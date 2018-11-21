@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501 393.32">
+  <path d="M250.47 32.82h125.02v120H250.47z" class="chart-highlight"/>
+  <path d="M312.98 24.88l-4.92-4.26-4.93-4.27h19.69l-4.92 4.27-4.92 4.26" class="chart-triangle"/>
+  <text class="chart-text" transform="translate(291.97 10.28)">
+    Grid cell
+  </text>
+  <path d="M.49 32.82h125v360H.49zm249.99 0h125v360h-125z" class="chart-line"/>
+  <path d="M.5 272.82h500v120H.5zm0-240h500v120H.5zm500 120l-.5 120" class="chart-line"/>
+</svg>

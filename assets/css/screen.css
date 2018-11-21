@@ -1,0 +1,12 @@
+/* For now… */
+
+:root {
+  background: url('../images/multicolor_wash.jpg') repeat-x scroll;
+  background-size: auto 10em;
+  padding-top: 10em;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 50em;
+}

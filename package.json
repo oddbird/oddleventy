@@ -1,0 +1,21 @@
+{
+  "name": "oddleventy",
+  "version": "1.0.0",
+  "description": "Software for Humans",
+  "homepage": "http://oddbird.net",
+  "main": "index.js",
+  "author": {
+    "name": "OddBird",
+    "email": "birds@oddbird.net"
+  },
+  "scripts": {
+    "serve": "yarn eleventy --serve"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.5.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.0.2"
+  }
+}
