@@ -11,6 +11,10 @@ OddBird Eleventy Test Site
 - write nunjucks filters and shortcodes in JS (Mia can do it!)
 - create named "collections" in JS (Mia can do it!)
 - very flexible, with documented configuration
+- simple to configure what is compiled, and what is passed through
+- various official and community plugins available
+- `permalink` setting allows you to override url per-template
+  in case things move around…
 
 ## Gotcha:
 - nunjucks is compiled before markdown,
@@ -18,4 +22,5 @@ OddBird Eleventy Test Site
   (work-around with markdown shortcode / filters in nunjucks)
 
 ## To Test:
-- Pagination
+- pagination
+- excerpts
