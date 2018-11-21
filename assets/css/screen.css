@@ -4,6 +4,7 @@
   background: url('../images/multicolor_wash.jpg') repeat-x scroll;
   background-size: auto 10em;
   padding-top: 10em;
+  fill: currentColor;
 }
 
 body {

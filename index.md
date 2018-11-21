@@ -8,6 +8,8 @@ nav:
 
 {% import 'utility.macros.njk' as utility %}
 
+{% include 'icons/allbirds.svg' %}
+
 # This is a test…
 
 <!-- more -->
