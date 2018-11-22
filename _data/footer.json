@@ -1,0 +1,12 @@
+{
+  "links": [
+    {
+      "name": "docs",
+      "url": "/docs/"
+    },
+    {
+      "name": "11ty",
+      "url": "https://www.11ty.io/"
+    }
+  ]
+}

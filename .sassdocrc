@@ -1,0 +1,14 @@
+theme: herman
+dest: _site/docs/
+src: assets/scss/
+
+display:
+  access:
+    - public
+
+herman:
+  sass:
+    includepaths: ['assets/scss']
+  extraLinks:
+    - name: 'OddBird'
+      url: 'http://oddbird.net/'

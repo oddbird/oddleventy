@@ -35,6 +35,9 @@
 			<a href="mailto:{{ site.email }}">
 				{{ site.author }}
 			</a>
+			{% for link in footer.links %}
+				| <a href="{{ link.url | url }}">{{ link.name }}</a>
+			{% endfor %}
 		</footer>
 
 		<!-- Current page: {{ page.url | url }} -->
