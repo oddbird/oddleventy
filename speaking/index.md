@@ -6,6 +6,9 @@ list_of:
 layout: 'layouts/list'
 nav:
   order: 1
+summary: |
+  **Look!**
+  I've added a summary!
 ---
 
 # List of Talks

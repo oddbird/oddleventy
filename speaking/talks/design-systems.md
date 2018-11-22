@@ -11,4 +11,7 @@ events:
 tags:
   - _talks
   - _talk_design-systems
+summary: |
+  Automated design systems
+  that scale **on a budget**
 ---

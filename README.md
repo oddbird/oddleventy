@@ -1,6 +1,14 @@
 # oddleventy
 OddBird Eleventy Test Site
 
+```bash
+# install what you need
+yarn
+
+# run the watcher and the server
+gulp
+```
+
 ## Nice:
 - actively maintained and documented
 - dev environment seems nice & fast to me… needs more setup and testing
@@ -23,4 +31,3 @@ OddBird Eleventy Test Site
 
 ## To Test:
 - pagination
-- excerpts

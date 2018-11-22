@@ -2,7 +2,7 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownIt = require('markdown-it')({
   html: true,
-  breaks: true,
+  breaks: false,
   linkify: true,
   typographer: true
 }).use(markdownItAnchor, {
@@ -79,6 +79,12 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter("getDate", (date = null, format = 'short') => {
     return getDate(format, date);
+  });
+
+  eleventyConfig.addFilter("md", (content, inline = false) => {
+    return inline
+      ? markdownIt.renderInline(content)
+      : markdownIt.render(content);
   });
 
   eleventyConfig.addShortcode("getDate", (format = null) => {

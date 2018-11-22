@@ -25,6 +25,11 @@
 		{% include 'site/nav.njk' %}
 
 		<main {{ utility.attr_if('class', templateClass) }}>
+			{% if summary %}
+				<aside>
+					{{ summary | md | safe }}
+				</aside>
+			{% endif %}
 			{% block content %}
 				{{ content | safe }}
 			{% endblock %}

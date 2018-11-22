@@ -15,6 +15,10 @@
 					{%- endif -%}
 				</a>
 
+				{% if post.data.summary %}
+					<div>{{ post.data.summary | md('inline') | safe }}</div>
+				{% endif %}
+
 				<time>{{ post.date | formatDate('long') }}</time>
 			</li>
 		{%- endfor -%}

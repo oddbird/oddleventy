@@ -11,6 +11,10 @@ events:
 tags:
   - _talks
   - _talk_dynamic-css
+summary: |
+  Don't let the declarative syntax fool you,
+  CSS is a dynamic language,
+  **designed for the web**
 templateEngineOverride: njk
 ---
 
