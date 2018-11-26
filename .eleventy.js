@@ -39,22 +39,24 @@ const formatDate = (date, format) => {
   ]
 
   const m0 = date.getMonth();
-  const mm = m0 + 1;
+  const mm = `${m0 + 1}`.padStart(2, '0');
   const MM = months[m0];
   const M = MM.slice(0, 3);
-  const dd = date.getDate();
+  const d = date.getDate();
+  const dd = `${d}`.padStart(2, '0');
   const D = days[date.getDay()];
   const yyyy = date.getFullYear();
 
   const formats = {
     'day': `${D}`,
-    'date': `${dd}`,
+    'date': `${d}`,
     'month': `${mm}`,
     'month-name': `${MM}`,
     'year': `${yyyy}`,
     'numeric': `${mm}/${dd}/${yyyy}`,
-    'short': `${M} ${dd}, ${yyyy}`,
-    'long': `${MM} ${dd}, ${yyyy}`,
+    'url': `${yyyy}/${mm}/${dd}`,
+    'short': `${M} ${d}, ${yyyy}`,
+    'long': `${MM} ${d}, ${yyyy}`,
   }
 
   return formats[format];

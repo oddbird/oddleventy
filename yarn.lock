@@ -50,6 +50,41 @@
     time-require "^0.1.2"
     valid-url "^1.0.9"
 
+"@11ty/eleventy@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-0.6.0.tgz#cfc92beb058610fae988e739bb7d1463c118b8b5"
+  integrity sha512-IFac7cQQQEVwrbaTshCy2ibUUty154gyGIZ87gRkEDmsONgztvXBDVo6CTlUH27t+5xfwjiiSWTh5cC1WWOf8g==
+  dependencies:
+    browser-sync "^2.24.7"
+    chalk "^2.4.1"
+    debug "^4.0.1"
+    ejs "^2.6.1"
+    fast-glob "^2.2.2"
+    fs-extra "^7.0.0"
+    glob-watcher "^5.0.1"
+    gray-matter "^4.0.1"
+    hamljs "^0.6.2"
+    handlebars "^4.0.12"
+    javascript-stringify "^1.6.0"
+    liquidjs "^6.0.1"
+    lodash "^4.17.11"
+    luxon "^1.4.1"
+    markdown-it "^8.4.2"
+    minimist "^1.2.0"
+    multimatch "^2.1.0"
+    mustache "^2.3.0"
+    normalize-path "^3.0.0"
+    nunjucks "^3.1.4"
+    parse-filepath "^1.0.2"
+    please-upgrade-node "^3.1.1"
+    pretty "^2.0.0"
+    pug "^2.0.3"
+    recursive-copy "^2.0.9"
+    semver "^5.5.1"
+    slugify "^1.3.1"
+    time-require "^0.1.2"
+    valid-url "^1.0.9"
+
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
@@ -934,7 +969,7 @@ browser-sync-ui@^2.26.2:
     socket.io-client "^2.0.4"
     stream-throttle "^0.1.3"
 
-browser-sync@^2.24.4:
+browser-sync@^2.24.4, browser-sync@^2.24.7:
   version "2.26.3"
   resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.26.3.tgz#1b59bd5935938a5b0fa73b3d78ef1050bd2bf912"
   integrity sha512-VLzpjCA4uXqfzkwqWtMM6hvPm2PNHp2RcmzBXcbi6C9WpkUhhFb8SVAr4CFrCsFxDg+oY6HalOjn8F+egyvhag==
@@ -1821,7 +1856,7 @@ debug@3.X, debug@^3.1.0:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.0, debug@^4.1.0:
+debug@^4.0.0, debug@^4.0.1, debug@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.0.tgz#373687bffa678b38b1cd91f861b63850035ddc87"
   integrity sha512-heNPJUJIqC+xB6ayLAMHaIrmN9HKa7aQO8MGqKpvCA+uJYVcvR6l5kgdrhRuwPFHU7P5/A1w0BjByPHwpfTDKg==
@@ -2830,6 +2865,15 @@ fs-extra@^6.0.1:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@^7.0.0:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
+  integrity sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-minipass@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
@@ -3408,7 +3452,7 @@ hamljs@^0.6.2:
   resolved "https://registry.yarnpkg.com/hamljs/-/hamljs-0.6.2.tgz#7b7116cf6dbe7278e42b3f6ef8725a33e177c8e3"
   integrity sha1-e3EWz22+cnjkKz9u+HJaM+F3yOM=
 
-handlebars@^4.0.11:
+handlebars@^4.0.11, handlebars@^4.0.12:
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.12.tgz#2c15c8a96d46da5e266700518ba8cb8d919d5bc5"
   integrity sha512-RhmTekP+FZL+XNhwS1Wf+bTTZpdLougwt5pcgA1tuz6Jcx0fpH/7z0qd71RKnZHBCxIRBHfBOnio4gViPemNzA==
@@ -4283,6 +4327,11 @@ isstream@~0.1.2:
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
+javascript-stringify@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/javascript-stringify/-/javascript-stringify-1.6.0.tgz#142d111f3a6e3dae8f4a9afd77d45855b5a9cce3"
+  integrity sha1-FC0RHzpuPa6PSpr9d9RYVbWpzOM=
+
 jpegtran-bin@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/jpegtran-bin/-/jpegtran-bin-3.2.0.tgz#f60ecf4ae999c0bdad2e9fbcdf2b6f0981e7a29b"
@@ -4545,6 +4594,11 @@ liquidjs@^5.1.0:
   integrity sha512-bIDYRWlo8f09dNd8Hz3lHVPOpgw33jtDCebMEDj2D9g54/KhTao7/lVv+3hYtsWTW2PId4hH+1X0iuuYnQHnTg==
   dependencies:
     resolve-url "^0.2.1"
+
+liquidjs@^6.0.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-6.1.1.tgz#81800c652b470251bc1980033370796519bfbbc6"
+  integrity sha512-FsPpyHy2lpqQF/BX/wqQxWXuf3TZc36VlOmK2ixCqBq5Yp71XFaIip2BPlZhlJMOzo+V6jByMN9UBMV83xesww==
 
 load-json-file@^1.0.0:
   version "1.1.0"
@@ -4985,6 +5039,11 @@ luxon@^1.3.0:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.7.1.tgz#721e86f12c47526014a53c9f92f74f2da6dc9a4c"
   integrity sha512-0fTd5a3UUVATblRdhD9ZXdhCdXp+ktqGERRu8q9seeMFfED0otQFeqrZwDw/2AoMH/cHjmswVJC8IUPeNBIPTA==
+
+luxon@^1.4.1:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.8.0.tgz#cfc807c5a26e55049383c9c512d57a5dda31e469"
+  integrity sha512-F742cYUYB7X+LXY3cIn6THZUBqRBjeAvF+CWE2i3+eKcv2bzsCsnRsBYL8Qrqzp1dfs6HsVcSjfKt2RcrtUElw==
 
 make-dir@^1.0.0:
   version "1.3.0"
@@ -5604,7 +5663,7 @@ nunjucks@^2.5.2:
     chokidar "^1.6.0"
     yargs "^3.32.0"
 
-nunjucks@^3.1.3:
+nunjucks@^3.1.3, nunjucks@^3.1.4:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/nunjucks/-/nunjucks-3.1.4.tgz#d15d7b6c4215d2525f991b948335e16502fa1bfa"
   integrity sha512-OIbdsl7jAZpw5V6GIa6wJc2AKCC/JSwuVdNKuVpFZ+eB3kYugoGF6OVN/jKNFe52782Uj89n0pT0DiSS1KPbxA==
@@ -7120,7 +7179,7 @@ semver-truncate@^1.0.0:
   dependencies:
     semver "^5.3.0"
 
-"semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.6.0:
+"semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
   integrity sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
@@ -7256,7 +7315,7 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
-slugify@^1.3.0:
+slugify@^1.3.0, slugify@^1.3.1:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.3.3.tgz#86200672a4ad7e88dc5190210176b62f9c19ecdf"
   integrity sha512-aFvcXobuowA7RqU4IBVJvqmhkREDIqsj4oIJKk6JuZ5EO1PCwtAAwDCl8TdsMs4J9zCoDAVkB9FLUElDjNcRSg==

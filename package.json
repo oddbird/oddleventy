@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.5.4",
+    "@11ty/eleventy": "^0.6.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.0",
     "beeper": "^1.1.1",
     "chalk": "^2.4.1",

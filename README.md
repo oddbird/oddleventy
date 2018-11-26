@@ -23,11 +23,13 @@ gulp
 - various official and community plugins available
 - `permalink` setting allows you to override url per-template
   in case things move around…
+- I was able to recreate our usual blog pagination
 
 ## Gotcha:
+- explicit dates are midnight UTC by default
 - nunjucks is compiled before markdown,
   can cause meaningful-whitespace problems
   (work-around with markdown shortcode / filters in nunjucks)
 
-## To Test:
-- pagination
+todo:
+- tag pages
