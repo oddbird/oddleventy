@@ -15,7 +15,7 @@ gulp
 - Mia had no trouble setting up the basics in a few minutes
 - yaml data in frontmatter, accessible in content
 - json data files scoped to global, folder, or page ('template')
-- built to integrate nunjucks & markdown smoothly
+- built to integrate nunjucks & markdown in a single file (see gotcha)
 - write nunjucks filters and shortcodes in JS (Mia can do it!)
 - create named "collections" in JS (Mia can do it!)
 - very flexible, with documented configuration
@@ -24,12 +24,10 @@ gulp
 - `permalink` setting allows you to override url per-template
   in case things move around…
 - I was able to recreate our usual blog pagination
+- tag pages also generated via pagination feature
 
 ## Gotcha:
 - explicit dates are midnight UTC by default
 - nunjucks is compiled before markdown,
   can cause meaningful-whitespace problems
   (work-around with markdown shortcode / filters in nunjucks)
-
-todo:
-- tag pages

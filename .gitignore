@@ -1,5 +1,6 @@
 # Eleventy
 _site
+.vscode
 
 # Logs
 logs

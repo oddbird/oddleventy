@@ -26,4 +26,4 @@ templateEngineOverride: njk
 
 {{ event.list(events, 'Page Events:') }}
 
-{{ event.list(collections.all_events, 'All Events:') }}
+{{ event.list(collections._all_events, 'All Events:') }}

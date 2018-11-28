@@ -75,6 +75,10 @@ module.exports = (eleventyConfig) => {
     return typeof val;
   });
 
+  eleventyConfig.addFilter("isPublic", (val) => {
+    return (val !== 'all') && !val.startsWith('_');
+  });
+
   eleventyConfig.addFilter("formatDate", (date, format = 'short') => {
     return formatDate(date, format);
   });
@@ -100,7 +104,7 @@ module.exports = (eleventyConfig) => {
   });
 
   // Create Nav Collection
-  eleventyConfig.addCollection('nav', (collection) => {
+  eleventyConfig.addCollection('_nav', (collection) => {
     return collection.getAll().filter(item => {
       return 'nav' in item.data;
     }).sort((a, b) => {
@@ -108,7 +112,7 @@ module.exports = (eleventyConfig) => {
     });
   })
 
-  eleventyConfig.addCollection("all_events", (collection) => {
+  eleventyConfig.addCollection("_all_events", (collection) => {
     const events = [];
 
     collection.getAll().filter((page) => {

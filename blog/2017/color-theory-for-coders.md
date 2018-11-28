@@ -1,7 +1,7 @@
 ---
 author: sondra
 tagline: 'from Natalya Shelburne'
-tags: [post, Tips, Color, Design, Recommendations]
+tags: [_post, Tips, Color, Design, Recommendations]
 image:
   src: 'blog/2017/color-theory/decision-tree.jpg'
 summary: |
