@@ -1,33 +1,63 @@
-# oddleventy
-OddBird Eleventy Test Site
+# mia
 
-```bash
-# install what you need
+This site is built using:
+
+- HTML, of course
+- CSS w/ a load of Grids & Variables
+- Eleventy JS w/ Markdown & Nunjucks
+- Sass w/ OddBird's Accoutrement & Herman
+- A lot of ideas from a lot of cool people
+
+## Develop:
+
+Install dependencies:
+
+```
 yarn
+```
 
-# run the watcher and the server
+Compile and run [Eleventy](http://www.11ty.io) server,
+with a watcher for Sass files:
+
+```
 gulp
 ```
 
-## Nice:
-- actively maintained and documented
-- dev environment seems nice & fast to me… needs more setup and testing
-- Mia had no trouble setting up the basics in a few minutes
-- yaml data in frontmatter, accessible in content
-- json data files scoped to global, folder, or page ('template')
-- built to integrate nunjucks & markdown in a single file (see gotcha)
-- write nunjucks filters and shortcodes in JS (Mia can do it!)
-- create named "collections" in JS (Mia can do it!)
-- very flexible, with documented configuration
-- simple to configure what is compiled, and what is passed through
-- various official and community plugins available
-- `permalink` setting allows you to override url per-template
-  in case things move around…
-- I was able to recreate our usual blog pagination
-- tag pages also generated via pagination feature
+The site will be compiled into `_site/`
+for netlify deployment,
+and the served site will be available at
+`localhost:8080` or e.g. `mia.hexxie.com:8080`.
 
-## Gotcha:
-- explicit dates are midnight UTC by default
-- nunjucks is compiled before markdown,
-  can cause meaningful-whitespace problems
-  (work-around with markdown shortcode / filters in nunjucks)
+You can also run individual commands:
+
+```
+# build the static site for production
+gulp build
+
+# run the server
+gulp serve
+
+# minify images
+gulp imagemin
+
+# compile sass
+gulp sass
+
+# lint sass
+gulp sasslint
+
+# format sass
+gulp prettier
+
+# compile sass docs
+gulp sassdoc
+
+# watch sass files (lint & compile)
+gulp watch
+
+# watch sass files (docs & lint & compile)
+gulp sassdoc-watch
+```
+
+Sass Docs are compiled into the `_site/style/` folder,
+which is then available at the URL: `/style/`.

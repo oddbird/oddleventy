@@ -1,6 +1,6 @@
-# Eleventy
 _site
-.vscode
+content/assets/css
+content/assets/images
 
 # Logs
 logs

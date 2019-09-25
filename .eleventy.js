@@ -1,136 +1,128 @@
-const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const markdownItAnchor = require('markdown-it-anchor');
-const markdownIt = require('markdown-it')({
-  html: true,
-  breaks: false,
-  linkify: true,
-  typographer: true
-}).use(markdownItAnchor, {
-  permalink: true,
-  permalinkClass: 'heading-link',
-  permalinkSymbol: '#',
-  level: [1, 2, 3, 4]
-});
+const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
 
-const formatDate = (date, format) => {
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
+const utils = require('./_src/filters/utils');
+const events = require('./_src/filters/events');
+const pages = require('./_src/filters/pages');
+const tags = require('./_src/filters/tags');
+const time = require('./_src/filters/time');
+const type = require('./_src/filters/type');
 
-  const days = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ]
+module.exports = eleventyConfig => {
+  eleventyConfig.addPlugin(hljs);
 
-  const m0 = date.getMonth();
-  const mm = `${m0 + 1}`.padStart(2, '0');
-  const MM = months[m0];
-  const M = MM.slice(0, 3);
-  const d = date.getDate();
-  const dd = `${d}`.padStart(2, '0');
-  const D = days[date.getDay()];
-  const yyyy = date.getFullYear();
+  // pass-through
+  eleventyConfig.addPassthroughCopy('content/assets');
+  eleventyConfig.addPassthroughCopy('content/robots.txt');
 
-  const formats = {
-    'day': `${D}`,
-    'date': `${d}`,
-    'month': `${mm}`,
-    'month-name': `${MM}`,
-    'year': `${yyyy}`,
-    'numeric': `${mm}/${dd}/${yyyy}`,
-    'url': `${yyyy}/${mm}/${dd}`,
-    'short': `${M} ${d}, ${yyyy}`,
-    'long': `${MM} ${d}, ${yyyy}`,
-  }
-
-  return formats[format];
-}
-
-const getDate = (format = null, date = null) => {
-  const now = date ? new Date(date) : new Date();
-  return format ? formatDate(now, format) : now;
-}
-
-module.exports = (eleventyConfig) => {
-  eleventyConfig.addPlugin(pluginSyntaxHighlight);
-  eleventyConfig.addPassthroughCopy('assets');
-
-  eleventyConfig.addFilter("typeOf", (val) => {
-    return typeof val;
+  // collections
+  eleventyConfig.addCollection('orgs', collection => {
+    return collection
+      .getAll()
+      .filter(item => item.data.org && item.data.end === 'ongoing')
+      .sort((a, b) => a.data.start - b.data.start);
   });
+  eleventyConfig.addCollection('all_orgs', collection => {
+    return collection
+      .getAll()
+      .filter(item => item.data.org)
+      .sort((a, b) => {
+        const ae = a.data.end === 'ongoing' ? null : a.data.end;
+        const be = b.data.end === 'ongoing' ? null : b.data.end;
 
-  eleventyConfig.addFilter("isPublic", (val) => {
-    return (val !== 'all') && !val.startsWith('_');
-  });
-
-  eleventyConfig.addFilter("formatDate", (date, format = 'short') => {
-    return formatDate(date, format);
-  });
-
-  eleventyConfig.addFilter("getDate", (date = null, format = 'short') => {
-    return getDate(format, date);
-  });
-
-  eleventyConfig.addFilter("md", (content, inline = false) => {
-    return inline
-      ? markdownIt.renderInline(content)
-      : markdownIt.render(content);
-  });
-
-  eleventyConfig.addShortcode("getDate", (format = null) => {
-    return getDate(format);
-  });
-
-  eleventyConfig.addPairedShortcode("markdown", (content, inline = null) => {
-    return inline
-      ? markdownIt.renderInline(content)
-      : markdownIt.render(content);
-  });
-
-  // Create Nav Collection
-  eleventyConfig.addCollection('_nav', (collection) => {
-    return collection.getAll().filter(item => {
-      return 'nav' in item.data;
-    }).sort((a, b) => {
-      return a.data.nav.order > b.data.nav.order;
-    });
-  })
-
-  eleventyConfig.addCollection("_all_events", (collection) => {
-    const events = [];
-
-    collection.getAll().filter((page) => {
-      return 'events' in page.data;
-    }).forEach((page) => {
-      page.data.events.forEach((event) => {
-        event['data'] = page.data;
-        events.push(event);
+        if (ae === be) {
+          return a.data.start - b.data.start;
+        }
+        return ae - be;
       });
-    });
-
-    return events.sort((a, b) => a.date > b.date );
   });
 
-  /* Markdown */
-  eleventyConfig.setLibrary('md', markdownIt);
+  // filters
+  eleventyConfig.addFilter('typeCheck', utils.typeCheck);
+  eleventyConfig.addFilter('objectKeys', utils.objectKeys);
+  eleventyConfig.addFilter('jsonString', utils.jsonString);
+  eleventyConfig.addFilter('only', utils.only);
 
+  eleventyConfig.addFilter('getDate', time.getDate);
+  eleventyConfig.addFilter('rssDate', time.rssDate);
+  eleventyConfig.addFilter('rssLatest', time.rssLatest);
+
+  eleventyConfig.addFilter('publicTags', tags.publicTags);
+  eleventyConfig.addFilter('getTags', tags.getTags);
+  eleventyConfig.addFilter('groupTags', tags.groupTags);
+  eleventyConfig.addFilter('hasTag', tags.hasTag);
+  eleventyConfig.addFilter('withTag', tags.withTag);
+  eleventyConfig.addFilter('displayName', tags.displayName);
+  eleventyConfig.addFilter('tagLink', tags.tagLink);
+  eleventyConfig.addFilter('inTopTagCount', count => {
+    return typeof count === 'number' && count <= tags.topCount;
+  });
+
+  eleventyConfig.addFilter('getPage', pages.fromCollection);
+  eleventyConfig.addFilter('getPublic', pages.getPublic);
+  eleventyConfig.addFilter('seriesNav', pages.seriesNav);
+  eleventyConfig.addFilter('titleSort', pages.titleSort);
+  eleventyConfig.addFilter('authorPage', (collection, bird) => {
+    const url = `/authors/${bird}/`;
+    return pages.fromCollection(collection, url);
+  });
+
+  eleventyConfig.addFilter('activeNav', (collection, nav, page) => {
+    const checkUrl = (link) => {
+      const target = pages.fromCollection(collection, link.url);
+
+      link.title = target.data.title || target.fileSlug;
+      link.active = (link.url === page.url)
+        || (link.url === page.location)
+        || (target.fileSlug === page.location);
+
+      return link;
+    };
+
+    function checkItem(item) {
+      if (item.url) {
+        return checkUrl(item);
+      }
+
+      if (item.subnav) {
+        const subnav = item.subnav.map(sub => checkUrl(sub));
+
+        item.subnav = subnav;
+        item.active = subnav.filter(sub => sub.active).length > 0
+          || (item.title === page.location);
+
+        return item;
+      }
+    };
+
+    return nav.map(main => checkItem(main));
+  });
+
+  eleventyConfig.addFilter('getEvents', events.get);
+  eleventyConfig.addFilter('countEvents', events.count);
+  eleventyConfig.addFilter('groupName', group => events.groupNames[group]);
+
+  eleventyConfig.addFilter('amp', type.amp);
+  eleventyConfig.addFilter('typogr', type.set);
+  eleventyConfig.addFilter('md', type.render);
+  eleventyConfig.addFilter('mdInline', type.inline);
+
+  // shortcodes
+  eleventyConfig.addPairedShortcode('md', type.render);
+  eleventyConfig.addPairedShortcode('mdInline', type.inline);
+  eleventyConfig.addShortcode('getDate', format => {
+    return `${time.getDate(time.now, format)}`;
+  });
+
+  // markdown
+  eleventyConfig.setLibrary('md', type.mdown);
+
+  // settings
   return {
-    markdownTemplateEngine: "njk",
-  }
+    markdownTemplateEngine: 'njk',
+    dir: {
+      input: 'content',
+      includes: '_includes',
+      layouts: '_layouts',
+    },
+  };
 };
