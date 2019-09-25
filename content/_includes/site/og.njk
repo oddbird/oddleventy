@@ -1,0 +1,20 @@
+{%- set og_image = image.src if ('://' in (image.src or '') | string) else [site.url, '/assets/images/', image.src or open_graph.img] | join -%}
+{%- set creatorPage = collections.all | authorPage(author) if author else none -%}
+{%- set creatorHandle = creatorPage.data.social.twitter if creatorPage else none -%}
+{%- set creator = ['@', creatorPage.data.social.twitter] | join() if creatorHandle else open_graph.site -%}
+
+<meta property="fb:app_id" content="{{ config.facebook_id }}" />
+<meta property="og:locale" content="{{ open_graph.locale }}" />
+<meta property="og:type" content="{{ og.type or open_graph.type }}" />
+<meta property="og:title" content="{{ og.title or meta_title }}" />
+<meta property="og:image" content="{{ og_image }}" />
+<meta property="og:description" content="{{ meta_desc }}" />
+<meta property="og:url" content="{{ full_url }}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta name="twitter:card" content="{{ og.twitter or 'summary' }}" />
+<meta name="twitter:title" content="{{ meta_title }}" />
+<meta name="twitter:description" content="{{ meta_desc }}" />
+<meta name="twitter:image" content="{{ og_image }}" />
+<meta name="twitter:domain" content="{{ site.url }}" />
+<meta name="twitter:site" content="{{ open_graph.site }}" />
+<meta name="twitter:creator" content="{{ creator }}" />

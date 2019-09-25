@@ -1,0 +1,19 @@
+{% import 'site/nav.macros.njk' as nav %}
+
+<div data-region="banner">
+  <header class="brand">
+    <a href="/" rel="home" class="logo-link">
+      {% include "icons/oddbird.svg" %}
+    </a>
+  </header>
+
+  <nav data-layout="nav">
+    {% set page = collections.all | getPage(page) or page %}
+    {{ nav.list(sitenav, page, collections.all) }}
+  </nav>
+
+  <span class="nav-contact">
+    <a href="{{ sie.contact }}">contact us</a>
+  </span>
+</div>
+

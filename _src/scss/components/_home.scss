@@ -1,0 +1,42 @@
+// Home Page
+// =========
+
+.letter-face {
+  margin-left: negative('shim-plus');
+}
+
+.letter-sig {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: size('gutter');
+
+  [data-icon] {
+    pointer-events: none;
+    transform: translate3d(-5%, size('shim-plus'), 0);
+  }
+
+  .h-card {
+    display: inline-block;
+    margin-left: size('double-gutter');
+  }
+}
+
+// Birds image
+// -----------
+.home-birds {
+  #{$link} {
+    color: color('text');
+    display: block;
+    margin: 0 auto;
+    max-width: size('medium-page');
+  }
+
+  #{$focus} {
+    color: color('action-hover');
+  }
+
+  [data-icon] {
+    height: auto;
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+// Archives
+// ========
+
+.project-feature {
+  margin: 0 auto;
+  max-width: size('full-content');
+  padding: 0 size('gutter');
+}
+
+.project-cover-image {
+  @include extend('extend-small');
+  display: block;
+  margin-bottom: size('gutter');
+  margin-top: size('gutter');
+}
+
+.project-list-links {
+  display: grid;
+  grid-gap: size('shim');
+  grid-template-columns: 1fr;
+
+  @include above('small-page') {
+    grid-template-columns: repeat(auto-fit, minmax(6em, max-content));
+  }
+}
+
+.project-list-title,
+.project-list-tagline {
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 100%;
+}

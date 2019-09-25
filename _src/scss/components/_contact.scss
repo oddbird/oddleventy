@@ -1,0 +1,52 @@
+// Contact
+// =======
+
+.contact-intro {
+  align-items: center;
+  display: flex;
+
+  .bird-face {
+    display: none;
+    flex: 0 0 auto;
+
+    @include above('small-page') {
+      display: block;
+    }
+  }
+
+  p {
+    flex: 1 1 auto;
+    margin: 0;
+  }
+}
+
+// Running Footer
+// --------------
+
+.contact-wrap {
+  $opaque: color(
+    'contact-bg',
+    (
+      'rgba': 1,
+      'tint': 50%,
+    )
+  );
+  @include link-color-for($opaque);
+  background: color('contact-bg');
+  padding: size('gutter') 0;
+}
+
+[data-module='contact-cta'] {
+  @include before(null) {
+    display: none;
+  }
+
+  h2,
+  p {
+    margin: 0;
+  }
+
+  .btn {
+    margin-top: size('shim');
+  }
+}

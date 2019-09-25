@@ -1,0 +1,31 @@
+// Inverted Sections
+// =================
+
+@mixin invert {
+  @include contrasted('invert');
+  @include link-color-for('invert');
+}
+
+.inverted {
+  @include invert;
+
+  + [divider] {
+    margin-top: 0;
+
+    [divider-line='large'] {
+      @include after(null) {
+        display: none;
+      }
+    }
+  }
+
+  [data-location*='susysite'] & {
+    @include contrasted('brand-pink');
+    @include link-color-for('brand-pink');
+  }
+
+  [data-location*='hermansite'] & {
+    @include contrasted('action-hover');
+    @include link-color-for('action-hover');
+  }
+}

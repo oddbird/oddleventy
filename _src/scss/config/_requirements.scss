@@ -1,0 +1,14 @@
+// Required Third-Party Dependencies
+// =================================
+
+@import '~accoutrement/sass/tools';
+@import '~sassdoc-theme-herman/scss/utilities';
+
+$functions: (
+  'rgba': get-function('rgba'),
+  'saturate': get-function('saturate'),
+  'darken': get-function('darken'),
+  'lighten': get-function('lighten'),
+  'adjust-hue': get-function('adjust-hue'),
+  'convert-units': get-function('convert-units'),
+);

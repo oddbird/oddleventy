@@ -1,0 +1,67 @@
+{% import 'utility.macros.njk' as utility %}
+
+{% macro list(
+  sitenav,
+  page,
+  all
+) %}
+  {% set data = all | activeNav(sitenav, page) %}
+  <ul class="main-nav">
+    {% for item in data %}
+      {% set class = 'nav-item' %}
+      {% set class = [class, 'has-dropdown'] | join(' ') if item.subnav else class %}
+      <li class="{{ class }}">
+        {{ link(item, is_main=true) }}
+        {{ dropdown(item) }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+
+{% macro dropdown(
+  item
+) %}
+  {% if item.subnav %}
+    <span class="nav-link-main"
+      {{ utility.attr_if('data-active', item.active) }}
+      {{ utility.toggle_button(item.title | slug) }}>
+      {{ item.title | typogr | safe }}
+    </span>
+
+    <ul class="is-dropdown"
+      {{ utility.toggle_target(item.title | slug, auto_closing=true) }}>
+      {% for sub in item.subnav %}
+        <li>
+          {{ link(sub) }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{% macro link(
+  item,
+  is_main=false
+) %}
+  {% if item.url %}
+    {% set class = 'nav-link-main' if is_main else 'dropdown-item' %}
+    {% set attrs = {
+      'class': ['nav-link', class] | join(' '),
+      'data-active': item.active
+    } %}
+
+    {% set content %}
+      {{ item.title | typogr | safe }}
+      {% if item.url and ('://' in item.url) %}
+        {% include "icons/external.svg" %}
+      {% endif %}
+    {% endset %}
+
+    {{ utility.link_if(
+      content=content,
+      url=item.url,
+      attrs=attrs
+    ) }}
+  {% endif %}
+{% endmacro %}

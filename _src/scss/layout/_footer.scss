@@ -1,0 +1,26 @@
+// Footer Region Layout
+// ====================
+
+[data-region='footer'] {
+  @include font-family('alt');
+  display: grid;
+  font-size: size('social');
+  grid-gap: size('gutter');
+  grid-template-areas:
+    'socials'
+    'form'
+    'siteinfo';
+  line-height: size('rhythm');
+  padding: size('gutter');
+
+  @include above('small-page') {
+    grid-gap: 0 size('gutter');
+    grid-template-areas:
+      'socials   form'
+      'siteinfo  form';
+  }
+
+  #mc_embed_signup {
+    grid-area: form;
+  }
+}

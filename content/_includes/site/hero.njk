@@ -1,0 +1,18 @@
+{% if image.src %}
+<figure data-pattern="figure" class="hero">
+  <div data-figure="content" class="hero-content">
+    <img
+      src="{{ site.images + image.src }}"
+      alt="{{ image.alt or '' }}"
+      class="hero-image"/>
+  </div>
+
+  {% if image.caption %}
+    <figcaption
+      data-figure="caption"
+      class="hero-caption">
+      {{ image.caption | mdInline | safe }}
+    </figcaption>
+  {% endif %}
+</figure>
+{% endif %}

@@ -1,0 +1,38 @@
+// Lists
+// =====
+
+[data-module='rst-body'] {
+  ul,
+  ol {
+    margin: size('shim') 0 size('gutter');
+    padding-left: size('gutter');
+  }
+}
+
+.upperroman {
+  list-style-type: upper-roman;
+}
+
+.loweralpha {
+  list-style-type: lower-alpha;
+}
+
+.dashed {
+  list-style-type: none;
+
+  li {
+    @include before('–') {
+      margin-left: negative('shim');
+      position: absolute;
+    }
+  }
+}
+
+// Simple is a generated class from RST
+.simple {
+  .project-tasks & {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+  }
+}

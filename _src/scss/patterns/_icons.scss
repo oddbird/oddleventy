@@ -1,0 +1,28 @@
+// Icon Pattern
+// ============
+
+/// Basic styles for all icons
+/// @group icons
+/// @icons templates/icons/
+/// @example njk
+///   {% import 'utility.macros.j2' as utility %}
+///   {{ utility.icon('dribbble') }}
+[data-icon] {
+  @include square(1em);
+  fill: currentColor;
+  padding: size('pixel');
+}
+
+// fill classes used when svg requires multiple colors
+.fill-white {
+  fill: color('background');
+}
+
+[data-size='text-small'] {
+  @include square(0.75em);
+  vertical-align: baseline;
+}
+
+.inline-icon {
+  margin-right: size('half-shim');
+}

@@ -1,0 +1,221 @@
+// Scale Settings
+// ==============
+
+// Ratios
+// ------
+/// @group config-scale
+/// @ratios
+/// @link https://oddbird.net/accoutrement-scale/docs/
+///   Accoutrement Scale
+$modular-scale: (
+  'text-ratio': 1.4,
+);
+
+@include add-ratios($modular-scale);
+@include herman-add(
+  'ratios',
+  'modular-scale',
+  $modular-scale,
+  get-function('ratio')
+);
+
+// Text Sizes
+// ----------
+/// @group config-scale
+/// @sizes
+/// @link https://oddbird.net/accoutrement-scale/docs/
+///   Accoutrement Scale
+$text-sizes: (
+  'root': 18px,
+  'h2': calc(1rem + 1vw),
+  'h3': calc(1rem + 0.5vw),
+  'small': '#root'
+    (
+      'text-ratio': -0.5,
+    ),
+  'xsmall': '#root'
+    (
+      'text-ratio': -1,
+    ),
+  'rel-small': 1em
+    (
+      'text-ratio': -0.5,
+    ),
+  'medium': '#root'
+    (
+      'text-ratio': 0.7,
+    ),
+  'headline-highlight-large': calc(1.35rem + 1vw),
+  'headline-highlight-small': '#root',
+  'caption': '#root',
+  'task': '#root'
+    (
+      'text-ratio': -0.125,
+    ),
+  'social': '#root'
+    (
+      'text-ratio': -0.25,
+    ),
+);
+
+@include add-sizes($text-sizes);
+@include herman-add('sizes', 'text-sizes', $text-sizes, get-function('size'));
+
+// Spacing Sizes
+// -------------
+/// @group config-scale
+/// @sizes {ruler}
+/// @link https://oddbird.net/accoutrement-scale/docs/
+///   Accoutrement Scale
+$spacing-sizes: (
+  'rhythm': '#root'
+    (
+      'text-ratio': 1,
+      'convert-units': 'rem',
+    ),
+  'gutter': '#rhythm',
+  'double-gutter': '#gutter'
+    (
+      'times': 2,
+    ),
+  'triple-gutter': '#gutter'
+    (
+      'times': 3,
+    ),
+  'shim-plus': '#gutter'
+    (
+      'times': 0.75,
+    ),
+  'shim': '#gutter'
+    (
+      'times': 0.5,
+    ),
+  'half-shim': '#shim'
+    (
+      'times': 0.5,
+    ),
+  'quarter-shim': '#shim'
+    (
+      'times': 0.25,
+    ),
+  'pad': 1rem,
+  'pixel': 1px,
+  'spacer': 'calc(#double-gutter + 3vw)',
+);
+
+@include add-sizes($spacing-sizes);
+@include herman-add(
+  'sizes',
+  'spacing-sizes',
+  $spacing-sizes,
+  get-function('size')
+);
+
+// Pattern Sizes
+// -------------
+/// @group config-scale
+/// @sizes {output-only}
+/// @link https://oddbird.net/accoutrement-scale/docs/
+///   Accoutrement Scale
+$pattern-sizes: (
+  'background': 'calc(%s + 16vw)'
+    (
+      '%s': '#rhythm'
+        (
+          'times': 6,
+        ),
+    ),
+  'border': 8px,
+  'border-thin': 1px,
+  'border-radius': '#half-shim',
+  'logo-y': '#rhythm'
+    (
+      'times': 2.25,
+    ),
+  'alt-logo-y': '#rhythm'
+    (
+      'times': 2,
+    ),
+  'hero-logo': '#rhythm'
+    (
+      'times': 5,
+    ),
+  'bird-face': 6rem,
+  'bird-face-small': '#bird-face'
+    (
+      'times': 0.75,
+    ),
+  'half-bird-face': '#bird-face'
+    (
+      'times': 0.5,
+    ),
+  'bird-sig-height': '#rhythm'
+    (
+      'times': 3,
+    ),
+  'bird-sig-width': '#bird-sig-height'
+    (
+      'times': 920/310,
+    ),
+  'intro-text': '#medium'
+    (
+      'convert-units': 'rem',
+    ),
+  'nav-small': 20rem,
+  'nav-medium': 35rem,
+  'nav-wide': 55rem,
+  'dropdown-narrow': 9rem,
+  'dropdown-wide': 14rem,
+  'splash-items': 16rem,
+  'splash-logo-y': '#spacer',
+  'imageblock-image': '#dropdown-wide',
+);
+
+@include add-sizes($pattern-sizes);
+@include herman-add(
+  'sizes',
+  'pattern-sizes',
+  $pattern-sizes,
+  get-function('size')
+);
+
+// Page Sizes
+// ----------
+// Mostly used as breakpoints when content is asking for css edits
+/// @group config-scale
+/// @sizes {output-only}
+/// @link https://oddbird.net/accoutrement-scale/docs/
+///   Accoutrement Scale
+$page-sizes: (
+  'small-page': 34rem,
+  'medium-page': 55rem,
+  'large-page': 75rem,
+);
+
+@include add-sizes($page-sizes);
+@include herman-add('sizes', 'page-sizes', $page-sizes, get-function('size'));
+
+// Column Sizes
+// ------------
+// Columns are used mostly in extend mixin and to declare size of content containers
+/// @group config-scale
+/// @sizes {output-only}
+/// @link https://oddbird.net/accoutrement-scale/docs/
+///   Accoutrement Scale
+$column-sizes: (
+  'full-content': 40rem,
+  'feature-width': calc(40rem + 10vw),
+  'extend-xsmall': 70vw,
+  'extend-small': 80vw,
+  'extend-large': 90vw,
+  'extend-full': 100vw,
+  'wide-column': 90%,
+);
+
+@include add-sizes($column-sizes);
+@include herman-add(
+  'sizes',
+  'column-sizes',
+  $column-sizes,
+  get-function('size')
+);

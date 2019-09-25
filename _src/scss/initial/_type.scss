@@ -1,0 +1,125 @@
+// Initial Typography
+// ------------------
+
+// Base
+// ----
+
+@include import-webfonts;
+
+:root {
+  @include font-family('body');
+  font-size: size('root');
+  font-size: calc(1em + 0.3vw);
+  line-height: 1.35;
+}
+
+// Selection
+// ---------
+/// Selected text is highlighted in orange,
+/// with any text-shadows removed.
+/// @group typography
+::selection {
+  @include contrasted('select');
+  text-shadow: none;
+}
+
+// Hidden Text & Fout
+// ------------------
+
+.is-hidden,
+.wf-loading {
+  @include is-hidden;
+}
+
+// Abbr
+// ----
+
+abbr {
+  &[title] {
+    text-decoration: none;
+  }
+}
+
+// Ampersands
+// ----------
+
+.amp {
+  @include font-family('amp');
+}
+
+// Headlines
+// ---------
+
+h1,
+h2 {
+  @include font-family('alt');
+}
+
+h2 {
+  font-size: size('h2');
+  margin: 1.5rem 0 0.75rem;
+}
+
+h3 {
+  font-size: size('h3');
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+
+  h2 + &,
+  h2 + section > &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  [data-module='rst-body'] & {
+    clear: both;
+  }
+
+  [href] {
+    text-decoration: none;
+  }
+}
+
+// Links
+// -----
+
+@include link-color-for('background');
+
+a {
+  #{$link} {
+    @include transition('colors');
+    text-decoration-line: underline;
+    text-decoration-skip-ink: auto;
+  }
+}
+
+.icon-text {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+.image-reference {
+  &,
+  #{$link} {
+    text-decoration: none;
+  }
+
+  object {
+    pointer-events: none;
+  }
+}
+
+// Paragraphs
+// ----------
+
+p {
+  margin-bottom: size('shim', 'em');
+  margin-top: size('shim', 'em');
+}

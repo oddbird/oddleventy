@@ -1,0 +1,71 @@
+// Links Config
+// ============
+
+// Link
+// ----
+/// Shortcut for `link` and `visited` pseudo-classes.
+/// @example scss
+///   a {
+///     #{$link} {
+///       color: blue;
+///     }
+///   }
+/// @group typography
+$link: '&:link, &:visited';
+
+// Focus
+// -----
+/// Shortcut for `hover`, `focus`, and `active` pseudo-classes.
+/// @example scss
+///   a {
+///     #{$focus} {
+///       color: red;
+///     }
+///   }
+/// @group typography
+$focus: '&:hover, &:focus, &:active';
+
+//
+// @TODO: Add docs to link-color!
+//
+@mixin link-color-for($background: 'background') {
+  $contrast: contrast($background, 'background', 'action');
+  $hover: color(
+    $background,
+    (
+      'lighten': 55%,
+      'saturate': 100%,
+    )
+  );
+  $hover: if($contrast == color('action'), color('action-hover'), $hover);
+
+  a {
+    #{$link} {
+      color: color($contrast);
+      text-decoration-color: color(
+        $contrast,
+        (
+          'rgba': 0.25,
+        )
+      );
+    }
+
+    #{$focus} {
+      color: color($hover);
+      text-decoration-color: currentColor;
+    }
+  }
+
+  .btn {
+    &,
+    #{$link} {
+      color: color($contrast);
+      text-decoration: none;
+    }
+
+    #{$focus} {
+      background-color: color($contrast);
+      color: color($background);
+    }
+  }
+}

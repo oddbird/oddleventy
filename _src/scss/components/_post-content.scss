@@ -1,0 +1,25 @@
+// Post Content
+// ============
+
+.section-title {
+  margin-top: 0;
+}
+
+.content-block {
+  @include center('medium-page');
+  @include grid;
+  margin: size('double-gutter') auto;
+  max-width: size('full-content');
+
+  @supports (display: grid) {
+    max-width: 100%;
+  }
+}
+
+.content-block-inner {
+  grid-column: col1-start / -1;
+
+  @include above('medium-page') {
+    grid-column: col3-start / span 1;
+  }
+}

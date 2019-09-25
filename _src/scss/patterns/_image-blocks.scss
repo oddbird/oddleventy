@@ -1,0 +1,37 @@
+// Image Blocks
+// ============
+
+.image-block {
+  @include contentblock;
+
+  @include above('small-page') {
+    align-items: center;
+  }
+}
+
+.imageblock-title {
+  font-size: size('h3');
+  margin-top: 0;
+}
+
+.imageblock-link {
+  @include contentblock-highlight('image');
+
+  &[href] {
+    @include transition('move');
+    display: block;
+    text-decoration: none;
+
+    #{$focus} {
+      transform: scale(1.1) translateX(negative('shim'));
+    }
+  }
+}
+
+.imageblock-image {
+  @include contentblock-highlight('image');
+}
+
+.imageblock-content {
+  @include contentblock-copy;
+}

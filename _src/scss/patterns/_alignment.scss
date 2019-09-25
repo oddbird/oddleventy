@@ -1,0 +1,30 @@
+// Alignment Patterns
+// ==================
+
+.align-left {
+  float: left;
+  margin-bottom: size('pad');
+  margin-right: size('pad');
+}
+
+.align-right {
+  float: right;
+  margin-bottom: size('pad');
+  margin-left: size('pad');
+}
+
+.align-center {
+  display: block;
+  margin: 0 auto size('pad');
+}
+
+.align-none {
+  margin-bottom: size('pad');
+}
+
+// Text Centering
+// --------------
+
+.center-text {
+  text-align: center;
+}

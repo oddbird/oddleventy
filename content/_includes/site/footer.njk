@@ -1,0 +1,15 @@
+{% import 'contact.macros.njk' as contact %}
+
+<footer
+  data-layout="footer">
+
+  <p>
+    Copyright © {% getDate 'year' %}
+    {{ site.title }}
+  </p>
+
+  {% if page.url | url != '/contact/' %}
+    {{ contact.form() }}
+  {% endif %}
+</footer>
+

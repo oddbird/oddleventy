@@ -1,0 +1,93 @@
+// Sections Pattern
+// ================
+
+[data-module] {
+  margin: size('gutter') auto;
+  max-width: size('full-content');
+  padding: 0 size('gutter');
+}
+
+.grid-template {
+  max-width: 100%;
+}
+
+// Dividers
+// --------
+
+[divider] {
+  position: relative;
+}
+
+[divider-title] {
+  font-size: inherit;
+}
+
+// Small Dividers
+// --------------
+
+[divider='small'] {
+  @include extend('extend-small');
+  margin: size('spacer') 0 size('gutter');
+  text-align: center;
+}
+
+[divider-line='small'] {
+  @include small-divider;
+}
+
+[divider-title='small'] {
+  @include font-family('body');
+  @include invert;
+  clip-path: polygon(
+    100% 0%,
+    calc(100% - #{size('shim-plus')}) 50%,
+    100% 100%,
+    0 100%,
+    #{size('shim-plus')} 50%,
+    0 0
+  );
+  display: inline-block;
+  margin: size('gutter') auto;
+  padding: size('half-shim') size('spacer');
+}
+
+// Large Dividers
+// --------------
+
+[divider='large'] {
+  @include z-index('large-divider');
+  margin-top: size('spacer');
+  text-align: center;
+
+  [data-region='banner'] & {
+    margin-top: 0;
+  }
+}
+
+[divider-line='large'] {
+  @include section-arrow;
+  box-shadow: 0 2px 2px color('shadow');
+  overflow: visible;
+
+  [data-location*='susysite'] & {
+    @include section-arrow('brand-pink');
+  }
+
+  [data-location*='hermansite'] & {
+    @include section-arrow('action-hover');
+  }
+}
+
+[divider-title='large'] {
+  margin: size('gutter') size('gutter') size('spacer');
+
+  @include above('small-page') {
+    padding-top: size('half-shim');
+  }
+}
+
+.section-end {
+  + section {
+    margin-top: size('spacer');
+  }
+}
