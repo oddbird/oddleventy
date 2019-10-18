@@ -62,12 +62,11 @@ def convert_page(source, add_to_header=None):
     header = yaml.safe_load(header)
     if add_to_header:
         header.update(add_to_header)
-    # Turn list of images into a single image
+    # De-listify images and headline
     if "image" in header:
-        images = header["image"]
-        if len(images) > 1:
-            raise Exception("Found more than one image in yaml header")
-        header["image"] = images[0]
+        header["image"] = header["image"][0]
+    if "headline" in header:
+        header["headline"] = header["headline"][0]
     # Convert rst in summary
     if "summary" in header:
         header["summary"] = convert_rst_to_md(header["summary"])
@@ -124,5 +123,4 @@ if __name__ == "__main__":
 """
 TO DO:
 - move first heading to title in header
-- hoist headline:tagline
 """
