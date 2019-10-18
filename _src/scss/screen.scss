@@ -1,9 +1,34 @@
 // Screen
 // ======
 
+@use '../../node_modules/cascading-color-systems' as ccs with (
+  $prime-hue: 195,
+  $steps: 6,
+  $fades: 1,
+  $fade-background: 20%,
+  $build: true,
+);
+
 // @@@ temporary…
+[data-ccs-colors] {
+  --ccs-neutral--theme: var(--ccs-h--accent);
+  --callout: var(--ccs-accent--bg#{ccs.$steps - 1}-fade);
+  background: var(--ccs--bg-full);
+  color: var(--ccs-prime--fg-full);
+}
+
 svg {
   max-width: 10em;
+  fill: currentColor;
+}
+
+[data-active] {
+  font-weight: bold;
+}
+
+a {
+  color: var(--ccs-prime--fg1);
+  text-decoration-color: var(--ccs-accent--fg2);
 }
 
 // @import 'config/manifest';

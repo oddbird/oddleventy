@@ -14,28 +14,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('content/assets');
   eleventyConfig.addPassthroughCopy('content/robots.txt');
 
-  // collections
-  eleventyConfig.addCollection('orgs', collection => {
-    return collection
-      .getAll()
-      .filter(item => item.data.org && item.data.end === 'ongoing')
-      .sort((a, b) => a.data.start - b.data.start);
-  });
-  eleventyConfig.addCollection('all_orgs', collection => {
-    return collection
-      .getAll()
-      .filter(item => item.data.org)
-      .sort((a, b) => {
-        const ae = a.data.end === 'ongoing' ? null : a.data.end;
-        const be = b.data.end === 'ongoing' ? null : b.data.end;
-
-        if (ae === be) {
-          return a.data.start - b.data.start;
-        }
-        return ae - be;
-      });
-  });
-
   // filters
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('objectKeys', utils.objectKeys);
