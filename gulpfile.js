@@ -12,6 +12,7 @@ const log = require('fancy-log');
 const rollup = require('rollup');
 const rollupBabel = require('rollup-plugin-babel');
 const rollupResolve = require('rollup-plugin-node-resolve');
+const rollupCommonjs = require('rollup-plugin-commonjs');
 const sass = require('gulp-sass');
 const sassdoc = require('sassdoc');
 const sasslint = require('gulp-stylelint');
@@ -113,14 +114,16 @@ gulp.task('js', () => {
             [
               '@babel/preset-env',
               {
+                targets: 'defaults',
                 modules: false,
                 corejs: '3',
                 useBuiltIns: 'usage',
-                debug: true,
               },
             ],
           ],
+          exclude: [/node_modules\/(?!cascading-color-systems)/],
         }),
+        rollupCommonjs(),
       ],
     })
     .then(bundle => {
