@@ -72,7 +72,7 @@ def convert_page(source, add_to_header=None):
     if "summary" in header:
         header["summary"] = convert_rst_to_md(header["summary"])
     # Translate public flag to eleventyExcludeFromCollections
-    if header.get("public") != "yes":
+    if not header.get("public"):
         header.pop("public")
         header["eleventyExcludeFromCollections"] = True
     header = yaml.dump(header, Dumper=Dumper, sort_keys=False)
@@ -111,6 +111,18 @@ if __name__ == "__main__":
     parser.add_argument("files", metavar="N", nargs="+", help="Source files")
     args = parser.parse_args()
 
-    target = args.files.pop()
+    if len(args.files) == 1:
+        target = "."
+    else:
+        target = args.files.pop()
+    if not os.path.exists(target):
+        logger.info(f"Creating target {target}")
+        os.makedirs(target)
     for path in args.files:
         migrate(path, target)
+
+"""
+TO DO:
+- move first heading to title in header
+- hoist headline:tagline
+"""
