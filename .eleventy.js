@@ -45,13 +45,18 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addFilter('activeNav', (collection, nav, page) => {
+    page = pages.fromCollection(collection, page.url);
+    const location = page.data
+      ? page.data.location
+      : page.fileSlug;
+
     const checkUrl = (link) => {
       const target = pages.fromCollection(collection, link.url);
 
       link.title = target.data.title || target.fileSlug;
       link.active = (link.url === page.url)
-        || (link.url === page.location)
-        || (target.fileSlug === page.location);
+        || (link.url === location)
+        || (target.fileSlug === location);
 
       return link;
     };
@@ -66,7 +71,7 @@ module.exports = eleventyConfig => {
 
         item.subnav = subnav;
         item.active = subnav.filter(sub => sub.active).length > 0
-          || (item.title === page.location);
+          || (item.title === location);
 
         return item;
       }

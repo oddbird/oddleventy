@@ -11,7 +11,7 @@ tags:
   - interview
   - creative bloq
 hero:
-  img: 2019/creative-bloq.jpg
+  img: blog/2019/creative-bloq.jpg
 summary: |
   Steve Jenkins interviews me
   about the state of CSS,
