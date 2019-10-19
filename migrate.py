@@ -110,7 +110,7 @@ def convert_page(source, add_to_header=None):
         header["eleventyExcludeFromCollections"] = True
     header = yaml.dump(header, Dumper=Dumper, sort_keys=False)
 
-    result = f"---\n{header}\n---\n\n{content}"
+    result = f"---\n{header}---\n\n{content}"
     return result
 
 
