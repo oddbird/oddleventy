@@ -1,6 +1,6 @@
 {% import 'site/nav.macros.njk' as nav %}
 
-<div data-region="banner">
+<div data-layout="banner">
   <header class="brand">
     <a href="/" rel="home" class="logo-link">
       {% include "icons/oddbird.svg" %}
@@ -8,7 +8,6 @@
   </header>
 
   <nav data-layout="nav">
-    {% set page = collections.all | getPage(page) or page %}
     {{ nav.list(sitenav, page, collections.all) }}
   </nav>
 

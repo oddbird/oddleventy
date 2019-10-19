@@ -12,7 +12,7 @@ const getPublic = collection => {
 
 const fromCollection = (collection, page) => {
   const pageURL = typeof page === 'string' ? page : page.url;
-  return collection.filter(page => page.url === pageURL)[0];
+  return collection.filter(page => page.url === pageURL)[0] || page;
 };
 
 const seriesNav = (page, collection) => {
