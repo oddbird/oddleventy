@@ -2,6 +2,7 @@
 title: Sass Layout in 2013 and the Future of Susy
 public: true
 tags:
+  - _post
   - Susy
   - Susy2
   - Layout
@@ -24,7 +25,6 @@ summary: |
   let you mix-and-match to customize for every site, and change your
   output with simple extensions?
 date: 2013-01-01
-
 ---
 
 The web is littered with grid systems and 'frameworks' that force your

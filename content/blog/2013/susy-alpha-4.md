@@ -2,6 +2,7 @@
 title: 'Susy Next: Alpha 4'
 public: true
 tags:
+  - _post
   - Susy
   - Susy2
   - Layout
@@ -14,7 +15,6 @@ summary: |
 
     [Susy Next alpha 4]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.4
 date: 2013-09-05
-
 ---
 
 I don't have a lot of time to delve, but let me run through some of the

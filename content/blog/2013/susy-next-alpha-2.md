@@ -2,6 +2,7 @@
 title: 'Susy Next: The Second Alpha'
 public: true
 tags:
+  - _post
   - Susy
   - Susy2
   - Layout
@@ -16,7 +17,6 @@ summary: |
 
     [second alpha]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.2
 date: 2013-05-03
-
 ---
 
 I've just released the [second alpha] of Susy Next. Go download and play

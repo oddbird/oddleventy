@@ -2,6 +2,7 @@
 title: 'Susy Next: The First Alpha'
 public: true
 tags:
+  - _post
   - Susy
   - Susy2
   - Layout
@@ -16,7 +17,6 @@ summary: |
   and syntax, but they are more "proof of concept" experimentation than
   usable interface.
 date: 2013-01-29
-
 ---
 
 Last night we released the very first [alpha build] of [Susy Next].

@@ -3,14 +3,14 @@ title: 2013 Wrap-up
 public: true
 author: carl
 tags:
+  - _post
   - Year in Review
   - Community
 image:
-  src: blog/2013.jpg
+  src: blog/2013/review.jpg
 summary: |
   A brief review of 2013: OddBird, year six.
 date: 2013-12-30
-
 ---
 
 As we wrap up our sixth year, it seems like a good time to share our
