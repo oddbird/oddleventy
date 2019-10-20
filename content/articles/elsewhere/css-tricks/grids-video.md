@@ -24,6 +24,7 @@ summary: |
   where folks are talking more and more about it
   and that it's becoming something we should learning.
 ---
+
 {% import "content.macros.njk" as content %}
 
 {{ content.fig(

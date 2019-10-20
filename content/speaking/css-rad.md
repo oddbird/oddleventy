@@ -46,4 +46,3 @@ now and into the future.
 - Understanding caniuse.com as a guide, rather than a gatekeeper
 - Understand the radical vision that makes design on the web so unique…
   and weird
-

@@ -1,30 +1,34 @@
+'use strict';
+
 const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
 
-const utils = require('./_src/filters/utils');
-const events = require('./_src/filters/events');
-const pages = require('./_src/filters/pages');
-const tags = require('./_src/filters/tags');
-const time = require('./_src/filters/time');
-const type = require('./_src/filters/type');
+const utils = require('./src/filters/utils');
+const events = require('./src/filters/events');
+const pages = require('./src/filters/pages');
+const tags = require('./src/filters/tags');
+const time = require('./src/filters/time');
+const type = require('./src/filters/type');
 
-module.exports = eleventyConfig => {
+module.exports = (eleventyConfig) => {
+  eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addPlugin(hljs);
 
   // pass-through
-  eleventyConfig.addPassthroughCopy('content/assets');
+  eleventyConfig.addPassthroughCopy({ _built: 'assets' });
+  eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
   eleventyConfig.addPassthroughCopy('content/robots.txt');
 
   // collections
-  eleventyConfig.addCollection('orgs', collection => {
-    return collection
+  eleventyConfig.addCollection('orgs', (collection) =>
+    collection
       .getAll()
-      .filter(item => item.data.org && item.data.end === 'ongoing')
-      .sort((a, b) => a.data.start - b.data.start);
-  });
-  eleventyConfig.addCollection('all_orgs', collection => {
-    return collection
+      .filter((item) => item.data.org && item.data.end === 'ongoing')
+      .sort((a, b) => a.data.start - b.data.start),
+  );
+  eleventyConfig.addCollection('all_orgs', (collection) =>
+    collection
       .getAll()
-      .filter(item => item.data.org)
+      .filter((item) => item.data.org)
       .sort((a, b) => {
         const ae = a.data.end === 'ongoing' ? null : a.data.end;
         const be = b.data.end === 'ongoing' ? null : b.data.end;
@@ -33,8 +37,8 @@ module.exports = eleventyConfig => {
           return a.data.start - b.data.start;
         }
         return ae - be;
-      });
-  });
+      }),
+  );
 
   // filters
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
@@ -53,9 +57,10 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('withTag', tags.withTag);
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
-  eleventyConfig.addFilter('inTopTagCount', count => {
-    return typeof count === 'number' && count <= tags.topCount;
-  });
+  eleventyConfig.addFilter(
+    'inTopTagCount',
+    (count) => typeof count === 'number' && count <= tags.topCount,
+  );
 
   eleventyConfig.addFilter('getPage', pages.fromCollection);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
@@ -71,35 +76,39 @@ module.exports = eleventyConfig => {
       const target = pages.fromCollection(collection, link.url);
 
       link.title = target.data.title || target.fileSlug;
-      link.active = (link.url === page.url)
-        || (link.url === page.location)
-        || (target.fileSlug === page.location);
+      link.active =
+        link.url === page.url ||
+        link.url === page.location ||
+        target.fileSlug === page.location;
 
       return link;
     };
 
-    function checkItem(item) {
+    const checkItem = function(item) {
       if (item.url) {
         return checkUrl(item);
       }
 
       if (item.subnav) {
-        const subnav = item.subnav.map(sub => checkUrl(sub));
+        const subnav = item.subnav.map((sub) => checkUrl(sub));
 
         item.subnav = subnav;
-        item.active = subnav.filter(sub => sub.active).length > 0
-          || (item.title === page.location);
+        item.active =
+          subnav.filter((sub) => sub.active).length > 0 ||
+          item.title === page.location;
 
         return item;
       }
+
+      return undefined;
     };
 
-    return nav.map(main => checkItem(main));
+    return nav.map((main) => checkItem(main));
   });
 
   eleventyConfig.addFilter('getEvents', events.get);
   eleventyConfig.addFilter('countEvents', events.count);
-  eleventyConfig.addFilter('groupName', group => events.groupNames[group]);
+  eleventyConfig.addFilter('groupName', (group) => events.groupNames[group]);
 
   eleventyConfig.addFilter('amp', type.amp);
   eleventyConfig.addFilter('typogr', type.set);
@@ -109,9 +118,10 @@ module.exports = eleventyConfig => {
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.render);
   eleventyConfig.addPairedShortcode('mdInline', type.inline);
-  eleventyConfig.addShortcode('getDate', format => {
-    return `${time.getDate(time.now, format)}`;
-  });
+  eleventyConfig.addShortcode(
+    'getDate',
+    (format) => `${time.getDate(time.now, format)}`,
+  );
 
   // markdown
   eleventyConfig.setLibrary('md', type.mdown);

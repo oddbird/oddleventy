@@ -95,6 +95,7 @@ media:
   - <<: *clarity
   - <<: *django
 ---
+
 {% import "content.macros.njk" as content %}
 
 For those few cases where a grid really is required,
@@ -108,11 +109,11 @@ and how to get started with only a few lines of code.
 - How to make grid-math simple, and lose the grid-system.
 - How to make grid-systems work for you when you need them.
 
-------
+---
 
 {{ content.quotes(press) }}
 
-------
+---
 
 {{ content.fig(
   data=media,

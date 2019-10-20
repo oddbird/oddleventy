@@ -71,6 +71,7 @@ media:
   - span: full
     <<: *drupal
 ---
+
 {% import "content.macros.njk" as content %}
 
 The web is more than a technology platform,
@@ -89,11 +90,11 @@ and designing for edge-cases with integrated teams.
 - How we integrate developers and designers in tight feedback cycles
 - How we talk to clients about design choices
 
-------
+---
 
 {{ content.quotes(press) }}
 
-------
+---
 
 {{ content.fig(
   data=media,

@@ -111,6 +111,7 @@ media:
   - span: full
     <<: *jsconf
 ---
+
 {% import "content.macros.njk" as content %}
 
 CSS has come a long way since the browser wars of the late 90s.
@@ -125,11 +126,11 @@ without all the invasive Javascript.
 - Practical examples and use-cases for data-infused design.
 - Integrating with CSS Grids to build layouts on-the-fly.
 
-------
+---
 
 {{ content.quotes(press) }}
 
-------
+---
 
 {{ content.fig(
   data=media,

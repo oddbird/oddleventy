@@ -38,6 +38,7 @@ media:
   - span: full
     <<: *cssconf
 ---
+
 {% import "content.macros.njk" as content %}
 
 We'll find ways to integrate maps into any project
@@ -50,7 +51,7 @@ before we push them to their limits.
 - Automating pattern libraries and style guides based on maps.
 - Fun with maps for data-storage, and natural-language syntax.
 
-------
+---
 
 {{ content.fig(
   data=media,
