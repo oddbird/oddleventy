@@ -1,5 +1,7 @@
 # OddLeventy
 
+[![CircleCI](https://circleci.com/gh/oddbird/oddleventy.svg?style=svg)](https://circleci.com/gh/oddbird/oddleventy)
+
 This site is built using:
 
 - HTML, of course
