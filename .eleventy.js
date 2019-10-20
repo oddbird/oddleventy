@@ -17,6 +17,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
   eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
   eleventyConfig.addPassthroughCopy('content/robots.txt');
+  eleventyConfig.addPassthroughCopy('content/favicon.ico');
 
   // filters
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);

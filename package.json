@@ -47,7 +47,7 @@
     "serve:prod": "run-s build:assets:prod build:site eleventy:serve",
     "build:site": "run-s site:clean sassdoc",
     "build:assets": "npm-run-all assets:clean -p image:copy js sass",
-    "build:assets:prod": "npm-run-all assets:clean -p image:min js:prod sass:prod",
+    "build:assets:prod": "npm-run-all assets:clean -p image:copy js:prod sass:prod",
     "build": "run-s build:assets build:site eleventy",
     "prod": "run-s build:assets:prod build:site eleventy"
   },
