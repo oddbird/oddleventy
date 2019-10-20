@@ -1,8 +1,7 @@
 ---
-feature: true
 title: Jump Start Sass
 sub: Get up to speed with Sass in a weekend…
-hero:
+image:
   img: writing/jssass.jpg
   caption: |
     co-writen with my friend

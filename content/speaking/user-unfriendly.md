@@ -1,8 +1,9 @@
 ---
 title: User Unfriendly
 sub: designing software for humans, with other humans
+author: miriam
 slides: https://www.oddbooksapp.com/book/software-for-humans
-hero:
+image:
   img: talks/user-unfriendly.png
 tags:
   - speaking

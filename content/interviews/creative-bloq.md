@@ -10,7 +10,7 @@ tags:
   - code
   - interview
   - creative bloq
-hero:
+image:
   img: blog/2019/creative-bloq.jpg
 summary: |
   Steve Jenkins interviews me

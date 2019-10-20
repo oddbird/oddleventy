@@ -1,6 +1,5 @@
 ---
-title: Your Own Damn [Susy] System
-public: true
+title: Your Own Damn Susy System
 tags:
   - _post
   - Susy

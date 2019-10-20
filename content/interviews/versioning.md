@@ -3,7 +3,7 @@ title: Versioning Show, Episode 8
 venue: SitePoint
 url: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
 date: 2016-10-13
-hero:
+image:
   img: blog/2016/versioning.png
 tags:
   - _calendar

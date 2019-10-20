@@ -1,6 +1,5 @@
 ---
 title: 'Susy Next: The First Alpha'
-public: true
 tags:
   - _post
   - Susy

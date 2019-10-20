@@ -1,9 +1,8 @@
 ---
-feature: true
 title: More CSS Charts, with Grid & Custom Properties
 url: https://css-tricks.com/css-charts-grid-custom-properties/
 date: 2017-08-11
-hero:
+image:
   img: blog/2017/trick-charts.jpg
 summary: |
   Inspired by Robin Rendle,

@@ -1,6 +1,5 @@
 ---
 title: PostgreSQL Transactions and SQLAlchemy
-public: true
 author: carl
 tags:
   - _post

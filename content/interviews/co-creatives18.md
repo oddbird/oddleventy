@@ -3,7 +3,7 @@ title: 100 Colorado Creatives 4.0
 date: 2018-02-19
 url: https://www.westword.com/arts/miriam-suzanne-talks-denver-arts-ahead-of-jane-eyre-10005120
 venue: Westword
-hero:
+image:
   img: art/theater/10myths.jpg
 tags:
   - _calendar

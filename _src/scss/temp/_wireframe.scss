@@ -21,6 +21,25 @@
   min-height: 100vh;
 }
 
+.to-content {
+  background: var(--action);
+  color: var(--bg);
+  opacity: 0;
+  padding: 0 1em;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transform: translateY(-100%);
+
+  &:focus,
+  &:active {
+    opacity: 1;
+    outline: 2px dotted var(--fg);
+    pointer-events: initial;
+    transform: translateY(0);
+  }
+}
+
 [data-layout='menu'] {
   grid-area: menu;
   margin: 0;

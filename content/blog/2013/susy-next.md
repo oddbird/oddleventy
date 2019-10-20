@@ -1,6 +1,5 @@
 ---
 title: Sass Layout in 2013 and the Future of Susy
-public: true
 tags:
   - _post
   - Susy

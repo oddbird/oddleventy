@@ -1,10 +1,8 @@
 ---
-layout: base
-type: About Us
 title: Meet the Odd Birds
 tagline: The people you'll work with...
-location: birds
-hero:
+permalink: birds/index.html
+image:
   src: pages/faces-hero.jpg
 summary: |
   **As a client, you'll get to know our tight-knit team**
@@ -23,3 +21,11 @@ or [in person][meetup] at a meetup or conference.
 
 [slack]: http://friends.oddbird.net
 [meetup]: /services/speaking/
+
+------
+
+## Birds
+
+{% for bird in collections.birds %}
+- [{{ bird.data.title }}]({{ bird.url }})
+{% endfor %}

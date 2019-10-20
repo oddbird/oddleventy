@@ -2,7 +2,7 @@
 title: Loops in CSS Preprocessors
 url: https://css-tricks.com/loops-css-preprocessors/
 date: 2016-12-02
-hero:
+image:
   img: blog/2016/trick-loops.jpg
 summary: |
   No matter what acronym drives your selectors

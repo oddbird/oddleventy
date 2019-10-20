@@ -1,6 +1,5 @@
 ---
 title: Python for Ada
-public: true
 author: carl
 tags:
   - _post

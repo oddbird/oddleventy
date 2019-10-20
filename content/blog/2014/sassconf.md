@@ -1,6 +1,5 @@
 ---
 title: SassConf 2014
-public: true
 author: miriam
 tags:
   - _post

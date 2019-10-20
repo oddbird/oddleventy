@@ -14,6 +14,12 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('content/assets');
   eleventyConfig.addPassthroughCopy('content/robots.txt');
 
+  eleventyConfig.addCollection("birds", function(collection) {
+    return collection
+      .getAll()
+      .filter(item => item.data.bird);
+  });
+
   // filters
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('objectKeys', utils.objectKeys);
@@ -39,7 +45,16 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('seriesNav', pages.seriesNav);
   eleventyConfig.addFilter('titleSort', pages.titleSort);
+
+  eleventyConfig.addFilter('byBird', (collection, bird) => {
+    return collection.filter(page => {
+      author = page.data.author || '';
+      return (author === bird) || author.includes(bird);
+    });
+  });
+
   eleventyConfig.addFilter('authorPage', (collection, bird) => {
+    bird = typeof bird === 'string' ? bird : bird[0];
     const url = `/authors/${bird}/`;
     return pages.fromCollection(collection, url);
   });

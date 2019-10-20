@@ -2,8 +2,9 @@
 title: Dynamic CSS
 banner: Dynamic CSS -- layouts & beyond
 sub: with grids & custom properties
+author: miriam
 slides: https://talks.oddbird.net/dynamic-css/
-hero:
+image:
   img: talks/miriam.jpg
 tags:
   - speaking

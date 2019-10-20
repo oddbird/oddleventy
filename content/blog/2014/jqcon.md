@@ -1,6 +1,5 @@
 ---
 title: jQuery Chicago 2014
-public: true
 author: jonny
 tags:
   - _post

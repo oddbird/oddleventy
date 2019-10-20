@@ -1,6 +1,7 @@
 ---
 title: Agile Design Systems
 sub: with meaningful code and automation
+author: miriam
 slides: https://talks.oddbird.net/agile-systems/
 tags:
   - speaking

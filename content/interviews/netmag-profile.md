@@ -11,7 +11,7 @@ tags:
   - interview
   - net magazine
   - creative bloq
-hero:
+image:
   img: elsewhere/netmag-mia.jpg
   alt: magaine spread (full text below)
 summary: |
