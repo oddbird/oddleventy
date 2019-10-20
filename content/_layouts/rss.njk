@@ -7,7 +7,7 @@
   <updated>{{ collections._post | rssLatest }}</updated>
   <id>{{ site.url }}/</id>
   <author>
-    <name>{{ site.author }}</name>
+    <name>{{ site.title }}</name>
     <email>{{ site.email }}</email>
   </author>
   {%- for post in collections._post | getPublic %}

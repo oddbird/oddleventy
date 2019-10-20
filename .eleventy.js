@@ -18,11 +18,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
   eleventyConfig.addPassthroughCopy('content/robots.txt');
 
-  eleventyConfig.addCollection("birds", function(collection) {
-    return collection
-      .getAll()
-      .filter(item => item.data.bird);
-  });
+  eleventyConfig.addCollection('birds', (collection) =>
+    collection.getAll().filter((item) => item.data.bird),
+  );
 
   // filters
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
@@ -51,12 +49,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('seriesNav', pages.seriesNav);
   eleventyConfig.addFilter('titleSort', pages.titleSort);
 
-  eleventyConfig.addFilter('byBird', (collection, bird) => {
-    return collection.filter(page => {
-      author = page.data.author || '';
-      return (author === bird) || author.includes(bird);
-    });
-  });
+  eleventyConfig.addFilter('byBird', (collection, bird) =>
+    collection.filter((page) => {
+      const author = page.data.author || '';
+      return author === bird || author.includes(bird);
+    }),
+  );
 
   eleventyConfig.addFilter('authorPage', (collection, bird) => {
     bird = typeof bird === 'string' ? bird : bird[0];

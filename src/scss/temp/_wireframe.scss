@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 [data-layout] {
   & + & {
     border-top: 1px solid;
