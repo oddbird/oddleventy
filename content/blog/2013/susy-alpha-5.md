@@ -42,8 +42,8 @@ In brief: **Sass 3.3 is now required** and **Compass is no longer
 required**, although we do tie in with Compass features such as
 vertical-rhythms if they are available.
 
-[sassscript maps]: https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md#sassscript-maps
-[source maps]: https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md#source-maps
+  [SassScript Maps]: https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md#sassscript-maps
+  [Source Maps]: https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md#source-maps
 
 ## Settings
 
@@ -137,27 +137,27 @@ added a `full` mixin. Use it!
 
 ## Other Changes
 
-- `bleed` now takes standard span syntax, with multiple (TRBL) spans,
-  e.g. `bleed(1em 2 of 8)` for 1em top/bottom and 2-columns
-  left/right. Use `bleed-x` and `bleed-y` mixins for horizontal and
-  vertical shortcuts.
-- Span arguments now accept `narrow`, `wide`, or `wider` keywords. The
-  `wide` keyword replaces the old `outer` keyword. A standard `span`
-  is called `narrow`, `wide` adds the width of one gutter, and `wider`
-  adds two gutters.
-- Re-wrote grid debugging for more concise & accurate output.
-  - Changed `grid-background()` to `show-grid()`/`show-grids()`.
-  - Changed `overlay-grid()` to `grid-overlay()`.
-  - Moved settings into `$debug` map:
-    `$debug: (color: rgba(#66f, .25), toggle: top right);`
-  - Removed the overlay-position setting.
-  - Only display vertical-rhythms when `$base-line-height` is
-    available.
-- `first`/`alpha`/`last`/`omega`/`nth-` mixins now require grid
-  context.
+-   `bleed` now takes standard span syntax, with multiple (TRBL) spans,
+    e.g. `bleed(1em 2 of 8)` for 1em top/bottom and 2-columns
+    left/right. Use `bleed-x` and `bleed-y` mixins for horizontal and
+    vertical shortcuts.
+-   Span arguments now accept `narrow`, `wide`, or `wider` keywords. The
+    `wide` keyword replaces the old `outer` keyword. A standard `span`
+    is called `narrow`, `wide` adds the width of one gutter, and `wider`
+    adds two gutters.
+-   Re-wrote grid debugging for more concise & accurate output.
+    -   Changed `grid-background()` to `show-grid()`/`show-grids()`.
+    -   Changed `overlay-grid()` to `grid-overlay()`.
+    -   Moved settings into `$debug` map:
+        `$debug: (color: rgba(#66f, .25), toggle: top right);`
+    -   Removed the overlay-position setting.
+    -   Only display vertical-rhythms when `$base-line-height` is
+        available.
+-   `first`/`alpha`/`last`/`omega`/`nth-` mixins now require grid
+    context.
 
 We're in the final stages here, working hard to get the last pieces in
 place and give it a coat of polish before it lands. Any help or feedback
 is appreciated, just file an issue on [GitHub], and we'll talk.
 
-[github]: https://github.com/oddbird/susy/issues?milestone=4&state=open
+  [GitHub]: https://github.com/oddbird/susy/issues?milestone=4&state=open

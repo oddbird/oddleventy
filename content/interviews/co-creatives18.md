@@ -23,7 +23,7 @@ tags:
 > with theatrical colleagues Julie Rada and Kenny Storms,
 > most currently working under the title of Grapefruit Lab,
 > while also performing with the band Teacup Gorilla
-> and creating Riding Sidesaddle\*,
+> and creating Riding Sidesaddle*,
 > a morphing book project composed on interchangeable index cards.
 > As Grapefruit Lab prepares to premiere its first effort,
 > **JANE/EYRE**,

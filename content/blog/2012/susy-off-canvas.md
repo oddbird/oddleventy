@@ -19,11 +19,11 @@ summary: |
 date: 2012-11-27
 ---
 
-**UPDATE**: _I fixed a bug with show-left failing on small screens. The
+**UPDATE**: *I fixed a bug with show-left failing on small screens. The
 main area was dropping below the left sidebar, as floats sometimes do.
 The fix is actually simpler than the original code: just set and leave a
 100% negative right-margin on the main area, removing all state changes
-to that margin._
+to that margin.*
 
 The [off-canvas](http://jasonweaver.name/lab/offcanvas/) layout pattern
 for responsive websites has been getting all the attention lately, and
@@ -43,7 +43,8 @@ I've used a few shortcuts that require the [latest Susy
 release](http://rubygems.org/gems/susy) (1.0.5), but the concepts remain
 true in older versions as well.
 
-## Basic Markup:
+Basic Markup:
+-------------
 
 ```html
 <div class="container">
@@ -63,13 +64,14 @@ We have a simple container with header, footer, and three body columns:
 left, right, and main. Inside the header we have links we can hijack in
 JavaScript to toggle state body-classes.
 
-## Susy Settings:
+Susy Settings:
+--------------
 
 ```scss
-$total-columns: 5;
-$column-width: 4em;
-$gutter-width: 1em;
-$grid-padding: 1em;
+$total-columns    : 5;
+$column-width     : 4em;
+$gutter-width     : 1em;
+$grid-padding     : 1em;
 ```
 
 Since this is a mobile-first design pattern, we'll start with settings
@@ -80,8 +82,8 @@ I'm also going to establish my medium and large column settings right
 away:
 
 ```scss
-$medium-columns: 8;
-$large-columns: 12;
+$medium-columns   : 8;
+$large-columns    : 12;
 ```
 
 And I'll set Susy's `$container-width` override to the largest layout
@@ -89,7 +91,8 @@ width, so the container is fluid up to that point:
 
     $container-width  : container-outer-width($large-columns);
 
-## Establish the Container:
+Establish the Container:
+------------------------
 
 ```scss
 .container {
@@ -102,15 +105,16 @@ Besides establishing the usual Susy container, I also set `overflow` to
 `hidden` so that our off-canvas elements don't trigger a horizontal
 scrollbar.
 
-## Small Layout:
+Small Layout:
+-------------
 
 For our smallest layout the `.main` section is visible at all times,
 full-width by default or pushed to one side to make room for the `.left`
 or `.right` sections to appear.
 
 ```scss
-$anchor: 1;
-$side: $total-columns - $anchor;
+$anchor : 1;
+$side   : $total-columns - $anchor;
 ```
 
 I've created an `$anchor` variable to control how many columns of the
@@ -149,11 +153,12 @@ function is used to push our main section only as far as it needs to go:
 `space()` represents the space taken by a given number of `columns()`
 with the final `gutter()` included.
 
-## Medium Layout:
+Medium Layout:
+--------------
 
 ```scss
-$main: 5;
-$side: $medium-columns - $main;
+    $main : 5;
+    $side : $medium-columns - $main;
 ```
 
 These variables simply establish the widths we will use for our columns.
@@ -189,7 +194,8 @@ adjusted as well.
 We also hide the left toggle ( `[href="#left"]` ) as it is no longer
 needed.
 
-## Large Layout:
+Large Layout:
+-------------
 
     $main : 6;
     $side : ($large-columns - $main)/2;
@@ -224,7 +230,8 @@ have leftover classes, and you're done.
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </figure>
 
-## Final Tweaks
+Final Tweaks
+------------
 
 I've added a number of styles to make it obvious what's going on and
 highlight the transitions in our

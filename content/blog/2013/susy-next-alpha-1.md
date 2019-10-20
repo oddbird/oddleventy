@@ -36,6 +36,6 @@ and flexability this engine has to offer.
 
 Check out the [susy-next branch on GitHub].
 
-[alpha build]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.1
-[susy next]: /2013/01/01/susy-next/
-[susy-next branch on github]: https://github.com/oddbird/susy/tree/susy-next
+  [alpha build]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.1
+  [Susy Next]: /2013/01/01/susy-next/
+  [susy-next branch on GitHub]: https://github.com/oddbird/susy/tree/susy-next

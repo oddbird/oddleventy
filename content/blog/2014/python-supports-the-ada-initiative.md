@@ -19,9 +19,9 @@ date: 2014-09-23
 <a href="https://supportada.org/?campaign=python"><img style="float: right;" src="/assets/images/blog/2014/Ada-Initiative-color-sticker-208x300.png"></a>
 
 [Donate] to the [Ada Initiative] today to support women in open
-technology and culture. If we hit **\$10,000** by Friday, [Jacob] and
+technology and culture. If we hit **$10,000** by Friday, [Jacob] and
 [Alex] and [Jim Meyer] and I will match your donations to make it a nice
-round **\$20k**. Life is short, go [donate now][donate]!
+round **$20k**. Life is short, go [donate now][Donate]!
 
 (**Update**: Shortly after we announced this drive, [Jim Meyer][]
 [pitched in] to raise the match amount from $7500 to $10,000! Awesome!)
@@ -41,9 +41,9 @@ Three years later, thanks to the incredible outreach efforts of Jessica
 McKellar, the amazing [PyLadies], the Ada Initiative, and many others,
 women gave a **full third** of the talks at PyCon 2014.
 
----
+------------------------------------------------------------------------
 
-[<img src="/assets/images/blog/2014/miko.jpg" class="align-left size-quarter align-left size-quarter" alt="Miko smiling while playing outside" />][donate]
+[<img src="/assets/images/blog/2014/miko.jpg" class="align-left size-quarter align-left size-quarter" alt="Miko smiling while playing outside" />][Donate]
 
 I have two sons, a seven-year-old and a four-month-old (yep, that's
 him). With the second just arrived, I think a lot these days about the
@@ -87,25 +87,25 @@ Thanks for listening,
 
 Carl
 
-[donate]: https://supportada.org/?campaign=python
-[ada initiative]: http://adainitiative.org/
-[jacob]: http://jacobian.org/
-[alex]: http://alexgaynor.net/
-[jim meyer]: http://blog.geekdaily.org
+[Donate]: https://supportada.org/?campaign=python
+[Ada Initiative]: http://adainitiative.org/
+[Jacob]: http://jacobian.org/
+[Alex]: http://alexgaynor.net/
+[Jim Meyer]: http://blog.geekdaily.org
 [pitched in]: https://twitter.com/purp/status/514453504253886464
 [start a company]: /2013/12/30/sixth-year/
 [become a public speaker]: http://pyvideo.org/speaker/35/carl-meyer
 [recognized for my contributions]: https://docs.djangoproject.com/en/dev/internals/team/
-[first pycon talk]: http://pyvideo.org/video/389/pycon-2011--reverse-engineering-ian-bicking--39-s
-[pyladies]: http://www.pyladies.com/
-[zoe quinn]: http://www.cracked.com/blog/5-things-i-learned-as-internets-most-hated-person/
+[first PyCon talk]: http://pyvideo.org/video/389/pycon-2011--reverse-engineering-ian-bicking--39-s
+[PyLadies]: http://www.pyladies.com/
+[Zoe Quinn]: http://www.cracked.com/blog/5-things-i-learned-as-internets-most-hated-person/
 [any number of other women]: http://geekfeminism.wikia.com/wiki/Timeline_of_incidents
 [pervasive sexual harassment]: http://anontechlady.wordpress.com/2014/08/04/my-first-oscon/
 [playing on the easy setting]: http://whatever.scalzi.com/2012/05/15/straight-white-male-the-lowest-difficulty-setting-there-is/
-[other attributes that i did nothing to earn]: http://www.confreaks.com/videos/4454-DjangoCon2014-all-you-need-is-l
+[other attributes that I did nothing to earn]: http://www.confreaks.com/videos/4454-DjangoCon2014-all-you-need-is-l
 [leading]: http://www.forbes.com/sites/women2/2013/04/09/record-number-of-women-give-tech-talks-at-pycon-2013/
 [way]: http://adainitiative.org/2012/10/leading-open-source-conference-pycon-us-shares-responsereport-guidelines-for-harassment/
-[code of conduct]: https://www.djangoproject.com/conduct/
-["that time i wasn't harassed at a conference"]: http://geekfeminism.org/2013/08/15/that-time-i-wasnt-harassed-at-a-conference/
+[Code of Conduct]: https://www.djangoproject.com/conduct/
+["that time I wasn't harassed at a conference"]: http://geekfeminism.org/2013/08/15/that-time-i-wasnt-harassed-at-a-conference/
 [working every day]: http://adainitiative.org/what-we-do/workshops-and-training/
 [make it a reality]: http://adacamp.org/

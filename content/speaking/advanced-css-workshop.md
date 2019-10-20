@@ -34,7 +34,6 @@ summary: |
   to maintaining complex design systems across applications,
   CSS is the web-language of design.
 ---
-
 {% import "content.macros.njk" as content %}
 
 Like all web languages,
@@ -54,11 +53,11 @@ passing data between JS and CSS,
 and combining modern techniques to solve real,
 everyday interface problems.
 
----
+------
 
 {{ content.quotes(press) }}
 
----
+------
 
 ## In this workshop, you’ll learn:
 

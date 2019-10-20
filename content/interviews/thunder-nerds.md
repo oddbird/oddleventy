@@ -24,7 +24,6 @@ media:
     width: 560
     height: 315
 ---
-
 {% import "content.macros.njk" as content %}
 
 {{ content.fig(

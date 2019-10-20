@@ -52,7 +52,6 @@ media:
   - span: full
     <<: *vue
 ---
-
 {% import "content.macros.njk" as content %}
 
 We don’t all have dedicated teams and budgets
@@ -65,11 +64,11 @@ living design systems in an agile and integrated process?
 - Designing and integrating toolkits that force pattern-making.
 - Examples of what weve done, where weve failed, and where were headed.
 
----
+------
 
 {{ content.quotes(press) }}
 
----
+------
 
 {{ content.fig(
   data=media,

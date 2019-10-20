@@ -21,6 +21,7 @@ in order to run.
 [code]: https://gist.github.com/3140730
 [sass3]: http://rubygems.org/gems/sass
 
+
 ## Stripes Function
 
 Start by setting a variable to the colors you want:
@@ -45,7 +46,7 @@ Here's the function:
   $width: 100% / length($colors);
 
   @for $i from 1 through length($colors) {
-    $pop: nth($colors, $i);
+    $pop: nth($colors,$i);
     $new: $pop ($width * ($i - 1)), $pop ($width * $i);
     $gradient: join($gradient, $new, comma);
   }
@@ -65,7 +66,9 @@ And how to use it:
 Jina has posted a demo and explanation
 on [CodePen][cp].
 
-[cp]: http://codepen.io/jina/pen/iosjp 'The real lesson here
+[cp]: http://codepen.io/jina/pen/iosjp
+
+(The real lesson here
 is that all the colors of the rainbow
 are acceptable CSS color keywords.
-Go forth and queer the web.'
+Go forth and queer the web.)

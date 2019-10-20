@@ -68,7 +68,6 @@ media:
   - <<: *cascadia
   - <<: *clarity
 ---
-
 {% import "content.macros.njk" as content %}
 
 Behind the scenes those patterns have to live in our code,
@@ -82,7 +81,7 @@ without extensive maintenance.
 - Designing and integrating toolkits that force pattern-making.
 - Examples of what we've done, where we've failed, and where we're headed.
 
----
+------
 
 {{ content.fig(
   data=media,

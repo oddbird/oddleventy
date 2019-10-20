@@ -26,7 +26,7 @@
     "sass:postcss:prod": "postcss _built/css/{screen,styleguide}.css --use autoprefixer --use cssnano --replace --map",
     "sassdoc": "sassdoc src/scss/screen.scss",
     "prettier:js": "prettier --write \"**/*.js\"",
-    "prettier:other": "prettier --write \"**/*.{json,md,yml}\"",
+    "prettier:other": "prettier --write \"**/*.{json,yml}\"",
     "eslint": "eslint \"*.js\" \"**/*.js\" --fix",
     "lint": "run-p lint:* prettier:other",
     "lint:js": "run-s prettier:js eslint",
@@ -105,7 +105,7 @@
       "stylelint --fix",
       "git add"
     ],
-    "*.{json,md,yml}": [
+    "*.{json,yml}": [
       "prettier --write",
       "git add"
     ]
