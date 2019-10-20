@@ -86,3 +86,7 @@ env/
 
 # next.js build output
 .next
+
+# Python
+/venv
+.python-version

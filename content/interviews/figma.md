@@ -4,7 +4,7 @@ date: 2017-12-15
 url: https://blog.figma.com/18-designers-predict-ui-ux-trends-for-2018-2d04d41361c6
 venue: Figma Design
 hero:
-  img: 2017/figma.png
+  img: blog/2017/figma.png
 tags:
   - _calendar
   - _post

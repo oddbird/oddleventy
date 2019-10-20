@@ -18,28 +18,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
   eleventyConfig.addPassthroughCopy('content/robots.txt');
 
-  // collections
-  eleventyConfig.addCollection('orgs', (collection) =>
-    collection
-      .getAll()
-      .filter((item) => item.data.org && item.data.end === 'ongoing')
-      .sort((a, b) => a.data.start - b.data.start),
-  );
-  eleventyConfig.addCollection('all_orgs', (collection) =>
-    collection
-      .getAll()
-      .filter((item) => item.data.org)
-      .sort((a, b) => {
-        const ae = a.data.end === 'ongoing' ? null : a.data.end;
-        const be = b.data.end === 'ongoing' ? null : b.data.end;
-
-        if (ae === be) {
-          return a.data.start - b.data.start;
-        }
-        return ae - be;
-      }),
-  );
-
   // filters
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('objectKeys', utils.objectKeys);
@@ -72,14 +50,17 @@ module.exports = (eleventyConfig) => {
   });
 
   eleventyConfig.addFilter('activeNav', (collection, nav, page) => {
+    page = pages.fromCollection(collection, page.url);
+    const location = page.data ? page.data.location : page.fileSlug;
+
     const checkUrl = (link) => {
       const target = pages.fromCollection(collection, link.url);
 
       link.title = target.data.title || target.fileSlug;
       link.active =
         link.url === page.url ||
-        link.url === page.location ||
-        target.fileSlug === page.location;
+        link.url === location ||
+        target.fileSlug === location;
 
       return link;
     };
@@ -95,7 +76,7 @@ module.exports = (eleventyConfig) => {
         item.subnav = subnav;
         item.active =
           subnav.filter((sub) => sub.active).length > 0 ||
-          item.title === page.location;
+          item.title === location;
 
         return item;
       }

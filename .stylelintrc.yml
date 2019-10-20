@@ -18,7 +18,11 @@ rules:
   prettier/prettier: true
 
   at-rule-no-unknown: null
-  scss/at-rule-no-unknown: true
+  scss/at-rule-no-unknown:
+    - true
+    - ignoreAtRules:
+        - use
+        - forward
 
   # possible errors (these are all on by default)
   no-descending-specificity: null
