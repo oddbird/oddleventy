@@ -1,7 +1,7 @@
 // @@@ temporary…
 @forward 'wireframe';
 
-@use '../../node_modules/cascading-color-systems' as ccs with (
+@use '../../../node_modules/cascading-color-systems' as ccs with (
   $prime-hue: 195,
   $steps: 6,
   $fades: 1,
@@ -31,4 +31,3 @@ a {
   color: var(--action);
   text-decoration-color: var(--ccs-accent--fg2);
 }
-

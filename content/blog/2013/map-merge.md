@@ -2,9 +2,9 @@
 title: Map-Set vs. Map-Merge
 tags:
   - _post
-  - Sass
-  - Sass Maps
-  - Code
+  - sass
+  - sass maps
+  - code
 author: miriam
 image:
   src: blog/sass33.jpg
@@ -30,11 +30,18 @@ $map: (
 
 // a map-set function (not included with Sass)
 @function map-set($map, $key, $value) {
-  $new: ($key: $value);
+  $new: (
+    $key: $value,
+  );
   @return map-merge($map, $new);
 }
 
 // the difference between map-set and map-merge: almost nothing.
-$merge: map-merge($map, (2: New York));
+$merge: map-merge(
+  $map,
+  (
+    2: New York,
+  )
+);
 $set: map-set($map, 2, New York);
 ```

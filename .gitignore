@@ -1,6 +1,17 @@
 _site
-content/assets/css
-content/assets/images
+_built
+
+TAGS
+*.DS_Store
+*~
+.vscode
+.idea/
+.livereload
+*.orig
+*.swp
+*.swo
+*.css.map
+*.js.map
 
 # Logs
 logs
@@ -19,9 +30,19 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+coverage/
+jscache/
 coverage
-
-# nyc test coverage
 .nyc_output
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
@@ -60,6 +81,8 @@ typings/
 
 # dotenv environment variables file
 .env
+ENV/
+env/
 
 # next.js build output
 .next

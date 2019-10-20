@@ -2,12 +2,12 @@
 title: Isolation and Bleed in Susy
 tags:
   - _post
-  - Susy
-  - Susy1
-  - Layout
-  - Grids
-  - Sub-pixel Rounding
-  - Code
+  - susy
+  - susy1
+  - layout
+  - grids
+  - sub-pixel rounding
+  - code
 author: miriam
 image:
   src: blog/susy.jpg
@@ -38,9 +38,9 @@ removes content from the flow, so I don't recommned building your entire
 layout on isolated floats, but it can be very useful as a spot-check
 when rounding errors are really causing you a headache.
 
-(*Note that rounding errors can still stack up when you use a gradient
+(_Note that rounding errors can still stack up when you use a gradient
 background for testing. Gradient background grids are useful, but you
-should never trust them as a pixel-exact guide.*)
+should never trust them as a pixel-exact guide._)
 
 Using John's method, you can now [isolate any grid element in susy],
 with the simple `isolate()` mixin:
@@ -61,10 +61,10 @@ removed from the flow:
 The items can overlap, and stack in any order – almost as though they
 are positioned absolutely.
 
-  [Sub-pixel rounding]: http://ejohn.org/blog/sub-pixel-problems-in-css/
-  [demo]: http://johnalbin.github.com/fluid-grid-rounding-errors/
-  [solution]: http://palantir.net/blog/responsive-design-s-dirty-little-secret
-  [isolate any grid element in susy]: https://susyone.oddbird.net/guides/reference/#ref-helper-isolation
+[sub-pixel rounding]: http://ejohn.org/blog/sub-pixel-problems-in-css/
+[demo]: http://johnalbin.github.com/fluid-grid-rounding-errors/
+[solution]: http://palantir.net/blog/responsive-design-s-dirty-little-secret
+[isolate any grid element in susy]: https://susyone.oddbird.net/guides/reference/#ref-helper-isolation
 
 ## Isolation Grid
 
@@ -112,4 +112,4 @@ This can be especially useful to bleed across `$grid-padding`. Simply
 
 Happy coding!
 
-  [Bleed]: https://susyone.oddbird.net/guides/reference/#ref-bleed
+[bleed]: https://susyone.oddbird.net/guides/reference/#ref-bleed

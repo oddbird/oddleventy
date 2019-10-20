@@ -4,8 +4,8 @@ const pages = require('./pages');
 const time = require('./time');
 const utils = require('./utils');
 
-const isPublic = event => event.draft !== true;
-const hasEvents = page => page.data.events;
+const isPublic = (event) => event.draft !== true;
+const hasEvents = (page) => page.data.events;
 
 const groupNames = {
   5000: 'now',
@@ -16,9 +16,8 @@ const groupNames = {
   soon: 3000,
 };
 
-const isEvent = page => {
-  return page.data.tags ? page.data.tags.includes('_calendar') : false;
-};
+const isEvent = (page) =>
+  page.data.tags ? page.data.tags.includes('_calendar') : false;
 
 const buildEvent = (page, event) => {
   const eventStart = event ? event.start || event.date : null;
@@ -28,14 +27,14 @@ const buildEvent = (page, event) => {
 
   // set end for far future…
   if (end === 'ongoing') {
-    end = new Date(`${groupNames['ongoing']}-01-01`);
+    end = new Date(`${groupNames.ongoing}-01-01`);
   }
 
   // set group…
   const end_iso = time.getDate(end, 'iso');
   const start_iso = time.getDate(start, 'iso');
   const now_iso = time.getDate(time.now, 'iso');
-  let date = start;
+  const date = start;
   let group = time.getDate(date, 'year');
 
   if (end_iso >= now_iso) {
@@ -43,7 +42,7 @@ const buildEvent = (page, event) => {
     if (groupNames[endYear]) {
       group = endYear;
     } else {
-      group = start_iso > now_iso ? groupNames['soon'] : groupNames['now'];
+      group = start_iso > now_iso ? groupNames.soon : groupNames.now;
     }
   }
 
@@ -58,24 +57,24 @@ const buildEvent = (page, event) => {
   return { page, event, start, end, date, group, tags, feature };
 };
 
-const fromYAML = page => {
+const fromYAML = (page) => {
   const events = [];
 
   page.data.events
-    .filter(event => isPublic(event))
-    .forEach(event => {
+    .filter((event) => isPublic(event))
+    .forEach((event) => {
       events.push(buildEvent(page, event));
     });
 
   return events;
 };
 
-const fromCollection = collection => {
-  let events = [];
+const fromCollection = (collection) => {
+  const events = [];
 
   collection
-    .filter(page => pages.isPublic(page))
-    .forEach(page => {
+    .filter((page) => pages.isPublic(page))
+    .forEach((page) => {
       if (hasEvents(page)) {
         Array.prototype.push.apply(events, fromYAML(page));
       }
@@ -88,18 +87,18 @@ const fromCollection = collection => {
   return events;
 };
 
-const count = groups => {
-  const eventsPer = groups.map(g => g.data.length);
+const count = (groups) => {
+  const eventsPer = groups.map((g) => g.data.length);
   return eventsPer.reduce((all, group) => all + group, 0);
 };
 
-const byGroup = events => {
+const byGroup = (events) => {
   const groups = utils.groupBy(events, 'group');
   const sorted = [];
 
   Object.keys(groups)
     .sort((a, b) => a - b)
-    .forEach(group => {
+    .forEach((group) => {
       const data = groups[group].sort((a, b) => a.date - b.date);
       group = groupNames[group] || group;
       sorted.push({ group, data });
@@ -112,7 +111,7 @@ const get = (collection, only, group = true) => {
   let events = fromCollection(collection);
 
   if (only) {
-    events = events.filter(event => event.tags.includes(only));
+    events = events.filter((event) => event.tags.includes(only));
   }
 
   if (group) {

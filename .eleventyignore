@@ -1,0 +1,7 @@
+.git/
+.nyc_output/
+.vscode/
+coverage/
+htmlcov/
+jscache/
+node_modules/

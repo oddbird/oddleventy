@@ -3,12 +3,12 @@ title: PostgreSQL Transactions and SQLAlchemy
 author: carl
 tags:
   - _post
-  - Python
-  - SQLAlchemy
-  - PostgreSQL
-  - Transactions
-  - Django
-  - Code
+  - python
+  - sqlalchemy
+  - postgresql
+  - transactions
+  - django
+  - code
 image:
   src: blog/2014/sqlalchemy.jpg
 summary: |
@@ -27,7 +27,7 @@ to work.
 There are several different layers at play, so let's review from the
 top:
 
-  [SQLAlchemy]: http://www.sqlalchemy.org/
+[sqlalchemy]: http://www.sqlalchemy.org/
 
 ## Transactions in PostgreSQL
 
@@ -69,9 +69,9 @@ statements and to behave like Postgres natively does, you set the
     conn = psycopg2.connect('dbname=test')
     conn.autocommit = True
 
-  [PEP 249]: http://legacy.python.org/dev/peps/pep-0249/
-  [psycopg2]: http://initd.org/psycopg/docs/
-  [autocommit property]: http://initd.org/psycopg/docs/connection.html#connection.autocommit
+[pep 249]: http://legacy.python.org/dev/peps/pep-0249/
+[psycopg2]: http://initd.org/psycopg/docs/
+[autocommit property]: http://initd.org/psycopg/docs/connection.html#connection.autocommit
 
 ## Postgres Has it Right
 
@@ -136,13 +136,13 @@ manager to define an atomic unit of database work (it can also be
 nested, using a stack of [savepoints] to achieve the effect of nested
 transactions).
 
-  [SQLAlchemy]: http://www.sqlalchemy.org/
-  [Django]: http://www.djangoproject.com
-  [transactions API]: https://docs.djangoproject.com/en/stable/topics/db/transactions/#transactions-upgrading-from-1-5
-  [Aymeric Augustin]: https://myks.org/en/
-  [prior work by Christophe Pettus]: https://github.com/Xof/xact
-  [transactions.atomic]: https://docs.djangoproject.com/en/stable/topics/db/transactions/#django.db.transaction.atomic
-  [savepoints]: http://www.postgresql.org/docs/9.2/static/sql-savepoint.html
+[sqlalchemy]: http://www.sqlalchemy.org/
+[django]: http://www.djangoproject.com
+[transactions api]: https://docs.djangoproject.com/en/stable/topics/db/transactions/#transactions-upgrading-from-1-5
+[aymeric augustin]: https://myks.org/en/
+[prior work by christophe pettus]: https://github.com/Xof/xact
+[transactions.atomic]: https://docs.djangoproject.com/en/stable/topics/db/transactions/#django.db.transaction.atomic
+[savepoints]: http://www.postgresql.org/docs/9.2/static/sql-savepoint.html
 
 ## SQLAlchemy
 
@@ -162,7 +162,7 @@ supported databases.
 But I'm using Postgres, I know how its native autocommit mode works, and
 that's the behavior I want with SQLAlchemy. Can I make that work?
 
-  [SQLAlchemy]: http://www.sqlalchemy.org/
+[sqlalchemy]: http://www.sqlalchemy.org/
 
 ### SQLAlchemy's Autocommit Mode -- Not What You Think
 
@@ -175,7 +175,7 @@ send queries that change the database. It doesn't put the database
 connections into true autocommit mode, so it still wraps reads in
 unnecessary transactions.
 
-  [autocommit mode]: http://docs.sqlalchemy.org/en/rel_0_9/orm/session.html#autocommit-mode
+[autocommit mode]: http://docs.sqlalchemy.org/en/rel_0_9/orm/session.html#autocommit-mode
 
 ### Turning on Real Autocommit
 
@@ -203,8 +203,8 @@ But regardless, `isolation_level='AUTOCOMMIT'` is the incantation needed
 to get all of our SQLAlchemy psycopg2 connections into true autocommit
 mode.
 
-  [Postgres documentation]: http://www.postgresql.org/docs/9.2/static/transaction-iso.html
-  [and psycopg2]: http://initd.org/psycopg/docs/extensions.html#psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT
+[postgres documentation]: http://www.postgresql.org/docs/9.2/static/transaction-iso.html
+[and psycopg2]: http://initd.org/psycopg/docs/extensions.html#psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT
 
 ### Starting a Transaction
 
@@ -262,7 +262,7 @@ off the Session's autoflush and autoexpire features. So far I haven't
 done the latter; waiting to see what (if any) problems ensue in
 practice.
 
-  [vague warnings]: http://docs.sqlalchemy.org/en/rel_0_9/orm/session.html#autocommit-mode
+[vague warnings]: http://docs.sqlalchemy.org/en/rel_0_9/orm/session.html#autocommit-mode
 
 ### Back to Autocommit When the Transaction Ends
 
@@ -367,7 +367,7 @@ error or implicitly commit the existing transaction -- but neither of
 these solutions are appealing compared to the conceptual simplicity of
 autocommit & explicit transactions.
 
-  [transaction.atomic]: https://docs.djangoproject.com/en/stable/topics/db/transactions/#django.db.transaction.atomic
+[transaction.atomic]: https://docs.djangoproject.com/en/stable/topics/db/transactions/#django.db.transaction.atomic
 
 ## Conclusion
 
@@ -386,7 +386,7 @@ tests for it, but they are currently integrated with the project where
 I'm using this. If there's enough interest (and it works well on this
 project) I might be convinced to package it up and release it properly.
 
-  [a gist]: https://gist.github.com/carljm/57bfb8616f11bceaf865
+[a gist]: https://gist.github.com/carljm/57bfb8616f11bceaf865
 
 ## Acknowledgments
 
@@ -396,6 +396,6 @@ towards the `AUTOCOMMIT` "isolation level" setting. Thanks to
 behavior, and [Aymeric Augustin] for the excellent implementation in
 Django 1.6+.
 
-  [Mike Bayer]: https://twitter.com/zzzeek
-  [Christophe Pettus]: http://thebuild.com/blog/
-  [Aymeric Augustin]: https://myks.org/en/
+[mike bayer]: https://twitter.com/zzzeek
+[christophe pettus]: http://thebuild.com/blog/
+[aymeric augustin]: https://myks.org/en/
