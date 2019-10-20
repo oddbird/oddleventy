@@ -4,9 +4,9 @@ public: true
 author: miriam
 tags:
   - _post
-  - Conferences
-  - Sass
-  - Community
+  - conferences
+  - sass
+  - community
 image:
   src: blog/sassconf2014.jpg
 summary: |
@@ -22,5 +22,5 @@ proud this year to have [one of the organizers] on our team.
 But who cares about pride, I have a flight to catch! See you all in
 SoHo!
 
-  [SassConf]: http://sassconf.com/
-  [one of the organizers]: /birds/#bird-claudina
+[sassconf]: http://sassconf.com/
+[one of the organizers]: /birds/#bird-claudina

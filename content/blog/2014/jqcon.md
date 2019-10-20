@@ -4,10 +4,10 @@ public: true
 author: jonny
 tags:
   - _post
-  - JavaScript
-  - Conferences
-  - Code
-  - jQuery
+  - javascript
+  - conferences
+  - code
+  - jquery
 image:
   src: blog/jqueryconf2014.jpg
 summary: |
@@ -24,7 +24,7 @@ not in the habit of doing.
 So what got my attention at [jQuery Conference Chicago 2014]? In no
 particular order:
 
-  [jQuery Conference Chicago 2014]: http://events.jquery.org/2014/chicago/
+[jquery conference chicago 2014]: http://events.jquery.org/2014/chicago/
 
 ## Web Workers
 
@@ -79,28 +79,28 @@ warnings?
 
 HT: [@potch] for the [talk] that got me started.
 
-  [Web Workers]: https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers
-  [close enough to ready]: http://caniuse.com/#feat=webworkers
-  [SharedWorkers]: https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker
-  [ServiceWorkers]: https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API
-  [support]: http://caniuse.com/#feat=sharedworkers
-  [another (contrived) example]: http://codepen.io/jgerigmeyer/pen/vKixI
-  [Blob() constructor]: https://developer.mozilla.org/en-US/docs/Web/API/Blob.Blob
-  [HTML5 Rocks article]: http://www.html5rocks.com/en/tutorials/workers/basics/
-  [@potch]: http://twitter.com/potch
-  [talk]: http://potch.github.io/workers-talk/
+[web workers]: https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers
+[close enough to ready]: http://caniuse.com/#feat=webworkers
+[sharedworkers]: https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker
+[serviceworkers]: https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API
+[support]: http://caniuse.com/#feat=sharedworkers
+[another (contrived) example]: http://codepen.io/jgerigmeyer/pen/vKixI
+[blob() constructor]: https://developer.mozilla.org/en-US/docs/Web/API/Blob.Blob
+[html5 rocks article]: http://www.html5rocks.com/en/tutorials/workers/basics/
+[@potch]: http://twitter.com/potch
+[talk]: http://potch.github.io/workers-talk/
 
 ## ECMAScript 6
 
 You know what else is here, and (mostly) ready for primetime?
 [ECMAScript 6]. Some of the new features I'm most excited about:
 
--   `String.prototype.contains()` instead of `indexOf()`
--   native promises
--   `Object.assign()` for merging objects
--   `Map()` and `Set()`
--   blocked scope variables using `let`
--   template strings(!):
+- `String.prototype.contains()` instead of `indexOf()`
+- native promises
+- `Object.assign()` for merging objects
+- `Map()` and `Set()`
+- blocked scope variables using `let`
+- template strings(!):
 
 <!-- -->
 
@@ -108,9 +108,9 @@ You know what else is here, and (mostly) ready for primetime?
     var company = 'OddBird';
     console.log(`I'm ${name}, and I work at ${company}.`);
 
--   default function parameters
--   modules, exports, and a system loader
--   expanded `class` syntax
+- default function parameters
+- modules, exports, and a system loader
+- expanded `class` syntax
 
 This just scratches the surface. Check out a [helpful summary], and keep
 a close eye on the [browser support chart].
@@ -125,15 +125,15 @@ parameters, modules), compile ES6 code into ES5 using Google's [Traceur]
 
 HT: [John K. Paul] for his [talk][1] encouraging devs to use ES6 now.
 
-  [ECMAScript 6]: http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts#draft_specification_for_es.next_ecma-262_edition_6
-  [helpful summary]: http://git.io/es6features
-  [browser support chart]: http://kangax.github.io/compat-table/es6/
-  [ES6 Shim]: http://github.com/paulmillr/es6-shim/
-  [Traceur]: http://github.com/google/traceur-compiler
-  [gulp-traceur]: http://github.com/sindresorhus/gulp-traceur
-  [grunt-traceur]: http://github.com/aaronfrost/grunt-traceur
-  [John K. Paul]: http://twitter.com/johnkpaul
-  [1]: http://johnkpaul.github.io/presentations/jqcon/2014/es6-now/
+[ecmascript 6]: http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts#draft_specification_for_es.next_ecma-262_edition_6
+[helpful summary]: http://git.io/es6features
+[browser support chart]: http://kangax.github.io/compat-table/es6/
+[es6 shim]: http://github.com/paulmillr/es6-shim/
+[traceur]: http://github.com/google/traceur-compiler
+[gulp-traceur]: http://github.com/sindresorhus/gulp-traceur
+[grunt-traceur]: http://github.com/aaronfrost/grunt-traceur
+[john k. paul]: http://twitter.com/johnkpaul
+[1]: http://johnkpaul.github.io/presentations/jqcon/2014/es6-now/
 
 ## Throw More Errors
 
@@ -171,17 +171,17 @@ To make this simpler, I've started using runtime assertions:
 
 When to consider throwing Errors?
 
--   When a function requires a specific argument type
--   When a function requires a specific number of arguments
--   For unexpected code paths (i.e. code that should never be executed)
--   When using promises (every promise should have an error handler
-    using `.catch()` or `.then()`)
+- When a function requires a specific argument type
+- When a function requires a specific number of arguments
+- For unexpected code paths (i.e. code that should never be executed)
+- When using promises (every promise should have an error handler
+  using `.catch()` or `.then()`)
 
 HT: [Ralph Holzmann] for his helpful [talk][2].
 
-  [Error objects]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
-  [Ralph Holzmann]: http://twitter.com/rlph
-  [2]: http://blog.ralphholzmann.com/presentations/2014/jquerychicago/throw_new_error.pdf
+[error objects]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
+[ralph holzmann]: http://twitter.com/rlph
+[2]: http://blog.ralphholzmann.com/presentations/2014/jquerychicago/throw_new_error.pdf
 
 ## Debugging by Proxy
 
@@ -196,9 +196,9 @@ essentially turn my computer into a dev environment for any website with
 resource mapping, throttle my bandwidth to mimic 3G or LTE, or disable
 caching or cookies entirely.
 
-  [Brian Arnold]: http://twitter.com/brianarn
-  [demoed]: http://www.randomthink.net/presentations/jqcon-chicago-2014-beyond-devtools/presentation/
-  [Charles]: http://www.charlesproxy.com/
+[brian arnold]: http://twitter.com/brianarn
+[demoed]: http://www.randomthink.net/presentations/jqcon-chicago-2014-beyond-devtools/presentation/
+[charles]: http://www.charlesproxy.com/
 
 ## JS Testing With Intern
 
@@ -212,9 +212,9 @@ tests in standalone browsers, and built-in [Travis CI] integration).
 
 Have you used either of these tools, or have further pros/cons to offer?
 
-  [Karma]: http://karma-runner.github.io/
-  [PhantomJS]: http://phantomjs.org/
-  [istanbul]: http://gotwarlost.github.io/istanbul/
-  [Intern]: http://theintern.io/
-  [Selenium]: http://www.seleniumhq.org/
-  [Travis CI]: https://travis-ci.com/
+[karma]: http://karma-runner.github.io/
+[phantomjs]: http://phantomjs.org/
+[istanbul]: http://gotwarlost.github.io/istanbul/
+[intern]: http://theintern.io/
+[selenium]: http://www.seleniumhq.org/
+[travis ci]: https://travis-ci.com/
