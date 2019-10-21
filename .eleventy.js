@@ -16,7 +16,9 @@ module.exports = (eleventyConfig) => {
   // pass-through
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
   eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
+  eleventyConfig.addPassthroughCopy({ 'src/images': 'assets/images' });
   eleventyConfig.addPassthroughCopy('content/robots.txt');
+  eleventyConfig.addPassthroughCopy('content/favicon.ico');
 
   eleventyConfig.addCollection('birds', (collection) =>
     collection.getAll().filter((item) => item.data.bird),

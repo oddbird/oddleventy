@@ -7,7 +7,7 @@ tags:
   - sass
   - community
 image:
-  src: blog/sassconf2014.jpg
+  src: blog/2014/sassconf.jpg
 summary: |
   SassConf is right around the corner, and Claudina has been working hard
   to make it happen!
