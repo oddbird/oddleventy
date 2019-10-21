@@ -3,7 +3,7 @@ title: CSS is Rad
 sub: resilient design on an infinite canvas
 author: miriam
 image:
-  img: talks/miriam.jpg
+  src: talks/miriam.jpg
 tags:
   - speaking
   - code

@@ -4,7 +4,7 @@ sub: it's time to move past grid systems like Susy
 author: miriam
 slides: https://talks.oddbird.net/no-grid-system/
 image:
-  img: talks/devconf-best.jpg
+  src: talks/devconf-best.jpg
 tags:
   - speaking
   - code

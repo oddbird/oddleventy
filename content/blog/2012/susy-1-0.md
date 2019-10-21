@@ -1,8 +1,10 @@
 ---
 title: Susy 1.0 Release
 date: 2012-08-14
+author: miriam
+image:
+  src: blog/susy.jpg
 tags:
-  - _calendar
   - _post
   - susy
   - code

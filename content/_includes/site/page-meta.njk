@@ -9,6 +9,18 @@
 {% if pub_tags or elsewhere or org %}
   <footer data-meta="page">
     <p>
+      {% set by = collections.birds | authorPage(author) if author else none %}
+      {% if by or author %}
+        by
+        {% if by.data %}
+          <a href="{{ by.url }}">
+            {{ by.data.title | mdInline | safe }}
+          </a>
+        {% else %}
+          {{ author | capitalize }}
+        {% endif %}
+      {% endif %}
+
       {{ utility.datetime(
         pubdate=pubdate or page.date,
         start=start or date or page.date,

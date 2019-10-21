@@ -2,10 +2,10 @@
 title: An Interview with Miriam Suzanne
 url: https://css-tricks.com/interview-miriam-suzanne/
 date: 2016-10-15
+author: miriam
 image:
-  img: elsewhere/css-tricks.svg
+  src: blog/elsewhere/css-tricks.jpg
 tags:
-  - _calendar
   - _post
   - _elsewhere
   - code

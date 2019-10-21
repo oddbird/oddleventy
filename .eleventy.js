@@ -43,10 +43,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('withTag', tags.withTag);
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
-  eleventyConfig.addFilter(
-    'inTopTagCount',
-    (count) => typeof count === 'number' && count <= tags.topCount,
-  );
+  eleventyConfig.addFilter('inTopTagCount', tags.inTopCount);
 
   eleventyConfig.addFilter('getPage', pages.fromCollection);
   eleventyConfig.addFilter('getPublic', pages.getPublic);

@@ -4,15 +4,15 @@ sub: Some day you’ll realise you can’t do everything…
 venue: Net Magazine
 url: https://www.creativebloq.com/net-magazine
 date: 2016-12-01
+author: miriam
 tags:
-  - _calendar
   - _post
   - code
   - interview
   - net magazine
   - creative bloq
 image:
-  img: elsewhere/netmag-mia.jpg
+  src: blog/elsewhere/netmag-mia.jpg
   alt: magaine spread (full text below)
 summary: |
   Miriam Suzanne creates experimental experiences

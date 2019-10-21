@@ -4,10 +4,10 @@ sub: a mid-conference conversation
 venue: Thunder Nerds
 url: https://www.thundernerds.io/2019/04/miriam-suzanne-vueconf-us-2019/
 date: 2019-03-26
+author: miriam
 image:
-  img: talks/miriam.jpg
+  src: talks/miriam.jpg
 tags:
-  - _calendar
   - _post
   - _elsewhere
   - interview

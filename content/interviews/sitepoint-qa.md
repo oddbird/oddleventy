@@ -3,10 +3,10 @@ title: Sass Toolkits, Live Q&A
 date: 2016-08-18
 venue: SitePoint
 url: https://www.sitepoint.com/how-to-choose-the-right-css-toolkits-and-frameworks/
+author: miriam
 image:
-  img: blog/2016/QandA.png
+  src: blog/2016/QandA.jpg
 tags:
-  - _calendar
   - _post
   - _elsewhere
   - interview

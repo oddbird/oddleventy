@@ -4,7 +4,7 @@ sub: designing software for humans, with other humans
 author: miriam
 slides: https://www.oddbooksapp.com/book/software-for-humans
 image:
-  img: talks/user-unfriendly.png
+  src: talks/user-unfriendly.png
 tags:
   - speaking
   - code

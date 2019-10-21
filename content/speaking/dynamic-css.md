@@ -5,7 +5,7 @@ sub: with grids & custom properties
 author: miriam
 slides: https://talks.oddbird.net/dynamic-css/
 image:
-  img: talks/miriam.jpg
+  src: talks/miriam.jpg
 tags:
   - speaking
   - code
