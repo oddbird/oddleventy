@@ -73,12 +73,12 @@ const getDate = (date, format) => {
   return format ? formatDate(date, format) : date;
 };
 
-const rssDate = page => {
+const rssDate = (page) => {
   const date = page.data ? page.data.start || page.date : page.date;
   return getDate(date, 'rfc');
 };
 
-const rssLatest = collection => {
+const rssLatest = (collection) => {
   collection.sort((a, b) => rssDate(a) - rssDate(b));
   return rssDate(collection[0]);
 };

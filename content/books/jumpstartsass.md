@@ -79,11 +79,11 @@ or [download the e-book »](https://www.sitepoint.com/premium/books/jump-start-s
    An introduction to the ability to emit warnings
    and throw errors directly from within stylesheets,
    as well as why and when doing so makes sense.
-10.**Architecture* -- \
+10. **Architecture* -- \
     A massive chapter on different approaches
     to Sass-powered project architecture,
     including OOCSS, ITCSS, SMACSS and more.
-11.**Ecosystem* -- \
+11. **Ecosystem* -- \
     The final chapter introduces you to the Sass ecosystem,
     its main toolkits, libraries and frameworks such as Bourbon,
     Susy, Accoutrement, SassDoc, Sass-Guidelines,

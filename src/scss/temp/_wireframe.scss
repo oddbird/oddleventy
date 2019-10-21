@@ -1,4 +1,6 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 [data-layout] {
   & + & {
@@ -9,11 +11,12 @@
 [data-layout='body'] {
   display: grid;
   font-size: calc(1em + 1vh);
-  grid: 'menu' auto
-        'banner' auto
-        'main' 1fr
-        'footer' auto /
-        minmax(0, 1fr);
+  grid:
+    'menu' auto
+    'banner' auto
+    'main' 1fr
+    'footer' auto /
+    minmax(0, 1fr);
   grid-gap: 1em;
   line-height: 1.4;
   margin: 0 auto;

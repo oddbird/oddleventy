@@ -3,11 +3,11 @@ title: Your Own Damn [Susy] System
 public: true
 tags:
   - _post
-  - Susy
-  - Susy2
-  - Layout
-  - Grids
-  - Code
+  - susy
+  - susy2
+  - layout
+  - grids
+  - code
 author: miriam
 image:
   src: blog/susy.jpg

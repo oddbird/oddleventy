@@ -4,27 +4,26 @@ const utils = require('./utils');
 const events = require('./events');
 
 const topCount = 6;
-const isPublic = tag => tag !== 'all' && !tag.startsWith('_');
-const publicTags = tags => (tags ? tags.filter(tag => isPublic(tag)) : tags);
+const isPublic = (tag) => tag !== 'all' && !tag.startsWith('_');
+const publicTags = (tags) =>
+  tags ? tags.filter((tag) => isPublic(tag)) : tags;
 
-const hasTag = (page, tag) => {
-  return page.data.tags ? page.data.tags.includes(tag) : false;
-};
+const hasTag = (page, tag) =>
+  page.data.tags ? page.data.tags.includes(tag) : false;
 
-const withTag = (collection, tag) => {
-  return collection.filter(page => hasTag(page, tag));
-};
+const withTag = (collection, tag) =>
+  collection.filter((page) => hasTag(page, tag));
 
-const tagData = collections => {
+const tagData = (collections) => {
   const eventTags = events
     .get(collections.all, false, false)
-    .map(e => e.tags)
+    .map((e) => e.tags)
     .reduce((all, one) => [...all, ...one], []);
 
   return utils
     .unique(eventTags)
-    .filter(tag => isPublic(tag))
-    .map(tag => {
+    .filter((tag) => isPublic(tag))
+    .map((tag) => {
       const tagEvents = events.get(collections.all, tag, false);
       return {
         tag,
@@ -32,15 +31,14 @@ const tagData = collections => {
         count: tagEvents.length,
       };
     })
-    .filter(item => item.count !== 0)
+    .filter((item) => item.count !== 0)
     .sort((a, b) => b.count - a.count);
 };
 
-const getTags = (collections, top = topCount) => {
-  return tagData(collections)
+const getTags = (collections, top = topCount) =>
+  tagData(collections)
     .slice(0, top || collections.length)
-    .map(item => item.tag);
-};
+    .map((item) => item.tag);
 
 const groupTags = (collections, top = topCount) => {
   const grouped = {};
@@ -57,7 +55,7 @@ const groupTags = (collections, top = topCount) => {
   });
 
   // sort the groups
-  Object.keys(grouped).forEach(group => {
+  Object.keys(grouped).forEach((group) => {
     sorted.push({
       group,
       tags: grouped[group],
@@ -67,15 +65,13 @@ const groupTags = (collections, top = topCount) => {
   return sorted.reverse();
 };
 
-const displayName = tag => {
-  return tag.startsWith('_') ? tag.slice(1) : tag;
-};
+const displayName = (tag) => (tag.startsWith('_') ? tag.slice(1) : tag);
 
 const tagLink = (tag, collections) => {
-  const pages = collections.all.filter(page => page.data.index === tag);
+  const pages = collections.all.filter((page) => page.data.index === tag);
 
   const extra = collections.all
-    .map(page => page.data.extraTags || [])
+    .map((page) => page.data.extraTags || [])
     .reduce((all, tags) => [...all, ...tags], [])
     .includes(tag);
 
