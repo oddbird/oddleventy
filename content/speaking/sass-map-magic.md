@@ -1,5 +1,6 @@
 ---
 title: Sass Map Magic
+author: miriam
 slides: https://www.oddbooksapp.com/book/sass-map-magic
 tags:
   - speaking

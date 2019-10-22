@@ -2,10 +2,10 @@
 title: Getting Started with CSS Grid
 url: https://css-tricks.com/video-screencasts/153-getting-started-with-css-grid/
 date: 2017-02-20
-hero:
-  img: elsewhere/css-tricks.svg
+author: miriam
+image:
+  src: blog/elsewhere/css-tricks.jpg
 tags:
-  - _calendar
   - _post
   - _elsewhere
   - code

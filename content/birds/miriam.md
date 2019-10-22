@@ -1,13 +1,14 @@
 ---
 title: Miriam Suzanne
-bird: Miriam
+bird: miriam
+image:
+  src: birds/miriam.jpg
 social:
   twitter: mirisuzanne
   github: mirisuzanne
   codepen: mirisuzanne
   stackoverflow: 1930386
-  dribbble: miriamsuzanne
-  facebook: mirisuzanne
+  _facebook: mirisuzanne
 summary: |
   [Miriam Suzanne][mia]
   is a product manager,
@@ -42,3 +43,37 @@ writing, music, and visual art.
 [jss]: https://www.sitepoint.com/premium/books/jump-start-sass
 [speaking]: /services/speaking/
 [dev]: https://blog.cssdevconf.com/slides-and-resources-from-css-dev-conf-2017-new-orleans-8e2a5edb06b0#2b07
+
+------
+
+## Social
+
+{% for site, username in social %}
+{% if site[0] != '_' %}
+- {{ site }}: {{ username }}
+{% endif %}
+{% endfor %}
+
+------
+
+## Open Source
+
+{% for page in collections._oss | byBird(bird) %}
+- [{{ page.data.title }}]({{ page.url }})
+{% endfor %}
+
+------
+
+## Speaking
+
+{% for page in collections.speaking | byBird(bird) %}
+- [{{ page.data.title }}]({{ page.url }})
+{% endfor %}
+
+------
+
+## Articles
+
+{% for page in collections._post | byBird(bird) %}
+- [{{ page.data.title }}]({{ page.url }})
+{% endfor %}

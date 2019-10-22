@@ -1,6 +1,5 @@
 ---
 title: 2013 Wrap-up
-public: true
 author: carl
 tags:
   - _post

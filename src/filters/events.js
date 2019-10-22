@@ -17,7 +17,7 @@ const groupNames = {
 };
 
 const isEvent = (page) =>
-  page.data.tags ? page.data.tags.includes('_calendar') : false;
+  page.data.tags ? page.data.tags.includes('_post') : false;
 
 const buildEvent = (page, event) => {
   const eventStart = event ? event.start || event.date : null;

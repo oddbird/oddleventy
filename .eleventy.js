@@ -8,6 +8,8 @@ const pages = require('./src/filters/pages');
 const tags = require('./src/filters/tags');
 const time = require('./src/filters/time');
 const type = require('./src/filters/type');
+const birds = require('./src/filters/birds');
+const nav = require('./src/filters/nav');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
@@ -19,6 +21,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({ 'src/images': 'assets/images' });
   eleventyConfig.addPassthroughCopy('content/robots.txt');
   eleventyConfig.addPassthroughCopy('content/favicon.ico');
+
+  eleventyConfig.addCollection('birds', (collection) =>
+    collection.getAll().filter((item) => item.data.bird),
+  );
 
   // filters
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
@@ -37,57 +43,17 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('withTag', tags.withTag);
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
-  eleventyConfig.addFilter(
-    'inTopTagCount',
-    (count) => typeof count === 'number' && count <= tags.topCount,
-  );
+  eleventyConfig.addFilter('inTopTagCount', tags.inTopCount);
 
   eleventyConfig.addFilter('getPage', pages.fromCollection);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('seriesNav', pages.seriesNav);
   eleventyConfig.addFilter('titleSort', pages.titleSort);
-  eleventyConfig.addFilter('authorPage', (collection, bird) => {
-    const url = `/authors/${bird}/`;
-    return pages.fromCollection(collection, url);
-  });
 
-  eleventyConfig.addFilter('activeNav', (collection, nav, page) => {
-    page = pages.fromCollection(collection, page.url);
-    const location = page.data ? page.data.location : page.fileSlug;
+  eleventyConfig.addFilter('byBird', birds.getPages);
+  eleventyConfig.addFilter('authorPage', birds.authorPage);
 
-    const checkUrl = (link) => {
-      const target = pages.fromCollection(collection, link.url);
-
-      link.title = target.data.title || target.fileSlug;
-      link.active =
-        link.url === page.url ||
-        link.url === location ||
-        target.fileSlug === location;
-
-      return link;
-    };
-
-    const checkItem = function(item) {
-      if (item.url) {
-        return checkUrl(item);
-      }
-
-      if (item.subnav) {
-        const subnav = item.subnav.map((sub) => checkUrl(sub));
-
-        item.subnav = subnav;
-        item.active =
-          subnav.filter((sub) => sub.active).length > 0 ||
-          item.title === location;
-
-        return item;
-      }
-
-      return undefined;
-    };
-
-    return nav.map((main) => checkItem(main));
-  });
+  eleventyConfig.addFilter('activeNav', nav.getActive);
 
   eleventyConfig.addFilter('getEvents', events.get);
   eleventyConfig.addFilter('countEvents', events.count);

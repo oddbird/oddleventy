@@ -4,6 +4,7 @@ const utils = require('./utils');
 const events = require('./events');
 
 const topCount = 6;
+const inTopCount = (count) => typeof count === 'number' && count <= topCount;
 const isPublic = (tag) => tag !== 'all' && !tag.startsWith('_');
 const publicTags = (tags) =>
   tags ? tags.filter((tag) => isPublic(tag)) : tags;
@@ -93,4 +94,5 @@ module.exports = {
   withTag,
   displayName,
   tagLink,
+  inTopCount,
 };

@@ -11,8 +11,11 @@
 
 [data-ccs-colors] {
   --ccs-neutral--theme: var(--ccs-h--accent);
-  background: var(--ccs--bg-full);
-  color: var(--ccs-prime--fg-full);
+  --bg: var(--ccs--bg-full);
+  --fg: var(--ccs-prime--fg-full);
+  --action: var(--ccs-prime--fg1);
+  background: var(--bg);
+  color: var(--fg);
 }
 
 svg {
@@ -25,6 +28,6 @@ svg {
 }
 
 a {
-  color: var(--ccs-prime--fg1);
+  color: var(--action);
   text-decoration-color: var(--ccs-accent--fg2);
 }

@@ -1,9 +1,9 @@
 ---
-feature: true
 title: Jump Start Sass
 sub: Get up to speed with Sass in a weekend…
-hero:
-  img: writing/jssass.jpg
+author: miriam
+image:
+  src: writing/jssass.jpg
   caption: |
     co-writen with my friend
     [Hugo Giraudel](https://hugogiraudel.com/)
@@ -11,7 +11,7 @@ venue: SitePoint
 url: https://www.sitepoint.com/premium/books/jump-start-sass
 date: 2016-03-22
 tags:
-  - _calendar
+  - _post
   - writing
   - book
   - code

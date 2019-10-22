@@ -2,8 +2,9 @@
 title: Loops in CSS Preprocessors
 url: https://css-tricks.com/loops-css-preprocessors/
 date: 2016-12-02
-hero:
-  img: blog/2016/trick-loops.jpg
+author: miriam
+image:
+  src: blog/2016/trick-loops.jpg
 summary: |
   No matter what acronym drives your selectors
   (BEM, OOCSS, SMACSS, ETC),

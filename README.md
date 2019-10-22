@@ -15,7 +15,7 @@ This site is built using:
 
 ## Develop:
 
-Install node & [yarn](https://yarnpkg.com/en/docs/install#mac-stable):
+Install node & [yarn](https://yarnpkg.com/en/docs/install):
 
 We recommend using [nvm](https://github.com/nvm-sh/nvm) for node version
 management. Once you have it installed, run `nvm install` (once per active

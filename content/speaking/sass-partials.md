@@ -1,5 +1,6 @@
 ---
 title: Organizing Sass Partials
+author: miriam
 slides: http://mirisuzanne.github.io/pres/sass-partials/
 tags:
   - speaking

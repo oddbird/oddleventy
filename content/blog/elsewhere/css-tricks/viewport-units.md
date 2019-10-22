@@ -2,8 +2,9 @@
 title: Fun with Viewport Units
 url: https://css-tricks.com/fun-viewport-units/
 date: 2017-06-05
-hero:
-  img: elsewhere/css-tricks.svg
+author: miriam
+image:
+  src: blog/elsewhere/css-tricks.jpg
 summary: |
   Viewport units have been around for several years now,
   with near-perfect support in the major browsers,

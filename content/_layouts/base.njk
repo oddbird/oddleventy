@@ -1,57 +1,58 @@
 {%- import 'utility.macros.njk' as utility -%}
 <!doctype html>
 <html lang="en" data-ccs="root" data-ccs-theme="{{ site.themes[0] }}" data-ccs-colors>
-	{%- set desc = sub or summary or content or none -%}
-	{%- set desc = desc | mdInline | striptags | truncate | replace('&nbsp;', ' ') | replace('&amp;', '&') if desc else desc -%}
-	{%- set meta_desc = description or desc or site.description -%}
-	{%- set meta_title = renderData.title or title -%}
-	{%- set full_title = renderData.banner or banner or meta_title -%}
-	{%- set full_title = full_title | mdInline(false) -%}
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport"
+  {%- set desc = sub or summary or content or none -%}
+  {%- set desc = desc | mdInline | striptags | truncate | replace('&nbsp;', ' ') | replace('&amp;', '&') if desc else desc -%}
+  {%- set meta_desc = description or desc or site.description -%}
+  {%- set meta_title = renderData.title or title -%}
+  {%- set full_title = renderData.banner or banner or meta_title -%}
+  {%- set full_title = full_title | mdInline(false) -%}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
       content="width=device-width, initial-scale=1.0" />
 
     <title>{{ [meta_title, site.title] | join(' | ') }}</title>
     <meta name="description"
       content="{{ meta_desc }}" />
 
-		{% set elsewhere = '_elsewhere' in (tags or []) %}
-		{% set full_url = (site.url + page.url) %}
-		{% set canon = url if elsewhere else full_url %}
-		<link rel="canonical"
-			href="{{ canon | url }}">
+    {% set elsewhere = '_elsewhere' in (tags or []) %}
+    {% set full_url = (site.url + page.url) %}
+    {% set canon = url if elsewhere else full_url %}
+    <link rel="canonical"
+      href="{{ canon | url }}">
 
-		{% for url in site.styles %}
-			<link rel="stylesheet"
-				href="/assets/css/{{ url }}" />
-		{% endfor %}
+    {% for url in site.styles %}
+      <link rel="stylesheet"
+        href="/assets/css/{{ url }}" />
+    {% endfor %}
 
-		{% for url in extra_styles %}
-			<link rel="stylesheet"
-				href="/assets/css/{{ url }}" />
-		{% endfor %}
+    {% for url in extra_styles %}
+      <link rel="stylesheet"
+        href="/assets/css/{{ url }}" />
+    {% endfor %}
 
     {% include 'site/og.njk' %}
-		{% block extra_og %}{% endblock extra_og %}
+    {% block extra_og %}{% endblock extra_og %}
 
     {% include 'site/feed.njk' %}
-	</head>
+  </head>
 
-	<body
-		data-layout="body">
-	  {% include "site/menu.njk" %}
-		{% include 'site/banner.njk' %}
+  <body
+    data-layout="body">
+    <a href="#content" class="to-content">Skip to main content</a>
+    {% include "site/menu.njk" %}
+    {% include 'site/banner.njk' %}
 
-		<main data-layout="main">
-			{% include 'site/page-title.njk' %}
-			{% include 'site/page.njk' %}
-		</main>
+    <main data-layout="main" id="content">
+      {% include 'site/page-title.njk' %}
+      {% include 'site/page.njk' %}
+    </main>
 
-		{% include 'site/footer.njk' %}
+    {% include 'site/footer.njk' %}
 
-		<script type="text/javascript" src="/assets/js/scripts.js"></script>
+    <script type="text/javascript" src="/assets/js/scripts.js"></script>
 
-		<!-- Current page: {{ page.url | url }} -->
-	</body>
+    <!-- Current page: {{ page.url | url }} -->
+  </body>
 </html>

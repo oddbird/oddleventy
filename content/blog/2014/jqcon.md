@@ -1,6 +1,5 @@
 ---
 title: jQuery Chicago 2014
-public: true
 author: jonny
 tags:
   - _post
@@ -9,7 +8,7 @@ tags:
   - code
   - jquery
 image:
-  src: blog/jqueryconf2014.jpg
+  src: blog/2014/jqueryconf.jpg
 summary: |
   Five practical JavaScript coding takeaways from jQuery Conference
   Chicago 2014.

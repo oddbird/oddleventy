@@ -1,5 +1,6 @@
 ---
 title: Planning Your Web Project
+author: miriam
 slides: https://www.oddbooksapp.com/book/web-projects
 tags:
   - speaking

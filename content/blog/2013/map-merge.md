@@ -1,6 +1,5 @@
 ---
 title: Map-Set vs. Map-Merge
-public: true
 tags:
   - _post
   - sass
