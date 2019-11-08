@@ -1,13 +1,12 @@
 ---
 title: 'Susy Next: The Second Alpha'
-public: true
 tags:
   - _post
-  - Susy
-  - Susy2
-  - Layout
-  - Grids
-  - Code
+  - susy
+  - susy2
+  - layout
+  - grids
+  - code
 author: miriam
 image:
   src: blog/susy.jpg
@@ -31,7 +30,7 @@ We haven't written full docs yet, and this blog post will be vastly
 incomplete, but I'll give you a quick rundown of where we're going. This
 is all open to change, of course. There's a reason we're still in alpha.
 
-  [second alpha]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.2
+[second alpha]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.2
 
 ## Span Anything
 
@@ -83,19 +82,19 @@ grids easily:
 
 Let's dissect that.
 
--   A grid starts with an optional container-width, similar to the Susy
-    1.0 `$container-width` setting – in this case `80%`.
--   After that we have columns, which can either be a simple number for
-    symmetrical grids (in this case `12`) or a list of relative column
-    sizes: `(1 2 3.5 2)` would create 4 columns of unequal size.
--   Then gutters are passed as a simple fraction -`1/4` of a column for
-    us. If you want to establish column/gutter widths as you did in Susy
-    1.0, you can pass your ratio as a list of two values – `(4em 1em)` –
-    and we'll use those values as column and gutter widths.
--   Finally you can pass a number of optional keyword settings, such as
-    `before`, `after`, `split`, and `inside` to change how we handle
-    gutters; `static` or `fluid` to use either fixed or relative widths;
-    and `float` or `isolate` to establish your default positioning.
+- A grid starts with an optional container-width, similar to the Susy
+  1.0 `$container-width` setting – in this case `80%`.
+- After that we have columns, which can either be a simple number for
+  symmetrical grids (in this case `12`) or a list of relative column
+  sizes: `(1 2 3.5 2)` would create 4 columns of unequal size.
+- Then gutters are passed as a simple fraction -`1/4` of a column for
+  us. If you want to establish column/gutter widths as you did in Susy
+  1.0, you can pass your ratio as a list of two values – `(4em 1em)` –
+  and we'll use those values as column and gutter widths.
+- Finally you can pass a number of optional keyword settings, such as
+  `before`, `after`, `split`, and `inside` to change how we handle
+  gutters; `static` or `fluid` to use either fixed or relative widths;
+  and `float` or `isolate` to establish your default positioning.
 
 Here are a few grids:
 
@@ -158,4 +157,4 @@ change your grids:
       }
     }
 
-  [breakpoint]: http://breakpoint-sass.com/
+[breakpoint]: http://breakpoint-sass.com/

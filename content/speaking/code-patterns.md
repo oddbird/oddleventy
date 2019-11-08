@@ -1,6 +1,7 @@
 ---
 title: Code Patterns
 banner: Code Patterns for Pattern Making
+author: miriam
 slides: https://oddbooksapp.com/book/pattern-making
 tags:
   - speaking

@@ -1,6 +1,7 @@
 ---
 title: Sassy Toolkits
 sub: a case-study in building and sharing open-source Sass
+author: miriam
 url: https://www.oddbooksapp.com/book/sassy-toolkits
 tags:
   - speaking

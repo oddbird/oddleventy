@@ -2,6 +2,7 @@
 title: Advanced CSS Workshop
 banner: Advanced CSS for Modern Applications
 sub: with practical use-cases, tooling, and pitfalls
+author: miriam
 tags:
   - speaking
   - workshop
@@ -20,7 +21,6 @@ events:
     url: https://www.smashingconf.com/sf-2019/
     adr: San Francisco, CA
     start: 2019-04-18
-    feature: true
 press:
   - text: |
       A fantastic speaker, with wonderful teaching skills,
