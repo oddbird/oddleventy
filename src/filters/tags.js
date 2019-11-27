@@ -1,7 +1,7 @@
 'use strict';
 
-const utils = require('./utils');
-const events = require('./events');
+const { unique, slugify } = require('./utils');
+const { get } = require('./events');
 
 const topCount = 6;
 const inTopCount = (count) => typeof count === 'number' && count <= topCount;
@@ -16,16 +16,14 @@ const withTag = (collection, tag) =>
   collection.filter((page) => hasTag(page, tag));
 
 const tagData = (collections) => {
-  const eventTags = events
-    .get(collections.all, false, false)
+  const eventTags = get(collections.all, false, false)
     .map((e) => e.tags)
     .reduce((all, one) => [...all, ...one], []);
 
-  return utils
-    .unique(eventTags)
+  return unique(eventTags)
     .filter((tag) => isPublic(tag))
     .map((tag) => {
-      const tagEvents = events.get(collections.all, tag, false);
+      const tagEvents = get(collections.all, tag, false);
       return {
         tag,
         events: tagEvents,
@@ -78,8 +76,7 @@ const tagLink = (tag, collections) => {
 
   const index = pages.length ? pages[0].url : null;
 
-  const fallback =
-    extra || collections[tag] ? `/tags/${utils.slugify(tag)}/` : null;
+  const fallback = extra || collections[tag] ? `/tags/${slugify(tag)}/` : null;
 
   return index || fallback;
 };

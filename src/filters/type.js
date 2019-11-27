@@ -1,6 +1,6 @@
 'use strict';
 
-const typogr = require('typogr');
+const { typogrify } = require('typogr');
 const mdown = require('markdown-it')({
   html: true,
   breaks: false,
@@ -15,7 +15,7 @@ const amp = (s) => {
   return s ? s.replace(/&amp;/g, '&').replace(/&/g, r) : s;
 };
 
-const set = (content) => (content ? typogr.typogrify(content) : content);
+const set = (content) => (content ? typogrify(content) : content);
 const render = (content, type = true) =>
   type ? set(mdown.render(content)) : mdown.render(content);
 const inline = (content, type = true) =>
