@@ -1,9 +1,9 @@
 'use strict';
 
-const pages = require('./pages');
+const { fromCollection } = require('./pages');
 
 const urlIsActive = (link, location, collection, page) => {
-  const target = pages.fromCollection(collection, link.url);
+  const target = fromCollection(collection, link.url);
 
   link.title = target.data.title || target.fileSlug;
   link.active =
@@ -35,11 +35,9 @@ const itemIsActive = (item, location, collection, page) => {
 };
 
 const getActive = (collection, nav, page) => {
-  page = pages.fromCollection(collection, page.url);
+  page = fromCollection(collection, page.url);
   const location = page.data ? page.data.location : page.fileSlug;
   return nav.map((main) => itemIsActive(main, location, collection, page));
 };
 
-module.exports = {
-  getActive,
-};
+module.exports = { getActive };

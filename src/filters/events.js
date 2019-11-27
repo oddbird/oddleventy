@@ -1,10 +1,10 @@
 'use strict';
 
 const pages = require('./pages');
-const time = require('./time');
-const utils = require('./utils');
+const { getDate, now } = require('./time');
+const { unique, groupBy } = require('./utils');
 
-const isPublic = (event) => event.draft !== true;
+const isPublic = (event) => Boolean(event.draft);
 const hasEvents = (page) => page.data.events;
 
 const groupNames = {
@@ -31,14 +31,14 @@ const buildEvent = (page, event) => {
   }
 
   // set group…
-  const end_iso = time.getDate(end, 'iso');
-  const start_iso = time.getDate(start, 'iso');
-  const now_iso = time.getDate(time.now, 'iso');
+  const end_iso = getDate(end, 'iso');
+  const start_iso = getDate(start, 'iso');
+  const now_iso = getDate(now, 'iso');
   const date = start;
-  let group = time.getDate(date, 'year');
+  let group = getDate(date, 'year');
 
   if (end_iso >= now_iso) {
-    const endYear = `${time.getDate(end, 'year')}`;
+    const endYear = `${getDate(end, 'year')}`;
     if (groupNames[endYear]) {
       group = endYear;
     } else {
@@ -49,7 +49,7 @@ const buildEvent = (page, event) => {
   // concat tags
   const pageTags = page.data.tags || [];
   const eventTags = event ? event.tags || [] : [];
-  const tags = utils.unique([...pageTags, ...eventTags]);
+  const tags = unique([...pageTags, ...eventTags]);
 
   // feature
   const feature = event ? event.feature : page.data.feature;
@@ -93,7 +93,7 @@ const count = (groups) => {
 };
 
 const byGroup = (events) => {
-  const groups = utils.groupBy(events, 'group');
+  const groups = groupBy(events, 'group');
   const sorted = [];
 
   Object.keys(groups)
