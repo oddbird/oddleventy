@@ -1,0 +1,70 @@
+// Color Properties
+// ================
+
+@use '../config';
+
+$prime-hue: hue(map-get(config.$brand-colors, 'brand-blue'));
+$accent-hue: hue(map-get(config.$brand-colors, 'brand-pink'));
+
+@use '../../../node_modules/cascading-color-systems' as ccs with (
+  $prime-hue: $prime-hue,
+  $accent-hue: $accent-hue,
+  $steps: 6,
+  $fades: 0.75,
+  $fade-background: 25%,
+  $build: true,
+);
+
+[data-ccs-colors] {
+  --mode-zero: calc((var(--ccs-mode) + 1) * 0.5);
+  --mode-zero--invert: calc((var(--ccs-mode--invert) + 1) * 0.5);
+
+  --ccs-neutral--theme: var(--ccs-h--accent);
+  --bg: var(--ccs--bg-full);
+  --callout: var(--ccs-neutral--bg5);
+  --border: var(--ccs-neutral);
+  --text: var(--ccs-prime--fg-full);
+  --action: var(--ccs-prime--fg1);
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-ccs-theme='oddbird'] {
+  --ccs-theme-prime: #{$prime-hue};
+  --ccs-theme-accent: #{$accent-hue};
+  --ccs-h--prime: calc(
+    var(--mode-zero) * var(--ccs-theme-prime) + var(--mode-zero--invert) *
+      var(--ccs-theme-accent)
+  );
+  --ccs-accent--theme: calc(
+    var(--mode-zero--invert) * var(--ccs-theme-prime) + var(--mode-zero) *
+      var(--ccs-theme-accent)
+  );
+  --ccs-custom-hue: none;
+}
+
+[data-ccs-theme='monochrome'] {
+  --ccs-accent--theme: var(--ccs-h--prime);
+}
+
+[data-ccs-theme='contrast'] {
+  --ccs-custom-hue: none;
+  --ccs-custom-saturation: none;
+}
+
+// temporary
+[data-ccs-field='hue'] {
+  --ccs-field-display: var(--ccs-custom-hue, block);
+}
+
+[data-ccs-field='lightness'] {
+  --ccs-field-display: var(--ccs-custom-lightness, block);
+}
+
+[data-ccs-field='saturation'] {
+  --ccs-field-display: var(--ccs-custom-saturation, block);
+}
+
+[data-ccs-field='contrast'] {
+  --ccs-field-display: var(--ccs-custom-contrast, block);
+}

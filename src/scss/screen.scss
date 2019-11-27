@@ -2,9 +2,7 @@
 // ======
 
 @use 'temp';
-
-// @import 'config/manifest';
-// @import 'initial/manifest';
-// @import 'patterns/manifest';
-// @import 'layout/manifest';
-// @import 'components/manifest';
+@use 'initial';
+@use 'patterns';
+// @import 'layout';
+@use 'components';

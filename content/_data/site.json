@@ -6,6 +6,14 @@
   "contact": "/contact/",
   "images": "/assets/images/",
   "feed": "feed.atom",
+  "themes": [
+    "oddbird",
+    "complement",
+    "adjacent",
+    "triad",
+    "monochrome",
+    "contrast"
+  ],
   "styles": ["screen.css"],
   "facebook_id": "1820980378150914"
 }
