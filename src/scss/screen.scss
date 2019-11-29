@@ -1,8 +1,9 @@
 // Screen
 // ======
 
+@use 'config';
 @use 'temp';
 @use 'initial';
 @use 'patterns';
-// @import 'layout';
+@use 'layout';
 @use 'components';

@@ -1,6 +1,9 @@
 // Scale Settings
 // ==============
 
+@use '../../../node_modules/accoutrement/sass/tools';
+@use '../../../node_modules/sassdoc-theme-herman/scss/utilities' as herman;
+
 // Ratios
 // ------
 /// @group config-scale
@@ -11,12 +14,12 @@ $modular-scale: (
   'text-ratio': 1.4,
 );
 
-@include add-ratios($modular-scale);
-@include herman-add(
+@include tools.add-ratios($modular-scale);
+@include herman.herman-add(
   'ratios',
   'modular-scale',
   $modular-scale,
-  get-function('ratio')
+  get-function('ratio', $module: 'tools')
 );
 
 // Text Sizes
@@ -58,8 +61,13 @@ $text-sizes: (
     ),
 );
 
-@include add-sizes($text-sizes);
-@include herman-add('sizes', 'text-sizes', $text-sizes, get-function('size'));
+@include tools.add-sizes($text-sizes);
+@include herman.herman-add(
+  'sizes',
+  'text-sizes',
+  $text-sizes,
+  get-function('size', $module: 'tools')
+);
 
 // Spacing Sizes
 // -------------
@@ -103,12 +111,12 @@ $spacing-sizes: (
   'spacer': 'calc(#double-gutter + 3vw)',
 );
 
-@include add-sizes($spacing-sizes);
-@include herman-add(
+@include tools.add-sizes($spacing-sizes);
+@include herman.herman-add(
   'sizes',
   'spacing-sizes',
   $spacing-sizes,
-  get-function('size')
+  get-function('size', $module: 'tools')
 );
 
 // Pattern Sizes
@@ -171,12 +179,12 @@ $pattern-sizes: (
   'imageblock-image': '#dropdown-wide',
 );
 
-@include add-sizes($pattern-sizes);
-@include herman-add(
+@include tools.add-sizes($pattern-sizes);
+@include herman.herman-add(
   'sizes',
   'pattern-sizes',
   $pattern-sizes,
-  get-function('size')
+  get-function('size', $module: 'tools')
 );
 
 // Page Sizes
@@ -192,8 +200,13 @@ $page-sizes: (
   'large-page': 75rem,
 );
 
-@include add-sizes($page-sizes);
-@include herman-add('sizes', 'page-sizes', $page-sizes, get-function('size'));
+@include tools.add-sizes($page-sizes);
+@include herman.herman-add(
+  'sizes',
+  'page-sizes',
+  $page-sizes,
+  get-function('size', $module: 'tools')
+);
 
 // Column Sizes
 // ------------
@@ -212,10 +225,10 @@ $column-sizes: (
   'wide-column': 90%,
 );
 
-@include add-sizes($column-sizes);
-@include herman-add(
+@include tools.add-sizes($column-sizes);
+@include herman.herman-add(
   'sizes',
   'column-sizes',
   $column-sizes,
-  get-function('size')
+  get-function('size', $module: 'tools')
 );

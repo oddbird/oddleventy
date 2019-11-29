@@ -1,31 +1,45 @@
 // Root Initialization
 // ===================
 
-// [id='oddsite'] {
-//   @include contrasted('background');
-//   background-attachment: scroll;
-//   background-image: url('../images/footer-wash.jpg');
-//   background-position: bottom right;
-//   background-repeat: no-repeat;
-//   background-size: size('background') auto;
-//   display: grid;
-//   grid-template-rows: auto 1fr auto;
-//   // .divider and .extend-full cause scroll issues in some browsers
-//   max-width: 100vw;
-//   min-height: 100vh;
-//   overflow-x: hidden;
-// }
+@use '../../../node_modules/accoutrement/sass/tools';
 
-a {
-  --action-underline--default: var(--ccs-accent--fg2);
-  color: var(--action);
-  text-decoration-color: var(
-    --action-underline,
-    var(--action-underline--default)
-  );
+html {
+  background-attachment: scroll;
+  background-image: url('../images/site/footer-wash.jpg');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: tools.size('background') auto;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-// this could be a candidate for accoutrement-init…
-object {
-  vertical-align: middle;
+a {
+  &:link,
+  &:visited {
+    --underline-color--default: var(--ccs-accent);
+    --underline-thickness--default: 0.05em;
+    --underline-offset--default: auto;
+    color: var(--action);
+    text-decoration-color: var(
+      --underline-color,
+      var(--underline-color--default)
+    );
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: var(
+      --underline-thickness,
+      var(--underline-thickness--default)
+    );
+    text-underline-offset: var(
+      --underline-offset,
+      var(--underline-offset--default)
+    );
+    text-shadow: none;
+    transition: text-decoration-thickness 150ms ease-out;
+  }
+
+  &:hover {
+    --underline-color: var(--ccs-accent--fg1);
+    --underline-thickness: 0.15em;
+    color: var(--action-focus);
+  }
 }

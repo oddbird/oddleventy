@@ -1,21 +1,17 @@
 // Config Manifest
 // ===============
 
-// Third-Party
-// -----------
-// @import 'requirements';
-
 // Accoutrement
 // ------------
 @forward 'color';
-// @import 'fonts';
-// @import 'scale';
+@forward 'fonts';
+@forward 'scale';
 
 // Utilities
 // ---------
-// @import 'utilities';
-// @import 'links';
-// @import 'layout';
-// @import 'sections';
-// @import 'typography';
-// @import 'animation';
+// @forward 'utilities';
+// @forward 'links';
+// @forward 'layout';
+// @forward 'sections';
+// @forward 'typography';
+// @forward 'animation';

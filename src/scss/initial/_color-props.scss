@@ -1,10 +1,11 @@
 // Color Properties
 // ================
 
-@use '../config';
+@use 'sass:color';
+@use '../../../node_modules/accoutrement/sass/tools';
 
-$prime-hue: hue(map-get(config.$brand-colors, 'brand-blue'));
-$accent-hue: hue(map-get(config.$brand-colors, 'brand-pink'));
+$prime-hue: color.hue(tools.color('brand-blue'));
+$accent-hue: color.hue(tools.color('brand-pink'));
 
 @use '../../../node_modules/cascading-color-systems' as ccs with (
   $prime-hue: $prime-hue,
@@ -12,21 +13,27 @@ $accent-hue: hue(map-get(config.$brand-colors, 'brand-pink'));
   $steps: 6,
   $fades: 0.75,
   $fade-background: 25%,
+  $neutral-saturation: 10%,
   $build: true,
 );
 
 [data-ccs-colors] {
+  // maybe should move to CCS?
   --mode-zero: calc((var(--ccs-mode) + 1) * 0.5);
   --mode-zero--invert: calc((var(--ccs-mode--invert) + 1) * 0.5);
 
-  --ccs-neutral--theme: var(--ccs-h--accent);
+  // our theme
   --bg: var(--ccs--bg-full);
   --callout: var(--ccs-neutral--bg5);
   --border: var(--ccs-neutral);
-  --text: var(--ccs-prime--fg-full);
+  --text: var(--ccs-neutral--fg-full);
   --action: var(--ccs-prime--fg1);
-  background: var(--bg);
-  color: var(--text);
+  --action-focus: var(--ccs-prime--fg2);
+
+  // used by CCS to set defaults
+  --ccs-neutral--theme: var(--ccs-h--prime);
+  --ccs-background: var(--bg);
+  --ccs-color: var(--text);
 }
 
 [data-ccs-theme='oddbird'] {
@@ -50,21 +57,4 @@ $accent-hue: hue(map-get(config.$brand-colors, 'brand-pink'));
 [data-ccs-theme='contrast'] {
   --ccs-custom-hue: none;
   --ccs-custom-saturation: none;
-}
-
-// temporary
-[data-ccs-field='hue'] {
-  --ccs-field-display: var(--ccs-custom-hue, block);
-}
-
-[data-ccs-field='lightness'] {
-  --ccs-field-display: var(--ccs-custom-lightness, block);
-}
-
-[data-ccs-field='saturation'] {
-  --ccs-field-display: var(--ccs-custom-saturation, block);
-}
-
-[data-ccs-field='contrast'] {
-  --ccs-field-display: var(--ccs-custom-contrast, block);
 }
