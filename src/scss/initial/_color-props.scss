@@ -37,16 +37,16 @@ $accent-hue: color.hue(tools.color('brand-pink'));
 }
 
 [data-ccs-theme='oddbird'] {
-  --ccs-theme-prime: #{$prime-hue};
-  --ccs-theme-accent: #{$accent-hue};
-  --ccs-h--prime: calc(
-    var(--mode-zero) * var(--ccs-theme-prime) + var(--mode-zero--invert) *
-      var(--ccs-theme-accent)
-  );
-  --ccs-accent--theme: calc(
-    var(--mode-zero--invert) * var(--ccs-theme-prime) + var(--mode-zero) *
-      var(--ccs-theme-accent)
-  );
+  --ccs-prime--config: #{$prime-hue};
+  --ccs-accent--config: #{$accent-hue};
+  --ccs-prime--theme: #{ccs.if-mode(
+      $light: var(--ccs-prime--config),
+      $dark: var(--ccs-accent--config)
+    )};
+  --ccs-accent--theme: #{ccs.if-mode(
+      $light: var(--ccs-accent--config),
+      $dark: var(--ccs-prime--config)
+    )};
   --ccs-custom-hue: none;
 }
 
