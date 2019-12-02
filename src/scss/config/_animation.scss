@@ -1,10 +1,21 @@
 @use '../../../node_modules/accoutrement/sass/tools' as *;
 
+// Times
+// -----
+/// Named times to be re-used in animations.
+/// @type map
+/// @group config-animation
 $times: (
   'fast': 150ms,
   'mid': 300ms,
 );
 
+// Changes
+// -------
+/// Named transition and animation definitions
+/// that can be re-used to create consistent movement.
+/// @type map
+/// @group config-animation
 $changes: (
   'colors': (
     color time('fast') ease-out,

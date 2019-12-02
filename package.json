@@ -19,7 +19,7 @@
     "sass:styleguide": "sass src/scss/styleguide.scss _built/css/styleguide.css",
     "sass:json": "sass --no-source-map src/scss/json.scss _built/css/json.css",
     "sass:postcss": "postcss _built/css/{screen,styleguide}.css --use autoprefixer --replace --map",
-    "sassdoc": "sassdoc src/scss/screen.scss",
+    "sassdoc": "sassdoc src/scss/**/*.scss",
     "prettier:js": "prettier --write \"**/*.js\"",
     "prettier:other": "prettier --write \"**/*.{json,yml}\"",
     "eslint": "eslint \"*.js\" \"**/*.js\" --fix",

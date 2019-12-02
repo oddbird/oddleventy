@@ -10,13 +10,10 @@ verbose: true
 
 groups:
   Tools:
-    tools-grids: Grids
-    tools-grid-vars: CSS Grid Variables
-    tools-patterns: Patterns
-    tools-stripes: Stripes
+    tools-range: Range Input Prefixes
   Design Tokens:
     config-animation: Animations
-    config-colors: Brand Colors
+    config-color: Brand Colors
     config-themes: Theme Colors
     config-grids: Grids
     config-fonts: Fonts
@@ -29,10 +26,12 @@ herman:
       url: http://www.11ty.io
     - name: 'Accoutrement'
       url: https://oddbird.net/accoutrement/
+    - name: 'Cascading Color Systems'
+      url: https://cascading-colors.netlify.com/
     - name: 'Herman'
       url: https://oddbird.net/herman/
   fontpath: 'src/fonts/'
   sass:
     includepaths: ['src/scss']
-    includes: ['config/manifest']
-    # jsonfile: '_built/css/json.css'
+    includes: ['config/index']
+    jsonfile: '_built/css/json.css'
