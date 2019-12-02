@@ -1,7 +1,16 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
-// defaults
-// --------
+// General Focus Styles
+// --------------------
+
+:focus {
+  outline: medium dashed currentColor;
+  outline-color: var(--outline-color, var(--text, currentColor));
+  outline-offset: var(--quarter-shim);
+}
+
+// Link Defaults
+// -------------
 
 a {
   &:link,
@@ -35,7 +44,7 @@ a {
   }
 }
 
-// skip to content
+// Skip to Content
 // ---------------
 
 .to-content {
@@ -56,7 +65,6 @@ a {
   &:focus,
   &:active {
     opacity: 1;
-    outline: 2px dotted var(--text);
     pointer-events: initial;
     transform: translateY(0);
   }
