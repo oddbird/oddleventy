@@ -1,7 +1,9 @@
-// Initial Manifest
-// ================
+// Custom Props
+@forward 'colors';
+@forward 'scale';
 
-@forward '../../../node_modules/cssremedy/css/remedy';
-@forward 'color-props';
+// Base Styles
 @forward 'root';
+@forward 'links';
+@forward 'headings';
 @forward 'type';

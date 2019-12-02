@@ -1,13 +1,8 @@
-// Animation Config
-// ================
+@use '../../../node_modules/accoutrement/sass/tools' as *;
 
 $times: (
   'fast': 150ms,
-  'mid': 200ms,
-  'slow': '#fast'
-    (
-      'times': 2,
-    ),
+  'mid': 300ms,
 );
 
 $changes: (
@@ -16,7 +11,6 @@ $changes: (
     background-color time('fast') ease-out,
     text-decoration-color time('fast') ease-out,
   ),
-  'move': transform time('slow') ease('_out-back'),
-  'move-smooth': transform time('slow') ease-in-out,
-  'fade': opacity time('mid') ease-in-out,
+  'move': transform time('mid') ease('_out-back'),
+  'fade': opacity time('fast') ease-out,
 );

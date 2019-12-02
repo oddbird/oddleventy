@@ -1,18 +1,11 @@
-// Initial Typography
-// ------------------
-
 @use '../../../node_modules/accoutrement/sass/tools';
 
-// Base
-// ----
+hr {
+  margin: var(--spacer) 0;
+}
 
-@include tools.import-webfonts;
-
-html {
-  @include tools.font-family('body');
-  font-size: tools.size('root');
-  font-size: calc(1em + 0.3vw);
-  line-height: 1.35;
+.intro {
+  font-size: var(--medium);
 }
 
 // Selection
@@ -21,8 +14,8 @@ html {
 /// with any text-shadows removed.
 /// @group typography
 ::selection {
-  // @include contrasted('select');
-  text-shadow: none;
+  background-color: var(--ccs-accent--fg5);
+  color: var(--bg);
 }
 
 // Hidden Text & Fout
@@ -33,15 +26,6 @@ html {
   @include tools.is-hidden;
 }
 
-// Abbr
-// ----
-
-abbr {
-  &[title] {
-    text-decoration: none;
-  }
-}
-
 // Ampersands
 // ----------
 
@@ -49,70 +33,12 @@ abbr {
   @include tools.font-family('amp');
 }
 
-// Headlines
-// ---------
+// Paragraphs & Lists
+// ------------------
 
-h1,
-h2 {
-  @include tools.font-family('alt');
-}
-
-h2 {
-  font-size: tools.size('h2');
-  margin: 1.5rem 0 0.75rem;
-}
-
-h3 {
-  font-size: tools.size('h3');
-  font-style: italic;
-  margin-bottom: 0.75rem;
-  margin-top: 1.5rem;
-
-  h2 + &,
-  h2 + section > &:first-child {
-    margin-top: 0;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  [data-module='rst-body'] & {
-    clear: both;
-  }
-
-  [href] {
-    text-decoration: none;
-  }
-}
-
-// Links
-// -----
-
-.icon-text {
-  text-decoration: underline;
-  text-decoration-skip-ink: auto;
-}
-
-.image-reference {
-  &,
-  &:link,
-  &:visited {
-    text-decoration: none;
-  }
-
-  object {
-    pointer-events: none;
-  }
-}
-
-// Paragraphs
-// ----------
-
-p {
-  margin-bottom: tools.size('shim', 'em');
-  margin-top: tools.size('shim', 'em');
+p,
+ul,
+ol {
+  margin-bottom: var(--newline);
+  margin-top: 0;
 }

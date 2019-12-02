@@ -6,7 +6,6 @@
 
 [data-layout='body'] {
   display: grid;
-  font-size: calc(1em + 1vh);
   grid:
     'menu' auto
     'banner' auto
@@ -18,25 +17,6 @@
   margin: 0 auto;
   max-width: 45em;
   min-height: 100vh;
-}
-
-.to-content {
-  background: var(--action);
-  color: var(--bg);
-  opacity: 0;
-  padding: 0 1em;
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  transform: translateY(-100%);
-
-  &:focus,
-  &:active {
-    opacity: 1;
-    outline: 2px dotted var(--text);
-    pointer-events: initial;
-    transform: translateY(0);
-  }
 }
 
 [data-layout='menu'] {
@@ -56,6 +36,7 @@
 }
 
 [data-layout='footer'] {
+  font-size: var(--small);
   grid-area: footer;
   padding: 1em;
 }

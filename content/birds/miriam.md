@@ -48,17 +48,17 @@ writing, music, and visual art.
 
 ## Social
 
-{% for site, username in social %}
-{% if site[0] != '_' %}
+{% for site, username in social -%}
+{%- if site[0] != '_' -%}
 - {{ site }}: {{ username }}
-{% endif %}
-{% endfor %}
+{% endif -%}
+{%- endfor %}
 
 ------
 
 ## Open Source
 
-{% for page in collections._oss | byBird(bird) %}
+{% for page in collections._oss | byBird(bird) -%}
 - [{{ page.data.title }}]({{ page.url }})
 {% endfor %}
 
@@ -66,7 +66,7 @@ writing, music, and visual art.
 
 ## Speaking
 
-{% for page in collections.speaking | byBird(bird) %}
+{% for page in collections.speaking | byBird(bird) -%}
 - [{{ page.data.title }}]({{ page.url }})
 {% endfor %}
 
@@ -74,6 +74,6 @@ writing, music, and visual art.
 
 ## Articles
 
-{% for page in collections._post | byBird(bird) %}
+{% for page in collections._post | byBird(bird) -%}
 - [{{ page.data.title }}]({{ page.url }})
 {% endfor %}
