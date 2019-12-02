@@ -1,0 +1,57 @@
+// Color Properties
+// ================
+
+@use 'sass:color';
+@use '../../../node_modules/accoutrement/sass/tools';
+
+$prime-hue: color.hue(tools.color('brand-blue')) / 1deg;
+$accent-hue: color.hue(tools.color('brand-pink')) / 1deg;
+
+@use '../../../node_modules/cascading-color-systems' as ccs with (
+  $prime-hue: $prime-hue,
+  $accent-hue: $accent-hue,
+  $steps: 6,
+  $fades: 0.75,
+  $fade-background: 25%,
+  $neutral-saturation: 10%,
+  $build: true,
+);
+
+[data-ccs-colors] {
+  // maybe should move to CCS?
+  --mode-zero: calc((var(--ccs-mode) + 1) * 0.5);
+  --mode-zero--invert: calc((var(--ccs-mode--invert) + 1) * 0.5);
+
+  // our theme
+  --bg: var(--ccs-neutral--bg-full);
+  --callout: var(--ccs-neutral--bg5);
+  --border: var(--ccs-neutral);
+  --text: var(--ccs-neutral--fg-full);
+  --action: var(--ccs-prime--fg2);
+  --action-focus: var(--ccs-prime--fg1);
+
+  // used by CCS to set defaults
+  --ccs-neutral--theme: var(--ccs-h--prime);
+  --ccs-background: var(--bg);
+  --ccs-color: var(--text);
+}
+
+[data-ccs-theme] {
+  --ccs-prime--config: #{ccs.if-mode($prime-hue, $accent-hue)};
+  --ccs-accent--config: #{ccs.if-mode($accent-hue, $prime-hue)};
+}
+
+[data-ccs-theme='oddbird'] {
+  --ccs-prime--theme: var(--ccs-prime--config);
+  --ccs-accent--theme: var(--ccs-accent--config);
+  --ccs-custom-hue: none;
+}
+
+[data-ccs-theme='monochrome'] {
+  --ccs-accent--theme: var(--ccs-h--prime);
+}
+
+[data-ccs-theme='contrast'] {
+  --ccs-custom-hue: none;
+  --ccs-custom-saturation: none;
+}

@@ -1,0 +1,63 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
+// defaults
+// --------
+
+a {
+  &:link,
+  &:visited,
+  &.icon-text {
+    --underline-color--default: var(--ccs-accent--fg1);
+    --underline-thickness--default: 0.05em;
+    --underline-offset--default: auto;
+    color: var(--link, var(--action));
+    text-decoration: underline;
+    text-decoration-color: var(
+      --underline-color,
+      var(--underline-color--default)
+    );
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: var(
+      --underline-thickness,
+      var(--underline-thickness--default)
+    );
+    text-underline-offset: var(
+      --underline-offset,
+      var(--underline-offset--default)
+    );
+    transition: text-decoration-thickness 150ms ease-out;
+  }
+
+  &:hover {
+    --underline-color: var(--ccs-accent);
+    --underline-thickness: 0.15em;
+    color: var(--action-focus);
+  }
+}
+
+// skip to content
+// ---------------
+
+.to-content {
+  &:link,
+  &:visited {
+    --underline-color: currentColor;
+    background: var(--action);
+    color: var(--bg);
+    opacity: 0;
+    padding: 0 1em;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transform: translateY(-100%);
+    transition: tools.change('move'), tools.change('fade');
+  }
+
+  &:focus,
+  &:active {
+    opacity: 1;
+    outline: 2px dotted var(--text);
+    pointer-events: initial;
+    transform: translateY(0);
+  }
+}

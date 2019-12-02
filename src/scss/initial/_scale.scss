@@ -1,0 +1,32 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
+html {
+  // spacing
+  --newline: 0.75em;
+  --gutter: #{tools.size('gutter')};
+  --gutter-plus: calc(var(--gutter) * 1.5);
+  --double-gutter: calc(var(--gutter) * 2);
+  --tripple-gutter: calc(var(--gutter) * 3);
+  --shim: calc(var(--gutter) / 2);
+  --shim-plus: calc(var(--gutter) * 0.75);
+  --half-shim: calc(var(--gutter) / 4);
+  --quarter-shim: calc(var(--gutter) / 8);
+
+  // responsive spacing
+  --spacer: calc(var(--double-gutter) + 3vw);
+
+  // borders
+  --border-width: thin;
+
+  // type scale
+  --small: 0.8rem;
+  --xsmall: 0.7rem;
+  --medium: 1.25rem;
+  --large: calc(1.5rem + 0.5vw);
+  --xlarge: calc(1.75rem + 1vw);
+
+  // type elements
+  --h1: var(--xlarge);
+  --h2: var(--large);
+  --h3: var(--medium);
+}
