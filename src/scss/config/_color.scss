@@ -1,17 +1,26 @@
-// Color Configuration
-// ===================
-
+@use 'sass:meta';
+@use 'sass:color';
 @use '../../../node_modules/accoutrement/sass/tools';
 @use '../../../node_modules/sassdoc-theme-herman/scss/utilities' as herman;
-@use 'sass:meta';
+
+/// # Color Config
+/// Accoutrement maps for storing global color tokens,
+/// and settings for generating color variables.
+/// @link https://www.oddbird.net/accoutrement/docs/color.html
+///   Accoutrement Scale
+/// @link https://cascading-colors.netlify.com/
+///   Cascading Color Systems
+/// @group config-color
 
 // Brand Colors
 // ------------
 /// The brand is defined by our primary brand blue,
 /// along with secondary pink and orange base colors.
-/// @group config-color
+/// These colors are rarely used directly,
+/// but form the basis of our CSS color variables.
 /// @colors
-/// @type Map
+/// @type map
+/// @group config-color
 $brand-colors: (
   'brand-blue': hsl(195, 52%, 31%),
   'brand-orange': hsl(24, 100%, 62%),
@@ -25,3 +34,83 @@ $brand-colors: (
   $brand-colors,
   meta.get-function('color', $module: 'tools')
 );
+
+// Global Colors
+// -------------
+/// Rather than using the brand colors directly,
+/// we use them to set default values for generated variables.
+/// This provides a mapping between semantic use-cases,
+/// and automatically-generated color variables.
+/// @type map
+/// @group config-color
+$global-colors: (
+  'bg': var(--ccs-neutral--bg-full),
+  'callout': var(--ccs-neutral--bg5),
+  'border': var(--ccs-neutral),
+  'text': var(--ccs-neutral--fg-full),
+  'action': var(--ccs-prime--fg2),
+  'action-focus': var(--ccs-prime--fg4),
+);
+
+// CCS Defaults
+// ------------
+/// The Cascading Color System has a few settings
+/// that we can most easily override with CSS variables
+/// @type map
+/// @group config-color
+$ccs-colors: (
+  'ccs-neutral--theme': var(--ccs-h--prime),
+  'ccs-background': var(--bg),
+  'ccs-color': var(--text),
+);
+
+// Brand Hues
+// ----------
+/// Hue values taken from the brand colors,
+/// for easy access in the CCS settings.
+/// @type map
+/// @access private
+/// @group config-color
+$_hues: (
+  'blue': color.hue(tools.color('brand-blue')),
+  'pink': color.hue(tools.color('brand-pink')),
+  'orange': color.hue(tools.color('brand-orange')),
+);
+
+// CCS Settings
+// ------------
+/// Settings for generating color variables.
+/// This map is marked private to encourage access
+/// through the `ccs()` function.
+/// See Cascading Color Systems documentation
+/// for valid settings.
+/// @type map
+/// @link https://cascading-colors.netlify.com/
+///   Cascading Color Systems
+/// @access private
+/// @group config-color
+$_ccs: (
+  'prime': map-get($_hues, 'blue') / 1deg,
+  'accent': map-get($_hues, 'pink') / 1deg,
+  'saturation': 75%,
+  // average of our brand colors… 'steps': 6,
+  'fades': 0.75,
+  'fade-background': 25%,
+  'neutral-saturation': 10%,
+);
+
+// CCS "Get" Function
+// ------------------
+/// Get settings from the `$ccs` configuration map.
+/// @param {string} $token -
+///   Name of a token key in the `$ccs` map.
+///   See map for valid tokens.
+/// @return {*} -
+///   Value from `$ccs` map, based on given key
+/// @example
+///   @use '../config/color';
+///   $prime-hue: color.ccs('prime');
+/// @group config-color
+@function ccs($token) {
+  @return map-get($_ccs, $token);
+}

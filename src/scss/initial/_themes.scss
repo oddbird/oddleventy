@@ -1,0 +1,35 @@
+@use '../config/color' as config;
+@use '../../../node_modules/cascading-color-systems' as ccs;
+
+// Default
+// -------
+/// The default theme flips primary (blue) and accent (pink) colors
+/// based on the (light/dark) mode
+/// @name Default Theme
+/// @group init-themes
+[data-ccs-theme] {
+  --ccs-prime--config: #{ccs.if-mode(config.ccs('prime'), config.ccs('accent'))};
+  --ccs-accent--config: #{ccs.if-mode(config.ccs('accent'), config.ccs('prime'))};
+}
+
+// OddBird
+// -------
+/// The OddBird theme is based on default settings,
+/// but removes user hue settings.
+/// @name Default Theme
+/// @group init-themes
+[data-ccs-theme='oddbird'] {
+  --ccs-prime--theme: var(--ccs-prime--config);
+  --ccs-accent--theme: var(--ccs-accent--config);
+  --ccs-custom-hue: none;
+}
+
+// Monochrome
+// ----------
+/// Provide a monochrome theme option,
+/// with one color for both accent and prime.
+/// @name Monochrome Theme
+/// @group init-themes
+[data-ccs-theme='monochrome'] {
+  --ccs-accent--theme: var(--ccs-h--prime);
+}

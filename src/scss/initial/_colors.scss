@@ -1,57 +1,27 @@
-// Color Properties
-// ================
-
-@use 'sass:color';
+@use '../config/color' as config;
 @use '../../../node_modules/accoutrement/sass/tools';
-
-$prime-hue: color.hue(tools.color('brand-blue')) / 1deg;
-$accent-hue: color.hue(tools.color('brand-pink')) / 1deg;
-
 @use '../../../node_modules/cascading-color-systems' as ccs with (
-  $prime-hue: $prime-hue,
-  $accent-hue: $accent-hue,
-  $steps: 6,
-  $fades: 0.75,
-  $fade-background: 25%,
-  $neutral-saturation: 10%,
+  $prime-hue: config.ccs('prime'),
+  $accent-hue: config.ccs('accent'),
+  $saturation: config.ccs('saturation'),
+  $steps: config.ccs('steps'),
+  $fades: config.ccs('fades'),
+  $fade-background: config.ccs('fade-background'),
+  $neutral-saturation: config.ccs('neutral-saturation'),
   $build: true,
 );
 
+/// # CSS Color Variables
+/// Generate CSS variables from configuration colors,
+/// Using Accoutrement variable tools.
+/// @link https://www.oddbird.net/accoutrement/docs/core-vars.html
+///   Accoutrement Variables
+/// @link https://cascading-colors.netlify.com/
+///   Cascading Color Systems
+/// @group init-colors
+
+/// @group init-colors
 [data-ccs-colors] {
-  // maybe should move to CCS?
-  --mode-zero: calc((var(--ccs-mode) + 1) * 0.5);
-  --mode-zero--invert: calc((var(--ccs-mode--invert) + 1) * 0.5);
-
-  // our theme
-  --bg: var(--ccs-neutral--bg-full);
-  --callout: var(--ccs-neutral--bg5);
-  --border: var(--ccs-neutral);
-  --text: var(--ccs-neutral--fg-full);
-  --action: var(--ccs-prime--fg2);
-  --action-focus: var(--ccs-prime--fg1);
-
-  // used by CCS to set defaults
-  --ccs-neutral--theme: var(--ccs-h--prime);
-  --ccs-background: var(--bg);
-  --ccs-color: var(--text);
-}
-
-[data-ccs-theme] {
-  --ccs-prime--config: #{ccs.if-mode($prime-hue, $accent-hue)};
-  --ccs-accent--config: #{ccs.if-mode($accent-hue, $prime-hue)};
-}
-
-[data-ccs-theme='oddbird'] {
-  --ccs-prime--theme: var(--ccs-prime--config);
-  --ccs-accent--theme: var(--ccs-accent--config);
-  --ccs-custom-hue: none;
-}
-
-[data-ccs-theme='monochrome'] {
-  --ccs-accent--theme: var(--ccs-h--prime);
-}
-
-[data-ccs-theme='contrast'] {
-  --ccs-custom-hue: none;
-  --ccs-custom-saturation: none;
+  @include tools.tokens--(config.$global-colors);
+  @include tools.tokens--(config.$ccs-colors);
 }

@@ -1,5 +1,11 @@
 @use '../../../node_modules/accoutrement/sass/tools' as *;
 
+/// # Animation Config
+/// Accoutrement maps for storing global animation tokens.
+/// @link https://www.oddbird.net/accoutrement/docs/animate.html
+///   Accoutrement Scale
+/// @group config-animation
+
 // Times
 // -----
 /// Named times to be re-used in animations.
@@ -13,7 +19,8 @@ $times: (
 // Changes
 // -------
 /// Named transition and animation definitions
-/// that can be re-used to create consistent movement.
+/// that can be re-used to create consistent movement
+/// across the site.
 /// @type map
 /// @group config-animation
 $changes: (
