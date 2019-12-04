@@ -1,6 +1,7 @@
 ---
 title: Stacy Kvernmo
 bird: stacy
+active: true
 image:
   src: birds/stacy.jpg
 social:

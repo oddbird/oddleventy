@@ -1,6 +1,7 @@
 ---
 title: Miriam Suzanne
 bird: miriam
+active: true
 image:
   src: birds/miriam.jpg
 social:

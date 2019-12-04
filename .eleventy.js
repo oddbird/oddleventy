@@ -51,6 +51,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('titleSort', pages.titleSort);
 
   eleventyConfig.addFilter('byBird', birds.getPages);
+  eleventyConfig.addFilter('active', birds.active);
   eleventyConfig.addFilter('authorPage', birds.authorPage);
 
   eleventyConfig.addFilter('activeNav', nav.getActive);

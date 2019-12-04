@@ -1,6 +1,7 @@
 ---
 title: Carl Meyer
 bird: carl
+active: true
 image:
   src: birds/carl.jpg
 social:

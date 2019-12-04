@@ -1,6 +1,7 @@
 ---
 title: Erica Mitchell
 bird: erica
+active: true
 image:
   src: birds/erica.jpg
 social:

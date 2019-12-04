@@ -26,6 +26,6 @@ or [in person][meetup] at a meetup or conference.
 
 ## Birds
 
-{% for bird in collections.birds %}
+{% for bird in collections.birds | active() %}
 - [{{ bird.data.title }}]({{ bird.url }})
 {% endfor %}

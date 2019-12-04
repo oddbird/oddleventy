@@ -1,6 +1,7 @@
 ---
 title: Miriam Suzanne
 bird: sondra
+active: true
 image:
   src: birds/sondra.jpg
 social:

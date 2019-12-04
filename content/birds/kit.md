@@ -1,6 +1,7 @@
 ---
 title: Kit La Touche
 bird: kit
+active: true
 image:
   src: birds/kit.jpg
 social:

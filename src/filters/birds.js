@@ -8,6 +8,8 @@ const getPages = (collection, bird) =>
     return author === bird || author.includes(bird);
   });
 
+const active = (collection) => collection.filter((bird) => bird.data.active);
+
 const authorPage = (collection, bird) => {
   if (bird) {
     bird = typeof bird === 'string' ? bird : bird[0];
@@ -20,5 +22,6 @@ const authorPage = (collection, bird) => {
 
 module.exports = {
   getPages,
+  active,
   authorPage,
 };

@@ -1,6 +1,7 @@
 ---
 title: Jonny Gerig Meyer
 bird: jonny
+active: true
 image:
   src: birds/jonny.jpg
 social:
