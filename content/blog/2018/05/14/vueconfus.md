@@ -30,6 +30,10 @@ date: 2018-05-14
 
 community/events.macros.j2\#videos\_by\_talk
 
+content.macros.j2\#get\_quotes
+
+content.macros.j2\#divider
+
 I enjoyed the conference as much as I enjoy the framework. I was
 particularly impressed with the way core team members talk about
 community and future development. Everyone was welcoming, interested in

@@ -20,6 +20,8 @@ summary: "CSS is the design language of the web --one of three core web language
 date: 2019-10-03
 ---
 
+content.macros.j2\#video
+
 CSS is for documents, and also for apps on a universally accessible web.
 
 This is a young platform, and all the core languages are growing fast,

@@ -22,6 +22,8 @@ summary: "I love when conferences give me the opportunity to travel around the\n
 date: 2018-05-15
 ---
 
+content.macros.j2\#get\_quotes
+
 Right from the start, Beyond Tellerand was unlike other conferences.
 Rather than hearing familiar talks about familiar technology, the first
 day took us on a journey through web annotations, intricate

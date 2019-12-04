@@ -30,6 +30,8 @@ underrepresented professionals in tech and their allies; with a focus on
 technology and creating a safe space to have conversations around
 diversity, inclusion, and intersectionality in tech.
 
+content.macros.j2\#pullquote
+
 I knew I was in the right place as I met so many people I already follow
 on Twitter.
 

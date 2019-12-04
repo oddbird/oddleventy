@@ -23,7 +23,11 @@ summary: "**We're excited to introduce Susy 3.0**, a major update to our popular
 date: 2017-06-28
 ---
 
+content.macros.j2\#link\_button
+
 Susy3 Website
+
+content.macros.j2\#link\_button
 
 Susy3 Reference Docs
 

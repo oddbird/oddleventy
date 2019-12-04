@@ -37,11 +37,15 @@ professionals.
 Get started with an intro to Dark Mode on the web, by Deja Hodge — and
 check out her [dark mode demo].
 
+content.macros.j2\#video
+
 Dark mode is all the rage, with iOS, macOS, Android and others all
 shipping a system-wide dark mode for people's devices.
 
 Jen Simmons shows us how to access a handy third-panel in the Firefox
 Developer Tools, and toggle print preview mode.
+
+content.macros.j2\#video
 
 Use that third pane to quickly access the Grid or Flexbox Inspectors,
 the Font Editor, the Animations Tools, Tracked Changes, and more.
@@ -50,6 +54,8 @@ If you’ve ever struggled to style lists with customized bullets and
 numbers, Miriam Suzanne has a video all about the `::marker`
 pseudo-element and list counters. Watch the video, and go play with the
 [demo on codepen].
+
+content.macros.j2\#video
 
 Style list markers, and add your own counters!
 
