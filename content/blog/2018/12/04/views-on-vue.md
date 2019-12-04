@@ -2,6 +2,7 @@
 title: 'Views on Vue: Fonts with Miriam Suzanne'
 public: true
 tags:
+  - _post
   - Elsewhere
   - Code
   - CSS

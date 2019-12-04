@@ -2,6 +2,7 @@
 title: Herman Style Guides
 public: true
 tags:
+  - _post
   - Herman
   - Herman1
   - CSS

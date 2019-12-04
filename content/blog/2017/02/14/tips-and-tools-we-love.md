@@ -3,6 +3,7 @@ title: Tips and Tools We Love
 public: true
 author: stacy
 tags:
+  - _post
   - Tips
   - Workflows
   - Tools

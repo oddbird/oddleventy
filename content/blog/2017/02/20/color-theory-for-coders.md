@@ -6,6 +6,7 @@ headline:
   type: Birds Recommend
   tagline: from Natalya Shelburne
 tags:
+  - _post
   - Tips
   - Color
   - Design

@@ -3,6 +3,7 @@ title: 'Get Started with Design: 4 Useful Tools & Tutorials'
 public: true
 author: sondra
 tags:
+  - _post
   - Tools
   - Color
   - Typography

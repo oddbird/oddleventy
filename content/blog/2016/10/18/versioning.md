@@ -3,6 +3,7 @@ title: 'Versioning Show Ep.8: Miriam Suzanne'
 public: true
 author: miriam
 tags:
+  - _post
   - Elsewhere
   - Interview
   - SitePoint

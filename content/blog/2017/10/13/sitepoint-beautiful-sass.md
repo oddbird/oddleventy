@@ -5,6 +5,7 @@ author: miriam
 canonical: https://www.sitepoint.com/writing-beautiful-sass/
 elsewhere: SitePoint
 tags:
+  - _post
   - Elsewhere
   - CSS
   - Sass

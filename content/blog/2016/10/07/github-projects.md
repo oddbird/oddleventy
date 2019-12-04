@@ -3,6 +3,7 @@ title: Auditioning Github Projects
 public: true
 author: miriam
 tags:
+  - _post
   - OddSite
   - Open Design
   - Tools

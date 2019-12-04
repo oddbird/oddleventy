@@ -3,6 +3,7 @@ title: Defining Goals, Exploring Possibilities
 public: true
 author: sondra
 tags:
+  - _post
   - OddSite
   - Open Design
   - Research

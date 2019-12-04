@@ -3,6 +3,7 @@ title: 'We Are Not Neutral: 2016 in Review'
 public: true
 author: miriam
 tags:
+  - _post
   - Politics
   - Year in Review
   - Diversity

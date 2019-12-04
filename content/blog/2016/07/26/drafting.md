@@ -2,6 +2,7 @@
 title: Shitty First Drafts
 author: miriam
 tags:
+  - _post
   - OddSite
   - Open Design
   - Process

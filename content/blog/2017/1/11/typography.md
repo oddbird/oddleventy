@@ -3,6 +3,7 @@ title: How to Choose Engaging & Accessible Typography for Your Website Brand
 public: true
 author: sondra
 tags:
+  - _post
   - OddSite
   - Open Design
   - Typography

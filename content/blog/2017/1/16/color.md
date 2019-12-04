@@ -3,6 +3,7 @@ title: How to Choose Beautiful & Accessible Brand Colors for Your Website
 public: true
 author: sondra
 tags:
+  - _post
   - OddSite
   - Open Design
   - Color

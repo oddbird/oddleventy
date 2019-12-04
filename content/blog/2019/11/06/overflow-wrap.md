@@ -5,6 +5,7 @@ author: miriam
 headline:
   tagline: None of the solutions are perfect, but we have some options
 tags:
+  - _post
   - CSS
   - Mozilla Developer
   - AboutWeb

@@ -5,6 +5,7 @@ author: miriam
 canonical: https://css-tricks.com/introducing-sass-modules/
 elsewhere: CSS-Tricks
 tags:
+  - _post
   - Elsewhere
   - Code
   - Modules

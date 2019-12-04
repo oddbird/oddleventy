@@ -3,6 +3,7 @@ title: The Scary & the Inspiring
 public: true
 author: sondra
 tags:
+  - _post
   - Conferences
   - Code
   - CSS

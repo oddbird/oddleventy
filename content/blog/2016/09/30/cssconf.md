@@ -3,6 +3,7 @@ title: CSSConf 2016 Recap
 public: true
 author: miriam
 tags:
+  - _post
   - Conferences
   - Front-end
   - CSS

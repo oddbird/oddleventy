@@ -5,6 +5,7 @@ author: miriam
 headline:
   tagline: Allow us to be more explicit & expressive about layouts
 tags:
+  - _post
   - CSS
   - Mozilla Developer
   - AboutWeb

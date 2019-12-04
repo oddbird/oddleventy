@@ -2,6 +2,7 @@
 title: Django REST Framework and Channels
 public: true
 tags:
+  - _post
   - Code
   - Python
   - Django

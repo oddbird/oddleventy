@@ -3,6 +3,7 @@ title: CSSDay 2016 Recap
 public: true
 author: stacy
 tags:
+  - _post
   - CSS
   - Front-end
   - Videos

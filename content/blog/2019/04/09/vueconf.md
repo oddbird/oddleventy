@@ -3,6 +3,7 @@ title: VueFinder at VueConf, 2019
 public: true
 author: miriam
 tags:
+  - _post
   - Vue
   - Conferences
   - Code

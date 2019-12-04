@@ -2,6 +2,7 @@
 title: Beyond Tellerand
 public: true
 tags:
+  - _post
   - Vue
   - Conferences
   - Design Systems

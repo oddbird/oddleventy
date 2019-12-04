@@ -5,6 +5,7 @@ author: miriam
 headline:
   tagline: For quick visual adjustments directly on the page
 tags:
+  - _post
   - CSS
   - Mozilla Developer
   - DevTools

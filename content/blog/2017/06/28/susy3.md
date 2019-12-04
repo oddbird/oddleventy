@@ -3,6 +3,7 @@ title: Welcome to Susy3!
 public: true
 author: miriam
 tags:
+  - _post
   - Susy
   - Susy3
   - CSS

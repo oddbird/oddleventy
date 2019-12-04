@@ -3,6 +3,7 @@ title: Smashing CSS Follow-Up Q&nbsp;&&nbsp;A
 public: true
 author: miriam
 tags:
+  - _post
   - Vue
   - Conferences
   - Code

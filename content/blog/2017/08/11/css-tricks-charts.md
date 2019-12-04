@@ -5,6 +5,7 @@ author: miriam
 canonical: https://css-tricks.com/css-charts-grid-custom-properties/
 elsewhere: CSS-Tricks
 tags:
+  - _post
   - Elsewhere
   - CSS
   - CSS Tricks

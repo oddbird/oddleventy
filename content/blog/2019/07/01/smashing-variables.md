@@ -5,6 +5,7 @@ author: miriam
 canonical: https://www.smashingmagazine.com/2019/07/css-custom-properties-cascade/
 elsewhere: Smashing Magazine
 tags:
+  - _post
   - Elsewhere
   - CSS
   - Custom Properties

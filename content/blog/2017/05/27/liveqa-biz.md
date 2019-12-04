@@ -4,6 +4,7 @@ public: true
 author: sondra
 type: event
 tags:
+  - _post
   - Events
   - Q&A
   - Tips

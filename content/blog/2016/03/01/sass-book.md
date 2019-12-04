@@ -5,6 +5,7 @@ author: miriam
 canonical: https://www.sitepoint.com/architecture-in-sass/
 elsewhere: SitePoint
 tags:
+  - _post
   - Elsewhere
   - Sass
   - Books

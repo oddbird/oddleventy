@@ -3,6 +3,7 @@ title: 'What''s Old is New: Drop Caps in CSS'
 public: true
 author: stacy
 tags:
+  - _post
   - CSS
   - Design
   - Code

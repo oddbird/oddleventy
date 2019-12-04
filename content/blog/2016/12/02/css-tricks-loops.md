@@ -5,6 +5,7 @@ author: miriam
 canonical: https://css-tricks.com/loops-css-preprocessors/
 elsewhere: CSS-Tricks
 tags:
+  - _post
   - Elsewhere
   - CSS
   - Sass

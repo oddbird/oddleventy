@@ -5,6 +5,7 @@ author: stacy
 canonical: https://css-tricks.com/its-my-job-and-yours/
 elsewhere: CSS-Tricks
 tags:
+  - _post
   - Elsewhere
   - Code
   - Design

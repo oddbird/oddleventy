@@ -7,6 +7,7 @@ headline:
     Just in time for
     `Selectors Level 4 <https://www.w3.org/TR/selectors-4/>`_!
 tags:
+  - _post
   - CSS
   - Mozilla Developer
   - AboutWeb

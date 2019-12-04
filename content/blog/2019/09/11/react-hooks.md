@@ -5,6 +5,7 @@ author: erica
 canonical: https://blog.bitsrc.io/why-we-switched-to-react-hooks-48798c42c7f
 elsewhere: Bits and Pieces
 tags:
+  - _post
   - Elsewhere
   - JS
   - React Hooks

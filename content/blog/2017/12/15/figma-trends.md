@@ -5,6 +5,7 @@ author: miriam
 canonical: https://www.figma.com/blog/eighteen-designers-predict-ui-ux-trends-for-2018/
 elsewhere: Figma
 tags:
+  - _post
   - Elsewhere
   - Design
   - CSS

@@ -2,6 +2,7 @@
 title: Understanding in Susy3
 public: true
 tags:
+  - _post
   - Susy
   - Susy3
   - CSS

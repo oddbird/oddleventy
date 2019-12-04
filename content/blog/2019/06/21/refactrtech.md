@@ -3,6 +3,7 @@ title: Diversity. Inclusion. Tech.
 public: true
 author: erica
 tags:
+  - _post
   - Conferences
   - JavaScript
   - Diversity

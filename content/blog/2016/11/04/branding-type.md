@@ -3,6 +3,7 @@ title: 'Behind the Scenes: OddSite Brand Process'
 public: true
 author: sondra
 tags:
+  - _post
   - OddSite
   - Open Design
   - Design

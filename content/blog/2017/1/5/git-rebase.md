@@ -3,6 +3,7 @@ title: A Rebase-Centric Model of Collaborative Git Use
 public: true
 author: kit
 tags:
+  - _post
   - Git
   - Workflows
   - Code

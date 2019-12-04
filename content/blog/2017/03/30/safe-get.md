@@ -6,6 +6,7 @@ headline:
   tagline: You don't need safe-get-function utilities
   type: Code Sample
 tags:
+  - _post
   - Sass
   - Tools
   - Code

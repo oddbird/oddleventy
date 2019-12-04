@@ -3,6 +3,7 @@ title: 'Birds Recommend: Performant Parallaxing with CSS 3D'
 public: true
 author: sondra
 tags:
+  - _post
   - Design
   - Recommendations
 image:

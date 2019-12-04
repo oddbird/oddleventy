@@ -3,6 +3,7 @@ title: 'SitePoint: Live Q&A with Miriam'
 public: true
 author: miriam
 tags:
+  - _post
   - Elsewhere
   - Q&A
   - Interview

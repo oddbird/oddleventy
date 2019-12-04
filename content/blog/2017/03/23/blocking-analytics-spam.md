@@ -3,6 +3,7 @@ title: Blocking Analytics Spam
 public: true
 author: jonny
 tags:
+  - _post
   - Spam
   - DevOps
   - Build Tools

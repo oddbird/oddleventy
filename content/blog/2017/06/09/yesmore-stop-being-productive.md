@@ -7,6 +7,7 @@ elsewhere: SuperYesMore
 headline:
   tagline: It's time to re-think what we're measuring
 tags:
+  - _post
   - Elsewhere
   - Design
   - CSS

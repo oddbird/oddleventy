@@ -5,6 +5,7 @@ author: miriam
 canonical: https://css-tricks.com/interview-miriam-suzanne/
 elsewhere: CSS-Tricks
 tags:
+  - _post
   - Elsewhere
   - CSS
   - Interview

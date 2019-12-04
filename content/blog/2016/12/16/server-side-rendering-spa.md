@@ -3,6 +3,7 @@ title: A Visit to the RESTful SPA
 public: true
 author: kit
 tags:
+  - _post
   - Single-Page Applications
   - Server-Side Rendering
   - JavaScript

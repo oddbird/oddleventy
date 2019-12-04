@@ -2,6 +2,7 @@
 title: Media Queries & Grid Settings
 public: true
 tags:
+  - _post
   - Susy
   - Susy3
   - CSS

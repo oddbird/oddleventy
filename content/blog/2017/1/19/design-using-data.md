@@ -3,6 +3,7 @@ title: Designing Using Data
 public: true
 author: stacy
 tags:
+  - _post
   - Data
   - Design
   - Videos

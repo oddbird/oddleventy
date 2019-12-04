@@ -5,6 +5,7 @@ author: miriam
 headline:
   tagline: How can we design for an unknown & infinite canvas?
 tags:
+  - _post
   - CSS
   - Mozilla Developer
   - AboutWeb

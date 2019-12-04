@@ -3,6 +3,7 @@ title: Open Design for OddBird.net
 public: true
 author: miriam
 tags:
+  - _post
   - OddSite
   - Open Design
 image:

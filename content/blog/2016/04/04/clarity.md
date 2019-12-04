@@ -3,6 +3,7 @@ title: Clarity Conference
 public: true
 author: miriam
 tags:
+  - _post
   - Conferences
   - Style Guides
 image:

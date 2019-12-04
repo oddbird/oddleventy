@@ -5,6 +5,7 @@ author: miriam
 headline:
   tagline: a gift from Mozilla (and OddBird)
 tags:
+  - _post
   - CSS
   - Mozilla Developer
   - AboutWeb

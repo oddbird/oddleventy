@@ -2,6 +2,7 @@
 title: VueConf US
 public: true
 tags:
+  - _post
   - Vue
   - Conferences
   - Design Systems

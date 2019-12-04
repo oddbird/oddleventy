@@ -5,6 +5,7 @@ author: miriam
 headline:
   tagline: Experience design is a collaboration
 tags:
+  - _post
   - User Experience
   - Net Magazine
   - Interview

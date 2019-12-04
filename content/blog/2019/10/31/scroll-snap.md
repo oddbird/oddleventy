@@ -5,6 +5,7 @@ author: miriam
 headline:
   tagline: Without any JavaScript or "scrolljacking"
 tags:
+  - _post
   - CSS
   - Mozilla Developer
   - AboutWeb

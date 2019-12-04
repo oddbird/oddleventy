@@ -5,6 +5,7 @@ author: miriam
 canonical: https://css-tricks.com/embracing-the-universal-web/
 elsewhere: CSS-Tricks
 tags:
+  - _post
   - Elsewhere
   - Code
   - CSS
