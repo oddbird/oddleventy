@@ -4,9 +4,9 @@ banner: A Practical Guide to Losing Control
 slides: https://www.oddbooksapp.com/book/losing-control
 author: miriam
 tags:
-  - speaking
-  - code
-  - art
+  - Speaking
+  - Code
+  - Art
 events:
   - venue: UVA Scholars’ Lab
     url: http://cal.lib.virginia.edu/event/3088981

@@ -8,9 +8,9 @@ image:
 tags:
   - _post
   - _elsewhere
-  - code
-  - css tricks
-  - interview
+  - Code
+  - CSS Tricks
+  - Interview
 summary: |
   Chris Coyier interviews Miriam
   when she joins the CSS Tricks team

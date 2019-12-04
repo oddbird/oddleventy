@@ -12,9 +12,9 @@ image:
 tags:
   - _post
   - _elsewhere
-  - code
-  - writing
-  - smashing magazine
+  - Code
+  - Writing
+  - Smashing Magazine
 summary: |
   Pushing past the “variable” metaphor,
   CSS Custom Properties can provide new ways

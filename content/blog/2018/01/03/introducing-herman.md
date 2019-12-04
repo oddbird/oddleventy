@@ -217,6 +217,7 @@ and [Nunjucks] (we're working on support for Vue components). Herman
 will display both input and compiled code, along with the rendered
 output when necessary:
 
+    {% raw %}
     /// Add default button styles to an element.
     /// @group buttons
     /// @example html - submit button
@@ -229,6 +230,7 @@ output when necessary:
       display: inline-block;
       padding: 0.25em 1em;
     }
+    {% endraw %}
 
 [<img src="/static/images/blog/2017/herman-intro/examples.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman rendered example" />][documentation of CSS selectors and markup patterns]
 

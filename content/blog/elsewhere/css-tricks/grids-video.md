@@ -8,9 +8,9 @@ image:
 tags:
   - _post
   - _elsewhere
-  - code
-  - css tricks
-  - screencast
+  - Code
+  - CSS Tricks
+  - Screencast
 video:
   caption: |
     Exploring CSS Grids with Geoff Graham

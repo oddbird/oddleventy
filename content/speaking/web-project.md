@@ -3,9 +3,9 @@ title: Planning Your Web Project
 author: miriam
 slides: https://www.oddbooksapp.com/book/web-projects
 tags:
-  - speaking
-  - code
-  - process
+  - Speaking
+  - Code
+  - Process
 events:
   - venue: Boost Biz Ed
     url: https://boostbized.com/events/how-to-plan-a-web-project

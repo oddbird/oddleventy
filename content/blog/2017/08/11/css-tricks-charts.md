@@ -7,7 +7,7 @@ elsewhere: CSS-Tricks
 tags:
   - Elsewhere
   - CSS
-  - CSS-Tricks
+  - CSS Tricks
   - Layout
   - Grids
   - Custom Properties

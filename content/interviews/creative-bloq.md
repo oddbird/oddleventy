@@ -7,9 +7,9 @@ author: miriam
 tags:
   - _post
   - _elsewhere
-  - code
-  - interview
-  - creative bloq
+  - Code
+  - Interview
+  - Creative Bloq
 image:
   src: blog/2019/creative-bloq.jpg
 summary: |

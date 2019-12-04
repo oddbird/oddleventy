@@ -2,12 +2,12 @@
 title: Isolation and Bleed in Susy
 tags:
   - _post
-  - susy
-  - susy1
-  - layout
-  - grids
-  - sub-pixel rounding
-  - code
+  - Susy
+  - Susy1
+  - Layout
+  - Grids
+  - Sub-pixel rounding
+  - Code
 author: miriam
 image:
   src: blog/susy.jpg

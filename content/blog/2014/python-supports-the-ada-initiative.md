@@ -3,9 +3,9 @@ title: Python for Ada
 author: carl
 tags:
   - _post
-  - python
-  - diversity
-  - community
+  - Python
+  - Diversity
+  - Community
 image:
   src: blog/2014/adainitiative.jpg
 summary: |

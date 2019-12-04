@@ -10,9 +10,9 @@ image:
 tags:
   - _post
   - _elsewhere
-  - interview
-  - podcast
-  - code
+  - Interview
+  - Podcast
+  - Code
 summary: |
   Thunder Nerds interview me
   before her talk at VueConf US 2019.

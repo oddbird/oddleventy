@@ -10,7 +10,7 @@ tags:
   - Modules
   - Sass
   - Tutorial
-  - CSS-Tricks
+  - CSS Tricks
 image:
   src: blog/2019/sass-logo.png
 summary: |

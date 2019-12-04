@@ -6,10 +6,10 @@ slides: https://talks.oddbird.net/no-grid-system/
 image:
   src: talks/devconf-best.jpg
 tags:
-  - speaking
-  - code
-  - susy
-  - layout
+  - Speaking
+  - Code
+  - Susy
+  - Layout
 events:
   - venue: Boulder Python
     url: https://www.meetup.com/BoulderPython/events/256868153/

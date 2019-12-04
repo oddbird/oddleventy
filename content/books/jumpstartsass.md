@@ -12,9 +12,9 @@ url: https://www.sitepoint.com/premium/books/jump-start-sass
 date: 2016-03-22
 tags:
   - _post
-  - writing
-  - book
-  - code
+  - Writing
+  - Book
+  - Code
 press:
   - text: |
       Miriam and Hugo have become some of the most notable

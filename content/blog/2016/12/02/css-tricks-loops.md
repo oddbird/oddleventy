@@ -10,7 +10,7 @@ tags:
   - Sass
   - Less
   - Stylus
-  - CSS-Tricks
+  - CSS Tricks
 image:
   src: blog/2016/trick-loops.jpg
 summary: |

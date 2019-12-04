@@ -6,8 +6,8 @@ image:
   src: blog/susy.jpg
 tags:
   - _post
-  - susy
-  - code
+  - Susy
+  - Code
 ---
 
 Susy 1.0 has officially launched!

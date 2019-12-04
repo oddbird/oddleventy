@@ -66,7 +66,7 @@ writing, music, and visual art.
 
 ## Speaking
 
-{% for page in collections.speaking | byBird(bird) %}
+{% for page in collections.Speaking | byBird(bird) %}
 - [{{ page.data.title }}]({{ page.url }})
 {% endfor %}
 

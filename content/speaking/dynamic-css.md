@@ -7,9 +7,9 @@ slides: https://talks.oddbird.net/dynamic-css/
 image:
   src: talks/miriam.jpg
 tags:
-  - speaking
-  - code
-  - layout
+  - Speaking
+  - Code
+  - Layout
 events:
   - venue: Webconf.asia
     url: https://2019.webconf.asia/

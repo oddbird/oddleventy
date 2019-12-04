@@ -7,10 +7,10 @@ date: 2016-12-01
 author: miriam
 tags:
   - _post
-  - code
-  - interview
-  - net magazine
-  - creative bloq
+  - Code
+  - Interview
+  - Net Magazine
+  - Creative Bloq
 image:
   src: blog/elsewhere/netmag-mia.jpg
   alt: magaine spread (full text below)

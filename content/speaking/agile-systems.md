@@ -4,10 +4,10 @@ sub: with meaningful code and automation
 author: miriam
 slides: https://talks.oddbird.net/agile-systems/
 tags:
-  - speaking
-  - code
-  - agile
-  - design systems
+  - Speaking
+  - Code
+  - Agile
+  - Design Systems
 events:
   - venue: Agile Alliance
     url: https://www.agilealliance.org/agile2019/program/

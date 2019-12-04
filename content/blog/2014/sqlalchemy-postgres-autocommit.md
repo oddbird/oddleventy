@@ -3,12 +3,12 @@ title: PostgreSQL Transactions and SQLAlchemy
 author: carl
 tags:
   - _post
-  - python
-  - sqlalchemy
-  - postgresql
-  - transactions
-  - django
-  - code
+  - Python
+  - Sqlalchemy
+  - Postgresql
+  - Transactions
+  - Django
+  - Code
 image:
   src: blog/2014/sqlalchemy.jpg
 summary: |

@@ -3,8 +3,8 @@ title: Sass Map Magic
 author: miriam
 slides: https://www.oddbooksapp.com/book/sass-map-magic
 tags:
-  - speaking
-  - code
+  - Speaking
+  - Code
 events:
   - venue: CSSConf 2016
     url: https://2016.cssconf.com/

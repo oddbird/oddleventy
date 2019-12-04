@@ -5,8 +5,8 @@ author: miriam
 image:
   src: talks/miriam.jpg
 tags:
-  - speaking
-  - code
+  - Speaking
+  - Code
 events:
   - venue: Smashing Conf NY
     url: https://smashingconf.com/ny-2019/

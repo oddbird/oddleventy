@@ -2,11 +2,11 @@
 title: Off-Canvas Layout with Susy
 tags:
   - _post
-  - susy
-  - susy1
-  - demos
-  - layout
-  - code
+  - Susy
+  - Susy1
+  - Demos
+  - Layout
+  - Code
 author: miriam
 image:
   src: blog/susy.jpg

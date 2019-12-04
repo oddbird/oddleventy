@@ -84,9 +84,9 @@ server-rendered list of comments. Using [Jinja2]/[Nunjucks], our markup
 might look like this:
 
     <div class="comment-list">
-      <article class="comment" data-js-model="{{ comment|json }}">
-        <p>{{ comment.body }}</p>
-        <p>{{ comment.author }}</p>
+      <article class="comment" data-js-model="\{\{ comment\|json \}\}">
+        <p>\{\{ comment.body \}\}</p>
+        <p>\{\{ comment.author \}\}</p>
       </article>
     </div>
 

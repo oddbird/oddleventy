@@ -9,9 +9,9 @@ image:
 tags:
   - _post
   - _elsewhere
-  - interview
-  - podcast
-  - code
+  - Interview
+  - Podcast
+  - Code
 summary: |
   In this episode of the Versioning Show,
   Tim and David are joined by Miriam Suzanne,

@@ -3,10 +3,10 @@ title: jQuery Chicago 2014
 author: jonny
 tags:
   - _post
-  - javascript
-  - conferences
-  - code
-  - jquery
+  - JavaScript
+  - Conferences
+  - Code
+  - jQuery
 image:
   src: blog/2014/jqueryconf.jpg
 summary: |

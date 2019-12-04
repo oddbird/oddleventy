@@ -8,9 +8,9 @@ image:
 tags:
   - _post
   - _elsewhere
-  - design
-  - interview
-  - code
+  - Design
+  - Interview
+  - Code
 ---
 
 Figma asked 18 designers

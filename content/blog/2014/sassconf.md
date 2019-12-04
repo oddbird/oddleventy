@@ -3,9 +3,9 @@ title: SassConf 2014
 author: miriam
 tags:
   - _post
-  - conferences
-  - sass
-  - community
+  - Conferences
+  - Sass
+  - Community
 image:
   src: blog/2014/sassconf.jpg
 summary: |

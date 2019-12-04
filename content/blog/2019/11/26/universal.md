@@ -9,7 +9,7 @@ tags:
   - Code
   - CSS
   - Accessibility
-  - CSS-Tricks
+  - CSS Tricks
 headline:
   tagline: "CSS-Tricks asked a number of web builders the same question\u2026"
 image:

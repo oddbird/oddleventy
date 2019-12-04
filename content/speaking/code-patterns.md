@@ -4,9 +4,9 @@ banner: Code Patterns for Pattern Making
 author: miriam
 slides: https://oddbooksapp.com/book/pattern-making
 tags:
-  - speaking
-  - code
-  - design systems
+  - Speaking
+  - Code
+  - Design Systems
 events:
   - venue: Refresh Denver
     url: https://www.meetup.com/refreshdenver/events/241230495/?from=ref

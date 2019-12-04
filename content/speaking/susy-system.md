@@ -4,10 +4,10 @@ sub: an introduction to the Susy layout toolkit
 author: miriam
 url: http://mirisuzanne.github.io/pres/susy2/
 tags:
-  - speaking
-  - code
-  - susy
-  - layout
+  - Speaking
+  - Code
+  - Susy
+  - Layout
 events:
   - venue: Bmore Sass
     url: http://bmore-sass.com/

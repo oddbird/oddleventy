@@ -6,12 +6,12 @@ slides: https://www.oddbooksapp.com/book/software-for-humans
 image:
   src: talks/user-unfriendly.png
 tags:
-  - speaking
-  - code
-  - art
-  - design
-  - process
-  - collaboration
+  - Speaking
+  - Code
+  - Art
+  - Design
+  - Process
+  - Collaboration
 events:
   - venue: Agnes Scott College
     url: https://calendar.agnesscott.edu/event/user_unfriendlynotes_toward_a_queer_web

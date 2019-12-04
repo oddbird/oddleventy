@@ -2,10 +2,10 @@
 title: 'Susy Next: Alpha 4'
 tags:
   - _post
-  - susy
-  - susy2
-  - layout
-  - grids
+  - Susy
+  - Susy2
+  - Layout
+  - Grids
 author: miriam
 image:
   src: blog/susy.jpg

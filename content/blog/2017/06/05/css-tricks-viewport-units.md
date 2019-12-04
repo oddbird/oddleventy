@@ -7,7 +7,7 @@ elsewhere: CSS-Tricks
 tags:
   - Elsewhere
   - CSS
-  - CSS-Tricks
+  - CSS Tricks
 image:
   src: blog/elsewhere/css-tricks.jpg
 summary: |

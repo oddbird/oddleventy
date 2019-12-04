@@ -9,9 +9,9 @@ image:
 tags:
   - _post
   - _elsewhere
-  - interview
-  - code
-  - susy
+  - Interview
+  - Code
+  - Susy
 ---
 
 I did a [live Q&A at SitePoint][qa]

@@ -3,8 +3,8 @@ title: 2013 Wrap-up
 author: carl
 tags:
   - _post
-  - year in review
-  - community
+  - Year in Review
+  - Community
 image:
   src: blog/2013/review.jpg
 summary: |

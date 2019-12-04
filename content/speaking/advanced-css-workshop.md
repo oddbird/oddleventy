@@ -4,9 +4,9 @@ banner: Advanced CSS for Modern Applications
 sub: with practical use-cases, tooling, and pitfalls
 author: miriam
 tags:
-  - speaking
-  - workshop
-  - code
+  - Speaking
+  - Workshop
+  - Code
 events:
   - venue: Webconf.asia
     url: https://2019.webconf.asia/
