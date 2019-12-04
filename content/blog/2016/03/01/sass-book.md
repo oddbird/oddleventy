@@ -85,8 +85,6 @@ smaller teams and products. Every project has different requirements, so
 you should never assume that the best solution for InstaFace or
 MyPinBook is going to be the best solution for you.
 
-content.macros.j2\#link\_button
-
 Read the full chapter on SitePoint
 
   [Natalie Downe]: https://twitter.com/Natbat

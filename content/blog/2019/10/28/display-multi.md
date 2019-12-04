@@ -20,8 +20,6 @@ summary: |
 date: 2019-10-28
 ---
 
-content.macros.j2\#video
-
 Learn what's new in the CSS `display` property
 
 The new `display` spec adds `flow` and `flow-root` values, and allows

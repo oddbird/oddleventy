@@ -60,11 +60,7 @@ Of course, this summary barely does justice to the beautiful
 demonstrantions Sarah included. Check out her [CodePen] page for a whole
 load of amazing and beautiful samples.
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Sarah Drasner&lt;/span&gt; Slides
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Sarah Drasner&lt;/span&gt; Video
 
@@ -89,11 +85,7 @@ were a few philisophical points that stood out:
 -   Take the time, on occasion, to review and clean up your tests –
     otherwise you will run into bloat and compile-time issues
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Brian Jordan&lt;/span&gt; Slides
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Brian Jordan&lt;/span&gt; Video
 
@@ -118,8 +110,6 @@ Since Electron uses the latest Choromium rendering, you don't have to
 target multiple browsers – but you do have to contend with multiple
 operating systems. Among other things, she advised disabling <span
 class="title-ref">cursor: pointer</span> and "rubber-band" scrolling.
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Jessica Lord&lt;/span&gt; Video
 
@@ -161,8 +151,6 @@ processor:
 -   Performance issues (addressed by "injecting" styles)
 -   Server rendering is difficult, maybe Webpack can provide a solution?
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Pete Hunt&lt;/span&gt; Video
 
   [3]: /static/images/blog/2016/cssconf/ph.jpg
@@ -198,11 +186,7 @@ behind flags, and buggy across all browsers. Jen recommends using Chrome
 to explore the new possibilities – but it will be some time before we
 can use it in production.
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Jen Kramer&lt;/span&gt; Slides
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Jen Kramer&lt;/span&gt; Video
 
@@ -250,8 +234,6 @@ All of these aspects can be tracked in browser Dev Tools, and Will
 provided great demonstrations to show the differences in performance,
 and ways to use accelerated properties to achieve affects you might
 initially try to achieve with other properties.
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Will Boyd&lt;/span&gt; Video
 
@@ -305,11 +287,7 @@ Keith also provides more detail on using viewport-relative `vw` units
 for your root font-size. Hint: they work great inside `calc()`, but
 provide terrible results on their own.
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Keith J. Grant&lt;/span&gt; Slides
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Keith J. Grant&lt;/span&gt; Video
 
@@ -400,11 +378,7 @@ Some custom-property gotchas:
 
 There's so much more! I highly recommend watching the video.
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Lea Verou&lt;/span&gt; Slides
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Lea Verou&lt;/span&gt; Video
 
@@ -432,11 +406,7 @@ web. Did you know mp4 videos have better performance than gif images?
 Sites like Twitter convert your animated gif into mp4 format for
 display.
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Henri Helvetica&lt;/span&gt; Slides
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Henri Helvetica&lt;/span&gt; Video
 
@@ -451,11 +421,7 @@ I showed a wide range of uses for the underused Sass "map" data type –
 from simple site theme configurations, to data storage, and complex
 functional programming. All the [slides] are online.
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Miriam Suzanne&lt;/span&gt; Slides
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Miriam Suzanne&lt;/span&gt; Video
 
@@ -468,8 +434,6 @@ content.macros.j2\#link\_button
 
 [Zach Green] walked us through his [Webpack] setup. I missed most of
 this, recovering from my own talk.
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Zach Green&lt;/span&gt; Video
 
@@ -488,8 +452,6 @@ colums. It's a great overview, and I particularly resonate with the
 refresher on the *how* and *why* of flexbox, this is a great place to
 start.
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Emily Hayman&lt;/span&gt; Video
 
   [12]: /static/images/blog/2016/cssconf/eh.jpg
@@ -504,11 +466,7 @@ content.macros.j2\#link\_button
 beautiful talk, that includes a demonstration of "Dolly zoom" (also
 known as the "vertigo effect") in CSS.
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Justin McDowell&lt;/span&gt; Slides
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Justin McDowell&lt;/span&gt; Video
 
@@ -524,11 +482,7 @@ content.macros.j2\#link\_button
 along with a history of SVG. This talk is packed full of useful
 information, if you are using SVG in any way.
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Amelia Bellamy-Royds&lt;/span&gt; Slides
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Amelia Bellamy-Royds&lt;/span&gt; Video
 
@@ -555,11 +509,7 @@ I would have taken better notes, but I was too busy applauding. This was
 a great way to end the conference. You should [watch the video], and I
 should find my local [Black Girls Code] (or similar) to volunteer.
 
-content.macros.j2\#link\_button
-
 &lt;span class="is-hidden"&gt;Alisha Ramos&lt;/span&gt; Slides
-
-content.macros.j2\#link\_button
 
 &lt;span class="is-hidden"&gt;Alisha Ramos&lt;/span&gt; Video
 

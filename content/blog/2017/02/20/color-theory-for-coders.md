@@ -28,8 +28,6 @@ recommendations for how to get started, but while you're waiting, check
 out [Natalya Shelburne's][] [Practical Color Theory for People Who
 Code].
 
-content.macros.j2\#link\_button
-
 Color Theory Demo
 
   [Natalya Shelburne's]: https://twitter.com/natalyathree

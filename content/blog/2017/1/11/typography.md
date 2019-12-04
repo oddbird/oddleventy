@@ -323,8 +323,6 @@ font sites do you use? What is your favorite tool or method for typeface
 pairing? Let’s talk web typography on the [OddFriends Slack channel].
 Typography nerds unite!
 
-content.macros.j2\#link\_button
-
 How to Choose Brand Colors
 
   [OddFriends Slack channel]: http://friends.oddbird.net

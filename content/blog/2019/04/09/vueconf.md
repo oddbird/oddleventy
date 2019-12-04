@@ -27,10 +27,6 @@ date: 2019-04-09
 
 community/events.macros.j2\#videos\_by\_talk
 
-content.macros.j2\#get\_quotes
-
-content.macros.j2\#divider
-
 After learning about Vue from [Sarah Drasner]'s stream of articles on
 [CSS-Tricks], I had the pleasure of speaking at [VueConf 2018]. I really
 enjoyed that conference, and left feeling inspired by the community and
@@ -98,14 +94,10 @@ more of the Vue community. [Chris Fritz] and Rahul helped me add some
 last-minute features to my slide deck, while [Maria Lamardo] and
 [Krystal Campioni] both inspired new demos in my talk.
 
-content.macros.j2\#iframe
-
 Animated sprites from [Monster Slayer] by [Krystal Campioni][]
 \[[permalink] / [source]\] -- hover to see them move
 
 You can find all the available [speaker slides linked from gist].
-
-content.macros.j2\#divider
 
 community/subscribe.macros.j2\#form
 

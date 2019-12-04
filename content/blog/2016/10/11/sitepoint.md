@@ -41,8 +41,6 @@ sound intelligent. Thanks for asking the questions!
 >
 > ---[Miriam Suzanne][live Q&A at SitePoint]
 
-content.macros.j2\#link\_button
-
 Read the full conversation
 
 You can also check out the [summary] – but it leaves out some good bits.

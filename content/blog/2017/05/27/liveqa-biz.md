@@ -29,8 +29,6 @@ budget and development costs, and how to build a user-base without
 relying on "viral" mysticism. **Join channel \#q-a on the OddBird
 Friends Slack.**
 
-content.macros.j2\#link\_button
-
 Join the channel for our Q&A
 
   [OddFriends Slack]: http://friends.oddbird.net
@@ -80,8 +78,6 @@ of code you can rapidly test your ideas with users, updating the
 features to fit their needs.
 
 **Join channel \#q-a on the OddBird Friends Slack.**
-
-content.macros.j2\#link\_button
 
 Join the channel for our Q&A
 

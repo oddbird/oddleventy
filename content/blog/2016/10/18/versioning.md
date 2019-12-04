@@ -20,8 +20,6 @@ summary: "I joined [Tim Evko] and [M. David Green] for their great new [SitePoin
 date: 2016-10-18
 ---
 
-content.macros.j2\#audio
-
 Miriam on Versioning episode 8
 
 Check out all the [other great episodes], with people like [Jen Simmons]

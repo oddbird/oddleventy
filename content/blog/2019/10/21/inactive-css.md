@@ -19,6 +19,4 @@ summary: |
 date: 2019-10-21
 ---
 
-content.macros.j2\#video
-
 Handy new developer tools in Firefox!

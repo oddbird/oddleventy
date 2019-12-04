@@ -21,8 +21,6 @@ summary: |
 date: 2019-10-31
 ---
 
-content.macros.j2\#video
-
 The fallback even works well in old browsers!
 
 -   [Image Gallery Demo]

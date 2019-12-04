@@ -25,8 +25,6 @@ that with hyphens to make wrapped text more readable. The solutions
 aren't perfect yet, but I'll walk you through the options we have, and
 how to use them.
 
-content.macros.j2\#video
-
 Overflow-wrap is the proper way to break words in CSS
 
 -   [MDN Overflow-Wrap]

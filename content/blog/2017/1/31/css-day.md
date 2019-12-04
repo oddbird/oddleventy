@@ -40,8 +40,6 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/aq3u001QMcM?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
-content.macros.j2\#link\_button
-
 Slides
 
   [Natalya Shelburne]: https://twitter.com/natalyathree
@@ -49,8 +47,6 @@ Slides
 ## Applying the principles of functional programming to CSS by [Ben Adam]
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/7g0BHu0kWXo?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
-
-content.macros.j2\#link\_button
 
 Slides
 
@@ -60,8 +56,6 @@ Slides
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/lK_akjzOUY0?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
-content.macros.j2\#link\_button
-
 Slides
 
   [Miriam Suzanne]: https://twitter.com/mirisuzanne/
@@ -69,8 +63,6 @@ Slides
 ## The In-Betweeners of Responsive Web Design by [Pralie Dutzel]
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/WLAVc18Ugoc?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
-
-content.macros.j2\#link\_button
 
 Slides
 
@@ -86,8 +78,6 @@ Slides
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/pnbT4HdcSwM?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
-content.macros.j2\#link\_button
-
 Slides
 
   [Stacy Kvernmo]: https://twitter.com/stacykvernmo
@@ -99,8 +89,6 @@ jQuery to CSS for web and mobile applications.
 
 *(video unavaliable)*
 
-content.macros.j2\#link\_button
-
 Slides
 
   [John Boere]: https://twitter.com/cliffhangersolu
@@ -108,8 +96,6 @@ Slides
 ## Solving CSS at scale with your own UI framework by [CJ Cenizal]
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/CbPYf9FslXw?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
-
-content.macros.j2\#link\_button
 
 Slides
 

@@ -31,12 +31,6 @@ the conference. In particular, I recommend watching, at minimum:
 -   Jason Pamental: [Dynamic Web Typography]
 -   Jen Simmons: [Thinking With Grid]
 
-content.macros.j2\#divider
-
-content.macros.j2\#get\_quotes
-
-content.macros.j2\#divider
-
   [follow-up post]: https://www.smashingmagazine.com/2019/04/smashingconf-san-francisco-2019/
   [including mine]: https://vimeo.com/331571593
   [Building Accessible Interfaces]: https://vimeo.com/331530115

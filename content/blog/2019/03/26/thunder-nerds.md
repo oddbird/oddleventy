@@ -16,8 +16,6 @@ summary: |
 date: 2019-03-26
 ---
 
-content.macros.j2\#audio
-
 Miriam on Thunder Nerds
 
 community/events.macros.j2\#videos\_by\_talk

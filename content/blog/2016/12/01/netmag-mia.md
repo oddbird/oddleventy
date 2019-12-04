@@ -64,6 +64,4 @@ right, but they are always worth listening to.
 
 Experience design is a collaboration.
 
-content.macros.j2\#divider
-
 <img src="/static/images/blog/2016/netmag-mia.jpg" class="img-shadow img-shadow" alt="magazine spread" />

@@ -25,6 +25,4 @@ summary: |
 date: 2018-12-04
 ---
 
-content.macros.j2\#audio
-
 Miriam on VoV \#040

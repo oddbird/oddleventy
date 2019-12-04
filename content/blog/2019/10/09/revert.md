@@ -21,8 +21,6 @@ summary: |
 date: 2019-10-09
 ---
 
-content.macros.j2\#video
-
 Revert takes user and user-agent styles into consideration
 
 It turns out `revert` is the one I wanted all along. It rolls back

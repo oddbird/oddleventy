@@ -27,8 +27,6 @@ and explicit. We can use them to test for browser support, and provide
 targeted styles only where they are supported. Now we can do the same
 with new selectors, like `::marker` or `:focus-visible`!
 
-content.macros.j2\#video
-
 Selector queries allow us to finesse browser-support in new ways
 
 -   [Firefox 69 Release Notes]

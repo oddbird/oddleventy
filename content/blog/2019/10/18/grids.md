@@ -25,17 +25,11 @@ Don't let that stop you: CSS Grid has made my layout process faster and
 simpler, with more flexibility. We can get started with a few basics,
 and the fallbacks don't have to be overwhelming:
 
-content.macros.j2\#video
-
 Check out this practical demo with a classic layout
 
 With Subgrid, we can also start to lay out nested elements on a shared
 grid:
 
-content.macros.j2\#video
-
 Subgrid for Better Card Layouts, with fallbacks for legacy browsers
-
-content.macros.j2\#video
 
 Laying Out Forms using Subgrid
