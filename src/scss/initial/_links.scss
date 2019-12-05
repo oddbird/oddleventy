@@ -4,7 +4,7 @@
 // --------------------
 
 :focus {
-  outline: medium dashed currentColor;
+  outline: medium dotted currentColor;
   outline-color: var(--outline-color, var(--text, currentColor));
   outline-offset: var(--quarter-shim);
 }

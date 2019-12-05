@@ -3,6 +3,9 @@
   "saturation": 75,
   "lightness": 50,
   "contrast": 42,
+  "steps": 6,
+  "fades": 0.75,
+  "colors": ["prime", "accent", "neutral"],
   "themes": [
     "oddbird",
     "complement",
