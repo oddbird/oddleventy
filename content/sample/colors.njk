@@ -24,6 +24,12 @@ Set in both `/content/_data/ccs.json` and `/src/scss/config/color.scss`
 - `fades: {{ ccs.fades }}`
 {% endmd %}
 
+<ul data-ccs-show="modes">
+  <li data-ccs-colors="light">light</li>
+  <li data-ccs-colors="invert">invert</li>
+  <li data-ccs-colors="dark">dark</li>
+</ul>
+
 {% macro preview(
   color,
   ccs

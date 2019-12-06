@@ -1,6 +1,22 @@
 // Styleguide
 // ==========
 
+[data-ccs-show='modes'] {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--shim);
+  list-style: none;
+  padding: 0;
+
+  li {
+    align-items: center;
+    border: thin solid var(--border);
+    display: grid;
+    justify-items: center;
+    padding: var(--gutter) var(--shim);
+  }
+}
+
 [data-ccs-show='color'] {
   display: grid;
   grid-gap: var(--shim);
