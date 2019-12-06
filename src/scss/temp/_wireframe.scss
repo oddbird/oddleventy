@@ -1,9 +1,3 @@
-[data-layout] {
-  & + & {
-    border-top: 1px solid;
-  }
-}
-
 [data-layout='body'] {
   display: grid;
   grid:

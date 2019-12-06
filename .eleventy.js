@@ -25,6 +25,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection('birds', (collection) =>
     collection.getAll().filter((item) => item.data.bird),
   );
+  eleventyConfig.addCollection('sample', (collection) =>
+    collection.getAll().filter((item) => item.data.sample),
+  );
 
   // filters
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);

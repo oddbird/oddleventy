@@ -19,6 +19,9 @@ groups:
     init-scale: Spacing & Sizes
 
 herman:
+  extraDocs:
+    - name: Getting Started
+      path: ./styleguide.md
   extraLinks:
     - name: Eleventy
       url: http://www.11ty.io

@@ -1,6 +1,6 @@
 ---
 layout: base
-title: H1 Primary Page Title
+title: Typography Sample Page
 sub: Subtitle for the page
 summary: |
   Tortor aliquet tempus condimentum ullamcorper class egestas
