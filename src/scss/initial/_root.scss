@@ -7,14 +7,14 @@ html {
   @include tools.font-family('body');
   font-size: calc(1.25em + 0.5vw);
   line-height: 1.4;
-  min-height: 100vh;
-  overflow-x: hidden;
 
-  @media (min-width: 60em) {
-    --wash-position: left;
+  @media (min-width: 50em) {
+    --wash-position: left 0;
   }
 
   @supports (background-blend-mode: multiply) {
+    --header-wash: calc(var(--gutter) * 6 + 1vw);
+    --footer-wash: var(--header-wash);
     background-blend-mode: multiply;
     background-image: url('../images/site/header-wash.jpg'),
       url('../images/site/footer-wash.jpg');

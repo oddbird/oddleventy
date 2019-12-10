@@ -3,8 +3,13 @@
   font-size: var(--small);
   grid-area: menu;
   justify-content: flex-end;
+  margin-right: calc(0px - var(--nav-spacer));
 }
 
 .menu-item {
-  display: block;
+  padding: var(--half-shim) var(--nav-spacer);
+}
+
+summary {
+  cursor: pointer;
 }

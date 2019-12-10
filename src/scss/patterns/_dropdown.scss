@@ -4,8 +4,10 @@
 
 [data-dropdown] {
   background: var(--bg);
-  border: var(--border-width) solid var(--border);
+  box-shadow: 0 var(--quarter-shim) var(--quarter-shim) var(--border-fade);
+  max-width: 14em;
   position: absolute;
+  width: calc(100vw - var(--double-gutter));
 
   &[aria-expanded='false'] {
     display: none;
@@ -13,7 +15,7 @@
 }
 
 [data-dropdown~='pad'] {
-  padding: var(--half-shim);
+  padding: var(--gutter);
 }
 
 [data-dropdown~='ltr'] {

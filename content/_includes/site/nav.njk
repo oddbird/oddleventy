@@ -5,10 +5,11 @@
   <ul data-navlist="main">
     {% for item in sitenav %}
       {% set target = collections.all | getPage(item.url) %}
+      {% set active = 'nav' if (item.url == page.url) else none %}
       <li>
         <a href="{{ item.url }}"
           data-nav="{{ item.url | slug }}"
-          {{ utility.attr_if('data-active', (item.url == page.url)) }}>
+          {{ utility.attr_if('data-active', active) }}>
           {{ item.title or target.data.title }}
         </a>
       </li>

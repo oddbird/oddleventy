@@ -1,0 +1,10 @@
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  display: grid;
+  grid-template: 'banner' auto 'main' 1fr 'footer' auto / 100%;
+}

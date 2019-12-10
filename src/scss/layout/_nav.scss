@@ -1,3 +1,5 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
 [data-layout='nav'] {
   font-size: var(--small);
   grid-area: nav;
@@ -5,26 +7,25 @@
 }
 
 [data-navlist] {
-  --nav-spacer: calc(var(--quarter-shim) + 1vw);
   justify-content: flex-end;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  margin: 0;
+  margin-right: calc(0px - var(--nav-spacer));
   padding: 0;
 }
 
 [data-nav] {
   --underline-color: transparent;
   --underline-thickness: 0;
-  padding: 0 calc(var(--quarter-shim) + 1vw);
-
-  &:last-child {
-    padding-right: 0;
-  }
+  display: inline-block;
+  padding: var(--half-shim) var(--nav-spacer);
 }
 
-[data-active] {
-  --link: var(--ccs-accent-fg2);
-  --underline-color: var(--action-focus);
-  --underline-thickness: 0.15em;
+[data-active='nav'] {
+  @include tools.font-family('body');
+  --link: var(--active);
+  --underline-color: transparent;
+  --underline-thickness: 0;
+  font-style: italic;
 }

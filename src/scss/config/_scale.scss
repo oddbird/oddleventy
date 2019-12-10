@@ -62,8 +62,7 @@ $spacing-sizes: (
 /// @sizes {ruler}
 $theme-sizes: (
   'border-width': medium,
-  'header-wash': calc(var(--gutter) * 4 + 1vw),
-  'footer-wash': '#header-wash',
+  'nav-spacer': calc(var(--shim) + 1vw),
 );
 
 @include tools.add-sizes($theme-sizes);

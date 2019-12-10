@@ -5,6 +5,7 @@
   --banner-left: calc(var(--quarter-shim) + 2vw);
   --banner-right: calc(var(--half-shim) + 3vw);
   display: grid;
+  grid-area: banner;
   grid-template:
     'top top top top' var(--quarter-shim)
     'left logo menu right' auto
@@ -13,6 +14,7 @@
 
   &::before {
     background-color: var(--overlay);
+    box-shadow: 0 0 var(--quarter-shim) var(--shadow);
     content: '';
     grid-column: left / right;
     grid-row: top / span 2;
