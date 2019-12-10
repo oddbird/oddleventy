@@ -1,2 +1,30 @@
-// Banner Layout
-// =============
+@use '../../../node_modules/accoutrement/sass/tools';
+
+[data-layout='banner'] {
+  @include tools.font-family('alt');
+  --banner-left: calc(var(--quarter-shim) + 2vw);
+  --banner-right: calc(var(--half-shim) + 3vw);
+  display: grid;
+  grid-template:
+    'top top top top' var(--quarter-shim)
+    'left logo menu right' auto
+    'left logo nav right' auto
+    / var(--banner-left) minmax(5em, 7em) 1fr var(--banner-right);
+
+  &::before {
+    background-color: var(--overlay);
+    content: '';
+    grid-column: left / right;
+    grid-row: top / span 2;
+  }
+
+  [data-logo] {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.banner-logo {
+  display: block;
+  grid-area: logo;
+}

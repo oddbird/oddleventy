@@ -10,11 +10,15 @@ html {
   min-height: 100vh;
   overflow-x: hidden;
 
+  @media (min-width: 60em) {
+    --wash-position: left;
+  }
+
   @supports (background-blend-mode: multiply) {
     background-blend-mode: multiply;
     background-image: url('../images/site/header-wash.jpg'),
       url('../images/site/footer-wash.jpg');
-    background-position: left top, bottom center;
+    background-position: var(--wash-position, right 25vw) top 0, bottom center;
     background-repeat: no-repeat, repeat-x;
     background-size: auto var(--header-wash), auto var(--footer-wash);
   }

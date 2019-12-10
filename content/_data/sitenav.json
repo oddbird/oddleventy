@@ -1,24 +1,7 @@
 [
-  {
-    "title": "work",
-    "subnav": [{ "url": "/work/" }, { "url": "/open-source/" }]
-  },
-  {
-    "title": "services",
-    "subnav": [
-      { "url": "/services/" },
-      { "url": "/services/planning/" },
-      { "url": "/services/design-systems/" },
-      { "url": "/services/speaking/" }
-    ]
-  },
-  {
-    "title": "about",
-    "subnav": [
-      { "url": "/birds/" },
-      { "url": "/community/" },
-      { "url": "/jobs/" }
-    ]
-  },
-  { "url": "/blog/" }
+  { "url": "/work/" },
+  { "url": "/services/" },
+  { "url": "/birds/" },
+  { "url": "/blog/" },
+  { "url": "/contact/" }
 ]

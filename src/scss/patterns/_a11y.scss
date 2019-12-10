@@ -1,0 +1,5 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
+[data-hidden] {
+  @include tools.is-hidden;
+}

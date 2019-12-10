@@ -1,0 +1,10 @@
+[data-layout='menu'] {
+  display: flex;
+  font-size: var(--small);
+  grid-area: menu;
+  justify-content: flex-end;
+}
+
+.menu-item {
+  display: block;
+}

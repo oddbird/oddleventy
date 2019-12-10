@@ -1,17 +1,19 @@
 ---
 layout: base
-title: contact
-banner: Contact Miriam
+title: Contact
+banner: Contact OddBird
 sub: Leave me a note, or find me online!
 ---
 
 {% import "contact.macros.njk" as contact %}
 {{ contact.form() }}
 
+## Email
+
+- [info@OddBird.net](mailto:info@oddbird.net)
+
 ## Feeling Social…
 
-- [Twitter](https://twitter.com/mirisuzanne) (`@mirisuzanne`)
-- [Github](https://github.com/mirisuzanne) (`@mirisuzanne`)
-- [Codepen](https://codepen.io/mirisuzanne/) (`@mirisuzanne`)
-- [StackOverflow](https://stackoverflow.com/users/1930386/)
-- [KeyBase](https://keybase.io/mirisuzanne)
+- [Twitter](https://twitter.com/oddbird) (`@oddbird`)
+- [Facebook](https://facebook.com/oddbird)
+- [Github](https://github.com/oddbird)

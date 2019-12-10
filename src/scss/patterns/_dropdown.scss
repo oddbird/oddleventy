@@ -1,0 +1,25 @@
+.has-dropdown {
+  position: relative;
+}
+
+[data-dropdown] {
+  background: var(--bg);
+  border: var(--border-width) solid var(--border);
+  position: absolute;
+
+  &[aria-expanded='false'] {
+    display: none;
+  }
+}
+
+[data-dropdown~='pad'] {
+  padding: var(--half-shim);
+}
+
+[data-dropdown~='ltr'] {
+  left: 0;
+}
+
+[data-dropdown~='rtl'] {
+  right: 0;
+}

@@ -1,18 +1,16 @@
-{% import 'site/nav.macros.njk' as nav %}
-
 <div data-layout="banner">
-  <header class="brand">
-    <a href="/" rel="home" class="logo-link">
-      {% include "icons/oddbird.svg" %}
-    </a>
-  </header>
+  <a href="/"
+    rel="home"
+    class="banner-logo"
+    aria-label="OddBird.Net"
+    >
+    {% include "icons/oddbird.svg" %}
+  </a>
 
-  <nav data-layout="nav">
-    {{ nav.list(sitenav, page, collections.all) }}
-  </nav>
+  <div data-layout="menu">
+    {% include "site/search.njk" %}
+    {% include "site/ccs.njk" %}
+  </div>
 
-  <span class="nav-contact">
-    <a href="{{ sie.contact }}">contact us</a>
-  </span>
+  {% include "site/nav.njk" %}
 </div>
-

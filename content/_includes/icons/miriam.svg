@@ -3,8 +3,9 @@
   viewBox="0 0 346.2 454.8"
   width="200px"
   height="260px"
-  data-icon="miriam"
+  data-face="miriam"
   >
+  <title>Miriam</title>
   <style>
     @keyframes draw-logo {
       0% { stroke-dashoffset: 800; }

@@ -35,7 +35,7 @@ $font-sizes: (
 /// @group config-scale
 /// @sizes {ruler}
 $spacing-sizes: (
-  'gutter': 1.4rem,
+  'gutter': 0.75rem,
   'newline': 0.75em,
   'gutter-plus': calc(var(--gutter) * 1.5),
   'double-gutter': calc(var(--gutter) * 2),

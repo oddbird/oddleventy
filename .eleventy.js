@@ -9,7 +9,6 @@ const tags = require('./src/filters/tags');
 const time = require('./src/filters/time');
 const type = require('./src/filters/type');
 const birds = require('./src/filters/birds');
-const nav = require('./src/filters/nav');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
@@ -55,8 +54,6 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('authorPage', birds.authorPage);
-
-  eleventyConfig.addFilter('activeNav', nav.getActive);
 
   eleventyConfig.addFilter('getEvents', events.get);
   eleventyConfig.addFilter('countEvents', events.count);
