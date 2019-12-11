@@ -1,0 +1,99 @@
+---
+title: Cascading Color Samples
+extra_styles:
+  - styleguide.css
+summary: |
+  The Cascading Color logic/code is all described
+  in [our styleguide](/style/),
+  but we haven't yet built a way to preview
+  custom-property colors in Herman.
+---
+
+{% import "utility.macros.njk" as utility %}
+
+{% md %}
+## Default Values
+
+Set in both `/content/_data/ccs.json` and `/src/scss/config/color.scss`
+
+- `(prime-)hue: {{ ccs.hue }}`
+- `saturation: {{ ccs.saturation }}`
+- `lightness: {{ ccs.lightness }}`
+- `contrast: {{ ccs.contrast }}`
+- `steps: {{ ccs.steps }}`
+- `fades: {{ ccs.fades }}`
+{% endmd %}
+
+<ul data-ccs-show="modes">
+  <li data-ccs-colors="light">light</li>
+  <li data-ccs-colors="invert">invert</li>
+  <li data-ccs-colors="dark">dark</li>
+</ul>
+
+{% macro preview(
+  color,
+  ccs
+) %}
+  <section data-ccs-show="color">
+    <h2>{{ color }}</h2>
+    {{ palette(color, ccs) }}
+    {% if ccs.fades %}
+      {{ palette(color, ccs, true) }}
+    {% endif %}
+  </section>
+{% endmacro %}
+
+
+{% macro palette(
+  color,
+  ccs,
+  is_fade=false
+) %}
+{% set fade = 'fade' if is_fade else none %}
+{% set steps = ccs.steps + 1 %}
+
+<ul data-ccs-show="palette" }}>
+  {% for step in range(1, steps) | reverse %}
+    {{ swatch(
+      color=color,
+      version='bg' + step,
+      fade=fade,
+      is_full=(step == ccs.steps)
+    ) }}
+  {% endfor %}
+
+  {{ swatch(color, fade=fade) }}
+
+  {% for step in range(1, steps) %}
+    {{ swatch(
+      color=color,
+      version='fg' + step,
+      fade=fade,
+      is_full=(step == ccs.steps)
+    ) }}
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+
+{% macro swatch(
+  color,
+  version=none,
+  fade=none,
+  is_full=false
+) %}
+  {% set var = ['--ccs', color] | join('-') %}
+  {% set version = [version, fade] | join('-') if (version and fade) else (version or fade) %}
+  {% set var = [var, version] | join('--') if version else var %}
+
+  <li data-ccs-show="swatch">
+    <pre data-ccs-show="input"><code>{{ var }}</code></pre>
+    <div data-ccs-show="output {{ fade if fade else '' }}"
+      style="--show: var({{ var }})"></div>
+  </li>
+{% endmacro %}
+
+
+{% for color in ccs.colors %}
+  {{ preview(color, ccs) }}
+{% endfor %}

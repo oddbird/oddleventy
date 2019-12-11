@@ -1,0 +1,27 @@
+@use '../tools/input-range' as range;
+
+[type='range'] {
+  appearance: none;
+  background: var(--border) no-repeat;
+  border-radius: 0.25em;
+  border: thin solid var(--text);
+  height: 1em;
+  max-width: 100%;
+  padding: 0;
+
+  @include range.track {
+    appearance: none;
+    height: 1em;
+    cursor: pointer;
+  }
+
+  @include range.thumb {
+    appearance: none;
+    border: medium solid var(--text);
+    height: 1em;
+    width: 0.5em;
+    border-radius: 0.25em;
+    background: var(--ccs-prime);
+    cursor: pointer;
+  }
+}

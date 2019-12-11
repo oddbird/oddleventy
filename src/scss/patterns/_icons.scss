@@ -3,10 +3,7 @@
 
 /// Basic styles for all icons
 /// @group icons
-/// @icons templates/icons/
-/// @example njk
-///   {% import 'utility.macros.j2' as utility %}
-///   {{ utility.icon('dribbble') }}
+/// @icons content/_includes/icons/
 [data-icon] {
   @include square(1em);
   fill: currentColor;

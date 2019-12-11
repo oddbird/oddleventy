@@ -1,6 +1,6 @@
 ---
 title: Meet the Odd Birds
-tagline: The people you'll work with...
+sub: The people you'll work with...
 permalink: birds/index.html
 image:
   src: pages/faces-hero.jpg

@@ -1,0 +1,16 @@
+---
+title: Sample Pages
+sub: To help with development
+summary: |
+  Samples pages demonstrate
+  how to create certain element/effects,
+  and also provide in-context style references.
+---
+
+<ul>
+{% for item in collections.sample %}
+  {% if item.url != page.url %}
+  <li><a href="{{ item.url }}">{{ item.data.title | mdInline | safe }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
