@@ -5,9 +5,8 @@
   grid-area: menu;
   justify-content: flex-end;
   margin-right: calc(var(--banner-space) * -1);
-  padding: var(--quarter-shim) 0;
 }
 
 .menu-item {
-  padding: var(--half-shim) var(--banner-space);
+  padding: var(--shim-plus) var(--banner-space);
 }

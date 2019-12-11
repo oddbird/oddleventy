@@ -7,20 +7,25 @@ html {
   @include tools.font-family('body');
   --header-img: url('../images/site/header-wash.jpg');
   --footer-img: url('../images/site/footer-wash.jpg');
+  --header-pos: left -8em;
   --bg-blend: multiply;
   font-size: calc(1.25em + 0.5vw);
   line-height: 1.4;
 
+  @media (min-width: 35em) {
+    --header-pos: right 25vw;
+  }
+
   @media (min-width: 50em) {
-    --wash-position: left 0;
+    --header-pos: left 0;
   }
 
   @supports (background-blend-mode: multiply) {
-    --header-wash: calc(var(--gutter) * 6 + 1vw);
+    --header-wash: calc(var(--gutter) * 7);
     --footer-wash: var(--header-wash);
     background-blend-mode: var(--bg-blend);
     background-image: var(--header-img), var(--footer-img);
-    background-position: var(--wash-position, right 25vw) top 0, bottom center;
+    background-position: var(--header-pos) top 0, bottom center;
     background-repeat: no-repeat, repeat-x;
     background-size: auto var(--header-wash), auto var(--footer-wash);
   }
