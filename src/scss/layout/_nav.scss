@@ -3,15 +3,16 @@
 [data-layout='nav'] {
   font-size: var(--small);
   grid-area: nav;
-  margin-left: -2em;
+  margin-left: -3em;
 }
 
 [data-navlist] {
-  justify-content: flex-end;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   list-style: none;
-  margin-right: calc(0px - var(--nav-spacer));
+  margin-right: calc(var(--banner-space) * -1);
   padding: 0;
 }
 
@@ -19,7 +20,7 @@
   --underline-color: transparent;
   --underline-thickness: 0;
   display: inline-block;
-  padding: var(--half-shim) var(--nav-spacer);
+  padding: var(--half-shim) var(--banner-space);
 }
 
 [data-active='nav'] {

@@ -3,11 +3,12 @@
 }
 
 [data-dropdown] {
-  background: var(--bg);
+  background: var(--overlay);
   box-shadow: 0 var(--quarter-shim) var(--quarter-shim) var(--border-fade);
   max-width: 14em;
   position: absolute;
   width: calc(100vw - var(--double-gutter));
+  z-index: 4;
 
   &[aria-expanded='false'] {
     display: none;

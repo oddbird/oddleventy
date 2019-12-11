@@ -18,10 +18,9 @@ hr {
   color: var(--bg);
 }
 
-// Hidden Text & Fout
-// ------------------
+// Font Loading
+// ------------
 
-.is-hidden,
 .wf-loading {
   @include tools.is-hidden;
 }
@@ -41,4 +40,18 @@ ul,
 ol {
   margin-bottom: var(--newline);
   margin-top: 0;
+}
+
+// Summary
+// -------
+
+summary {
+  cursor: pointer;
+  color: var(--action);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--action-focus);
+  }
 }

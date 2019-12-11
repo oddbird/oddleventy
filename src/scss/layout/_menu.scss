@@ -1,15 +1,13 @@
 [data-layout='menu'] {
+  align-items: center;
   display: flex;
   font-size: var(--small);
   grid-area: menu;
   justify-content: flex-end;
-  margin-right: calc(0px - var(--nav-spacer));
+  margin-right: calc(var(--banner-space) * -1);
+  padding: var(--quarter-shim) 0;
 }
 
 .menu-item {
-  padding: var(--half-shim) var(--nav-spacer);
-}
-
-summary {
-  cursor: pointer;
+  padding: var(--half-shim) var(--banner-space);
 }

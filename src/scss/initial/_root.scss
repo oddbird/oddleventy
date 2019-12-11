@@ -5,6 +5,9 @@
 
 html {
   @include tools.font-family('body');
+  --header-img: url('../images/site/header-wash.jpg');
+  --footer-img: url('../images/site/footer-wash.jpg');
+  --bg-blend: multiply;
   font-size: calc(1.25em + 0.5vw);
   line-height: 1.4;
 
@@ -15,11 +18,24 @@ html {
   @supports (background-blend-mode: multiply) {
     --header-wash: calc(var(--gutter) * 6 + 1vw);
     --footer-wash: var(--header-wash);
-    background-blend-mode: multiply;
-    background-image: url('../images/site/header-wash.jpg'),
-      url('../images/site/footer-wash.jpg');
+    background-blend-mode: var(--bg-blend);
+    background-image: var(--header-img), var(--footer-img);
     background-position: var(--wash-position, right 25vw) top 0, bottom center;
     background-repeat: no-repeat, repeat-x;
     background-size: auto var(--header-wash), auto var(--footer-wash);
   }
+
+  @media (prefers-color-scheme: dark) {
+    &:not([style*='--ccs-mode--user']) {
+      --header-img: url('../images/site/header-wash-dark.jpg');
+      --footer-img: url('../images/site/footer-wash-dark.jpg');
+      --bg-blend: screen;
+    }
+  }
+}
+
+[style*='--ccs-mode--user:-1'] {
+  --header-img: url('../images/site/header-wash-dark.jpg');
+  --footer-img: url('../images/site/footer-wash-dark.jpg');
+  --bg-blend: screen;
 }

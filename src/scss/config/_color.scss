@@ -45,8 +45,10 @@ $brand-colors: (
 /// @group config-color
 $global-colors: (
   'bg': var(--ccs-neutral--bg-full),
+  'bg-full': var(--ccs--bg-full),
   'callout': var(--ccs-neutral--bg5),
-  'overlay': var(--ccs-neutral--bg-full-fade),
+  'overlay': var(--ccs--bg-full),
+  'overlay-fade': hsla(0, 0%, calc(100% * var(--ccs-mode)), var(--ccs-fade)),
   'text': var(--ccs-neutral--fg-full),
   'border': var(--ccs-neutral),
   'border-fade': var(--ccs-neutral--bg1-fade),
