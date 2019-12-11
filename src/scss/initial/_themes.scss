@@ -8,8 +8,8 @@
 /// @name Default Theme
 /// @group init-themes
 [data-ccs-theme='oddbird'] {
-  --ccs-prime--theme: var(--ccs-prime--config);
-  --ccs-accent--theme: var(--ccs-accent--config);
+  --ccs-h--prime: var(--ccs-prime--config);
+  --ccs-h--accent: var(--ccs-accent--config);
   --ccs-custom-hue: none;
 }
 

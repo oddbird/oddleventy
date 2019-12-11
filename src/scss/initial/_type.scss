@@ -10,8 +10,8 @@ hr {
 
 // Selection
 // ---------
-/// Selected text is highlighted in orange,
-/// with any text-shadows removed.
+/// Selected text is inverted,
+/// with a hint of the accent hue.
 /// @group typography
 ::selection {
   background-color: var(--ccs-accent--fg5);
