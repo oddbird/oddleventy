@@ -1,0 +1,24 @@
+@use '../config/color' as config;
+@use '../../../node_modules/cascading-color-systems' as ccs;
+
+// OddBird
+// -------
+/// The OddBird theme is based on default settings,
+/// but removes user hue settings.
+/// @name Default Theme
+/// @group init-themes
+[data-ccs-theme='oddbird'] {
+  --ccs-h--prime: var(--ccs-prime--config);
+  --ccs-h--accent: var(--ccs-accent--config);
+  --ccs-custom-hue: none;
+}
+
+// Monochrome
+// ----------
+/// Provide a monochrome theme option,
+/// with one color for both accent and prime.
+/// @name Monochrome Theme
+/// @group init-themes
+[data-ccs-theme='monochrome'] {
+  --ccs-accent--theme: var(--ccs-h--prime);
+}

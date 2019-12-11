@@ -2,7 +2,7 @@
 // ===========
 
 .title {
-  @include text-shadow;
+  // @include text-shadow;
   margin-bottom: size('gutter');
   margin-top: size('gutter');
   padding: size('shim') size('gutter');
@@ -87,69 +87,5 @@
 
   .h-card {
     margin-bottom: size('gutter');
-  }
-}
-
-// Dynamic Titles
-// --------------
-
-.title-select {
-  display: inline-block;
-
-  .is-dropdown {
-    transform: translateY(size('border-thin'));
-    width: size('dropdown-narrow');
-
-    @include above('nav-wide') {
-      width: size('dropdown-wide');
-    }
-  }
-}
-
-.title-current {
-  color: color('action');
-  transition: all time('slow') ease-in-out;
-
-  #{$focus} {
-    color: color('action-hover');
-  }
-}
-
-[name='title-option'] {
-  @include is-hidden;
-
-  &:checked {
-    ~ .dropdown-item {
-      font-style: italic;
-    }
-  }
-
-  &:focus {
-    ~ .dropdown-item {
-      color: color('action');
-    }
-  }
-}
-
-.tagline-option {
-  // float "isolation" keeps container height consistent…
-  float: left;
-  margin-right: -200%;
-  opacity: 0;
-  pointer-events: none;
-  position: relative;
-  transform: translate3d(0, -100%, 0);
-  transition: change('fade'), change('move-smooth');
-  width: 100%;
-
-  &.is-active {
-    opacity: 1;
-    pointer-events: initial;
-    transform: translate3d(0, 0, 0);
-    transition: change('fade') time('fast'), change('move-smooth');
-
-    ~ .tagline-option {
-      transform: translate3d(0, 100%, 0);
-    }
   }
 }

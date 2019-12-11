@@ -1,182 +1,77 @@
-// Scale Settings
-// ==============
+@use '../../../node_modules/accoutrement/sass/tools';
+@use '../../../node_modules/sassdoc-theme-herman/scss/utilities' as herman;
 
-// Ratios
-// ------
-/// @group config-scale
-/// @ratios
-/// @link https://oddbird.net/accoutrement-scale/docs/
+/// # Spacing & Size Config
+/// Accoutrement maps for storing global spacing and size tokens.
+/// @link https://www.oddbird.net/accoutrement/docs/scale.html
 ///   Accoutrement Scale
-$modular-scale: (
-  'text-ratio': 1.4,
-);
+/// @group config-scale
 
-@include add-ratios($modular-scale);
-@include herman-add(
-  'ratios',
-  'modular-scale',
-  $modular-scale,
-  get-function('ratio')
-);
-
-// Text Sizes
+// Font Sizes
 // ----------
 /// @group config-scale
-/// @sizes
-/// @link https://oddbird.net/accoutrement-scale/docs/
-///   Accoutrement Scale
-$text-sizes: (
-  'root': 18px,
-  'h2': calc(1rem + 1vw),
-  'h3': calc(1rem + 0.5vw),
-  'small': '#root'
-    (
-      'text-ratio': -0.5,
-    ),
-  'xsmall': '#root'
-    (
-      'text-ratio': -1,
-    ),
-  'rel-small': 1em
-    (
-      'text-ratio': -0.5,
-    ),
-  'medium': '#root'
-    (
-      'text-ratio': 0.7,
-    ),
-  'headline-highlight-large': calc(1.35rem + 1vw),
-  'headline-highlight-small': '#root',
-  'caption': '#root',
-  'task': '#root'
-    (
-      'text-ratio': -0.125,
-    ),
-  'social': '#root'
-    (
-      'text-ratio': -0.25,
-    ),
+/// @sizes {text}
+$font-sizes: (
+  'small': 0.8rem,
+  'xsmall': 0.7rem,
+  'medium': 1.25rem,
+  'large': calc(1.5rem + 0.5vw),
+  'xlarge': calc(1.75rem + 1vw),
+  'h1': '#xlarge',
+  'h2': '#large',
+  'h3': '#medium',
 );
 
-@include add-sizes($text-sizes);
-@include herman-add('sizes', 'text-sizes', $text-sizes, get-function('size'));
+@include tools.add-sizes($font-sizes);
+@include herman.herman-add(
+  'sizes',
+  'font-sizes',
+  $font-sizes,
+  get-function('size', $module: 'tools')
+);
 
 // Spacing Sizes
 // -------------
 /// @group config-scale
 /// @sizes {ruler}
-/// @link https://oddbird.net/accoutrement-scale/docs/
-///   Accoutrement Scale
 $spacing-sizes: (
-  'rhythm': '#root'
-    (
-      'text-ratio': 1,
-      'convert-units': 'rem',
-    ),
-  'gutter': '#rhythm',
-  'double-gutter': '#gutter'
-    (
-      'times': 2,
-    ),
-  'triple-gutter': '#gutter'
-    (
-      'times': 3,
-    ),
-  'shim-plus': '#gutter'
-    (
-      'times': 0.75,
-    ),
-  'shim': '#gutter'
-    (
-      'times': 0.5,
-    ),
-  'half-shim': '#shim'
-    (
-      'times': 0.5,
-    ),
-  'quarter-shim': '#shim'
-    (
-      'times': 0.25,
-    ),
-  'pad': 1rem,
-  'pixel': 1px,
-  'spacer': 'calc(#double-gutter + 3vw)',
+  'gutter': 1.4rem,
+  'newline': 0.75em,
+  'gutter-plus': calc(var(--gutter) * 1.5),
+  'double-gutter': calc(var(--gutter) * 2),
+  'tripple-gutter': calc(var(--gutter) * 3),
+  'shim': calc(var(--gutter) / 2),
+  'shim-plus': calc(var(--gutter) * 0.75),
+  'half-shim': calc(var(--gutter) / 4),
+  'quarter-shim': calc(var(--gutter) / 8),
+  'spacer': calc(var(--double-gutter) + 3vw),
 );
 
-@include add-sizes($spacing-sizes);
-@include herman-add(
+@include tools.add-sizes($spacing-sizes);
+@include herman.herman-add(
   'sizes',
   'spacing-sizes',
   $spacing-sizes,
-  get-function('size')
+  get-function('size', $module: 'tools')
 );
 
-// Pattern Sizes
-// -------------
+// Theme Sizes
+// -----------
+// Mostly used as breakpoints when content is asking for css edits
 /// @group config-scale
-/// @sizes {output-only}
-/// @link https://oddbird.net/accoutrement-scale/docs/
-///   Accoutrement Scale
-$pattern-sizes: (
-  'background': 'calc(%s + 16vw)'
-    (
-      '%s': '#rhythm'
-        (
-          'times': 6,
-        ),
-    ),
-  'border': 8px,
-  'border-thin': 1px,
-  'border-radius': '#half-shim',
-  'logo-y': '#rhythm'
-    (
-      'times': 2.25,
-    ),
-  'alt-logo-y': '#rhythm'
-    (
-      'times': 2,
-    ),
-  'hero-logo': '#rhythm'
-    (
-      'times': 5,
-    ),
-  'bird-face': 6rem,
-  'bird-face-small': '#bird-face'
-    (
-      'times': 0.75,
-    ),
-  'half-bird-face': '#bird-face'
-    (
-      'times': 0.5,
-    ),
-  'bird-sig-height': '#rhythm'
-    (
-      'times': 3,
-    ),
-  'bird-sig-width': '#bird-sig-height'
-    (
-      'times': 920/310,
-    ),
-  'intro-text': '#medium'
-    (
-      'convert-units': 'rem',
-    ),
-  'nav-small': 20rem,
-  'nav-medium': 35rem,
-  'nav-wide': 55rem,
-  'dropdown-narrow': 9rem,
-  'dropdown-wide': 14rem,
-  'splash-items': 16rem,
-  'splash-logo-y': '#spacer',
-  'imageblock-image': '#dropdown-wide',
+/// @sizes {ruler}
+$theme-sizes: (
+  'border-width': medium,
+  'header-wash': calc(var(--gutter) * 4 + 1vw),
+  'footer-wash': '#header-wash',
 );
 
-@include add-sizes($pattern-sizes);
-@include herman-add(
+@include tools.add-sizes($theme-sizes);
+@include herman.herman-add(
   'sizes',
-  'pattern-sizes',
-  $pattern-sizes,
-  get-function('size')
+  'theme-sizes',
+  $theme-sizes,
+  get-function('size', $module: 'tools')
 );
 
 // Page Sizes
@@ -184,24 +79,25 @@ $pattern-sizes: (
 // Mostly used as breakpoints when content is asking for css edits
 /// @group config-scale
 /// @sizes {output-only}
-/// @link https://oddbird.net/accoutrement-scale/docs/
-///   Accoutrement Scale
 $page-sizes: (
   'small-page': 34rem,
   'medium-page': 55rem,
   'large-page': 75rem,
 );
 
-@include add-sizes($page-sizes);
-@include herman-add('sizes', 'page-sizes', $page-sizes, get-function('size'));
+@include tools.add-sizes($page-sizes);
+@include herman.herman-add(
+  'sizes',
+  'page-sizes',
+  $page-sizes,
+  get-function('size', $module: 'tools')
+);
 
 // Column Sizes
 // ------------
 // Columns are used mostly in extend mixin and to declare size of content containers
 /// @group config-scale
 /// @sizes {output-only}
-/// @link https://oddbird.net/accoutrement-scale/docs/
-///   Accoutrement Scale
 $column-sizes: (
   'full-content': 40rem,
   'feature-width': calc(40rem + 10vw),
@@ -212,10 +108,10 @@ $column-sizes: (
   'wide-column': 90%,
 );
 
-@include add-sizes($column-sizes);
-@include herman-add(
+@include tools.add-sizes($column-sizes);
+@include herman.herman-add(
   'sizes',
   'column-sizes',
   $column-sizes,
-  get-function('size')
+  get-function('size', $module: 'tools')
 );
