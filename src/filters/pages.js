@@ -21,7 +21,7 @@ const withData = (collection, key, value) =>
     const data = page.data[key];
 
     if (data) {
-      if (data === value || value === null) {
+      if (data === value || !value) {
         return true;
       }
 
