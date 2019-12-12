@@ -1,5 +1,6 @@
 'use strict';
 
+const { withData } = require('./pages');
 const { unique, slugify } = require('./utils');
 const { get } = require('./events');
 
@@ -9,11 +10,7 @@ const isPublic = (tag) => tag !== 'all' && !tag.startsWith('_');
 const publicTags = (tags) =>
   tags ? tags.filter((tag) => isPublic(tag)) : tags;
 
-const hasTag = (page, tag) =>
-  page.data.tags ? page.data.tags.includes(tag) : false;
-
-const withTag = (collection, tag) =>
-  collection.filter((page) => hasTag(page, tag));
+const withTag = (collection, tag) => withData(collection, 'tags', tag);
 
 const tagData = (collections) => {
   const eventTags = get(collections.all, false, false)
@@ -87,7 +84,6 @@ module.exports = {
   publicTags,
   getTags,
   groupTags,
-  hasTag,
   withTag,
   displayName,
   tagLink,
