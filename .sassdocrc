@@ -6,8 +6,6 @@ shortcutIcon: ./content/favicon.ico
 verbose: true
 
 groups:
-  Tools:
-    tools-range: Range Input Prefixes
   Sass Tokens:
     config-animation: Animations
     config-color: Colors
@@ -17,6 +15,13 @@ groups:
     init-colors: Global Colors
     init-themes: Preset Themes
     init-scale: Spacing & Sizes
+  Forms:
+    tools-range: Range Input Tools
+    input-range: Range Inputs
+  Patterns:
+    a11y: Accessibility
+    type: Typography
+    icons: SVG Icons
 
 herman:
   extraDocs:
