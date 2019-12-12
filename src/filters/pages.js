@@ -13,26 +13,30 @@ const fromCollection = (collection, page) => {
   return collection.find((thisPage) => thisPage.url === pageURL) || page;
 };
 
-const seriesNav = (page, collection) => {
-  collection = collection || [];
-  const pageIndex = collection.findIndex((item) => item.url === page.url);
-
-  if (pageIndex !== -1) {
-    return {
-      prev: collection[pageIndex - 1] || null,
-      next: collection[pageIndex + 1] || null,
-    };
-  }
-  return null;
-};
-
 const titleSort = (collection) =>
   collection.sort((a, b) => a.data.title - b.data.title);
+
+const withData = (collection, key, value) =>
+  collection.filter((page) => {
+    const data = page.data[key];
+
+    if (data) {
+      if (data === value || !value) {
+        return true;
+      }
+
+      if (Array.isArray(data)) {
+        return data.includes(value);
+      }
+    }
+
+    return false;
+  });
 
 module.exports = {
   isPublic,
   getPublic,
   fromCollection,
-  seriesNav,
+  withData,
   titleSort,
 };

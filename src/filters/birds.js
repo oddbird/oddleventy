@@ -1,12 +1,8 @@
 'use strict';
 
-const { fromCollection } = require('./pages');
+const { fromCollection, withData } = require('./pages');
 
-const getPages = (collection, bird) =>
-  collection.filter((page) => {
-    const author = page.data.author || [];
-    return author === bird || author.includes(bird);
-  });
+const getPages = (collection, bird) => withData(collection, 'author', bird);
 
 const authorPage = (collection, bird) => {
   if (bird) {
