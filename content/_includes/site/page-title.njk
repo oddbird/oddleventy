@@ -4,4 +4,10 @@
   <h1 class="title-main">
     {{ full_title | safe }}
   </h1>
+
+  {% if sub %}
+    <p class="subtitle">
+      {{ sub | mdInline | safe }}
+    </p>
+  {% endif %}
 </header>

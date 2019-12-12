@@ -1,38 +1,36 @@
 theme: herman
 dest: _site/style/
 
-display:
-  access: public
-
 package: ./package.json
-shortcutIcon: ./favicon.ico
+shortcutIcon: ./content/favicon.ico
 verbose: true
 
 groups:
   Tools:
-    tools-grids: Grids
-    tools-grid-vars: CSS Grid Variables
-    tools-patterns: Patterns
-    tools-stripes: Stripes
-  Design Tokens:
+    tools-range: Range Input Prefixes
+  Sass Tokens:
     config-animation: Animations
-    config-colors: Brand Colors
-    config-themes: Theme Colors
-    config-grids: Grids
+    config-color: Colors
     config-fonts: Fonts
-    config-scale: Ratios & Sizes
-    config-patterns: Patterns
+    config-scale: Spacing & Sizes
+  CSS Variables:
+    init-colors: Global Colors
+    init-themes: Preset Themes
+    init-scale: Spacing & Sizes
 
 herman:
+  extraDocs:
+    - name: Getting Started
+      path: ./styleguide.md
   extraLinks:
-    - name: 'Eleventy'
+    - name: Eleventy
       url: http://www.11ty.io
-    - name: 'Accoutrement'
+    - name: Accoutrement
       url: https://oddbird.net/accoutrement/
-    - name: 'Herman'
+    - name: Cascading Color Systems
+      url: https://cascading-colors.netlify.com/
+    - name: Herman
       url: https://oddbird.net/herman/
-  fontpath: 'src/fonts/'
+  fontpath: src/fonts/
   sass:
-    includepaths: ['src/scss']
-    includes: ['config/manifest']
-    # jsonfile: '_built/css/json.css'
+    jsonfile: _built/css/json.css

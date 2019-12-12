@@ -1,5 +1,5 @@
 ---
-title: Miriam Suzanne
+title: Sondra Eby
 bird: sondra
 active: true
 image:

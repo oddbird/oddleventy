@@ -1,26 +1,21 @@
-// Initial Typography
-// ------------------
+@use '../../../node_modules/accoutrement/sass/tools';
 
-// Base
-// ----
+hr {
+  margin: var(--spacer) 0;
+}
 
-@include import-webfonts;
-
-:root {
-  @include font-family('body');
-  font-size: size('root');
-  font-size: calc(1em + 0.3vw);
-  line-height: 1.35;
+.intro {
+  font-size: var(--medium);
 }
 
 // Selection
 // ---------
-/// Selected text is highlighted in orange,
-/// with any text-shadows removed.
+/// Selected text is inverted,
+/// with a hint of the accent hue.
 /// @group typography
 ::selection {
-  @include contrasted('select');
-  text-shadow: none;
+  background-color: var(--ccs-accent--fg5);
+  color: var(--bg);
 }
 
 // Hidden Text & Fout
@@ -28,98 +23,22 @@
 
 .is-hidden,
 .wf-loading {
-  @include is-hidden;
-}
-
-// Abbr
-// ----
-
-abbr {
-  &[title] {
-    text-decoration: none;
-  }
+  @include tools.is-hidden;
 }
 
 // Ampersands
 // ----------
 
 .amp {
-  @include font-family('amp');
+  @include tools.font-family('amp');
 }
 
-// Headlines
-// ---------
+// Paragraphs & Lists
+// ------------------
 
-h1,
-h2 {
-  @include font-family('alt');
-}
-
-h2 {
-  font-size: size('h2');
-  margin: 1.5rem 0 0.75rem;
-}
-
-h3 {
-  font-size: size('h3');
-  font-style: italic;
-  margin-bottom: 0.75rem;
-  margin-top: 1.5rem;
-
-  h2 + &,
-  h2 + section > &:first-child {
-    margin-top: 0;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  [data-module='rst-body'] & {
-    clear: both;
-  }
-
-  [href] {
-    text-decoration: none;
-  }
-}
-
-// Links
-// -----
-
-@include link-color-for('background');
-
-a {
-  #{$link} {
-    @include transition('colors');
-    text-decoration-line: underline;
-    text-decoration-skip-ink: auto;
-  }
-}
-
-.icon-text {
-  text-decoration: underline;
-  text-decoration-skip-ink: auto;
-}
-
-.image-reference {
-  &,
-  #{$link} {
-    text-decoration: none;
-  }
-
-  object {
-    pointer-events: none;
-  }
-}
-
-// Paragraphs
-// ----------
-
-p {
-  margin-bottom: size('shim', 'em');
-  margin-top: size('shim', 'em');
+p,
+ul,
+ol {
+  margin-bottom: var(--newline);
+  margin-top: 0;
 }

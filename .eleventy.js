@@ -25,6 +25,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection('birds', (collection) =>
     collection.getAll().filter((item) => item.data.bird),
   );
+  eleventyConfig.addCollection('sample', (collection) =>
+    collection.getAll().filter((item) => item.data.sample),
+  );
 
   // filters
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
@@ -39,7 +42,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('publicTags', tags.publicTags);
   eleventyConfig.addFilter('getTags', tags.getTags);
   eleventyConfig.addFilter('groupTags', tags.groupTags);
-  eleventyConfig.addFilter('hasTag', tags.hasTag);
   eleventyConfig.addFilter('withTag', tags.withTag);
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
@@ -47,7 +49,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('getPage', pages.fromCollection);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
-  eleventyConfig.addFilter('seriesNav', pages.seriesNav);
+  eleventyConfig.addFilter('withData', pages.withData);
   eleventyConfig.addFilter('titleSort', pages.titleSort);
 
   eleventyConfig.addFilter('byBird', birds.getPages);

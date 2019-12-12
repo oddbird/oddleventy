@@ -1,10 +1,10 @@
 // Screen
 // ======
 
+@use '../../node_modules/cssremedy/css/remedy';
+@use 'config';
 @use 'temp';
-
-// @import 'config/manifest';
-// @import 'initial/manifest';
-// @import 'patterns/manifest';
-// @import 'layout/manifest';
-// @import 'components/manifest';
+@use 'initial';
+@use 'patterns';
+@use 'layout';
+@use 'components';
