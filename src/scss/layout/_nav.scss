@@ -2,8 +2,8 @@
 
 [data-layout='nav'] {
   font-size: var(--small);
-  grid-area: nav;
-  margin-left: -3em;
+  grid-column: logo / nav;
+  grid-row: nav;
 }
 
 [data-navlist] {
@@ -14,13 +14,19 @@
   list-style: none;
   margin-right: calc(var(--banner-space) * -1);
   padding: 0;
+
+  // this keeps the first line from overlapping with the logo tail
+  &::before {
+    content: '';
+    width: 6em;
+  }
 }
 
 [data-nav] {
   --underline-color: transparent;
   --underline-thickness: 0;
   display: inline-block;
-  padding: var(--half-shim) var(--banner-space);
+  padding: var(--shim) var(--banner-space);
 }
 
 [data-active='nav'] {

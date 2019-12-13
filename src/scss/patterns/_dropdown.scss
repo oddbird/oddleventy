@@ -3,8 +3,9 @@
 }
 
 [data-dropdown] {
-  background: var(--overlay);
-  box-shadow: 0 var(--quarter-shim) var(--quarter-shim) var(--border-fade);
+  background: var(--bg);
+  border: thin solid var(--border-fade);
+  box-shadow: 0 0 var(--quarter-shim) var(--border-fade);
   max-width: 14em;
   position: absolute;
   width: calc(100vw - var(--double-gutter));

@@ -2,7 +2,7 @@
 
 [data-layout='banner'] {
   @include tools.font-family('alt');
-  --banner-space: calc(var(--half-shim) + 1vw);
+  --banner-space: calc(var(--shim) + 1vw);
   display: grid;
   grid-area: banner;
   grid-template:
@@ -11,8 +11,7 @@
     / minmax(5em, 7em) 1fr;
 
   &::before {
-    background-color: var(--overlay-fade);
-    box-shadow: 0 0 var(--quarter-shim) var(--shadow);
+    background-color: var(--overlay-banner);
     content: '';
     grid-column: 1 / -1;
     grid-row: menu;
