@@ -7,13 +7,24 @@
 ///   Accoutrement Scale
 /// @group config-scale
 
+// Line Height
+// -----------
+/// Going for a readable line-height
+/// that adapts to context
+/// @ratios
+/// @group config-scale
+$ratios: (
+  'line-height': 1.4,
+);
+
 // Font Sizes
 // ----------
-/// @group config-scale
 /// @sizes {text}
+/// @group config-scale
 $font-sizes: (
   'small': 0.8rem,
   'xsmall': 0.7rem,
+  'rem': calc(1.25em + 0.5vw),
   'medium': 1.25rem,
   'large': calc(1.5rem + 0.5vw),
   'xlarge': calc(1.75rem + 1vw),
@@ -32,8 +43,8 @@ $font-sizes: (
 
 // Spacing Sizes
 // -------------
-/// @group config-scale
 /// @sizes {ruler}
+/// @group config-scale
 $spacing-sizes: (
   'gutter': 0.75rem,
   'newline': '#gutter',
@@ -58,8 +69,8 @@ $spacing-sizes: (
 // Theme Sizes
 // -----------
 // Mostly used as breakpoints when content is asking for css edits
-/// @group config-scale
 /// @sizes {ruler}
+/// @group config-scale
 $theme-sizes: (
   'body-inline': calc(var(--quarter-shim) + 4vw),
   'border-width': medium,
@@ -76,8 +87,8 @@ $theme-sizes: (
 // Page Sizes
 // ----------
 // Mostly used as breakpoints when content is asking for css edits
-/// @group config-scale
 /// @sizes {output-only}
+/// @group config-scale
 $page-sizes: (
   'small-page': 34rem,
   'medium-page': 55rem,
@@ -95,8 +106,8 @@ $page-sizes: (
 // Column Sizes
 // ------------
 // Columns are used mostly in extend mixin and to declare size of content containers
-/// @group config-scale
 /// @sizes {output-only}
+/// @group config-scale
 $column-sizes: (
   'full-content': 40rem,
   'feature-width': calc(40rem + 10vw),
