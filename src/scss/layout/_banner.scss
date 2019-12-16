@@ -23,6 +23,7 @@
   &:link,
   &:visited {
     @include tools.transition('move');
+    align-self: start;
     display: block;
     grid-area: logo;
     margin-top: var(--half-shim);
@@ -36,7 +37,7 @@
   }
 
   [data-logo] {
-    width: 100%;
     height: auto;
+    width: 100%;
   }
 }

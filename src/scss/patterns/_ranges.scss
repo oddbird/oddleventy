@@ -3,6 +3,10 @@
 /// # Range Inputs
 /// @group input-range
 
+// Type = Range
+// ------------
+/// Reset the browser styles for a range input,
+/// and re-style the track/thumb to match our branding.
 /// @group input-range
 [type='range'] {
   appearance: none;

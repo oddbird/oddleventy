@@ -1,4 +1,4 @@
 ---
 layout: base
-title: jobs
+title: Jobs
 ---

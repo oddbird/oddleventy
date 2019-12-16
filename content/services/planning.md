@@ -1,4 +1,4 @@
 ---
-title: research & concepting
+title: Research & Concepting
 index: planning
 ---

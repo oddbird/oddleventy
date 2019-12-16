@@ -1,4 +1,4 @@
 ---
-title: integrated design systems
+title: Integrated Design Systems
 index: design systems
 ---

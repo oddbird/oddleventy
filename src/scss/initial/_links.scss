@@ -18,8 +18,8 @@ a {
   &.icon-text {
     @include tools.transition('underline');
     --underline-color--default: var(--ccs-accent--fg1);
-    --underline-thickness--default: 0.05em;
-    --underline-offset--default: auto;
+    --underline-thickness--default: 0.1em;
+    --underline-offset--default: 0.1em;
     color: var(--link, var(--action));
     text-decoration: underline;
     text-decoration-color: var(
@@ -40,7 +40,7 @@ a {
   &:hover,
   &:focus {
     --underline-color: var(--ccs-accent);
-    --underline-thickness: 0.15em;
+    --underline-thickness: 0.2em;
     color: var(--action-focus);
   }
 }

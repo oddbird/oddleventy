@@ -1,5 +1,5 @@
 ---
 layout: base
-title: software for humans
+title: Software For Humans
 banner: OddBird
 ---

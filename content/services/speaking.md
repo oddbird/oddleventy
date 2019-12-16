@@ -1,4 +1,4 @@
 ---
-title: speaking & training
+title: Speaking & Training
 index: speaking
 ---

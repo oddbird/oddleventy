@@ -25,7 +25,7 @@ hr {
 // Font Loading
 // ------------
 /// Hide the page visually while fonts are loading,
-/// toavoid a flash of unstyled text.
+/// to avoid a flash of unstyled text.
 /// @group type
 .wf-loading {
   @include tools.is-hidden;
