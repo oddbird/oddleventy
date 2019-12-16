@@ -55,9 +55,8 @@ $global-colors: (
   'border-fade': var(--ccs-neutral--bg1-fade),
   'shadow': var(--ccs-neutral--bg1-fade),
   'action': var(--ccs-prime--fg2),
-  'action-alt': var(--ccs-accent--fg2),
   'action-focus': var(--ccs-prime--fg4),
-  'active': '#action-alt',
+  'active': var(--ccs-accent--fg2),
 );
 
 // CCS Defaults

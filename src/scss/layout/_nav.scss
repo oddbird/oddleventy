@@ -23,16 +23,17 @@
 }
 
 [data-nav] {
-  --underline-color: transparent;
-  --underline-thickness: 0;
   display: inline-block;
   padding: var(--shim) var(--banner-space);
+
+  &:not(:hover):not(:active):not(:focus):not([data-active]) {
+    --underline-color: transparent;
+    --underline-thickness: 0;
+  }
 }
 
 [data-active='nav'] {
-  @include tools.font-family('body');
   --link: var(--active);
-  --underline-color: transparent;
-  --underline-thickness: 0;
-  font-style: italic;
+  --link-focus: var(--link);
+  --underline-color: currentColor;
 }

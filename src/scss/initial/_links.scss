@@ -17,7 +17,7 @@ a {
   &:visited,
   &.icon-text {
     @include tools.transition('underline');
-    --underline-color--default: var(--ccs-accent--fg1);
+    --underline-color--default: var(--ccs-accent);
     --underline-thickness--default: 0.1em;
     --underline-offset--default: 0.1em;
     color: var(--link, var(--action));
@@ -39,8 +39,8 @@ a {
 
   &:hover,
   &:focus {
-    --underline-color: var(--ccs-accent);
+    --underline-color: var(--active);
     --underline-thickness: 0.2em;
-    color: var(--action-focus);
+    color: var(--link-focus, var(--action-focus));
   }
 }
