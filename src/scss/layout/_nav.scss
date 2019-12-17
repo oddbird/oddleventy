@@ -1,100 +1,39 @@
-// Site Navigation
-// ===============
+@use '../../../node_modules/accoutrement/sass/tools';
 
-.main-nav {
+[data-layout='nav'] {
+  font-size: var(--small);
+  grid-column: logo / nav;
+  grid-row: nav;
+}
+
+[data-navlist] {
+  align-items: center;
   display: flex;
-  flex: 1 0 auto;
-  font-size: size('small');
-  justify-content: center;
-  position: relative;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin-right: calc(var(--banner-space) * -1);
+  padding: 0;
 
-  @include below('small-page') {
-    .has-dropdown {
-      position: static;
-    }
-
-    .is-dropdown {
-      left: negative('half-shim');
-      width: 100vw;
-    }
-  }
-
-  .is-dropdown {
-    @include z-index('nav-dropdown');
-  }
-
-  @include above('medium-page') {
-    font-size: inherit;
+  // this keeps the first line from overlapping with the logo tail
+  &::before {
+    content: '';
+    width: 6em;
   }
 }
 
-.nav-item {
-  display: inline-flex;
-}
-
-// Shared base styles for links in navigation
-.nav-link {
-  &,
-  #{$link} {
-    color: color('action-alt');
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  #{$focus} {
-    color: color('action');
-  }
-}
-
-// Styles for main items outside the .nav-link base styles
-.nav-link-main {
+[data-nav] {
   display: inline-block;
-  padding: size('half-shim') size('shim');
+  padding: var(--shim) var(--banner-space);
 
-  @include above('nav-medium') {
-    margin: 0 size('half-shim');
-  }
-
-  @include above('nav-wide') {
-    margin: 0 size('shim');
-  }
-
-  &[aria-pressed='true'] {
-    color: color('action');
+  &:not(:hover):not(:active):not(:focus):not([data-active]) {
+    --underline-color: transparent;
+    --underline-thickness: 0;
   }
 }
 
-// Map nav locations for highlighting active page
-$nav-locations: (
-  'case-studies': 'work',
-  'open-source': 'work',
-  'planning': 'services',
-  'development': 'services',
-  'design-systems': 'services',
-  'speaking': 'services',
-  'birds': 'about',
-  'community': 'about',
-  'jobs': 'about',
-  'blog': null,
-  'contact': null,
-  'susysite-sites': null,
-  'susysite-articles': null,
-  'susysite-styleguide': 'susysite-support',
-  'hermansite-articles': null,
-);
-
-// Highlight self and parent (if applicable)
-@each $location, $parent in $nav-locations {
-  [data-location='#{$location}'] {
-    [data-active='#{$location}'],
-    [data-active='#{$parent}'] {
-      color: color('action-hover');
-      font-style: italic;
-    }
-  }
-}
-
-// OddBird link from sub-sites
-[data-active='oddbird'] {
-  @include after('»');
+[data-active='nav'] {
+  --link: var(--active);
+  --link-focus: var(--link);
+  --underline-color: var(--link);
 }

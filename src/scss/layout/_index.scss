@@ -1,7 +1,9 @@
 // Layout Manifest
 // ===============
 
-// @import 'banner';
-// @import 'nav';
-// @import 'main';
+@import 'root';
+@import 'banner';
+@import 'menu';
+@import 'nav';
+@import 'main';
 @import 'footer';

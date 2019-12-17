@@ -1,5 +1,5 @@
 ---
 layout: base
-title: open source tools
+title: Open Source Tools
 index: open source
 ---

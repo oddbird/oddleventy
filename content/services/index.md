@@ -1,5 +1,5 @@
 ---
-layout: base
-title: app design & development
+title: Services
+banner: App Design & Development
 index: services
 ---

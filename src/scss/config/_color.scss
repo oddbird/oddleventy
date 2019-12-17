@@ -45,11 +45,18 @@ $brand-colors: (
 /// @group config-color
 $global-colors: (
   'bg': var(--ccs-neutral--bg-full),
+  'bg-full': var(--ccs--bg-full),
   'callout': var(--ccs-neutral--bg5),
-  'border': var(--ccs-neutral),
+  'overlay': var(--ccs-neutral--bg6-fade),
+  'overlay-banner':
+    hsla(var(--ccs-h--neutral), var(--ccs-s--bg6), var(--ccs-l--bg6), 0.4),
   'text': var(--ccs-neutral--fg-full),
+  'border': var(--ccs-neutral),
+  'border-fade': var(--ccs-neutral--bg1-fade),
+  'shadow': var(--ccs-neutral--bg1-fade),
   'action': var(--ccs-prime--fg2),
   'action-focus': var(--ccs-prime--fg4),
+  'active': var(--ccs-accent--fg2),
 );
 
 // CCS Defaults

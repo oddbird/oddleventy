@@ -1,4 +1,7 @@
-/* stylelint-disable */
+/// # Range Input Tools
+/// Provide browser-prefixed selectors for styling
+/// range input tracks and thumbs.
+/// @group tools-range
 
 // Track
 // -----
@@ -19,6 +22,7 @@
 ///   }
 /// @group tools-range
 @mixin track {
+  /* stylelint-disable */
   &::-webkit-slider-runnable-track {
     @content;
   }
@@ -28,6 +32,7 @@
   &::-ms-track {
     @content;
   }
+  /* stylelint-enable */
 }
 
 // Track
@@ -52,6 +57,7 @@
 ///   }
 /// @group tools-range
 @mixin thumb {
+  /* stylelint-disable */
   &::-webkit-slider-thumb {
     transform: translateY(-35%);
     @content;
@@ -62,6 +68,5 @@
   &::-ms-thumb {
     @content;
   }
+  /* stylelint-enable */
 }
-
-/* stylelint-enable */

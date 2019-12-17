@@ -1,0 +1,12 @@
+[data-layout='menu'] {
+  align-items: center;
+  display: flex;
+  font-size: var(--small);
+  grid-area: menu;
+  justify-content: flex-end;
+  margin-right: calc(var(--banner-space) * -1);
+}
+
+.menu-item {
+  padding: var(--shim-plus) var(--banner-space);
+}

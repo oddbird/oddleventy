@@ -1,9 +1,12 @@
-// Fonts Config
-// ============
-
 @use '../../../node_modules/accoutrement/sass/tools';
 @use '../../../node_modules/sassdoc-theme-herman/scss/utilities' as herman;
 @use 'sass:meta';
+
+/// # Fonts Config
+/// Accoutrement maps for storing global font tokens.
+/// @link https://www.oddbird.net/accoutrement/docs/type.html
+///   Accoutrement Type
+/// @group config-fonts
 
 // Body Font
 // ---------

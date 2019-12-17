@@ -1,7 +1,15 @@
+[data-ccs='menu'] {
+  display: none;
+
+  @supports (--custom: props) {
+    display: flex;
+  }
+}
+
 [data-ccs='buttons'] {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--gutter);
+  margin-bottom: var(--shim);
 }
 
 $rainbow: ();

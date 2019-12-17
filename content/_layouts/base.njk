@@ -45,14 +45,30 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
 
-  <body
-    data-layout="body">
-    <a href="#content" class="to-content">Skip to main content</a>
-    {% include "site/menu.njk" %}
-    {% include 'site/banner.njk' %}
+  <body data-layout="body">
+    <a href="#page-title"
+      id="to-content"
+      class="sr-only">
+      Skip to main
+    </a>
 
-    <main data-layout="main" id="content">
-      {% include 'site/page-title.njk' %}
+    {% include "site/banner.njk" %}
+
+    <main data-layout="main">
+      <header class="title">
+        <h1 class="title-main"
+          id="page-title"
+          tabindex="-1">
+          {{ full_title | safe }}
+        </h1>
+
+        {% if sub %}
+          <p class="subtitle">
+            {{ sub | mdInline | safe }}
+          </p>
+        {% endif %}
+      </header>
+
       {% include 'site/page.njk' %}
     </main>
 

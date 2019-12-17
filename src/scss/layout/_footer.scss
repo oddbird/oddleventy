@@ -3,4 +3,5 @@
 [data-layout='footer'] {
   @include tools.font-family('alt');
   font-size: var(--small);
+  grid-area: footer;
 }

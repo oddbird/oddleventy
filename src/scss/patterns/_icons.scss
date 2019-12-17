@@ -1,25 +1,26 @@
-// Icon Pattern
-// ============
+@use '../../../node_modules/accoutrement/sass/tools';
 
-/// Basic styles for all icons
+/// # SVG Icons
 /// @group icons
-/// @icons content/_includes/icons/
-[data-icon] {
-  @include square(1em);
+
+// SVG defaults
+// ------------
+/// Unless otherwise defined,
+/// embeded SVGs will take on the color
+/// of surrounding content.
+/// Adding `1px` padding helps with overflow clipping errors
+/// on rounded paths.
+/// @group icons
+svg {
   fill: currentColor;
-  padding: size('pixel');
+  padding: 1px;
 }
 
-// fill classes used when svg requires multiple colors
-.fill-white {
-  fill: color('background');
-}
-
-[data-size='text-small'] {
-  @include square(0.75em);
-  vertical-align: baseline;
-}
-
-.inline-icon {
-  margin-right: size('half-shim');
+// Icon
+// ----
+/// By default, icons take on the size of surrounding text.
+/// @group icons
+[data-icon] {
+  height: var(--icon-height, var(--icon-size, 1em));
+  width: var(--icon-width, var(--icon-size, 1em));
 }
