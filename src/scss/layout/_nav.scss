@@ -35,5 +35,5 @@
 [data-active='nav'] {
   --link: var(--active);
   --link-focus: var(--link);
-  --underline-color: currentColor;
+  --underline-color: var(--link);
 }
