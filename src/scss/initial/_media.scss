@@ -1,0 +1,33 @@
+/// # Initial Media Styles
+/// @group init-media
+
+/// @group init-media
+audio,
+canvas,
+iframe,
+video {
+  margin-bottom: var(--newline);
+}
+
+/// @group init-media
+audio {
+  width: 100%;
+}
+
+// SVG defaults
+// ------------
+/// Unless otherwise defined,
+/// embeded SVGs will take on the color
+/// of surrounding content.
+/// Adding `1px` padding helps with overflow clipping errors
+/// on rounded paths.
+/// @group init-media
+svg {
+  fill: currentColor;
+  padding: 1px;
+}
+
+[data-face='miriam'] {
+  --mia-svg-animate: none;
+  --mia-svg-eyes: darkslategray;
+}

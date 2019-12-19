@@ -25,8 +25,9 @@
   }
 }
 
-[type='textarea'] {
-  min-height: 8em;
+textarea {
+  min-height: calc(6em + 4vw);
+  resize: vertical;
 }
 
 select {

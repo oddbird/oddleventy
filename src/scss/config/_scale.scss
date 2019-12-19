@@ -102,26 +102,3 @@ $page-sizes: (
   $page-sizes,
   get-function('size', $module: 'tools')
 );
-
-// Column Sizes
-// ------------
-// Columns are used mostly in extend mixin and to declare size of content containers
-/// @sizes {output-only}
-/// @group config-scale
-$column-sizes: (
-  'full-content': 40rem,
-  'feature-width': calc(40rem + 10vw),
-  'extend-xsmall': 70vw,
-  'extend-small': 80vw,
-  'extend-large': 90vw,
-  'extend-full': 100vw,
-  'wide-column': 90%,
-);
-
-@include tools.add-sizes($column-sizes);
-@include herman.herman-add(
-  'sizes',
-  'column-sizes',
-  $column-sizes,
-  get-function('size', $module: 'tools')
-);

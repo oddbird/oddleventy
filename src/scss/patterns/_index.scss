@@ -2,12 +2,14 @@
 // ================
 
 @use 'a11y';
-@use 'dropdown';
-@use 'icons';
 
+@use 'buttons';
 @use 'forms';
 @use 'ranges';
-@use 'buttons';
+
+@use 'dropdown';
+@use 'icons';
+@use 'media';
 
 // @import 'alignment';
 // @import 'blockquotes';
@@ -16,7 +18,6 @@
 // @import 'sections';
 // @import 'sizes';
 // @import 'states';
-// @import 'media';
 // @import 'code';
 // @import 'tags';
 

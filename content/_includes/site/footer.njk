@@ -1,4 +1,6 @@
 {% import 'contact.macros.njk' as contact %}
+{% import 'content.macros.njk' as content %}
+{% import 'utility.macros.njk' as utility %}
 
 <section
   data-layout="footer">
@@ -6,15 +8,31 @@
   {% set footer = index_page.data.footer %}
 
   <header class="footer-cta">
-    <h2>{{ footer.title | mdInline | safe }}</h2>
-    {{ footer.summary | md | safe }}
+    {% call content.media(
+      src='faces/' + (footer.face or 'miriam') + '.svg',
+      embed=true,
+      name='cta-face'
+    ) %}
+      <h2>{{ footer.title | mdInline | safe }}</h2>
+      {{ footer.summary | md | safe }}
+
+      {% if footer.links %}
+        <ul class="cta-links">
+        {% for link in footer.links %}
+          <li>
+            {{ utility.icon_link(
+              icon='icons/' + (link.icon or 'external') + '.svg',
+              text=link.text,
+              url=link.url
+            ) }}
+          </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endcall %}
   </header>
 
-  {% if page.url | url == '/contact/' %}
-    <p>@@@ email signup or something???</p>
-  {% else %}
-    {{ contact.form(name="contact-footer") }}
-  {% endif %}
+  {{ contact.form(name="contact-footer") }}
 
   <footer role="contentinfo">
     <div class="colophon">

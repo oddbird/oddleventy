@@ -13,6 +13,7 @@
 // -------------
 
 a {
+  .link-text,
   &:link,
   &:visited,
   &.icon-text {
@@ -37,10 +38,18 @@ a {
     );
   }
 
+  .icon-link:hover &,
+  .icon-link:focus &,
   &:hover,
   &:focus {
     --underline-color: var(--active);
     --underline-thickness: 0.2em;
     color: var(--link-focus, var(--action-focus));
+  }
+}
+
+.icon-link {
+  &:link {
+    text-decoration: none;
   }
 }

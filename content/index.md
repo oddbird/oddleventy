@@ -10,6 +10,13 @@ footer:
     with our team of Python, UX, and front-end experts --
     or a 1-3 day workshop
     with Miriam Suzanne.
+  links:
+    - text: birds@oddbird.net
+      url: mailto:birds@oddbird.net
+      icon: mail
+    - text: '@oddbird'
+      url: https://twitter.com/oddbird
+      icon: twitter
   colophon: |
     Built with
     [Eleventy](https://11ty.io/).
