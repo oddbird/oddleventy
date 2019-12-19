@@ -73,6 +73,7 @@ $spacing-sizes: (
 $theme-sizes: (
   'body-inline': calc(var(--quarter-shim) + 4vw),
   'border-width': medium,
+  'radius': var(--half-shim),
 );
 
 @include tools.add-sizes($theme-sizes);

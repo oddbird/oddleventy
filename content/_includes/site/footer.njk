@@ -1,31 +1,37 @@
 {% import 'contact.macros.njk' as contact %}
 
-<footer
+<section
   data-layout="footer">
+  {% set index_page = collections.all | getPage('/') %}
+  {% set footer = index_page.data.footer %}
 
-  <p>
-    Copyright © {% getDate 'year' %}
-    {{ site.title }}
-  </p>
+  <header class="footer-cta">
+    <h2>{{ footer.title | mdInline | safe }}</h2>
+    {{ footer.summary | md | safe }}
+  </header>
 
-  {% if page.url | url != '/contact/' %}
-    {{ contact.form() }}
+  {% if page.url | url == '/contact/' %}
+    <p>@@@ email signup or something???</p>
+  {% else %}
+    {{ contact.form(name="contact-footer") }}
   {% endif %}
 
-  <p class="colophon">
-    {% mdInline %}
-      Built with
-      [Eleventy](https://11ty.io/);
-      styled with
-      [Sass](https://sass-lang.com/),
-      [Accoutrement](/accoutrement/),
-      and
-      [Cascading Color Systems](https://cascading-colors.netlify.com/);
-      and
-      [documented](/style/)
-      with
-      [Herman](/herman/)/[SassDoc](https://sassdoc.com/).
-    {% endmdInline %}
-  </p>
-</footer>
+  <footer role="contentinfo">
+    <div class="colophon">
+      {{ footer.colophon | md | safe }}
+    </div>
 
+    <div class="legal">
+      <p>
+        Established in 2008 by three odd siblings.
+        <a href="/conduct/">Code of Conduct</a>.
+      </p>
+      <p class="h-card">
+        Copyright © 2009&ndash;{% getDate 'year' %}
+        <a href="{{ site.url }}" class="p-name u-url">
+          {{ site.title }}
+        </a>
+      </p>
+    </div>
+  </footer>
+</section>
