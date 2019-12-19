@@ -26,13 +26,13 @@
   display: inline-block;
   padding: var(--shim) var(--banner-space);
 
-  &:not(:hover):not(:active):not(:focus):not([data-active]) {
+  &:not(:hover):not(:active):not(:focus):not([aria-current]) {
     --underline-color: transparent;
     --underline-thickness: 0;
   }
 }
 
-[data-active='nav'] {
+[aria-current='page'] {
   --link: var(--active);
   --link-focus: var(--link);
   --underline-color: var(--link);
