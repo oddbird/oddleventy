@@ -34,6 +34,7 @@
   grid-column: 1 / -1;
   margin: 0 calc(var(--body-inline) * -1);
   padding: var(--spacer) var(--body-inline) calc(var(--spacer) + var(--gutter));
+  text-shadow: 0 1px 0 var(--shadow);
 
   * {
     margin-top: 0;
@@ -77,6 +78,7 @@
 
   a {
     --link: currentColor;
+    --underline-color: currentColor;
     display: inline-block;
     font-weight: bold;
   }

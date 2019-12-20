@@ -4,7 +4,7 @@
   @include tools.font-family('alt');
   @include tools.transition('colors');
   align-items: center;
-  background: var(--action-alt);
+  background: var(--highlight);
   border: 0;
   border-radius: var(--radius);
   color: var(--bg);
@@ -15,7 +15,7 @@
 
   &:hover,
   &:focus {
-    background: var(--action-alt-focus);
+    background: var(--accent);
   }
 
   &:active,
