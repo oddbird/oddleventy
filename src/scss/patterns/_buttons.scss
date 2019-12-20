@@ -1,5 +1,14 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
+/// # Button Pattern
+/// @group buttons
+
+// Basic Buttons
+// -------------
+/// The basic button accepts one CSS adjustment variable --
+/// `--btn-padding` --
+/// which allows an override of inline padding on the button.
+/// @group buttons
 [data-btn] {
   @include tools.font-family('alt');
   @include tools.transition('colors');
@@ -24,6 +33,11 @@
   }
 }
 
+// Small
+// -----
+/// "Small" buttons override both the font-size
+/// and the inline padding.
+/// @group buttons
 [data-btn~='small'] {
   --btn-padding: var(--gutter);
   font-size: var(--small);

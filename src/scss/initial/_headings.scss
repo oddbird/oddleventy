@@ -1,5 +1,14 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
+/// # Heading Defaults
+/// Initial global defaults for heading elements…
+/// @group headings
+
+// All headings
+// ------------
+/// all headings have bottom-margin removed
+/// and heading-links inherit the heading color
+/// @group headings
 h1,
 h2,
 h3,

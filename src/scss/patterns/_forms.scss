@@ -1,15 +1,30 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
+// Fields
+// ------
+/// Form fields (using the `label` for markup)
+/// are set to block display, with a margin.
+/// @group forms
 [data-field] {
   display: block;
   margin-bottom: var(--shim);
 }
 
+// Labels
+// ------
+/// Form label text uses a span inside the wrapper label
+/// and is displayed above the input.
+/// @group forms
 [data-label] {
   @include tools.font-family('alt');
   display: block;
 }
 
+// Text Inputs
+// -----------
+/// Varioius input "types" all rely on the same basic
+/// text-input style.
+/// @group forms
 [data-input*='text'] {
   border: thin solid var(--border);
   display: block;
@@ -25,15 +40,26 @@
   }
 }
 
+// Text Areas
+// ----------
+/// @group forms
 textarea {
   min-height: calc(6em + 4vw);
   resize: vertical;
 }
 
+// Select
+// ------
+/// @group forms
 select {
   width: 100%;
 }
 
+// Form Actions
+// ------------
+/// A wrapper element to provide layout and spacing
+/// of the actions at the end of a form.
+/// @group forms
 .form-actions {
   margin: var(--newline) 0;
 }
