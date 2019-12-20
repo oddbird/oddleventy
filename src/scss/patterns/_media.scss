@@ -1,5 +1,14 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
+/// # Media Blocks & Ratios
+/// @group media
+
+// Media Blocks
+// ------------
+/// Media blocks align an image with fluid text.
+/// The vertical alignment and image size can be adjusted
+/// using html attributes and CSS variables.
+/// @group media
 [data-media] {
   align-items: var(--align, start);
   display: grid;
@@ -10,6 +19,11 @@
   }
 }
 
+// Media Image
+// -----------
+/// The image in a media-block accepts variables
+/// for min/max and width values
+/// @group media
 .media-image {
   justify-self: center;
   max-width: var(--media-max, initial);
@@ -17,6 +31,9 @@
   width: var(--media-size, initial);
 }
 
+// Media Content
+// -------------
+/// @group media
 .media-content {
   *:first-child {
     margin-top: 0;
@@ -27,9 +44,14 @@
   }
 }
 
-// Ratios
-// ------
+/// ## Ratios
+/// @group media
 
+// Ratio Parent
+// ------------
+/// Ratios are created with a parent wrapper
+/// set as relative context.
+/// @group media
 [data-ratio='parent'] {
   --ratio: #{tools.ratio('_widescreen')};
   position: relative;
@@ -43,6 +65,11 @@
   }
 }
 
+// Ratio Child
+// -----------
+/// The child element takes on the parent ratio
+/// through absolute positioning.
+/// @group media
 [data-ratio='child'] {
   @include tools.position(0);
   @include tools.square(100%);

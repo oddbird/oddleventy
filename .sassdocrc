@@ -29,6 +29,7 @@ groups:
     type: Typography
     icons: SVG Icons
     dropdown: Dropdowns
+    media: Media Blocks & Ratios
 
 herman:
   extraDocs:
