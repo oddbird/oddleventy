@@ -1,0 +1,41 @@
+.page-meta {
+  --newline: 0;
+  font-size: var(--small);
+  grid-area: meta;
+  padding: 0 var(--body-inline);
+}
+
+.subtitle {
+  font-size: var(--h3);
+  font-style: italic;
+  margin-bottom: var(--gutter);
+}
+
+.taglist {
+  display: inline-flex;
+  font-size: var(--xsmall);
+  margin: var(--half-shim) 0;
+  padding: 0;
+}
+
+.tag {
+  display: inline-block;
+  margin: var(--half-shim);
+
+  .taglink {
+    &:link,
+    &:visited {
+      background-color: var(--callout-accent);
+      border: thin solid var(--action-border);
+      border-radius: var(--radius);
+      display: inline-block;
+      padding: 0 var(--shim);
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: var(--action-focus);
+    }
+  }
+}

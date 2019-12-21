@@ -9,8 +9,7 @@ permalink: /tags/{{ tag | slug }}/
 renderData:
   title: 'Just {{ tag }}'
   banner: 'Just {{ tag }} and Nothing Else'
-  calendar: '{{ tag }}'
-eleventyExcludeFromCollections: true
+  index: '{{ tag }}'
 ---
 
 <!-- This is required, and I don't know why -->

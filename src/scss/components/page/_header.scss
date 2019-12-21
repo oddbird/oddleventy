@@ -1,0 +1,16 @@
+.page-header {
+  --edge: calc(var(--body-inline) / 2);
+  --overlap: var(--gutter);
+  margin: 0 calc(var(--body-inline) * -1) var(--spacer);
+  display: grid;
+  grid-template:
+    'hero hero' auto
+    'title hero2' var(--overlap)
+    'title .' auto
+    'meta meta' auto
+    / auto minmax(var(--edge), 1fr);
+
+  @media (min-width: 35em) and (min-height: 35em) {
+    --overlap: var(--h1);
+  }
+}

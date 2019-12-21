@@ -1,0 +1,26 @@
+#page-title {
+  --angle: var(--edge);
+  grid-area: title;
+  margin: 0;
+  padding: var(--gutter) 0 var(--shim) var(--body-inline);
+  position: relative;
+  z-index: 2;
+
+  .hero + & {
+    --outset: calc(var(--quarter-shim) * -1);
+    background-color: var(--bg);
+    box-shadow: 0 0 var(--quarter-shim) var(--shadow);
+    clip-path: polygon(
+      0 var(--outset),
+      calc(100% - var(--angle)) var(--outset),
+      100% var(--h1),
+      100% calc(100% - 1px),
+      0 calc(100% - 1px)
+    );
+    padding-right: calc(var(--angle) + var(--gutter));
+  }
+
+  @media (min-width: 35em) {
+    --edge: var(--body-inline);
+  }
+}

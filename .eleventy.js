@@ -46,6 +46,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('tagLink', tags.tagLink);
   eleventyConfig.addFilter('inTopTagCount', tags.inTopCount);
 
+  eleventyConfig.addFilter('meta', pages.meta);
   eleventyConfig.addFilter('getPage', pages.fromCollection);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('withData', pages.withData);

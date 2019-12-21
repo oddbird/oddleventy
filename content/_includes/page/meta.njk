@@ -1,0 +1,71 @@
+{%- import 'utility.macros.njk' as utility -%}
+
+{% set public_tags = tags | publicTags %}
+{% set elsewhere = {
+  'venue': venue,
+  'url': url
+} if elsewhere else none %}
+
+{% if sub or public_tags or elsewhere or author %}
+  <div class="page-meta">
+    {% if sub or dates %}
+      <p class="subtitle">
+        {{ sub | mdInline | safe }}
+        {%- if sub and dates %}, {% endif %}
+        {{ dates }}
+      </p>
+    {% endif %}
+
+    {% set by = collections.birds | authorPage(author) if author else none %}
+    {% if by or author %}
+      <p class="byline">
+        <i>by</i>
+        {% if by.data %}
+          {{ utility.link_if(
+            content=by.data.title | mdInline | safe,
+            url=by.url,
+            class='h-card'
+          ) }}
+        {% else %}
+          {{ author | capitalize }}
+        {% endif %}
+
+        <i>on</i>
+        {{ utility.datetime(
+          pubdate=pubdate or page.date,
+          start=start or date or page.date,
+          end=end,
+          format='long'
+        ) }}
+
+        {% if adr %}
+          <i>in</i>
+          <span class="adr">
+            {{ adr | typogr | safe }}
+          </span>
+        {% endif %}
+      </p>
+    {% endif %}
+
+
+    {% if elsewhere %}
+      <p class="elsewhere">
+        <i>at</i>
+        <a rel="bookmark"
+          href="{{ elsewhere.url }}">
+          <em>{{ elsewhere.venue }}</em>
+        </a>
+      </p>
+    {% endif %}
+
+    {% if public_tags %}
+      <div class="page-tags">
+        {% include "icons/tags.svg" %}
+        {{ utility.tag_list(
+          tags=tags,
+          all=collections
+        ) }}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

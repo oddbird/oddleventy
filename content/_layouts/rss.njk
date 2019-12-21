@@ -17,7 +17,7 @@
     <updated>{{ post | rssDate }}</updated>
     <id>{{ site.url }}{{ post.url }}</id>
     <content type="html">
-      {% if post.data.hero %}
+      {% if post.data.image %}
         <img src="{{ site.url + site.images + post.data.image.src }}" alt="{{ post.data.image.alt }}"/>;
       {% endif %}
       {{ post.templateContent }}

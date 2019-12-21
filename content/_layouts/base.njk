@@ -4,26 +4,19 @@
   data-ccs="root"
   data-ccs-theme="{{ ccs.themes | first }}"
   data-ccs-colors>
-  {%- set desc = sub or summary or content or none -%}
-  {%- set desc = desc | mdInline | striptags | truncate | replace('&nbsp;', ' ') | replace('&amp;', '&') if desc else desc -%}
-  {%- set meta_desc = description or desc or site.description -%}
-  {%- set meta_title = renderData.title or title -%}
-  {%- set full_title = renderData.banner or banner or meta_title -%}
-  {%- set full_title = full_title | mdInline(false) -%}
+  {% set meta = collections.all | meta(page, renderData, site) %}
   <head>
     <meta charset="utf-8" />
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0" />
 
-    <title>{{ [meta_title, site.title] | join(' | ') }}</title>
+    <title>{{ [meta.title, site.title] | join(' | ') }}</title>
     <meta name="description"
-      content="{{ meta_desc }}" />
+      content="{{ meta.description }}" />
 
     {% set elsewhere = '_elsewhere' in (tags or []) %}
-    {% set full_url = (site.url + page.url) %}
-    {% set canon = url if elsewhere else full_url %}
     <link rel="canonical"
-      href="{{ canon | url }}">
+      href="{{ (meta.url if elsewhere else meta.canonical) | url }}">
 
     {% for url in site.styles %}
       <link rel="stylesheet"
@@ -53,25 +46,7 @@
     </a>
 
     {% include "site/banner.njk" %}
-
-    <main data-layout="main">
-      <header class="title">
-        <h1 class="title-main"
-          id="page-title"
-          tabindex="-1">
-          {{ full_title | safe }}
-        </h1>
-
-        {% if sub %}
-          <p class="subtitle">
-            {{ sub | mdInline | safe }}
-          </p>
-        {% endif %}
-      </header>
-
-      {% include 'site/page.njk' %}
-    </main>
-
+    {% include 'page/base.njk' %}
     {% include 'site/footer.njk' %}
 
     <script type="text/javascript" src="/assets/js/scripts.js"></script>
