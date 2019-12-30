@@ -24,6 +24,7 @@
 
 /// @group init-colors
 [data-ccs-colors] {
-  @include tools.tokens--(config.$global-colors);
   @include tools.tokens--(config.$ccs-colors);
+  @include tools.tokens--(config.$background-colors);
+  @include tools.tokens--(config.$content-colors);
 }

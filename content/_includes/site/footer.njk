@@ -1,31 +1,55 @@
 {% import 'contact.macros.njk' as contact %}
+{% import 'content.macros.njk' as content %}
+{% import 'utility.macros.njk' as utility %}
 
-<footer
+<section
   data-layout="footer">
+  {% set index_page = collections.all | getPage('/') %}
+  {% set footer = index_page.data.footer %}
 
-  <p>
-    Copyright © {% getDate 'year' %}
-    {{ site.title }}
-  </p>
+  <header class="footer-cta">
+    {% call content.media(
+      src='faces/' + (footer.face or 'miriam') + '.svg',
+      embed=true,
+      name='cta-face'
+    ) %}
+      <h2>{{ footer.title | mdInline | safe }}</h2>
+      {{ footer.summary | md | safe }}
 
-  {% if page.url | url != '/contact/' %}
-    {{ contact.form() }}
-  {% endif %}
+      {% if footer.links %}
+        <ul class="cta-links">
+        {% for link in footer.links %}
+          <li>
+            {{ utility.icon_link(
+              icon='icons/' + (link.icon or 'external') + '.svg',
+              text=link.text,
+              url=link.url
+            ) }}
+          </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endcall %}
+  </header>
 
-  <p class="colophon">
-    {% mdInline %}
-      Built with
-      [Eleventy](https://11ty.io/);
-      styled with
-      [Sass](https://sass-lang.com/),
-      [Accoutrement](/accoutrement/),
-      and
-      [Cascading Color Systems](https://cascading-colors.netlify.com/);
-      and
-      [documented](/style/)
-      with
-      [Herman](/herman/)/[SassDoc](https://sassdoc.com/).
-    {% endmdInline %}
-  </p>
-</footer>
+  {{ contact.form(name="contact-footer") }}
 
+  <footer role="contentinfo">
+    <div class="colophon">
+      {{ footer.colophon | md | safe }}
+    </div>
+
+    <div class="legal">
+      <p>
+        Established in 2008 by three odd siblings.
+        <a href="/conduct/">Code of Conduct</a>.
+      </p>
+      <p class="h-card">
+        Copyright © 2009&ndash;{% getDate 'year' %}
+        <a href="{{ site.url }}" class="p-name u-url">
+          {{ site.title }}
+        </a>
+      </p>
+    </div>
+  </footer>
+</section>

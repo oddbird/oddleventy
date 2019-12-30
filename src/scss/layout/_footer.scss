@@ -1,7 +1,92 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
+$two-column: 45em;
+
 [data-layout='footer'] {
   @include tools.font-family('alt');
+  display: grid;
   font-size: var(--small);
   grid-area: footer;
+  grid-gap: var(--gutter);
+  padding: var(--gutter) 0 var(--spacer);
+
+  @include tools.above($two-column) {
+    grid-template-columns: minmax(10em, var(--medium-page)) minmax(
+        10em,
+        var(--small-page)
+      );
+    justify-content: space-between;
+  }
+}
+
+.footer-cta {
+  background: var(--callout-fade);
+  clip-path: polygon(
+    0 0,
+    calc(50% - var(--double-gutter)) 0,
+    50% var(--double-gutter),
+    calc(50% + var(--double-gutter)) 0,
+    100% 0,
+    100% calc(100% - var(--double-gutter)),
+    calc(50% + var(--double-gutter)) calc(100% - var(--double-gutter)),
+    50% 100%,
+    calc(50% - var(--double-gutter)) calc(100% - var(--double-gutter)),
+    0 calc(100% - var(--double-gutter))
+  );
+  grid-column: 1 / -1;
+  margin: 0 calc(var(--body-inline) * -1);
+  padding: var(--spacer) var(--body-inline) calc(var(--spacer) + var(--gutter));
+  text-shadow: 0 1px 0 var(--shadow);
+
+  * {
+    margin-top: 0;
+  }
+}
+
+[data-media='cta-face'] {
+  --media-min: 6em;
+  --media-size: calc(4em + 5vw);
+  margin: 0 auto;
+  max-width: var(--small-page);
+}
+
+.cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: var(--gutter) calc(var(--shim) * -1);
+  padding: 0;
+
+  li {
+    padding: 0 var(--shim);
+  }
+}
+
+[data-form='contact-footer'] {
+  .form-actions {
+    margin-bottom: 0;
+  }
+}
+
+[role='contentinfo'] {
+  --link: currentColor;
+  --underline-color: currentColor;
+  display: grid;
+  grid-gap: var(--gutter);
+  grid-template-rows: 1fr auto;
+  padding-top: var(--gutter);
+
+  @include tools.above($two-column) {
+    text-align: right;
+  }
+
+  a {
+    display: inline-block;
+    font-weight: bold;
+  }
+}
+
+.legal {
+  --newline: 0;
+  font-size: var(--xsmall);
 }

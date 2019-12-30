@@ -1,5 +1,4 @@
 @use '../../../node_modules/accoutrement/sass/tools';
-@use '../../../node_modules/cascading-color-systems/sass/ccs';
 
 @include tools.import-webfonts;
 
@@ -14,16 +13,16 @@ html {
     background-blend-mode: var(--bg-blend, multiply);
     background-image: url('../images/site/header-wash.png'),
       url('../images/site/footer-wash.png');
-    background-position: var(--header-pos, left -8em) top 0, bottom center;
-    background-repeat: no-repeat, repeat-x;
-    background-size: auto 5.5em, auto 8em;
+    background-position: var(--header-pos, left -8em) top 0, bottom left;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 5.5em, 20em auto;
   }
 
-  @media (min-width: 40em) {
+  @include tools.above(40em) {
     --header-pos: right 0;
   }
 
-  @media (min-width: 50em) {
+  @include tools.above(50em) {
     --header-pos: left 0;
   }
 

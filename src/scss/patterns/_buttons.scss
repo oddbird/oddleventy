@@ -1,49 +1,44 @@
-// Buttons and Button Links
-// ========================
+@use '../../../node_modules/accoutrement/sass/tools';
 
+/// # Button Pattern
+/// @group buttons
+
+// Basic Buttons
+// -------------
+/// The basic button accepts one CSS adjustment variable --
+/// `--btn-padding` --
+/// which allows an override of inline padding on the button.
+/// @group buttons
 [data-btn] {
-  @include font-family('alt');
-  @include transition('colors');
+  @include tools.font-family('alt');
+  @include tools.transition('colors');
   align-items: center;
-  background-clip: padding-box;
-  border: 1px solid;
-  border-radius: size('border-radius');
+  background: var(--highlight);
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--bg);
+  cursor: pointer;
   display: inline-flex;
-  font-weight: bold;
-  padding: size('half-shim') size('gutter');
-  text-decoration: none;
+  font-size: inherit;
+  padding: var(--quarter-shim) var(--btn-padding, var(--double-gutter));
 
-  @include after('»') {
-    font-weight: normal;
-    padding: 0 size('quarter-shim');
-    transform-origin: 50% 60%;
-    transition: transform 250ms;
+  &:hover,
+  &:focus {
+    background: var(--accent);
   }
 
-  #{$focus},
+  &:active,
   &[aria-pressed='true'] {
-    @include contrasted('action');
-
-    &::after {
-      transform: translateX(size('quarter-shim'));
-    }
-  }
-
-  &[aria-pressed='true'] {
-    &::after {
-      transform: rotate(180deg);
-    }
+    background: var(--action-focus);
   }
 }
 
-.small-btn {
-  font-size: size('small');
-  line-height: normal;
-  padding: size('half-shim') size('shim');
-}
-
-.content-img {
-  + .btn {
-    margin-top: size('gutter');
-  }
+// Small
+// -----
+/// "Small" buttons override both the font-size
+/// and the inline padding.
+/// @group buttons
+[data-btn~='small'] {
+  --btn-padding: var(--gutter);
+  font-size: var(--small);
 }

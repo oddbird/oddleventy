@@ -50,6 +50,18 @@ ol {
   margin-top: 0;
 }
 
+// List Markers
+// ------------
+/// Lighter markers and smaller bullet points…
+/// @group type
+::marker {
+  color: var(--text-light);
+
+  ul & {
+    font-size: 0.75em;
+  }
+}
+
 // Summary
 // -------
 /// Provide basic interaction styles for detail `summary` elements.

@@ -76,6 +76,26 @@
   {%- endif -%}
 {%- endmacro %}
 
+{% macro icon_link(
+  icon,
+  text,
+  url,
+  class=none,
+  attrs={}
+) %}
+  {% set content %}
+    {% include icon %}
+    <span class="link-text">{{ text }}</span>
+  {% endset %}
+
+  {{ link_if(
+    content=content,
+    url=url,
+    class=[class, 'icon-link'] | join(' ') if class else 'icon-link',
+    attrs=attrs
+  ) }}
+{% endmacro %}
+
 {% macro link_if(
   content,
   url=none,

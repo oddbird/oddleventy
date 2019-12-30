@@ -3,24 +3,12 @@
 /// # SVG Icons
 /// @group icons
 
-// SVG defaults
-// ------------
-/// Unless otherwise defined,
-/// embeded SVGs will take on the color
-/// of surrounding content.
-/// Adding `1px` padding helps with overflow clipping errors
-/// on rounded paths.
-/// @group icons
-svg {
-  fill: currentColor;
-  padding: 1px;
-}
-
 // Icon
 // ----
 /// By default, icons take on the size of surrounding text.
 /// @group icons
 [data-icon] {
+  display: inline-block;
   height: var(--icon-height, var(--icon-size, 1em));
   width: var(--icon-width, var(--icon-size, 1em));
 }

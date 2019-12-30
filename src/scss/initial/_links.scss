@@ -1,40 +1,42 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
-// General Focus Styles
-// --------------------
+/// # Link Defaults
+/// Initial global defaults for links…
+/// @group links
 
+// Focus
+// -----
+/// By default, all elements get a dotted outline on focus.
+/// In practice, we can override this when other focus styles exist.
+/// @group links
 :focus {
   outline: medium dotted currentColor;
   outline-color: var(--outline-color, var(--text, currentColor));
   outline-offset: var(--quarter-shim);
 }
 
-// Link Defaults
-// -------------
-
+// Links
+// -----
+/// Basic link (and link-states) apply action and interaction text colors.
+/// Text underlines are also applied,
+/// but the target depends on the presence or absence of icons,
+/// in order to avoid awkward-looking icon underlines.
+/// @example njk
+///   {% import 'utility.macros.njk' as utility %}
+///   <a href="#">simple text link</a>
+///   {{ utility.icon_link(
+///     icon='icons/external.svg',
+///     text='link with icon',
+///     url='#'
+///   ) }}
+/// @group links
 a {
   &:link,
-  &:visited,
-  &.icon-text {
-    @include tools.transition('underline');
-    --underline-color--default: var(--ccs-accent);
+  &:visited {
+    --underline-color--default: var(--accent);
     --underline-thickness--default: 0.1em;
-    --underline-offset--default: 0.1em;
+    --underline-offset--default: 0.15em;
     color: var(--link, var(--action));
-    text-decoration: underline;
-    text-decoration-color: var(
-      --underline-color,
-      var(--underline-color--default)
-    );
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: var(
-      --underline-thickness,
-      var(--underline-thickness--default)
-    );
-    text-underline-offset: var(
-      --underline-offset,
-      var(--underline-offset--default)
-    );
   }
 
   &:hover,
@@ -42,5 +44,32 @@ a {
     --underline-color: var(--active);
     --underline-thickness: 0.2em;
     color: var(--link-focus, var(--action-focus));
+  }
+
+  // underlines applied to link-text as well as basic link states
+  .link-text,
+  &:link,
+  &:visited {
+    @include tools.transition('underline');
+    text-decoration: underline;
+    text-decoration-color: var(
+      --underline-color,
+      var(--underline-color--default)
+    );
+    text-decoration-thickness: var(
+      --underline-thickness,
+      var(--underline-thickness--default)
+    );
+    text-decoration-skip-ink: auto;
+    text-underline-offset: var(
+      --underline-offset,
+      var(--underline-offset--default)
+    );
+  }
+
+  // icon links have the underline removed
+  // (and applied to the icon-text instead)
+  &.icon-link {
+    text-decoration: none;
   }
 }
