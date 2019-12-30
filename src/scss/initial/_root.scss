@@ -18,11 +18,11 @@ html {
     background-size: auto 5.5em, 20em auto;
   }
 
-  @media (min-width: 40em) {
+  @include tools.above(40em) {
     --header-pos: right 0;
   }
 
-  @media (min-width: 50em) {
+  @include tools.above(50em) {
     --header-pos: left 0;
   }
 

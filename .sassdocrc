@@ -11,6 +11,7 @@ groups:
     config-color: Colors
     config-fonts: Fonts
     config-scale: Spacing & Sizes
+    config-layout: Layout Tokens
   CSS Variables:
     init-colors: Global Colors
     init-themes: Preset Themes
