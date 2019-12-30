@@ -1,26 +1,38 @@
+@use '../../../../node_modules/accoutrement/sass/tools';
+
 #page-title {
-  --angle: var(--edge);
+  @include tools.z-index('initial');
+  --blur: var(--quarter-shim);
+  --outset: calc(var(--blur) * -1);
   grid-area: title;
   margin: 0;
-  padding: var(--gutter) 0 var(--shim) var(--body-inline);
+  padding-left: var(--body-inline);
   position: relative;
-  z-index: 2;
 
   .hero + & {
-    --outset: calc(var(--quarter-shim) * -1);
-    background-color: var(--bg);
-    box-shadow: 0 0 var(--quarter-shim) var(--shadow);
-    clip-path: polygon(
-      0 var(--outset),
-      calc(100% - var(--angle)) var(--outset),
-      100% var(--h1),
-      100% calc(100% - 1px),
-      0 calc(100% - 1px)
-    );
+    // clip the horizontal and bottom shadows only
+    clip-path: inset(var(--outset) calc(var(--outset) / 1.5) 0 0);
+    filter: drop-shadow(0 0 var(--blur) var(--shadow));
     padding-right: calc(var(--angle) + var(--gutter));
-  }
 
-  @media (min-width: 35em) {
-    --edge: var(--body-inline);
+    // create a clipped background shape
+    &::before {
+      background-color: var(--bg);
+      bottom: var(--outset);
+      clip-path: polygon(
+        0 0,
+        calc(100% - var(--angle)) 0,
+        calc(100% + var(--outset)) var(--overlap),
+        100% var(--overlap),
+        100% 100%,
+        0 100%
+      );
+      content: '';
+      left: var(--outset);
+      position: absolute;
+      right: var(--outset);
+      top: 0;
+      z-index: -1;
+    }
   }
 }

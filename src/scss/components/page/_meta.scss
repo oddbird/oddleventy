@@ -8,7 +8,10 @@
 .subtitle {
   font-size: var(--h3);
   font-style: italic;
-  margin-bottom: var(--gutter);
+
+  &:not(:last-child) {
+    margin-bottom: var(--gutter);
+  }
 }
 
 .taglist {

@@ -1,4 +1,7 @@
+@use '../../../../node_modules/accoutrement/sass/tools';
+
 .page-header {
+  --angle: var(--edge);
   --edge: calc(var(--body-inline) / 2);
   --overlap: var(--gutter);
   margin: 0 calc(var(--body-inline) * -1) var(--spacer);
@@ -12,5 +15,14 @@
 
   @media (min-width: 35em) and (min-height: 35em) {
     --overlap: var(--h1);
+  }
+
+  @include tools.above(35em) {
+    --angle: var(--body-inline);
+    --edge: var(--body-inline);
+  }
+
+  @include tools.above(50em) {
+    --edge: 25%;
   }
 }

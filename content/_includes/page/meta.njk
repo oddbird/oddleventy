@@ -30,6 +30,15 @@
           {{ author | capitalize }}
         {% endif %}
 
+        {% if elsewhere %}
+          <i>at</i>
+          {{ utility.link_if(
+            content=elsewhere.venue | mdInline | safe,
+            url=elsewhere.url,
+            attrs={'rel': 'bookmark'}
+          ) }}
+        {% endif %}
+
         <i>on</i>
         {{ utility.datetime(
           pubdate=pubdate or page.date,
@@ -48,15 +57,6 @@
     {% endif %}
 
 
-    {% if elsewhere %}
-      <p class="elsewhere">
-        <i>at</i>
-        <a rel="bookmark"
-          href="{{ elsewhere.url }}">
-          <em>{{ elsewhere.venue }}</em>
-        </a>
-      </p>
-    {% endif %}
 
     {% if public_tags %}
       <div class="page-tags">
