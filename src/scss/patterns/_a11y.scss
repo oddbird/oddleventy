@@ -38,6 +38,7 @@
 #to-content {
   &:link,
   &:visited {
+    @include tools.z-index('skip-link');
     --underline-color: currentColor;
     background: var(--active);
     color: var(--bg);
@@ -48,7 +49,6 @@
     top: 0;
     transform: translate3d(0, -100%, 0);
     transition: tools.change('move'), tools.change('fade');
-    z-index: 5;
   }
 
   &:focus,

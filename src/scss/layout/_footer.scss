@@ -1,5 +1,7 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
+$two-column: 45em;
+
 [data-layout='footer'] {
   @include tools.font-family('alt');
   display: grid;
@@ -8,7 +10,7 @@
   grid-gap: var(--gutter);
   padding: var(--gutter) 0 var(--spacer);
 
-  @media (min-width: 45em) {
+  @include tools.above($two-column) {
     grid-template-columns: minmax(10em, var(--medium-page)) minmax(
         10em,
         var(--small-page)
@@ -74,7 +76,7 @@
   grid-template-rows: 1fr auto;
   padding-top: var(--gutter);
 
-  @media (min-width: 45em) {
+  @include tools.above($two-column) {
     text-align: right;
   }
 

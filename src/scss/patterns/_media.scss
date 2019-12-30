@@ -14,7 +14,7 @@
   display: grid;
   grid-gap: var(--shim) var(--gutter);
 
-  @media (min-width: 40em) {
+  @include tools.above(40em) {
     grid-template-columns: fit-content(25%) minmax(min-content, 1fr);
   }
 }

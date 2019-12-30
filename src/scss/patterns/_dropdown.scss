@@ -1,3 +1,5 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
 /// # Dropdowns
 /// A flexible pattern for dropdown menus.
 /// @group dropdown
@@ -17,13 +19,13 @@
 /// with a max-width of the available space.
 /// @group dropdown
 [data-dropdown] {
+  @include tools.z-index('dropdown');
   background: var(--bg);
   border: thin solid var(--border-fade);
   box-shadow: 0 0 var(--quarter-shim) var(--border-fade);
   max-width: 14em;
   position: absolute;
   width: calc(100vw - var(--body-inline));
-  z-index: 4;
 
   &[aria-expanded='false'] {
     display: none;

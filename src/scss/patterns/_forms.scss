@@ -27,6 +27,7 @@
 /// @group forms
 [data-input*='text'] {
   border: thin solid var(--border);
+  border-radius: 0;
   display: block;
   font: inherit;
   font-size: var(--small);
