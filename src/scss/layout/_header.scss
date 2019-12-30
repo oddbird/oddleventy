@@ -1,4 +1,4 @@
-@use '../../../../node_modules/accoutrement/sass/tools';
+@use '../../../node_modules/accoutrement/sass/tools';
 
 .page-header {
   --angle: var(--edge);
@@ -6,6 +6,7 @@
   --overlap: var(--gutter);
   margin: 0 calc(var(--body-inline) * -1) var(--spacer);
   display: grid;
+  grid-area: header;
   grid-template:
     'hero hero' auto
     'title hero2' var(--overlap)

@@ -22,7 +22,7 @@
   @include tools.z-index('dropdown');
   background: var(--bg);
   border: thin solid var(--border-fade);
-  box-shadow: 0 0 var(--quarter-shim) var(--border-fade);
+  box-shadow: 0 0 var(--quarter-shim) var(--shadow);
   max-width: 14em;
   position: absolute;
   width: calc(100vw - var(--body-inline));

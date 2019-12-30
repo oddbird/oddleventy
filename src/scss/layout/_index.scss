@@ -1,9 +1,17 @@
-// Layout Manifest
-// ===============
+// Global
+@forward 'root';
 
-@import 'root';
-@import 'banner';
-@import 'menu';
-@import 'nav';
-@import 'main';
-@import 'footer';
+// Before
+@forward 'banner';
+@forward 'menu';
+@forward 'nav';
+
+// Content
+@forward 'header';
+@forward 'hero';
+@forward 'title';
+@forward 'meta';
+@forward 'main';
+
+// After
+@forward 'footer';

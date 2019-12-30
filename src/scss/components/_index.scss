@@ -1,9 +1,9 @@
 // Component Manifest
 // ==================
 
-@use 'ccs-menu';
-@use 'contact';
-@use 'page';
+@forward 'ccs-menu';
+@forward 'call-to-action';
+@forward 'contact';
 
 // @import 'home';
 // @import 'archives';
