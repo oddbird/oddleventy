@@ -1,6 +1,6 @@
-<header class="page-header">
+<header data-layout="header">
   {% if image.src %}
-    <div class="hero">
+    <div id="hero">
       <img
         src="{{ site.images + image.src }}"
         alt="{{ image.alt or '' }}"
@@ -8,7 +8,7 @@
     </div>
   {% endif %}
 
-  <h1 id="page-title"
+  <h1 id="title"
     tabindex="-1">
     {{ meta.banner | mdInline | safe }}
   </h1>

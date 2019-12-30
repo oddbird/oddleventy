@@ -1,6 +1,6 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
-#page-title {
+#title {
   @include tools.z-index('initial');
   --blur: var(--quarter-shim);
   --outset: calc(var(--blur) * -1);
@@ -9,7 +9,7 @@
   padding-left: var(--body-inline);
   position: relative;
 
-  .hero + & {
+  #hero + & {
     // clip the horizontal and bottom shadows only
     clip-path: inset(var(--outset) calc(var(--outset) / 1.5) 0 0);
     filter: drop-shadow(0 0 var(--blur) var(--shadow));

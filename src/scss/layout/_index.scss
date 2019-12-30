@@ -1,17 +1,19 @@
 // Global
 @forward 'root';
 
-// Before
+// Banner
 @forward 'banner';
 @forward 'menu';
 @forward 'nav';
 
-// Content
+// Header
 @forward 'header';
 @forward 'hero';
 @forward 'title';
 @forward 'meta';
+
+// Content
 @forward 'main';
 
-// After
+// Footer
 @forward 'footer';

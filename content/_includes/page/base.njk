@@ -1,8 +1,8 @@
 {%- import 'utility.macros.njk' as utility -%}
 
-<main data-layout="main">
-  {% include "page/header.njk" %}
+{% include "page/header.njk" %}
 
+<main data-layout="main">
   {% if (content or summary) %}
     <div
       data-main

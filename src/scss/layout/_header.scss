@@ -1,6 +1,6 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
-.page-header {
+[data-layout='header'] {
   --angle: var(--edge);
   --edge: calc(var(--body-inline) / 2);
   --overlap: var(--gutter);

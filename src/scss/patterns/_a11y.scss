@@ -65,7 +65,7 @@
 /// so that it does not appear in the tab order --
 /// but it can recieve focus from the
 /// @group a11y
-#page-title {
+#title {
   &:focus {
     outline: none;
   }

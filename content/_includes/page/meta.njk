@@ -7,7 +7,7 @@
 } if elsewhere else none %}
 
 {% if sub or public_tags or elsewhere or author %}
-  <div class="page-meta">
+  <div id="meta">
     {% if sub or dates %}
       <p class="subtitle">
         {{ sub | mdInline | safe }}
