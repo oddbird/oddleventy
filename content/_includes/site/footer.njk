@@ -2,54 +2,63 @@
 {% import 'content.macros.njk' as content %}
 {% import 'utility.macros.njk' as utility %}
 
-<section
+<div
   data-layout="footer">
-  {% set index_page = collections.all | getPage('/') %}
-  {% set footer = index_page.data.footer %}
+  {% set cta_url = ['/_sitedata/cta_', cta or 'workshop', '/'] | join %}
+  {% set cta = collections.all | getPage(cta_url) %}
 
-  <header class="footer-cta">
-    {% call content.media(
-      src='faces/' + (footer.face or 'miriam') + '.svg',
-      embed=true,
-      name='cta-face'
-    ) %}
-      <h2>{{ footer.title | mdInline | safe }}</h2>
-      {{ footer.summary | md | safe }}
-
-      {% if footer.links %}
-        <ul class="cta-links">
-        {% for link in footer.links %}
-          <li>
-            {{ utility.icon_link(
-              icon='icons/' + (link.icon or 'external') + '.svg',
-              text=link.text,
-              url=link.url
-            ) }}
-          </li>
-        {% endfor %}
-        </ul>
+  {% if cta %}
+    <section class="footer-cta">
+      {% if cta.data.image %}
+        <img
+          src="{{ site.images + cta.data.image.src }}"
+          alt="{{ cta.data.image.alt }}">
       {% endif %}
-    {% endcall %}
-  </header>
+
+      {% if cta.templateContent %}
+        <h2>{{ cta.data.title | mdInline | safe }}</h2>
+        {{ cta.templateContent | safe }}
+      {% endif %}
+
+      {% call content.media(
+        src='faces/' + (cta.data.face or 'miriam') + '.svg',
+        embed=true,
+        name='cta-face'
+      ) %}
+        {% if not cta.templateContent %}
+          <h2>{{ cta.data.title | mdInline | safe }}</h2>
+        {% endif %}
+        {{ cta.data.summary | md | safe }}
+
+        {% if cta.data.links %}
+          <ul class="cta-links">
+          {% for link in cta.data.links %}
+            <li>
+              {{ utility.icon_link(
+                icon='icons/' + (link.icon or 'external') + '.svg',
+                text=link.text,
+                url=link.url
+              ) }}
+            </li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endcall %}
+    </section>
+  {% endif %}
 
   {{ contact.form(name="contact-footer") }}
 
+  {% set legal = collections.all | getPage('/_sitedata/legal/') %}
+
   <footer role="contentinfo">
     <div class="colophon">
-      {{ footer.colophon | md | safe }}
+      {{ legal.data.colophon | md | safe }}
     </div>
 
     <div class="legal">
-      <p>
-        Established in 2008 by three odd siblings.
-        <a href="/conduct/">Code of Conduct</a>.
-      </p>
-      <p class="h-card">
-        Copyright © 2009&ndash;{% getDate 'year' %}
-        <a href="{{ site.url }}" class="p-name u-url">
-          {{ site.title }}
-        </a>
-      </p>
+      {{ legal.data.est | md | safe }}
+      {{ legal.templateContent | safe }}
     </div>
   </footer>
-</section>
+</div>
