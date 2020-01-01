@@ -1,5 +1,7 @@
 'use strict';
 
+const path = require('path');
+
 const removeMd = require('remove-markdown');
 
 const isPublic = (page) => {
@@ -38,25 +40,17 @@ const withData = (collection, key, value) =>
 const meta = (collection, page, renderData, site) => {
   page = fromCollection(collection, page.url) || page;
   renderData = renderData || {};
-  const canonical = site.url + page.url;
-  const data = page.data;
+  const data = page.data || {};
 
-  if (data) {
-    data.title = renderData.title || data.title || page.fileSlug;
-    data.banner = renderData.banner || data.banner || data.title;
-    const description = data.sub || data.summary || site.description;
-    data.description = removeMd(description);
-    data.index = renderData.index || data.index;
-    data.canonical = canonical;
-    return data;
-  }
+  data.title = renderData.title || data.title || page.fileSlug || '';
+  data.banner = renderData.banner || data.banner || data.title;
+  data.description = removeMd(
+    renderData.sub || data.sub || data.summary || site.description,
+  );
+  data.index = renderData.index || data.index;
+  data.canonical = path.join(site.url, page.url || '');
 
-  return {
-    title: site.title,
-    banner: site.title,
-    description: site.description,
-    canonical,
-  };
+  return data;
 };
 
 module.exports = {

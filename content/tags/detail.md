@@ -7,9 +7,11 @@ pagination:
   alias: tag
 permalink: /tags/{{ tag | slug }}/
 renderData:
-  title: 'Just {{ tag }}'
-  banner: 'Just {{ tag }} and Nothing Else'
+  title: '{{ tag | displayName | capitalize }}'
+  banner: "{{ tag | displayName | capitalize }} Resources"
   index: '{{ tag }}'
 ---
 
-<!-- This is required, and I don't know why -->
+{% for post in collections[tag] %}
+- [{{ post.date | getDate('iso') }}] [{{ post.data.title }}]({{ post.url | url }})
+{% endfor %}

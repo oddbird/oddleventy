@@ -25,16 +25,23 @@ const tagData = (collections) => {
         tag,
         events: tagEvents,
         count: tagEvents.length,
+        pageCount: collections[tag].length,
       };
     })
     .filter((item) => item.count !== 0)
     .sort((a, b) => b.count - a.count);
 };
 
-const getTags = (collections, top = topCount) =>
-  tagData(collections)
-    .slice(0, top || collections.length)
-    .map((item) => item.tag);
+const getTags = (collections, top = topCount, data = false) => {
+  const tags = tagData(collections).slice(0, top || collections.length);
+  return data ? tags : tags.map((item) => item.tag);
+};
+
+const byEventCount = (tags) =>
+  tags ? tags.sort((a, b) => b.count - a.count) : tags;
+
+const byPageCount = (tags) =>
+  tags ? tags.sort((a, b) => b.pageCount - a.pageCount) : tags;
 
 const groupTags = (collections, top = topCount) => {
   const grouped = {};
@@ -88,4 +95,6 @@ module.exports = {
   displayName,
   tagLink,
   inTopCount,
+  byEventCount,
+  byPageCount,
 };

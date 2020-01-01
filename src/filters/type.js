@@ -15,11 +15,22 @@ const amp = (s) => {
   return s ? s.replace(/&amp;/g, '&').replace(/&/g, r) : s;
 };
 
-const set = (content) => (content ? typogrify(content) : content);
-const render = (content, type = true) =>
-  type ? set(mdown.render(content)) : mdown.render(content);
-const inline = (content, type = true) =>
-  type ? set(mdown.renderInline(content)) : mdown.renderInline(content);
+const set = (content, typeset = true) => {
+  if (content && typeset) {
+    return typeset === 'amp' ? amp(content) : typogrify(content);
+  }
+
+  return content;
+};
+const render = (content, typeset = true) => {
+  const md = mdown.render(content);
+  return typeset ? set(md, typeset) : md;
+};
+
+const inline = (content, typeset = true) => {
+  const md = mdown.renderInline(content);
+  return typeset ? set(md, typeset) : md;
+};
 
 module.exports = {
   mdown,
