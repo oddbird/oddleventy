@@ -1,5 +1,4 @@
 {% import 'content.macros.njk' as render %}
-{% import 'utility.macros.njk' as utility %}
 
 {% set cta_url = ['/_sitedata/cta/', cta or 'default', '/'] | join %}
 {% set cta = collections.all | getPage(cta_url) %}
