@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: njk
-est: |
+history: |
   Established in 2008 by three odd siblings.
   [Code of Conduct](/conduct/).
 colophon: |
@@ -17,7 +17,8 @@ colophon: |
   See [sample pages](/sample/)
   for basic usage.
 ---
-{{ est | md }}
+
+{{ history | md | safe }}
 
 <p class="h-card">
   Copyright © 2009&ndash;{% getDate 'year' %}
