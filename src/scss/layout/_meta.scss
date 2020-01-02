@@ -1,0 +1,48 @@
+#meta {
+  --newline: var(--shim);
+  font-size: var(--small);
+  grid-area: meta;
+  padding: 0 var(--body-inline);
+}
+
+.subtitle {
+  font-size: var(--h3);
+  font-style: italic;
+}
+
+.page-tags {
+  margin-bottom: var(--newline);
+}
+
+.taglist {
+  display: inline;
+  font-size: var(--xsmall);
+  padding: 0;
+}
+
+.tag {
+  display: inline-block;
+  margin: var(--half-shim);
+
+  .taglink {
+    &:link,
+    &:visited {
+      background-color: hsla(
+        var(--ccs-h--special),
+        var(--ccs-s--bg1),
+        var(--ccs-l--bg5),
+        var(--ccs-fade)
+      );
+      border: thin solid var(--ccs-special--bg2-fade);
+      border-radius: var(--radius);
+      display: inline-block;
+      padding: 0 var(--shim);
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: var(--ccs-special);
+    }
+  }
+}

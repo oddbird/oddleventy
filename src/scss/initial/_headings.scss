@@ -22,6 +22,7 @@ h6 {
 h1,
 h2 {
   @include tools.font-family('alt');
+  line-height: 1.2;
   margin: var(--gutter-plus) 0 var(--shim);
 }
 

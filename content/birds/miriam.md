@@ -1,5 +1,7 @@
 ---
 title: Miriam Suzanne
+sub: Co-founder & product lead
+dates: 2008–present
 bird: miriam
 image:
   src: birds/miriam.jpg

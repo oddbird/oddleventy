@@ -12,8 +12,12 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   list-style: none;
-  margin-right: calc(var(--banner-space) * -1);
+  margin-bottom: var(--shim);
   padding: 0;
+}
+
+[data-navlist='main'] {
+  margin-right: calc(var(--banner-space) * -1);
 
   // this keeps the first line from overlapping with the logo tail
   &::before {

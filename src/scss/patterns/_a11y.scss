@@ -10,7 +10,7 @@
 /// hides content from both display and screen readers.
 /// @group a11y
 [hidden] {
-  display: none;
+  display: none !important; /* stylelint-disable-line declaration-no-important */
 }
 
 // Screen Reader Only
@@ -65,7 +65,7 @@
 /// so that it does not appear in the tab order --
 /// but it can recieve focus from the
 /// @group a11y
-#page-title {
+#title {
   &:focus {
     outline: none;
   }

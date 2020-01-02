@@ -40,12 +40,15 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('publicTags', tags.publicTags);
   eleventyConfig.addFilter('getTags', tags.getTags);
+  eleventyConfig.addFilter('byEventCount', tags.byEventCount);
+  eleventyConfig.addFilter('byPageCount', tags.byPageCount);
   eleventyConfig.addFilter('groupTags', tags.groupTags);
   eleventyConfig.addFilter('withTag', tags.withTag);
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
   eleventyConfig.addFilter('inTopTagCount', tags.inTopCount);
 
+  eleventyConfig.addFilter('meta', pages.meta);
   eleventyConfig.addFilter('getPage', pages.fromCollection);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('withData', pages.withData);

@@ -1,0 +1,22 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
+#hero {
+  grid-area: hero / hero / hero2;
+  position: relative;
+
+  &::before {
+    @include tools.position(0 -1em 0 -1em);
+    box-shadow: 0 0 var(--quarter-shim) var(--shadow-invert) inset;
+    content: '';
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.hero-image {
+  height: 100%;
+  max-height: 50vmin;
+  object-fit: cover;
+  object-position: var(--hero-position, center);
+  width: 100%;
+}

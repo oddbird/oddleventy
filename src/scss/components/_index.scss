@@ -1,8 +1,9 @@
 // Component Manifest
 // ==================
 
-@use 'ccs-menu';
-@use 'contact';
+@forward 'ccs-menu';
+@forward 'call-to-action';
+@forward 'contact';
 
 // @import 'home';
 // @import 'archives';
@@ -10,10 +11,8 @@
 // @import 'email-subscribe';
 // @import 'events';
 // @import 'intro';
-// @import 'hero';
 // @import 'pagination';
 // @import 'post-list';
-// @import 'post-header';
 // @import 'post-content';
 // @import 'services';
 // @import 'social';

@@ -1,16 +1,16 @@
 // Pattern Manifest
 // ================
 
-@use 'a11y';
+@forward 'a11y';
 
-@use 'buttons';
-@use 'forms';
-@use 'ranges';
+@forward 'buttons';
+@forward 'forms';
+@forward 'ranges';
 
-@use 'dropdown';
-@use 'icons';
-@use 'media';
-@use 'lists';
+@forward 'dropdown';
+@forward 'icons';
+@forward 'media';
+@forward 'lists';
 
 // @import 'alignment';
 // @import 'blockquotes';
