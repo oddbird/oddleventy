@@ -4,9 +4,8 @@
   @include tools.z-index('initial');
   --blur: var(--quarter-shim);
   --outset: calc(var(--blur) * -1);
+  align-self: center;
   grid-area: title;
-  margin-bottom: 0;
-  padding-left: var(--body-inline);
   position: relative;
 
   #hero + & {
@@ -34,6 +33,18 @@
       right: var(--outset);
       top: 0;
       z-index: -1;
+    }
+  }
+
+  [data-header='device'] & {
+    em {
+      font-size: var(--h2);
+      font-style: normal;
+      font-weight: normal;
+
+      @include tools.above('small-page') {
+        display: inline-block;
+      }
     }
   }
 }

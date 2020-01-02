@@ -15,13 +15,12 @@ summary: |
   component libraries, testing, and documentation.
 ---
 
-{% import 'content.macros.njk' as content %}
-{% import 'utility.macros.njk' as utility %}
+{{ summary | md | safe }}
+
+{% import 'media.macros.njk' as media %}
 {% set default = collections.all | getPage('/_sitedata/cta/default/') %}
 
-{{ summary | md | safe }}
-{{ content.media(
-  src='faces/miriam.svg',
-  embed=true,
+{{ media.grid(
+  image=media.svg('faces/miriam'),
   content=default.templateContent
 ) }}

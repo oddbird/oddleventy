@@ -1,0 +1,11 @@
+{% import 'utility.macros.njk' as utility %}
+
+{% if summary or action %}
+  <div id='intro'>
+    {{ summary | md | safe }}
+
+    {% if action %}
+      {{ utility.link_if(action.text, action.url, class="page-action") }}
+    {% endif %}
+  </div>
+{% endif %}

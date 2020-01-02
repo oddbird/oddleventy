@@ -1,18 +1,33 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
 [data-layout='header'] {
+  display: grid;
+  grid-area: header;
+}
+
+[data-header='hero'] {
   --angle: var(--edge);
   --edge: calc(var(--body-inline) / 2);
   --overlap: var(--gutter);
+  --newline: var(--shim);
   margin: 0 calc(var(--body-inline) * -1) var(--spacer);
-  display: grid;
-  grid-area: header;
   grid-template:
     'hero hero' auto
     'title hero2' var(--overlap)
     'title .' auto
     'meta meta' auto
+    'intro intro' auto
     / auto minmax(var(--edge), 1fr);
+
+  #title {
+    margin-bottom: 0;
+    padding-left: var(--body-inline);
+  }
+
+  #meta,
+  #intro {
+    padding: 0 var(--body-inline);
+  }
 
   @media (min-width: 35em) and (min-height: 35em) {
     --overlap: var(--h1);
@@ -26,4 +41,8 @@
   @include tools.above(50em) {
     --edge: 25%;
   }
+}
+
+[data-header='device'] {
+  justify-self: center;
 }

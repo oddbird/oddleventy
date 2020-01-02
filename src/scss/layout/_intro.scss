@@ -1,0 +1,9 @@
+#intro {
+  grid-area: intro;
+}
+
+.page-action {
+  display: inline-block;
+  font-size: var(--medium);
+  margin-bottom: var(--newline);
+}

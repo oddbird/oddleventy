@@ -1,0 +1,35 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
+[data-screen] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-screen='iphone'] {
+  --device-margin: 5%;
+  --device-margin-top: 15%;
+  --device-radius: var(--double-gutter);
+
+  img {
+    @include tools.position(1px);
+    background: var(--device-fill);
+    border-radius: var(--device-radius, 0);
+    height: calc(100% - 2px);
+    object-fit: cover;
+    object-position: top left;
+    overflow: hidden;
+    padding: var(--device-margin-top, var(--device-margin, var(--shim)))
+      var(--device-margin-right, var(--device-margin, var(--shim)))
+      var(--device-margin-bottom, var(--device-margin, var(--shim)))
+      var(--device-margin-left, var(--device-margin, var(--shim)));
+    width: calc(100% - 2px);
+    z-index: -1;
+  }
+}
+
+[data-device] {
+  fill: var(--bg);
+  stroke: var(--border);
+  stroke-width: 2;
+  width: 100%;
+}

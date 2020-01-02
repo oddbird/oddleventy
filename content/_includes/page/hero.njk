@@ -1,0 +1,12 @@
+{% import 'media.macros.njk' as media %}
+
+{% if image.src %}
+  <div id="hero">
+    {% set style = ['--hero-position', image.position] | join(':') if image.position else none %}
+    {{ media.img(
+      src=image.src,
+      alt=image.alt,
+      attrs={'style': style}
+    ) }}
+  </div>
+{% endif %}

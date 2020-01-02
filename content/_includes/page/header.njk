@@ -1,21 +1,29 @@
-{% import 'utility.macros.njk' as utility %}
+{% import 'media.macros.njk' as media %}
 
-<header data-layout="header">
-  {% if image.src %}
-    {% set style = ['--hero-position', image.position] | join(':') if image.position else none %}
-    <div id="hero">
-      <img
-        src="{{ site.images + image.src }}"
-        alt="{{ image.alt or '' }}"
-        {{ utility.attr_if('style', style) }}
-        class="hero-image"/>
-    </div>
-  {% endif %}
-
-  <h1 id="title"
-    tabindex="-1">
-    {{ meta.banner | mdInline('amp') | safe }}
-  </h1>
-
+{% set device = (image and image.device) %}
+{% set details %}
+  {% include 'page/title.njk' %}
   {% include 'page/meta.njk' %}
+  {% include 'page/intro.njk' %}
+{% endset %}
+
+<header
+  data-layout="header"
+  data-header="{{ 'device' if device else 'hero' }}">
+  {% if device %}
+    {% set hero = media.screen(
+      fill=image.fill,
+      content=media.img(image.src, image.alt)
+    ) %}
+
+    {{ media.grid(
+      image=hero,
+      name='hero',
+      reverse='vertical',
+      content=details
+    ) }}
+  {% else %}
+    {% include 'page/hero.njk' %}
+    {{ details | safe }}
+  {% endif %}
 </header>
