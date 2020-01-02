@@ -19,7 +19,7 @@
   }
 }
 
-.banner-logo {
+#banner-logo {
   &:link,
   &:visited {
     @include tools.transition('move');

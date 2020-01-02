@@ -18,21 +18,21 @@
   {{ link_if(
     tag | displayName,
     tag | tagLink(all),
-    class
+    class='taglink'
   ) }}
 {%- endmacro %}
 
 {% macro tag_list(
   tags,
   all,
-  separator=', '
+  separator='ul'
 ) -%}
 {% set tags = tags | publicTags %}
 {% if tags | length > 0 %}
   {% if (separator == 'ul') %}
-    <ul>
+    <ul class="taglist">
       {%- for tag in tags -%}
-        <li>
+        <li class="tag">
           {{ tag_link(tag, all) }}
         </li>
       {%- endfor -%}

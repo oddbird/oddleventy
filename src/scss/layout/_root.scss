@@ -6,6 +6,6 @@ body {
 
 body {
   display: grid;
-  grid-template: 'banner' auto 'main' 1fr 'footer' auto / 100%;
+  grid-template: 'banner' auto 'header' auto 'main' 1fr 'footer' auto / 100%;
   padding: 0 var(--body-inline);
 }
