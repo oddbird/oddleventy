@@ -1,64 +1,20 @@
 {% import 'contact.macros.njk' as contact %}
-{% import 'content.macros.njk' as content %}
+{% import 'content.macros.njk' as render %}
 {% import 'utility.macros.njk' as utility %}
 
 <div
   data-layout="footer">
-  {% set cta_url = ['/_sitedata/cta_', cta or 'workshop', '/'] | join %}
-  {% set cta = collections.all | getPage(cta_url) %}
-
-  {% if cta %}
-    <section class="footer-cta">
-      {% if cta.data.image %}
-        <img
-          src="{{ site.images + cta.data.image.src }}"
-          alt="{{ cta.data.image.alt }}">
-      {% endif %}
-
-      {% if cta.templateContent %}
-        <h2>{{ cta.data.title | mdInline | safe }}</h2>
-        {{ cta.templateContent | safe }}
-      {% endif %}
-
-      {% call content.media(
-        src='faces/' + (cta.data.face or 'miriam') + '.svg',
-        embed=true,
-        name='cta-face'
-      ) %}
-        {% if not cta.templateContent %}
-          <h2>{{ cta.data.title | mdInline | safe }}</h2>
-        {% endif %}
-        {{ cta.data.summary | md | safe }}
-
-        {% if cta.data.links %}
-          <ul class="cta-links">
-          {% for link in cta.data.links %}
-            <li>
-              {{ utility.icon_link(
-                icon='icons/' + (link.icon or 'external') + '.svg',
-                text=link.text,
-                url=link.url
-              ) }}
-            </li>
-          {% endfor %}
-          </ul>
-        {% endif %}
-      {% endcall %}
-    </section>
-  {% endif %}
-
   {{ contact.form(name="contact-footer") }}
 
-  {% set legal = collections.all | getPage('/_sitedata/legal/') %}
+  {% set info = collections.all | getPage('/_sitedata/info/') %}
 
   <footer role="contentinfo">
     <div class="colophon">
-      {{ legal.data.colophon | md | safe }}
+      {{ info.data.colophon | md | safe }}
     </div>
 
     <div class="legal">
-      {{ legal.data.est | md | safe }}
-      {{ legal.templateContent | safe }}
+      {{ info.templateContent | safe }}
     </div>
   </footer>
 </div>

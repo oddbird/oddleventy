@@ -17,6 +17,7 @@ colophon: |
   See [sample pages](/sample/)
   for basic usage.
 ---
+{{ est | md }}
 
 <p class="h-card">
   Copyright © 2009&ndash;{% getDate 'year' %}

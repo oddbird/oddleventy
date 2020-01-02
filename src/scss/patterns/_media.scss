@@ -13,6 +13,7 @@
   align-items: var(--align, start);
   display: grid;
   grid-gap: var(--shim) var(--gutter);
+  margin: var(--newline) 0;
 
   @include tools.above(40em) {
     grid-template-columns: fit-content(25%) minmax(min-content, 1fr);
