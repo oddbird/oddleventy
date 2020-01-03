@@ -8,7 +8,7 @@ summary: |
   Take full advantage of the universal web,
   and reduce maintenance over the long term
   with resilient HTML, CSS, and JS systems.
-  OddBird provides **custom consulting**
+  OddBird provides [custom consulting](/services/)
   and [in-depth trainings](/talks/resilient-systems/)
   on front-end architecture and workflow --
   from advanced HTML/CSS to integrated design systems,
