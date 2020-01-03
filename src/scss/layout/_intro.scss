@@ -1,5 +1,10 @@
 #intro {
   grid-area: intro;
+
+  [data-header='hero'] & {
+    font-size: var(--medium);
+    margin-top: var(--gutter);
+  }
 }
 
 .page-action {

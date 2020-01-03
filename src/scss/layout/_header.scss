@@ -10,7 +10,7 @@
   --edge: calc(var(--body-inline) / 2);
   --overlap: var(--gutter);
   --newline: var(--shim);
-  margin: 0 calc(var(--body-inline) * -1) var(--spacer);
+  margin: 0 calc(var(--body-inline) * -1) var(--gutter);
   grid-template:
     'hero hero' auto
     'title hero2' var(--overlap)

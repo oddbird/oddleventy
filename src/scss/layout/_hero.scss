@@ -24,11 +24,12 @@
 [data-media='hero'] {
   @include tools.transition('move');
   --align: center;
+  --media-content: var(--small-page);
+  --media-min: 10em;
   --newline: var(--gutter);
   margin-bottom: var(--spacer);
-  max-width: var(--small-page);
 
-  @include tools.above('page') {
+  @include tools.above('medium-page') {
     transform: rotate(-6deg);
   }
 }

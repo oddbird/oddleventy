@@ -22,11 +22,16 @@
 
   @include tools.above(40em) {
     grid-template-areas: var(--reverse-x, 'image content');
-    grid-template-columns: fit-content(25%) minmax(min-content, 1fr);
+    grid-template-columns: fit-content(25%) minmax(
+        min-content,
+        var(--media-content, 1fr)
+      );
 
     &[data-reverse~='horizontal'] {
       --reverse-x: 'content image';
-      grid-template-columns: minmax(min-content, 1fr) fit-content(25%);
+      grid-template-columns: minmax(min-content, var(--media-content, 1fr)) fit-content(
+          25%
+        );
     }
   }
 }

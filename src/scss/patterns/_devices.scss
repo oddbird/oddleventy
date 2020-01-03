@@ -29,6 +29,7 @@
 
 [data-device] {
   fill: var(--bg);
+  pointer-events: none;
   stroke: var(--border);
   stroke-width: 2;
   width: 100%;
