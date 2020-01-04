@@ -51,13 +51,11 @@
   value=none
 ) %}
   {%- if value -%}
-    {{- attr -}}
-    {%- if (value | string | lower != 'true') -%}
-      {%- set value = value | string -%}
-      {%- set value = value | url if (attr == 'href') else value -%}
-      ="{{ value }}"
-    {%- endif -%}
-  {%- endif %}
+    {%- set boolean = attr if (value | string | lower != 'true') else none -%}
+    {%- set value = value | url if (attr == 'href') else value -%}
+    {%- set full -%}{{ attr }}="{{ value }}"{%- endset -%}
+    {{- boolean or full -}}
+  {%- endif -%}
 {% endmacro %}
 
 {% macro show_attrs(
@@ -71,9 +69,7 @@
 {% macro style_if(
   style
 ) -%}
-  {%- if style -%}
-    style="{%- for prop, val in style -%}{{ prop }}: {{ val }};{%- endfor -%}"
-  {%- endif -%}
+  {%- if style -%}style="{%- for prop, val in style -%}{{ prop }}: {{ val }};{%- endfor -%}"{%- endif -%}
 {%- endmacro %}
 
 {% macro inline_list(data) -%}
@@ -123,18 +119,13 @@
   attrs={}
 ) -%}
   {%- if url -%}
-    <a
-      href="{{ url | url }}"
-      {{ attr_if('class', class) }}
-      {{ show_attrs(attrs) }}>
-      {{- content | safe -}}
-    </a>
+  <a href="{{ url | url }}" {{ attr_if('class', class) }} {{ show_attrs(attrs) }}>{#
+    #}{{ content | safe }}{#
+  #}</a>
   {%- else -%}
-    <span
-      {{ attr_if('class', class) }}
-      {{ show_attrs(attrs) }}>
-      {{- content | safe -}}
-    </span>
+  <span {{ attr_if('class', class) }} {{ show_attrs(attrs) }}>{#
+    #}{{ content | safe }}{#
+  #}</span>
   {%- endif -%}
 {%- endmacro %}
 
@@ -191,38 +182,3 @@
   </time>
 {% endmacro %}
 
-{# Toggle collapsible elements (see `static/js/app/base.js`) #}
-{% macro toggle_button(
-  id,
-  expanded=false,
-  button=false,
-  synced=false
-) -%}
-  data-toggle="button"
-  tabindex="0"
-  aria-controls="{{ id }}"
-  aria-pressed="{{ 'true' if expanded else 'false' }}"
-  {% if not button %}role="button"{% endif %}
-  data-toggle-synced="{{ 'true' if synced else 'false' }}"
-{%- endmacro %}
-
-{% macro toggle_target(
-  id,
-  expanded=false,
-  auto_closing=false,
-  auto_closing_on_any_click=false,
-  auto_closing_exception=none
-) -%}
-  data-toggle="target"
-  id="{{ id }}"
-  data-target-id="{{ id }}"
-  aria-expanded="{{ 'true' if expanded else 'false' }}"
-  data-auto-closing="{{ 'true' if (auto_closing or auto_closing_on_any_click) else 'false' }}"
-  data-auto-closing-on-any-click="{{ 'true' if auto_closing_on_any_click else 'false' }}"
-  {% if auto_closing_exception %}data-auto-closing-exception="{{ auto_closing_exception }}"{% endif %}
-{%- endmacro %}
-
-{% macro toggle_close(id) -%}
-  data-toggle="close"
-  aria-controls="{{ id }}"
-{%- endmacro %}

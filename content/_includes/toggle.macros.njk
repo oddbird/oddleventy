@@ -1,0 +1,46 @@
+{% import "utility.macros.njk" as utility %}
+
+{# Toggle collapsible elements (needs JS) #}
+{% macro btn(
+  id,
+  expanded=false,
+  button=false,
+  synced=false
+) -%}
+  {%- set attrs = {
+    'data-toggle': 'button',
+    'tabindex': 0,
+    'aria-controls': id,
+    'aria-pressed': 'true' if expanded else 'false',
+    'role': none if button else 'button',
+    'data-toggle-synced': 'true' if synced else 'false'
+  } -%}
+  {{ utility.show_attrs(attrs) }}
+{%- endmacro %}
+
+{% macro target(
+  id,
+  expanded=false,
+  auto_closing=false,
+  auto_closing_on_any_click=false,
+  auto_closing_exception=none
+) -%}
+  {%- set attrs = {
+    'data-toggle': 'target',
+    'id': id,
+    'data-target-id': id,
+    'aria-expanded': 'true' if expanded else 'false',
+    'data-auto-closing': 'true' if (auto_closing or auto_closing_on_any_click) else 'false',
+    'data-auto-closing-on-any-click': 'true' if auto_closing_on_any_click else 'false',
+    'data-auto-closing-exception': auto_closing_exception
+  } -%}
+  {{ utility.show_attrs(attrs) }}
+{%- endmacro %}
+
+{% macro close(id) -%}
+  {%- set attrs = {
+    'data-toggle': 'close',
+    'aria-controls': id
+  } -%}
+  {{ utility.show_attrs(attrs) }}
+{%- endmacro %}

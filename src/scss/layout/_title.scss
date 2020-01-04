@@ -44,6 +44,7 @@
 
       @include tools.above('small-page') {
         display: inline-block;
+        transform: translateY(calc(-1vw));
       }
     }
   }

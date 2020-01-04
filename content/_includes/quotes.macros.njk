@@ -1,0 +1,56 @@
+{% import "utility.macros.njk" as utility %}
+
+{% macro from(
+  collection,
+  page,
+  slug=none
+) -%}
+  {%- set data = collection | pageData(page, 'press') -%}
+  {%- if slug -%}
+    {{- show(data | get('slug', slug)) | safe -}}
+  {%- else -%}
+    {{- grid(data) | safe if data else none -}}
+  {%- endif -%}
+{%- endmacro %}
+
+{% macro grid(
+  data
+) %}
+  {%- for item in data -%}
+    {%- if item.text -%}
+      {{- show(item, false) | safe -}}
+    {%- endif -%}
+  {%- endfor -%}
+{% endmacro %}
+
+{% macro show(
+  data,
+  inline=true
+) -%}
+{%- if inline -%}
+> {{ data.text | trim }}
+>
+> {{ _cite(data) | safe }}
+{%- else -%}
+<blockquote class="">
+{{ data.text | md | safe }}
+<p>{{ cite(data) }}</p>
+</blockquote>
+{%- endif -%}
+{%- endmacro %}
+
+{% macro cite(
+  data
+) -%}
+  <span class="h-card cite">---{{ _cite(data) | safe }}</span>
+{%- endmacro %}
+
+{% macro _cite(
+  data
+) -%}
+  {%- set venue = utility.link_if(data.venue, data.url if not data.title, class='p-org h-card h-name') if data.venue else none -%}
+  {%- set title = utility.link_if(data.title, data.url if not venue, class='p-job-title') if data.title else none -%}
+  {%- set context = utility.link_if([title, venue] | join(' at '), data.url) if (title and venue) else (title or venue) -%}
+  {%- set name = utility.link_if(data.name, data.url if not context, class='p-name') -%}
+  {{- [name, context] | join(', ') | safe -}}
+{%- endmacro %}

@@ -79,7 +79,7 @@ press:
       about the benefits of using plain CSS
       instead of heavy library for your grid!
       Very useful and inspiring. Thanks!
-    credit: Sami Stein
+    name: Sami Stein
     title: Frontend Developer at XING
     url: https://twitter.com/frontend_cat/status/993799732018532352
 summary: |
@@ -96,7 +96,8 @@ media:
   - <<: *clarity
   - <<: *django
 ---
-{% import "content.macros.njk" as content %}
+{% import "quotes.macros.njk" as quotes %}
+{% import "media.macros.njk" as media %}
 
 For those few cases where a grid really is required,
 we'll talk about the best ways to roll your own,
@@ -111,11 +112,11 @@ and how to get started with only a few lines of code.
 
 ------
 
-{{ content.quotes(press) }}
+{{ quotes.grid(press) }}
 
 ------
 
-{{ content.fig(
+{{ media.fig(
   data=media,
   caption='Conference videos…'
 ) }}

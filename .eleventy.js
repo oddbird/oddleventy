@@ -33,6 +33,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('objectKeys', utils.objectKeys);
   eleventyConfig.addFilter('jsonString', utils.jsonString);
   eleventyConfig.addFilter('only', utils.only);
+  eleventyConfig.addFilter('get', utils.get);
 
   eleventyConfig.addFilter('getDate', time.getDate);
   eleventyConfig.addFilter('rssDate', time.rssDate);
@@ -50,6 +51,9 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('meta', pages.meta);
   eleventyConfig.addFilter('getPage', pages.fromCollection);
+  eleventyConfig.addFilter('getData', pages.getData);
+  eleventyConfig.addFilter('pageData', pages.pageData);
+  eleventyConfig.addFilter('pageContent', pages.pageContent);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('withData', pages.withData);
   eleventyConfig.addFilter('titleSort', pages.titleSort);

@@ -24,9 +24,9 @@ media:
     width: 560
     height: 315
 ---
-{% import "content.macros.njk" as content %}
+{% import "media.macros.njk" as media %}
 
-{{ content.fig(
+{{ media.fig(
   data=media,
   caption='Audio and video of the podcast…'
 ) }}

@@ -18,9 +18,9 @@ summary: |
 {{ summary | md | safe }}
 
 {% import 'media.macros.njk' as media %}
-{% set default = collections.all | getPage('/_sitedata/cta/default/') %}
+{% set default = collections.all | pageContent('/_sitedata/cta/default/') %}
 
 {{ media.grid(
   image=media.svg('faces/miriam'),
-  content=default.templateContent
+  content=default
 ) }}

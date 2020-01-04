@@ -3,13 +3,13 @@
 <nav data-layout="nav" aria-label="primary navigation">
   <ul data-navlist="main">
     {% for item in sitenav %}
-      {% set target = collections.all | getPage(item.url) %}
+      {% set target = collections.all | pageData(item.url) %}
       {% set current = 'page' if (item.url == page.url) else none %}
       <li>
         <a href="{{ item.url }}"
           data-nav="{{ item.url | slug }}"
           {{ utility.attr_if('aria-current', current) }}>
-          {{ item.title or target.data.title }}
+          {{ item.title or target.title }}
         </a>
       </li>
     {% endfor %}

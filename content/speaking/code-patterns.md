@@ -69,7 +69,7 @@ media:
   - <<: *cascadia
   - <<: *clarity
 ---
-{% import "content.macros.njk" as content %}
+{% import "media.macros.njk" as media %}
 
 Behind the scenes those patterns have to live in our code,
 and make life easier for developers.
@@ -84,7 +84,7 @@ without extensive maintenance.
 
 ------
 
-{{ content.fig(
+{{ media.fig(
   data=media,
   caption='Conference videos…'
 ) }}

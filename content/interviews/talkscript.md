@@ -17,9 +17,9 @@ summary: |
 media:
   - audio: https://media.blubrry.com/sitepen/p/media.sitepen.com/podcast/TalkScript_018.mp3?_=1
 ---
-{% import "content.macros.njk" as content %}
+{% import "media.macros.njk" as media %}
 
-{{ content.fig(
+{{ media.fig(
   data=media,
   caption='Listen to the podcast…'
 ) }}
