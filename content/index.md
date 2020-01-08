@@ -23,17 +23,26 @@ action:
 work:
   ch: /work/coachhub/
   mc: /work/medcurbside/
+  td: /work/timedesigner/
+  md: /work/metadeploy/
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
 
+{{ quotes.show(collections.all | pageData(work.md, 'press', {'slug': 'extension'})) }}
+
+> Morbi magnis nostra diam pharetra lobortis blandit molestie ultricies, magna tortor sem aliquam non nam class. Adipiscing libero per class dignissim nostra in nulla laoreet vitae elit, fusce sagittis integer fames ad himenaeos ut iaculis dictumst, conubia diam sapien metus tincidunt posuere luctus praesent vehicula.
+>
+> ---*Someone* Said it
+
+
 {{ quotes.grid([
-  collections.all | pageData(work.ch, 'press', {'slug': 'remote'}),
+  collections.all | pageData(work.md, 'press', {'slug': 'extension'}),
   collections.all | pageData(work.mc, 'press', {'slug': 'goals'})
 ]) }}
 
 
 {{ quotes.grid([
-  collections.all | pageData(work.ch, 'press', {'slug': 'handoff'}),
-  collections.all | pageData(work.mc, 'press', {'slug': 'goals'})
+  collections.all | pageData(work.td, 'press', {'slug': 'investment'}),
+  collections.all | pageData(work.ch, 'press', {'slug': 'handoff'})
 ]) }}

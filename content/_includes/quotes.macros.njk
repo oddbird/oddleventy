@@ -8,9 +8,9 @@
 ) -%}
   {%- set data = collection | pageData(page, 'press') -%}
   {%- if slug -%}
-    {{- show(data | get('slug', slug)) | safe -}}
+    {{- show(data | get('slug', slug)) -}}
   {%- else -%}
-    {{- grid(data) | safe if data else none -}}
+    {{- grid(data) if data else none -}}
   {%- endif -%}
 {%- endmacro %}
 
@@ -20,14 +20,15 @@
 <div class="quote-grid">
   {%- for item in data -%}
     {%- if item.text -%}
-      {{- show(item, false) | safe -}}
+      {{- show(item, 'grid') -}}
     {%- endif -%}
   {%- endfor -%}
 </div>
 {% endmacro %}
 
 {% macro show(
-  data
+  data,
+  type='solo'
 ) -%}
 {%- set img -%}
   {%- if data.face -%}
@@ -44,7 +45,7 @@
   {%- endif -%}
 {%- endset -%}
 
-<blockquote class="h-card">
+<blockquote class="h-card" data-quote="{{ type or '' }}">
 {%- call media.grid(
   image=img,
   name='quote'

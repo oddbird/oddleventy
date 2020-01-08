@@ -11,7 +11,9 @@ summary: |
 
 ## [This subtitle is an H2 with a link](#)
 
-Dictumst feugiat [condimentum sociosqu](#) mi ridiculus curabitur amet pellentesque augue, eu iaculis tristique montes pulvinar magnis lorem parturient curae arcu, primis himenaeos aptent fusce *vestibulum elementum pretium habitant*. Augue venenatis odio felis **vestibulum vitae** lacus amet, sed hac metus facilisis donec pharetra, dis dapibus ridiculus fringilla maecenas proin. *Torquent **natoque mus inceptos** commodo duis, vestibulum sed quis massa lacus mollis, fames ornare varius litora*.
+Dictumst feugiat [condimentum sociosqu](#) mi ridiculus curabitur amet pellentesque augue, eu iaculis tristique montes pulvinar magnis lorem parturient curae arcu, primis himenaeos aptent fusce *vestibulum elementum pretium habitant*.
+
+Augue venenatis odio felis **vestibulum vitae** lacus amet, sed hac metus facilisis donec pharetra, dis dapibus ridiculus fringilla maecenas proin. *Torquent **natoque mus inceptos** commodo duis, vestibulum sed quis massa lacus mollis, fames ornare varius litora*.
 
 1. Arcu est pharetra porttitor mus nostra platea in,
    sociis massa interdum potenti non consectetur,
@@ -26,8 +28,6 @@ Dictumst feugiat [condimentum sociosqu](#) mi ridiculus curabitur amet pellentes
 
 Erat nibh lectus magna cum taciti metus nullam adipiscing diam neque, nec orci faucibus fusce risus non etiam inceptos convallis, malesuada cras nisl sociosqu urna senectus aenean elit ad.
 
-------
-
 ## Another h2 subtitle for testing
 
 Amet tempus duis litora felis accumsan himenaeos tincidunt eleifend, ante netus nulla mollis lorem ad iaculis, arcu montes platea nisl enim vitae ut. Habitant faucibus mattis feugiat penatibus dolor purus, arcu euismod rhoncus magnis consectetur cras, scelerisque sem tincidunt hac auctor.
@@ -41,13 +41,38 @@ Amet tempus duis litora felis accumsan himenaeos tincidunt eleifend, ante netus 
 
 Orci ridiculus fermentum neque mattis nisl integer venenatis laoreet turpis sem at, non nunc metus curae ut quisque euismod massa gravida litora lorem magnis, risus accumsan pellentesque tempor enim aptent augue urna ad porta.
 
-> Tortor aliquet tempus condimentum ullamcorper class egestas bibendum cum
-> consectetur facilisis eu, venenatis at id pharetra dolor elit nullam dui
-> phasellus fames iaculis, commodo euismod mi urna non nunc ac accumsan
-> neque imperdiet.
->
-> ---Mia, OddBird
-
 #### Sub subtitle h4
 
 Consequat scelerisque egestas ut mollis feugiat sit velit per cubilia, gravida dignissim hendrerit duis natoque senectus a eros luctus mi, odio phasellus curabitur turpis vitae ultricies iaculis dictumst.
+
+------
+
+## Quotes
+
+> Basic quotes can be created in markdown,
+> and should end with a citation line.
+>
+> ---Mia, OddBird
+
+> Individual quotes will alternate direction.
+> Rutrum aliquet inceptos nisi lacinia integer blandit.
+>
+> ---Mia, OddBird
+
+Quotes can also be generated from data,
+either one at a time with the `show()` macro:
+
+{% import 'quotes.macros.njk' as quotes %}
+
+{{ quotes.show(collections.all | pageData(
+  '/work/metadeploy/',
+  'press',
+  {'slug': 'extension'}
+)) }}
+
+Or in a grid:
+
+{{ quotes.grid(collections.all | pageData(
+  '/work/timedesigner/',
+  'press'
+)) }}
