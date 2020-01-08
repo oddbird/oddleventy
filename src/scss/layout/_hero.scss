@@ -27,9 +27,4 @@
   --media-content: var(--small-page);
   --media-min: 10em;
   --newline: var(--gutter);
-  margin-bottom: var(--spacer);
-
-  @include tools.above('medium-page') {
-    transform: rotate(-6deg);
-  }
 }

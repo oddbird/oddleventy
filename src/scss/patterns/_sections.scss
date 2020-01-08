@@ -1,3 +1,7 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+@use '../config/scale';
+@use 'sass:map';
+
 // Main Actions
 // ------------
 /// Main actions are large block links,
@@ -5,7 +9,27 @@
 /// to represent themain call to action of that section.
 /// @group links
 .main-action {
-  display: block;
+  --link: var(--accent);
   font-size: var(--medium);
-  margin: var(--newline) auto var(--newline) 0;
+  margin-top: var(--double-gutter);
+}
+
+[data-block] {
+  margin-block: var(--double-gutter);
+}
+
+[data-block~='center'] {
+  margin-inline: auto;
+}
+
+[data-block~='rotate'] {
+  @include tools.above('medium-page') {
+    transform: rotate(-6deg);
+  }
+}
+
+@each $name in map.keys(scale.$page-sizes) {
+  [data-block~='#{$name}'] {
+    max-width: var(--#{unquote($name)});
+  }
 }

@@ -28,21 +28,68 @@ work:
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
+{% import 'media.macros.njk' as media %}
 
-{{ quotes.show(collections.all | pageData(work.md, 'press', {'slug': 'extension'})) }}
+## Featured Clients
 
-> Morbi magnis nostra diam pharetra lobortis blandit molestie ultricies, magna tortor sem aliquam non nam class. Adipiscing libero per class dignissim nostra in nulla laoreet vitae elit, fusce sagittis integer fames ad himenaeos ut iaculis dictumst, conubia diam sapien metus tincidunt posuere luctus praesent vehicula.
->
-> ---*Someone* Said it
-
+@@@ client logos
 
 {{ quotes.grid([
   collections.all | pageData(work.md, 'press', {'slug': 'extension'}),
   collections.all | pageData(work.mc, 'press', {'slug': 'goals'})
 ]) }}
 
+## Core Development
+
+@@@ oss logos
+
+{% call media.grid(
+  image=media.img(
+    src='writing/jssass.png',
+    alt='Jump Start Sass, by Miriam Suzanne and Hugo Giraudel'
+  ),
+  attrs={'data-block': 'center media-page'}
+) %}
+
+As core contributors to Sass & Django,
+we write the books,
+contribute to the languages,
+and build the tools millions of other developers rely on.
+Then we bring that expertise to your custom web projects.
+Our clients have gained traction,
+been acquired,
+and reported easy maintenance for years.
+
+- Python & Django (*core contributor*)
+- CSS & Sass (*core contributor*)
+- JavaScript & Vue, React, Node, etc.
+- WordPress
+- Accessible HTML & Nunjucks
+
+{% endcall %}
+
 
 {{ quotes.grid([
   collections.all | pageData(work.td, 'press', {'slug': 'investment'}),
   collections.all | pageData(work.ch, 'press', {'slug': 'handoff'})
 ]) }}
+
+
+{% call media.grid(
+  image=media.svg('faces/miriam'),
+  attrs={'data-block': 'center media-page rotate'}
+) %}
+
+## Hi, I'm Miriam
+
+I cofounded OddBird with my brothers in 2008
+to provide custom web application design, development, and training.
+Since then OddBird has become an industry leader
+in open-source tooling and training,
+while providing top shelf services for our clients.
+
+--[Miriam Suzanne](/authors/miriam/)
+
+{{ media.svg('icons/miriam-sig') | svgo }}
+
+{% endcall %}
