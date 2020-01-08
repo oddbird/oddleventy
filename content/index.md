@@ -20,21 +20,20 @@ summary: |
 action:
   text: Start a conversation »
   url: /contact/
-remote:
-  page: /work/coachhub/
-  data: press
-  if:
-    slug: remote
-goals:
-  page: /work/medcurbside/
-  data: press
-  if:
-    slug: goals
+work:
+  ch: /work/coachhub/
+  mc: /work/medcurbside/
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
 
 {{ quotes.grid([
-  collections.all | pageData(remote.page, remote.data, remote.if),
-  collections.all | pageData(goals.page, goals.data, goals.if)
+  collections.all | pageData(work.ch, 'press', {'slug': 'remote'}),
+  collections.all | pageData(work.mc, 'press', {'slug': 'goals'})
+]) }}
+
+
+{{ quotes.grid([
+  collections.all | pageData(work.ch, 'press', {'slug': 'handoff'}),
+  collections.all | pageData(work.mc, 'press', {'slug': 'goals'})
 ]) }}

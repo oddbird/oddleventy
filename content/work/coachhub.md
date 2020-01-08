@@ -2,6 +2,7 @@
 title: 'Case Study: CoachHub'
 image:
   src: projects/coachhub.jpg
+  position: top
 client:
   name: &client ORCAS
   url: http://orcasinc.com
@@ -121,9 +122,10 @@ summary: |
   [currently being used]: https://coachhub.resilienceboost.com/
 ---
 
-content.macros.j2\#get\_quotes
+{% import 'quotes.macros.njk' as quotes %}
+{{ quotes.grid(press) }}
 
-content.macros.j2\#rst
+------
 
 ## What They Needed
 

@@ -20,7 +20,7 @@
   grid-area: cta;
   grid-template-columns: minmax(min-content, var(--small-page));
   justify-content: center;
-  margin: 0 calc(var(--body-inline) * -1);
-  padding: var(--spacer) var(--body-inline) calc(var(--spacer) + var(--gutter));
+  margin: var(--spacer) calc(var(--page-margin) * -1) 0;
+  padding: var(--spacer) var(--page-margin) calc(var(--spacer) + var(--gutter));
   text-shadow: 0 1px 0 var(--shadow);
 }

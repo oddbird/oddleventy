@@ -11,7 +11,7 @@
   #hero + & {
     // clip the horizontal and bottom shadows only
     clip-path: inset(var(--outset) calc(var(--outset) / 1.5) 0 0);
-    filter: drop-shadow(0 0 var(--blur) var(--shadow-invert));
+    filter: drop-shadow(0 0 var(--blur) var(--shadow));
     margin-top: 0;
     padding-right: calc(var(--angle) + var(--gutter));
 

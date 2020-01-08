@@ -7,10 +7,10 @@
 
 [data-header='hero'] {
   --angle: var(--edge);
-  --edge: calc(var(--body-inline) / 2);
+  --edge: calc(var(--page-margin) / 2);
   --overlap: var(--gutter);
   --newline: var(--shim);
-  margin: 0 calc(var(--body-inline) * -1) var(--gutter);
+  margin: 0 calc(var(--page-margin) * -1) var(--gutter);
   grid-template:
     'hero hero' auto
     'title hero2' var(--overlap)
@@ -21,12 +21,12 @@
 
   #title {
     margin-bottom: 0;
-    padding-left: var(--body-inline);
+    padding-left: var(--page-margin);
   }
 
   #meta,
   #intro {
-    padding: 0 var(--body-inline);
+    padding: 0 var(--page-margin);
   }
 
   @media (min-width: 35em) and (min-height: 35em) {
@@ -34,8 +34,8 @@
   }
 
   @include tools.above(35em) {
-    --angle: var(--body-inline);
-    --edge: var(--body-inline);
+    --angle: var(--page-margin);
+    --edge: var(--page-margin);
   }
 
   @include tools.above(50em) {

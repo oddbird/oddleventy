@@ -6,7 +6,7 @@
 
   &::before {
     @include tools.position(0 -1em 0 -1em);
-    box-shadow: 0 0 var(--quarter-shim) var(--shadow-invert) inset;
+    box-shadow: 0 0 var(--quarter-shim) var(--shadow) inset;
     content: '';
     pointer-events: none;
     z-index: 1;

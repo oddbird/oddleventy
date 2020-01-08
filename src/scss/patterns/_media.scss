@@ -47,6 +47,12 @@
   max-width: var(--media-max, initial);
   min-width: var(--media-min, initial);
   width: var(--media-size, initial);
+
+  img,
+  svg {
+    height: auto;
+    width: 100%;
+  }
 }
 
 // Media Content

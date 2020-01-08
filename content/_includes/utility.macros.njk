@@ -50,20 +50,17 @@
   attr,
   value=none
 ) %}
-  {%- if value -%}
-    {%- set boolean = attr if (value | string | lower != 'true') else none -%}
-    {%- set value = value | url if (attr == 'href') else value -%}
-    {%- set full -%}{{ attr }}="{{ value }}"{%- endset -%}
-    {{- boolean or full -}}
+  {%- if (value and (value | string | lower == 'true')) or (value == '') -%}
+    {{ attr }}
+  {%- elif value -%}
+    {{ attr }}="{{ value }}"
   {%- endif -%}
 {% endmacro %}
 
 {% macro show_attrs(
   attrs
 ) %}
-  {%- for attr, value in attrs -%}
-    {{- attr_if(attr, value) -}}
-  {%- endfor -%}
+  {%- for attr, value in attrs %} {{ attr_if(attr, value) }}{%- endfor -%}
 {% endmacro %}
 
 {% macro style_if(

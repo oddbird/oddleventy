@@ -80,6 +80,7 @@ press:
     name: Jason Pamental
     title: Invited Expert
     venue: W3C
+    icon: twitter
     url: https://twitter.com/jpamental/status/1118585546803036160
   - text: |
       Well that was awesome!!!
@@ -88,6 +89,7 @@ press:
       @MiriSuzanne thank you so much for the amazing talk!
     name: Nour Saud
     title: Software Engineer
+    icon: twitter
     url: https://twitter.com/Nour_ASoud/status/1118588349994823681
   - text: |
       Miriam has always been nothing but spot-on,
@@ -96,6 +98,7 @@ press:
     name: Vitaly Friedman
     title: Founder
     venue: Smashing Magazine & Conference
+    icon: twitter
     url: https://www.smashingmagazine.com/events/
   - text: |
       So stoked @mirisuzanne is @vueconfus !!!
@@ -103,6 +106,7 @@ press:
     name: Ngan Hoang
     title: Principal Designer
     venue: Prefect.io
+    icon: twitter
     url: https://twitter.com/itsngansense/status/1111001282528063488
 summary: |
   Don't let the declarative syntax fool you --

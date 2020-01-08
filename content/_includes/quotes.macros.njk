@@ -1,4 +1,5 @@
 {% import "utility.macros.njk" as utility %}
+{% import 'media.macros.njk' as media %}
 
 {% macro from(
   collection,
@@ -16,33 +17,48 @@
 {% macro grid(
   data
 ) %}
+<div class="quote-grid">
   {%- for item in data -%}
     {%- if item.text -%}
       {{- show(item, false) | safe -}}
     {%- endif -%}
   {%- endfor -%}
+</div>
 {% endmacro %}
 
 {% macro show(
-  data,
-  inline=true
+  data
 ) -%}
-{%- if inline -%}
-> {{ data.text | trim }}
->
-> {{ _cite(data) | safe }}
-{%- else -%}
-<blockquote class="">
-{{ data.text | md | safe }}
-<p>{{ cite(data) }}</p>
+{%- set img -%}
+  {%- if data.face -%}
+    {{- media.img(
+      src='quotes/' + data.face,
+      attrs={
+        'class': 'u-photo',
+        'height': 60,
+        'width': 60
+      }
+    ) -}}
+  {%- else -%}
+    {%- include 'icons/' + (data.icon or 'tags') + '.svg' -%}
+  {%- endif -%}
+{%- endset -%}
+
+<blockquote class="h-card">
+{%- call media.grid(
+  image=img,
+  name='quote'
+) -%}
+{{- data.text | md | safe -}}
+{{- cite(data) | safe -}}
+{%- endcall -%}
 </blockquote>
-{%- endif -%}
 {%- endmacro %}
 
 {% macro cite(
   data
 ) -%}
-  <span class="h-card cite">---{{ _cite(data) | safe }}</span>
+<p class="byline">---{{ _cite(data) | safe }}</p>
 {%- endmacro %}
 
 {% macro _cite(
@@ -50,7 +66,7 @@
 ) -%}
   {%- set venue = utility.link_if(data.venue, data.url if not data.title, class='p-org h-card h-name') if data.venue else none -%}
   {%- set title = utility.link_if(data.title, data.url if not venue, class='p-job-title') if data.title else none -%}
-  {%- set context = utility.link_if([title, venue] | join(' at '), data.url) if (title and venue) else (title or venue) -%}
+  {%- set context = utility.link_if([title, venue] | join(' <i>at</i> '), data.url) if (title and venue) else (title or venue) -%}
   {%- set name = utility.link_if(data.name, data.url if not context, class='p-name') -%}
   {{- [name, context] | join(', ') | safe -}}
 {%- endmacro %}

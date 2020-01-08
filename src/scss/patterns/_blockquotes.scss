@@ -1,3 +1,72 @@
-// .quote-grid {
+@use '../../../node_modules/accoutrement/sass/tools';
 
-// }
+blockquote {
+  --angle: var(--double-gutter);
+  background-color: var(--callout-fade);
+  margin: var(--newline) 0;
+  padding: var(--spacer) var(--gutter);
+
+  &:nth-of-type(odd) {
+    clip-path: polygon(0 0, calc(100% - var(--angle)) 0, 100% 100%, 0 100%);
+    padding-right: var(--triple-gutter);
+  }
+
+  &:nth-of-type(even) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, var(--angle) 100%);
+    padding-left: var(--triple-gutter);
+  }
+
+  .byline {
+    --newline: 0;
+    font-size: var(--small);
+  }
+
+  .u-photo {
+    border-radius: 100%;
+  }
+
+  .p-name {
+    font-style: italic;
+  }
+}
+
+.quote-grid {
+  --overlap: var(--page-margin);
+  display: grid;
+  grid-gap: var(--double-gutter);
+  margin: calc(var(--spacer) * 2) calc(var(--page-margin) * -1) var(--spacer);
+
+  &:first-child {
+    margin-top: calc(var(--spacer) + var(--newline));
+  }
+
+  @include tools.above('medium-page') {
+    --overlap: calc(var(--gutter) * -1);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  blockquote {
+    --edge: minmax(var(--page-margin), 1fr);
+    --quote: minmax(min-content, var(--small-page));
+    display: grid;
+    margin: 0;
+
+    &:nth-of-type(odd) {
+      grid: 'edge quote' auto / var(--edge) var(--quote);
+      margin-right: var(--overlap);
+      transform: translateY(calc(var(--spacer) * -1));
+    }
+
+    &:nth-of-type(even) {
+      grid: 'quote edge' auto / var(--quote) var(--edge);
+      margin-left: var(--overlap);
+    }
+  }
+}
+
+[data-media='quote'] {
+  --fill: var(--ccs-special--fade);
+  --media-size: var(--double-gutter);
+  --media-min: 3em;
+  grid-area: quote;
+}
