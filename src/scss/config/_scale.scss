@@ -90,9 +90,9 @@ $theme-sizes: (
 /// @sizes {output-only}
 /// @group config-scale
 $page-sizes: (
-  'small-page': 34rem,
-  'medium-page': 55rem,
-  'large-page': 75rem,
+  'small-page': 30rem,
+  'medium-page': 45rem,
+  'large-page': 70rem,
 );
 
 @include tools.add-sizes($page-sizes);

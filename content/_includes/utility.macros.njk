@@ -76,25 +76,45 @@
   {%- endif -%}
 {%- endmacro %}
 
+{% macro inline_list(data) -%}
+  {%- if data -%}
+    <ul class="inline-list">
+    {%- for link in data -%}
+      <li>
+        {%- if link.icon -%}
+          {{ icon_link(
+            icon=link.icon + '.svg',
+            text=link.text,
+            url=link.url
+          ) }}
+        {%- else -%}
+          {{ link_if(link.text, link.url) }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+    </ul>
+  {%- endif -%}
+{%- endmacro %}
+
 {% macro icon_link(
   icon,
   text,
   url,
   class=none,
   attrs={}
-) %}
-  {% set content %}
-    {% include icon %}
+) -%}
+  {%- set content -%}
+    {%- include icon -%}
     <span class="link-text">{{ text }}</span>
-  {% endset %}
+  {%- endset -%}
 
-  {{ link_if(
+  {{- link_if(
     content=content,
     url=url,
     class=[class, 'icon-link'] | join(' ') if class else 'icon-link',
     attrs=attrs
-  ) }}
-{% endmacro %}
+  ) -}}
+{%- endmacro %}
 
 {% macro link_if(
   content,

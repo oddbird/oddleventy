@@ -51,7 +51,7 @@ $background-colors: (
     hsla(
       var(--ccs-h--prime),
       var(--ccs-s--bg2),
-      var(--ccs-l--bg4),
+      var(--ccs-l--bg5),
       var(--ccs-fade)
     ),
   'overlay': var(--ccs-neutral--bg6-fade),
@@ -69,14 +69,14 @@ $background-colors: (
 /// @group config-color
 $content-colors: (
   'text': var(--ccs-neutral--fg-full),
-  'text-light': var(--ccs-neutral--fg2),
+  'text-light': var(--ccs-neutral--fg3),
   'accent': var(--ccs-accent--fg1),
-  'highlight': var(--ccs-accent--fg2),
+  'highlight': var(--ccs-accent--fg3),
   'border': var(--ccs-neutral),
   'border-fade': var(--ccs-neutral--fade),
   'shadow': var(--ccs-neutral--bg-full-fade),
   'shadow-invert': var(--ccs-neutral--fg-full-fade),
-  'action': var(--ccs-prime--fg2),
+  'action': var(--ccs-prime--fg3),
   'active': '#highlight',
 );
 

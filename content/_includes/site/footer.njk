@@ -1,55 +1,19 @@
 {% import 'contact.macros.njk' as contact %}
-{% import 'content.macros.njk' as content %}
 {% import 'utility.macros.njk' as utility %}
 
-<section
+<div
   data-layout="footer">
-  {% set index_page = collections.all | getPage('/') %}
-  {% set footer = index_page.data.footer %}
-
-  <header class="footer-cta">
-    {% call content.media(
-      src='faces/' + (footer.face or 'miriam') + '.svg',
-      embed=true,
-      name='cta-face'
-    ) %}
-      <h2>{{ footer.title | mdInline | safe }}</h2>
-      {{ footer.summary | md | safe }}
-
-      {% if footer.links %}
-        <ul class="cta-links">
-        {% for link in footer.links %}
-          <li>
-            {{ utility.icon_link(
-              icon='icons/' + (link.icon or 'external') + '.svg',
-              text=link.text,
-              url=link.url
-            ) }}
-          </li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    {% endcall %}
-  </header>
-
   {{ contact.form(name="contact-footer") }}
+
+  {% set info = collections.all | getPage('/_sitedata/info/') %}
 
   <footer role="contentinfo">
     <div class="colophon">
-      {{ footer.colophon | md | safe }}
+      {{ info.data.colophon | md | safe }}
     </div>
 
     <div class="legal">
-      <p>
-        Established in 2008 by three odd siblings.
-        <a href="/conduct/">Code of Conduct</a>.
-      </p>
-      <p class="h-card">
-        Copyright © 2009&ndash;{% getDate 'year' %}
-        <a href="{{ site.url }}" class="p-name u-url">
-          {{ site.title }}
-        </a>
-      </p>
+      {{ info.templateContent | safe }}
     </div>
   </footer>
-</section>
+</div>
