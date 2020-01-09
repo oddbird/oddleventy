@@ -29,19 +29,35 @@ work:
 
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'media.macros.njk' as media %}
+{% import 'section.macros.njk' as section %}
 
-## Featured Clients
+{{ section.title('Featured Clients') }}
 
-@@@ client logos
+{{ media.logos([
+  'orcas',
+  'mozilla',
+  'sram',
+  'salesforce',
+  'tegy',
+  'phamaly',
+  'cfoshare'
+]) }}
 
 {{ quotes.grid([
   collections.all | pageData(work.md, 'press', {'slug': 'extension'}),
   collections.all | pageData(work.mc, 'press', {'slug': 'goals'})
 ]) }}
 
-## Core Development
+{{ section.title('Developer Tools') }}
 
-@@@ oss logos
+{{ media.logos([
+  'django',
+  'sass',
+  'remedy',
+  'susy',
+  'herman',
+  'true'
+]) }}
 
 {% call media.grid(
   image=media.img(
@@ -51,11 +67,11 @@ work:
   attrs={'data-block': 'center media-page'}
 ) %}
 
-As core contributors to Sass & Django,
+**As core contributors to Sass & Django**,
 we write the books,
 contribute to the languages,
 and build the tools millions of other developers rely on.
-Then we bring that expertise to your custom web projects.
+Then **we bring that expertise to your custom web projects**.
 Our clients have gained traction,
 been acquired,
 and reported easy maintenance for years.
@@ -83,16 +99,16 @@ and reported easy maintenance for years.
 ## Hi, I'm Miriam
 
 I co-founded OddBird with my brothers in 2008
-to provide custom web application design and development,
-along with refactors for integrated design systems,
+to provide **custom web application design and development**,
+along with refactors for **integrated design systems,
 accessibility, performance,
-and long-term sustainability.
+and long-term sustainability**.
 
 Since then OddBird has become an industry leaders --
 from our work on Django, Sass, and Susy,
-to the Mozilla Developer Channel,
-and in-depth trainings on front-end architecture, workflow,
-component libraries, testing, and documentation.
+to the **Mozilla Developer Channel**,
+and in-depth **trainings on front-end architecture, workflow,
+component libraries, testing, and documentation**.
 
 We'd love to help you
 take your app to the next level.

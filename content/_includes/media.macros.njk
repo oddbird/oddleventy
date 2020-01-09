@@ -64,6 +64,16 @@
 </figure>
 {%- endmacro %}
 
+{% macro logos(
+  projects
+) %}
+<div class="logo-grid">
+  {%- for project in projects -%}
+    {{- svg('logos/' + project) | safe -}}
+  {%- endfor -%}
+</div>
+{% endmacro %}
+
 {#
   Ratios
   ------

@@ -14,6 +14,39 @@
   margin-top: var(--double-gutter);
 }
 
+// Titles
+// ------
+
+[data-section-title] {
+  --indent: var(--gutter-plus);
+  background: var(--feature);
+  color: var(--bg);
+  padding: var(--quarter-shim) var(--spacer) var(--half-shim);
+  margin: var(--double-gutter) auto;
+  width: max-content;
+}
+
+[data-section-title='left'] {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    calc(100% - var(--indent)) 50%,
+    100% 100%,
+    0 100%
+  );
+  margin-left: calc(var(--page-margin) * -1);
+  padding-left: var(--page-margin);
+}
+
+[data-section-title='right'] {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, var(--indent) 50%);
+  margin-right: calc(var(--page-margin) * -1);
+  padding-right: var(--page-margin);
+}
+
+// Blocks
+// ------
+
 [data-block] {
   margin-block: var(--double-gutter);
 }
