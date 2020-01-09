@@ -112,3 +112,25 @@ blockquote:not([data-quote]) {
     transform: translateY(calc(var(--offset) * -1));
   }
 }
+
+// Signature
+// ---------
+
+.signature {
+  display: grid;
+  grid:
+    [sig-start] auto [by-start] var(--gutter-plus) [sig-end] auto [by-end]
+    / [sig-start] var(--spacer) [by-start] max-content [by-end sig-end];
+  justify-content: end;
+  transform: rotate(calc(var(--rotate) * -1));
+
+  [data-img] {
+    grid-area: sig;
+    height: 4em;
+    width: auto;
+  }
+
+  .byline {
+    grid-area: by;
+  }
+}

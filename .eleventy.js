@@ -9,7 +9,6 @@ const tags = require('./src/filters/tags');
 const time = require('./src/filters/time');
 const type = require('./src/filters/type');
 const birds = require('./src/filters/birds');
-const svg = require('./src/filters/svg');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
@@ -58,8 +57,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('withData', pages.withData);
   eleventyConfig.addFilter('titleSort', pages.titleSort);
-
-  eleventyConfig.addFilter('svgo', svg.clean);
 
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('authorPage', birds.authorPage);

@@ -69,5 +69,17 @@
   {%- set title = utility.link_if(data.title, data.url if not venue, class='p-job-title') if data.title else none -%}
   {%- set context = utility.link_if([title, venue] | join(' <i>at</i> '), data.url) if (title and venue) else (title or venue) -%}
   {%- set name = utility.link_if(data.name, data.url if not context, class='p-name') -%}
-  {{- [name, context] | join(', ') | safe -}}
+  {%- set full = [name, context] | join(', ') if (name and context) else (name or context) -%}
+  {{- full | safe -}}
 {%- endmacro %}
+
+{% macro signature() %}
+{% set data = {
+  'name': 'Miriam Suzanne',
+  'url': '/authors/miriam/'
+} %}
+<div class="signature h-card">
+{{ media.svg('icons/miriam-sig') }}
+<p class="byline">{{ _cite(data) | safe }}</p>
+</div>
+{% endmacro %}

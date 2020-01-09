@@ -82,14 +82,20 @@ and reported easy maintenance for years.
 
 ## Hi, I'm Miriam
 
-I cofounded OddBird with my brothers in 2008
-to provide custom web application design, development, and training.
-Since then OddBird has become an industry leader
-in open-source tooling and training,
-while providing top shelf services for our clients.
+I co-founded OddBird with my brothers in 2008
+to provide custom web application design and development,
+along with refactors for integrated design systems,
+accessibility, performance,
+and long-term sustainability.
 
---[Miriam Suzanne](/authors/miriam/)
+Since then OddBird has become an industry leaders --
+from our work on Django, Sass, and Susy,
+to the Mozilla Developer Channel,
+and in-depth trainings on front-end architecture, workflow,
+component libraries, testing, and documentation.
 
-{{ media.svg('icons/miriam-sig') | svgo }}
+We'd love to help you
+take your app to the next level.
 
+{{ quotes.signature() }}
 {% endcall %}

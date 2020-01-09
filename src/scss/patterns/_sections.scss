@@ -23,8 +23,10 @@
 }
 
 [data-block~='rotate'] {
+  transform: rotate(var(--rotate));
+
   @include tools.above('medium-page') {
-    transform: rotate(-6deg);
+    --rotate: -6deg;
   }
 }
 
