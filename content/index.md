@@ -75,10 +75,12 @@ Then **we bring that expertise to your custom web projects**.
 Our clients have gained traction,
 been acquired,
 and reported easy maintenance for years.
+Our specialties include:
 
-- Python & Django (*core contributor*)
-- CSS & Sass (*core contributor*)
-- JavaScript & Vue, React, Node, etc.
+- Strategy, branding, and design
+- Python & Django (*core contributorss*)
+- CSS & Sass (*core contributors*)
+- JavaScript with Vue, React, Node, etc...
 - WordPress
 - Accessible HTML & Nunjucks
 

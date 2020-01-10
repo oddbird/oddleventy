@@ -120,7 +120,7 @@ blockquote:not([data-quote]) {
   display: grid;
   grid:
     [sig-start] auto [by-start] var(--gutter-plus) [sig-end] auto [by-end]
-    / [sig-start] var(--spacer) [by-start] max-content [by-end sig-end];
+    / [sig-start] 3em [by-start] max-content [by-end sig-end];
   justify-content: end;
   transform: rotate(calc(var(--rotate) * -1));
 
