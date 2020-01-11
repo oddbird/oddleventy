@@ -1,9 +1,9 @@
-{% import 'media.macros.njk' as media %}
+{% import 'embed.macros.njk' as embed %}
 
 {% if image.src %}
   <div id="hero">
     {% set style = ['--hero-position', image.position] | join(':') if image.position else none %}
-    {{ media.img(
+    {{ embed.img(
       src=image.src,
       alt=image.alt,
       attrs={'style': style}

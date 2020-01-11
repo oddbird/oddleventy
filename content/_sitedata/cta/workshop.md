@@ -17,10 +17,10 @@ summary: |
 
 {{ summary | md | safe }}
 
-{% import 'media.macros.njk' as media %}
+{% import 'embed.macros.njk' as embed %}
 {% set default = collections.all | pageContent('/_sitedata/cta/default/') %}
 
-{{ media.grid(
-  image=media.svg('faces/miriam'),
+{{ embed.media_block(
+  media=embed.svg('faces/miriam'),
   content=default
 ) }}

@@ -73,7 +73,7 @@ media:
     <<: *drupal
 ---
 {% import "quotes.macros.njk" as quotes %}
-{% import "media.macros.njk" as media %}
+{% import "embed.macros.njk" as embed %}
 
 The web is more than a technology platform,
 it was created with a mission statement.
@@ -97,7 +97,7 @@ and designing for edge-cases with integrated teams.
 
 ------
 
-{{ media.fig(
+{{ embed.figure(
   data=media,
   caption='Conference videos…'
 ) }}

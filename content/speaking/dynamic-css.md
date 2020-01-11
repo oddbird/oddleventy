@@ -120,7 +120,7 @@ media:
     <<: *jsconf
 ---
 {% import "quotes.macros.njk" as quotes %}
-{% import "media.macros.njk" as media %}
+{% import "embed.macros.njk" as embed %}
 
 CSS has come a long way since the browser wars of the late 90s.
 What used to be a struggle,
@@ -140,7 +140,7 @@ without all the invasive Javascript.
 
 ------
 
-{{ media.fig(
+{{ embed.figure(
   data=media,
   caption='Conference videos…'
 ) }}

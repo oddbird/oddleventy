@@ -1,4 +1,4 @@
-{% import 'media.macros.njk' as media %}
+{% import 'embed.macros.njk' as embed %}
 
 {% set device = (image and image.device) %}
 {% set details %}
@@ -11,13 +11,13 @@
   data-layout="header"
   data-header="{{ 'device' if device else 'hero' }}">
   {% if device %}
-    {% set hero = media.screen(
+    {% set hero = embed.screen(
       fill=image.fill,
-      content=media.img(image.src, image.alt)
+      content=embed.img(image.src, image.alt)
     ) %}
 
-    {{ media.grid(
-      image=hero,
+    {{ embed.media_block(
+      media=hero,
       name='hero',
       reverse='vertical',
       attrs={'data-block': 'rotate'},

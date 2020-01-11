@@ -45,6 +45,14 @@ const get = (data, attr, value) => {
   return data.filter((item) => item[attr]);
 };
 
+const styles = (dict) => {
+  const map = Object.keys(dict).map((prop) => {
+    const val = dict[prop];
+    return val ? `${prop}:${val};` : '';
+  });
+  return map.reduce((all, one) => `${all}${one}`, '');
+};
+
 module.exports = {
   groupBy,
   typeCheck,
@@ -54,4 +62,5 @@ module.exports = {
   jsonString,
   only,
   get,
+  styles,
 };

@@ -24,9 +24,9 @@ summary: |
   where folks are talking more and more about it
   and that it's becoming something we should learning.
 ---
-{% import "media.macros.njk" as media %}
+{% import "embed.macros.njk" as embed %}
 
-{{ media.fig(
+{{ embed.figure(
   video.src,
   video.caption
 ) }}

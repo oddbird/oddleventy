@@ -54,7 +54,7 @@ media:
     <<: *vue
 ---
 {% import "quotes.macros.njk" as quotes %}
-{% import "media.macros.njk" as media %}
+{% import "embed.macros.njk" as embed %}
 
 We don’t all have dedicated teams and budgets
 to build a centralized system.
@@ -72,7 +72,7 @@ living design systems in an agile and integrated process?
 
 ------
 
-{{ media.fig(
+{{ embed.figure(
   data=media,
   caption='Conference videos…'
 ) }}

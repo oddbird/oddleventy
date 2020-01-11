@@ -1,0 +1,208 @@
+{% import 'utility.macros.njk' as utility %}
+
+
+{% macro media_block(
+  media,
+  name='',
+  attrs={},
+  reverse=false,
+  content=none
+) %}
+{%- set content = content if (content != none) else caller() -%}
+<div data-media="{{ name }}" {{ utility.attr_if('data-reverse', reverse) }} {{ utility.show_attrs(attrs) }}>
+<div class="media-image">{{ media | safe }}</div>
+<div class="media-content">{{ content | safe }}</div>
+</div>
+{% endmacro %}
+
+
+{% macro figure(
+  data=none,
+  caption=none,
+  content=none
+) -%}
+{%- set content = content or _fig_content(data) -%}
+{% if content %}
+<figure>
+<div class="fig-content">
+{{- content | safe -}}
+</div>
+{%- if caption -%}
+<figcaption>
+{{- caption | mdInline | safe -}}
+</figcaption>
+{%- endif -%}
+</figure>
+{% endif %}
+{%- endmacro %}
+
+
+{% macro logos(
+  projects
+) %}
+<div class="logo-grid">
+  {%- for project in projects -%}
+    {{- svg('logos/' + project) | safe -}}
+  {%- endfor -%}
+</div>
+{% endmacro %}
+
+
+{% macro icon_block(
+  data,
+  title=none
+) -%}
+{%- if data -%}
+<section class="icon-blocks">
+{%- if title %}<h2>{{ title | mdInline | safe }}</h2>{% endif -%}
+{%- for item in data -%}
+{%- call media_block(
+  media=utility.link_if(svg(item.icon), item.url),
+  name='icon-block'
+) -%}
+{%- if item.title -%}
+<h3>{{ utility.link_if(item.title, item.url) }}</h3>
+{%- endif -%}
+{{ item.text | md | safe }}
+{%- endcall -%}
+{%- endfor -%}
+</section>
+{%- endif -%}
+{%- endmacro %}
+
+
+{#
+  Media Types
+  -----------
+#}
+{% macro img(
+  src,
+  alt='',
+  attrs={}
+) -%}
+{%- if src -%}
+{%- set src = src if ('://' in src) else ('/assets/images/' + src) -%}
+{%- set main = {
+  'src': src,
+  'alt': alt
+} -%}
+<img {{ utility.show_attrs(main) }} {{ utility.show_attrs(attrs) }}/>
+{%- endif -%}
+{%- endmacro %}
+
+
+{% macro svg(
+  path
+) -%}
+  {%- include path + '.svg' -%}
+{%- endmacro %}
+
+
+{% macro iframe(
+  src,
+  width=none,
+  height=none,
+  span=none
+) %}
+  {%- set attrs = {
+    'src': src,
+    'width': width,
+    'height': height,
+    'frameborder': '0',
+    'webkitallowfullscreen': true,
+    'mozallowfullscreen': true,
+    'allowfullscreen': true
+  } -%}
+  {%- set content %}<iframe {{ utility.show_attrs(attrs) }}></iframe>{% endset -%}
+  {{- ratio(width, height, span, content) | safe -}}
+{% endmacro %}
+
+
+{% macro audio(
+  src,
+  span
+) -%}
+{%- set style = {
+  '--width': '100%',
+  '--span': span
+} -%}
+<audio src="{{ src }}" {{ utility.style_if(style) }} controls>{{ src | mdInline }}</audio>
+{%- endmacro %}
+
+
+{% macro screen(
+  device='iphone',
+  fill=none,
+  content=none
+) %}
+{%- set content = content if (content != none) else caller() -%}
+{%- set style = {'--device-fill': fill} -%}
+<div data-screen="{{ device }}" {{ utility.style_if(style) }}>
+{{ content | safe }}
+{% include 'devices/' + device + '.svg' %}
+</div>
+{% endmacro %}
+
+
+{#
+  Ratios
+  ------
+#}
+{% macro ratio(
+  width=none,
+  height=none,
+  span=none,
+  content=none
+) %}
+{%- set content = content if (content != none) else caller() -%}
+{%- if width | typeCheck('number') and height | typeCheck('number') -%}
+  {%- set style = {
+    '--ratio': (width / height),
+    '--span': span
+  } -%}
+<div class="ratio" {{ utility.style_if(style) }}\>{{ content | safe }}</div>
+  {%- else -%}
+    {{- content | safe -}}
+  {%- endif -%}
+{%- endmacro %}
+
+
+{#
+  Placement
+  ---------
+#}
+{% macro place(
+  width,
+  height=none,
+  content=none
+) -%}
+{%- set content = content if (content != none) else caller() -%}
+{%- set style = {
+  '--width': width,
+  '--height': height
+} -%}
+<div data-place {{ utility.style_if(style) }}>{{ content | safe }}</div>
+{%- endmacro %}
+
+
+{#
+  Private
+  -------
+#}
+{% macro _fig_content(
+  data
+) -%}
+{%- for item in data -%}
+  {%- if item.img -%}
+    {%- set style = {
+      '--width': item.width,
+      '--span': item.span
+    } | styles -%}
+    {{- img(item.img, item.alt, {'style': style}) | safe -}}
+  {%- elif item.iframe -%}
+    {{- iframe(item.iframe, item.width, item.height, item.span) -}}
+  {%- elif item.audio -%}
+    {{- audio(item.audio, span) -}}
+  {%- endif -%}
+{%- endfor -%}
+{%- endmacro %}

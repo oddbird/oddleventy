@@ -14,12 +14,14 @@ summary: |
   On Episode 18,
   the TalkScript team continues the live-ish at JSConfUS podcast series
   with guests Myles Borins, Tim Doherty, and Miriam Suzanne. Listen in!
-media:
-  - audio: https://media.blubrry.com/sitepen/p/media.sitepen.com/podcast/TalkScript_018.mp3?_=1
+audio:
+  caption: Listen to the podcast...
+  src:
+    - audio: https://media.blubrry.com/sitepen/p/media.sitepen.com/podcast/TalkScript_018.mp3?_=1
 ---
-{% import "media.macros.njk" as media %}
+{% import "embed.macros.njk" as embed %}
 
-{{ media.fig(
-  data=media,
-  caption='Listen to the podcast…'
+{{ embed.figure(
+  data=audio.src,
+  caption=audio.caption
 ) }}

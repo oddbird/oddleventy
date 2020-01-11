@@ -97,7 +97,7 @@ media:
   - <<: *django
 ---
 {% import "quotes.macros.njk" as quotes %}
-{% import "media.macros.njk" as media %}
+{% import "embed.macros.njk" as embed %}
 
 For those few cases where a grid really is required,
 we'll talk about the best ways to roll your own,
@@ -116,7 +116,7 @@ and how to get started with only a few lines of code.
 
 ------
 
-{{ media.fig(
+{{ embed.figure(
   data=media,
   caption='Conference videos…'
 ) }}

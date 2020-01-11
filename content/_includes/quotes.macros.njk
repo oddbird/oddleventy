@@ -1,5 +1,12 @@
 {% import "utility.macros.njk" as utility %}
-{% import 'media.macros.njk' as media %}
+{% import 'embed.macros.njk' as embed %}
+
+{% macro pullquote(
+  content=none
+) -%}
+{%- set content = content if (content != none) else caller() -%}
+<div class="pullquote">{{ content | md | safe }}</div>
+{%- endmacro %}
 
 {% macro from(
   collection,
@@ -32,7 +39,7 @@
 ) -%}
 {%- set img -%}
   {%- if data.face -%}
-    {{- media.img(
+    {{- embed.img(
       src='quotes/' + data.face,
       attrs={
         'class': 'u-photo',
@@ -46,8 +53,8 @@
 {%- endset -%}
 
 <blockquote class="h-card" data-quote="{{ type or '' }}">
-{%- call media.grid(
-  image=img,
+{%- call embed.media_block(
+  media=img,
   name='quote'
 ) -%}
 {{- data.text | md | safe -}}
@@ -79,7 +86,7 @@
   'url': '/authors/miriam/'
 } %}
 <div class="signature h-card">
-{{ media.svg('icons/miriam-sig') }}
+{{ embed.svg('icons/miriam-sig') }}
 <p class="byline">{{ _cite(data) | safe }}</p>
 </div>
 {% endmacro %}

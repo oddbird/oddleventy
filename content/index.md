@@ -28,12 +28,12 @@ work:
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
-{% import 'media.macros.njk' as media %}
+{% import 'embed.macros.njk' as embed %}
 {% import 'section.macros.njk' as section %}
 
 {{ section.title('Featured Clients') }}
 
-{{ media.logos([
+{{ embed.logos([
   'orcas',
   'mozilla',
   'sram',
@@ -50,7 +50,7 @@ work:
 
 {{ section.title('Developer Tools') }}
 
-{{ media.logos([
+{{ embed.logos([
   'django',
   'sass',
   'remedy',
@@ -59,8 +59,8 @@ work:
   'true'
 ]) }}
 
-{% call media.grid(
-  image=media.img(
+{% call embed.media_block(
+  media=embed.img(
     src='writing/jssass.png',
     alt='Jump Start Sass, by Miriam Suzanne and Hugo Giraudel'
   ),
@@ -93,8 +93,8 @@ Our specialties include:
 ]) }}
 
 
-{% call media.grid(
-  image=media.svg('faces/miriam'),
+{% call embed.media_block(
+  media=embed.svg('faces/miriam'),
   attrs={'data-block': 'center media-page rotate'}
 ) %}
 
