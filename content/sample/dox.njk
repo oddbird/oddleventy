@@ -1,0 +1,96 @@
+---
+pagination:
+  data: dox
+  size: 1
+  alias: file
+permalink: /sample/macros/{{ file.slug | slug }}/
+renderData:
+  title: '{{ file.info.label or file.name }}'
+  sub: '`{{ file.name }}`'
+eleventyExcludeFromCollections: true
+---
+
+{# Macros ------------------------------- #}
+
+{% macro describe(pattern) %}
+  {% if pattern.note %}
+    {{ pattern.note | md | safe }}
+  {% endif %}
+
+  {% if pattern.params %}
+    <h4>Params:</h4>
+    <ul data-dox="params">
+      {% for key, item in pattern.params %}
+        <li>
+          <code>
+            <strong>{{ key }}</strong>
+            {% if item.type %}
+              {{ '{' + item.type + '}' }}
+            {% endif %}
+            {% if item.default %}
+              = <em>{{ item.default }}</em>
+            {% endif %}
+          </code>
+          {% if item.note %}
+            {{ item.note | md | safe }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if pattern.links %}
+    <h4>Links:</h4>
+    <ul>
+      {% for link in pattern.links %}
+        <li>{{ link | mdInline | safe }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if pattern.todo %}
+    <h4>Todo:</h4>
+    {{ pattern.todo | md | safe }}
+  {% endif %}
+{% endmacro %}
+
+{% macro show(
+  patterns
+) %}
+  {% for pattern in patterns %}
+    <article id="{{ pattern.slug }}">
+      <h3>
+        <a href="#{{ pattern.slug }}">
+          <code>{{ pattern.label }}()</code>
+        </a>
+      </h3>
+
+      {{ describe(pattern) }}
+
+      {% if pattern.example %}
+        <h4>Example:</h4>
+        {% highlight "django" %}{{ pattern.example | safe }}{% endhighlight %}
+      {% endif %}
+    </article>
+  {% endfor %}
+{% endmacro %}
+
+{# Content ------------------------------- #}
+
+{{ describe(file.info) }}
+
+{% for group, patterns in file.patterns | groupby("category") %}
+{% set group = none if (group | lower == 'undefined') else group %}
+<hr>
+
+{% if (loop.length > 1) or group %}
+  <section>
+    <h2>{{ group | capitalize or 'General' }}</h2>
+    {{ show(patterns) }}
+  </section>
+{% else %}
+  {{ show(patterns) }}
+{% endif %}
+{% else %}
+<p>No macros documented…</p>
+{% endfor %}
