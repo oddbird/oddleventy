@@ -10,24 +10,73 @@ renderData:
 eleventyExcludeFromCollections: true
 ---
 
-{% import "doxray.njk" as doxray %}
+{% macro describe(pattern) %}
+  {% if pattern.note %}
+    {{ pattern.note | md | safe }}
+  {% endif %}
 
-{{ doxray.describe(file.info) }}
+  {% if pattern.params %}
+    <ul data-dox="params">
+      {% for key, item in pattern.params %}
+        <li>
+          <code>
+            <strong>{{ key }}</strong>
+            {% if item.type %}
+              {{ '{' + item.type + '}' }}
+            {% endif %}
+            {% if item.default %}
+              = <em>{{ item.default }}</em>
+            {% endif %}
+          </code>
+          {% if item.note %}
+            {{ item.note | md | safe }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if pattern.links %}
+    <h4>Links:</h4>
+    <ul>
+      {% for link in pattern.links %}
+        <li>{{ link | mdInline | safe }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if pattern.todo %}
+    <h4>Todo:</h4>
+    {{ pattern.todo | md | safe }}
+  {% endif %}
+{% endmacro %}
+
+{# Content ------------------------------- #}
+
+{{ describe(file.info) }}
 
 {% for group, patterns in file.patterns | groupby("category") %}
 <hr>
 <section>
-  <h2>{{ group or 'General' }}</h2>
+  <h2>{{ group | capitalize or 'General' }}</h2>
 
-{% for pattern in patterns %}
-  <article id="{{ pattern.slug }}">
-    {{ doxray.heading(pattern.label, pattern.slug) }}
-    {{ doxray.describe(pattern) }}
-    {{ doxray.code(pattern.njk) | safe }}
-  </article>
-{% endfor %}
+  {% for pattern in patterns %}
+    <article id="{{ pattern.slug }}">
+      <h3>
+        <a href="#{{ pattern.slug }}">
+          <code>{{ pattern.label }}()</code>
+        </a>
+      </h3>
+
+      {{ describe(pattern) }}
+
+      {% for example in pattern.examples %}
+        {% highlight "django" %}{{ example | safe }}{% endhighlight %}
+      {% endfor %}
+    </article>
+  {% endfor %}
 
 </section>
 {% else %}
-  No macros documented…
+<p>No macros documented…</p>
 {% endfor %}

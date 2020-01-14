@@ -72,10 +72,25 @@
 {% macro _cite(
   data
 ) -%}
-  {%- set venue = utility.link_if(data.venue, data.url if not data.title, class='p-org h-card h-name') if data.venue else none -%}
-  {%- set title = utility.link_if(data.title, data.url if not venue, class='p-job-title') if data.title else none -%}
-  {%- set context = utility.link_if([title, venue] | join(' <i>at</i> '), data.url) if (title and venue) else (title or venue) -%}
-  {%- set name = utility.link_if(data.name, data.url if not context, class='p-name') -%}
+  {%- set venue = utility.link_if(
+    content=data.venue,
+    url=data.url if not data.title,
+    class='p-org h-card h-name'
+  ) if data.venue else none -%}
+  {%- set title = utility.link_if(
+    content=data.title,
+    url=data.url if not venue,
+    class='p-job-title'
+  ) if data.title else none -%}
+  {%- set context = utility.link_if(
+    content=[title, venue] | join(' <i>at</i> '),
+    url=data.url
+  ) if (title and venue) else (title or venue) -%}
+  {%- set name = utility.link_if(
+    content=data.name,
+    url=data.url if not context,
+    class='p-name'
+  ) -%}
   {%- set full = [name, context] | join(', ') if (name and context) else (name or context) -%}
   {{- full | safe -}}
 {%- endmacro %}

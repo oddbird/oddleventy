@@ -27,7 +27,7 @@
           {{ utility.link_if(
             content=by.data.title | mdInline('amp') | safe,
             url=by.url,
-            class='h-card'
+            class='h-card'}
           ) }}
         {% else %}
           {{ author | capitalize }}
@@ -44,10 +44,10 @@
 
         <i>on</i>
         {{ utility.datetime(
-          pubdate=pubdate or page.date,
           start=start or date or page.date,
           end=end,
-          format='long'
+          format='long',
+          is_pubdate=pubdate or page.date
         ) }}
 
         {% if adr %}

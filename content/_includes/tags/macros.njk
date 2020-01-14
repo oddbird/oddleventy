@@ -71,8 +71,8 @@
     {% for item in data | only(0, 5) %}
       <li>
         {{ utility.link_if(
-          item.data.title | mdInline,
-          item.url
+          content=item.data.title | mdInline,
+          url=item.url
         ) }}
       </li>
     {% endfor %}

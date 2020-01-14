@@ -29,6 +29,9 @@ module.exports = (eleventyConfig) => {
   );
 
   // filters
+  eleventyConfig.addFilter('merge', () =>
+    [...arguments].reduce((all, current) => ({ ...all, ...current }), {}),
+  );
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('objectKeys', utils.objectKeys);
   eleventyConfig.addFilter('jsonString', utils.jsonString);

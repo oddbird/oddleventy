@@ -16,10 +16,10 @@ const includeDir = path.join(remeDir, 'content/_includes/');
 const doxOptions = {
   regex: {
     css: {
-      opening: /^\{#*\s*@docs[^\n]*\n/m,
+      opening: /\{#*\s*@docs[^\n]*\n/m,
       closing: /#}/,
-      comment: /^\{#\s*@docs+(?:[^}]+)*#}/gm,
-      ignore: /^\{#\s*@ignore-docs[\s\S]*/gm,
+      comment: /\{#\s*@docs\s*([^#]|#[^}])*\s*#}/gm,
+      ignore: /\{#\s*@no-docs[\s\S]*/gm,
     },
   },
 };

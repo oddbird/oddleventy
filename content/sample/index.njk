@@ -10,7 +10,7 @@ summary: |
 <ul>
 {% for item in collections.sample %}
   {% if item.url != page.url %}
-  <li><a href="{{ item.url }}">{{ item.data.title | mdInline | safe }}</a></li>
+  <li><a href="{{ item.url }}">{{ (item.data.title or item.renderData.title or item.url) | mdInline | safe }}</a></li>
   {% endif %}
 {% endfor %}
 </ul>
