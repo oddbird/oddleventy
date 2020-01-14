@@ -7,6 +7,13 @@ summary: |
   bibendum cum consectetur facilisis eu,
   venenatis at id pharetra dolor elit nullam dui phasellus fames iaculis,
   commodo euismod mi urna non nunc ac accumsan neque imperdiet.
+press:
+  - text: |
+      Praesent conubia vel lorem cursus sapien aliquet odio,
+      integer rutrum non donec parturient montes facilisi,
+      maecenas inceptos nullam eros hendrerit natoque.
+    name: Someone
+    title: Latin
 ---
 
 ## [This subtitle is an H2 with a link](#)
@@ -59,20 +66,18 @@ Consequat scelerisque egestas ut mollis feugiat sit velit per cubilia, gravida d
 >
 > ---Mia, OddBird
 
-Quotes can also be generated from data,
-either one at a time with the `show()` macro:
-
 {% import 'quotes.macros.njk' as quotes %}
 
-{{ quotes.show(collections.all | pageData(
-  '/work/metadeploy/',
-  'press',
-  {'slug': 'extension'}
-)) }}
+Quotes can also be generated from data on any page,
+either one at a time:
+
+{{ quotes.from(collections.all, '/work/metadeploy/', 'extension') }}
 
 Or in a grid:
 
-{{ quotes.grid(collections.all | pageData(
-  '/work/timedesigner/',
-  'press'
-)) }}
+{{ quotes.from(collections.all, '/work/timedesigner/') }}
+
+To show a quote or quotes from the current page,
+you can call `quotes.grid()` or `quotes.blockquote()` directly:
+
+{{ quotes.grid(press) }}
