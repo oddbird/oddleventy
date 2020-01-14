@@ -39,7 +39,7 @@ media:
   - span: full
     <<: *cssconf
 ---
-{% import "content.macros.njk" as content %}
+{% import "embed.macros.njk" as embed %}
 
 We'll find ways to integrate maps into any project
 before we push them to their limits.
@@ -53,7 +53,7 @@ before we push them to their limits.
 
 ------
 
-{{ content.fig(
+{{ embed.figure(
   data=media,
   caption='Conference videos…'
 ) }}

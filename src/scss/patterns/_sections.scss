@@ -1,93 +1,70 @@
-// Sections Pattern
-// ================
+@use '../../../node_modules/accoutrement/sass/tools';
+@use '../config/scale';
+@use 'sass:map';
 
-[data-module] {
-  margin: size('gutter') auto;
-  max-width: size('full-content');
-  padding: 0 size('gutter');
+// Main Actions
+// ------------
+/// Main actions are large block links,
+/// used at the end of a section
+/// to represent the main call to action of that section.
+/// @group links
+.main-action {
+  --link: var(--accent);
+  font-size: var(--medium);
+  margin-top: var(--double-gutter);
 }
 
-.grid-template {
-  max-width: 100%;
+// Titles
+// ------
+
+[data-section-title] {
+  --indent: var(--gutter-plus);
+  background: var(--feature);
+  color: var(--bg);
+  padding: var(--quarter-shim) var(--spacer) var(--half-shim);
+  margin: var(--double-gutter) auto;
+  width: max-content;
 }
 
-// Dividers
-// --------
-
-[divider] {
-  position: relative;
-}
-
-[divider-title] {
-  font-size: inherit;
-}
-
-// Small Dividers
-// --------------
-
-[divider='small'] {
-  @include extend('extend-small');
-  margin: size('spacer') 0 size('gutter');
-  text-align: center;
-}
-
-[divider-line='small'] {
-  @include small-divider;
-}
-
-[divider-title='small'] {
-  @include font-family('body');
-  @include invert;
+[data-section-title='left'] {
   clip-path: polygon(
-    100% 0%,
-    calc(100% - #{size('shim-plus')}) 50%,
+    0 0,
+    100% 0,
+    calc(100% - var(--indent)) 50%,
     100% 100%,
-    0 100%,
-    #{size('shim-plus')} 50%,
-    0 0
+    0 100%
   );
-  display: inline-block;
-  margin: size('gutter') auto;
-  padding: size('half-shim') size('spacer');
+  margin-left: calc(var(--page-margin) * -1);
+  padding-left: var(--page-margin);
 }
 
-// Large Dividers
-// --------------
+[data-section-title='right'] {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, var(--indent) 50%);
+  margin-right: calc(var(--page-margin) * -1);
+  padding-right: var(--page-margin);
+}
 
-[divider='large'] {
-  @include z-index('large-divider');
-  margin-top: size('spacer');
-  text-align: center;
+// Blocks
+// ------
 
-  [data-region='banner'] & {
-    margin-top: 0;
+[data-block] {
+  margin-block: var(--double-gutter);
+}
+
+[data-block~='center'] {
+  margin-inline: auto;
+}
+
+[data-block~='rotate'] {
+  transform: rotate(var(--rotate));
+
+  @include tools.above('medium-page') {
+    --rotate: -6deg;
   }
 }
 
-[divider-line='large'] {
-  @include section-arrow;
-  box-shadow: 0 2px 2px color('shadow');
-  overflow: visible;
-
-  [data-location*='susysite'] & {
-    @include section-arrow('brand-pink');
-  }
-
-  [data-location*='hermansite'] & {
-    @include section-arrow('action-hover');
-  }
-}
-
-[divider-title='large'] {
-  margin: size('gutter') size('gutter') size('spacer');
-
-  @include above('small-page') {
-    padding-top: size('half-shim');
-  }
-}
-
-.section-end {
-  + section {
-    margin-top: size('spacer');
+@each $name in map.keys(scale.$page-sizes) {
+  [data-block~='#{$name}'] {
+    max-width: var(--#{unquote($name)});
   }
 }

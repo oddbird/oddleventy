@@ -12,11 +12,27 @@
 [data-media] {
   align-items: var(--align, start);
   display: grid;
-  grid-gap: var(--shim) var(--gutter);
+  grid-gap: var(--gutter);
+  grid-template-areas: var(--reverse-y, 'image' 'content');
   margin: var(--newline) 0;
 
+  &[data-reverse~='vertical'] {
+    --reverse-y: 'content' 'image';
+  }
+
   @include tools.above(40em) {
-    grid-template-columns: fit-content(25%) minmax(min-content, 1fr);
+    grid-template-areas: var(--reverse-x, 'image content');
+    grid-template-columns: fit-content(25%) minmax(
+        min-content,
+        var(--media-content, 1fr)
+      );
+
+    &[data-reverse~='horizontal'] {
+      --reverse-x: 'content image';
+      grid-template-columns: minmax(min-content, var(--media-content, 1fr)) fit-content(
+          25%
+        );
+    }
   }
 }
 
@@ -26,16 +42,25 @@
 /// for min/max and width values
 /// @group media
 .media-image {
+  grid-area: image;
   justify-self: center;
   max-width: var(--media-max, initial);
   min-width: var(--media-min, initial);
   width: var(--media-size, initial);
+
+  img,
+  svg {
+    height: auto;
+    width: 100%;
+  }
 }
 
 // Media Content
 // -------------
 /// @group media
 .media-content {
+  grid-area: content;
+
   *:first-child {
     margin-top: 0;
   }

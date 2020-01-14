@@ -77,29 +77,36 @@ press:
       from @MiriSuzanne --
       color, layout & animation all in css
       and only using JS to feed data.
-    credit: Jason Pamental
-    title: Invited Expert on the W3C
+    name: Jason Pamental
+    title: Invited Expert
+    venue: W3C
+    icon: twitter
     url: https://twitter.com/jpamental/status/1118585546803036160
   - text: |
       Well that was awesome!!!
       “If you think CSS is a dumb language,
       you’re a dumb language — CSS IS AWESOME!”
       @MiriSuzanne thank you so much for the amazing talk!
-    credit: Nour Saud
+    name: Nour Saud
     title: Software Engineer
+    icon: twitter
     url: https://twitter.com/Nour_ASoud/status/1118588349994823681
   - text: |
       Miriam has always been nothing but spot-on,
       professional, funny, while also being extremely knowledgeable,
       smart, polite and always on time.
-    credit: Vitaly Friedman
-    title: Founder of Smashing Magazine & Conference
+    name: Vitaly Friedman
+    title: Founder
+    venue: Smashing Magazine & Conference
+    icon: twitter
     url: https://www.smashingmagazine.com/events/
   - text: |
       So stoked @mirisuzanne is @vueconfus !!!
       look at how cool CSS is ~ and all the squishy things it does.
-    credit: Ngan Hoang
-    title: Principal Designer at Prefect.io
+    name: Ngan Hoang
+    title: Principal Designer
+    venue: Prefect.io
+    icon: twitter
     url: https://twitter.com/itsngansense/status/1111001282528063488
 summary: |
   Don't let the declarative syntax fool you --
@@ -112,7 +119,8 @@ media:
   - span: full
     <<: *jsconf
 ---
-{% import "content.macros.njk" as content %}
+{% import "quotes.macros.njk" as quotes %}
+{% import "embed.macros.njk" as embed %}
 
 CSS has come a long way since the browser wars of the late 90s.
 What used to be a struggle,
@@ -128,11 +136,11 @@ without all the invasive Javascript.
 
 ------
 
-{{ content.quotes(press) }}
+{{ quotes.grid(press) }}
 
 ------
 
-{{ content.fig(
+{{ embed.figure(
   data=media,
   caption='Conference videos…'
 ) }}

@@ -50,6 +50,7 @@ $spacing-sizes: (
   'newline': '#gutter',
   'gutter-plus': calc(var(--gutter) * 1.5),
   'double-gutter': calc(var(--gutter) * 2),
+  'triple-gutter': calc(var(--gutter) * 3),
   'shim': calc(var(--gutter) / 2),
   'shim-plus': calc(var(--gutter) * 0.75),
   'half-shim': calc(var(--gutter) / 4),
@@ -71,7 +72,7 @@ $spacing-sizes: (
 /// @sizes {ruler}
 /// @group config-scale
 $theme-sizes: (
-  'body-inline': calc(var(--quarter-shim) + 4vw),
+  'page-margin': calc(var(--quarter-shim) + 4vw),
   'border-width': medium,
   'radius': var(--half-shim),
 );
@@ -91,6 +92,7 @@ $theme-sizes: (
 /// @group config-scale
 $page-sizes: (
   'small-page': 30rem,
+  'media-page': 38rem,
   'medium-page': 45rem,
   'large-page': 70rem,
 );

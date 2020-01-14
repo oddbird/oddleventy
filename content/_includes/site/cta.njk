@@ -1,15 +1,11 @@
-{% import 'content.macros.njk' as render %}
+{% import 'embed.macros.njk' as embed %}
 
 {% set cta_url = ['/_sitedata/cta/', cta or 'default', '/'] | join %}
 {% set cta = collections.all | getPage(cta_url) %}
 
 {% if cta %}
   <section data-layout="cta">
-    {% if cta.data.image %}
-      <img
-        src="{{ site.images + cta.data.image.src }}"
-        alt="{{ cta.data.image.alt }}">
-    {% endif %}
+    {{ embed.img(cta.data.image.src, cta.data.image.alt) }}
 
     {% set cta_content %}
       <h2>{{ cta.data.title | mdInline | safe }}</h2>
@@ -17,10 +13,10 @@
     {% endset %}
 
     {% if cta.data.face %}
-      {{ render.media(
-        src='faces/' + (cta.data.media.face or 'miriam') + '.svg',
-        embed=true,
-        content=cta_content | safe
+      {% set face = 'faces/' + (cta.data.embed.face or 'miriam') %}
+      {{ embed.media_block(
+        media=embed.svg(face),
+        content=cta_content
       ) }}
     {% else %}
       {{ cta_content | safe }}

@@ -1,0 +1,92 @@
+{% import "utility.macros.njk" as utility %}
+{% import 'embed.macros.njk' as embed %}
+
+{% macro pullquote(
+  content=none
+) -%}
+{%- set content = content if (content != none) else caller() -%}
+<div class="pullquote">{{ content | md | safe }}</div>
+{%- endmacro %}
+
+{% macro from(
+  collection,
+  page,
+  slug=none
+) -%}
+  {%- set data = collection | pageData(page, 'press') -%}
+  {%- if slug -%}
+    {{- show(data | get('slug', slug)) -}}
+  {%- else -%}
+    {{- grid(data) if data else none -}}
+  {%- endif -%}
+{%- endmacro %}
+
+{% macro grid(
+  data
+) %}
+<div class="quote-grid">
+  {%- for item in data -%}
+    {%- if item.text -%}
+      {{- show(item, 'grid') -}}
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+{% endmacro %}
+
+{% macro show(
+  data,
+  type='solo'
+) -%}
+{%- set img -%}
+  {%- if data.face -%}
+    {{- embed.img(
+      src='quotes/' + data.face,
+      attrs={
+        'class': 'u-photo',
+        'height': 60,
+        'width': 60
+      }
+    ) -}}
+  {%- else -%}
+    {%- include 'icons/' + (data.icon or 'tags') + '.svg' -%}
+  {%- endif -%}
+{%- endset -%}
+
+<blockquote class="h-card" data-quote="{{ type or '' }}">
+{%- call embed.media_block(
+  media=img,
+  name='quote'
+) -%}
+{{- data.text | md | safe -}}
+{{- cite(data) | safe -}}
+{%- endcall -%}
+</blockquote>
+{%- endmacro %}
+
+{% macro cite(
+  data
+) -%}
+<p class="byline">---{{ _cite(data) | safe }}</p>
+{%- endmacro %}
+
+{% macro _cite(
+  data
+) -%}
+  {%- set venue = utility.link_if(data.venue, data.url if not data.title, class='p-org h-card h-name') if data.venue else none -%}
+  {%- set title = utility.link_if(data.title, data.url if not venue, class='p-job-title') if data.title else none -%}
+  {%- set context = utility.link_if([title, venue] | join(' <i>at</i> '), data.url) if (title and venue) else (title or venue) -%}
+  {%- set name = utility.link_if(data.name, data.url if not context, class='p-name') -%}
+  {%- set full = [name, context] | join(', ') if (name and context) else (name or context) -%}
+  {{- full | safe -}}
+{%- endmacro %}
+
+{% macro signature() %}
+{% set data = {
+  'name': 'Miriam Suzanne',
+  'url': '/authors/miriam/'
+} %}
+<div class="signature h-card">
+{{ embed.svg('icons/miriam-sig') }}
+<p class="byline">{{ _cite(data) | safe }}</p>
+</div>
+{% endmacro %}

@@ -42,7 +42,7 @@ press:
   - text: |
       Every time I hear Miriam talk, I learn a ton and laugh a ton…
       Watch this talk when it’s published!
-    credit: Sarah Drasner
+    name: Sarah Drasner
     title: Microsoft Sr. Developer Advocate & Vue Core Team member
     url: https://twitter.com/sarah_edo/status/979023728611905536
 summary: |
@@ -53,7 +53,8 @@ media:
   - span: full
     <<: *vue
 ---
-{% import "content.macros.njk" as content %}
+{% import "quotes.macros.njk" as quotes %}
+{% import "embed.macros.njk" as embed %}
 
 We don’t all have dedicated teams and budgets
 to build a centralized system.
@@ -67,11 +68,11 @@ living design systems in an agile and integrated process?
 
 ------
 
-{{ content.quotes(press) }}
+{{ quotes.grid(press) }}
 
 ------
 
-{{ content.fig(
+{{ embed.figure(
   data=media,
   caption='Conference videos…'
 ) }}

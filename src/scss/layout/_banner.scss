@@ -15,7 +15,7 @@
     content: '';
     grid-column: 1 / -1;
     grid-row: menu;
-    margin: 0 calc(var(--body-inline) * -1);
+    margin: 0 calc(var(--page-margin) * -1);
   }
 }
 
