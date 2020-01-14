@@ -1,0 +1,58 @@
+{%- import 'utility.macros.njk' as utility -%}
+
+{# @docs
+label: Tags
+category: file
+note: |
+  Tag-related utilities…
+#}
+
+
+{# @docs
+label: Tag Links
+category: tags
+note: |
+  Get the tag display name, and tag-index URL,
+  and create a link.
+#}
+{% macro tag_link(
+  tag,
+  all
+) -%}
+  {{ utility.link_if(
+    tag | displayName,
+    tag | tagLink(all),
+    class='taglink'
+  ) }}
+{%- endmacro %}
+
+
+{# @docs
+label: Tag List
+category: tags
+note: |
+  Generate a list of tag-links,
+  with a given delimiter, or `ul` markup structure.
+#}
+{% macro tag_list(
+  tags,
+  all,
+  separator='ul'
+) -%}
+{% set tags = tags | publicTags %}
+{% if tags | length > 0 %}
+  {% if (separator == 'ul') %}
+    <ul class="taglist">
+      {%- for tag in tags -%}
+        <li class="tag">
+          {{ tag_link(tag, all) }}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {% else %}
+    {%- for tag in tags -%}
+      {{ tag_link(tag, all) }}{%-if not loop.last %}{{ separator }}{% endif -%}
+    {%- endfor -%}
+  {% endif %}
+{% endif %}
+{%- endmacro -%}

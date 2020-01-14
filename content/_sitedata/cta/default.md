@@ -11,4 +11,4 @@ summary: |
 {% import 'utility.macros.njk' as utility %}
 
 {{ summary | md | safe }}
-{{ utility.inline_list(site.links) }}
+{{ utility.link_list(site.links) }}

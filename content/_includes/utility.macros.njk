@@ -1,51 +1,33 @@
-{# Titles #}
-{% macro section_title(
-  title
-) %}
-  <header
-    class="section-header">
-    <h2 class="section-title">
-      {{ title | typogr | safe }}
-    </h2>
-  </header>
-{% endmacro %}
+{# @docs
+label: Utilities
+category: file
+note: |
+  Utilities can be used just about anywhere,
+  and that's why we love them.
+#}
 
-{# Tags #}
-{% macro tag_link(
-  tag,
-  all
-) -%}
-  {{ link_if(
-    tag | displayName,
-    tag | tagLink(all),
-    class='taglink'
-  ) }}
-{%- endmacro %}
 
-{% macro tag_list(
-  tags,
-  all,
-  separator='ul'
-) -%}
-{% set tags = tags | publicTags %}
-{% if tags | length > 0 %}
-  {% if (separator == 'ul') %}
-    <ul class="taglist">
-      {%- for tag in tags -%}
-        <li class="tag">
-          {{ tag_link(tag, all) }}
-        </li>
-      {%- endfor -%}
-    </ul>
-  {% else %}
-    {%- for tag in tags -%}
-      {{ tag_link(tag, all) }}{%-if not loop.last %}{{ separator }}{% endif -%}
-    {%- endfor -%}
-  {% endif %}
-{% endif %}
-{%- endmacro -%}
-
-{# Attributes #}
+{# @docs
+label: Single Attribute-If
+category: attributes
+note: |
+  Pass in an attribute name and value.
+  If the value is not falsey,
+  we'll display the attribute
+  with appropriate value when necessary.
+params:
+  attr:
+    type: string
+    note: The attribute name
+  value:
+    type: string | boolean
+    default: none
+    note: |
+      The value of the attribute.
+      "True" or "true" (string or boolean)
+      will output the attribute without any value,
+      while falsey values will not output any attribute.
+#}
 {% macro attr_if(
   attr,
   value=none
@@ -57,19 +39,46 @@
   {%- endif -%}
 {% endmacro %}
 
+
+{# @docs
+label: Multiple Attributes-If
+category: attributes
+note: |
+  Render a dictionary of attribute/value pairs
+  into HTML-ready attributes.
+params:
+  attrs:
+    type: dictionary
+#}
 {% macro show_attrs(
   attrs
 ) %}
   {%- for attr, value in attrs %} {{ attr_if(attr, value) }}{%- endfor -%}
 {% endmacro %}
 
+
+{# @docs
+label: Style-If
+category: attributes
+note: |
+  Render a dictionary of property/value pairs
+  into an HTML-ready style attribute.
+params:
+  style:
+    type: dictionary
+#}
 {% macro style_if(
   style
 ) -%}
   {{ attr_if('style', style | styles) }}
 {%- endmacro %}
 
-{% macro inline_list(data) -%}
+
+{# @docs
+label: Link List
+category: links
+#}
+{% macro link_list(data) -%}
   {%- if data -%}
     <ul class="inline-list">
     {%- for link in data -%}
@@ -89,6 +98,27 @@
   {%- endif -%}
 {%- endmacro %}
 
+
+{# @docs
+label: Icon Link
+category: links
+note: |
+  Links with icons require special handling
+  in order to avoid awkward underline collisions.
+params:
+  icon:
+    type: include path
+  text:
+    type: string
+  url:
+    type: url
+  class:
+    type: string
+    default: none
+  attrs:
+    type: dictionary
+    default: (empty dict)
+#}
 {% macro icon_link(
   icon,
   text,
@@ -109,6 +139,11 @@
   ) -}}
 {%- endmacro %}
 
+
+{# @docs
+label: Link If
+category: links
+#}
 {% macro link_if(
   content,
   url=none,
@@ -126,6 +161,12 @@
   {%- endif -%}
 {%- endmacro %}
 
+
+{# @docs
+label: Previous / Next
+category: links
+note: This probably doesn't belong in utilities…
+#}
 {% macro prev_next(to, is) %}
   {% if to %}
     <li>
@@ -135,6 +176,11 @@
   {% endif %}
 {% endmacro %}
 
+
+{# @docs
+label: DateTime
+category: time
+#}
 {% macro datetime(
   pubdate,
   start,

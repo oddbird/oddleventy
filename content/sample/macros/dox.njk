@@ -1,0 +1,33 @@
+---
+pagination:
+  data: dox
+  size: 1
+  alias: file
+permalink: /sample/macros/{{ file.slug | slug }}/
+renderData:
+  title: '{{ file.info.label or file.name }}'
+  sub: '`{{ file.name }}`'
+eleventyExcludeFromCollections: true
+---
+
+{% import "doxray.njk" as doxray %}
+
+{{ doxray.describe(file.info) }}
+
+{% for group, patterns in file.patterns | groupby("category") %}
+<hr>
+<section>
+  <h2>{{ group or 'General' }}</h2>
+
+{% for pattern in patterns %}
+  <article id="{{ pattern.slug }}">
+    {{ doxray.heading(pattern.label, pattern.slug) }}
+    {{ doxray.describe(pattern) }}
+    {{ doxray.code(pattern.njk) | safe }}
+  </article>
+{% endfor %}
+
+</section>
+{% else %}
+  No macros documented…
+{% endfor %}
