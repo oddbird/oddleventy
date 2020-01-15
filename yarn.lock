@@ -2936,10 +2936,10 @@ download@^7.1.0:
     p-event "^2.1.0"
     pify "^3.0.0"
 
-doxray@^0.8.2:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/doxray/-/doxray-0.8.2.tgz#28968dda259d8fe979e6336c7d12f0a832c3cb69"
-  integrity sha512-BMlHchIzrEC4MQpIE3XrdgY4+n+K3folzfU/2Dm0s173ySHcFLr5M+mKhc141wu0UAIU4yxotuHo1ZPuHCkRZg==
+doxray@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/doxray/-/doxray-0.9.0.tgz#0b4c7ece89c8bb462a1fddbe2fb8be4ebf58cd35"
+  integrity sha512-YZc2BWVSNqh9uDPBZbAqWnhYL9SVTnAZfnFGlm8D5CO2Z9Dpe2bvkgwFCja+O4hpIIRSkWDDfR1a40OuOEZ4Fg==
   dependencies:
     deep-equal "~0.2.1"
     glob "~5.0.5"

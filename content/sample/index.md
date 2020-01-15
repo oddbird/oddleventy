@@ -24,6 +24,6 @@ to generate special patterns and effects,
 or convert structured data
 into page content.
 
-{% for file in dox %}
+{% for file in macros %}
 - [`{{ file.name }}`](/sample/macros/{{ file.slug | slug }})
 {%- endfor %}

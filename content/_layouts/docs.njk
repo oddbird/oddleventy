@@ -1,13 +1,5 @@
 ---
-pagination:
-  data: dox
-  size: 1
-  alias: file
-permalink: /sample/macros/{{ file.slug | slug }}/
-renderData:
-  title: '{{ file.info.label or file.name }}'
-  sub: '`{{ file.name }}`'
-eleventyExcludeFromCollections: true
+layout: base
 ---
 
 {# Macros ------------------------------- #}
@@ -48,6 +40,11 @@ eleventyExcludeFromCollections: true
     </ul>
   {% endif %}
 
+  {% if pattern.example %}
+    <h4>Example:</h4>
+    {% highlight doc_lang %}{{ pattern.example | safe }}{% endhighlight %}
+  {% endif %}
+
   {% if pattern.todo %}
     <h4>Todo:</h4>
     {{ pattern.todo | md | safe }}
@@ -66,11 +63,6 @@ eleventyExcludeFromCollections: true
       </h3>
 
       {{ describe(pattern) }}
-
-      {% if pattern.example %}
-        <h4>Example:</h4>
-        {% highlight "django" %}{{ pattern.example | safe }}{% endhighlight %}
-      {% endif %}
     </article>
   {% endfor %}
 {% endmacro %}
@@ -94,3 +86,7 @@ eleventyExcludeFromCollections: true
 {% else %}
 <p>No macros documented…</p>
 {% endfor %}
+
+<hr>
+
+{{ content | safe }}

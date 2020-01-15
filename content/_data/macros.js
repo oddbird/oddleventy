@@ -15,7 +15,7 @@ const includeDir = path.join(remeDir, 'content/_includes/');
 // define the documentation regex…
 const doxOptions = {
   regex: {
-    css: {
+    njk: {
       opening: /\{#*\s*@docs[^\n]*\n/m,
       closing: /#}/,
       comment: /\{#\s*@docs\s*([^#]|#[^}])*\s*#}/gm,
