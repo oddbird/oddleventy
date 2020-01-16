@@ -2,7 +2,7 @@
 
 const { withData } = require('./pages');
 const { unique, slugify } = require('./utils');
-const { get } = require('./events');
+const { getEvents } = require('./events');
 
 /* @docs
 label: Tag Filters
@@ -75,7 +75,7 @@ params:
 const tagData = (collections, sort = 'eventCount') =>
   allTags(collections.all)
     .map((tag) => {
-      const tagEvents = get(collections.all, tag, false);
+      const tagEvents = getEvents(collections.all, tag, false);
       return {
         tag,
         events: tagEvents,

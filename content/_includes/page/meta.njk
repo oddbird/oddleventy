@@ -13,7 +13,7 @@
   <div id="meta">
     {% if sub or dates %}
       <p class="subtitle">
-        {{ sub | mdInline('amp') | safe }}
+        {{ sub | mdInline | safe }}
         {%- if sub and dates %}, {% endif %}
         {{ dates }}
       </p>
@@ -25,7 +25,7 @@
         <i>by</i>
         {% if by.data %}
           {{ utility.link_if(
-            content=by.data.title | mdInline('amp') | safe,
+            content=by.data.title | mdInline | safe,
             url=by.url,
             class='h-card'
           ) }}
@@ -36,7 +36,7 @@
         {% if elsewhere %}
           <i>at</i>
           {{ utility.link_if(
-            content=elsewhere.venue | mdInline('amp') | safe,
+            content=elsewhere.venue | mdInline | safe,
             url=elsewhere.url,
             attrs={'rel': 'bookmark'}
           ) }}

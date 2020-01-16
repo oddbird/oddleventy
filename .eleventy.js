@@ -61,18 +61,16 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('authorPage', birds.authorPage);
 
-  eleventyConfig.addFilter('getEvents', events.get);
-  eleventyConfig.addFilter('countEvents', events.count);
-  eleventyConfig.addFilter('groupName', (group) => events.groupNames[group]);
+  eleventyConfig.addFilter('getEvents', events.getEvents);
+  eleventyConfig.addFilter('groupName', events.groupName);
 
-  eleventyConfig.addFilter('amp', type.amp);
-  eleventyConfig.addFilter('typogr', type.set);
-  eleventyConfig.addFilter('md', type.render);
-  eleventyConfig.addFilter('mdInline', type.inline);
+  eleventyConfig.addFilter('typogr', type.typogr);
+  eleventyConfig.addFilter('md', type.md);
+  eleventyConfig.addFilter('mdInline', type.mdInline);
 
   // shortcodes
-  eleventyConfig.addPairedShortcode('md', type.render);
-  eleventyConfig.addPairedShortcode('mdInline', type.inline);
+  eleventyConfig.addPairedShortcode('md', type.md);
+  eleventyConfig.addPairedShortcode('mdInline', type.mdInline);
   eleventyConfig.addShortcode(
     'getDate',
     (format) => `${time.getDate(time.now, format)}`,
