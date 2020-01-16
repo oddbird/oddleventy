@@ -4,6 +4,11 @@ const pages = require('./pages');
 const { getDate, now } = require('./time');
 const { unique, groupBy } = require('./utils');
 
+/* @docs
+label: Event Filters
+category: file
+*/
+
 const isPublic = (event) => Boolean(event.draft);
 const hasEvents = (page) => page.data.events;
 

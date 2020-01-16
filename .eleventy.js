@@ -33,25 +33,21 @@ module.exports = (eleventyConfig) => {
     [...arguments].reduce((all, current) => ({ ...all, ...current }), {}),
   );
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
-  eleventyConfig.addFilter('objectKeys', utils.objectKeys);
-  eleventyConfig.addFilter('jsonString', utils.jsonString);
-  eleventyConfig.addFilter('only', utils.only);
+  eleventyConfig.addFilter('items', utils.items);
   eleventyConfig.addFilter('get', utils.get);
+  eleventyConfig.addFilter('has', utils.has);
   eleventyConfig.addFilter('styles', utils.styles);
 
   eleventyConfig.addFilter('getDate', time.getDate);
   eleventyConfig.addFilter('rssDate', time.rssDate);
   eleventyConfig.addFilter('rssLatest', time.rssLatest);
 
+  eleventyConfig.addFilter('isPublic', tags.isPublic);
   eleventyConfig.addFilter('publicTags', tags.publicTags);
-  eleventyConfig.addFilter('getTags', tags.getTags);
-  eleventyConfig.addFilter('byEventCount', tags.byEventCount);
-  eleventyConfig.addFilter('byPageCount', tags.byPageCount);
-  eleventyConfig.addFilter('groupTags', tags.groupTags);
-  eleventyConfig.addFilter('withTag', tags.withTag);
+  eleventyConfig.addFilter('allTags', tags.allTags);
+  eleventyConfig.addFilter('tagData', tags.tagData);
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
-  eleventyConfig.addFilter('inTopTagCount', tags.inTopCount);
 
   eleventyConfig.addFilter('meta', pages.meta);
   eleventyConfig.addFilter('getPage', pages.fromCollection);

@@ -4,7 +4,12 @@ const path = require('path');
 
 const removeMd = require('remove-markdown');
 
-const { get } = require('./utils');
+const { get, has } = require('./utils');
+
+/* @docs
+label: Page Filters
+category: file
+*/
 
 const isPublic = (page) => {
   const live = page.data.draft !== true;
@@ -16,7 +21,7 @@ const getPublic = (collection) => collection.filter((page) => isPublic(page));
 
 const fromCollection = (collection, page) => {
   const pageURL = typeof page === 'string' ? page : page.url;
-  return collection.find((thisPage) => thisPage.url === pageURL) || page;
+  return get(collection, 'url', pageURL) || page;
 };
 
 const getData = (data, attrs, test) => {
@@ -46,10 +51,10 @@ const pageContent = (collection, page) =>
 const titleSort = (collection) =>
   collection.sort((a, b) => a.data.title - b.data.title);
 
-const withData = (collection, key, value) =>
-  collection.filter((page) =>
-    page.data && page.data.length ? get(page.data, key, value) : false,
-  );
+const withData = (collection, key, value, first = false) => {
+  const pages = collection.filter((page) => has(page.data, key, value));
+  return pages && first ? pages[0] : pages;
+};
 
 const meta = (collection, page, renderData, site) => {
   page = fromCollection(collection, page.url) || page;

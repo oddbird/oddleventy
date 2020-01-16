@@ -9,36 +9,36 @@ const doxray = require('doxray');
 // to the root directory of any package to be documented
 const remeDir = './';
 
-// relative path from remeDir to njk documents inside the project
-const includeDir = path.join(remeDir, 'content/_includes/');
+// relative path from remeDir to filters inside the project
+const filterDir = path.join(remeDir, 'src/filters/');
 
 // define the documentation regex…
 const doxOptions = {
   regex: {
-    njk: {
-      opening: /\{#*\s*@docs[^\n]*\n/m,
-      closing: /#}/,
-      comment: /\{#\s*@docs\s*([^#]|#[^}])*\s*#}/gm,
-      ignore: /\{#\s*@no-docs[\s\S]*/gm,
+    js: {
+      opening: /\/\*\s*@docs[^\n]*\n/m,
+      closing: /\*\//,
+      comment: /\/\*\s*@docs[^*]*\*+(?:[^/*][^*]*\*+)*\//gm,
+      ignore: /\/\*\s*ignore-@docs[\s\S]*/gm,
     },
   },
 };
 
 module.exports = () => {
-  const njk = [];
+  const js = [];
 
   // get the docs
-  fs.readdir(includeDir, (err, files) => {
+  fs.readdir(filterDir, (err, files) => {
     if (err) {
       throw err;
     }
 
     files
-      .filter((file) => file.endsWith('.macros.njk'))
+      .filter((file) => file.endsWith('.js'))
       .forEach((file) => {
         const data = {};
 
-        const filePath = path.join(includeDir, file);
+        const filePath = path.join(filterDir, file);
         const docs = doxray([filePath], doxOptions);
 
         data.name = file;
@@ -52,9 +52,9 @@ module.exports = () => {
           (pattern) => pattern.category !== 'file',
         );
 
-        njk.push(data);
+        js.push(data);
       });
   });
 
-  return njk;
+  return js;
 };

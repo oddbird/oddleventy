@@ -10,6 +10,11 @@ const mdown = require('markdown-it')({
   .use(require('markdown-it-mark'))
   .use(require('markdown-it-footnote'));
 
+/* @docs
+label: Typography Filters
+category: file
+*/
+
 const amp = (s) => {
   const r = '<span class="amp">&</span>';
   return s ? s.replace(/&amp;/g, '&').replace(/&/g, r) : s;

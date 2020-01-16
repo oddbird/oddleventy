@@ -16,6 +16,17 @@ summary: |
 {%- endif -%}
 {%- endfor %}
 
+
+## Available Filters
+
+Filters are written in JS,
+and can be used to manage and manipulate data.
+
+{% for other in filters -%}
+- [{{ other.title | mdInline | safe }}](/sample/filters/{{ other.slug | slug }})
+{%- endfor %}
+
+
 ## Available Macros
 
 We have a number of nunjucks macros
@@ -24,6 +35,6 @@ to generate special patterns and effects,
 or convert structured data
 into page content.
 
-{% for file in macros %}
-- [`{{ file.name }}`](/sample/macros/{{ file.slug | slug }})
+{% for other in macros -%}
+- [{{ other.title | mdInline | safe }}](/sample/macros/{{ other.slug | slug }})
 {%- endfor %}

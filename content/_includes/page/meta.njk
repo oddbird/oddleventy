@@ -27,7 +27,7 @@
           {{ utility.link_if(
             content=by.data.title | mdInline('amp') | safe,
             url=by.url,
-            class='h-card'}
+            class='h-card'
           ) }}
         {% else %}
           {{ author | capitalize }}
@@ -64,7 +64,7 @@
         {% include "icons/tags.svg" %}
         {{ tagutils.tag_list(
           tags=tags,
-          all=collections
+          all=collections.all
         ) }}
       </div>
     {% endif %}
