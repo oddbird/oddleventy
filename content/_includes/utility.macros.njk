@@ -73,28 +73,6 @@ params:
   {{ attr_if('style', style | styles) }}
 {%- endmacro %}
 
-<<<<<<< HEAD
-{% macro inline_list(data) -%}
-  {%- if data -%}
-    <ul class="inline-list">
-    {%- for link in data -%}
-      <li>
-        {%- if link.icon -%}
-          {{ icon_link(
-            icon=link.icon,
-            text=link.text,
-            url=link.url
-          ) }}
-        {%- else -%}
-          {{ link_if(link.text, link.url) }}
-        {%- endif -%}
-      </li>
-    {%- endfor -%}
-    </ul>
-  {%- endif -%}
-{%- endmacro %}
-=======
->>>>>>> docs
 
 {# @docs
 label: icon_link

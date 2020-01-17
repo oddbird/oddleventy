@@ -7,6 +7,7 @@ active: 2009
 image:
   src: birds/miriam.jpg
 social:
+  email: miriam
   twitter: mirisuzanne
   github: mirisuzanne
   codepen: mirisuzanne

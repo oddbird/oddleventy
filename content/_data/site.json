@@ -8,16 +8,8 @@
   "feed": "feed.atom",
   "styles": ["screen.css"],
   "facebook_id": "1820980378150914",
-  "links": [
-    {
-      "text": "birds@oddbird.net",
-      "url": "mailto:birds@oddbird.net",
-      "icon": "icons/mail"
-    },
-    {
-      "text": "@oddbird",
-      "url": "https://twitter.com/oddbird",
-      "icon": "social/twitter"
-    }
-  ]
+  "social": {
+    "email": "birds",
+    "twitter": "oddbird"
+  }
 }

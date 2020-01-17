@@ -9,16 +9,8 @@ summary: |
 ---
 
 {% import 'utility.macros.njk' as utility %}
+{% import 'contact.macros.njk' as contact %}
 
 {{ summary | md | safe }}
 
-<ul class="inline-list">
-{%- for link in site.links -%}
-<li>{{- utility.icon_link(
-    icon=link.icon + '.svg',
-    text=link.text,
-    url=link.url
-  ) -}}
-</li>
-{%- endfor -%}
-</ul>
+{{ contact.social(site.social, 'OddBird', false) | safe }}
