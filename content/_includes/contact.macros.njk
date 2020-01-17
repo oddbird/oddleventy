@@ -1,33 +1,37 @@
 {% macro form(
   next='/contact/thanks/',
-  submit='send'
+  submit='Send',
+  name='contact'
 ) %}
 <form
-  name="contact"
+  name="{{ name or 'contact' }}"
+  data-form="{{ name or 'contact' }}"
   method="POST"
   action="{{ next }}"
   netlify-honeypot="subject"
   data-netlify="true">
-  <label data-field="name">
-    <span data-label>Name:</span>
-    <input
-      data-input="text"
-      type="text"
-      name="name"
-      required />
-  </label>
-  <label data-field="email">
-    <span data-label>Email:</span>
-    <input
-      data-input="text"
-      type="email"
-      name="email"
-      required />
-  </label>
+  <div data-fieldgroup="contact-info">
+    <label data-field="name">
+      <span data-label>Name:</span>
+      <input
+        data-input="text"
+        type="text"
+        name="name"
+        required />
+    </label>
+    <label data-field="email">
+      <span data-label>Email:</span>
+      <input
+        data-input="text"
+        type="email"
+        name="email"
+        required />
+    </label>
+  </div>
   <label data-field="message">
     <span data-label>Message:</span>
     <textarea
-      data-input="text area"
+      data-input="textarea"
       name="message"
       required></textarea>
   </label>
@@ -35,7 +39,7 @@
     <span>Don't fill out this field:</span>
     <input name="subject" />
   </label>
-  <div data-actions>
+  <div class="form-actions">
     <button
       data-btn="submit"
       type="submit">
@@ -43,4 +47,111 @@
     </button>
   </div>
 </form>
+{% endmacro %}
+
+{% macro subscribe(
+  label='Subscribe to our email newsletter',
+  action='Subscribe',
+  interests='oddnews'
+) %}
+  {% set groups = [
+    {
+      'key': 'oddbooks',
+      'label': 'OddBooks',
+      'value': 1
+    },
+    {
+      'key': 'book_tester',
+      'label': 'OddBooks Tester',
+      'value': 2
+    },
+    {
+      'key': 'oddnews',
+      'label': 'OddNews',
+      'value': 4
+    },
+    {
+      'key': 'vueconfus19',
+      'label': 'Event: VueConf US 2019',
+      'value': 8
+    },
+    {
+      'key': 'beyondtellerand19',
+      'label': 'Event: Beyond Tellerand 2019',
+      'value': 16
+    },
+    {
+      'key': 'smashingconf19',
+      'label': 'Event: Smashing Conference 2019',
+      'value': 32
+    },
+    {
+      'key': 'generate19',
+      'label': 'Event: Generate 2019',
+      'value': 64
+    }
+  ] %}
+
+<!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+  <form
+    action="https://oddbird.us19.list-manage.com/subscribe/post?u=80219aa68d7bad77b9fd2eb93&amp;id=7c27f7fb9a"
+    method="post"
+    id="mc-embedded-subscribe-form"
+    name="mc-embedded-subscribe-form"
+    class="validate"
+    target="_blank"
+    novalidate
+    data-form="email-subscribe"
+  >
+    <div id="mc_embed_signup_scroll" class="odd-input-group">
+      <label for="mce-EMAIL" data-field="contact-email">
+        <span data-label>
+          {{ label }}
+        </span>
+        <input
+          data-input="text"
+          type="email"
+          value=""
+          name="EMAIL"
+          class="email"
+          id="mce-EMAIL"
+          placeholder="email address"
+          required >
+      </label>
+
+      <ul hidden>
+        {% for group in groups %}
+          <li>
+            <label for="mce-group[2075]-2075-{{ group.value }}">
+              <input
+                type="checkbox"
+                value="{{ group.value }}"
+                name="group[2075][{{ group.value }}]"
+                id="mce-group[2075]-2075-{{ group.value }}"
+                {{ 'checked' if (group.key in interests) else '' }}
+                >
+              {{ group.label }}
+            </label>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80219aa68d7bad77b9fd2eb93_7c27f7fb9a" tabindex="-1" value=""></div>
+
+      <div class="form-actions">
+        <button
+          type="submit"
+          name="subscribe"
+          id="mc-embedded-subscribe"
+          data-btn="small"
+        >
+          {{ action }}
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<!--End mc_embed_signup-->
 {% endmacro %}

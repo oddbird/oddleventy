@@ -1,6 +1,6 @@
-<details data-ccs="menu" hidden>
+<details data-ccs="menu" class="has-dropdown" hidden>
   <summary class="menu-item">colors</summary>
-  <div data-dropdown="pad">
+  <div data-dropdown="pad rtl">
     <div data-ccs="buttons">
       <button
         data-ccs-input="mode"
@@ -17,7 +17,9 @@
       </button>
     </div>
 
-    <label for="theme" data-ccs-field="theme">
+    <label for="theme"
+      data-ccs-field="theme"
+      data-field="theme">
       <span data-label>theme:</span>
       <select name="theme" id="theme" data-ccs-input="theme">
         {% for theme in ccs.themes %}
@@ -27,7 +29,9 @@
         {% endfor %}
       </select>
     </label>
-    <label for="hue" data-ccs-field="hue">
+    <label for="hue"
+      data-ccs-field="hue"
+      data-field="hue">
       <span data-label>hue:</span>
       <input
         id="hue"
@@ -37,7 +41,9 @@
         value="{{ ccs.hue }}"
         data-ccs-input="hue">
     </label>
-    <label for="saturation" data-ccs-field="saturation">
+    <label for="saturation"
+      data-ccs-field="saturation"
+      data-field="saturation">
       <span data-label>saturation:</span>
       <input
         id="saturation"
@@ -47,7 +53,9 @@
         value="{{ ccs.saturation }}"
         data-ccs-input="saturation">
     </label>
-    <label for="lightness" data-ccs-field="lightness">
+    <label for="lightness"
+      data-ccs-field="lightness"
+      data-field="lightness">
       <span data-label>lightness:</span>
       <input
         id="lightness"
@@ -57,7 +65,9 @@
         value="{{ ccs.lightness }}"
         data-ccs-input="lightness">
     </label>
-    <label for="contrast" data-ccs-field="contrast">
+    <label for="contrast"
+      data-ccs-field="contrast"
+      data-field="contrast">
       <span data-label>contrast:</span>
       <input
         id="contrast"

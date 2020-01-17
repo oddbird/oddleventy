@@ -4,26 +4,19 @@
   data-ccs="root"
   data-ccs-theme="{{ ccs.themes | first }}"
   data-ccs-colors>
-  {%- set desc = sub or summary or content or none -%}
-  {%- set desc = desc | mdInline | striptags | truncate | replace('&nbsp;', ' ') | replace('&amp;', '&') if desc else desc -%}
-  {%- set meta_desc = description or desc or site.description -%}
-  {%- set meta_title = renderData.title or title -%}
-  {%- set full_title = renderData.banner or banner or meta_title -%}
-  {%- set full_title = full_title | mdInline(false) -%}
+  {% set meta = collections.all | meta(page, renderData, site) %}
   <head>
     <meta charset="utf-8" />
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0" />
 
-    <title>{{ [meta_title, site.title] | join(' | ') }}</title>
+    <title>{{ [meta.title, site.title] | join(' | ') }}</title>
     <meta name="description"
-      content="{{ meta_desc }}" />
+      content="{{ meta.description }}" />
 
     {% set elsewhere = '_elsewhere' in (tags or []) %}
-    {% set full_url = (site.url + page.url) %}
-    {% set canon = url if elsewhere else full_url %}
     <link rel="canonical"
-      href="{{ canon | url }}">
+      href="{{ (meta.url if elsewhere else meta.canonical) | url }}">
 
     {% for url in site.styles %}
       <link rel="stylesheet"
@@ -45,17 +38,16 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
 
-  <body
-    data-layout="body">
-    <a href="#content" class="to-content">Skip to main content</a>
-    {% include "site/menu.njk" %}
-    {% include 'site/banner.njk' %}
+  <body data-layout="body">
+    <a href="#title"
+      id="to-content"
+      class="sr-only">
+      Skip to main
+    </a>
 
-    <main data-layout="main" id="content">
-      {% include 'site/page-title.njk' %}
-      {% include 'site/page.njk' %}
-    </main>
-
+    {% include "site/banner.njk" %}
+    {% include 'page/base.njk' %}
+    {% include 'site/cta.njk' %}
     {% include 'site/footer.njk' %}
 
     <script type="text/javascript" src="/assets/js/scripts.js"></script>

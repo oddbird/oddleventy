@@ -10,27 +10,20 @@ tags:
 author: miriam
 image:
   src: blog/susy.jpg
-summary: |
-  I've just released the [second alpha] of Susy Next. Go download and play
+sub: |
+  Go [download & play](http://rubygems.org/gems/susy/versions/2.0.0.alpha.2)
   with it!
-
-    [second alpha]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.2
 date: 2013-05-03
+summary: |
+  We haven't written full docs yet, and this blog post will be vastly
+  incomplete, but I'll give you a quick rundown of where we're going. This
+  is all open to change, of course. There's a reason we're still in alpha.
 ---
-
-I've just released the [second alpha] of Susy Next. Go download and play
-with it!
 
 The main difference you will notice from Susy 1.0 is a
 "natural-language" syntax that allows you to adjust settings more
 quickly and easily on the fly. You can also go gridless, and we'll still
 help you manage your layouts.
-
-We haven't written full docs yet, and this blog post will be vastly
-incomplete, but I'll give you a quick rundown of where we're going. This
-is all open to change, of course. There's a reason we're still in alpha.
-
-[second alpha]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.2
 
 ## Span Anything
 

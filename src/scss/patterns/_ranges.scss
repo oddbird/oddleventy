@@ -1,12 +1,20 @@
 @use '../tools/input-range' as range;
 
+/// # Range Inputs
+/// @group input-range
+
+// Type = Range
+// ------------
+/// Reset the browser styles for a range input,
+/// and re-style the track/thumb to match our branding.
+/// @group input-range
 [type='range'] {
   appearance: none;
   background: var(--border) no-repeat;
   border-radius: 0.25em;
   border: thin solid var(--text);
   height: 1em;
-  max-width: 100%;
+  width: 100%;
   padding: 0;
 
   @include range.track {

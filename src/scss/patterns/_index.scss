@@ -1,19 +1,25 @@
 // Pattern Manifest
 // ================
 
-@use 'ranges';
+@forward 'a11y';
+
+@forward 'buttons';
+@forward 'forms';
+@forward 'ranges';
+
+@forward 'dropdown';
+@forward 'icons';
+@forward 'media';
+@forward 'devices';
+@forward 'lists';
+@forward 'sections';
+@forward 'blockquotes';
 
 // @import 'alignment';
-// @import 'buttons';
 // @import 'blockquotes';
 // @import 'gallery';
-// @import 'icons';
-// @import 'forms';
-// @import 'lists';
-// @import 'sections';
 // @import 'sizes';
 // @import 'states';
-// @import 'media';
 // @import 'code';
 // @import 'tags';
 

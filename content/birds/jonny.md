@@ -1,5 +1,7 @@
 ---
 title: Jonny Gerig Meyer
+sub: Co-founder & technical lead
+dates: 2008–present
 bird: jonny
 active: true
 image:

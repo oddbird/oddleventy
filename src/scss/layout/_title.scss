@@ -1,0 +1,51 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
+#title {
+  @include tools.z-index('initial');
+  --blur: var(--quarter-shim);
+  --outset: calc(var(--blur) * -1);
+  align-self: center;
+  grid-area: title;
+  position: relative;
+
+  #hero + & {
+    // clip the horizontal and bottom shadows only
+    clip-path: inset(var(--outset) calc(var(--outset) / 1.5) 0 0);
+    filter: drop-shadow(0 0 var(--blur) var(--shadow));
+    margin-top: 0;
+    padding-right: calc(var(--angle) + var(--gutter));
+
+    // create a clipped background shape
+    &::before {
+      background-color: var(--bg);
+      bottom: var(--outset);
+      clip-path: polygon(
+        0 0,
+        calc(100% - var(--angle)) 0,
+        calc(100% + var(--outset)) var(--overlap),
+        100% var(--overlap),
+        100% 100%,
+        0 100%
+      );
+      content: '';
+      left: var(--outset);
+      position: absolute;
+      right: var(--outset);
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  [data-header='device'] & {
+    em {
+      font-size: var(--h2);
+      font-style: normal;
+      font-weight: normal;
+
+      @include tools.above('small-page') {
+        display: inline-block;
+        transform: translateY(calc(-1vw));
+      }
+    }
+  }
+}

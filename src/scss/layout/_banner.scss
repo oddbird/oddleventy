@@ -1,2 +1,43 @@
-// Banner Layout
-// =============
+@use '../../../node_modules/accoutrement/sass/tools';
+
+[data-layout='banner'] {
+  @include tools.font-family('alt');
+  --banner-space: calc(var(--shim) + 1vw);
+  display: grid;
+  grid-area: banner;
+  grid-template:
+    'logo menu' minmax(var(--double-gutter), auto)
+    'logo nav' minmax(var(--double-gutter), auto)
+    / minmax(5em, 7em) 1fr;
+
+  &::before {
+    background-color: var(--overlay-banner);
+    content: '';
+    grid-column: 1 / -1;
+    grid-row: menu;
+    margin: 0 calc(var(--page-margin) * -1);
+  }
+}
+
+#banner-logo {
+  &:link,
+  &:visited {
+    @include tools.transition('move');
+    align-self: start;
+    display: block;
+    grid-area: logo;
+    margin-top: var(--half-shim);
+    transform-origin: top center;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    transform: scale(1.05);
+  }
+
+  [data-logo] {
+    height: auto;
+    width: 100%;
+  }
+}

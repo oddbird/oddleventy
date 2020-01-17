@@ -1,5 +1,5 @@
 ---
-layout: base
-title: clients & case studies
+title: Work
+banner: Clients & Case Studies
 index: client work
 ---

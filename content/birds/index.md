@@ -1,5 +1,6 @@
 ---
-title: Meet the Odd Birds
+title: About
+banner: About OddBird
 sub: The people you'll work with...
 permalink: birds/index.html
 image:

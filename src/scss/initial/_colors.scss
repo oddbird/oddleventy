@@ -1,8 +1,7 @@
 @use '../config/color' as config;
 @use '../../../node_modules/accoutrement/sass/tools';
 @use '../../../node_modules/cascading-color-systems' as ccs with (
-  $prime-hue: config.ccs('prime'),
-  $accent-hue: config.ccs('accent'),
+  $hues: config.ccs('hues'),
   $saturation: config.ccs('saturation'),
   $contrast: config.ccs('contrast'),
   $steps: config.ccs('steps'),
@@ -24,6 +23,7 @@
 
 /// @group init-colors
 [data-ccs-colors] {
-  @include tools.tokens--(config.$global-colors);
   @include tools.tokens--(config.$ccs-colors);
+  @include tools.tokens--(config.$background-colors);
+  @include tools.tokens--(config.$content-colors);
 }

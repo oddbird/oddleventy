@@ -9,7 +9,6 @@ const tags = require('./src/filters/tags');
 const time = require('./src/filters/time');
 const type = require('./src/filters/type');
 const birds = require('./src/filters/birds');
-const nav = require('./src/filters/nav');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
@@ -34,6 +33,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('objectKeys', utils.objectKeys);
   eleventyConfig.addFilter('jsonString', utils.jsonString);
   eleventyConfig.addFilter('only', utils.only);
+  eleventyConfig.addFilter('get', utils.get);
+  eleventyConfig.addFilter('styles', utils.styles);
 
   eleventyConfig.addFilter('getDate', time.getDate);
   eleventyConfig.addFilter('rssDate', time.rssDate);
@@ -41,13 +42,19 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('publicTags', tags.publicTags);
   eleventyConfig.addFilter('getTags', tags.getTags);
+  eleventyConfig.addFilter('byEventCount', tags.byEventCount);
+  eleventyConfig.addFilter('byPageCount', tags.byPageCount);
   eleventyConfig.addFilter('groupTags', tags.groupTags);
   eleventyConfig.addFilter('withTag', tags.withTag);
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
   eleventyConfig.addFilter('inTopTagCount', tags.inTopCount);
 
+  eleventyConfig.addFilter('meta', pages.meta);
   eleventyConfig.addFilter('getPage', pages.fromCollection);
+  eleventyConfig.addFilter('getData', pages.getData);
+  eleventyConfig.addFilter('pageData', pages.pageData);
+  eleventyConfig.addFilter('pageContent', pages.pageContent);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('withData', pages.withData);
   eleventyConfig.addFilter('titleSort', pages.titleSort);
@@ -55,8 +62,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('active', birds.active);
   eleventyConfig.addFilter('authorPage', birds.authorPage);
-
-  eleventyConfig.addFilter('activeNav', nav.getActive);
 
   eleventyConfig.addFilter('getEvents', events.get);
   eleventyConfig.addFilter('countEvents', events.count);

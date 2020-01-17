@@ -1,31 +1,19 @@
 {% import 'contact.macros.njk' as contact %}
+{% import 'utility.macros.njk' as utility %}
 
-<footer
+<div
   data-layout="footer">
+  {{ contact.form(name="contact-footer") }}
 
-  <p>
-    Copyright © {% getDate 'year' %}
-    {{ site.title }}
-  </p>
+  {% set info = collections.all | getPage('/_sitedata/info/') %}
 
-  {% if page.url | url != '/contact/' %}
-    {{ contact.form() }}
-  {% endif %}
+  <footer role="contentinfo">
+    <div class="colophon">
+      {{ info.data.colophon | md | safe }}
+    </div>
 
-  <p class="colophon">
-    {% mdInline %}
-      Built with
-      [Eleventy](https://11ty.io/);
-      styled with
-      [Sass](https://sass-lang.com/),
-      [Accoutrement](/accoutrement/),
-      and
-      [Cascading Color Systems](https://cascading-colors.netlify.com/);
-      and
-      [documented](/style/)
-      with
-      [Herman](/herman/)/[SassDoc](https://sassdoc.com/).
-    {% endmdInline %}
-  </p>
-</footer>
-
+    <div class="legal">
+      {{ info.templateContent | safe }}
+    </div>
+  </footer>
+</div>

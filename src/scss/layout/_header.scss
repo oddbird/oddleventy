@@ -1,0 +1,48 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
+[data-layout='header'] {
+  display: grid;
+  grid-area: header;
+}
+
+[data-header='hero'] {
+  --angle: var(--edge);
+  --edge: calc(var(--page-margin) / 2);
+  --overlap: var(--gutter);
+  --newline: var(--shim);
+  margin: 0 calc(var(--page-margin) * -1) var(--gutter);
+  grid-template:
+    'hero hero' auto
+    'title hero2' var(--overlap)
+    'title .' auto
+    'meta meta' auto
+    'intro intro' auto
+    / auto minmax(var(--edge), 1fr);
+
+  #title {
+    margin-bottom: 0;
+    padding-left: var(--page-margin);
+  }
+
+  #meta,
+  #intro {
+    padding: 0 var(--page-margin);
+  }
+
+  @media (min-width: 35em) and (min-height: 35em) {
+    --overlap: var(--h1);
+  }
+
+  @include tools.above(35em) {
+    --angle: var(--page-margin);
+    --edge: var(--page-margin);
+  }
+
+  @include tools.above(50em) {
+    --edge: 25%;
+  }
+}
+
+[data-header='device'] {
+  justify-self: center;
+}

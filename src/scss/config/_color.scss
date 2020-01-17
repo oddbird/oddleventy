@@ -35,21 +35,49 @@ $brand-colors: (
   meta.get-function('color', $module: 'tools')
 );
 
-// Global Colors
-// -------------
+// Background Colors
+// -----------------
 /// Rather than using the brand colors directly,
 /// we use them to set default values for generated variables.
-/// This provides a mapping between semantic use-cases,
+/// This provides a mapping between semantic background use-cases,
 /// and automatically-generated color variables.
 /// @type map
 /// @group config-color
-$global-colors: (
+$background-colors: (
   'bg': var(--ccs-neutral--bg-full),
+  'bg-full': var(--ccs--bg-full),
   'callout': var(--ccs-neutral--bg5),
-  'border': var(--ccs-neutral),
+  'callout-fade':
+    hsla(
+      var(--ccs-h--prime),
+      var(--ccs-s--bg2),
+      var(--ccs-l--bg5),
+      var(--ccs-fade)
+    ),
+  'overlay': var(--ccs-neutral--bg6-fade),
+  'overlay-banner':
+    hsla(var(--ccs-h--neutral), var(--ccs-s--bg6), var(--ccs-l--bg6), 0.4),
+);
+
+// Content Colors
+// --------------
+/// Rather than using the brand colors directly,
+/// we use them to set default values for generated variables.
+/// This provides a mapping between semantic foreground use-cases,
+/// and automatically-generated color variables.
+/// @type map
+/// @group config-color
+$content-colors: (
   'text': var(--ccs-neutral--fg-full),
-  'action': var(--ccs-prime--fg2),
-  'action-focus': var(--ccs-prime--fg4),
+  'text-light': var(--ccs-neutral--fg3),
+  'accent': var(--ccs-accent--fg1),
+  'highlight': var(--ccs-accent--fg3),
+  'feature': var(--ccs-prime--fg4),
+  'border': var(--ccs-neutral),
+  'border-fade': var(--ccs-neutral--fade),
+  'shadow': var(--ccs-neutral--fade),
+  'action': var(--ccs-prime--fg3),
+  'active': '#highlight',
 );
 
 // CCS Defaults
@@ -72,9 +100,10 @@ $ccs-colors: (
 /// @access private
 /// @group config-color
 $_hues: (
-  'blue': color.hue(tools.color('brand-blue')),
-  'pink': color.hue(tools.color('brand-pink')),
-  'orange': color.hue(tools.color('brand-orange')),
+  'prime': color.hue(tools.color('brand-blue')) / 1deg,
+  'accent': color.hue(tools.color('brand-pink')) / 1deg,
+  'special': color.hue(tools.color('brand-orange')) / 1deg,
+  'neutral': null,
 );
 
 // CCS Settings
@@ -90,8 +119,7 @@ $_hues: (
 /// @access private
 /// @group config-color
 $_ccs: (
-  'prime': map-get($_hues, 'blue') / 1deg,
-  'accent': map-get($_hues, 'pink') / 1deg,
+  'hues': $_hues,
   'saturation': 75%,
   'contrast': 45%,
   'steps': 6,

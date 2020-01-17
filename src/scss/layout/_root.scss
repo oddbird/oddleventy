@@ -1,0 +1,17 @@
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  display: grid;
+  grid-template:
+    'banner' auto
+    'header' auto
+    'main' 1fr
+    'cta' auto
+    'footer' auto
+    / 100%;
+  padding: 0 var(--page-margin);
+}

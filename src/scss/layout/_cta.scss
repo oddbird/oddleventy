@@ -1,0 +1,25 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
+[data-layout='cta'] {
+  --media-size: calc(4em + 2vw);
+  background: var(--callout-fade);
+  clip-path: polygon(
+    0 0,
+    calc(50% - var(--double-gutter)) 0,
+    50% var(--double-gutter),
+    calc(50% + var(--double-gutter)) 0,
+    100% 0,
+    100% calc(100% - var(--double-gutter)),
+    calc(50% + var(--double-gutter)) calc(100% - var(--double-gutter)),
+    50% 100%,
+    calc(50% - var(--double-gutter)) calc(100% - var(--double-gutter)),
+    0 calc(100% - var(--double-gutter))
+  );
+  display: grid;
+  font-size: var(--small);
+  grid-area: cta;
+  grid-template-columns: minmax(min-content, var(--small-page));
+  justify-content: center;
+  margin: var(--spacer) calc(var(--page-margin) * -1) 0;
+  padding: var(--spacer) var(--page-margin) calc(var(--spacer) + var(--gutter));
+}

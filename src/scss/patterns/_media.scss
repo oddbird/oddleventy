@@ -1,120 +1,65 @@
-// Media
-// =====
+@use '../../../node_modules/accoutrement/sass/tools';
 
-audio,
-canvas,
-iframe,
-video {
-  margin-bottom: size('gutter');
-}
+/// # Media Blocks & Ratios
+/// @group media
 
-audio {
-  width: 100%;
-}
+// Media Blocks
+// ------------
+/// Media blocks align an image with fluid text.
+/// The vertical alignment and image size can be adjusted
+/// using html attributes and CSS variables.
+/// @group media
+[data-media] {
+  align-items: var(--align, start);
+  display: grid;
+  grid-gap: var(--gutter);
+  grid-template-areas: var(--reverse-y, 'image' 'content');
+  margin: var(--newline) 0;
 
-svg {
-  fill: currentColor;
-}
+  &[data-reverse~='vertical'] {
+    --reverse-y: 'content' 'image';
+  }
 
-// For those images that have text and need separation from content
-.img-spacing {
-  margin-bottom: size('shim');
-  margin-top: size('shim');
-}
+  @include tools.above(40em) {
+    grid-template-areas: var(--reverse-x, 'image content');
+    grid-template-columns: fit-content(25%) minmax(
+        min-content,
+        var(--media-content, 1fr)
+      );
 
-.img-border {
-  border: 1px solid color('border-light');
-
-  &.gallery {
-    border: 0;
-
-    .gallery-image {
-      border: 1px solid color('border-light');
+    &[data-reverse~='horizontal'] {
+      --reverse-x: 'content image';
+      grid-template-columns: minmax(min-content, var(--media-content, 1fr)) fit-content(
+          25%
+        );
     }
   }
 }
 
-.img-shadow {
-  box-shadow: 2px 2px 5px color('shadow');
-}
+// Media Image
+// -----------
+/// The image in a media-block accepts variables
+/// for min/max and width values
+/// @group media
+.media-image {
+  grid-area: image;
+  justify-self: center;
+  max-width: var(--media-max, initial);
+  min-width: var(--media-min, initial);
+  width: var(--media-size, initial);
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  + img {
-    margin-top: size('shim');
-  }
-}
-
-.caption {
-  color: color('caption');
-  font-size: size('caption');
-  font-style: italic;
-}
-
-.figure {
-  margin-bottom: size('gutter');
-  margin-top: size('gutter');
-
-  img {
+  img,
+  svg {
+    height: auto;
     width: 100%;
   }
 }
 
-.add-space {
-  margin-bottom: size('gutter');
-  margin-top: size('gutter');
-
-  @include above('medium-page') {
-    margin-bottom: size('spacer');
-    margin-top: size('spacer');
-  }
-}
-
-// Media Blocks
-// ------------
-
-[data-media-block] {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: size('shim');
-
-  @include above('small-page') {
-    flex-direction: row;
-  }
-}
-
-[data-media-block~='start'] {
-  @include above('small-page') {
-    align-items: start;
-  }
-}
-
-[data-media-block~='end'] {
-  @include above('small-page') {
-    align-items: end;
-  }
-}
-
-.media-image {
-  flex: 0 0 auto;
-
-  @include below('small-page') {
-    margin-bottom: size('shim');
-  }
-
-  @include above('small-page') {
-    margin-right: size('gutter');
-  }
-}
-
+// Media Content
+// -------------
+/// @group media
 .media-content {
-  align-self: center;
-  flex: 1 1 0;
+  grid-area: content;
 
   *:first-child {
     margin-top: 0;
@@ -125,22 +70,33 @@ h6 {
   }
 }
 
-// Ratios
-// ------
+/// ## Ratios
+/// @group media
 
+// Ratio Parent
+// ------------
+/// Ratios are created with a parent wrapper
+/// set as relative context.
+/// @group media
 [data-ratio='parent'] {
-  --ratio: #{ratio('_widescreen')};
+  --ratio: #{tools.ratio('_widescreen')};
   position: relative;
 
-  @include before('') {
+  &::before {
+    content: '';
     display: inline-block;
     height: 0;
-    padding-top: calc(100% / var(--ratio, #{ratio('_widescreen')}));
+    padding-top: calc(100% / var(--ratio, #{tools.ratio('_widescreen')}));
     width: 1px;
   }
 }
 
+// Ratio Child
+// -----------
+/// The child element takes on the parent ratio
+/// through absolute positioning.
+/// @group media
 [data-ratio='child'] {
-  @include position(0);
-  @include square(100%);
+  @include tools.position(0);
+  @include tools.square(100%);
 }

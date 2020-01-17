@@ -1,5 +1,4 @@
 ---
-layout: base
-title: speaking & training
+title: Speaking & Training
 index: speaking
 ---

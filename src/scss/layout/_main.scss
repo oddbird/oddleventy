@@ -1,17 +1,6 @@
 // Main Region Layout
 // ==================
 
-[data-region='main'] {
-  position: relative;
-}
-
-[data-module='rst-body'] {
-  section {
-    @include clearfix;
-    clear: both;
-
-    + section {
-      margin-top: size('double-gutter');
-    }
-  }
+[data-layout='main'] {
+  grid-area: main;
 }

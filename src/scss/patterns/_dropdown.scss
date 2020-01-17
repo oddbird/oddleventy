@@ -1,0 +1,68 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
+/// # Dropdowns
+/// A flexible pattern for dropdown menus.
+/// @group dropdown
+
+// Has Dropdown
+// ------------
+/// Apply relative positioning
+/// to establish the layout context of a dropdown.
+/// @group dropdown
+.has-dropdown {
+  position: relative;
+}
+
+// Dropdown
+// --------
+/// The basic dropdown box,
+/// with a max-width of the available space.
+/// @group dropdown
+[data-dropdown] {
+  @include tools.z-index('dropdown');
+  background: var(--bg);
+  border: thin solid var(--border-fade);
+  box-shadow: 0 0 var(--quarter-shim) var(--shadow);
+  max-width: 14em;
+  position: absolute;
+  width: calc(100vw - var(--page-margin));
+
+  &[aria-expanded='false'] {
+    display: none;
+  }
+}
+
+// Pad
+// ---
+/// Add default padding to dropdowns
+/// that don't need full-width content.
+/// @group dropdown
+[data-dropdown~='pad'] {
+  padding: var(--gutter);
+}
+
+/// ## Dropdown Alignment
+/// Dropdowns can be aligned with keyword variants
+/// @group dropdown
+
+// Center
+// ------
+/// @group dropdown
+[data-dropdown~='center'] {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// Left-to-right
+// -------------
+/// @group dropdown
+[data-dropdown~='ltr'] {
+  left: 0;
+}
+
+// Right-to-left
+// -------------
+/// @group dropdown
+[data-dropdown~='rtl'] {
+  right: 0;
+}

@@ -26,7 +26,7 @@ press:
       A fantastic speaker, with wonderful teaching skills,
       and highly praised by attendees of the conference
       and the workshop alike.
-    credit: Vitaly Friedman
+    name: Vitaly Friedman
     title: Founder of Smashing Magazine & Conference
     url: https://www.smashingmagazine.com/events/
 summary: |
@@ -34,7 +34,7 @@ summary: |
   to maintaining complex design systems across applications,
   CSS is the web-language of design.
 ---
-{% import "content.macros.njk" as content %}
+{% import "quotes.macros.njk" as quotes %}
 
 Like all web languages,
 **Cascading Style Sheets have come a long way
@@ -55,7 +55,7 @@ everyday interface problems.
 
 ------
 
-{{ content.quotes(press) }}
+{{ quotes.grid(press) }}
 
 ------
 

@@ -1,0 +1,13 @@
+.logo-grid {
+  --fill: var(--feature);
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: var(--spacer) 0;
+
+  [data-logo] {
+    flex: 0 1 10em;
+    margin: var(--gutter);
+  }
+}

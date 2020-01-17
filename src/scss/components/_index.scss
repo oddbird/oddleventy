@@ -1,22 +1,10 @@
 // Component Manifest
 // ==================
 
-@use 'ccs-menu';
-
-// @import 'home';
-// @import 'archives';
-// @import 'author';
-// @import 'contact';
-// @import 'email-subscribe';
-// @import 'events';
-// @import 'intro';
-// @import 'hero';
-// @import 'pagination';
-// @import 'post-list';
-// @import 'post-header';
-// @import 'post-content';
-// @import 'services';
-// @import 'social';
+@forward 'ccs-menu';
+@forward 'call-to-action';
+@forward 'contact';
+@forward 'logo-grid';
 
 // Less used, load later
 // @import 'charts';

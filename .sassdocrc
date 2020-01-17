@@ -6,17 +6,31 @@ shortcutIcon: ./content/favicon.ico
 verbose: true
 
 groups:
-  Tools:
-    tools-range: Range Input Prefixes
   Sass Tokens:
     config-animation: Animations
     config-color: Colors
     config-fonts: Fonts
     config-scale: Spacing & Sizes
+    config-layout: Layout Tokens
   CSS Variables:
     init-colors: Global Colors
     init-themes: Preset Themes
     init-scale: Spacing & Sizes
+  Global Defaults:
+    links: Links
+    headings: Headings
+    init-media: Media
+  Forms:
+    forms: Form Fields & Inputs
+    tools-range: Range Input Tools
+    input-range: Range Inputs
+    buttons: Buttons
+  Patterns:
+    a11y: Accessibility
+    type: Typography
+    icons: SVG Icons
+    dropdown: Dropdowns
+    media: Media Blocks & Ratios
 
 herman:
   extraDocs:

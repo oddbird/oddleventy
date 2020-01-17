@@ -1,6 +1,5 @@
 ---
-layout: base
-title: resources
+title: Resources
 index: resources
 permalink: /blog/index.html
 ---

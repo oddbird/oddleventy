@@ -1,0 +1,13 @@
+{%- import 'utility.macros.njk' as utility -%}
+
+{% include "page/header.njk" %}
+
+<main data-layout="main">
+  {% if (content or summary) %}
+    <div
+      data-main
+      data-typeset>
+      {{ content | typogr | safe }}
+    </div>
+  {% endif %}
+</main>

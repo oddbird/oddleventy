@@ -1,21 +1,38 @@
 @use '../../../node_modules/accoutrement/sass/tools';
-@use '../../../node_modules/cascading-color-systems/sass/ccs';
 
 @include tools.import-webfonts;
 
 html {
   @include tools.font-family('body');
-  font-size: calc(1.25em + 0.5vw);
-  line-height: 1.4;
-  min-height: 100vh;
-  overflow-x: hidden;
+  font-size: tools.size('rem');
+  line-height: tools.ratio('line-height');
 
+  // image, size, position, & media-queries are all related *magically*
+  // and should be adjusted/tested as a group by hand
   @supports (background-blend-mode: multiply) {
-    background-blend-mode: multiply;
-    background-image: url('../images/site/header-wash.jpg'),
-      url('../images/site/footer-wash.jpg');
-    background-position: left top, bottom center;
-    background-repeat: no-repeat, repeat-x;
-    background-size: auto var(--header-wash), auto var(--footer-wash);
+    background-blend-mode: var(--bg-blend, multiply);
+    background-image: url('../images/site/header-wash.png'),
+      url('../images/site/footer-wash.png');
+    background-position: var(--header-pos, left -8em) top 0, bottom left;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 5.5em, 20em auto;
   }
+
+  @include tools.above(40em) {
+    --header-pos: right 0;
+  }
+
+  @include tools.above(50em) {
+    --header-pos: left 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &:not([style*='--ccs-mode--user']) {
+      --bg-blend: color-dodge;
+    }
+  }
+}
+
+[style*='--ccs-mode--user:-1'] {
+  --bg-blend: color-dodge;
 }

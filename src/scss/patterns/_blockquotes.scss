@@ -1,89 +1,136 @@
-// Blockquotes
-// ===========
+@use '../../../node_modules/accoutrement/sass/tools';
 
-$quote-circle: calc(2rem + 2vw);
-$quote-circle-type: calc(5rem + 2vw);
-
-[data-quote-section] {
-  margin-bottom: size('spacer');
-  margin-top: size('spacer');
-}
-
-[data-quote-section=''] {
-  @include center('small-page');
-}
-
-[data-quote-section='two-up'] {
-  @include extend('extend-small');
-  @include center('medium-page');
-  align-items: start;
-  display: grid;
-  grid-column-gap: size('double-gutter');
-
-  @include above('small-page') {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .pullquote,
-  blockquote {
-    justify-self: center;
-
-    &:nth-child(odd) {
-      &:last-child {
-        grid-column: 1 / -1;
-      }
-    }
-  }
-
-  // clearfix breaking the layout…
-  [data-module='rst-body'] & {
-    @include after(null) {
-      display: none;
-    }
-  }
-}
-
-.pullquote,
 blockquote {
-  margin-bottom: size('gutter');
-  margin-top: size('gutter');
+  --angle: var(--double-gutter);
+  --angle-space: calc(var(--angle) + var(--gutter));
+  --edge: minmax(var(--page-margin), 1fr);
+  --quote: minmax(min-content, var(--small-page));
+  background-color: var(--callout-fade);
+  display: grid;
+  margin: var(--newline) 0;
+  padding: var(--spacer) var(--gutter);
 
-  .media-image {
-    @include square($quote-circle);
-    border-radius: 50%;
+  &:nth-of-type(odd) {
+    clip-path: polygon(0 0, 100% 0, calc(100% - var(--angle)) 100%, 0 100%);
+    grid: 'edge icon quote' auto / var(--edge) auto var(--quote);
+    padding-right: var(--angle-space);
+  }
 
-    &:not(img) {
-      @include before('“');
-      @include font-family('alt');
-      background-color: color('quote');
-      color: color('background');
-      font-size: $quote-circle-type;
-      font-style: normal;
-      line-height: 0.8;
-      text-align: right;
+  &:nth-of-type(even) {
+    clip-path: polygon(var(--angle) 0, 100% 0, 100% 100%, 0 100%);
+    grid: 'icon quote edge' auto / auto var(--quote) var(--edge);
+    padding-left: var(--angle-space);
+  }
+
+  .byline {
+    --newline: 0;
+    font-size: var(--small);
+  }
+
+  .u-photo {
+    border-radius: 100%;
+  }
+
+  .p-name {
+    font-style: italic;
+  }
+
+  &:not([data-quote]) {
+    &::before {
+      color: var(--ccs-special--fade);
+      content: '“';
+      font-size: 4em;
+      grid-column: icon;
+      margin: -0.25em var(--gutter) -2em;
     }
-  }
 
-  &:not([data-media-block]) {
-    border-left: size('border') solid color('callout');
-    font-size: size('intro-text');
-    padding-left: size('gutter');
-  }
+    > * {
+      grid-column: quote;
+    }
 
-  p {
-    &:not(.attribution) {
-      @include wrap-content;
-      text-indent: -0.4em;
+    > p:last-child {
+      --newline: 0;
+      font-size: var(--small);
     }
   }
 }
 
-.attribution {
-  font-size: 1rem;
-  margin-bottom: 0;
+// Quote Pattern
+// -------------
 
-  b {
-    font-style: normal;
-    font-weight: normal;
+[data-quote='solo'],
+blockquote:not([data-quote]) {
+  &:nth-of-type(odd) {
+    margin-left: calc(var(--page-margin) * -1);
+    padding-left: var(--page-margin);
+  }
+
+  &:nth-of-type(even) {
+    margin-right: calc(var(--page-margin) * -1);
+    padding-right: var(--page-margin);
+  }
+}
+
+[data-media='quote'] {
+  --fill: var(--ccs-special--fade);
+  --media-size: var(--double-gutter);
+  --media-min: 3em;
+  grid-area: quote;
+}
+
+// Quote Grids
+// -----------
+
+.quote-grid {
+  --overlap: var(--page-margin);
+  display: grid;
+  grid-gap: var(--double-gutter);
+  margin: var(--spacer) calc(var(--page-margin) * -1);
+
+  @include tools.above('medium-page') {
+    --overlap: calc(var(--gutter) * -1);
+    --offset: var(--spacer);
+    grid-template: var(--offset) / repeat(2, 1fr);
+
+    // provide space for the right-hand vertical offset
+    &::before {
+      content: '';
+      grid-column: span 2;
+    }
+  }
+}
+
+[data-quote='grid'] {
+  margin: 0;
+
+  &:nth-of-type(odd) {
+    margin-right: var(--overlap);
+  }
+
+  &:nth-of-type(even) {
+    margin-left: var(--overlap);
+    transform: translateY(calc(var(--offset) * -1));
+  }
+}
+
+// Signature
+// ---------
+
+.signature {
+  display: grid;
+  grid:
+    [sig-start] auto [by-start] var(--gutter-plus) [sig-end] auto [by-end]
+    / [sig-start] 3em [by-start] max-content [by-end sig-end];
+  justify-content: end;
+  transform: rotate(calc(var(--rotate) * -1));
+
+  [data-img] {
+    grid-area: sig;
+    height: 4em;
+    width: auto;
+  }
+
+  .byline {
+    grid-area: by;
   }
 }

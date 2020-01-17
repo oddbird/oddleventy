@@ -34,6 +34,25 @@ const jsonString = (item) => JSON.stringify(item);
 
 const only = (list, start, end) => list.slice(start, end);
 
+const get = (data, attr, value) => {
+  if (value) {
+    return data.find((item) => {
+      const hasValue = Array.isArray(item) ? item.includes(value) : false;
+      return item[attr] === value || hasValue;
+    });
+  }
+
+  return data.filter((item) => item[attr]);
+};
+
+const styles = (dict) => {
+  const map = Object.keys(dict).map((prop) => {
+    const val = dict[prop];
+    return val ? `${prop}:${val};` : '';
+  });
+  return map.reduce((all, one) => `${all}${one}`, '');
+};
+
 module.exports = {
   groupBy,
   typeCheck,
@@ -42,4 +61,6 @@ module.exports = {
   unique,
   jsonString,
   only,
+  get,
+  styles,
 };

@@ -19,12 +19,12 @@ press:
   - text: |
       Miriam and Hugo have become some of the most notable
       creators of Sass plugins and best practices.
-    credit: Chris Eppstein
+    name: Chris Eppstein
   - text: |
       This is hands down the best book on Sass
       if you want to learn the most important parts of the Sass language
       that will help you architect a good application.
-    credit: Kaelig Deloumeau-Prigent
+    name: Kaelig Deloumeau-Prigent
     venue: SitePoint
     url: https://www.sitepoint.com/premium/books/jump-start-sass#reviews
     datetime: 2016-03-23
@@ -35,9 +35,9 @@ summary: |
   This book provides a thorough introduction to
   Sass for the beginner.
 ---
-{% import "content.macros.njk" as content %}
+{% import "quotes.macros.njk" as quotes %}
 
-{{ content.quotes(press) }}
+{{ quotes.grid(press) }}
 
 [buy the book](http://shop.oreilly.com/product/9780994182678.do)
 or [download the e-book »](https://www.sitepoint.com/premium/books/jump-start-sass)

@@ -61,7 +61,7 @@ press:
       Thought provoking talk on rethinking who the user is
       and who we are writing for as developers.
       Wow! Made me think.
-    credit: Nithya Ruff
+    name: Nithya Ruff
     title: Leader of Comcast Open Source Office
     url: https://twitter.com/nithyaruff/status/1141803102376550402
 summary: |
@@ -72,7 +72,8 @@ media:
   - span: full
     <<: *drupal
 ---
-{% import "content.macros.njk" as content %}
+{% import "quotes.macros.njk" as quotes %}
+{% import "embed.macros.njk" as embed %}
 
 The web is more than a technology platform,
 it was created with a mission statement.
@@ -92,11 +93,11 @@ and designing for edge-cases with integrated teams.
 
 ------
 
-{{ content.quotes(press) }}
+{{ quotes.grid(press) }}
 
 ------
 
-{{ content.fig(
+{{ embed.figure(
   data=media,
   caption='Conference videos…'
 ) }}
