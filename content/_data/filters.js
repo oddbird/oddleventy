@@ -24,37 +24,35 @@ const doxOptions = {
   },
 };
 
-module.exports = () => {
-  const js = [];
+module.exports = () =>
+  new Promise((resolve, reject) => {
+    // get the docs
+    fs.readdir(filterDir, (err, files) => {
+      if (err) {
+        reject(err);
+      }
 
-  // get the docs
-  fs.readdir(filterDir, (err, files) => {
-    if (err) {
-      throw err;
-    }
+      const js = files
+        .filter((file) => file.endsWith('.js'))
+        .map((file) => {
+          const filePath = path.join(filterDir, file);
+          const docs = doxray([filePath], doxOptions);
+          const info = docs.patterns.find(
+            (pattern) => pattern.category === 'file',
+          );
+          const name = file;
 
-    files
-      .filter((file) => file.endsWith('.js'))
-      .forEach((file) => {
-        const data = {};
-
-        const filePath = path.join(filterDir, file);
-        const docs = doxray([filePath], doxOptions);
-
-        data.name = file;
-        data.path = filePath;
-        data.slug = file.slice(0, file.indexOf('.'));
-        data.info = docs.patterns.find(
-          (pattern) => pattern.category === 'file',
-        );
-        data.title = data.info ? data.info.label : data.name;
-        data.patterns = docs.patterns.filter(
-          (pattern) => pattern.category !== 'file',
-        );
-
-        js.push(data);
-      });
+          return {
+            name,
+            info,
+            path: filePath,
+            slug: file.slice(0, file.indexOf('.')),
+            title: info ? info.label : name,
+            patterns: docs.patterns.filter(
+              (pattern) => pattern.category !== 'file',
+            ),
+          };
+        });
+      resolve(js);
+    });
   });
-
-  return js;
-};
