@@ -44,8 +44,8 @@ work:
 ]) }}
 
 {{ quotes.grid([
-  collections.all | pageData(work.md, 'press', {'slug': 'extension'}),
-  collections.all | pageData(work.mc, 'press', {'slug': 'goals'})
+  collections.all | findData('press', {'slug': 'extension'}),
+  collections.all | findData('press', {'slug': 'goals'})
 ]) }}
 
 {{ section.title('Developer Tools') }}
@@ -88,8 +88,8 @@ Our specialties include:
 
 
 {{ quotes.grid([
-  collections.all | pageData(work.td, 'press', {'slug': 'investment'}),
-  collections.all | pageData(work.ch, 'press', {'slug': 'handoff'})
+  collections.all | findData('press', {'slug': 'investment'}),
+  collections.all | findData('press', {'slug': 'handoff'})
 ]) }}
 
 

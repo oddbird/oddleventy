@@ -40,7 +40,7 @@ note: |
   There is no need for a macro
   when creating one-off quotes in markdown content.
 example: |
-  {{ quotes.blockquote(press | get('slug', 'extension')) }}
+  {{ quotes.blockquote(press | just('slug', 'extension')) }}
 params:
   data:
     type: dictionary
@@ -110,7 +110,7 @@ params:
 ) -%}
   {%- set data = collection | pageData(page, 'press') -%}
   {%- if slug -%}
-    {{- blockquote(data | get('slug', slug)) -}}
+    {{- blockquote(data | just('slug', slug)) -}}
   {%- else -%}
     {{- grid(data) if data else none -}}
   {%- endif -%}

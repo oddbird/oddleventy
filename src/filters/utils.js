@@ -26,58 +26,98 @@ const typeCheck = (val, is) => {
 };
 
 /* @docs
-label: has
+label: get
 category: inspect
 note: |
   Returns true if an object contains a particular attribute
   or attr:value pair,
   including values inside an array.
 example: |
-  {% if page.data | has('author', 'miriam') %}
+  {% if page.data | get('author', 'miriam') %}
 params:
   obj:
     type: object
-  attr:
-    type: string
+  attrs:
+    type: string | array
     note: Attribute to filter for
   value:
     type: any
     default: undefined
     note: Optional value to find within the attribute
 */
-const has = (obj, attr, value) => {
-  const item = obj[attr];
+const get = (obj, attrs, value) => {
+  attrs = typeof attrs === 'string' ? [attrs] : attrs || [];
 
-  if (value && item) {
-    return Array.isArray(item) ? item.includes(value) : item === value;
+  if (attrs && attrs.length) {
+    attrs.forEach((attr) => {
+      obj = obj[attr];
+    });
   }
 
-  return item;
+  if (value && obj) {
+    return obj === value || (Array.isArray(obj) && obj.includes(value));
+  }
+
+  return obj;
 };
 
 /* @docs
-label: get
+label: just
 category: data
 note: |
   Returns a filtered array of objects with a given attribute,
   or the first object where that attribute is equal to a particular value.
 example: |
-  {{ embed.figure(media | get('audio')) }}
-  {{ quotes.blockquote(press | get('slug', 'extension')) }}
+  {{ embed.figure(media | just('audio')) }}
+  {{ quotes.blockquote(press | just('slug', 'extension')) }}
 params:
   array:
     type: array of objects
-  attr:
-    type: string
+  attrs:
+    type: string | array
     note: Attribute to filter for
   value:
     type: any
     default: undefined
-    note: Optional attribute-value to find
+    note: Optional attribute-value to just
 */
-const get = (array, attr, value) => {
-  const items = array.filter((item) => has(item, attr, value));
+const just = (array, attrs, value) => {
+  const items = array.filter((item) => get(item, attrs, value));
   return items && value ? items[0] : items;
+};
+
+/* @docs
+label: getJust
+category: data
+note: |
+  The built-in nunjucks `slice` filter returns
+  an array of arrays at a given length.
+  This filter acts more like the js `array.slice()`,
+  returning a single sub-array from a given start index,
+  to the given end (or end of array).
+example: |
+  {# the first 5 items in a list #}
+  {% for item in my_array | items(0, 5) %}
+params:
+  data:
+    type: object
+  attrs:
+    type: string | array
+    note: The attributes to get
+  test:
+    type: object
+    note: attribute/value pairs to find in the resulting array
+*/
+const getJust = (data, attrs, test) => {
+  data = get(data, attrs);
+
+  if (data && test) {
+    Object.keys(test).forEach((key) => {
+      data = just(data, key, test[key]);
+    });
+  }
+
+  return data;
 };
 
 /* @docs
@@ -160,6 +200,7 @@ module.exports = {
   unique,
   items,
   get,
-  has,
+  just,
+  getJust,
   styles,
 };

@@ -35,7 +35,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('items', utils.items);
   eleventyConfig.addFilter('get', utils.get);
-  eleventyConfig.addFilter('has', utils.has);
+  eleventyConfig.addFilter('just', utils.just);
+  eleventyConfig.addFilter('getJust', utils.getJust);
   eleventyConfig.addFilter('styles', utils.styles);
 
   eleventyConfig.addFilter('getDate', time.getDate);
@@ -51,12 +52,11 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('meta', pages.meta);
   eleventyConfig.addFilter('getPage', pages.fromCollection);
-  eleventyConfig.addFilter('getData', pages.getData);
   eleventyConfig.addFilter('pageData', pages.pageData);
+  eleventyConfig.addFilter('findData', pages.findData);
   eleventyConfig.addFilter('pageContent', pages.pageContent);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('withData', pages.withData);
-  eleventyConfig.addFilter('titleSort', pages.titleSort);
 
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('authorPage', birds.authorPage);
