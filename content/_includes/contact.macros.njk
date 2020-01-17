@@ -1,5 +1,31 @@
 {% import 'utility.macros.njk' as utility %}
 
+{# @docs
+label: Contact Macros
+category: file
+note: Forms related to Oddbird communication.
+#}
+
+
+{# @docs
+label: form
+note: Generate a contact form
+params:
+  next:
+    type: url
+    default: '/contact/thanks/'
+    note: The landing page after form-submit
+  submit:
+    type: string
+    default: Send
+    note: text for the submit button
+  name:
+    type: string
+    default: contact
+    note: |
+      Name the form for special cases
+      where a CSS hook is required
+#}
 {% macro form(
   next='/contact/thanks/',
   submit='Send',
@@ -51,6 +77,21 @@
 </form>
 {% endmacro %}
 
+
+{# @docs
+label: subscribe
+note: Generate a n email-newsletter signup form
+params:
+  label:
+    type: string
+    default: Subscribe to our email newsletter
+  action:
+    type: string
+    default: Subscribe
+  interests:
+    type: string
+    default: oddnews
+#}
 {% macro subscribe(
   label='Subscribe to our email newsletter',
   action='Subscribe',
@@ -158,11 +199,28 @@
 <!--End mc_embed_signup-->
 {% endmacro %}
 
+{# @docs
+label: social
+note: Generate an inline-list of social-media links
+params:
+  data:
+    type: dictionary
+    note: site-slug/user-id pairs
+  name:
+    type: string
+    note: The name of the user
+#}
 {% macro social(
   data,
-  name
+  name,
+  details=true
 ) %}
   {%- set sites = {
+    'email': {
+      'user': '%s@oddbird.net',
+      'url': 'mailto:%s@oddbird.net',
+      'icon': 'mail'
+    },
     'twitter': {
       'user': '@%s',
       'url': 'https://twitter.com/%s/'
@@ -174,6 +232,9 @@
       'title': 'CodePen',
       'url': 'https://codepen.io/%s/'
     },
+    'dribbble': {
+      'url': 'https://dribbble.com/%s/'
+    },
     'stackoverflow': {
       'title': 'Stack Overflow',
       'url': 'https://stackoverflow.com/users/%s/',
@@ -182,17 +243,19 @@
   } -%}
 
   {%- if data -%}
-    <ul class="inline-list">
+    <ul class="inline-list social-list">
     {%- for site, id in data -%}
       {%- set info = sites[site] -%}
       {% if info %}
         {%- set text = info.user | replace("%s", id) if info.user else info.text or id -%}
         <li>
           {{- utility.icon_link(
-            icon='social/' + site,
+            icon='social/' + (info.icon or site),
             text=text,
             url=info.url | replace("%s", id)
-          ) }} <i>on</i> {{ info.title or site | capitalize -}}
+          ) -}}
+          {%- if details %} <i>on</i> {{ info.title or site | capitalize -}}
+          {%- endif -%}
         </li>
       {% endif %}
     {%- endfor -%}

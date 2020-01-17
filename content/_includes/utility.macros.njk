@@ -1,51 +1,33 @@
-{# Titles #}
-{% macro section_title(
-  title
-) %}
-  <header
-    class="section-header">
-    <h2 class="section-title">
-      {{ title | typogr | safe }}
-    </h2>
-  </header>
-{% endmacro %}
+{# @docs
+label: Utility Macros
+category: file
+note: |
+  Utilities can be used just about anywhere,
+  and that's why we love them.
+#}
 
-{# Tags #}
-{% macro tag_link(
-  tag,
-  all
-) -%}
-  {{ link_if(
-    tag | displayName,
-    tag | tagLink(all),
-    class='taglink'
-  ) }}
-{%- endmacro %}
 
-{% macro tag_list(
-  tags,
-  all,
-  separator='ul'
-) -%}
-{% set tags = tags | publicTags %}
-{% if tags | length > 0 %}
-  {% if (separator == 'ul') %}
-    <ul class="taglist">
-      {%- for tag in tags -%}
-        <li class="tag">
-          {{ tag_link(tag, all) }}
-        </li>
-      {%- endfor -%}
-    </ul>
-  {% else %}
-    {%- for tag in tags -%}
-      {{ tag_link(tag, all) }}{%-if not loop.last %}{{ separator }}{% endif -%}
-    {%- endfor -%}
-  {% endif %}
-{% endif %}
-{%- endmacro -%}
-
-{# Attributes #}
+{# @docs
+label: attr_if
+category: attributes
+note: |
+  Pass in an attribute name and value.
+  If the value is not falsey,
+  we'll display the attribute
+  with appropriate value when necessary.
+params:
+  attr:
+    type: string
+    note: The attribute name
+  value:
+    type: string | boolean
+    default: none
+    note: |
+      The value of the attribute.
+      "True" or "true" (string or boolean)
+      will output the attribute without any value,
+      while falsey values will not output any attribute.
+#}
 {% macro attr_if(
   attr,
   value=none
@@ -57,18 +39,41 @@
   {%- endif -%}
 {% endmacro %}
 
+
+{# @docs
+label: show_attrs
+category: attributes
+note: |
+  Render a dictionary of attribute/value pairs
+  into HTML-ready attributes.
+params:
+  attrs:
+    type: dictionary
+#}
 {% macro show_attrs(
   attrs
 ) %}
   {%- for attr, value in attrs %} {{ attr_if(attr, value) }}{%- endfor -%}
 {% endmacro %}
 
+
+{# @docs
+label: style_if
+category: attributes
+note: |
+  Render a dictionary of property/value pairs
+  into an HTML-ready style attribute.
+params:
+  style:
+    type: dictionary
+#}
 {% macro style_if(
   style
 ) -%}
   {{ attr_if('style', style | styles) }}
 {%- endmacro %}
 
+<<<<<<< HEAD
 {% macro inline_list(data) -%}
   {%- if data -%}
     <ul class="inline-list">
@@ -88,11 +93,34 @@
     </ul>
   {%- endif -%}
 {%- endmacro %}
+=======
+>>>>>>> docs
 
+{# @docs
+label: icon_link
+category: links
+note: |
+  Links with icons require special handling
+  in order to avoid awkward underline collisions.
+params:
+  icon:
+    type: include path
+  text:
+    type: string
+  url:
+    type: url
+    default: none
+  class:
+    type: string
+    default: none
+  attrs:
+    type: dictionary
+    default: '{}'
+#}
 {% macro icon_link(
   icon,
   text,
-  url,
+  url=none,
   class=none,
   attrs={}
 ) -%}
@@ -109,6 +137,24 @@
   ) -}}
 {%- endmacro %}
 
+
+{# @docs
+label: link_if
+category: links
+note: Return a link or span with given attributes
+params:
+  content:
+    type: string
+  url:
+    type: url
+    default: none
+  class:
+    type: string
+    default: none
+  attrs:
+    type: dictionary
+    default: '{}'
+#}
 {% macro link_if(
   content,
   url=none,
@@ -116,30 +162,38 @@
   attrs={}
 ) -%}
   {%- if url -%}
-  <a href="{{ url | url }}" {{ attr_if('class', class) }} {{ show_attrs(attrs) }}>{#
-    #}{{ content | safe }}{#
-  #}</a>
+  <a href="{{ url | url }}" {{ attr_if('class', class) }} {{ show_attrs(attrs) }}>{{
+    content | safe
+  }}</a>
   {%- else -%}
-  <span {{ attr_if('class', class) }} {{ show_attrs(attrs) }}>{#
-    #}{{ content | safe }}{#
-  #}</span>
+  <span {{ attr_if('class', class) }} {{ show_attrs(attrs) }}>{{
+    content | safe
+  }}</span>
   {%- endif -%}
 {%- endmacro %}
 
-{% macro prev_next(to, is) %}
-  {% if to %}
-    <li>
-      {{ is }}:
-      {{ link_if(to.data.title | mdInline, to.url) }}
-    </li>
-  {% endif %}
-{% endmacro %}
 
+{# @docs
+label: datetime
+category: time
+note: Format dates and times for posts
+params:
+  start:
+    type: date
+  end:
+    type: date | none
+  format:
+    type: string | date-format
+    default: long
+  is_pubdate:
+    type: boolean
+    default: false
+#}
 {% macro datetime(
-  pubdate,
   start,
   end,
-  format='long'
+  format='long',
+  is_pubdate=false
 ) %}
   {% set ranges = {
     'same-y': {
@@ -156,7 +210,7 @@
 
   <time
     datetime="{{ pub | getDate('iso') }}"
-    {{ attr_if('pubdate', not not pubdate) }}>
+    {{ attr_if('pubdate', not not is_pubdate) }}>
 
     {% if ongoing %}
       since {{ start | getDate('range') }}

@@ -1,6 +1,27 @@
 {% import "utility.macros.njk" as utility %}
 {% import 'embed.macros.njk' as embed %}
 
+
+{# @docs
+label: Quote Macros
+category: file
+note: |
+  Pullquotes, blockquotes, citations,
+  and quote-grids generated from structured data.
+  See the [typography samples](/samples/type/)
+  for more usage examples.
+#}
+
+
+{# @docs
+label: pullquote
+category: from markdown
+note: |
+  Generate markup for a pullquote,
+  by passing in the quote as markdown.
+  Since pull-quotes don't require citations,
+  there's little reason to use structured data.
+#}
 {% macro pullquote(
   content=none
 ) -%}
@@ -8,32 +29,31 @@
 <div class="pullquote">{{ content | md | safe }}</div>
 {%- endmacro %}
 
-{% macro from(
-  collection,
-  page,
-  slug=none
-) -%}
-  {%- set data = collection | pageData(page, 'press') -%}
-  {%- if slug -%}
-    {{- show(data | get('slug', slug)) -}}
-  {%- else -%}
-    {{- grid(data) if data else none -}}
-  {%- endif -%}
-{%- endmacro %}
 
-{% macro grid(
-  data
-) %}
-<div class="quote-grid">
-  {%- for item in data -%}
-    {%- if item.text -%}
-      {{- show(item, 'grid') -}}
-    {%- endif -%}
-  {%- endfor -%}
-</div>
-{% endmacro %}
+{# @docs
+label: blockquote
+category: from data
+note: |
+  Generate a single quote from structured data.
+  Basic markdown blockquote syntax is preferred
+  for simple markdown quotes.
+  There is no need for a macro
+  when creating one-off quotes in markdown content.
+example: |
+  {{ quotes.blockquote(press | just('slug', 'extension')) }}
+params:
+  data:
+    type: dictionary
+    note: |
+      Quote dictionaries include:
 
-{% macro show(
+      - `text`: The markdown content of the quote
+      - (`citation data`): See `cite` macro
+  type:
+    type: 'solo | grid'
+    default: solo
+#}
+{% macro blockquote(
   data,
   type='solo'
 ) -%}
@@ -63,23 +83,95 @@
 </blockquote>
 {%- endmacro %}
 
+
+{# @docs
+label: from
+category: from data
+note: |
+  Display one or all quotes from a page with `press` data.
+example: |
+  {{ quotes.from(collections.all, '/work/timedesigner/') }}
+  {{ quotes.from(collections.all, '/work/metadeploy/', 'extension') }}
+params:
+  collection:
+    type: array
+    note: The 11ty source collection to look in
+  page:
+    type: url
+    note: URL of the page to select quotes from, e.g. '/work/metadeploy/'
+  slug:
+    type: string
+    note: Select a single quote based on its `slug` value.
+#}
+{% macro from(
+  collection,
+  page,
+  slug=none
+) -%}
+  {%- set data = collection | pageData(page, 'press') -%}
+  {%- if slug -%}
+    {{- blockquote(data | just('slug', slug)) -}}
+  {%- else -%}
+    {{- grid(data) if data else none -}}
+  {%- endif -%}
+{%- endmacro %}
+
+
+{# @docs
+label: grid
+category: from data
+note: |
+  Generate a quote grid from structured data.
+example: |
+  {{ quotes.grid(press) }}
+params:
+  data:
+    type: array
+    note: Array of quote dictionaries.
+#}
+{% macro grid(
+  data
+) %}
+<div class="quote-grid">
+  {%- for item in data -%}
+    {%- if item.text -%}
+      {{- blockquote(item, 'grid') -}}
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+{% endmacro %}
+
+
+{# @docs
+label: cite
+category: from data
+note: Generate a citation line from data.
+params:
+  data:
+    type: dictionary
+    note: |
+      Citation dats includes:
+
+      - `name`: who said it?
+      - `venue` [optional]: article, publication, or company name
+      - `title` [optional]: job title of the person quoted
+      - `url` [optional]: link for context
+#}
 {% macro cite(
   data
 ) -%}
 <p class="byline">---{{ _cite(data) | safe }}</p>
 {%- endmacro %}
 
-{% macro _cite(
-  data
-) -%}
-  {%- set venue = utility.link_if(data.venue, data.url if not data.title, class='p-org h-card h-name') if data.venue else none -%}
-  {%- set title = utility.link_if(data.title, data.url if not venue, class='p-job-title') if data.title else none -%}
-  {%- set context = utility.link_if([title, venue] | join(' <i>at</i> '), data.url) if (title and venue) else (title or venue) -%}
-  {%- set name = utility.link_if(data.name, data.url if not context, class='p-name') -%}
-  {%- set full = [name, context] | join(', ') if (name and context) else (name or context) -%}
-  {{- full | safe -}}
-{%- endmacro %}
 
+{# @docs
+label: signature
+category: meta
+note: |
+  Make Miriam sign something.
+  Huh, this seems like a bad idea,
+  doesn't it?
+#}
 {% macro signature() %}
 {% set data = {
   'name': 'Miriam Suzanne',
@@ -90,3 +182,32 @@
 <p class="byline">{{ _cite(data) | safe }}</p>
 </div>
 {% endmacro %}
+
+
+{# Citation logic, for internal use… #}
+{% macro _cite(
+  data
+) -%}
+  {%- set venue = utility.link_if(
+    content=data.venue,
+    url=data.url if not data.title,
+    class='p-org h-card h-name'
+  ) if data.venue else none -%}
+  {%- set title = utility.link_if(
+    content=data.title,
+    url=data.url if not venue,
+    class='p-job-title'
+  ) if data.title else none -%}
+  {%- set context = utility.link_if(
+    content=[title, venue] | join(' <i>at</i> '),
+    url=data.url
+  ) if (title and venue) else (title or venue) -%}
+  {%- set name = utility.link_if(
+    content=data.name,
+    url=data.url if not context,
+    class='p-name'
+  ) -%}
+  {%- set full = [name, context] | join(', ') if (name and context) else (name or context) -%}
+  {{- full | safe -}}
+{%- endmacro %}
+

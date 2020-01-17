@@ -4,7 +4,30 @@ const pages = require('./pages');
 const { getDate, now } = require('./time');
 const { unique, groupBy } = require('./utils');
 
+/* @docs
+label: Event Filters
+category: file
+todo: |
+  These filters come from miriamsuzanne.com,
+  and I'm not at all sure how/if we'll use them.
+  I'll document them in more detail
+  once I set up our events pages…
+*/
+
+/* @docs
+label: isPublic
+params:
+  event:
+    type: event object
+*/
 const isPublic = (event) => Boolean(event.draft);
+
+/* @docs
+label: hasEvents
+params:
+  page:
+    type: page object
+*/
 const hasEvents = (page) => page.data.events;
 
 const groupNames = {
@@ -16,9 +39,25 @@ const groupNames = {
   soon: 3000,
 };
 
+/* @docs
+label: isEvent
+params:
+  page:
+    type: page object
+*/
 const isEvent = (page) =>
   page.data.tags ? page.data.tags.includes('_post') : false;
 
+/* @docs
+label: buildEvent
+note:
+params:
+  page:
+    type: page object
+  event:
+    type: event object
+    note: can be empty, for building events from pages
+*/
 const buildEvent = (page, event) => {
   const eventStart = event ? event.start || event.date : null;
   const start = eventStart || page.data.start || page.date;
@@ -57,7 +96,14 @@ const buildEvent = (page, event) => {
   return { page, event, start, end, date, group, tags, feature };
 };
 
-const fromYAML = (page) => {
+/* @docs
+label: fromData
+note: Get events from `page.data.events` yaml
+params:
+  page:
+    type: page object
+*/
+const fromData = (page) => {
   const events = [];
 
   page.data.events
@@ -69,6 +115,13 @@ const fromYAML = (page) => {
   return events;
 };
 
+/* @docs
+label: fromCollection
+note: Get both page and data events from a collection
+params:
+  collection:
+    type: array of pages
+*/
 const fromCollection = (collection) => {
   const events = [];
 
@@ -76,7 +129,7 @@ const fromCollection = (collection) => {
     .filter((page) => pages.isPublic(page))
     .forEach((page) => {
       if (hasEvents(page)) {
-        Array.prototype.push.apply(events, fromYAML(page));
+        Array.prototype.push.apply(events, fromData(page));
       }
 
       if (isEvent(page) && pages.isPublic(page)) {
@@ -87,11 +140,13 @@ const fromCollection = (collection) => {
   return events;
 };
 
-const count = (groups) => {
-  const eventsPer = groups.map((g) => g.data.length);
-  return eventsPer.reduce((all, group) => all + group, 0);
-};
-
+/* @docs
+label: byGroup
+note: Group events by year, and sort
+params:
+  events:
+    type: array of events
+*/
 const byGroup = (events) => {
   const groups = groupBy(events, 'group');
   const sorted = [];
@@ -107,11 +162,27 @@ const byGroup = (events) => {
   return sorted.reverse();
 };
 
-const get = (collection, only, group = true) => {
+/* @docs
+label: getEvents
+note: |
+  Get events from a collection,
+  optionally filtering by tag,
+  and grouping by year
+params:
+  collection:
+    type: array of pages
+  tag:
+    type: string
+    note: Filter by tag
+  group:
+    type: boolean
+    default: true
+*/
+const getEvents = (collection, tag, group = true) => {
   let events = fromCollection(collection);
 
-  if (only) {
-    events = events.filter((event) => event.tags.includes(only));
+  if (tag) {
+    events = events.filter((event) => event.tags.includes(tag));
   }
 
   if (group) {
@@ -121,13 +192,23 @@ const get = (collection, only, group = true) => {
   return events;
 };
 
+/* @docs
+label: groupName
+note: |
+  Get the name of a special-case group,
+  like "now" / "soon" / "ongoing"
+params:
+  group:
+    type: group id
+*/
+const groupName = (group) => groupNames[group] || group;
+
 module.exports = {
   isPublic,
   isEvent,
   hasEvents,
   fromCollection,
   byGroup,
-  get,
-  count,
-  groupNames,
+  getEvents,
+  groupName,
 };

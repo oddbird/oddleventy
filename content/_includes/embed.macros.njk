@@ -1,6 +1,42 @@
 {% import 'utility.macros.njk' as utility %}
 
+{# @docs
+label: Media Embed macros
+category: file
+note: |
+  Helper macros for consistent embeding of
+  images, svg, video (iframes), and audio media --
+  as welll as creating particular patterns
+  like media/icon-blocks, logo arrays, figures, galleries, etc.
+#}
 
+
+{# @docs
+label: media_block
+category: patterns
+note: |
+  Media blocks create a side-by-side layout,
+  with constrained-wdth media on one side,
+  and text-content flowing to the other side.
+params:
+  media:
+    type: string
+    note: The media to embed (this macro does not generate the media itself)
+  name:
+    type: string
+    default: "''"
+    note: This name will be applied to the `data-media` attribute
+  attrs:
+    type: dictionary
+    default: '{}'
+  reverse:
+    type: boolean
+    default: 'false'
+  content:
+    type: string
+    default: none
+    note: Provide either the content parameter *or* a `caller()` block
+#}
 {% macro media_block(
   media,
   name='',
@@ -16,12 +52,25 @@
 {% endmacro %}
 
 
+{# @docs
+label: figure
+category: patterns
+note: |
+  Generate a figure from data, or pass in a `caller()` block.
+params:
+  data:
+    type: array
+    default: none
+    note: Array of media-data dictionaries
+  caption:
+    type: string
+    default: none
+#}
 {% macro figure(
   data=none,
-  caption=none,
-  content=none
+  caption=none
 ) -%}
-{%- set content = content or _fig_content(data) -%}
+{%- set content = _fig_content(data) if (data != none) else caller() -%}
 {% if content %}
 <figure>
 <div class="fig-content">
@@ -37,6 +86,69 @@
 {%- endmacro %}
 
 
+{# Private macro used to generate figure content from data #}
+{% macro _fig_content(
+  data
+) -%}
+{%- for item in data -%}
+  {%- if item.img -%}
+    {%- set style = {
+      '--width': item.width,
+      '--span': item.span
+    } | styles -%}
+    {{- img(item.img, item.alt, {'style': style}) | safe -}}
+  {%- elif item.iframe -%}
+    {{- iframe(item.iframe, item.width, item.height, item.span) -}}
+  {%- elif item.audio -%}
+    {{- audio(item.audio, span) -}}
+  {%- endif -%}
+{%- endfor -%}
+{%- endmacro %}
+
+
+{# @docs
+label: screen
+category: patterns
+note: Place an image inside a screen, like an iphone.
+params:
+  device:
+    type: string
+    note: Name of an icon in `_includes/devices/`
+  fill:
+    type: color
+    default: 'none'
+    note: Color to use in any extra space around the image
+  content:
+    type: html
+    default: none
+    note: The image to embed (can also be passed into a `caller()` block)
+#}
+{% macro screen(
+  device='iphone',
+  fill=none,
+  content=none
+) %}
+{%- set content = content if (content != none) else caller() -%}
+{%- set style = {'--device-fill': fill} -%}
+<div data-screen="{{ device }}" {{ utility.style_if(style) }}>
+{{ content | safe }}
+{% include 'devices/' + device + '.svg' %}
+</div>
+{% endmacro %}
+
+
+{# @docs
+label: logos
+category: patterns
+note: Generate a block of project logos.
+todo: This is likely to move and expand to include page data.
+params:
+  projects:
+    type: array
+    note: |
+      Names of svg files to include from `content/_includes/logos/`,
+      without the path or `.svg` extension.
+#}
 {% macro logos(
   projects
 ) %}
@@ -48,6 +160,21 @@
 {% endmacro %}
 
 
+{# @docs
+label: icon_block
+category: patterns
+note: Generate a series of media-blocks with icons
+params:
+  data:
+    type: array
+    note: |
+      Each dictionary in the array should include an `icon` and `text`,
+      with optional `title` and `url`.
+  title:
+    type: string
+    default: 'none'
+    note: The overall title for the icon-blocks section.
+#}
 {% macro icon_block(
   data,
   title=none
@@ -71,9 +198,19 @@
 {%- endmacro %}
 
 
-{#
-  Media Types
-  -----------
+{# @docs
+label: img
+category: embed
+note: Embed an image
+params:
+  src:
+    type: url
+  alt:
+    type: string
+    default: ''
+  attrs:
+    type: dictionary
+    default: '{}'
 #}
 {% macro img(
   src,
@@ -91,6 +228,14 @@
 {%- endmacro %}
 
 
+{# @docs
+label: svg
+category: embed
+note: Embed an svg file from the `content/_includes/` folder
+params:
+  path:
+    type: string
+#}
 {% macro svg(
   path
 ) -%}
@@ -98,6 +243,27 @@
 {%- endmacro %}
 
 
+{# @docs
+label: iframe
+category: embed
+note: |
+  Embed an iframe (most often used for videos).
+  Width and height are provided both as defaults,
+  and to create intrinsic ratios when possible.
+params:
+  src:
+    type: url
+  width:
+    type: number
+    default: 'none'
+  height:
+    type: number
+    default: 'none'
+  span:
+    type: number | 'full'
+    default: 'none'
+    note: Span multiple columns of a gallery
+#}
 {% macro iframe(
   src,
   width=none,
@@ -117,7 +283,17 @@
   {{- ratio(width, height, span, content) | safe -}}
 {% endmacro %}
 
-
+{# @docs
+label: audio
+category: embed
+note: Embed an audio file
+params:
+  src:
+    type: url
+  attrs:
+    type: dictionary
+    default: '{}'
+#}
 {% macro audio(
   src,
   span
@@ -130,23 +306,25 @@
 {%- endmacro %}
 
 
-{% macro screen(
-  device='iphone',
-  fill=none,
-  content=none
-) %}
-{%- set content = content if (content != none) else caller() -%}
-{%- set style = {'--device-fill': fill} -%}
-<div data-screen="{{ device }}" {{ utility.style_if(style) }}>
-{{ content | safe }}
-{% include 'devices/' + device + '.svg' %}
-</div>
-{% endmacro %}
-
-
-{#
-  Ratios
-  ------
+{# @docs
+label: ratio
+category: layout
+note: Maintain aspect ratio for embedded media
+params:
+  width:
+    type: number
+    default: 'none'
+  height:
+    type: number
+    default: 'none'
+  span:
+    type: number | 'full'
+    default: 'none'
+    note: Span multiple columns of a gallery
+  content:
+    type: html
+    default: 'none'
+    note: The content to embed (can also be a `caller()` block)
 #}
 {% macro ratio(
   width=none,
@@ -164,45 +342,4 @@
   {%- else -%}
     {{- content | safe -}}
   {%- endif -%}
-{%- endmacro %}
-
-
-{#
-  Placement
-  ---------
-#}
-{% macro place(
-  width,
-  height=none,
-  content=none
-) -%}
-{%- set content = content if (content != none) else caller() -%}
-{%- set style = {
-  '--width': width,
-  '--height': height
-} -%}
-<div data-place {{ utility.style_if(style) }}>{{ content | safe }}</div>
-{%- endmacro %}
-
-
-{#
-  Private
-  -------
-#}
-{% macro _fig_content(
-  data
-) -%}
-{%- for item in data -%}
-  {%- if item.img -%}
-    {%- set style = {
-      '--width': item.width,
-      '--span': item.span
-    } | styles -%}
-    {{- img(item.img, item.alt, {'style': style}) | safe -}}
-  {%- elif item.iframe -%}
-    {{- iframe(item.iframe, item.width, item.height, item.span) -}}
-  {%- elif item.audio -%}
-    {{- audio(item.audio, span) -}}
-  {%- endif -%}
-{%- endfor -%}
 {%- endmacro %}

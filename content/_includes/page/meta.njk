@@ -1,4 +1,5 @@
 {%- import 'utility.macros.njk' as utility -%}
+{%- import 'tags.macros.njk' as tagutils -%}
 
 {% set public_tags = tags | publicTags %}
 {% set elsewhere = {
@@ -6,11 +7,13 @@
   'url': url
 } if elsewhere else none %}
 
+{% set sub = renderData.sub or sub %}
+
 {% if sub or public_tags or elsewhere or author %}
   <div id="meta">
     {% if sub or dates %}
       <p class="subtitle">
-        {{ sub | mdInline('amp') | safe }}
+        {{ sub | mdInline | safe }}
         {%- if sub and dates %}, {% endif %}
         {{ dates }}
       </p>
@@ -22,7 +25,7 @@
         <i>by</i>
         {% if by.data %}
           {{ utility.link_if(
-            content=by.data.title | mdInline('amp') | safe,
+            content=by.data.title | mdInline | safe,
             url=by.url,
             class='h-card'
           ) }}
@@ -33,7 +36,7 @@
         {% if elsewhere %}
           <i>at</i>
           {{ utility.link_if(
-            content=elsewhere.venue | mdInline('amp') | safe,
+            content=elsewhere.venue | mdInline | safe,
             url=elsewhere.url,
             attrs={'rel': 'bookmark'}
           ) }}
@@ -41,10 +44,10 @@
 
         <i>on</i>
         {{ utility.datetime(
-          pubdate=pubdate or page.date,
           start=start or date or page.date,
           end=end,
-          format='long'
+          format='long',
+          is_pubdate=pubdate or page.date
         ) }}
 
         {% if adr %}
@@ -59,9 +62,9 @@
     {% if public_tags %}
       <div class="page-tags">
         {% include "icons/tags.svg" %}
-        {{ utility.tag_list(
+        {{ tagutils.tag_list(
           tags=tags,
-          all=collections
+          all=collections.all
         ) }}
       </div>
     {% endif %}
