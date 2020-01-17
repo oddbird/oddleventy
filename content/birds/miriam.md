@@ -3,7 +3,7 @@ title: Miriam Suzanne
 sub: Co-founder & product lead
 dates: 2008–present
 bird: miriam
-active: true
+active: 2009
 image:
   src: birds/miriam.jpg
 social:
@@ -11,15 +11,14 @@ social:
   github: mirisuzanne
   codepen: mirisuzanne
   stackoverflow: 1930386
-  _facebook: mirisuzanne
 summary: |
-  [Miriam Suzanne][mia]
-  is a product manager,
-  user-experience designer,
-  writer, speaker,
-  and open source developer.
-
-  [mia]: /authors/miriam/
+  Miriam Suzanne
+  is a co-founder,
+  product manager,
+  user-experience designer --
+  also doing developer outreach
+  through workshops, conferences,
+  and open source tools.
 ---
 
 **Miriam leads the OddBird process**,

@@ -1,7 +1,7 @@
 ---
 title: Carl Meyer
 bird: carl
-active: true
+active: 2009
 image:
   src: birds/carl.jpg
 social:
@@ -9,14 +9,15 @@ social:
   github: carljm
   stackoverflow: 3207
 summary: |
-  [Carl Meyer][carl]
-  is an active owner
+  Carl Meyer
+  is a co-founder
+  and developer-emeritus,
   providing oversight and counsel
-  to the development team,
-  and core developer of the
-  [Django][django] Python web framework.
+  to the development team.
+  He's a core developer of the
+  [Django][django] Python web framework,
+  and conntributor to the Python language.
 
-  [carl]: /authors/carl/
   [django]: https://www.djangoproject.com/
 ---
 

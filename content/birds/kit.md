@@ -1,21 +1,18 @@
 ---
 title: Kit La Touche
 bird: kit
-active: true
+active: 2016
 image:
   src: birds/kit.jpg
 social:
   twitter: wlonk
   github: wlonk
 summary: |
-  [Kit La Touche][kit]
+  Kit La Touche
   is a back-end developer,
   computational linguist,
   Linux system administrator,
   and game designer.
-
-  [kit]: /authors/kit/
-
 ---
 
 **Kit leads our server-side development**,

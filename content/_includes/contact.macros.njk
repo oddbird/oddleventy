@@ -1,3 +1,5 @@
+{% import 'utility.macros.njk' as utility %}
+
 {% macro form(
   next='/contact/thanks/',
   submit='Send',
@@ -154,4 +156,46 @@
   </form>
 </div>
 <!--End mc_embed_signup-->
+{% endmacro %}
+
+{% macro social(
+  data,
+  name
+) %}
+  {%- set sites = {
+    'twitter': {
+      'user': '@%s',
+      'url': 'https://twitter.com/%s/'
+    },
+    'github': {
+      'url': 'https://github.com/%s/'
+    },
+    'codepen': {
+      'title': 'CodePen',
+      'url': 'https://codepen.io/%s/'
+    },
+    'stackoverflow': {
+      'title': 'Stack Overflow',
+      'url': 'https://stackoverflow.com/users/%s/',
+      'text': name
+    }
+  } -%}
+
+  {%- if data -%}
+    <ul class="inline-list">
+    {%- for site, id in data -%}
+      {%- set info = sites[site] -%}
+      {% if info %}
+        {%- set text = info.user | replace("%s", id) if info.user else info.text or id -%}
+        <li>
+          {{- utility.icon_link(
+            icon='social/' + site,
+            text=text,
+            url=info.url | replace("%s", id)
+          ) }} <i>on</i> {{ info.title or site | capitalize -}}
+        </li>
+      {% endif %}
+    {%- endfor -%}
+    </ul>
+  {%- endif -%}
 {% endmacro %}

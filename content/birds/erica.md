@@ -1,20 +1,18 @@
 ---
 title: Erica Mitchell
 bird: erica
-active: true
+active: 2019
 image:
   src: birds/erica.jpg
 social:
   twitter: DuggieMitchell
   github: duggiemitchell
 summary: |
-  [Erica Mitchell][erica]
-  is a front end developer,
+  Erica Mitchell
+  is a front end JavaScript developer,
   veteran,
+  teacher,
   and advocate for users.
-
-  [erica]: /authors/erica/
-
 ---
 
 **Erica brings design and application data alive for your users**,

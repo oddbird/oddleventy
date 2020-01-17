@@ -1,7 +1,7 @@
 ---
 title: Stacy Kvernmo
 bird: stacy
-active: true
+active: 2016
 image:
   src: birds/stacy.jpg
 social:
@@ -10,13 +10,11 @@ social:
   codepen: stacy
   stackoverflow: 7033764
 summary: |
-  [Stacy Kvernmo][stacy]
+  Stacy Kvernmo
   is a user experience designer,
   front-end developer,
   speaker,
   and podcast superfan.
-
-  [stacy]: /authors/stacy/
 ---
 
 With over 15 years of experience,

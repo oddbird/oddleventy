@@ -1,7 +1,7 @@
 ---
 title: Sondra Eby
 bird: sondra
-active: true
+active: 2011
 image:
   src: birds/sondra.jpg
 social:
@@ -9,12 +9,10 @@ social:
   github: sondrae
   dribbble: sondraeby
 summary: |
-  [Sondra Eby][sondra]
-  is a brand and interface designer,
-  user-tester,
-  author, and musician.
-
-  [sondra]: /authors/sondra/
+  Sondra Eby
+  is a brand and interface designer --
+  as well as a marketing expert,
+  and usability tester.
 ---
 
 **Sondra spearheads our design process**

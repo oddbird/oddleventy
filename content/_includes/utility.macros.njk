@@ -76,7 +76,7 @@
       <li>
         {%- if link.icon -%}
           {{ icon_link(
-            icon=link.icon + '.svg',
+            icon=link.icon,
             text=link.text,
             url=link.url
           ) }}
@@ -97,7 +97,7 @@
   attrs={}
 ) -%}
   {%- set content -%}
-    {%- include icon -%}
+    {%- include icon + '.svg' -%}
     <span class="link-text">{{ text }}</span>
   {%- endset -%}
 

@@ -22,7 +22,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('content/favicon.ico');
 
   eleventyConfig.addCollection('birds', (collection) =>
-    collection.getAll().filter((item) => item.data.bird),
+    collection
+      .getAll()
+      .filter((item) => item.data.bird)
+      .sort((a, b) => a.data.title - b.data.title),
   );
   eleventyConfig.addCollection('sample', (collection) =>
     collection.getAll().filter((item) => item.data.sample),

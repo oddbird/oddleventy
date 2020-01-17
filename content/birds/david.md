@@ -14,8 +14,7 @@ summary: |
   and prolific core-contributor to the Plone CMS.
 
   [david]: /authors/david/
-
-------
+---
 
 **David is a developer emeritus**
 (now working with [Salesforce.org][salesforce])

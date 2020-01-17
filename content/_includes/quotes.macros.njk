@@ -48,7 +48,7 @@
       }
     ) -}}
   {%- else -%}
-    {%- include 'icons/' + (data.icon or 'tags') + '.svg' -%}
+    {{ embed.svg(data.icon or 'icons/tags') }}
   {%- endif -%}
 {%- endset -%}
 
