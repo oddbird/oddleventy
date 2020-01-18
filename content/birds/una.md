@@ -6,12 +6,10 @@ image:
 social:
   twitter: una
 summary: |
-  [Una Kravets][una]
+  Una
   is a designer,
   front-end developer,
   and speaker.
-
-  [una]: /authors/una/
 ---
 
 **Una Kravets**

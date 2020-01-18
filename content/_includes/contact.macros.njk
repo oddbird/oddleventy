@@ -201,7 +201,7 @@ params:
 
 {# @docs
 label: social
-note: Generate an inline-list of social-media links
+note: Generate a list of social-media icon-links
 params:
   data:
     type: dictionary
@@ -213,13 +213,14 @@ params:
 {% macro social(
   data,
   name,
-  details=true
+  details=false
 ) %}
   {%- set sites = {
     'email': {
       'user': '%s@oddbird.net',
       'url': 'mailto:%s@oddbird.net',
-      'icon': 'mail'
+      'icon': 'mail',
+      'hide_details': true
     },
     'twitter': {
       'user': '@%s',
@@ -243,21 +244,24 @@ params:
   } -%}
 
   {%- if data -%}
-    <ul class="inline-list social-list">
+    <ul class="social-list">
     {%- for site, id in data -%}
       {%- set info = sites[site] -%}
-      {% if info %}
+      {%- if info -%}
+        {%- set hide_details = info.hide_details or (not details) -%}
         {%- set text = info.user | replace("%s", id) if info.user else info.text or id -%}
+        {%- set context %} <i>on</i> {{ info.title or site | capitalize }}{% endset -%}
+        {%- set context = '<span class="sr-only">' + context + '</span>' if hide_details else context %}
+        {%- set text = text + context if hide_details else text -%}
         <li>
           {{- utility.icon_link(
             icon='social/' + (info.icon or site),
-            text=text,
+            text=text | safe,
             url=info.url | replace("%s", id)
           ) -}}
-          {%- if details %} <i>on</i> {{ info.title or site | capitalize -}}
-          {%- endif -%}
+          {{- context if not hide_details -}}
         </li>
-      {% endif %}
+      {%- endif -%}
     {%- endfor -%}
     </ul>
   {%- endif -%}

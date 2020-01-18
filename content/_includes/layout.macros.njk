@@ -1,7 +1,31 @@
+{% import 'utility.macros.njk' as utility %}
+
+{# @docs
+label: title
+note: Section titles are flag-like
+params:
+  content:
+    type: markdown
+  align:
+    type: right | left | center [none]
+    default: 'right'
+    note: |
+      The macro defaults to `right`,
+      but the CSS defaults to a centered layout
+      if no valid alignment is given.
+#}
+{% macro title(
+  content,
+  align='right'
+) %}
+<h2 data-section-title="{{ align | mdInline | safe }}">{{ content }}</h2>
+{% endmacro %}
+
 {% macro grid(
-  name='fit-small',
-  content=none
+  name='fit',
+  content=none,
+  attrs={}
 ) -%}
 {%- set content = content if (content != none) else caller() -%}
-<div data-grid="{{ name }}">{{ content }}</div>
+<div data-grid="{{ name }}" {{ utility.show_attrs(attrs) }}>{{ content }}</div>
 {%- endmacro %}

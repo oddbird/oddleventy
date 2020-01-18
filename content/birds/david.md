@@ -8,12 +8,10 @@ social:
   github: davisagli
   stackoverflow: 212493
 summary: |
-  [David Glick][david]
+  David
   is a Python and JavaScript developer,
   database designer,
   and prolific core-contributor to the Plone CMS.
-
-  [david]: /authors/david/
 ---
 
 **David is a developer emeritus**

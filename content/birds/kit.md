@@ -8,7 +8,7 @@ social:
   twitter: wlonk
   github: wlonk
 summary: |
-  Kit La Touche
+  Kit
   is a back-end developer,
   computational linguist,
   Linux system administrator,

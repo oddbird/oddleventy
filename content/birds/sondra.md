@@ -9,7 +9,7 @@ social:
   github: sondrae
   dribbble: sondraeby
 summary: |
-  Sondra Eby
+  Sondra
   is a brand and interface designer --
   as well as a marketing expert,
   and usability tester.

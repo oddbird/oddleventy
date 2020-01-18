@@ -10,7 +10,7 @@ social:
   codepen: stacy
   stackoverflow: 7033764
 summary: |
-  Stacy Kvernmo
+  Stacy
   is a user experience designer,
   front-end developer,
   speaker,

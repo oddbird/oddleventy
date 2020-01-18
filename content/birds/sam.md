@@ -6,12 +6,9 @@ image:
 social:
   github: samwisemr
 summary: |
-  [Sam Meyer-Reed][sam]
+  Sam
   is a student
   at the University of Waterloo.
-
-  [sam]: /birds/#bird-sam
-
 ---
 
 **Sam Meyer-Reed**

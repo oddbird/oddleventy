@@ -104,7 +104,7 @@ params:
 ) -%}
   {%- set content -%}
     {%- include icon + '.svg' -%}
-    <span class="link-text">{{ text }}</span>
+    <span class="link-text">{{ text | safe }}</span>
   {%- endset -%}
 
   {{- link_if(

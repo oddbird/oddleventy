@@ -9,16 +9,12 @@ social:
   github: carljm
   stackoverflow: 3207
 summary: |
-  Carl Meyer
-  is a co-founder
-  and developer-emeritus,
-  providing oversight and counsel
-  to the development team.
+  Carl is a co-founder
+  and active developer-emeritus,
+  providing counsel to the team.
   He's a core developer of the
-  [Django][django] Python web framework,
-  and conntributor to the Python language.
-
-  [django]: https://www.djangoproject.com/
+  [Django](https://www.djangoproject.com/)
+  Python web framework.
 ---
 
 **Carl is an active owner and developer-emeritus**,

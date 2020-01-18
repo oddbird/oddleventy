@@ -40,6 +40,7 @@ params:
 const active = (collection) =>
   collection
     .filter((page) => page.data.bird && page.data.active)
+    .sort((a, b) => a.data.title - b.data.title)
     .sort((a, b) => a.data.active - b.data.active);
 
 /* @docs

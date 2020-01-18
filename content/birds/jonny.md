@@ -2,7 +2,7 @@
 title: Jonny Gerig Meyer
 sub: Co-founder & technical lead
 bird: jonny
-active: 2009
+active: 2008
 image:
   src: birds/jonny.jpg
 social:
@@ -10,7 +10,7 @@ social:
   github: jgerigmeyer
   _facebook: jgerigmeyer
 summary: |
-  Jonny Gerig Meyer
+  Jonny
   is a co-founder and technical lead --
   helping architect clean,
   well-tested JavaScript web applications.

@@ -1,6 +1,17 @@
-// Main Region Layout
-// ==================
+@use '../../../node_modules/accoutrement/sass/tools';
 
 [data-layout='main'] {
   grid-area: main;
+}
+
+[data-grid] {
+  --fit--default: minmax(var(--fit-min, var(--min-page)), var(--fit-max, 1fr));
+  display: grid;
+  grid:
+    var(--row-template, auto-flow)
+    / var(--col-template, repeat(auto-fit, var(--fit, var(--fit--default))));
+  grid-gap: var(--row-gap, var(--gap, var(--double-gutter)))
+    var(--col-gap, var(--gap, var(--double-gutter)));
+  justify-content: var(--justify, center);
+  justify-items: var(--justify, center);
 }

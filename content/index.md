@@ -29,9 +29,9 @@ work:
 
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
-{% import 'section.macros.njk' as section %}
+{% import 'layout.macros.njk' as layout %}
 
-{{ section.title('Featured Clients') }}
+{{ layout.title('Featured Clients') }}
 
 {{ embed.logos([
   'orcas',
@@ -48,7 +48,7 @@ work:
   collections.all | findData('press', {'slug': 'goals'})
 ]) }}
 
-{{ section.title('Developer Tools') }}
+{{ layout.title('Developer Tools') }}
 
 {{ embed.logos([
   'django',

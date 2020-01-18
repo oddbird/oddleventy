@@ -1,7 +1,7 @@
 ---
 title: About
 banner: About OddBird
-sub: The people you'll work with...
+sub: Founded in 2008 by three odd siblings
 permalink: birds/index.html
 image:
   svg: faces/allbirds
@@ -20,13 +20,19 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'contact.macros.njk' as contact %}
 
-{% call layout.grid() %}
+{{ layout.title('Meet the birds') }}
+
+{% set style = {
+  '--media-content': 'var(--small-page)'
+} | styles %}
+
+{% call layout.grid(attrs={'style': style}) %}
   {% for bird in collections.birds | active %}
     {% call embed.media_block(
       media=embed.svg('faces/' + bird.data.bird),
       name='bird'
     ) %}
-      <h2>{{ utility.link_if(bird.data.title, bird.url) }}</h2>
+      <h3>{{ utility.link_if(bird.data.title, bird.url) }}</h3>
 
       {{ bird.data.summary | md | safe }}
 

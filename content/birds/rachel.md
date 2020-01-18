@@ -6,13 +6,11 @@ image:
 social:
   twitter: rachelnabors
 summary: |
-  [Rachel Nabors][rachel]
+  Rachel
   is a front-end developer,
   designer,
   comic artist,
   and web-animation expert.
-
-  [rachel]: /birds/#bird-rachel
 ---
 
 **Rachel Nabors**

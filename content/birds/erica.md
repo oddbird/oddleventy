@@ -8,7 +8,7 @@ social:
   twitter: DuggieMitchell
   github: duggiemitchell
 summary: |
-  Erica Mitchell
+  Erica
   is a front end JavaScript developer,
   veteran,
   teacher,
