@@ -118,5 +118,5 @@ and how to get started with only a few lines of code.
 
 {{ embed.figure(
   data=media,
-  caption='Conference videos…'
+  caption='Conference videos...'
 ) }}

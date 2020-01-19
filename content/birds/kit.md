@@ -3,7 +3,7 @@ title: Kit La Touche
 bird: kit
 active: 2016
 image:
-  src: birds/kit.jpg
+  face: kit
 social:
   twitter: wlonk
   github: wlonk

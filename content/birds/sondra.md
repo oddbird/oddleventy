@@ -3,7 +3,7 @@ title: Sondra Eby
 bird: sondra
 active: 2011
 image:
-  src: birds/sondra.jpg
+  face: sondra
 social:
   twitter: sondraeby
   github: sondrae

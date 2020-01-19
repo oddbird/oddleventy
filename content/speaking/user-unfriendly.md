@@ -99,5 +99,5 @@ and designing for edge-cases with integrated teams.
 
 {{ embed.figure(
   data=media,
-  caption='Conference videos…'
+  caption='Conference videos...'
 ) }}

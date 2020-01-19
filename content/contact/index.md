@@ -12,7 +12,7 @@ sub: Leave me a note, or find me online!
 
 - [info@OddBird.net](mailto:info@oddbird.net)
 
-## Feeling Social…
+## Feeling Social...
 
 - [Twitter](https://twitter.com/oddbird) (`@oddbird`)
 - [Facebook](https://facebook.com/oddbird)

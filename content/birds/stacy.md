@@ -3,7 +3,7 @@ title: Stacy Kvernmo
 bird: stacy
 active: 2016
 image:
-  src: birds/stacy.jpg
+  face: stacy
 social:
   twitter: stacykvernmo
   github: stacyk

@@ -1,6 +1,6 @@
 ---
 title: \*Beyond Pixels Profile
-sub: Some day you’ll realise you can’t do everything…
+sub: Some day you’ll realise you can’t do everything...
 venue: Net Magazine
 url: https://www.creativebloq.com/net-magazine
 date: 2016-12-01
@@ -13,7 +13,7 @@ tags:
   - Creative Bloq
 image:
   src: blog/elsewhere/netmag-mia.jpg
-  alt: magaine spread (full text below)
+  alt: magazine spread (full text below)
 summary: |
   Miriam Suzanne creates experimental experiences
   with her band and her fellow developers.

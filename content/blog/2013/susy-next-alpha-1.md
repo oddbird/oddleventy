@@ -1,5 +1,5 @@
 ---
-title: 'Susy Next: The First Alpha'
+title: Susy Next, The First Alpha
 tags:
   - _post
   - Susy

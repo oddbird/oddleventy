@@ -1,6 +1,6 @@
 ---
 title: Getting Started with CSS Grid
-url: https://css-tricks.com/video-screencasts/153-getting-started-with-css-grid/
+canonical: https://css-tricks.com/video-screencasts/153-getting-started-with-css-grid/
 date: 2017-02-20
 author: miriam
 image:

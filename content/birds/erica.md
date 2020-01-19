@@ -3,7 +3,7 @@ title: Erica Mitchell
 bird: erica
 active: 2019
 image:
-  src: birds/erica.jpg
+  face: erica
 social:
   twitter: DuggieMitchell
   github: duggiemitchell

@@ -55,5 +55,5 @@ before we push them to their limits.
 
 {{ embed.figure(
   data=media,
-  caption='Conference videos…'
+  caption='Conference videos...'
 ) }}

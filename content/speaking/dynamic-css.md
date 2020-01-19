@@ -142,5 +142,5 @@ without all the invasive Javascript.
 
 {{ embed.figure(
   data=media,
-  caption='Conference videos…'
+  caption='Conference videos...'
 ) }}

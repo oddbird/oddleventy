@@ -40,7 +40,7 @@ events:
     start: 2018-03-21
 press:
   - text: |
-      Every time I hear Miriam talk, I learn a ton and laugh a ton…
+      Every time I hear Miriam talk, I learn a ton and laugh a ton...
       Watch this talk when it’s published!
     name: Sarah Drasner
     title: Microsoft Sr. Developer Advocate & Vue Core Team member
@@ -74,5 +74,5 @@ living design systems in an agile and integrated process?
 
 {{ embed.figure(
   data=media,
-  caption='Conference videos…'
+  caption='Conference videos...'
 ) }}

@@ -1,6 +1,6 @@
 ---
 title: Jump Start Sass
-sub: Get up to speed with Sass in a weekend…
+sub: Get up to speed with Sass in a weekend...
 author: miriam
 image:
   src: writing/jssass.jpg

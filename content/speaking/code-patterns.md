@@ -84,5 +84,5 @@ without extensive maintenance.
 
 {{ embed.figure(
   data=media,
-  caption='Conference videos…'
+  caption='Conference videos...'
 ) }}

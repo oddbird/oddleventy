@@ -17,7 +17,7 @@ summary: |
   help you manage the worst effects of [sub-pixel rounding], while
   `bleed()` helps you break items out of the box.
 
-    [sub-pixel rounding]: http://palantir.net/blog/responsive-design-s-dirty-little-secret
+  [sub-pixel rounding]: http://palantir.net/blog/responsive-design-s-dirty-little-secret
 date: 2013-03-20
 ---
 
