@@ -47,6 +47,8 @@ summary: |
   [the video channel]: https://www.youtube.com/MozillaDeveloper
 ---
 
+{% import "embed.macros.njk" as embed %}
+
 The project will include short videos, articles, demos, and tools that
 teach web technologies and standards, browser tools, compatibility, and
 more. No matter your experience level or job description, we’re all

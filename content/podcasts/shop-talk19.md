@@ -8,10 +8,10 @@ tags:
   - _calendar
   - _post
   - _elsewhere
-  - interview
-  - code
-  - podcast
-  - sass
+  - Interview
+  - Code
+  - Podcast
+  - Sass
 summary: |
   I drop by the show to talk about Sass in 2019,
   design tokens, Oddbird, unused CSS, new CSS properties,
