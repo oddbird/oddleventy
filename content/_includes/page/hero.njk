@@ -2,7 +2,7 @@
 
 {% if image.src %}
   <div id="hero">
-    {% set style = ['--hero-position', image.position] | join(':') if image.position else none %}
+    {% set style = {'--hero-position', image.position} | styles %}
     {{ embed.img(
       src=image.src,
       alt=image.alt,

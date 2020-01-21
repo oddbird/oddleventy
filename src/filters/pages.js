@@ -8,7 +8,7 @@ const { just, get, getJust } = require('./utils');
 
 /* @docs
 label: Page Filters
-category: file
+category: File
 */
 
 const isPublic = (page) => {
@@ -19,7 +19,7 @@ const isPublic = (page) => {
 
 /* @docs
 label: getPublic
-category: filter
+category: Filter
 note: Return only the public pages from a collection
 params:
   collection:
@@ -29,7 +29,7 @@ const getPublic = (collection) => collection.filter((page) => isPublic(page));
 
 /* @docs
 label: getPage
-category: filter
+category: Filter
 note: Return full page data based on a URL or current `page` object
 params:
   collection:
@@ -44,7 +44,7 @@ const fromCollection = (collection, page) => {
 
 /* @docs
 label: pageData
-category: data
+category: Data
 note: Return data from a given page
 example: |
   {% set chQuotes = collections.all | pageData('/work/coachhub/', 'press') %}
@@ -65,7 +65,7 @@ const pageData = (collection, page, attrs, test) =>
 
 /* @docs
 label: findData
-category: data
+category: Data
 note: Find data anywhere in a collection
 example: |
   {% set quote = collections.all | findData('press', {'slug': 'extension'}) %}
@@ -94,7 +94,7 @@ const findData = (collection, attrs, test) => {
 
 /* @docs
 label: pageContent
-category: data
+category: Data
 note: Return the content of any page
 params:
   collection:
@@ -107,7 +107,7 @@ const pageContent = (collection, page) =>
 
 /* @docs
 label: withData
-category: filter
+category: Filter
 note: Return pages with particular data
 params:
   collection:
@@ -126,7 +126,7 @@ const withData = (collection, attrs, value, first = false) => {
 
 /* @docs
 label: meta
-category: data
+category: Data
 note: Collate metadate for the page from various sources
 params:
   collection:

@@ -4,13 +4,13 @@ const { withData } = require('./pages');
 
 /* @docs
 label: Bird Filters
-category: file
+category: File
 note: Filtering data related to individual Odd Birds
 */
 
 /* @docs
 label: byBird
-category: pages
+category: Pages
 note: Get all the pages where a given bird is one of the authors
 example: |
   {{ collections.all | byBird('miriam') }}
@@ -26,7 +26,7 @@ const getPages = (collection, bird) => withData(collection, 'author', bird);
 
 /* @docs
 label: authorPage
-category: pages
+category: Pages
 note: Return the home page of a given author
 example: |
   {{ collections.all | authorPage('miriam') }}

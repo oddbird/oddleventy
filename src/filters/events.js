@@ -6,7 +6,7 @@ const { unique, groupBy } = require('./utils');
 
 /* @docs
 label: Event Filters
-category: file
+category: File
 todo: |
   These filters come from miriamsuzanne.com,
   and I'm not at all sure how/if we'll use them.

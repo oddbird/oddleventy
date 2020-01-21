@@ -6,12 +6,12 @@ const { getEvents } = require('./events');
 
 /* @docs
 label: Tag Filters
-category: file
+category: File
 */
 
 /* @docs
 label: isPublic
-category: visibility
+category: Visibility
 note: Return false if a tag name starts with `_`
 params:
   tag:
@@ -21,7 +21,7 @@ const isPublic = (tag) => !tag.startsWith('_');
 
 /* @docs
 label: publicTags
-category: visibility
+category: Visibility
 note: Remove private `_<name>` tags from a list
 params:
   tags:
@@ -32,7 +32,7 @@ const publicTags = (tags) =>
 
 /* @docs
 label: displayName
-category: visibility
+category: Visibility
 note: |
   Returns a tag name with private `_` removed,
   for those rare cases where we want to display private tags.
@@ -44,7 +44,7 @@ const displayName = (tag) => (tag.startsWith('_') ? tag.slice(1) : tag);
 
 /* @docs
 label: allTags
-category: list
+category: List
 note: Returns a list of public tag names in a collection
 params:
   collection:
@@ -60,7 +60,7 @@ const allTags = (collection) => {
 
 /* @docs
 label: tagData
-category: list
+category: List
 note: |
   Returns an array tag-data objects for every tag,
   including name (`tag`), `events`,
@@ -87,7 +87,7 @@ const tagData = (collections, sort = 'eventCount') =>
 
 /* @docs
 label: tagLink
-category: links
+category: Links
 note: |
   Returns the link for a given tag --
   either the auto-generated tag page,

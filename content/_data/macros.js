@@ -38,7 +38,7 @@ module.exports = () =>
           const filePath = path.join(includeDir, file);
           const docs = doxray([filePath], doxOptions);
           const info = docs.patterns.find(
-            (pattern) => pattern.category === 'file',
+            (pattern) => String(pattern.category).toLowerCase() === 'file',
           );
           const name = file;
 
@@ -49,7 +49,7 @@ module.exports = () =>
             slug: file.slice(0, file.indexOf('.')),
             title: info ? info.label : name,
             patterns: docs.patterns.filter(
-              (pattern) => pattern.category !== 'file',
+              (pattern) => String(pattern.category).toLowerCase() !== 'file',
             ),
           };
         });
