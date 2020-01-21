@@ -52,7 +52,7 @@ events:
     start: 2018-09-06
     slides: https://talks.oddbird.net/dynamic-css/fullstack18/
     video: https://youtu.be/9fTUeLsR2Hc
-    embed: &fsfest
+    media: &fsfest
       iframe: https://www.youtube.com/embed/9fTUeLsR2Hc
       width: 560
       height: 315
@@ -62,7 +62,7 @@ events:
     start: 2018-08-21
     slides: https://talks.oddbird.net/dynamic-css/jsconfus18/
     video: https://www.youtube.com/watch?v=uwgBz748t-g
-    embed: &jsconf
+    media: &jsconf
       iframe: https://www.youtube.com/embed/uwgBz748t-g
       width: 560
       height: 315

@@ -23,7 +23,7 @@ events:
     start: 2019-06-26
     slides: https://talks.oddbird.net/user-unfriendly/design4drupal19
     video: https://drupal.tv/external-video/2019-06-28/user-unfriendly-practical-guide-losing-control
-    embed: &drupal
+    media: &drupal
       iframe: https://www.youtube.com/embed/2MkQBQb43gE
       width: 560
       height: 315

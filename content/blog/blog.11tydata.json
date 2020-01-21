@@ -1,5 +1,4 @@
 {
   "layout": "base",
-  "location": "blog",
   "permalink": "/{{ page.date | getDate('url') }}/{{ page.fileSlug }}/index.html"
 }

@@ -306,6 +306,7 @@ params:
   '--width': '100%',
   '--span': span
 } -%}
+{%- set src = src if ('://' in src) else ('/assets/media/' + src) -%}
 <audio src="{{ src }}" {{ utility.style_if(style) }} controls>{{ src | mdInline }}</audio>
 {%- endmacro %}
 

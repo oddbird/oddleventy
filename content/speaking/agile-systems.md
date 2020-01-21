@@ -29,7 +29,7 @@ events:
     slides: https://oddbooksapp.com/release/9edb34c9-8789-4201-9f14-64bf5ab11b0a
     start: 2018-03-26
     video: https://www.vuemastery.com/conferences/vueconf-2018/agile-design-systems-in-vue-miriam-suzanne/
-    embed: &vue
+    media: &vue
       - iframe: https://player.vimeo.com/video/264296381
         width: 640
         height: 360
