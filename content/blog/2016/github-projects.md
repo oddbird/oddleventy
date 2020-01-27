@@ -31,8 +31,8 @@ features, and the ability to organize issues – but the flow doesn't feel
 well-integrated yet. We'll write about the experience in more detail
 once we've had more time to live with it.
 
-  [Github]: https://github.com/
-  [project-management features]: https://github.com/blog/2256-a-whole-new-github-universe-announcing-new-tools-forums-and-features
-  [kanban]: https://www.atlassian.com/agile/kanban
-  [Pivotal Tracker]: https://www.pivotaltracker.com/n/projects/22378
-  [OddSite Open Design]: https://github.com/oddbird/oddsite/projects/1
+[Github]: https://github.com/
+[project-management features]: https://github.com/blog/2256-a-whole-new-github-universe-announcing-new-tools-forums-and-features
+[kanban]: https://www.atlassian.com/agile/kanban
+[Pivotal Tracker]: https://www.pivotaltracker.com/n/projects/22378
+[OddSite Open Design]: https://github.com/oddbird/oddsite/projects/1

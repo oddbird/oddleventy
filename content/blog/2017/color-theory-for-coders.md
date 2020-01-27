@@ -16,6 +16,9 @@ summary: |
   beautiful, cohesive, and accessible color palette using Sass color
   functions, and teach you why her palettes work so well, all at the same
   time.
+action:
+  text: Color Theory Demo
+  url: http://tallys.github.io/color-theory/
 date: 2017-02-20
 ---
 
@@ -23,15 +26,10 @@ So you write code, but design intrigues you and you'd like to delve
 deeper. Where to start? The sheer number of tools and tutorials is
 overwhelming. Later this week, I'll be publishing an article with my
 recommendations for how to get started, but while you're waiting, check
-out [Natalya Shelburne's][] [Practical Color Theory for People Who
-Code].
+out [Natalya Shelburne's][] [Practical Color Theory for People WhoCode][].
 
-content.macros.j2\#link\_button
-
-Color Theory Demo
-
-  [Natalya Shelburne's]: https://twitter.com/natalyathree
-  [Practical Color Theory for People Who Code]: http://tallys.github.io/color-theory/
+[Natalya Shelburne's]: https://twitter.com/natalyathree
+[Practical Color Theory for People Who Code]: http://tallys.github.io/color-theory/
 
 ## Sass Color Functions
 
@@ -54,6 +52,6 @@ provided a special toggle for you!
 Have some color theories of your own? Let's discuss. Send us a message
 via [Twitter] or join our public [Slack channel].
 
-  [speaker]: /2017/1/31/css-day/#color-theory-for-people-who-code-svg-and-css-by-natalya-shelburne
-  [Twitter]: https://twitter.com/oddbird
-  [Slack channel]: http://friends.oddbird.net/
+[speaker]: /2017/1/31/css-day/#color-theory-for-people-who-code-svg-and-css-by-natalya-shelburne
+[Twitter]: https://twitter.com/oddbird
+[Slack channel]: http://friends.oddbird.net/

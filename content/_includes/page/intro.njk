@@ -5,9 +5,7 @@
     {{ summary | md | safe }}
 
     {% if action %}
-      <p class="main-action">
-        {{ utility.link_if(action.text, action.url) }}
-      </p>
+      {{ utility.main_action(action.text, action.url) }}
     {% endif %}
   </div>
 {% endif %}

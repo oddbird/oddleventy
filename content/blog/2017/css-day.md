@@ -25,7 +25,7 @@ and compare.
 Below are the available videos and slides of each session, including two
 from our very own OddBirds.
 
-  [CSS Day 2016]: http://cssday.io/
+[CSS Day 2016]: http://cssday.io/
 
 ## SVG: from Practical to Wild by [Sarah Drasner]
 
@@ -34,64 +34,54 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 *(video unavaliable)*
 
-  [Sarah Drasner]: http://twitter.com/sarah_edo
-  [SVG Animations]: http://shop.oreilly.com/product/0636920045335.do
+[Sarah Drasner]: http://twitter.com/sarah_edo
+[SVG Animations]: http://shop.oreilly.com/product/0636920045335.do
 
 ## Color Theory for people who code SVG and CSS by [Natalya Shelburne]
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/aq3u001QMcM?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
-content.macros.j2\#link\_button
+- [Slides](https://docs.google.com/presentation/d/1ytSMRNpNrD9CWms351X4xelQuJT24tIqKnIzSbe2OQ0/edit?usp=sharing)
 
-Slides
-
-  [Natalya Shelburne]: https://twitter.com/natalyathree
+[Natalya Shelburne]: https://twitter.com/natalyathree
 
 ## Applying the principles of functional programming to CSS by [Ben Adam]
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/7g0BHu0kWXo?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
-content.macros.j2\#link\_button
+- [Slides](http://css-day.surge.sh/#/?_k=xpchzn)
 
-Slides
-
-  [Ben Adam]: https://twitter.com/benadam11
+[Ben Adam]: https://twitter.com/benadam11
 
 ## Code Patterns for Pattern Making by [Miriam Suzanne]
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/lK_akjzOUY0?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
-content.macros.j2\#link\_button
+- [Slides](https://oddbooksapp.com/book/pattern-making)
 
-Slides
-
-  [Miriam Suzanne]: https://twitter.com/mirisuzanne/
+[Miriam Suzanne]: https://twitter.com/mirisuzanne/
 
 ## The In-Betweeners of Responsive Web Design by [Pralie Dutzel]
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/WLAVc18Ugoc?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
-content.macros.j2\#link\_button
+- [Slides](http://praliedutzel.com/talks/betweeners-responsive-web-design/)
 
-Slides
-
-  [Pralie Dutzel]: https://twitter.com/praliedutzel
+[Pralie Dutzel]: https://twitter.com/praliedutzel
 
 ## Style Guide-Driven Development: Documentation that Does Work by [Jan Jorgensen]
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/9Fknadsepd4?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
-  [Jan Jorgensen]: https://twitter.com/ramblinjan
+[Jan Jorgensen]: https://twitter.com/ramblinjan
 
 ## The Great State of Design by [Stacy Kvernmo]
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/pnbT4HdcSwM?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
-content.macros.j2\#link\_button
+- [Slides](http://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends)
 
-Slides
-
-  [Stacy Kvernmo]: https://twitter.com/stacykvernmo
+[Stacy Kvernmo]: https://twitter.com/stacykvernmo
 
 ## jQuery out, CSS in by [John Boere]
 
@@ -100,21 +90,17 @@ jQuery to CSS for web and mobile applications.
 
 *(video unavaliable)*
 
-content.macros.j2\#link\_button
+- [Slides](https://www.dropbox.com/s/u2sz0yfjl4753y7/1612_CSSday.pdf)
 
-Slides
-
-  [John Boere]: https://twitter.com/cliffhangersolu
+[John Boere]: https://twitter.com/cliffhangersolu
 
 ## Solving CSS at scale with your own UI framework by [CJ Cenizal]
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/CbPYf9FslXw?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
-content.macros.j2\#link\_button
+- [Slides](http://cenizal.com/projects/solving_css_at_scale/)
 
-Slides
-
-  [CJ Cenizal]: https://twitter.com/TheCJCenizal
+[CJ Cenizal]: https://twitter.com/TheCJCenizal
 
 ## Showing Gratitude
 
@@ -137,8 +123,8 @@ As always, we would love to discuss the content covered in these videos
 shared from CSS Day 2016. Send us a message via [Twitter] or join our
 public [Slack channel].
 
-  [Brad Westfall]: https://twitter.com/bradwestfall
-  [videos]:
-  [Photos]: https://drive.google.com/drive/folders/0B0xOcf_BzQVlZGJHaGVWa3Bhc0k
-  [Twitter]: https://twitter.com/oddbird
-  [Slack channel]: http://friends.oddbird.net
+[Brad Westfall]: https://twitter.com/bradwestfall
+[videos]: https://www.youtube.com/playlist?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_
+[Photos]: https://drive.google.com/drive/folders/0B0xOcf_BzQVlZGJHaGVWa3Bhc0k
+[Twitter]: https://twitter.com/oddbird
+[Slack channel]: http://friends.oddbird.net

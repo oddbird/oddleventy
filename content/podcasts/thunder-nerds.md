@@ -9,7 +9,6 @@ image:
   src: talks/miriam.jpg
 tags:
   - _post
-  - Elsewhere
   - Interview
   - Podcast
   - Code

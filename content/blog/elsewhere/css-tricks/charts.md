@@ -3,12 +3,12 @@ title: More CSS Charts, with Grid & Custom Properties
 author: miriam
 date: 2017-08-11
 canonical: https://css-tricks.com/css-charts-grid-custom-properties/
-elsewhere: CSS-Tricks
+venue: CSS-Tricks
 tags:
   - _post
-  - Elsewhere
   - CSS
   - CSS Tricks
+  - Code
   - Layout
   - Grids
   - Custom Properties

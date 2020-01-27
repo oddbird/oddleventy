@@ -5,7 +5,7 @@ date: 2016-09-19
 tags:
   - _post
   - Grids
-  - CSS Grid
+  - CSS
   - Layout
   - Design
   - Code
@@ -45,7 +45,7 @@ create structure on both x and y axis’. A container with <span
 class="title-ref">display: flex;</span> can either go horizontally or
 vertically as selected by the flex-direction property.
 
-  [“Solved by Flexbox,”]: https://philipwalton.github.io/solved-by-flexbox/
+[“Solved by Flexbox,”]: https://philipwalton.github.io/solved-by-flexbox/
 
 ## CSS Grid Layout to the Rescue
 
@@ -72,8 +72,8 @@ Internet Explorer and Opera Mini:
 
 [<img src="/static/images/blog/feature-queries.jpg" class="align-center align-center" alt="Feature Queries support in browsers looks good" />]
 
-  [<img src="/static/images/blog/feature-queries.jpg" class="align-center align-center" alt="Feature Queries support in browsers looks good" />]:
-    http://caniuse.com/#feat=css-featurequeries
+[<img src="/static/images/blog/feature-queries.jpg" class="align-center align-center" alt="Feature Queries support in browsers looks good" />]:
+  http://caniuse.com/#feat=css-featurequeries
 
 ### Grid Introduces New Vocabulary
 
@@ -113,8 +113,8 @@ Over the next few months we will be writing more about CSS Grid Layout.
 In the meantime, [CSS-Tricks posted a guide] from Chris House [Chris
 House] that explains each of the below properties in great detail.
 
-  [CSS-Tricks posted a guide]: https://css-tricks.com/snippets/css/complete-guide-grid
-  [Chris House]: http://chris.house/blog/a-complete-guide-css-grid-layout/
+[CSS-Tricks posted a guide]: https://css-tricks.com/snippets/css/complete-guide-grid
+[Chris House]: http://chris.house/blog/a-complete-guide-css-grid-layout/
 
 #### CSS Grid Layout Properties to use on a Grid Container:
 
@@ -179,12 +179,12 @@ perhaps different from what we've always done in the past.
 -   [Flexbox Defense]
 -   [Flexbox Patterns]
 
-  [Stacy’s Flexbox Bookmark Collection]: https://raindrop.io/collection/1328630
-  [Codrops CSS Flexbox Reference]: http://tympanus.net/codrops/css_reference/flexbox/
-  [CSS-Tricks Guide to Flexbox]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-  [Flexbox Froggy]: http://flexboxfroggy.com/
-  [Flexbox Defense]: http://www.flexboxdefense.com/
-  [Flexbox Patterns]: http://www.flexboxpatterns.com/home
+[Stacy’s Flexbox Bookmark Collection]: https://raindrop.io/collection/1328630
+[Codrops CSS Flexbox Reference]: http://tympanus.net/codrops/css_reference/flexbox/
+[CSS-Tricks Guide to Flexbox]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+[Flexbox Froggy]: http://flexboxfroggy.com/
+[Flexbox Defense]: http://www.flexboxdefense.com/
+[Flexbox Patterns]: http://www.flexboxpatterns.com/home
 
 ### CSS Grid Layout
 
@@ -197,14 +197,14 @@ perhaps different from what we've always done in the past.
 -   [Where Things Are at in the CSS Grid Layout Working Draft]
 -   [CSS Grid Layout CodePen Collection]
 
-  [Stacy’s CSS Grid Layout Bookmark Collection]: https://raindrop.io/collection/1295293
-  [Grid by Example]: http://gridbyexample.com/
-  [Jen Simmons Labs]: http://labs.jensimmons.com/
-  [Should I Use Grid or Flexbox]: https://www.rachelandrew.co.uk/archives/2016/03/30/should-i-use-grid-or-flexbox/
-  [Get Ready for CSS Grid Layout]: https://abookapart.com/products/get-ready-for-css-grid-layout
-  [CSS Grid Layout]: https://blogs.igalia.com/mrego/tag/css-grid-layout/
-  [Where Things Are at in the CSS Grid Layout Working Draft]: https://www.sitepoint.com/where-things-are-at-in-the-css-grid-layout-working-draft/
-  [CSS Grid Layout CodePen Collection]: http://codepen.io/collection/XRRJGq/
+[Stacy’s CSS Grid Layout Bookmark Collection]: https://raindrop.io/collection/1295293
+[Grid by Example]: http://gridbyexample.com/
+[Jen Simmons Labs]: http://labs.jensimmons.com/
+[Should I Use Grid or Flexbox]: https://www.rachelandrew.co.uk/archives/2016/03/30/should-i-use-grid-or-flexbox/
+[Get Ready for CSS Grid Layout]: https://abookapart.com/products/get-ready-for-css-grid-layout
+[CSS Grid Layout]: https://blogs.igalia.com/mrego/tag/css-grid-layout/
+[Where Things Are at in the CSS Grid Layout Working Draft]: https://www.sitepoint.com/where-things-are-at-in-the-css-grid-layout-working-draft/
+[CSS Grid Layout CodePen Collection]: http://codepen.io/collection/XRRJGq/
 
 ### Related Conference Talks
 

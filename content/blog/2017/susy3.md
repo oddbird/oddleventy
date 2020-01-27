@@ -23,15 +23,10 @@ summary: |
   ugly markup. But grid systems are on the way out,
   replaced by real CSS layout specs that live in the browser.
   With Susy3, we want to help make that a smooth transition.
+action:
+  text: Susy3 Reference Docs
+  url: /susy/docs/
 ---
-
-content.macros.j2\#link\_button
-
-Susy3 Website
-
-content.macros.j2\#link\_button
-
-Susy3 Reference Docs
 
 I remember when [Blueprint] first came out. Besides [Eric Meyer’s
 Reset], it was one of the first open-source CSS libraries that our

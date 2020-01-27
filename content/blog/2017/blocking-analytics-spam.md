@@ -37,8 +37,8 @@ There are [many solutions out there]; since we mostly saw spam in the
 "referral" field, we wanted a simple way to block spam referrals from
 being included in our analytics data.
 
-  [Google Analytics]: https://analytics.google.com/
-  [many solutions out there]: https://www.google.com/#q=how+to+block+google+analytics+spam
+[Google Analytics]: https://analytics.google.com/
+[many solutions out there]: https://www.google.com/#q=how+to+block+google+analytics+spam
 
 ## Blocking Spam Referrals
 
@@ -89,13 +89,13 @@ And in our HTML, after the JS file has been executed:
       }
     </script>
 
-  [free services]: https://referrerspamblocker.com/
-  [spam-referrals-blocker]: https://github.com/MohamedBassem/spam-referrals-blocker/
-  [community-contributed list of referrer spammers]: https://github.com/piwik/referrer-spam-blacklist
-  [gulp]: http://gulpjs.com/
-  [gulp-download]: https://github.com/Metrime/gulp-download
-  [webpack]: https://webpack.js.org/
-  [raw-loader]: https://github.com/webpack-contrib/raw-loader
+[free services]: https://referrerspamblocker.com/
+[spam-referrals-blocker]: https://github.com/MohamedBassem/spam-referrals-blocker/
+[community-contributed list of referrer spammers]: https://github.com/piwik/referrer-spam-blacklist
+[gulp]: http://gulpjs.com/
+[gulp-download]: https://github.com/Metrime/gulp-download
+[webpack]: https://webpack.js.org/
+[raw-loader]: https://github.com/webpack-contrib/raw-loader
 
 ### Bonus: Excluding Internal Traffic
 
@@ -145,8 +145,8 @@ If you use Google Analytics, how have you tackled the problem of spam
 infecting your data? Let us know via [Twitter] or our public [Slack
 channel]!
 
-  [this guide]: https://www.ohow.co/ultimate-guide-to-removing-irrelevant-traffic-in-google-analytics/
-  [using a whitelist filter to exclude any hostnames we haven't explicitly authorized]:
-    https://www.ohow.co/ultimate-guide-to-removing-irrelevant-traffic-in-google-analytics/#a-creating-a-valid-hostname-filter-for-ghost-spam
-  [Twitter]: https://twitter.com/oddbird
-  [Slack channel]: http://friends.oddbird.net/
+[this guide]: https://www.ohow.co/ultimate-guide-to-removing-irrelevant-traffic-in-google-analytics/
+[using a whitelist filter to exclude any hostnames we haven't explicitly authorized]:
+  https://www.ohow.co/ultimate-guide-to-removing-irrelevant-traffic-in-google-analytics/#a-creating-a-valid-hostname-filter-for-ghost-spam
+[Twitter]: https://twitter.com/oddbird
+[Slack channel]: http://friends.oddbird.net/

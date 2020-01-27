@@ -5,7 +5,6 @@ date: 2019-10-09
 canonical: https://css-tricks.com/introducing-sass-modules/
 tags:
   - _post
-  - Elsewhere
   - Code
   - Modules
   - Sass

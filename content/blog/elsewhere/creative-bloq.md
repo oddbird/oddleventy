@@ -1,12 +1,11 @@
 ---
 title: Has CSS finally come of age?
 canonical: https://www.creativebloq.com/features/has-css-has-finally-come-of-age
-elsewhere: Creative Bloq
+venue: Creative Bloq
 date: 2019-04-23
 author: miriam
 tags:
   - _post
-  - Elsewhere
   - Code
   - Interview
   - Creative Bloq

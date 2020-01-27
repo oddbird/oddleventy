@@ -35,7 +35,7 @@ First I'll talk about how I would do it using Celery. But
 `django-channels` provides some cool new options for handling background
 processes, so I'll cover that too.
 
-  [last post]: /2017/03/20/serializing-things/
+[last post]: /2017/03/20/serializing-things/
 
 ## Celery
 
@@ -88,8 +88,8 @@ curve that can be a bit steep for some situations; if developer time is
 cheaper than ongoing service costs, then it might be worth rolling your
 own websocket solution. Which brings us to our next section.
 
-  [messages framework]: https://docs.djangoproject.com/en/1.11/ref/contrib/messages/
-  [Pusher]: https://pusher.com/
+[messages framework]: https://docs.djangoproject.com/en/1.11/ref/contrib/messages/
+[Pusher]: https://pusher.com/
 
 ## Django-Channels
 
@@ -172,9 +172,9 @@ or through our [handy contact form].
 
 (Header image from [Tekniska Museet].)
 
-  [channels docs]: https://channels.readthedocs.io/en/stable/
-  [excellent blog post]: https://blog.heroku.com/in_deep_with_django_channels_the_future_of_real_time_apps_in_django
-  [Twitter]: https://twitter.com/oddbird
-  [public Slack channel]: http://friends.oddbird.net
-  [handy contact form]: /contact/
-  [Tekniska Museet]: https://www.flickr.com/photos/tekniskamuseet/6984485227/in/photolist-bDcj86-bCJAcK-kuma4q-a84vA7-m9MW4X-bpxan1-5MqJ6t-qveiAk-9HUcBY-bK7X7H-bDc9G8-H4CRif-ecoWKZ-gxg8pi-gxfwdA-gxg9yo-gxganN-gxgxhM-gxgdCL-SRK9sh-g2gW4S-eWUwc-Tj1w3G-SXLqUw-kWJsG1-5nuzrQ-o6Gn1v-dn8r3R-dn8u4y-RCNiKJ-dnp4W6-82121J-Sk9roq-dn7sPf-SiTrzM-SgfCro-TmmueP-dnpnsi-SgfEp1-dnpYB5-SRnywU-RF1mQK-JP5Pxc-SFuTr9-4BrHoH-Si5fuK-Sivnqi-KKuKjn-KjmLNW-KCAU1X
+[channels docs]: https://channels.readthedocs.io/en/stable/
+[excellent blog post]: https://blog.heroku.com/in_deep_with_django_channels_the_future_of_real_time_apps_in_django
+[Twitter]: https://twitter.com/oddbird
+[public Slack channel]: http://friends.oddbird.net
+[handy contact form]: /contact/
+[Tekniska Museet]: https://www.flickr.com/photos/tekniskamuseet/6984485227/in/photolist-bDcj86-bCJAcK-kuma4q-a84vA7-m9MW4X-bpxan1-5MqJ6t-qveiAk-9HUcBY-bK7X7H-bDc9G8-H4CRif-ecoWKZ-gxg8pi-gxfwdA-gxg9yo-gxganN-gxgxhM-gxgdCL-SRK9sh-g2gW4S-eWUwc-Tj1w3G-SXLqUw-kWJsG1-5nuzrQ-o6Gn1v-dn8r3R-dn8u4y-RCNiKJ-dnp4W6-82121J-Sk9roq-dn7sPf-SiTrzM-SgfCro-TmmueP-dnpnsi-SgfEp1-dnpYB5-SRnywU-RF1mQK-JP5Pxc-SFuTr9-4BrHoH-Si5fuK-Sivnqi-KKuKjn-KjmLNW-KCAU1X

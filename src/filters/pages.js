@@ -151,7 +151,9 @@ const meta = (collection, page, renderData, site) => {
     renderData.sub || data.sub || data.summary || site.description,
   );
   data.index = renderData.index || data.index;
-  data.canonical = path.join(site.url, page.url || '');
+
+  const local = page.url ? path.join(site.url, page.url) : null;
+  data.canonical = data.canonical || local;
 
   return data;
 };

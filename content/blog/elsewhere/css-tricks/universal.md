@@ -4,10 +4,9 @@ sub: CSS-Tricks asked a number of web builders the same question...
 author: miriam
 date: 2019-11-26
 canonical: https://css-tricks.com/embracing-the-universal-web/
-elsewhere: CSS-Tricks
+venue: CSS-Tricks
 tags:
   - _post
-  - Elsewhere
   - Code
   - CSS
   - Accessibility

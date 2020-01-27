@@ -14,9 +14,10 @@
     <meta name="description"
       content="{{ meta.description }}" />
 
-    {% set elsewhere = '_elsewhere' in (tags or []) %}
-    <link rel="canonical"
-      href="{{ (meta.url if elsewhere else meta.canonical) | url }}">
+    {% if meta.canonical %}
+      <link rel="canonical"
+        href="{{ meta.canonical | url }}">
+    {% endif %}
 
     {% for url in site.styles %}
       <link rel="stylesheet"

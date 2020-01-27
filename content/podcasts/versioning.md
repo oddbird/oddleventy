@@ -4,12 +4,11 @@ author: miriam
 date: 2016-10-18
 tags:
   - _post
-  - Elsewhere
   - Interview
   - SitePoint
   - Podcast
 canonical: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
-elsewhere: SitePoint
+venue: SitePoint
 image:
   src: blog/2016/versioning.png
 media:

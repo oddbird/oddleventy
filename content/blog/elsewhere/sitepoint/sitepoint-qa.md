@@ -8,7 +8,6 @@ image:
   src: blog/2016/QandA.jpg
 tags:
   - _post
-  - Elsewhere
   - Interview
   - Code
   - Susy

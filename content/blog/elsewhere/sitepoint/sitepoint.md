@@ -4,12 +4,11 @@ author: miriam
 date: 2016-10-11
 tags:
   - _post
-  - Elsewhere
   - Q&A
   - Interview
   - SitePoint
 canonical: https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664
-elsewhere: SitePoint
+venue: SitePoint
 image:
   src: blog/2016/QandA.jpg
 summary: |
@@ -41,11 +40,7 @@ sound intelligent. Thanks for asking the questions!
 >
 > ---[Miriam Suzanne][live Q&A at SitePoint]
 
-content.macros.j2\#link\_button
-
-Read the full conversation
-
 You can also check out the [summary] – but it leaves out some good bits.
 
-  [live Q&A at SitePoint]: https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664
-  [summary]: https://www.sitepoint.com/how-to-choose-the-right-css-toolkits-and-frameworks/
+[live Q&A at SitePoint]: https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664
+[summary]: https://www.sitepoint.com/how-to-choose-the-right-css-toolkits-and-frameworks/

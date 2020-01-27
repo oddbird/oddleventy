@@ -34,13 +34,13 @@ in the open – sharing our thoughts while we work.
 -   **Articles and Artifacts:** Check back here for regular posts as we
     work. We'll update the [timeline] at the bottom of this page.
 
-  [open Slack channel]: http://friends.oddbird.net
-  [Twitter]: http://twitter.com/oddbird
-  [Github]: https://github.com/oddbird/oddsite/
-  [project board]: https://github.com/oddbird/oddsite/projects/1
-  [Pivotal Tracker]: https://www.pivotaltracker.com/projects/22378
-  [test the new Github features]: /2016/10/07/github-projects/
-  [timeline]: #open-design-articles
+[open Slack channel]: http://friends.oddbird.net
+[Twitter]: http://twitter.com/oddbird
+[Github]: https://github.com/oddbird/oddsite/
+[project board]: https://github.com/oddbird/oddsite/projects/1
+[Pivotal Tracker]: https://www.pivotaltracker.com/projects/22378
+[test the new Github features]: /2016/10/07/github-projects/
+[timeline]: #open-design-articles
 
 ## What is Open Design?
 
@@ -63,10 +63,10 @@ planning documents), and telling stories about our process and decision
 making. We also have our [source code] available on GitHub, and will
 talk about the open source tools we use, and share any tools we build.
 
-  [open source collaboration]: /open-source/
-  [we're not the first to do it]: http://bradfrost.com/blog/post/designing-in-the-open/
-  [continuous integration]: https://en.wikipedia.org/wiki/Continuous_integration
-  [source code]: https://github.com/oddbird/oddsite/
+[open source collaboration]: /open-source/
+[we're not the first to do it]: http://bradfrost.com/blog/post/designing-in-the-open/
+[continuous integration]: https://en.wikipedia.org/wiki/Continuous_integration
+[source code]: https://github.com/oddbird/oddsite/
 
 ## Our Process From Here...
 
@@ -99,9 +99,9 @@ These are the rough stages we expect to go through:
     everything is in place, we will be able to make much more clear and
     informed decisions about the final visual details.
 
-  [Miriam]: /authors/miriam/
-  [Sondra]: /authors/sondra/
-  [rstBlog]: https://github.com/mitsuhiko/rstblog
+[Miriam]: /authors/miriam/
+[Sondra]: /authors/sondra/
+[rstBlog]: https://github.com/mitsuhiko/rstblog
 
 ## Rinse and Repeat...
 

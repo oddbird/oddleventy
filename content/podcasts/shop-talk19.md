@@ -7,7 +7,6 @@ url: https://shoptalkshow.com/episodes/384/
 tags:
   - _calendar
   - _post
-  - _elsewhere
   - Interview
   - Code
   - Podcast

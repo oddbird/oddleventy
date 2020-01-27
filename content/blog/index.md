@@ -9,5 +9,5 @@ summary: |
 ---
 
 {% for post in collections._post %}
-- [{{ post.date | getDate('iso') }}] [{{ post.data.title }}]({{ post.url | url }})
+1. [{{ post.date | getDate('iso') }}] [{{ post.data.title }}]({{ post.url | url }})
 {% endfor %}

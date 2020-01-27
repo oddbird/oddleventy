@@ -4,10 +4,9 @@ sub: A preview of Jump Start Sass, chapter 11
 author: miriam
 date: 2016-03-01
 canonical: https://www.sitepoint.com/architecture-in-sass/
-elsewhere: SitePoint
+venue: SitePoint
 tags:
   - _post
-  - Elsewhere
   - Sass
   - Books
   - SitePoint
@@ -83,9 +82,5 @@ smaller teams and products. Every project has different requirements, so
 you should never assume that the best solution for InstaFace or
 MyPinBook is going to be the best solution for you.
 
-content.macros.j2\#link\_button
-
-Read the full chapter on SitePoint
-
-  [Natalie Downe]: https://twitter.com/Natbat
-  [CSS Systems]: http://www.slideshare.net/nataliedowne/css-systems-presentation
+[Natalie Downe]: https://twitter.com/Natbat
+[CSS Systems]: http://www.slideshare.net/nataliedowne/css-systems-presentation

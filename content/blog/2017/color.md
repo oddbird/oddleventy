@@ -34,8 +34,8 @@ overwhelmed? Color toolkit to the rescue! Over the years, I’ve collected
 several resources to help guide me through these challenges – many of
 which I used during OddBird’s [open redesign process].
 
-  [selected excellent typography]: /2017/1/11/typography/
-  [open redesign process]: /2016/07/12/open-design/
+[selected excellent typography]: /2017/1/11/typography/
+[open redesign process]: /2016/07/12/open-design/
 
 ## Step 1 – Define Brand Goals
 
@@ -58,7 +58,7 @@ brand words will be related to each other in many different ways. The
 process of sorting and resorting may offer new inspiration as you
 prepare to look for a color palette that makes your company stand out.
 
-  [OddSite Brand Goals]: /2016/11/04/branding-type/
+[OddSite Brand Goals]: /2016/11/04/branding-type/
 
 ## Step 2 – Research for Inspiration
 
@@ -74,8 +74,8 @@ feel about each company?
 
 ![image]
 
-  [Canva]: https://designschool.canva.com/blog/website-color-schemes/
-  [image]: /static/images/blog/2017/colors/canva.jpg
+[Canva]: https://designschool.canva.com/blog/website-color-schemes/
+[image]: /static/images/blog/2017/colors/canva.jpg
 
 ## [Design Seeds]
 
@@ -84,36 +84,36 @@ feel about each company?
 I looked at the sites of many web development agencies that I know and
 love as I considered OddBird’s color palette.
 
-  [Design Seeds]: https://www.design-seeds.com/
-  [1]: /static/images/blog/2017/colors/designseeds.jpg
+[Design Seeds]: https://www.design-seeds.com/
+[1]: /static/images/blog/2017/colors/designseeds.jpg
 
 ## [Happy Cog]
 
 ![image][2]
 
-  [Happy Cog]: http://happycog.com/
-  [2]: /static/images/blog/2017/colors/happycog.jpg
+[Happy Cog]: http://happycog.com/
+[2]: /static/images/blog/2017/colors/happycog.jpg
 
 ## [Mild Bunch]
 
 ![image][3]
 
-  [Mild Bunch]: http://mildbun.ch/
-  [3]: /static/images/blog/2017/colors/mildbunch.jpg
+[Mild Bunch]: http://mildbun.ch/
+[3]: /static/images/blog/2017/colors/mildbunch.jpg
 
 ## [Clear Left]
 
 ![image][4]
 
-  [Clear Left]: http://clearleft.com/
-  [4]: /static/images/blog/2017/colors/clearleft.jpg
+[Clear Left]: http://clearleft.com/
+[4]: /static/images/blog/2017/colors/clearleft.jpg
 
 ## [Crush Lovely]
 
 ![image][5]
 
-  [Crush Lovely]: http://crushlovely.com/
-  [5]: /static/images/blog/2017/colors/crushlovely.jpg
+[Crush Lovely]: http://crushlovely.com/
+[5]: /static/images/blog/2017/colors/crushlovely.jpg
 
 ## Step 3 – Start \[Color\] Scheming
 
@@ -145,8 +145,8 @@ used the sliders to find a very dark color for the text and a very light
 “callout” background color for highlighting important information.
 SassMe converts the hex colors into Sass color functions for me.
 
-  [Paletton]: http://paletton.com/
-  [6]: /static/images/blog/2017/colors/paletton.jpg
+[Paletton]: http://paletton.com/
+[6]: /static/images/blog/2017/colors/paletton.jpg
 
 ## [SassMe]
 
@@ -156,15 +156,15 @@ OddBird saves our colors and typography in a living style guide, making
 it easier for designers like me to grab exact colors when I’m
 prototyping website pages or features.
 
-  [SassMe]: http://jim-nielsen.com/sassme/
-  [7]: /static/images/blog/2017/colors/sassme.jpg
+[SassMe]: http://jim-nielsen.com/sassme/
+[7]: /static/images/blog/2017/colors/sassme.jpg
 
 ## [Living Style Guide]
 
 ![image][8]
 
-  [Living Style Guide]: /styleguide/color.html
-  [8]: /static/images/blog/2017/colors/styleguide.jpg
+[Living Style Guide]: /styleguide/color.html
+[8]: /static/images/blog/2017/colors/styleguide.jpg
 
 ## Step 4 – Test Colors for Accessibility
 
@@ -182,7 +182,7 @@ between background and text colors.
 
 Contrast Ratio is my go-to web tool for the job.
 
-  [WebAIM]: http://webaim.org/techniques/fonts/
+[WebAIM]: http://webaim.org/techniques/fonts/
 
 ## [Contrast Ratio]
 
@@ -200,8 +200,8 @@ two that work. Plus, Checker provides detailed descriptions of how to
 choose accessible colors, and accessibility articles if you’d like to
 dive deep.
 
-  [Contrast Ratio]: http://leaverou.github.io/contrast-ratio/
-  [9]: /static/images/blog/2017/colors/contrastratio.jpg
+[Contrast Ratio]: http://leaverou.github.io/contrast-ratio/
+[9]: /static/images/blog/2017/colors/contrastratio.jpg
 
 ## [WebAIM: Color Contrast Checker]
 
@@ -214,8 +214,8 @@ Darkening our orange to the point that it passed AA level changed the
 color so much that it no longer retained the bright, fun feel we needed.
 So I began the search for a new brand color.
 
-  [WebAIM: Color Contrast Checker]: #webaim-color-contrast-checker
-  [10]: /static/images/blog/2017/colors/webaim.jpg
+[WebAIM: Color Contrast Checker]: #webaim-color-contrast-checker
+[10]: /static/images/blog/2017/colors/webaim.jpg
 
 ## Step 5 - Test Colors in Context
 
@@ -266,13 +266,13 @@ As always, we want to know what your favorite web tools are for playing
 with color. Have you tried Xd? What did you think? We’ll be discussing
 this and more in our [OddFriends Slack channel]. Join us!
 
-  [Adobe Experience Design]: http://www.adobe.com/products/experience-design.html
-  [11]: /static/images/blog/2017/colors/xd.jpg
-  [12]: /static/images/blog/2017/colors/elementcollages-color.jpg
-  [Susy]: /susy/
-  [Miriam]: /authors/miriam/
-  [13]: /static/images/blog/2017/colors/elementcollage-final.jpg
-  [OddFriends Slack channel]: http://friends.oddbird.net
+[Adobe Experience Design]: http://www.adobe.com/products/experience-design.html
+[11]: /static/images/blog/2017/colors/xd.jpg
+[12]: /static/images/blog/2017/colors/elementcollages-color.jpg
+[Susy]: /susy/
+[Miriam]: /authors/miriam/
+[13]: /static/images/blog/2017/colors/elementcollage-final.jpg
+[OddFriends Slack channel]: http://friends.oddbird.net
 
 ### Bonus - Color Palette Inspiration
 
@@ -280,36 +280,36 @@ this and more in our [OddFriends Slack channel]. Join us!
 
 ![image][14]
 
-  [Color Palette FX]: http://www.palettefx.com/
-  [14]: /static/images/blog/2017/colors/fx.jpg
+[Color Palette FX]: http://www.palettefx.com/
+[14]: /static/images/blog/2017/colors/fx.jpg
 
 ## [HSL Color Picker]
 
 ![image][15]
 
-  [HSL Color Picker]: http://hslpicker.com/
-  [15]: /static/images/blog/2017/colors/hsl.jpg
+[HSL Color Picker]: http://hslpicker.com/
+[15]: /static/images/blog/2017/colors/hsl.jpg
 
 ## [Color Me]
 
 ![image][16]
 
-  [Color Me]: https://colorme.io/
-  [16]: /static/images/blog/2017/colors/colorme.jpg
+[Color Me]: https://colorme.io/
+[16]: /static/images/blog/2017/colors/colorme.jpg
 
 ## [Culrs]
 
 ![image][17]
 
-  [Culrs]: http://culrs.com/
-  [17]: /static/images/blog/2017/colors/culrs.jpg
+[Culrs]: http://culrs.com/
+[17]: /static/images/blog/2017/colors/culrs.jpg
 
 ## [Open Color]
 
 ![image][18]
 
-  [Open Color]: https://yeun.github.io/open-color/
-  [18]: /static/images/blog/2017/colors/opencolor.jpg
+[Open Color]: https://yeun.github.io/open-color/
+[18]: /static/images/blog/2017/colors/opencolor.jpg
 
 ### Bonus - Color Contrast Tools for Accessibility
 
@@ -317,19 +317,19 @@ this and more in our [OddFriends Slack channel]. Join us!
 
 ![image][19]
 
-  [Colour Contrast Check]: https://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333
-  [19]: /static/images/blog/2017/colors/check.jpg
+[Colour Contrast Check]: https://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333
+[19]: /static/images/blog/2017/colors/check.jpg
 
 ## [Accessible Colors]
 
 ![image][20]
 
-  [Accessible Colors]: http://accessible-colors.com/
-  [20]: /static/images/blog/2017/colors/accessiblecolors.jpg
+[Accessible Colors]: http://accessible-colors.com/
+[20]: /static/images/blog/2017/colors/accessiblecolors.jpg
 
 ## [Adobe Plugin Check Contrast Ratio]
 
 ![image][21]
 
-  [Adobe Plugin Check Contrast Ratio]: https://creative.adobe.com/addons/products/12170#.WHlhCrYrKHp
-  [21]: /static/images/blog/2017/colors/plugin.jpg
+[Adobe Plugin Check Contrast Ratio]: https://creative.adobe.com/addons/products/12170#.WHlhCrYrKHp
+[21]: /static/images/blog/2017/colors/plugin.jpg

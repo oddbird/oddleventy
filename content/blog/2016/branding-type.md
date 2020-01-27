@@ -45,7 +45,7 @@ wizards who would point the way out of the thicket, or the new tools we
 would gain for our questing satchels... (I’m in the middle of writing a
 fantasy novel. My apologies.)
 
-  [Defining Goals and Exploring Possibilities]: /2016/08/22/possibilities/
+[Defining Goals and Exploring Possibilities]: /2016/08/22/possibilities/
 
 ## OddSite Brand Goals
 
@@ -116,7 +116,7 @@ egg-wing friend, so we’re sticking with it. The text behind the bird is
 up for grabs, though, as we consider what typography best suits the
 overall site. More on that below.
 
-  [image]: /static/images/blog/2016/brand/type-logo.jpg
+[image]: /static/images/blog/2016/brand/type-logo.jpg
 
 ## The Birds: Design Team
 
@@ -125,9 +125,9 @@ brought years of varied experience, methods, tools, and questions. This
 would be Miriam’s and Sondra’s first time working on brand design with
 Stacy, and we were all excited to get started!
 
-  [Miriam]: /authors/miriam/
-  [Sondra]: /authors/sondra/
-  [Stacy]: /authors/stacy/
+[Miriam]: /authors/miriam/
+[Sondra]: /authors/sondra/
+[Stacy]: /authors/stacy/
 
 ## Element Collages, Moodboards, and Style Tiles? Oh my!
 
@@ -194,13 +194,13 @@ article from [Vox Product] detailing their brand design process. When
 their design team got to the step we reached, they wisely picked a
 single element to focus on: typography.
 
-  [mood board]: http://www.creativebloq.com/graphic-design/mood-boards-812470
-  [Style Tiles and How They Work]: http://alistapart.com/article/style-tiles-and-how-they-work
-  [Element Collages]: http://danielmall.com/articles/rif-element-collages/
-  [1]: /static/images/blog/2016/brand/type-styletiles.jpg
-  [2]: /static/images/blog/2016/brand/type-elcollage.jpg
-  [3]: /static/images/blog/2016/brand/type-elcollage2.jpg
-  [Vox Product]: http://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
+[mood board]: http://www.creativebloq.com/graphic-design/mood-boards-812470
+[Style Tiles and How They Work]: http://alistapart.com/article/style-tiles-and-how-they-work
+[Element Collages]: http://danielmall.com/articles/rif-element-collages/
+[1]: /static/images/blog/2016/brand/type-styletiles.jpg
+[2]: /static/images/blog/2016/brand/type-elcollage.jpg
+[3]: /static/images/blog/2016/brand/type-elcollage2.jpg
+[Vox Product]: http://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
 
 ## Typography - With a Little Help From Our Friends
 
@@ -252,8 +252,8 @@ this OddSite brand design process has proven how dependent we are on
 each other to do this business of web design to the best of our
 abilities. Thanks!
 
-  [4]: /static/images/blog/2016/brand/bookmania-2.png
-  [5]: /static/images/blog/2016/brand/plume-tisa-2.png
-  [6]: /static/images/blog/2016/brand/mia-baskerville.jpg
-  [7]: /static/images/blog/2016/brand/typography-freight2.jpg
-  [OddFriends Slack channel]: http://friends.oddbird.net/
+[4]: /static/images/blog/2016/brand/bookmania-2.png
+[5]: /static/images/blog/2016/brand/plume-tisa-2.png
+[6]: /static/images/blog/2016/brand/mia-baskerville.jpg
+[7]: /static/images/blog/2016/brand/typography-freight2.jpg
+[OddFriends Slack channel]: http://friends.oddbird.net/

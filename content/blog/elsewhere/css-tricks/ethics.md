@@ -4,10 +4,9 @@ sub: CSS-Tricks asked a number of web builders the same question...
 author: stacy
 date: 2019-11-22
 canonical: https://css-tricks.com/its-my-job-and-yours/
-elsewhere: CSS-Tricks
+venue: CSS-Tricks
 tags:
   - _post
-  - Elsewhere
   - Code
   - Design
   - Ethics

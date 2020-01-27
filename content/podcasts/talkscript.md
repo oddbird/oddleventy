@@ -6,7 +6,6 @@ url: https://www.sitepen.com/blog/episode-18-ethics-es6-in-practice-dynamic-css-
 author: miriam
 tags:
   - _post
-  - Elsewhere
   - Interview
   - Code
   - Podcast

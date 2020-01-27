@@ -7,7 +7,6 @@ image:
   src: blog/2017/figma-trends.jpg
 tags:
   - _post
-  - Elsewhere
   - Design
   - Interview
   - Code

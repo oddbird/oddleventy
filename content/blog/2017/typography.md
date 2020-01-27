@@ -37,8 +37,8 @@ branding, but many of these ideas apply to print as well. If you already
 have typography, but you need a beautiful color palette, check out this
 guide to [choosing brand colors for your website].
 
-  [open redesign process]: /2016/07/12/open-design/
-  [choosing brand colors for your website]: /2017/1/16/color/
+[open redesign process]: /2016/07/12/open-design/
+[choosing brand colors for your website]: /2017/1/16/color/
 
 ## Step 1 – Define Brand Goals
 
@@ -53,7 +53,7 @@ standards without arrogance or that rectangular corporate look. All of
 that plus a dash of our odd, people-first personality (though we agreed
 any typeface termed cute or flashy would be going too far).
 
-  [OddSite Brand Goals]: /2016/11/04/branding-type/
+[OddSite Brand Goals]: /2016/11/04/branding-type/
 
 ## Step 2 – Play with Typography Options and Typeface Pairings
 
@@ -83,9 +83,9 @@ whether it is accessible at small sizes.
 
 Dive deep and luxuriate.
 
-  [study by Errol Morris]: http://www.fastcodesign.com/3046365/errol-morris-how-typography-shapes-our-perception-of-truth
-  [image]: /static/images/blog/2017/typography/librebaskerville.jpg
-  [1]: /static/images/blog/2017/typography/amatic.jpg
+[study by Errol Morris]: http://www.fastcodesign.com/3046365/errol-morris-how-typography-shapes-our-perception-of-truth
+[image]: /static/images/blog/2017/typography/librebaskerville.jpg
+[1]: /static/images/blog/2017/typography/amatic.jpg
 
 ### 7 Resources – Free and High Quality Typography and Typeface Pairing
 
@@ -97,8 +97,8 @@ easy to filter and download.
 
 ![image][2]
 
-  [Font Squirrel]: https://www.fontsquirrel.com/
-  [2]: /static/images/blog/2017/typography/fontsquirrel.jpg
+[Font Squirrel]: https://www.fontsquirrel.com/
+[2]: /static/images/blog/2017/typography/fontsquirrel.jpg
 
 ## [Fontspring]
 
@@ -111,9 +111,9 @@ favorite that OddBird used for the [CoachHub app].
 
 ![image][3]
 
-  [Fontspring]: https://www.fontspring.com/
-  [CoachHub app]: /2015/08/14/coachhub-study/
-  [3]: /static/images/blog/2017/typography/fontspring.jpg
+[Fontspring]: https://www.fontspring.com/
+[CoachHub app]: /2015/08/14/coachhub-study/
+[3]: /static/images/blog/2017/typography/fontspring.jpg
 
 ## [Adobe TypeKit]
 
@@ -132,10 +132,10 @@ final round of element collages, but it was an excellent place to start.
 
 ![image][4]
 
-  [Adobe TypeKit]: https://typekit.com/
-  [licensing details]: https://helpx.adobe.com/typekit/using/font-licensing.html#sync-lic
-  [TypeKit Design Gallery]: https://typekit.com/gallery
-  [4]: /static/images/blog/2017/typography/typekit.jpg
+[Adobe TypeKit]: https://typekit.com/
+[licensing details]: https://helpx.adobe.com/typekit/using/font-licensing.html#sync-lic
+[TypeKit Design Gallery]: https://typekit.com/gallery
+[4]: /static/images/blog/2017/typography/typekit.jpg
 
 ## [Google Fonts]
 
@@ -149,8 +149,8 @@ also offers typeface pairing suggestions with each specimen.
 
 ![image][5]
 
-  [Google Fonts]: https://fonts.google.com
-  [5]: /static/images/blog/2017/typography/googlefonts.jpg
+[Google Fonts]: https://fonts.google.com
+[5]: /static/images/blog/2017/typography/googlefonts.jpg
 
 ## [Typewolf]
 
@@ -160,8 +160,8 @@ discovered Freight Sans and Freight Text on Typewolf.
 
 ![image][6]
 
-  [Typewolf]: https://www.typewolf.com/
-  [6]: /static/images/blog/2017/typography/typewolf.jpg
+[Typewolf]: https://www.typewolf.com/
+[6]: /static/images/blog/2017/typography/typewolf.jpg
 
 ## [Font Pair]
 
@@ -172,8 +172,8 @@ this pair didn’t make the final round of cuts.
 
 ![image][7]
 
-  [Font Pair]: http://fontpair.co/
-  [7]: /static/images/blog/2017/typography/fontpair.jpg
+[Font Pair]: http://fontpair.co/
+[7]: /static/images/blog/2017/typography/fontpair.jpg
 
 ## [Carrie Dils]
 
@@ -183,8 +183,8 @@ her pairings work well together.
 
 ![image][8]
 
-  [Carrie Dils]: https://carriedils.com/typekit-font-pairings/
-  [8]: /static/images/blog/2017/typography/carriedils.jpg
+[Carrie Dils]: https://carriedils.com/typekit-font-pairings/
+[8]: /static/images/blog/2017/typography/carriedils.jpg
 
 ## Step 3 – Test Typography and Pairings in Context
 
@@ -219,11 +219,11 @@ with a twist.
 
 Browse our full element collages in our [Behind the Scenes post].
 
-  [WebAIM]: http://webaim.org/techniques/fonts/
-  [Vox Product’s]: https://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
-  [Birds]: /birds/
-  [9]: /static/images/blog/2017/typography/elementcollagecollage.jpg
-  [Behind the Scenes post]: /2016/11/04/branding-type/
+[WebAIM]: http://webaim.org/techniques/fonts/
+[Vox Product’s]: https://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
+[Birds]: /birds/
+[9]: /static/images/blog/2017/typography/elementcollagecollage.jpg
+[Behind the Scenes post]: /2016/11/04/branding-type/
 
 ## Step 4 – Vote Remotely Using...GitHub?
 
@@ -250,11 +250,11 @@ brilliantly with the winning typefaces receiving six thumbs up.
 
 ![image][10]
 
-  [WebAIM]: http://webaim.org/techniques/fonts/
-  [Dotmocracy]: https://en.wikipedia.org/wiki/Dotmocracy
-  [OddFriends Slack channel]: http://friends.oddbird.net
-  [GitHub Issues]: https://github.com/oddbird/oddsite/issues/49
-  [10]: /static/images/blog/2017/typography/github.jpg
+[WebAIM]: http://webaim.org/techniques/fonts/
+[Dotmocracy]: https://en.wikipedia.org/wiki/Dotmocracy
+[OddFriends Slack channel]: http://friends.oddbird.net
+[GitHub Issues]: https://github.com/oddbird/oddsite/issues/49
+[10]: /static/images/blog/2017/typography/github.jpg
 
 ## Pros and Cons of Freight Sans and Freight Text Font Pair
 
@@ -298,13 +298,13 @@ with, requiring monthly pageview tracking. With TypeKit, we were golden.
 
 ![image][13]
 
-  [11]: /static/images/blog/2017/typography/freight.jpg
-  [Typedia]: http://typedia.com/explore/typeface/freight-text/
-  [create a custom font stack]: https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/
-  [12]: /static/images/blog/2017/typography/numbers.jpg
-  [Darden Studio]: https://www.dardenstudio.com/
-  [Phil’s Fonts]: https://philsfonts.com/index.php/fonts/overview/GF060021X1
-  [13]: /static/images/blog/2017/typography/darden.jpg
+[11]: /static/images/blog/2017/typography/freight.jpg
+[Typedia]: http://typedia.com/explore/typeface/freight-text/
+[create a custom font stack]: https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/
+[12]: /static/images/blog/2017/typography/numbers.jpg
+[Darden Studio]: https://www.dardenstudio.com/
+[Phil’s Fonts]: https://philsfonts.com/index.php/fonts/overview/GF060021X1
+[13]: /static/images/blog/2017/typography/darden.jpg
 
 ## Getting Personal
 
@@ -322,8 +322,4 @@ font sites do you use? What is your favorite tool or method for typeface
 pairing? Let’s talk web typography on the [OddFriends Slack channel].
 Typography nerds unite!
 
-content.macros.j2\#link\_button
-
-How to Choose Brand Colors
-
-  [OddFriends Slack channel]: http://friends.oddbird.net
+[OddFriends Slack channel]: http://friends.oddbird.net
