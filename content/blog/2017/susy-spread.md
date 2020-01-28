@@ -27,7 +27,7 @@ we haven't seen anyone else talking about it explicitly.
 In Susy3 we've tried to move in the other direction – naming spread, and
 making it central to the API – giving you full control over the math.
 
-  [or even to Susy generally]: https://susy.readthedocs.io/settings/#spread
+[or even to Susy generally]: https://susy.readthedocs.io/settings/#spread
 
 ## Spread on Containers
 
@@ -71,7 +71,7 @@ decide if it's useful.
 
 <img src="{{ site.images }}blog/2017/spread/span-wider.jpg" class="extend-small extend-small" alt="spread: wider" />
 
-  [CSS Grid module]: /2016/09/19/css-grid-layout/
+[CSS Grid module]: /2016/09/19/css-grid-layout/
 
 ## Fluid Context
 
@@ -83,23 +83,29 @@ elements is a container.
 Fluid-span calculations require understanding both the container width
 and span-width. The Sass math looks like this:
 
-    $fluid-width: percentage($span-width / $container-width);
+```scss
+$fluid-width: percentage($span-width / $container-width);
+```
 
 For that reason, it's important to be explicit with Susy about the
 spread of both containers and spans, when you are building fluid grids.
 In the Susy3 syntax, that looks like:
 
-    $width: span(3 wide of 6 narrow);
+```scss
+$width: span(3 wide of 6 narrow);
+```
 
 If it comes before `of`, it describes the span. If it comes after `of`,
 it describes the container. In most cases, there will be a sensible
 default for both values, which you can set in the global settings:
 
-    // Both default to "narrow"...
-    $susy: (
-      'spread': 'narrow',
-      'container-spread': 'narrow',
-    );
+```scss
+// Both default to "narrow"...
+$susy: (
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);
+```
 
 ## Common Use Cases
 
@@ -145,6 +151,6 @@ Keep an eye out for the Susy3 release, coming soon! Follow us on
 [Twitter], join our [public Slack channel], or [contact us] online.
 We're excited to hear from you!
 
-  [Twitter]: https://twitter.com/oddbird
-  [public Slack channel]: http://friends.oddbird.net
-  [contact us]: /contact/
+[Twitter]: https://twitter.com/oddbird
+[public Slack channel]: http://friends.oddbird.net
+[contact us]: /contact/

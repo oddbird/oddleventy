@@ -139,29 +139,33 @@ We decided to extend SassDoc, using their framework as a jumping-off
 point for something larger. The SassDoc syntax uses a variant on Sass
 line-comments to explicitly mark documentation for parsing:
 
-    // Normal Sass comments are ignored by SassDoc
+```scss
+// Normal Sass comments are ignored by SassDoc
 
-    /// Comments that begin with 3 slashes
-    /// will be parsed as SassDoc documentation.
+/// Comments that begin with 3 slashes
+/// will be parsed as SassDoc documentation.
+```
 
 In addition to allowing prose descriptions (parsed as markdown), SassDoc
 includes a number of explicit annotations, using an `@annotation`
 syntax. Here are just a few of their options:
 
-    /// @group buttons
-    /// @access public
-    /// @param {color} $color [green] - The background color for the button
-    /// @example scss
-    ///   .button {
-    ///     @include call-to-action(red);
-    ///   }
+```scss
+/// @group buttons
+/// @access public
+/// @param {color} $color [green] - The background color for the button
+/// @example scss
+///   .button {
+///     @include call-to-action(red);
+///   }
+```
 
 Herman supports [all SassDoc annotations], and we've added style guide
 features of our own...
 
-  [KSS]: http://warpspire.com/kss/
-  [SassDoc]: http://sassdoc.com/
-  [all SassDoc annotations]: http://sassdoc.com/annotations/
+[KSS]: http://warpspire.com/kss/
+[SassDoc]: http://sassdoc.com/
+[all SassDoc annotations]: http://sassdoc.com/annotations/
 
 ## Visualizing Design Tokens
 
@@ -176,11 +180,13 @@ these abstractions.
 Herman provides display annotations for [colors] (`@colors`), [fonts]
 (`@fonts`), [sizes] (`@sizes`), and [ratios][sizes] (`@ratios`):
 
-    /// @colors brand-primaries
-    /// @font my-font (normal, bold)
-    ///   <any html head required for CDN font imports>
-    /// @sizes my-spacing
-    /// @ratios my-modular-scale
+```scss
+/// @colors brand-primaries
+/// @font my-font (normal, bold)
+///   <any html head required for CDN font imports>
+/// @sizes my-spacing
+/// @ratios my-modular-scale
+```
 
 [<img src="{{ site.images }}blog/2017/herman-intro/colors.jpg" class="extend-large img-border img-shadow img-spacing extend-large img-border img-shadow img-spacing" alt="Herman color palettes" />][colors]
 
@@ -193,16 +199,17 @@ working to make this step even more simple and automatic.
 We also provide an `@icons` annotation to display all the SVG icons in a
 given folder:
 
-    /// @icons path-to/my-assets/svg/
+```scss
+/// @icons path-to/my-assets/svg/
+```
 
-[<img src="{{ site.images }}blog/2017/herman-intro/icons.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman icon palettes" />]
+[<img src="{{ site.images }}blog/2017/herman-intro/icons.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman icon palettes" />][img]
 
-  [colors]: /herman/docs/demo_colors.html
-  [fonts]: /herman/docs/demo_fonts.html
-  [sizes]: /herman/docs/demo_sizes.html
-  [Sass export utilities]: /herman/docs/api_json-export.html
-  [<img src="{{ site.images }}blog/2017/herman-intro/icons.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman icon palettes" />]:
-    /herman/docs/demo_icons.html
+[colors]: /herman/docs/demo_colors.html
+[fonts]: /herman/docs/demo_fonts.html
+[sizes]: /herman/docs/demo_sizes.html
+[Sass export utilities]: /herman/docs/api_json-export.html
+[img]: /herman/docs/demo_icons.html
 
 ## Rendered Output & Examples
 
@@ -216,26 +223,26 @@ and [Nunjucks] (we're working on support for Vue components). Herman
 will display both input and compiled code, along with the rendered
 output when necessary:
 
-    {% raw %}
-    /// Add default button styles to an element.
-    /// @group buttons
-    /// @example html - submit button
-    ///   {% import 'content.macros.j2' as content %}
-    ///   {{ content.button('Submit', attrs={'type': 'submit'}) }}
-    [data-btn] {
-      border: 1px solid currentColor;
-      border-radius: 3em;
-      color: pink;
-      display: inline-block;
-      padding: 0.25em 1em;
-    }
-    {% endraw %}
+```scss
+/// Add default button styles to an element.
+/// @group buttons
+/// @example html - submit button
+///   {​% import 'content.macros.j2' as content %}
+///   {​{ content.button('Submit', attrs={'type': 'submit'}) }}
+[data-btn] {
+  border: 1px solid currentColor;
+  border-radius: 3em;
+  color: pink;
+  display: inline-block;
+  padding: 0.25em 1em;
+}
+```
 
 [<img src="{{ site.images }}blog/2017/herman-intro/examples.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman rendered example" />][documentation of CSS selectors and markup patterns]
 
-  [documentation of CSS selectors and markup patterns]: /herman/docs/demo_examples.html
-  [Sass]: http://sass-lang.com
-  [Nunjucks]: https://mozilla.github.io/nunjucks/
+[documentation of CSS selectors and markup patterns]: /herman/docs/demo_examples.html
+[Sass]: http://sass-lang.com
+[Nunjucks]: https://mozilla.github.io/nunjucks/
 
 ## Prose, Pages, and Third-Party Links
 
@@ -259,8 +266,8 @@ use this to create an introduction to our design systems, provide quick
 access to a changelog, or document patterns that are not directly
 attached to Sass code.
 
-  [markdown documents]: /herman/docs/CONFIGURATION.html#extradocs
-  [Herman configuration]: /herman/docs/CONFIGURATION.html
+[markdown documents]: /herman/docs/CONFIGURATION.html#extradocs
+[Herman configuration]: /herman/docs/CONFIGURATION.html
 
 ### Third-party Links
 
@@ -269,7 +276,7 @@ relevant documentation is accessible in one place. Define `extraLinks`
 in your Herman configuration, and we'll add links to the bottom of the
 sidebar.
 
-  [external links]: /herman/docs/CONFIGURATION.html#extralinks
+[external links]: /herman/docs/CONFIGURATION.html#extralinks
 
 ## Open Source & Actively Developed
 
@@ -286,9 +293,9 @@ libraries you build with Herman, or any [tutorials] you've written.
 We're always excited to collaborate, and we've provided some
 ["contributing" documentation] to help you get involved.
 
-  [available on GitHub]: https://github.com/oddbird/sassdoc-theme-herman
-  [tutorials]: /herman/articles/
-  ["contributing" documentation]: /herman/docs/CONTRIBUTING.html
+[available on GitHub]: https://github.com/oddbird/sassdoc-theme-herman
+[tutorials]: /herman/articles/
+["contributing" documentation]: /herman/docs/CONTRIBUTING.html
 
 ## Need help with your design system?
 
@@ -308,8 +315,8 @@ You can use our handy [contact form], talk to [@OddBird] on Twitter, or
 join our [public Slack] (with a dedicated `#herman` channel). We're
 excited to hear from you!
 
-  [team of experts]: /birds/
-  [a range of support, training, and consulting]: /services/design-systems/
-  [contact form]: /contact/
-  [@OddBird]: https://twitter.com/oddbird
-  [public Slack]: http://friends.oddbird.net
+[team of experts]: /birds/
+[a range of support, training, and consulting]: /services/design-systems/
+[contact form]: /contact/
+[@OddBird]: https://twitter.com/oddbird
+[public Slack]: http://friends.oddbird.net

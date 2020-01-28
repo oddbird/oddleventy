@@ -58,7 +58,7 @@ params:
   {% if (separator == 'ul') %}
     <ul class="taglist">
       {%- for tag in tags -%}
-        <li class="tag">
+        <li class="tagitem">
           {{ tag_link(tag, all) }}
         </li>
       {%- endfor -%}

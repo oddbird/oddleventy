@@ -134,6 +134,7 @@ media:
   - <<: *jsconf
 ---
 
+{% import 'utility.macros.njk' as utility %}
 {% import "quotes.macros.njk" as quotes %}
 {% import "embed.macros.njk" as embed %}
 
@@ -159,3 +160,11 @@ without all the invasive Javascript.
   data=media,
   caption='Conference videos...'
 ) }}
+
+------
+
+{% for event in events -%}
+- [{{ event.start | getDate('iso') }}]
+  {{ utility.link_if(event.venue, event.url) }} --
+  {{ event.adr }}
+{% endfor %}

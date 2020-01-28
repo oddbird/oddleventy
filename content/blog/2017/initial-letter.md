@@ -30,38 +30,44 @@ will append the `::first-letter` pseudo element. The property is
 `initial-letter` and the value is the number of lines you would like
 your initial letter to expand.
 
-    .intro::first-letter {
-      initial-letter: 7;
-      -webkit-initial-letter: 7;
-    }
+```css
+.intro::first-letter {
+  initial-letter: 7;
+  -webkit-initial-letter: 7;
+}
+```
 
 This code would give us a drop cap seven lines tall, like the large
 letter "I" in this example:
 
 <img src="{{ site.images }}blog/2017/initial-letter/minions-initial-letter.jpg" class="align-center img-border align-center img-border" alt="Screenshot of inital-letter demo" />
 
-<hr>
+------
 
 A few months ago we briefly introduced Feature Queries when we wrote
 about [CSS Grid Layout]. Feature Queries will play an important role in
 using initial-letter today. As a reminder, a Feature Query will ask the
 browser to check for support for a specific property and value:
 
-    @supports (property: value) {
-      property: value;
-    }
+```scss
+@supports (property: value) {
+  property: value;
+}
+```
 
 When we wrap our block in a Feature Query, we can add additional values
 that we would only want applied <span class="title-ref">if</span>
 `initial-letter` is supported.
 
-    @supports (initial-letter: 7) or (-webkit-initial-letter: 7) {
-      .intro::first-letter {
-        color: hsl(350, 50%, 50%);
-        initial-letter: 3;
-        -webkit-initial-letter: 3;
-      }
-    }
+```scss
+@supports (initial-letter: 7) or (-webkit-initial-letter: 7) {
+  .intro::first-letter {
+    color: hsl(350, 50%, 50%);
+    initial-letter: 3;
+    -webkit-initial-letter: 3;
+  }
+}
+```
 
 The specific number used in the @supports line for initial-letter does
 not matter unlike properties that require a keyword like
@@ -72,18 +78,20 @@ you can still use this as an enhancement and fake it 'til you make it to
 achieve a similar outcome. By using the operator `not` we can tell
 browsers that do not support `initial-letter` to use alternate styles.
 
-    $font-size: 1.15rem;
-    $cap-size: $font-size * 6.25;
+```scss
+$font-size: 1.15rem;
+$cap-size: $font-size * 6.25;
 
-    @supports (not(initial-letter: 5)) and (not(-webkit-initial-letter: 5)) {
-      .intro::first-letter {
-        color: hsl(350, 50%, 50%);
-        font-size: $cap-size;
-        float: left;
-        line-height: .7;
-        margin: 17px 2px 0 0;
-      }
-    }
+@supports (not(initial-letter: 5)) and (not(-webkit-initial-letter: 5)) {
+  .intro::first-letter {
+    color: hsl(350, 50%, 50%);
+    font-size: $cap-size;
+    float: left;
+    line-height: .7;
+    margin: 17px 2px 0 0;
+  }
+}
+```
 
 These “magic numbers” are not universal so if you change a value or
 font-family you will likely have to edit these values. We could probably
@@ -99,7 +107,7 @@ Here is the CodePen demo:
 <p data-height="530" data-theme-id="light" data-slug-hash="JbgvRe" data-default-tab="css,result" data-user="stacy" data-embed-version="2" data-pen-title="Initial Letter, with fallback and enhancement" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/JbgvRe/">Initial Letter, with fallback and enhancement</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-  [CSS Grid Layout]: /2016/09/19/css-grid-layout/
+[CSS Grid Layout]: /2016/09/19/css-grid-layout/
 
 ## Raised and Sunken Initial Letters
 
@@ -108,15 +116,17 @@ instruct the browser where to place the initial cap. After our drop cap
 height value we will add a space and the number of lines we want our cap
 to drop. A value equal to the initial height value is the default.
 
-    .raised-cap::first-letter {
-      -webkit-initial-letter: 3 1;
-      initial-letter: 3 1;
-    }
+```scss
+.raised-cap::first-letter {
+  -webkit-initial-letter: 3 1;
+  initial-letter: 3 1;
+}
 
-    .sunken-cap::first-letter {
-      -webkit-initial-letter: 3 2;
-      initial-letter: 3 2;
-    }
+.sunken-cap::first-letter {
+  -webkit-initial-letter: 3 2;
+  initial-letter: 3 2;
+}
+```
 
 <img src="{{ site.images }}blog/2017/initial-letter/sunken-raised-drop-caps.jpg" class="align-center img-border align-center img-border" alt="Screenshot of raised, sunken, and drop cap demo" />
 
@@ -128,5 +138,5 @@ The following CodePen demo is available in Safari only:
 We'd love to see how you use `initial-letter` in your design. Send us a
 message via [Twitter] or join our public [Slack channel].
 
-  [Twitter]: https://twitter.com/oddbird
-  [Slack channel]: http://friends.oddbird.net/
+[Twitter]: https://twitter.com/oddbird
+[Slack channel]: http://friends.oddbird.net/

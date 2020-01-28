@@ -62,8 +62,8 @@ Keep in mind that the preferred order of these names varies in different
 cultures (so avoid calling them “first name” and “last name”). And keep
 in mind that they may change over time. [Names are hard.]
 
-  [one of the hard problems in computer science]: https://martinfowler.com/bliki/TwoHardThings.html
-  [Names are hard.]: http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/
+[one of the hard problems in computer science]: https://martinfowler.com/bliki/TwoHardThings.html
+[Names are hard.]: http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/
 
 ## Building this User Model in Django
 
@@ -71,26 +71,28 @@ We like [Django] for building backends. There are a number of ways to
 extend Django's default user model. Here's our custom `User` model that
 meets the above guidelines:
 
-    from django.db import models
-    from django.contrib.auth.models import PermissionsMixin
-    from django.contrib.auth.base_user import AbstractBaseUser
+```python
+from django.db import models
+from django.contrib.auth.models import PermissionsMixin
+from django.contrib.auth.base_user import AbstractBaseUser
 
-    class User(AbstractBaseUser, PermissionsMixin):
-        email = models.EmailField("email address", unique=True)
-        name = models.CharField("name", max_length=30, blank=True, unique=True)
-        date_joined = models.DateTimeField(_("date joined"), auto_now_add=True)
-        is_active = models.BooleanField(_("active"), default=True)
+class User(AbstractBaseUser, PermissionsMixin):
+    email = models.EmailField("email address", unique=True)
+    name = models.CharField("name", max_length=30, blank=True, unique=True)
+    date_joined = models.DateTimeField(_("date joined"), auto_now_add=True)
+    is_active = models.BooleanField(_("active"), default=True)
 
-        objects = UserManager()
+    objects = UserManager()
 
-        USERNAME_FIELD = "email"
-        REQUIRED_FIELDS = []
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = []
 
-        def get_full_name(self):
-            return self.name
+    def get_full_name(self):
+        return self.name
 
-        def get_short_name(self):
-            return self.name
+    def get_short_name(self):
+        return self.name
+```
 
 Like all Django models, it has a default `id` field which meets our
 criteria for **user id**. There is a single `name` field which is used
@@ -111,8 +113,8 @@ again.
 Did we miss anything important? Let us know via [Twitter] or our public
 [Slack channel]!
 
-  [Django]: https://www.djangoproject.com/
-  [How to Extend the Django User Model]: https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html
-  [AUTH\_USER\_MODEL setting]: https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-AUTH_USER_MODEL
-  [Twitter]: https://twitter.com/oddbird
-  [Slack channel]: http://friends.oddbird.net/
+[Django]: https://www.djangoproject.com/
+[How to Extend the Django User Model]: https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html
+[AUTH\_USER\_MODEL setting]: https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-AUTH_USER_MODEL
+[Twitter]: https://twitter.com/oddbird
+[Slack channel]: http://friends.oddbird.net/

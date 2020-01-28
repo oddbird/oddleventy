@@ -5,17 +5,42 @@ author: miriam
 date: 2019-10-15
 image:
   src: talks/miriam.jpg
+slides: https://sliiides.netlify.com/css-is-rad/
 tags:
   - _post
   - Speaking
   - Talks
   - Code
 events:
+  - venue: Smashing Conf Austin
+    url: https://smashingconf.com/austin-2020/
+    start: 2020-06-09
+    end: 2020-06-10
+    adr: Austin, TX
+  - venue: Front Range Front End
+    url: https://www.meetup.com/front-range-front-end/events/bxrfwqyzpbkb/
+    date: 2019-11-07
+    adr: Denver, CO
+    video: https://youtu.be/bSITeqDKkb8
+    tags:
+      - code video
+    media: &frfe
+      iframe: https://www.youtube.com/embed/bSITeqDKkb8
+      width: 560
+      height: 315
   - venue: Smashing Conf NY
+    feature: true
     url: https://smashingconf.com/ny-2019/
     start: 2019-10-15
     end: 2019-10-16
     adr: New York, NY
+    video: https://vimeo.com/367890815
+    tags:
+      - code video
+    media: &smashNY
+      iframe: https://player.vimeo.com/video/367890815
+      width: 640
+      height: 360
 summary: |
   Depending who you ask,
   CSS is either awesome or broken.
@@ -25,7 +50,13 @@ summary: |
   and not like print design either --
   but trapped in a strange middle ground
   with unique rules and constraints.
+media:
+  - <<: *smashNY
+  - <<: *frfe
 ---
+
+{% import 'utility.macros.njk' as utility %}
+{% import 'embed.macros.njk' as embed %}
 
 The web is designed to work across platforms,
 devices, languages, and interfaces --
@@ -51,3 +82,17 @@ now and into the future.
 - Understand the radical vision that makes design on the web so unique...
   and weird
 
+------
+
+{{ embed.figure(
+  data=media,
+  caption='Conference videos...'
+) }}
+
+------
+
+{% for event in events -%}
+- [{{ event.start | getDate('iso') }}]
+  {{ utility.link_if(event.venue, event.url) }} --
+  {{ event.adr }}
+{% endfor %}

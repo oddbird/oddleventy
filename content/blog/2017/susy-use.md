@@ -30,13 +30,15 @@ automatically apply changed variables at different screen widths. We can
 actually see that ideal in action with CSS variables, where the change
 can be scoped to DOM states, like viewport width:
 
-    :root { --columns: 2; }
+```scss
+:root { --columns: 2; }
 
-    @media (min-width: 30em) {
-      /* the new settings will apply to all elements */
-      /* above a viewport width of 30em */
-      :root { --columns: 6; }
-    }
+@media (min-width: 30em) {
+  /* the new settings will apply to all elements */
+  /* above a viewport width of 30em */
+  :root { --columns: 6; }
+}
+```
 
 Because CSS variables inherit in the DOM like any other CSS property,
 the effects of a variable-change propagate out to each grid element.
@@ -62,34 +64,36 @@ the variables *and* redo the math. If we set width earlier using `span`
 and expect that width to change, we'll have to call `span` again to get
 the new output:
 
-    // Initial Sass Layout
-    $susy: (
-      'columns': susy-repeat(4),
-      'gutters': 0.5rem,
-    );
+```scss
+// Initial Sass Layout
+$susy: (
+  'columns': susy-repeat(4),
+  'gutters': 0.5rem,
+);
 
-    .item {
-      width: span(2); // 2 of 4
-      padding: gutter(); // 0.5rem
-    }
+.item {
+  width: span(2); // 2 of 4
+  padding: gutter(); // 0.5rem
+}
 
-    // Sass Media Query
-    @media (min-width: 30em) {
-      // We have to change the global variable
-      $susy: (
-        'columns': susy-repeat(6),
-        'gutters': 1rem,
-      );
+// Sass Media Query
+@media (min-width: 30em) {
+  // We have to change the global variable
+  $susy: (
+    'columns': susy-repeat(6),
+    'gutters': 1rem,
+  );
 
-      // And explicitly redo all the math...
-      .item {
-        width: span(2); // 2 of 6
-        padding: gutter(); // 1rem
-      }
-    }
+  // And explicitly redo all the math...
+  .item {
+    width: span(2); // 2 of 6
+    padding: gutter(); // 1rem
+  }
+}
 
-    // If we're not careful,
-    // the $susy variable changes aren't contained to the media query
+// If we're not careful,
+// the $susy variable changes aren't contained to the media query
+```
 
 This is a major limitation of pre-processing, and one of the main
 reasons I'm excited about CSS variables. In the meantime, there are some
@@ -101,40 +105,44 @@ We'll need a mixin that changes our global settings for a block of
 wrapped code – using the `@content` argument. We can pair that with a
 media query to define the proper settings for a particular screen:
 
-    $medium: (
-      'columns': susy-repeat(8),
-      'gutters': 1em,
-    );
+```scss
+$medium: (
+  'columns': susy-repeat(8),
+  'gutters': 1em,
+);
 
-    // any code out here uses the global $susy settings...
+// any code out here uses the global $susy settings...
 
-    @media (min-width: 30em) {
-      @include susy-use($medium) {
-        // any code in this block will use the $medium settings...
-      }
-    }
+@media (min-width: 30em) {
+  @include susy-use($medium) {
+    // any code in this block will use the $medium settings...
+  }
+}
+```
 
 Of course, Susy3 doesn't have a `susy-use` mixin, so we'll have to add
 one:
 
-    @mixin susy-use(
-      $config
-    ) {
-      //  parse and normalize any shorthand arguments
-      $config: susy-compile($config);
+```scss
+@mixin susy-use(
+  $config
+) {
+  //  parse and normalize any shorthand arguments
+  $config: susy-compile($config);
 
-      // record the global settings -
-      // and update the global variable with our new settings
-      $global: $susy;
-      $susy: map-merge($susy, $config) !global;
+  // record the global settings -
+  // and update the global variable with our new settings
+  $global: $susy;
+  $susy: map-merge($susy, $config) !global;
 
-      // any content inside this mixin
-      // will use the local settings
-      @content;
+  // any content inside this mixin
+  // will use the local settings
+  @content;
 
-      // return the global variable to its initial value
-      $susy: $global !global;
-    }
+  // return the global variable to its initial value
+  $susy: $global !global;
+}
+```
 
 ## Susy-At Mixin
 
@@ -143,48 +151,52 @@ we can write another mixin to associate the two. Each breakpoint will
 need a map of Susy settings, as well as the media query values (e.g.
 `min-width: 30em`):
 
-    // it is safe to add non-Susy data to Susy maps
-    $medium: (
-      'min-width': 30em,
-      'columns': susy-repeat(8),
-      'gutters': 1em,
-    );
+```scss
+// it is safe to add non-Susy data to Susy maps
+$medium: (
+  'min-width': 30em,
+  'columns': susy-repeat(8),
+  'gutters': 1em,
+);
 
-    // any code out here uses the global $susy settings...
+// any code out here uses the global $susy settings...
 
-    @include susy-at($medium) {
-      // this block establishes a new breakpoint,
-      // and any code in this block will use the $medium settings...
-    }
+@include susy-at($medium) {
+  // this block establishes a new breakpoint,
+  // and any code in this block will use the $medium settings...
+}
+```
 
 Again, we'll have to define the mixin. There are several ways to do it,
 depending on the exact syntax you want, but here's my first attempt
 (using the `susy-use` mixin we created above):
 
-    @mixin susy-at(
-      $config
-    ) {
-      //  parse and normalize any shorthand arguments
-      $config: susy-compile($config);
+```scss
+@mixin susy-at(
+  $config
+) {
+  //  parse and normalize any shorthand arguments
+  $config: susy-compile($config);
 
-      // build min-and-max queries
-      $min: map-get($config, 'min-width');
-      $min: if($min, '(min-width: #{$min})', null);
-      $max: map-get($config, 'max-width');
-      $max: if($max, '(max-width: #{$max})', null);
+  // build min-and-max queries
+  $min: map-get($config, 'min-width');
+  $min: if($min, '(min-width: #{$min})', null);
+  $max: map-get($config, 'max-width');
+  $max: if($max, '(max-width: #{$max})', null);
 
-      // combine them if we need both
-      $and: if($min and $max, '#{$min} and #{$max}', null);
-      // or fall back to the value we need...
-      $query: $and or $min or $max;
+  // combine them if we need both
+  $and: if($min and $max, '#{$min} and #{$max}', null);
+  // or fall back to the value we need...
+  $query: $and or $min or $max;
 
-      // apply the results...
-      @media #{$query} {
-        @include susy-use($config) {
-          @content;
-        }
-      }
+  // apply the results...
+  @media #{$query} {
+    @include susy-use($config) {
+      @content;
     }
+  }
+}
+```
 
 ## Adjust for Your Project
 
@@ -194,13 +206,17 @@ wanted to match the Susy2 syntax, we can rename `susy-use` to
 `with-layout`, and add an argument for cleanly overriding (rather than
 inheriting) the global defaults.
 
-    @mixin with-layout($config, $clean: false) { /* ... */ }
+```scss
+@mixin with-layout($config, $clean: false) { /* ... */ }
+```
 
 For the Susy2 media query syntax, we would rename `susy-at` to
 `susy-breakpoint` and separate the media query from the Susy settings,
 rather than storing them inside the same map:
 
-    @mixin susy-use($breakpoint, $config) { /* ... */ }
+```scss
+@mixin susy-use($breakpoint, $config) { /* ... */ }
+```
 
 That's a bit more flexible – allowing you to associate any breakpoint
 with any layout configuration on-the-fly – but I'm not sure that
@@ -224,6 +240,6 @@ Follow us on [Twitter], join our [public Slack chat] (there's even a
 **\#susy** channel), or [contact us] online. We're excited to hear from
 you!
 
-  [Twitter]: https://twitter.com/oddbird
-  [public Slack chat]: http://friends.oddbird.net
-  [contact us]: /contact/
+[Twitter]: https://twitter.com/oddbird
+[public Slack chat]: http://friends.oddbird.net
+[contact us]: /contact/

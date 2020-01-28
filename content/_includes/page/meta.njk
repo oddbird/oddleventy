@@ -8,8 +8,9 @@
 } if venue else none %}
 
 {% set sub = renderData.sub or sub %}
+{% set project_links = project and (project.source or project.docs) %}
 
-{% if sub or public_tags or linked or author %}
+{% if sub or public_tags or linked or author or project_links or slides %}
   <div id="meta">
     {% if sub or dates %}
       <p class="subtitle">
@@ -67,6 +68,21 @@
           all=collections.all
         ) }}
       </div>
+    {% endif %}
+
+    {% if project_links or slides %}
+      <ul class="page-links">
+        {% if slides %}
+          <li>{{ utility.link_if('Slides »', slides) }}</li>
+        {% endif %}
+
+        {% if project and project.source %}
+          <li>{{ utility.link_if('Source Code »', project.source) }}</li>
+        {% endif %}
+        {% if project and project.docs %}
+          <li>{{ utility.link_if('Documentation »', project.docs) }}</li>
+        {% endif %}
+      </ul>
     {% endif %}
   </div>
 {% endif %}

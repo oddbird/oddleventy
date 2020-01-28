@@ -31,7 +31,7 @@ is built automatically whenever we build the code, and it is delivered
 as a static HTML website which can be served alongside the app. For
 example, the style guide for this website can be found [here][]:
 
-  [here]: /styleguide/
+[here]: /styleguide/
 
 ## SassDoc
 
@@ -40,15 +40,17 @@ which compiles the documentation based on special comments written
 inline in our stylesheets. For example, the triple-slash commented lines
 in the following Sass:
 
-    // Selection
-    // ---------
-    /// Selected text is highlighted in orange,
-    /// with any text-shadows removed.
-    /// @group typography
-    ::selection {
-      @include contrasted('select');
-      text-shadow: none;
-    }
+```scss
+// Selection
+// ---------
+/// Selected text is highlighted in orange,
+/// with any text-shadows removed.
+/// @group typography
+::selection {
+  @include contrasted('select');
+  text-shadow: none;
+}
+```
 
 is rendered in the style guide like this:
 
@@ -59,9 +61,9 @@ provides extra tools for rendering samples of things like colors, fonts,
 and icons. (Alas, while we are using it to produce documentation, it is
 not yet very well-documented itself.)
 
-  [SassDoc]: http://sassdoc.com/
-  [image]: {{ site.images }}blog/2017/docs/sassdoc.png
-  [Herman]: https://github.com/oddbird/sassdoc-theme-herman/
+[SassDoc]: http://sassdoc.com/
+[image]: {{ site.images }}blog/2017/docs/sassdoc.png
+[Herman]: https://github.com/oddbird/sassdoc-theme-herman/
 
 ## The Multi-language Challenge
 
@@ -86,7 +88,9 @@ directives to pull in documentation from inline source comments wherever
 makes sense. For example, this directive would add documentation
 generated from the code and comments in the `rstblog` module:
 
-    .. automodule:: rstblog
+```
+.. automodule:: rstblog
+```
 
 But this approach still suffers from the single-language problem!
 Sphinx's autodoc extension is focused on Python code. And while it is
@@ -98,7 +102,7 @@ Python ecosystem. So Sphinx autodoc extensions to pull in inline
 documentation from other languages are not consistently available or
 well-maintained.
 
-  [Sphinx]: http://www.sphinx-doc.org/
+[Sphinx]: http://www.sphinx-doc.org/
 
 ## A Way Forward
 
@@ -127,5 +131,5 @@ to [join the conversation on our Slack channel]. Or if you'd like to
 hire us to help set up a living style guide or other tools, please [get
 in touch].
 
-  [join the conversation on our Slack channel]: http://friends.oddbird.net/
-  [get in touch]: /contact/
+[join the conversation on our Slack channel]: http://friends.oddbird.net/
+[get in touch]: /contact/

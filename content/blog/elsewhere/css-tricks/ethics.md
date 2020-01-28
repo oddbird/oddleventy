@@ -47,11 +47,11 @@ research and communication. Asking yourself or your team a series of
 questions may help facilitate important conversations and decisions.
 These may include:
 
--   Why are we creating this?
--   Who is most affected by this?
--   What outcomes should we consider?
--   Could we do better? How?
--   Could this cause harm?
+- Why are we creating this?
+- Who is most affected by this?
+- What outcomes should we consider?
+- Could we do better? How?
+- Could this cause harm?
 
 While unintended consequences are unavoidable by nature, thinking
 through these questions upfront could help avoid negative impacts later.
@@ -95,12 +95,12 @@ Also, variable fonts.
 If you are interested in learning more about Ethics in Design, here are
 some resources that I recommend:
 
--   Cennydd Bowles -Future Ethics ([Book] & [Talk])
--   Mule Design -[Code of Ethics]
--   Mike Monteiro -[How Designers Destroyed the World] and [How to Build
+- Cennydd Bowles -Future Ethics ([Book] & [Talk])
+- Mule Design -[Code of Ethics]
+- Mike Monteiro -[How Designers Destroyed the World] and [How to Build
     an Atomic Bomb]
--   Brainstorm Design 2019 -[The Ethics of Design I Fortune]
--   Cathy O'Neil -[Weapons of Math Destruction]
+- Brainstorm Design 2019 -[The Ethics of Design I Fortune]
+- Cathy O'Neil -[Weapons of Math Destruction]
 
   [Book]: https://www.future-ethics.com/
   [Talk]: https://www.youtube.com/watch?v=DfxMv9mIjFU&t=381s

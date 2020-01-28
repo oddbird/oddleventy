@@ -44,10 +44,10 @@ code/logic duplication in the API layer. That's a great start, but we
 still need to turn that server-rendered markup into an interactive
 single-page application.
 
-  [greenfield projects]: https://en.wikipedia.org/wiki/Greenfield_project
-  [MV\* framework]: http://backbonejs.org/
-  [Kit]: /authors/kit/
-  [already laid out]: /2016/12/16/server-side-rendering-spa/
+[greenfield projects]: https://en.wikipedia.org/wiki/Greenfield_project
+[MV\* framework]: http://backbonejs.org/
+[Kit]: /authors/kit/
+[already laid out]: /2016/12/16/server-side-rendering-spa/
 
 ## Getting the Data
 
@@ -83,15 +83,17 @@ For example, let's say that we want to attach models and views to a
 server-rendered list of comments. Using [Jinja2]/[Nunjucks], our markup
 might look like this:
 
-    <div class="comment-list">
-      <article class="comment" data-js-model="\{\{ comment\|json \}\}">
-        <p>\{\{ comment.body \}\}</p>
-        <p>\{\{ comment.author \}\}</p>
-      </article>
-    </div>
+```django
+<div class="comment-list">
+  <article class="comment" data-js-model="{​{ comment | json }}">
+    <p>{​{ comment.body }}</p>
+    <p>{​{ comment.author }}</p>
+  </article>
+</div>
+```
 
-  [Jinja2]: http://jinja.pocoo.org/docs/dev/
-  [Nunjucks]: https://mozilla.github.io/nunjucks/
+[Jinja2]: http://jinja.pocoo.org/docs/dev/
+[Nunjucks]: https://mozilla.github.io/nunjucks/
 
 ## Brief `<aside>`
 
@@ -102,26 +104,30 @@ written in Python on the back-end) is that any custom filters used in
 shared templates must be written in both languages. So for this to work,
 we have a `json` filter added to our Nunjucks environment:
 
-    import nunjucks from 'nunjucks';
+```js
+import nunjucks from 'nunjucks';
 
-    const env = new nunjucks.Environment();
-    env.addFilter('json', (val) => JSON.stringify(val));
+const env = new nunjucks.Environment();
+env.addFilter('json', (val) => JSON.stringify(val));
+```
 
 And a corresponding filter added to our Jinja2 environment:
 
-    from json import dumps
-    from jinja2 import Environment
+```python
+from json import dumps
+from jinja2 import Environment
 
-    def environment(**options):
-        env = Environment(**options)
-        env.filters.update({
-            'json': json,
-        })
-        return env
+def environment(**options):
+    env = Environment(**options)
+    env.filters.update({
+        'json': json,
+    })
+    return env
 
-    def json(val):
-        """Return given value as a JSON string."""
-        return dumps(val)
+def json(val):
+    """Return given value as a JSON string."""
+    return dumps(val)
+```
 
 This isn't ideal, but seems like a reasonable trade-off since it allows
 us to avoid duplicating all the template files themselves.
@@ -138,82 +144,86 @@ The details differ here from one framework to another. Since we're using
 [Backbone.js] and [Marionette] (^3.0.0), let's look at one approach with
 those frameworks.
 
-    import BB from 'backbone';
-    import Mnt from 'backbone.marionette';
+```js
+import BB from 'backbone';
+import Mnt from 'backbone.marionette';
 
-    const ViewWithModel = Mnt.View.extend({
-      initialize () {
-        // Only run this code if an ``el`` option is passed in, signifying
-        // that the view is being attached to existing markup in the DOM.
-        if (this.options.el) {
-          this.attachModel();
-        }
-      },
-      // Find the existing [data-js-model] element, adding a model to the view.
-      attachModel () {
-        const child = this.$('[data-js-model]');
-        const modelData = child.data('js-model');
-        this.model = new BB.Model(modelData);
-        // Trigger any onRender handlers attached to the view.
-        this.triggerMethod('render', this);
-      }
-    });
+const ViewWithModel = Mnt.View.extend({
+  initialize () {
+    // Only run this code if an ``el`` option is passed in, signifying
+    // that the view is being attached to existing markup in the DOM.
+    if (this.options.el) {
+      this.attachModel();
+    }
+  },
+  // Find the existing [data-js-model] element, adding a model to the view.
+  attachModel () {
+    const child = this.$('[data-js-model]');
+    const modelData = child.data('js-model');
+    this.model = new BB.Model(modelData);
+    // Trigger any onRender handlers attached to the view.
+    this.triggerMethod('render', this);
+  }
+});
 
-    const myView = new ViewWithModel({ el: $('.comment') });
+const myView = new ViewWithModel({ el: $('.comment') });
+```
 
 Or for a view with a collection of models:
 
-    import BB from 'backbone';
-    import Mnt from 'backbone.marionette';
+```js
+import BB from 'backbone';
+import Mnt from 'backbone.marionette';
 
-    // Create a child view (used for each individual model).
-    const MyChildView = Mnt.View.extend({
-      // ...
-    });
+// Create a child view (used for each individual model).
+const MyChildView = Mnt.View.extend({
+  // ...
+});
 
-    const ViewWithCollection = Mnt.CollectionView.extend({
-      collection: new BB.Collection(),
-      childView: MyChildView,
-      initialize () {
-        // Only run this code if an ``el`` option is passed in, signifying
-        // that the view is being attached to existing markup in the DOM.
-        if (this.options.el) {
-          this.attachChildren();
-        }
-      },
-      // Look through existing child [data-js-model] elements, adding models
-      // to the collection, and attaching views to the models.
-      attachChildren () {
-        const view = this;
-        const collection = view.collection;
-        const children = this.$('[data-js-model]');
-        children.each((idx, el) => {
-          const $el = $(el);
-          const modelData = $el.data('js-model');
-          // Check to see if this model already exists in the collection.
-          let model = collection.get(modelData.id);
-          if (!model) {
-            // Create the new model, and add it to the collection.
-            model = collection.add(modelData, { silent: true });
-          }
-          const childView = new view.childView({ model, el });
-          view.addChildView(childView, idx);
-        });
-        // Prevent the collectionView from rendering children initially.
-        view._isRendered = true;
-        // Trigger any onRender handlers attached to the view.
-        view.triggerMethod('render', view);
+const ViewWithCollection = Mnt.CollectionView.extend({
+  collection: new BB.Collection(),
+  childView: MyChildView,
+  initialize () {
+    // Only run this code if an ``el`` option is passed in, signifying
+    // that the view is being attached to existing markup in the DOM.
+    if (this.options.el) {
+      this.attachChildren();
+    }
+  },
+  // Look through existing child [data-js-model] elements, adding models
+  // to the collection, and attaching views to the models.
+  attachChildren () {
+    const view = this;
+    const collection = view.collection;
+    const children = this.$('[data-js-model]');
+    children.each((idx, el) => {
+      const $el = $(el);
+      const modelData = $el.data('js-model');
+      // Check to see if this model already exists in the collection.
+      let model = collection.get(modelData.id);
+      if (!model) {
+        // Create the new model, and add it to the collection.
+        model = collection.add(modelData, { silent: true });
       }
+      const childView = new view.childView({ model, el });
+      view.addChildView(childView, idx);
     });
+    // Prevent the collectionView from rendering children initially.
+    view._isRendered = true;
+    // Trigger any onRender handlers attached to the view.
+    view.triggerMethod('render', view);
+  }
+});
 
-    const myView = new ViewWithCollection({ el: $('.comment-list') });
+const myView = new ViewWithCollection({ el: $('.comment-list') });
+```
 
 Now we have a model (or collection of models) instantiated with data
 from our server-rendered markup, all being managed by Marionette views!
 🎉
 
-  [Backbone.js]: http://backbonejs.org/
-  [Marionette]: http://marionettejs.com/
+[Backbone.js]: http://backbonejs.org/
+[Marionette]: http://marionettejs.com/
 
 ## Where Do We Go From Here?
 
@@ -240,6 +250,6 @@ with server-side rendering? What are we missing, or where could we
 improve our methods? Drop us a line via [Twitter] or chime in on our
 public [Slack channel]!
 
-  [behavior]: http://marionettejs.com/docs/v3.1.0/marionette.behavior.html
-  [Twitter]: https://twitter.com/oddbird
-  [Slack channel]: http://friends.oddbird.net/
+[behavior]: http://marionettejs.com/docs/v3.1.0/marionette.behavior.html
+[Twitter]: https://twitter.com/oddbird
+[Slack channel]: http://friends.oddbird.net/

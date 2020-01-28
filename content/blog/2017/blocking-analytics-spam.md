@@ -55,39 +55,45 @@ periodically with the latest blacklist – or maintaining our own fork of
 the repo – we decided to fetch the latest list as part of our
 build/deploy process, using [gulp] and [gulp-download][]:
 
-    const gulp = require('gulp');
-    const download = require('gulp-download');
+```js
+const gulp = require('gulp');
+const download = require('gulp-download');
 
-    gulp.task('update-spammers', () => {
-      const url = 'https://raw.githubusercontent.com/piwik/referrer-spam-blacklist/master/spammers.txt';
-      return download(url).pipe(gulp.dest('path/to/js/'));
-    });
+gulp.task('update-spammers', () => {
+  const url = 'https://raw.githubusercontent.com/piwik/referrer-spam-blacklist/master/spammers.txt';
+  return download(url).pipe(gulp.dest('path/to/js/'));
+});
+```
 
 Once we have an up-to-date blacklist, we import it with the [webpack][]
 [raw-loader] and block any referrer found on the list:
 
-    import spammers from 'raw-loader!./spammers.txt';
+```js
+import spammers from 'raw-loader!./spammers.txt';
 
-    window.isSpamReferral = function () {
-      const list = spammers.split(' ');
-      const currentReferral = document.referrer;
-      if (currentReferral) {
-        for (const spammer of list) {
-          if (spammer && currentReferral.indexOf(spammer) !== -1) {
-            return true;
-          }
-        }
+window.isSpamReferral = function () {
+  const list = spammers.split(' ');
+  const currentReferral = document.referrer;
+  if (currentReferral) {
+    for (const spammer of list) {
+      if (spammer && currentReferral.indexOf(spammer) !== -1) {
+        return true;
       }
-      return false;
-    };
+    }
+  }
+  return false;
+};
+```
 
 And in our HTML, after the JS file has been executed:
 
-    <script>
-      if(!window.isSpamReferral()) {
-        // ... initialize Google Analytics
-      }
-    </script>
+```html
+<script>
+  if(!window.isSpamReferral()) {
+    // ... initialize Google Analytics
+  }
+</script>
+```
 
 [free services]: https://referrerspamblocker.com/
 [spam-referrals-blocker]: https://github.com/MohamedBassem/spam-referrals-blocker/
@@ -102,22 +108,26 @@ And in our HTML, after the JS file has been executed:
 Without much extra work, we can also exclude internal traffic from our
 analytics data:
 
-    const devHosts = [
-      // List your local development servers
-      'oddsite.hexxie.com:3000',
-      'localhost:3000',
-      '127.0.0.1:3000'
-    ];
+```js
+const devHosts = [
+  // List your local development servers
+  'oddsite.hexxie.com:3000',
+  'localhost:3000',
+  '127.0.0.1:3000'
+];
 
-    window.isDevelopment = () => devHosts.indexOf(window.location.host) !== -1;
+window.isDevelopment = () => devHosts.indexOf(window.location.host) !== -1;
+```
 
 And our modified HTML:
 
-    <script>
-      if(!window.isSpamReferral() && !window.isDevelopment()) {
-        // ... initialize Google Analytics
-      }
-    </script>
+```html
+<script>
+  if(!window.isSpamReferral() && !window.isDevelopment()) {
+    // ... initialize Google Analytics
+  }
+</script>
+```
 
 ## Can't We Do Better Than That?
 

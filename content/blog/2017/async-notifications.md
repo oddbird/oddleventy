@@ -49,19 +49,21 @@ store state. You can do this with Celery's database result backend, or a
 custom task state model that you periodically update. Imagine something
 like this:
 
-    @app.task
-    def my_task(some_arg):
-        # some unique identifier, that you can recover outside the task:
-        task_id = get_task_id_based_on_arg(some_arg)
-        state, _ = TaskState.objects.get_or_create(task_id=task_id)
+```python
+@app.task
+def my_task(some_arg):
+    # some unique identifier, that you can recover outside the task:
+    task_id = get_task_id_based_on_arg(some_arg)
+    state, _ = TaskState.objects.get_or_create(task_id=task_id)
 
-        total = len(some_arg)
-        for i, elem in enumerate(some_arg):
-            process_elem(elem)
-            # Every 100 elements, update the percentage processed:
-            if i % 100 == 0:
-                state.percent_done = (i / float(total)) * 100
-                state.save()
+    total = len(some_arg)
+    for i, elem in enumerate(some_arg):
+        process_elem(elem)
+        # Every 100 elements, update the percentage processed:
+        if i % 100 == 0:
+            state.percent_done = (i / float(total)) * 100
+            state.save()
+```
 
 Then in your views, you can retrieve the appropriate TaskState and show
 how much has been processed. Sometimes that's a good approach, but
@@ -120,12 +122,14 @@ consumers at once, if necessary.)
 So, for our purposes, your `channel_routing` should have, at a minimum,
 these values:
 
-    channel_routing = [
-        route("websocket.connect", websocket_connect),
-        route("websocket.receive", websocket_receive),
-        route("websocket.disconnect", websocket_disconnect),
-        route("my-background-task", my_background_task),
-    ]
+```js
+channel_routing = [
+    route("websocket.connect", websocket_connect),
+    route("websocket.receive", websocket_receive),
+    route("websocket.disconnect", websocket_disconnect),
+    route("my-background-task", my_background_task),
+]
+```
 
 The first three are consumers for handling basic websocket operations.
 The last one is whatever long-running task you want to run in the
@@ -133,7 +137,9 @@ background.
 
 You can then call the background task in a view:
 
-    Channel('my-background-task').send(some_arguments)
+```js
+Channel('my-background-task').send(some_arguments)
+```
 
 Be sure that there's some stable way to identify the `Group` that you
 need to send to. It might be as simple as passing in the username of the
@@ -142,26 +148,32 @@ process UUID that's in the view's path, or something else. Whatever it
 is, when the user's browser makes a websocket connection on page load,
 you'll want to add that reply channel to the `Group`:
 
-    def websocket_connect(message):
-        # Accept connection
-        message.reply_channel.send({"accept": True})
-        Group(get_group_id_from(message)).add(message.reply_channel)
+```python
+def websocket_connect(message):
+    # Accept connection
+    message.reply_channel.send({"accept": True})
+    Group(get_group_id_from(message)).add(message.reply_channel)
+```
 
 On the front-end, you should have something like this:
 
-    socket = new WebSocket("ws://" + window.location.host);
-    socket.onmessage = show_some_toast_for(message);
-    // Call onopen directly if socket is already open
-    if (socket.readyState == WebSocket.OPEN) socket.onopen();
+```js
+socket = new WebSocket("ws://" + window.location.host);
+socket.onmessage = show_some_toast_for(message);
+// Call onopen directly if socket is already open
+if (socket.readyState == WebSocket.OPEN) socket.onopen();
+```
 
 And now you can push messages to users yourself:
 
-    def my_background_task(message):
-        # ...
-        Group(get_group_id_from(message)).send({
-            "text": some_status_update,
-        })
-        # ...
+```python
+def my_background_task(message):
+    # ...
+    Group(get_group_id_from(message)).send({
+        "text": some_status_update,
+    })
+    # ...
+```
 
 And the front-end JavaScript will receive it over the websocket. Display
 it in a toast or other style of your choosing, and you're good to go!

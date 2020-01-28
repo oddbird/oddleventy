@@ -30,29 +30,31 @@ help you manage your layouts.
 The main layout mixin is called `span` and allows you to span columns on
 a grid, or span any width you want, and forget about grids entirely.
 
-    // span 50%
-    @include span(50%);
+```scss
+// span 50%
+@include span(50%);
 
-    // span 300px;
-    @include span(300px);
+// span 300px;
+@include span(300px);
 
-    // span 3 columns
-    @include span(3);
+// span 3 columns
+@include span(3);
 
-    // span 4 of 12 columns
-    @include span(4 of 12);
+// span 4 of 12 columns
+@include span(4 of 12);
 
-    // span the last 3 columns in a 5-column row
-    @include span(last 3 of 5);
+// span the last 3 columns in a 5-column row
+@include span(last 3 of 5);
 
-    // isolate an item in the last 3 columns of a 5-column row
-    @include span(last 3 of 5 isolate);
+// isolate an item in the last 3 columns of a 5-column row
+@include span(last 3 of 5 isolate);
 
-    // isolate 2-col width, in the 3rd of 12 columns
-    @include span(2 at 3 of 12);
+// isolate 2-col width, in the 3rd of 12 columns
+@include span(2 at 3 of 12);
 
-    // anything can be arbitrary: width (30em), gutter (20px), & location (30%)!
-    @include span(isolate 30em gutter 20px at 30%);
+// anything can be arbitrary: width (30em), gutter (20px), & location (30%)!
+@include span(isolate 30em gutter 20px at 30%);
+```
 
 You can also use various keywords to change your output from the
 defaults. Output `static` or `fluid` units; move gutters `before`,
@@ -64,14 +66,15 @@ In Susy 2.0, you still can set individual settings, but you can also
 contain an entire grid in a single argument. That allows us to change
 grids easily:
 
-    $container: 80%;
-    $columns: 12;
-    $gutters: 1/4;
-    $gutter-placement: before;
+```scss
+$container: 80%;
+$columns: 12;
+$gutters: 1/4;
+$gutter-placement: before;
 
-    // or:
-
-    @include set-grid(80% 12 1/4 before);
+// or...
+@include set-grid(80% 12 1/4 before);
+```
 
 Let's dissect that.
 
@@ -91,17 +94,19 @@ Let's dissect that.
 
 Here are a few grids:
 
-    $susy-1-default: 12 (4em 1em) after;
-    $960-ish: 12 (60px 20px) inside static;
-    $asymmetrical: (2 8 2) 1/3 isolate;
+```scss
+$susy-1-default: 12 (4em 1em) after;
+$960-ish: 12 (60px 20px) inside static;
+$asymmetrical: (2 8 2) 1/3 isolate;
 
-    // set a grid globally
-    @include set-grid($susy-1-default);
+// set a grid globally
+@include set-grid($susy-1-default);
 
-    // use a grid locally
-    @include use-grid($960-ish) {
-      /* This code will use the $960-ish grid... */
-    }
+// use a grid locally
+@include use-grid($960-ish) {
+  /* This code will use the $960-ish grid... */
+}
+```
 
 You can use `set-grid()` to establish new grids anywhere you need, or
 `use-grid() { ... }` to use a new grid for one block of code.
@@ -114,26 +119,34 @@ so you can create the layouts that work for you.
 Containers are simple with the `container` mixin, and the grid syntax
 you already learned.
 
-    @include container($grid);
+```scss
+@include container($grid);
+```
 
 Of course, we'll default to any grid you already set globally. you can
 also pass an arbitrary width, or add keywords to justify your container
 `left`, `right`, or `center`.
 
-    // 960 container, justified left
-    @include container(960px left);
+```scss
+// 960 container, justified left
+@include container(960px left);
+```
 
 While you're at it, you can `show` or `hide` the grid background for
 that particular container:
 
-    @include container(show);
+```scss
+@include container(show);
+```
 
 ## Galleries (Formerly "isolate-grid")
 
 You can now create a simple gallery layout using either isolation or
 basic float techniques. The syntax should be familiar already:
 
-    @include gallery(2 of 12 isolate);
+```scss
+@include gallery(2 of 12 isolate);
+```
 
 ## Media Queries
 
@@ -143,11 +156,13 @@ integration in before 2.0 stable, but for now you can just add the <span
 class="title-ref">use-grid()</span> mixin inside any media-queries to
 change your grids:
 
-    // using breakpoint
-    @include breakpoint(50em) {
-      @include use-grid($my-grid) {
-        /* Your Code Here */
-      }
-    }
+```scss
+// using breakpoint
+@include breakpoint(50em) {
+  @include use-grid($my-grid) {
+    /* Your Code Here */
+  }
+}
+```
 
 [breakpoint]: http://breakpoint-sass.com/

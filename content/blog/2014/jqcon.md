@@ -42,18 +42,20 @@ Keep the UI responsive, and let Workers do difficult tasks in the
 background. (Aside: This is awesome. Why isn't everyone using it
 already?)
 
-    // main script
-    var worker = new Worker('my_worker.js');
-    worker.addEventListener('message', function (e) {
-      console.log('The worker said: ' + e.data);
-    }, false);
-    worker.postMessage('Hello Worker!');
+```js
+// main script
+var worker = new Worker('my_worker.js');
+worker.addEventListener('message', function (e) {
+  console.log('The worker said: ' + e.data);
+}, false);
+worker.postMessage('Hello Worker!');
 
-    // worker script ('my_worker.js')
-    self.addEventListener('message', function (e) {
-      console.log('The client said: ' + e.data);
-      self.postMessage('Hello Client!');
-    }, false);
+// worker script ('my_worker.js')
+self.addEventListener('message', function (e) {
+  console.log('The client said: ' + e.data);
+  self.postMessage('Hello Client!');
+}, false);
+```
 
 Check out [another (contrived) example] to see it in action. Notice that
 the timer (and the entire UI) locks up while running the task without
@@ -64,14 +66,14 @@ importing from another file.)
 So when might I actually use Workers? From this helpful [HTML5 Rocks
 article][]:
 
-    - Prefetching and/or caching data for later use
-    - Code syntax highlighting or other real-time text formatting
-    - Spell checker
-    - Analyzing video or audio data
-    - Background I/O or polling of webservices
-    - Processing large arrays or humungous JSON responses
-    - Image filtering in <canvas>
-    - Updating many rows of a local web database
+> - Prefetching and/or caching data for later use
+> - Code syntax highlighting or other real-time text formatting
+> - Spell checker
+> - Analyzing video or audio data
+> - Background I/O or polling of webservices
+> - Processing large arrays or humungous JSON responses
+> - Image filtering in <canvas>
+> - Updating many rows of a local web database
 
 Do you already use Web Workers, or have additional suggestions or
 warnings?
@@ -101,11 +103,11 @@ You know what else is here, and (mostly) ready for primetime?
 - blocked scope variables using `let`
 - template strings(!):
 
-<!-- -->
-
-    var name = 'Jonny';
-    var company = 'OddBird';
-    console.log(`I'm ${name}, and I work at ${company}.`);
+```js
+var name = 'Jonny';
+var company = 'OddBird';
+console.log(`I'm ${name}, and I work at ${company}.`);
+```
 
 - default function parameters
 - modules, exports, and a system loader
@@ -138,18 +140,22 @@ HT: [John K. Paul] for his [talk][1] encouraging devs to use ES6 now.
 
 [Error objects] have been around forever, and aren't difficult to use:
 
-    if (user.id) {
-      // do the thing
-    } else {
-      throw new Error('User ID not found.')
-    }
+```js
+if (user.id) {
+  // do the thing
+} else {
+  throw new Error('User ID not found.')
+}
+```
 
 But I'm not very good at actually doing this. When I'm writing code, I
 usually default to the "fail silently" approach:
 
-    if (user.id) {
-      // do the thing
-    }
+```js
+if (user.id) {
+  // do the thing
+}
+```
 
 There are times when failing silently is exactly what I want: when the
 code will continue to work correctly regardless. But often it'd be
@@ -160,13 +166,15 @@ went wrong in the first place.
 
 To make this simpler, I've started using runtime assertions:
 
-    var assert = function (message, test) {
-      if (!test) {
-        throw new Error('Assertion failed: ' + message);
-      }
-    };
+```js
+var assert = function (message, test) {
+  if (!test) {
+    throw new Error('Assertion failed: ' + message);
+  }
+};
 
-    assert('User has an ID', user.id);
+assert('User has an ID', user.id);
+```
 
 When to consider throwing Errors?
 

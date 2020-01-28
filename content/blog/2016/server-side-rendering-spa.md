@@ -76,9 +76,11 @@ the DOM. The backend needs to render a whole page every time. It turns
 out that you can put a Jinja2 `extends` directive in a conditional. So,
 our `layout.njk` template begins with a simple incantation:
 
-    {% if server_rendered %}
-      {% extends 'base.html.j2' %}
-    {% endif %}
+```django
+{​% if server_rendered %}
+  {​% extends 'base.html.j2' %}
+{​% endif %}
+```
 
 The variable `server_rendered` is set to `True` on the backend, and left
 undefined (therefore falsy) on the frontend.
@@ -117,43 +119,45 @@ argument in favor of the "stupid hack" approach.
 The shim we use to make "requests" from inside a request is something
 like this:
 
-    from django.core.urlresolvers import resolve
-    from django.http import Http404
+```python
+from django.core.urlresolvers import resolve
+from django.http import Http404
 
-    def server_side_api_adapter(path, request):
-        """
-        Access a particular API path from inside the server, and get
-        the resulting data.
-        This is not going to be the most runtime-efficient usually,
-        but it allows powerful reduction in duplication of effort.
-
-        Arguments
-        ---------
-        path : str
-            The API path to request.
-        request : Request
-            The request object from the calling view, to give things like
-            headers and request.user that the inner API view requires.
-
-        Returns
-        -------
-        JSON object
-            The decoded JSON that would be returned from that API
-            endpoint.
-        None
-            If the path is not an API path, this returns None.
+def server_side_api_adapter(path, request):
     """
-    try:
-        resolved = resolve(path)
-        handler = resolved.func
-        args = resolved.args
-        kwargs = resolved.kwargs
-        resp = handler(request, *args, **kwargs)
-        if resp.status_code == 404:
-            return None
-        return getattr(resp, 'data', None)
-    except Http404:
+    Access a particular API path from inside the server, and get
+    the resulting data.
+    This is not going to be the most runtime-efficient usually,
+    but it allows powerful reduction in duplication of effort.
+
+    Arguments
+    ---------
+    path : str
+        The API path to request.
+    request : Request
+        The request object from the calling view, to give things like
+        headers and request.user that the inner API view requires.
+
+    Returns
+    -------
+    JSON object
+        The decoded JSON that would be returned from that API
+        endpoint.
+    None
+        If the path is not an API path, this returns None.
+"""
+try:
+    resolved = resolve(path)
+    handler = resolved.func
+    args = resolved.args
+    kwargs = resolved.kwargs
+    resp = handler(request, *args, **kwargs)
+    if resp.status_code == 404:
         return None
+    return getattr(resp, 'data', None)
+except Http404:
+    return None
+```
 
 Now our terrible hacks can be yours!
 

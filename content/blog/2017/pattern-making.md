@@ -42,7 +42,7 @@ developing a set of tools to help us manage our patterns in code, and
 document the results as we go. We're not done, but we've learned a lot,
 and I'd like to show you what we have so far.
 
-  [Carl]: /authors/carl/
+[Carl]: /authors/carl/
 
 ## Starting Abstract
 
@@ -56,7 +56,7 @@ My first goal is to make these patterns tangible in our code, so they
 (which will include colors, fonts, and sizes) must be based on real and
 meaningful code, or it's nothing but theory.
 
-  [OddSite design]: /tags/Open%20Design/
+[OddSite design]: /tags/Open%20Design/
 
 ## Grouping Variables into Maps
 
@@ -65,29 +65,31 @@ solve this problem. It’s common to store abstract patterns in Sass
 variables. Here are some example variables from [Bootstrap-Sass], where
 they define nearly [400 variables in a single file][]:
 
-    // brand colors:
-    $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
-    $brand-success:         #5cb85c !default;
-    $brand-info:            #5bc0de !default;
-    $brand-warning:         #f0ad4e !default;
-    $brand-danger:          #d9534f !default;
+```scss
+// brand colors:
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
 
-    // applied colors:
-    $link-color:            $brand-primary !default;
-    $link-hover-color:      darken($link-color, 15%) !default;
+// applied colors:
+$link-color:            $brand-primary !default;
+$link-hover-color:      darken($link-color, 15%) !default;
 
-    // font stacks:
-    $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-    $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+// font stacks:
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 
-    // font sizes:
-    $font-size-base:          14px !default;
-    $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
-    $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+// font sizes:
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-    // spacing sizes:
-    $padding-base-vertical:     6px !default;
-    $padding-base-horizontal:   12px !default;
+// spacing sizes:
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+```
 
 There’s nothing wrong about that approach, and it's certainly not unique
 to Bootstrap. This is what variables are designed for, and patterns
@@ -109,19 +111,21 @@ of `key: value` pairs contained in a single variable.
 
 Converting the brand-colors above might look something like this:
 
-    $brand-colors: (
-      'primary':  darken(#428bca, 6.5%),
-      'success':  #5cb85c,
-      'info':     #5bc0de,
-      'warning':  #f0ad4e,
-      'danger':   #d9534f,
-    ) !default;
+```scss
+$brand-colors: (
+  'primary':  darken(#428bca, 6.5%),
+  'success':  #5cb85c,
+  'info':     #5bc0de,
+  'warning':  #f0ad4e,
+  'danger':   #d9534f,
+) !default;
+```
 
 Now the brand-colors are grouped explicitly, clear to both humans and
 compilers, with less clutter in the global namespace.
 
-  [Bootstrap-Sass]: https://github.com/twbs/bootstrap-sass
-  [400 variables in a single file]: https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
+[Bootstrap-Sass]: https://github.com/twbs/bootstrap-sass
+[400 variables in a single file]: https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
 
 ## Other Map Advantages
 
@@ -132,43 +136,51 @@ in Sass, but new map keys can. The following code attempts to create and
 save lighter and darker versions of our primary brand color. This won’t
 work, using variables:
 
-    @for each $adjustment in ('lighten', 'darken') {
-      $new-color: call($adjustment, $brand-primary, 10%);
+```scss
+@for each $adjustment in ('lighten', 'darken') {
+  $new-color: call($adjustment, $brand-primary, 10%);
 
-      // There is no Sass syntax for this...
-      $brand-primary-#{$adjustment}: $new-color;
-    }
+  // There is no Sass syntax for this...
+  $brand-primary-#{$adjustment}: $new-color;
+}
+```
 
 But it does work, using map keys:
 
-    @for each $adjustment in ('lighten', 'darken') {
-      $new-color: call($adjustment, $brand-primary, 10%);
-      $new-color-map: ('primary-#{$adjustment}': $new-color);
+```scss
+@for each $adjustment in ('lighten', 'darken') {
+  $new-color: call($adjustment, $brand-primary, 10%);
+  $new-color-map: ('primary-#{$adjustment}': $new-color);
 
-      $brand-colors: map-merge($brand-colors, $new-color-map);
-    }
+  $brand-colors: map-merge($brand-colors, $new-color-map);
+}
+```
 
 The same is true with accessing variable names and map keys
 programmatically. Using variables, it fails:
 
-    @for each $header in ('h1', 'h2', 'h3') {
-      #{$header} {
-        @if variable-exists('font-size-#{$header}') {
-          // There is no Sass syntax for this...
-          font-size: $font-size-#{$header};
-        }
-      }
+```scss
+@for each $header in ('h1', 'h2', 'h3') {
+  #{$header} {
+    @if variable-exists('font-size-#{$header}') {
+      // There is no Sass syntax for this...
+      font-size: $font-size-#{$header};
     }
+  }
+}
+```
 
 Again, it works great with a map key:
 
-    @for each $header in ('h1', 'h2', 'h3') {
-      #{$header} {
-        @if map-has-key($text-sizes, $header) {
-          font-size: map-get($text-sizes, $header);
-        }
-      }
+```scss
+@for each $header in ('h1', 'h2', 'h3') {
+  #{$header} {
+    @if map-has-key($text-sizes, $header) {
+      font-size: map-get($text-sizes, $header);
     }
+  }
+}
+```
 
 That may not be a common use-case, but it can come in handy for
 automating repetitive patterns. More important to OddBird’s daily use,
@@ -188,25 +200,29 @@ Sass variables can easily reference other variables – e.g
 `$blue-gray: desaturate($blue, 20%);` – but **map values cannot
 reference other values in the same map**.
 
-    $colors: (
-      'blue': #339,
-      'blue-gray': desaturate(map-get($colors, blue), 20%),
-    );
+```scss
+$colors: (
+  'blue': #339,
+  'blue-gray': desaturate(map-get($colors, blue), 20%),
+);
 
-    // SASS ERROR: Undefined variable: "$colors".
+// SASS ERROR: Undefined variable: "$colors".
+```
 
 That's ugly, and it doesn't work. At the point where we are calling the
 map, it hasn't yet been defined. Technically, we could only reference
 values from previously-defined maps, and build our patterns that way –
 but that gets even uglier:
 
-    $colors: (
-      'blue': #339,
-    );
+```scss
+$colors: (
+  'blue': #339,
+);
 
-    $colors: map-merge($colors, (
-      'blue-gray': desaturate(map-get($colors, blue), 20%),
-    ));
+$colors: map-merge($colors, (
+  'blue-gray': desaturate(map-get($colors, blue), 20%),
+));
+```
 
 What’s the point of grouping all your values in a single variable, if
 you have to define it over and over, one small piece at a time?
@@ -220,20 +236,24 @@ Clearly we have to make some changes to our map. Instead of referencing
 and manipulating values directly, we use an invented syntax to define
 what references and manipulations *should* happen:
 
-    // Define first...
-    $colors: (
-      'blue': #339,
-      'blue-gray': 'blue' ('desaturate': 20%),
-    );
+```scss
+// Define first...
+$colors: (
+  'blue': #339,
+  'blue-gray': 'blue' ('desaturate': 20%),
+);
+```
 
 Our syntax has two parts: a base color – which can be any color-value,
 or another key in the map – and an optional map of adjustments,
 including function names, and additional arguments:
 
-    $color: (
-      <name>: <base-color> (<function>: <arguments...>, ...),
-      'blue-gray': 'blue' ('desaturate': 20%, 'lighten': 15%),
-    );
+```scss
+$color: (
+  // <name>: <base-color> (<function>: <arguments...>, ...),
+  'blue-gray': 'blue' ('desaturate': 20%, 'lighten': 15%),
+);
+```
 
 That's hopefully human-readable, and loosely based on functional
 programming standards, but it will require processing in order to work.
@@ -245,8 +265,10 @@ At OddBird we have three abstract "Sass [Accoutrement]" toolkits
 compile our maps. In the color module, that function is simply called
 `color()`, and works like this:
 
-    // Calculate on-the-fly...
-    $result: color('blue-gray');
+```scss
+// Calculate on-the-fly...
+$result: color('blue-gray');
+```
 
 While `'blue' ('desaturate': 20%)` doesn’t mean anything special to
 Sass, the `color()` function understands how to parse that syntax, and
@@ -265,10 +287,10 @@ with nothing but Sass and empty `div` elements – a pretty good
 proof-of-concept for the more robust style guide generator we'll develop
 later.
 
-  [Accoutrement]: /accoutrement/
-  [color]: /accoutrement-color/docs/
-  [scale]: /accoutrement-scale/docs/
-  [type]: /accoutrement-type/docs/
+[Accoutrement]: /accoutrement/
+[color]: /accoutrement-color/docs/
+[scale]: /accoutrement-scale/docs/
+[type]: /accoutrement-type/docs/
 
 ### The Theming Option
 
@@ -280,35 +302,41 @@ dynamic until they are called.
 Let’s start with a few colors defined as variables, with one color based
 on the other color:
 
-    $brand: #339;
-    $brand-light: lighten($brand, 10%); // #4040bf
+```scss
+$brand: #339;
+$brand-light: lighten($brand, 10%); // #4040bf
+```
 
 If I override the value of `$brand` later in the document, that will
 have no effect on the value of `$brand-light`:
 
-    $brand: #339;
-    $brand-light: lighten($brand, 10%); // #4040bf
+```scss
+$brand: #339;
+$brand-light: lighten($brand, 10%); // #4040bf
 
-    $brand: #933;
+$brand: #933;
 
-    .static-variables {
-      background: $brand-light; // #4040bf – still the same...
-    }
+.static-variables {
+  background: $brand-light; // #4040bf – still the same...
+}
+```
 
 The lighten-10% relationship is lost, unless we re-define both colors at
 once. If we do the same thing using Sass maps, we get a different
 result:
 
-    $colors: (
-      'brand': #339,
-      'brand-light': 'brand' ('lighten': 10%), // #4040bf
-    );
+```scss
+$colors: (
+  'brand': #339,
+  'brand-light': 'brand' ('lighten': 10%), // #4040bf
+);
 
-    $colors: map-merge($colors, ('brand': #933));
+$colors: map-merge($colors, ('brand': #933));
 
-    .dynamic-values {
-      background: color('brand-light'); // #bf4040 – it changed!
-    }
+.dynamic-values {
+  background: color('brand-light'); // #bf4040 – it changed!
+}
+```
 
 Keeping that relationship dynamic could allow us to handle theming in
 new ways. Change the base color on-the-fly, and watch the results
@@ -350,13 +378,13 @@ projects? How would you improve on our map solution? We'd love to hear
 your thoughts on [Twitter], on our [public Slack channel], or through
 our [handy contact form]. Happy coding!
 
-  [export all that data to JSON]: https://github.com/oddbird/sass-json-export
-  [SassDoc]: http://sassdoc.com
-  [Herman]: https://github.com/oddbird/sassdoc-theme-herman
-  [OddSite config]: https://github.com/oddbird/oddsite/tree/master/static/sass/config
-  [see the generated docs]: /styleguide/
-  [Codepen]: http://codepen.io/
-  [Sassmeister]: http://sassmeister.com/
-  [Twitter]: https://twitter.com/oddbird
-  [public Slack channel]: http://friends.oddbird.net
-  [handy contact form]: /contact/
+[export all that data to JSON]: https://github.com/oddbird/sass-json-export
+[SassDoc]: http://sassdoc.com
+[Herman]: https://github.com/oddbird/sassdoc-theme-herman
+[OddSite config]: https://github.com/oddbird/oddsite/tree/master/static/sass/config
+[see the generated docs]: /styleguide/
+[Codepen]: http://codepen.io/
+[Sassmeister]: http://sassmeister.com/
+[Twitter]: https://twitter.com/oddbird
+[public Slack channel]: http://friends.oddbird.net
+[handy contact form]: /contact/

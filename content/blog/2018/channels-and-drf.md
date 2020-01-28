@@ -1,5 +1,5 @@
 ---
-title: Django REST Framework and Channels
+title: Django REST Framework & Channels
 tags:
   - _post
   - Code
@@ -47,25 +47,29 @@ minimal server-side logic mostly encapsulated in the serializers.
 
 Just so we're on the same page, the endpoints look a bit like this:
 
-    GET /api/foo
-    POST /api/foo
-    GET /api/foo/:id
-    PUT /api/foo/:id
-    DELETE /api/foo/:id
+```
+GET /api/foo
+POST /api/foo
+GET /api/foo/:id
+PUT /api/foo/:id
+DELETE /api/foo/:id
+```
 
 And the code is organized like this:
 
-    foo/
-      __init__.py
-      models.py
-      serializers.py
-      urls.py
-      views.py
-      tests/
-        __init__.py
-        models.py
-        serializers.py
-        views.py
+```
+foo/
+  __init__.py
+  models.py
+  serializers.py
+  urls.py
+  views.py
+  tests/
+    __init__.py
+    models.py
+    serializers.py
+    views.py
+```
 
 (For something that I'm not distributing as a library, I like to keep
 the tests parallel to the code and within the same tree; I find it makes
@@ -95,11 +99,13 @@ adjusting your settings appropriately.
 At this stage, you won't yet have anything in `consumers`, nor much in
 `routing`. `routing` can look like this:
 
-    from channels.routing import ProtocolTypeRouter
+```python
+from channels.routing import ProtocolTypeRouter
 
-    application = ProtocolTypeRouter({
-        # (http->django views is added by default)
-    })
+application = ProtocolTypeRouter({
+    # (http->django views is added by default)
+})
+```
 
 Yep, that's basically an empty `ProtocolTypeRouter`. We're just first
 making sure we don't break anything with the transition to ASGI, and
@@ -125,10 +131,12 @@ wants, using the payload it sends to validate and set up that
 subscription. So the client sends the following data to
 `wss://server.domain/ws/notifications/`:
 
-    {
-        "model": "app.label",
-        "id": "123ABC"
-    }
+```json
+{
+  "model": "app.label",
+  "id": "123ABC"
+}
+```
 
 The model is something like `foo.Foo`, using the syntax `apps.get_model`
 [expects]. The id is the HashID of the model instance in question. (We
@@ -150,86 +158,90 @@ using, but that sort of tight coupling may not match your needs.)
 
 OK, but what does that `Consumer` look like?
 
-    from channels.generic.websocket import AsyncJsonWebsocketConsumer
+```python
+from channels.generic.websocket import AsyncJsonWebsocketConsumer
 
 
-    class NotificationConsumer(AsyncJsonWebsocketConsumer):
-        async def connect(self):
-            # We're always going to accept the connection, though we may
-            # close it later based on other factors.
-            await self.accept()
+class NotificationConsumer(AsyncJsonWebsocketConsumer):
+    async def connect(self):
+        # We're always going to accept the connection, though we may
+        # close it later based on other factors.
+        await self.accept()
 
-        async def notify(self, event):
-            """
-            This handles calls elsewhere in this codebase that look
-            like:
+    async def notify(self, event):
+        """
+        This handles calls elsewhere in this codebase that look
+        like:
 
-                channel_layer.group_send(group_name, {
-                    'type': 'notify',  # This routes it to this handler.
-                    'content': json_message,
-                })
+            channel_layer.group_send(group_name, {
+                'type': 'notify',  # This routes it to this handler.
+                'content': json_message,
+            })
 
-            Don't try to directly use send_json or anything; this
-            decoupling will help you as things grow.
-            """
-            await self.send_json(event["content"])
+        Don't try to directly use send_json or anything; this
+        decoupling will help you as things grow.
+        """
+        await self.send_json(event["content"])
 
 
-        async def receive_json(self, content, **kwargs):
-            """
-            This handles data sent over the wire from the client.
+    async def receive_json(self, content, **kwargs):
+        """
+        This handles data sent over the wire from the client.
 
-            We need to validate that the received data is of the correct
-            form. You can do this with a simple DRF serializer.
+        We need to validate that the received data is of the correct
+        form. You can do this with a simple DRF serializer.
 
-            We then need to use that validated data to confirm that the
-            requesting user (available in self.scope["user"] because of
-            the use of channels.auth.AuthMiddlewareStack in routing) is
-            allowed to subscribe to the requested object.
-            """
+        We then need to use that validated data to confirm that the
+        requesting user (available in self.scope["user"] because of
+        the use of channels.auth.AuthMiddlewareStack in routing) is
+        allowed to subscribe to the requested object.
+        """
 
-            serializer = self.get_serializer(data=content)
-            if not serializer.is_valid():
-                return
-            # Define this method on your serializer:
-            group_name = serializer.get_group_name()
-            # The AsyncJsonWebsocketConsumer parent class has a
-            # self.groups list already. It uses it in cleanup.
-            self.groups.append(group_name)
-            # This actually subscribes the requesting socket to the
-            # named group:
-            await self.channel_layer.group_add(
-                group_name,
-                self.channel_name,
-            )
+        serializer = self.get_serializer(data=content)
+        if not serializer.is_valid():
+            return
+        # Define this method on your serializer:
+        group_name = serializer.get_group_name()
+        # The AsyncJsonWebsocketConsumer parent class has a
+        # self.groups list already. It uses it in cleanup.
+        self.groups.append(group_name)
+        # This actually subscribes the requesting socket to the
+        # named group:
+        await self.channel_layer.group_add(
+            group_name,
+            self.channel_name,
+        )
 
-         def get_serializer(self, *, data):
-             # ... omitted for brevity. See
-             # https://github.com/encode/django-rest-framework/blob/master/rest_framework/generics.py
+     def get_serializer(self, *, data):
+         # ... omitted for brevity. See
+         # https://github.com/encode/django-rest-framework/blob/master/rest_framework/generics.py
+```
 
 And now you'll want to add some stuff to your `routing` module, too:
 
-    from django.urls import path
+```python
+from django.urls import path
 
-    from channels.auth import AuthMiddlewareStack
-    from channels.routing import ProtocolTypeRouter, URLRouter
+from channels.auth import AuthMiddlewareStack
+from channels.routing import ProtocolTypeRouter, URLRouter
 
-    from .consumers import NotificationConsumer
-
-
-    websockets = URLRouter([
-        path(
-            "ws/notifications/",
-            NotificationConsumer,
-            name="ws_notifications",
-        ),
-    ])
+from .consumers import NotificationConsumer
 
 
-    application = ProtocolTypeRouter({
-        # (http->django views is added by default)
-        "websocket": AuthMiddlewareStack(websockets),
-    })
+websockets = URLRouter([
+    path(
+        "ws/notifications/",
+        NotificationConsumer,
+        name="ws_notifications",
+    ),
+])
+
+
+application = ProtocolTypeRouter({
+    # (http->django views is added by default)
+    "websocket": AuthMiddlewareStack(websockets),
+})
+```
 
 There are a couple more pieces. We need to actually send updates when a
 model changes!
@@ -245,51 +257,55 @@ on the channel layer. This is part of our API, and the output of all the
 helper functions here should be documented for anyone who consumes this
 API.
 
-    from channels.layers import get_channel_layer
-    from .serializers import FooSerializer
+```python
+from channels.layers import get_channel_layer
+from .serializers import FooSerializer
 
-    async def update_foo(foo):
-        serializer = FooSerializer(foo)
-        group_name = serializer.get_group_name()
-        channel_layer = get_channel_layer()
-        content = {
-            # This "type" passes through to the front-end to facilitate
-            # our Redux events.
-            "type": "UPDATE_FOO",
-            "payload": serializer.data,
-        }
-        await channel_layer.group_send(group_name, {
-            # This "type" defines which handler on the Consumer gets
-            # called.
-            "type": "notify",
-            "content": content,
-        })
+async def update_foo(foo):
+    serializer = FooSerializer(foo)
+    group_name = serializer.get_group_name()
+    channel_layer = get_channel_layer()
+    content = {
+        # This "type" passes through to the front-end to facilitate
+        # our Redux events.
+        "type": "UPDATE_FOO",
+        "payload": serializer.data,
+    }
+    await channel_layer.group_send(group_name, {
+        # This "type" defines which handler on the Consumer gets
+        # called.
+        "type": "notify",
+        "content": content,
+    })
+```
 
 And then our `models` relies on three things: an override in the `save`
 method, the `FieldTracker` from `django-model-utils`, and calling the
 update method from `notifications` wrapped in
 `asgiref.sync.async_to_sync`. This looks like:
 
-    from django.db import models
-    # Using FieldTracker from django-model-utils helps you only send
-    # updates when something actually changes.
-    from model_utils import FieldTracker
-    from asgiref.sync import async_to_sync
+```python
+from django.db import models
+# Using FieldTracker from django-model-utils helps you only send
+# updates when something actually changes.
+from model_utils import FieldTracker
+from asgiref.sync import async_to_sync
 
-    class Foo(models.Model):
-        tracker = FieldTracker(fields=("bar",))
-        bar = models.CharField(max_length=100)
+class Foo(models.Model):
+    tracker = FieldTracker(fields=("bar",))
+    bar = models.CharField(max_length=100)
 
-        def save(self, *args, **kwargs):
-            ret = super().save(*args, **kwargs)
-            has_changed = self.tracker.has_changed("bar")
-            if has_changed:
-                # This is the wrapper that lets you call an async
-                # function from inside a synchronous context:
-                async_to_sync(update_foo)(self)
-            return ret
+    def save(self, *args, **kwargs):
+        ret = super().save(*args, **kwargs)
+        has_changed = self.tracker.has_changed("bar")
+        if has_changed:
+            # This is the wrapper that lets you call an async
+            # function from inside a synchronous context:
+            async_to_sync(update_foo)(self)
+        return ret
+```
 
-  [expects]: https://docs.djangoproject.com/en/2.1/ref/applications/#django.apps.apps.get_model
+[expects]: https://docs.djangoproject.com/en/2.1/ref/applications/#django.apps.apps.get_model
 
 ## Testing
 
@@ -304,25 +320,27 @@ each point where you expect it to have new data, or your tests may fall
 down with hard-to-diagnose timeout errors. So your tests will look a
 little like this:
 
-    connected, _ = await communicator.connect()
-    assert connected
+```python
+connected, _ = await communicator.connect()
+assert connected
 
-    await communicator.send_json_to({
-        "model": "as.Appropriate",
-        "id": str(some_model.id),
-    })
-    assert await communicator.receive_nothing()
+await communicator.send_json_to({
+    "model": "as.Appropriate",
+    "id": str(some_model.id),
+})
+assert await communicator.receive_nothing()
 
-    await some_notification_async_function()
-    response = await communicator.receive_json_from()
-    assert response == {
-        # ... whatever you expect
-    }
+await some_notification_async_function()
+response = await communicator.receive_json_from()
+assert response == {
+    # ... whatever you expect
+}
 
-    await communicator.disconnect()
+await communicator.disconnect()
+```
 
-  [pytest-asyncio]: https://github.com/pytest-dev/pytest-asyncio
-  [how to test consumers]: https://channels.readthedocs.io/en/latest/topics/testing.html
+[pytest-asyncio]: https://github.com/pytest-dev/pytest-asyncio
+[how to test consumers]: https://channels.readthedocs.io/en/latest/topics/testing.html
 
 ## Final Thoughts
 

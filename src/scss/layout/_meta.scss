@@ -1,6 +1,16 @@
+@use '../../../node_modules/accoutrement/sass/tools';
+
 #meta {
+  display: grid;
   font-size: var(--small);
   grid-area: meta;
+  grid-auto-flow: dense;
+  grid-column-gap: var(--gutter);
+  grid-template-columns: 1fr;
+
+  > * {
+    grid-column: var(--meta-column, 1);
+  }
 }
 
 .subtitle {
@@ -18,7 +28,7 @@
   padding: 0;
 }
 
-.tag {
+.tagitem {
   display: inline-block;
   margin: var(--half-shim);
 
@@ -42,5 +52,22 @@
     &:focus {
       border-color: var(--ccs-special);
     }
+  }
+}
+
+.page-links {
+  padding: 0;
+
+  @include tools.above('medium-page') {
+    --meta-column: 2;
+    font-size: var(--medium);
+  }
+
+  li {
+    display: inline;
+  }
+
+  li:not(:first-child)::before {
+    content: ' | ';
   }
 }

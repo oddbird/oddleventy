@@ -27,7 +27,7 @@ but today’s post is about the tips and tools that have our approval and
 praise. I asked each OddBird to share one work-related item they
 wouldn’t want to be without and why.
 
-  [mixin defined]: http://codepen.io/stacy/pen/249235ffa47cbe123358452508c554b9
+[mixin defined]: http://codepen.io/stacy/pen/249235ffa47cbe123358452508c554b9
 
 ## JSON Viewer
 
@@ -39,8 +39,8 @@ default json view to the enhanced view after enabling this extension.
 
 <img src="{{ site.images }}blog/2017/tips-tools/before-after-json-viewer.jpg" class="img-border img-border" alt="clean and messy json screenshots" />
 
-  [David Glick]: /authors/david/
-  [JSON Viewer]: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+[David Glick]: /authors/david/
+[JSON Viewer]: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
 
 ## Git Gutter
 
@@ -55,11 +55,11 @@ with [Sublime Text], but there are versions for [most text editors].
 
 <img src="{{ site.images }}blog/2017/tips-tools/gitgutter.jpg" class="align-center" alt="screenshot of the Git Gutter plugin in use" />
 
-  [Jonny Gerig Meyer]: /authors/jonny/
-  [Git Gutter]: https://github.com/jisaacks/GitGutter
-  [JD Isaacks]: https://twitter.com/jisaacks
-  [Sublime Text]: https://www.sublimetext.com/
-  [most text editors]: https://github.com/gitgutter
+[Jonny Gerig Meyer]: /authors/jonny/
+[Git Gutter]: https://github.com/jisaacks/GitGutter
+[JD Isaacks]: https://twitter.com/jisaacks
+[Sublime Text]: https://www.sublimetext.com/
+[most text editors]: https://github.com/gitgutter
 
 ## Surround.vim
 
@@ -71,11 +71,11 @@ braces” with a single vim motion.
 You can also get versions of this plugin for Sublime Text called
 [Sublime-surround] and [Vim Surround for Atom].
 
-  [Kit La Touche]: /authors/kit/
-  [Tim Pope]: https://twitter.com/tpope
-  [Surround.vim]: https://github.com/tpope/vim-surround
-  [Sublime-surround]: https://github.com/jcartledge/sublime-surround
-  [Vim Surround for Atom]: https://atom.io/packages/vim-surround
+[Kit La Touche]: /authors/kit/
+[Tim Pope]: https://twitter.com/tpope
+[Surround.vim]: https://github.com/tpope/vim-surround
+[Sublime-surround]: https://github.com/jcartledge/sublime-surround
+[Vim Surround for Atom]: https://atom.io/packages/vim-surround
 
 ## Alfred
 
@@ -97,12 +97,12 @@ repetative tasks with simple keyboard shortcuts. These can be easily
 created in a drag and drop interface making it a great tool for
 non-developers as well.
 
-  [Alfred]: https://www.alfredapp.com/
-  [Miriam Suzanne’s]: /authors/miriam/
-  [launcher]: https://www.alfredapp.com/help/features/default-results/
-  [searchable clipboard]: https://www.alfredapp.com/help/features/clipboard/
-  [screenshot of the Alfred application launcher in use]: {{ site.images }}blog/2017/tips-tools/alfred-launcher.jpg
-  [created by the Alfred community]: https://www.alfredapp.com/workflows/
+[Alfred]: https://www.alfredapp.com/
+[Miriam Suzanne’s]: /authors/miriam/
+[launcher]: https://www.alfredapp.com/help/features/default-results/
+[searchable clipboard]: https://www.alfredapp.com/help/features/clipboard/
+[screenshot of the Alfred application launcher in use]: {{ site.images }}blog/2017/tips-tools/alfred-launcher.jpg
+[created by the Alfred community]: https://www.alfredapp.com/workflows/
 
 ## Adobe Experience Design
 
@@ -117,9 +117,9 @@ elements.
 
 ![image]
 
-  [Sondra Eby]: /authors/sondra/
-  [Adobe Xd]: http://www.adobe.com/products/experience-design.html
-  [image]: {{ site.images }}blog/2017/tips-tools/adobexd.jpg
+[Sondra Eby]: /authors/sondra/
+[Adobe Xd]: http://www.adobe.com/products/experience-design.html
+[image]: {{ site.images }}blog/2017/tips-tools/adobexd.jpg
 
 ## TextExpander
 
@@ -142,35 +142,37 @@ Another snippet I use often allows me to visually see the breakpoints of
 a web project I am working on. When I type `;showbp` the following
 TextExpander snippet is triggered:
 
-    $breakpoints: (
-      '%filltext:name=Breakpoint 1 Name:default=small%': %filltext:name=Breakpoint 1 Value :default=24rem%,
-      '%filltext:name=Breakpoint 2 Name:default=medium%': %filltext:name=Breakpoint 2 Value :default=44rem%,
-      '%filltext:name=Breakpoint 3 Name:default=large%': %filltext:name=Breakpoint 3 Value :default=60rem%,
-    );
+```scss
+$breakpoints: (
+  '%filltext:name=Breakpoint 1 Name:default=small%': %filltext:name=Breakpoint 1 Value :default=24rem%,
+  '%filltext:name=Breakpoint 2 Name:default=medium%': %filltext:name=Breakpoint 2 Value :default=44rem%,
+  '%filltext:name=Breakpoint 3 Name:default=large%': %filltext:name=Breakpoint 3 Value :default=60rem%,
+);
 
 
-    // Display Breakpoint During Development on Front end
-    @each $breakpoint, $screen-size in $breakpoints {
+// Display Breakpoint During Development on Front end
+@each $breakpoint, $screen-size in $breakpoints {
 
-      @media screen and (min-width: '#{$screen-size}') {
-        body:before {
-          content: '@include above(#{$breakpoint}) // min-width: #{$screen-size}';
-        }
-      }
-    }
-
+  @media screen and (min-width: '#{$screen-size}') {
     body:before {
-      background-color: hsla(0, 80%, 20%, .75);
-      color: #fff;
-      display: block;
-      font-size: 1rem;
-      margin: 0;
-      padding: 0.5rem;
-      position: fixed;
-      text-align: center;
-      top: 0;
-      width: auto;
+      content: '@include above(#{$breakpoint}) // min-width: #{$screen-size}';
     }
+  }
+}
+
+body:before {
+  background-color: hsla(0, 80%, 20%, .75);
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5rem;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: auto;
+}
+```
 
 I used six single-line fill-in fields for the breakpoint names and
 values. Breakpoints can be added or removed later if necessary.
@@ -186,9 +188,9 @@ list. What are the tips or tools you wouldn’t want to be without? Let’s
 continue this conversation on two additional tools we love, [Twitter]
 and [Slack].
 
-  [TextExpander]: https://textexpander.com
-  [Smile]: https://smilesoftware.com
-  [Fill-in text dialog box]: {{ site.images }}blog/2017/tips-tools/fill-ins.jpg
-  [in this Pen]: http://codepen.io/stacy/pen/9b76e7d9eb9d730e734aa776a7078fc5/
-  [Twitter]: https://twitter.com/oddbird
-  [Slack]: http://friends.oddbird.net
+[TextExpander]: https://textexpander.com
+[Smile]: https://smilesoftware.com
+[Fill-in text dialog box]: {{ site.images }}blog/2017/tips-tools/fill-ins.jpg
+[in this Pen]: http://codepen.io/stacy/pen/9b76e7d9eb9d730e734aa776a7078fc5/
+[Twitter]: https://twitter.com/oddbird
+[Slack]: http://friends.oddbird.net

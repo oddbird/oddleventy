@@ -61,18 +61,20 @@ dependencies.
 
 In my old Sass projects, I could do something like this:
 
-    // app-styles.scss
+```scss
+// app-styles.scss
 
-    // configuration...
-    $font-path: '../fonts/';
+// configuration...
+$font-path: '../fonts/';
 
-    // accoutrement now has access to my configuration...
-    @import 'accoutrement/sass/tools';
+// accoutrement now has access to my configuration...
+@import 'accoutrement/sass/tools';
 
-    // all these files have access to accoutrement, and each other...
-    @import 'fonts';
-    @import 'type';
-    @import 'layout';
+// all these files have access to accoutrement, and each other...
+@import 'fonts';
+@import 'type';
+@import 'layout';
+```
 
 In a module system, that will no longer work --each file that we import
 would become available inside `app-styles.scss`, but they would have no
@@ -84,12 +86,12 @@ access to Accoutrement, we also need to make that clear.
 By making it all explicit, we're not just adding boilerplate --we're
 making it possible to look at a single file and know:
 
--   Exactly what other files are required
--   Exactly where variables, mixins, and functions are coming from
--   If we add variables, mixins, or functions, we only have to worry
-    about their name being unique *in this one file*
+- Exactly what other files are required
+- Exactly where variables, mixins, and functions are coming from
+- If we add variables, mixins, or functions, we only have to worry
+  about their name being unique *in this one file*
 
-  [Accoutrement]: https://www.oddbird.net/accoutrement/
+[Accoutrement]: https://www.oddbird.net/accoutrement/
 
 ## Replacing `@import` with `@use` & `@forward`
 
@@ -105,8 +107,8 @@ entirely. We're giving that syntax back to CSS, and building modules
 with an entirely new syntax. During the transition, the two syntaxes
 will work together smoothly:
 
--   you can `@import` a file written with `@use`/`@forward` syntax
--   you can `@use` or `@forward` a file written with `@import` syntax
+- you can `@import` a file written with `@use`/`@forward` syntax
+- you can `@use` or `@forward` a file written with `@import` syntax
 
 While they work together, I highly recommend learning the new system,
 and using it for new code.
@@ -118,17 +120,19 @@ of dependencies, We'll often need one or more `@use` statements at the
 top of Sass documents. If we want access to Accoutrement in a file, we
 can `@use` Accoutrement:
 
-    @use 'accoutrement/sass/tools';
+```scss
+@use 'accoutrement/sass/tools';
+```
 
 Like `@import`, that makes Accoutrement tools available in our file!
 Unlike `@import`...
 
--   Accoutrement will not be passed along to other files that we `@use`
-    after it
--   Accoutrement will not be passed along when this file is imported,
-    used, or forwarded in another place
--   By default, Accoutrement "members" (variables, mixins, and
-    functions) are *namespaced*
+- Accoutrement will not be passed along to other files that we `@use`
+  after it
+- Accoutrement will not be passed along when this file is imported,
+  used, or forwarded in another place
+- By default, Accoutrement "members" (variables, mixins, and
+  functions) are *namespaced*
 
 ### Manage namespaces when using
 
@@ -138,23 +142,27 @@ end of the import path, so `accoutrement/sass/tools` will create a
 separated by a period: `<namespace>.$variable`,
 `<namespace>.function()`, or `<namespace>.mixin()`:
 
-    // The default namespace will be "tools"
-    @use 'accoutrement/sass/tools';
+```scss
+// The default namespace will be "tools"
+@use 'accoutrement/sass/tools';
 
-    // The Accoutrement "animate()" mixin
-    @include tools.animate('fade-in');
+// The Accoutrement "animate()" mixin
+@include tools.animate('fade-in');
 
-    // The Accoutrement "color()" function
-    html { color: tools.color('brand-primary'); }
+// The Accoutrement "color()" function
+html { color: tools.color('brand-primary'); }
 
-    // The Accoutrement "$font-path" variable
-    $my-font-url: tools.$font-path + 'my-font.woff2';
+// The Accoutrement "$font-path" variable
+$my-font-url: tools.$font-path + 'my-font.woff2';
+```
 
 We can change that namespace by adding `as <name>` to the `@use`
 statement:
 
-    @use 'accoutrement/sass/tools' as amt;
-    @include amt.animate('fade-in');
+```scss
+@use 'accoutrement/sass/tools' as amt;
+@include amt.animate('fade-in');
+```
 
 We can even use `as *` to make external members available without a
 namespace --but I don't recommend it very often. Namespaces are a good
@@ -169,26 +177,30 @@ I'll often group small Sass files together in a directory like
 `layout/`, and then merge them all together in a file called
 `layout/_index.scss` --so I can import them all at once:
 
-    // layout/_index.scss
-    @import 'banner';
-    @import 'nav';
-    @import 'main';
-    @import 'footer';
+```scss
+// layout/_index.scss
+@import 'banner';
+@import 'nav';
+@import 'main';
+@import 'footer';
 
-    // app-styles.scss
-    @import 'layout'; // sass knows to grab the index file...
+// app-styles.scss
+@import 'layout'; // sass knows to grab the index file...
+```
 
 The new module system has a special syntax for that: passing along other
 files as though they are all part of one module.
 
-    // layout/_index.scss
-    @forward 'banner';
-    @forward 'nav';
-    @forward 'main';
-    @forward 'footer';
+```scss
+// layout/_index.scss
+@forward 'banner';
+@forward 'nav';
+@forward 'main';
+@forward 'footer';
 
-    // app-styles.scss
-    @use 'layout';
+// app-styles.scss
+@use 'layout';
+```
 
 ### Configure modules once
 
@@ -196,18 +208,20 @@ Since Accoutrement (in our example) has no access to local variables, we
 need a way to explicitly configure the library before we `@use` it. In
 brief, module configuration looks like this:
 
-    @use 'accoutrement/sass/tools' with (
-      $font-path: '../fonts/',
-      /* additional config variables as needed */
-    );
+```scss
+@use 'accoutrement/sass/tools' with (
+  $font-path: '../fonts/',
+  /* additional config variables as needed */
+);
+```
 
 It's like a Sass map, but with `$` on all the key names to make it clear
 they are variables.
 
 This is where things can get the most confusing, because
 
--   A module can only be configured once
--   Configuration has to happen the very first time you `@use` a module
+- A module can only be configured once
+- Configuration has to happen the very first time you `@use` a module
 
 This will take some getting used to, and can be difficult to debug --but
 there are a few patterns you can use. Either put configurations at the
@@ -215,27 +229,31 @@ very top of your "entrypoint" (the main file that imports everything
 else), or combine `@use` with `@forward` to create a wrapper around the
 configured library, and forward the results with optional extensions:
 
-    // _tools.scss
-    @use 'accoutrement/sass/tools' with (
-      $font-path: '../fonts/',
-    );
+```scss
+// _tools.scss
+@use 'accoutrement/sass/tools' with (
+  $font-path: '../fonts/',
+);
 
-    @forward 'accoutrement/sass/tools';
+@forward 'accoutrement/sass/tools';
 
-    // add extensions here, as desired
+// add extensions here, as desired
+```
 
 Now Accoutrement has been used and configured and forwarded all in one
 place. In all our other files, we can `@use 'tools'` to access the
 fully-configured Accoutrement without any danger of duplicate or
 out-of-order configurations:
 
-    // _banner.scss
-    @use 'tools';
+```scss
+// _banner.scss
+@use 'tools';
 
-    // _nav.scss
-    @use 'tools';
+// _nav.scss
+@use 'tools';
 
-    // etc...
+// etc...
+```
 
 ## So much more...
 
@@ -253,8 +271,8 @@ projects are very much under construction, but feel free to dig around.
 Check back soon for more details --and if you have questions, feel free
 to reach out.
 
-  [article for CSS-Tricks]: https://css-tricks.com/introducing-sass-modules/
-  [new documentation]: https://sass-lang.com/documentation/
-  [an overview on the Sass Blog]: http://sass.logdown.com/posts/7858341-the-module-system-is-launched
-  [Cascading Color Systems]: https://github.com/mirisuzanne/cascading-color-system/
-  [Teacup Gorilla]: https://github.com/mirisuzanne/teacup
+[article for CSS-Tricks]: https://css-tricks.com/introducing-sass-modules/
+[new documentation]: https://sass-lang.com/documentation/
+[an overview on the Sass Blog]: http://sass.logdown.com/posts/7858341-the-module-system-is-launched
+[Cascading Color Systems]: https://github.com/mirisuzanne/cascading-color-system/
+[Teacup Gorilla]: https://github.com/mirisuzanne/teacup

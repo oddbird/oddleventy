@@ -54,57 +54,57 @@ journey.
 
 **What is the subject product/company?**
 
--   *Web Development Partner:* a design and development company that
+- *Web Development Partner:* a design and development company that
     builds web-based tools for people to use
--   *Consulting:* from strategy and design to testing and implementation
--   *Education:* open source sharing, writing, and speaking about web
+- *Consulting:* from strategy and design to testing and implementation
+- *Education:* open source sharing, writing, and speaking about web
     design and development experiences, experiments, and the tools we
     use
 
 **What do the target audiences gain from interactions with OddSite?**
 
--   Trusted, communicative partner
--   Design and development of their project, making their idea a reality
--   Education about web tools/processes
--   Fun, entertaining, and humorous experience
+- Trusted, communicative partner
+- Design and development of their project, making their idea a reality
+- Education about web tools/processes
+- Fun, entertaining, and humorous experience
 
 **How does this subject work? How is it different?**
 
--   *Communication:* personal, direct, transparent
--   *Expertise:* excellent design and code
--   *Full-stack:* everything integrated
--   *Attention to process:* adapting quickly to change
--   *Focus on end users:* usability testing
--   *Diverse team:* plans to continue increasing diversity
+- *Communication:* personal, direct, transparent
+- *Expertise:* excellent design and code
+- *Full-stack:* everything integrated
+- *Attention to process:* adapting quickly to change
+- *Focus on end users:* usability testing
+- *Diverse team:* plans to continue increasing diversity
 
 **Why? What belief is behind the how & what?**
 
--   We care about collaboratively solving web problems for people by
+- We care about collaboratively solving web problems for people by
     creating web tools that serve people.
--   We like to have fun and be in control of our own time, and excellent
+- We like to have fun and be in control of our own time, and excellent
     web tools can help with both of those things for other people.
--   We want to help steer the web toward being open and diverse.
--   We love what we do.
+- We want to help steer the web toward being open and diverse.
+- We love what we do.
 
 **What is the personality/attitude of the subject?**
 
--   High standards
--   Skilled/experienced
--   Transparent/honest/integrity/collaborative
--   User-focussed/accessible
--   Engaged
--   Thoughtful
--   Human/personal/kind/friendly
--   Odd/quirky/fun/creative
--   Diverse
+- High standards
+- Skilled/experienced
+- Transparent/honest/integrity/collaborative
+- User-focussed/accessible
+- Engaged
+- Thoughtful
+- Human/personal/kind/friendly
+- Odd/quirky/fun/creative
+- Diverse
 
 **What is \*not\* OddBird?**
 
--   Overly cute/flashy/embellished
--   Corporate rectangles
--   Dumbed down
--   Jargony
--   Always right
+- Overly cute/flashy/embellished
+- Corporate rectangles
+- Dumbed down
+- Jargony
+- Always right
 
 ## An Odd Logo
 

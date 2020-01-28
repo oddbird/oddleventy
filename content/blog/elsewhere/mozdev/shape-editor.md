@@ -1,5 +1,5 @@
 ---
-title: Edit your CSS Shapes with the Shape Path Editor
+title: Edit CSS Shapes in the Browser
 sub: For quick visual adjustments directly on the page
 author: miriam
 date: 2019-11-25

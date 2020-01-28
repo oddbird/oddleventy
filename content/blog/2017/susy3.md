@@ -130,13 +130,15 @@ Our `columns` setting now matches the basic features of CSS
 optional `susy-repeat()` shortcut function, matching the CSS `repeat()`
 option:
 
-    // Symmetrical layouts
-    $grid-template-columns: repeat(12, 120px);
-    $columns: susy-repeat(12, 120px);
+```scss
+// Symmetrical layouts
+$grid-template-columns: repeat(12, 120px);
+$columns: susy-repeat(12, 120px);
 
-    // Asymmetrical and mixed-unit layouts
-    $grid-template-columns: 120px repeat(4, 1fr) 30em;
-    $columns: 120px susy-repeat(4) 30em;
+// Asymmetrical and mixed-unit layouts
+$grid-template-columns: 120px repeat(4, 1fr) 30em;
+$columns: 120px susy-repeat(4) 30em;
+```
 
 Where CSS Grid uses the `fr` unit for fluid columns, we use unitless
 numbers. A column of width `2` in Susy will work similarly to a `2fr`
@@ -145,20 +147,22 @@ column in CSS. The default setting (`susy-repeat(4)`) defines a grid of
 
 Here are a few examples of different column settings:
 
-    // 12-column em-based grid... (these have same result)
-    $columns: susy-repeat(12, 5em);
-    $columns: 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em;
+```scss
+// 12-column em-based grid... (these have same result)
+$columns: susy-repeat(12, 5em);
+$columns: 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em;
 
-    // holy grail grid from above...
-    $columns: 12em 1 200px;
+// holy grail grid from above...
+$columns: 12em 1 200px;
 
-    // add more columns in the fluid area of holy grail...
-    $columns: 12em susy-repeat(4) 200px;
-    $columns: 12em 1 1 1 1 200px;
+// add more columns in the fluid area of holy grail...
+$columns: 12em susy-repeat(4) 200px;
+$columns: 12em 1 1 1 1 200px;
 
-    // repeated alternating columns...
-    $columns: susy-repeat(3, 8em 200px);
-    $columns: 8em 200px 8em 200px 8em 200px;
+// repeated alternating columns...
+$columns: susy-repeat(3, 8em 200px);
+$columns: 8em 200px 8em 200px 8em 200px;
+```
 
 This is a breaking change from Susy2, which allowed a single number `12`
 to represent 12 equal-and-fluid columns. That has been replaced with
@@ -176,11 +180,13 @@ between columns. A unitless gutter setting will act as a fraction, on
 the same scale as any unitless columns. Gutters with units will remain
 static:
 
-    // unitless fluid gutters...
-    $gutters: 0.25;
+```scss
+// unitless fluid gutters...
+$gutters: 0.25;
 
-    // static gutters...
-    $gutters: 10px;
+// static gutters...
+$gutters: 10px;
+```
 
 ## Simplify Your Math
 
@@ -192,7 +198,9 @@ tricks to simplify your math, and handle it manually.
 
 First, fix the browser [box-model] by setting a global `box-sizing`:
 
-    * { box-sizing: border-box; }
+```scss
+* { box-sizing: border-box; }
+```
 
 I recommend setting this globally by default, no matter how you handle
 layouts. Border-box sizing means you can set a width, without worrying
@@ -214,17 +222,19 @@ is a simple fraction: `percentage(3/12)` in Sass. If you are able to
 drop the gutters, or even move them into `padding` rather than
 `margins`, you can avoid grid math entirely:
 
-    // With Sass
-    .simple-grid {
-      float: left;
-      width: percentage(3/12);
-    }
+```scss
+// With Sass
+.simple-grid {
+  float: left;
+  width: percentage(3/12);
+}
 
-    /* Without Sass */
-    .simple-grid {
-      float: left;
-      width: calc(3/12 * 100%);
-    }
+/* Without Sass */
+.simple-grid {
+  float: left;
+  width: calc(3/12 * 100%);
+}
+```
 
 If you want to get really clever, you can build your own grid-system out
 of CSS [custom properties] (aka variables):
@@ -250,7 +260,7 @@ pure CSS, it's better to describe your actual needs more simply. Why
 solve all layout problems, when you can solve only the problems you
 have?
 
-  [custom properties]: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+[custom properties]: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
 
 ### Use Flexbox
 
@@ -271,21 +281,25 @@ If you do want to use Susy with flexbox to achieve more consistent
 grids, you only need to replace any `flex-basis` values with Susy's
 `span()` function.
 
-    .flex {
-      flex: 1 1 span(3 of 12);
-    }
+```scss
+.flex {
+  flex: 1 1 span(3 of 12);
+}
+```
 
 I can't think of any way to improve that with mixins, unless you want a
 few flexing defaults:
 
-    @mixin span(
-      $span,
-      $config: ()
-    ) {
-      flex: 1 1 span($span, $config);
-      // split the gutter on each side of the element...
-      padding: gutter($span, $config) / 2;
-    }
+```scss
+@mixin span(
+  $span,
+  $config: ()
+) {
+  flex: 1 1 span($span, $config);
+  // split the gutter on each side of the element...
+  padding: gutter($span, $config) / 2;
+}
+```
 
 ### Use Calc to Mix Units
 
@@ -310,11 +324,15 @@ Susy3 is here to help calculate margin-gutters, asymmetrical grids, and
 mixed-unit calculations that are difficult to handle without CSS Grid.
 In those cases, Susy can turn this:
 
-    $width: ($span + (($span - 1) * $gutter-width)) / ($columns + (($columns - 1) * $gutter-width));
+```scss
+$width: ($span + (($span - 1) * $gutter-width)) / ($columns + (($columns - 1) * $gutter-width));
+```
 
 Into something more manageable:
 
-    $width: span(3);
+```scss
+$width: span(3);
+```
 
 ## Grids on Demand
 
@@ -329,56 +347,62 @@ classes when you can simply use these two functions wherever you need to
 align with the grid? This is more readable and more flexible than most
 grid systems, because no CSS properties are hidden from view:
 
-    // class names are for demonstration only...
-    .float {
-      width: span(3);
-      margin-right: gutter();
-    }
+```scss
+// class names are for demonstration only...
+.float {
+  width: span(3);
+  margin-right: gutter();
+}
 
-    .flexbox {
-      flex: 1 1 span(3);
-      padding: 0 gutter() / 2;
-    }
+.flexbox {
+  flex: 1 1 span(3);
+  padding: 0 gutter() / 2;
+}
 
-    .push-3 {
-      margin-left: span(3 wide);
-    }
+.push-3 {
+  margin-left: span(3 wide);
+}
+```
 
 If you find that too repetitive for your needs, you can build mixins to
 manage a few common patterns. Here's a simple `span` mixin for floated
 grids, with margin-gutters on the right:
 
-    @mixin span(
-      $span,
-      $config: $susy
-    ) {
-      width: span($span, $config);
+```scss
+@mixin span(
+  $span,
+  $config: $susy
+) {
+  width: span($span, $config);
 
-      @if index($span, 'last') {
-        float: right;
-      } @else {
-        float: left;
-        margin-right: gutter();
-      }
-    }
+  @if index($span, 'last') {
+    float: right;
+  } @else {
+    float: left;
+    margin-right: gutter();
+  }
+}
+```
 
 You can also build a class system of your own, like you might find in
 other grid frameworks:
 
-    .span {
-      float: left;
-      margin-right: gutter();
+```scss
+.span {
+  float: left;
+  margin-right: gutter();
 
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+  &:last-child {
+    margin-right: 0;
+  }
+}
 
-    @for $span from 1 through length(susy-get('columns')) {
-      .span-#{$span} {
-        width: span($span);
-      }
-    }
+@for $span from 1 through length(susy-get('columns')) {
+  .span-#{$span} {
+    width: span($span);
+  }
+}
+```
 
 Only users with very specific and complicated needs may still want to
 "build an entire system" on top of Susy, in which case we'll provide the
@@ -391,12 +415,14 @@ Global settings are still stored in the `$susy` map variable, just like
 Susy2, but now we only have four total settings. Here they are, with
 their default values:
 
-    $susy: (
-      'columns': susy-repeat(4),
-      'gutters': 0.25,
-      'spread': 'narrow',
-      'container-spread': 'narrow',
-    );
+```scss
+$susy: (
+  'columns': susy-repeat(4),
+  'gutters': 0.25,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);
+```
 
 We've already introduced you to `columns` and `gutters`, so let's take a
 look at the remaining options.
@@ -411,9 +437,9 @@ other settings, like `gutter-position`. We wrote an article last week
 To summarize, there are three spread options, and most people will only
 use two of them: `narrow`, `wide`, and (rarely) `wider`.
 
--   A `narrow` spread has one less gutter than columns.
--   A `wide` spread has an equal number of columns and gutters.
--   A `wider` spread has one more gutter than columns.
+- A `narrow` spread has one less gutter than columns.
+- A `wide` spread has an equal number of columns and gutters.
+- A `wider` spread has one more gutter than columns.
 
 Susy needs to know how an element spreads, and also how containers
 spread. Note that Susy3 has no single `container` element. Every grid
@@ -424,43 +450,47 @@ element.
 In Susy2, we would generate both spread values based on
 `gutter-position`, using roughly this logic:
 
-    // gutter-position: before | after (margins)
-    $susy: (
-      'spread': 'narrow',
-      'container-spread': 'narrow',
-    );
+```scss
+// gutter-position: before | after (margins)
+$susy: (
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);
 
-    // gutter-position: split (margins)
-    $susy: (
-      'spread': 'narrow',
-      'container-spread': 'wide',
-    );
+// gutter-position: split (margins)
+$susy: (
+  'spread': 'narrow',
+  'container-spread': 'wide',
+);
 
-    // gutter-position: inside (padding)
-    $susy: (
-      'spread': 'wide',
-      'container-spread': 'wide',
-    );
+// gutter-position: inside (padding)
+$susy: (
+  'spread': 'wide',
+  'container-spread': 'wide',
+);
+```
 
 We also override those options when pushing, pulling, padding, and
 bleeding:
 
-    .push-3 {
-      margin-left: span(3 wide);
-    }
+```scss
+.push-3 {
+  margin-left: span(3 wide);
+}
 
-    .pull-3 {
-      margin-left: 0 - span(3 wide);
-    }
+.pull-3 {
+  margin-left: 0 - span(3 wide);
+}
 
-    .pad-left-3 {
-      padding-left: span(3 wide);
-    }
+.pad-left-3 {
+  padding-left: span(3 wide);
+}
 
-    .bleed-left-3 {
-      margin-left: 0 - span(3 wide);
-      padding-left: span(3 wide);
-    }
+.bleed-left-3 {
+  margin-left: 0 - span(3 wide);
+  padding-left: span(3 wide);
+}
+```
 
 Susy3 defaults both values to `narrow`, which will work the same as CSS
 Grid and most other grid systems. If you're not doing anything special,
@@ -479,27 +509,33 @@ All Susy3 functions draw on the same shorthand syntax in two parts –
 separated by the word `of`. The first part describes a **span** `width`,
 `location`, and `spread` (in any order):
 
-    // <width> <location> <spread>
-    $span: 2;
-    $spread: 3 wide;
+```scss
+// <width> <location> <spread>
+$span: 2;
+$spread: 3 wide;
 
-    // location is only needed with asymmetrical grids
-    $location: 3 at 2 narrow;
+// location is only needed with asymmetrical grids
+$location: 3 at 2 narrow;
+```
 
 You can also span explicit asymmetrical columns, using a column-list
 instead of span-count and location:
 
-    // span 120px and one fraction of the container
-    $span: (120px 1) narrow;
+```scss
+// span 120px and one fraction of the container
+$span: (120px 1) narrow;
+```
 
 The second half of Susy's shorthand describes the **grid-context** – or
 available space – with `columns`, `container-spread`, and `gutters` (in
 any order). None are required:
 
-    // of <columns> <container-spread> <gutters>
-    $columns: of susy-repeat(6);
-    $spread: of (120px 1 1 14em) wide;
-    $gutters: of 12 set-gutters 2em;
+```scss
+// of <columns> <container-spread> <gutters>
+$columns: of susy-repeat(6);
+$spread: of (120px 1 1 14em) wide;
+$gutters: of 12 set-gutters 2em;
+```
 
 As you can see, the `columns` value here is identical to the global
 `columns` setting, with one difference. Unlike the global setting,
@@ -507,17 +543,21 @@ shorthand column-context can be described as a unitless span-count
 rather than a list. A single unitless number for columns will be treated
 as a slice of the parent grid:
 
-    // columns: susy-repeat(12, 120px)
-    $shorthand: of 4;
-    $meaning: of susy-repeat(4, 120px);
+```scss
+// columns: susy-repeat(12, 120px)
+$shorthand: of 4;
+$meaning: of susy-repeat(4, 120px);
+```
 
 If you are using asymmetrical grids, Susy can't slice it for you. We
 provide a slice function with exactly the same shorthand syntax, but it
 returns a list of columns rather than a calculated width:
 
-    // columns: 1 1 2 3 5 8 13
-    $shorthand: of slice(first 4);
-    $meaning: of (1 1 2 3);
+```scss
+// columns: 1 1 2 3 5 8 13
+$shorthand: of slice(first 4);
+$meaning: of (1 1 2 3);
+```
 
 ## Primary API Functions
 
@@ -535,23 +575,27 @@ around.
 The `span()` mixin only requires a span width, but accepts the full
 shorthand:
 
-    // Common Use...
-    $width: span(3);
+```scss
+// Common Use...
+$width: span(3);
 
-    // Much less common...
-    $width: span(first 3 wide of (1 1 2 3 5 8) wide set-gutters 20px);
+// Much less common...
+$width: span(first 3 wide of (1 1 2 3 5 8) wide set-gutters 20px);
+```
 
 ### Gutter
 
 Gutter will return the width of a single gutter, and only accepts the
 second half (context) of the shorthand – with or without `of`:
 
-    // Common Use...
-    $padding: gutter();
+```scss
+// Common Use...
+$padding: gutter();
 
-    // With Context...
-    $padding: gutter(of 4);
-    $same-meaning: gutter(4);
+// With Context...
+$padding: gutter(of 4);
+$same-meaning: gutter(4);
+```
 
 ## Installation & Other Options
 
@@ -559,38 +603,44 @@ There are full installation instructions in the [reference docs], but
 you should note that we now provide the Susy API with or without
 prefixes:
 
-    // unprefixed
-    @import '<path-to>/susy/sass/susy';
+```scss
+// unprefixed
+@import '<path-to>/susy/sass/susy';
 
-    // prefixed
-    @import '<path-to>/susy/sass/susy-prefix';
+// prefixed
+@import '<path-to>/susy/sass/susy-prefix';
+```
 
 By default we assume you want Susy without any prefix, but importing
 `susy-prefix` will include `susy-` before all function names. You can
 use that if you are worried about name collisions with other functions
 in your project.
 
-  [reference docs]: /susy/docs/
+[reference docs]: /susy/docs/
 
 ### SVG grids for debugging
 
 If you want help visualizing and debugging your grids, import the SVG
 Grid Plugin:
 
-    // unprefixed
-    @import '<path-to>/susy/sass/plugins/svg-grid';
+```scss
+// unprefixed
+@import '<path-to>/susy/sass/plugins/svg-grid';
 
-    // prefixed
-    @import '<path-to>/susy/sass/plugins/svg-grid/prefix';
+// prefixed
+@import '<path-to>/susy/sass/plugins/svg-grid/prefix';
+```
 
 The plugin adds an `svg-grid-colors` setting to your global defaults,
 which you can override in the `$susy` settings map. It also provides you
 with a new function, `susy-svg-grid()`, which will return an inline svg
 image for use on the background of an element:
 
-    .container {
-      background: susy-svg-grid() no-repeat scroll;
-    }
+```scss
+.container {
+  background: susy-svg-grid() no-repeat scroll;
+}
+```
 
 SVG grids are much more reliable than the old background-image gradient,
 because background gradients have subpixel rounding issues.
@@ -601,7 +651,7 @@ Once you get the basics, Susy3 also provides tools to help you build
 your own mixins and define your own system, if that's something you
 need. See the [Plugin Utilities] for more detail.
 
-  [Plugin Utilities]: /susy/docs/plugin-utils.html
+[Plugin Utilities]: /susy/docs/plugin-utils.html
 
 ## Feedback is Always Welcome
 
@@ -621,10 +671,10 @@ and any [third-party tutorials] that we hear about. [Contact us], or
 twitter, or join our [public Slack] (with a \#Susy channel). We're
 excited to hear from you!
 
-  [sites built with Susy]: /susy/sites/
-  [third-party tutorials]: /susy/articles/
-  [Contact us]: /contact/
-  [submit a pull request]: https://github.com/oddbird/oddsite/tree/master/content/susy
-  [SassSusy]: https://twitter.com/sasssusy
-  [OddBird]: https://twitter.com/oddbird
-  [public Slack]: http://friends.oddbird.net
+[sites built with Susy]: /susy/sites/
+[third-party tutorials]: /susy/articles/
+[Contact us]: /contact/
+[submit a pull request]: https://github.com/oddbird/oddsite/tree/master/content/susy
+[SassSusy]: https://twitter.com/sasssusy
+[OddBird]: https://twitter.com/oddbird
+[public Slack]: http://friends.oddbird.net

@@ -50,7 +50,9 @@ prefer to avoid using it, and save myself the worry.
 To ensure we don't risk executing arbitrary code, we can tell Celery to
 use the JSON serializer:
 
-    CELERY_TASK_SERIALIZER = 'json'
+```python
+CELERY_TASK_SERIALIZER = 'json'
+```
 
 But now we can't pass full Python objects around, only primitive data.
 If we try to pass something that can't be JSON-serialized, we'll get a
@@ -60,11 +62,11 @@ runtime error.
 web processes in different languages. That's beyond what I'll talk about
 here, but it's worth thinking about!)
 
-  [Celery]: http://docs.celeryproject.org/en/latest/index.html
-  [Django Channels]: https://channels.readthedocs.io/en/stable/
-  [AMQP]: https://www.rabbitmq.com/
-  [Redis]: https://redis.io/
-  [security concerns]: https://blog.nelhage.com/2011/03/exploiting-pickle/
+[Celery]: http://docs.celeryproject.org/en/latest/index.html
+[Django Channels]: https://channels.readthedocs.io/en/stable/
+[AMQP]: https://www.rabbitmq.com/
+[Redis]: https://redis.io/
+[security concerns]: https://blog.nelhage.com/2011/03/exploiting-pickle/
 
 ## Getting a Django Model Between Processes
 
@@ -100,18 +102,20 @@ about the types of the arguments. Still don't do this.)
 Alternatively, you could add three (or however many) different arguments
 to the task:
 
-    @task()
-    def some_task(foo_id=None, bar_id=None, baz_id=None):
-        if foo_id is not None:
-            obj = Foo.objects.get(pk=id)
-        elif bar_id is not None:
-            obj = Bar.objects.get(pk=id)
-        elif baz_id is not None:
-            obj = Baz.objects.get(pk=id)
-        else:
-            # Do some error logging and return.
-            return
-        # Operate on obj
+```python
+@task()
+def some_task(foo_id=None, bar_id=None, baz_id=None):
+    if foo_id is not None:
+        obj = Foo.objects.get(pk=id)
+    elif bar_id is not None:
+        obj = Bar.objects.get(pk=id)
+    elif baz_id is not None:
+        obj = Baz.objects.get(pk=id)
+    else:
+        # Do some error logging and return.
+        return
+    # Operate on obj
+```
 
 This is *tolerable*, but it adds a lot of boilerplate. You get a
 function signature that increases in length as the number of possible
@@ -127,13 +131,15 @@ things programmatically.
 The third option – my favorite – is to simply tell the task what model
 you need:
 
-    from django.apps import apps
+```python
+from django.apps import apps
 
-    @task()
-    def some_task(model_name, model_id):
-        Model = apps.get_model('django_app_name.{}'.format(model_name))
-        obj = Model.objects.get(pk=model_id)
-        # Operate on obj
+@task()
+def some_task(model_name, model_id):
+    Model = apps.get_model('django_app_name.{}'.format(model_name))
+    obj = Model.objects.get(pk=model_id)
+    # Operate on obj
+```
 
 Note the crucial piece here: `django.apps.apps.get_model`. It takes a
 model identifier, which is `django_app_name.ModelName`. The
@@ -144,15 +150,17 @@ model identifier, which is `django_app_name.ModelName`. The
 For added delight here, you can even get the model name automatically in
 a mixin to your models:
 
-    class SomeMixin:
-        # Assuming that you want to trigger the task on save:
-        def save(self, *args, **kwargs):
-            ret = super().save(*args, **kwargs)
-            some_task.apply_async((
-                self.__class__.__name__,
-                self.pk,
-            ))
-            return ret
+```python
+class SomeMixin:
+    # Assuming that you want to trigger the task on save:
+    def save(self, *args, **kwargs):
+        ret = super().save(*args, **kwargs)
+        some_task.apply_async((
+            self.__class__.__name__,
+            self.pk,
+        ))
+        return ret
+```
 
 As a final word to the wise, it's worth noting that this entire
 database-mediated approach opens you up to certain timing risks. Data
@@ -180,28 +188,32 @@ possible.
 One approach I like is to use the [attrs] library. It lets you define
 your business logic class like so:
 
-    import attr
+```python
+import attr
 
-    @attr.s
-    class SomeClass(object):
-        foo = attr.ib()
-        bar = attr.ib()
+@attr.s
+class SomeClass(object):
+    foo = attr.ib()
+    bar = attr.ib()
 
-        def some_method(self):
-            pass
+    def some_method(self):
+        pass
 
 And then you can easily serialize an instance:
 
-    import attr
-    inst = SomeClass(foo={'hi': 'there'}, bar=SomeClass(foo=1, bar=False))
-    attr.asdict(inst)
-    # {'foo': {'bar': False, 'foo': 1}, 'foo': {'hi': 'there'}}
+import attr
+inst = SomeClass(foo={'hi': 'there'}, bar=SomeClass(foo=1, bar=False))
+attr.asdict(inst)
+# {'foo': {'bar': False, 'foo': 1}, 'foo': {'hi': 'there'}}
+```
 
 And just as importantly, you can pass that serialized data to the task,
 and inflate it:
 
-    def some_task(some_class):
-        inst = SomeClass(**some_class)
+```python
+def some_task(some_class):
+    inst = SomeClass(**some_class)
+```
 
 How have you handled object serialization in your projects? We'd love to
 hear your thoughts on [Twitter], on our [public Slack channel], or
@@ -217,27 +229,29 @@ use Django's built-in serialization/deserialization framework.
 This is particularly useful for smaller models, without lots of deep or
 crucial relationships. It looks something like this:
 
-    from django.core.serializers import serialize, deserialize
+```python
+from django.core.serializers import serialize, deserialize
 
-    # Note that this requires an iterable, so you have to wrap your
-    # instance in a list:
-    json_version = serialize('json', [some_class_instance])
-    # Now you have a JSON representation of the instance that knows its
-    # own type.
-    # Put it on the wire here, passing it to a task or whatever.
-    # Then in the task:
-    deserialized_objects = deserialize('json', json_version)
-    # This will produce a list of DeserializedObject instances that wrap
-    # the actual model, which will be available as
-    # deserialized_objects[i].object
+# Note that this requires an iterable, so you have to wrap your
+# instance in a list:
+json_version = serialize('json', [some_class_instance])
+# Now you have a JSON representation of the instance that knows its
+# own type.
+# Put it on the wire here, passing it to a task or whatever.
+# Then in the task:
+deserialized_objects = deserialize('json', json_version)
+# This will produce a list of DeserializedObject instances that wrap
+# the actual model, which will be available as
+# deserialized_objects[i].object
+```
 
 [1] You are keeping in mind that your *data model* and your Django
 *Models* aren't the same, right? Django models are persistence-layer
 mappings that you can bolt some additional logic to. Your data model may
 be much more!
 
-  [attrs]: https://attrs.readthedocs.io/en/stable/
-  [Twitter]: https://twitter.com/oddbird
-  [public Slack channel]: http://friends.oddbird.net
-  [handy contact form]: /contact/
-  [Dan Morelle]: https://www.flickr.com/photos/doodledan/5623812207/in/photolist-9yXvrr-9W139J-rPYrZp-7BkxKT-aWPwCP-pkqpEu-8iimgZ-pkpuKF-pkqpm1-nvKV6q-4mVgtJ-pzSGYY-6qjB4E-pBVzNr-8JG1Ja-6qfuMn-pBTApN-bo34GB-pBUVaK-7NVtXW-5XJRQK-dM3hhG-aWPxoT-dQD6zK-pBURD6-pBVjRH-9VXd56-5x1PMy-7NVt7U-5qMsjU-pkqPdu-pkqWKT-4vkwsh-8WvmVA-3NBhJG-pkqCzq-pBD7rv-aWPvP4-pBUNx6-dLWDRk-7NRvR6-aWPuQB-7jnkHb-8oZuCB-DPKaV-pkqtML-pdG1Hz-6qfsrZ-pBCy9e-8Zhx4A
+[attrs]: https://attrs.readthedocs.io/en/stable/
+[Twitter]: https://twitter.com/oddbird
+[public Slack channel]: http://friends.oddbird.net
+[handy contact form]: /contact/
+[Dan Morelle]: https://www.flickr.com/photos/doodledan/5623812207/in/photolist-9yXvrr-9W139J-rPYrZp-7BkxKT-aWPwCP-pkqpEu-8iimgZ-pkpuKF-pkqpm1-nvKV6q-4mVgtJ-pzSGYY-6qjB4E-pBVzNr-8JG1Ja-6qfuMn-pBTApN-bo34GB-pBUVaK-7NVtXW-5XJRQK-dM3hhG-aWPxoT-dQD6zK-pBURD6-pBVjRH-9VXd56-5x1PMy-7NVt7U-5qMsjU-pkqPdu-pkqWKT-4vkwsh-8WvmVA-3NBhJG-pkqCzq-pBD7rv-aWPvP4-pBUNx6-dLWDRk-7NRvR6-aWPuQB-7jnkHb-8oZuCB-DPKaV-pkqtML-pdG1Hz-6qfsrZ-pBCy9e-8Zhx4A

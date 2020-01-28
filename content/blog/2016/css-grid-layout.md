@@ -59,13 +59,15 @@ for <span class="title-ref">display: grid</span> or if the browser
 doesn't even know what Feature Queries are, then it ignores the block of
 code.
 
-    .container {
-      display: flex;
+```scss
+.container {
+  display: flex;
 
-      @supports ( display: grid ) {
-         display: grid;
-      }
-    }
+  @supports ( display: grid ) {
+     display: grid;
+  }
+}
+```
 
 Currently, Feature Queries are supported in most browsers except
 Internet Explorer and Opera Mini:
@@ -118,33 +120,33 @@ House] that explains each of the below properties in great detail.
 
 #### CSS Grid Layout Properties to use on a Grid Container:
 
--   display
--   grid-template-columns
--   grid-template-rows
--   grid-template-areas
--   grid-column-gap
--   grid-row-gap
--   grid-gap
--   justify-items
--   align-items
--   justify-content
--   align-content
--   grid-auto-columns
--   grid-auto-rows
--   grid-auto-flow
--   grid
+- display
+- grid-template-columns
+- grid-template-rows
+- grid-template-areas
+- grid-column-gap
+- grid-row-gap
+- grid-gap
+- justify-items
+- align-items
+- justify-content
+- align-content
+- grid-auto-columns
+- grid-auto-rows
+- grid-auto-flow
+- grid
 
 #### CSS Grid Layout Properties to use on a Grid Item:
 
--   grid-column-start
--   grid-column-end
--   grid-row-start
--   grid-row-end
--   grid-column
--   grid-row
--   grid-area
--   justify-self
--   align-self
+- grid-column-start
+- grid-column-end
+- grid-row-start
+- grid-row-end
+- grid-column
+- grid-row
+- grid-area
+- justify-self
+- align-self
 
 I’ve been creating a few demos in CodePen using Grid and it has been
 exciting to see the flexibility we will have once this rolls out. I
@@ -172,12 +174,12 @@ perhaps different from what we've always done in the past.
 
 ### Flexbox
 
--   [Stacy’s Flexbox Bookmark Collection]
--   [Codrops CSS Flexbox Reference]
--   [CSS-Tricks Guide to Flexbox]
--   [Flexbox Froggy]
--   [Flexbox Defense]
--   [Flexbox Patterns]
+- [Stacy’s Flexbox Bookmark Collection]
+- [Codrops CSS Flexbox Reference]
+- [CSS-Tricks Guide to Flexbox]
+- [Flexbox Froggy]
+- [Flexbox Defense]
+- [Flexbox Patterns]
 
 [Stacy’s Flexbox Bookmark Collection]: https://raindrop.io/collection/1328630
 [Codrops CSS Flexbox Reference]: http://tympanus.net/codrops/css_reference/flexbox/
@@ -188,14 +190,14 @@ perhaps different from what we've always done in the past.
 
 ### CSS Grid Layout
 
--   [Stacy’s CSS Grid Layout Bookmark Collection]
--   [Grid by Example]
--   [Jen Simmons Labs]
--   [Should I Use Grid or Flexbox]
--   [Get Ready for CSS Grid Layout]
--   [CSS Grid Layout]
--   [Where Things Are at in the CSS Grid Layout Working Draft]
--   [CSS Grid Layout CodePen Collection]
+- [Stacy’s CSS Grid Layout Bookmark Collection]
+- [Grid by Example]
+- [Jen Simmons Labs]
+- [Should I Use Grid or Flexbox]
+- [Get Ready for CSS Grid Layout]
+- [CSS Grid Layout]
+- [Where Things Are at in the CSS Grid Layout Working Draft]
+- [CSS Grid Layout CodePen Collection]
 
 [Stacy’s CSS Grid Layout Bookmark Collection]: https://raindrop.io/collection/1295293
 [Grid by Example]: http://gridbyexample.com/

@@ -31,12 +31,12 @@ later.
 Now that you have enough links to take you away from this post for a day
 at least, let's get started.
 
-  [many]: https://grimoire.ca/git/pull-request-workflow
-  [ways]: http://nvie.com/posts/a-successful-git-branching-model/
-  [to]: https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow
-  [use]: https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
-  [git]: http://blog.endpoint.com/2014/05/git-workflows-that-work.html
-  [a content-addressable filesystem, used to track directory trees]: http://marc.info/?l=linux-kernel&m=111293537202443
+[many]: https://grimoire.ca/git/pull-request-workflow
+[ways]: http://nvie.com/posts/a-successful-git-branching-model/
+[to]: https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow
+[use]: https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+[git]: http://blog.endpoint.com/2014/05/git-workflows-that-work.html
+[a content-addressable filesystem, used to track directory trees]: http://marc.info/?l=linux-kernel&m=111293537202443
 
 ## Git is a DAG-Manipulation Tool
 
@@ -44,9 +44,11 @@ First, let's unpack what I said above. Be prepared for some graph theory
 terms. You've seen these sorts of charts in every bit of git
 documentation you look at, right? :
 
-    A---B---C topic
-    /         \
-    D---E---F---G---H master
+```
+      A---B---C topic
+     /         \
+D---E---F---G---H master
+```
 
 (From <https://git-scm.com/docs/git-merge>.)
 
@@ -66,15 +68,19 @@ on the particular changesets involved.**
 When you rebase, you "rewrite history" and transform, for example, this
 DAG:
 
-    A---B---C topic
-    /
-    D---E---F---G master
+```
+      A---B---C topic
+     /
+D---E---F---G master
+```
 
 Into this DAG:
 
-    A'--B'--C' topic
-    /
-    D---E---F---G master
+```
+              A'--B'--C' topic
+             /
+D---E---F---G master
+```
 
 (Examples from <https://git-scm.com/docs/git-rebase>.)
 
@@ -125,8 +131,10 @@ approach right now: they each have a copy of the repo on their own
 computers, and they are sharing one repo on GitHub. When Bao runs
 `git remote -v`, they get:
 
-    origin git@github.com:example/project.git (fetch)
-    origin git@github.com:example/project.git (push)
+```
+origin git@github.com:example/project.git (fetch)
+origin git@github.com:example/project.git (push)
+```
 
 And Robin would see the same. They can each push to that remote, too,
 but they have an understanding that they won't push branches that don't
@@ -152,18 +160,20 @@ branch on to that work:
 
 On Bao's machine, this looks like:
 
-    $ git fetch
-    $ # Update local information on upstream branch.
-    $ # Because Bao *never* commits on this branch, every merge
-    $ # should be a fast-forward merge, but let's use --ff-only
-    $ # just to be sure:
-    $ git checkout robin-feature && git merge --ff-only
-    $ # See what the world looks like at this moment:
-    $ git checkout bao-fix
-    $ git branch -vv
-    * bao-fix       ca1f618 [robin-feature: ahead 4, behind 9] short message
-      robin-feature fc58298 [origin/robin-feature] short message
-      master        d1ef2a3 [origin/master] Merge Bao's work
+```bash
+$ git fetch
+$ # Update local information on upstream branch.
+$ # Because Bao *never* commits on this branch, every merge
+$ # should be a fast-forward merge, but let's use --ff-only
+$ # just to be sure:
+$ git checkout robin-feature && git merge --ff-only
+$ # See what the world looks like at this moment:
+$ git checkout bao-fix
+$ git branch -vv
+* bao-fix       ca1f618 [robin-feature: ahead 4, behind 9] short message
+  robin-feature fc58298 [origin/robin-feature] short message
+  master        d1ef2a3 [origin/master] Merge Bao's work
+```
 
 This leaves Bao's branch attached to the old commit G, which had been in
 Robin's branch before the rebase. But because Bao's branch tracks
@@ -174,12 +184,14 @@ on their local computer, just run `git rebase` and get this:
 
 Again, on Bao's machine:
 
-    $ # Because the bao-fix branch has robin-feature as an upstream:
-    $ git rebase
-    $ git branch -vv
-    * bao-fix       ca1f618 [robin-feature: ahead 2] short message
-      robin-feature fc58298 [origin/robin-feature] short message
-      master        d1ef2a3 [origin/master] Merge Bao's work
+```bash
+$ # Because the bao-fix branch has robin-feature as an upstream:
+$ git rebase
+$ git branch -vv
+* bao-fix       ca1f618 [robin-feature: ahead 2] short message
+  robin-feature fc58298 [origin/robin-feature] short message
+  master        d1ef2a3 [origin/master] Merge Bao's work
+```
 
 Note that Bao's work is now coming off of K', not G (or G'). This is
 because it tracks Robin's *branch* as its upstream, not a specific
@@ -213,8 +225,10 @@ having a way to *undo* is crucial.
 There are some git defaults you may want to set to make this pattern
 easier:
 
-    git config merge.defaultToUpstream true
-    git config branch.autosetupmerge always
+```bash
+git config merge.defaultToUpstream true
+git config branch.autosetupmerge always
+```
 
 Honestly, they're useful defaults to set in any case! (Hat-tip to [Owen]
 for these defaults, and a lot of thinking about git!)
@@ -224,9 +238,9 @@ if you write [good commit messages]. If you don't go spelunking through
 your git history often to understand past choices, then let this be your
 excuse.
 
-  [reflog]: https://git-scm.com/docs/git-reflog
-  [Owen]: https://grimoire.ca/git/config
-  [good commit messages]: http://alistapart.com/article/the-art-of-the-commit
+[reflog]: https://git-scm.com/docs/git-reflog
+[Owen]: https://grimoire.ca/git/config
+[good commit messages]: http://alistapart.com/article/the-art-of-the-commit
 
 ## What Do the OddBirds Do?
 
