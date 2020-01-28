@@ -25,13 +25,13 @@ Like many websites, we use [Google Analytics] to gather data about our
 users – what OS and browser they used, how they came to our site, etc.
 But a number of months ago we started seeing lots of this:
 
-<img src="/static/images/blog/2017/ga-spam/ga-spam.jpg" class="img-border img-border" alt="google analytics spam" />
+<img src="{{ site.images }}blog/2017/ga-spam/ga-spam.jpg" class="img-border img-border" alt="google analytics spam" />
 
 It's not a new problem, but it's particularly problematic for smaller
 sites that don't receive lots of traffic. On a given day, spam hits were
 accounting for anywhere from ten to ninety (!) percent of our sessions.
 
-<img src="/static/images/blog/2017/ga-spam/sessions.jpg" class="img-border img-border" alt="google analytics total sessions and filtered (non-spam) sessions" />
+<img src="{{ site.images }}blog/2017/ga-spam/sessions.jpg" class="img-border img-border" alt="google analytics total sessions and filtered (non-spam) sessions" />
 
 There are [many solutions out there]; since we mostly saw spam in the
 "referral" field, we wanted a simple way to block spam referrals from

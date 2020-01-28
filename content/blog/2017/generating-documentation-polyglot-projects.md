@@ -60,7 +60,7 @@ and icons. (Alas, while we are using it to produce documentation, it is
 not yet very well-documented itself.)
 
   [SassDoc]: http://sassdoc.com/
-  [image]: /static/images/blog/2017/docs/sassdoc.png
+  [image]: {{ site.images }}blog/2017/docs/sassdoc.png
   [Herman]: https://github.com/oddbird/sassdoc-theme-herman/
 
 ## The Multi-language Challenge

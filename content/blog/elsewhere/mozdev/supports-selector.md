@@ -16,24 +16,26 @@ summary: |
   Firefox 69 was the first to implement selector feature queries, but
   other browsers are following suit. I'll show you how it works, and how
   to start using this new feature query right away.
+media:
+  - iframe: https://www.youtube.com/embed/WjvJheGhHIQ
 ---
 
-There are many ways to start using a new feature in CSS without waiting
-for full cross-browser support, but "feature queries" are the most clear
-and explicit. We can use them to test for browser support, and provide
-targeted styles only where they are supported. Now we can do the same
-with new selectors, like `::marker` or `:focus-visible`!
+{% import "embed.macros.njk" as embed %}
 
-content.macros.j2\#video
+There are many ways to start using a new feature in CSS
+without waiting for full cross-browser support,
+but "feature queries" are the most clear and explicit.
+We can use them to test for browser support,
+and provide targeted styles only where they are supported.
+Now we can do the same with new selectors,
+like `::marker` or `:focus-visible`!
 
-Selector queries allow us to finesse browser-support in new ways
+{{ embed.figure(
+  data=media,
+  caption='Selector queries allow us to finesse browser-support in new ways'
+) }}
 
--   [Firefox 69 Release Notes]
--   [MDN]
--   [Caniuse]
--   [Demos]
-
-  [Firefox 69 Release Notes]: https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/69
-  [MDN]: https://developer.mozilla.org/en-US/docs/Web/CSS/@supports#Testing_for_the_support_of_a_selector
-  [Caniuse]: https://caniuse.com/#feat=mdn-css_at-rules_supports_selector
-  [Demos]: https://mozdemos.netlify.com/support-selector/
+- [Firefox 69 Release Notes](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/69)
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports#Testing_for_the_support_of_a_selector)
+- [Caniuse](https://caniuse.com/#feat=mdn-css_at-rules_supports_selector)
+- [Demos](https://mozdemos.netlify.com/support-selector/)

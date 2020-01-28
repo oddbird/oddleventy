@@ -26,7 +26,9 @@ note: |
   content=none
 ) -%}
 {%- set content = content if (content != none) else caller() -%}
+{%- if content -%}
 <div class="pullquote">{{ content | md | safe }}</div>
+{%- endif -%}
 {%- endmacro %}
 
 

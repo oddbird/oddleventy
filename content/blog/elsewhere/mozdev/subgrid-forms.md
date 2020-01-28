@@ -18,8 +18,6 @@ summary: |
   with several quick fallbacks.
 media:
   - iframe: https://www.youtube.com/embed/gmQlK3kRft4
-    width: 560
-    height: 315
 ---
 {% import "embed.macros.njk" as embed %}
 

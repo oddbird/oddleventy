@@ -3,11 +3,14 @@ title: Dynamic CSS
 banner: Dynamic CSS -- layouts & beyond
 sub: with grids & custom properties
 author: miriam
+date: 2018-08-18
 slides: https://talks.oddbird.net/dynamic-css/
 image:
   src: talks/miriam.jpg
 tags:
+  - _post
   - Speaking
+  - Talks
   - Code
   - Layout
 events:
@@ -21,12 +24,18 @@ events:
     start: 2019-08-15
     end: 2019-08-16
     adr: Denver, CO
+    video: https://www.youtube.com/watch?v=JnvkjhwcMcM
+    media: &dvlp
+      iframe: https://www.youtube.com/embed/JnvkjhwcMcM
   - venue: Generate New York
     url: https://www.generateconf.com/
     adr: San Francisco, CA
     start: 2019-04-24
     end: 2019-04-25
     slides: https://talks.oddbird.net/dynamic-css/generate19/
+    video: https://www.youtube.com/watch?v=oXEsYwtTT6I
+    media: &generate
+      iframe: https://www.youtube.com/embed/oXEsYwtTT6I
   - venue: Smashing Conf
     url: https://www.smashingconf.com/sf-2019/
     adr: San Francisco, CA
@@ -34,12 +43,17 @@ events:
     end: 2019-04-17
     slides: https://talks.oddbird.net/dynamic-css/smashingsf19/
     video: https://vimeo.com/331571593
+    media: &smashing
+      iframe: https://player.vimeo.com/video/331571593
+      width: 640
+      height: 360
   - venue: VueConf US
     url: http://vueconf.us/
     adr: Tampa, FL
     start: 2019-03-26
     end: 2019-03-27
     slides: https://talks.oddbird.net/dynamic-css/vueconf19/
+    video: https://www.vuemastery.com/conferences/vueconf-us-2019/dynamic-css-with-vue/
   - venue: Front Range Front-End
     url: https://www.meetup.com/front-range-front-end/events/chtxtpyxpbcb/
     adr: Denver, CO
@@ -54,8 +68,6 @@ events:
     video: https://youtu.be/9fTUeLsR2Hc
     media: &fsfest
       iframe: https://www.youtube.com/embed/9fTUeLsR2Hc
-      width: 560
-      height: 315
   - venue: JSConf US
     url: https://2018.jsconf.us/
     adr: Carlsbad, CA
@@ -64,8 +76,6 @@ events:
     video: https://www.youtube.com/watch?v=uwgBz748t-g
     media: &jsconf
       iframe: https://www.youtube.com/embed/uwgBz748t-g
-      width: 560
-      height: 315
   - venue: CSSConf Argentina
     url: https://cssconfar.com/
     adr: Buenos Aires, Argentina
@@ -77,6 +87,7 @@ press:
       from @MiriSuzanne --
       color, layout & animation all in css
       and only using JS to feed data.
+    slug: mind-bending
     name: Jason Pamental
     title: Invited Expert
     venue: W3C
@@ -108,6 +119,7 @@ press:
     venue: Prefect.io
     icon: social/twitter
     url: https://twitter.com/itsngansense/status/1111001282528063488
+    slug: squishy
 summary: |
   Don't let the declarative syntax fool you --
   CSS is a powerful and dynamic programming language.
@@ -115,10 +127,13 @@ summary: |
   back into the language designed for it.
 media:
   - span: full
-    <<: *fsfest
-  - span: full
-    <<: *jsconf
+    <<: *dvlp
+  - <<: *generate
+  - <<: *smashing
+  - <<: *fsfest
+  - <<: *jsconf
 ---
+
 {% import "quotes.macros.njk" as quotes %}
 {% import "embed.macros.njk" as embed %}
 

@@ -19,8 +19,6 @@ darkmode:
     all shipping a system-wide dark mode for people's devices.
   media:
     - iframe: https://www.youtube.com/embed/jmepqJ5UbuM
-      width: 560
-      height: 315
 inspector:
   caption: |
     Use that third pane to quickly access
@@ -28,16 +26,12 @@ inspector:
     the Animations Tools, Tracked Changes, and more.
   media:
     - iframe: https://www.youtube.com/embed/N6aMLUZ
-      width: 560
-      height: 315
 markers:
   caption: |
     Style list markers,
     and add your own counters!
   media:
     - iframe: https://www.youtube.com/embed/2awepiNoaZI
-      width: 560
-      height: 315
 summary: |
   Over the summer, we've been working with Mozilla to help create a new
   resource for web professionals like us --with a mix of videos, articles,

@@ -2,9 +2,12 @@
 title: Your Own Damn Susy System
 sub: an introduction to the Susy layout toolkit
 author: miriam
+date: 2014-04-16
 url: http://mirisuzanne.github.io/pres/susy2/
 tags:
+  - _post
   - Speaking
+  - Talks
   - Code
   - Susy
   - Layout

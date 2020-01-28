@@ -2,11 +2,14 @@
 title: Don't Use My Grid System
 sub: it's time to move past grid systems like Susy
 author: miriam
+date: 2017-06-14
 slides: https://talks.oddbird.net/no-grid-system/
 image:
   src: talks/devconf-best.jpg
 tags:
+  - _post
   - Speaking
+  - Talks
   - Code
   - Susy
   - Layout
@@ -38,8 +41,6 @@ events:
     video: https://youtu.be/Prc_V-j6yS4
     media: &clarity
       iframe: https://www.youtube.com/embed/Prc_V-j6yS4
-      width: 560
-      height: 315
   - venue: CSS Dev Conf
     url: http://2017.cssdevconf.com/
     adr: New Orleans, LA
@@ -53,8 +54,6 @@ events:
     video: https://youtu.be/mDRfFEcj3-Q
     media: &django
       iframe: https://www.youtube.com/embed/mDRfFEcj3-Q
-      width: 560
-      height: 315
   - venue: Women Who Code Fort Collins
     url: https://www.meetup.com/Women-Who-Code-Fort-Collins/events/242033627/
     adr: Fort Collins, CO
@@ -80,6 +79,7 @@ press:
       instead of heavy library for your grid!
       Very useful and inspiring. Thanks!
     name: Sami Stein
+    slug: useful
     title: Frontend Developer at XING
     url: https://twitter.com/frontend_cat/status/993799732018532352
 summary: |

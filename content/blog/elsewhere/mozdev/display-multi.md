@@ -20,8 +20,6 @@ summary: |
   to match it's multiple uses.
 media:
   - iframe: https://www.youtube.com/embed/4Clyc38U-MA
-    width: 560
-    height: 315
 ---
 {% import "embed.macros.njk" as embed %}
 

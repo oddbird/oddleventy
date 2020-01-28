@@ -19,6 +19,8 @@ summary: |
   [Refactr.tech Conference]: http://refactr.tech/
 ---
 
+{% import "quotes.macros.njk" as quotes %}
+
 ## Why this matters.
 
 For three days, technologists from many parts of the country gathered in
@@ -28,10 +30,9 @@ underrepresented professionals in tech and their allies; with a focus on
 technology and creating a safe space to have conversations around
 diversity, inclusion, and intersectionality in tech.
 
-content.macros.j2\#pullquote
-
-I knew I was in the right place as I met so many people I already follow
-on Twitter.
+I knew I was in the right place
+as I met so many people
+I already follow on Twitter.
 
 First, I'd like to thank the awesome women of [Vue Vixens] for
 sponsoring my ticket for the conference. Refactr.tech is a re-branding
@@ -56,9 +57,9 @@ work towards gender, racial and ethnic diversity see financial gains
 above industry medians; but I love how the organizers of this conference
 took the conversation further than just its economic benefits.
 
-  [Refactr.tech]: http://refactr.tech/
-  [Vue Vixens]: https://vuevixens.org/
-  [We RISE]: https://www.womenwhocode.com/blog/women-who-code-announces-we-rise-tech-conference-in-atlanta
+[Refactr.tech]: http://refactr.tech/
+[Vue Vixens]: https://vuevixens.org/
+[We RISE]: https://www.womenwhocode.com/blog/women-who-code-announces-we-rise-tech-conference-in-atlanta
 
 ## Here's a recap.
 
@@ -131,26 +132,26 @@ own goals to join the conference circuit – it’s refreshing to know that
 not everyone is a rock star and that there is space for me to one day
 present my ideas and experiences to my peers.
 
-  [GraphQL]: http://https://graphql.org/
-  [Flutter]: http://flutter.io
-  [Gatsby]: https://gatsbyjs.org/
-  [Vue Skulk]: https://vuevixens.org/
-  [Tracy Lee]: https://twitter.com/ladyleet
-  [This Dot Labs]: https://www.thisdot.co/labs
-  [Dr. Kortney Ziegler]: https://twitter.com/fakerapper?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
-  [ZaMLabs]: https://sites.google.com/zamlabs.info/medialab/about
-  [Mike Harington]: https://twitter.com/mhartington
-  [Ionic]: https://ionicframework.com/
-  [Tae’lur Alexis]: https://twitter.com/TaelurAlexis
-  [codeeveryday.io]: https://codeeveryday.io/
-  [the most diverse panel of technologists]: https://refactr.tech/detail/sessions.html#forging-a-path-through-inclusive-entrepreneurship
-  [Sangeeta Nori]: https://twitter.com/norisangeeta
-  [quantum computing]: https://en.wikipedia.org/wiki/Quantum_computing
-  [/dev/color]: https://www.devcolor.org/
-  [Alexandra Millatmal]: https://twitter.com/halfghaninne?lang=en
-  [Newsela]: https://newsela.com/
-  [Nick Caldwell]: https://twitter.com/nickcald?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
-  [Looker (now Google)]: https://cloud.google.com/blog/topics/inside-google-cloud/expanding-our-platform-for-business-intelligence-and-embedded-analytics
+[GraphQL]: http://https://graphql.org/
+[Flutter]: http://flutter.io
+[Gatsby]: https://gatsbyjs.org/
+[Vue Skulk]: https://vuevixens.org/
+[Tracy Lee]: https://twitter.com/ladyleet
+[This Dot Labs]: https://www.thisdot.co/labs
+[Dr. Kortney Ziegler]: https://twitter.com/fakerapper?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+[ZaMLabs]: https://sites.google.com/zamlabs.info/medialab/about
+[Mike Harington]: https://twitter.com/mhartington
+[Ionic]: https://ionicframework.com/
+[Tae’lur Alexis]: https://twitter.com/TaelurAlexis
+[codeeveryday.io]: https://codeeveryday.io/
+[the most diverse panel of technologists]: https://refactr.tech/detail/sessions.html#forging-a-path-through-inclusive-entrepreneurship
+[Sangeeta Nori]: https://twitter.com/norisangeeta
+[quantum computing]: https://en.wikipedia.org/wiki/Quantum_computing
+[/dev/color]: https://www.devcolor.org/
+[Alexandra Millatmal]: https://twitter.com/halfghaninne?lang=en
+[Newsela]: https://newsela.com/
+[Nick Caldwell]: https://twitter.com/nickcald?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+[Looker (now Google)]: https://cloud.google.com/blog/topics/inside-google-cloud/expanding-our-platform-for-business-intelligence-and-embedded-analytics
 
 ## Final Thoughts.
 

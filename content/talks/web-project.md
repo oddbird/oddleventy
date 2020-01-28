@@ -1,9 +1,12 @@
 ---
 title: Planning Your Web Project
 author: miriam
+date: 2017-12-12
 slides: https://www.oddbooksapp.com/book/web-projects
 tags:
+  - _post
   - Speaking
+  - Talks
   - Code
   - Process
 events:

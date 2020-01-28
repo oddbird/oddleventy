@@ -38,7 +38,7 @@ heavily on data without considering the context of their visitor's
 situation, emotional state and more. Sarah’s talk showcases how you can
 use both research and experience to create the best results.
 
-[<img src="/static/images/blog/2017/video-series/sarah-2.jpg" class="align-center align-center" alt="Watch Designing Using Data Video" />]
+[<img src="{{ site.images }}blog/2017/video-series/sarah-2.jpg" class="align-center align-center" alt="Watch Designing Using Data Video" />]
 
 How do you use research to help you make design decisions? Let us know
 by sending us a message via [Twitter] or join our public [Slack
@@ -46,7 +46,7 @@ channel]. For other great talks from An Event Apart speakers, [visit
 their website].
 
   [Sarah Parmenter]: http://www.sazzy.co.uk/
-  [<img src="/static/images/blog/2017/video-series/sarah-2.jpg" class="align-center align-center" alt="Watch Designing Using Data Video" />]:
+  [<img src="{{ site.images }}blog/2017/video-series/sarah-2.jpg" class="align-center align-center" alt="Watch Designing Using Data Video" />]:
     https://vimeo.com/120804557
   [Twitter]: https://twitter.com/oddbird
   [Slack channel]: http://friends.oddbird.net/

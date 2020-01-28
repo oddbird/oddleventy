@@ -38,7 +38,7 @@ your initial letter to expand.
 This code would give us a drop cap seven lines tall, like the large
 letter "I" in this example:
 
-<img src="/static/images/blog/2017/initial-letter/minions-initial-letter.jpg" class="align-center img-border align-center img-border" alt="Screenshot of inital-letter demo" />
+<img src="{{ site.images }}blog/2017/initial-letter/minions-initial-letter.jpg" class="align-center img-border align-center img-border" alt="Screenshot of inital-letter demo" />
 
 <hr>
 
@@ -92,7 +92,7 @@ programmatically, but it will not take into account the x-height of the
 typeface you choose. Here is a screenshot of the resulting fallback and
 enhancement:
 
-<img src="/static/images/blog/2017/initial-letter/fallback-enhancement.jpg" class="align-center img-border align-center img-border" alt="Fallback and Enhancement in Chrome and Safari" />
+<img src="{{ site.images }}blog/2017/initial-letter/fallback-enhancement.jpg" class="align-center img-border align-center img-border" alt="Fallback and Enhancement in Chrome and Safari" />
 
 Here is the CodePen demo:
 
@@ -118,7 +118,7 @@ to drop. A value equal to the initial height value is the default.
       initial-letter: 3 2;
     }
 
-<img src="/static/images/blog/2017/initial-letter/sunken-raised-drop-caps.jpg" class="align-center img-border align-center img-border" alt="Screenshot of raised, sunken, and drop cap demo" />
+<img src="{{ site.images }}blog/2017/initial-letter/sunken-raised-drop-caps.jpg" class="align-center img-border align-center img-border" alt="Screenshot of raised, sunken, and drop cap demo" />
 
 The following CodePen demo is available in Safari only:
 

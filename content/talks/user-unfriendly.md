@@ -2,11 +2,14 @@
 title: User Unfriendly
 sub: designing software for humans, with other humans
 author: miriam
+date: 2015-11-11
 slides: https://www.oddbooksapp.com/book/software-for-humans
 image:
   src: talks/user-unfriendly.png
 tags:
+  - _post
   - Speaking
+  - Talks
   - Code
   - Art
   - Design
@@ -25,8 +28,6 @@ events:
     video: https://drupal.tv/external-video/2019-06-28/user-unfriendly-practical-guide-losing-control
     media: &drupal
       iframe: https://www.youtube.com/embed/2MkQBQb43gE
-      width: 560
-      height: 315
   - venue: Open Source Conference
     url: https://www.comcastlabsconnect.com/open-source-2019
     adr: Denver, CO

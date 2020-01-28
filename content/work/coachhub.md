@@ -60,7 +60,7 @@ press:
     slug: experts
 planning:
   - title: App Goals
-    icon: map
+    icon: icons/map
     text: |
       For an in-depth understanding of the CoachHub project
       and its place in the market, we created an App Goals document with ORCAS.
@@ -68,7 +68,7 @@ planning:
       how our software might address these problems,
       and what features would make CoachHub uniquely useful.
   - title: User Profiles
-    icon: users
+    icon: icons/users
     text: |
       Together, we identified three distinct users --
       health coaches, individual clients,
@@ -77,7 +77,7 @@ planning:
       and detailed the significantly different motivations
       and needs of each persona.
   - title: User Stories
-    icon: theater
+    icon: icons/theater
     text: |
       Each user story defined one task that a specific user
       might want to accomplish on CoachHub.
@@ -89,7 +89,7 @@ planning:
       remaining up-to-date and in control of
       the project cost and scope.
   - title: Data Models
-    icon: site-map
+    icon: icons/site-map
     text: |
       The data model provides a sense of backend database
       structure and object-relationships,
@@ -123,6 +123,8 @@ summary: |
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
+{% import 'embed.macros.njk' as embed %}
+
 {{ quotes.grid(press) }}
 
 ------
@@ -141,20 +143,16 @@ of support when they need it. In designing the CoachHub web app, we
 aimed to create an inviting space for clients and coaches to quickly and
 easily access one another in dynamic and effective ways.
 
-content.macros.j2\#rst
+{{ embed.icon_block(planning, 'Planning & Discovery Phase') }}
 
-content.macros.j2\#icon\_block
-
-content.macros.j2\#rst
-
-  [ORCAS]: http://orcasinc.com
-  [MoodHacker]: http://www.orcasinc.com/products/moodhacker/
+[ORCAS]: http://orcasinc.com
+[MoodHacker]: http://www.orcasinc.com/products/moodhacker/
 
 ## Design and Development Phase
 
 ### Site Architecture & Information Design
 
-<img src="/static/images/work/coachhub/browse-coach-sitemap.jpg" class="extend-left img-shadow extend-left img-shadow" alt="site map for browsing coaches" />
+<img src="{{ site.images }}work/coachhub/browse-coach-sitemap.jpg" class="extend-left img-shadow extend-left img-shadow" alt="site map for browsing coaches" />
 
 We created an interactive web of static-HTML content templates – a
 living draft of the site architecture, with samples of real content. For
@@ -181,14 +179,14 @@ brand identity. Like their existing apps – MoodHacker and BlipHub – the
 CoachHub logo and overall brand are bright, cheerful, and hopeful.
 
 <figure>
-<img src="/static/images/work/coachhub/color-palette.jpg" class="extend-small" alt="" /><figcaption>Full color palette derived from three basic brand colors.</figcaption>
+<img src="{{ site.images }}work/coachhub/color-palette.jpg" class="extend-small" alt="" /><figcaption>Full color palette derived from three basic brand colors.</figcaption>
 </figure>
 
 <figure>
-<img src="/static/images/work/coachhub/logo.jpg" class="align-center" alt="" /><figcaption>Rounded edges and a playful curl evoke feelings of friendliness and movement. New life, change, and hope: turning over a new leaf.</figcaption>
+<img src="{{ site.images }}work/coachhub/logo.jpg" class="align-center" alt="" /><figcaption>Rounded edges and a playful curl evoke feelings of friendliness and movement. New life, change, and hope: turning over a new leaf.</figcaption>
 </figure>
 
-<img src="/static/images/work/coachhub/avatars-small.jpg" class="extend-left extend-left" alt="leaf avatar collage" />
+<img src="{{ site.images }}work/coachhub/avatars-small.jpg" class="extend-left extend-left" alt="leaf avatar collage" />
 
 We then created hundreds of unique avatar designs from just a few unique
 leaf graphics dynamically rendered using light and dark contrasts of our
@@ -205,11 +203,11 @@ allowing us to move quickly and efficiently. Integrating design and
 implementation helped us minimize time and money waste.
 
 <figure>
-<img src="/static/images/work/coachhub/profiles.jpg" class="extend-full" alt="" /><figcaption>Starting with designs for the smallest, mobile screens sizes helped clarify and prioritize relevant information for each user.</figcaption>
+<img src="{{ site.images }}work/coachhub/profiles.jpg" class="extend-full" alt="" /><figcaption>Starting with designs for the smallest, mobile screens sizes helped clarify and prioritize relevant information for each user.</figcaption>
 </figure>
 
 <figure>
-<img src="/static/images/work/coachhub/interactive.jpg" class="extend-small img-shadow" alt="" /><figcaption>Interaction can become distracting if implemented for its own sake. Sliding side panels and realtime chat serve the needs of the user, highlighting particular features or important information.</figcaption>
+<img src="{{ site.images }}work/coachhub/interactive.jpg" class="extend-small img-shadow" alt="" /><figcaption>Interaction can become distracting if implemented for its own sake. Sliding side panels and realtime chat serve the needs of the user, highlighting particular features or important information.</figcaption>
 </figure>
 
 ### Usability Testing
@@ -219,7 +217,7 @@ adjusting UX design along the way, ensuring that CoachHub would be
 useful and relevant to users and partners.
 
 <figure>
-<img src="/static/images/work/coachhub/calendars.jpg" class="extend-large" alt="" /><figcaption>As we observed users navigating the app, it became clear that the appointment calendar needed distinct views and interactions for coaches and clients.</figcaption>
+<img src="{{ site.images }}work/coachhub/calendars.jpg" class="extend-large" alt="" /><figcaption>As we observed users navigating the app, it became clear that the appointment calendar needed distinct views and interactions for coaches and clients.</figcaption>
 </figure>
 
 ### Accessibility
@@ -243,7 +241,7 @@ recommended and edited text, and identified important “call to action”
 steps to create a relevant and compelling landing pages for different
 users.
 
-<img src="/static/images/work/coachhub/splash-final-2.jpg" class="extend-full img-shadow extend-full img-shadow" alt="final design for landing page" />
+<img src="{{ site.images }}work/coachhub/splash-final-2.jpg" class="extend-full img-shadow extend-full img-shadow" alt="final design for landing page" />
 
 ## On-Going Design
 
@@ -253,5 +251,3 @@ team, consulting on the design and flow of new features as CoachHub
 expands to accommodate the needs of their growing user-base – people who
 use it every day to improve their health and wellness, or as part of
 their work coaching others.
-
-content.macros.j2\#rst

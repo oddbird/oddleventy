@@ -2,9 +2,12 @@
 title: Agile Design Systems
 sub: with meaningful code and automation
 author: miriam
+date: 2018-03-21
 slides: https://talks.oddbird.net/agile-systems/
 tags:
+  - _post
   - Speaking
+  - Talks
   - Code
   - Agile
   - Design Systems
@@ -45,6 +48,7 @@ press:
     name: Sarah Drasner
     title: Microsoft Sr. Developer Advocate & Vue Core Team member
     url: https://twitter.com/sarah_edo/status/979023728611905536
+    slug: audit
 summary: |
   **Style Guides & Pattern Libraries are great tools**
   for documenting the relationships between code and design,

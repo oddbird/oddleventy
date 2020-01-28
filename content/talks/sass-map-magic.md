@@ -1,9 +1,12 @@
 ---
 title: Sass Map Magic
 author: miriam
+date: 2014-09-12
 slides: https://www.oddbooksapp.com/book/sass-map-magic
 tags:
+  - _post
   - Speaking
+  - Talks
   - Code
 events:
   - venue: CSSConf 2016
@@ -13,8 +16,6 @@ events:
     slides: https://oddbooksapp.com/release/b71e6e5d-e956-42ff-a4dd-b70bf3b13a2a
     media: &cssconf
       iframe: https://www.youtube.com/embed/MdwtoFt2LOI
-      width: 560
-      height: 315
   - venue: CSS Summit
     url: http://environmentsforhumans.com/2015/css-summit/
     adr: Online

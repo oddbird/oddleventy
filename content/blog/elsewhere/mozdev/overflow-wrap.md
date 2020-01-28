@@ -14,24 +14,27 @@ image:
   src: mozdev/overflow_wrap.png
 summary: |
   Horizontal text overflow has always been difficult to manage on the web.
-  The default visible overflow is designed to make sure content remains
-  accessible no matter the size of a containing box, but it's not our only
-  option.
+  The default visible overflow
+  is designed to make sure content remains accessible
+  no matter the size of a containing box,
+  but it's not our only option.
+media:
+  - iframe: https://www.youtube.com/embed/UOKQ6gw21NA
 ---
 
-We can now use `overflow-wrap` to control how words break --and combine
-that with hyphens to make wrapped text more readable. The solutions
-aren't perfect yet, but I'll walk you through the options we have, and
-how to use them.
+{% import "embed.macros.njk" as embed %}
 
-content.macros.j2\#video
+We can now use overflow-wrap to control how words break --
+and combine that with hyphens to make wrapped text more readable.
+The solutions aren't perfect yet,
+but I'll walk you through the options we have,
+and how to use them.
 
-Overflow-wrap is the proper way to break words in CSS
+{{ embed.figure(
+  data=media,
+  caption='Overflow-Wrap is the proper way to break words in CSS'
+) }}
 
--   [MDN Overflow-Wrap]
--   [MDN Hyphens]
--   [CodePen Demo]
-
-  [MDN Overflow-Wrap]: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap
-  [MDN Hyphens]: https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens
-  [CodePen Demo]: https://codepen.io/mirisuzanne/pen/GRKoxXY
+- [MDN Overflow-Wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap)
+- [MDN Hyphens](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens)
+- [CodePen Demo](https://codepen.io/mirisuzanne/pen/GRKoxXY)

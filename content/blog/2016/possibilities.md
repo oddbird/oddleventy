@@ -68,7 +68,7 @@ development process into case studies of work for past clients or give
 *process* a page of its own? We haven’t settled on an answer yet, and
 we’d love to [hear what you think].
 
-[oddsite site map]: /static/images/blog/sitemap.jpg
+[oddsite site map]: {{ site.images }}blog/sitemap.jpg
 [hear what you think]: /contact/
 
 ## User Profiles
@@ -102,7 +102,7 @@ identify key elements to include on OddSite. We aim to be transparent
 about our process and make it easy to find case studies and quotes from
 past clients so new clients know what to expect.
 
-[oddsite user profiles]: /static/images/blog/userprofiles.jpg
+[oddsite user profiles]: {{ site.images }}blog/userprofiles.jpg
 [donations]: /community/
 [speaking]: /services/speaking/
 [public Slack chat]: http://friends.oddbird.net/
@@ -121,7 +121,7 @@ assigned each story to a team member. These blog posts about our open
 design process are top priority user stories for the OddSite project.
 *Pop!* (The sound of my brain exploding.)
 
-[user stories in pivotal tracker]: /static/images/blog/pivotal.jpg
+[user stories in pivotal tracker]: {{ site.images }}blog/pivotal.jpg
 [Pivotal Tracker]: https://www.pivotaltracker.com/n/projects/22378
 
 ## Visual Design
@@ -137,7 +137,7 @@ design drafts. Through pairing and conversation, we continue to improve
 the visual design and user experience as it moves from a static mockup
 to the interactive and responsive web.
 
-[draft mockup of navigation for mobile]: /static/images/blog/navdraft.jpg
+[draft mockup of navigation for mobile]: {{ site.images }}blog/navdraft.jpg
 [Stacy]: /authors/stacy/
 [Miriam]: /authors/miriam/
 
@@ -153,4 +153,4 @@ more than up to, but I’ll let her tell that story. And I'll be writing
 more detailed posts in the weeks to come about each stage of the process
 outlined here.
 
-[draft mockup of banner for mobile]: /static/images/blog/mobilebannerdraft.jpg
+[draft mockup of banner for mobile]: {{ site.images }}blog/mobilebannerdraft.jpg

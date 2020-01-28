@@ -37,7 +37,7 @@ blockquote {
 
   &:not([data-quote]) {
     &::before {
-      color: var(--ccs-special--fade);
+      color: var(--icons);
       content: '“';
       font-size: 4em;
       grid-column: icon;
@@ -72,7 +72,7 @@ blockquote:not([data-quote]) {
 }
 
 [data-media='quote'] {
-  --fill: var(--ccs-special--fade);
+  --fill: var(--icons);
   --media-size: var(--double-gutter);
   --media-min: 3em;
   grid-area: quote;

@@ -52,44 +52,54 @@ way to establish defaults and user overrides in a Sass plugin has been
 to use variables. In Susy 1 and the early alpha releases, we did the
 same:
 
-    $columns: 6;
-    $gutters: 1/4;
-    $gutter-position: inside;
+```scss
+$columns: 6;
+$gutters: 1/4;
+$gutter-position: inside;
+```
 
 But that clogs up the global namespace in ugly ways. Now, thanks to
 SassScript Maps, we have a new solution that keeps everything contained,
 and comes with side-benefits for anyone using multiple grids:
 
-    $susy: (
-      columns: 6,
-      gutters: 1/4,
-      gutter-position: inside,
-    );
+```scss
+$susy: (
+  columns: 6,
+  gutters: 1/4,
+  gutter-position: inside,
+);
+```
 
 There is only one variable, named `$susy`, that takes a map of all your
 settings. You can still use the grid shorthand with `set-grid` or
 `use-grid`:
 
-    @include set-grid(6 1/4 inside);
+```scss
+@include set-grid(6 1/4 inside);
+```
 
 But you can also mix-and-match shorthand with maps, both for
 grid-settings and for spans:
 
-    $large: (
-      columns: 12,
-      container: 90em,
-    );
+```scss
+$large: (
+  columns: 12,
+  container: 90em,
+);
 
-    @include use-grid($large inside) {
-      // ...
-    }
+@include use-grid($large inside) {
+  // ...
+}
 
-    @include span(3 $large);
+@include span(3 $large);
+```
 
 If you need access the current value of a setting, just use
 `susy-get(setting-name)`:
 
-    $current-columns: susy-get(columns);
+```scss
+$current-columns: susy-get(columns);
+```
 
 ## Split Gutters
 
@@ -108,10 +118,12 @@ inner elements.
 Susy is very flexible, and there are many ways you can work around that
 problem already, but we added a `container` shortcut to make it easier.
 
-    .outer-element {
-      @include span(6 of 12 container);
-      .inner-element { @include span(3 of 6); }
-    }
+```scss
+.outer-element {
+  @include span(6 of 12 container);
+  .inner-element { @include span(3 of 6); }
+}
+```
 
 ## Full
 
@@ -128,11 +140,13 @@ That's changing. Thanks to the added complexity of inside and split
 gutters, which also need to be applied on full-width elements, we've
 added a `full` mixin. Use it!
 
-    // Wrong! (usually)
-    @include span(12 of 12);
+```scss
+// Wrong! (usually)
+@include span(12 of 12);
 
-    // Right!
-    @include full(of 12);
+// Right!
+@include full(of 12);
+```
 
 ## Other Changes
 

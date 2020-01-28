@@ -75,7 +75,7 @@ feel about each company?
 ![image]
 
 [Canva]: https://designschool.canva.com/blog/website-color-schemes/
-[image]: /static/images/blog/2017/colors/canva.jpg
+[image]: {{ site.images }}blog/2017/colors/canva.jpg
 
 ## [Design Seeds]
 
@@ -85,35 +85,35 @@ I looked at the sites of many web development agencies that I know and
 love as I considered OddBird’s color palette.
 
 [Design Seeds]: https://www.design-seeds.com/
-[1]: /static/images/blog/2017/colors/designseeds.jpg
+[1]: {{ site.images }}blog/2017/colors/designseeds.jpg
 
 ## [Happy Cog]
 
 ![image][2]
 
 [Happy Cog]: http://happycog.com/
-[2]: /static/images/blog/2017/colors/happycog.jpg
+[2]: {{ site.images }}blog/2017/colors/happycog.jpg
 
 ## [Mild Bunch]
 
 ![image][3]
 
 [Mild Bunch]: http://mildbun.ch/
-[3]: /static/images/blog/2017/colors/mildbunch.jpg
+[3]: {{ site.images }}blog/2017/colors/mildbunch.jpg
 
 ## [Clear Left]
 
 ![image][4]
 
 [Clear Left]: http://clearleft.com/
-[4]: /static/images/blog/2017/colors/clearleft.jpg
+[4]: {{ site.images }}blog/2017/colors/clearleft.jpg
 
 ## [Crush Lovely]
 
 ![image][5]
 
 [Crush Lovely]: http://crushlovely.com/
-[5]: /static/images/blog/2017/colors/crushlovely.jpg
+[5]: {{ site.images }}blog/2017/colors/crushlovely.jpg
 
 ## Step 3 – Start \[Color\] Scheming
 
@@ -146,7 +146,7 @@ used the sliders to find a very dark color for the text and a very light
 SassMe converts the hex colors into Sass color functions for me.
 
 [Paletton]: http://paletton.com/
-[6]: /static/images/blog/2017/colors/paletton.jpg
+[6]: {{ site.images }}blog/2017/colors/paletton.jpg
 
 ## [SassMe]
 
@@ -157,14 +157,14 @@ it easier for designers like me to grab exact colors when I’m
 prototyping website pages or features.
 
 [SassMe]: http://jim-nielsen.com/sassme/
-[7]: /static/images/blog/2017/colors/sassme.jpg
+[7]: {{ site.images }}blog/2017/colors/sassme.jpg
 
 ## [Living Style Guide]
 
 ![image][8]
 
 [Living Style Guide]: /styleguide/color.html
-[8]: /static/images/blog/2017/colors/styleguide.jpg
+[8]: {{ site.images }}blog/2017/colors/styleguide.jpg
 
 ## Step 4 – Test Colors for Accessibility
 
@@ -201,7 +201,7 @@ choose accessible colors, and accessibility articles if you’d like to
 dive deep.
 
 [Contrast Ratio]: http://leaverou.github.io/contrast-ratio/
-[9]: /static/images/blog/2017/colors/contrastratio.jpg
+[9]: {{ site.images }}blog/2017/colors/contrastratio.jpg
 
 ## [WebAIM: Color Contrast Checker]
 
@@ -215,7 +215,7 @@ color so much that it no longer retained the bright, fun feel we needed.
 So I began the search for a new brand color.
 
 [WebAIM: Color Contrast Checker]: #webaim-color-contrast-checker
-[10]: /static/images/blog/2017/colors/webaim.jpg
+[10]: {{ site.images }}blog/2017/colors/webaim.jpg
 
 ## Step 5 - Test Colors in Context
 
@@ -267,11 +267,11 @@ with color. Have you tried Xd? What did you think? We’ll be discussing
 this and more in our [OddFriends Slack channel]. Join us!
 
 [Adobe Experience Design]: http://www.adobe.com/products/experience-design.html
-[11]: /static/images/blog/2017/colors/xd.jpg
-[12]: /static/images/blog/2017/colors/elementcollages-color.jpg
+[11]: {{ site.images }}blog/2017/colors/xd.jpg
+[12]: {{ site.images }}blog/2017/colors/elementcollages-color.jpg
 [Susy]: /susy/
 [Miriam]: /authors/miriam/
-[13]: /static/images/blog/2017/colors/elementcollage-final.jpg
+[13]: {{ site.images }}blog/2017/colors/elementcollage-final.jpg
 [OddFriends Slack channel]: http://friends.oddbird.net
 
 ### Bonus - Color Palette Inspiration
@@ -281,35 +281,35 @@ this and more in our [OddFriends Slack channel]. Join us!
 ![image][14]
 
 [Color Palette FX]: http://www.palettefx.com/
-[14]: /static/images/blog/2017/colors/fx.jpg
+[14]: {{ site.images }}blog/2017/colors/fx.jpg
 
 ## [HSL Color Picker]
 
 ![image][15]
 
 [HSL Color Picker]: http://hslpicker.com/
-[15]: /static/images/blog/2017/colors/hsl.jpg
+[15]: {{ site.images }}blog/2017/colors/hsl.jpg
 
 ## [Color Me]
 
 ![image][16]
 
 [Color Me]: https://colorme.io/
-[16]: /static/images/blog/2017/colors/colorme.jpg
+[16]: {{ site.images }}blog/2017/colors/colorme.jpg
 
 ## [Culrs]
 
 ![image][17]
 
 [Culrs]: http://culrs.com/
-[17]: /static/images/blog/2017/colors/culrs.jpg
+[17]: {{ site.images }}blog/2017/colors/culrs.jpg
 
 ## [Open Color]
 
 ![image][18]
 
 [Open Color]: https://yeun.github.io/open-color/
-[18]: /static/images/blog/2017/colors/opencolor.jpg
+[18]: {{ site.images }}blog/2017/colors/opencolor.jpg
 
 ### Bonus - Color Contrast Tools for Accessibility
 
@@ -318,18 +318,18 @@ this and more in our [OddFriends Slack channel]. Join us!
 ![image][19]
 
 [Colour Contrast Check]: https://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333
-[19]: /static/images/blog/2017/colors/check.jpg
+[19]: {{ site.images }}blog/2017/colors/check.jpg
 
 ## [Accessible Colors]
 
 ![image][20]
 
 [Accessible Colors]: http://accessible-colors.com/
-[20]: /static/images/blog/2017/colors/accessiblecolors.jpg
+[20]: {{ site.images }}blog/2017/colors/accessiblecolors.jpg
 
 ## [Adobe Plugin Check Contrast Ratio]
 
 ![image][21]
 
 [Adobe Plugin Check Contrast Ratio]: https://creative.adobe.com/addons/products/12170#.WHlhCrYrKHp
-[21]: /static/images/blog/2017/colors/plugin.jpg
+[21]: {{ site.images }}blog/2017/colors/plugin.jpg

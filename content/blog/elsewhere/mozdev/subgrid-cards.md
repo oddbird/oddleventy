@@ -19,9 +19,8 @@ summary: |
   headers and footers that might need more or less room.
 media:
   - iframe: https://www.youtube.com/embed/lLnFtK1LNu4
-    width: 560
-    height: 315
 ---
+
 {% import "embed.macros.njk" as embed %}
 
 That's why we need "subgrid" --

@@ -2,10 +2,13 @@
 title: CSS is Rad
 sub: resilient design on an infinite canvas
 author: miriam
+date: 2019-10-15
 image:
   src: talks/miriam.jpg
 tags:
+  - _post
   - Speaking
+  - Talks
   - Code
 events:
   - venue: Smashing Conf NY

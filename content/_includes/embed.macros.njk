@@ -111,6 +111,47 @@ params:
 
 
 {# @docs
+label: from_event
+category: patterns
+note: |
+  Generate a figure from one particular event.
+params:
+  collection:
+    type: array
+    note: The 11ty source collection to look in
+  venue:
+    type: string
+    note: Venue of the event
+  page:
+    type: url
+    default: none
+    note: Url of a page to select from
+  caption:
+    type: string
+    default: none
+#}
+{% macro from_event(
+  collection,
+  venue,
+  page=none,
+  caption=none
+) -%}
+  {%- set caption = caption if (caption != none) else caller() -%}
+  {%- set event =
+    collection | pageData(page, 'events', {'venue': venue})
+    if page else
+    collection | findData('events', {'venue': venue})
+  -%}
+  {%- if event.media -%}
+    {{- figure(
+      data=event.media,
+      caption=caption
+    ) -}}
+  {%- endif -%}
+{%- endmacro %}
+
+
+{# @docs
 label: screen
 category: patterns
 note: Place an image inside a screen, like an iphone.
@@ -276,8 +317,8 @@ params:
 ) %}
   {%- set attrs = {
     'src': src,
-    'width': width,
-    'height': height,
+    'width': width or '560',
+    'height': height or '315',
     'frameborder': '0',
     'webkitallowfullscreen': true,
     'mozallowfullscreen': true,

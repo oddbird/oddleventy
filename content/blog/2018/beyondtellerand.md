@@ -1,7 +1,8 @@
 ---
 title: Beyond Tellerand
 sub: |
-  [Don't Use My Grid System](/talks/no-grid-system/) (with Vue Invaders!)
+  [Don't Use My Grid System](/talks/no-grid-system/)
+  (with Vue Invaders!)
 author: miriam
 date: 2018-05-15
 tags:
@@ -13,6 +14,7 @@ tags:
   - Style Guides
 image:
   src: blog/2018/vue-invaders.jpg
+talk: /talks/no-grid-system/
 summary: |
   I love when conferences give me the opportunity to travel around the world.
   I love it even more when conferences go beyond the web to find inspiration from
@@ -22,7 +24,15 @@ summary: |
   [Beyond Tellerand]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers
 ---
 
-content.macros.j2\#get\_quotes
+{% import "quotes.macros.njk" as quotes %}
+{% import "embed.macros.njk" as embed %}
+{% import 'contact.macros.njk' as contact %}
+
+{{ quotes.from(
+  collections.all,
+  page=talk,
+  slug='useful'
+) }}
 
 Right from the start, Beyond Tellerand was unlike other conferences.
 Rather than hearing familiar talks about familiar technology, the first
@@ -41,7 +51,7 @@ Jared Tarbell and the [Levitated Toy Factory], I picked [one of his art
 pieces] to recreate with CSS variables (aka custom properties) and CSS
 grid layouts.
 
-<img src="/static/images/blog/2018/levitated.jpg" class="extend-small img-border img-spacing extend-small img-border img-spacing" alt="image" />
+<img src="{{ site.images }}blog/2018/levitated.jpg" class="extend-small img-border img-spacing extend-small img-border img-spacing" alt="image" />
 
 I spent that evening studying his image, and translating it into HTML
 and CSS. My first draft relied heavily on `:nth-child()` selectors,
@@ -65,21 +75,28 @@ Enjoy the invasion!
 I highly recommend watching the other talks. Here are a few of my
 favorites:
 
--   [A Tinker Story] by dina Amin
--   [Broad Band] --*What History’s Female Internet Pioneers can Teach us
-    about Tomorrow* by Claire Evans
--   [Generative Spaces] by Jared Tarbell
--   [How to Build an Atomic Bomb] by Mike Monteiro
+- [A Tinker Story] by dina Amin
+- [Broad Band] --
+  *What History’s Female Internet Pioneers can Teach us about Tomorrow*
+  by Claire Evans
+- [Generative Spaces] by Jared Tarbell
+- [How to Build an Atomic Bomb] by Mike Monteiro
 
-community/events.macros.j2\#videos\_by\_talk
+{{ embed.from_event(
+  collections.all,
+  venue='Beyond Tellerand',
+  caption='Video from Beyond Tellerand'
+) }}
 
-community/subscribe.macros.j2\#form
+{{ contact.subscribe(
+  interests=['oddnews', 'beyondtellerand19']
+) }}
 
-  [Levitated Toy Factory]: http://levitated.guru/
-  [one of his art pieces]: http://levitated.net/daily/levInvaderFractal.html
-  [second draft]: https://codepen.io/mirisuzanne/pen/gzXqOP
-  [Vue]: https://vuejs.org/
-  [A Tinker Story]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/dina-amin#talk
-  [Broad Band]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/claire-evans#talk
-  [Generative Spaces]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/jared-tarbell#talk
-  [How to Build an Atomic Bomb]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/mike-monteiro#talk
+[Levitated Toy Factory]: http://levitated.guru/
+[one of his art pieces]: http://levitated.net/daily/levInvaderFractal.html
+[second draft]: https://codepen.io/mirisuzanne/pen/gzXqOP
+[Vue]: https://vuejs.org/
+[A Tinker Story]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/dina-amin#talk
+[Broad Band]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/claire-evans#talk
+[Generative Spaces]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/jared-tarbell#talk
+[How to Build an Atomic Bomb]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/mike-monteiro#talk

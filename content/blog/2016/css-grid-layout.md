@@ -70,9 +70,9 @@ code.
 Currently, Feature Queries are supported in most browsers except
 Internet Explorer and Opera Mini:
 
-[<img src="/static/images/blog/feature-queries.jpg" class="align-center align-center" alt="Feature Queries support in browsers looks good" />]
+[<img src="{{ site.images }}blog/feature-queries.jpg" class="align-center align-center" alt="Feature Queries support in browsers looks good" />]
 
-[<img src="/static/images/blog/feature-queries.jpg" class="align-center align-center" alt="Feature Queries support in browsers looks good" />]:
+[<img src="{{ site.images }}blog/feature-queries.jpg" class="align-center align-center" alt="Feature Queries support in browsers looks good" />]:
   http://caniuse.com/#feat=css-featurequeries
 
 ### Grid Introduces New Vocabulary

@@ -25,8 +25,6 @@ summary: |
   How did we get here?
 media:
   - iframe: https://www.youtube.com/embed/aHUtMbJw8iA
-    width: 560
-    height: 315
 ---
 {% import "embed.macros.njk" as embed %}
 

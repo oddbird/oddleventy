@@ -46,14 +46,14 @@ work. When drafting logos, I often trace images. Paper lets me upload an
 image, draw on top of it, and easily delete the image from the
 background when I’m finished.
 
-  [Paper sketching tool]: /static/images/blog/2017/get-started-designing/paper.jpg
+  [Paper sketching tool]: {{ site.images }}blog/2017/get-started-designing/paper.jpg
   [Paper]: https://www.fiftythree.com/
   [QuarqNet]: https://www.quarqnet.com/
-  [QuarqNet sketches on Paper]: /static/images/blog/2017/get-started-designing/sketches.jpg
+  [QuarqNet sketches on Paper]: {{ site.images }}blog/2017/get-started-designing/sketches.jpg
 
 ## Typography: A Practical Guide
 
-<img src="/static/images/blog/2017/get-started-designing/santamaria.jpg" class="img-border img-border" alt="Jason Santa Maria&#39;s website" />
+<img src="{{ site.images }}blog/2017/get-started-designing/santamaria.jpg" class="img-border img-border" alt="Jason Santa Maria&#39;s website" />
 
 According to typography expert [Jason Santa Maria], “If your type is
 bad, the design fails.” There’s so much to learn in the rich field of
@@ -97,7 +97,7 @@ learn more, here's an outlined of my [process for choosing brand colors]
 including a list of several tools for generating color palettes and
 testing contrast.
 
-  [Natalya's color theory decision tree]: /static/images/blog/2017/get-started-designing/decision-tree.jpg
+  [Natalya's color theory decision tree]: {{ site.images }}blog/2017/get-started-designing/decision-tree.jpg
   [Practical Color Theory for People Who Code]: http://tallys.github.io/color-theory/
   [process for choosing brand colors]: /2017/1/16/color/
 
@@ -115,7 +115,7 @@ What design tools and tutorials have you found most useful? I’d love to
 hear your recommendations. Join the conversation on [Twitter] or join
 our public [Slack channel].
 
-  [Adobe Experience Design]: /static/images/blog/2017/get-started-designing/xd.jpg
+  [Adobe Experience Design]: {{ site.images }}blog/2017/get-started-designing/xd.jpg
   [1]: https://helpx.adobe.com/experience-design/how-to/xd-ui-ux-design.html
   [Twitter]: https://twitter.com/oddbird
   [Slack channel]: http://friends.oddbird.net/

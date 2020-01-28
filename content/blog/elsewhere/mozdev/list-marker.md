@@ -11,8 +11,6 @@ summary: |
   and even create our own!
 media:
   - iframe: https://www.youtube.com/embed/2awepiNoaZI
-    width: 560
-    height: 315
 ---
 {% import "embed.macros.njk" as embed %}
 

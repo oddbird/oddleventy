@@ -1,7 +1,7 @@
 ---
 title: Smashing CSS Follow-Up Q&nbsp;&&nbsp;A
 sub: |
-  [Dynamic CSS](/talks/data-design/) &
+  [Dynamic CSS](/talks/dynamic-css/) &
   [Advanced CSS](/talks/advanced-css-workshop/)
 author: miriam
 tags:
@@ -24,28 +24,30 @@ The conference has already released a [follow-up post] that links to
 videos ([including mine]), photos, collaborative notes from both days of
 the conference. In particular, I recommend watching, at minimum:
 
--   Sara Soueidan: [Building Accessible Interfaces]
--   Jason Pamental: [Dynamic Web Typography]
--   Jen Simmons: [Thinking With Grid]
+- Sara Soueidan: [Building Accessible Interfaces]
+- Jason Pamental: [Dynamic Web Typography]
+- Jen Simmons: [Thinking With Grid]
 
-content.macros.j2\#divider
+------
 
-content.macros.j2\#get\_quotes
+{% import "quotes.macros.njk" as quotes %}
 
-content.macros.j2\#divider
+{{ quotes.from(collections.all, '/talks/dynamic-css/', 'mind-bending') }}
 
-  [follow-up post]: https://www.smashingmagazine.com/2019/04/smashingconf-san-francisco-2019/
-  [including mine]: https://vimeo.com/331571593
-  [Building Accessible Interfaces]: https://vimeo.com/331530115
-  [Dynamic Web Typography]: https://vimeo.com/331575184
-  [Thinking With Grid]: https://vimeo.com/331578108
+------
+
+[follow-up post]: https://www.smashingmagazine.com/2019/04/smashingconf-san-francisco-2019/
+[including mine]: https://vimeo.com/331571593
+[Building Accessible Interfaces]: https://vimeo.com/331530115
+[Dynamic Web Typography]: https://vimeo.com/331575184
+[Thinking With Grid]: https://vimeo.com/331578108
 
 ## Collaborative Questions
 
 The [collaborative notes from day 2] include a few questions about my
 talk, so I thought I'd take a minute to provide some answers:
 
-  [collaborative notes from day 2]: https://smashed.by/sf2
+[collaborative notes from day 2]: https://smashed.by/sf2
 
 ### Tooling & Frameworks
 
@@ -151,16 +153,16 @@ set.
 
 With a quick search, I found several examples and articles:
 
--   [Live Theming with CSS Variables]
--   [Advanced CSS Theming with Custom Properties and JavaScript]
+- [Live Theming with CSS Variables]
+- [Advanced CSS Theming with Custom Properties and JavaScript]
 
 [CSS-Tricks also provides a rundown] with links to more articles.
 There's a lot of room left to explore here, so play with it, and share
 what you find!
 
-  [Live Theming with CSS Variables]: https://www.jonathan-harrell.com/live-theming-with-css-variables/
-  [Advanced CSS Theming with Custom Properties and JavaScript]: https://www.sitepoint.com/css-theming-custom-properties-javascript/
-  [CSS-Tricks also provides a rundown]: https://css-tricks.com/css-custom-properties-theming/
+[Live Theming with CSS Variables]: https://www.jonathan-harrell.com/live-theming-with-css-variables/
+[Advanced CSS Theming with Custom Properties and JavaScript]: https://www.sitepoint.com/css-theming-custom-properties-javascript/
+[CSS-Tricks also provides a rundown]: https://css-tricks.com/css-custom-properties-theming/
 
 ### Unit Tests
 
@@ -186,6 +188,6 @@ that allow us to move forward, even while we support old browsers.
 I use [Dank Mono], recommended by [Sarah Drasner] as the perfect font
 for her [Night Owl] VS Code theme.
 
-  [Dank Mono]: https://dank.sh/
-  [Sarah Drasner]: https://sarahdrasnerdesign.com/
-  [Night Owl]: https://github.com/sdras/night-owl-vscode-theme
+[Dank Mono]: https://dank.sh/
+[Sarah Drasner]: https://sarahdrasnerdesign.com/
+[Night Owl]: https://github.com/sdras/night-owl-vscode-theme

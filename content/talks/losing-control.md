@@ -3,8 +3,11 @@ title: Losing Control
 banner: A Practical Guide to Losing Control
 slides: https://www.oddbooksapp.com/book/losing-control
 author: miriam
+date: 2017-01-23
 tags:
+  - _post
   - Speaking
+  - Talks
   - Code
   - Art
 events:

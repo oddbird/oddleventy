@@ -84,8 +84,8 @@ whether it is accessible at small sizes.
 Dive deep and luxuriate.
 
 [study by Errol Morris]: http://www.fastcodesign.com/3046365/errol-morris-how-typography-shapes-our-perception-of-truth
-[image]: /static/images/blog/2017/typography/librebaskerville.jpg
-[1]: /static/images/blog/2017/typography/amatic.jpg
+[image]: {{ site.images }}blog/2017/typography/librebaskerville.jpg
+[1]: {{ site.images }}blog/2017/typography/amatic.jpg
 
 ### 7 Resources – Free and High Quality Typography and Typeface Pairing
 
@@ -98,7 +98,7 @@ easy to filter and download.
 ![image][2]
 
 [Font Squirrel]: https://www.fontsquirrel.com/
-[2]: /static/images/blog/2017/typography/fontsquirrel.jpg
+[2]: {{ site.images }}blog/2017/typography/fontsquirrel.jpg
 
 ## [Fontspring]
 
@@ -113,7 +113,7 @@ favorite that OddBird used for the [CoachHub app].
 
 [Fontspring]: https://www.fontspring.com/
 [CoachHub app]: /2015/08/14/coachhub-study/
-[3]: /static/images/blog/2017/typography/fontspring.jpg
+[3]: {{ site.images }}blog/2017/typography/fontspring.jpg
 
 ## [Adobe TypeKit]
 
@@ -135,7 +135,7 @@ final round of element collages, but it was an excellent place to start.
 [Adobe TypeKit]: https://typekit.com/
 [licensing details]: https://helpx.adobe.com/typekit/using/font-licensing.html#sync-lic
 [TypeKit Design Gallery]: https://typekit.com/gallery
-[4]: /static/images/blog/2017/typography/typekit.jpg
+[4]: {{ site.images }}blog/2017/typography/typekit.jpg
 
 ## [Google Fonts]
 
@@ -150,7 +150,7 @@ also offers typeface pairing suggestions with each specimen.
 ![image][5]
 
 [Google Fonts]: https://fonts.google.com
-[5]: /static/images/blog/2017/typography/googlefonts.jpg
+[5]: {{ site.images }}blog/2017/typography/googlefonts.jpg
 
 ## [Typewolf]
 
@@ -161,7 +161,7 @@ discovered Freight Sans and Freight Text on Typewolf.
 ![image][6]
 
 [Typewolf]: https://www.typewolf.com/
-[6]: /static/images/blog/2017/typography/typewolf.jpg
+[6]: {{ site.images }}blog/2017/typography/typewolf.jpg
 
 ## [Font Pair]
 
@@ -173,7 +173,7 @@ this pair didn’t make the final round of cuts.
 ![image][7]
 
 [Font Pair]: http://fontpair.co/
-[7]: /static/images/blog/2017/typography/fontpair.jpg
+[7]: {{ site.images }}blog/2017/typography/fontpair.jpg
 
 ## [Carrie Dils]
 
@@ -184,7 +184,7 @@ her pairings work well together.
 ![image][8]
 
 [Carrie Dils]: https://carriedils.com/typekit-font-pairings/
-[8]: /static/images/blog/2017/typography/carriedils.jpg
+[8]: {{ site.images }}blog/2017/typography/carriedils.jpg
 
 ## Step 3 – Test Typography and Pairings in Context
 
@@ -222,7 +222,7 @@ Browse our full element collages in our [Behind the Scenes post].
 [WebAIM]: http://webaim.org/techniques/fonts/
 [Vox Product’s]: https://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
 [Birds]: /birds/
-[9]: /static/images/blog/2017/typography/elementcollagecollage.jpg
+[9]: {{ site.images }}blog/2017/typography/elementcollagecollage.jpg
 [Behind the Scenes post]: /2016/11/04/branding-type/
 
 ## Step 4 – Vote Remotely Using...GitHub?
@@ -254,7 +254,7 @@ brilliantly with the winning typefaces receiving six thumbs up.
 [Dotmocracy]: https://en.wikipedia.org/wiki/Dotmocracy
 [OddFriends Slack channel]: http://friends.oddbird.net
 [GitHub Issues]: https://github.com/oddbird/oddsite/issues/49
-[10]: /static/images/blog/2017/typography/github.jpg
+[10]: {{ site.images }}blog/2017/typography/github.jpg
 
 ## Pros and Cons of Freight Sans and Freight Text Font Pair
 
@@ -298,13 +298,13 @@ with, requiring monthly pageview tracking. With TypeKit, we were golden.
 
 ![image][13]
 
-[11]: /static/images/blog/2017/typography/freight.jpg
+[11]: {{ site.images }}blog/2017/typography/freight.jpg
 [Typedia]: http://typedia.com/explore/typeface/freight-text/
 [create a custom font stack]: https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/
-[12]: /static/images/blog/2017/typography/numbers.jpg
+[12]: {{ site.images }}blog/2017/typography/numbers.jpg
 [Darden Studio]: https://www.dardenstudio.com/
 [Phil’s Fonts]: https://philsfonts.com/index.php/fonts/overview/GF060021X1
-[13]: /static/images/blog/2017/typography/darden.jpg
+[13]: {{ site.images }}blog/2017/typography/darden.jpg
 
 ## Getting Personal
 
@@ -313,7 +313,7 @@ first hand-drawn alphabet from fifth grade.
 
 ![image][14]
 
-  [14]: /static/images/blog/2017/typography/alphabet.jpg
+  [14]: {{ site.images }}blog/2017/typography/alphabet.jpg
 
 ## What Are Your Favorite Typography Tools?
 

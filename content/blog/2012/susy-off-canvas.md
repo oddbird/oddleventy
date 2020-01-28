@@ -87,7 +87,10 @@ $large-columns: 12;
 And I'll set Susy's `$container-width` override to the largest layout
 width, so the container is fluid up to that point:
 
-    $container-width  : container-outer-width($large-columns);
+
+```scss
+$container-width  : container-outer-width($large-columns);
+```
 
 ## Establish the Container:
 
@@ -118,23 +121,25 @@ main section remain visible while side-sections are displayed. The
 `$side` width of our left & right sections is based on the remaining
 space.
 
-    .left {
-      @include span-columns($side);
-      margin-left: -100%;
-      .show-left & { margin-left: 0; }
-    }
+```scss
+.left {
+  @include span-columns($side);
+  margin-left: -100%;
+  .show-left & { margin-left: 0; }
+}
 
-    .main {
-      @include span-columns($total-columns);
-      margin-right: -100%;
-      .show-right & { margin-left: - space($side); }
-    }
+.main {
+  @include span-columns($total-columns);
+  margin-right: -100%;
+  .show-right & { margin-left: - space($side); }
+}
 
-    .right {
-      @include span-columns($side omega);
-      margin-right: -100%;
-      .show-right & { margin-right: 0; }
-    }
+.right {
+  @include span-columns($side omega);
+  margin-right: -100%;
+  .show-right & { margin-right: 0; }
+}
+```
 
 The `span-column` mixins establish our spacing, just like any other Susy
 site. The main difference here is that our total columns-spanned is much
@@ -160,25 +165,27 @@ These variables simply establish the widths we will use for our columns.
 You could, of course, set different right and left widths. I'll leave
 that as an exercise for the reader.
 
-    @include at-breakpoint($medium-columns) {
-      [href="#left"] { visibility: hidden; }
+```scss
+@include at-breakpoint($medium-columns) {
+  [href="#left"] { visibility: hidden; }
 
-      .left {
-        @include span-columns($side);
-        margin-left: 0;
-        .show-right & { margin-left: - 100%; }
-      }
+  .left {
+    @include span-columns($side);
+    margin-left: 0;
+    .show-right & { margin-left: - 100%; }
+  }
 
-      .main {
-        width: columns($main);
-        .show-right & { margin-left: 0; }
-      }
+  .main {
+    width: columns($main);
+    .show-right & { margin-left: 0; }
+  }
 
-      .right {
-        width: columns($side);
-        .show-right & { margin-right: 0; }
-      }
-    }
+  .right {
+    width: columns($side);
+    .show-right & { margin-right: 0; }
+  }
+}
+```
 
 At our medium breakpoint, we change the styles to show both the left and
 main sections by default. I used `width: columns()` instead of
@@ -191,28 +198,32 @@ needed.
 
 ## Large Layout:
 
-    $main : 6;
-    $side : ($large-columns - $main)/2;
+```scss
+$main : 6;
+$side : ($large-columns - $main)/2;
+```
 
 Nothing new here; we're just dividing up the space into variables we can
 use.
 
-    @include at-breakpoint($large-columns) {
-      [href="#right"] { visibility: hidden; }
+```scss
+@include at-breakpoint($large-columns) {
+  [href="#right"] { visibility: hidden; }
 
-      .left {
-        @include span-columns($side);
-        .show-right & { margin-left: 0; }
-      }
+  .left {
+    @include span-columns($side);
+    .show-right & { margin-left: 0; }
+  }
 
-      .main {
-        width: columns($main);
-      }
+  .main {
+    width: columns($main);
+  }
 
-      .right {
-        @include span-columns($side omega);
-      }
-    }
+  .right {
+    @include span-columns($side omega);
+  }
+}
+```
 
 At our largest breakpoint we are simply overriding everything to get
 ourselves back to a normal layout. No more off-canvas malarkey here.

@@ -1,7 +1,7 @@
 ---
 title: VueFinder at VueConf, 2019
 sub: |
-  [Dynamic CSS with Vue](/talks/data-design/)
+  [Dynamic CSS with Vue](/talks/dynamic-css/)
 author: miriam
 date: 2019-04-09
 tags:
@@ -10,8 +10,24 @@ tags:
   - Conferences
   - Code
   - CSS
+talk: /talks/dynamic-css/
 image:
   src: blog/2019/vueconf.jpg
+sprites:
+  src:
+    - iframe: https://talks.oddbird.net/demos/cssSprites
+      width: 600
+      height: 300
+  caption: |
+    Animated sprites from [Monster Slayer]
+    by [Krystal Campioni]
+    [[permalink] / [source]] --
+    hover to see them move
+
+    [Krystal Campioni]: https://twitter.com/krystalcampioni
+    [Monster Slayer]: https://github.com/krystalcampioni/monster-slayer
+    [permalink]: https://talks.oddbird.net/demos/cssSprites
+    [source]: https://github.com/oddbird/vuefinder/blob/master/components/demos/cssSprites.vue
 summary: |
   Inspired by [VueConf 2018] I spent some time learning JS and Vue in more
   depth, and built myself a more flexible [VueFinder] presentation tool to
@@ -22,11 +38,17 @@ summary: |
   [VueFinder]: https://github.com/oddbird/vuefinder
 ---
 
-community/events.macros.j2\#videos\_by\_talk
+{% import "embed.macros.njk" as embed %}
+{% import 'contact.macros.njk' as contact %}
+{% import "quotes.macros.njk" as quotes %}
 
-content.macros.j2\#get\_quotes
+{{ quotes.from(
+  collections.all,
+  page=talk,
+  slug='squishy'
+) }}
 
-content.macros.j2\#divider
+------
 
 After learning about Vue from [Sarah Drasner]'s stream of articles on
 [CSS-Tricks], I had the pleasure of speaking at [VueConf 2018]. I really
@@ -36,9 +58,11 @@ Vue components in plain HTML/CSS --and slowly integrate JS logic as
 necessary. I started digging, and quickly learned to bind JS data to
 HTML attributes:
 
-    <table :style="{'--scale': graph.scale}">
-      <!-- ... -->
-      <td :style="{'--value': item.value}">{{ item.value }}%</td>
+```html
+<table :style="{'--scale': graph.scale}">
+  <!-- ... -->
+  <td :style="{'--value': item.value}">{ item.value }%</td>
+```
 
 CSS variables provide a safe approach for passing JS settings to CSS via
 inline HTML. While most inline styles are difficult to override, CSS
@@ -54,13 +78,13 @@ manipulate presentation directly in CSS --a combination of variables,
 The [slides are online], and you can [sign up for a notification] when
 the videos are posted.
 
-  [Sarah Drasner]: https://twitter.com/sarah_edo
-  [CSS-Tricks]: https://css-tricks.com/author/sdrasner/
-  [VueConf 2018]: /2018/05/14/vueconfus/
-  [More CSS Charts, with Grid & Custom Properties]: https://css-tricks.com/css-charts-grid-custom-properties/
-  [Dynamic CSS]: /talks/data-design/
-  [slides are online]: https://talks.oddbird.net/dynamic-css/vueconf19/
-  [sign up for a notification]: https://www.vuemastery.com/conferences/
+[Sarah Drasner]: https://twitter.com/sarah_edo
+[CSS-Tricks]: https://css-tricks.com/author/sdrasner/
+[VueConf 2018]: /2018/05/14/vueconfus/
+[More CSS Charts, with Grid & Custom Properties]: https://css-tricks.com/css-charts-grid-custom-properties/
+[Dynamic CSS]: /talks/dynamic-css/
+[slides are online]: https://talks.oddbird.net/dynamic-css/vueconf19/
+[sign up for a notification]: https://www.vuemastery.com/conferences/
 
 ## VueFinder Slides
 
@@ -83,10 +107,10 @@ Studio Code that provides syntax-highlighting and code-folding for my
 `.slides` files, as well as the `.vue-slides` format [he uses]. Thanks,
 Rahul!
 
-  [VueFinder]: https://github.com/oddbird/vuefinder
-  [Rahul Kadyan]: https://twitter.com/znck0
-  [released an extension]: https://marketplace.visualstudio.com/itemdetails?itemName=znck.vue-slides#qna
-  [he uses]: https://github.com/znck/vue-slides
+[VueFinder]: https://github.com/oddbird/vuefinder
+[Rahul Kadyan]: https://twitter.com/znck0
+[released an extension]: https://marketplace.visualstudio.com/itemdetails?itemName=znck.vue-slides#qna
+[he uses]: https://github.com/znck/vue-slides
 
 ## VueConf, 2019
 
@@ -95,22 +119,21 @@ more of the Vue community. [Chris Fritz] and Rahul helped me add some
 last-minute features to my slide deck, while [Maria Lamardo] and
 [Krystal Campioni] both inspired new demos in my talk.
 
-content.macros.j2\#iframe
-
-Animated sprites from [Monster Slayer] by [Krystal Campioni][]
-\[[permalink] / [source]\] -- hover to see them move
+{{ embed.figure(
+  data=sprites.src,
+  caption=sprites.caption | md
+) }}
 
 You can find all the available [speaker slides linked from gist].
 
-content.macros.j2\#divider
+------
 
-community/subscribe.macros.j2\#form
+{{ contact.subscribe(
+  interests=['oddnews', 'vueconfus19']
+) }}
 
-  [Vue Vixens]: https://vuevixens.org/
-  [Chris Fritz]: https://twitter.com/chrisvfritz
-  [Maria Lamardo]: https://twitter.com/marialamardo
-  [Krystal Campioni]: https://twitter.com/krystalcampioni
-  [Monster Slayer]: https://github.com/krystalcampioni/monster-slayer
-  [permalink]: https://talks.oddbird.net/demos/cssSprites
-  [source]: https://github.com/oddbird/vuefinder/blob/master/components/demos/cssSprites.vue
-  [speaker slides linked from gist]: https://gist.github.com/vincentmayers/298f7bfd4c26ebd2fc0143f03dc4cbf7
+[Vue Vixens]: https://vuevixens.org/
+[Chris Fritz]: https://twitter.com/chrisvfritz
+[Maria Lamardo]: https://twitter.com/marialamardo
+[Krystal Campioni]: https://twitter.com/krystalcampioni
+[speaker slides linked from gist]: https://gist.github.com/vincentmayers/298f7bfd4c26ebd2fc0143f03dc4cbf7

@@ -126,7 +126,7 @@ add a pattern in the stylesheet, they can document their work right at
 the source. When a pattern changes, all the edits can be made in a
 single location, so documentation is more likely to stay up-to-date.
 
-[<img src="/static/images/blog/2017/herman-intro/sassdoc.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="SassDoc screenshot" />][SassDoc]
+[<img src="{{ site.images }}blog/2017/herman-intro/sassdoc.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="SassDoc screenshot" />][SassDoc]
 
 Those tools are great, but neither one is built to handle more complex
 design systems, integrated with markup templates and other languages. On
@@ -182,9 +182,9 @@ Herman provides display annotations for [colors] (`@colors`), [fonts]
     /// @sizes my-spacing
     /// @ratios my-modular-scale
 
-[<img src="/static/images/blog/2017/herman-intro/colors.jpg" class="extend-large img-border img-shadow img-spacing extend-large img-border img-shadow img-spacing" alt="Herman color palettes" />][colors]
+[<img src="{{ site.images }}blog/2017/herman-intro/colors.jpg" class="extend-large img-border img-shadow img-spacing extend-large img-border img-shadow img-spacing" alt="Herman color palettes" />][colors]
 
-[<img src="/static/images/blog/2017/herman-intro/sizes.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman size palettes" />][sizes]
+[<img src="{{ site.images }}blog/2017/herman-intro/sizes.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman size palettes" />][sizes]
 
 In order to display that data, you will need to export all your Sass
 tokens to json, using our provided [Sass export utilities]. We're
@@ -195,13 +195,13 @@ given folder:
 
     /// @icons path-to/my-assets/svg/
 
-[<img src="/static/images/blog/2017/herman-intro/icons.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman icon palettes" />]
+[<img src="{{ site.images }}blog/2017/herman-intro/icons.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman icon palettes" />]
 
   [colors]: /herman/docs/demo_colors.html
   [fonts]: /herman/docs/demo_fonts.html
   [sizes]: /herman/docs/demo_sizes.html
   [Sass export utilities]: /herman/docs/api_json-export.html
-  [<img src="/static/images/blog/2017/herman-intro/icons.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman icon palettes" />]:
+  [<img src="{{ site.images }}blog/2017/herman-intro/icons.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman icon palettes" />]:
     /herman/docs/demo_icons.html
 
 ## Rendered Output & Examples
@@ -231,7 +231,7 @@ output when necessary:
     }
     {% endraw %}
 
-[<img src="/static/images/blog/2017/herman-intro/examples.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman rendered example" />][documentation of CSS selectors and markup patterns]
+[<img src="{{ site.images }}blog/2017/herman-intro/examples.jpg" class="extend-small img-border img-shadow extend-small img-border img-shadow" alt="Herman rendered example" />][documentation of CSS selectors and markup patterns]
 
   [documentation of CSS selectors and markup patterns]: /herman/docs/demo_examples.html
   [Sass]: http://sass-lang.com

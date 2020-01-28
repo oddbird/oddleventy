@@ -14,17 +14,17 @@
 @forward 'sections';
 @forward 'blockquotes';
 
-// @import 'alignment';
-// @import 'blockquotes';
-// @import 'gallery';
-// @import 'sizes';
-// @import 'states';
-// @import 'code';
-// @import 'tags';
+// @forward 'alignment';
+// @forward 'blockquotes';
+// @forward 'gallery';
+// @forward 'sizes';
+// @forward 'states';
+// @forward 'code';
+// @forward 'tags';
 
-// // Less used CSS load later
-// // ------------------------
+// Less used CSS load later
+// ------------------------
 
-// @import 'image-blocks';
-// @import 'icon-blocks';
-// @import 'text-blocks';
+// @forward 'image-blocks';
+@forward 'icon-blocks';
+// @forward 'text-blocks';

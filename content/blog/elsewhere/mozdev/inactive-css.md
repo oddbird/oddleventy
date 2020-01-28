@@ -20,8 +20,6 @@ summary: |
   and look for the greyed-out property with an info-box on hover.
 media:
   - iframe: https://www.youtube.com/embed/O3DAm82vIvU
-    width: 560
-    height: 315
 ---
 {% import "embed.macros.njk" as embed %}
 
