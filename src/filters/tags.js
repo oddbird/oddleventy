@@ -2,7 +2,6 @@
 
 const { withData } = require('./pages');
 const { unique, slugify } = require('./utils');
-const { getEvents } = require('./events');
 
 /* @docs
 label: Tag Filters
@@ -63,26 +62,20 @@ label: tagData
 category: List
 note: |
   Returns an array tag-data objects for every tag,
-  including name (`tag`), `events`,
-  `eventCount`, and `pageCount`
+  including name (`tag`), and `pageCount`
 params:
   collections:
     type: array of collections
   sort:
-    type: eventCount | pageCount | tag
-    default: 'eventCount'
+    type: pageCount | tag
+    default: 'pageCount'
 */
-const tagData = (collections, sort = 'eventCount') =>
+const tagData = (collections, sort = 'pageCount') =>
   allTags(collections.all)
-    .map((tag) => {
-      const tagEvents = getEvents(collections.all, tag, false);
-      return {
-        tag,
-        events: tagEvents,
-        eventCount: tagEvents.length,
-        pageCount: collections[tag].length,
-      };
-    })
+    .map((tag) => ({
+      tag,
+      pageCount: collections[tag].length,
+    }))
     .sort((a, b) => b[sort] - a[sort]);
 
 /* @docs

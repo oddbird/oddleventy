@@ -3,7 +3,6 @@
 const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 const utils = require('./src/filters/utils');
-const events = require('./src/filters/events');
 const pages = require('./src/filters/pages');
 const tags = require('./src/filters/tags');
 const time = require('./src/filters/time');
@@ -60,9 +59,6 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('authorPage', birds.authorPage);
-
-  eleventyConfig.addFilter('getEvents', events.getEvents);
-  eleventyConfig.addFilter('groupName', events.groupName);
 
   eleventyConfig.addFilter('typogr', type.typogr);
   eleventyConfig.addFilter('md', type.md);

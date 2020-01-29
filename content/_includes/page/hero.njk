@@ -1,6 +1,6 @@
 {% import 'embed.macros.njk' as embed %}
 
-{% if image.src %}
+{% if image %}
   <div id="hero">
     {% set style = {'--hero-position', image.position} | styles %}
     {{ embed.img(

@@ -18,7 +18,7 @@ params:
   is:
     type: string
     default: undefined
-    note: Optinoally check for a particular type
+    note: Optionally check for a particular type
 */
 const typeCheck = (val, is) => {
   const type = typeof val;
