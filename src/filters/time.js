@@ -2,7 +2,7 @@
 
 /* @docs
 label: Date & Time Filters
-category: file
+category: File
 note: |
   In addition to the date/time filters,
   we have a `getDate` shortcode
@@ -81,7 +81,7 @@ const formatDate = (date, format) => {
 
 /* @docs
 label: getDate
-category: formatting
+category: Formatting
 note: |
   Returns a date in any format.
 example: |
@@ -101,7 +101,7 @@ const getDate = (date, format) => {
 
 /* @docs
 label: rssDate
-category: rss
+category: RSS
 note: These are used in generating the site RSS output…
 */
 const rssDate = (page) => {
@@ -111,7 +111,7 @@ const rssDate = (page) => {
 
 /* @docs
 label: rssLatest
-category: rss
+category: RSS
 note: These are used in generating the site RSS output…
 */
 const rssLatest = (collection) => {

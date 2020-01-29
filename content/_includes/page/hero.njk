@@ -6,8 +6,7 @@
     {% if image.src %}
       {{ embed.img(
         src=image.src,
-        alt=image.alt,
-        attrs={'style': style}
+        alt=image.alt
       ) }}
     {% elif image.svg %}
       {{ embed.svg(image.svg) }}

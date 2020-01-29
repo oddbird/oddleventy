@@ -2,16 +2,15 @@
 
 const { withData } = require('./pages');
 const { unique, slugify } = require('./utils');
-const { getEvents } = require('./events');
 
 /* @docs
 label: Tag Filters
-category: file
+category: File
 */
 
 /* @docs
 label: isPublic
-category: visibility
+category: Visibility
 note: Return false if a tag name starts with `_`
 params:
   tag:
@@ -21,7 +20,7 @@ const isPublic = (tag) => !tag.startsWith('_');
 
 /* @docs
 label: publicTags
-category: visibility
+category: Visibility
 note: Remove private `_<name>` tags from a list
 params:
   tags:
@@ -32,7 +31,7 @@ const publicTags = (tags) =>
 
 /* @docs
 label: displayName
-category: visibility
+category: Visibility
 note: |
   Returns a tag name with private `_` removed,
   for those rare cases where we want to display private tags.
@@ -44,7 +43,7 @@ const displayName = (tag) => (tag.startsWith('_') ? tag.slice(1) : tag);
 
 /* @docs
 label: allTags
-category: list
+category: List
 note: Returns a list of public tag names in a collection
 params:
   collection:
@@ -60,34 +59,28 @@ const allTags = (collection) => {
 
 /* @docs
 label: tagData
-category: list
+category: List
 note: |
   Returns an array tag-data objects for every tag,
-  including name (`tag`), `events`,
-  `eventCount`, and `pageCount`
+  including name (`tag`), and `pageCount`
 params:
   collections:
     type: array of collections
   sort:
-    type: eventCount | pageCount | tag
-    default: 'eventCount'
+    type: pageCount | tag
+    default: 'pageCount'
 */
-const tagData = (collections, sort = 'eventCount') =>
+const tagData = (collections, sort = 'pageCount') =>
   allTags(collections.all)
-    .map((tag) => {
-      const tagEvents = getEvents(collections.all, tag, false);
-      return {
-        tag,
-        events: tagEvents,
-        eventCount: tagEvents.length,
-        pageCount: collections[tag].length,
-      };
-    })
+    .map((tag) => ({
+      tag,
+      pageCount: collections[tag].length,
+    }))
     .sort((a, b) => b[sort] - a[sort]);
 
 /* @docs
 label: tagLink
-category: links
+category: Links
 note: |
   Returns the link for a given tag --
   either the auto-generated tag page,

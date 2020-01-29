@@ -1,6 +1,6 @@
 {# @docs
 label: Utility Macros
-category: file
+category: File
 note: |
   Utilities can be used just about anywhere,
   and that's why we love them.
@@ -9,7 +9,7 @@ note: |
 
 {# @docs
 label: attr_if
-category: attributes
+category: Attributes
 note: |
   Pass in an attribute name and value.
   If the value is not falsey,
@@ -42,7 +42,7 @@ params:
 
 {# @docs
 label: show_attrs
-category: attributes
+category: Attributes
 note: |
   Render a dictionary of attribute/value pairs
   into HTML-ready attributes.
@@ -59,7 +59,7 @@ params:
 
 {# @docs
 label: style_if
-category: attributes
+category: Attributes
 note: |
   Render a dictionary of property/value pairs
   into an HTML-ready style attribute.
@@ -76,7 +76,7 @@ params:
 
 {# @docs
 label: icon_link
-category: links
+category: Links
 note: |
   Links with icons require special handling
   in order to avoid awkward underline collisions.
@@ -118,7 +118,7 @@ params:
 
 {# @docs
 label: link_if
-category: links
+category: Links
 note: Return a link or span with given attributes
 params:
   content:
@@ -176,7 +176,7 @@ params:
 
 {# @docs
 label: datetime
-category: time
+category: Time
 note: Format dates and times for posts
 params:
   start:
@@ -207,7 +207,7 @@ params:
     }
   } %}
 
-  {% set ongoing = (end == 'ongoing') or (end | groupName == 'ongoing') %}
+  {% set ongoing = (end == 'ongoing') %}
 
   <time
     datetime="{{ pub | getDate('iso') }}"

@@ -24,37 +24,36 @@ const doxOptions = {
   },
 };
 
-module.exports = () => {
-  const njk = [];
+module.exports = () =>
+  new Promise((resolve, reject) => {
+    // get the docs
+    fs.readdir(includeDir, (err, files) => {
+      if (err) {
+        reject(err);
+      }
 
-  // get the docs
-  fs.readdir(includeDir, (err, files) => {
-    if (err) {
-      throw err;
-    }
+      const njk = files
+        .filter((file) => file.endsWith('.macros.njk'))
+        .map((file) => {
+          const filePath = path.join(includeDir, file);
+          const docs = doxray([filePath], doxOptions);
+          const info = docs.patterns.find(
+            (pattern) => String(pattern.category).toLowerCase() === 'file',
+          );
+          const name = file;
 
-    files
-      .filter((file) => file.endsWith('.macros.njk'))
-      .forEach((file) => {
-        const data = {};
+          return {
+            name,
+            info,
+            path: filePath,
+            slug: file.slice(0, file.indexOf('.')),
+            title: info ? info.label : name,
+            patterns: docs.patterns.filter(
+              (pattern) => String(pattern.category).toLowerCase() !== 'file',
+            ),
+          };
+        });
 
-        const filePath = path.join(includeDir, file);
-        const docs = doxray([filePath], doxOptions);
-
-        data.name = file;
-        data.path = filePath;
-        data.slug = file.slice(0, file.indexOf('.'));
-        data.info = docs.patterns.find(
-          (pattern) => pattern.category === 'file',
-        );
-        data.title = data.info ? data.info.label : data.name;
-        data.patterns = docs.patterns.filter(
-          (pattern) => pattern.category !== 'file',
-        );
-
-        njk.push(data);
-      });
+      resolve(njk);
+    });
   });
-
-  return njk;
-};

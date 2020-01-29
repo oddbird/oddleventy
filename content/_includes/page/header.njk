@@ -32,7 +32,9 @@
       content=details
     ) }}
   {% else %}
+    {% if image %}
     {% include 'page/hero.njk' %}
+    {% endif %}
     {{ details | safe }}
   {% endif %}
 </header>

@@ -2,12 +2,12 @@
 
 /* @docs
 label: Utility Filters
-category: file
+category: File
 */
 
 /* @docs
 label: typeCheck
-category: inspect
+category: Inspect
 note: Return either the type, or the result of a type-check.
 example: |
   {{ my_data | typeCheck('array') }}
@@ -18,7 +18,7 @@ params:
   is:
     type: string
     default: undefined
-    note: Optinoally check for a particular type
+    note: Optionally check for a particular type
 */
 const typeCheck = (val, is) => {
   const type = typeof val;
@@ -27,7 +27,7 @@ const typeCheck = (val, is) => {
 
 /* @docs
 label: get
-category: inspect
+category: Inspect
 note: |
   Returns true if an object contains a particular attribute
   or attr:value pair,
@@ -63,7 +63,7 @@ const get = (obj, attrs, value) => {
 
 /* @docs
 label: just
-category: data
+category: Data
 note: |
   Returns a filtered array of objects with a given attribute,
   or the first object where that attribute is equal to a particular value.
@@ -88,7 +88,7 @@ const just = (array, attrs, value) => {
 
 /* @docs
 label: getJust
-category: data
+category: Data
 note: |
   The built-in nunjucks `slice` filter returns
   an array of arrays at a given length.
@@ -122,7 +122,7 @@ const getJust = (data, attrs, test) => {
 
 /* @docs
 label: items
-category: data
+category: Data
 note: |
   The built-in nunjucks `slice` filter returns
   an array of arrays at a given length.
@@ -144,7 +144,7 @@ const items = (list, start, end) => list.slice(start, end);
 
 /* @docs
 label: styles
-category: formatting
+category: Formatting
 note: |
   Convert an object of property-value pairs
   into valid CSS for an inline-style.

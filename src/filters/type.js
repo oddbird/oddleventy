@@ -12,7 +12,7 @@ const mdown = require('markdown-it')({
 
 /* @docs
 label: Typography Filters
-category: file
+category: File
 */
 
 /* @docs
