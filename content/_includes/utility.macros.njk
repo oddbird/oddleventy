@@ -184,7 +184,7 @@ params:
     }
   } %}
 
-  {% set ongoing = (end == 'ongoing') or (end | groupName == 'ongoing') %}
+  {% set ongoing = (end == 'ongoing') %}
 
   <time
     datetime="{{ pub | getDate('iso') }}"
