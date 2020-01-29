@@ -60,7 +60,6 @@
 
   @include tools.above('medium-page') {
     --meta-column: 2;
-    font-size: var(--medium);
   }
 
   li {

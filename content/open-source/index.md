@@ -1,5 +1,9 @@
 ---
-layout: base
+permalink: open-source/index.html
 title: Open Source Tools
-index: open source
+index: Open Source
 ---
+
+{% for item in collections.oss | withData('oss', 'owner') -%}
+- [{{ item.data.title }}]({{ item.url }})
+{% endfor %}

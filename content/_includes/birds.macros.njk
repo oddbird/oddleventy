@@ -1,0 +1,80 @@
+{% import 'utility.macros.njk' as utility %}
+
+{# @docs
+label: Bird Macros
+category: file
+#}
+
+
+{# @docs
+label: authors
+category: names & links
+note: |
+  Pass in one or more authors,
+  and return a display-ready list
+  with links to author pages.
+params:
+  names:
+    type: string | list
+    note: |
+      Author slugs tend to be lowercase, first-name.
+      We also support `oddbird`,
+      which links to the "about" page,
+      and will show up in lists for all oddbirds.
+  collections:
+    type: 11ty collections array
+    default: none
+    note: |
+      When collections are provided,
+      we can find and link to author pages.
+#}
+{% macro authors(
+  names,
+  collections=none
+) %}
+  {% if names | typeCheck('string') %}
+    {{ author(names, collections) }}
+  {% else %}
+    {% for name in names %}
+      {{ author(name, collections) }}{{ ',' if not loop.last }}
+    {% endfor %}
+  {% endif %}
+{% endmacro %}
+
+
+{# @docs
+label: authors
+category: names & links
+note: |
+  Convert an author slug into full name
+  and optional link to author-page
+params:
+  name:
+    type: string
+    note: |
+      Author slugs tend to be lowercase, first-name.
+      We also support `oddbird`,
+      which links to the "about" page,
+      and will show up in lists for all oddbirds.
+  collections:
+    type: 11ty collections array
+    default: none
+    note: |
+      When collections are provided,
+      we can find and link to author pages.
+#}{% macro author(
+  name,
+  collections=none
+) -%}
+  {%- set by = collections.birds | authorPage(name) if collections else none -%}
+  {%- if by.data -%}
+    {%- set name = by.data.title if (name != 'oddbird') else 'OddBird' -%}
+    {{ utility.link_if(
+      content=name | mdInline | safe,
+      url=by.url,
+      class='h-card'
+    ) }}
+  {%- else -%}
+    {{ name | capitalize }}
+  {%- endif -%}
+{%- endmacro %}

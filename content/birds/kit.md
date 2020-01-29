@@ -1,7 +1,7 @@
 ---
 title: Kit La Touche
 bird: kit
-active: 2016
+date: 2016-04-18
 image:
   face: kit
 social:

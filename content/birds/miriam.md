@@ -3,7 +3,7 @@ title: Miriam Suzanne
 sub: Co-founder & product lead
 dates: 2008–present
 bird: miriam
-active: 2008
+date: 2008-04-01
 image:
   src: birds/miriam.jpg
 social:
@@ -58,22 +58,22 @@ writing, music, and visual art.
 
 ## Open Source
 
-{% for page in collections._oss | byBird(bird) -%}
-- [{{ page.data.title }}]({{ page.url }})
+{% for item in collections.oss | byBird(bird) -%}
+- [{{ item.data.title }}]({{ item.url }})
 {% endfor %}
 
 ------
 
 ## Speaking
 
-{% for page in collections.Speaking | byBird(bird) %}
-- [{{ page.data.title }}]({{ page.url }})
+{% for item in collections.Speaking | byBird(bird) %}
+- [{{ item.data.title }}]({{ item.url }})
 {% endfor %}
 
 ------
 
 ## Articles
 
-{% for page in collections._post | byBird(bird) -%}
-- [{{ page.data.title }}]({{ page.url }})
+{% for item in collections._post | byBird(bird) -%}
+- [{{ item.data.title }}]({{ item.url }})
 {% endfor %}

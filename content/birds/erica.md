@@ -1,7 +1,7 @@
 ---
 title: Erica Mitchell
 bird: erica
-active: 2019
+date: 2019-04-01
 image:
   face: erica
 social:

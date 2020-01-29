@@ -1,7 +1,7 @@
 ---
 title: Sondra Eby
 bird: sondra
-active: 2011
+date: 2014-08-01
 image:
   face: sondra
 social:

@@ -1,7 +1,7 @@
 ---
 title: Carl Meyer
 bird: carl
-active: 2009
+date: 2008-04-01
 image:
   src: birds/carl.jpg
 social:

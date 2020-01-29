@@ -1,6 +1,8 @@
 ---
 title: David Glick
 bird: david
+date: 2016-01-19
+end: 2018-07-06
 image:
   src: birds/david.jpg
 social:

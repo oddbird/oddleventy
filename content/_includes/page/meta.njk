@@ -1,5 +1,6 @@
 {%- import 'utility.macros.njk' as utility -%}
 {%- import 'tags.macros.njk' as tagutils -%}
+{%- import 'birds.macros.njk' as birds -%}
 
 {% set public_tags = tags | publicTags %}
 {% set linked = {
@@ -20,19 +21,10 @@
       </p>
     {% endif %}
 
-    {% set by = collections.birds | authorPage(author) if author else none %}
-    {% if by or author %}
+    {% if author %}
       <p class="byline">
         <i>by</i>
-        {% if by.data %}
-          {{ utility.link_if(
-            content=by.data.title | mdInline | safe,
-            url=by.url,
-            class='h-card'
-          ) }}
-        {% else %}
-          {{ author | capitalize }}
-        {% endif %}
+        {{ birds.authors(author, collections) }}
 
         {% if linked %}
           <i>at</i>
@@ -73,14 +65,14 @@
     {% if project_links or slides %}
       <ul class="page-links">
         {% if slides %}
-          <li>{{ utility.link_if('Slides »', slides) }}</li>
+          <li>{{ utility.link_if('slides »', slides) }}</li>
         {% endif %}
 
         {% if project and project.source %}
-          <li>{{ utility.link_if('Source Code »', project.source) }}</li>
+          <li>{{ utility.link_if('source »', project.source) }}</li>
         {% endif %}
         {% if project and project.docs %}
-          <li>{{ utility.link_if('Documentation »', project.docs) }}</li>
+          <li>{{ utility.link_if('docs »', project.docs) }}</li>
         {% endif %}
       </ul>
     {% endif %}

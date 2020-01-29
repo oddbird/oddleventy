@@ -1,7 +1,7 @@
 ---
 title: Stacy Kvernmo
 bird: stacy
-active: 2016
+date: 2016-04-18
 image:
   face: stacy
 social:

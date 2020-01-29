@@ -1,6 +1,7 @@
 'use strict';
 
 const { withData } = require('./pages');
+const { get } = require('./utils');
 
 /* @docs
 label: Bird Filters
@@ -22,7 +23,11 @@ params:
     type: string
     note: The name of the bird (as used in `author` settings)
 */
-const getPages = (collection, bird) => withData(collection, 'author', bird);
+const getPages = (collection, bird) =>
+  collection.filter(
+    (page) =>
+      get(page.data, 'author', bird) || get(page.data, 'author', 'oddbird'),
+  );
 
 /* @docs
 label: active
@@ -39,9 +44,12 @@ params:
 */
 const active = (collection) =>
   collection
-    .filter((page) => page.data.bird && page.data.active)
+    .filter(
+      (page) =>
+        page.data.bird && page.data.bird !== 'oddbird' && !page.data.end,
+    )
     .sort((a, b) => a.data.title - b.data.title)
-    .sort((a, b) => a.data.active - b.data.active);
+    .sort((a, b) => a.data.date - b.data.date);
 
 /* @docs
 label: authorPage

@@ -19,14 +19,29 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
   eleventyConfig.addPassthroughCopy({ 'src/images': 'assets/images' });
   eleventyConfig.addPassthroughCopy({ 'src/media': 'assets/media' });
+
+  eleventyConfig.addPassthroughCopy({ 'src/docs/susy': 'susy/docs' });
+  eleventyConfig.addPassthroughCopy({ 'src/docs/herman': 'herman/docs' });
+  eleventyConfig.addPassthroughCopy({ 'src/docs/true': 'true/docs' });
+  eleventyConfig.addPassthroughCopy({
+    'src/docs/accoutrement': 'accoutrement/docs',
+  });
+
   eleventyConfig.addPassthroughCopy('content/robots.txt');
   eleventyConfig.addPassthroughCopy('content/favicon.ico');
 
+  // collections
   eleventyConfig.addCollection('birds', (collection) =>
     collection
       .getAll()
       .filter((item) => item.data.bird)
       .sort((a, b) => a.data.title - b.data.title),
+  );
+  eleventyConfig.addCollection('oss', (collection) =>
+    collection
+      .getAll()
+      .filter((item) => item.data.oss)
+      .sort((a, b) => a.data.date - b.data.date),
   );
   eleventyConfig.addCollection('sample', (collection) =>
     collection.getAll().filter((item) => item.data.sample),

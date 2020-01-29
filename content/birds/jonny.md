@@ -2,7 +2,7 @@
 title: Jonny Gerig Meyer
 sub: Co-founder & technical lead
 bird: jonny
-active: 2008
+date: 2009-07-01
 image:
   src: birds/jonny.jpg
 social:
@@ -37,10 +37,4 @@ and trying to keep up with his dog and two young kids.
 {% if site[0] != '_' %}
 - {{ site }}: {{ username }}
 {% endif %}
-{% endfor %}
-
-------
-
-{% for page in collections._oss | byBird(bird) %}
-- [{{ page.data.title }}]({{ page.url }})
 {% endfor %}
