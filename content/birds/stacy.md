@@ -1,9 +1,12 @@
 ---
 title: Stacy Kvernmo
+sub: User experience designer & developer
 bird: stacy
 date: 2016-04-18
+end: ongoing
 image:
-  face: stacy
+  type: media
+  svg: faces/stacy
 social:
   twitter: stacykvernmo
   github: stacyk

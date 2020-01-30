@@ -5,17 +5,37 @@ const path = require('path');
 const removeMd = require('remove-markdown');
 
 const { just, get, getJust } = require('./utils');
+const { now, getDate } = require('./time');
 
 /* @docs
 label: Page Filters
 category: File
 */
 
+/* @docs
+label: isPublic
+category: Status
+note: Check that a page is
+params:
+  collection:
+    type: array of pages
+*/
 const isPublic = (page) => {
   const live = page.data.draft !== true;
   const title = page.data && page.data.title;
   return live && title;
 };
+
+/* @docs
+label: isCurrent
+category: Status
+note: Check that the page does not have an end date
+params:
+  collection:
+    type: array of pages
+*/
+const isCurrent = (page) =>
+  page.data.end === 'ongoing' || !page.data.end || getDate(page.data.end) > now;
 
 /* @docs
 label: getPublic
@@ -160,6 +180,7 @@ const meta = (collection, page, renderData, site) => {
 
 module.exports = {
   isPublic,
+  isCurrent,
   getPublic,
   fromCollection,
   findData,

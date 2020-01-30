@@ -2,8 +2,10 @@
 title: Susy
 sub: CSS layout framework
 date: 2009-07-13
+end: ongoing
 image:
-  src: projects/susy.png
+  type: media
+  svg: logos/susy-mark
 author:
   - miriam
   - oddbird
@@ -52,11 +54,9 @@ badges:
     src: https://travis-ci.org/oddbird/susy.svg
     url: https://travis-ci.org/oddbird/susy
 summary: |
-  **Susy is a lightweight grid-layout engine for Sass**,
-  designed to simplify and clarify responsive grid layouts
+  **Susy was a responsive layout engine for Sass**,
   before `flexbox` and CSS `grid` were availabe.
   These days, we recommend letting the browser handle your layouts.
-
   If you need help moving off Susy,
   or learning the latest in web layout,
   **we offer [workshops](#@@@)

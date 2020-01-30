@@ -6,20 +6,21 @@ image:
   src: herman/herman-hero.jpg
 author: oddbird
 date: 2015-11-08
+end: ongoing
 index: Herman
 oss: owner
 screenshots:
-  - image: herman/screenshots/sq-colors.jpg
+  - img: herman/screenshots/sq-colors.jpg
     alt: Color Palettes
-  - image: herman/screenshots/sq-icons.jpg
+  - img: herman/screenshots/sq-icons.jpg
     alt: Icons
-  - image: herman/screenshots/sq-ratios.jpg
+  - img: herman/screenshots/sq-ratios.jpg
     alt: Ratio Previews
-  - image: herman/screenshots/sq-sizes.jpg
+  - img: herman/screenshots/sq-sizes.jpg
     alt: Size Previews
-  - image: herman/screenshots/sq-fonts.jpg
+  - img: herman/screenshots/sq-fonts.jpg
     alt: Typefaces
-  - image: herman/screenshots/sq-example.jpg
+  - img: herman/screenshots/sq-example.jpg
     alt: Example Code Blocks
 project:
   source: https://github.com/oddbird/sassdoc-theme-herman
@@ -46,7 +47,7 @@ summary: |
   [hire us]: /contact/
 ---
 
-content.macros.j2\#rst
+{% import 'embed.macros.njk' as embed %}
 
 ## Give Your Design System a Home
 
@@ -64,21 +65,23 @@ and keep everything in one place.
 
 ### Herman's Current Features
 
--   Supports all [SassDoc] annotations and configuration settings
--   Integrated with Sass/CSS for better automation
--   Visualize design tokens like fonts, colors, sizes, ratios, and icons
--   Display Sass mixins and [Nunjucks] macros with expected input and
-    rendered examples
--   Include additional prose, pages, and links to third-party docs
--   Encourage self-documenting patterns, without locking yourself in
--   Optionally integrate with OddBird's [Sass Accoutrement] libraries
+- Supports all [SassDoc] annotations and configuration settings
+- Integrated with Sass/CSS for better automation
+- Visualize design tokens like fonts, colors, sizes, ratios, and icons
+- Display Sass mixins and [Nunjucks] macros with expected input and
+  rendered examples
+- Include additional prose, pages, and links to third-party docs
+- Encourage self-documenting patterns, without locking yourself in
+- Optionally integrate with OddBird's [Sass Accoutrement] libraries
 
-content.macros.j2\#gallery
+[SassDoc]: http://sassdoc.com/
+[Nunjucks]: https://mozilla.github.io/nunjucks/
+[Sass Accoutrement]: /accoutrement/
 
-content.macros.j2\#rst
 
-content.macros.j2\#icon\_block
+{{ embed.figure(screenshots) }}
 
-  [SassDoc]: http://sassdoc.com/
-  [Nunjucks]: https://mozilla.github.io/nunjucks/
-  [Sass Accoutrement]: /accoutrement/
+{{ embed.icon_block(
+  collections.oss | findData('accoutrement_modules') | first,
+  title='Integrate with [Accoutrement](/accoutrement/) Modules'
+) }}

@@ -1,6 +1,7 @@
 {%- import 'utility.macros.njk' as utility -%}
 {%- import 'tags.macros.njk' as tagutils -%}
 {%- import 'birds.macros.njk' as birds -%}
+{%- import 'contact.macros.njk' as contact -%}
 
 {% set public_tags = tags | publicTags %}
 {% set linked = {
@@ -11,9 +12,15 @@
 {% set sub = renderData.sub or sub %}
 {% set project_links = project and (project.source or project.docs) %}
 
+{% set dates = utility.datetime(
+  start=start or date or page.date,
+  end=end,
+  prefix=true
+) if bird else none %}
+
 {% if sub or public_tags or linked or author or project_links or slides %}
   <div id="meta">
-    {% if sub or dates %}
+    {% if sub %}
       <p class="subtitle">
         {{ sub | mdInline | safe }}
         {%- if sub and dates %}, {% endif %}
@@ -35,12 +42,12 @@
           ) }}
         {% endif %}
 
-        <i>on</i>
         {{ utility.datetime(
           start=start or date or page.date,
           end=end,
           format='long',
-          is_pubdate=pubdate or page.date
+          is_pubdate=pubdate or page.date,
+          prefix=true
         ) }}
 
         {% if adr %}
@@ -50,6 +57,11 @@
           </span>
         {% endif %}
       </p>
+    {% elif bird %}
+      {{ contact.social(
+        data=social,
+        name=bird | capitalize
+      ) }}
     {% endif %}
 
     {% if public_tags %}

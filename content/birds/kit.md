@@ -1,9 +1,12 @@
 ---
 title: Kit La Touche
+sub: Back-end developer
 bird: kit
 date: 2016-04-18
+end: ongoing
 image:
-  face: kit
+  type: media
+  svg: faces/kit
 social:
   twitter: wlonk
   github: wlonk

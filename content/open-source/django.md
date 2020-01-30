@@ -1,6 +1,7 @@
 ---
 title: Django
 date: 2010-10-08
+end: ongoing
 sub: Python web framework
 image:
   src: projects/django.jpg

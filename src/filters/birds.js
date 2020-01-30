@@ -1,6 +1,6 @@
 'use strict';
 
-const { withData } = require('./pages');
+const { withData, isCurrent } = require('./pages');
 const { get } = require('./utils');
 
 /* @docs
@@ -44,10 +44,7 @@ params:
 */
 const active = (collection) =>
   collection
-    .filter(
-      (page) =>
-        page.data.bird && page.data.bird !== 'oddbird' && !page.data.end,
-    )
+    .filter((page) => isCurrent(page) && page.data.bird !== 'oddbird')
     .sort((a, b) => a.data.title - b.data.title)
     .sort((a, b) => a.data.date - b.data.date);
 

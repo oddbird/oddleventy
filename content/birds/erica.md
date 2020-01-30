@@ -1,9 +1,12 @@
 ---
 title: Erica Mitchell
+sub: Front-end developer
 bird: erica
 date: 2019-04-01
+end: ongoing
 image:
-  face: erica
+  type: media
+  svg: faces/erica
 social:
   twitter: DuggieMitchell
   github: duggiemitchell

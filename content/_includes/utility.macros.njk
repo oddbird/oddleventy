@@ -194,7 +194,8 @@ params:
   start,
   end,
   format='long',
-  is_pubdate=false
+  is_pubdate=false,
+  prefix=none
 ) %}
   {% set ranges = {
     'same-y': {
@@ -209,12 +210,16 @@ params:
 
   {% set ongoing = (end == 'ongoing') %}
 
+  {% if prefix %}
+    <i>{{ 'since' if ongoing else 'on' }}</i>
+  {% endif %}
+
   <time
     datetime="{{ pub | getDate('iso') }}"
     {{ attr_if('pubdate', not not is_pubdate) }}>
 
     {% if ongoing %}
-      since {{ start | getDate('range') }}
+      {{ start | getDate('year') }}
     {% elif (start and end) and (start != end) %}
       {% set start_m = start | getDate('month') %}
       {% set start_y = start | getDate('year') %}

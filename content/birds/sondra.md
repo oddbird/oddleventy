@@ -1,9 +1,12 @@
 ---
 title: Sondra Eby
+sub: brand & user experience designer
 bird: sondra
 date: 2014-08-01
+end: ongoing
 image:
-  face: sondra
+  type: media
+  svg: faces/sondra
 social:
   twitter: sondraeby
   github: sondrae

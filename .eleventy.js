@@ -61,13 +61,16 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('rssDate', time.rssDate);
   eleventyConfig.addFilter('rssLatest', time.rssLatest);
 
-  eleventyConfig.addFilter('isPublic', tags.isPublic);
+  eleventyConfig.addFilter('tagIsPublic', tags.isPublic);
   eleventyConfig.addFilter('publicTags', tags.publicTags);
   eleventyConfig.addFilter('allTags', tags.allTags);
   eleventyConfig.addFilter('tagData', tags.tagData);
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
 
+  eleventyConfig.addFilter('pageIsPublic', pages.isPublic);
+  eleventyConfig.addFilter('pageIsCurrent', pages.isCurrent);
+  eleventyConfig.addFilter('meta', pages.meta);
   eleventyConfig.addFilter('meta', pages.meta);
   eleventyConfig.addFilter('getPage', pages.fromCollection);
   eleventyConfig.addFilter('pageData', pages.pageData);
