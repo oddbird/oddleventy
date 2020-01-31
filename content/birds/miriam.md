@@ -60,11 +60,3 @@ writing, music, and visual art.
 {% for item in collections.Speaking | byBird(bird) %}
 - [{{ item.data.title }}]({{ item.url }})
 {% endfor %}
-
-------
-
-## Articles
-
-{% for item in collections._post | byBird(bird) -%}
-- [{{ item.data.title }}]({{ item.url }})
-{% endfor %}

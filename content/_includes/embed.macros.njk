@@ -76,12 +76,12 @@ params:
 ) -%}
 {%- set content = _fig_content(data) if (data != none) else caller() -%}
 {% if content %}
-<figure>
-<div class="fig-content">
+<figure class="embed">
+<div class="gallery">
 {{- content | safe -}}
 </div>
 {%- if caption -%}
-<figcaption>
+<figcaption class="caption">
 {{- caption | mdInline | safe -}}
 </figcaption>
 {%- endif -%}

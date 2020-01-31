@@ -45,8 +45,7 @@ params:
 const active = (collection) =>
   collection
     .filter((page) => isCurrent(page) && page.data.bird !== 'oddbird')
-    .sort((a, b) => a.data.title - b.data.title)
-    .sort((a, b) => a.data.date - b.data.date);
+    .sort((a, b) => b.data.title - a.data.title);
 
 /* @docs
 label: authorPage

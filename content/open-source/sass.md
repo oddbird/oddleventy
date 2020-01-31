@@ -5,6 +5,7 @@ author: miriam
 oss: core
 date: 2016-05-20
 end: ongoing
+index: Sass
 image:
   type: media
   svg: logos/sass
@@ -15,8 +16,8 @@ project:
   docs: https://sass-lang.com/documentation
   status: public
 summary: |
-  Sass is the most mature, stable, and powerful
-  professional grade CSS extension language in the world.
+  **Sass is the most mature, stable, and powerful
+  professional grade CSS extension language in the world**.
   After creating several of the most popular sass toolkits,
-  Miriam has became a core contributor to the language.
+  Miriam became a core contributor to the language.
 ---

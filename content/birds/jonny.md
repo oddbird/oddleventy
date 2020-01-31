@@ -31,11 +31,3 @@ numerous open-source projects.
 He's easily distracted by a game of ultimate frisbee,
 homebrewing delicious IPAs and stouts,
 and trying to keep up with his dog and two young kids.
-
-------
-
-{% for site, username in social %}
-{% if site[0] != '_' %}
-- {{ site }}: {{ username }}
-{% endif %}
-{% endfor %}

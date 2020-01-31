@@ -5,8 +5,9 @@
 }
 
 [data-grid] {
-  --fit--default: minmax(var(--fit-min, var(--min-page)), var(--fit-max, 1fr));
+  --fit--default: minmax(var(--fit-min, var(--grid-item)), var(--fit-max, 1fr));
   display: grid;
+  font-size: var(--small);
   grid:
     var(--row-template, auto-flow)
     / var(--col-template, repeat(auto-fit, var(--fit, var(--fit--default))));

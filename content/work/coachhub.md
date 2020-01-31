@@ -1,12 +1,14 @@
 ---
-title: 'Case Study: CoachHub'
+title: CoachHub
+banner: CoachHub Case Study
+sub: Responsive platform for integrated health coaching
+logo: orcas
 image:
   src: projects/coachhub.jpg
   position: top
 client:
   name: &client ORCAS
   url: http://orcasinc.com
-  logo: orcas
 people:
   - &sara
     name: Sara Taillon
@@ -15,13 +17,17 @@ people:
     venue: *client
 date: 2015-09-15
 project:
-  name: CoachHub
   industry: Wellness & Medical
-  tagline: Integrated Health Coaching
   url: https://coachhub.resilienceboost.com/
-  case_study: true
-  years: 2014--2016
   status: live
+tags:
+  - _post
+  - Case Study
+  - Research & Concepting
+  - Branding
+  - Design
+  - Development
+  - Custom Application
 tasks:
   - Accessible Interface
   - Custom Django Application
@@ -32,10 +38,6 @@ tasks:
   - Project Architecture
   - User Experience Design
   - WCAG & HIPPA Compliant
-brag: |
-  Responsive platform for health coaches,
-  used by the **US Coast Guard**
-  and **National Institutes of Health**.
 press:
   - text: |
       OddBird really changed my thinking
@@ -108,26 +110,28 @@ summary: |
   anytime access to varying levels of support --
   video chat, in-app messaging,
   public Q&A, webinars, and support groups.
-  Users browse coaches, send messages,
-  request appointments, post questions, and grant
-  permissions for coaches to view their progress.
-  Coaches create a profile, manage daily tasks, make appointments,
-  post answers to questions, view user progress,
-  and set alerts for relapse prevention and
-  escalation of care.
-
-  The product is [currently being used] by the US Military
-  and Coast Guard for internal health coaching.
-
-  [currently being used]: https://coachhub.resilienceboost.com/
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
 
-{{ quotes.grid(press) }}
+Users browse coaches, send messages,
+request appointments, post questions, and grant
+permissions for coaches to view their progress.
+Coaches create a profile, manage daily tasks, make appointments,
+post answers to questions, view user progress,
+and set alerts for relapse prevention and
+escalation of care.
 
-------
+The product has been used by the
+**National Institudes of Health**
+and is [currently being used] by the
+**US Military** and **Coast Guard**
+for internal health coaching.
+
+[currently being used]: https://coachhub.resilienceboost.com/
+
+{{ quotes.grid(press | items(0, 2) ) }}
 
 ## What They Needed
 

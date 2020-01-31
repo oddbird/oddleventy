@@ -33,9 +33,9 @@ events:
     start: 2018-03-26
     video: https://www.vuemastery.com/conferences/vueconf-2018/agile-design-systems-in-vue-miriam-suzanne/
     media: &vue
-      - iframe: https://player.vimeo.com/video/264296381
-        width: 640
-        height: 360
+      iframe: https://player.vimeo.com/video/264296381
+      width: 640
+      height: 360
   - venue: Tech Confluence
     url: https://www.meetup.com/TechConfluence/events/nxcfhlyxfbcc/
     adr: Denver, CO

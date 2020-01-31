@@ -25,7 +25,7 @@ params:
   content,
   align='right'
 ) %}
-<h2 data-section-title="{{ align | mdInline | safe }}">{{ content }}</h2>
+<h2 data-section-title="{{ align }}">{{ content | mdInline | safe }}</h2>
 {% endmacro %}
 
 {% macro grid(
@@ -33,6 +33,19 @@ params:
   content=none,
   attrs={}
 ) -%}
+{%- set content = _grid_content(content) if content and (content | typeCheck('object')) else content -%}
 {%- set content = content if (content != none) else caller() -%}
-<div data-grid="{{ name }}" {{ utility.show_attrs(attrs) }}>{{ content }}</div>
+<div data-grid="{{ name }}" {{ utility.show_attrs(attrs) }}>{{ content | safe }}</div>
 {%- endmacro %}
+
+
+{% macro _grid_content(
+  data
+) %}
+{% for item in data %}
+  <article class="grid-item">
+    <h3 class="item-title">{{ item.title | mdInline | safe }}</h3>
+    {{ item.text | md | safe }}
+  </article>
+{% endfor %}
+{% endmacro %}

@@ -1,4 +1,5 @@
 {
   "layout": "base",
+  "cta": "workshop",
   "permalink": "{{ page.fileSlug }}/index.html"
 }

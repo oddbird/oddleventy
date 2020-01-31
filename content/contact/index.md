@@ -1,19 +1,21 @@
 ---
-layout: base
 title: Contact
+sub: Let's get to know each other
 banner: Contact OddBird
-sub: Leave me a note, or find me online!
+social:
+  twitter: oddbird
+  github: oddbird
+  email: birds
+summary: |
+  **We're always happy to talk** –
+  whether you have a project in mind,
+  or just want to say *hi*.
+  Ask a question,
+  inquire about [our services](/services/),
+  set up a free consultation,
+  or [schedule a workshop](/talks/resilient-systems/).
+  Miriam will get back to you soon.
 ---
 
 {% import "contact.macros.njk" as contact %}
 {{ contact.form() }}
-
-## Email
-
-- [info@OddBird.net](mailto:info@oddbird.net)
-
-## Feeling Social...
-
-- [Twitter](https://twitter.com/oddbird) (`@oddbird`)
-- [Facebook](https://facebook.com/oddbird)
-- [Github](https://github.com/oddbird)

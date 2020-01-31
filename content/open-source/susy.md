@@ -15,6 +15,23 @@ project:
   source: https://github.com/oddbird/susy
   docs: /susy/docs/
   status: public
+screenshots:
+  - img: susy/screenshots/sasslang.jpg
+    alt: Sass
+  - img: susy/screenshots/virginamerica.jpg
+    alt: Virgin America
+  - img: susy/screenshots/squaremarket.jpg
+    alt: Square Market
+  - img: susy/screenshots/esquire.jpg
+    alt: Esquire UK
+  - img: susy/screenshots/python.jpg
+    alt: Python
+  - img: susy/screenshots/mediamolecule.jpg
+    alt: Media Molecule
+  - img: susy/screenshots/simple.jpg
+    alt: Simple
+  - img: susy/screenshots/smithsonian.jpg
+    alt: Smithsonian
 press:
   - text: I like the idea of grids-on-demand, rather than a strict framework.
     name: Chris Coyier
@@ -80,6 +97,11 @@ purchase going to [Black Girls Code]
 when you follow the link from our site.
 You can also still access [Susy2 documentation](https://susy.readthedocs.io/)
 if necessary.
+
+{{ embed.figure(
+  screenshots,
+  'A few of the sites (mobile & desktop) that were built with Susy'
+) }}
 
 {{ quotes.grid(press) }}
 

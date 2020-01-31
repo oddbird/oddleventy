@@ -1,20 +1,25 @@
 ---
-title: 'Case Study: TimeDesigner'
+title: Tegy Time
+banner: Tegy Time Case Study
+sub: Whole-School Design Thinking & Scheduling
+logo: tegy
 client:
-  - name: &client Sensible Innovation
-    url: https://www.sensibleinnovation.com/
-sort_date: 2018-07-15
-project:
-  - name: TimeDesigner
-    tagline: Whole-School Design Thinking & Scheduling
-    years: 2017--2018
-    status: private
+  name: &client Sensible Innovation
+  url: https://www.sensibleinnovation.com/
+date: 2018-07-15
 people:
   - &furman
     name: Furman Brown
     face: furman-brown.jpg
     title: Founder
     venue: *client
+tags:
+  - _post
+  - Case Study
+  - Research & Concepting
+  - Design
+  - Development
+  - Custom Application
 press:
   - text: |
       OddBird is high-caliber and nimble.

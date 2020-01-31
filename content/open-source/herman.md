@@ -79,7 +79,10 @@ and keep everything in one place.
 [Sass Accoutrement]: /accoutrement/
 
 
-{{ embed.figure(screenshots) }}
+{{ embed.figure(
+  screenshots,
+  'Document colors, icons, ratios, sizes, fonts, and components'
+) }}
 
 {{ embed.icon_block(
   collections.oss | findData('accoutrement_modules') | first,

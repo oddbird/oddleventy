@@ -10,13 +10,13 @@
 } if venue else none %}
 
 {% set sub = renderData.sub or sub %}
-{% set project_links = project and (project.source or project.docs) %}
+{% set project_links = project and (project.source or project.docs or project.url) %}
 
 {% set dates = utility.datetime(
   start=start or date or page.date,
   end=end,
   prefix=true
-) if bird else none %}
+) if bird and bird != 'oddbird' else none %}
 
 {% if sub or public_tags or linked or author or project_links or slides %}
   <div id="meta">
@@ -57,7 +57,7 @@
           </span>
         {% endif %}
       </p>
-    {% elif bird %}
+    {% elif social %}
       {{ contact.social(
         data=social,
         name=bird | capitalize
@@ -80,6 +80,9 @@
           <li>{{ utility.link_if('slides »', slides) }}</li>
         {% endif %}
 
+        {% if project and project.url %}
+          <li>{{ utility.link_if('site »', project.url) }}</li>
+        {% endif %}
         {% if project and project.source %}
           <li>{{ utility.link_if('source »', project.source) }}</li>
         {% endif %}

@@ -4,6 +4,10 @@ banner: About OddBird
 sub: Founded in 2008 by three odd siblings
 permalink: birds/index.html
 bird: oddbird
+social:
+  twitter: oddbird
+  github: oddbird
+  email: birds
 image:
   svg: faces/oddbird
 summary: |
@@ -23,11 +27,14 @@ summary: |
 
 {{ layout.title('Meet the birds') }}
 
-{% set style = {
-  '--media-content': 'var(--small-page)'
-} | styles %}
-
-{% call layout.grid(attrs={'style': style}) %}
+{% call layout.grid(
+  attrs={
+    'style': {
+      '--fit-min': 'var(--min-page)',
+      '--media-content': 'var(--small-page)'
+    } | styles
+  }
+) %}
   {% for bird in collections.birds | active %}
     {% call embed.media_block(
       media=embed.svg('faces/' + bird.data.bird),
