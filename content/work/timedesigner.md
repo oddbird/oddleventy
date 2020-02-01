@@ -1,12 +1,12 @@
 ---
-title: Tegy Time
-banner: Tegy Time Case Study
+title: TimeDesigner
 sub: Whole-School Design Thinking & Scheduling
 logo: tegy
-client:
-  name: &client Sensible Innovation
-  url: https://www.sensibleinnovation.com/
+client: &client Tegy
 date: 2018-07-15
+image:
+  src: projects/tegy/desktop.jpg
+  alt: School schedule grid
 people:
   - &furman
     name: Furman Brown
@@ -15,7 +15,7 @@ people:
     venue: *client
 tags:
   - _post
-  - Case Study
+  - Client Work
   - Research & Concepting
   - Design
   - Development
@@ -77,7 +77,14 @@ press:
     <<: *furman
     slug: process
 summary: |
-  Whole-School Design Thinking
+  Tegy TimeDesigner helps school teams
+  easily create multiple scheduling scenarios
+  from various perspectives,
+  and plan ahead for future iterations.
+  Currently the software is only available to schools in
+  Tegy training programs.
 ---
 
+{% import 'quotes.macros.njk' as quotes %}
 
+{{ quotes.grid(press | items(0, 2) ) }}

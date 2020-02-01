@@ -6,9 +6,7 @@ logo: salesforce
 url: https://install.salesforce.org/
 image:
   src: projects/metadeploy.jpg
-client:
-  name: &client Salesforce.org
-  url: https://salesforce.org
+client: &client Salesforce.org
 date: 2019-05-15
 people:
   - &jason
@@ -19,11 +17,13 @@ people:
 tags:
   - _post
   - Case Study
+  - Client Work
   - Research & Concepting
   - Design
   - Development
   - Custom Application
   - React
+  - Salesforce.org
 tasks:
   - User Experience Design
   - Project Architecture

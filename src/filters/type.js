@@ -1,5 +1,6 @@
 'use strict';
 
+const removeMd = require('remove-markdown');
 const type = require('typogr');
 const mdown = require('markdown-it')({
   html: true,
@@ -68,4 +69,5 @@ module.exports = {
   typogr,
   md,
   mdInline,
+  removeMd,
 };

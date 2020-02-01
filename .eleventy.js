@@ -70,8 +70,6 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('pageIsPublic', pages.isPublic);
   eleventyConfig.addFilter('pageIsCurrent', pages.isCurrent);
-  eleventyConfig.addFilter('meta', pages.meta);
-  eleventyConfig.addFilter('meta', pages.meta);
   eleventyConfig.addFilter('getPage', pages.fromCollection);
   eleventyConfig.addFilter('pageData', pages.pageData);
   eleventyConfig.addFilter('findData', pages.findData);
@@ -86,6 +84,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('typogr', type.typogr);
   eleventyConfig.addFilter('md', type.md);
   eleventyConfig.addFilter('mdInline', type.mdInline);
+  eleventyConfig.addFilter('removeMd', type.removeMd);
 
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.md);

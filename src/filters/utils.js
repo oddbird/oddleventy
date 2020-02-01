@@ -165,20 +165,8 @@ const styles = (dict) => {
 
 // Not currently available as filters…
 // -----------------------------------
-// Slugify & groupBy already have built-in filters,
+// groupBy already has built-in filters,
 // but we need a JS version as well…
-
-const slugify = (text) =>
-  text && typeof text === 'string'
-    ? text
-        .toString()
-        .toLowerCase()
-        .replace(/\s+/g, '-') // Replace spaces with -
-        .replace(/[^\w-]+/g, '') // Remove all non-word chars
-        .replace(/--+/g, '-') // Replace multiple - with single -
-        .replace(/^-+/, '') // Trim - from start of text
-        .replace(/-+$/, '') // Trim - from end of text
-    : text;
 
 const groupBy = (objectArray, property) =>
   objectArray.reduce((acc, obj) => {
@@ -198,7 +186,6 @@ const unique = (array) =>
 module.exports = {
   groupBy,
   typeCheck,
-  slugify,
   unique,
   items,
   get,

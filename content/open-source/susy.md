@@ -3,6 +3,7 @@ title: Susy
 sub: CSS layout framework
 date: 2009-07-13
 end: ongoing
+logo: susy
 image:
   type: media
   svg: logos/susy-mark
@@ -10,8 +11,13 @@ author:
   - miriam
   - oddbird
 oss: owner
+tags:
+  - _post
+  - Open Source
+  - OddTools
+  - Sass
+  - Layout
 project:
-  logo: susy
   source: https://github.com/oddbird/susy
   docs: /susy/docs/
   status: public

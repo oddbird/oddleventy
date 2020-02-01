@@ -1,7 +1,7 @@
 ---
 title: Work
 banner: Work Samples
-index: Case Study
+index: Client Work
 index_title: Client Work
 summary: |
   **We love what we do**, we do great work,

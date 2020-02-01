@@ -12,20 +12,23 @@
     </div>
   {% endif %}
 
-  {% set resources = collections[index] if index else none %}
+  {% set show = renderData.index or index %}
+  {% set resources = collections[show] if show else none %}
   {% set resources = collections._post | byBird(bird) if bird and (bird != 'oddbird') else resources %}
   {% if resources %}
-    {% set list_title = index | displayName if index else none %}
+    {% set list_title = show | displayName if show else none %}
     {% set list_title = bird + "'s" if bird else list_title %}
-    {% set list_title = list_title | capitalize + ' Resources' if list_title else none %}
+    {% set list_title = list_title + ' Resources' if list_title else none %}
 
     {{ layout.title(index_title or list_title) }}
     <ul>
-      {% for item in resources %}
+      {% for item in resources | sort(true, false, 'date') %}
+        {% set item_title = item.data.renderData.title or item.data.title %}
+        {% set item_banner = item.data.renderData.banner or item.data.banner or item_title %}
         <li>
           [{{ item.date | getDate('iso') }}]
           {{ utility.link_if(
-            item.data.banner or item.data.title,
+            item_banner,
             item.url
           ) }}
         </li>

@@ -6,17 +6,17 @@ url: http://quarqnet.com
 logo: sram
 image:
   src: projects/qasper.jpg
-client:
-  name: SRAM
-  url: http://sram.com/
+client: SRAM/Quarq
 date: 2016-12-15
 tags:
   - _post
   - Case Study
+  - Client Work
   - Research & Concepting
   - Design
   - Development
   - Custom Application
+  - SRAM/Quarq
 quotes:
   - text: |
       A mobile-friendly design that will let users see the live tracking

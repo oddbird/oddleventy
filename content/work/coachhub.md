@@ -6,9 +6,7 @@ logo: orcas
 image:
   src: projects/coachhub.jpg
   position: top
-client:
-  name: &client ORCAS
-  url: http://orcasinc.com
+client: &client ORCAS
 people:
   - &sara
     name: Sara Taillon
@@ -23,6 +21,7 @@ project:
 tags:
   - _post
   - Case Study
+  - Client Work
   - Research & Concepting
   - Branding
   - Design

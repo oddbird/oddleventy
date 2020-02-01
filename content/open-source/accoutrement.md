@@ -11,6 +11,13 @@ project:
   status: public
 index: Accoutrement
 oss: owner
+tags:
+  - _post
+  - Open Source
+  - OddTools
+  - Sass
+  - Design Systems
+  - Documentation
 author:
   - miriam
   - oddbird

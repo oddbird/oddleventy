@@ -6,14 +6,14 @@
 <meta property="fb:app_id" content="{{ config.facebook_id }}" />
 <meta property="og:locale" content="{{ open_graph.locale }}" />
 <meta property="og:type" content="{{ og.type or open_graph.type }}" />
-<meta property="og:title" content="{{ og.title or meta.title }}" />
+<meta property="og:title" content="{{ og.title or title }}" />
 <meta property="og:image" content="{{ og_image }}" />
-<meta property="og:description" content="{{ meta.description }}" />
-<meta property="og:url" content="{{ meta.canonical }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta property="og:url" content="{{ canonical }}" />
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta name="twitter:card" content="{{ og.twitter or 'summary' }}" />
-<meta name="twitter:title" content="{{ meta.title }}" />
-<meta name="twitter:description" content="{{ meta.description }}" />
+<meta name="twitter:title" content="{{ title }}" />
+<meta name="twitter:description" content="{{ description }}" />
 <meta name="twitter:image" content="{{ og_image }}" />
 <meta name="twitter:domain" content="{{ site.url }}" />
 <meta name="twitter:site" content="{{ open_graph.site }}" />

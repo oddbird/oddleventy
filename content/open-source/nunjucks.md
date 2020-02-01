@@ -6,6 +6,10 @@ image:
 oss: maintainer
 date: 2015-09-01
 end: 2016-09-02
+tags:
+  - _post
+  - Open Source
+  - Mozilla
 project:
   url: http://mozilla.github.io/nunjucks/
   source: https://github.com/mozilla/nunjucks/

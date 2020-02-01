@@ -1,11 +1,9 @@
 ---
 title: MedCurbside
-banner: MedCurbside Case Study
 sub: Knowledge-sharing for clinical physicians
 image:
   src: projects/medcurbside.jpg
-client:
-  name: &client Lab06
+client: &client Lab06
 date: 2017-12-15
 project:
   url: https://www.medcurbside.com/
@@ -19,6 +17,7 @@ people:
 tags:
   - _post
   - Case Study
+  - Client Work
   - Research & Concepting
   - Branding
   - Design

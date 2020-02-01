@@ -1,9 +1,5 @@
 'use strict';
 
-const path = require('path');
-
-const removeMd = require('remove-markdown');
-
 const { just, get, getJust } = require('./utils');
 const { now, getDate } = require('./time');
 
@@ -144,40 +140,6 @@ const withData = (collection, attrs, value, first = false) => {
   return pages && first ? pages[0] : pages;
 };
 
-/* @docs
-label: meta
-category: Data
-note: Collate metadate for the page from various sources
-params:
-  collection:
-    type: array of pages
-  page:
-    type: url | page
-  renderData:
-    type: object
-    note: Current page only
-  site:
-    type: object
-    note: From `_data/site.json`
-*/
-const meta = (collection, page, renderData, site) => {
-  page = fromCollection(collection, page.url) || page;
-  renderData = renderData || {};
-  const data = page.data || {};
-
-  data.title = renderData.title || data.title || page.fileSlug || '';
-  data.banner = renderData.banner || data.banner || data.title;
-  data.description = removeMd(
-    renderData.sub || data.sub || data.summary || site.description,
-  );
-  data.index = renderData.index || data.index;
-
-  const local = page.url ? path.join(site.url, page.url) : null;
-  data.canonical = data.canonical || local;
-
-  return data;
-};
-
 module.exports = {
   isPublic,
   isCurrent,
@@ -187,5 +149,4 @@ module.exports = {
   pageData,
   pageContent,
   withData,
-  meta,
 };

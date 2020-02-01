@@ -1,7 +1,9 @@
 'use strict';
 
+const slugify = require('slugify');
+
 const { withData } = require('./pages');
-const { unique, slugify } = require('./utils');
+const { unique } = require('./utils');
 
 /* @docs
 label: Tag Filters

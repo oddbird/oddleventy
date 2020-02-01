@@ -195,11 +195,17 @@ params:
       without the path or `.svg` extension.
 #}
 {% macro logos(
-  projects
+  projects,
+  collection
 ) %}
 <div class="logo-grid">
   {%- for project in projects -%}
-    {{- svg('logos/' + project) | safe -}}
+    {%- set page = collection | getPage(project) if collection else none -%}
+    {%- set logo = page.data.logo if page else project -%}
+    {{ utility.link_if(
+      content=svg('logos/' + logo),
+      url=page.url if page else none
+    ) }}
   {%- endfor -%}
 </div>
 {% endmacro %}

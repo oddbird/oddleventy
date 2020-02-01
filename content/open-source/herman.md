@@ -9,6 +9,13 @@ date: 2015-11-08
 end: ongoing
 index: Herman
 oss: owner
+tags:
+  - _post
+  - Open Source
+  - OddTools
+  - Sass
+  - Design Systems
+  - Documentation
 screenshots:
   - img: herman/screenshots/sq-colors.jpg
     alt: Color Palettes

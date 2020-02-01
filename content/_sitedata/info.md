@@ -1,5 +1,6 @@
 ---
 templateEngineOverride: njk
+title: site info
 history: |
   Established in 2008 by three odd siblings.
   [Code of Conduct](/conduct/).

@@ -2,6 +2,7 @@
 title: Color Theory for Coders
 sub: from Natalya Shelburne
 author: sondra
+date: 2017-02-20
 tags:
   - _post
   - Tips
@@ -19,7 +20,6 @@ summary: |
 action:
   text: Color Theory Demo
   url: http://tallys.github.io/color-theory/
-date: 2017-02-20
 ---
 
 So you write code, but design intrigues you and you'd like to delve

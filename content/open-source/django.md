@@ -7,6 +7,10 @@ image:
   src: projects/django.jpg
 oss: core
 logo: django
+tags:
+  - _post
+  - Open Source
+  - Python
 project:
   url: https://www.djangoproject.com/
   docs: https://docs.djangoproject.com/

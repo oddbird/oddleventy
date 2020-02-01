@@ -5,6 +5,10 @@ oss: core
 author: miriam
 date: 2010-04-09
 end: 2016-08-04
+tags:
+  - _post
+  - Open Source
+  - Sass
 project:
   url: http://compass-style.org
   source: http://github.com/compass/compass

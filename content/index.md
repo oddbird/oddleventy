@@ -21,10 +21,20 @@ action:
   text: Start a conversation »
   url: /contact/
 work:
-  ch: /work/coachhub/
-  mc: /work/medcurbside/
-  td: /work/timedesigner/
-  md: /work/metadeploy/
+  - /work/coachhub/
+  - /work/moztrap/
+  - /work/quarqrace/
+  - /work/metadeploy/
+  - /work/timedesigner/
+  - /work/phamaly/
+  - /work/cfoshare/
+tools:
+  - /django/
+  - /sass/
+  - /css-remedy/
+  - /susy/
+  - /herman/
+  - /true/
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
@@ -33,15 +43,7 @@ work:
 
 {{ layout.title('Featured Clients') }}
 
-{{ embed.logos([
-  'orcas',
-  'mozilla',
-  'sram',
-  'salesforce',
-  'tegy',
-  'phamaly',
-  'cfoshare'
-]) }}
+{{ embed.logos(work, collections.all) }}
 
 {{ quotes.grid([
   collections.all | findData('press', {'slug': 'extension'}),
@@ -50,14 +52,7 @@ work:
 
 {{ layout.title('Developer Tools') }}
 
-{{ embed.logos([
-  'django',
-  'sass',
-  'remedy',
-  'susy',
-  'herman',
-  'true'
-]) }}
+{{ embed.logos(tools, collections.all) }}
 
 {% call embed.media_block(
   media=embed.img(

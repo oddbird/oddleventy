@@ -3,14 +3,20 @@ title: 'True'
 sub: Unit-testing for Sass developers
 date: 2013-06-06
 end: ongoing
+logo: 'true'
 image:
   src: projects/true.jpg
 author:
   - miriam
   - oddbird
 oss: owner
+tags:
+  - _post
+  - Open Source
+  - OddTools
+  - Sass
+  - Testing
 project:
-  logo: 'true'
   source: https://github.com/oddbird/true
   docs: /true/docs/
   status: public

@@ -4,19 +4,25 @@
   data-ccs="root"
   data-ccs-theme="{{ ccs.themes | first }}"
   data-ccs-colors>
-  {% set meta = collections.all | meta(page, renderData, site) %}
   <head>
     <meta charset="utf-8" />
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0" />
 
-    <title>{{ [meta.title, site.title] | join(' | ') }}</title>
-    <meta name="description"
-      content="{{ meta.description }}" />
+    {% set title = renderData.title or title %}
+    {% set banner = renderData.banner or banner or title %}
+    {% set sub = renderData.sub or sub %}
+    {% set index = renderData.index or index %}
+    {% set description = (sub or summary or site.description) | removeMd %}
+    {% set canonical = canonical or (site.url + page.url) %}
 
-    {% if meta.canonical %}
+    <title>{{ [title, site.title] | join(' | ') }}</title>
+    <meta name="description"
+      content="{{ description }}" />
+
+    {% if canonical %}
       <link rel="canonical"
-        href="{{ meta.canonical | url }}">
+        href="{{ canonical | url }}">
     {% endif %}
 
     {% for url in site.styles %}
