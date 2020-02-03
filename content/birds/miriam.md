@@ -44,19 +44,3 @@ writing, music, and visual art.
 [jss]: https://www.sitepoint.com/premium/books/jump-start-sass
 [speaking]: /services/speaking/
 [dev]: https://blog.cssdevconf.com/slides-and-resources-from-css-dev-conf-2017-new-orleans-8e2a5edb06b0#2b07
-
-------
-
-## Open Source
-
-{% for item in collections.oss | byBird(bird) -%}
-- [{{ item.data.title }}]({{ item.url }})
-{% endfor %}
-
-------
-
-## Speaking
-
-{% for item in collections.Speaking | byBird(bird) %}
-- [{{ item.data.title }}]({{ item.url }})
-{% endfor %}

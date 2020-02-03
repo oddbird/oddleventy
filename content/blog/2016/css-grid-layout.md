@@ -21,6 +21,8 @@ after:
     id: css-grid-layout
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 I couldn’t be more excited about CSS grid layout. For far too many years
 we’ve been dealing with CSS solutions that were never made for the
 layouts we have been creating. Working with tables then floats and
@@ -32,20 +34,24 @@ browsers.
 In the meantime, Flexbox has been a great addition to our CSS Toolbox,
 giving us a way to lay content out easier than before. Remember when
 vertical centering used to be a huge ordeal? There are a number of
-issues that are [“Solved by Flexbox,”] but it is still not a complete
+issues that are “[Solved by Flexbox],” but it is still not a complete
 grid solution.
 
 If you haven’t used Flexbox yet, I highly suggest studying this CodePen
 demo:
 
-<p data-height="688" data-theme-id="21914" data-slug-hash="adLPwv" data-default-tab="result" data-user="enxaneta" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/enxaneta/pen/adLPwv/">Flexbox playground</a> by Gabi (<a href="http://codepen.io/enxaneta">@enxaneta</a>) on <a href="http://codepen.io">CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+{{ embed.codepen(
+  id='adLPwv',
+  title='Flexbox playground',
+  user='enxaneta'
+) }}
 
 Flexbox is great for single direction elements but lacks the ability to
 create structure on both x and y axis’. A container with <span
 class="title-ref">display: flex;</span> can either go horizontally or
 vertically as selected by the flex-direction property.
 
-[“Solved by Flexbox,”]: https://philipwalton.github.io/solved-by-flexbox/
+[Solved by Flexbox]: https://philipwalton.github.io/solved-by-flexbox/
 
 ## CSS Grid Layout to the Rescue
 
@@ -72,42 +78,39 @@ code.
 Currently, Feature Queries are supported in most browsers except
 Internet Explorer and Opera Mini:
 
-[<img src="{{ site.images }}blog/feature-queries.jpg" class="align-center align-center" alt="Feature Queries support in browsers looks good" />]
-
-[<img src="{{ site.images }}blog/feature-queries.jpg" class="align-center align-center" alt="Feature Queries support in browsers looks good" />]:
-  http://caniuse.com/#feat=css-featurequeries
+[{{ embed.img(
+  src='blog/feature-queries.jpg',
+  alt='Feature Queries support in browsers looks good',
+  attrs={
+    'class': 'align-center',
+    'width': '1980',
+    'height': '1288'
+  }
+) }}](http://caniuse.com/#feat=css-featurequeries)
 
 ### Grid Introduces New Vocabulary
 
 **Grid line**
 The lines that create the grid, separating the grid cells.
 
-<svg data-icon="grid-line" data-size="chart">
-  <use xlink:href="#icon-grid-line"></use>
-</svg>
+{{ embed.svg('svg/grid/line') }}
 
 **Grid track**
 The horizontal or vertical space between two grid lines, often spanning
 multiple grid cells.
 
-<svg data-icon="grid-track" data-size="chart">
-  <use xlink:href="#icon-grid-track"></use>
-</svg>
+{{ embed.svg('svg/grid/track') }}
 
 **Grid cell**
 A single unit of the grid made from the space between four grid lines.
 
-<svg data-icon="grid-cell" data-size="chart">
-  <use xlink:href="#icon-grid-cell"></use>
-</svg>
+{{ embed.svg('svg/grid/cell') }}
 
 **Grid area**
 A group of space between four grid lines, often containing a group of
 grid cells. Grid areas can be named in CSS.
 
-<svg data-icon="grid-area" data-size="chart">
-  <use xlink:href="#icon-grid-area"></use>
-</svg>
+{{ embed.svg('svg/grid/area') }}
 
 ### Grid-specific CSS Properties
 
@@ -152,7 +155,12 @@ I’ve been creating a few demos in CodePen using Grid and it has been
 exciting to see the flexibility we will have once this rolls out. I
 encourage you to start experimenting on your own as well.
 
-<p data-height="568" data-theme-id="21914" data-slug-hash="rLyErg" data-default-tab="result" data-user="stacy" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/rLyErg/">CSS Grid Layout Demo</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+{{ embed.codepen(
+  id='rLyErg',
+  title='CSS Grid Layout Demo',
+  user='stacy',
+  height=568
+) }}
 
 In the CodePen demo below, you'll see we start with floats then wrap
 everything else in `@supports ( display: flex ) {}` or
@@ -160,7 +168,12 @@ everything else in `@supports ( display: flex ) {}` or
 we over-write the float, max-width, and clearing properties we defined
 for the older browsers.
 
-<p data-height="642" data-theme-id="21914" data-slug-hash="vXBvNE" data-default-tab="css,result" data-user="stacy" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/vXBvNE/">CSS Grid Layout with float and flexbox fallbacks</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+{{ embed.codepen(
+  id='vXBvNE',
+  title='CSS Grid Layout with float and flexbox fallbacks',
+  user='stacy',
+  height=568
+) }}
 
 What types of layouts can we create with this more flexible system? I
 would love for some very experimental design to start taking place. I
@@ -216,6 +229,9 @@ demonstrating the *how*, *why* and *what* is possible when it comes to
 CSS Grid Layout. If you have any resources to share with us, we'd love
 to hear from you, too!
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/QsjXSU2pflg" frameborder="0" allowfullscreen></iframe>
-<iframe src="https://player.vimeo.com/video/160593669?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<iframe allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" src="https://fast.wistia.com/embed/iframe/n8q1rasfdb" width="640" height="468"></iframe>
+{{ embed.video_figure(
+  src='https://player.vimeo.com/video/160593669',
+  height=360,
+  width=640,
+  caption='Taking Layout to the Next Level, by Chrisopher Wright'
+) }}

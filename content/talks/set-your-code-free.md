@@ -1,6 +1,10 @@
 ---
 title: Set Your Code Free
 author: carl
+tags:
+  - _post
+  - Talks
+  - Python
 events:
   - venue: PyCon
     url: https://us.pycon.org/2014/
@@ -21,11 +25,11 @@ There are a lot of things to think about when releasing code to the
 world, if you want others to be able to use it and contribute back.
 We'll cover:
 
--   The structure of an open-source Python project
--   Choosing a license
--   Documentation with Sphinx and ReadTheDocs
--   Multi-version testing with Tox, coverage measurement with
-    coverage.py, and continuous integration with TravisCI
--   Writing a setup.py and releasing to PyPI
--   Semantic versioning
--   Helping people contribute to your project
+- The structure of an open-source Python project
+- Choosing a license
+- Documentation with Sphinx and ReadTheDocs
+- Multi-version testing with Tox, coverage measurement with
+  coverage.py, and continuous integration with TravisCI
+- Writing a setup.py and releasing to PyPI
+- Semantic versioning
+- Helping people contribute to your project

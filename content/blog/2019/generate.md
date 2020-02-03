@@ -8,7 +8,6 @@ tags:
   - Conferences
   - Code
   - CSS
-  - Workshop
 image:
   src: blog/2019/houdini-bunny.jpg
 summary: |

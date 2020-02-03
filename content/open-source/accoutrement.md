@@ -71,6 +71,13 @@ accoutrement_modules:
       import them all with a single command,
       and access font-stacks on-the-fly,
       with utilities for generated content and accessibility.
+badges:
+  - name: npm
+    src: https://badge.fury.io/js/accoutrement.svg
+    url: https://www.npmjs.com/package/accoutrement
+  - name: build
+    src: https://travis-ci.org/oddbird/accoutrement.svg
+    url: https://travis-ci.org/oddbird/accoutrement
 summary: |
   OddBird's Accoutrement tools (now a single package)
   help keep design tokens meaningful to both humans and machines --
@@ -79,35 +86,22 @@ summary: |
   our automated pattern-library generator.
 ---
 
-content.macros.j2\#divider
-
-content.macros.j2\#rst
+{% import 'embed.macros.njk' as embed %}
 
 ## All your patterns in one place
-
-[!['npm package']]
-
-[!['build status']]
 
 By storing all our design tokens and patterns in Sass maps, we can
 improve both organization and automation – making our design systems
 meaningful to both developers and the Sass language.
 
-    # npm
-    npm install accoutrement
+```bash
+# npm
+npm install accoutrement
 
-    # yarn
-    yarn add accoutrement
+# yarn
+yarn add accoutrement
+```
 
-content.macros.j2\#link\_button
+------
 
-Get started
-
-content.macros.j2\#divider
-
-content.macros.j2\#icon\_block
-
-  ['npm package']: https://badge.fury.io/js/accoutrement.svg
-  [!['npm package']]: https://www.npmjs.com/package/accoutrement
-  ['build status']: https://api.travis-ci.org/oddbird/accoutrement.svg
-  [!['build status']]: https://travis-ci.org/oddbird/accoutrement
+{{ embed.icon_block(accoutrement_modules, 'Modules') }}

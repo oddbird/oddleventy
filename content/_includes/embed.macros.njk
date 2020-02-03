@@ -90,6 +90,23 @@ params:
 {%- endmacro %}
 
 
+{% macro video_figure(
+  src,
+  height=none,
+  width=none,
+  caption=none
+) %}
+  {{ figure(
+    data=[{
+      'iframe': src,
+      'height': height,
+      'width': width
+    }],
+    caption=caption
+  ) }}
+{% endmacro %}
+
+
 {# Private macro used to generate figure content from data #}
 {% macro _fig_content(
   data
@@ -395,3 +412,69 @@ params:
     {{- content | safe -}}
   {%- endif -%}
 {%- endmacro %}
+
+{# @docs
+label: codepen
+category: Patterns
+note: Embed a demo from codepen
+links:
+  - '[Codepen docs](https://blog.codepen.io/documentation/features/embedded-pens/)'
+params:
+  id:
+    type: string
+    note: The "slug hash" of the desired pen
+  title:
+    type: string
+    note: Used in the default fallback link
+  user:
+    type: string
+    note: The codepen username, eg 'mirisuzanne'
+  tab:
+    type: string
+    default: 'result'
+    note: The tabs to have open by default, eg 'html' or 'html,css,result'
+  height:
+    type: number | '100%'
+    default: 500
+    note: The pixel-height of the embed, or '100%' to fit a sized container
+  theme:
+    type: string | 'light' | 'dark'
+    default: none
+    note: The embed-frame theme (not the code theme)
+  preview:
+    type: boolean
+    default: none
+    note: Set `true` to keep the pen from auto-running
+  attrs:
+    type: array
+    default: '{}'
+#}
+{% macro codepen(
+  id,
+  title,
+  user,
+  tab='result',
+  height=500,
+  theme=none,
+  preview=none,
+  attrs={}
+) %}
+<p {{ utility.show_attrs({
+  'data-height': height,
+  'data-theme-id': theme,
+  'data-slug-hash': id,
+  'data-default-tab': tab,
+  'data-user': user,
+  'data-embed-version': "2",
+  "data-preview": preview
+}) }} {{ utility.show_attrs(attrs) }}>See the Pen {{ utility.link_if(
+  content=title,
+  url=('http://codepen.io/' + user + '/pen/' + id)
+) }} by {{ utility.link_if(
+  content='@' + user,
+  url='http://codepen.io/' + user
+) }} on {{ utility.link_if(
+  content='CodePen',
+  url='http://codepen.io'
+) }}.</p><script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+{% endmacro %}

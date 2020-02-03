@@ -6,7 +6,6 @@ author: miriam
 date: 2017-01-23
 tags:
   - _post
-  - Speaking
   - Talks
   - Code
   - Art

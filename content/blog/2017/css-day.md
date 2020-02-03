@@ -16,6 +16,8 @@ summary: |
   advanced CSS topics.
 ---
 
+{% import "embed.macros.njk" as embed %}
+
 [CSS Day 2016] covered a wide range of topics for a one day conference
 including SVG, animation, color theory, design, layout and more.
 Throughout the day, a focus on code architecture was a theme. Attendees
@@ -39,7 +41,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Color Theory for people who code SVG and CSS by [Natalya Shelburne]
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/aq3u001QMcM?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
+{{ embed.video_figure('https://www.youtube.com/embed/aq3u001QMcM') }}
 
 - [Slides](https://docs.google.com/presentation/d/1ytSMRNpNrD9CWms351X4xelQuJT24tIqKnIzSbe2OQ0/edit?usp=sharing)
 
@@ -47,7 +49,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Applying the principles of functional programming to CSS by [Ben Adam]
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/7g0BHu0kWXo?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
+{{ embed.video_figure('https://www.youtube.com/embed/7g0BHu0kWXo') }}
 
 - [Slides](http://css-day.surge.sh/#/?_k=xpchzn)
 
@@ -55,7 +57,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Code Patterns for Pattern Making by [Miriam Suzanne]
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/lK_akjzOUY0?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
+{{ embed.video_figure('https://www.youtube.com/embed/lK_akjzOUY0') }}
 
 - [Slides](https://oddbooksapp.com/book/pattern-making)
 
@@ -63,7 +65,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## The In-Betweeners of Responsive Web Design by [Pralie Dutzel]
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/WLAVc18Ugoc?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
+{{ embed.video_figure('https://www.youtube.com/embed/WLAVc18Ugoc') }}
 
 - [Slides](http://praliedutzel.com/talks/betweeners-responsive-web-design/)
 
@@ -71,13 +73,13 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Style Guide-Driven Development: Documentation that Does Work by [Jan Jorgensen]
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/9Fknadsepd4?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
+{{ embed.video_figure('https://www.youtube.com/embed/9Fknadsepd4') }}
 
 [Jan Jorgensen]: https://twitter.com/ramblinjan
 
 ## The Great State of Design by [Stacy Kvernmo]
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/pnbT4HdcSwM?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
+{{ embed.video_figure('https://www.youtube.com/embed/pnbT4HdcSwM') }}
 
 - [Slides](http://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends)
 
@@ -96,7 +98,7 @@ jQuery to CSS for web and mobile applications.
 
 ## Solving CSS at scale with your own UI framework by [CJ Cenizal]
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/CbPYf9FslXw?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
+{{ embed.video_figure('https://www.youtube.com/embed/CbPYf9FslXw') }}
 
 - [Slides](http://cenizal.com/projects/solving_css_at_scale/)
 

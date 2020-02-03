@@ -1,6 +1,11 @@
 ---
 title: Python Testing Tools
 author: carl
+tags:
+  - _post
+  - Talks
+  - Python
+  - Testing
 events:
   - venue: ConFoo
     url: http://confoo.ca/

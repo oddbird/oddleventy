@@ -2,6 +2,11 @@
 title: No Pain No Gain; CSS Code Reviews
 author: stacy
 slides: http://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw
+tags:
+  - _post
+  - Talks
+  - Process
+  - CSS
 events:
   - venue: SassConf 2015
     url: http://sassconf.com

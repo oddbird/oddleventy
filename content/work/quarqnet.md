@@ -1,6 +1,6 @@
 ---
 title: QuarqNet
-banner: QuarqNet Case Study
+banner: QuarqNet Application
 sub: Real-time telemetry for athletes
 url: http://quarqnet.com
 logo: sram
@@ -17,12 +17,13 @@ tags:
   - Development
   - Custom Application
   - SRAM/Quarq
-quotes:
+press:
   - text: |
       A mobile-friendly design that will let users see the live tracking
       and performance data, even on the go, making it easy to connect up
       with others while out on a ride.
     name: BikeRumor
+    face: bike-rumor.jpg
     url: https://www.bikerumor.com/2016/09/28/share-ride-real-time-quarq-qollector/
     slug: mobile
   - text: |
@@ -32,6 +33,7 @@ quotes:
       Athletes get unaltered, high-definition data
       and training log perfection.
     name: AeroGeeks
+    face: aero-geeks.jpg
     url: http://aerogeeks.com/2016/10/09/10-9-2016-wir-the-kona-edition/
     slug: data
 tasks:
@@ -41,24 +43,42 @@ tasks:
   - Responsive Styles
 planning:
   - title: User Profiles
-    icon: users
-    text: "Together, we identified three distinct users \u2013\nathletes, coaches,\
-      \ and friends/family.\nEach type of user\nwanted to use QuarqNet\nin unique\
-      \ ways.\nAthletes, the primary users,\nmight use the app\nto track routes and\
-      \ stats\nin real time,\nconnect with other athletes,\nor share stats on third-party\
-      \ sites.\nA friend may want to\ncheck an athlete's location\nto meet up for\
-      \ an activity,\nand a coach may want to\ntrack an athlete's progress over time.\n"
+    icon: icons/users
+    text: |
+      Together, we identified three distinct users --
+      athletes, coaches, and friends/family.
+      Each type of user
+      wanted to use QuarqNet
+      in unique ways.
+      Athletes, the primary users,
+      might use the app
+      to track routes and stats
+      in real time,
+      connect with other athletes,
+      or share stats on third-party sites.
+      A friend may want to
+      check an athlete's location
+      to meet up for an activity,
+      and a coach may want to
+      track an athlete's progress over time.
   - title: User Stories
-    icon: theater
-    text: "We created an itemized list of user stories \u2013\na representation of\
-      \ all the user interactions.\nEach user story defined one task\nthat an athlete,\
-      \ coach, or friend\nmight want to accomplish on QuarqNet.\nBefore beginning\
-      \ development,\nwe estimated the user stories,\nand Quarq prioritized them.\n\
-      The process of\ncreating, estimating, and prioritizing user stories\ncontinued\
-      \ throughout the project,\nallowing Quarq to remain up-to-date\nand in control\
-      \ of the project cost and scope.\n"
+    icon: icons/theater
+    text: |
+      We created an itemized list of user stories --
+      a representation of all the user interactions.
+      Each user story defined one task
+      that an athlete, coach, or friend
+      might want to accomplish on QuarqNet.
+      Before beginning development,
+      we estimated the user stories,
+      and Quarq prioritized them.
+      The process of
+      creating, estimating, and prioritizing user stories
+      continued throughout the project,
+      allowing Quarq to remain up-to-date
+      and in control of the project cost and scope.
   - title: Data Models
-    icon: site-map
+    icon: icons/site-map
     text: |
       The data model provides a sense
       of back-end database structure
@@ -81,9 +101,10 @@ summary: |
   Peaks, Dropbox, and Today's Plan.
 ---
 
-content.macros.j2\#get\_quotes
+{% import 'quotes.macros.njk' as quotes %}
+{% import 'embed.macros.njk' as embed %}
 
-content.macros.j2\#rst
+{{ quotes.grid(press) }}
 
 ## What They Needed
 
@@ -97,14 +118,10 @@ Qollector, Quarq's wearable, activity-tracking hardware. The QuarqNet
 brand also matches [Quarq Race Intelligence], another Quarq web
 application OddBird had the privilege to design and develop.
 
-content.macros.j2\#rst
+[Quarq]: https://www.quarq.com
+[Quarq Race Intelligence]: https://www.quarqrace.com/
 
-content.macros.j2\#icon\_block
-
-content.macros.j2\#rst
-
-  [Quarq]: https://www.quarq.com
-  [Quarq Race Intelligence]: https://www.quarqrace.com/
+{{ embed.icon_block(planning, 'Planning & Discovery Phase') }}
 
 ## UX Design & Development Process
 
@@ -122,9 +139,9 @@ These colors were communicated via Pivotal Tracker and coded as Sass
 Maps to establish front-end development patterns as well as an automated
 "living" [style guide].
 
-<img src="/static/images/work/quarqnet/communication.jpg" class="extend-large extend-large" alt="user story in Pivotal Tracker and Sass color maps" />
+<img src="{{ site.images }}work/quarqnet/communication.jpg" class="extend-large extend-large" alt="user story in Pivotal Tracker and Sass color maps" />
 
-  [style guide]: http://quarqnet.com/styleguide/config-colors.html
+[style guide]: http://quarqnet.com/styleguide/config-colors.html
 
 ### User Story
 
@@ -135,7 +152,7 @@ athlete, I can view my activity (map & data).*
 
 ### Initial Sketches
 
-<img src="/static/images/work/quarqnet/activity.jpg" class="extend-left img-shadow extend-left img-shadow" alt="initial sketch of activity map and data" />
+<img src="{{ site.images }}work/quarqnet/activity.jpg" class="extend-left img-shadow extend-left img-shadow" alt="initial sketch of activity map and data" />
 
 Because of our focus on users, OddBird's development process for each
 user story begins with rough sketches showing the flow of a specific
@@ -156,7 +173,7 @@ scannable layout for the activity data. We don't linger too long on this
 step or attempt pixel perfection, as new UX problems nearly always
 present themselves during implementation.
 
-<img src="/static/images/work/quarqnet/mockup1.jpg" class="extend-large extend-large" alt="initial mockups of activity map and data" />
+<img src="{{ site.images }}work/quarqnet/mockup1.jpg" class="extend-large extend-large" alt="initial mockups of activity map and data" />
 
   [Adobe Xd]: http://www.adobe.com/products/experience-design.html
 
@@ -171,7 +188,7 @@ calls to demo, discuss, pair, and re-design features. For this user
 story we improved the dotted line, font size, and spacing of the
 activity data within the browser.
 
-<img src="/static/images/work/quarqnet/implementation.jpg" class="extend-large extend-large" alt="initial implementation of activity map and data" />
+<img src="{{ site.images }}work/quarqnet/implementation.jpg" class="extend-large extend-large" alt="initial implementation of activity map and data" />
 
 ## Iteration Process
 
@@ -200,7 +217,7 @@ Back to the sketch pad. The new proposal? Clarify wording, add a
 collapsed view, make the tabs more compact, and move navigation to the
 bottom of the activity box.
 
-<img src="/static/images/work/quarqnet/compact.jpg" class="extend-full extend-full" alt="sketch of new, compact navigation" />
+<img src="{{ site.images }}work/quarqnet/compact.jpg" class="extend-full extend-full" alt="sketch of new, compact navigation" />
 
 ### Interactive Sketch
 
@@ -210,24 +227,22 @@ mockup. The blue boxes below represent click targets and demonstrate the
 user flow between activity list, data, and collapsed views. Play with
 the interactive [InVision sketch].
 
-<img src="/static/images/work/quarqnet/interactive.jpg" class="extend-large extend-large" alt="interactive sketch of new, compact navigation" />
+<img src="{{ site.images }}work/quarqnet/interactive.jpg" class="extend-large extend-large" alt="interactive sketch of new, compact navigation" />
 
-  [InVision sketch]: https://invis.io/YC8PAW1K3#/191020362_Map_Only
+[InVision sketch]: https://invis.io/YC8PAW1K3#/191020362_Map_Only
 
 ### Hi-Fi Mockup
 
 A hi-fi mockup added further detail, defining colors, shadows, icons,
 and other visual clues to improve user comprehension of the new flow.
 
-<img src="/static/images/work/quarqnet/mockup3.jpg" class="extend-large img-shadow extend-large img-shadow" alt="mockup of new, compact navigation" />
+<img src="{{ site.images }}work/quarqnet/mockup3.jpg" class="extend-large img-shadow extend-large img-shadow" alt="mockup of new, compact navigation" />
 
 ### Implementation
 
 After minor design tweaks in the browser, we had our solution! View the
 current, live application at [QuarqNet.com].
 
-<img src="/static/images/work/quarqnet/implementation3.jpg" class="extend-large extend-large" alt="current, live application tab navigation" />
+<img src="{{ site.images }}work/quarqnet/implementation3.jpg" class="extend-large extend-large" alt="current, live application tab navigation" />
 
-content.macros.j2\#rst
-
-  [QuarqNet.com]: https://www.quarqnet.com/
+[QuarqNet.com]: https://www.quarqnet.com/

@@ -8,9 +8,9 @@ image:
 slides: https://sliiides.netlify.com/css-is-rad/
 tags:
   - _post
-  - Speaking
   - Talks
   - Code
+  - CSS
 events:
   - venue: Smashing Conf Austin
     url: https://smashingconf.com/austin-2020/

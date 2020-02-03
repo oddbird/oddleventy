@@ -1,6 +1,13 @@
 ---
-title: 'Reverse-engineering Ian Bicking''s brain: inside pip and virtualenv'
+title: Reverse-engineering Ian Bicking's brain
+sub: Inside `pip` and `virtualenv`
 author: carl
+tags:
+  - _post
+  - Talks
+  - Python
+  - Pip
+  - Virtualenv
 events:
   - venue: PyCon
     url: https://us.pycon.org/2011/

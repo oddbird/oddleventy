@@ -15,12 +15,22 @@ summary: |
 date: 2014-09-23
 ---
 
-<a href="https://supportada.org/?campaign=python"><img style="float: right;" src="/assets/images/blog/2014/Ada-Initiative-color-sticker-208x300.png"></a>
+{% import 'embed.macros.njk' as embed %}
 
-[Donate] to the [Ada Initiative] today to support women in open
+{{ embed.img(
+  src='blog/2014/Ada-Initiative-color-sticker-208x300.png',
+  alt='The Ada Initiative',
+  attrs={
+    'style': 'float: right;',
+    'width': '208',
+    'height': '300'
+  }
+) }}
+
+Donate to the [Ada Initiative] today to support women in open
 technology and culture. If we hit **\$10,000** by Friday, [Jacob] and
 [Alex] and [Jim Meyer] and I will match your donations to make it a nice
-round **\$20k**. Life is short, go [donate now][donate]!
+round **\$20k**. Life is short, go donate now!
 
 (**Update**: Shortly after we announced this drive, [Jim Meyer][]
 [pitched in] to raise the match amount from $7500 to $10,000! Awesome!)
@@ -40,9 +50,17 @@ Three years later, thanks to the incredible outreach efforts of Jessica
 McKellar, the amazing [PyLadies], the Ada Initiative, and many others,
 women gave a **full third** of the talks at PyCon 2014.
 
----
+------
 
-[<img src="/assets/images/blog/2014/miko.jpg" class="align-left size-quarter align-left size-quarter" alt="Miko smiling while playing outside" />][donate]
+{{ embed.img(
+  src='blog/2014/miko.jpg',
+  alt='Miko smiling while playing outside',
+  attrs={
+    'class': 'align-left size-quarter',
+    'width': '720',
+    'height': '960'
+  }
+) }}
 
 I have two sons, a seven-year-old and a four-month-old (yep, that's
 him). With the second just arrived, I think a lot these days about the
@@ -70,8 +88,13 @@ being welcoming to people who don't all look, talk, and act like me. I'm
 happy to be in the Python community (and humbled by all the hard work it
 took to get here) when I see this:
 
-<blockquote class="twitter-tweet" lang="en"><p>Hello from your <a href="https://twitter.com/pycon">@PyCon</a> Diversity Outreach Chair. % PyCon talks by women: (2011: 1%), (2012: 7%), (2013: 15%), (2014: 33%). Outreach works.</p>&mdash; Jessica McKellar (@jessicamckellar) <a href="https://twitter.com/jessicamckellar/status/413009020522221568">December 17, 2013</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+> Hello from your [@PyCon](https://twitter.com/pycon)
+> Diversity Outreach Chair.
+> % PyCon talks by women:
+> (2011: 1%), (2012: 7%), (2013: 15%), (2014: 33%). Outreach works.
+>
+> ---Jessica McKellar (@jessicamckellar)
+> [December 17, 2013](https://twitter.com/jessicamckellar/status/413009020522221568)
 
 I'm proud to be part of the Django community when we adopt a strong
 [Code of Conduct] (in consultation with Ada Initiative!), and when
@@ -86,7 +109,6 @@ Thanks for listening,
 
 Carl
 
-[donate]: https://supportada.org/?campaign=python
 [ada initiative]: http://adainitiative.org/
 [jacob]: http://jacobian.org/
 [alex]: http://alexgaynor.net/

@@ -1,6 +1,6 @@
 ---
 title: CoachHub
-banner: CoachHub Case Study
+banner: CoachHub Application
 sub: Responsive platform for integrated health coaching
 logo: orcas
 image:
@@ -155,7 +155,7 @@ easily access one another in dynamic and effective ways.
 
 ### Site Architecture & Information Design
 
-<img src="{{ site.images }}work/coachhub/browse-coach-sitemap.jpg" class="extend-left img-shadow extend-left img-shadow" alt="site map for browsing coaches" />
+<img src="{{ site.images }}work/coachhub/browse-coach-sitemap.jpg" class="extend-left img-shadow" alt="site map for browsing coaches" />
 
 We created an interactive web of static-HTML content templates – a
 living draft of the site architecture, with samples of real content. For
@@ -189,7 +189,7 @@ CoachHub logo and overall brand are bright, cheerful, and hopeful.
 <img src="{{ site.images }}work/coachhub/logo.jpg" class="align-center" alt="" /><figcaption>Rounded edges and a playful curl evoke feelings of friendliness and movement. New life, change, and hope: turning over a new leaf.</figcaption>
 </figure>
 
-<img src="{{ site.images }}work/coachhub/avatars-small.jpg" class="extend-left extend-left" alt="leaf avatar collage" />
+<img src="{{ site.images }}work/coachhub/avatars-small.jpg" class="extend-left" alt="leaf avatar collage" />
 
 We then created hundreds of unique avatar designs from just a few unique
 leaf graphics dynamically rendered using light and dark contrasts of our
@@ -234,8 +234,8 @@ also used Lea Verou's [Contrast Ratio] tool to select colors for text
 that passed WCAG AA level at all sizes. We also built a WCAG contrast
 test into our [Sass Accoutrement toolkits].
 
-  [Contrast Ratio]: http://leaverou.github.io/contrast-ratio/
-  [Sass Accoutrement toolkits]: /accoutrement/
+[Contrast Ratio]: http://leaverou.github.io/contrast-ratio/
+[Sass Accoutrement toolkits]: /accoutrement/
 
 ### Landing Pages
 

@@ -9,9 +9,11 @@ image:
   src: talks/miriam.jpg
 tags:
   - _post
-  - Speaking
   - Talks
   - Code
+  - CSS
+  - JavaScript
+  - Vue
   - Layout
 events:
   - venue: Webconf.asia

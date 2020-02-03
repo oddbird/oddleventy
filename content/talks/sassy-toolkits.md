@@ -6,7 +6,6 @@ date: 2013-10-12
 url: https://www.oddbooksapp.com/book/sassy-toolkits
 tags:
   - _post
-  - Speaking
   - Talks
   - Code
 events:

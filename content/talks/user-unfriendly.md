@@ -8,7 +8,6 @@ image:
   src: talks/user-unfriendly.png
 tags:
   - _post
-  - Speaking
   - Talks
   - Code
   - Art

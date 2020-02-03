@@ -10,7 +10,6 @@ tags:
   - Conferences
   - Code
   - CSS
-  - Workshop
 image:
   src: blog/2019/mia-jen-smashing.jpg
 summary: |

@@ -1,6 +1,11 @@
 ---
 title: Taming dependencies with pip
 author: carl
+tags:
+  - _post
+  - Talks
+  - Python
+  - Pip
 events:
   - venue: DjangoCon US
     url: https://2011.djangocon.us/

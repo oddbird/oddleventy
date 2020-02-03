@@ -1,11 +1,11 @@
 ---
 title: Second Measure
-banner: Second Measure Case Study
+banner: Second Measure Component Library
 sub: React design system & component library
 logo: second-measure
 image:
   src: projects/secondmeasure.jpg
-client: Second Measure
+client: &client Second Measure
 date: 2019-03-29
 tags:
   - _post
@@ -18,20 +18,29 @@ tasks:
   - Sass/CSS Design System Architecture
   - Design Dictionary & Storybook integration
   - Living Documentation
-quotes:
+people:
+  - &matt
+    name: Matthew King
+    role: Engineering Manager
+    face: matthew-king.jpg
+    venue: *client
+  - &tara
+    name: Tara Kelly
+    role: Director Of Product Design
+    face: tara-kelly.jpg
+    venue: *client
+press:
   - text: |
       OddBird was quick to learn and pick up new technologies.
       **They delivered high quality code, and delivered on time.**
-    name: "Matthew\_King"
-    role: Engineering Manager
+    <<: *matt
     slug: quick
   - text: |
       When the inventor of the modern design system
       names you as **the number one person she'd hire
       to build a design system**, well then I jump!
       I'm grateful she put us in contact.
-    name: Tara Kelly
-    role: Director Of Product Design
+    <<: *tara
     slug: best
   - text: |
       **It was easy to talk about technology options.**
@@ -39,16 +48,14 @@ quotes:
       (working within the constraints of our existing systems)
       and opinionated
       (bringing context from past experience).
-    name: "Matthew\_King"
-    role: Engineering Manager
+    <<: *matt
     slug: easy
   - text: |
       **I appreciated the specific experience OddBird brought to bear
       in terms of building component libraries**,
       particularly the need to incrementally import the component library
       in order to have it successfully be used.
-    name: "Matthew\_King"
-    role: Engineering Manager
+    <<: *matt
     slug: systems
 summary: |
   Second Measure provides a daily view into company performance & consumer
@@ -57,4 +64,5 @@ summary: |
   integrated design system.
 ---
 
-
+{% import 'quotes.macros.njk' as quotes %}
+{{ quotes.grid(press) }}

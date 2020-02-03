@@ -8,7 +8,6 @@ image:
   src: talks/devconf-best.jpg
 tags:
   - _post
-  - Speaking
   - Talks
   - Code
   - Susy

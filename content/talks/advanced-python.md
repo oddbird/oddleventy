@@ -1,6 +1,10 @@
 ---
 title: Advanced Python
 author: carl
+tags:
+  - _post
+  - Talks
+  - Python
 events:
   - venue: ConFoo
     url: http://confoo.ca/

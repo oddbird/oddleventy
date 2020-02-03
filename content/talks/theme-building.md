@@ -1,6 +1,10 @@
 ---
 title: WordPress from Scratch to Launch
 author: stacy
+tags:
+  - _post
+  - Talks
+  - WordPress
 events:
   - venue: WordPress Naperville
     url: https://www.meetup.com/WordPress-Naperville/events/236903886/

@@ -23,6 +23,8 @@ summary: |
   [An Event Apart Orlando]: https://aneventapart.com/event/orlando-2014
 ---
 
+{% import "embed.macros.njk" as embed %}
+
 In her presentation, [Sarah Parmenter] walks us through a journey of
 using research throughout the design process to make informed decisions.
 While she is known for her work in user interface design, she goes
@@ -38,16 +40,19 @@ heavily on data without considering the context of their visitor's
 situation, emotional state and more. Sarah’s talk showcases how you can
 use both research and experience to create the best results.
 
-[<img src="{{ site.images }}blog/2017/video-series/sarah-2.jpg" class="align-center align-center" alt="Watch Designing Using Data Video" />]
+[{{ embed.img(
+  src='blog/2017/video-series/sarah-2.jpg',
+  alt='Watch Designing Using Data Video',
+  attrs={'class': 'align-center'}
+) }}][video]
 
 How do you use research to help you make design decisions? Let us know
 by sending us a message via [Twitter] or join our public [Slack
 channel]. For other great talks from An Event Apart speakers, [visit
 their website].
 
-  [Sarah Parmenter]: http://www.sazzy.co.uk/
-  [<img src="{{ site.images }}blog/2017/video-series/sarah-2.jpg" class="align-center align-center" alt="Watch Designing Using Data Video" />]:
-    https://vimeo.com/120804557
-  [Twitter]: https://twitter.com/oddbird
-  [Slack channel]: http://friends.oddbird.net/
-  [visit their website]: https://aneventapart.com/
+[Sarah Parmenter]: http://www.sazzy.co.uk/
+[video]: https://vimeo.com/120804557
+[Twitter]: https://twitter.com/oddbird
+[Slack channel]: http://friends.oddbird.net/
+[visit their website]: https://aneventapart.com/

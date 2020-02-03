@@ -6,10 +6,11 @@ author: miriam
 date: 2019-04-18
 tags:
   - _post
-  - Speaking
   - Talks
-  - Workshop
+  - Workshops
   - Code
+  - CSS
+  - Sass
 events:
   - venue: Webconf.asia
     url: https://2019.webconf.asia/

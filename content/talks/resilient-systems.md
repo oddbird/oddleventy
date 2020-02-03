@@ -2,6 +2,11 @@
 title: Resilient Web Systems
 sub: Upgrade your app with front-end training & consulting
 author: miriam
+tags:
+  - _post
+  - Workshops
+  - CSS
+  - Sass
 image:
   src: blog/2019/mia-jen-smashing.jpg
   position: top

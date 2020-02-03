@@ -3,6 +3,11 @@ title: The Great State of Design
 sub: with CSS Grid Layout and Friends
 author: stacy
 slides: https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends
+tags:
+  - _post
+  - Talks
+  - CSS
+  - Grids
 events:
   - venue: Front-End Camp
     url: http://chicagocamps.org/events/2017/front-end-camp/

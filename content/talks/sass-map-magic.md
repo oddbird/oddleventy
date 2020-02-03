@@ -5,7 +5,6 @@ date: 2014-09-12
 slides: https://www.oddbooksapp.com/book/sass-map-magic
 tags:
   - _post
-  - Speaking
   - Talks
   - Code
 events:

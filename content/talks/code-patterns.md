@@ -6,9 +6,10 @@ date: 2016-03-31
 slides: https://oddbooksapp.com/book/pattern-making
 tags:
   - _post
-  - Speaking
   - Talks
   - Code
+  - CSS
+  - Sass
   - Design Systems
 events:
   - venue: Refresh Denver

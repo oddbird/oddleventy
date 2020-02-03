@@ -5,7 +5,6 @@ date: 2013-11-19
 slides: http://mirisuzanne.github.io/pres/sass-partials/
 tags:
   - _post
-  - Speaking
   - Talks
   - Code
 events:

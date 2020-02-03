@@ -1,6 +1,11 @@
 ---
 title: Testing and Django
 author: carl
+tags:
+  - _post
+  - Talks
+  - Testing
+  - Django
 events:
   - venue: PyCon
     url: https://us.pycon.org/2012/
