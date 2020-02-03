@@ -5,14 +5,14 @@
   data-layout="footer">
   {{ contact.form(name="contact-footer") }}
 
-  {% set info = collections.all | getPage('/_sitedata/info/') %}
-
   <footer role="contentinfo">
     <div class="colophon">
-      {{ info.data.colophon | md | safe }}
+      {% set colophon = collections.all | getPage('/_sitedata/colophon/') %}
+      {{ colophon.templateContent | safe }}
     </div>
 
     <div class="legal">
+      {% set info = collections.all | getPage('/_sitedata/info/') %}
       {{ info.templateContent | safe }}
     </div>
   </footer>
