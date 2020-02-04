@@ -1,9 +1,7 @@
 'use strict';
 
 const path = require('path');
-const { promisify } = require('util');
 const fs = require('fs');
-const readFileAsync = promisify(fs.readdir); // node js module
 
 const doxray = require('doxray');
 
@@ -26,32 +24,36 @@ const doxOptions = {
   },
 };
 
-module.exports = async () => {
-  const njk = await readFileAsync(includeDir, (err, files) => {
-    if (err) {
-      return err;
-    }
-    return files
-      .filter((file) => file.endsWith('.macros.njk'))
-      .map((file) => {
-        const filePath = path.join(includeDir, file);
-        const docs = doxray([filePath], doxOptions);
-        const info = docs.patterns.find(
-          (pattern) => String(pattern.category).toLowerCase() === 'file',
-        );
-        const name = file;
+module.exports = () =>
+  new Promise((resolve, reject) => {
+    // get the docs
+    fs.readdir(includeDir, (err, files) => {
+      if (err) {
+        reject(err);
+      }
 
-        return {
-          name,
-          info,
-          path: filePath,
-          slug: file.slice(0, file.indexOf('.')),
-          title: info ? info.label : name,
-          patterns: docs.patterns.filter(
-            (pattern) => String(pattern.category).toLowerCase() !== 'file',
-          ),
-        };
-      });
+      const njk = files
+        .filter((file) => file.endsWith('.macros.njk'))
+        .map((file) => {
+          const filePath = path.join(includeDir, file);
+          const docs = doxray([filePath], doxOptions);
+          const info = docs.patterns.find(
+            (pattern) => String(pattern.category).toLowerCase() === 'file',
+          );
+          const name = file;
+
+          return {
+            name,
+            info,
+            path: filePath,
+            slug: file.slice(0, file.indexOf('.')),
+            title: info ? info.label : name,
+            patterns: docs.patterns.filter(
+              (pattern) => String(pattern.category).toLowerCase() !== 'file',
+            ),
+          };
+        });
+
+      resolve(njk);
+    });
   });
-  return njk;
-};
