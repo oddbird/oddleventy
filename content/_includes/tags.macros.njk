@@ -27,7 +27,7 @@ params:
 ) -%}
   {{ utility.link_if(
     content=tag | displayName,
-    url=tag | tagLink(all),
+    url=all | tagLink(tag),
     attrs={'class': 'taglink'}
   ) }}
 {%- endmacro %}

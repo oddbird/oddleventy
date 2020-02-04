@@ -3,8 +3,7 @@
 const path = require('path');
 
 const removeMd = require('remove-markdown');
-
-const { just, get, getJust } = require('./utils');
+const _ = require('lodash');
 
 /* @docs
 label: Page Filters
@@ -28,68 +27,99 @@ params:
 const getPublic = (collection) => collection.filter((page) => isPublic(page));
 
 /* @docs
-label: getPage
+label: withData
 category: Filter
-note: Return full page data based on a URL or current `page` object
+note: Return pages with particular data
 params:
   collection:
     type: array of pages
-  page:
-    type: url | page
+  keys:
+    type: string
+    note: Any nested data attributes to get
+  value:
+    type: any
+    note: Only get pages where the desired attributes have this value
 */
-const fromCollection = (collection, page) => {
-  const pageURL = typeof page === 'string' ? page : page.url;
-  return just(collection, 'url', pageURL) || page;
-};
+const withData = (collection, keys, value) =>
+  collection.filter((page) =>
+    value ? _.includes(_.get(page, keys), value) : _.hasIn(page, keys),
+  );
 
 /* @docs
-label: pageData
+label: getData
 category: Data
-note: Return data from a given page
+note: Return combined data from a collection
 example: |
-  {% set chQuotes = collections.all | pageData('/work/coachhub/', 'press') %}
+  {# all events #}
+  {{ collections.all | getData('data.events') }}
+  {# all events with a venue #}
+  {{ collections.all | getData('data.events', 'venue') }}
+  {# all events with a venue of 'Smashing Conf' #}
+  {{ collections.all | getData('data.events', {'venue': 'Smashing Conf'}) }}
 params:
   collection:
-    type: array of pages
-  page:
-    type: url | page
-  attrs:
-    type: string | array
-    note: Any nested data attributes to get
+    type: array
+    note: often an array of pages, but can be an array of  any objects
+  keys:
+    type: string
+    note: use dot-notation (`data.press`) for nested keys
   test:
-    type: object
-    note: Any attribute/value pairs to find in a resulting array
+    type: string | object
+    default: undefined
+    note: filter the resulting collection
 */
-const pageData = (collection, page, attrs, test) =>
-  getJust(fromCollection(collection, page).data, attrs, test);
+const getData = (collection, keys, test) => {
+  const data = _.flatMap(_.filter(collection, keys), (page) =>
+    _.get(page, keys),
+  );
+  return test ? _.filter(data, test) : data;
+};
 
 /* @docs
 label: findData
 category: Data
-note: Find data anywhere in a collection
+note: The same as getData, but only returns the first match in the collection
 example: |
-  {% set quote = collections.all | findData('press', {'slug': 'extension'}) %}
+  {{ collections.all | findData('data.press', {'slug': 'handoff'}) }}
 params:
   collection:
-    type: array of pages
-  attrs:
-    type: string | array
-    note: Any nested data attributes to get
+    type: array
+    note: often an array of pages, but can be an array of  any objects
+  keys:
+    type: string
+    note: use dot-notation (`data.press`) for nested keys
   test:
-    type: object
-    note: Any attribute/value pairs to find in a resulting array
+    type: string | object
+    default: undefined
+    note: filter the resulting collection
 */
-const findData = (collection, attrs, test) => {
-  const found = [];
+const findData = (collection, keys, test) => getData(collection, keys, test)[0];
 
-  collection.forEach((page) => {
-    const inPage = getJust(page.data, attrs, test);
-    if (inPage) {
-      found.push(inPage);
-    }
-  });
-
-  return found && test ? found[0] : found;
+/* @docs
+label: getPage
+category: Data
+note: Return a single page by url, or data from inside that page
+example: |
+  {{ collections.all | getPage('/work/timedesigner/', 'data.press') }}
+params:
+  collection:
+    type: array
+    note: often an array of pages, but can be an array of  any objects
+  url:
+    type: string
+    note: The url of the desired page
+  keys:
+    type: string
+    note: use dot-notation (`data.press`) for nested keys
+  test:
+    type: string | object
+    default: undefined
+    note: filter the resulting collection
+*/
+const getPage = (collection, url, keys, test) => {
+  const page = _.find(collection, { url });
+  const data = keys ? _.get(page, keys) : page;
+  return test ? _.filter(data, test) : data;
 };
 
 /* @docs
@@ -99,30 +129,11 @@ note: Return the content of any page
 params:
   collection:
     type: array of pages
-  page:
-    type: url | page
+  url:
+    type: url
 */
-const pageContent = (collection, page) =>
-  fromCollection(collection, page).templateContent;
-
-/* @docs
-label: withData
-category: Filter
-note: Return pages with particular data
-params:
-  collection:
-    type: array of pages
-  attrs:
-    type: string | array
-    note: Any nested data attributes to get
-  value:
-    type: any
-    note: Only get pages where the desired attributes have this value
-*/
-const withData = (collection, attrs, value, first = false) => {
-  const pages = collection.filter((page) => get(page.data, attrs, value));
-  return pages && first ? pages[0] : pages;
-};
+const pageContent = (collection, url) =>
+  getPage(collection, url, 'templateContent');
 
 /* @docs
 label: meta
@@ -141,7 +152,7 @@ params:
     note: From `_data/site.json`
 */
 const meta = (collection, page, renderData, site) => {
-  page = fromCollection(collection, page.url) || page;
+  page = getPage(collection, page.url) || page;
   renderData = renderData || {};
   const data = page.data || {};
 
@@ -159,9 +170,9 @@ const meta = (collection, page, renderData, site) => {
 module.exports = {
   isPublic,
   getPublic,
-  fromCollection,
+  getPage,
+  getData,
   findData,
-  pageData,
   pageContent,
   withData,
   meta,

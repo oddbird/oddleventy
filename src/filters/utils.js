@@ -1,6 +1,5 @@
 'use strict';
 
-const _ = require('lodash');
 /* @docs
 label: Utility Filters
 category: File
@@ -24,98 +23,6 @@ params:
 const typeCheck = (val, is) => {
   const type = typeof val;
   return is ? type === is : type;
-};
-
-/* @docs
-label: get
-category: Inspect
-note: |
-  Returns an object containing a particular attribute
-  or attr:value pair,
-  including values inside an array.
-example: |
-  {% if page.data | get('author', 'miriam') %}
-params:
-  obj:
-    type: object
-  attrs:
-    type: string | array
-    note: Attribute to filter for
-  value:
-    type: any
-    default: undefined
-    note: Optional value to find within the attribute
-*/
-const get = (obj, attr, value) => {
-  // turn obj to arr for easier access...
-  const data = [].concat(obj);
-  const results = _.find(data, attr);
-  if (value !== undefined) {
-    return _.filter(results, _.matches(value));
-  }
-  return results;
-};
-
-/* @docs
-label: just
-category: Data
-note: |
-  Returns a filtered array of objects with a given attribute,
-  or the first object where that attribute is equal to a particular value.
-example: |
-  {{ embed.figure(media | just('audio')) }}
-  {{ quotes.blockquote(press | just('slug', 'extension')) }}
-params:
-  array:
-    type: array of objects
-  attrs:
-    type: string | array
-    note: Attribute to filter for
-  value:
-    type: any
-    default: undefined
-    note: Optional attribute-value to just
-*/
-const just = (arr, attr, value) => {
-  const items = _.keyBy(arr, attr);
-  if (value !== undefined) {
-    return items[value];
-  }
-  return items;
-};
-
-/* @docs
-label: getJust
-category: Data
-note: |
-  The built-in nunjucks `slice` filter returns
-  an array of arrays at a given length.
-  This filter acts more like the js `array.slice()`,
-  returning a single sub-array from a given start index,
-  to the given end (or end of array).
-example: |
-  {# the first 5 items in a list #}
-  {% for item in my_array | items(0, 5) %}
-params:
-  data:
-    type: object
-  attrs:
-    type: string | array
-    note: The attributes to get
-  test:
-    type: object
-    note: attribute/value pairs to find in the resulting array
-*/
-const getJust = (data, attrs, test) => {
-  data = get(data, attrs);
-
-  if (data && test) {
-    Object.keys(test).forEach((key) => {
-      data = just(data, key, test[key]);
-    });
-  }
-
-  return data;
 };
 
 /* @docs
@@ -186,19 +93,12 @@ const groupBy = (objectArray, property) =>
     return acc;
   }, {});
 
-const unique = (array) =>
-  array.filter((value, index, self) => self.indexOf(value) === index);
-
 // -----------------------------------
 
 module.exports = {
   groupBy,
   typeCheck,
   slugify,
-  unique,
   items,
-  get,
-  just,
-  getJust,
   styles,
 };

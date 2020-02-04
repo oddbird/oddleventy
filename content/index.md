@@ -31,6 +31,7 @@ work:
 {% import 'embed.macros.njk' as embed %}
 {% import 'section.macros.njk' as section %}
 
+
 {{ section.title('Featured Clients') }}
 
 {{ embed.logos([
@@ -44,8 +45,8 @@ work:
 ]) }}
 
 {{ quotes.grid([
-  collections.all | findData('press', {'slug': 'extension'}),
-  collections.all | findData('press', {'slug': 'goals'})
+  collections.all | findData('data.press', {'slug': 'extension'}),
+  collections.all | findData('data.press', {'slug': 'goals'})
 ]) }}
 
 {{ section.title('Developer Tools') }}
@@ -86,10 +87,9 @@ Our specialties include:
 
 {% endcall %}
 
-
 {{ quotes.grid([
-  collections.all | findData('press', {'slug': 'investment'}),
-  collections.all | findData('press', {'slug': 'handoff'})
+  collections.all | findData('data.press', {'slug': 'investment'}),
+  collections.all | findData('data.press', {'slug': 'handoff'})
 ]) }}
 
 

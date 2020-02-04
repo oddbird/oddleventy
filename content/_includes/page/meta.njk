@@ -1,7 +1,7 @@
 {%- import 'utility.macros.njk' as utility -%}
-{%- import 'tags.macros.njk' as tagutils -%}
 
-{% set public_tags = tags | publicTags %}
+{% set public_tags = collections | tagData(tags) %}
+{% set public_tags = public_tags if public_tags | length else none %}
 {% set elsewhere = {
   'venue': venue,
   'url': url
@@ -19,19 +19,23 @@
       </p>
     {% endif %}
 
-    {% set by = collections.birds | authorPage(author) if author else none %}
-    {% if by or author %}
+    {% if author %}
       <p class="byline">
         <i>by</i>
-        {% if by.data %}
-          {{ utility.link_if(
-            content=by.data.title | mdInline | safe,
-            url=by.url,
-            class='h-card'
-          ) }}
-        {% else %}
-          {{ author | capitalize }}
-        {% endif %}
+        {% set author_list = [author] if author | typeCheck('string') else author %}
+        {% for name in author_list -%}
+          {%- set by = collections.birds | authorPage(name) -%}
+          {%- if by -%}
+            {{ utility.link_if(
+              content=by.data.title | mdInline | safe,
+              url=by.url,
+              class='h-card'
+            ) }}
+          {%- else -%}
+            {{ name | capitalize }}
+          {%- endif -%}
+          {{ ', ' if not loop.last }}
+        {%- endfor %}
 
         {% if elsewhere %}
           <i>at</i>
@@ -62,10 +66,13 @@
     {% if public_tags %}
       <div class="page-tags">
         {% include "icons/tags.svg" %}
-        {{ tagutils.tag_list(
-          tags=tags,
-          all=collections.all
-        ) }}
+        <ul class="taglist">
+          {%- for item in public_tags -%}
+            <li class="tag">
+              {{ utility.link_if(item.tag, item.url) }}
+            </li>
+          {%- endfor -%}
+        </ul>
       </div>
     {% endif %}
   </div>

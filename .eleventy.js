@@ -44,18 +44,18 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('isPublic', tags.isPublic);
   eleventyConfig.addFilter('publicTags', tags.publicTags);
-  eleventyConfig.addFilter('allTags', tags.allTags);
+  eleventyConfig.addFilter('getTags', tags.getTags);
   eleventyConfig.addFilter('tagData', tags.tagData);
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
 
   eleventyConfig.addFilter('meta', pages.meta);
-  eleventyConfig.addFilter('getPage', pages.fromCollection);
-  eleventyConfig.addFilter('pageData', pages.pageData);
+  eleventyConfig.addFilter('getPage', pages.getPage);
+  eleventyConfig.addFilter('getData', pages.getData);
   eleventyConfig.addFilter('findData', pages.findData);
+  eleventyConfig.addFilter('withData', pages.withData);
   eleventyConfig.addFilter('pageContent', pages.pageContent);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
-  eleventyConfig.addFilter('withData', pages.withData);
 
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('authorPage', birds.authorPage);

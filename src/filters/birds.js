@@ -22,7 +22,8 @@ params:
     type: string
     note: The name of the bird (as used in `author` settings)
 */
-const getPages = (collection, bird) => withData(collection, 'author', bird);
+const getPages = (collection, bird) =>
+  withData(collection, 'data.author', bird);
 
 /* @docs
 label: authorPage
@@ -38,14 +39,8 @@ params:
     type: string
     note: The name of the bird (as used in `author` settings)
 */
-const authorPage = (collection, bird) => {
-  if (bird) {
-    bird = typeof bird === 'string' ? bird : `${bird[0]}`;
-    return withData(collection, 'bird', bird, true);
-  }
-
-  return undefined;
-};
+const authorPage = (collection, bird) =>
+  withData(collection, 'data.bird', bird)[0];
 
 module.exports = {
   getPages,
