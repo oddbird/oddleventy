@@ -30,7 +30,7 @@ const typeCheck = (val, is) => {
 label: get
 category: Inspect
 note: |
-  Returns true if an object contains a particular attribute
+  Returns an object containing a particular attribute
   or attr:value pair,
   including values inside an array.
 example: |
@@ -51,9 +51,9 @@ const get = (obj, attr, value) => {
   const data = [].concat(obj);
   const results = _.find(data, attr);
   if (value !== undefined) {
-    return Object.values(results).includes(value);
+    return _.filter(results, _.matches(value));
   }
-  return Boolean(results);
+  return results;
 };
 
 /* @docs
