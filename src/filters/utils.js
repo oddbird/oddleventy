@@ -1,5 +1,6 @@
 'use strict';
 
+const _ = require('lodash');
 /* @docs
 label: Utility Filters
 category: File
@@ -45,20 +46,14 @@ params:
     default: undefined
     note: Optional value to find within the attribute
 */
-const get = (obj, attrs, value) => {
-  attrs = typeof attrs === 'string' ? [attrs] : attrs || [];
-
-  if (attrs && attrs.length) {
-    attrs.forEach((attr) => {
-      obj = obj[attr];
-    });
+const get = (obj, attr, value) => {
+  // turn obj to arr for easier access...
+  const data = [].concat(obj);
+  const results = _.find(data, attr);
+  if (value !== undefined) {
+    return Object.values(results).includes(value);
   }
-
-  if (value && obj) {
-    return obj === value || (Array.isArray(obj) && obj.includes(value));
-  }
-
-  return obj;
+  return Boolean(results);
 };
 
 /* @docs
@@ -81,9 +76,12 @@ params:
     default: undefined
     note: Optional attribute-value to just
 */
-const just = (array, attrs, value) => {
-  const items = array.filter((item) => get(item, attrs, value));
-  return items && value ? items[0] : items;
+const just = (arr, attr, value) => {
+  const items = _.keyBy(arr, attr);
+  if (value !== undefined) {
+    return items[value];
+  }
+  return items;
 };
 
 /* @docs
