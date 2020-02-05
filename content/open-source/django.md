@@ -5,6 +5,7 @@ end: ongoing
 sub: Python web framework
 image:
   src: projects/django.jpg
+author: carl
 oss: core
 logo: django
 tags:

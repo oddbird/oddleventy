@@ -18,8 +18,8 @@
   post,
   collections=none
 ) %}
-  {% set title = post.data | render('title') %}
-  {% set banner = post.data | render('banner') or title %}
+  {% set title = post | render('title') %}
+  {% set banner = post | render('banner') or title %}
   <li>
     <h3>
       {{ utility.link_if(

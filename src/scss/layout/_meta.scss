@@ -17,3 +17,17 @@
   font-size: var(--h3);
   font-style: italic;
 }
+
+.page-links {
+  --meta-column: 2;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+  }
+
+  li + li::before {
+    content: ' | ';
+  }
+}

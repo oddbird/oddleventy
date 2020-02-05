@@ -169,8 +169,10 @@ params:
 const pageContent = (collection, url) =>
   getPage(collection, url, 'templateContent');
 
-const render = (data, key) =>
-  data.renderData ? data.renderData[key] || data[key] : data[key];
+const render = (page, key) =>
+  page.data.renderData
+    ? page.data.renderData[key] || page.data[key]
+    : page.data[key];
 
 const pageType = (page) => {
   if (hasData(page, 'data.client')) {

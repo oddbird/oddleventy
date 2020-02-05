@@ -36,7 +36,9 @@ params:
     {{ author(names, collections) }}
   {% else %}
     {% for name in names %}
-      {{ author(name, collections) }}{{ ',' if not loop.last }}
+      {% set tween = ' & ' | mdInline if (loop.length == 2) else ',' %}
+      {{ author(name, collections) }}
+      {{- tween | safe if not loop.last }}
     {% endfor %}
   {% endif %}
 {% endmacro %}
