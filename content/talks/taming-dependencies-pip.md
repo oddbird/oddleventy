@@ -1,6 +1,7 @@
 ---
 title: Taming dependencies with pip
 author: carl
+date: 2011-09-08
 tags:
   - _post
   - Talks

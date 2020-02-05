@@ -1,0 +1,51 @@
+{% import 'utility.macros.njk' as utility %}
+{% import 'birds.macros.njk' as birds %}
+
+{% macro list(
+  posts,
+  collections=none
+) %}
+{% if posts %}
+  <ol reversed>
+    {% for post in posts | sort(true, false, 'date') %}
+      {{ item(post, collections) }}
+    {% endfor %}
+  </ol>
+{% endif %}
+{% endmacro %}
+
+{% macro item(
+  post,
+  collections=none
+) %}
+  {% set title = post.data | render('title') %}
+  {% set banner = post.data | render('banner') or title %}
+  <li>
+    <h3>
+      {{ utility.link_if(
+        banner,
+        post.url
+      ) }}
+    </h3>
+    <p>
+      <strong>{{ post | pageType }}</strong>
+
+      {% if post.data.author %}
+        <i>by</i>
+        {{ birds.authors(post.data.author, collections) }}
+      {% endif %}
+
+      {% if post.data.client %}
+        <i>for</i>
+        <strong>{{ post.data.client | mdInline | safe }}</strong>
+      {% endif %}
+
+      {{ utility.datetime(
+        start=post.date,
+        end=post.data.end,
+        is_pubdate=true,
+        prefix=true
+      ) }}
+    </p>
+  </li>
+{% endmacro %}

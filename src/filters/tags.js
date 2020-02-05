@@ -41,7 +41,12 @@ params:
   tag:
     type: string
 */
-const displayName = (tag) => (tag.startsWith('_') ? tag.slice(1) : tag);
+const displayName = (tag) => {
+  const capitalize = ([first, ...rest]) =>
+    first ? first.toUpperCase() + rest.join('') : '';
+
+  return tag.startsWith('_') ? capitalize(tag.slice(1)) : tag;
+};
 
 /* @docs
 label: tagLink

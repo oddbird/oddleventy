@@ -1,6 +1,7 @@
 ---
 title: Testing and Django
 author: carl
+date: 2012-03-10
 tags:
   - _post
   - Talks

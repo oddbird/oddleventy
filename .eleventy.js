@@ -71,6 +71,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('findData', pages.findData);
   eleventyConfig.addFilter('withData', pages.withData);
   eleventyConfig.addFilter('pageContent', pages.pageContent);
+  eleventyConfig.addFilter('render', pages.render);
+  eleventyConfig.addFilter('pageType', pages.pageType);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
 
   eleventyConfig.addFilter('byBird', birds.getPages);

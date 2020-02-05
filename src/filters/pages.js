@@ -169,6 +169,27 @@ params:
 const pageContent = (collection, url) =>
   getPage(collection, url, 'templateContent');
 
+const render = (data, key) =>
+  data.renderData ? data.renderData[key] || data[key] : data[key];
+
+const pageType = (page) => {
+  if (hasData(page, 'data.client')) {
+    return 'client work';
+  } else if (hasData(page, 'data.oss')) {
+    return 'tool';
+  } else if (hasData(page, 'data.tags', 'Talks')) {
+    return 'talk';
+  } else if (hasData(page, 'data.tags', 'Workshops')) {
+    return 'workshop';
+  } else if (hasData(page, 'data.tags', 'Podcast')) {
+    return 'podcast';
+  } else if (hasData(page, 'data.tags', 'Video')) {
+    return 'video';
+  }
+
+  return 'article';
+};
+
 module.exports = {
   isPublic,
   isCurrent,
@@ -178,5 +199,7 @@ module.exports = {
   getData,
   findData,
   pageContent,
+  pageType,
   withData,
+  render,
 };

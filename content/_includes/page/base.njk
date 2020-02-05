@@ -1,4 +1,4 @@
-{%- import 'utility.macros.njk' as utility -%}
+{%- import 'post.macros.njk' as post -%}
 {%- import 'layout.macros.njk' as layout -%}
 
 {% include "page/header.njk" %}
@@ -20,19 +20,9 @@
     {% set list_title = bird | capitalize + "'s" if bird else list_title %}
     {% set list_title = list_title + ' Resources' if list_title else none %}
 
-    {{ layout.title(index_title or list_title) }}
-    <ul>
-      {% for item in resources | sort(true, false, 'date') %}
-        {% set item_title = item.data.renderData.title or item.data.title %}
-        {% set item_banner = item.data.renderData.banner or item.data.banner or item_title %}
-        <li>
-          [{{ item.date | getDate('iso') }}]
-          {{ utility.link_if(
-            item_banner,
-            item.url
-          ) }}
-        </li>
-      {% endfor %}
-    </ul>
+    {% if index_title != 'hide' %}
+      {{ layout.title(index_title or list_title) }}
+    {% endif %}
+    {{ post.list(resources, collections) }}
   {% endif %}
 </main>

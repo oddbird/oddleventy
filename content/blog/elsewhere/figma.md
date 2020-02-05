@@ -1,28 +1,30 @@
 ---
-title: 18 designers predict UI/UX trends for 2018
+title: 18 Designers Predict UI/UX Trends for 2018
+author: miriam
 date: 2017-12-15
-url: https://blog.figma.com/18-designers-predict-ui-ux-trends-for-2018-2d04d41361c6
-venue: Figma Design
-image:
-  src: blog/2017/figma-trends.jpg
+venue: Figma
+canonical: https://www.figma.com/blog/eighteen-designers-predict-ui-ux-trends-for-2018/
 tags:
   - _post
   - Design
+  - CSS
   - Interview
-  - Code
+  - Figma
+image:
+  src: blog/2017/figma-trends.jpg
+summary: |
+  Figma asked 18 designers (including me) what UI/UX trends they predict
+  for 2018. December, with its flurry of holiday parties, cheery
+  out-of-office auto-replies and introspective weather patterns, provided
+  the perfect opportunity to pause and survey the landscape.
 ---
 
-Figma asked 18 designers
-what UI/UX trends they predict for 2018.
-December, with its flurry of holiday parties,
-cheery OOO auto-replies and introspective weather patterns,
-provided the perfect opportunity to pause and survey the landscape.
+## Improvements in CSS will affect web design in surprising ways
 
-Designers are always looking toward the future  —
- in our “build and ship it now” industry
-we’re programmed to iterate ad finitum.
-In the end, a designer’s obsession always circles back
-to one simple question:
-How can we improve the user’s experience?
-
-[Read the interview](https://blog.figma.com/18-designers-predict-ui-ux-trends-for-2018-2d04d41361c6)
+There’s a lot to be excited about in CSS — integrating new tools,
+like Grid and Custom Properties,
+with existing features like Calc and Viewport Units.
+Modern CSS allow a new level of interaction,
+responsiveness, and data-visualization
+that previously required extensive Javascript involvement.
+I’m excited to see what new trends grow out of that technology.

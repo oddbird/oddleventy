@@ -2,6 +2,7 @@
 title: Curing Design Complacency
 sub: It's easy to fall into old habits
 author: stacy
+date: 2016-04-30
 slides: http://www.slideshare.net/Funstacy/curing-design-complacency-61550889
 tags:
   - _post

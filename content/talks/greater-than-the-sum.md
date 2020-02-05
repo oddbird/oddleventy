@@ -2,6 +2,7 @@
 title: Greater Than the Sum of Parts
 sub: Integrating Pyramid, React, & Plone
 author: david
+date: 2016-10-20
 slides: https://www.oddbooksapp.com/book/web-projects
 tags:
   - _post
@@ -20,5 +21,3 @@ summary: |
 
   [David]: /authors/david/
 ---
-
-
