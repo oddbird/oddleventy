@@ -3,7 +3,6 @@
 const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 const utils = require('./src/filters/utils');
-const events = require('./src/filters/events');
 const pages = require('./src/filters/pages');
 const tags = require('./src/filters/tags');
 const time = require('./src/filters/time');
@@ -29,51 +28,45 @@ module.exports = (eleventyConfig) => {
   );
 
   // filters
+  eleventyConfig.addFilter('merge', () =>
+    [...arguments].reduce((all, current) => ({ ...all, ...current }), {}),
+  );
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
-  eleventyConfig.addFilter('objectKeys', utils.objectKeys);
-  eleventyConfig.addFilter('jsonString', utils.jsonString);
-  eleventyConfig.addFilter('only', utils.only);
+  eleventyConfig.addFilter('items', utils.items);
   eleventyConfig.addFilter('get', utils.get);
+  eleventyConfig.addFilter('just', utils.just);
+  eleventyConfig.addFilter('getJust', utils.getJust);
   eleventyConfig.addFilter('styles', utils.styles);
 
   eleventyConfig.addFilter('getDate', time.getDate);
   eleventyConfig.addFilter('rssDate', time.rssDate);
   eleventyConfig.addFilter('rssLatest', time.rssLatest);
 
+  eleventyConfig.addFilter('isPublic', tags.isPublic);
   eleventyConfig.addFilter('publicTags', tags.publicTags);
   eleventyConfig.addFilter('getTags', tags.getTags);
-  eleventyConfig.addFilter('byEventCount', tags.byEventCount);
-  eleventyConfig.addFilter('byPageCount', tags.byPageCount);
-  eleventyConfig.addFilter('groupTags', tags.groupTags);
-  eleventyConfig.addFilter('withTag', tags.withTag);
+  eleventyConfig.addFilter('tagData', tags.tagData);
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
-  eleventyConfig.addFilter('inTopTagCount', tags.inTopCount);
 
   eleventyConfig.addFilter('meta', pages.meta);
-  eleventyConfig.addFilter('getPage', pages.fromCollection);
+  eleventyConfig.addFilter('getPage', pages.getPage);
   eleventyConfig.addFilter('getData', pages.getData);
-  eleventyConfig.addFilter('pageData', pages.pageData);
+  eleventyConfig.addFilter('findData', pages.findData);
+  eleventyConfig.addFilter('withData', pages.withData);
   eleventyConfig.addFilter('pageContent', pages.pageContent);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
-  eleventyConfig.addFilter('withData', pages.withData);
-  eleventyConfig.addFilter('titleSort', pages.titleSort);
 
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('authorPage', birds.authorPage);
 
-  eleventyConfig.addFilter('getEvents', events.get);
-  eleventyConfig.addFilter('countEvents', events.count);
-  eleventyConfig.addFilter('groupName', (group) => events.groupNames[group]);
-
-  eleventyConfig.addFilter('amp', type.amp);
-  eleventyConfig.addFilter('typogr', type.set);
-  eleventyConfig.addFilter('md', type.render);
-  eleventyConfig.addFilter('mdInline', type.inline);
+  eleventyConfig.addFilter('typogr', type.typogr);
+  eleventyConfig.addFilter('md', type.md);
+  eleventyConfig.addFilter('mdInline', type.mdInline);
 
   // shortcodes
-  eleventyConfig.addPairedShortcode('md', type.render);
-  eleventyConfig.addPairedShortcode('mdInline', type.inline);
+  eleventyConfig.addPairedShortcode('md', type.md);
+  eleventyConfig.addPairedShortcode('mdInline', type.mdInline);
   eleventyConfig.addShortcode(
     'getDate',
     (format) => `${time.getDate(time.now, format)}`,

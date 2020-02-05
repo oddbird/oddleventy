@@ -1,3 +1,29 @@
+{# @docs
+label: Contact Macros
+category: File
+note: Forms related to OddBird communication.
+#}
+
+
+{# @docs
+label: form
+note: Generate a contact form
+params:
+  next:
+    type: url
+    default: '/contact/thanks/'
+    note: The landing page after form-submit
+  submit:
+    type: string
+    default: Send
+    note: text for the submit button
+  name:
+    type: string
+    default: contact
+    note: |
+      Name the form for special cases
+      where a CSS hook is required
+#}
 {% macro form(
   next='/contact/thanks/',
   submit='Send',
@@ -49,6 +75,21 @@
 </form>
 {% endmacro %}
 
+
+{# @docs
+label: subscribe
+note: Generate an email-newsletter signup form
+params:
+  label:
+    type: string
+    default: Subscribe to our email newsletter
+  action:
+    type: string
+    default: Subscribe
+  interests:
+    type: string
+    default: oddnews
+#}
 {% macro subscribe(
   label='Subscribe to our email newsletter',
   action='Subscribe',

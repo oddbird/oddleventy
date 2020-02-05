@@ -1,6 +1,6 @@
 'use strict';
 
-const { typogrify } = require('typogr');
+const type = require('typogr');
 const mdown = require('markdown-it')({
   html: true,
   breaks: false,
@@ -10,32 +10,62 @@ const mdown = require('markdown-it')({
   .use(require('markdown-it-mark'))
   .use(require('markdown-it-footnote'));
 
-const amp = (s) => {
-  const r = '<span class="amp">&</span>';
-  return s ? s.replace(/&amp;/g, '&').replace(/&/g, r) : s;
-};
+/* @docs
+label: Typography Filters
+category: File
+*/
 
-const set = (content, typeset = true) => {
-  if (content && typeset) {
-    return typeset === 'amp' ? amp(content) : typogrify(content);
+/* @docs
+label: typogr
+links:
+  - '[Typogr.js](https://github.com/ekalinin/typogr.js/)'
+params:
+  content:
+    type: string
+  inline:
+    type: boolean
+    default: false
+    note: Inline typesetting removes the "widont" filter
+*/
+const typogr = (content, inline = false) => {
+  if (content) {
+    return inline
+      ? type(content)
+          .chain()
+          .amp()
+          .smartypants()
+          .initQuotes()
+          .caps()
+          .ord()
+          .value()
+      : type.typogrify(content);
   }
 
   return content;
 };
-const render = (content, typeset = true) => {
-  const md = mdown.render(content);
-  return typeset ? set(md, typeset) : md;
-};
 
-const inline = (content, typeset = true) => {
-  const md = mdown.renderInline(content);
-  return typeset ? set(md, typeset) : md;
-};
+/* @docs
+label: md
+note: Block markdown with typesetting
+params:
+  content:
+    type: string
+*/
+const md = (content) => (content ? typogr(mdown.render(content)) : content);
+
+/* @docs
+label: mdInline
+note: Inline markdown with inline typesetting
+params:
+  content:
+    type: string
+*/
+const mdInline = (content) =>
+  content ? typogr(mdown.renderInline(content), true) : content;
 
 module.exports = {
   mdown,
-  amp,
-  set,
-  render,
-  inline,
+  typogr,
+  md,
+  mdInline,
 };

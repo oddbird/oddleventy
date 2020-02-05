@@ -1,10 +1,43 @@
 {% import "utility.macros.njk" as utility %}
 
-{# Toggle collapsible elements (needs JS) #}
+
+{# @docs
+label: Toggles
+category: File
+note: |
+  Tools for accessible toggling hidden/visible content
+  with various options for interaction details.
+todo: |
+  These macros require JS
+  which is not yet implemented
+example: |
+  <button {{ toggle.btn('toggle-id') }}>toggle aside</button>
+  <aside {{ toggle.target('toggle-id', synced=true) }}>
+    <p>This content can be toggled</p>
+    <button {{ toggle.close('toggle-id') }}>close</button>
+  </aside>
+#}
+
+
+{# @docs
+label: btn
+category: Controls
+note: Attributes for the toggle-control button.
+params:
+  id:
+    type: string
+    note: Must match the `id` passed to `toggle.target()`
+  expanded:
+    type: boolean
+    default: 'false'
+    note: Current toggle status
+  synced:
+    type: boolean
+    default: 'false'
+#}
 {% macro btn(
   id,
   expanded=false,
-  button=false,
   synced=false
 ) -%}
   {%- set attrs = {
@@ -18,6 +51,47 @@
   {{ utility.show_attrs(attrs) }}
 {%- endmacro %}
 
+
+{# @docs
+label: close
+category: Controls
+note: Attributes for the toggle-close button.
+params:
+  id:
+    type: string
+    note: Must match the `id` passed to `toggle.target()`
+#}
+{% macro close(id) -%}
+  {%- set attrs = {
+    'data-toggle': 'close',
+    'aria-controls': id
+  } -%}
+  {{ utility.show_attrs(attrs) }}
+{%- endmacro %}
+
+
+{# @docs
+label: target
+category: Content
+note: Attributes for the element to be toggled.
+params:
+  id:
+    type: string
+    note: Must match the `id` passed to `toggle.btn()`
+  expanded:
+    type: boolean
+    default: 'false'
+    note: Current toggle status
+  auto_closing:
+    type: boolean
+    default: 'false'
+  auto_closing_on_any_click:
+    type: boolean
+    default: 'false'
+  auto_closing_exception:
+    type: boolean
+    default: 'none'
+#}
 {% macro target(
   id,
   expanded=false,
@@ -33,14 +107,6 @@
     'data-auto-closing': 'true' if (auto_closing or auto_closing_on_any_click) else 'false',
     'data-auto-closing-on-any-click': 'true' if auto_closing_on_any_click else 'false',
     'data-auto-closing-exception': auto_closing_exception
-  } -%}
-  {{ utility.show_attrs(attrs) }}
-{%- endmacro %}
-
-{% macro close(id) -%}
-  {%- set attrs = {
-    'data-toggle': 'close',
-    'aria-controls': id
   } -%}
   {{ utility.show_attrs(attrs) }}
 {%- endmacro %}

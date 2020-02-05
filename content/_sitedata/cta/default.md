@@ -11,4 +11,14 @@ summary: |
 {% import 'utility.macros.njk' as utility %}
 
 {{ summary | md | safe }}
-{{ utility.inline_list(site.links) }}
+
+<ul class="inline-list">
+{%- for link in site.links -%}
+<li>{{- utility.icon_link(
+    icon=link.icon + '.svg',
+    text=link.text,
+    url=link.url
+  ) -}}
+</li>
+{%- endfor -%}
+</ul>

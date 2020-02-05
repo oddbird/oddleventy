@@ -51,6 +51,7 @@
     "chokidar-cli": "^2.0.0",
     "core-js": "^3.3.2",
     "cssremedy": "^0.1.0-beta.2",
+    "doxray": "^0.9.0",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-import": "^2.18.2",
@@ -98,5 +99,8 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
   }
 }

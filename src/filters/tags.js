@@ -1,100 +1,109 @@
 'use strict';
 
-const { withData } = require('./pages');
-const { unique, slugify } = require('./utils');
-const { get } = require('./events');
+const { uniq } = require('lodash');
 
-const topCount = 6;
-const inTopCount = (count) => typeof count === 'number' && count <= topCount;
-const isPublic = (tag) => tag !== 'all' && !tag.startsWith('_');
+const { withData, getData } = require('./pages');
+const { slugify } = require('./utils');
+
+/* @docs
+label: Tag Filters
+category: File
+*/
+
+/* @docs
+label: isPublic
+category: Visibility
+note: Return false if a tag name starts with `_`
+params:
+  tag:
+    type: string
+*/
+const isPublic = (tag) => !tag.startsWith('_');
+
+/* @docs
+label: publicTags
+category: Visibility
+note: Remove private `_<name>` tags from a list
+params:
+  tags:
+    type: array
+*/
 const publicTags = (tags) =>
   tags ? tags.filter((tag) => isPublic(tag)) : tags;
 
-const withTag = (collection, tag) => withData(collection, 'tags', tag);
-
-const tagData = (collections) => {
-  const eventTags = get(collections.all, false, false)
-    .map((e) => e.tags)
-    .reduce((all, one) => [...all, ...one], []);
-
-  return unique(eventTags)
-    .filter((tag) => isPublic(tag))
-    .map((tag) => {
-      const tagEvents = get(collections.all, tag, false);
-      return {
-        tag,
-        events: tagEvents,
-        count: tagEvents.length,
-        pageCount: collections[tag].length,
-      };
-    })
-    .filter((item) => item.count !== 0)
-    .sort((a, b) => b.count - a.count);
-};
-
-const getTags = (collections, top = topCount, data = false) => {
-  const tags = tagData(collections).slice(0, top || collections.length);
-  return data ? tags : tags.map((item) => item.tag);
-};
-
-const byEventCount = (tags) =>
-  tags ? tags.sort((a, b) => b.count - a.count) : tags;
-
-const byPageCount = (tags) =>
-  tags ? tags.sort((a, b) => b.pageCount - a.pageCount) : tags;
-
-const groupTags = (collections, top = topCount) => {
-  const grouped = {};
-  const sorted = [];
-
-  // group by popularity
-  tagData(collections).forEach((item, i) => {
-    const group = i < top ? 'top' : Math.ceil(item.count / 5) * 5;
-    if (grouped[group]) {
-      grouped[group].push(item);
-    } else {
-      grouped[group] = [item];
-    }
-  });
-
-  // sort the groups
-  Object.keys(grouped).forEach((group) => {
-    sorted.push({
-      group,
-      tags: grouped[group],
-    });
-  });
-
-  return sorted.reverse();
-};
-
+/* @docs
+label: displayName
+category: Visibility
+note: |
+  Returns a tag name with private `_` removed,
+  for those rare cases where we want to display private tags.
+params:
+  tag:
+    type: string
+*/
 const displayName = (tag) => (tag.startsWith('_') ? tag.slice(1) : tag);
 
-const tagLink = (tag, collections) => {
-  const pages = collections.all.filter((page) => page.data.index === tag);
+/* @docs
+label: tagLink
+category: Links
+note: |
+  Returns the link for a given tag --
+  either the auto-generated tag page,
+  or page marked as `index` for that tag
+params:
+  all:
+    type: array of all pages (`collections.all`)
+  tag:
+    type: string
+*/
+const tagLink = (all, tag) => {
+  const index = withData(all, 'data.index', tag)[0];
+  return index ? index.url : `/tags/${slugify(tag)}/`;
+};
 
-  const extra = collections.all
-    .map((page) => page.data.extraTags || [])
-    .reduce((all, tags) => [...all, ...tags], [])
-    .includes(tag);
+/* @docs
+label: getTags
+category: List
+note: Returns all tags in a collection
+params:
+  collection:
+    type: array of pages
+*/
+const getTags = (collection) => getData(collection, 'data.tags');
 
-  const index = pages.length ? pages[0].url : null;
-
-  const fallback = extra || collections[tag] ? `/tags/${slugify(tag)}/` : null;
-
-  return index || fallback;
+/* @docs
+label: tagData
+category: List
+note: |
+  Returns an array tag-data objects for each tag,
+  including name, url, and page count
+params:
+  collections:
+    type: 11ty collections
+  tags:
+    type: array | 'all'
+    default: undefined
+    note: Will return data for all tags when set to `all`
+  sort:
+    type: pageCount | tag
+    default: 'pageCount'
+*/
+const tagData = (collections, tags, sort = 'pageCount') => {
+  const taglist = tags === 'all' ? getTags(collections.all) : tags;
+  return uniq(publicTags(taglist))
+    .map((tag) => ({
+      tag,
+      url: tagLink(collections.all, tag),
+      pageCount: collections[tag].length,
+    }))
+    .sort((a, b) => b[sort] - a[sort]);
 };
 
 module.exports = {
-  topCount,
   isPublic,
   publicTags,
   getTags,
-  groupTags,
-  withTag,
+  tagData,
   displayName,
   tagLink,
-  inTopCount,
-  byEventCount,
-  byPageCount,
 };
