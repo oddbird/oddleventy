@@ -2,7 +2,8 @@
 title: Accoutrement
 sub: Integrated design-system management in Sass
 date: 2014-10-30
-cend: ongoing
+end: ongoing
+logo: accoutrement
 image:
   src: projects/accoutrement.jpg
 project:

@@ -33,6 +33,7 @@ tools:
   - /sass/
   - /css-remedy/
   - /susy/
+  - /accoutrement/
   - /herman/
   - /true/
 ---
