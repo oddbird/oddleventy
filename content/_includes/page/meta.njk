@@ -69,7 +69,11 @@
         <ul class="taglist">
           {%- for item in public_tags -%}
             <li class="tag">
-              {{ utility.link_if(item.tag, item.url) }}
+              {{ utility.link_if(
+                content=item.tag,
+                url=item.url,
+                class='taglink'
+              ) }}
             </li>
           {%- endfor -%}
         </ul>
