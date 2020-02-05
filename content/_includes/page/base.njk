@@ -17,7 +17,7 @@
   {% set resources = collections._post | byBird(bird) if bird and (bird != 'oddbird') else resources %}
   {% if resources %}
     {% set list_title = show | displayName if show else none %}
-    {% set list_title = bird + "'s" if bird else list_title %}
+    {% set list_title = bird | capitalize + "'s" if bird else list_title %}
     {% set list_title = list_title + ' Resources' if list_title else none %}
 
     {{ layout.title(index_title or list_title) }}

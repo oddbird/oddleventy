@@ -14,15 +14,15 @@
     {% set sub = renderData.sub or sub %}
     {% set index = renderData.index or index %}
     {% set description = (sub or summary or site.description) | removeMd %}
-    {% set canonical = canonical or (site.url + page.url) %}
+    {% set permalink = canonical or (site.url + page.url) %}
 
     <title>{{ [title, site.title] | join(' | ') }}</title>
     <meta name="description"
       content="{{ description }}" />
 
-    {% if canonical %}
+    {% if permalink %}
       <link rel="canonical"
-        href="{{ canonical | url }}">
+        href="{{ permalink | url }}">
     {% endif %}
 
     {% for url in site.styles %}

@@ -1,4 +1,5 @@
 ---
+layout: base
 title: 'True'
 sub: Unit-testing for Sass developers
 date: 2013-06-06

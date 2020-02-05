@@ -42,7 +42,7 @@ note: |
   There is no need for a macro
   when creating one-off quotes in markdown content.
 example: |
-  {{ quotes.blockquote(press | just('slug', 'extension')) }}
+  {{ quotes.blockquote(press | withData('slug', 'extension')) }}
 params:
   data:
     type: dictionary
@@ -110,12 +110,12 @@ params:
   page,
   slug=none
 ) -%}
-  {%- set data = collection | pageData(page, 'press') -%}
-  {%- if slug -%}
-    {{- blockquote(data | just('slug', slug)) -}}
-  {%- else -%}
-    {{- grid(data) if data else none -}}
-  {%- endif -%}
+  {%- set data = collection | getPage(
+    page,
+    'data.press',
+    {'slug': slug} if slug else none
+  ) -%}
+  {{- grid(data) -}}
 {%- endmacro %}
 
 
@@ -133,15 +133,17 @@ params:
 #}
 {% macro grid(
   data
-) %}
-<div class="quote-grid">
-  {%- for item in data -%}
-    {%- if item.text -%}
-      {{- blockquote(item, 'grid') -}}
-    {%- endif -%}
-  {%- endfor -%}
-</div>
-{% endmacro %}
+) -%}
+  {%- if data -%}
+    <div class="quote-grid">
+      {%- for item in data -%}
+        {%- if item.text -%}
+          {{- blockquote(item, 'grid') -}}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+{%- endmacro %}
 
 
 {# @docs

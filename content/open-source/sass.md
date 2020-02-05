@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Sass
 sub: CSS with superpowers
 author: miriam

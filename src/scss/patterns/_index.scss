@@ -15,12 +15,13 @@
 @forward 'blockquotes';
 @forward 'code';
 @forward 'gallery';
+@forward 'pills';
 
-// @forward 'alignment';
-// @forward 'blockquotes';
-// @forward 'sizes';
-// @forward 'states';
-// @forward 'tags';
+// @import 'alignment';
+// @import 'gallery';
+// @import 'sizes';
+// @import 'states';
+// @import 'code';
 
 // Less used CSS load later
 // ------------------------

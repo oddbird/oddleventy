@@ -1,9 +1,9 @@
 'use strict';
 
 const slugify = require('slugify');
+const { uniq } = require('lodash');
 
-const { withData } = require('./pages');
-const { unique } = require('./utils');
+const { withData, getData } = require('./pages');
 
 /* @docs
 label: Tag Filters
@@ -44,43 +44,6 @@ params:
 const displayName = (tag) => (tag.startsWith('_') ? tag.slice(1) : tag);
 
 /* @docs
-label: allTags
-category: List
-note: Returns a list of public tag names in a collection
-params:
-  collection:
-    type: array of pages
-*/
-const allTags = (collection) => {
-  const tags = withData(collection, 'tags')
-    .map((page) => page.data.tags)
-    .reduce((all, one) => [...all, ...one], []);
-
-  return unique(publicTags(tags));
-};
-
-/* @docs
-label: tagData
-category: List
-note: |
-  Returns an array tag-data objects for every tag,
-  including name (`tag`), and `pageCount`
-params:
-  collections:
-    type: array of collections
-  sort:
-    type: pageCount | tag
-    default: 'pageCount'
-*/
-const tagData = (collections, sort = 'pageCount') =>
-  allTags(collections.all)
-    .map((tag) => ({
-      tag,
-      pageCount: collections[tag].length,
-    }))
-    .sort((a, b) => b[sort] - a[sort]);
-
-/* @docs
 label: tagLink
 category: Links
 note: |
@@ -88,20 +51,58 @@ note: |
   either the auto-generated tag page,
   or page marked as `index` for that tag
 params:
-  tag:
-    type: string
   all:
     type: array of all pages (`collections.all`)
+  tag:
+    type: string
 */
-const tagLink = (tag, all) => {
-  const index = withData(all, 'index', tag, true);
+const tagLink = (all, tag) => {
+  const index = withData(all, 'data.index', tag)[0];
   return index ? index.url : `/tags/${slugify(tag)}/`;
+};
+
+/* @docs
+label: getTags
+category: List
+note: Returns all tags in a collection
+params:
+  collection:
+    type: array of pages
+*/
+const getTags = (collection) => getData(collection, 'data.tags');
+
+/* @docs
+label: tagData
+category: List
+note: |
+  Returns an array tag-data objects for each tag,
+  including name, url, and page count
+params:
+  collections:
+    type: 11ty collections
+  tags:
+    type: array | 'all'
+    default: undefined
+    note: Will return data for all tags when set to `all`
+  sort:
+    type: pageCount | tag
+    default: 'pageCount'
+*/
+const tagData = (collections, tags, sort = 'pageCount') => {
+  const taglist = tags === 'all' ? getTags(collections.all) : tags;
+  return uniq(publicTags(taglist))
+    .map((tag) => ({
+      tag,
+      url: tagLink(collections.all, tag),
+      pageCount: collections[tag].length,
+    }))
+    .sort((a, b) => b[sort] - a[sort]);
 };
 
 module.exports = {
   isPublic,
   publicTags,
-  allTags,
+  getTags,
   tagData,
   displayName,
   tagLink,

@@ -51,10 +51,6 @@ module.exports = (eleventyConfig) => {
     [...arguments].reduce((all, current) => ({ ...all, ...current }), {}),
   );
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
-  eleventyConfig.addFilter('items', utils.items);
-  eleventyConfig.addFilter('get', utils.get);
-  eleventyConfig.addFilter('just', utils.just);
-  eleventyConfig.addFilter('getJust', utils.getJust);
   eleventyConfig.addFilter('styles', utils.styles);
 
   eleventyConfig.addFilter('getDate', time.getDate);
@@ -63,19 +59,19 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('tagIsPublic', tags.isPublic);
   eleventyConfig.addFilter('publicTags', tags.publicTags);
-  eleventyConfig.addFilter('allTags', tags.allTags);
+  eleventyConfig.addFilter('getTags', tags.getTags);
   eleventyConfig.addFilter('tagData', tags.tagData);
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
 
-  eleventyConfig.addFilter('pageIsPublic', pages.isPublic);
-  eleventyConfig.addFilter('pageIsCurrent', pages.isCurrent);
-  eleventyConfig.addFilter('getPage', pages.fromCollection);
-  eleventyConfig.addFilter('pageData', pages.pageData);
+  eleventyConfig.addFilter('meta', pages.meta);
+  eleventyConfig.addFilter('getPage', pages.getPage);
+  eleventyConfig.addFilter('hasData', pages.hasData);
+  eleventyConfig.addFilter('getData', pages.getData);
   eleventyConfig.addFilter('findData', pages.findData);
+  eleventyConfig.addFilter('withData', pages.withData);
   eleventyConfig.addFilter('pageContent', pages.pageContent);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
-  eleventyConfig.addFilter('withData', pages.withData);
 
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('active', birds.active);

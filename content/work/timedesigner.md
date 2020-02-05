@@ -87,4 +87,4 @@ summary: |
 
 {% import 'quotes.macros.njk' as quotes %}
 
-{{ quotes.grid(press | items(0, 2) ) }}
+{{ quotes.grid(press | slice(2) | first ) }}

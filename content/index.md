@@ -47,8 +47,8 @@ tools:
 {{ embed.logos(work, collections.all) }}
 
 {{ quotes.grid([
-  collections.all | findData('press', {'slug': 'extension'}),
-  collections.all | findData('press', {'slug': 'goals'})
+  collections.all | findData('data.press', {'slug': 'extension'}),
+  collections.all | findData('data.press', {'slug': 'goals'})
 ]) }}
 
 {{ layout.title('Developer Tools') }}
@@ -82,10 +82,9 @@ Our specialties include:
 
 {% endcall %}
 
-
 {{ quotes.grid([
-  collections.all | findData('press', {'slug': 'investment'}),
-  collections.all | findData('press', {'slug': 'handoff'})
+  collections.all | findData('data.press', {'slug': 'investment'}),
+  collections.all | findData('data.press', {'slug': 'handoff'})
 ]) }}
 
 

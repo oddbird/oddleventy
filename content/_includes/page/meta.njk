@@ -1,9 +1,9 @@
 {%- import 'utility.macros.njk' as utility -%}
-{%- import 'tags.macros.njk' as tagutils -%}
 {%- import 'birds.macros.njk' as birds -%}
 {%- import 'contact.macros.njk' as contact -%}
 
-{% set public_tags = tags | publicTags %}
+{% set public_tags = collections | tagData(tags) %}
+{% set public_tags = public_tags if public_tags | length else none %}
 {% set linked = {
   'venue': venue,
   'url': canonical or url
@@ -74,10 +74,17 @@
     {% if public_tags %}
       <div class="page-tags">
         {% include "icons/tags.svg" %}
-        {{ tagutils.tag_list(
-          tags=tags,
-          all=collections.all
-        ) }}
+        <ul class="pill-set">
+          {%- for item in public_tags -%}
+            <li class="pill-item">
+              {{ utility.link_if(
+                content=item.tag,
+                url=item.url,
+                class='pill'
+              ) }}
+            </li>
+          {%- endfor -%}
+        </ul>
       </div>
     {% endif %}
 

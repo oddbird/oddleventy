@@ -92,6 +92,6 @@ and keep everything in one place.
 ) }}
 
 {{ embed.icon_block(
-  collections.oss | findData('accoutrement_modules') | first,
+  collections._oss | findData('accoutrement_modules'),
   title='Integrate with [Accoutrement](/accoutrement/) Modules'
 ) }}

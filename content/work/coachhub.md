@@ -130,7 +130,7 @@ for internal health coaching.
 
 [currently being used]: https://coachhub.resilienceboost.com/
 
-{{ quotes.grid(press | items(0, 2) ) }}
+{{ quotes.grid(press | slice(2) | first ) }}
 
 ## What They Needed
 

@@ -1,7 +1,6 @@
 'use strict';
 
-const { withData, isCurrent } = require('./pages');
-const { get } = require('./utils');
+const { hasData, withData, isCurrent } = require('./pages');
 
 /* @docs
 label: Bird Filters
@@ -26,7 +25,8 @@ params:
 const getPages = (collection, bird) =>
   collection.filter(
     (page) =>
-      get(page.data, 'author', bird) || get(page.data, 'author', 'oddbird'),
+      hasData(page, 'data.author', bird) ||
+      hasData(page, 'data.author', 'oddbird'),
   );
 
 /* @docs
@@ -61,14 +61,8 @@ params:
     type: string
     note: The name of the bird (as used in `author` settings)
 */
-const authorPage = (collection, bird) => {
-  if (bird) {
-    bird = typeof bird === 'string' ? bird : `${bird[0]}`;
-    return withData(collection, 'bird', bird, true);
-  }
-
-  return undefined;
-};
+const authorPage = (collection, bird) =>
+  withData(collection, 'data.bird', bird)[0];
 
 module.exports = {
   getPages,

@@ -100,5 +100,8 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
   }
 }

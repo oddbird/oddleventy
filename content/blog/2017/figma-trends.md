@@ -1,8 +1,8 @@
 ---
 title: 'Figma: 18 Designers Predict UI/UX Trends for 2018'
 author: miriam
-canonical: https://www.figma.com/blog/eighteen-designers-predict-ui-ux-trends-for-2018/
 venue: Figma
+url: https://www.figma.com/blog/eighteen-designers-predict-ui-ux-trends-for-2018/
 tags:
   - _post
   - Design

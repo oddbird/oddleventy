@@ -155,9 +155,15 @@ params:
 ) -%}
   {%- set caption = caption if (caption != none) else caller() -%}
   {%- set event =
-    collection | pageData(page, 'events', {'venue': venue})
-    if page else
-    collection | findData('events', {'venue': venue})
+    collection | getPage(
+      page,
+      'data.events',
+      {'venue': venue} if venue else none
+    ) if page else
+    collection | findData(
+      'data.events',
+      {'venue': venue}
+    )
   -%}
   {%- if event.media -%}
     {{- figure(
