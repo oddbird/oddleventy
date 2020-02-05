@@ -66,13 +66,13 @@
     {% if public_tags %}
       <div class="page-tags">
         {% include "icons/tags.svg" %}
-        <ul class="taglist">
+        <ul class="pill-set">
           {%- for item in public_tags -%}
-            <li class="tag">
+            <li class="pill-item">
               {{ utility.link_if(
                 content=item.tag,
                 url=item.url,
-                class='taglink'
+                class='pill'
               ) }}
             </li>
           {%- endfor -%}
