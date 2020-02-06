@@ -24,6 +24,7 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
 {% import 'contact.macros.njk' as contact %}
+{% import 'birds.macros.njk' as birds %}
 
 {{ layout.title('Meet the birds') }}
 
@@ -58,6 +59,12 @@ summary: |
 
 <ul>
 {% for bird in collections.birds | active(false) %}
-  <li>{{ bird.data.title }}, {{ utility.datetime(bird.date, bird.data.end) }}</li>
+  {% set is_author = collections._post | byBird(bird.data.bird, 'solo') | length > 0 %}
+  {% set name = birds.author(
+    name=bird.data.bird,
+    page=bird,
+    link=is_author
+  ) %}
+  <li>{{ name | safe }}, {{ utility.datetime(bird.date, bird.data.end) }}</li>
 {% endfor %}
 </ul>

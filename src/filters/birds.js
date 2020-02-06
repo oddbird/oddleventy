@@ -21,12 +21,16 @@ params:
   bird:
     type: string
     note: The name of the bird (as used in `author` settings)
+  solo:
+    type: boolean
+    default: false
+    note: Optionally remove `oddbird`-authored pages from the collection
 */
-const getPages = (collection, bird) =>
+const getPages = (collection, bird, solo = false) =>
   collection.filter(
     (page) =>
       hasData(page, 'data.author', bird) ||
-      hasData(page, 'data.author', 'oddbird'),
+      (solo ? false : hasData(page, 'data.author', 'oddbird')),
   );
 
 /* @docs

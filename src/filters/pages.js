@@ -169,16 +169,49 @@ params:
 const pageContent = (collection, url) =>
   getPage(collection, url, 'templateContent');
 
+/* @docs
+label: render
+category: Data
+note: Returns the value for a given key from either `renderData` or `data`
+params:
+  page:
+    type: page object
+  key:
+    type: string
+*/
 const render = (page, key) =>
   page.data.renderData
     ? page.data.renderData[key] || page.data[key]
     : page.data[key];
 
+/* @docs
+label: pageType
+category: Data
+note: |
+  Return one of several resource "types"
+  which we can use to provide different list styling,
+  or filtering.
+
+  Current types include:
+  - client (tagged as 'Client Work')
+  - tool (tagged as 'OddTools')
+  - oss (tagged as 'Open Source')
+  - talk (tagged as 'Talks')
+  - workshop (tagged as 'Workshops')
+  - podcast (tagged as 'Podcast')
+  - video (tagged as 'Video')
+  - **article** (the default)
+params:
+  page:
+    type: page object
+*/
 const pageType = (page) => {
-  if (hasData(page, 'data.client')) {
-    return 'client work';
-  } else if (hasData(page, 'data.oss')) {
+  if (hasData(page, 'data.tags', 'Client Work')) {
+    return 'client';
+  } else if (hasData(page, 'data.tags', 'OddTools')) {
     return 'tool';
+  } else if (hasData(page, 'data.tags', 'Open Source')) {
+    return 'oss';
   } else if (hasData(page, 'data.tags', 'Talks')) {
     return 'talk';
   } else if (hasData(page, 'data.tags', 'Workshops')) {

@@ -66,14 +66,16 @@ params:
       we can find and link to author pages.
 #}{% macro author(
   name,
-  collections=none
+  collections=none,
+  page=none,
+  link=true
 ) -%}
-  {%- set by = collections.birds | authorPage(name) if collections else none -%}
-  {%- if by.data -%}
-    {%- set name = by.data.title if (name != 'oddbird') else 'OddBird' -%}
+  {%- set page = collections.birds | authorPage(name) if (collections and not page) else page -%}
+  {%- if page.data -%}
+    {%- set name = page.data.title if (name != 'oddbird') else 'OddBird' -%}
     {{ utility.link_if(
       content=name | mdInline | safe,
-      url=by.url,
+      url=page.url if link,
       class='h-card'
     ) }}
   {%- else -%}
