@@ -5,9 +5,8 @@ image:
   src: projects/medcurbside.jpg
 client: &client Lab06
 date: 2017-12-15
-project:
-  url: https://www.medcurbside.com/
-  status: live
+links:
+  site: https://www.medcurbside.com/
 people:
   - &rohit
     name: Rohit Puranik

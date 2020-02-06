@@ -19,11 +19,11 @@ events:
   - venue: Webconf.asia
     url: https://2019.webconf.asia/
     adr: Hong Kong
-    start: 2019-11-22
+    date: 2019-11-22
     end: 2019-11-23
   - venue: Develop Denver
     url: https://developdenver.org/
-    start: 2019-08-15
+    date: 2019-08-15
     end: 2019-08-16
     adr: Denver, CO
     video: https://www.youtube.com/watch?v=JnvkjhwcMcM
@@ -32,7 +32,7 @@ events:
   - venue: Generate New York
     url: https://www.generateconf.com/
     adr: San Francisco, CA
-    start: 2019-04-24
+    date: 2019-04-24
     end: 2019-04-25
     slides: https://talks.oddbird.net/dynamic-css/generate19/
     video: https://www.youtube.com/watch?v=oXEsYwtTT6I
@@ -41,7 +41,7 @@ events:
   - venue: Smashing Conf
     url: https://www.smashingconf.com/sf-2019/
     adr: San Francisco, CA
-    start: 2019-04-16
+    date: 2019-04-16
     end: 2019-04-17
     slides: https://talks.oddbird.net/dynamic-css/smashingsf19/
     video: https://vimeo.com/331571593
@@ -52,20 +52,20 @@ events:
   - venue: VueConf US
     url: http://vueconf.us/
     adr: Tampa, FL
-    start: 2019-03-26
+    date: 2019-03-26
     end: 2019-03-27
     slides: https://talks.oddbird.net/dynamic-css/vueconf19/
     video: https://www.vuemastery.com/conferences/vueconf-us-2019/dynamic-css-with-vue/
   - venue: Front Range Front-End
     url: https://www.meetup.com/front-range-front-end/events/chtxtpyxpbcb/
     adr: Denver, CO
-    start: 2018-11-01
+    date: 2018-11-01
     slides: https://talks.oddbird.net/dynamic-css/frontrange18/
     video: https://www.vuemastery.com/conferences/vueconf-us-2019/dynamic-css-with-vue/
   - venue: Full Stack Fest
     url: https://2018.fullstackfest.com/
     adr: Barcelona, Spain
-    start: 2018-09-06
+    date: 2018-09-06
     slides: https://talks.oddbird.net/dynamic-css/fullstack18/
     video: https://youtu.be/9fTUeLsR2Hc
     media: &fsfest
@@ -73,7 +73,7 @@ events:
   - venue: JSConf US
     url: https://2018.jsconf.us/
     adr: Carlsbad, CA
-    start: 2018-08-21
+    date: 2018-08-21
     slides: https://talks.oddbird.net/dynamic-css/jsconfus18/
     video: https://www.youtube.com/watch?v=uwgBz748t-g
     media: &jsconf
@@ -81,7 +81,7 @@ events:
   - venue: CSSConf Argentina
     url: https://cssconfar.com/
     adr: Buenos Aires, Argentina
-    start: 2018-08-18
+    date: 2018-08-18
     slides: https://talks.oddbird.net/dynamic-css/cssconfar18/
 press:
   - text: |

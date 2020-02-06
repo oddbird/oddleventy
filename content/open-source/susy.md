@@ -17,10 +17,9 @@ tags:
   - OddTools
   - Sass
   - Layout
-project:
+links:
   source: https://github.com/oddbird/susy
   docs: /susy/docs/
-  status: public
 screenshots:
   - img: susy/screenshots/sasslang.jpg
     alt: Sass

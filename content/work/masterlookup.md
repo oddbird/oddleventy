@@ -1,13 +1,16 @@
 ---
-eleventyExcludeFromCollections: true
 title: Master Lookup Table
 sub: Parcel Mapping for Urban Development
 client: The Providence Plan
 date: 2011-12-15
-project:
-  name: Master Lookup Table
+links:
   source: https://github.com/oddbird/mlt
-  status: private
+tags:
+  - _post
+  - Client Work
+  - Design
+  - Development
+  - Custom Application
 tasks:
   - Product Branding
   - User Experience Design

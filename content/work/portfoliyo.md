@@ -4,9 +4,8 @@ title: Portfoliyo
 sub: Real-Time Communication for Parents, Teachers, and Students
 client: The K Network
 date: 2013-05-15
-project:
+links:
   source: https://github.com/oddbird/portfoliyo
-  status: dead
 tasks:
   - Product Branding
   - User Experience Design

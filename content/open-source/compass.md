@@ -9,8 +9,8 @@ tags:
   - _post
   - Open Source
   - Sass
-project:
-  url: http://compass-style.org
+links:
+  site: http://compass-style.org
   source: http://github.com/compass/compass
   status: end-of-life
 summary: |

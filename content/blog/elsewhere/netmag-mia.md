@@ -1,5 +1,5 @@
 ---
-title: \*Beyond Pixels Profile
+title: Beyond Pixels Profile
 sub: Experience design is a collaboration
 author: miriam
 date: 2016-12-01

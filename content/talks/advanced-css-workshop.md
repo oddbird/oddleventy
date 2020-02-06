@@ -15,16 +15,16 @@ events:
   - venue: Webconf.asia
     url: https://2019.webconf.asia/
     adr: Hong Kong
-    start: 2019-11-20
+    date: 2019-11-20
     end: 2019-11-21
   - venue: Generate New York
     url: https://www.generateconf.com/
     adr: San Francisco, CA
-    start: 2019-04-24
+    date: 2019-04-24
   - venue: Smashing Conf
     url: https://www.smashingconf.com/sf-2019/
     adr: San Francisco, CA
-    start: 2019-04-18
+    date: 2019-04-18
 press:
   - text: |
       A fantastic speaker, with wonderful teaching skills,

@@ -17,10 +17,9 @@ tags:
   - OddTools
   - Sass
   - Testing
-project:
+links:
   source: https://github.com/oddbird/true
   docs: /true/docs/
-  status: public
 badges:
   - name: npm
     src: https://badge.fury.io/js/true.svg

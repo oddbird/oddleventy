@@ -29,10 +29,9 @@ screenshots:
     alt: Typefaces
   - img: herman/screenshots/sq-example.jpg
     alt: Example Code Blocks
-project:
+links:
   source: https://github.com/oddbird/sassdoc-theme-herman
   docs: /herman/docs/
-  status: pre-release
 quotes:
   - text: |
       Herman is my documentation dream come true,

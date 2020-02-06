@@ -3,9 +3,8 @@ eleventyExcludeFromCollections: true
 title: The Steel Wheels
 client: The Steel Wheels
 date: 2010-05-15
-project:
-  url: https://www.thesteelwheels.com/
-  status: changed
+links:
+  site: https://www.thesteelwheels.com/
 tasks:
   - Branding
   - User Experience Design

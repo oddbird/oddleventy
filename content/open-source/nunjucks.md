@@ -10,10 +10,9 @@ tags:
   - _post
   - Open Source
   - Mozilla
-project:
-  url: http://mozilla.github.io/nunjucks/
+links:
+  site: http://mozilla.github.io/nunjucks/
   source: https://github.com/mozilla/nunjucks/
-  status: public
 author:
   - carl
   - jonny

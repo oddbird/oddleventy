@@ -6,10 +6,9 @@ end: ongoing
 logo: accoutrement
 image:
   src: projects/accoutrement.jpg
-project:
+links:
   source: https://github.com/oddbird/accoutrement
   docs: /accoutrement/docs/
-  status: public
 index: Accoutrement
 oss: owner
 tags:

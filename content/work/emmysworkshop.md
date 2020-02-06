@@ -7,8 +7,6 @@ image:
 client: &client Carleton College
 url: https://turing.mathcs.carleton.edu/production/AlgebraSolving.html
 date: 2017-01-15
-project:
-  status: live
 tasks:
   - Branding
   - Responsive front-end architecture

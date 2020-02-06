@@ -1,16 +1,16 @@
 ---
-eleventyExcludeFromCollections: true
 title: Trop
 sub: A cool little lit mag from Los Angeles.
 image:
   src: projects/trop.jpg
 client: Trop Magazine
 date: 2017-01-15
-project:
-  url: http://tropmag.com/
-  status: live
-tasks:
-  - WordPress Theme
+links:
+  site: http://tropmag.com/
+tags:
+  - _post
+  - Client Work
+  - WordPress
 quotes:
   - text: |
       Having worked with a handful of web developers,

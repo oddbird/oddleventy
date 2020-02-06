@@ -5,9 +5,8 @@ sub: Curration Tools for Teachers
 client: Junyo
 url: http://junyo.com/
 date: 2014-09-15
-project:
-  url: http://junyo.com/streams/
-  status: changed
+links:
+  site: http://junyo.com/streams/
 tasks:
   - Product Branding
   - User Experience Design

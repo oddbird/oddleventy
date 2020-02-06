@@ -14,7 +14,7 @@ tags:
   - CSS
   - Mozilla
 index: CSS Remedy
-project:
+links:
   source: https://github.com/mozdevs/cssremedy/
 summary: |
   These days, browsers are far more consistent in how they render CSS,

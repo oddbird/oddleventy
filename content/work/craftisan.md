@@ -3,8 +3,6 @@ eleventyExcludeFromCollections: true
 title: Craftisan
 client: Craftisan
 date: 2011-04-15
-project:
-  status: dead
 tasks:
   - Product Branding
   - User Experience Design

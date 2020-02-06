@@ -14,7 +14,7 @@ tags:
 events:
   - venue: Smashing Conf Austin
     url: https://smashingconf.com/austin-2020/
-    start: 2020-06-09
+    date: 2020-06-09
     end: 2020-06-10
     adr: Austin, TX
   - venue: Front Range Front End
@@ -31,7 +31,7 @@ events:
   - venue: Smashing Conf NY
     feature: true
     url: https://smashingconf.com/ny-2019/
-    start: 2019-10-15
+    date: 2019-10-15
     end: 2019-10-16
     adr: New York, NY
     video: https://vimeo.com/367890815

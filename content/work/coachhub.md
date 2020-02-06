@@ -14,10 +14,8 @@ people:
     title: CTO
     venue: *client
 date: 2015-09-15
-project:
-  industry: Wellness & Medical
-  url: https://coachhub.resilienceboost.com/
-  status: live
+links:
+  site: https://coachhub.resilienceboost.com/
 tags:
   - _post
   - Case Study

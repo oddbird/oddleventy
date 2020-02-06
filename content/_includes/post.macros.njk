@@ -1,12 +1,29 @@
 {% import 'utility.macros.njk' as utility %}
 {% import 'birds.macros.njk' as birds %}
 
+{# @docs
+label: Post Macros
+category: file
+#}
+
+
+{# @docs
+label: list
+category: lists
+note: Generate a list of posts
+params:
+  posts:
+    type: array
+  collections:
+    type: 11ty collections array
+    default: none
+#}
 {% macro list(
   posts,
   collections=none
 ) %}
 {% if posts %}
-  <ol reversed>
+  <ol class="post-list" reversed>
     {% for post in posts | sort(true, false, 'date') %}
       {{ item(post, collections) }}
     {% endfor %}
@@ -14,38 +31,255 @@
 {% endif %}
 {% endmacro %}
 
+{# @docs
+label: item
+category: lists
+note: Generate each post in a list
+params:
+  post:
+    type: 11ty page
+  collections:
+    type: 11ty collections array
+    default: none
+#}
 {% macro item(
   post,
   collections=none
 ) %}
-  {% set title = post | render('title') %}
-  {% set banner = post | render('banner') or title %}
-  <li>
-    <h3>
-      {{ utility.link_if(
-        banner,
-        post.url
-      ) }}
-    </h3>
-    <p>
+  <li class="post">
+    {{ heading(post) }}
+    {{ subtitle(post.data.sub) }}
+
+    <p class="byline">
       <strong>{{ post | pageType }}</strong>
 
-      {% if post.data.author %}
-        <i>by</i>
-        {{ birds.authors(post.data.author, collections) }}
-      {% endif %}
+      {{ by(post.data.author, collections) }}
 
-      {% if post.data.client %}
-        <i>for</i>
-        <strong>{{ post.data.client | mdInline | safe }}</strong>
-      {% endif %}
-
-      {{ utility.datetime(
-        start=post.date,
-        end=post.data.end,
-        is_pubdate=true,
-        prefix=true
+      {{ linked(
+        venue=post.data.venue,
+        url=post.data.canonical or post.data.url
       ) }}
+
+      {{ client(post.data.client) }}
+
+      {{ pubdate(
+        start=post.date,
+        end=post.data.end
+      ) }}
+
+      {{ where(post.data.adr) }}
     </p>
+
+    {{ taglist(post.data.tags, collections) }}
   </li>
+{% endmacro %}
+
+{# @docs
+label: title
+category: metadata
+note: Generate a linked heading with the post title
+params:
+  post:
+    type: 11ty page
+#}
+{% macro heading(
+  post
+) %}
+  {% set post_title = post | render('banner') or post | render('title') %}
+  <h3>
+    {{ utility.link_if(
+      post_title,
+      post.url
+    ) }}
+  </h3>
+{% endmacro %}
+
+{# @docs
+label: subtitle
+category: metadata
+note: Generate each post in a list
+params:
+  post:
+    type: 11ty page
+  collections:
+    type: 11ty collections array
+    default: none
+#}
+{% macro subtitle(
+  sub
+) %}
+  {% if sub %}
+    <p class="subtitle">
+      {{ sub | mdInline | safe }}
+    </p>
+  {% endif %}
+{% endmacro %}
+
+{# @docs
+label: by
+category: metadata
+note: Show a linked list of authors
+params:
+  author:
+    type: string | array
+  collections:
+    type: 11ty collections array
+#}
+{% macro by(
+  author,
+  collections
+) %}
+  {% if author %}
+    <i>by</i>
+    {{ birds.authors(author, collections) }}
+  {% endif %}
+{% endmacro %}
+
+{# @docs
+label: pubdate
+category: metadata
+note: Generate a pubdate in the proper format
+params:
+  start:
+    type: date
+  end:
+    type: date
+  format:
+    type: string
+    default: 'long'
+#}
+{% macro pubdate(
+  start,
+  end,
+  format='long'
+) %}
+  {{ utility.datetime(
+    start=start,
+    end=end,
+    format=format,
+    is_pubdate=true,
+    prefix=true
+  ) }}
+{% endmacro %}
+
+{# @docs
+label: client
+category: metadata
+note: Show the client name on a client project
+params:
+  name:
+    type: string
+#}
+{% macro client(name) %}
+  {% if name %}
+    <i>for</i>
+    <strong>{{ name | mdInline | safe }}</strong>
+  {% endif %}
+{% endmacro %}
+
+{# @docs
+label: where
+category: metadata
+note: Show the address when available
+params:
+  adr:
+    type: string
+#}
+{% macro where(
+  adr
+) %}
+  {% if adr %}
+    <i>in</i>
+    <span class="adr">
+      {{ adr | typogr | safe }}
+    </span>
+  {% endif %}
+{% endmacro %}
+
+{# @docs
+label: linked
+category: metadata
+note: Link to original post or venue
+params:
+  venue:
+    type: string
+  url:
+    type: url
+#}
+{% macro linked(
+  venue,
+  url
+) -%}
+{%- if venue and url %}
+  <i>at</i>
+  {{ utility.link_if(
+    content=venue | mdInline | safe,
+    url=url,
+    attrs={'rel': 'bookmark'}
+  ) }}
+{% endif -%}
+{%- endmacro %}
+
+{# @docs
+label: taglist
+category: metadata
+note: Show a linked list of all post tags, as pills
+params:
+  tags:
+    type: array
+  collections:
+    type: 11ty collections array
+#}
+{% macro taglist(
+  tags,
+  collections
+) -%}
+  {%- set public_tags = collections | tagData(tags) -%}
+  {%- set public_tags = public_tags if public_tags | length else none -%}
+
+  {%- if public_tags -%}
+    <div class="post-tags">
+      {%- include "icons/tags.svg" -%}
+      <ul class="pill-set">
+        {%- for item in public_tags -%}
+          <li class="pill-item">
+            {{- utility.link_if(
+              content=item.tag,
+              url=item.url,
+              class='pill'
+            ) -}}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endif -%}
+{%- endmacro %}
+
+{# @docs
+label: linklist
+category: metadata
+note: List of links to docs, source, sites, slides, etc
+params:
+  links:
+    type: object
+    note: the key will be used as text, with the value for url
+  slides:
+    type: url
+    default: 'none'
+#}
+{% macro linklist(
+  links,
+  slides=none
+) %}
+  {% if links | length or slides %}
+    <ul class="post-links">
+      {% if slides %}
+        <li>{{ utility.link_if('slides »', slides) }}</li>
+      {% endif %}
+
+      {% for name, url in links %}
+        <li>{{ utility.link_if(namme + ' »', url) }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% endmacro %}

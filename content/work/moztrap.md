@@ -6,10 +6,8 @@ image:
 logo: mozilla
 client: Mozilla
 date: 2012-03-15
-project:
-  industry: Enterprise Technology
+links:
   source: https://github.com/mozilla/moztrap
-  status: dead
 tags:
   - _post
   - Client Work

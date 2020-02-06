@@ -11,14 +11,14 @@
   > * {
     grid-column: var(--meta-column, 1);
   }
+
+  .subtitle {
+    font-size: var(--h3);
+    font-style: italic;
+  }
 }
 
-.subtitle {
-  font-size: var(--h3);
-  font-style: italic;
-}
-
-.page-links {
+.post-links {
   --meta-column: 2;
   padding: 0;
   list-style: none;

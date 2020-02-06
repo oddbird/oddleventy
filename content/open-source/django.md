@@ -12,11 +12,10 @@ tags:
   - _post
   - Open Source
   - Python
-project:
-  url: https://www.djangoproject.com/
+links:
+  site: https://www.djangoproject.com/
   docs: https://docs.djangoproject.com/
   source: https://github.com/django/django
-  status: public
 summary: |
   **Django is a high-level Python Web framework**
   that encourages rapid development and clean, pragmatic design.

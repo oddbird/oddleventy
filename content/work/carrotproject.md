@@ -9,8 +9,6 @@ people:
   - name: Jake de Grazia
     venue: *client
 date: 2010-03-15
-project:
-  status: dead
 tasks:
   - Product Branding
   - User Experience Design
