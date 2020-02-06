@@ -51,3 +51,13 @@ summary: |
     {% endcall %}
   {% endfor %}
 {% endcall %}
+
+<hr>
+
+<h2>Birds Emeritus</h2>
+
+<ul>
+{% for bird in collections.birds | active(false) %}
+  <li>{{ bird.data.title }}, {{ utility.datetime(bird.date, bird.data.end) }}</li>
+{% endfor %}
+</ul>

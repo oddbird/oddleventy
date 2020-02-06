@@ -41,11 +41,15 @@ params:
   collection:
     type: array
     note: The 11ty collection of pages to filter
+  current:
+    type: boolean
+    default: 'true'
+    note: Flip result to show inactive birds
 */
-const active = (collection) =>
+const active = (collection, current = true) =>
   collection
-    .filter((page) => isCurrent(page) && page.data.bird !== 'oddbird')
-    .sort((a, b) => b.data.title - a.data.title);
+    .filter((page) => page.data.bird !== 'oddbird')
+    .filter((page) => (current ? isCurrent(page) : !isCurrent(page)));
 
 /* @docs
 label: authorPage
