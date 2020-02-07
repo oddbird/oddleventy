@@ -27,7 +27,7 @@ work:
   - /work/metadeploy/
   - /work/timedesigner/
   - /work/phamaly/
-  - /work/cfoshare/
+  - /work/workflow-builder/
 tools:
   - /django/
   - /sass/
