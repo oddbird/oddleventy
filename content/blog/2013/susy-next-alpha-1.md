@@ -1,11 +1,11 @@
 ---
-title: 'Susy Next: The First Alpha'
+title: Susy Next, The First Alpha
 tags:
   - _post
-  - susy
-  - susy2
-  - layout
-  - grids
+  - Susy
+  - Susy2
+  - Layout
+  - Grids
 author: miriam
 image:
   src: blog/susy.jpg

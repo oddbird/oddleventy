@@ -1,6 +1,6 @@
 ---
 title: Loops in CSS Preprocessors
-url: https://css-tricks.com/loops-css-preprocessors/
+canonical: https://css-tricks.com/loops-css-preprocessors/
 date: 2016-12-02
 author: miriam
 image:

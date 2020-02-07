@@ -1,0 +1,8 @@
+#!/bin/sh
+
+yarn global add susy sass-true sassdoc-theme-herman accoutrement --no-lockfile --ignore-scripts --no-bin-links --global-folder temp
+rm -rf ./src/docs/susy/; cp -a ./temp/node_modules/susy/docs ./src/docs/susy/
+rm -rf ./src/docs/true/; cp -a ./temp/node_modules/sass-true/docs ./src/docs/true/
+rm -rf ./src/docs/herman/; cp -a ./temp/node_modules/sassdoc-theme-herman/docs ./src/docs/herman/
+rm -rf ./src/docs/accoutrement/; cp -a ./temp/node_modules/accoutrement/docs ./src/docs/accoutrement/
+rm -rf temp

@@ -1,0 +1,51 @@
+{% import 'utility.macros.njk' as utility %}
+
+{# @docs
+label: Section Macros
+category: File
+note: For sectioning content in posts
+#}
+
+
+{# @docs
+label: title
+note: Section titles are flag-like
+params:
+  content:
+    type: markdown
+  align:
+    type: right | left | center [none]
+    default: 'right'
+    note: |
+      The macro defaults to `right`,
+      but the CSS defaults to a centered layout
+      if no valid alignment is given.
+#}
+{% macro title(
+  content,
+  align='right'
+) %}
+<h2 data-section-title="{{ align }}">{{ content | mdInline | safe }}</h2>
+{% endmacro %}
+
+{% macro grid(
+  name='fit',
+  content=none,
+  attrs={}
+) -%}
+{%- set content = _grid_content(content) if content and (content | typeCheck('object')) else content -%}
+{%- set content = content if (content != none) else caller() -%}
+<div data-grid="{{ name }}" {{ utility.show_attrs(attrs) }}>{{ content | safe }}</div>
+{%- endmacro %}
+
+
+{% macro _grid_content(
+  data
+) %}
+{% for item in data %}
+  <article class="grid-item">
+    <h3 class="item-title">{{ item.title | mdInline | safe }}</h3>
+    {{ item.text | md | safe }}
+  </article>
+{% endfor %}
+{% endmacro %}

@@ -1,8 +1,9 @@
 ---
 title: Jonny Gerig Meyer
 sub: Co-founder & technical lead
-dates: 2008–present
 bird: jonny
+date: 2009-07-01
+end: ongoing
 image:
   src: birds/jonny.jpg
 social:
@@ -10,12 +11,10 @@ social:
   github: jgerigmeyer
   _facebook: jgerigmeyer
 summary: |
-  [Jonny Gerig Meyer][jonny]
-  is an architect of clean,
-  well-tested JavaScript web applications,
-  and a brewer of delicious IPAs.
-
-  [jonny]: /authors/jonny/
+  Jonny
+  is a co-founder and technical lead --
+  helping architect clean,
+  well-tested JavaScript web applications.
 ---
 
 **Jonny leads the front-end development process**,
@@ -32,17 +31,3 @@ numerous open-source projects.
 He's easily distracted by a game of ultimate frisbee,
 homebrewing delicious IPAs and stouts,
 and trying to keep up with his dog and two young kids.
-
-------
-
-{% for site, username in social %}
-{% if site[0] != '_' %}
-- {{ site }}: {{ username }}
-{% endif %}
-{% endfor %}
-
-------
-
-{% for page in collections._oss | byBird(bird) %}
-- [{{ page.data.title }}]({{ page.url }})
-{% endfor %}

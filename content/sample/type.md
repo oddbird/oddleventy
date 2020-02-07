@@ -71,11 +71,17 @@ Consequat scelerisque egestas ut mollis feugiat sit velit per cubilia, gravida d
 Quotes can also be generated from data on any page,
 either one at a time:
 
-{{ quotes.from(collections.all, '/work/metadeploy/', 'extension') }}
+{{ quotes.find(
+  collections.all,
+  slugs='extension'
+) }}
 
 Or in a grid:
 
-{{ quotes.from(collections.all, '/work/timedesigner/') }}
+{{ quotes.find(
+  collections.all,
+  page='/work/timedesigner/'
+) }}
 
 To show a quote or quotes from the current page,
 you can call `quotes.grid()` or `quotes.blockquote()` directly:

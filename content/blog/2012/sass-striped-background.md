@@ -4,7 +4,7 @@ date: 2012-07-20
 author: miriam
 tags:
   - _post
-  - code
+  - Code
 ---
 
 [Jina][jina] asked twitter for Sass advice the other day.

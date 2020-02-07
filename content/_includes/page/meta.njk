@@ -1,83 +1,47 @@
 {%- import 'utility.macros.njk' as utility -%}
+{%- import 'contact.macros.njk' as contact -%}
+{%- import 'post.macros.njk' as post -%}
 
-{% set public_tags = collections | tagData(tags) %}
-{% set public_tags = public_tags if public_tags | length else none %}
-{% set elsewhere = {
-  'venue': venue,
-  'url': url
-} if elsewhere else none %}
+{% set taglist = post.taglist(tags, collections) %}
+{% set linklist = post.linklist(links, slides) %}
+{% set linked = post.linked(
+  venue=venue,
+  url=canonical or url
+) %}
 
 {% set sub = renderData.sub or sub %}
 
-{% if sub or public_tags or elsewhere or author %}
+{% set dates = utility.datetime(
+  start=start or date or page.date,
+  end=end,
+  prefix=true
+) if bird and bird != 'oddbird' else none %}
+
+{% if sub or linklist or taglist or linked or author or links or slides %}
   <div id="meta">
-    {% if sub or dates %}
-      <p class="subtitle">
-        {{ sub | mdInline | safe }}
-        {%- if sub and dates %}, {% endif %}
-        {{ dates }}
-      </p>
-    {% endif %}
+    {{ post.subtitle(
+      [sub, dates] | join(', ') if dates else sub
+    ) }}
 
-    {% if author %}
+    {% if author or client %}
       <p class="byline">
-        <i>by</i>
-        {% set author_list = [author] if author | typeCheck('string') else author %}
-        {% for name in author_list -%}
-          {%- set by = collections.birds | authorPage(name) -%}
-          {%- if by -%}
-            {{ utility.link_if(
-              content=by.data.title | mdInline | safe,
-              url=by.url,
-              class='h-card'
-            ) }}
-          {%- else -%}
-            {{ name | capitalize }}
-          {%- endif -%}
-          {{ ', ' if not loop.last }}
-        {%- endfor %}
-
-        {% if elsewhere %}
-          <i>at</i>
-          {{ utility.link_if(
-            content=elsewhere.venue | mdInline | safe,
-            url=elsewhere.url,
-            attrs={'rel': 'bookmark'}
-          ) }}
-        {% endif %}
-
-        <i>on</i>
-        {{ utility.datetime(
-          start=start or date or page.date,
-          end=end,
-          format='long',
-          is_pubdate=pubdate or page.date
+        {{ post.by(author, collections) }}
+        {{ linked | safe }}
+        {{ post.client(client) }}
+        {{ post.pubdate(
+          start=date or page.date,
+          end=end
         ) }}
-
-        {% if adr %}
-          <i>in</i>
-          <span class="adr">
-            {{ adr | typogr | safe }}
-          </span>
-        {% endif %}
+        {{ post.where(adr) }}
       </p>
+    {% elif social %}
+      {{ contact.social(
+        data=social,
+        name=bird | capitalize
+      ) }}
     {% endif %}
 
-    {% if public_tags %}
-      <div class="page-tags">
-        {% include "icons/tags.svg" %}
-        <ul class="pill-set">
-          {%- for item in public_tags -%}
-            <li class="pill-item">
-              {{ utility.link_if(
-                content=item.tag,
-                url=item.url,
-                class='pill'
-              ) }}
-            </li>
-          {%- endfor -%}
-        </ul>
-      </div>
-    {% endif %}
+    {{ taglist | safe }}
+    {{ linklist | safe }}
   </div>
 {% endif %}

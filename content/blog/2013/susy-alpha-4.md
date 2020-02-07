@@ -1,18 +1,18 @@
 ---
-title: 'Susy Next: Alpha 4'
+title: Susy Next, Alpha 4
 tags:
   - _post
-  - susy
-  - susy2
-  - layout
-  - grids
+  - Susy
+  - Susy2
+  - Layout
+  - Grids
 author: miriam
 image:
   src: blog/susy.jpg
 summary: |
   [Susy Next alpha 4] is now available.
 
-    [Susy Next alpha 4]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.4
+  [Susy Next alpha 4]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.4
 date: 2013-09-05
 ---
 

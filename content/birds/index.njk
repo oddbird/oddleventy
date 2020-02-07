@@ -1,0 +1,70 @@
+---
+title: About
+banner: About OddBird
+sub: Founded in 2008 by three odd siblings
+permalink: birds/index.html
+bird: oddbird
+social:
+  twitter: oddbird
+  github: oddbird
+  email: birds
+image:
+  svg: faces/oddbird
+summary: |
+  **As a client, you'll get to know our tight-knit team**
+  on a first-name basis,
+  with direct access to everyone involved.
+  We'll all learn what makes your company special,
+  and discuss features as a team –
+  keeping backend, frontend, and design integrated
+  for a shared understanding of your project and goals.
+---
+
+{% import 'utility.macros.njk' as utility %}
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'contact.macros.njk' as contact %}
+{% import 'birds.macros.njk' as birds %}
+
+{{ layout.title('Meet the birds') }}
+
+{% call layout.grid(
+  attrs={
+    'style': {
+      '--fit-min': 'var(--min-page)',
+      '--media-content': 'var(--small-page)'
+    } | styles
+  }
+) %}
+  {% for bird in collections.birds | active %}
+    {% call embed.media_block(
+      media=embed.svg('faces/' + bird.data.bird),
+      name='bird'
+    ) %}
+      <h3>{{ utility.link_if(bird.data.title, bird.url) }}</h3>
+
+      {{ bird.data.summary | md | safe }}
+
+      {{ contact.social(
+        data=bird.data.social,
+        name=bird.data.bird | capitalize
+      ) }}
+    {% endcall %}
+  {% endfor %}
+{% endcall %}
+
+<hr>
+
+<h2>Birds Emeritus</h2>
+
+<ul>
+{% for bird in collections.birds | active(false) %}
+  {% set is_author = collections._post | byBird(bird.data.bird, 'solo') | length > 0 %}
+  {% set name = birds.author(
+    name=bird.data.bird,
+    page=bird,
+    link=is_author
+  ) %}
+  <li>{{ name | safe }}, {{ utility.datetime(bird.date, bird.data.end) }}</li>
+{% endfor %}
+</ul>

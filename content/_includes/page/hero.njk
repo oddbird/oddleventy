@@ -1,12 +1,15 @@
+{% import 'utility.macros.njk' as utility %}
 {% import 'embed.macros.njk' as embed %}
 
 {% if image %}
-  <div id="hero">
-    {% set style = {'--hero-position', image.position} | styles %}
-    {{ embed.img(
-      src=image.src,
-      alt=image.alt,
-      attrs={'style': style}
-    ) }}
+  <div id="hero" {{ utility.style_if({'--hero-position': image.position}) }}>
+    {% if image.src %}
+      {{ embed.img(
+        src=image.src,
+        alt=image.alt
+      ) }}
+    {% elif image.svg %}
+      {{ embed.svg(image.svg) }}
+    {% endif %}
   </div>
 {% endif %}

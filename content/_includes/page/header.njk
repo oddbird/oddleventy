@@ -1,6 +1,7 @@
 {% import 'embed.macros.njk' as embed %}
 
 {% set device = (image and image.device) %}
+{% set media = device or (image.type == 'media') %}
 {% set details %}
   {% include 'page/title.njk' %}
   {% include 'page/meta.njk' %}
@@ -9,7 +10,7 @@
 
 <header
   data-layout="header"
-  data-header="{{ 'device' if device else 'hero' }}">
+  data-header="{{ 'media' if media else 'hero' }}">
   {% if device %}
     {% set hero = embed.screen(
       fill=image.fill,
@@ -20,6 +21,13 @@
       media=hero,
       name='hero',
       reverse='vertical',
+      attrs={'data-block': 'rotate'},
+      content=details
+    ) }}
+  {% elif media %}
+    {{ embed.media_block(
+      media=embed.svg(image.svg) if image.svg else embed.img(image.src, image.alt),
+      name='hero',
       attrs={'data-block': 'rotate'},
       content=details
     ) }}

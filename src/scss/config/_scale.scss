@@ -31,6 +31,7 @@ $font-sizes: (
   'h1': '#xlarge',
   'h2': '#large',
   'h3': '#medium',
+  'code': 0.9em,
 );
 
 @include tools.add-sizes($font-sizes);
@@ -91,6 +92,8 @@ $theme-sizes: (
 /// @sizes {output-only}
 /// @group config-scale
 $page-sizes: (
+  'grid-item': 16rem,
+  'min-page': 22rem,
   'small-page': 30rem,
   'media-page': 38rem,
   'medium-page': 45rem,

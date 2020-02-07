@@ -74,6 +74,7 @@
     "sass": "^1.23.0",
     "sassdoc": "^2.7.1",
     "sassdoc-theme-herman": "^3.0.2",
+    "slugify": "^1.3.6",
     "stylelint": "^11.1.1",
     "stylelint-config-prettier": "^6.0.0",
     "stylelint-config-recommended": "^3.0.0",

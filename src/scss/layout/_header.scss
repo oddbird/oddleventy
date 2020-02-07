@@ -1,6 +1,7 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
 [data-layout='header'] {
+  --newline: var(--shim);
   display: grid;
   grid-area: header;
 }
@@ -9,7 +10,6 @@
   --angle: var(--edge);
   --edge: calc(var(--page-margin) / 2);
   --overlap: var(--gutter);
-  --newline: var(--shim);
   margin: 0 calc(var(--page-margin) * -1) var(--gutter);
   grid-template:
     'hero hero' auto
@@ -22,6 +22,7 @@
   #title {
     margin-bottom: 0;
     padding-left: var(--page-margin);
+    padding-top: var(--half-shim);
   }
 
   #meta,
@@ -43,6 +44,7 @@
   }
 }
 
-[data-header='device'] {
+[data-header='media'] {
   justify-self: center;
+  margin-bottom: var(--spacer);
 }

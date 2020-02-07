@@ -1,16 +1,15 @@
 ---
-title: An Interview with Miriam Suzanne
-url: https://css-tricks.com/interview-miriam-suzanne/
-date: 2016-10-15
+title: CSS Tricks Interview
 author: miriam
+date: 2016-10-15
+canonical: https://css-tricks.com/interview-miriam-suzanne/
 image:
   src: blog/elsewhere/css-tricks.jpg
 tags:
   - _post
-  - _elsewhere
-  - code
-  - css tricks
-  - interview
+  - Code
+  - CSS Tricks
+  - Interview
 summary: |
   Chris Coyier interviews Miriam
   when she joins the CSS Tricks team

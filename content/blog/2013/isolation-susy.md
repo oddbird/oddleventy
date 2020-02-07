@@ -2,12 +2,12 @@
 title: Isolation and Bleed in Susy
 tags:
   - _post
-  - susy
-  - susy1
-  - layout
-  - grids
-  - sub-pixel rounding
-  - code
+  - Susy
+  - Susy1
+  - Layout
+  - Grids
+  - Sub-pixel rounding
+  - Code
 author: miriam
 image:
   src: blog/susy.jpg
@@ -17,7 +17,7 @@ summary: |
   help you manage the worst effects of [sub-pixel rounding], while
   `bleed()` helps you break items out of the box.
 
-    [sub-pixel rounding]: http://palantir.net/blog/responsive-design-s-dirty-little-secret
+  [sub-pixel rounding]: http://palantir.net/blog/responsive-design-s-dirty-little-secret
 date: 2013-03-20
 ---
 

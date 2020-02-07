@@ -6,7 +6,7 @@
 /// are set to block display, with a margin.
 /// @group forms
 [data-field] {
-  display: block;
+  display: var(--ccs-custom-display, block);
   margin-bottom: var(--shim);
 }
 
@@ -26,8 +26,10 @@
 /// text-input style.
 /// @group forms
 [data-input*='text'] {
+  background-color: var(--bg-full);
   border: thin solid var(--border);
   border-radius: 0;
+  color: var(--text);
   display: block;
   font: inherit;
   font-size: var(--small);

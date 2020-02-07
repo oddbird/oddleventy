@@ -2,10 +2,10 @@
 title: Sass Layout in 2013 and the Future of Susy
 tags:
   - _post
-  - susy
-  - susy2
-  - layout
-  - grids
+  - Susy
+  - Susy2
+  - Layout
+  - Grids
 author: miriam
 image:
   src: blog/susy.jpg
