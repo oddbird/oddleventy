@@ -74,6 +74,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('render', pages.render);
   eleventyConfig.addFilter('pageType', pages.pageType);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
+  eleventyConfig.addFilter('buildEvent', pages.buildEvent);
+  eleventyConfig.addFilter('includeEvents', pages.includeEvents);
 
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('active', birds.active);
