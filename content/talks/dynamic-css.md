@@ -10,6 +10,7 @@ image:
 tags:
   - _post
   - Talks
+  - Training
   - Code
   - CSS
   - JavaScript

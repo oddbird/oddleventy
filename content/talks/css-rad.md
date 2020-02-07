@@ -9,6 +9,7 @@ slides: https://sliiides.netlify.com/css-is-rad/
 tags:
   - _post
   - Talks
+  - Training
   - Code
   - CSS
 events:

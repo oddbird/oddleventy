@@ -42,10 +42,10 @@ summary: |
 {% import 'contact.macros.njk' as contact %}
 {% import "quotes.macros.njk" as quotes %}
 
-{{ quotes.from(
+{{ quotes.find(
   collections.all,
   page=talk,
-  slug='squishy'
+  slugs='squishy'
 ) }}
 
 ------

@@ -5,6 +5,7 @@ date: 2014-02-28
 tags:
   - _post
   - Talks
+  - Training
   - Python
   - Testing
 events:

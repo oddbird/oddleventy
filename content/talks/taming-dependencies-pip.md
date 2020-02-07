@@ -5,6 +5,7 @@ date: 2011-09-08
 tags:
   - _post
   - Talks
+  - Training
   - Python
   - Pip
 events:

@@ -6,6 +6,7 @@ slides: https://www.oddbooksapp.com/book/sass-map-magic
 tags:
   - _post
   - Talks
+  - Training
   - Code
 events:
   - venue: CSSConf 2016

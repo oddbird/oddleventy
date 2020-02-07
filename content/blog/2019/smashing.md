@@ -31,7 +31,10 @@ the conference. In particular, I recommend watching, at minimum:
 
 {% import "quotes.macros.njk" as quotes %}
 
-{{ quotes.from(collections.all, '/talks/dynamic-css/', 'mind-bending') }}
+{{ quotes.find(
+  collections.all,
+  slugs='mind-bending'
+) }}
 
 ------
 

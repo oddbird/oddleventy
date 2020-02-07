@@ -7,6 +7,7 @@ slides: https://oddbooksapp.com/book/pattern-making
 tags:
   - _post
   - Talks
+  - Training
   - Code
   - CSS
   - Sass

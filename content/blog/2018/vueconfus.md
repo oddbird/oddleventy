@@ -36,10 +36,10 @@ summary: |
   caption='Video from VueConf US'
 ) }}
 
-{{ quotes.from(
+{{ quotes.find(
   collections.all,
   page=talk,
-  slug='audit'
+  slugs='audit'
 ) }}
 
 ------

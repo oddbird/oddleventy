@@ -7,6 +7,7 @@ slides: http://www.slideshare.net/Funstacy/curing-design-complacency-61550889
 tags:
   - _post
   - Talks
+  - Training
   - Design
 events:
   - venue: WordCamp Chicago

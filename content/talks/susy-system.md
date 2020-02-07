@@ -7,6 +7,7 @@ slides: http://mirisuzanne.github.io/pres/susy2/
 tags:
   - _post
   - Talks
+  - Training
   - Code
   - Susy
   - Layout

@@ -7,6 +7,7 @@ slides: https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-g
 tags:
   - _post
   - Talks
+  - Training
   - CSS
   - Grids
 events:

@@ -47,7 +47,8 @@ params:
   collections=none
 ) %}
   <li class="post">
-    {{ heading(post) }}
+    <h3>{{ heading(post) }}</h3>
+
     {{ subtitle(post.data.sub) }}
 
     <p class="byline">
@@ -84,15 +85,13 @@ params:
 #}
 {% macro heading(
   post
-) %}
-  {% set post_title = post | render('banner') or post | render('title') %}
-  <h3>
-    {{ utility.link_if(
-      post_title,
-      post.url
-    ) }}
-  </h3>
-{% endmacro %}
+) -%}
+  {%- set post_title = post | render('banner') or post | render('title') -%}
+  {{- utility.link_if(
+    post_title,
+    post.url
+  ) -}}
+{%- endmacro %}
 
 {# @docs
 label: subtitle

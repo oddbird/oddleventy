@@ -9,6 +9,7 @@ image:
 tags:
   - _post
   - Talks
+  - Training
   - Code
   - Susy
   - Layout

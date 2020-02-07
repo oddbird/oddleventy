@@ -5,6 +5,7 @@ date: 2014-02-27
 tags:
   - _post
   - Talks
+  - Training
   - Python
 events:
   - venue: ConFoo

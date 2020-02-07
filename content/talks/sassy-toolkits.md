@@ -7,6 +7,7 @@ slides: https://www.oddbooksapp.com/book/sassy-toolkits
 tags:
   - _post
   - Talks
+  - Training
   - Code
 events:
   - venue: Frontend Zurich

@@ -28,7 +28,7 @@ quotes:
       open source test case management systems out there.
     name: Frank O'Hara
     role: User
-    slug: best
+    slug: moztrap
 summary: |
   Mozilla's next-generation test case management system, MozTrap manages
   extensive test suites for all of Mozilla's software products (including

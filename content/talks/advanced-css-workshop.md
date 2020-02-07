@@ -6,8 +6,8 @@ author: miriam
 date: 2019-04-18
 tags:
   - _post
-  - Talks
   - Workshops
+  - Training
   - Code
   - CSS
   - Sass

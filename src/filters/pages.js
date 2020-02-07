@@ -95,17 +95,19 @@ params:
     type: array
     note: often an array of pages, but can be an array of  any objects
   keys:
-    type: string
-    note: use dot-notation (`data.press`) for nested keys
+    type: string | false
+    note: |
+      use dot-notation (`data.press`) for nested keys,
+      or `false` to filter without digging into nested data
   test:
     type: string | object
     default: undefined
     note: filter the resulting collection
 */
 const getData = (collection, keys, test) => {
-  const data = _.flatMap(_.filter(collection, keys), (page) =>
-    _.get(page, keys),
-  );
+  const data = keys
+    ? _.flatMap(_.filter(collection, keys), (page) => _.get(page, keys))
+    : collection;
   return test ? _.filter(data, test) : data;
 };
 

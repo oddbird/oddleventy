@@ -5,6 +5,7 @@ date: 2017-01-17
 tags:
   - _post
   - Talks
+  - Training
   - WordPress
 events:
   - venue: WordPress Naperville

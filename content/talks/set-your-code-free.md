@@ -5,6 +5,7 @@ date: 2014-04-13
 tags:
   - _post
   - Talks
+  - Training
   - Python
 events:
   - venue: PyCon

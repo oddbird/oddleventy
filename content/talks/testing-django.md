@@ -5,6 +5,7 @@ date: 2012-03-10
 tags:
   - _post
   - Talks
+  - Training
   - Testing
   - Django
 events:

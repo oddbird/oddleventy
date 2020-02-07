@@ -28,10 +28,10 @@ summary: |
 {% import "embed.macros.njk" as embed %}
 {% import 'contact.macros.njk' as contact %}
 
-{{ quotes.from(
+{{ quotes.find(
   collections.all,
   page=talk,
-  slug='useful'
+  slugs='useful'
 ) }}
 
 Right from the start, Beyond Tellerand was unlike other conferences.

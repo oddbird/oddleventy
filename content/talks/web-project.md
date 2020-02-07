@@ -6,6 +6,7 @@ slides: https://www.oddbooksapp.com/book/web-projects
 tags:
   - _post
   - Talks
+  - Training
   - Code
   - Process
 events:
