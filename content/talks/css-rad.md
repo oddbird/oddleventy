@@ -92,8 +92,9 @@ now and into the future.
 
 ------
 
-{% for event in events -%}
-- [{{ event.start | getDate('iso') }}]
-  {{ utility.link_if(event.venue, event.url) }} --
-  {{ event.adr }}
+### Events:
+
+{% for post in collections.Talks | pageEvents(page.url) %}
+- [{{ post.date | getDate('iso') }}]
+  {% if post.event.venue %}at {{ post.event.venue }}{% endif %}
 {% endfor %}

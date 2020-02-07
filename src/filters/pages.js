@@ -79,39 +79,6 @@ params:
 const withData = (collection, keys, value) =>
   collection.filter((page) => hasData(page, keys, value));
 
-const buildEvent = (page, event) => {
-  const eventPage = {};
-
-  Object.keys(page).forEach((key) => (eventPage[key] = page[key]));
-
-  eventPage.date = getDate(event.date) || eventPage.date;
-  eventPage.data.is_event = true;
-
-  Object.keys(event).forEach((key) => (eventPage.data[key] = event[key]));
-
-  return eventPage;
-};
-
-const includeEvents = (collection, replace = true) => {
-  const results = [];
-
-  collection.forEach((page) => {
-    if (page.data.events) {
-      page.data.events.forEach((event) => {
-        results.push(buildEvent(page, event));
-      });
-
-      if (!replace) {
-        results.push(page);
-      }
-    } else {
-      results.push(page);
-    }
-  });
-
-  return results.sort((a, b) => b.date - a.date);
-};
-
 /* @docs
 label: getData
 category: Data
@@ -241,10 +208,10 @@ params:
     type: page object
 */
 const pageType = (page) => {
-  if (hasData(page, 'data.tags', 'Client Work')) {
-    return 'client';
-  } else if (hasData(page, 'data.is_event')) {
+  if (page.is_event) {
     return 'event';
+  } else if (hasData(page, 'data.tags', 'Client Work')) {
+    return 'client';
   } else if (hasData(page, 'data.tags', 'OddTools')) {
     return 'tool';
   } else if (hasData(page, 'data.tags', 'Open Source')) {
@@ -274,6 +241,4 @@ module.exports = {
   pageType,
   withData,
   render,
-  buildEvent,
-  includeEvents,
 };

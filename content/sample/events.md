@@ -6,9 +6,9 @@ sub: Testing out the event filters
 
 Output should show 2 workshops, and three events at different venues:
 
-{% for post in collections.Workshops | includeEvents(false) %}
+{% for post in collections.Talks | includeEvents(false) %}
 - [{{ post.date | getDate('iso') }}]
   **{{ post | pageType }}**
-  [{{ post.data.title or 'WTF' }}]({{ post.url }})
-  {% if post.data.venue %}at {{ post.data.venue }}{% endif %}
+  [{{ post.event.title or post.data.title }}]({{ post.url }})
+  {% if post.event.venue %}at {{ post.event.venue }}{% endif %}
 {% endfor %}
