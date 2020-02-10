@@ -165,11 +165,3 @@ without all the invasive Javascript.
   data=media,
   caption='Conference videos...'
 ) }}
-
-------
-
-{% for event in events -%}
-- [{{ event.start | getDate('iso') }}]
-  {{ utility.link_if(event.venue, event.url) }} --
-  {{ event.adr }}
-{% endfor %}
