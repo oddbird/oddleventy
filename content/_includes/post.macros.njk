@@ -68,7 +68,7 @@ params:
         end=post.data.end
       ) }}
 
-      {{ where(post.data.adr) }}
+      {{ where(post.event.adr if post.event else post.data.adr) }}
     </p>
 
     {{ taglist(post.data.tags, collections) }}

@@ -1,6 +1,5 @@
 ---
 title: Dynamic CSS
-banner: Dynamic CSS -- layouts & beyond
 sub: with grids & custom properties
 author: miriam
 date: 2018-08-18
@@ -18,10 +17,13 @@ tags:
   - Layout
 events:
   - venue: Webconf.asia
-    url: https://2019.webconf.asia/
+    url: https://2020.webconf.asia/
     adr: Hong Kong
-    date: 2019-11-22
-    end: 2019-11-23
+    date: 2020-08-28
+  - venue: CSS Day
+    url: https://cssday.nl/2020
+    adr: Amsterdam, Netherlands
+    date: 2020-06-12
   - venue: Develop Denver
     url: https://developdenver.org/
     date: 2019-08-15

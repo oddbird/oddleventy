@@ -28,11 +28,13 @@ label: isCurrent
 category: Status
 note: Check that the page does not have an end date
 params:
-  collection:
-    type: array of pages
+  page:
+    type: page object
 */
 const isCurrent = (page) =>
-  page.data.end === 'ongoing' || !page.data.end || getDate(page.data.end) > now;
+  page.data.end === 'ongoing' ||
+  !page.data.end ||
+  getDate(page.data.end) >= now;
 
 /* @docs
 label: getPublic

@@ -65,7 +65,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
 
-  eleventyConfig.addFilter('meta', pages.meta);
+  eleventyConfig.addFilter('isPublic', pages.isPublic);
+  eleventyConfig.addFilter('getPublic', pages.getPublic);
+  eleventyConfig.addFilter('isCurrent', pages.isCurrent);
   eleventyConfig.addFilter('getPage', pages.getPage);
   eleventyConfig.addFilter('hasData', pages.hasData);
   eleventyConfig.addFilter('getData', pages.getData);
@@ -74,10 +76,11 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('pageContent', pages.pageContent);
   eleventyConfig.addFilter('render', pages.render);
   eleventyConfig.addFilter('pageType', pages.pageType);
-  eleventyConfig.addFilter('getPublic', pages.getPublic);
 
   eleventyConfig.addFilter('buildEvent', events.buildEvent);
-  eleventyConfig.addFilter('includeEvents', events.includeEvents);
+  eleventyConfig.addFilter('getEvents', events.getEvents);
+  eleventyConfig.addFilter('isFuture', events.isFuture);
+  eleventyConfig.addFilter('getFuture', events.getFuture);
 
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('active', birds.active);

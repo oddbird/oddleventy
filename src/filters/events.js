@@ -1,6 +1,6 @@
 'use strict';
 
-const { getDate } = require('./time');
+const { now, getDate } = require('./time');
 
 /* @docs
 label: Event Filters
@@ -9,6 +9,7 @@ category: File
 
 /* @docs
 label: buildEvent
+category: List
 note: |
   Build an event-page out of combined event and page data,
   so that events can be treated as a page of their own
@@ -29,21 +30,25 @@ const buildEvent = (page, event) => ({
 });
 
 /* @docs
-label: includeEvents
+label: getEvents
+category: List
 note: |
   Turn collection-events into top-level pages,
   either in-addition-to or replacing their source pages
+links:
+  - '[Event-list samples](/sample/events/)'
 params:
   collection:
     type: 11ty collection
-  replace:
-    type: boolean
-    default: true
+  pages:
+    type: boolean | mixed
+    default: 'mixed'
     note: |
-      Set `false` in order to see both events and
-      event-having pages in the list
+      Set `true` to leave event-source pages in the list,
+      or `false` to remove all pages from the list
+      and show events only
 */
-const includeEvents = (collection, replace = true) => {
+const getEvents = (collection, pages = 'mixed') => {
   const results = [];
 
   collection.forEach((page) => {
@@ -52,10 +57,10 @@ const includeEvents = (collection, replace = true) => {
         results.push(buildEvent(page, event));
       });
 
-      if (!replace) {
+      if (Boolean(pages) && pages !== 'mixed') {
         results.push(page);
       }
-    } else {
+    } else if (pages) {
       results.push(page);
     }
   });
@@ -63,7 +68,30 @@ const includeEvents = (collection, replace = true) => {
   return results.sort((a, b) => b.date - a.date);
 };
 
+/* @docs
+label: isFuture
+category: Upcoming
+note: Check that the page/event has a start date in the future (or today)
+params:
+  page:
+    type: event-page object
+*/
+const isFuture = (page) =>
+  page.event.end ? getDate(page.event.end) >= now : getDate(page.date) >= now;
+
+/* @docs
+label: getFuture
+category: Upcoming
+note: Return only the pages/events in the future
+params:
+  collection:
+    type: array of pages
+*/
+const getFuture = (collection) => collection.filter((page) => isFuture(page));
+
 module.exports = {
   buildEvent,
-  includeEvents,
+  getEvents,
+  isFuture,
+  getFuture,
 };
