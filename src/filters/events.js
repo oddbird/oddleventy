@@ -16,10 +16,9 @@ params:
   page:
     type: page object
   event:
-    type: object | null
-    default: null
+    type: object
 */
-const buildEvent = (page, event = null) => ({
+const buildEvent = (page, event) => ({
   date: event ? getDate(event.date) || page.date : page.date,
   url: page.url,
   inputPath: page.inputPath,
@@ -41,7 +40,7 @@ params:
     type: boolean
     default: true
     note: |
-      Set `false` inorder to see both events and
+      Set `false` in order to see both events and
       event-having pages in the list
 */
 const includeEvents = (collection, replace = true) => {
