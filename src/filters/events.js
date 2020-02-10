@@ -1,21 +1,49 @@
 'use strict';
 
 const { getDate } = require('./time');
-const { getPage } = require('./pages');
 
 /* @docs
 label: Event Filters
 category: File
 */
 
+/* @docs
+label: buildEvent
+note: |
+  Build an event-page out of combined event and page data,
+  so that events can be treated as a page of their own
+params:
+  page:
+    type: page object
+  event:
+    type: object | null
+    default: null
+*/
 const buildEvent = (page, event = null) => ({
   date: event ? getDate(event.date) || page.date : page.date,
   url: page.url,
-  is_event: Boolean(event),
-  event,
+  inputPath: page.inputPath,
+  fileSlug: page.fileSlug,
+  outputPath: page.outputPath,
   data: page.data,
+  event,
 });
 
+/* @docs
+label: includeEvents
+note: |
+  Turn collection-events into top-level pages,
+  either in-addition-to or replacing their source pages
+params:
+  collection:
+    type: 11ty collection
+  replace:
+    type: boolean
+    default: true
+    note: |
+      Set `false` inorder to see both events and
+      event-having pages in the list
+*/
 const includeEvents = (collection, replace = true) => {
   const results = [];
 
@@ -26,23 +54,17 @@ const includeEvents = (collection, replace = true) => {
       });
 
       if (!replace) {
-        results.push(buildEvent(page));
+        results.push(page);
       }
     } else {
-      results.push(buildEvent(page));
+      results.push(page);
     }
   });
 
   return results.sort((a, b) => b.date - a.date);
 };
 
-const pageEvents = (collection, url, replace = true) => {
-  const page = getPage(collection, url);
-  return page ? includeEvents([page], replace) : undefined;
-};
-
 module.exports = {
   buildEvent,
   includeEvents,
-  pageEvents,
 };

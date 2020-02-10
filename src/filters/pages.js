@@ -208,7 +208,7 @@ params:
     type: page object
 */
 const pageType = (page) => {
-  if (page.is_event) {
+  if (page.event) {
     return 'event';
   } else if (hasData(page, 'data.tags', 'Client Work')) {
     return 'client';

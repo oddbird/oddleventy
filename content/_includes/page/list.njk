@@ -1,0 +1,19 @@
+{% set index = renderData.index or index %}
+
+{% if index or bird %}
+  {% set index = {'slug': index} if index | typeCheck('string') else index %}
+  {% set list = collections._post | byBird(bird) if bird else collections[index.slug] %}
+  {% set list = list | includeEvents(index.events == 'replace') if (index and index.events) else list %}
+
+  {% if list %}
+    {% set list_title = index.slug | displayName if index.slug else bird | capitalize + "'s" %}
+    {% set list_title = list_title + ' Resources' if list_title else none %}
+
+    {% if index.title != 'none' %}
+      {{ layout.title(index.title or list_title) }}
+    {% endif %}
+
+    {{ post.list(list, collections) }}
+  {% endif %}
+{% endif %}
+

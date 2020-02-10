@@ -88,9 +88,17 @@ params:
 ) -%}
   {%- set post_title = post | render('banner') or post | render('title') -%}
   {{- utility.link_if(
-    post_title,
+    post_title | mdInline,
     post.url
   ) -}}
+
+  {%- if post.event and post.event.venue %}
+    <i>at</i>
+    {{ utility.link_if(
+      post.event.venue | mdInline,
+      post.event.url
+    ) }}
+  {%- endif -%}
 {%- endmacro %}
 
 {# @docs

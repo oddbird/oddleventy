@@ -89,12 +89,3 @@ now and into the future.
   data=media,
   caption='Conference videos...'
 ) }}
-
-------
-
-### Events:
-
-{% for post in collections.Talks | pageEvents(page.url) %}
-- [{{ post.date | getDate('iso') }}]
-  {% if post.event.venue %}at {{ post.event.venue }}{% endif %}
-{% endfor %}
