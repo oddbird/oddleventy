@@ -1,3 +1,5 @@
+'use strict';
+
 /* @docs
 label: Utility Filters
 category: File
@@ -44,4 +46,4 @@ const styles = (dict) => {
   return map.reduce((all, one) => `${all}${one}`, '');
 };
 
-export { typeCheck, styles };
+module.exports = { typeCheck, styles };

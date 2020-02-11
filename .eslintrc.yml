@@ -2,10 +2,8 @@
 
 root: true
 parserOptions:
-  sourceType: module
+  sourceType: script
   ecmaVersion: 2018
-  ecmaFeatures:
-    impliedStrict: true
 env:
   es6: true
   node: true

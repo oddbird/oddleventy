@@ -1,8 +1,10 @@
-import removeMd from 'remove-markdown';
-import type from 'typogr';
-import markdown from 'markdown-it';
-import mdMark from 'markdown-it-mark';
-import mdFootnote from 'markdown-it-footnote';
+'use strict';
+
+const removeMd = require('remove-markdown');
+const type = require('typogr');
+const markdown = require('markdown-it');
+const mdMark = require('markdown-it-mark');
+const mdFootnote = require('markdown-it-footnote');
 
 const mdown = markdown({
   html: true,
@@ -66,4 +68,4 @@ params:
 const mdInline = (content) =>
   content ? typogr(mdown.renderInline(content), true) : content;
 
-export { mdown, typogr, md, mdInline, removeMd };
+module.exports = { mdown, typogr, md, mdInline, removeMd };

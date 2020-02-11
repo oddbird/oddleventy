@@ -1,8 +1,10 @@
-import babel from 'rollup-plugin-babel';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+'use strict';
 
-export default {
+const babel = require('rollup-plugin-babel');
+const resolve = require('@rollup/plugin-node-resolve');
+const commonjs = require('@rollup/plugin-commonjs');
+
+module.exports = {
   input: 'src/js/index.js',
   output: {
     file: '_built/js/scripts.js',

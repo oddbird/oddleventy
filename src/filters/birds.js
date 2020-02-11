@@ -1,4 +1,6 @@
-import { hasData, withData, isCurrent } from './pages';
+'use strict';
+
+const { hasData, withData, isCurrent } = require('./pages');
 
 /* @docs
 label: Bird Filters
@@ -70,4 +72,4 @@ params:
 const authorPage = (collection, bird) =>
   withData(collection, 'data.bird', bird)[0];
 
-export { getPages, active, authorPage };
+module.exports = { getPages, active, authorPage };

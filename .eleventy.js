@@ -1,13 +1,15 @@
-import hljs from '@11ty/eleventy-plugin-syntaxhighlight';
+'use strict';
 
-import * as birds from './src/filters/birds';
-import * as pages from './src/filters/pages';
-import * as tags from './src/filters/tags';
-import * as time from './src/filters/time';
-import * as type from './src/filters/type';
-import * as utils from './src/filters/utils';
+const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
 
-export default (eleventyConfig) => {
+const birds = require('./src/filters/birds');
+const pages = require('./src/filters/pages');
+const tags = require('./src/filters/tags');
+const time = require('./src/filters/time');
+const type = require('./src/filters/type');
+const utils = require('./src/filters/utils');
+
+module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addPlugin(hljs);
 

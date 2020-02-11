@@ -1,6 +1,8 @@
-import _ from 'lodash';
+'use strict';
 
-import { now, getDate } from './time';
+const _ = require('lodash');
+
+const { now, getDate } = require('./time');
 
 /* @docs
 label: Page Filters
@@ -225,7 +227,7 @@ const pageType = (page) => {
   return 'article';
 };
 
-export {
+module.exports = {
   isPublic,
   isCurrent,
   getPublic,

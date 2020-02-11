@@ -9,7 +9,7 @@
   },
   "private": true,
   "engines": {
-    "node": "12.15.0",
+    "node": "12.16.0",
     "yarn": "^2.0.0-rc.29"
   },
   "scripts": {

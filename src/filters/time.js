@@ -1,3 +1,5 @@
+'use strict';
+
 /* @docs
 label: Date & Time Filters
 category: File
@@ -116,4 +118,4 @@ const rssLatest = (collection) => {
   return rssDate(collection[0]);
 };
 
-export { now, getDate, rssDate, rssLatest };
+module.exports = { now, getDate, rssDate, rssLatest };

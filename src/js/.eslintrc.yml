@@ -1,5 +1,7 @@
 # http://eslint.org/docs/rules/
 
+parserOptions:
+  sourceType: module
 env:
   browser: true
   commonjs: true

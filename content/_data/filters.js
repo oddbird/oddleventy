@@ -1,7 +1,9 @@
-import path from 'path';
-import fs from 'fs';
+'use strict';
 
-import doxray from 'doxray';
+const path = require('path');
+const fs = require('fs');
+
+const doxray = require('doxray');
 
 // relative path from the root directory of remedocs
 // to the root directory of any package to be documented
@@ -22,7 +24,7 @@ const doxOptions = {
   },
 };
 
-export default () =>
+module.exports = () =>
   new Promise((resolve, reject) => {
     // get the docs
     fs.readdir(filterDir, (err, files) => {
