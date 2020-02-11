@@ -1,9 +1,7 @@
-'use strict';
+import slugify from 'slugify';
+import { uniq } from 'lodash';
 
-const slugify = require('slugify');
-const { uniq } = require('lodash');
-
-const { withData, getData } = require('./pages');
+import { withData, getData } from './pages';
 
 /* @docs
 label: Tag Filters
@@ -104,11 +102,4 @@ const tagData = (collections, tags, sort = 'pageCount') => {
     .sort((a, b) => b[sort] - a[sort]);
 };
 
-module.exports = {
-  isPublic,
-  publicTags,
-  getTags,
-  tagData,
-  displayName,
-  tagLink,
-};
+export { isPublic, publicTags, getTags, tagData, displayName, tagLink };
