@@ -88,8 +88,5 @@ at the URL: `/style/`.
 The site is auto-deployed on [Netlify](https://www.netlify.com/) from the
 `master` branch on GitHub. Deploys are automated on push to master.
 
-For testing production locally, run `yarn prod:serve` and access the site at
-http://localhost:8080.
-
 Use branches and PRs for changes, and Netlify will create staging previews for
 functional review before merge.
