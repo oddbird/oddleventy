@@ -1,7 +1,7 @@
 @use 'sass:meta';
 @use 'sass:color';
-@use '../../../node_modules/accoutrement/sass/tools';
-@use '../../../node_modules/sassdoc-theme-herman/scss/utilities' as herman;
+@use '~accoutrement/sass/tools';
+@use '~sassdoc-theme-herman/scss/utilities' as herman;
 
 /// # Color Config
 /// Accoutrement maps for storing global color tokens,
