@@ -1,2 +1,2 @@
 [build.environment]
-  YARN_VERSION = "2.0.0-rc.29"
+  YARN_FLAGS = "--immutable --immutable-cache --check-cache"

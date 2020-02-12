@@ -9,8 +9,7 @@
   },
   "private": true,
   "engines": {
-    "node": "12.15.0",
-    "yarn": "^2.0.0-rc.29"
+    "node": "12.15.0"
   },
   "scripts": {
     "js": "rollup -c",
