@@ -26,14 +26,17 @@ The correct [Yarn](https://yarnpkg.com/) version is included in the repo, and
 will be used automatically for any `yarn` command.
 
 To upgrade the node version used by OddLeventy, update the version number in
-three places and then run `nvm install` to upgrade:
+these places and then run `nvm install` to upgrade:
 
 - `.nvmrc`
 - `package.json` (`engines.node` field)
 - `.circleci/config.yml` (`docker.image` field)
 
-To upgrade the yarn version used by OddLeventy, run
-`yarn set version <new-version>`.
+To upgrade the yarn version used by OddLeventy, update the version number in
+these places and then run `yarn set version <new-version>` to upgrade:
+
+- `package.json` (`engines.yarn` field)
+- `netlify.toml`
 
 ### Install dependencies
 
