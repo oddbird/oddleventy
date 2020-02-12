@@ -26,7 +26,9 @@ note: |
   content=none
 ) -%}
 {%- set content = content if (content != none) else caller() -%}
+{%- if content -%}
 <div class="pullquote">{{ content | md | safe }}</div>
+{%- endif -%}
 {%- endmacro %}
 
 
@@ -68,7 +70,7 @@ params:
       }
     ) -}}
   {%- else -%}
-    {%- include 'icons/' + (data.icon or 'tags') + '.svg' -%}
+    {{ embed.svg(data.icon or 'icons/quote') }}
   {%- endif -%}
 {%- endset -%}
 
@@ -90,30 +92,45 @@ category: From data
 note: |
   Display one or all quotes from a page with `press` data.
 example: |
-  {{ quotes.from(collections.all, '/work/timedesigner/') }}
-  {{ quotes.from(collections.all, '/work/metadeploy/', 'extension') }}
+  {{ quotes.find(collections.all, page='/work/timedesigner/') }}
+  {{ quotes.find(collections.all, 'extension') }}
+  {{ quotes.find(collections.all, ['extension', 'goals']) }}
 params:
   collection:
     type: array
     note: The 11ty source collection to look in
+  slugs:
+    type: string | array | none
+    default: 'none'
+    note: Select quotes based on their `slug` value
   page:
-    type: url
-    note: URL of the page to select quotes from, e.g. '/work/metadeploy/'
-  slug:
-    type: string
-    note: Select a single quote based on its `slug` value.
+    type: url | none
+    default: 'none'
+    note: Select quotes from a particular page
 #}
-{% macro from(
+{% macro find(
   collection,
-  page,
-  slug=none
+  slugs=none,
+  page=none
 ) -%}
-  {%- set data = collection | getPage(
-    page,
-    'data.press',
-    {'slug': slug} if slug else none
-  ) -%}
-  {{- grid(data) -}}
+  {%- if slugs | typeCheck('string') -%}
+    {%- set quote = collection | findData('data.press', {'slug': slugs}) -%}
+    {{- blockquote(quote) if quote else none -}}
+  {%- else -%}
+    {%- set data = collection | getPage(page, 'data.press') if page else collection | getData('data.press') -%}
+
+    {%- if slugs -%}
+      {%- set content -%}
+        {%- for item in slugs -%}
+          {%- set quote = data | findData(false, {'slug': item}) -%}
+          {{- blockquote(quote, 'grid') if quote else none -}}
+        {%- endfor -%}
+      {%- endset -%}
+      {{- _grid_markup(content) | safe -}}
+    {%- else -%}
+      {{- grid(data) if data else none -}}
+    {%- endif -%}
+  {%- endif -%}
 {%- endmacro %}
 
 
@@ -132,16 +149,22 @@ params:
 {% macro grid(
   data
 ) -%}
-  {%- if data -%}
-    <div class="quote-grid">
+  {%- if data | length -%}
+    {%- set content -%}
       {%- for item in data -%}
         {%- if item.text -%}
           {{- blockquote(item, 'grid') -}}
         {%- endif -%}
       {%- endfor -%}
-    </div>
+    {%- endset -%}
+    {{- _grid_markup(content) | safe -}}
   {%- endif -%}
 {%- endmacro %}
+
+
+{% macro _grid_markup(content) %}
+<div class="quote-grid">{{- content | safe -}}</div>
+{% endmacro %}
 
 
 {# @docs

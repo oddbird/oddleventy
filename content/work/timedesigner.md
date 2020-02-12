@@ -1,20 +1,25 @@
 ---
-title: 'Case Study: TimeDesigner'
-client:
-  - name: &client Sensible Innovation
-    url: https://www.sensibleinnovation.com/
-sort_date: 2018-07-15
-project:
-  - name: TimeDesigner
-    tagline: Whole-School Design Thinking & Scheduling
-    years: 2017--2018
-    status: private
+title: TimeDesigner
+sub: Whole-School Design Thinking & Scheduling
+logo: tegy
+client: &client Tegy
+date: 2018-07-15
+image:
+  src: projects/tegy/desktop.jpg
+  alt: School schedule grid
 people:
   - &furman
     name: Furman Brown
     face: furman-brown.jpg
     title: Founder
     venue: *client
+tags:
+  - _post
+  - Client Work
+  - Research & Concepting
+  - Design
+  - Development
+  - Custom Application
 press:
   - text: |
       OddBird is high-caliber and nimble.
@@ -72,7 +77,14 @@ press:
     <<: *furman
     slug: process
 summary: |
-  Whole-School Design Thinking
+  Tegy TimeDesigner helps school teams
+  easily create multiple scheduling scenarios
+  from various perspectives,
+  and plan ahead for future iterations.
+  Currently the software is only available to schools in
+  Tegy training programs.
 ---
 
+{% import 'quotes.macros.njk' as quotes %}
 
+{{ quotes.grid(press | slice(2) | first ) }}

@@ -103,8 +103,8 @@ params:
   attrs={}
 ) -%}
   {%- set content -%}
-    {%- include icon -%}
-    <span class="link-text">{{ text }}</span>
+    {%- include icon + '.svg' -%}
+    <span class="link-text">{{ text | safe }}</span>
   {%- endset -%}
 
   {{- link_if(
@@ -139,6 +139,7 @@ params:
   class=none,
   attrs={}
 ) -%}
+  {%- set content = content if (content != none) else caller() -%}
   {%- if url -%}
   <a href="{{ url | url }}" {{ attr_if('class', class) }} {{ show_attrs(attrs) }}>{{
     content | safe
@@ -149,6 +150,28 @@ params:
   }}</span>
   {%- endif -%}
 {%- endmacro %}
+
+
+{# @docs
+label: main_action
+category: links
+note: |
+  Generate a "main-action" link,
+  generally one-per-section.
+params:
+  content:
+    type: string
+  url:
+    type: url
+    default: none
+#}
+{% macro main_action(
+  content=none,
+  url=none
+) %}
+{%- set content = content if (content != none) else caller() -%}
+<p class="main-action">{{ link_if(content, url) }}</p>
+{% endmacro %}
 
 
 {# @docs
@@ -171,7 +194,8 @@ params:
   start,
   end,
   format='long',
-  is_pubdate=false
+  is_pubdate=false,
+  prefix=none
 ) %}
   {% set ranges = {
     'same-y': {
@@ -186,12 +210,16 @@ params:
 
   {% set ongoing = (end == 'ongoing') %}
 
+  {% if prefix %}
+    <i>{{ 'since' if ongoing else 'on' }}</i>
+  {% endif %}
+
   <time
     datetime="{{ pub | getDate('iso') }}"
     {{ attr_if('pubdate', not not is_pubdate) }}>
 
     {% if ongoing %}
-      since {{ start | getDate('range') }}
+      {{ start | getDate('year') }}
     {% elif (start and end) and (start != end) %}
       {% set start_m = start | getDate('month') %}
       {% set start_y = start | getDate('year') %}
@@ -210,4 +238,3 @@ params:
     {% endif %}
   </time>
 {% endmacro %}
-

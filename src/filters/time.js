@@ -72,7 +72,6 @@ const formatDate = (date, format) => {
     url: `${yyyy}/${mm}/${dd}`,
     short: `${M} ${d}, ${yyyy}`,
     long: `${MM} ${d}, ${yyyy}`,
-    since: `since ${range}`,
     rfc: `${iso}T12:00:00-06:00`,
   };
 

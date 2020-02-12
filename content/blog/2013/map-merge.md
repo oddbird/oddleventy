@@ -2,9 +2,9 @@
 title: Map-Set vs. Map-Merge
 tags:
   - _post
-  - sass
-  - sass maps
-  - code
+  - Sass
+  - Sass maps
+  - Code
 author: miriam
 image:
   src: blog/sass33.jpg

@@ -21,44 +21,39 @@ action:
   text: Start a conversation »
   url: /contact/
 work:
-  ch: /work/coachhub/
-  mc: /work/medcurbside/
-  td: /work/timedesigner/
-  md: /work/metadeploy/
+  - /work/coachhub/
+  - /work/moztrap/
+  - /work/quarqrace/
+  - /work/metadeploy/
+  - /work/timedesigner/
+  - /work/phamaly/
+  - /work/workflow-builder/
+tools:
+  - /django/
+  - /sass/
+  - /css-remedy/
+  - /susy/
+  - /accoutrement/
+  - /herman/
+  - /true/
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
-{% import 'section.macros.njk' as section %}
+{% import 'layout.macros.njk' as layout %}
 
+{{ layout.title('Featured Clients') }}
 
-{{ section.title('Featured Clients') }}
+{{ embed.logos(work, collections.all) }}
 
-{{ embed.logos([
-  'orcas',
-  'mozilla',
-  'sram',
-  'salesforce',
-  'tegy',
-  'phamaly',
-  'cfoshare'
-]) }}
+{{ quotes.find(
+  collections.all,
+  slugs=['extension', 'goals']
+) }}
 
-{{ quotes.grid([
-  collections.all | findData('data.press', {'slug': 'extension'}),
-  collections.all | findData('data.press', {'slug': 'goals'})
-]) }}
+{{ layout.title('Developer Tools') }}
 
-{{ section.title('Developer Tools') }}
-
-{{ embed.logos([
-  'django',
-  'sass',
-  'remedy',
-  'susy',
-  'herman',
-  'true'
-]) }}
+{{ embed.logos(tools, collections.all) }}
 
 {% call embed.media_block(
   media=embed.img(
@@ -87,11 +82,10 @@ Our specialties include:
 
 {% endcall %}
 
-{{ quotes.grid([
-  collections.all | findData('data.press', {'slug': 'investment'}),
-  collections.all | findData('data.press', {'slug': 'handoff'})
-]) }}
-
+{{ quotes.find(
+  collections.all,
+  slugs=['investment', 'handoff']
+) }}
 
 {% call embed.media_block(
   media=embed.svg('faces/miriam'),

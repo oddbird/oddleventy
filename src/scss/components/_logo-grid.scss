@@ -3,11 +3,15 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: var(--spacer) 0;
 
-  [data-logo] {
+  > * {
     flex: 0 1 10em;
     margin: var(--gutter);
+  }
+
+  > a {
+    --fill: currentColor;
   }
 }

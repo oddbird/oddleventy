@@ -1,22 +1,27 @@
 ---
-title: 'Case Study: MedCurbside'
+title: MedCurbside
+sub: Knowledge-sharing for clinical physicians
 image:
   src: projects/medcurbside.jpg
-client:
-  - name: &client Lab06
-sort_date: 2017-12-15
-project:
-  - name: MedCurbside
-    tagline: Ask, Answer, Cite. Make Medicine Better.
-    url: https://www.medcurbside.com/
-    years: 2016--2018
-    status: live
+client: &client Lab06
+date: 2017-12-15
+links:
+  site: https://www.medcurbside.com/
 people:
   - &rohit
     name: Rohit Puranik
     face: rohit-puranik.jpg
     title: Founder
     venue: *client
+tags:
+  - _post
+  - Case Study
+  - Client Work
+  - Research & Concepting
+  - Branding
+  - Design
+  - Development
+  - Custom Application
 tasks:
   - Product Branding
   - User Experience Design

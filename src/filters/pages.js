@@ -1,20 +1,38 @@
 'use strict';
 
-const path = require('path');
-
-const removeMd = require('remove-markdown');
 const _ = require('lodash');
+
+const { now, getDate } = require('./time');
 
 /* @docs
 label: Page Filters
 category: File
 */
 
+/* @docs
+label: isPublic
+category: Status
+note: Check that a page is
+params:
+  collection:
+    type: array of pages
+*/
 const isPublic = (page) => {
   const live = page.data.draft !== true;
   const title = page.data && page.data.title;
   return live && title;
 };
+
+/* @docs
+label: isCurrent
+category: Status
+note: Check that the page does not have an end date
+params:
+  collection:
+    type: array of pages
+*/
+const isCurrent = (page) =>
+  page.data.end === 'ongoing' || !page.data.end || getDate(page.data.end) > now;
 
 /* @docs
 label: getPublic
@@ -25,6 +43,24 @@ params:
     type: array of pages
 */
 const getPublic = (collection) => collection.filter((page) => isPublic(page));
+
+/* @docs
+label: hasData
+category: Filter
+note: Return true if a an object (often a page) has particular data
+params:
+  obj:
+    type: object
+    note: The object to search for data
+  keys:
+    type: string
+    note: Any nested data attributes to get
+  value:
+    type: any
+    note: Only approve pages where the desired attributes have a given value
+*/
+const hasData = (obj, keys, value) =>
+  value ? _.includes(_.get(obj, keys), value) : _.hasIn(obj, keys);
 
 /* @docs
 label: withData
@@ -41,9 +77,7 @@ params:
     note: Only get pages where the desired attributes have this value
 */
 const withData = (collection, keys, value) =>
-  collection.filter((page) =>
-    value ? _.includes(_.get(page, keys), value) : _.hasIn(page, keys),
-  );
+  collection.filter((page) => hasData(page, keys, value));
 
 /* @docs
 label: getData
@@ -61,17 +95,19 @@ params:
     type: array
     note: often an array of pages, but can be an array of  any objects
   keys:
-    type: string
-    note: use dot-notation (`data.press`) for nested keys
+    type: string | false
+    note: |
+      use dot-notation (`data.press`) for nested keys,
+      or `false` to filter without digging into nested data
   test:
     type: string | object
     default: undefined
     note: filter the resulting collection
 */
 const getData = (collection, keys, test) => {
-  const data = _.flatMap(_.filter(collection, keys), (page) =>
-    _.get(page, keys),
-  );
+  const data = keys
+    ? _.flatMap(_.filter(collection, keys), (page) => _.get(page, keys))
+    : collection;
   return test ? _.filter(data, test) : data;
 };
 
@@ -136,44 +172,71 @@ const pageContent = (collection, url) =>
   getPage(collection, url, 'templateContent');
 
 /* @docs
-label: meta
+label: render
 category: Data
-note: Collate metadate for the page from various sources
+note: Returns the value for a given key from either `renderData` or `data`
 params:
-  collection:
-    type: array of pages
   page:
-    type: url | page
-  renderData:
-    type: object
-    note: Current page only
-  site:
-    type: object
-    note: From `_data/site.json`
+    type: page object
+  key:
+    type: string
 */
-const meta = (collection, page, renderData, site) => {
-  page = getPage(collection, page.url) || page;
-  renderData = renderData || {};
-  const data = page.data || {};
+const render = (page, key) =>
+  page.data.renderData
+    ? page.data.renderData[key] || page.data[key]
+    : page.data[key];
 
-  data.title = renderData.title || data.title || page.fileSlug || '';
-  data.banner = renderData.banner || data.banner || data.title;
-  data.description = removeMd(
-    renderData.sub || data.sub || data.summary || site.description,
-  );
-  data.index = renderData.index || data.index;
-  data.canonical = path.join(site.url, page.url || '');
+/* @docs
+label: pageType
+category: Data
+note: |
+  Return one of several resource "types"
+  which we can use to provide different list styling,
+  or filtering.
 
-  return data;
+  Current types include:
+  - client (tagged as 'Client Work')
+  - tool (tagged as 'OddTools')
+  - oss (tagged as 'Open Source')
+  - talk (tagged as 'Talks')
+  - workshop (tagged as 'Workshops')
+  - podcast (tagged as 'Podcast')
+  - video (tagged as 'Video')
+  - **article** (the default)
+params:
+  page:
+    type: page object
+*/
+const pageType = (page) => {
+  if (hasData(page, 'data.tags', 'Client Work')) {
+    return 'client';
+  } else if (hasData(page, 'data.tags', 'OddTools')) {
+    return 'tool';
+  } else if (hasData(page, 'data.tags', 'Open Source')) {
+    return 'oss';
+  } else if (hasData(page, 'data.tags', 'Talks')) {
+    return 'talk';
+  } else if (hasData(page, 'data.tags', 'Workshops')) {
+    return 'workshop';
+  } else if (hasData(page, 'data.tags', 'Podcast')) {
+    return 'podcast';
+  } else if (hasData(page, 'data.tags', 'Video')) {
+    return 'video';
+  }
+
+  return 'article';
 };
 
 module.exports = {
   isPublic,
+  isCurrent,
   getPublic,
   getPage,
+  hasData,
   getData,
   findData,
   pageContent,
+  pageType,
   withData,
-  meta,
+  render,
 };

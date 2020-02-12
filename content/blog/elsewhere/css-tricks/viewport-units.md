@@ -1,6 +1,6 @@
 ---
 title: Fun with Viewport Units
-url: https://css-tricks.com/fun-viewport-units/
+canonical: https://css-tricks.com/fun-viewport-units/
 date: 2017-06-05
 author: miriam
 image:

@@ -3,12 +3,12 @@ title: PostgreSQL Transactions and SQLAlchemy
 author: carl
 tags:
   - _post
-  - python
-  - sqlalchemy
-  - postgresql
-  - transactions
-  - django
-  - code
+  - Python
+  - Sqlalchemy
+  - Postgresql
+  - Transactions
+  - Django
+  - Code
 image:
   src: blog/2014/sqlalchemy.jpg
 summary: |
@@ -65,9 +65,11 @@ In order to get psycopg2 to stop sending these automatic `BEGIN`
 statements and to behave like Postgres natively does, you set the
 [autocommit property] of your connection object to `True`:
 
-    import psycopg2
-    conn = psycopg2.connect('dbname=test')
-    conn.autocommit = True
+```python
+import psycopg2
+conn = psycopg2.connect('dbname=test')
+conn.autocommit = True
+```
 
 [pep 249]: http://legacy.python.org/dev/peps/pep-0249/
 [psycopg2]: http://initd.org/psycopg/docs/
@@ -184,8 +186,10 @@ autocommit became quite easy in SQLAlchemy 0.8.2: SQLAlchemy's psycopg2
 "dialect" now exposes an `AUTOCOMMIT` transaction isolation level, and
 selecting it sets `autocommit=True` on all the psycopg2 connections.
 
-    from sqlalchemy import create_engine
-    engine = create_engine('postgresql://test', isolation_level="AUTOCOMMIT")
+```python
+from sqlalchemy import create_engine
+engine = create_engine('postgresql://test', isolation_level="AUTOCOMMIT")
+```
 
 We haven't discussed transaction isolation levels yet (and I won't in
 detail here). They control the visibility of changes between multiple
@@ -226,21 +230,23 @@ SQLAlchemy gives us a way to hook into the `begin()` call: the
 We have to dig through a few layers of connection-wrapping to get down
 to the actual psycopg2 connection object, but that's not hard:
 
-    from sqlalchemy import create_engine, event
-    from sqlalchemy.orm import sessionmaker
+```python
+from sqlalchemy import create_engine, event
+from sqlalchemy.orm import sessionmaker
 
-    engine = create_engine('postgresql://test', isolation_level="AUTOCOMMIT")
-    Session = sessionmaker(bind=engine, autocommit=True)
+engine = create_engine('postgresql://test', isolation_level="AUTOCOMMIT")
+Session = sessionmaker(bind=engine, autocommit=True)
 
-    @event.listens_for(Session, 'after_begin')
-    def receive_after_begin(session, transaction, connection):
-        """When a (non-nested) transaction begins, turn autocommit off."""
-        dbapi_connection = connection.connection.connection
-        if transaction.nested:
-            assert not dbapi_connection.autocommit
-            return
-        assert dbapi_connection.autocommit
-        dbapi_connection.autocommit = False
+@event.listens_for(Session, 'after_begin')
+def receive_after_begin(session, transaction, connection):
+    """When a (non-nested) transaction begins, turn autocommit off."""
+    dbapi_connection = connection.connection.connection
+    if transaction.nested:
+        assert not dbapi_connection.autocommit
+        return
+    assert dbapi_connection.autocommit
+    dbapi_connection.autocommit = False
+```
 
 The `session.begin()` API can also be used to initiate "nested
 transactions" using savepoints. In this case autocommit should already
@@ -284,34 +290,36 @@ In order to get around this, I maintain a mapping of
 `after_transaction_end` and restore autocommit on all the appropriate
 connections:
 
-    from sqlalchemy import create_engine, event
-    from sqlalchemy.orm import sessionmaker
+```python
+from sqlalchemy import create_engine, event
+from sqlalchemy.orm import sessionmaker
 
-    engine = create_engine('postgresql://test', isolation_level="AUTOCOMMIT")
-    Session = sessionmaker(bind=engine, autocommit=True)
+engine = create_engine('postgresql://test', isolation_level="AUTOCOMMIT")
+Session = sessionmaker(bind=engine, autocommit=True)
 
-    dconns_by_trans = {}
+dconns_by_trans = {}
 
-    @event.listens_for(Session, 'after_begin')
-    def receive_after_begin(session, transaction, connection):
-        """When a transaction begins, turn autocommit off."""
-        dbapi_connection = connection.connection.connection
-        if transaction.nested:
+@event.listens_for(Session, 'after_begin')
+def receive_after_begin(session, transaction, connection):
+    """When a transaction begins, turn autocommit off."""
+    dbapi_connection = connection.connection.connection
+    if transaction.nested:
+        assert not dbapi_connection.autocommit
+        return
+    assert dbapi_connection.autocommit
+    dbapi_connection.autocommit = False
+    dconns_by_trans.setdefault(transaction, set()).add(
+        dbapi_connection)
+
+@event.listens_for(Session, 'after_transaction_end')
+def receive_after_transaction_end(session, transaction):
+    """Restore autocommit where this transaction turned it off."""
+    if transaction in dconns_by_trans:
+        for dbapi_connection in dconns_by_trans[transaction]:
             assert not dbapi_connection.autocommit
-            return
-        assert dbapi_connection.autocommit
-        dbapi_connection.autocommit = False
-        dconns_by_trans.setdefault(transaction, set()).add(
-            dbapi_connection)
-
-    @event.listens_for(Session, 'after_transaction_end')
-    def receive_after_transaction_end(session, transaction):
-        """Restore autocommit where this transaction turned it off."""
-        if transaction in dconns_by_trans:
-            for dbapi_connection in dconns_by_trans[transaction]:
-                assert not dbapi_connection.autocommit
-                dbapi_connection.autocommit = True
-            del dconns_by_trans[transaction]
+            dbapi_connection.autocommit = True
+        del dconns_by_trans[transaction]
+```
 
 ### A Transaction Context Manager
 
@@ -320,39 +328,41 @@ equivalent to [transaction.atomic] for SQLAlchemy (unlike
 [transaction.atomic] this doesn't work as a decorator, but adding that
 is just a matter of some boilerplate):
 
-    from contextlib import contextmanager
-    from sqlalchemy.orm import Session as BaseSession
+```python
+from contextlib import contextmanager
+from sqlalchemy.orm import Session as BaseSession
 
 
-    class Session(BaseSession):
-        def __init__(self, *a, **kw):
-            super(Session, self).__init__(*a, **kw)
-            self._in_atomic = False
+class Session(BaseSession):
+    def __init__(self, *a, **kw):
+        super(Session, self).__init__(*a, **kw)
+        self._in_atomic = False
 
-        @contextmanager
-        def atomic(self):
-            """Transaction context manager.
+    @contextmanager
+    def atomic(self):
+        """Transaction context manager.
 
-            Will commit the transaction on successful completion
-            of the block, or roll it back on error.
+        Will commit the transaction on successful completion
+        of the block, or roll it back on error.
 
-            Supports nested usage (via savepoints).
+        Supports nested usage (via savepoints).
 
-            """
-            nested = self._in_atomic
-            self.begin(nested=nested)
-            self._in_atomic = True
+        """
+        nested = self._in_atomic
+        self.begin(nested=nested)
+        self._in_atomic = True
 
-            try:
-                yield
-            except:
-                self.rollback()
-                raise
-            else:
-                self.commit()
-            finally:
-                if not nested:
-                    self._in_atomic = False
+        try:
+            yield
+        except:
+            self.rollback()
+            raise
+        else:
+            self.commit()
+        finally:
+            if not nested:
+                self._in_atomic = False
+```
 
 It would be possible to implement this same context manager in
 SQLAlchemy's default implicit-transactions mode: you just leave out the

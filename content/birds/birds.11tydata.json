@@ -1,6 +1,4 @@
 {
   "layout": "base",
-  "location": "birds",
-  "type": "About Us",
   "permalink": "authors/{{ page.fileSlug }}/index.html"
 }

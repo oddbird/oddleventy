@@ -11,9 +11,10 @@
 @forward 'icons';
 @forward 'media';
 @forward 'devices';
-@forward 'lists';
 @forward 'sections';
 @forward 'blockquotes';
+@forward 'code';
+@forward 'gallery';
 @forward 'pills';
 
 // @import 'alignment';
@@ -22,9 +23,9 @@
 // @import 'states';
 // @import 'code';
 
-// // Less used CSS load later
-// // ------------------------
+// Less used CSS load later
+// ------------------------
 
-// @import 'image-blocks';
-// @import 'icon-blocks';
-// @import 'text-blocks';
+// @forward 'image-blocks';
+@forward 'icon-blocks';
+// @forward 'text-blocks';

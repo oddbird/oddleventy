@@ -1,6 +1,6 @@
 'use strict';
 
-const { withData } = require('./pages');
+const { hasData, withData, isCurrent } = require('./pages');
 
 /* @docs
 label: Bird Filters
@@ -21,9 +21,39 @@ params:
   bird:
     type: string
     note: The name of the bird (as used in `author` settings)
+  solo:
+    type: boolean
+    default: false
+    note: Optionally remove `oddbird`-authored pages from the collection
 */
-const getPages = (collection, bird) =>
-  withData(collection, 'data.author', bird);
+const getPages = (collection, bird, solo = false) =>
+  collection.filter(
+    (page) =>
+      hasData(page, 'data.author', bird) ||
+      (solo ? false : hasData(page, 'data.author', 'oddbird')),
+  );
+
+/* @docs
+label: active
+category: pages
+note: |
+  Return all active bird pages in a collection,
+  sorted by active date.
+example: |
+  {{ collections.birds | active }}
+params:
+  collection:
+    type: array
+    note: The 11ty collection of pages to filter
+  current:
+    type: boolean
+    default: 'true'
+    note: Flip result to show inactive birds
+*/
+const active = (collection, current = true) =>
+  collection
+    .filter((page) => page.data.bird !== 'oddbird')
+    .filter((page) => (current ? isCurrent(page) : !isCurrent(page)));
 
 /* @docs
 label: authorPage
@@ -44,5 +74,6 @@ const authorPage = (collection, bird) =>
 
 module.exports = {
   getPages,
+  active,
   authorPage,
 };
