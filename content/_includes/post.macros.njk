@@ -14,8 +14,9 @@ note: Generate a list of posts
 params:
   posts:
     type: array
+    note: containing 11ty page objects
   collections:
-    type: 11ty collections array
+    type: 11ty collections object
     default: none
 #}
 {% macro list(
@@ -37,9 +38,9 @@ category: lists
 note: Generate each post in a list
 params:
   post:
-    type: 11ty page
+    type: 11ty page object
   collections:
-    type: 11ty collections array
+    type: 11ty collections object
     default: none
 #}
 {% macro item(
@@ -81,7 +82,7 @@ category: metadata
 note: Generate a linked heading with the post title
 params:
   post:
-    type: 11ty page
+    type: 11ty page object
 #}
 {% macro heading(
   post
@@ -107,9 +108,9 @@ category: metadata
 note: Generate each post in a list
 params:
   post:
-    type: 11ty page
+    type: 11ty page object
   collections:
-    type: 11ty collections array
+    type: 11ty collections object
     default: none
 #}
 {% macro subtitle(
@@ -130,7 +131,7 @@ params:
   author:
     type: string | array
   collections:
-    type: 11ty collections array
+    type: 11ty collections object
 #}
 {% macro by(
   author,
@@ -235,7 +236,7 @@ params:
   tags:
     type: array
   collections:
-    type: 11ty collections array
+    type: 11ty collections object
 #}
 {% macro taglist(
   tags,
