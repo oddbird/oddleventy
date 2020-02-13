@@ -1,0 +1,44 @@
+{% set index = renderData.index or index %}
+{% set index = {'slug': index} if index | typeCheck('string') else index %}
+
+{% if index %}
+  {% set event_pages = {
+    'all': true,
+    'only': false,
+    'true': 'mixed'
+  } %}
+  {% set pages = event_pages[index.events] if index.events else 'mixed' %}
+  {% set list = collections[index.slug] if index.slug else none %}
+  {% set list = list | getEvents(pages) if index.events else list %}
+
+  {% if list %}
+    {% if index.title != 'none' %}
+      {{ layout.title(
+        index.title or index.slug | displayName + ' Resources'
+      ) }}
+    {% endif %}
+
+    {{ post.list(list, collections) }}
+  {% endif %}
+{% elif bird and (bird != 'oddbird') %}
+  {% set list = collections._post | byBird(bird) %}
+
+  {{ layout.title(bird | capitalize + "'s Resources") }}
+  {{ post.list(list, collections) }}
+{% elif events %}
+  <h2>Related Events</h2>
+  <ol reversed>
+    {% for event in events -%}
+      {% set eventPage = {'date': page.date, 'event': event } %}
+      <li>
+        {% if eventPage | isFuture %}
+          <strong>Upcoming!</strong>
+        {% endif %}
+        [{{ event.start | getDate('iso') }}]
+        {{ utility.link_if(event.venue, event.url) }} --
+        {{ event.adr }}
+      </li>
+    {% endfor %}
+  </ol>
+{% endif %}
+

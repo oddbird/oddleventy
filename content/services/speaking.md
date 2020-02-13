@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: njk
 title: Training & Workshops
 sub: Bring us to your company or conference
 index: Training
@@ -14,3 +15,12 @@ summary: |
   site performance, and accessibility.
 ---
 
+{% import 'layout.macros.njk' as layout %}
+{% import 'post.macros.njk' as post %}
+
+{% set upcoming = collections.Training | getEvents(false) | getFuture() %}
+
+{% if upcoming | length > 0 %}
+{{ layout.title('Upcoming Events') }}
+{{ post.list(upcoming, collections) }}
+{% endif %}

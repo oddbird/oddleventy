@@ -57,12 +57,15 @@ note: |
   or page marked as `index` for that tag
 params:
   all:
-    type: array of all pages (`collections.all`)
+    type: array
+    note: containing all 11ty page objects (`collections.all`)
   tag:
     type: string
 */
 const tagLink = (all, tag) => {
-  const index = withData(all, 'data.index', tag)[0];
+  const index =
+    withData(all, 'data.index', tag)[0] ||
+    withData(all, 'data.index.slug', tag)[0];
   return index ? index.url : `/tags/${slugify(tag)}/`;
 };
 
@@ -72,7 +75,8 @@ category: List
 note: Returns all tags in a collection
 params:
   collection:
-    type: array of pages
+    type: array
+    note: containing 11ty page objects
 */
 const getTags = (collection) => getData(collection, 'data.tags');
 
@@ -84,13 +88,13 @@ note: |
   including name, url, and page count
 params:
   collections:
-    type: 11ty collections
+    type: 11ty collections object
   tags:
     type: array | 'all'
     default: undefined
     note: Will return data for all tags when set to `all`
   sort:
-    type: pageCount | tag
+    type: "'pageCount' | 'tag'"
     default: 'pageCount'
 */
 const tagData = (collections, tags, sort = 'pageCount') => {

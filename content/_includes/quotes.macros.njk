@@ -45,7 +45,7 @@ example: |
   {{ quotes.blockquote(press | withData('slug', 'extension')) }}
 params:
   data:
-    type: dictionary
+    type: object
     note: |
       Quote dictionaries include:
 
@@ -98,7 +98,7 @@ example: |
 params:
   collection:
     type: array
-    note: The 11ty source collection to look in
+    note: containing 11ty page objects
   slugs:
     type: string | array | none
     default: 'none'
@@ -144,7 +144,7 @@ example: |
 params:
   data:
     type: array
-    note: Array of quote dictionaries.
+    note: Array of quote objects.
 #}
 {% macro grid(
   data
@@ -173,7 +173,7 @@ category: From data
 note: Generate a citation line from data.
 params:
   data:
-    type: dictionary
+    type: object
     note: |
       Citation data includes:
 
@@ -235,4 +235,3 @@ note: |
   {%- set full = [name, context] | join(', ') if (name and context) else (name or context) -%}
   {{- full | safe -}}
 {%- endmacro %}
-

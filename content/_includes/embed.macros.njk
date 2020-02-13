@@ -27,7 +27,7 @@ params:
     default: "''"
     note: This name will be applied to the `data-media` attribute
   attrs:
-    type: dictionary
+    type: object
     default: '{}'
   reverse:
     type: boolean
@@ -134,7 +134,7 @@ note: |
   Generate a figure from one particular event.
 params:
   collection:
-    type: array
+    type: 11ty collection array
     note: The 11ty source collection to look in
   venue:
     type: string
@@ -283,7 +283,7 @@ params:
     type: string
     default: ''
   attrs:
-    type: dictionary
+    type: object
     default: '{}'
 #}
 {% macro img(
@@ -365,7 +365,7 @@ params:
   src:
     type: url
   attrs:
-    type: dictionary
+    type: object
     default: '{}'
 #}
 {% macro audio(
