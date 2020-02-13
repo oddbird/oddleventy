@@ -46,7 +46,4 @@ const styles = (dict) => {
   return map.reduce((all, one) => `${all}${one}`, '');
 };
 
-module.exports = {
-  typeCheck,
-  styles,
-};
+module.exports = { typeCheck, styles };

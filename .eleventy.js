@@ -2,12 +2,12 @@
 
 const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
 
-const utils = require('./src/filters/utils');
+const birds = require('./src/filters/birds');
 const pages = require('./src/filters/pages');
 const tags = require('./src/filters/tags');
 const time = require('./src/filters/time');
 const type = require('./src/filters/type');
-const birds = require('./src/filters/birds');
+const utils = require('./src/filters/utils');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
@@ -47,8 +47,8 @@ module.exports = (eleventyConfig) => {
   );
 
   // filters
-  eleventyConfig.addFilter('merge', () =>
-    [...arguments].reduce((all, current) => ({ ...all, ...current }), {}),
+  eleventyConfig.addFilter('merge', (...args) =>
+    [...args].reduce((all, current) => ({ ...all, ...current }), {}),
   );
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('styles', utils.styles);
@@ -64,7 +64,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('displayName', tags.displayName);
   eleventyConfig.addFilter('tagLink', tags.tagLink);
 
-  eleventyConfig.addFilter('meta', pages.meta);
   eleventyConfig.addFilter('getPage', pages.getPage);
   eleventyConfig.addFilter('hasData', pages.hasData);
   eleventyConfig.addFilter('getData', pages.getData);

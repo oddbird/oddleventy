@@ -3,18 +3,19 @@ jobs:
   build:
     working_directory: ~/oddleventy
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:12.15.0
     steps:
       - checkout
       - restore_cache:
           key: oddleventy-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
-          command: yarn install --frozen-lockfile
+          command: yarn install --immutable --immutable-cache
       - save_cache:
           key: oddleventy-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
-            - ./node_modules
+            - ./.yarn/unplugged
+            - ./.yarn/build-state.yml
       - run:
           name: Lint JS & Sass
           command: yarn lint
