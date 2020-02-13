@@ -4,6 +4,7 @@ author: miriam
 date: 2017-01-26
 tags:
   - _post
+  - News
   - Politics
   - Year in Review
   - Diversity

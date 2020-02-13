@@ -3,6 +3,7 @@ title: Serializing Things for Celery
 author: kit
 tags:
   - _post
+  - News
   - Celery
   - Django
   - Serialization

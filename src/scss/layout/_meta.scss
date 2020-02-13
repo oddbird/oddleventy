@@ -14,8 +14,11 @@
 
   .subtitle {
     font-size: var(--h3);
-    font-style: italic;
   }
+}
+
+.subtitle {
+  font-style: italic;
 }
 
 .post-links {

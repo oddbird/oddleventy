@@ -1,7 +1,7 @@
 @use '../../../node_modules/accoutrement/sass/tools';
 
 #title {
-  @include tools.z-index('initial');
+  @include tools.z-index('bump');
   --blur: var(--quarter-shim);
   --outset: calc(var(--blur) * -1);
   align-self: center;

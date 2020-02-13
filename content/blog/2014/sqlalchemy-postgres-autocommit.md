@@ -3,6 +3,7 @@ title: PostgreSQL Transactions and SQLAlchemy
 author: carl
 tags:
   - _post
+  - News
   - Python
   - Sqlalchemy
   - Postgresql

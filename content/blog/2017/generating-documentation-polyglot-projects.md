@@ -3,6 +3,7 @@ title: Generating Code Documentation for Polyglot Projects
 author: david
 tags:
   - _post
+  - News
   - Docs
   - Tools
   - JavaScript

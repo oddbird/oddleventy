@@ -3,6 +3,7 @@ title: Susy
 sub: CSS layout framework
 date: 2009-07-13
 end: ongoing
+feature: large
 logo: susy
 image:
   type: media

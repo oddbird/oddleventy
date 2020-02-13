@@ -6,7 +6,7 @@ sub: Python web framework
 image:
   src: projects/django.jpg
 author: carl
-oss: core
+oss: core team
 logo: django
 tags:
   - _post

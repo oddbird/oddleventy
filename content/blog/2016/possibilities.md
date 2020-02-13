@@ -4,6 +4,7 @@ author: sondra
 date: 2016-08-22
 tags:
   - _post
+  - News
   - OddSite
   - Open Design
   - Research

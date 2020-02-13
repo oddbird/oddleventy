@@ -5,6 +5,7 @@ author: miriam
 date: 2019-10-02
 tags:
   - _post
+  - News
   - Sass
   - Code
   - Tutorial

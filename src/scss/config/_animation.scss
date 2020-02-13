@@ -30,6 +30,7 @@ $changes: (
     text-decoration-color time('fast') ease-out,
   ),
   'move': transform time('mid') ease('_out-back'),
+  'pop': filter time('fast') ease('_out-back'),
   'fade': opacity time('fast') ease-out,
   'underline': text-decoration-thickness 150ms ease-out,
 );

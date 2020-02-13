@@ -15,6 +15,7 @@ tags:
   - Code
   - Custom Properties
   - Smashing Magazine
+  - Links
 summary: |
   Pushing past the “variable” metaphor,
   CSS Custom Properties can provide new ways

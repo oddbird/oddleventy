@@ -4,6 +4,7 @@ author: miriam
 date: 2016-07-12
 tags:
   - _post
+  - News
   - OddSite
   - Open Design
 image:

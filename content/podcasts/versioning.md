@@ -6,7 +6,7 @@ tags:
   - _post
   - Interview
   - SitePoint
-  - Podcast
+  - Podcasts
 canonical: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
 venue: SitePoint
 image:

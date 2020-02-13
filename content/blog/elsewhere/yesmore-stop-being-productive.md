@@ -7,6 +7,7 @@ canonical: https://superyesmore.com/stop-being-productive-21dea85762f5753eb52990
 venue: SuperYesMore
 tags:
   - _post
+  - Links
   - Design
   - Productivity
   - SuperYesMore

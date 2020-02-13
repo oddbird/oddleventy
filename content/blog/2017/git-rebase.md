@@ -4,6 +4,7 @@ author: kit
 date: 2017-01-05
 tags:
   - _post
+  - News
   - Git
   - Workflows
   - Code

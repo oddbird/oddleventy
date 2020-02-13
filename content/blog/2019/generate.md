@@ -5,6 +5,7 @@ author: sondra
 date: 2019-05-24
 tags:
   - _post
+  - News
   - Conferences
   - Code
   - CSS

@@ -6,6 +6,7 @@ venue: Figma
 canonical: https://www.figma.com/blog/eighteen-designers-predict-ui-ux-trends-for-2018/
 tags:
   - _post
+  - Links
   - Design
   - CSS
   - Interview

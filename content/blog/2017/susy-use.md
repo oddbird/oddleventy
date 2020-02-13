@@ -5,6 +5,7 @@ author: miriam
 date: 2017-09-25
 tags:
   - _post
+  - News
   - Susy
   - Susy3
   - CSS

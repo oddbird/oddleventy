@@ -1,11 +1,23 @@
-{% import 'utility.macros.njk' as utility %}
 {% import 'birds.macros.njk' as birds %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'embed.macros.njk' as embed %}
+{% import 'utility.macros.njk' as utility %}
 
 {# @docs
 label: Post Macros
 category: file
 #}
 
+
+{% macro by_year(
+  pages,
+  collections=none
+) %}
+  {% for group in pages | byYear %}
+    {{ layout.title(group.year) }}
+    {{ list(group.posts, collections) }}
+  {% endfor %}
+{% endmacro %}
 
 {# @docs
 label: list
@@ -23,9 +35,11 @@ params:
   collections=none
 ) %}
 {% if posts %}
-  <ol class="post-list" reversed>
+  <ol data-grid="resources" reversed>
     {% for post in posts | sort(true, false, 'date') %}
-      {{ item(post, collections) }}
+      {% set feature = 'large' if (loop.length == 1) else none %}
+      {% set feature = 'small' if (feature or post.data.feature) and (loop.length == 2) else feature %}
+      {{ item(post, collections, feature) }}
     {% endfor %}
   </ol>
 {% endif %}
@@ -44,35 +58,132 @@ params:
 #}
 {% macro item(
   post,
+  collections=none,
+  feature=none
+) %}
+  {% set type = post | pageType %}
+
+  {% set feature = post.event.feature if (post.event and not feature) else feature %}
+  {% set feature = feature or post.data.feature %}
+  {% set feature = 'small' if feature and not feature | typeCheck('string') else feature %}
+
+  <li data-post="{{ type | slug if type else 'default' }}" {{ utility.attr_if('data-feature', feature) }}>
+    {{ category(type, collections) }}
+
+    {% if feature == 'large' %}
+      {{ large(post, collections) }}
+    {% else %}
+      {{ small(post, collections) }}
+    {% endif %}
+  </li>
+{% endmacro %}
+
+{% macro small(
+  post,
   collections=none
 ) %}
-  <li class="post">
-    <h3>{{ heading(post) }}</h3>
+  <a href="{{ post.url | url }}" data-card="link">
+    <div class="card-inner">
+      <h3 class="card-title">{{ heading(post, link=false) }}</h3>
+      {{ subtitle(post.data.sub) }}
+      {{ byline(post, collections, false) }}
+    </div>
+  </a>
+{% endmacro %}
 
-    {{ subtitle(post.data.sub) }}
+{% macro large(
+  post,
+  collections=none
+) %}
+  <article data-card="feature">
+    {% if post.data.image and (post.data.image.src or post.data.image.svg) %}
+      <div class="card-hero">
+        {% if post.data.image.src %}
+          {{ embed.img(post.data.image.src, post.data.image.alt) }}
+        {% else %}
+          {{ embed.svg(post.data.image.svg) }}
+        {% endif %}
+      </div>
+    {% endif %}
 
-    <p class="byline">
-      <strong>{{ post | pageType }}</strong>
+    <div class="card-meta">
+      <h3>{{ heading(post) }}</h3>
+      {{ subtitle(post.data.sub) }}
+      {{ byline(post, collections) }}
+      {{ taglist(post.data.tags, collections) }}
+    </div>
 
-      {{ by(post.data.author, collections) }}
+    <div class="summary">
+      {{ post.data.summary | md | safe }}
+    </div>
+  </article>
+{% endmacro %}
 
+{% macro byline(
+  post,
+  collections=none,
+  links=true
+) %}
+  {% set type = post | pageType %}
+  <p class="byline">
+    {% set byType = {
+      'Workshops': 'Workshop',
+      'Talks': 'Talk',
+      'Videos': 'Video',
+      'Podcasts': 'Podcast',
+      'OddTools': 'Created'
+    } %}
+
+    {% if (not post.data.venue) and (not type in ['News', 'Links']) %}
+      <b>{{ byType[type] or type }}</b>
+    {% endif %}
+
+    {{ by(
+      post.data.author,
+      collections,
+      prefix=none if post.data.venue else 'by',
+      link=links
+    ) }}
+
+    {% if (post.data.oss == 'core team') %}
+      ({{ post.data.oss }})
+    {% endif %}
+
+    {% if links %}
       {{ linked(
         venue=post.data.venue,
-        url=post.data.canonical or post.data.url
+        url=(post.data.canonical or post.data.url)
       ) }}
+    {% elif post.data.venue %}
+      <i>at</i>
+      <b>{{ post.data.venue }}</b>
+    {% endif %}
 
-      {{ client(post.data.client) }}
+    {{ client(post.data.client) }}
+  </p>
+{% endmacro %}
 
-      {{ pubdate(
-        start=post.date,
-        end=post.data.end
-      ) }}
-
-      {{ where(post.event.adr if post.event else post.data.adr) }}
-    </p>
-
-    {{ taglist(post.data.tags, collections) }}
-  </li>
+{% macro category(
+  type,
+  collections=none
+) %}
+  {% set icons = {
+    'Client Work': 'tools',
+    'OddTools': 'tools',
+    'Open Source': 'opensource',
+    'Talks': 'talk',
+    'Workshops': 'workshop',
+    'Podcasts': 'audio',
+    'Videos': 'video',
+    'Links': 'link',
+    'News': 'news'
+  } %}
+  {{ utility.icon_link(
+    icon='icons/' + (icons[type] or 'tags'),
+    text=type or 'all tags',
+    url=collections.all | tagLink(type) if collections else none,
+    class='post-type'
+  ) }}
 {% endmacro %}
 
 {# @docs
@@ -84,21 +195,14 @@ params:
     type: 11ty page
 #}
 {% macro heading(
-  post
+  post,
+  link=true
 ) -%}
   {%- set post_title = post | render('banner') or post | render('title') -%}
   {{- utility.link_if(
-    post_title | mdInline,
-    post.url
+    post_title,
+    post.url if link else none
   ) -}}
-
-  {%- if post.event and post.event.venue %}
-    <i>at</i>
-    {{ utility.link_if(
-      post.event.venue | mdInline,
-      post.event.url
-    ) }}
-  {%- endif -%}
 {%- endmacro %}
 
 {# @docs
@@ -134,11 +238,13 @@ params:
 #}
 {% macro by(
   author,
-  collections
+  collections,
+  prefix='by',
+  link=true
 ) %}
   {% if author %}
-    <i>by</i>
-    {{ birds.authors(author, collections) }}
+    {% if prefix %}<i>{{ prefix }}</i>{% endif %}
+    {{ birds.authors(author, collections, link) }}
   {% endif %}
 {% endmacro %}
 
@@ -177,12 +283,12 @@ params:
   name:
     type: string
 #}
-{% macro client(name) %}
-  {% if name %}
+{% macro client(name) -%}
+  {%- if name %}
     <i>for</i>
-    <strong>{{ name | mdInline | safe }}</strong>
-  {% endif %}
-{% endmacro %}
+    <b>{{ name | mdInline | safe }}</b>
+  {% endif -%}
+{%- endmacro %}
 
 {# @docs
 label: where
@@ -239,7 +345,8 @@ params:
 #}
 {% macro taglist(
   tags,
-  collections
+  collections,
+  pill=true
 ) -%}
   {%- set public_tags = collections | tagData(tags) -%}
   {%- set public_tags = public_tags if public_tags | length else none -%}
@@ -247,13 +354,13 @@ params:
   {%- if public_tags -%}
     <div class="post-tags">
       {%- include "icons/tags.svg" -%}
-      <ul class="pill-set">
+      <ul class="{{ 'pill-set' if pill else 'inline-list' }}">
         {%- for item in public_tags -%}
-          <li class="pill-item">
+          <li class="{{ 'pill-item' if pill else 'inline-item' }}">
             {{- utility.link_if(
               content=item.tag,
               url=item.url,
-              class='pill'
+              class='pill' if pill else none
             ) -}}
           </li>
         {%- endfor -%}
@@ -278,14 +385,14 @@ params:
   links,
   slides=none
 ) %}
-  {% if links | length or slides %}
+  {% if links or slides %}
     <ul class="post-links">
       {% if slides %}
         <li>{{ utility.link_if('slides »', slides) }}</li>
       {% endif %}
 
       {% for name, url in links %}
-        <li>{{ utility.link_if(namme + ' »', url) }}</li>
+        <li>{{ utility.link_if(name + ' »', url) }}</li>
       {% endfor %}
     </ul>
   {% endif %}

@@ -1,7 +1,7 @@
 ---
 layout: base
 title: Events Sample Page
-sub: Testing out the [event filters](/sample/filters/events/)
+sub: Testing out the event filters
 ---
 
 ## Mixed pages & events
@@ -12,7 +12,6 @@ while leaving non-event pages un-touched:
 
 {% for post in collections.Workshops | getEvents() %}
 - [{{ post.date | getDate('iso') }}]
-  **{{ post | pageType }}**
   [{{ post.event.title or post.data.title }}]({{ post.url }})
   {% if post.event.venue %}at {{ post.event.venue }}{% endif %}
 {% endfor %}
@@ -25,7 +24,6 @@ in addition to all existing pages in the collection:
 
 {% for post in collections.Workshops | getEvents(true) %}
 - [{{ post.date | getDate('iso') }}]
-  **{{ post | pageType }}**
   [{{ post.event.title or post.data.title }}]({{ post.url }})
   {% if post.event.venue %}at {{ post.event.venue }}{% endif %}
 {% endfor %}
@@ -38,7 +36,6 @@ in addition to all existing pages in the collection:
 
 {% for post in collections.Workshops | getEvents(false) %}
 - [{{ post.date | getDate('iso') }}]
-  **{{ post | pageType }}**
   [{{ post.event.title or post.data.title }}]({{ post.url }})
   {% if post.event.venue %}at {{ post.event.venue }}{% endif %}
 {% endfor %}

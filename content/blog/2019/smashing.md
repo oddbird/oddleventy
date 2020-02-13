@@ -1,11 +1,10 @@
 ---
 title: Smashing CSS Follow-Up Q&nbsp;&&nbsp;A
-sub: |
-  [Dynamic CSS](/talks/dynamic-css/) &
-  [Advanced CSS](/talks/advanced-css-workshop/)
+sub: Questions about Dynamic CSS
 author: miriam
 tags:
   - _post
+  - News
   - Vue
   - Conferences
   - Code

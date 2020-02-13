@@ -10,7 +10,7 @@ tags:
   - Mozilla Developer
   - AboutWeb
   - Code
-  - Video
+  - Videos
 summary: |
   Card layouts are popular on the web,
   rows and columns of boxes with similar content.

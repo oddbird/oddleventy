@@ -188,6 +188,27 @@ const render = (page, key) =>
     ? page.data.renderData[key] || page.data[key]
     : page.data[key];
 
+const pageYears = (collection) =>
+  collection.map((page) => {
+    page.year = getDate(page.date, 'year');
+    return page;
+  });
+
+const byYear = (collection) => {
+  if (!collection || collection.length === 0) {
+    return [];
+  }
+
+  const groups = _.groupBy(pageYears(collection), 'year');
+
+  return Object.keys(groups)
+    .reverse()
+    .map((year) => ({
+      year,
+      posts: groups[year],
+    }));
+};
+
 /* @docs
 label: pageType
 category: Data
@@ -195,40 +216,24 @@ note: |
   Return one of several resource "types"
   which we can use to provide different list styling,
   or filtering.
-
-  Current types include:
-  - client (tagged as 'Client Work')
-  - tool (tagged as 'OddTools')
-  - oss (tagged as 'Open Source')
-  - talk (tagged as 'Talks')
-  - workshop (tagged as 'Workshops')
-  - podcast (tagged as 'Podcast')
-  - video (tagged as 'Video')
-  - **article** (the default)
 params:
   page:
     type: page object
 */
 const pageType = (page) => {
-  if (page.event) {
-    return 'event';
-  } else if (hasData(page, 'data.tags', 'Client Work')) {
-    return 'client';
-  } else if (hasData(page, 'data.tags', 'OddTools')) {
-    return 'tool';
-  } else if (hasData(page, 'data.tags', 'Open Source')) {
-    return 'oss';
-  } else if (hasData(page, 'data.tags', 'Talks')) {
-    return 'talk';
-  } else if (hasData(page, 'data.tags', 'Workshops')) {
-    return 'workshop';
-  } else if (hasData(page, 'data.tags', 'Podcast')) {
-    return 'podcast';
-  } else if (hasData(page, 'data.tags', 'Video')) {
-    return 'video';
-  }
+  const tags = [
+    'Client Work',
+    'OddTools',
+    'Open Source',
+    'Talks',
+    'Workshops',
+    'Podcasts',
+    'Videos',
+    'Links',
+    'News',
+  ];
 
-  return 'article';
+  return tags.find((type) => hasData(page, 'data.tags', type));
 };
 
 module.exports = {
@@ -243,4 +248,5 @@ module.exports = {
   pageType,
   withData,
   render,
+  byYear,
 };

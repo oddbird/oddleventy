@@ -4,6 +4,7 @@ author: sondra
 date: 2017-01-27
 tags:
   - _post
+  - News
   - Design
   - Recommendations
 image:

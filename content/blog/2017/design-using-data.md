@@ -4,9 +4,10 @@ author: stacy
 date: 2017-01-19
 tags:
   - _post
+  - News
   - Data
   - Design
-  - Videos
+  - Videoss
   - Recommendations
 image:
   src: blog/2017/video-series/sarah.jpg

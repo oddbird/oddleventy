@@ -41,7 +41,7 @@ module.exports = (eleventyConfig) => {
     collection
       .getAll()
       .filter((item) => item.data.oss)
-      .sort((a, b) => a.data.date - b.data.date),
+      .sort((a, b) => b.date - a.date),
   );
   eleventyConfig.addCollection('sample', (collection) =>
     collection.getAll().filter((item) => item.data.sample),
@@ -76,6 +76,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('pageContent', pages.pageContent);
   eleventyConfig.addFilter('render', pages.render);
   eleventyConfig.addFilter('pageType', pages.pageType);
+  eleventyConfig.addFilter('byYear', pages.byYear);
 
   eleventyConfig.addFilter('buildEvent', events.buildEvent);
   eleventyConfig.addFilter('getEvents', events.getEvents);

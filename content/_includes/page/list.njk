@@ -1,3 +1,6 @@
+{% import 'post.macros.njk' as post %}
+{% import 'layout.macros.njk' as layout %}
+
 {% set index = renderData.index or index %}
 {% set index = {'slug': index} if index | typeCheck('string') else index %}
 
@@ -11,20 +14,21 @@
   {% set list = collections[index.slug] if index.slug else none %}
   {% set list = list | getEvents(pages) if index.events else list %}
 
-  {% if list %}
-    {% if index.title != 'none' %}
-      {{ layout.title(
-        index.title or index.slug | displayName + ' Resources'
-      ) }}
-    {% endif %}
-
+  {% if list | length > 6 %}
+    {{ post.by_year(list, collections) }}
+  {% else %}
+    {{ layout.title('Resources') }}
     {{ post.list(list, collections) }}
   {% endif %}
 {% elif bird and (bird != 'oddbird') %}
   {% set list = collections._post | byBird(bird) %}
 
-  {{ layout.title(bird | capitalize + "'s Resources") }}
-  {{ post.list(list, collections) }}
+  {% if list | length > 6 %}
+    {{ post.by_year(list, collections) }}
+  {% else %}
+    {{ layout.title('Resources') }}
+    {{ post.list(list, collections) }}
+  {% endif %}
 {% elif events %}
   <h2>Related Events</h2>
   <ol reversed>

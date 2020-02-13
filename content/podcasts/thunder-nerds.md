@@ -10,7 +10,7 @@ image:
 tags:
   - _post
   - Interview
-  - Podcast
+  - Podcasts
   - Code
 summary: |
   Thunder Nerds interview me

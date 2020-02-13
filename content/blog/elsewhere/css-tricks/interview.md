@@ -7,6 +7,7 @@ image:
   src: blog/elsewhere/css-tricks.jpg
 tags:
   - _post
+  - Links
   - Code
   - CSS Tricks
   - Interview

@@ -1,0 +1,15 @@
+---
+title: Resources
+permalink: blog/index.html
+image:
+  type: media
+  svg: icons/tools
+summary: |
+  Learn how to write resilient CSS,
+  add WebSocket push notifications to a RESTful API,
+  and more with these articles, videos,
+  podcasts, and conference talks.
+---
+
+{% import 'post.macros.njk' as post %}
+{{ post.by_year(collections._post, collections) }}

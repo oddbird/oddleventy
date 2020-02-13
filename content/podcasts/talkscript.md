@@ -8,7 +8,7 @@ tags:
   - _post
   - Interview
   - Code
-  - Podcast
+  - Podcasts
 summary: |
   On Episode 18,
   the TalkScript team continues the live-ish at JSConfUS podcast series

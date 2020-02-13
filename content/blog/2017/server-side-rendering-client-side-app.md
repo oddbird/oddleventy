@@ -3,6 +3,7 @@ title: Server-Side Rendering For Client-Side Apps
 author: jonny
 tags:
   - _post
+  - News
   - Single-Page Applications
   - Server-Side Rendering
   - JavaScript

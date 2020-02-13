@@ -5,6 +5,7 @@ author: erica
 date: 2019-06-21
 tags:
   - _post
+  - News
   - Conferences
   - JavaScript
   - Diversity

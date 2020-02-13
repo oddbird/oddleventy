@@ -3,7 +3,7 @@ layout: base
 title: Sass
 sub: CSS with superpowers
 author: miriam
-oss: core
+oss: core team
 image:
   type: media
   svg: logos/sass

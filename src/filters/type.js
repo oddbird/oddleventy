@@ -5,7 +5,6 @@ const type = require('typogr');
 const mdown = require('markdown-it')({
   html: true,
   breaks: false,
-  linkify: true,
   typographer: true,
 })
   .use(require('markdown-it-mark'))
@@ -26,11 +25,15 @@ params:
   inline:
     type: boolean
     default: false
-    note: Inline typesetting removes the "widont" filter
+    note: |
+      Inline typesetting removes the "widont" filter
+      if the text has fewer than 5 words
 */
 const typogr = (content, inline = false) => {
   if (content) {
-    return inline
+    // if this is inline text with less than 5 words
+    // avoid the "widont" feature
+    return inline && content.split(' ').length < 5
       ? type(content)
           .chain()
           .amp()
