@@ -32,8 +32,10 @@ these places and then run `nvm install` to upgrade:
 - `package.json` (`engines.node` field)
 - `.circleci/config.yml` (`docker.image` field)
 
-To upgrade the yarn version used by OddLeventy, run
-`yarn set version <new-version>`.
+To upgrade the yarn version used by OddLeventy, update the version number in
+these places and then run `yarn set version <new-version>` to upgrade:
+
+- `package.json` (`engines.yarn` field)
 
 ### Install dependencies
 
