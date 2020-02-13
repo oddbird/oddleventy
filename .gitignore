@@ -4,7 +4,6 @@ _built
 TAGS
 *.DS_Store
 *~
-.vscode
 .idea/
 .livereload
 *.orig
@@ -76,8 +75,10 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
+# Yarn
 .yarn-integrity
+.yarn/unplugged
+.yarn/build-state.yml
 
 # dotenv environment variables file
 .env

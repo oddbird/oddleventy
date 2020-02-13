@@ -72,8 +72,4 @@ params:
 const authorPage = (collection, bird) =>
   withData(collection, 'data.bird', bird)[0];
 
-module.exports = {
-  getPages,
-  active,
-  authorPage,
-};
+module.exports = { getPages, active, authorPage };
