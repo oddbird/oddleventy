@@ -39,6 +39,7 @@
     "test": "jest"
   },
   "devDependencies": {
+    "#": "link:./src/filters",
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@babel/core": "^7.8.4",

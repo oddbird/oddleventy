@@ -2,12 +2,7 @@
 
 parserOptions:
   sourceType: module
-  ecmaFeatures:
-    impliedStrict: true
-    jsx: true
 env:
-  browser: true
-  commonjs: true
   jest: true
   node: false
 plugins:

@@ -2,7 +2,7 @@
 
 const _ = require('lodash');
 
-const { now, getDate } = require('./time');
+const { now, getDate } = require('#/time');
 
 /* @docs
 label: Page Filters

@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["#", "link:./src/filters::locator=oddsite%40workspace%3A."],
             ["@11ty/eleventy", "npm:0.10.0"],
             ["@11ty/eleventy-plugin-syntaxhighlight", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.0.1"],
             ["@babel/core", "npm:7.8.4"],
@@ -83,6 +84,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typogr", "npm:0.6.8"]
           ],
           "linkType": "SOFT",
+        }]
+      ]],
+      ["#", [
+        ["link:./src/filters::locator=oddsite%40workspace%3A.", {
+          "packageLocation": "./src/filters/",
+          "packageDependencies": [
+            ["#", "link:./src/filters::locator=oddsite%40workspace%3A."]
+          ],
+          "linkType": "SOFT",
+          "discardFromLookup": true
         }]
       ]],
       ["@11ty/dependency-tree", [
@@ -11468,6 +11479,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["oddsite", "workspace:."],
+            ["#", "link:./src/filters::locator=oddsite%40workspace%3A."],
             ["@11ty/eleventy", "npm:0.10.0"],
             ["@11ty/eleventy-plugin-syntaxhighlight", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.0.1"],
             ["@babel/core", "npm:7.8.4"],

@@ -1,4 +1,4 @@
-const { active, authorPage, getPages } = require('../../src/filters/birds');
+import { active, authorPage, getPages } from '#/birds';
 
 const collection = [
   {

@@ -3,7 +3,7 @@
 const slugify = require('slugify');
 const { uniq } = require('lodash');
 
-const { withData, getData } = require('./pages');
+const { withData, getData } = require('#/pages');
 
 /* @docs
 label: Tag Filters

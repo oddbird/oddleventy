@@ -4,6 +4,12 @@
 __metadata:
   version: 4
 
+"#@link:./src/filters::locator=oddsite%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "#@link:./src/filters::locator=oddsite%40workspace%3A."
+  languageName: node
+  linkType: soft
+
 "@11ty/dependency-tree@npm:^1.0.0":
   version: 1.0.0
   resolution: "@11ty/dependency-tree@npm:1.0.0"
@@ -10236,6 +10242,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oddsite@workspace:."
   dependencies:
+    "#": "link:./src/filters"
     "@11ty/eleventy": ^0.10.0
     "@11ty/eleventy-plugin-syntaxhighlight": ^3.0.1
     "@babel/core": ^7.8.4

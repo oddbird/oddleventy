@@ -1,6 +1,6 @@
 'use strict';
 
-const { hasData, withData, isCurrent } = require('./pages');
+const { hasData, withData, isCurrent } = require('#/pages');
 
 /* @docs
 label: Bird Filters
