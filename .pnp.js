@@ -11102,10 +11102,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/postcss-syntax-virtual-97f01651cf/0/cache/postcss-syntax-npm-0.36.2-ef243fe3b7-2.zip/node_modules/postcss-syntax/",
           "packageDependencies": [
             ["postcss-syntax", "virtual:3b64ddf1f8ca45af3fd5f37a630d74faaf920d27755a830cb9b6f36dc1a0ab94dd0e39cb34cef0653641c9eda529ff605ade25f886b0c8130333d21689e189f1#npm:0.36.2"],
-            ["postcss", "npm:7.0.26"]
+            ["postcss", "npm:7.0.26"],
+            ["postcss-scss", "npm:2.0.0"]
           ],
           "packagePeers": [
-            "postcss"
+            "postcss",
+            "postcss-scss"
           ],
           "linkType": "HARD",
         }]
