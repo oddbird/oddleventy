@@ -37,7 +37,8 @@ params:
 ) %}
 {% if posts %}
   <ol data-grid="resources" reversed>
-    {% for post in posts | sort(true, false, 'date') %}
+    {% set sort = 'sort' if (posts[0].sort) else 'date' %}
+    {% for post in posts | sort(true, false, sort) %}
       {% set feature = 'large' if (loop.length == 1) else none %}
       {% set feature = 'small' if (feature or post.data.feature) and (loop.length == 2) else feature %}
       {{ item(post, collections, feature) }}

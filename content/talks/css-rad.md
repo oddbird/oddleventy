@@ -6,7 +6,6 @@ date: 2019-10-15
 image:
   src: talks/miriam.jpg
 slides: https://sliiides.netlify.com/css-is-rad/
-feature: large
 tags:
   - _post
   - Talks

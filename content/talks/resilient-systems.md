@@ -2,7 +2,7 @@
 title: Resilient Web Systems
 sub: Upgrade your app with front-end training & consulting
 author: miriam
-feature: small
+feature: large
 date: 2020-01-01
 tags:
   - _post
@@ -10,6 +10,11 @@ tags:
   - Training
   - CSS
   - Sass
+events:
+  - venue: Smashing Conf Austin
+    url: https://smashingconf.com/austin-2020/
+    date: 2020-06-08
+    adr: Austin, TX
 image:
   src: blog/2019/mia-jen-smashing.jpg
   position: top
