@@ -48,7 +48,7 @@ note: |
   into HTML-ready attributes.
 params:
   attrs:
-    type: dictionary
+    type: object
 #}
 {% macro show_attrs(
   attrs
@@ -65,7 +65,7 @@ note: |
   into an HTML-ready style attribute.
 params:
   style:
-    type: dictionary
+    type: object
 #}
 {% macro style_if(
   style
@@ -92,7 +92,7 @@ params:
     type: string
     default: none
   attrs:
-    type: dictionary
+    type: object
     default: '{}'
 #}
 {% macro icon_link(
@@ -130,7 +130,7 @@ params:
     type: string
     default: none
   attrs:
-    type: dictionary
+    type: object
     default: '{}'
 #}
 {% macro link_if(

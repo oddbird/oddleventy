@@ -1,6 +1,6 @@
 # OddLeventy
 
-[![CircleCI](https://circleci.com/gh/oddbird/oddleventy.svg?style=svg)](https://circleci.com/gh/oddbird/oddleventy)
+[![CircleCI](https://circleci.com/gh/oddbird/oddleventy.svg?style=svg)](https://circleci.com/gh/oddbird/oddleventy) [![Netlify Status](https://api.netlify.com/api/v1/badges/4f75b5a7-8412-4586-bad0-b4de64bb4f17/deploy-status)](https://app.netlify.com/sites/oddleventy/deploys)
 
 This site is built using:
 
@@ -15,17 +15,35 @@ This site is built using:
 
 ## Develop:
 
-Install node & [yarn](https://yarnpkg.com/en/docs/install):
+### Install Node and Yarn
 
 We recommend using [nvm](https://github.com/nvm-sh/nvm) for node version
-management. Once you have it installed, run `nvm install` (once per active
-shell) to use the correct version of node for OddLeventy development.
+management. [Install it](https://github.com/nvm-sh/nvm#installation-and-update)
+if necessary, then run `nvm install` (once per active shell) to use the correct
+version of node for OddLeventy development.
 
-Install dependencies:
+The correct [Yarn](https://yarnpkg.com/) version is included in the repo, and
+will be used automatically for any `yarn` command.
+
+To upgrade the node version used by OddLeventy, update the version number in
+these places and then run `nvm install` to upgrade:
+
+- `.nvmrc`
+- `package.json` (`engines.node` field)
+- `.circleci/config.yml` (`docker.image` field)
+
+To upgrade the yarn version used by OddLeventy, update the version number in
+these places and then run `yarn set version <new-version>` to upgrade:
+
+- `package.json` (`engines.yarn` field)
+
+### Install dependencies
 
 ```
 yarn
 ```
+
+### Development tasks
 
 Compile and run [Eleventy](http://www.11ty.io) server, with a watcher for file
 changes:
@@ -71,9 +89,6 @@ at the URL: `/style/`.
 
 The site is auto-deployed on [Netlify](https://www.netlify.com/) from the
 `master` branch on GitHub. Deploys are automated on push to master.
-
-For testing production locally, run `yarn prod:serve` and access the site at
-http://localhost:8080.
 
 Use branches and PRs for changes, and Netlify will create staging previews for
 functional review before merge.

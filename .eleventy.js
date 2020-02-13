@@ -2,13 +2,13 @@
 
 const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
 
-const utils = require('./src/filters/utils');
-const pages = require('./src/filters/pages');
+const birds = require('./src/filters/birds');
 const events = require('./src/filters/events');
+const pages = require('./src/filters/pages');
 const tags = require('./src/filters/tags');
 const time = require('./src/filters/time');
 const type = require('./src/filters/type');
-const birds = require('./src/filters/birds');
+const utils = require('./src/filters/utils');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
@@ -48,8 +48,8 @@ module.exports = (eleventyConfig) => {
   );
 
   // filters
-  eleventyConfig.addFilter('merge', () =>
-    [...arguments].reduce((all, current) => ({ ...all, ...current }), {}),
+  eleventyConfig.addFilter('merge', (...args) =>
+    [...args].reduce((all, current) => ({ ...all, ...current }), {}),
   );
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('styles', utils.styles);

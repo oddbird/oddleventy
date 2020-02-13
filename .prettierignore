@@ -1,7 +1,9 @@
 !.*
 .git/
 .nyc_output/
+.pnp.js
 .vscode/
+.yarn/
 _built/
 _site/
 coverage/

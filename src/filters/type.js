@@ -2,13 +2,17 @@
 
 const removeMd = require('remove-markdown');
 const type = require('typogr');
-const mdown = require('markdown-it')({
+const markdown = require('markdown-it');
+const mdMark = require('markdown-it-mark');
+const mdFootnote = require('markdown-it-footnote');
+
+const mdown = markdown({
   html: true,
   breaks: false,
   typographer: true,
 })
-  .use(require('markdown-it-mark'))
-  .use(require('markdown-it-footnote'));
+  .use(mdMark)
+  .use(mdFootnote);
 
 /* @docs
 label: Typography Filters
@@ -67,10 +71,4 @@ params:
 const mdInline = (content) =>
   content ? typogr(mdown.renderInline(content), true) : content;
 
-module.exports = {
-  mdown,
-  typogr,
-  md,
-  mdInline,
-  removeMd,
-};
+module.exports = { mdown, typogr, md, mdInline, removeMd };

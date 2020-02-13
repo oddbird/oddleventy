@@ -118,9 +118,4 @@ const rssLatest = (collection) => {
   return rssDate(collection[0]);
 };
 
-module.exports = {
-  now,
-  getDate,
-  rssDate,
-  rssLatest,
-};
+module.exports = { now, getDate, rssDate, rssLatest };

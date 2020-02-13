@@ -1,0 +1,29 @@
+{
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "npm.packageManager": "yarn",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ],
+  "eslint.enable": true,
+  "eslint.nodePath": ".vscode/pnpify",
+  "prettier.prettierPath": ".vscode/pnpify/prettier/index.js",
+  "search.exclude": {
+    ".pnp.js": true,
+    ".vscode": true,
+    ".yarn": true,
+    "src/docs": true,
+    "yarn.lock": true
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+  }
+}

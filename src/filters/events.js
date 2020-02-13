@@ -15,12 +15,12 @@ note: |
   so that events can be treated as a page of their own
 params:
   page:
-    type: page object
+    type: 11ty page object
   event:
     type: object
 */
 const buildEvent = (page, event) => ({
-  date: event ? getDate(event.date) || page.date : page.date,
+  date: event.date ? getDate(event.date) : page.date,
   url: page.url,
   inputPath: page.inputPath,
   fileSlug: page.fileSlug,
@@ -95,7 +95,8 @@ category: Upcoming
 note: Return only the pages/events in the future
 params:
   collection:
-    type: array of pages
+    type: array
+    note: containing 11ty page objects
 */
 const withFuture = (collection) =>
   collection.filter((page) => page.data.events && getFuture(page.data.events));
