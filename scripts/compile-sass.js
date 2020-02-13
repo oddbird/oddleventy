@@ -57,7 +57,7 @@ const outputFile = (file, contents) =>
     }
   });
 
-const compileSass = ({ name, postCSS }) => {
+const compileSass = ({ name, sourceMap, postCSS }) => {
   const inFile = path.join(inDir, `${name}.scss`);
   const outFilename = `${name}.css`;
   const outFile = path.join(outDir, outFilename);
@@ -65,7 +65,7 @@ const compileSass = ({ name, postCSS }) => {
   sass.render(
     {
       file: inFile,
-      sourceMap: Boolean(postCSS),
+      sourceMap: Boolean(sourceMap),
       outFile: outFilename,
       importer: nodeImporter,
     },
@@ -84,14 +84,14 @@ const compileSass = ({ name, postCSS }) => {
             res.warnings().forEach((warn) => {
               console.warn(warn.toString());
             });
-            if (res.map) {
+            if (sourceMap && res.map) {
               outputFile(outMap, res.map);
             }
             return outputFile(outFile, res.css);
           })
           .catch(console.error);
       }
-      if (result.map) {
+      if (sourceMap && result.map) {
         outputFile(outMap, result.map);
       }
       return outputFile(outFile, result.css);
@@ -101,4 +101,4 @@ const compileSass = ({ name, postCSS }) => {
 
 compileSass({ name: 'screen', sourceMap: true, postCSS: true });
 compileSass({ name: 'styleguide', sourceMap: true, postCSS: true });
-compileSass({ name: 'json', sourceMap: false });
+compileSass({ name: 'json' });
