@@ -56,7 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.1.2"],
             ["eslint-plugin-simple-import-sort", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.0.1"],
             ["fs-extra", "npm:8.1.0"],
-            ["husky", "npm:4.2.1"],
+            ["husky", "npm:4.2.3"],
             ["lint-staged", "npm:10.0.7"],
             ["lodash", "npm:4.17.15"],
             ["markdown-it", "npm:10.0.0"],
@@ -6878,10 +6878,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["husky", [
-        ["npm:4.2.1", {
-          "packageLocation": "./.yarn/unplugged/husky-npm-4.2.1-aa787446b4/node_modules/husky/",
+        ["npm:4.2.3", {
+          "packageLocation": "./.yarn/unplugged/husky-npm-4.2.3-b5c1a5429e/node_modules/husky/",
           "packageDependencies": [
-            ["husky", "npm:4.2.1"],
+            ["husky", "npm:4.2.3"],
             ["chalk", "npm:3.0.0"],
             ["ci-info", "npm:2.0.0"],
             ["compare-versions", "npm:3.5.1"],
@@ -10121,7 +10121,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.1.2"],
             ["eslint-plugin-simple-import-sort", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.0.1"],
             ["fs-extra", "npm:8.1.0"],
-            ["husky", "npm:4.2.1"],
+            ["husky", "npm:4.2.3"],
             ["lint-staged", "npm:10.0.7"],
             ["lodash", "npm:4.17.15"],
             ["markdown-it", "npm:10.0.0"],

@@ -6102,9 +6102,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"husky@npm:^4.2.1":
-  version: 4.2.1
-  resolution: "husky@npm:4.2.1"
+"husky@npm:^4.2.3":
+  version: 4.2.3
+  resolution: "husky@npm:4.2.3"
   dependencies:
     chalk: ^3.0.0
     ci-info: ^2.0.0
@@ -6119,7 +6119,7 @@ fsevents@~2.1.2:
   bin:
     husky-run: bin/run.js
     husky-upgrade: lib/upgrader/bin.js
-  checksum: 2/17d9df3f2eb4b8d176d169529b2b1b1fe1d64c703fc86b4229bb8fd1502c271c167c305e8ca9549732cf516910cd06d2f072daab6a3d9a91819ad78d20ded4ed
+  checksum: 2/ab5154c891ac3a2e9a5977014e7b10d60ffb53eddf9016a889fac74a0cd1b7b979ac3f8a2ad25a4b87c2ee54f9e1abdd949f377588661a5063915708dc557975
   languageName: node
   linkType: hard
 
@@ -9050,7 +9050,7 @@ fsevents@~2.1.2:
     eslint-plugin-prettier: ^3.1.2
     eslint-plugin-simple-import-sort: ^5.0.1
     fs-extra: ^8.1.0
-    husky: ^4.2.1
+    husky: ^4.2.3
     lint-staged: ^10.0.7
     lodash: ^4.17.15
     markdown-it: ^10.0.0
