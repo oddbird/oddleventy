@@ -1,0 +1,18 @@
+# http://eslint.org/docs/rules/
+
+parserOptions:
+  sourceType: module
+  ecmaFeatures:
+    impliedStrict: true
+    jsx: true
+env:
+  browser: true
+  commonjs: true
+  jest: true
+  node: false
+plugins:
+  - simple-import-sort
+rules:
+  # Import
+  simple-import-sort/sort: 1
+  import/order: 0
