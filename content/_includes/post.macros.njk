@@ -14,8 +14,9 @@ note: Generate a list of posts
 params:
   posts:
     type: array
+    note: containing 11ty page objects
   collections:
-    type: 11ty collections array
+    type: 11ty collections object
     default: none
 #}
 {% macro list(
@@ -37,9 +38,9 @@ category: lists
 note: Generate each post in a list
 params:
   post:
-    type: 11ty page
+    type: 11ty page object
   collections:
-    type: 11ty collections array
+    type: 11ty collections object
     default: none
 #}
 {% macro item(
@@ -68,7 +69,7 @@ params:
         end=post.data.end
       ) }}
 
-      {{ where(post.data.adr) }}
+      {{ where(post.event.adr if post.event else post.data.adr) }}
     </p>
 
     {{ taglist(post.data.tags, collections) }}
@@ -81,16 +82,24 @@ category: metadata
 note: Generate a linked heading with the post title
 params:
   post:
-    type: 11ty page
+    type: 11ty page object
 #}
 {% macro heading(
   post
 ) -%}
   {%- set post_title = post | render('banner') or post | render('title') -%}
   {{- utility.link_if(
-    post_title,
+    post_title | mdInline,
     post.url
   ) -}}
+
+  {%- if post.event and post.event.venue %}
+    <i>at</i>
+    {{ utility.link_if(
+      post.event.venue | mdInline,
+      post.event.url
+    ) }}
+  {%- endif -%}
 {%- endmacro %}
 
 {# @docs
@@ -99,9 +108,9 @@ category: metadata
 note: Generate each post in a list
 params:
   post:
-    type: 11ty page
+    type: 11ty page object
   collections:
-    type: 11ty collections array
+    type: 11ty collections object
     default: none
 #}
 {% macro subtitle(
@@ -122,7 +131,7 @@ params:
   author:
     type: string | array
   collections:
-    type: 11ty collections array
+    type: 11ty collections object
 #}
 {% macro by(
   author,
@@ -227,7 +236,7 @@ params:
   tags:
     type: array
   collections:
-    type: 11ty collections array
+    type: 11ty collections object
 #}
 {% macro taglist(
   tags,

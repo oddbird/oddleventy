@@ -17,7 +17,7 @@ example: |
 params:
   collection:
     type: array
-    note: The 11ty collection of pages to filter
+    note: containing 11ty page objects
   bird:
     type: string
     note: The name of the bird (as used in `author` settings)
@@ -44,7 +44,7 @@ example: |
 params:
   collection:
     type: array
-    note: The 11ty collection of pages to filter
+    note: containing 11ty page objects
   current:
     type: boolean
     default: 'true'
@@ -64,7 +64,7 @@ example: |
 params:
   collection:
     type: array
-    note: The 11ty collection of pages to filter
+    note: containing 11ty page objects
   bird:
     type: string
     note: The name of the bird (as used in `author` settings)

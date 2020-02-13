@@ -14,8 +14,8 @@ label: isPublic
 category: Status
 note: Check that a page is
 params:
-  collection:
-    type: array of pages
+  page:
+    type: 11ty page object
 */
 const isPublic = (page) => {
   const live = page.data.draft !== true;
@@ -28,11 +28,13 @@ label: isCurrent
 category: Status
 note: Check that the page does not have an end date
 params:
-  collection:
-    type: array of pages
+  page:
+    type: 11ty page object
 */
 const isCurrent = (page) =>
-  page.data.end === 'ongoing' || !page.data.end || getDate(page.data.end) > now;
+  page.data.end === 'ongoing' ||
+  !page.data.end ||
+  getDate(page.data.end) >= now;
 
 /* @docs
 label: getPublic
@@ -40,7 +42,8 @@ category: Filter
 note: Return only the public pages from a collection
 params:
   collection:
-    type: array of pages
+    type: array
+    note: containing 11ty page objects
 */
 const getPublic = (collection) => collection.filter((page) => isPublic(page));
 
@@ -68,7 +71,8 @@ category: Filter
 note: Return pages with particular data
 params:
   collection:
-    type: array of pages
+    type: array
+    note: containing 11ty page objects
   keys:
     type: string
     note: Any nested data attributes to get
@@ -93,7 +97,7 @@ example: |
 params:
   collection:
     type: array
-    note: often an array of pages, but can be an array of  any objects
+    note: often an array of 11ty pages, but can be an array of any objects
   keys:
     type: string | false
     note: |
@@ -120,7 +124,7 @@ example: |
 params:
   collection:
     type: array
-    note: often an array of pages, but can be an array of  any objects
+    note: often an array of 11ty pages, but can be an array of any objects
   keys:
     type: string
     note: use dot-notation (`data.press`) for nested keys
@@ -140,7 +144,7 @@ example: |
 params:
   collection:
     type: array
-    note: often an array of pages, but can be an array of  any objects
+    note: often an array of 11ty pages, but can be an array of any objects
   url:
     type: string
     note: The url of the desired page
@@ -164,7 +168,8 @@ category: Data
 note: Return the content of any page
 params:
   collection:
-    type: array of pages
+    type: array
+    note: containing 11ty page objects
   url:
     type: url
 */
@@ -177,7 +182,7 @@ category: Data
 note: Returns the value for a given key from either `renderData` or `data`
 params:
   page:
-    type: page object
+    type: 11ty page object
   key:
     type: string
 */
@@ -205,10 +210,12 @@ note: |
   - **article** (the default)
 params:
   page:
-    type: page object
+    type: 11ty page object
 */
 const pageType = (page) => {
-  if (hasData(page, 'data.tags', 'Client Work')) {
+  if (page.event) {
+    return 'event';
+  } else if (hasData(page, 'data.tags', 'Client Work')) {
     return 'client';
   } else if (hasData(page, 'data.tags', 'OddTools')) {
     return 'tool';
