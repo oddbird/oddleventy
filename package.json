@@ -48,6 +48,7 @@
     "accoutrement": "^2.1.3",
     "autoprefixer": "^9.7.4",
     "cascading-color-systems": "^0.1.0-beta.11",
+    "chalk": "^3.0.0",
     "chokidar-cli": "^2.1.0",
     "core-js": "^3.6.4",
     "cssremedy": "^0.1.0-beta.2",

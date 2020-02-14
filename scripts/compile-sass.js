@@ -5,6 +5,7 @@
 const path = require('path');
 
 const autoprefixer = require('autoprefixer');
+const chalk = require('chalk');
 const fs = require('fs-extra');
 const postcss = require('postcss');
 const sass = require('sass');
@@ -64,7 +65,7 @@ const nodeImporter = (url, prev, done) => {
 
 const outputFile = (file, inputName, contents) =>
   fs.outputFile(file, contents.toString().trim(), (writeErr) => {
-    console.log('\x1b[32m%s\x1b[0m', `Compiled Sass: ${inputName} => ${file}`);
+    console.log(chalk.green.bold(`Compiled Sass: ${inputName} => ${file}`));
     if (writeErr) {
       throw writeErr;
     }
@@ -96,7 +97,7 @@ const compileSass = ({ name, sourceMap, postCSS }) => {
           })
           .then((res) => {
             res.warnings().forEach((warn) => {
-              console.warn('\x1b[33m%s\x1b[0m', warn.toString());
+              console.warn(chalk.yellow(warn.toString()));
             });
             if (sourceMap && res.map) {
               outputFile(outMap, inFilename, res.map);
@@ -104,7 +105,7 @@ const compileSass = ({ name, sourceMap, postCSS }) => {
             return outputFile(outFile, inFilename, res.css);
           })
           .catch((err) => {
-            console.error('\x1b[31m%s\x1b[0m', err);
+            console.error(chalk.red(err));
           });
       }
       if (sourceMap && result.map) {
