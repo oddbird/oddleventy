@@ -9,7 +9,7 @@
   },
   "private": true,
   "engines": {
-    "node": "12.15.0",
+    "node": "12.16.0",
     "yarn": "^2.0.0-rc.29"
   },
   "scripts": {
@@ -51,6 +51,7 @@
     "autoprefixer": "^9.7.4",
     "babel-jest": "^25.1.0",
     "cascading-color-systems": "^0.1.0-beta.11",
+    "chalk": "^3.0.0",
     "chokidar-cli": "^2.1.0",
     "core-js": "^3.6.4",
     "cssremedy": "^0.1.0-beta.2",
@@ -74,13 +75,13 @@
     "postcss": "^7.0.26",
     "prettier": "^1.19.1",
     "remove-markdown": "^0.3.0",
-    "rollup": "^1.31.0",
+    "rollup": "^1.31.1",
     "rollup-plugin-babel": "^4.3.3",
     "sass": "^1.25.0",
     "sassdoc": "^2.7.1",
     "sassdoc-theme-herman": "^3.0.2",
     "slugify": "^1.3.6",
-    "stylelint": "^13.1.0",
+    "stylelint": "^13.2.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-prettier": "^1.1.2",

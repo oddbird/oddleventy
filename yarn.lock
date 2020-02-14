@@ -3569,9 +3569,9 @@ __metadata:
   linkType: hard
 
 "compare-versions@npm:^3.5.1":
-  version: 3.5.1
-  resolution: "compare-versions@npm:3.5.1"
-  checksum: 2/6b45fe237ca9184f334ffbb4adfee419ba1d91767011c43933555307194d58a19bc6b27b3af3f322cfa0816392ef130da83339f04631d808d96534f87b6c2574
+  version: 3.6.0
+  resolution: "compare-versions@npm:3.6.0"
+  checksum: 2/09525264502bda1f6667ad2429eaf5520b543d997e79e7a94b66a5896df8921cdc3a97140dfff75af6c9ba1859c872de1921c3cf8a6c48ed807bbf9f582cf093
   languageName: node
   linkType: hard
 
@@ -4396,7 +4396,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dot-prop@npm:^4.1.0, dot-prop@npm:^4.1.1":
+"dot-prop@npm:^4.1.0":
   version: 4.2.0
   resolution: "dot-prop@npm:4.2.0"
   dependencies:
@@ -10254,6 +10254,7 @@ __metadata:
     autoprefixer: ^9.7.4
     babel-jest: ^25.1.0
     cascading-color-systems: ^0.1.0-beta.11
+    chalk: ^3.0.0
     chokidar-cli: ^2.1.0
     core-js: ^3.6.4
     cssremedy: ^0.1.0-beta.2
@@ -10277,13 +10278,13 @@ __metadata:
     postcss: ^7.0.26
     prettier: ^1.19.1
     remove-markdown: ^0.3.0
-    rollup: ^1.31.0
+    rollup: ^1.31.1
     rollup-plugin-babel: ^4.3.3
     sass: ^1.25.0
     sassdoc: ^2.7.1
     sassdoc-theme-herman: ^3.0.2
     slugify: ^1.3.6
-    stylelint: ^13.1.0
+    stylelint: ^13.2.0
     stylelint-config-prettier: ^8.0.1
     stylelint-config-recommended: ^3.0.0
     stylelint-prettier: ^1.1.2
@@ -11143,17 +11144,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^3.1.0":
-  version: 3.1.1
-  resolution: "postcss-selector-parser@npm:3.1.1"
-  dependencies:
-    dot-prop: ^4.1.1
-    indexes-of: ^1.0.1
-    uniq: ^1.0.1
-  checksum: 2/3bb7d6ee35d22034138f6908ed32d26ef95191252ffa0ef41ca7058dd1165045f27e9a2581acfd28ae345a19029bc0003f5457abeea798c5a0dc13b89dd61d19
-  languageName: node
-  linkType: hard
-
 "postcss-selector-parser@npm:^6.0.2":
   version: 6.0.2
   resolution: "postcss-selector-parser@npm:6.0.2"
@@ -11915,13 +11905,13 @@ __metadata:
   linkType: hard
 
 "regjsparser@npm:^0.6.0":
-  version: 0.6.2
-  resolution: "regjsparser@npm:0.6.2"
+  version: 0.6.3
+  resolution: "regjsparser@npm:0.6.3"
   dependencies:
     jsesc: ~0.5.0
   bin:
     regjsparser: bin/parser
-  checksum: 2/6ea2ef028a41791ba8851690efe4bdc7fb284603e6b4948adec0e355a764ce134695235397d02762581ae487f035da462fb8b4bc2d5c9e07c1e1e5a16d77d168
+  checksum: 2/bcb2caf20f7515f6f47ff83953844eb9d2192b53c729a571f69c43a7eb9aea27ea864841af3303f137d1c40bf568a9130666dc74c0af598ea7b8b54ff7087c0a
   languageName: node
   linkType: hard
 
@@ -12328,16 +12318,16 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"rollup@npm:^1.31.0":
-  version: 1.31.0
-  resolution: "rollup@npm:1.31.0"
+"rollup@npm:^1.31.1":
+  version: 1.31.1
+  resolution: "rollup@npm:1.31.1"
   dependencies:
     "@types/estree": "*"
     "@types/node": "*"
     acorn: ^7.1.0
   bin:
     rollup: dist/bin/rollup
-  checksum: 2/ae5a8cde296735bd4ae21077705d82c334f2fecde8796c8ac5ccea297a6bb9e9924f6bbdbfb3558f465a5a3be84fa680020763bcd7766c49f73a1edba0cf6401
+  checksum: 2/60e45a50b3f90799d43c34e756ea856c000fd98eb03dbc8a5268487af9f3ab00a296a62f05d75fe3a8977092029b844e986974b7ef88465b79055dd2723ff7e2
   languageName: node
   linkType: hard
 
@@ -13673,9 +13663,9 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^13.1.0":
-  version: 13.1.0
-  resolution: "stylelint@npm:13.1.0"
+"stylelint@npm:^13.2.0":
+  version: 13.2.0
+  resolution: "stylelint@npm:13.2.0"
   dependencies:
     autoprefixer: ^9.7.4
     balanced-match: ^1.0.0
@@ -13711,7 +13701,7 @@ resolve@1.1.7:
     postcss-safe-parser: ^4.0.1
     postcss-sass: ^0.4.2
     postcss-scss: ^2.0.0
-    postcss-selector-parser: ^3.1.0
+    postcss-selector-parser: ^6.0.2
     postcss-syntax: ^0.36.2
     postcss-value-parser: ^4.0.2
     resolve-from: ^5.0.0
@@ -13727,7 +13717,7 @@ resolve@1.1.7:
     write-file-atomic: ^3.0.1
   bin:
     stylelint: bin/stylelint.js
-  checksum: 2/a33d8ebeaa435c4035d9eb7a516ce00970160e77003a95bea784c3defb49639ad41921d04e3300102139640ddf3236cf744e34772f5dd219368141be9bdf050e
+  checksum: 2/dd9a8f4dc684600597762273002a32787669141faf96f0da26e360db6e260ccc212b1799fe20b7fa38593aa19b3a2b0af3a171d7f75741bb482255b35ade1b75
   languageName: node
   linkType: hard
 
