@@ -39,6 +39,14 @@ hr {
   @include tools.font-family('amp');
 }
 
+// H-Cards
+// -------
+/// By default, non-link h-cards are bold.
+/// @group type
+.h-card:not([href]) {
+  font-weight: bold;
+}
+
 // Paragraphs & Lists
 // ------------------
 /// Apply spacing after paragraphs and lists.

@@ -13,24 +13,12 @@
   {% set pages = event_pages[index.events] if index.events else 'mixed' %}
   {% set list = collections[index.slug] if index.slug else none %}
   {% set list = list | getEvents(pages) if index.events else list %}
-
-  {% if list | length > 6 %}
-    {{ post.by_year(list, collections) }}
-  {% else %}
-    {{ layout.title('Resources') }}
-    {{ post.list(list, collections) }}
-  {% endif %}
+  {{ post.by_year(list, collections) }}
 {% elif bird and (bird != 'oddbird') %}
   {% set list = collections._post | byBird(bird) %}
-
-  {% if list | length > 6 %}
-    {{ post.by_year(list, collections) }}
-  {% else %}
-    {{ layout.title('Resources') }}
-    {{ post.list(list, collections) }}
-  {% endif %}
+  {{ post.by_year(list, collections) }}
 {% elif events %}
-  <h2>Related Events</h2>
+  {{ layout.title('Events') }}
   <ol reversed>
     {% for event in events -%}
       {% set eventPage = {'date': page.date, 'event': event } %}
@@ -45,4 +33,3 @@
     {% endfor %}
   </ol>
 {% endif %}
-

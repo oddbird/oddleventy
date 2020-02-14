@@ -8,15 +8,38 @@ label: Post Macros
 category: file
 #}
 
-
+{# @docs
+label: by_year
+category: lists
+note: |
+  Group posts by year,
+  when there are more than
+  a set (`above`) number of posts
+params:
+  posts:
+    type: array
+    note: containing 11ty page objects
+  collections:
+    type: 11ty collections object
+    default: none
+  above:
+    type: number
+    default: 6
+#}
 {% macro by_year(
-  pages,
-  collections=none
+  posts,
+  collections=none,
+  above=6
 ) %}
-  {% for group in pages | byYear %}
-    {{ layout.title(group.year) }}
-    {{ list(group.posts, collections) }}
-  {% endfor %}
+  {% if posts | length > above %}
+    {% for group in posts | byYear %}
+      {{ layout.title(group.year) }}
+      {{ list(group.posts, collections) }}
+    {% endfor %}
+  {% else %}
+    {{ layout.title('Resources') }}
+    {{ list(posts, collections) }}
+  {% endif %}
 {% endmacro %}
 
 {# @docs
@@ -35,14 +58,16 @@ params:
   posts,
   collections=none
 ) %}
-{% if posts %}
+{%- if posts -%}
+  {%- set posts = posts if (posts[0].sort) else posts | pageYears  -%}
+  {%- set sort = 'sort' if (posts[0].sort) else 'date' -%}
+
   <ol data-grid="resources" reversed>
-    {% set sort = 'sort' if (posts[0].sort) else 'date' %}
-    {% for post in posts | sort(true, false, sort) %}
-      {% set feature = 'large' if (loop.length == 1) else none %}
-      {% set feature = 'small' if (feature or post.data.feature) and (loop.length == 2) else feature %}
+    {%- for post in posts | sort(true, false, sort) -%}
+      {%- set feature = 'large' if (loop.length == 1) else none -%}
+      {%- set feature = 'small' if (feature or post.data.feature) and (loop.length == 2) else feature -%}
       {{ item(post, collections, feature) }}
-    {% endfor %}
+    {%- endfor -%}
   </ol>
 {% endif %}
 {% endmacro %}
@@ -63,20 +88,19 @@ params:
   collections=none,
   feature=none
 ) %}
-  {% set type = post | pageType %}
-
-  {% set feature = post.event.feature if (post.event and not feature) else feature %}
-  {% set feature = feature or post.data.feature %}
-  {% set feature = 'small' if feature and not feature | typeCheck('string') else feature %}
+  {%- set type = post.data.tags | pageType -%}
+  {%- set feature = post.event.feature if (post.event and not feature) else feature -%}
+  {%- set feature = feature or post.data.feature -%}
+  {%- set feature = 'small' if feature and not feature | typeCheck('string') else feature -%}
 
   <li data-post="{{ type | slug if type else 'default' }}" {{ utility.attr_if('data-feature', feature) }}>
-    {{ category(type, collections) }}
+    {{ type_link(type, collections) }}
 
-    {% if feature == 'large' %}
+    {%- if feature == 'large' -%}
       {{ large(post, collections) }}
-    {% else %}
+    {%- else -%}
       {{ small(post, collections) }}
-    {% endif %}
+    {%- endif -%}
   </li>
 {% endmacro %}
 
@@ -85,8 +109,8 @@ params:
   collections=none
 ) %}
   <a href="{{ post.url | url }}" data-card="link">
-    <div class="card-inner">
-      <h3 class="card-title">{{ heading(post, link=false) }}</h3>
+    <div class="card-inner post-header">
+      {{ banner(post, link=false) }}
       {{ subtitle(post.data.sub) }}
       {{ byline(post, collections, false) }}
     </div>
@@ -98,18 +122,12 @@ params:
   collections=none
 ) %}
   <article data-card="feature">
-    {% if post.data.image and (post.data.image.src or post.data.image.svg) %}
-      <div class="card-hero">
-        {% if post.data.image.src %}
-          {{ embed.img(post.data.image.src, post.data.image.alt) }}
-        {% else %}
-          {{ embed.svg(post.data.image.svg) }}
-        {% endif %}
-      </div>
+    {% if post.data.image and not (post.data.image.type === 'media') %}
+      {{ hero(post.data.image) }}
     {% endif %}
 
-    <div class="card-meta">
-      <h3>{{ heading(post) }}</h3>
+    <div class="post-header">
+      {{ banner(post) }}
       {{ subtitle(post.data.sub) }}
       {{ byline(post, collections) }}
       {{ taglist(post.data.tags, collections) }}
@@ -121,24 +139,36 @@ params:
   </article>
 {% endmacro %}
 
+{% macro hero(
+  image,
+  type='post'
+) %}
+  {%- if image -%}
+    <div data-hero="{{ type or 'post' }}">
+      {%- if image.src -%}
+        {%- set position = {'--hero-position': image.position} | styles -%}
+        {{ embed.img(
+          src=image.src,
+          alt=image.alt,
+          attrs={style: position}
+        ) }}
+      {%- elif image.svg -%}
+        {{ embed.svg(image.svg) }}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+{% endmacro %}
+
 {% macro byline(
   post,
   collections=none,
   links=true
 ) %}
-  {% set type = post | pageType %}
   <p class="byline">
-    {% set byType = {
-      'Workshops': 'Workshop',
-      'Talks': 'Talk',
-      'Videos': 'Video',
-      'Podcasts': 'Podcast',
-      'OddTools': 'Created'
-    } %}
-
-    {% if (not post.data.venue) and (not type in ['News', 'Links']) %}
-      <b>{{ byType[type] or type }}</b>
-    {% endif %}
+    {{ byline_type(
+      tags=post.data.tags,
+      venue=post.data.venue
+    ) }}
 
     {{ by(
       post.data.author,
@@ -165,7 +195,24 @@ params:
   </p>
 {% endmacro %}
 
-{% macro category(
+{% macro byline_type(
+  tags,
+  venue=none
+) %}
+  {%- set type = tags | pageType -%}
+  {%- if type and (not venue) and not (type in ['News', 'Links']) -%}
+    {%- set byType = {
+      'Workshops': 'Workshop',
+      'Talks': 'Talk',
+      'Videos': 'Video',
+      'Podcasts': 'Podcast',
+      'OddTools': 'Created'
+    } -%}
+    <b>{{ byType[type] or type }}</b>
+  {%- endif -%}
+{% endmacro %}
+
+{% macro type_link(
   type,
   collections=none
 ) %}
@@ -196,15 +243,16 @@ params:
   post:
     type: 11ty page object
 #}
-{% macro heading(
+{% macro banner(
   post,
+  level=3,
   link=true
 ) -%}
-  {%- set post_title = post | render('banner') or post | render('title') -%}
-  {{- utility.link_if(
-    post_title,
-    post.url if link else none
-  ) -}}
+  {%- set title = post | render('banner') or post | render('title') -%}
+  {%- set url = post.url if link else none -%}
+  {%- h level, {'class': 'post-title'} -%}
+    {{ utility.link_if(title, url) }}
+  {%- endh -%}
 {%- endmacro %}
 
 {# @docs

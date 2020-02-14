@@ -186,10 +186,15 @@ params:
   key:
     type: string
 */
-const render = (page, key) =>
-  page.data.renderData
+const render = (page, key) => {
+  if (!page.data) {
+    return undefined;
+  }
+
+  return page.data.renderData
     ? page.data.renderData[key] || page.data[key]
     : page.data[key];
+};
 
 /* @docs
 label: pageYears
@@ -265,11 +270,11 @@ note: |
   which we can use to provide different list styling,
   or filtering.
 params:
-  page:
-    type: 11ty page object
+  tags:
+    type: array
 */
-const pageType = (page) => {
-  const tags = [
+const pageType = (tags) => {
+  const types = [
     'Client Work',
     'OddTools',
     'Open Source',
@@ -281,7 +286,7 @@ const pageType = (page) => {
     'News',
   ];
 
-  return tags.find((type) => hasData(page, 'data.tags', type));
+  return tags ? tags.find((tag) => types.includes(tag)) : false;
 };
 
 module.exports = {

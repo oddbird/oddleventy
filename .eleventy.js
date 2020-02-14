@@ -76,6 +76,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('pageContent', pages.pageContent);
   eleventyConfig.addFilter('render', pages.render);
   eleventyConfig.addFilter('pageType', pages.pageType);
+  eleventyConfig.addFilter('pageYears', pages.pageYears);
   eleventyConfig.addFilter('byYear', pages.byYear);
 
   eleventyConfig.addFilter('buildEvent', events.buildEvent);
@@ -95,6 +96,7 @@ module.exports = (eleventyConfig) => {
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.md);
   eleventyConfig.addPairedShortcode('mdInline', type.mdInline);
+  eleventyConfig.addPairedShortcode('h', type.heading);
   eleventyConfig.addShortcode(
     'getDate',
     (format) => `${time.getDate(time.now, format)}`,

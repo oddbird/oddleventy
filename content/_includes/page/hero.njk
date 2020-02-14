@@ -1,15 +1,7 @@
-{% import 'utility.macros.njk' as utility %}
-{% import 'embed.macros.njk' as embed %}
+{% import 'post.macros.njk' as post %}
 
 {% if image %}
-  <div id="hero" {{ utility.style_if({'--hero-position': image.position}) }}>
-    {% if image.src %}
-      {{ embed.img(
-        src=image.src,
-        alt=image.alt
-      ) }}
-    {% elif image.svg %}
-      {{ embed.svg(image.svg) }}
-    {% endif %}
+  <div id="hero">
+    {{ post.hero(image, 'page') }}
   </div>
 {% endif %}

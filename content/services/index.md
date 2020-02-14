@@ -15,7 +15,7 @@ summary: |
 
 {% for service in services %}
 {% set page = collections.all | getPage(service) %}
-## {{ post.heading(page) }}
+## {{ post.banner(page, level=2) }}
 
 {{ page.data.summary }}
 {% endfor %}

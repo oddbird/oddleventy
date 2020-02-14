@@ -21,6 +21,7 @@ category: File
 
 /* @docs
 label: typogr
+category: typesetting
 links:
   - '[Typogr.js](https://github.com/ekalinin/typogr.js/)'
 params:
@@ -54,6 +55,7 @@ const typogr = (content, inline = false) => {
 
 /* @docs
 label: md
+category: typesetting
 note: Block markdown with typesetting
 params:
   content:
@@ -63,6 +65,7 @@ const md = (content) => (content ? typogr(mdown.render(content)) : content);
 
 /* @docs
 label: mdInline
+category: typesetting
 note: Inline markdown with inline typesetting
 params:
   content:
@@ -71,4 +74,34 @@ params:
 const mdInline = (content) =>
   content ? typogr(mdown.renderInline(content), true) : content;
 
-module.exports = { mdown, typogr, md, mdInline, removeMd };
+/* @docs
+label: h
+category: headings
+note: Generate a heading at any given level
+params:
+  content:
+    type: string
+  level:
+    type: Number (1-6)
+  attrs:
+    type: object
+*/
+const heading = (content, level, attrs = {}) => {
+  const attr_html = Object.keys(attrs)
+    .map((attr) => {
+      const val = attrs[attr];
+      if (val) {
+        return typeof val === 'boolean' || val === ''
+          ? `${attr}`
+          : `${attr}="${val}"`;
+      }
+
+      return undefined;
+    })
+    .filter((attr) => attr)
+    .join(' ');
+
+  return `<h${level} ${attr_html}>${content}</h${level}>`;
+};
+
+module.exports = { mdown, typogr, md, mdInline, removeMd, heading };
