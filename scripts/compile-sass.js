@@ -62,16 +62,17 @@ const nodeImporter = (url, prev, done) => {
   }
 };
 
-const outputFile = (file, contents) =>
+const outputFile = (file, inputName, contents) =>
   fs.outputFile(file, contents.toString().trim(), (writeErr) => {
-    console.log(`Compiled: ${file}`);
+    console.log('\x1b[32m%s\x1b[0m', `Compiled Sass: ${inputName} => ${file}`);
     if (writeErr) {
       throw writeErr;
     }
   });
 
 const compileSass = ({ name, sourceMap, postCSS }) => {
-  const inFile = path.join(inDir, `${name}.scss`);
+  const inFilename = `${name}.scss`;
+  const inFile = path.join(inDir, inFilename);
   const outFilename = `${name}.css`;
   const outFile = path.join(outDir, outFilename);
   const outMap = path.join(outDir, `${outFilename}.map`);
@@ -84,7 +85,7 @@ const compileSass = ({ name, sourceMap, postCSS }) => {
     },
     (compileErr, result) => {
       if (compileErr) {
-        throw compileErr;
+        throw compileErr.formatted;
       }
       if (postCSS) {
         return postcss([autoprefixer])
@@ -95,19 +96,21 @@ const compileSass = ({ name, sourceMap, postCSS }) => {
           })
           .then((res) => {
             res.warnings().forEach((warn) => {
-              console.warn(warn.toString());
+              console.warn('\x1b[33m%s\x1b[0m', warn.toString());
             });
             if (sourceMap && res.map) {
-              outputFile(outMap, res.map);
+              outputFile(outMap, inFilename, res.map);
             }
-            return outputFile(outFile, res.css);
+            return outputFile(outFile, inFilename, res.css);
           })
-          .catch(console.error);
+          .catch((err) => {
+            console.error('\x1b[31m%s\x1b[0m', err);
+          });
       }
       if (sourceMap && result.map) {
-        outputFile(outMap, result.map);
+        outputFile(outMap, inFilename, result.map);
       }
-      return outputFile(outFile, result.css);
+      return outputFile(outFile, inFilename, result.css);
     },
   );
 };
