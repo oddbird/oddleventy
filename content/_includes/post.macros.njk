@@ -109,10 +109,13 @@ params:
   collections=none
 ) %}
   <a href="{{ post.url | url }}" data-card="link">
-    <div class="card-inner post-header">
-      {{ banner(post, link=false) }}
-      {{ subtitle(post.data.sub) }}
-      {{ byline(post, collections, false) }}
+    <div class="card-inner">
+      <div class="post-header">
+        {{ banner(post, link=false) }}
+        {{ subtitle(post.data.sub) }}
+        {{ byline(post, collections, false) }}
+      </div>
+      {{ upcoming(post.data.events, links=false) }}
     </div>
   </a>
 {% endmacro %}
@@ -131,6 +134,7 @@ params:
 
     <div class="summary">
       {{ post.data.summary | md | safe }}
+      {{ upcoming(post.data.events) }}
     </div>
   {%- endset -%}
   {%- set image = post.data.image -%}
@@ -147,6 +151,28 @@ params:
       {{ content | safe }}
     {%- endif -%}
   </article>
+{% endmacro %}
+
+{% macro upcoming(
+  events,
+  links=true
+) %}
+  {% set events = events | getFuture if events else none %}
+  {% set next = events | sort(false, false, 'date') | first %}
+  {% if next %}
+    <p class="next-event">
+      {{ linked(
+        next.venue,
+        next.url if links else none
+      ) }}
+      <i>on</i>
+      {{ utility.datetime(
+        next.date,
+        next.end,
+        format='md'
+      ) }}
+    </p>
+  {% endif %}
 {% endmacro %}
 
 {% macro hero(
@@ -191,15 +217,10 @@ params:
       ({{ post.data.oss }})
     {% endif %}
 
-    {% if links %}
-      {{ linked(
-        venue=post.data.venue,
-        url=(post.data.canonical or post.data.url)
-      ) }}
-    {% elif post.data.venue %}
-      <i>at</i>
-      <b>{{ post.data.venue }}</b>
-    {% endif %}
+    {{ linked(
+      venue=post.data.venue,
+      url=(post.data.canonical or post.data.url) if links else none
+    ) }}
 
     {{ client(post.data.client) }}
   </p>
@@ -383,12 +404,13 @@ params:
   venue,
   url
 ) -%}
-{%- if venue and url %}
+{%- if venue %}
   <i>at</i>
   {{ utility.link_if(
     content=venue | mdInline | safe,
     url=url,
-    attrs={'rel': 'bookmark'}
+    class='h-card',
+    attrs={'rel': 'bookmark'} if url else none
   ) }}
 {% endif -%}
 {%- endmacro %}

@@ -70,7 +70,8 @@
     transition-delay: 20ms; // avoid janky scrolling
   }
 
-  .byline {
+  .byline,
+  .next-event {
     font-size: var(--xsmall);
   }
 }
