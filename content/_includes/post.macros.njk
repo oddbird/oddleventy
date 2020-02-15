@@ -157,22 +157,26 @@ params:
   events,
   links=true
 ) %}
-  {% set events = events | getFuture if events else none %}
-  {% set next = events | sort(false, false, 'date') | first %}
-  {% if next %}
-    <p class="next-event">
-      {{ linked(
-        next.venue,
-        next.url if links else none
-      ) }}
-      <i>on</i>
-      {{ utility.datetime(
-        next.date,
-        next.end,
-        format='md'
-      ) }}
-    </p>
-  {% endif %}
+  {%- set events = events | getFuture if events else none -%}
+  {%- set events = events | sort(false, false, 'date') -%}
+  {%- if events -%}
+    <ul class="next-event">
+      {%- for next in events -%}
+        <li>
+          {{ linked(
+            next.venue,
+            next.url if links else none
+          ) }}
+          <i>on</i>
+          {{ utility.datetime(
+            next.date,
+            next.end,
+            format='md'
+          ) }}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
 {% endmacro %}
 
 {% macro hero(

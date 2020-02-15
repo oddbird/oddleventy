@@ -74,6 +74,10 @@
   .next-event {
     font-size: var(--xsmall);
   }
+
+  .next-event {
+    padding-left: 1em;
+  }
 }
 
 .card-inner {
@@ -167,4 +171,8 @@
 
 .summary {
   margin: var(--gutter) 0;
+}
+
+.next-event {
+  padding: 0;
 }
