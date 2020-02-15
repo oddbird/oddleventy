@@ -20,9 +20,10 @@
 }
 
 [data-media='hero'] {
-  --align: center;
   --media-content: var(--small-page);
-  --media-min: 10em;
+  --media-min: 8em;
+  justify-content: center;
+  margin-bottom: var(--spacer);
 }
 
 // Card Grid
@@ -81,16 +82,12 @@
 }
 
 // Features
-[data-card='feature'] {
+[data-card='hero'] {
   display: grid;
   grid-template-columns: 1fr [main-start] minmax(min-content, var(--small-page)) [main-end] 1fr;
 
   > * {
     grid-column: var(--area, main);
-  }
-
-  .summary {
-    margin: var(--gutter) 0;
   }
 }
 
@@ -165,4 +162,8 @@
 
 .byline {
   font-size: var(--small);
+}
+
+.summary {
+  margin: var(--gutter) 0;
 }

@@ -121,11 +121,7 @@ params:
   post,
   collections=none
 ) %}
-  <article data-card="feature">
-    {% if post.data.image and not (post.data.image.type === 'media') %}
-      {{ hero(post.data.image) }}
-    {% endif %}
-
+  {%- set content -%}
     <div class="post-header">
       {{ banner(post) }}
       {{ subtitle(post.data.sub) }}
@@ -136,6 +132,20 @@ params:
     <div class="summary">
       {{ post.data.summary | md | safe }}
     </div>
+  {%- endset -%}
+  {%- set image = post.data.image -%}
+  <article data-card="{{ 'media' if (image.type === 'media') else 'hero' }}">
+    {%- if image and (image.type === 'media') -%}
+      {{ embed.media_block(
+        media=embed.svg(image.svg) if image.svg else embed.img(image.src, image.alt),
+        name='hero',
+        attrs={'data-block': 'rotate'},
+        content=content
+      ) }}
+    {%- else -%}
+      {{ hero(image) }}
+      {{ content | safe }}
+    {%- endif -%}
   </article>
 {% endmacro %}
 
