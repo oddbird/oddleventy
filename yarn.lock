@@ -1393,15 +1393,15 @@ __metadata:
   linkType: hard
 
 "@types/babel__core@npm:^7.1.0":
-  version: 7.1.3
-  resolution: "@types/babel__core@npm:7.1.3"
+  version: 7.1.4
+  resolution: "@types/babel__core@npm:7.1.4"
   dependencies:
     "@babel/parser": ^7.1.0
     "@babel/types": ^7.0.0
     "@types/babel__generator": "*"
     "@types/babel__template": "*"
     "@types/babel__traverse": "*"
-  checksum: 2/8f558936f7290554d307c89dbc44a5ce904018006b3991a524bf1c4642ed371079e29d489159c016483fbe1468f85ee2a44213efd04b44f1f65fb0fde3606f94
+  checksum: 2/b8195c19491063ed18bd99813f9602f2de2a7291ef329ae1e1d1c06684d9d8a97ffe6204c13873d7afba54b8587eec16ffa47add7fba214f3fa5f697793d5ace
   languageName: node
   linkType: hard
 
@@ -4540,9 +4540,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.3.349":
-  version: 1.3.349
-  resolution: "electron-to-chromium@npm:1.3.349"
-  checksum: 2/0d76b705831cfd92721be4ae4aa99f3fee85f5489fb6cb4c6f203a15fb7341c7aa11bd1ba104d793179ad179ec34d89ffa81b777cc94952d14254004647655d9
+  version: 1.3.350
+  resolution: "electron-to-chromium@npm:1.3.350"
+  checksum: 2/e6b5587adc36e2870f9706a6aecdebf7bd7a0d30a8063f08562aede51af57dc1ed36a0db23820d68471ea4e3da95d8aaaba6043a51b8efa1c123b34f1c58fb37
   languageName: node
   linkType: hard
 
@@ -9379,8 +9379,8 @@ __metadata:
   linkType: hard
 
 "meow@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "meow@npm:6.0.0"
+  version: 6.0.1
+  resolution: "meow@npm:6.0.1"
   dependencies:
     "@types/minimist": ^1.2.0
     camelcase-keys: ^6.1.1
@@ -9393,7 +9393,7 @@ __metadata:
     trim-newlines: ^3.0.0
     type-fest: ^0.8.1
     yargs-parser: ^16.1.0
-  checksum: 2/53b52d4ee1fc1c6b231b54edd872a7524b0846a219849e8a59e9e64255ce5a163924e129cb028e4b31d294300b47d30df87045d3f171cc667b34456b82997631
+  checksum: 2/df0b098968d606460816954194a3ba85ed1b0ef6e4322a5020efd55e37deb23493c1d3bf824cac2d62e7f91a930595c9ef744b5a94fa048e179ea03721815adf
   languageName: node
   linkType: hard
 
@@ -11312,12 +11312,12 @@ __metadata:
   linkType: hard
 
 "prompts@npm:^2.0.1":
-  version: 2.3.0
-  resolution: "prompts@npm:2.3.0"
+  version: 2.3.1
+  resolution: "prompts@npm:2.3.1"
   dependencies:
     kleur: ^3.0.3
-    sisteransi: ^1.0.3
-  checksum: 2/8ae77324f19ad7096c313898748e422c2cd11a40ccb174a9c6f6128ce1f3344f96d90e9d6650f8dabda1cc5e4a35fcdc7b34beaaf42270ccb803a3740f1e9e28
+    sisteransi: ^1.0.4
+  checksum: 2/c8b6f82ff8c5717826d8c53bc8469fa54e9221c1d5555a1c37db4738b8dff0924a9a69d4cb2966de9713b96604c2fcc82f9edf79cb25c7634790862f3d058edf
   languageName: node
   linkType: hard
 
@@ -12860,7 +12860,7 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"sisteransi@npm:^1.0.3":
+"sisteransi@npm:^1.0.4":
   version: 1.0.4
   resolution: "sisteransi@npm:1.0.4"
   checksum: 2/a8d203079e4636124fbb2092a93186774b8363b95de8848df3fe9a5eac0bc95b36d64e2966d36a05acc8b91f1da686a71d9999d590735a32a954efa4685535dc
