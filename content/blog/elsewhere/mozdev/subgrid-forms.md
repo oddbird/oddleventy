@@ -3,8 +3,8 @@ feature: true
 title: Laying out Forms using Subgrid
 sub: and fallbacks for legacy browsers
 date: 2019-10-16
-hero:
-  img: mozdev/subgrid_forms.png
+image:
+  src: mozdev/subgrid_forms.png
 tags:
   - _post
   - CSS

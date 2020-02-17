@@ -94,22 +94,26 @@ params:
   {%- set feature = 'small' if feature and not feature | typeCheck('string') else feature -%}
 
   <li data-post="{{ type | slug if type else 'default' }}" {{ utility.attr_if('data-feature', feature) }}>
-    {{ type_link(type, collections) }}
-
     {%- if feature == 'large' -%}
       {{ large(post, collections) }}
     {%- else -%}
-      {{ small(post, collections) }}
+      {{ small(post, collections, feature) }}
     {%- endif -%}
+
+    {{ type_link(type, collections) }}
   </li>
 {% endmacro %}
 
 {% macro small(
   post,
-  collections=none
+  collections=none,
+  feature=none
 ) %}
   <a href="{{ post.url | url }}" data-card="link">
     <div class="card-inner">
+      {% if feature and post.data.image and not (post.data.image.type == 'media') %}
+        {{ hero(post.data.image, 'card') }}
+      {% endif %}
       <div class="post-header">
         {{ banner(post, link=false) }}
         {{ subtitle(post.data.sub) }}
@@ -181,10 +185,10 @@ params:
 
 {% macro hero(
   image,
-  type='post'
+  type='large'
 ) %}
   {%- if image -%}
-    <div data-hero="{{ type or 'post' }}">
+    <div data-hero="{{ type or 'large' }}">
       {%- if image.src -%}
         {%- set position = {'--hero-position': image.position} | styles -%}
         {{ embed.img(

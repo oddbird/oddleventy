@@ -11,9 +11,15 @@ tags:
   - CSS
   - Sass
 events:
+  - venue: Smashing Conf NY
+    url: https://smashingconf.com/austin-2020/
+    date: 2020-10-19
+    end: 2020-10-21
+    adr: New York
   - venue: Smashing Conf Austin
     url: https://smashingconf.com/austin-2020/
     date: 2020-06-08
+    end: 2020-06-10
     adr: Austin, TX
 image:
   src: blog/2019/mia-jen-smashing.jpg
