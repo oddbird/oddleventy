@@ -12,7 +12,7 @@ tags:
   - Sass
 events:
   - venue: Smashing Conf NY
-    url: https://smashingconf.com/austin-2020/
+    url: https://smashingconf.com/ny-2020/
     date: 2020-10-19
     end: 2020-10-21
     adr: New York
@@ -23,6 +23,7 @@ events:
     adr: Austin, TX
 image:
   src: blog/2019/mia-jen-smashing.jpg
+  alt: Miriam talking with Jen Simmons and others
   position: top
 modules:
   - title: Resilient & Universal Code

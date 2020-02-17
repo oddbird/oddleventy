@@ -11,6 +11,8 @@ tags:
   - CSS
 image:
   src: blog/2019/mia-jen-smashing.jpg
+  alt: Miriam talking with Jen Simmons and others
+  position: top
 summary: |
   I had the pleasure of presenting both a talk and workshop at Smashing
   Conf in San Francisco this year. During the talk, people left questions

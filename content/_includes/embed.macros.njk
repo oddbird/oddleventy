@@ -293,11 +293,7 @@ params:
 ) -%}
 {%- if src -%}
 {%- set src = src if ('://' in src) else ('/assets/images/' + src) -%}
-{%- set main = {
-  'src': src,
-  'alt': alt
-} -%}
-<img {{ utility.show_attrs(main) }} {{ utility.show_attrs(attrs) }}/>
+<img src="{{ src }}" alt="{{ alt }}" {{ utility.show_attrs(attrs) }}/>
 {%- endif -%}
 {%- endmacro %}
 
