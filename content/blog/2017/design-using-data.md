@@ -7,7 +7,7 @@ tags:
   - News
   - Data
   - Design
-  - Videoss
+  - Videos
   - Recommendations
 image:
   src: blog/2017/video-series/sarah.jpg

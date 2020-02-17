@@ -7,7 +7,7 @@ tags:
   - News
   - CSS
   - Front-end
-  - Videoss
+  - Videos
   - Conferences
 image:
   src: blog/2017/cssday/cssday.jpg

@@ -1,12 +1,12 @@
 .pill-set,
 .inline-list {
   display: inline;
-  font-size: var(--xsmall);
   padding: 0;
 }
 
 .pill-item {
   display: inline-block;
+  font-size: var(--xsmall);
   margin: var(--half-shim);
 }
 
