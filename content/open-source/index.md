@@ -1,7 +1,10 @@
 ---
 permalink: open-source/index.html
 title: Open Source Tools
+banner: Open Source Developer Tools
 index: Open Source
+tags:
+  - Services
 summary: |
   **We use open source software regularly**
   in our personal and professional work,

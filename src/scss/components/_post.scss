@@ -153,8 +153,11 @@
   margin: 0;
 
   [data-card='link'] & {
-    font-size: 1.25em;
     margin-right: var(--shim);
+  }
+
+  [data-grid] & {
+    font-size: 1.25em;
   }
 
   [data-card='feature'] & {

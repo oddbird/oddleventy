@@ -10,6 +10,8 @@ tags:
   - Python
   - Sass
   - Code
+  - Accoutrement
+  - Herman
 image:
   src: blog/2017/docs/style.jpg
 summary: |

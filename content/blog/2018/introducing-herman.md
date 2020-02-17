@@ -6,6 +6,7 @@ date: 2018-01-03
 tags:
   - _post
   - News
+  - Accoutrement
   - Herman
   - Herman1
   - CSS

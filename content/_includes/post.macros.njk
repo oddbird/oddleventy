@@ -31,15 +31,17 @@ params:
   collections=none,
   above=6
 ) %}
-  {% if posts | length > above %}
-    {% for group in posts | byYear %}
-      {{ layout.title(group.year) }}
-      {{ list(group.posts, collections) }}
-    {% endfor %}
-  {% else %}
-    {{ layout.title('Resources') }}
-    {{ list(posts, collections) }}
-  {% endif %}
+  {%- if posts -%}
+    {%- if posts | length > above -%}
+      {%- for group in posts | byYear -%}
+        {{ layout.title(group.year) }}
+        {{ list(group.posts, collections) }}
+      {%- endfor -%}
+    {%- else -%}
+      {{ layout.title('Resources') }}
+      {{ list(posts, collections) }}
+    {%- endif -%}
+  {%- endif -%}
 {% endmacro %}
 
 {# @docs

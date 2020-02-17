@@ -10,6 +10,7 @@ tags:
   - Training
   - CSS
   - Sass
+  - Design Systems
 events:
   - venue: Smashing Conf NY
     url: https://smashingconf.com/ny-2020/

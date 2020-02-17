@@ -1,3 +1,4 @@
+{% import 'layout.macros.njk' as layout %}
 {% import 'utility.macros.njk' as utility %}
 
 {# @docs
@@ -255,7 +256,7 @@ params:
 ) -%}
 {%- if data -%}
 <section class="icon-blocks">
-{%- if title %}<h2>{{ title | mdInline | safe }}</h2>{% endif -%}
+{%- if title %}{{ layout.title(title) }}{% endif -%}
 {%- for item in data -%}
 {%- call media_block(
   media=utility.link_if(svg(item.icon), item.url),

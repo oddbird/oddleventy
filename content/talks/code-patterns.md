@@ -12,6 +12,8 @@ tags:
   - CSS
   - Sass
   - Design Systems
+  - Accoutrement
+  - Herman
 events:
   - venue: Refresh Denver
     url: https://www.meetup.com/refreshdenver/events/241230495/?from=ref

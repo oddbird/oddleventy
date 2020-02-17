@@ -11,6 +11,8 @@ tags:
   - Design Systems
   - Code
   - Style Guides
+  - Accoutrement
+  - Herman
 image:
   src: blog/2018/vueconf.jpg
 talk: /talks/agile-systems/

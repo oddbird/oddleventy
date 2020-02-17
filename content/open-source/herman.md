@@ -15,6 +15,7 @@ tags:
   - OddTools
   - Sass
   - Design Systems
+  - Accoutrement
   - Documentation
 screenshots:
   - img: herman/screenshots/sq-colors.jpg
