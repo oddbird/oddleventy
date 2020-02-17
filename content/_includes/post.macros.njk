@@ -76,13 +76,16 @@ params:
 
 {# @docs
 label: item
-category: lists
+category: posts
 note: Generate each post in a list
 params:
   post:
     type: 11ty page object
   collections:
     type: 11ty collections object
+    default: none
+  feature:
+    type: boolean | 'large'
     default: none
 #}
 {% macro item(
@@ -106,6 +109,20 @@ params:
   </li>
 {% endmacro %}
 
+{# @docs
+label: small
+category: posts
+note: Content for a small card resource
+params:
+  post:
+    type: 11ty page object
+  collections:
+    type: 11ty collections object
+    default: none
+  feature:
+    type: boolean | 'large'
+    default: none
+#}
 {% macro small(
   post,
   collections=none,
@@ -126,6 +143,17 @@ params:
   </a>
 {% endmacro %}
 
+{# @docs
+label: large
+category: posts
+note: Content for a large featured resource
+params:
+  post:
+    type: 11ty page object
+  collections:
+    type: 11ty collections object
+    default: none
+#}
 {% macro large(
   post,
   collections=none
@@ -159,6 +187,18 @@ params:
   </article>
 {% endmacro %}
 
+{# @docs
+label: upcoming
+category: events
+note: Listof upcoming events from a post
+params:
+  events:
+    type: array
+  links:
+    type: boolean
+    default: true
+    note: Optionally remove event links for content in linked-cards
+#}
 {% macro upcoming(
   events,
   links=true
@@ -185,6 +225,17 @@ params:
   {%- endif -%}
 {% endmacro %}
 
+{# @docs
+label: hero
+category: metadata
+note: Display hero image for a post
+params:
+  image:
+    type: object
+  type:
+    type: large | card | page
+    default: 'large'
+#}
 {% macro hero(
   image,
   type='large'
@@ -205,6 +256,23 @@ params:
   {%- endif -%}
 {% endmacro %}
 
+{# @docs
+label: byline
+category: metadata
+note: |
+  Generate the post byline with
+  type, authors, venue/client, date, and location
+params:
+  post:
+    type: 11ty page object
+  collections:
+    type: 11ty collections object
+    default: none
+  links:
+    type: boolean
+    default: true
+    note: Optionally remove links for content in linked cards
+#}
 {% macro byline(
   post,
   collections=none,
@@ -236,6 +304,20 @@ params:
   </p>
 {% endmacro %}
 
+{# @docs
+label: byline_type
+category: metadata
+note: |
+  Generate post-type label for the byline
+params:
+  tags:
+    type: array
+  venue:
+    type: string
+    default: none
+    note: |
+      We don't show type in the byline when a venue is set
+#}
 {% macro byline_type(
   tags,
   venue=none
@@ -253,6 +335,19 @@ params:
   {%- endif -%}
 {% endmacro %}
 
+{# @docs
+label: type_link
+category: metadata
+note: |
+  Generate an icon-link
+  to the post-type index page
+params:
+  type:
+    type: string
+  collections:
+    type: 11ty collections object
+    default: none
+#}
 {% macro type_link(
   type,
   collections=none

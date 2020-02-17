@@ -82,8 +82,8 @@ summary: |
   These days, we recommend letting the browser handle your layouts.
   If you need help moving off Susy,
   or learning the latest in web layout,
-  **we offer [workshops](#@@@)
-  and [consulting](#@@@)
+  **we offer [training](/services/speaking/)
+  and [consulting](/services/development/)
   to help bring you up-to-date**.
 ---
 
