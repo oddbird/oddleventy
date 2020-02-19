@@ -3,7 +3,6 @@ title: 'Behind the Scenes: OddSite Brand Process'
 author: sondra
 date: 2016-11-04
 tags:
-  - _post
   - OddSite
   - Open Design
   - Design

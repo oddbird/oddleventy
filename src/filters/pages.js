@@ -138,7 +138,7 @@ const findData = (collection, keys, test) => getData(collection, keys, test)[0];
 /* @docs
 label: getPage
 category: Data
-note: Return a single page by url, or data from inside that page
+note: Return a single page by url, or return data from inside that page
 example: |
   {{ collections.all | getPage('/work/timedesigner/', 'data.press') }}
 params:
@@ -163,18 +163,24 @@ const getPage = (collection, url, keys, test) => {
 };
 
 /* @docs
-label: pageContent
+label: findPage
 category: Data
-note: Return the content of any page
+note: Find the first page with any particular data
+example: |
+  {{ collections.all | findPage('data.cta_slug', 'workshop') }}
 params:
   collection:
     type: array
-    note: containing 11ty page objects
-  url:
-    type: url
+    note: often an array of 11ty pages, but can be an array of any objects
+  keys:
+    type: string
+    note: use dot-notation (`data.press`) for nested keys
+  value:
+    type: any
+    note: Only find pages where the desired keys have a given value
 */
-const pageContent = (collection, url) =>
-  getPage(collection, url, 'templateContent');
+const findPage = (collection, keys, value) =>
+  collection.find((page) => hasData(page, keys, value));
 
 /* @docs
 label: render
@@ -239,10 +245,10 @@ module.exports = {
   isCurrent,
   getPublic,
   getPage,
+  findPage,
   hasData,
   getData,
   findData,
-  pageContent,
   pageType,
   withData,
   render,

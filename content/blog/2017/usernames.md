@@ -4,7 +4,6 @@ sub: (None of them is the username)
 author: david
 date: 2017-04-11
 tags:
-  - _post
   - Data Modeling
   - Django
   - Code

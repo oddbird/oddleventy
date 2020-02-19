@@ -4,12 +4,7 @@ sub: Just in time for [Selectors Level 4](https://www.w3.org/TR/selectors-4/)
 author: miriam
 date: 2019-11-20
 tags:
-  - _post
-  - CSS
-  - Mozilla Developer
   - AboutWeb
-  - Code
-  - Video
 image:
   src: mozdev/supports_selector.png
 summary: |

@@ -2,7 +2,6 @@
 title: Susy
 sub: CSS layout framework
 date: 2009-07-13
-end: ongoing
 logo: susy
 image:
   type: media
@@ -10,10 +9,7 @@ image:
 author:
   - miriam
   - oddbird
-oss: owner
 tags:
-  - _post
-  - Open Source
   - OddTools
   - Sass
   - Layout

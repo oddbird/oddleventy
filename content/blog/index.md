@@ -1,6 +1,7 @@
 ---
 title: Resources
 permalink: /blog/index.html
+override:tags: []
 index:
   slug: _post
   title: none

@@ -1,15 +1,10 @@
 ---
 title: Sass Architecture
 sub: A preview of Jump Start Sass, chapter 11
-author: miriam
 date: 2016-03-01
 canonical: https://www.sitepoint.com/architecture-in-sass/
-venue: SitePoint
 tags:
-  - _post
-  - Sass
   - Books
-  - SitePoint
 image:
   src: blog/sassbook.jpg
 summary: |

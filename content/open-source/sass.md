@@ -1,5 +1,4 @@
 ---
-layout: base
 title: Sass
 sub: CSS with superpowers
 author: miriam
@@ -8,11 +7,7 @@ image:
   type: media
   svg: logos/sass
 date: 2016-05-20
-end: ongoing
 index: Sass
-tags:
-  - _post
-  - Open Source
 logo: sass
 links:
   site: https://sass-lang.com/

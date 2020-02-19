@@ -5,7 +5,6 @@ sub: |
 author: miriam
 date: 2019-04-09
 tags:
-  - _post
   - Vue
   - Conferences
   - Code

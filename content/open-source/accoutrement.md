@@ -2,7 +2,6 @@
 title: Accoutrement
 sub: Integrated design-system management in Sass
 date: 2014-10-30
-end: ongoing
 logo: accoutrement
 image:
   src: projects/accoutrement.jpg
@@ -10,10 +9,7 @@ links:
   source: https://github.com/oddbird/accoutrement
   docs: /accoutrement/docs/
 index: Accoutrement
-oss: owner
 tags:
-  - _post
-  - Open Source
   - OddTools
   - Sass
   - Design Systems

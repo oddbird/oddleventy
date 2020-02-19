@@ -3,7 +3,6 @@ title: Erica Mitchell
 sub: Front-end developer
 bird: erica
 date: 2019-04-01
-end: ongoing
 image:
   type: media
   svg: faces/erica

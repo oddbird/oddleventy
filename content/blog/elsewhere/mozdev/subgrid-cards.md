@@ -5,12 +5,7 @@ date: 2019-10-15
 hero:
   img: mozdev/subgrid_cards.png
 tags:
-  - _post
-  - CSS
-  - Mozilla Developer
   - AboutWeb
-  - Code
-  - Video
 summary: |
   Card layouts are popular on the web,
   rows and columns of boxes with similar content.

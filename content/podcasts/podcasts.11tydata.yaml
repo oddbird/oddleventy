@@ -1,0 +1,5 @@
+permalink: /{{ page.date | getDate('url') }}/{{ page.fileSlug }}/index.html
+tags:
+  - _post
+  - Interview
+  - Podcast

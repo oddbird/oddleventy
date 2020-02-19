@@ -2,7 +2,6 @@
 title: 2013 Wrap-up
 author: carl
 tags:
-  - _post
   - Year in Review
   - Community
 image:

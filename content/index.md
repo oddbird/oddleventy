@@ -1,5 +1,4 @@
 ---
-layout: base
 title: Software For Humans
 banner: |
   Custom Web App

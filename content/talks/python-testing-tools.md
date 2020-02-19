@@ -3,9 +3,7 @@ title: Python Testing Tools
 author: carl
 date: 2014-02-28
 tags:
-  - _post
   - Talks
-  - Training
   - Python
   - Testing
 events:
@@ -21,5 +19,3 @@ summary: |
   versions with tox, writing test doubles, stubs, and spies with mock and
   pretend, and measuring code coverage with coverage.py.
 ---
-
-

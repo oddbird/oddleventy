@@ -3,7 +3,6 @@ title: CSSConf 2016 Recap
 author: miriam
 date: 2016-09-30
 tags:
-  - _post
   - Conferences
   - Front-end
   - CSS

@@ -4,12 +4,7 @@ sub: How can we design for an unknown & infinite canvas?
 author: miriam
 date: 2019-10-03
 tags:
-  - _post
-  - CSS
-  - Mozilla Developer
   - AboutWeb
-  - Code
-  - Video
 image:
   src: mozdev/css-is-weird.png
 summary: |

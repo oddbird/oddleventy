@@ -4,12 +4,10 @@ author: miriam
 date: 2019-10-09
 canonical: https://css-tricks.com/introducing-sass-modules/
 tags:
-  - _post
   - Code
   - Modules
   - Sass
   - Tutorial
-  - CSS Tricks
 image:
   src: blog/2019/sass-logo.png
 summary: |
@@ -22,5 +20,3 @@ summary: |
 
   [Sass Modules, a Primer]: /2019/10/02/sass-modules
 ---
-
-

@@ -4,12 +4,7 @@ sub: And how is it different from `unset` or `initial`?
 author: miriam
 date: 2019-10-09
 tags:
-  - _post
-  - CSS
-  - Mozilla Developer
   - AboutWeb
-  - Code
-  - Video
 image:
   src: mozdev/revert.png
 summary: |

@@ -4,9 +4,7 @@ sub: Inside `pip` and `virtualenv`
 author: carl
 date: 2011-03-12
 tags:
-  - _post
   - Talks
-  - Training
   - Python
   - Pip
   - Virtualenv

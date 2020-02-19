@@ -1,7 +1,6 @@
 ---
 title: Understanding in Susy3
 tags:
-  - _post
   - Susy
   - Susy3
   - CSS

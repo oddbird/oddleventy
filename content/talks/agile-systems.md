@@ -5,9 +5,7 @@ author: miriam
 date: 2018-03-21
 slides: https://talks.oddbird.net/agile-systems/
 tags:
-  - _post
   - Talks
-  - Training
   - Code
   - Agile
   - Design Systems

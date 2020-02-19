@@ -1,7 +1,6 @@
 ---
 title: Map-Set vs. Map-Merge
 tags:
-  - _post
   - Sass
   - Sass maps
   - Code

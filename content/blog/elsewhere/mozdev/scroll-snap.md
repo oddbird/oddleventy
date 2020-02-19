@@ -4,12 +4,7 @@ sub: Without any JavaScript or "scrolljacking"
 author: miriam
 date: 2019-10-31
 tags:
-  - _post
-  - CSS
-  - Mozilla Developer
   - AboutWeb
-  - Code
-  - Video
 image:
   src: mozdev/scroll-snap.png
 summary: |

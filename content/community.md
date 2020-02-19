@@ -1,7 +1,6 @@
 ---
 title: Sponsorships & Donations
 sub: Towards a thriving community
-layout: base
 giving:
   - name: Django Girls
     url: https://djangogirls.org/

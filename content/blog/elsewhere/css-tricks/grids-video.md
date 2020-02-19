@@ -6,12 +6,10 @@ author: miriam
 image:
   src: blog/elsewhere/css-tricks.jpg
 tags:
-  - _post
   - Code
-  - CSS Tricks
   - CSS
   - Grids
-  - Screencast
+  - Videos
 video:
   caption: |
     Exploring CSS Grids with Geoff Graham

@@ -4,12 +4,7 @@ sub: And `subgrid`, landing on Dec 3
 author: miriam
 date: 2019-10-18
 tags:
-  - _post
-  - CSS
-  - Mozilla Developer
   - AboutWeb
-  - Code
-  - Video
 image:
   src: mozdev/grid.png
 summary: |

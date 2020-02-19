@@ -5,11 +5,7 @@ venue: Shop Talk Show
 date: 2019-10-28
 canonical: https://shoptalkshow.com/episodes/384/
 tags:
-  - _calendar
-  - _post
-  - Interview
   - Code
-  - Podcast
   - Sass
 summary: |
   I drop by the show to talk about Sass in 2019,

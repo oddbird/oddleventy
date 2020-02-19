@@ -8,9 +8,6 @@ author: miriam
 image:
   src: talks/miriam.jpg
 tags:
-  - _post
-  - Interview
-  - Podcast
   - Code
 summary: |
   Thunder Nerds interview me

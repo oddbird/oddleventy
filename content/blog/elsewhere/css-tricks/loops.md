@@ -3,6 +3,9 @@ title: Loops in CSS Preprocessors
 canonical: https://css-tricks.com/loops-css-preprocessors/
 date: 2016-12-02
 author: miriam
+tags:
+  - CSS
+  - Sass
 image:
   src: blog/2016/trick-loops.jpg
 summary: |

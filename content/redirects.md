@@ -1,6 +1,5 @@
 ---
 eleventyExcludeFromCollections: true
-layout: base
 title: Redirecting
 sub: This page has moved
 redirects:
@@ -26,11 +25,11 @@ pagination:
   data: redirects
   size: 1
   alias: redirect
-permalink: '{{ redirect.from }}'
+permalink: /{{ redirect.from }}
 ---
 
 {% set to = collections.all | getPage(redirect.to) %}
 {% set name = to | render('banner') or to | render('title') %}
 
-Redirecting you to [{{ name | mdInline }}]({{ to.url }}).
+Redirecting you to [{{ name | mdInline }}]({{ to.url | url }}).
 If you are not redirected shortly, please click the link.

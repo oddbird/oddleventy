@@ -6,11 +6,8 @@ date: 2019-11-22
 canonical: https://css-tricks.com/its-my-job-and-yours/
 venue: CSS-Tricks
 tags:
-  - _post
-  - Code
   - Design
   - Ethics
-  - CSS Tricks
 image:
   src: herman/stacy-design-systems-training.jpg
 summary: |
@@ -102,10 +99,10 @@ some resources that I recommend:
 - Brainstorm Design 2019 -[The Ethics of Design I Fortune]
 - Cathy O'Neil -[Weapons of Math Destruction]
 
-  [Book]: https://www.future-ethics.com/
-  [Talk]: https://www.youtube.com/watch?v=DfxMv9mIjFU&t=381s
-  [Code of Ethics]: https://muledesign.com/2017/07/a-designers-code-of-ethics
-  [How Designers Destroyed the World]: https://vimeo.com/122022963
-  [How to Build an Atomic Bomb]: https://vimeo.com/268704084
-  [The Ethics of Design I Fortune]: https://www.youtube.com/watch?v=X24twMoJYt4&
-  [Weapons of Math Destruction]: https://weaponsofmathdestructionbook.com/
+[Book]: https://www.future-ethics.com/
+[Talk]: https://www.youtube.com/watch?v=DfxMv9mIjFU&t=381s
+[Code of Ethics]: https://muledesign.com/2017/07/a-designers-code-of-ethics
+[How Designers Destroyed the World]: https://vimeo.com/122022963
+[How to Build an Atomic Bomb]: https://vimeo.com/268704084
+[The Ethics of Design I Fortune]: https://www.youtube.com/watch?v=X24twMoJYt4&
+[Weapons of Math Destruction]: https://weaponsofmathdestructionbook.com/

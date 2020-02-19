@@ -1,0 +1,20 @@
+url: '{{ pkg.homepage }}'
+title: OddBird
+description: |
+  Scalable, accessible, and performant web applications
+  with a human-centered design.
+email: birds@oddbird.net
+images: /assets/images/
+feed: feed.atom
+styles:
+  - screen.css
+facebook_id: 1820980378150914
+social:
+  email: birds
+  twitter: oddbird
+nav:
+  - url: /work/
+  - url: /services/
+  - url: /birds/
+  - url: /blog/
+  - url: /contact/

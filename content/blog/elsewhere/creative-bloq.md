@@ -5,7 +5,6 @@ venue: Creative Bloq
 date: 2019-04-23
 author: miriam
 tags:
-  - _post
   - Code
   - Interview
   - Creative Bloq

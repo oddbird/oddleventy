@@ -4,9 +4,7 @@ sub: Upgrade your app with front-end training & consulting
 author: miriam
 date: 2020-01-01
 tags:
-  - _post
   - Workshops
-  - Training
   - CSS
   - Sass
 image:

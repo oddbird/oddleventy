@@ -3,9 +3,7 @@ title: Set Your Code Free
 author: carl
 date: 2014-04-13
 tags:
-  - _post
   - Talks
-  - Training
   - Python
 events:
   - venue: PyCon

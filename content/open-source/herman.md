@@ -4,14 +4,9 @@ sub: Automated style guides
 logo: herman
 image:
   src: herman/herman-hero.jpg
-author: oddbird
 date: 2015-11-08
-end: ongoing
 index: Herman
-oss: owner
 tags:
-  - _post
-  - Open Source
   - OddTools
   - Sass
   - Design Systems

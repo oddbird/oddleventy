@@ -3,9 +3,7 @@ title: Advanced Python
 author: carl
 date: 2014-02-27
 tags:
-  - _post
   - Talks
-  - Training
   - Python
 events:
   - venue: ConFoo
@@ -20,5 +18,3 @@ summary: |
   also discuss what problems you might (or might not) want to reach for
   each of them as a solution to.
 ---
-
-

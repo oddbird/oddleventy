@@ -4,13 +4,8 @@ sub: a gift from Mozilla (and OddBird)
 author: miriam
 date: 2019-10-01
 tags:
-  - _post
-  - CSS
-  - Mozilla Developer
   - AboutWeb
   - DevTools
-  - Code
-  - Video
 image:
   src: mozdev/mozilla-youtube.jpg
 darkmode:

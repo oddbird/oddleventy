@@ -4,7 +4,6 @@ sub: Make grid systems your fallback plan
 author: miriam
 date: 2017-06-28
 tags:
-  - _post
   - Susy
   - Susy3
   - CSS

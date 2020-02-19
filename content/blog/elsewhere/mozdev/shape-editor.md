@@ -4,12 +4,7 @@ sub: For quick visual adjustments directly on the page
 author: miriam
 date: 2019-11-25
 tags:
-  - _post
-  - CSS
-  - Mozilla Developer
   - DevTools
-  - Code
-  - Video
 image:
   src: mozdev/shape_path.png
 summary: |

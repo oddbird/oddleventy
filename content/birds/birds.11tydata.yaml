@@ -1,0 +1,2 @@
+permalink: authors/{{ page.fileSlug }}/index.html
+end: ongoing

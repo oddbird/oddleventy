@@ -1,6 +1,7 @@
 'use strict';
 
 const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
+const yaml = require('js-yaml');
 
 const birds = require('./src/filters/birds');
 const events = require('./src/filters/events');
@@ -69,11 +70,11 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('isCurrent', pages.isCurrent);
   eleventyConfig.addFilter('getPage', pages.getPage);
+  eleventyConfig.addFilter('findPage', pages.findPage);
   eleventyConfig.addFilter('hasData', pages.hasData);
   eleventyConfig.addFilter('getData', pages.getData);
   eleventyConfig.addFilter('findData', pages.findData);
   eleventyConfig.addFilter('withData', pages.withData);
-  eleventyConfig.addFilter('pageContent', pages.pageContent);
   eleventyConfig.addFilter('render', pages.render);
   eleventyConfig.addFilter('pageType', pages.pageType);
 
@@ -99,11 +100,16 @@ module.exports = (eleventyConfig) => {
     (format) => `${time.getDate(time.now, format)}`,
   );
 
-  // markdown
+  // config
   eleventyConfig.setLibrary('md', type.mdown);
+  eleventyConfig.addDataExtension('yaml', yaml.safeLoad);
+  eleventyConfig.setQuietMode(true);
+  eleventyConfig.setDataDeepMerge(true);
 
   // settings
   return {
+    dataTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
     dir: {
       input: 'content',

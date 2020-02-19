@@ -5,7 +5,6 @@ sub: |
 author: miriam
 date: 2018-05-14
 tags:
-  - _post
   - Vue
   - Conferences
   - Design Systems

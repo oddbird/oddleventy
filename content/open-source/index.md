@@ -2,6 +2,7 @@
 permalink: open-source/index.html
 title: Open Source Tools
 index: Open Source
+override:tags: []
 summary: |
   **We use open source software regularly**
   in our personal and professional work,

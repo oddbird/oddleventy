@@ -4,7 +4,6 @@ sub: Practical media helpers for Susy3
 author: miriam
 date: 2017-09-25
 tags:
-  - _post
   - Susy
   - Susy3
   - CSS

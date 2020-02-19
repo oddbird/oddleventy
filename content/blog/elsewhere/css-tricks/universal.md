@@ -6,11 +6,9 @@ date: 2019-11-26
 canonical: https://css-tricks.com/embracing-the-universal-web/
 venue: CSS-Tricks
 tags:
-  - _post
   - Code
   - CSS
   - Accessibility
-  - CSS Tricks
 image:
   src: birds/miriam.jpg
 summary: |

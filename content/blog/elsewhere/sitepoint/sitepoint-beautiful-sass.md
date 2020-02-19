@@ -1,14 +1,9 @@
 ---
 title: How to Write Beautiful Sass
-author: miriam
 canonical: https://www.sitepoint.com/writing-beautiful-sass/
-venue: SitePoint
 tags:
-  - _post
   - CSS
-  - Sass
   - Code
-  - SitePoint
   - Books
 image:
   src: blog/sassbook.jpg
@@ -20,5 +15,3 @@ summary: |
   started writing beautiful Sass.
 date: 2017-10-13
 ---
-
-

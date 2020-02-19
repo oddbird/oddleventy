@@ -1,5 +1,5 @@
 ---
-templateEngineOverride: njk
+cta_slug: workshop
 title: Resilient Web Training & Consulting
 image:
   src: talks/mia-btconf.jpg
@@ -18,9 +18,9 @@ summary: |
 {{ summary | md | safe }}
 
 {% import 'embed.macros.njk' as embed %}
-{% set default = collections.all | pageContent('/_sitedata/cta/default/') %}
+{% set default = collections.all | findPage('data.cta_slug', 'default') %}
 
 {{ embed.media_block(
   media=embed.svg('faces/miriam'),
-  content=default
+  content=default.templateContent
 ) }}

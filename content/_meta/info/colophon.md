@@ -1,4 +1,5 @@
 ---
+info_slug: colophon
 title: colophon
 ---
 

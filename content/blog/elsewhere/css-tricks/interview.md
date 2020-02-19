@@ -6,9 +6,6 @@ canonical: https://css-tricks.com/interview-miriam-suzanne/
 image:
   src: blog/elsewhere/css-tricks.jpg
 tags:
-  - _post
-  - Code
-  - CSS Tricks
   - Interview
 summary: |
   Chris Coyier interviews Miriam

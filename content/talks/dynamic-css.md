@@ -7,9 +7,7 @@ slides: https://talks.oddbird.net/dynamic-css/
 image:
   src: talks/miriam.jpg
 tags:
-  - _post
   - Talks
-  - Training
   - Code
   - CSS
   - JavaScript

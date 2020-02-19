@@ -5,7 +5,6 @@ sub: |
   [Advanced CSS](/talks/advanced-css-workshop/)
 author: miriam
 tags:
-  - _post
   - Vue
   - Conferences
   - Code

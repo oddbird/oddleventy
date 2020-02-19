@@ -4,6 +4,8 @@ sub: Powerful New CSS for Styling Bullets, Numbers, and List Markers
 date: 2019-10-01
 image:
   src: mozdev/list-markers.png
+tags:
+  - AboutWeb
 summary: |
   When you create lists in HTML,
   browsers add bullet-points or numbers we call *list markers*.

@@ -3,7 +3,6 @@ title: Sass Striped Backgrounds
 date: 2012-07-20
 author: miriam
 tags:
-  - _post
   - Code
 ---
 

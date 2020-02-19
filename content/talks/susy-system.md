@@ -5,9 +5,7 @@ author: miriam
 date: 2014-04-16
 slides: http://mirisuzanne.github.io/pres/susy2/
 tags:
-  - _post
   - Talks
-  - Training
   - Code
   - Susy
   - Layout
@@ -42,4 +40,3 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 
 {{ embed.figure(media) }}
-

@@ -4,12 +4,7 @@ sub: Allow us to be more explicit & expressive about layouts
 author: miriam
 date: 2019-10-28
 tags:
-  - _post
-  - CSS
-  - Mozilla Developer
   - AboutWeb
-  - Code
-  - Video
 image:
   src: mozdev/multi-display.png
 summary: |
