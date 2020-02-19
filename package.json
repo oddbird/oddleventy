@@ -35,7 +35,9 @@
     "serve": "npm-run-all build:assets build:site -p eleventy:serve watch:js watch:sass",
     "build:site": "run-s site:clean sassdoc",
     "build:assets": "npm-run-all assets:clean -p js sass",
-    "build": "run-s build:assets build:site eleventy"
+    "build": "run-s build:assets build:site eleventy",
+    "update-oss-docs": "./bin/update-oss-docs",
+    "prod": "run-s update-oss-docs build"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
