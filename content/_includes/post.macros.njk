@@ -175,7 +175,7 @@ params:
   <article data-card="{{ 'media' if (image.type === 'media') else 'hero' }}">
     {%- if image and (image.type === 'media') -%}
       {{ embed.media_block(
-        media=embed.svg(image.svg) if image.svg else embed.img(image.src, image.alt),
+        media=embed.svg(image.svg, image.alt) if image.svg else embed.img(image.src, image.alt),
         name='hero',
         attrs={'data-block': 'rotate'},
         content=content
@@ -250,7 +250,7 @@ params:
           attrs={style: position}
         ) }}
       {%- elif image.svg -%}
-        {{ embed.svg(image.svg) }}
+        {{ embed.svg(image.svg, image.alt) }}
       {%- endif -%}
     </div>
   {%- endif -%}
@@ -363,9 +363,11 @@ params:
     'Links': 'link',
     'News': 'news'
   } %}
-  {{ utility.icon_link(
-    icon='icons/' + (icons[type] or 'tags'),
-    text=type or 'all tags',
+  {{ utility.link_if(
+    content=embed.svg(
+      path='icons/' + (icons[type] or 'tags'),
+      alt=['see all', type] | join(' ') if type else 'all tags'
+    ),
     url=collections.all | tagLink(type) if collections else none,
     class='post-type'
   ) }}

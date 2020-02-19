@@ -27,7 +27,7 @@
     ) }}
   {% elif media %}
     {{ embed.media_block(
-      media=embed.svg(image.svg) if image.svg else embed.img(image.src, image.alt),
+      media=embed.svg(image.svg, image.alt) if image.svg else embed.img(image.src, image.alt),
       name='hero',
       attrs={'data-block': 'rotate'},
       content=details

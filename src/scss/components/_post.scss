@@ -28,7 +28,7 @@
   --media-content: var(--small-page);
   --media-min: 8em;
   justify-content: center;
-  margin-bottom: var(--spacer);
+  margin: var(--spacer);
 }
 
 // Card Grid
@@ -140,10 +140,6 @@
   &:focus,
   &:active {
     --fill: var(--post-type-active, var(--active));
-  }
-
-  .link-text {
-    @include tools.is-hidden;
   }
 }
 

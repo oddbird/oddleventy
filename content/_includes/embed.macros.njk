@@ -227,7 +227,10 @@ params:
     {%- set page = collection | getPage(project) if collection else none -%}
     {%- set logo = page.data.logo if page else project -%}
     {{ utility.link_if(
-      content=svg('logos/' + logo),
+      content=svg(
+        path='logos/' + logo,
+        alt=page | render('banner') or page | render('title')
+      ),
       url=page.url if page else none
     ) }}
   {%- endfor -%}
@@ -259,7 +262,7 @@ params:
 {%- if title %}{{ layout.title(title) }}{% endif -%}
 {%- for item in data -%}
 {%- call media_block(
-  media=utility.link_if(svg(item.icon), item.url),
+  media=svg(item.icon, item.alt),
   name='icon-block'
 ) -%}
 {%- if item.title -%}
@@ -308,9 +311,11 @@ params:
     type: string
 #}
 {% macro svg(
-  path
+  path,
+  alt=none
 ) -%}
   {%- include path + '.svg' -%}
+  {% if alt %}<span class="sr-only">{{ alt }}</span>{% endif %}
 {%- endmacro %}
 
 
