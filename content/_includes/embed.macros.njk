@@ -91,7 +91,24 @@ params:
 {%- endmacro %}
 
 
-{% macro video_figure(
+{# @docs
+label: video_figure
+category: Patterns
+note: |
+  Generate a figure for a one-off video
+params:
+  src:
+    type: url
+  height:
+    type: number
+    default: none
+  width:
+    type: number
+    default: none
+  caption:
+    type: string
+    default: none
+#}{% macro video_figure(
   src,
   height=none,
   width=none,
