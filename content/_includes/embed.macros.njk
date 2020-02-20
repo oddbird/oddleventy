@@ -243,10 +243,12 @@ params:
   {%- for project in projects -%}
     {%- set page = collection | getPage(project) if collection else none -%}
     {%- set logo = page.data.logo if page else project -%}
+    {%- set client = page.data.client -%}
+    {%- set title = page | render('banner') or page | render('title') -%}
     {{ utility.link_if(
       content=svg(
         path='logos/' + logo,
-        alt=page | render('banner') or page | render('title')
+        alt=[client, title] | join(': ') if (client and title) else title
       ),
       url=page.url if page else none
     ) }}

@@ -78,7 +78,7 @@ badges:
     url: https://travis-ci.org/oddbird/susy
 summary: |
   **Susy was a responsive layout engine for Sass**,
-  before `flexbox` and CSS `grid` were availabe.
+  before `flexbox` and CSS `grid` were available.
   These days, we recommend letting the browser handle your layouts.
   If you need help moving off Susy,
   or learning the latest in web layout,
