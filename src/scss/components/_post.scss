@@ -62,9 +62,7 @@
 [data-card='link'] {
   @include tools.transition('pop');
   display: grid;
-  filter: drop-shadow(
-    calc(var(--drop) * -1) var(--drop) var(--blur, 0) var(--pop, var(--shadow))
-  );
+  box-shadow: calc(var(--drop) * -1) var(--drop) 0 var(--pop, var(--shadow));
   position: relative;
   transform: rotate(var(--rotate, 0));
 
