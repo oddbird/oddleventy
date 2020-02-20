@@ -1,4 +1,5 @@
-{%- set og_image = image.src if ('://' in (image.src or '') | string) else [site.url, 'assets/images/', image.src or open_graph.img] | join -%}
+{% set og_image = open_graph.img if (og and og.img == 'default') else og.img or image.src or open_graph.img %}
+{%- set og_image = og_image if ('://' in (og_image or '') | string) else [site.url, site.images, og_image] | join -%}
 {%- set creatorPage = collections.birds | authorPage(author) if author else none -%}
 {%- set creatorHandle = creatorPage.data.social.twitter if creatorPage else none -%}
 {%- set creator = ['@', creatorPage.data.social.twitter] | join() if creatorHandle else open_graph.site -%}
@@ -9,7 +10,7 @@
 <meta property="og:title" content="{{ og.title or title }}" />
 <meta property="og:image" content="{{ og_image }}" />
 <meta property="og:description" content="{{ description }}" />
-<meta property="og:url" content="{{ permalink | url }}" />
+<meta property="og:url" content="{{ perma | url }}" />
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta name="twitter:card" content="{{ og.twitter or 'summary' }}" />
 <meta name="twitter:title" content="{{ title }}" />
