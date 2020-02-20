@@ -5,7 +5,7 @@
   "email": "birds@oddbird.net",
   "contact": "/contact/",
   "images": "/assets/images/",
-  "feed": "feed.atom",
+  "feed": "/feed.xml",
   "styles": ["screen.css"],
   "facebook_id": "1820980378150914",
   "social": {
