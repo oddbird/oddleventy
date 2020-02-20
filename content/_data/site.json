@@ -1,5 +1,5 @@
 {
-  "url": "{{ pkg.homepage }}",
+  "url": "https://oddbird.net",
   "title": "OddBird",
   "description": "Scalable, accessible, and performant web applications with a human-centered design.",
   "email": "birds@oddbird.net",
