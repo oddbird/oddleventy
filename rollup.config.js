@@ -9,6 +9,7 @@ module.exports = {
   output: {
     file: '_built/js/scripts.js',
     format: 'iife',
+    sourcemap: true,
   },
   plugins: [resolve({ browser: true }), commonjs(), babel()],
 };

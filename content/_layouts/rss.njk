@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title }}</title>
   <subtitle>{{ site.description }}</subtitle>
-  <link href="{{ site.url }}/{{ permalink }}" rel="self"/>
-  <link href="{{ site.url }}/"/>
+  <link href="{{ site.url + page.url | url }}" rel="self"/>
+  <link href="{{ site.url | url }}/"/>
   <updated>{{ collections._post | rssLatest }}</updated>
   <id>{{ site.url }}/</id>
   <author>
@@ -13,9 +13,9 @@
   {%- for post in collections._post | getPublic %}
   <entry>
     <title>{{ post.data.title }}</title>
-    <link href="{{ site.url }}{{ post.url }}"/>
+    <link href="{{ site.url + post.url | url }}"/>
     <updated>{{ post | rssDate }}</updated>
-    <id>{{ site.url }}{{ post.url }}</id>
+    <id>{{ site.url + post.url | url }}</id>
     <content type="html">
       {% if post.data.image %}
         <img src="{{ site.url + site.images + post.data.image.src }}" alt="{{ post.data.image.alt }}"/>;
