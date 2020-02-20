@@ -1,6 +1,6 @@
 ---
-title: Phamaly Theatre Company
-sub: A WordPress site
+title: Phamaly Theatre Website
+sub: Built with WordPress
 logo: phamaly
 client: Phamaly
 date: 2019-12-06

@@ -15,6 +15,7 @@ tags:
   - Books
   - CSS
   - Code
+  - News
 press:
   - text: |
       Miriam and Hugo have become some of the most notable

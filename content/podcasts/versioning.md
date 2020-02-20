@@ -3,7 +3,9 @@ title: Versioning Show Ep.8
 author: miriam
 date: 2016-10-18
 tags:
+  
   - SitePoint
+  - Podcasts
 canonical: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
 venue: SitePoint
 image:

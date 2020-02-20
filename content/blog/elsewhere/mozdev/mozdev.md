@@ -6,6 +6,8 @@ date: 2019-10-01
 tags:
   - AboutWeb
   - DevTools
+  - Code
+  - Videos
 image:
   src: mozdev/mozilla-youtube.jpg
 darkmode:

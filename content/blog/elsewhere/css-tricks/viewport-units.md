@@ -6,6 +6,9 @@ author: miriam
 image:
   src: blog/elsewhere/css-tricks.jpg
 tags:
+  - Links
+  - Code
+  - Sass
   - CSS
   - Layout
 summary: |

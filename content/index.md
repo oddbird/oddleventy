@@ -10,6 +10,8 @@ image:
   alt: CoachHub App on iPhone
   device: iphone
   fill: white
+og:
+  img: default
 summary: |
   **We help companies create better web applications**
   with resilient design systems & well-tested code.

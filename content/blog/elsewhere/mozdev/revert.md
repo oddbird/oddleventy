@@ -5,6 +5,8 @@ author: miriam
 date: 2019-10-09
 tags:
   - AboutWeb
+  - Code
+  - Videos
 image:
   src: mozdev/revert.png
 summary: |

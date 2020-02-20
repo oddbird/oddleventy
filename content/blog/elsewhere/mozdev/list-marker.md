@@ -5,7 +5,11 @@ date: 2019-10-01
 image:
   src: mozdev/list-markers.png
 tags:
+  - CSS
+  - Mozilla Developer
   - AboutWeb
+  - Code
+  - Videos
 summary: |
   When you create lists in HTML,
   browsers add bullet-points or numbers we call *list markers*.

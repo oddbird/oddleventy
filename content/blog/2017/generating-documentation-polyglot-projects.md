@@ -2,12 +2,15 @@
 title: Generating Code Documentation for Polyglot Projects
 author: david
 tags:
+  - News
   - Docs
   - Tools
   - JavaScript
   - Python
   - Sass
   - Code
+  - Accoutrement
+  - Herman
 image:
   src: blog/2017/docs/style.jpg
 summary: |

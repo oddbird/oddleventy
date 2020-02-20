@@ -5,6 +5,8 @@ date: 2019-10-21
 author: miriam
 tags:
   - DevTools
+  - Code
+  - Videos
 image:
   src: mozdev/inactive-css.png
 summary: |

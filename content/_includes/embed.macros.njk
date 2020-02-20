@@ -1,3 +1,4 @@
+{% import 'layout.macros.njk' as layout %}
 {% import 'utility.macros.njk' as utility %}
 
 {# @docs
@@ -90,7 +91,24 @@ params:
 {%- endmacro %}
 
 
-{% macro video_figure(
+{# @docs
+label: video_figure
+category: Patterns
+note: |
+  Generate a figure for a one-off video
+params:
+  src:
+    type: url
+  height:
+    type: number
+    default: none
+  width:
+    type: number
+    default: none
+  caption:
+    type: string
+    default: none
+#}{% macro video_figure(
   src,
   height=none,
   width=none,
@@ -225,8 +243,13 @@ params:
   {%- for project in projects -%}
     {%- set page = collection | getPage(project) if collection else none -%}
     {%- set logo = page.data.logo if page else project -%}
+    {%- set client = page.data.client -%}
+    {%- set title = page | render('banner') or page | render('title') -%}
     {{ utility.link_if(
-      content=svg('logos/' + logo),
+      content=svg(
+        path='logos/' + logo,
+        alt=[client, title] | join(': ') if (client and title) else title
+      ),
       url=page.url if page else none
     ) }}
   {%- endfor -%}
@@ -255,10 +278,10 @@ params:
 ) -%}
 {%- if data -%}
 <section class="icon-blocks">
-{%- if title %}<h2>{{ title | mdInline | safe }}</h2>{% endif -%}
+{%- if title %}{{ layout.title(title) }}{% endif -%}
 {%- for item in data -%}
 {%- call media_block(
-  media=utility.link_if(svg(item.icon), item.url),
+  media=svg(item.icon, item.alt),
   name='icon-block'
 ) -%}
 {%- if item.title -%}
@@ -293,11 +316,7 @@ params:
 ) -%}
 {%- if src -%}
 {%- set src = src if ('://' in src) else ('/assets/images/' + src) -%}
-{%- set main = {
-  'src': src,
-  'alt': alt
-} -%}
-<img {{ utility.show_attrs(main) }} {{ utility.show_attrs(attrs) }}/>
+<img src="{{ src }}" alt="{{ alt }}" {{ utility.show_attrs(attrs) }}/>
 {%- endif -%}
 {%- endmacro %}
 
@@ -311,9 +330,11 @@ params:
     type: string
 #}
 {% macro svg(
-  path
+  path,
+  alt=none
 ) -%}
   {%- include path + '.svg' -%}
+  {% if alt %}<span class="sr-only">{{ alt }}</span>{% endif %}
 {%- endmacro %}
 
 

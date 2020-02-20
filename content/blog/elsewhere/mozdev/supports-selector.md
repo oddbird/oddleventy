@@ -1,10 +1,12 @@
 ---
 title: Use new selectors responsibly with selector queries
-sub: Just in time for [Selectors Level 4](https://www.w3.org/TR/selectors-4/)
+sub: Just in time for Selectors Level 4
 author: miriam
 date: 2019-11-20
 tags:
   - AboutWeb
+  - Code
+  - Videos
 image:
   src: mozdev/supports_selector.png
 summary: |
@@ -22,7 +24,8 @@ without waiting for full cross-browser support,
 but "feature queries" are the most clear and explicit.
 We can use them to test for browser support,
 and provide targeted styles only where they are supported.
-Now we can do the same with new selectors,
+Now we can do the same
+with [new selectors](https://www.w3.org/TR/selectors-4/),
 like `::marker` or `:focus-visible`!
 
 {{ embed.figure(

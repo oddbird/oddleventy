@@ -4,6 +4,8 @@ sub: A preview of Jump Start Sass, chapter 11
 date: 2016-03-01
 canonical: https://www.sitepoint.com/architecture-in-sass/
 tags:
+  - Links
+  - Sass
   - Books
 image:
   src: blog/sassbook.jpg

@@ -1,6 +1,7 @@
 ---
 title: Sass Layout in 2013 and the Future of Susy
 tags:
+  - News
   - Susy
   - Susy2
   - Layout

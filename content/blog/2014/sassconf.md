@@ -2,6 +2,7 @@
 title: SassConf 2014
 author: miriam
 tags:
+  - News
   - Conferences
   - Sass
   - Community

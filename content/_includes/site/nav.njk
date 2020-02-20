@@ -9,7 +9,7 @@
         <a href="{{ item.url }}"
           data-nav="{{ item.url | slug }}"
           {{ utility.attr_if('aria-current', current) }}>
-          {{ item.title or target.title }}
+          {{ item.title or target.title or 'ERROR' }}
         </a>
       </li>
     {% endfor %}

@@ -1,6 +1,7 @@
 ---
 title: Susy Next, The First Alpha
 tags:
+  - News
   - Susy
   - Susy2
   - Layout

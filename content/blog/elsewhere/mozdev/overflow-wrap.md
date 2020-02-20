@@ -5,6 +5,8 @@ author: miriam
 date: 2019-11-06
 tags:
   - AboutWeb
+  - Code
+  - Videos
 image:
   src: mozdev/overflow_wrap.png
 summary: |

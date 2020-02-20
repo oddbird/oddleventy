@@ -1,0 +1,27 @@
+---
+title: Services
+banner: OddBird's Services
+services:
+  - /services/development/
+  - /services/planning/
+  - /services/design-systems/
+  - /services/speaking/
+  - /open-source/
+summary: |
+  **Let’s solve real problems for your business and users** --
+  pairing your industry-expertise,
+  with our product-design experience.
+---
+
+{% import 'post.macros.njk' as post %}
+{% import 'layout.macros.njk' as layout %}
+
+{% call layout.grid() %}
+  {% for service in services %}
+    {% set page = collections.all | getPage(service) %}
+    <article>
+      {{ post.banner(page, level=2) }}
+      {{ page.data.summary | md | safe }}
+    </article>
+  {% endfor %}
+{% endcall %}

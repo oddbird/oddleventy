@@ -58,7 +58,7 @@
 [data-block~='rotate'] {
   transform: rotate(var(--rotate));
 
-  @include tools.above('medium-page') {
+  @include tools.above('page') {
     --rotate: -6deg;
   }
 }

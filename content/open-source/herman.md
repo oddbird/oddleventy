@@ -10,6 +10,7 @@ tags:
   - OddTools
   - Sass
   - Design Systems
+  - Accoutrement
   - Documentation
 screenshots:
   - img: herman/screenshots/sq-colors.jpg
@@ -86,6 +87,6 @@ and keep everything in one place.
 ) }}
 
 {{ embed.icon_block(
-  collections._oss | findData('accoutrement_modules'),
-  title='Integrate with [Accoutrement](/accoutrement/) Modules'
+  collections.all | getData('data.accoutrement_modules'),
+  title='Integrate with Accoutrement'
 ) }}

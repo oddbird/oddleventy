@@ -13,6 +13,7 @@ const sass = require('sass');
 const baseDir = path.resolve(__dirname, '..');
 const inDir = path.join(baseDir, 'src', 'scss');
 const outDir = path.join(baseDir, '_built', 'css');
+const destCssDir = path.join(baseDir, 'assets', 'css');
 
 let pnp;
 
@@ -77,10 +78,12 @@ const compileSass = ({ name, sourceMap, postCSS }) => {
   const outFilename = `${name}.css`;
   const outFile = path.join(outDir, outFilename);
   const outMap = path.join(outDir, `${outFilename}.map`);
+  const destCssFile = path.join(destCssDir, outFilename);
   sass.render(
     {
       file: inFile,
       sourceMap: Boolean(sourceMap),
+      sourceMapContents: true,
       outFile: outFilename,
       importer: nodeImporter,
     },
@@ -91,9 +94,11 @@ const compileSass = ({ name, sourceMap, postCSS }) => {
       if (postCSS) {
         return postcss([autoprefixer])
           .process(result.css, {
-            from: inFile,
-            to: outFilename,
-            map: { prev: result.map.toString() },
+            from: undefined,
+            to: destCssFile,
+            map: {
+              prev: result.map.toString(),
+            },
           })
           .then((res) => {
             res.warnings().forEach((warn) => {

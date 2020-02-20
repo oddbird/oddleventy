@@ -2,6 +2,7 @@
 title: Django, Background Processes, and Keeping Users in the Loop
 author: kit
 tags:
+  - News
   - Celery
   - Django
   - Django-Channels

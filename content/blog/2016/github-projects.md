@@ -3,6 +3,7 @@ title: Auditioning Github Projects
 author: miriam
 date: 2016-10-07
 tags:
+  - News
   - OddSite
   - Open Design
   - Tools

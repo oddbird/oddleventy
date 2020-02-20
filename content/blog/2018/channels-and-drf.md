@@ -1,6 +1,7 @@
 ---
 title: Django REST Framework & Channels
 tags:
+  - News
   - Code
   - Python
   - Django

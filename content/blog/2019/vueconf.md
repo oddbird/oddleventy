@@ -1,10 +1,10 @@
 ---
 title: VueFinder at VueConf, 2019
-sub: |
-  [Dynamic CSS with Vue](/talks/dynamic-css/)
+sub: Dynamic CSS with Vue
 author: miriam
 date: 2019-04-09
 tags:
+  - News
   - Vue
   - Conferences
   - Code

@@ -13,6 +13,7 @@ tags:
   - OddTools
   - Sass
   - Design Systems
+  - Herman
   - Documentation
 author:
   - miriam
@@ -97,7 +98,5 @@ npm install accoutrement
 # yarn
 yarn add accoutrement
 ```
-
-------
 
 {{ embed.icon_block(accoutrement_modules, 'Modules') }}

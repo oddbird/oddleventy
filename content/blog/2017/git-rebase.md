@@ -3,6 +3,7 @@ title: A Rebase-Centric Model of Collaborative Git Use
 author: kit
 date: 2017-01-05
 tags:
+  - News
   - Git
   - Workflows
   - Code

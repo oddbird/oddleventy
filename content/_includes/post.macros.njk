@@ -1,11 +1,48 @@
-{% import 'utility.macros.njk' as utility %}
 {% import 'birds.macros.njk' as birds %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'embed.macros.njk' as embed %}
+{% import 'utility.macros.njk' as utility %}
 
 {# @docs
 label: Post Macros
 category: file
 #}
 
+{# @docs
+label: by_year
+category: lists
+note: |
+  Group posts by year,
+  when there are more than
+  a set (`above`) number of posts
+params:
+  posts:
+    type: array
+    note: containing 11ty page objects
+  collections:
+    type: 11ty collections object
+    default: none
+  above:
+    type: number
+    default: 6
+#}
+{% macro by_year(
+  posts,
+  collections=none,
+  above=6
+) %}
+  {%- if posts -%}
+    {%- if posts | length > above -%}
+      {%- for group in posts | byYear -%}
+        {{ layout.title(group.year) }}
+        {{ list(group.posts, collections) }}
+      {%- endfor -%}
+    {%- else -%}
+      {{ layout.title('Resources') }}
+      {{ list(posts, collections) }}
+    {%- endif -%}
+  {%- endif -%}
+{% endmacro %}
 
 {# @docs
 label: list
@@ -23,18 +60,23 @@ params:
   posts,
   collections=none
 ) %}
-{% if posts %}
-  <ol class="post-list" reversed>
-    {% for post in posts | sort(true, false, 'date') %}
-      {{ item(post, collections) }}
-    {% endfor %}
+{%- if posts -%}
+  {%- set posts = posts if (posts[0].sort) else posts | pageYears  -%}
+  {%- set sort = 'sort' if (posts[0].sort) else 'date' -%}
+
+  <ol data-grid="resources" reversed>
+    {%- for post in posts | sort(true, false, sort) -%}
+      {%- set feature = 'large' if (loop.length == 1) else none -%}
+      {%- set feature = 'small' if (feature or post.data.feature) and (loop.length == 2) else feature -%}
+      {{ item(post, collections, feature) }}
+    {%- endfor -%}
   </ol>
 {% endif %}
 {% endmacro %}
 
 {# @docs
 label: item
-category: lists
+category: posts
 note: Generate each post in a list
 params:
   post:
@@ -42,38 +84,293 @@ params:
   collections:
     type: 11ty collections object
     default: none
+  feature:
+    type: boolean | 'large'
+    default: none
 #}
 {% macro item(
   post,
+  collections=none,
+  feature=none
+) %}
+  {%- set type = post.data.tags | pageType -%}
+  {%- set feature = post.event.feature if (post.event and not feature) else feature -%}
+  {%- set feature = feature or post.data.feature -%}
+  {%- set feature = 'small' if feature and not feature | typeCheck('string') else feature -%}
+
+  <li data-post="{{ type | slug if type else 'default' }}" {{ utility.attr_if('data-feature', feature) }}>
+    {%- if feature == 'large' -%}
+      {{ type_link(type, collections) }}
+      {{ large(post, collections) }}
+    {%- else -%}
+      {{ small(post, collections, feature) }}
+      {{ type_link(type, collections) }}
+    {%- endif -%}
+  </li>
+{% endmacro %}
+
+{# @docs
+label: small
+category: posts
+note: Content for a small card resource
+params:
+  post:
+    type: 11ty page object
+  collections:
+    type: 11ty collections object
+    default: none
+  feature:
+    type: boolean | 'large'
+    default: none
+#}
+{% macro small(
+  post,
+  collections=none,
+  feature=none
+) %}
+  <article data-card="link">
+    <div class="card-inner">
+      {% if feature and post.data.image and not (post.data.image.type == 'media') %}
+        {{ hero(post.data.image, 'card') }}
+      {% endif %}
+      <div class="post-header">
+        {{ banner(post) }}
+        {{ subtitle(post.data.sub) }}
+        {{ byline(post, collections, false) }}
+      </div>
+      {{ upcoming(post.data.events, links=false) }}
+    </div>
+  </article>
+{% endmacro %}
+
+{# @docs
+label: large
+category: posts
+note: Content for a large featured resource
+params:
+  post:
+    type: 11ty page object
+  collections:
+    type: 11ty collections object
+    default: none
+#}
+{% macro large(
+  post,
   collections=none
 ) %}
-  <li class="post">
-    <h3>{{ heading(post) }}</h3>
+  {%- set content -%}
+    <div class="post-header">
+      {{ banner(post) }}
+      {{ subtitle(post.data.sub) }}
+      {{ byline(post, collections) }}
+      {{ taglist(post.data.tags, collections) }}
+    </div>
 
-    {{ subtitle(post.data.sub) }}
-
-    <p class="byline">
-      <strong>{{ post | pageType }}</strong>
-
-      {{ by(post.data.author, collections) }}
-
-      {{ linked(
-        venue=post.data.venue,
-        url=post.data.canonical or post.data.url
+    <div class="summary">
+      {{ post.data.summary | md | safe }}
+      {{ upcoming(post.data.events) }}
+    </div>
+  {%- endset -%}
+  {%- set image = post.data.image -%}
+  <article data-card="{{ 'media' if (image.type === 'media') else 'hero' }}">
+    {%- if image and (image.type === 'media') -%}
+      {{ embed.media_block(
+        media=embed.svg(image.svg, image.alt) if image.svg else embed.img(image.src, image.alt),
+        name='hero',
+        attrs={'data-block': 'rotate'},
+        content=content
       ) }}
+    {%- else -%}
+      {{ hero(image) }}
+      {{ content | safe }}
+    {%- endif -%}
+  </article>
+{% endmacro %}
 
-      {{ client(post.data.client) }}
+{# @docs
+label: upcoming
+category: events
+note: Listof upcoming events from a post
+params:
+  events:
+    type: array
+  links:
+    type: boolean
+    default: true
+    note: Optionally remove event links for content in linked-cards
+#}
+{% macro upcoming(
+  events,
+  links=true
+) %}
+  {%- set events = events | getFuture if events else none -%}
+  {%- set events = events | sort(false, false, 'date') -%}
+  {%- if events -%}
+    <ul class="next-event">
+      {%- for next in events -%}
+        <li>
+          {{ linked(
+            next.venue,
+            next.url if links else none
+          ) }}
+          <i>on</i>
+          {{ utility.datetime(
+            next.date,
+            next.end,
+            format='md'
+          ) }}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+{% endmacro %}
 
-      {{ pubdate(
-        start=post.date,
-        end=post.data.end
-      ) }}
+{# @docs
+label: hero
+category: metadata
+note: Display hero image for a post
+params:
+  image:
+    type: object
+  type:
+    type: large | card | page
+    default: 'large'
+#}
+{% macro hero(
+  image,
+  type='large'
+) %}
+  {%- if image -%}
+    <div data-hero="{{ type or 'large' }}">
+      {%- if image.src -%}
+        {%- set position = {'--hero-position': image.position} | styles -%}
+        {{ embed.img(
+          src=image.src,
+          alt=image.alt,
+          attrs={style: position}
+        ) }}
+      {%- elif image.svg -%}
+        {{ embed.svg(image.svg, image.alt) }}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+{% endmacro %}
 
-      {{ where(post.event.adr if post.event else post.data.adr) }}
-    </p>
+{# @docs
+label: byline
+category: metadata
+note: |
+  Generate the post byline with
+  type, authors, venue/client, date, and location
+params:
+  post:
+    type: 11ty page object
+  collections:
+    type: 11ty collections object
+    default: none
+  links:
+    type: boolean
+    default: true
+    note: Optionally remove links for content in linked cards
+#}
+{% macro byline(
+  post,
+  collections=none,
+  links=true
+) %}
+  <p class="byline">
+    {{ byline_type(
+      tags=post.data.tags,
+      venue=post.data.venue
+    ) }}
 
-    {{ taglist(post.data.tags, collections) }}
-  </li>
+    {{ by(
+      post.data.author,
+      collections,
+      prefix=none if post.data.venue else 'by',
+      link=links
+    ) }}
+
+    {% if (post.data.oss == 'core team') %}
+      ({{ post.data.oss }})
+    {% endif %}
+
+    {{ linked(
+      venue=post.data.venue,
+      url=(post.data.canonical or post.data.url) if links else none
+    ) }}
+
+    {{ client(post.data.client) }}
+  </p>
+{% endmacro %}
+
+{# @docs
+label: byline_type
+category: metadata
+note: |
+  Generate post-type label for the byline
+params:
+  tags:
+    type: array
+  venue:
+    type: string
+    default: none
+    note: |
+      We don't show type in the byline when a venue is set
+#}
+{% macro byline_type(
+  tags,
+  venue=none
+) %}
+  {%- set type = tags | pageType -%}
+  {%- if type and (not venue) and not (type in ['News', 'Links']) -%}
+    {%- set byType = {
+      'Workshops': 'Workshop',
+      'Talks': 'Talk',
+      'Videos': 'Video',
+      'Podcasts': 'Podcast',
+      'OddTools': 'Created'
+    } -%}
+    <b>{{ byType[type] or type }}</b>
+  {%- endif -%}
+{% endmacro %}
+
+{# @docs
+label: type_link
+category: metadata
+note: |
+  Generate an icon-link
+  to the post-type index page
+params:
+  type:
+    type: string
+  collections:
+    type: 11ty collections object
+    default: none
+#}
+{% macro type_link(
+  type,
+  collections=none
+) %}
+  {% set icons = {
+    'Client Work': 'tools',
+    'OddTools': 'tools',
+    'Open Source': 'opensource',
+    'Talks': 'talk',
+    'Workshops': 'workshop',
+    'Podcasts': 'audio',
+    'Videos': 'video',
+    'Links': 'link',
+    'News': 'news'
+  } %}
+  {{ utility.link_if(
+    content=embed.svg(
+      path='icons/' + (icons[type] or 'tags'),
+      alt=['see all', type] | join(' ') if type else 'all tags'
+    ),
+    url=collections.all | tagLink(type) if collections else none,
+    class='post-type'
+  ) }}
 {% endmacro %}
 
 {# @docs
@@ -84,22 +381,16 @@ params:
   post:
     type: 11ty page object
 #}
-{% macro heading(
-  post
+{% macro banner(
+  post,
+  level=3,
+  link=true
 ) -%}
-  {%- set post_title = post | render('banner') or post | render('title') -%}
-  {{- utility.link_if(
-    post_title | mdInline,
-    post.url
-  ) -}}
-
-  {%- if post.event and post.event.venue %}
-    <i>at</i>
-    {{ utility.link_if(
-      post.event.venue | mdInline,
-      post.event.url
-    ) }}
-  {%- endif -%}
+  {%- set title = post | render('banner') or post | render('title') -%}
+  {%- set url = post.url if link else none -%}
+  {%- h level, {'class': 'post-title'} -%}
+    {{ utility.link_if(title | mdInline, url, 'title-link') }}
+  {%- endh -%}
 {%- endmacro %}
 
 {# @docs
@@ -135,11 +426,13 @@ params:
 #}
 {% macro by(
   author,
-  collections
+  collections,
+  prefix='by',
+  link=true
 ) %}
   {% if author %}
-    <i>by</i>
-    {{ birds.authors(author, collections) }}
+    {% if prefix %}<i>{{ prefix }}</i>{% endif %}
+    {{ birds.authors(author, collections, link) }}
   {% endif %}
 {% endmacro %}
 
@@ -178,12 +471,12 @@ params:
   name:
     type: string
 #}
-{% macro client(name) %}
-  {% if name %}
+{% macro client(name) -%}
+  {%- if name %}
     <i>for</i>
-    <strong>{{ name | mdInline | safe }}</strong>
-  {% endif %}
-{% endmacro %}
+    <b>{{ name | mdInline | safe }}</b>
+  {% endif -%}
+{%- endmacro %}
 
 {# @docs
 label: where
@@ -218,12 +511,13 @@ params:
   venue,
   url
 ) -%}
-{%- if venue and url %}
+{%- if venue %}
   <i>at</i>
   {{ utility.link_if(
     content=venue | mdInline | safe,
     url=url,
-    attrs={'rel': 'bookmark'}
+    class='h-card',
+    attrs={'rel': 'bookmark'} if url else none
   ) }}
 {% endif -%}
 {%- endmacro %}
@@ -240,7 +534,8 @@ params:
 #}
 {% macro taglist(
   tags,
-  collections
+  collections,
+  pill=true
 ) -%}
   {%- set public_tags = collections | tagData(tags) -%}
   {%- set public_tags = public_tags if public_tags | length else none -%}
@@ -248,13 +543,13 @@ params:
   {%- if public_tags -%}
     <div class="post-tags">
       {%- include "icons/tags.svg" -%}
-      <ul class="pill-set">
+      <ul class="{{ 'pill-set' if pill else 'inline-list' }}">
         {%- for item in public_tags -%}
-          <li class="pill-item">
+          <li class="{{ 'pill-item' if pill else 'inline-item' }}">
             {{- utility.link_if(
               content=item.tag,
               url=item.url,
-              class='pill'
+              class='pill' if pill else none
             ) -}}
           </li>
         {%- endfor -%}
@@ -279,14 +574,14 @@ params:
   links,
   slides=none
 ) %}
-  {% if links | length or slides %}
+  {% if links or slides %}
     <ul class="post-links">
       {% if slides %}
         <li>{{ utility.link_if('slides »', slides) }}</li>
       {% endif %}
 
       {% for name, url in links %}
-        <li>{{ utility.link_if(namme + ' »', url) }}</li>
+        <li>{{ utility.link_if(name + ' »', url) }}</li>
       {% endfor %}
     </ul>
   {% endif %}
