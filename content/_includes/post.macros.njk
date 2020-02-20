@@ -100,12 +100,12 @@ params:
 
   <li data-post="{{ type | slug if type else 'default' }}" {{ utility.attr_if('data-feature', feature) }}>
     {%- if feature == 'large' -%}
+      {{ type_link(type, collections) }}
       {{ large(post, collections) }}
     {%- else -%}
       {{ small(post, collections, feature) }}
+      {{ type_link(type, collections) }}
     {%- endif -%}
-
-    {{ type_link(type, collections) }}
   </li>
 {% endmacro %}
 
@@ -128,19 +128,19 @@ params:
   collections=none,
   feature=none
 ) %}
-  <a href="{{ post.url | url }}" data-card="link">
+  <article data-card="link">
     <div class="card-inner">
       {% if feature and post.data.image and not (post.data.image.type == 'media') %}
         {{ hero(post.data.image, 'card') }}
       {% endif %}
       <div class="post-header">
-        {{ banner(post, link=false) }}
+        {{ banner(post) }}
         {{ subtitle(post.data.sub) }}
         {{ byline(post, collections, false) }}
       </div>
       {{ upcoming(post.data.events, links=false) }}
     </div>
-  </a>
+  </article>
 {% endmacro %}
 
 {# @docs
@@ -389,7 +389,7 @@ params:
   {%- set title = post | render('banner') or post | render('title') -%}
   {%- set url = post.url if link else none -%}
   {%- h level, {'class': 'post-title'} -%}
-    {{ utility.link_if(title, url) }}
+    {{ utility.link_if(title | mdInline, url, 'title-link') }}
   {%- endh -%}
 {%- endmacro %}
 

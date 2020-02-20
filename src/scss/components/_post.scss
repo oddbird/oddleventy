@@ -48,6 +48,7 @@
 // Cards
 [data-card] {
   --crop-size: var(--triple-gutter);
+  --drop: var(--half-shim);
   --crop: polygon(
     0 0,
     calc(100% - var(--crop-size)) 0,
@@ -59,20 +60,30 @@
 }
 
 [data-card='link'] {
-  &:link,
-  &:visited {
-    @include tools.transition('pop');
-    color: inherit;
-    display: grid;
-    text-decoration: none;
-    transform: rotate(var(--rotate, 0));
-  }
+  @include tools.transition('pop');
+  display: grid;
+  filter: drop-shadow(
+    calc(var(--drop) * -1) var(--drop) var(--blur, 0) var(--pop, var(--shadow))
+  );
+  position: relative;
+  transform: rotate(var(--rotate, 0));
 
   &:hover,
-  &:focus,
-  &:active {
-    filter: drop-shadow(0 0 var(--half-shim) var(--shadow));
-    transition-delay: 20ms; // avoid janky scrolling
+  &:focus-within {
+    --drop: var(--shim);
+    --pop: var(--active);
+    transition-delay: 20ms;
+  }
+
+  .title-link {
+    --underline-color: transparent;
+    display: block;
+
+    &::after {
+      @include tools.position(0 0 0 0);
+      content: '';
+      display: block;
+    }
   }
 
   .byline,
@@ -111,7 +122,8 @@
   margin: calc(var(--half-shim) * -1);
 
   [data-card] {
-    margin: calc(var(--quarter-shim));
+    --shadow: transparent;
+    margin: var(--quarter-shim);
   }
 }
 

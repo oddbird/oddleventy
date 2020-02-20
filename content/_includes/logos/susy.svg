@@ -1,7 +1,7 @@
 <svg
   data-logo="susy"
   xmlns="http://www.w3.org/2000/svg"
-  aria-hidden
+  aria-hidden="true"
   focusable="false"
   width="520"
   height="195"

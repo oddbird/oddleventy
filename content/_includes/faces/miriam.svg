@@ -1,7 +1,7 @@
 <svg
   data-face="miriam"
   xmlns="http://www.w3.org/2000/svg"
-  aria-hidden
+  aria-hidden="true"
   focusable="false"
   viewBox="0 0 456.5 456.5"
   width="200px"

@@ -29,7 +29,7 @@
 
   &:active,
   &[aria-pressed='true'] {
-    background: var(--action-focus);
+    background: var(--active);
   }
 }
 

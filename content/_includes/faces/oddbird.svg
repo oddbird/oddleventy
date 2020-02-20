@@ -1,7 +1,7 @@
 <svg
   data-face="birds"
   xmlns="http://www.w3.org/2000/svg"
-  aria-hidden
+  aria-hidden="true"
   focusable="false"
   viewBox="0 0 2532.58 560"
   width="431px"
