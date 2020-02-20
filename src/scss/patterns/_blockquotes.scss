@@ -22,11 +22,6 @@ blockquote {
     padding-left: var(--angle-space);
   }
 
-  .byline {
-    --newline: 0;
-    font-size: var(--small);
-  }
-
   .u-photo {
     border-radius: 100%;
   }
@@ -87,7 +82,7 @@ blockquote:not([data-quote]) {
   grid-gap: var(--double-gutter);
   margin: var(--spacer) calc(var(--page-margin) * -1);
 
-  @include tools.above('medium-page') {
+  @include tools.above('page') {
     --overlap: calc(var(--gutter) * -1);
     --offset: var(--spacer);
     grid-template: var(--offset) / repeat(2, 1fr);

@@ -3,6 +3,7 @@ title: Code Patterns & Style Guides
 author: miriam
 tags:
   - _post
+  - News
   - Tools
   - Color
   - Typography

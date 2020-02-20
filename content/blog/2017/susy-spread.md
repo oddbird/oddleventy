@@ -1,7 +1,8 @@
 ---
-title: Understanding in Susy3
+title: Understanding 'Spread' in Susy3
 tags:
   - _post
+  - News
   - Susy
   - Susy3
   - CSS

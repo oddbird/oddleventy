@@ -2,6 +2,7 @@
 title: Off-Canvas Layout with Susy
 tags:
   - _post
+  - News
   - Susy
   - Susy1
   - Demos

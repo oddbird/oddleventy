@@ -4,6 +4,7 @@ author: miriam
 sub: You don't need safe-get-function utilities
 tags:
   - _post
+  - News
   - Sass
   - Tools
   - Code

@@ -30,7 +30,6 @@ events:
       width: 560
       height: 315
   - venue: Smashing Conf NY
-    feature: true
     url: https://smashingconf.com/ny-2019/
     date: 2019-10-15
     end: 2019-10-16

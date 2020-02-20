@@ -10,7 +10,7 @@ tags:
   - AboutWeb
   - DevTools
   - Code
-  - Video
+  - Videos
 image:
   src: mozdev/mozilla-youtube.jpg
 darkmode:

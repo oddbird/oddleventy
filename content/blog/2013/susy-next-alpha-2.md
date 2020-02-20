@@ -1,19 +1,18 @@
 ---
 title: Susy Next, The Second Alpha
+author: miriam
+image:
+  src: blog/susy.jpg
+sub: Go download & play with it!
+date: 2013-05-03
 tags:
   - _post
+  - News
   - Susy
   - Susy2
   - Layout
   - Grids
   - Code
-author: miriam
-image:
-  src: blog/susy.jpg
-sub: |
-  Go [download & play](http://rubygems.org/gems/susy/versions/2.0.0.alpha.2)
-  with it!
-date: 2013-05-03
 summary: |
   We haven't written full docs yet, and this blog post will be vastly
   incomplete, but I'll give you a quick rundown of where we're going. This

@@ -1,10 +1,9 @@
-{%- import 'post.macros.njk' as post -%}
 {%- import 'layout.macros.njk' as layout -%}
 
 {% include "page/header.njk" %}
 
 <main data-layout="main">
-  {% if (content or summary) %}
+  {% if content %}
     <div
       data-main
       data-typeset>

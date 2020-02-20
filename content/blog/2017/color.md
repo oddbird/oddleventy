@@ -4,6 +4,7 @@ author: sondra
 date: 2017-01-16
 tags:
   - _post
+  - News
   - OddSite
   - Open Design
   - Color

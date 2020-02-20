@@ -4,6 +4,7 @@ date: 2012-07-20
 author: miriam
 tags:
   - _post
+  - News
   - Code
 ---
 

@@ -1,12 +1,11 @@
 ---
 title: Beyond Tellerand
-sub: |
-  [Don't Use My Grid System](/talks/no-grid-system/)
-  (with Vue Invaders!)
+sub: Grid Systems & Vue Invaders!
 author: miriam
 date: 2018-05-15
 tags:
   - _post
+  - News
   - Vue
   - Conferences
   - Design Systems

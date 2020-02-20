@@ -11,7 +11,7 @@ tags:
   - CSS Tricks
   - CSS
   - Grids
-  - Screencast
+  - Videos
 video:
   caption: |
     Exploring CSS Grids with Geoff Graham

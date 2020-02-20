@@ -9,7 +9,7 @@ tags:
   - Mozilla Developer
   - DevTools
   - Code
-  - Video
+  - Videos
 image:
   src: mozdev/inactive-css.png
 summary: |

@@ -9,7 +9,7 @@ tags:
   - Mozilla Developer
   - AboutWeb
   - Code
-  - Video
+  - Videos
 image:
   src: mozdev/revert.png
 summary: |

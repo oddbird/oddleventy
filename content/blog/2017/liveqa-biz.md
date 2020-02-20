@@ -4,6 +4,7 @@ author: sondra
 type: event
 tags:
   - _post
+  - News
   - Events
   - Q&A
   - Tips

@@ -186,10 +186,81 @@ params:
   key:
     type: string
 */
-const render = (page, key) =>
-  page.data.renderData
+const render = (page, key) => {
+  if (!page.data) {
+    return undefined;
+  }
+
+  return page.data.renderData
     ? page.data.renderData[key] || page.data[key]
     : page.data[key];
+};
+
+/* @docs
+label: pageYears
+category: Sorting
+note: |
+  Add `sort` and `year` keys to the page object,
+  based on the latest date available (`date` or `end`),
+  optionally including dates from events
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+  events:
+    type: boolean
+    default: 'true'
+    note: optionally include events in sort/year dates
+*/
+const pageYears = (collection, events = true) =>
+  collection.map((page) => {
+    const dates = [page.date];
+
+    if (page.data.end && page.data.end !== 'ongoing') {
+      dates.push(page.data.end);
+    }
+
+    if (events && page.data.events) {
+      page.data.events.forEach((event) => {
+        dates.push(event.date);
+      });
+    }
+
+    page.sort = dates.reduce((a, b) => (a > b ? a : b));
+    page.year = getDate(page.sort, 'year');
+
+    return page;
+  });
+
+/* @docs
+label: byYear
+category: Sorting
+note: |
+  Runs a collection through `pageYears`,
+  and then groups them by the resulting `year` value
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+  events:
+    type: boolean
+    default: 'true'
+    note: optionally include events in sort/year dates
+*/
+const byYear = (collection, events = true) => {
+  if (!collection || collection.length === 0) {
+    return [];
+  }
+
+  const groups = _.groupBy(pageYears(collection, events), 'year');
+
+  return Object.keys(groups)
+    .reverse()
+    .map((year) => ({
+      year,
+      posts: groups[year],
+    }));
+};
 
 /* @docs
 label: pageType
@@ -198,40 +269,24 @@ note: |
   Return one of several resource "types"
   which we can use to provide different list styling,
   or filtering.
-
-  Current types include:
-  - client (tagged as 'Client Work')
-  - tool (tagged as 'OddTools')
-  - oss (tagged as 'Open Source')
-  - talk (tagged as 'Talks')
-  - workshop (tagged as 'Workshops')
-  - podcast (tagged as 'Podcast')
-  - video (tagged as 'Video')
-  - **article** (the default)
 params:
-  page:
-    type: 11ty page object
+  tags:
+    type: array
 */
-const pageType = (page) => {
-  if (page.event) {
-    return 'event';
-  } else if (hasData(page, 'data.tags', 'Client Work')) {
-    return 'client';
-  } else if (hasData(page, 'data.tags', 'OddTools')) {
-    return 'tool';
-  } else if (hasData(page, 'data.tags', 'Open Source')) {
-    return 'oss';
-  } else if (hasData(page, 'data.tags', 'Talks')) {
-    return 'talk';
-  } else if (hasData(page, 'data.tags', 'Workshops')) {
-    return 'workshop';
-  } else if (hasData(page, 'data.tags', 'Podcast')) {
-    return 'podcast';
-  } else if (hasData(page, 'data.tags', 'Video')) {
-    return 'video';
-  }
+const pageType = (tags) => {
+  const types = [
+    'Client Work',
+    'OddTools',
+    'Open Source',
+    'Talks',
+    'Workshops',
+    'Podcasts',
+    'Videos',
+    'Links',
+    'News',
+  ];
 
-  return 'article';
+  return tags ? tags.find((tag) => types.includes(tag)) : false;
 };
 
 module.exports = {
@@ -246,4 +301,6 @@ module.exports = {
   pageType,
   withData,
   render,
+  pageYears,
+  byYear,
 };

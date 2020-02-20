@@ -1,16 +1,18 @@
 ---
 title: VueConf US
-sub: |
-  [Agile Design Systems in Vue](/talks/agile-systems/)
+sub: Agile design systems in Vue
 author: miriam
 date: 2018-05-14
 tags:
   - _post
+  - News
   - Vue
   - Conferences
   - Design Systems
   - Code
   - Style Guides
+  - Accoutrement
+  - Herman
 image:
   src: blog/2018/vueconf.jpg
 talk: /talks/agile-systems/

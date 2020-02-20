@@ -2,6 +2,7 @@
 title: Django REST Framework & Channels
 tags:
   - _post
+  - News
   - Code
   - Python
   - Django

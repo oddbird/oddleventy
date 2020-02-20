@@ -6,6 +6,7 @@ canonical: https://css-tricks.com/css-charts-grid-custom-properties/
 venue: CSS-Tricks
 tags:
   - _post
+  - Links
   - CSS
   - CSS Tricks
   - Code

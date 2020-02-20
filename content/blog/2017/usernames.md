@@ -5,6 +5,7 @@ author: david
 date: 2017-04-11
 tags:
   - _post
+  - News
   - Data Modeling
   - Django
   - Code

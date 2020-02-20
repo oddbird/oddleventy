@@ -2,7 +2,7 @@
 title: CSS Remedy
 sub: Addressing the technical debt of CSS
 author: miriam
-oss: core
+oss: core team
 logo: remedy
 image:
   svg: logos/remedy

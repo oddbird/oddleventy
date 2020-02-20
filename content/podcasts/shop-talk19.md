@@ -4,12 +4,15 @@ title: On Sass & CSS
 venue: Shop Talk Show
 date: 2019-10-28
 canonical: https://shoptalkshow.com/episodes/384/
+author: miriam
+image:
+  src: blog/elsewhere/shop-talk.png
 tags:
   - _calendar
   - _post
   - Interview
   - Code
-  - Podcast
+  - Podcasts
   - Sass
 summary: |
   I drop by the show to talk about Sass in 2019,

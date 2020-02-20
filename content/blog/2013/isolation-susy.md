@@ -2,6 +2,7 @@
 title: Isolation and Bleed in Susy
 tags:
   - _post
+  - News
   - Susy
   - Susy1
   - Layout
