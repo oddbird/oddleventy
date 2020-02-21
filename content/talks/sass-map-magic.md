@@ -4,7 +4,6 @@ author: miriam
 date: 2014-09-12
 slides: https://www.oddbooksapp.com/book/sass-map-magic
 tags:
-  - Talks
   - Code
 events:
   - venue: CSSConf 2016

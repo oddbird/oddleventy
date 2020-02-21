@@ -10,11 +10,11 @@ summary: |
   or
   [browse all tags](/tags/).
 pagination:
-  data: collections
   size: 1
   alias: tag
   filter:
-    - 'all'
+    - all
+    - sample
 permalink: /tags/{{ tag | slug }}/
 renderData:
   title: 'Tag: {{ tag | displayName }}'

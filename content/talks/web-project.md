@@ -6,7 +6,6 @@ author: miriam
 date: 2017-12-12
 slides: https://www.oddbooksapp.com/book/web-projects
 tags:
-  - Talks
   - Code
   - Process
 events:

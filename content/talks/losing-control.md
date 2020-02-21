@@ -5,7 +5,6 @@ slides: https://www.oddbooksapp.com/book/losing-control
 author: miriam
 date: 2017-01-23
 tags:
-  - Talks
   - Code
   - Art
 events:

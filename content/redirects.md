@@ -16,7 +16,11 @@ redirects:
   - from: /accoutrement-type/
     to: /accoutrement/
   - from: /services/design-systems-training/
-    to: /talks/resilient-systems/
+    to: /workshops/resilient-systems/
+  - from: /talks/resilient-systems/
+    to: /workshops/resilient-systems/
+  - from: /talks/advanced-css-workshop/
+    to: /workshops/advanced-css/
   - from: /speaking/
     to: /services/speaking/
   - from: /work/services/

@@ -5,7 +5,6 @@ author: stacy
 date: 2015-10-27
 slides: http://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw
 tags:
-  - Talks
   - Process
   - CSS
 events:

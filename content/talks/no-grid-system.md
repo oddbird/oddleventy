@@ -7,7 +7,6 @@ slides: https://talks.oddbird.net/no-grid-system/
 image:
   src: talks/devconf-best.jpg
 tags:
-  - Talks
   - Code
   - Susy
   - Layout

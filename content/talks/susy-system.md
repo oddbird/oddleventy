@@ -5,7 +5,6 @@ author: miriam
 date: 2014-04-16
 slides: http://mirisuzanne.github.io/pres/susy2/
 tags:
-  - Talks
   - Code
   - Susy
   - Layout

@@ -3,7 +3,6 @@ title: Advanced Python
 author: carl
 date: 2014-02-27
 tags:
-  - Talks
   - Python
 events:
   - venue: ConFoo

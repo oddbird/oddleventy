@@ -2,8 +2,6 @@
 title: Web Design & Development
 sub: Custom web applications & refactors
 index: Custom Application
-tags:
-  - _services
 image:
   src: projects/coachhub.jpg
   position: top

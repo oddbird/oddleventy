@@ -5,7 +5,6 @@ author: stacy
 date: 2016-04-30
 slides: http://www.slideshare.net/Funstacy/curing-design-complacency-61550889
 tags:
-  - Talks
   - Design
 events:
   - venue: WordCamp Chicago

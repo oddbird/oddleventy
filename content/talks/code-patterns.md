@@ -5,7 +5,6 @@ author: miriam
 date: 2016-03-31
 slides: https://oddbooksapp.com/book/pattern-making
 tags:
-  - Talks
   - Code
   - CSS
   - Sass

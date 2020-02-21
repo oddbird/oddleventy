@@ -74,7 +74,7 @@ params:
   {%- endif -%}
 {%- endset -%}
 
-<blockquote class="h-card" data-quote="{{ type or '' }}">
+<blockquote data-quote="{{ type or '' }}">
 {%- call embed.media_block(
   media=img,
   name='quote'
@@ -185,7 +185,7 @@ params:
 {% macro cite(
   data
 ) -%}
-<p class="byline">---{{ _cite(data) | safe }}</p>
+<p class="byline h-card">---{{ _cite(data) | safe }}</p>
 {%- endmacro %}
 
 

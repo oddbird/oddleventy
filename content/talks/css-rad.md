@@ -7,7 +7,6 @@ image:
   src: talks/miriam.jpg
 slides: https://sliiides.netlify.com/css-is-rad/
 tags:
-  - Talks
   - Code
   - CSS
 events:
