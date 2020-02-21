@@ -3,13 +3,6 @@
 {% include "page/header.njk" %}
 
 <main data-layout="main">
-  {% if content %}
-    <div
-      data-main
-      data-typeset>
-      {{ content | typogr | safe }}
-    </div>
-  {% endif %}
-
+  {{ content | typogr | safe }}
   {% include "page/list.njk" %}
 </main>

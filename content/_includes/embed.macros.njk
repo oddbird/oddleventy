@@ -365,10 +365,12 @@ params:
   height=none,
   span=none
 ) %}
+  {%- set width = width or 560 -%}
+  {%- set height = height or 315 -%}
   {%- set attrs = {
     'src': src,
-    'width': width or '560',
-    'height': height or '315',
+    'width': width,
+    'height': height,
     'frameborder': '0',
     'webkitallowfullscreen': true,
     'mozallowfullscreen': true,
@@ -487,6 +489,7 @@ params:
   attrs={}
 ) %}
 <p {{ utility.show_attrs({
+  'class': 'codepen',
   'data-height': height,
   'data-theme-id': theme,
   'data-slug-hash': id,
@@ -494,7 +497,7 @@ params:
   'data-user': user,
   'data-embed-version': "2",
   "data-preview": preview
-}) }} {{ utility.show_attrs(attrs) }}>See the Pen {{ utility.link_if(
+} | merge(attrs)) }}>See the Pen {{ utility.link_if(
   content=title,
   url=('http://codepen.io/' + user + '/pen/' + id)
 ) }} by {{ utility.link_if(

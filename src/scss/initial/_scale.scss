@@ -20,4 +20,8 @@ html {
   @include tools.tokens--(scale.$spacing-sizes);
   @include tools.tokens--(scale.$theme-sizes);
   @include tools.tokens--(scale.$page-sizes);
+  --typeset: [full-start] var(--page-margin) [content-start] minmax(0, 1fr)
+    [wide-start] minmax(0, $wide) [page-start] minmax(min-content, var(--page))
+    [page-end] minmax(0, $wide) [wide-end] minmax(0, 1fr) [content-end]
+    var(--page-margin) [full-end];
 }

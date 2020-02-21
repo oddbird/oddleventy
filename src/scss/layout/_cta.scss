@@ -1,7 +1,8 @@
 @use '~accoutrement/sass/tools';
 
 [data-layout='cta'] {
-  --media-size: calc(4em + 2vw);
+  --media-min: 6em;
+  --media-size: calc(4em + 5vw);
   background: var(--callout-fade);
   clip-path: polygon(
     0 0,
@@ -18,8 +19,8 @@
   display: grid;
   font-size: var(--small);
   grid-area: cta;
-  grid-template-columns: minmax(min-content, var(--small-page));
+  grid-template-columns: minmax(min-content, var(--page));
   justify-content: center;
-  margin: var(--spacer) calc(var(--page-margin) * -1) 0;
+  margin-top: var(--spacer);
   padding: var(--spacer) var(--page-margin) calc(var(--spacer) + var(--gutter));
 }

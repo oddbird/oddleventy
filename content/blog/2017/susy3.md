@@ -28,6 +28,8 @@ action:
   url: /susy/docs/
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 I remember when [Blueprint] first came out. Besides [Eric Meyer’s
 Reset], it was one of the first open-source CSS libraries that our
 industry started using en-masse. That's how I remember things, at least.
@@ -104,10 +106,11 @@ Remember the old 3-column "Holy Grail" layout, with equal-height
 fixed-width sidebars and a fluid center? Here it is, in a few lines of
 code:
 
-<figure class="extend-small">
-  <p data-height="450" data-theme-id="0" data-slug-hash="0229f885f9a574c6d049b9d30dffc609" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="CSS Grid Demo" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/0229f885f9a574c6d049b9d30dffc609/">CSS Grid Demo</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='0229f885f9a574c6d049b9d30dffc609',
+  title='CSS Grid Demo',
+  user='mirisuzanne'
+) }}
 
 In most cases, you can also provide a float, flexbox, or css-table
 fallback by wrapping your grid code in the
@@ -239,10 +242,11 @@ drop the gutters, or even move them into `padding` rather than
 If you want to get really clever, you can build your own grid-system out
 of CSS [custom properties] (aka variables):
 
-<figure class="extend-small">
-  <p data-height="300" data-theme-id="0" data-slug-hash="d05d2ea9339419df7070f9c393a9c080" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Calc() + Custom Properties" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/d05d2ea9339419df7070f9c393a9c080/">Calc() + Custom Properties</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='d05d2ea9339419df7070f9c393a9c080',
+  title='Calc() + Custom Properties',
+  user='mirisuzanne'
+) }}
 
 That will also work with css-tables, etc. Add any padding you like, and
 you have on-the-fly fluid grids without any third-party tools.
@@ -250,10 +254,11 @@ you have on-the-fly fluid grids without any third-party tools.
 We've even built a nearly-complete Susy3 in pure CSS. This is a fun
 experiment, but I don't recommend using it in production:
 
-<figure class="extend-small">
-  <p data-height="500" data-theme-id="0" data-slug-hash="PboVrw" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="SusyCSS Demo" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/PboVrw/">SusyCSS Demo</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='PboVrw',
+  title='SusyCSS Demo',
+  user='mirisuzanne'
+) }}
 
 Susy is designed to handle any layout, but if you are designing grids in
 pure CSS, it's better to describe your actual needs more simply. Why
@@ -272,10 +277,11 @@ explicit grid-columns.
 
 Here's an example flexbox layout, without Susy:
 
-<figure class="extend-small">
-  <p data-height="450" data-theme-id="0" data-slug-hash="657a71f05b9c044d0235bab212abdbdc" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Full-height Flexbox" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/657a71f05b9c044d0235bab212abdbdc/">Full-height Flexbox</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='657a71f05b9c044d0235bab212abdbdc',
+  title='Full-height Flexbox',
+  user='mirisuzanne'
+) }}
 
 If you do want to use Susy with flexbox to achieve more consistent
 grids, you only need to replace any `flex-basis` values with Susy's
@@ -309,10 +315,11 @@ browser, it can calculate the results of otherwise non-comparable units.
 This is a bit more fragile and manual than allowing grid or flexbox to
 do that work for you, but it can be a powerful fallback:
 
-<figure class="extend-small">
-  <p data-height="350" data-theme-id="0" data-slug-hash="70b5a2cf411542e74d1cd42d5ddbe446" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Floats with Calc" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/70b5a2cf411542e74d1cd42d5ddbe446/">Floats with Calc</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='70b5a2cf411542e74d1cd42d5ddbe446',
+  title='Floats with Calc',
+  user='mirisuzanne'
+) }}
 
 ## Introducing Susy3
 

@@ -1,25 +1,22 @@
-// Alignment Patterns
-// ==================
-
 .align-left {
   float: left;
-  margin-bottom: size('pad');
-  margin-right: size('pad');
+  margin-bottom: var(--newline);
+  margin-right: var(--gutter);
 }
 
 .align-right {
   float: right;
-  margin-bottom: size('pad');
-  margin-left: size('pad');
+  margin-bottom: var(--newline);
+  margin-left: var(--gutter);
 }
 
 .align-center {
   display: block;
-  margin: 0 auto size('pad');
+  margin: 0 auto var(--newline);
 }
 
 .align-none {
-  margin-bottom: size('pad');
+  margin-bottom: var(--newline);
 }
 
 // Text Centering

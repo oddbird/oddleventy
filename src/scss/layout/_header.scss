@@ -9,7 +9,6 @@
   --angle: var(--edge);
   --edge: calc(var(--page-margin) / 2);
   --overlap: var(--gutter);
-  margin: 0 calc(var(--page-margin) * -1) var(--gutter);
   grid-template:
     'hero hero' auto
     'title hero2' var(--overlap)
@@ -23,8 +22,7 @@
     padding-top: var(--half-shim);
   }
 
-  #meta,
-  #intro {
+  #meta {
     padding: 0 var(--page-margin);
   }
 
