@@ -1,6 +1,6 @@
 'use strict';
 
-const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
 
 const birds = require('./src/filters/birds');
@@ -13,7 +13,7 @@ const utils = require('./src/filters/utils');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
-  eleventyConfig.addPlugin(hljs);
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // pass-through
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
