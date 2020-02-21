@@ -6,7 +6,6 @@ image:
 sub: Go download & play with it!
 date: 2013-05-03
 tags:
-  - _post
   - News
   - Susy
   - Susy2

@@ -4,7 +4,6 @@ sub: Co-founder & product lead
 bird: miriam
 adr: Denver, CO
 date: 2008-04-01
-end: ongoing
 image:
   src: birds/miriam.jpg
 social:

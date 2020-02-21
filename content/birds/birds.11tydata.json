@@ -1,4 +1,0 @@
-{
-  "layout": "base",
-  "permalink": "authors/{{ page.fileSlug }}/index.html"
-}

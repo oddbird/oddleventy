@@ -3,7 +3,6 @@ title: Will CSS Grid Layout Enable Creative Design?
 author: stacy
 date: 2016-09-19
 tags:
-  - _post
   - News
   - Grids
   - CSS

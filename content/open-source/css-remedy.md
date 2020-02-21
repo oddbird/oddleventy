@@ -7,10 +7,7 @@ logo: remedy
 image:
   svg: logos/remedy
 date: 2019-07-11
-end: ongoing
 tags:
-  - _post
-  - Open Source
   - CSS
   - Mozilla
 index: CSS Remedy

@@ -3,9 +3,6 @@ title: WordPress from Scratch to Launch
 author: stacy
 date: 2017-01-17
 tags:
-  - _post
-  - Talks
-  - Training
   - WordPress
 events:
   - venue: WordPress Naperville
@@ -28,5 +25,3 @@ summary: |
   launch with WordPress --
   planning, design, and theme-building.
 ---
-
-

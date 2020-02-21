@@ -4,8 +4,6 @@ sub: Strategy, design concepts, and estimates based on user-research
 index: Research & Concepting
 image:
   src: pages/design-sketch.jpg
-tags:
-  - _services
 pitch:
   - title: Project Summary
     icon: icons/map

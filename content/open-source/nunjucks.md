@@ -7,8 +7,6 @@ oss: maintainer
 date: 2015-09-01
 end: 2016-09-02
 tags:
-  - _post
-  - Open Source
   - Mozilla
 links:
   site: http://mozilla.github.io/nunjucks/

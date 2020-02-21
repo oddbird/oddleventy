@@ -1,5 +1,4 @@
 ---
-layout: base
 title: Events Sample Page
 sub: Testing out the event filters
 ---

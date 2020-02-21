@@ -1,5 +1,4 @@
 ---
-layout: base
 title: Typography Sample Page
 sub: Subtitle for the page
 summary: |

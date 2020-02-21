@@ -7,12 +7,12 @@
 
   <footer role="contentinfo">
     <div class="colophon">
-      {% set colophon = collections.all | getPage('/_sitedata/colophon/') %}
+      {% set colophon = collections.all | findPage('data.info_slug', 'colophon') %}
       {{ colophon.templateContent | safe }}
     </div>
 
     <div class="legal">
-      {% set info = collections.all | getPage('/_sitedata/info/') %}
+      {% set info = collections.all | findPage('data.info_slug', 'legal') %}
       {{ info.templateContent | safe }}
     </div>
   </footer>

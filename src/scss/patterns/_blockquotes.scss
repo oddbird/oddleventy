@@ -43,7 +43,7 @@ blockquote {
       grid-column: quote;
     }
 
-    > p:last-child {
+    > p:last-child:not(:first-child) {
       --newline: 0;
       font-size: var(--small);
     }

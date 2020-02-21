@@ -5,7 +5,6 @@ author: miriam
 image:
   src: blog/susy.jpg
 tags:
-  - _post
   - News
   - Susy
   - Code

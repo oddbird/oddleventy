@@ -2,7 +2,6 @@
 title: jQuery Chicago 2014
 author: jonny
 tags:
-  - _post
   - News
   - JavaScript
   - Conferences

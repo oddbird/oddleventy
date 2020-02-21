@@ -4,7 +4,6 @@ sub: Agile design systems in Vue
 author: miriam
 date: 2018-05-14
 tags:
-  - _post
   - News
   - Vue
   - Conferences

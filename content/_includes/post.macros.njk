@@ -352,7 +352,7 @@ params:
   type,
   collections=none
 ) %}
-  {% set icons = {
+  {%- set icons = {
     'Client Work': 'tools',
     'OddTools': 'tools',
     'Open Source': 'opensource',
@@ -362,13 +362,19 @@ params:
     'Videos': 'video',
     'Links': 'link',
     'News': 'news'
-  } %}
+  } -%}
+  {%- set icon = 'tags' -%}
+  {%- set url = '/tags/' -%}
+  {%- if icons[type] -%}
+    {% set icon = (icons[type] or 'tags') %}
+    {% set url = collections.all | tagLink(type) if collections else none %}
+  {%- endif -%}
   {{ utility.link_if(
     content=embed.svg(
-      path='icons/' + (icons[type] or 'tags'),
+      path='icons/' + icon,
       alt=['see all', type] | join(' ') if type else 'all tags'
     ),
-    url=collections.all | tagLink(type) if collections else none,
+    url=url,
     class='post-type'
   ) }}
 {% endmacro %}

@@ -7,9 +7,6 @@ image:
   src: herman/herman-hero.jpg
 slides: https://talks.oddbird.net/agile-systems/
 tags:
-  - _post
-  - Talks
-  - Training
   - Code
   - Agile
   - Design Systems

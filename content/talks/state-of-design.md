@@ -5,9 +5,6 @@ author: stacy
 date: 2016-12-03
 slides: https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends
 tags:
-  - _post
-  - Talks
-  - Training
   - CSS
   - Grids
 events:

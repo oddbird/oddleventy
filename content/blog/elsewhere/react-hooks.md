@@ -5,7 +5,6 @@ date: 2019-09-11
 canonical: https://blog.bitsrc.io/why-we-switched-to-react-hooks-48798c42c7f
 venue: Bits and Pieces
 tags:
-  - _post
   - Links
   - JS
   - React Hooks
@@ -19,5 +18,3 @@ summary: |
   to clients, and how we've benefited from having simple, consistent
   patterns to manage state and share logic across components.
 ---
-
-

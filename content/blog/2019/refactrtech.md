@@ -4,7 +4,6 @@ sub: Refactr.tech 2019 aims to solve tech's diversity problem
 author: erica
 date: 2019-06-21
 tags:
-  - _post
   - News
   - Conferences
   - JavaScript
