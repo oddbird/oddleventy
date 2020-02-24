@@ -82,6 +82,7 @@ const compileSass = ({ name, sourceMap, postCSS }) => {
   sass.render(
     {
       file: inFile,
+      outputStyle: 'compressed',
       sourceMap: Boolean(sourceMap),
       sourceMapContents: true,
       outFile: outFilename,

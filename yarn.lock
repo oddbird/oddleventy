@@ -64,7 +64,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.8.3":
+"@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.5.5, @babel/code-frame@npm:^7.8.3":
   version: 7.8.3
   resolution: "@babel/code-frame@npm:7.8.3"
   dependencies:
@@ -3040,7 +3040,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^2.19.0, commander@npm:^2.2.0, commander@npm:~2.20.3":
+"commander@npm:^2.19.0, commander@npm:^2.2.0, commander@npm:^2.20.0, commander@npm:~2.20.3":
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
   checksum: 2/b73428e97de7624323f81ba13f8ed9271de487017432d18b4da3f07cfc528ad754bbd199004bd5d14e0ccd67d1fdfe0ec8dbbd4c438b401df3c4cc387bfd1daa
@@ -7079,6 +7079,16 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"jest-worker@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-worker@npm:24.9.0"
+  dependencies:
+    merge-stream: ^2.0.0
+    supports-color: ^6.1.0
+  checksum: 2/9740355081d8f98b15e035405a76a9eafc4ee2b943e00bbc74c34fa632a23e2c2d9d9efb4eb86165435ff76f8bc95dcd74ec63b5acbeb2f0755c83e77d0e71f4
+  languageName: node
+  linkType: hard
+
 "jpegtran-bin@npm:^4.0.0":
   version: 4.0.0
   resolution: "jpegtran-bin@npm:4.0.0"
@@ -9028,6 +9038,7 @@ fsevents@~2.1.2:
     remove-markdown: ^0.3.0
     rollup: ^1.31.1
     rollup-plugin-babel: ^4.3.3
+    rollup-plugin-terser: ^5.2.0
     sass: ^1.25.0
     sassdoc: ^2.7.1
     sassdoc-theme-herman: ^3.0.2
@@ -10932,7 +10943,22 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"rollup-pluginutils@npm:^2.8.1":
+"rollup-plugin-terser@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "rollup-plugin-terser@npm:5.2.0"
+  dependencies:
+    "@babel/code-frame": ^7.5.5
+    jest-worker: ^24.9.0
+    rollup-pluginutils: ^2.8.2
+    serialize-javascript: ^2.1.2
+    terser: ^4.6.2
+  peerDependencies:
+    rollup: ">=0.66.0 <2"
+  checksum: 2/df04de5e149147a70d9e36f39f74ab65ba7cae14e90752a582752acfc77c5c44ec256e3b2c56177b4b775e7b995d16620428daa952681de58daf8b9b36b26343
+  languageName: node
+  linkType: hard
+
+"rollup-pluginutils@npm:^2.8.1, rollup-pluginutils@npm:^2.8.2":
   version: 2.8.2
   resolution: "rollup-pluginutils@npm:2.8.2"
   dependencies:
@@ -11321,6 +11347,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"serialize-javascript@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "serialize-javascript@npm:2.1.2"
+  checksum: 2/9a4d4da6469e327332203438eed9a408e0618519d18aaba3790c88bf87712df4d577423d8fbd7122753800fa12afe19540cba111178ab0cf1f33c2b5771731bf
+  languageName: node
+  linkType: hard
+
 "serve-index@npm:1.9.1":
   version: 1.9.1
   resolution: "serve-index@npm:1.9.1"
@@ -11643,6 +11676,16 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"source-map-support@npm:~0.5.12":
+  version: 0.5.16
+  resolution: "source-map-support@npm:0.5.16"
+  dependencies:
+    buffer-from: ^1.0.0
+    source-map: ^0.6.0
+  checksum: 2/cf44ce8b694a32bc63f686826bc7e254e5025d4c7eeb4f0c76f61c828cd81067f0df88c0414c50db728dc3d207fb032d7c50c3b419286330332ddbdd4d2689d7
+  languageName: node
+  linkType: hard
+
 "source-map-url@npm:^0.4.0":
   version: 0.4.0
   resolution: "source-map-url@npm:0.4.0"
@@ -11666,7 +11709,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"source-map@npm:^0.6.1, source-map@npm:~0.6.0, source-map@npm:~0.6.1":
+"source-map@npm:^0.6.0, source-map@npm:^0.6.1, source-map@npm:~0.6.0, source-map@npm:~0.6.1":
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: 2/8647829a0611724114022be455ca1c8a2c8ae61df81c5b3667d9b398207226a1e21174fb7bbf0b4dbeb27ac358222afb5a14f1c74a62a62b8883b012e5eb1270
@@ -12410,6 +12453,19 @@ fsevents@~2.1.2:
   dependencies:
     execa: ^0.7.0
   checksum: 2/3620b140f84262fefbae5264ee9872cc5e26b05250050d379fb7dd2f123d2b9a49e329c3da4333cd4f9e5855689b10f7d18d0a962f42c4ed6369affb28dcefbb
+  languageName: node
+  linkType: hard
+
+"terser@npm:^4.6.2":
+  version: 4.6.4
+  resolution: "terser@npm:4.6.4"
+  dependencies:
+    commander: ^2.20.0
+    source-map: ~0.6.1
+    source-map-support: ~0.5.12
+  bin:
+    terser: bin/terser
+  checksum: 2/a0f1a53b7c297628c14e998365bcf13711115dd744f90b3f52dafded15469d7c9b1deab24eabdfe2388b028db34ad69e62fb6d351a924d5572001b2935831469
   languageName: node
   linkType: hard
 
