@@ -15,6 +15,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addPlugin(syntaxHighlight);
 
+  eleventyConfig.addWatchTarget('./src/images/');
+  eleventyConfig.addWatchTarget('./src/media/');
+
   // pass-through
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
   eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
