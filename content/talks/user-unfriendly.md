@@ -70,6 +70,7 @@ media:
   - span: full
     <<: *drupal
 ---
+
 {% import "quotes.macros.njk" as quotes %}
 {% import "embed.macros.njk" as embed %}
 
