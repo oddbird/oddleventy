@@ -14,7 +14,7 @@
     {% set sub = renderData.sub or sub %}
     {% set index = renderData.index or index %}
     {% set description = (sub or summary or site.description) | removeMd %}
-    {% set perma = redirect.to if redirect else canonical or (site.url + page.url) %}
+    {% set perma = redirect.to if redirect else canonical or (page.url | absoluteUrl(site.url)) %}
 
     <title>{{ [title, site.title] | join(' | ') }}</title>
     <meta name="description"

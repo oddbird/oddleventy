@@ -63,7 +63,7 @@ contributors, and anyone participating in OddBird spaces or activities.
   health, parenting, relationships, geographic locations, drugs, and
   employment.
 - Deliberate misgendering or use of ‘dead’ or rejected names.
-- Gratuitous or off-topic sexual images or behaviour in spaces where
+- Gratuitous or off-topic sexual images or behavior in spaces where
   they are not appropriate.
 - Physical contact and simulated physical contact (eg, textual
   descriptions like “`*hug*`” or “`*backrub*`”) without consent or

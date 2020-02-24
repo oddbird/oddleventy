@@ -98,24 +98,4 @@ const getDate = (date, format) => {
   return format ? formatDate(date, format) : date;
 };
 
-/* @docs
-label: rssDate
-category: RSS
-note: These are used in generating the site RSS output…
-*/
-const rssDate = (page) => {
-  const date = page.data ? page.data.start || page.date : page.date;
-  return getDate(date, 'rfc');
-};
-
-/* @docs
-label: rssLatest
-category: RSS
-note: These are used in generating the site RSS output…
-*/
-const rssLatest = (collection) => {
-  collection.sort((a, b) => rssDate(a) - rssDate(b));
-  return rssDate(collection[0]);
-};
-
-module.exports = { now, getDate, rssDate, rssLatest };
+module.exports = { now, getDate };

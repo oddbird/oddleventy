@@ -124,7 +124,7 @@ if necessary.
 This book will teach you everything you need to know.
 After going through the book and videos,
 you’ll never have to pore over the documentation
-or spend hours searching through Stackoverflow
+or spend hours searching through Stack Overflow
 to figure out how to make Susy work ever again.
 
 [Get the first seven chapters for free][]!
