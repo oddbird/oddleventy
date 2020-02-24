@@ -3,11 +3,11 @@
 {% set cta = collections.all | findPage('data.cta_slug', cta or 'default') %}
 
 {% if cta %}
-  <section data-layout="cta">
+  <aside data-layout="cta" aria-labelledby="cta-title">
     {{ embed.img(cta.data.image.src, cta.data.image.alt) }}
 
     {% set cta_content %}
-      <h2>{{ cta.data.title | mdInline | safe }}</h2>
+      <h2 id="cta-title">{{ cta.data.title | mdInline | safe }}</h2>
       {{ cta.templateContent | safe }}
     {% endset %}
 
@@ -20,5 +20,5 @@
     {% else %}
       {{ cta_content | safe }}
     {% endif %}
-  </section>
+  </aside>
 {% endif %}

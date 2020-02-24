@@ -3,6 +3,10 @@
 [data-screen] {
   position: relative;
   overflow: hidden;
+
+  &:hover {
+    --img-bright: 1;
+  }
 }
 
 [data-screen='iphone'] {
