@@ -2,15 +2,12 @@
 title: CSS Remedy
 sub: Addressing the technical debt of CSS
 author: miriam
-oss: core
+oss: core team
 logo: remedy
 image:
   svg: logos/remedy
 date: 2019-07-11
-end: ongoing
 tags:
-  - _post
-  - Open Source
   - CSS
   - Mozilla
 index: CSS Remedy

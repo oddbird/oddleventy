@@ -1,0 +1,25 @@
+---
+layout: base
+image:
+  svg: icons/tags
+  type: media
+summary: |
+  For more resources,
+  return to the
+  [full resource list](/blog/)
+  or
+  [browse all tags](/tags/).
+pagination:
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - sample
+permalink: /tags/{{ tag | slug }}/
+renderData:
+  title: 'Tag: {{ tag | displayName }}'
+---
+
+{% import 'post.macros.njk' as post %}
+
+{{ post.by_year(collections[tag], collections) }}

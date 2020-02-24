@@ -43,7 +43,7 @@ a {
   &:focus {
     --underline-color: var(--active);
     --underline-thickness: 0.2em;
-    color: var(--link-focus, var(--action-focus));
+    color: var(--link-focus, var(--active));
   }
 
   // underlines applied to link-text as well as basic link states

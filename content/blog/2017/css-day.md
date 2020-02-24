@@ -3,7 +3,7 @@ title: CSSDay 2016 Recap
 author: stacy
 date: 2017-01-31
 tags:
-  - _post
+  - News
   - CSS
   - Front-end
   - Videos

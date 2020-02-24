@@ -3,10 +3,11 @@ title: CSSConf 2016 Recap
 author: miriam
 date: 2016-09-30
 tags:
-  - _post
+  - News
   - Conferences
   - Front-end
   - CSS
+  - Article
   - Code
 image:
   src: blog/2016/cssconf/ns.jpg

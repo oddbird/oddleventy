@@ -2,7 +2,7 @@
 title: Python for Ada
 author: carl
 tags:
-  - _post
+  - News
   - Python
   - Diversity
   - Community

@@ -2,7 +2,7 @@
 title: Susy
 sub: CSS layout framework
 date: 2009-07-13
-end: ongoing
+feature: large
 logo: susy
 image:
   type: media
@@ -10,10 +10,7 @@ image:
 author:
   - miriam
   - oddbird
-oss: owner
 tags:
-  - _post
-  - Open Source
   - OddTools
   - Sass
   - Layout
@@ -77,12 +74,12 @@ badges:
     url: https://travis-ci.org/oddbird/susy
 summary: |
   **Susy was a responsive layout engine for Sass**,
-  before `flexbox` and CSS `grid` were availabe.
+  before `flexbox` and CSS `grid` were available.
   These days, we recommend letting the browser handle your layouts.
   If you need help moving off Susy,
   or learning the latest in web layout,
-  **we offer [workshops](#@@@)
-  and [consulting](#@@@)
+  **we offer [training](/services/speaking/)
+  and [consulting](/services/development/)
   to help bring you up-to-date**.
 ---
 

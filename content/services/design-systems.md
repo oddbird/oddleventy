@@ -2,8 +2,6 @@
 title: Integrated Design Systems
 sub: Want to reduce technical debt and scale your applications?
 index: Design Systems
-tags:
-  - _services
 image:
   src: /herman/stacy-design-systems-training.jpg
 summary: |

@@ -1,12 +1,11 @@
 ---
 title: Planning Your Web Project
+image:
+  src: pages/design-sketch.jpg
 author: miriam
 date: 2017-12-12
 slides: https://www.oddbooksapp.com/book/web-projects
 tags:
-  - _post
-  - Talks
-  - Training
   - Code
   - Process
 events:

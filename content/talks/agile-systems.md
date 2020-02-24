@@ -3,14 +3,15 @@ title: Agile Design Systems
 sub: with meaningful code and automation
 author: miriam
 date: 2018-03-21
+image:
+  src: herman/herman-hero.jpg
 slides: https://talks.oddbird.net/agile-systems/
 tags:
-  - _post
-  - Talks
-  - Training
   - Code
   - Agile
   - Design Systems
+  - Accoutrement
+  - Herman
 events:
   - venue: Agile Alliance
     url: https://www.agilealliance.org/agile2019/program/
@@ -70,11 +71,7 @@ living design systems in an agile and integrated process?
 - Designing and integrating toolkits that force pattern-making.
 - Examples of what weve done, where weve failed, and where were headed.
 
-------
-
 {{ quotes.grid(press) }}
-
-------
 
 {{ embed.figure(
   data=media,

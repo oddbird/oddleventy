@@ -6,11 +6,10 @@ date: 2016-12-01
 venue: Net Magazine
 url: https://www.creativebloq.com/net-magazine
 tags:
-  - _post
+  - Links
   - User Experience
   - Net Magazine
   - Interview
-  - News
 image:
   src: blog/2016/teacup.jpg
 figure:

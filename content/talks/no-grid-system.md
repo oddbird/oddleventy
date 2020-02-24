@@ -1,15 +1,12 @@
 ---
 title: Don't Use My Grid System
-sub: it's time to move past grid systems like Susy
+sub: It's time to move past grid systems like Susy
 author: miriam
 date: 2017-06-14
 slides: https://talks.oddbird.net/no-grid-system/
 image:
   src: talks/devconf-best.jpg
 tags:
-  - _post
-  - Talks
-  - Training
   - Code
   - Susy
   - Layout

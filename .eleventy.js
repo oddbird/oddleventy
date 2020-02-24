@@ -1,6 +1,7 @@
 'use strict';
 
 const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
+const yaml = require('js-yaml');
 
 const birds = require('#/birds');
 const events = require('#/events');
@@ -41,7 +42,7 @@ module.exports = (eleventyConfig) => {
     collection
       .getAll()
       .filter((item) => item.data.oss)
-      .sort((a, b) => a.data.date - b.data.date),
+      .sort((a, b) => b.date - a.date),
   );
   eleventyConfig.addCollection('sample', (collection) =>
     collection.getAll().filter((item) => item.data.sample),
@@ -69,13 +70,15 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('isCurrent', pages.isCurrent);
   eleventyConfig.addFilter('getPage', pages.getPage);
+  eleventyConfig.addFilter('findPage', pages.findPage);
   eleventyConfig.addFilter('hasData', pages.hasData);
   eleventyConfig.addFilter('getData', pages.getData);
   eleventyConfig.addFilter('findData', pages.findData);
   eleventyConfig.addFilter('withData', pages.withData);
-  eleventyConfig.addFilter('pageContent', pages.pageContent);
   eleventyConfig.addFilter('render', pages.render);
   eleventyConfig.addFilter('pageType', pages.pageType);
+  eleventyConfig.addFilter('pageYears', pages.pageYears);
+  eleventyConfig.addFilter('byYear', pages.byYear);
 
   eleventyConfig.addFilter('buildEvent', events.buildEvent);
   eleventyConfig.addFilter('getEvents', events.getEvents);
@@ -94,16 +97,22 @@ module.exports = (eleventyConfig) => {
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.md);
   eleventyConfig.addPairedShortcode('mdInline', type.mdInline);
+  eleventyConfig.addPairedShortcode('h', type.heading);
   eleventyConfig.addShortcode(
     'getDate',
     (format) => `${time.getDate(time.now, format)}`,
   );
 
-  // markdown
+  // config
   eleventyConfig.setLibrary('md', type.mdown);
+  eleventyConfig.addDataExtension('yaml', yaml.safeLoad);
+  eleventyConfig.setQuietMode(true);
+  eleventyConfig.setDataDeepMerge(true);
 
   // settings
   return {
+    dataTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
     dir: {
       input: 'content',

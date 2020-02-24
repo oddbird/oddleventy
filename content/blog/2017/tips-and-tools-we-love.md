@@ -2,7 +2,7 @@
 title: Tips and Tools We Love
 author: stacy
 tags:
-  - _post
+  - News
   - Tips
   - Workflows
   - Tools

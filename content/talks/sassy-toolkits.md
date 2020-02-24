@@ -5,9 +5,6 @@ author: miriam
 date: 2013-10-12
 slides: https://www.oddbooksapp.com/book/sassy-toolkits
 tags:
-  - _post
-  - Talks
-  - Training
   - Code
 events:
   - venue: Frontend Zurich

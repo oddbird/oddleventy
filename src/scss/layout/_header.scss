@@ -1,7 +1,6 @@
 @use '~accoutrement/sass/tools';
 
 [data-layout='header'] {
-  --newline: var(--shim);
   display: grid;
   grid-area: header;
 }
@@ -20,7 +19,6 @@
     / auto minmax(var(--edge), 1fr);
 
   #title {
-    margin-bottom: 0;
     padding-left: var(--page-margin);
     padding-top: var(--half-shim);
   }
@@ -42,9 +40,4 @@
   @include tools.above(50em) {
     --edge: 25%;
   }
-}
-
-[data-header='media'] {
-  justify-self: center;
-  margin-bottom: var(--spacer);
 }

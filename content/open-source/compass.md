@@ -1,13 +1,11 @@
 ---
 title: Compass
 sub: CSS-authoring framework & Sass library
-oss: core
+oss: core team
 author: miriam
 date: 2010-04-09
 end: 2016-08-04
 tags:
-  - _post
-  - Open Source
   - Sass
 links:
   site: http://compass-style.org

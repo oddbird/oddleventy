@@ -4,17 +4,13 @@ sub: Automated style guides
 logo: herman
 image:
   src: herman/herman-hero.jpg
-author: oddbird
 date: 2015-11-08
-end: ongoing
 index: Herman
-oss: owner
 tags:
-  - _post
-  - Open Source
   - OddTools
   - Sass
   - Design Systems
+  - Accoutrement
   - Documentation
 screenshots:
   - img: herman/screenshots/sq-colors.jpg
@@ -91,6 +87,6 @@ and keep everything in one place.
 ) }}
 
 {{ embed.icon_block(
-  collections._oss | findData('accoutrement_modules'),
-  title='Integrate with [Accoutrement](/accoutrement/) Modules'
+  collections.all | getData('data.accoutrement_modules'),
+  title='Integrate with Accoutrement'
 ) }}

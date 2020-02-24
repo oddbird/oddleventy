@@ -7,9 +7,6 @@ slides: https://talks.oddbird.net/dynamic-css/
 image:
   src: talks/miriam.jpg
 tags:
-  - _post
-  - Talks
-  - Training
   - Code
   - CSS
   - JavaScript
@@ -22,7 +19,7 @@ events:
     date: 2020-08-28
   - venue: CSS Day
     url: https://cssday.nl/2020
-    adr: Amsterdam, Netherlands
+    adr: Amsterdam, NL
     date: 2020-06-12
   - venue: Develop Denver
     url: https://developdenver.org/

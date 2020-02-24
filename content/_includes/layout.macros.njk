@@ -28,6 +28,19 @@ params:
 <h2 data-section-title="{{ align }}">{{ content | mdInline | safe }}</h2>
 {% endmacro %}
 
+{# @docs
+label: grid
+note: Create an auto-fit or auto-fill grid for child elements
+params:
+  name:
+    type: string
+    default: fit
+  content:
+    type: string | none
+    default: none
+    note: Expects `caller()` if no  value is given
+  attrs: object
+#}
 {% macro grid(
   name='fit',
   content=none,
@@ -37,7 +50,6 @@ params:
 {%- set content = content if (content != none) else caller() -%}
 <div data-grid="{{ name }}" {{ utility.show_attrs(attrs) }}>{{ content | safe }}</div>
 {%- endmacro %}
-
 
 {% macro _grid_content(
   data

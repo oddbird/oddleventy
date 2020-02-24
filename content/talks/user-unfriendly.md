@@ -7,9 +7,6 @@ slides: https://www.oddbooksapp.com/book/software-for-humans
 image:
   src: talks/user-unfriendly.png
 tags:
-  - _post
-  - Talks
-  - Training
   - Code
   - Art
   - Design

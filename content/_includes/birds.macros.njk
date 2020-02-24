@@ -30,14 +30,23 @@ params:
 #}
 {% macro authors(
   names,
-  collections=none
+  collections=none,
+  link=true
 ) %}
   {% if names | typeCheck('string') %}
-    {{ author(names, collections) }}
+    {{ author(
+      name=names,
+      collections=collections,
+      link=link
+    ) }}
   {% else %}
     {% for name in names %}
       {% set tween = ' & ' | mdInline if (loop.length == 2) else ',' %}
-      {{ author(name, collections) }}
+      {{ author(
+        name=name,
+        collections=collections,
+        link=link
+      ) }}
       {{- tween | safe if not loop.last }}
     {% endfor %}
   {% endif %}
@@ -75,7 +84,7 @@ params:
     {%- set name = page.data.title if (name != 'oddbird') else 'OddBird' -%}
     {{ utility.link_if(
       content=name | mdInline | safe,
-      url=page.url if link,
+      url=page.url if link else none,
       class='h-card'
     ) }}
   {%- else -%}

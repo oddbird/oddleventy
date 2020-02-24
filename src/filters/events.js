@@ -74,7 +74,7 @@ category: Upcoming
 note: Check that the page/event has a start date in the future (or today)
 params:
   page:
-    type: event-page object
+    type: event object
 */
 const isFuture = (page) =>
   page.event ? getDate(page.event.end) >= now : getDate(page.date) >= now;
@@ -84,15 +84,27 @@ label: getFuture
 category: Upcoming
 note: Return only the pages/events in the future
 params:
+  events:
+    type: array of events
+*/
+const getFuture = (events) => events.filter((event) => isFuture(event));
+
+/* @docs
+label: withFuture
+category: Upcoming
+note: Return only the pages/events in the future
+params:
   collection:
     type: array
     note: containing 11ty page objects
 */
-const getFuture = (collection) => collection.filter((page) => isFuture(page));
+const withFuture = (collection) =>
+  collection.filter((page) => page.data.events && getFuture(page.data.events));
 
 module.exports = {
   buildEvent,
   getEvents,
   isFuture,
   getFuture,
+  withFuture,
 };

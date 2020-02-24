@@ -10268,6 +10268,7 @@ __metadata:
     fs-extra: ^8.1.0
     husky: ^4.2.3
     jest: ^25.1.0
+    js-yaml: ^3.13.1
     lint-staged: ^10.0.7
     lodash: ^4.17.15
     markdown-it: ^10.0.0

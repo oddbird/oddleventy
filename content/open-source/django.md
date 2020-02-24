@@ -1,16 +1,13 @@
 ---
 title: Django
 date: 2010-10-08
-end: ongoing
 sub: Python web framework
 image:
   src: projects/django.jpg
 author: carl
-oss: core
+oss: core team
 logo: django
 tags:
-  - _post
-  - Open Source
   - Python
 links:
   site: https://www.djangoproject.com/

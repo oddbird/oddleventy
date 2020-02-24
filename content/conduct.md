@@ -1,6 +1,5 @@
 ---
 title: Code of Conduct
-layout: base
 summary: |
   As a company, we want to embrace the very differences that have made
   our collaboration successful, and work together to provide the best
