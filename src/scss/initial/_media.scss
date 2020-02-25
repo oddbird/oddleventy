@@ -12,6 +12,14 @@ video {
   margin-bottom: var(--newline);
 }
 
+// Image brightness
+// ----------------
+/// Adjust image brightness depending on mode & contrast
+img {
+  filter: brightness(var(--img-bright, var(--img-bright--default, 1)))
+    contrast(var(--img-contrast, var(--img-contrast--default, 1)));
+}
+
 // Audio
 // -----
 /// Audio is full-width by default.

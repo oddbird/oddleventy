@@ -68,6 +68,8 @@
 
   &:hover,
   &:focus-within {
+    --img-bright: 1;
+    --img-contrast: 1;
     --drop: var(--shim);
     --pop: var(--active);
     transition-delay: 20ms;
