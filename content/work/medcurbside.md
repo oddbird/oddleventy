@@ -3,6 +3,7 @@ title: MedCurbside
 sub: Knowledge-sharing for clinical physicians
 image:
   src: projects/medcurbside.jpg
+  alt: ask or answer medical questions
 client: &client Lab06
 date: 2017-12-15
 links:
@@ -57,5 +58,3 @@ summary: |
   deal with the plethora of information available
   in healthcare today.
 ---
-
-

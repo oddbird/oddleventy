@@ -3,6 +3,7 @@ title: MozTrap
 sub: Distributed quality assurance tools
 image:
   src: projects/moztrap.jpg
+  alt: tabular data showing recent software test results
 logo: mozilla
 client: Mozilla
 date: 2012-03-15
@@ -38,5 +39,3 @@ summary: |
   product managers. MozTrap also includes a RESTful JSON API to allow
   automated tools to run tests and report results.
 ---
-
-

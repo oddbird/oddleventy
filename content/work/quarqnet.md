@@ -6,6 +6,7 @@ url: http://quarqnet.com
 logo: sram
 image:
   src: projects/qasper.jpg
+  alt: worlds greatest athlete, stacy kvernmo's latest bike ride stats and mapped route
 client: SRAM/Quarq
 date: 2016-12-15
 tags:
@@ -118,8 +119,8 @@ Qollector, Quarq's wearable, activity-tracking hardware. The QuarqNet
 brand also matches [Quarq Race Intelligence], another Quarq web
 application OddBird had the privilege to design and develop.
 
-[Quarq]: https://www.quarq.com
-[Quarq Race Intelligence]: https://www.quarqrace.com/
+[quarq]: https://www.quarq.com
+[quarq race intelligence]: https://www.quarqrace.com/
 
 {{ embed.icon_block(planning, 'Planning & Discovery Phase') }}
 
@@ -147,8 +148,8 @@ Maps to establish front-end development patterns as well as an automated
 
 OddBird's user experience design and development process always begins
 with a user story, written from the perspective of a single user. One of
-the very first user stories on the list for QuarqNet was: *As an
-athlete, I can view my activity (map & data).*
+the very first user stories on the list for QuarqNet was: _As an
+athlete, I can view my activity (map & data)._
 
 ### Initial Sketches
 
@@ -175,7 +176,7 @@ present themselves during implementation.
 
 <img src="{{ site.images }}work/quarqnet/mockup1.jpg" class="extend-large extend-large" alt="initial mockups of activity map and data" />
 
-  [Adobe Xd]: http://www.adobe.com/products/experience-design.html
+[adobe xd]: http://www.adobe.com/products/experience-design.html
 
 ### Implementation
 
@@ -207,9 +208,9 @@ complex. The same box displayed activity data, a list of past
 activities, and more. During testing, users were not able to move
 quickly between the pieces of information they needed. Plus, the tab
 navigation we created hid too much of the map on mobile screens, a no-go
-for our active QuarqNet users. A new user story was born: *As an
+for our active QuarqNet users. A new user story was born: _As an
 athlete, I want to move quickly and easily between activity list, data,
-and map.*
+and map._
 
 ### Sketches
 
@@ -229,7 +230,7 @@ the interactive [InVision sketch].
 
 <img src="{{ site.images }}work/quarqnet/interactive.jpg" class="extend-large extend-large" alt="interactive sketch of new, compact navigation" />
 
-[InVision sketch]: https://invis.io/YC8PAW1K3#/191020362_Map_Only
+[invision sketch]: https://invis.io/YC8PAW1K3#/191020362_Map_Only
 
 ### Hi-Fi Mockup
 
@@ -245,4 +246,4 @@ current, live application at [QuarqNet.com].
 
 <img src="{{ site.images }}work/quarqnet/implementation3.jpg" class="extend-large extend-large" alt="current, live application tab navigation" />
 
-[QuarqNet.com]: https://www.quarqnet.com/
+[quarqnet.com]: https://www.quarqnet.com/

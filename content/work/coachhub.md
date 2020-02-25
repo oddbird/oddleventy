@@ -5,6 +5,7 @@ sub: Responsive platform for integrated health coaching
 logo: orcas
 image:
   src: projects/coachhub.jpg
+  alt: coachhub's services and platform demos
   position: top
 client: &client ORCAS
 people:
@@ -146,8 +147,8 @@ easily access one another in dynamic and effective ways.
 
 {{ embed.icon_block(planning, 'Planning & Discovery Phase') }}
 
-[ORCAS]: http://orcasinc.com
-[MoodHacker]: http://www.orcasinc.com/products/moodhacker/
+[orcas]: http://orcasinc.com
+[moodhacker]: http://www.orcasinc.com/products/moodhacker/
 
 ## Design and Development Phase
 
@@ -232,8 +233,8 @@ also used Lea Verou's [Contrast Ratio] tool to select colors for text
 that passed WCAG AA level at all sizes. We also built a WCAG contrast
 test into our [Sass Accoutrement toolkits].
 
-[Contrast Ratio]: http://leaverou.github.io/contrast-ratio/
-[Sass Accoutrement toolkits]: /accoutrement/
+[contrast ratio]: http://leaverou.github.io/contrast-ratio/
+[sass accoutrement toolkits]: /accoutrement/
 
 ### Landing Pages
 

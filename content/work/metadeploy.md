@@ -6,6 +6,7 @@ logo: salesforce
 url: https://install.salesforce.org/
 image:
   src: projects/metadeploy.jpg
+  alt: app ui of product installation flow
 client: &client Salesforce.org
 date: 2019-05-15
 people:
@@ -52,5 +53,3 @@ summary: |
   allowing users to customize their installations, and run preflight
   checks before committing to a full install.
 ---
-
-
