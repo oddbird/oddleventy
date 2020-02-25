@@ -27,8 +27,7 @@
   @include tools.tokens--(config.$background-colors);
   @include tools.tokens--(config.$content-colors);
 
-  --img-bright--base: #{ccs.if-mode($light: 40%, $dark: 30%)};
-  --img-bright--default: calc(
-    var(--img-bright--base) + var(--ccs-l) + var(--ccs-contrast) / 5
-  );
+  --img-bright--base: #{ccs.if-mode($light: 50%, $dark: 40%)};
+  --img-bright--default: calc(var(--img-bright--base) + var(--ccs-l));
+  --img-contrast--default: calc(55% + var(--ccs-contrast));
 }

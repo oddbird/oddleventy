@@ -16,11 +16,13 @@ video {
 // ----------------
 /// Adjust image brightness depending on mode & contrast
 img {
-  filter: brightness(var(--img-bright, var(--img-bright--default, 1)));
+  filter: brightness(var(--img-bright, var(--img-bright--default, 1)))
+    contrast(var(--img-contrast, var(--img-contrast--default, 1)));
 
   &:hover,
   :focus & {
     --img-bright: 1;
+    --img-contrast: 1;
   }
 }
 
