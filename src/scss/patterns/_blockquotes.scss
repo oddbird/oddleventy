@@ -8,7 +8,7 @@ blockquote {
   background-color: var(--callout-fade);
   display: grid;
   margin: var(--newline) 0;
-  padding: var(--spacer) var(--gutter);
+  padding: var(--spacer) 0;
 
   &:nth-of-type(odd) {
     clip-path: polygon(0 0, 100% 0, calc(100% - var(--angle)) 100%, 0 100%);
@@ -56,11 +56,13 @@ blockquote {
 [data-quote='solo'],
 blockquote:not([data-quote]) {
   &:nth-of-type(odd) {
+    --column: full / wide;
     margin-left: 0;
     padding-left: var(--page-margin);
   }
 
   &:nth-of-type(even) {
+    --column: wide / full;
     margin-right: 0;
     padding-right: var(--page-margin);
   }

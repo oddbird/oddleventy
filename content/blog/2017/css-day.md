@@ -41,7 +41,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Color Theory for people who code SVG and CSS by [Natalya Shelburne]
 
-{{ embed.video_figure('https://www.youtube.com/embed/aq3u001QMcM') }}
+{{ embed.video('https://www.youtube.com/embed/aq3u001QMcM') }}
 
 - [Slides](https://docs.google.com/presentation/d/1ytSMRNpNrD9CWms351X4xelQuJT24tIqKnIzSbe2OQ0/edit?usp=sharing)
 
@@ -49,7 +49,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Applying the principles of functional programming to CSS by [Ben Adam]
 
-{{ embed.video_figure('https://www.youtube.com/embed/7g0BHu0kWXo') }}
+{{ embed.video('https://www.youtube.com/embed/7g0BHu0kWXo') }}
 
 - [Slides](http://css-day.surge.sh/#/?_k=xpchzn)
 
@@ -57,7 +57,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Code Patterns for Pattern Making by [Miriam Suzanne]
 
-{{ embed.video_figure('https://www.youtube.com/embed/lK_akjzOUY0') }}
+{{ embed.video('https://www.youtube.com/embed/lK_akjzOUY0') }}
 
 - [Slides](https://oddbooksapp.com/book/pattern-making)
 
@@ -65,7 +65,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## The In-Betweeners of Responsive Web Design by [Pralie Dutzel]
 
-{{ embed.video_figure('https://www.youtube.com/embed/WLAVc18Ugoc') }}
+{{ embed.video('https://www.youtube.com/embed/WLAVc18Ugoc') }}
 
 - [Slides](http://praliedutzel.com/talks/betweeners-responsive-web-design/)
 
@@ -73,13 +73,13 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Style Guide-Driven Development: Documentation that Does Work by [Jan Jorgensen]
 
-{{ embed.video_figure('https://www.youtube.com/embed/9Fknadsepd4') }}
+{{ embed.video('https://www.youtube.com/embed/9Fknadsepd4') }}
 
 [Jan Jorgensen]: https://twitter.com/ramblinjan
 
 ## The Great State of Design by [Stacy Kvernmo]
 
-{{ embed.video_figure('https://www.youtube.com/embed/pnbT4HdcSwM') }}
+{{ embed.video('https://www.youtube.com/embed/pnbT4HdcSwM') }}
 
 - [Slides](http://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends)
 
@@ -98,7 +98,7 @@ jQuery to CSS for web and mobile applications.
 
 ## Solving CSS at scale with your own UI framework by [CJ Cenizal]
 
-{{ embed.video_figure('https://www.youtube.com/embed/CbPYf9FslXw') }}
+{{ embed.video('https://www.youtube.com/embed/CbPYf9FslXw') }}
 
 - [Slides](http://cenizal.com/projects/solving_css_at_scale/)
 

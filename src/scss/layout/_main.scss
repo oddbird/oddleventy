@@ -1,18 +1,9 @@
 @use '~accoutrement/sass/tools';
 
-$wide: (tools.size('wide-page') - tools.size('page')) / 2;
-
 [data-layout='main'] {
   display: grid;
   grid-area: main;
-  grid-template-columns:
-    [full-start] var(--page-margin)
-    [content-start] minmax(0, 1fr)
-    [wide-start] minmax(0, $wide)
-    [page-start] minmax(min-content, var(--page)) [page-end]
-    minmax(0, $wide) [wide-end]
-    minmax(0, 1fr) [content-end]
-    var(--page-margin) [full-end];
+  grid-template-columns: var(--typeset);
 
   > * {
     grid-column: var(--column, page);

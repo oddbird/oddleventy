@@ -92,7 +92,7 @@ params:
 
 
 {# @docs
-label: video_figure
+label: video
 category: Patterns
 note: |
   Generate a figure for a one-off video
@@ -108,7 +108,8 @@ params:
   caption:
     type: string
     default: none
-#}{% macro video_figure(
+#}
+{% macro video(
   src,
   height=none,
   width=none,
