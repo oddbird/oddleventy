@@ -73,11 +73,12 @@ params:
 #}
 {% macro figure(
   data=none,
-  caption=none
+  caption=none,
+  class=''
 ) -%}
 {%- set content = _fig_content(data) if (data != none) else caller() -%}
 {% if content %}
-<figure class="embed">
+<figure class="embed{{ ' ' + class if class else '' }}">
 <div class="gallery">
 {{- content | safe -}}
 </div>
@@ -137,6 +138,8 @@ params:
       '--span': item.span
     } | styles -%}
     {{- img(item.img, item.alt, {'style': style}) | safe -}}
+  {%- elif item.svg -%}
+    {{- svg(item.svg, item.alt) | safe -}}
   {%- elif item.iframe -%}
     {{- iframe(item.iframe, item.width, item.height, item.span) -}}
   {%- elif item.audio -%}

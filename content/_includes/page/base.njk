@@ -4,11 +4,8 @@
 <main data-layout="main" aria-labelledby="title">
   {% include "page/header.njk" %}
 
-  {% if content %}
-    <div data-main data-typeset>
-      {{ content | typogr | safe }}
-    </div>
-  {% endif %}
-
-  {% include "page/list.njk" %}
+  <div data-main data-typeset>
+    {{ content | typogr | safe }}
+    {% include "page/list.njk" %}
+  </div>
 </main>

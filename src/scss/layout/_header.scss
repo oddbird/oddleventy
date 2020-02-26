@@ -38,3 +38,14 @@
     --edge: 25%;
   }
 }
+
+[data-header='angle'] {
+  display: grid;
+  grid-template-columns: var(--typeset);
+  margin: var(--spacer) var(--page-margin);
+  place-items: center;
+
+  > * {
+    grid-column: var(--column, page);
+  }
+}

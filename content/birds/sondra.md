@@ -4,7 +4,7 @@ sub: brand & user experience designer
 bird: sondra
 date: 2014-08-01
 image:
-  type: media
+  type: angle
   svg: faces/sondra
 social:
   twitter: sondraeby

@@ -11,6 +11,10 @@
     object-position: var(--hero-position, center);
     width: 100%;
   }
+
+  svg {
+    object-fit: contain;
+  }
 }
 
 [data-hero='large'] {
@@ -25,10 +29,9 @@
 }
 
 [data-media='hero'] {
+  --column: wide;
   --media-content: var(--page);
   --media-min: 8em;
-  justify-content: center;
-  margin: var(--spacer);
 }
 
 // Card Grid
