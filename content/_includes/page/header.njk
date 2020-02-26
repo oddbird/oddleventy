@@ -3,6 +3,7 @@
 {% set device = (image and image.device) %}
 {% set hero = image.src or image.svg %}
 {% set media = device or (image.type == 'angle' and hero) %}
+{% set hero_type = 'hero' if hero and not device else 'angle' %}
 {% set details %}
   {% include 'page/title.njk' %}
   {% include 'page/meta.njk' %}
@@ -12,7 +13,7 @@
 <header
   data-layout="header"
   class="post-header"
-  data-header="{{ image.type or ('hero' if hero else 'angle') }}"
+  data-header="{{ image.type or hero_type }}"
   aria-label="page">
   {% if device %}
     {% set hero = embed.screen(

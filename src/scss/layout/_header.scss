@@ -42,7 +42,7 @@
 [data-header='angle'] {
   display: grid;
   grid-template-columns: var(--typeset);
-  margin: var(--spacer) var(--page-margin);
+  margin: var(--spacer) 0;
   place-items: center;
 
   > * {

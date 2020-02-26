@@ -16,6 +16,7 @@
 [data-grid] {
   --fit--default: minmax(var(--fit-min, var(--grid-item)), var(--fit-max, 1fr));
   --column: content;
+  align-items: var(--align, start);
   display: grid;
   font-size: var(--small);
   grid:
@@ -25,4 +26,8 @@
     var(--col-gap, var(--gap, var(--double-gutter)));
   justify-content: var(--justify, center);
   justify-items: var(--justify, center);
+
+  > * {
+    max-width: calc(100vw - var(--page-margin));
+  }
 }
