@@ -2,6 +2,7 @@
 
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
+const _ = require('lodash');
 
 const birds = require('./src/filters/birds');
 const events = require('./src/filters/events');
@@ -52,9 +53,9 @@ module.exports = (eleventyConfig) => {
   );
 
   // filters
-  eleventyConfig.addFilter('merge', (...args) =>
-    [...args].reduce((all, current) => ({ ...all, ...current }), {}),
-  );
+  eleventyConfig.addFilter('concat', _.concat);
+  eleventyConfig.addFilter('merge', _.merge);
+
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('styles', utils.styles);
 

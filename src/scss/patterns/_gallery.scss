@@ -1,5 +1,10 @@
 @use '~accoutrement/sass/tools';
 
+figure {
+  --column: wide;
+  margin: var(--newline) 0;
+}
+
 .ratio {
   position: relative;
 
@@ -15,10 +20,6 @@
     @include tools.position(0 0 0 0);
     @include tools.square(100%);
   }
-}
-
-.embed {
-  margin: var(--newline) 0;
 }
 
 .gallery {
@@ -39,6 +40,11 @@
 }
 
 .caption {
-  font-size: var(--font-small);
+  font-size: var(--small);
   margin-top: var(--shim);
+}
+
+// codepen embeds
+.cp_embed_wrapper {
+  --column: wide;
 }

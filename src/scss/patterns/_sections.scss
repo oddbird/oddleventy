@@ -19,11 +19,11 @@
 
 [data-section-title] {
   --indent: var(--gutter-plus);
+  --column: full;
   background: var(--feature);
   color: var(--bg);
   padding: var(--quarter-shim) var(--spacer) var(--half-shim);
   margin: var(--double-gutter) auto;
-  width: max-content;
 }
 
 [data-section-title='left'] {
@@ -34,13 +34,13 @@
     100% 100%,
     0 100%
   );
-  margin-left: calc(var(--page-margin) * -1);
+  margin-left: 0;
   padding-left: var(--page-margin);
 }
 
 [data-section-title='right'] {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, var(--indent) 50%);
-  margin-right: calc(var(--page-margin) * -1);
+  margin-right: 0;
   padding-right: var(--page-margin);
 }
 
@@ -49,6 +49,7 @@
 
 [data-block] {
   margin-block: var(--double-gutter);
+  max-width: var(--block-max);
 }
 
 [data-block~='center'] {
@@ -58,13 +59,13 @@
 [data-block~='rotate'] {
   transform: rotate(var(--rotate));
 
-  @include tools.above('page') {
+  @include tools.above('wide-page') {
     --rotate: -6deg;
   }
 }
 
 @each $name in map.keys(scale.$page-sizes) {
   [data-block~='#{$name}'] {
-    max-width: var(--#{unquote($name)});
+    --block-max: var(--#{unquote($name)});
   }
 }

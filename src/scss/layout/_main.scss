@@ -1,11 +1,21 @@
 @use '~accoutrement/sass/tools';
 
-[data-layout='main'] {
+[data-main] {
   grid-area: main;
+}
+
+[data-typeset] {
+  display: grid;
+  grid-template-columns: var(--typeset);
+
+  > * {
+    grid-column: var(--column, page);
+  }
 }
 
 [data-grid] {
   --fit--default: minmax(var(--fit-min, var(--grid-item)), var(--fit-max, 1fr));
+  --column: content;
   display: grid;
   font-size: var(--small);
   grid:

@@ -23,6 +23,8 @@ summary: |
   across different media queries.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 ## CSS Variables & Media Queries
 
 The ideal combination of media queries and grid-changes would
@@ -45,10 +47,11 @@ the effects of a variable-change propagate out to each grid element.
 Here's a more complete example of CSS-Variable grids and breakpoints in
 action:
 
-<figure class="extend-small">
-  <p data-height="400" data-theme-id="0" data-slug-hash="NadbNR" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="CSS Variable Breakpoints" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/NadbNR/">CSS Variable Breakpoints</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='NadbNR',
+  title='CSS Variable Breakpoints',
+  user='mirisuzanne'
+) }}
 
 ## Sass Limitations
 

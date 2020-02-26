@@ -1,4 +1,9 @@
 .icon-blocks {
-  --media-size: var(--spacer);
+  --media-size: calc(var(--extra) - var(--gutter));
   --fill: var(--icons);
+  --column: full;
+}
+
+.icon-block {
+  --column: wide / page;
 }

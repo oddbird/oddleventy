@@ -153,7 +153,15 @@ easily access one another in dynamic and effective ways.
 
 ### Site Architecture & Information Design
 
-<img src="{{ site.images }}work/coachhub/browse-coach-sitemap.jpg" class="extend-left img-shadow" alt="site map for browsing coaches" />
+<div class="contain">
+
+{{ embed.img(
+  src='work/coachhub/browse-coach-sitemap.jpg',
+  alt='site map for browsing coaches',
+  attrs={
+    'class': 'align-left'
+  }
+) }}
 
 We created an interactive web of static-HTML content templates – a
 living draft of the site architecture, with samples of real content. For
@@ -172,6 +180,8 @@ interactive, and testable prototype of the information architecture and
 user-experience flows. Building features would be a matter of replacing
 static content with live data.
 
+</div>
+
 ### Brand Identity
 
 We worked with ORCAS to pinpoint the attitude and associations they
@@ -179,19 +189,31 @@ wanted the CoachHub brand to evoke, and created a friendly, distinct
 brand identity. Like their existing apps – MoodHacker and BlipHub – the
 CoachHub logo and overall brand are bright, cheerful, and hopeful.
 
-<figure>
-<img src="{{ site.images }}work/coachhub/color-palette.jpg" class="extend-small" alt="" /><figcaption>Full color palette derived from three basic brand colors.</figcaption>
-</figure>
+{{ embed.figure(
+  data=[{'img': 'work/coachhub/color-palette.jpg'}],
+  caption='Full color palette derived from three basic brand colors.'
+) }}
 
-<figure>
-<img src="{{ site.images }}work/coachhub/logo.jpg" class="align-center" alt="" /><figcaption>Rounded edges and a playful curl evoke feelings of friendliness and movement. New life, change, and hope: turning over a new leaf.</figcaption>
-</figure>
+{{ embed.figure(
+  data=[{'img': 'work/coachhub/logo.jpg'}],
+  caption='Rounded edges and a playful curl evoke feelings of friendliness and movement. New life, change, and hope: turning over a new leaf.'
+) }}
 
-<img src="{{ site.images }}work/coachhub/avatars-small.jpg" class="extend-left" alt="leaf avatar collage" />
+<div class="contain">
+
+{{ embed.img(
+  src='work/coachhub/avatars-small.jpg',
+  alt='leaf avatar collage',
+  attrs={
+    'class': 'align-left'
+  }
+) }}
 
 We then created hundreds of unique avatar designs from just a few unique
 leaf graphics dynamically rendered using light and dark contrasts of our
 colors and rotation of the leaves.
+
+</div>
 
 ### Responsive & Interactive UX Design
 

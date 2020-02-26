@@ -5,9 +5,7 @@
   {% include "page/header.njk" %}
 
   {% if content %}
-    <div
-      data-main
-      data-typeset>
+    <div data-main data-typeset>
       {{ content | typogr | safe }}
     </div>
   {% endif %}

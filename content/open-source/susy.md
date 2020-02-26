@@ -115,7 +115,7 @@ if necessary.
     src='susy/book-cover.png',
     alt='Learning Susy, by Zell Liew'
   ),
-  attrs={'data-block': 'center media-page rotate'}
+  attrs={'data-block': 'rotate'}
 ) %}
 
 ## Learning Susy (v2)

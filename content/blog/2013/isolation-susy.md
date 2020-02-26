@@ -21,6 +21,8 @@ summary: |
 date: 2013-03-20
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 A few new features have landed in Susy 1.0.7, even as we work on more
 integrated syntaxes for 2.0.
 
@@ -45,18 +47,22 @@ should never trust them as a pixel-exact guide._)
 Using John's method, you can now [isolate any grid element in susy],
 with the simple `isolate()` mixin:
 
-<figure class="extend-small">
-  <p data-height="265" data-theme-id="0" data-slug-hash="ad41121d402b5faccd1dbee4e88e35d1" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy Isolation Demo: Syntax" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/ad41121d402b5faccd1dbee4e88e35d1/">Susy Isolation Demo: Syntax</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='ad41121d402b5faccd1dbee4e88e35d1',
+  title='Susy Isolation Demo: Syntax',
+  user='mirisuzanne',
+  height=300
+) }}
 
 When you put several of those together, you can see how they have been
 removed from the flow:
 
-<figure class="extend-small">
-  <p data-height="265" data-theme-id="0" data-slug-hash="93faa807c78fb4e9b1e15af2727d22d1" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy Isolation Demo: Multiple" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/93faa807c78fb4e9b1e15af2727d22d1/">Susy Isolation Demo: Multiple</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='93faa807c78fb4e9b1e15af2727d22d1',
+  title='Susy Isolation Demo: Multiple',
+  user='mirisuzanne',
+  height=300
+) }}
 
 The items can overlap, and stack in any order – almost as though they
 are positioned absolutely.
@@ -76,10 +82,11 @@ nth-child selectors.
 
 Change the span-width, and we'll update everything for you:
 
-<figure class="extend-small">
-  <p data-height="400" data-theme-id="0" data-slug-hash="c891305b8d32d1306fc305846cfd926f" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy Isolation Demo: Gallery" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/c891305b8d32d1306fc305846cfd926f/">Susy Isolation Demo: Gallery</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='c891305b8d32d1306fc305846cfd926f',
+  title='Susy Isolation Demo: Gallery',
+  user='mirisuzanne'
+) }}
 
 ## Bleed
 
@@ -90,10 +97,12 @@ normally occupy.
 
 Here's an element bleeding 1-column outside our 6-column page layout:
 
-<figure class="extend-small">
-  <p data-height="265" data-theme-id="0" data-slug-hash="351a144615300d48574188af838764ea" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy1 Bleed Demo: Syntax" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/351a144615300d48574188af838764ea/">Susy1 Bleed Demo: Syntax</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='351a144615300d48574188af838764ea',
+  title='Susy1 Bleed Demo: Syntax',
+  user='mirisuzanne',
+  height=300
+) }}
 
 You'll notice that the context syntax is a bit different here:
 `(1 of 9)` instead of `(1,9)`. That's the direction we're heading with
@@ -102,10 +111,12 @@ argument we want to access easily. Use the second argument to list which
 sides should do the bleeding (defaults to "left right"). You can also
 pass arbitrary widths in the first argument:
 
-<figure class="extend-small">
-  <p data-height="265" data-theme-id="0" data-slug-hash="c8eb354821f8441e8c4b28864f92a8dd" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy1 Bleed Demo: Sides" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/c8eb354821f8441e8c4b28864f92a8dd/">Susy1 Bleed Demo: Sides</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='c8eb354821f8441e8c4b28864f92a8dd',
+  title='Susy1 Bleed Demo: Sides',
+  user='mirisuzanne',
+  height=300
+) }}
 
 This can be especially useful to bleed across `$grid-padding`. Simply
 `bleed($grid-padding)` and you're there.

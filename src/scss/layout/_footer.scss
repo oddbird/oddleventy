@@ -8,12 +8,12 @@ $two-column: 45em;
   font-size: var(--small);
   grid-area: footer;
   grid-gap: var(--gutter);
-  padding: var(--gutter) 0 var(--spacer);
+  padding: var(--gutter) var(--page-margin) var(--spacer);
 
   @include tools.above($two-column) {
-    grid-template-columns: minmax(10em, var(--page)) minmax(
+    grid-template-columns: minmax(10em, var(--wide-page)) minmax(
         10em,
-        var(--small-page)
+        var(--page)
       );
     justify-content: space-between;
   }
