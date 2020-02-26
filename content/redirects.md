@@ -35,5 +35,5 @@ permalink: /{{ redirect.from }}
 {% set to = collections.all | getPage(redirect.to) %}
 {% set name = to | render('banner') or to | render('title') %}
 
-Redirecting you to [{{ name | mdInline }}]({{ to.url | url }}).
+Redirecting you to [{{ name | mdInline }}]({{ to.url }}).
 If you are not redirected shortly, please click the link.

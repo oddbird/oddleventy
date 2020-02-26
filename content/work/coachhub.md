@@ -189,13 +189,15 @@ wanted the CoachHub brand to evoke, and created a friendly, distinct
 brand identity. Like their existing apps – MoodHacker and BlipHub – the
 CoachHub logo and overall brand are bright, cheerful, and hopeful.
 
-<figure>
-<img src="{{ site.images }}" class="extend-small" alt="" /><figcaption>Full color palette derived from three basic brand colors.</figcaption>
-</figure>
+{{ embed.figure(
+  data=[{'img': 'work/coachhub/color-palette.jpg'}],
+  caption='Full color palette derived from three basic brand colors.'
+) }}
 
-<figure>
-<img src="{{ site.images }}work/coachhub/logo.jpg" class="align-center" alt="" /><figcaption>Rounded edges and a playful curl evoke feelings of friendliness and movement. New life, change, and hope: turning over a new leaf.</figcaption>
-</figure>
+{{ embed.figure(
+  data=[{'img': 'work/coachhub/logo.jpg'}],
+  caption='Rounded edges and a playful curl evoke feelings of friendliness and movement. New life, change, and hope: turning over a new leaf.'
+) }}
 
 <div class="contain">
 

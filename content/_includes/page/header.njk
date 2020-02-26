@@ -11,7 +11,8 @@
 <header
   data-layout="header"
   class="post-header"
-  data-header="{{ 'media' if media else 'hero' }}">
+  data-header="{{ 'media' if media else 'hero' }}"
+  aria-label="page">
   {% if device %}
     {% set hero = embed.screen(
       fill=image.fill,

@@ -70,6 +70,8 @@
 
   &:hover,
   &:focus-within {
+    --img-bright: 1;
+    --img-contrast: 1;
     --drop: var(--shim);
     --pop: var(--active);
     transition-delay: 20ms;
@@ -105,10 +107,9 @@
 // Features
 [data-card='hero'] {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) [main-start] minmax(
-      min-content,
-      var(--page)
-    ) [main-end] minmax(0, 1fr);
+  grid-template-columns:
+    minmax(0, 1fr) [main-start] minmax(min-content, var(--page))
+    [main-end] minmax(0, 1fr);
 
   > * {
     grid-column: var(--area, main);

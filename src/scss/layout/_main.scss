@@ -1,8 +1,11 @@
 @use '~accoutrement/sass/tools';
 
-[data-layout='main'] {
-  display: grid;
+[data-main] {
   grid-area: main;
+}
+
+[data-typeset] {
+  display: grid;
   grid-template-columns: var(--typeset);
 
   > * {

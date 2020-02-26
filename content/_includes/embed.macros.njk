@@ -278,7 +278,7 @@ params:
   title=none
 ) -%}
 {%- if data -%}
-<section class="icon-blocks">
+<section class="icon-blocks" data-typeset>
 {%- if title %}{{ layout.title(title) }}{% endif -%}
 {%- for item in data -%}
 {%- call media_block(

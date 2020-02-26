@@ -2,12 +2,6 @@
   --media-size: calc(var(--extra) - var(--gutter));
   --fill: var(--icons);
   --column: full;
-  display: grid;
-  grid-template-columns: var(--typeset);
-
-  > * {
-    grid-column: var(--column, page);
-  }
 }
 
 .icon-block {

@@ -22,7 +22,7 @@
 
     {% if perma %}
       <link rel="canonical"
-        href="{{ perma | url }}">
+        href="{{ perma }}">
     {% endif %}
 
     {% if redirect %}
@@ -64,6 +64,6 @@
 
     <script type="text/javascript" src="/assets/js/scripts.js"></script>
 
-    <!-- Current page: {{ page.url | url }} -->
+    <!-- Current page: {{ page.url }} -->
   </body>
 </html>
