@@ -6,7 +6,7 @@
 
 [data-typeset] {
   display: grid;
-  grid-template-columns: var(--typeset);
+  grid-template-columns: var(--page-columns);
 
   > * {
     grid-column: var(--column, page);
