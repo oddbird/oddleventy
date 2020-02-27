@@ -28,8 +28,7 @@ params:
   tags:
     type: array
 */
-const publicTags = (tags) =>
-  tags ? tags.filter((tag) => isPublic(tag)) : tags;
+const publicTags = (tags) => tags && tags.filter((tag) => isPublic(tag));
 
 /* @docs
 label: displayName
@@ -43,9 +42,9 @@ params:
 */
 const displayName = (tag) => {
   const capitalize = ([first, ...rest]) =>
-    first ? first.toUpperCase() + rest.join('') : '';
+    first && first.toUpperCase() + rest.join('');
 
-  return tag.startsWith('_') ? capitalize(tag.slice(1)) : tag;
+  return tag.startsWith('_') ? capitalize(tag.slice(1)) : capitalize(tag);
 };
 
 /* @docs
