@@ -26,7 +26,7 @@ html {
     page-start] minmax(var(--main-min), var(--page)) [page-end wide-end
     content-end] var(--page-margin) [full-end];
 
-  @include tools.above('page') {
+  @include tools.above('wide-page') {
     --main-min: var(--min-page);
     --page-columns: [full-start] var(--page-margin) [content-start]
       minmax(0, 1fr) [wide-start] minmax(0, var(--extra)) [page-start]

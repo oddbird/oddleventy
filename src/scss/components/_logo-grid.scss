@@ -1,3 +1,5 @@
+@use '~accoutrement/sass/tools';
+
 .logo-grid {
   --column: content;
   --fill: var(--feature);
@@ -8,8 +10,9 @@
   margin: var(--spacer) 0;
 
   > * {
-    flex: 0 1 10em;
+    flex: var(--logo-flex, 1 1 40%);
     margin: var(--gutter);
+    max-width: 10em;
   }
 
   > a {
