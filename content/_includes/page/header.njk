@@ -1,7 +1,9 @@
 {% import 'embed.macros.njk' as embed %}
 
 {% set device = (image and image.device) %}
-{% set media = device or (image.type == 'media') %}
+{% set hero = image.src or image.svg %}
+{% set media = device or (image.type == 'angle' and hero) %}
+{% set hero_type = 'hero' if hero and not device else 'angle' %}
 {% set details %}
   {% include 'page/title.njk' %}
   {% include 'page/meta.njk' %}
@@ -11,7 +13,7 @@
 <header
   data-layout="header"
   class="post-header"
-  data-header="{{ 'media' if media else 'hero' }}"
+  data-header="{{ image.type or hero_type }}"
   aria-label="page">
   {% if device %}
     {% set hero = embed.screen(
@@ -35,8 +37,12 @@
     ) }}
   {% else %}
     {% if image %}
-    {% include 'page/hero.njk' %}
+      {% include 'page/hero.njk' %}
+      {{ details | safe }}
+    {% else %}
+      <div data-block="rotate">
+        {{ details | safe }}
+      </div>
     {% endif %}
-    {{ details | safe }}
   {% endif %}
 </header>

@@ -5,7 +5,7 @@ date: 2009-07-13
 feature: large
 logo: susy
 image:
-  type: media
+  type: angle
   svg: logos/susy-mark
 author:
   - miriam
