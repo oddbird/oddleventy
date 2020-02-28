@@ -1,6 +1,6 @@
 {% import 'utility.macros.njk' as utility %}
 
-<nav data-layout="nav" aria-label="primary navigation">
+<nav data-layout="nav" aria-label="primary">
   <ul data-navlist="main">
     {% for item in site.nav %}
       {% set target = collections.all | getPage(item.url, 'data') %}

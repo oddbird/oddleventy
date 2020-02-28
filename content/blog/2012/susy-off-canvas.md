@@ -19,6 +19,8 @@ summary: |
 date: 2012-11-27
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 **UPDATE**: _I fixed a bug with show-left failing on small screens. The
 main area was dropping below the left sidebar, as floats sometimes do.
 The fix is actually simpler than the original code: just set and leave a
@@ -230,10 +232,11 @@ ourselves back to a normal layout. No more off-canvas malarkey here.
 Hide the other toggle-link, make sure everything stays put even if we
 have leftover classes, and you're done.
 
-<figure class="extend-small">
-  <p data-height="500" data-theme-id="0" data-slug-hash="c84837d2f8c478b6a3accca409c790eb" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy1 Off-Canvas Demo" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/c84837d2f8c478b6a3accca409c790eb/">Susy1 Off-Canvas Demo</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</figure>
+{{ embed.codepen(
+  id='c84837d2f8c478b6a3accca409c790eb',
+  title='Susy1 Off-Canvas Demo',
+  user='mirisuzanne'
+) }}
 
 ## Final Tweaks
 

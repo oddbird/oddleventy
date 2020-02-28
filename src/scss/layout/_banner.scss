@@ -6,16 +6,15 @@
   display: grid;
   grid-area: banner;
   grid-template:
-    'logo menu' minmax(var(--double-gutter), auto)
-    'logo nav' minmax(var(--double-gutter), auto)
-    / minmax(5em, 7em) 1fr;
+    '. logo menu .' minmax(var(--double-gutter), auto)
+    '. logo nav .' minmax(var(--double-gutter), auto)
+    / var(--page-margin) minmax(5em, 7em) 1fr var(--page-margin);
 
   &::before {
     background-color: var(--overlay-banner);
     content: '';
     grid-column: 1 / -1;
     grid-row: menu;
-    margin: 0 calc(var(--page-margin) * -1);
   }
 }
 

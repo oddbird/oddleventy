@@ -17,11 +17,13 @@ date: 2014-09-23
 
 {% import 'embed.macros.njk' as embed %}
 
+<div class="contain">
+
 {{ embed.img(
   src='blog/2014/Ada-Initiative-color-sticker-208x300.png',
   alt='The Ada Initiative',
   attrs={
-    'style': 'float: right;',
+    'class': 'align-right',
     'width': '208',
     'height': '300'
   }
@@ -34,6 +36,8 @@ round **\$20k**. Life is short, go donate now!
 
 (**Update**: Shortly after we announced this drive, [Jim Meyer][]
 [pitched in] to raise the match amount from $7500 to $10,000! Awesome!)
+
+</div>
 
 I've spent most of my working life with Python and open technology.
 Python and open source have been good to me. They've helped me [start a
@@ -51,6 +55,8 @@ McKellar, the amazing [PyLadies], the Ada Initiative, and many others,
 women gave a **full third** of the talks at PyCon 2014.
 
 ------
+
+<div class="contain">
 
 {{ embed.img(
   src='blog/2014/miko.jpg',
@@ -71,6 +77,8 @@ I am ashamed to admit to being part of this industry when I see Kathy
 Sierra or Adria Richards or Anita Sarkeesian or [Zoe Quinn] or [any
 number of other women] systematically harassed, threatened, and attacked
 by gangs of abusive men for the crime of speaking their minds as women.
+
+</div>
 
 I am ashamed to be part of this industry because of [pervasive sexual
 harassment] and sexism at tech conferences, in the workplace, and at

@@ -8,8 +8,6 @@ social:
   twitter: oddbird
   github: oddbird
   email: birds
-image:
-  svg: faces/oddbird
 summary: |
   **As a client, you'll get to know our tight-knit team**
   on a first-name basis,
@@ -26,13 +24,20 @@ summary: |
 {% import 'contact.macros.njk' as contact %}
 {% import 'birds.macros.njk' as birds %}
 
+{{ embed.figure(
+  data=[{
+    svg: 'faces/oddbird',
+    alt: 'Drawings of all the birds'
+  }],
+  class='extend-large'
+) }}
+
 {{ layout.title('Meet the birds') }}
 
 {% call layout.grid(
   attrs={
     'style': {
-      '--fit-min': 'var(--min-page)',
-      '--media-content': 'var(--small-page)'
+      '--media-content': 'var(--min-page)'
     } | styles
   }
 ) %}
@@ -53,9 +58,14 @@ summary: |
   {% endfor %}
 {% endcall %}
 
-<hr>
+{{ layout.title('Birds emeritus') }}
 
-<h2>Birds Emeritus</h2>
+{% md %}
+Over time,
+some OddBirds move on to other work.
+We're grateful for the time they spent with us,
+and proud of the careers they've built since.
+{% endmd %}
 
 <ul>
 {% for bird in collections.birds | active(false) %}

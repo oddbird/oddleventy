@@ -4,7 +4,7 @@ sub: CSS with superpowers
 author: miriam
 oss: core team
 image:
-  type: media
+  type: angle
   svg: logos/sass
 date: 2016-05-20
 index: Sass

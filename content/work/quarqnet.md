@@ -139,7 +139,13 @@ These colors were communicated via Pivotal Tracker and coded as Sass
 Maps to establish front-end development patterns as well as an automated
 "living" [style guide].
 
-<img src="{{ site.images }}work/quarqnet/communication.jpg" class="extend-large extend-large" alt="user story in Pivotal Tracker and Sass color maps" />
+{{ embed.img(
+  src='work/quarqnet/communication.jpg',
+  alt='user story in Pivotal Tracker and Sass color maps',
+  attrs={
+    'class': 'extend-large'
+  }
+) }}
 
 [style guide]: http://quarqnet.com/styleguide/config-colors.html
 
@@ -152,7 +158,15 @@ athlete, I can view my activity (map & data).*
 
 ### Initial Sketches
 
-<img src="{{ site.images }}work/quarqnet/activity.jpg" class="extend-left img-shadow extend-left img-shadow" alt="initial sketch of activity map and data" />
+<div class="contain">
+
+{{ embed.img(
+  src='work/quarqnet/activity.jpg',
+  alt='initial sketch of activity map and data',
+  attrs={
+    'class': 'align-left'
+  }
+) }}
 
 Because of our focus on users, OddBird's development process for each
 user story begins with rough sketches showing the flow of a specific
@@ -161,6 +175,8 @@ to the map of their route as well as the activity data. This initial
 sketch displays the map and activity details together in a single view.
 No clicking necessary to access the most useful information on both
 mobile and larger screens.
+
+</div>
 
 ### Hi-Fi Mockups
 
@@ -173,9 +189,15 @@ scannable layout for the activity data. We don't linger too long on this
 step or attempt pixel perfection, as new UX problems nearly always
 present themselves during implementation.
 
-<img src="{{ site.images }}work/quarqnet/mockup1.jpg" class="extend-large extend-large" alt="initial mockups of activity map and data" />
+{{ embed.img(
+  src='work/quarqnet/mockup1.jpg',
+  alt='initial mockups of activity map and data',
+  attrs={
+    'class': 'extend-large'
+  }
+) }}
 
-  [Adobe Xd]: http://www.adobe.com/products/experience-design.html
+[Adobe Xd]: http://www.adobe.com/products/experience-design.html
 
 ### Implementation
 
@@ -188,7 +210,13 @@ calls to demo, discuss, pair, and re-design features. For this user
 story we improved the dotted line, font size, and spacing of the
 activity data within the browser.
 
-<img src="{{ site.images }}work/quarqnet/implementation.jpg" class="extend-large extend-large" alt="initial implementation of activity map and data" />
+{{ embed.img(
+  src='work/quarqnet/implementation.jpg',
+  alt='initial implementation of activity map and data',
+  attrs={
+    'class': 'extend-large'
+  }
+) }}
 
 ## Iteration Process
 
@@ -217,7 +245,13 @@ Back to the sketch pad. The new proposal? Clarify wording, add a
 collapsed view, make the tabs more compact, and move navigation to the
 bottom of the activity box.
 
-<img src="{{ site.images }}work/quarqnet/compact.jpg" class="extend-full extend-full" alt="sketch of new, compact navigation" />
+{{ embed.img(
+  src='work/quarqnet/compact.jpg',
+  alt='sketch of new, compact navigation',
+  attrs={
+    'class': 'extend-full'
+  }
+) }}
 
 ### Interactive Sketch
 
@@ -227,7 +261,13 @@ mockup. The blue boxes below represent click targets and demonstrate the
 user flow between activity list, data, and collapsed views. Play with
 the interactive [InVision sketch].
 
-<img src="{{ site.images }}work/quarqnet/interactive.jpg" class="extend-large extend-large" alt="interactive sketch of new, compact navigation" />
+{{ embed.img(
+  src='work/quarqnet/interactive.jpg',
+  alt='interactive sketch of new, compact navigation',
+  attrs={
+    'class': 'extend-large'
+  }
+) }}
 
 [InVision sketch]: https://invis.io/YC8PAW1K3#/191020362_Map_Only
 
@@ -236,13 +276,25 @@ the interactive [InVision sketch].
 A hi-fi mockup added further detail, defining colors, shadows, icons,
 and other visual clues to improve user comprehension of the new flow.
 
-<img src="{{ site.images }}work/quarqnet/mockup3.jpg" class="extend-large img-shadow extend-large img-shadow" alt="mockup of new, compact navigation" />
+{{ embed.img(
+  src='work/quarqnet/mockup3.jpg',
+  alt='mockup of new, compact navigation',
+  attrs={
+    'class': 'extend-large'
+  }
+) }}
 
 ### Implementation
 
 After minor design tweaks in the browser, we had our solution! View the
 current, live application at [QuarqNet.com].
 
-<img src="{{ site.images }}work/quarqnet/implementation3.jpg" class="extend-large extend-large" alt="current, live application tab navigation" />
+{{ embed.img(
+  src='work/quarqnet/implementation3.jpg',
+  alt='current, live application tab navigation',
+  attrs={
+    'class': 'extend-large'
+  }
+) }}
 
 [QuarqNet.com]: https://www.quarqnet.com/

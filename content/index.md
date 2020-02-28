@@ -60,8 +60,7 @@ tools:
   media=embed.img(
     src='writing/jssass.png',
     alt='Jump Start Sass, by Miriam Suzanne and Hugo Giraudel'
-  ),
-  attrs={'data-block': 'center media-page'}
+  )
 ) %}
 
 **As core contributors to Sass & Django**,
@@ -90,7 +89,7 @@ Our specialties include:
 
 {% call embed.media_block(
   media=embed.svg('faces/miriam'),
-  attrs={'data-block': 'center media-page rotate'}
+  attrs={'data-block': 'rotate'}
 ) %}
 
 ## Hi, I'm Miriam

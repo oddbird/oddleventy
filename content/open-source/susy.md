@@ -5,7 +5,7 @@ date: 2009-07-13
 feature: large
 logo: susy
 image:
-  type: media
+  type: angle
   svg: logos/susy-mark
 author:
   - miriam
@@ -115,7 +115,7 @@ if necessary.
     src='susy/book-cover.png',
     alt='Learning Susy, by Zell Liew'
   ),
-  attrs={'data-block': 'center media-page rotate'}
+  attrs={'data-block': 'rotate'}
 ) %}
 
 ## Learning Susy (v2)

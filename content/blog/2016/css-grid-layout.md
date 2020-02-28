@@ -229,7 +229,7 @@ demonstrating the *how*, *why* and *what* is possible when it comes to
 CSS Grid Layout. If you have any resources to share with us, we'd love
 to hear from you, too!
 
-{{ embed.video_figure(
+{{ embed.video(
   src='https://player.vimeo.com/video/160593669',
   height=360,
   width=640,

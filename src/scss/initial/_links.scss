@@ -41,6 +41,8 @@ a {
 
   &:hover,
   &:focus {
+    --img-bright: 1;
+    --img-contrast: 1;
     --underline-color: var(--active);
     --underline-thickness: 0.2em;
     color: var(--link-focus, var(--active));
