@@ -16,16 +16,6 @@
 @forward 'code';
 @forward 'gallery';
 @forward 'pills';
-
-// @import 'alignment';
-// @import 'gallery';
-// @import 'sizes';
-// @import 'states';
-// @import 'code';
-
-// Less used CSS load later
-// ------------------------
-
-// @forward 'image-blocks';
+@forward 'alignment';
+@forward 'sizes';
 @forward 'icon-blocks';
-// @forward 'text-blocks';

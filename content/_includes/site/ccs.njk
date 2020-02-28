@@ -1,6 +1,11 @@
+{% import 'embed.macros.njk' as embed %}
+
 <details data-ccs="menu" class="has-dropdown" hidden>
-  <summary class="menu-item">colors</summary>
-  <div data-dropdown="pad rtl">
+  <summary class="menu-item">
+    {{ embed.svg('icons/palette') }}
+    colors
+  </summary>
+  <form data-dropdown="pad rtl">
     <div data-ccs="buttons">
       <button
         data-ccs-input="mode"
@@ -77,5 +82,5 @@
         value="{{ ccs.contrast }}"
         data-ccs-input="contrast">
     </label>
-  </div>
+  </form>
 </details>

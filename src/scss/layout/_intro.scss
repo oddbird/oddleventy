@@ -3,6 +3,14 @@
 
   [data-header='hero'] & {
     font-size: var(--medium);
-    margin-top: var(--gutter);
+    justify-self: center;
+    max-width: var(--wide-page);
+    margin: var(--spacer) var(--page-margin);
+  }
+}
+
+.summary {
+  > :last-child {
+    --newline: 0;
   }
 }

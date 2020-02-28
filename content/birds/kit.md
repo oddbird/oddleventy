@@ -4,7 +4,7 @@ sub: Back-end developer
 bird: kit
 date: 2016-04-18
 image:
-  type: media
+  type: angle
   svg: faces/kit
 social:
   twitter: wlonk

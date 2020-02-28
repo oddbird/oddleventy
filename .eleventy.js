@@ -1,7 +1,8 @@
 'use strict';
 
-const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
+const _ = require('lodash');
 
 const birds = require('#/birds');
 const events = require('#/events');
@@ -13,7 +14,10 @@ const utils = require('#/utils');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
-  eleventyConfig.addPlugin(hljs);
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.addWatchTarget('./src/images/');
+  eleventyConfig.addWatchTarget('./src/media/');
 
   // pass-through
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
@@ -49,9 +53,9 @@ module.exports = (eleventyConfig) => {
   );
 
   // filters
-  eleventyConfig.addFilter('merge', (...args) =>
-    [...args].reduce((all, current) => ({ ...all, ...current }), {}),
-  );
+  eleventyConfig.addFilter('concat', _.concat);
+  eleventyConfig.addFilter('merge', _.merge);
+
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('styles', utils.styles);
 

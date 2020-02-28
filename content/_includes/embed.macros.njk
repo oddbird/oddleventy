@@ -70,14 +70,18 @@ params:
   caption:
     type: string
     default: none
+  class:
+    type: string
+    default: ''
 #}
 {% macro figure(
   data=none,
-  caption=none
+  caption=none,
+  class=''
 ) -%}
 {%- set content = _fig_content(data) if (data != none) else caller() -%}
 {% if content %}
-<figure class="embed">
+<figure class="embed{{ ' ' + class if class else '' }}">
 <div class="gallery">
 {{- content | safe -}}
 </div>
@@ -92,7 +96,7 @@ params:
 
 
 {# @docs
-label: video_figure
+label: video
 category: Patterns
 note: |
   Generate a figure for a one-off video
@@ -108,7 +112,8 @@ params:
   caption:
     type: string
     default: none
-#}{% macro video_figure(
+#}
+{% macro video(
   src,
   height=none,
   width=none,
@@ -136,6 +141,8 @@ params:
       '--span': item.span
     } | styles -%}
     {{- img(item.img, item.alt, {'style': style}) | safe -}}
+  {%- elif item.svg -%}
+    {{- svg(item.svg, item.alt) | safe -}}
   {%- elif item.iframe -%}
     {{- iframe(item.iframe, item.width, item.height, item.span) -}}
   {%- elif item.audio -%}
@@ -277,7 +284,7 @@ params:
   title=none
 ) -%}
 {%- if data -%}
-<section class="icon-blocks">
+<section class="icon-blocks" data-typeset>
 {%- if title %}{{ layout.title(title) }}{% endif -%}
 {%- for item in data -%}
 {%- call media_block(
@@ -365,10 +372,12 @@ params:
   height=none,
   span=none
 ) %}
+  {%- set width = width or 560 -%}
+  {%- set height = height or 315 -%}
   {%- set attrs = {
     'src': src,
-    'width': width or '560',
-    'height': height or '315',
+    'width': width,
+    'height': height,
     'frameborder': '0',
     'webkitallowfullscreen': true,
     'mozallowfullscreen': true,
@@ -487,6 +496,7 @@ params:
   attrs={}
 ) %}
 <p {{ utility.show_attrs({
+  'class': 'codepen',
   'data-height': height,
   'data-theme-id': theme,
   'data-slug-hash': id,
@@ -494,7 +504,7 @@ params:
   'data-user': user,
   'data-embed-version': "2",
   "data-preview": preview
-}) }} {{ utility.show_attrs(attrs) }}>See the Pen {{ utility.link_if(
+} | merge(attrs)) }}>See the Pen {{ utility.link_if(
   content=title,
   url=('http://codepen.io/' + user + '/pen/' + id)
 ) }} by {{ utility.link_if(

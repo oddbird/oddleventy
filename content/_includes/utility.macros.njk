@@ -141,7 +141,7 @@ params:
 ) -%}
   {%- set content = content if (content != none) else caller() -%}
   {%- if url -%}
-  <a href="{{ url | url }}" {{ attr_if('class', class) }} {{ show_attrs(attrs) }}>{{
+  <a href="{{ url }}" {{ attr_if('class', class) }} {{ show_attrs(attrs) }}>{{
     content | safe
   }}</a>
   {%- else -%}
@@ -230,7 +230,7 @@ params:
       {% set same = 'same-m' if same and (start_m == end_m) else same %}
 
       {{ start | getDate(ranges[same].start or 'range') }}
-      {{- '---' | typogr | safe -}}
+      {{- '--' | typogr | safe -}}
       {{ end | getDate(ranges[same].end or 'range') }}
 
     {% else %}
