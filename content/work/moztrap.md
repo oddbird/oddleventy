@@ -9,7 +9,6 @@ date: 2012-03-15
 links:
   source: https://github.com/mozilla/moztrap
 tags:
-  - _post
   - Client Work
   - Research & Concepting
   - Branding
@@ -38,5 +37,3 @@ summary: |
   product managers. MozTrap also includes a RESTful JSON API to allow
   automated tools to run tests and report results.
 ---
-
-

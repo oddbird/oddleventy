@@ -7,7 +7,6 @@ date: 2020-01-13
 image:
   src: projects/aunalytics/workflow-mockup.png
 tags:
-  - _post
   - Client Work
   - Research & Concepting
   - Development

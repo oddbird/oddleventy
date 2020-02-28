@@ -10,7 +10,6 @@ image:
 links:
   site: https://phamaly.org
 tags:
-  - _post
   - Client Work
   - Research & Concepting
   - WordPress

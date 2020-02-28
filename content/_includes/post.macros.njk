@@ -22,6 +22,9 @@ params:
   collections:
     type: 11ty collections object
     default: none
+  title:
+    type: string
+    default: 'Resources'
   above:
     type: number
     default: 6
@@ -29,6 +32,7 @@ params:
 {% macro by_year(
   posts,
   collections=none,
+  title='Resources',
   above=6
 ) %}
   {%- if posts -%}
@@ -38,7 +42,7 @@ params:
         {{ list(group.posts, collections) }}
       {%- endfor -%}
     {%- else -%}
-      {{ layout.title('Resources') }}
+      {{ layout.title(title) }}
       {{ list(posts, collections) }}
     {%- endif -%}
   {%- endif -%}

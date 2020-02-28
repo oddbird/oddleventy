@@ -7,7 +7,6 @@ date: 2019-05-14
 image:
   svg: logos/aunalytics
 tags:
-  - _post
   - Client Work
   - Research & Concepting
   - Design

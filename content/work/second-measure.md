@@ -8,7 +8,6 @@ image:
 client: &client Second Measure
 date: 2019-03-29
 tags:
-  - _post
   - Client Work
   - Design System
   - Component Library

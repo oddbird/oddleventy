@@ -14,7 +14,6 @@ people:
     title: Founder
     venue: *client
 tags:
-  - _post
   - Client Work
   - Research & Concepting
   - Design
