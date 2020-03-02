@@ -98,6 +98,7 @@ params:
     type: array
     note: containing 11ty page objects
 */
+/* istanbul ignore next */
 const withFuture = (collection) =>
   collection.filter((page) => page.data.events && getFuture(page.data.events));
 

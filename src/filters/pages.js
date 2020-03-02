@@ -18,8 +18,8 @@ params:
     type: 11ty page object
 */
 const isPublic = (page) => {
-  const live = page.data.draft !== true;
-  const title = page.data && page.data.title;
+  const live = !page.data.draft;
+  const title = Boolean(page.data.title);
   return live && title;
 };
 
@@ -193,13 +193,13 @@ params:
     type: string
 */
 const render = (page, key) => {
+  /* will pages ever not have data attributes? */
+  /* instanbul ignore next */
   if (!page.data) {
     return undefined;
   }
 
-  return page.data.renderData
-    ? page.data.renderData[key] || page.data[key]
-    : page.data[key];
+  return page.data.renderData ? page.data.renderData[key] : page.data[key];
 };
 
 /* @docs
@@ -259,7 +259,6 @@ const byYear = (collection, events = true) => {
   }
 
   const groups = _.groupBy(pageYears(collection, events), 'year');
-
   return Object.keys(groups)
     .reverse()
     .map((year) => ({
