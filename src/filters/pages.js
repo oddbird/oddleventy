@@ -256,7 +256,6 @@ params:
     note: optionally include events in sort/year dates
 */
 const byYear = (collection, events = true) => {
-  /* istanbul ignore else */
   if (!collection || collection.length === 0) {
     return [];
   }
