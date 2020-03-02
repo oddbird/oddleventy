@@ -6,8 +6,6 @@ const {
   getTags,
 } = require('#/tags');
 
-jest.mock('slugify');
-
 const collection = [
   {
     inputPath: './test1.md',
@@ -29,6 +27,7 @@ const collection = [
 
 describe('tag filters', () => {
   const tags = ['workshops', '_foo bar', 'talks'];
+
   test('isPublic', () => {
     expect(isPublic(tags[0])).toEqual(true);
     expect(isPublic(tags[1])).toBe(false);
@@ -46,8 +45,17 @@ describe('tag filters', () => {
   });
 
   test('tagData', () => {
-    // @todo needs a fix...
-    tagData(collection, tags, 'pageCount');
+    const collections = {
+      all: collection,
+      workshops: [],
+      talks: collection,
+    };
+    const expected = [
+      { tag: 'talks', url: '/tags/talks/', pageCount: 1 },
+      { tag: 'workshops', url: '/tags/workshops/', pageCount: 0 },
+    ];
+
+    expect(tagData(collections, tags)).toEqual(expected);
   });
 
   test('getTags', () => {

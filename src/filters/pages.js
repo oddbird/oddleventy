@@ -291,7 +291,7 @@ const pageType = (tags) => {
     'Links',
     'News',
   ];
-  return tags.filter((tag) => types.includes(tag));
+  return tags ? tags.find((tag) => types.includes(tag)) : false;
 };
 
 module.exports = {

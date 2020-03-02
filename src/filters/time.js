@@ -94,8 +94,8 @@ params:
     note: See js file for a list of available date formats
 */
 const getDate = (date, format) => {
-  date = typeof date === 'string' ? new Date(date) : date || now;
-  return format ? formatDate(date, format) : date;
+  const dateObj = typeof date === 'string' ? new Date(date) : date || now;
+  return format ? formatDate(dateObj, format) : dateObj;
 };
 
 /* @docs

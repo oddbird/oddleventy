@@ -13,8 +13,6 @@ const {
   pageType,
 } = require('#/pages');
 
-jest.mock('lodash');
-
 const collection = [
   {
     inputPath: './test1.md',
@@ -138,11 +136,9 @@ describe('page filters', () => {
 
   test('pageYears', () => {
     const testPage = pageYears(collection)[0];
-    const pageKeys = Object.keys(testPage);
 
-    expect(pageKeys).toHaveProperty('sort');
-    // This is somehow failing but its in keys when printed //
-    expect(pageKeys).toHaveProperty('year');
+    expect(testPage).toHaveProperty('sort');
+    expect(testPage).toHaveProperty('year');
   });
 
   describe('byYear', () => {
@@ -159,7 +155,7 @@ describe('page filters', () => {
   describe('pageType', () => {
     test('Return one of several resource "types" from page tags', () => {
       const tags = ['Workshops', 'Podcasts', 'foo', 'bar'];
-      expect(pageType(tags)).toEqual(['Workshops', 'Podcasts']);
+      expect(pageType(tags)).toEqual('Workshops');
     });
   });
 });
