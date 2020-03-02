@@ -97,12 +97,12 @@ params:
     default: 'pageCount'
 */
 const tagData = (collections, tags, sort = 'pageCount') => {
-  const taglist = tags === 'all' ? getTags(collections.all) : tags;
-  return uniq(publicTags(taglist))
+  const tagList = tags === 'all' ? getTags(collections.all) : tags;
+  return uniq(publicTags(tagList))
     .map((tag) => ({
       tag,
       url: tagLink(collections.all, tag),
-      pageCount: collections[tag].length,
+      pageCount: collections[tag] ? collections[tag].length : 0,
     }))
     .sort((a, b) => b[sort] - a[sort]);
 };

@@ -4,6 +4,7 @@ const {
   publicTags,
   tagData,
   getTags,
+  tagLink,
 } = require('#/tags');
 
 const collection = [
@@ -50,17 +51,27 @@ describe('tag filters', () => {
       workshops: [],
       talks: collection,
     };
-    const expected = [
+    const expected1 = [
       { tag: 'talks', url: '/tags/talks/', pageCount: 1 },
       { tag: 'workshops', url: '/tags/workshops/', pageCount: 0 },
     ];
+    const expected2 = [
+      { tag: 'tag 1', url: '/tags/tag-1/', pageCount: 0 },
+      { tag: 'tag 2', url: '/tags/tag-2/', pageCount: 0 },
+    ];
 
-    expect(tagData(collections, tags)).toEqual(expected);
+    expect(tagData(collections, tags)).toEqual(expected1);
+    expect(tagData(collections, 'all')).toEqual(expected2);
   });
 
   test('getTags', () => {
     const expected = ['tag 1', 'tag 2'];
 
     expect(getTags(collection)).toEqual(expected);
+  });
+
+  test('tagLink', () => {
+    const expected = '/test1/';
+    expect(tagLink(collection, 'foo')).toEqual(expected);
   });
 });

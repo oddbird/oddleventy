@@ -76,8 +76,8 @@ params:
   page:
     type: event object
 */
-const isFuture = (page) =>
-  page.event ? getDate(page.event.end) >= now : getDate(page.date) >= now;
+const isFuture = (event) =>
+  event.end ? getDate(event.end) >= now : getDate(event.date) >= now;
 
 /* @docs
 label: getFuture

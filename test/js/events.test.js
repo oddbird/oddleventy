@@ -119,14 +119,22 @@ describe('event filters', () => {
     });
   });
 
-  describe('isFuture', () => {
-    test('returns false for event dates not in the future', () => {
-      expect(isFuture(collection[2])).toBeFalsy();
-    });
+  test('isFuture', () => {
+    const events = [
+      {
+        foo: 'bar',
+        date: '2020-01-09T04:10:17.000Z',
+        end: '2020-01-10T04:10:17.000Z',
+      },
+      {
+        bar: 'baz',
+        date: '2018-04-09T04:10:17.000Z',
+        end: '2020-04-10T04:10:17.000Z',
+      },
+    ];
 
-    test('returns true for events dates in the future', () => {
-      expect(isFuture(collection[3])).toBeTruthy();
-    });
+    expect(isFuture(events[0])).toBeFalsy();
+    expect(isFuture(events[1])).toBeTruthy();
   });
 
   test('getFuture', () => {

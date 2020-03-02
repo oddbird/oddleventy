@@ -199,7 +199,9 @@ const render = (page, key) => {
     return undefined;
   }
 
-  return page.data.renderData ? page.data.renderData[key] : page.data[key];
+  return page.data.renderData
+    ? page.data.renderData[key] || page.data[key]
+    : page.data[key];
 };
 
 /* @docs
