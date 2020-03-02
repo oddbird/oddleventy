@@ -8,7 +8,6 @@ date: 2017-01-15
 links:
   site: http://tropmag.com/
 tags:
-  - _post
   - Client Work
   - WordPress
 quotes:

@@ -15,7 +15,7 @@ tasks:
 summary: |
   We worked with Junyo to develop
   an early version of their Streams Resource Library --
-  a community-currated directory of teaching materials.
+  a community-curated directory of teaching materials.
   Teachers can collect and access all of their open and licensed
   digital resources in one library.
   Search by curriculum, student need, use case,

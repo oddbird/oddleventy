@@ -443,7 +443,7 @@ params:
     '--ratio': (width / height),
     '--span': span
   } -%}
-<div class="ratio" {{ utility.style_if(style) }}\>{{ content | safe }}</div>
+<div class="ratio" {{ utility.style_if(style) }}>{{ content | safe }}</div>
   {%- else -%}
     {{- content | safe -}}
   {%- endif -%}

@@ -10,6 +10,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "editor.formatOnSave": true,
   "eslint.validate": [
     "javascript"
   ],
@@ -25,5 +26,6 @@
   },
   "[markdown]": {
     "files.trimTrailingWhitespace": false,
+    "editor.formatOnSave": false
   }
 }

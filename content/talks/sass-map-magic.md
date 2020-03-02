@@ -37,6 +37,7 @@ media:
   - span: full
     <<: *cssconf
 ---
+
 {% import "embed.macros.njk" as embed %}
 
 We'll find ways to integrate maps into any project

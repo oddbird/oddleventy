@@ -1,7 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 title: The Carrot Project
-sub: A community tool for social responsability
+sub: A community tool for social responsibility
 image:
   src: projects/carrot.jpg
 client: &client The Carrot Project
@@ -20,5 +20,3 @@ summary: |
   Join in and discuss with experts, become an expert yourself,
   or just browse for personal edification. No one likes soggy carrots.
 ---
-
-

@@ -1,5 +1,5 @@
 ---
-title: Smashing CSS Follow-Up Q&nbsp;&&nbsp;A
+title: Smashing CSS Follow-Up Q&A
 sub: Questions about Dynamic CSS
 author: miriam
 tags:

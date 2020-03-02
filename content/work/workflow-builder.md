@@ -7,7 +7,6 @@ date: 2020-01-13
 image:
   src: projects/aunalytics/workflow-mockup.png
 tags:
-  - _post
   - Client Work
   - Research & Concepting
   - Development
@@ -43,7 +42,7 @@ press:
     slug: configurations
 summary: |
   Aunalytics provides a full suite of data-analytics and management tools.
-  The "workflow builder" is an embeded Vue application
+  The "workflow builder" is an embedded Vue application
   allowing data scientists to visually create and navigate
   through data flows of various kinds.
   The interface is an integration between standard HTML

@@ -65,6 +65,7 @@ media:
   - <<: *cascadia
   - <<: *clarity
 ---
+
 {% import "embed.macros.njk" as embed %}
 
 Behind the scenes those patterns have to live in our code,

@@ -14,7 +14,6 @@ people:
     title: Founder
     venue: *client
 tags:
-  - _post
   - Client Work
   - Research & Concepting
   - Design
@@ -36,7 +35,7 @@ press:
     <<: *furman
     slug: iterate
   - text: |
-      Oddbird was the wise investment.
+      OddBird was the wise investment.
       We could have selected a cheaper avenue for this work --
       **we would have paid for it manifold in the long run**.
     <<: *furman
