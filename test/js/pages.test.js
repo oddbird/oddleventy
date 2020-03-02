@@ -6,8 +6,11 @@ const {
   getData,
   getPage,
   findPage,
+  findData,
   render,
   pageYears,
+  byYear,
+  pageType,
 } = require('#/pages');
 
 jest.mock('lodash');
@@ -115,7 +118,7 @@ describe('page filters', () => {
 
   test('findData', () => {
     // this keeps returning undefined...
-    // findData(collection, 'author', 'erica');
+    findData(collection, 'author', 'erica');
   });
 
   test('getPage', () => {
@@ -139,10 +142,24 @@ describe('page filters', () => {
 
     expect(pageKeys).toHaveProperty('sort');
     // This is somehow failing but its in keys when printed //
-    // expect(pageKeys).toHaveProperty('year');
+    expect(pageKeys).toHaveProperty('year');
   });
 
-  // test('byYear', () => {
-  //   console.log(byYear(collection));
-  // });
+  describe('byYear', () => {
+    test('returns empty if no collection', () => {
+      const expected = [];
+
+      expect(byYear([])).toEqual(expected);
+    });
+    test('returns pages grouped by year', () => {
+      byYear(collection);
+    });
+  });
+
+  describe('pageType', () => {
+    test('Return one of several resource "types" from page tags', () => {
+      const tags = ['Workshops', 'Podcasts', 'foo', 'bar'];
+      expect(pageType(tags)).toEqual(['Workshops', 'Podcasts']);
+    });
+  });
 });

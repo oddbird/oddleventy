@@ -194,7 +194,7 @@ params:
 */
 const render = (page, key) => {
   /* will pages ever not have data attributes? */
-  /* instanbul ignore next */
+  /* istanbul ignore if */
   if (!page.data) {
     return undefined;
   }
@@ -254,6 +254,7 @@ params:
     note: optionally include events in sort/year dates
 */
 const byYear = (collection, events = true) => {
+  /* istanbul ignore else */
   if (!collection || collection.length === 0) {
     return [];
   }
@@ -290,8 +291,7 @@ const pageType = (tags) => {
     'Links',
     'News',
   ];
-
-  return tags ? tags.find((tag) => types.includes(tag)) : false;
+  return tags.filter((tag) => types.includes(tag));
 };
 
 module.exports = {
