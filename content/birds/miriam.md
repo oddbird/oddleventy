@@ -13,8 +13,8 @@ social:
   stackoverflow: 1930386
 summary: |
   Miriam is a co-founder,
-  and product manager,
-  and user-experience designer.
+  product manager,
+  and user-experience developer.
   She's a core contributor to the
   [Sass](https://sass-lang.com) language.
 ---

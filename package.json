@@ -9,7 +9,7 @@
   },
   "private": true,
   "engines": {
-    "node": "12.16.0",
+    "node": "12.16.1 ",
     "yarn": "^2.0.0-rc.29"
   },
   "scripts": {
@@ -80,6 +80,7 @@
     "remove-markdown": "^0.3.0",
     "rollup": "^1.31.1",
     "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-terser": "^5.2.0",
     "sass": "^1.25.0",
     "sassdoc": "^2.7.1",
     "sassdoc-theme-herman": "^3.0.2",

@@ -10,6 +10,7 @@
 /// using html attributes and CSS variables.
 /// @group media
 [data-media] {
+  --column: wide;
   align-items: var(--align, start);
   display: grid;
   grid-gap: var(--gutter);
@@ -20,7 +21,7 @@
     --reverse-y: 'content' 'image';
   }
 
-  @include tools.above(40em) {
+  @include tools.above('wide-page') {
     grid-template-areas: var(--reverse-x, 'image content');
     grid-template-columns: fit-content(25%) minmax(
         min-content,

@@ -1,7 +1,3 @@
-// Size Patterns
-// =============
-// Works well with images in blog posts
-
 .size-full {
   width: 100%;
 }
@@ -16,22 +12,22 @@
 
 // Extend thing outside its container on one side only
 .extend-left {
-  @include extend-side('left');
+  --column: wide / page;
 }
 
 .extend-right {
-  @include extend-side('right');
+  --column: page / wide;
 }
 
 // Extend thing past the width of its container on both sides
 .extend-small {
-  @include extend('extend-small');
+  --column: wide;
 }
 
 .extend-large {
-  @include extend('extend-large');
+  --column: content;
 }
 
 .extend-full {
-  @include extend('extend-full');
+  --column: full;
 }

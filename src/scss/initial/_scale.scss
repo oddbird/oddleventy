@@ -20,4 +20,17 @@ html {
   @include tools.tokens--(scale.$spacing-sizes);
   @include tools.tokens--(scale.$theme-sizes);
   @include tools.tokens--(scale.$page-sizes);
+  --extra: #{(tools.size('wide-page') - tools.size('page')) / 2};
+  --main-min: calc(100vw - var(--page-margin) * 2);
+  --page-columns: [full-start] var(--page-margin) [content-start wide-start
+    page-start] minmax(var(--main-min), var(--page)) [page-end wide-end
+    content-end] var(--page-margin) [full-end];
+
+  @include tools.above('wide-page') {
+    --main-min: var(--min-page);
+    --page-columns: [full-start] var(--page-margin) [content-start]
+      minmax(0, 1fr) [wide-start] minmax(0, var(--extra)) [page-start]
+      minmax(var(--main-min), var(--page)) [page-end] minmax(0, var(--extra))
+      [wide-end] minmax(0, 1fr) [content-end] var(--page-margin) [full-end];
+  }
 }

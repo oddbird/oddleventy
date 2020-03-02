@@ -25,7 +25,7 @@
   box-shadow: 0 0 var(--quarter-shim) var(--shadow);
   max-width: 14em;
   position: absolute;
-  width: calc(100vw - var(--page-margin));
+  width: calc(100vw - var(--page-margin) * 2);
 
   &[aria-expanded='false'] {
     display: none;

@@ -66,6 +66,20 @@ ol {
   margin-top: 0;
 }
 
+ul,
+ol {
+  --list-padding--default: 1em;
+  padding-left: var(--list-padding, 0);
+
+  & & {
+    --list-padding: var(--list-padding--default);
+  }
+
+  @include tools.below('page') {
+    --list-padding: var(--list-padding--default);
+  }
+}
+
 // List Markers
 // ------------
 /// Lighter markers and smaller bullet points…
@@ -88,7 +102,8 @@ summary {
 
   &:hover,
   &:focus,
-  &:active {
+  &:active,
+  [open] > & {
     color: var(--active);
   }
 }

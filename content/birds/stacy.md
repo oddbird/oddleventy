@@ -4,7 +4,7 @@ sub: User experience designer & developer
 bird: stacy
 date: 2016-04-18
 image:
-  type: media
+  type: angle
   svg: faces/stacy
 social:
   twitter: stacykvernmo

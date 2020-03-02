@@ -1,5 +1,6 @@
 ---
-title: What does do in CSS?
+title: Why revert in CSS?
+banner: What does `revert` do in CSS?
 sub: And how is it different from `unset` or `initial`?
 author: miriam
 date: 2019-10-09

@@ -11,6 +11,10 @@
     object-position: var(--hero-position, center);
     width: 100%;
   }
+
+  svg {
+    object-fit: contain;
+  }
 }
 
 [data-hero='large'] {
@@ -25,10 +29,9 @@
 }
 
 [data-media='hero'] {
-  --media-content: var(--small-page);
+  --column: wide;
+  --media-content: var(--page);
   --media-min: 8em;
-  justify-content: center;
-  margin: var(--spacer);
 }
 
 // Card Grid
@@ -36,6 +39,8 @@
   --justify: stretch;
   list-style: none;
   grid-auto-flow: dense;
+  margin: 0;
+  padding: 0;
 }
 
 [data-post] {
@@ -68,6 +73,8 @@
 
   &:hover,
   &:focus-within {
+    --img-bright: 1;
+    --img-contrast: 1;
     --drop: var(--shim);
     --pop: var(--active);
     transition-delay: 20ms;
@@ -103,7 +110,9 @@
 // Features
 [data-card='hero'] {
   display: grid;
-  grid-template-columns: 1fr [main-start] minmax(min-content, var(--small-page)) [main-end] 1fr;
+  grid-template-columns:
+    minmax(0, 1fr) [main-start] minmax(min-content, var(--page))
+    [main-end] minmax(0, 1fr);
 
   > * {
     grid-column: var(--area, main);
@@ -128,7 +137,7 @@
 [data-feature='large'] {
   font-size: 1rem;
   grid-column: 1 / -1;
-  margin: var(--gutter) 0 var(--double-gutter);
+  margin: var(--gutter) 0;
 }
 
 // Post Elements
