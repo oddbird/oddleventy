@@ -105,13 +105,24 @@ describe('page filters', () => {
   });
 
   test('hasData', () => {
-    // this keeps returning undefined...
-    hasData(collection, 'data.slug', 'news');
+    const page = collection[0];
+
+    expect(hasData(page, 'data.slug', 'news')).toBeTruthy();
+    expect(hasData(page, 'data.index')).toBeFalsy();
   });
 
   test('getData', () => {
-    // this keeps returning undefined...
-    getData(collection, 'author', 'erica');
+    const expected = [
+      {
+        foo: 'bar',
+        date: '2018-01-09T04:10:17.000Z',
+        end: '2018-01-10T04:10:17.000Z',
+      },
+    ];
+
+    expect(getData(collection, 'data.events', 'foo')).toEqual(expected);
+
+    expect(getData(collection)).toEqual(collection);
   });
 
   test('findData', () => {
@@ -132,6 +143,7 @@ describe('page filters', () => {
   test('render', () => {
     expect(render(collection[2], 'foo')).toBe('bar');
     expect(render(collection[3], 'foo')).toEqual({ foo: 'bar' });
+    expect(render(collection[0], 'title')).toEqual('Test Title');
   });
 
   test('pageYears', () => {
@@ -155,7 +167,9 @@ describe('page filters', () => {
   describe('pageType', () => {
     test('Return one of several resource "types" from page tags', () => {
       const tags = ['Workshops', 'Podcasts', 'foo', 'bar'];
+
       expect(pageType(tags)).toEqual('Workshops');
+      expect(pageType(['foo'])).toEqual('');
     });
   });
 });

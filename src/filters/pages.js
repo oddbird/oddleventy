@@ -293,7 +293,7 @@ const pageType = (tags) => {
     'Links',
     'News',
   ];
-  return tags ? tags.find((tag) => types.includes(tag)) : false;
+  return (tags && tags.find((tag) => types.includes(tag))) || '';
 };
 
 module.exports = {
