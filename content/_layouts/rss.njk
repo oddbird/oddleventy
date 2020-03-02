@@ -4,20 +4,21 @@
   <subtitle>{{ site.description }}</subtitle>
   <link href="{{ page.url | absoluteUrl(site.url) }}" rel="self"/>
   <link href="{{ site.url }}"/>
-  <updated>{{ collections._post | getPublic | rssLastUpdatedDate }}</updated>
+  <updated>{{ (collections._post | getPublic | reverse)[0].date.toISOString() }}</updated>
   <id>{{ site.url }}</id>
   <author>
     <name>{{ site.title }}</name>
     <email>{{ site.email }}</email>
   </author>
   {%- for post in collections._post | getPublic %}
-  {%- if post.templateContent %}
+  {%- if post.templateContent or post.data.summary %}
   {%- set absolutePostUrl = post.url | absoluteUrl(site.url) -%}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | rssDate }}</updated>
+    <updated>{{ post.date.toISOString() }}</updated>
     <id>{{ absolutePostUrl }}</id>
+    {%- if post.templateContent %}
     <content type="html">
       {% if post.data.image.src -%}
       {%- filter escape -%}
@@ -26,6 +27,9 @@
       {%- endif %}
       {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
     </content>
+    {%- elif post.data.summary %}
+    <summary type="html">{{ post.data.summary | md | htmlToAbsoluteUrls(absolutePostUrl) }}</summary>
+    {%- endif %}
   </entry>
   {% endif -%}
   {% endfor -%}
