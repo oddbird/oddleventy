@@ -22,9 +22,6 @@ params:
   collections:
     type: 11ty collections object
     default: none
-  title:
-    type: string
-    default: 'Resources'
   above:
     type: number
     default: 6
@@ -32,17 +29,14 @@ params:
 {% macro by_year(
   posts,
   collections=none,
-  title='Resources',
   above=6
 ) %}
   {%- if posts -%}
     {%- if posts | length > above -%}
       {%- for group in posts | byYear -%}
-        {{ layout.title(group.year) }}
-        {{ list(group.posts, collections) }}
+        {{ list(group.posts, collections, group.year) }}
       {%- endfor -%}
     {%- else -%}
-      {{ layout.title(title) }}
       {{ list(posts, collections) }}
     {%- endif -%}
   {%- endif -%}
@@ -59,14 +53,22 @@ params:
   collections:
     type: 11ty collections object
     default: none
+  title:
+    type: string
+    default: 'Resources'
 #}
 {% macro list(
   posts,
-  collections=none
+  collections=none,
+  title='Resources'
 ) %}
 {%- if posts -%}
   {%- set posts = posts if (posts[0].sort) else posts | pageYears  -%}
   {%- set sort = 'sort' if (posts[0].sort) else 'date' -%}
+
+  {%- if title -%}
+    {{ layout.title(title) }}
+  {%- endif -%}
 
   <ol data-grid="resources" reversed>
     {%- for post in posts | sort(true, false, sort) -%}

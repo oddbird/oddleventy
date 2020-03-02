@@ -17,8 +17,8 @@
 {% elif bird and (bird != 'oddbird') %}
   {% set list = collections._post | byBird(bird) %}
   {{ post.by_year(list, collections) }}
-  {% set oss = collections["Open Source"] | byBird(bird) %}
-  {{ post.by_year(oss, collections, 'Open Source', Infinity) }}
+  {% set oss = collections['Open Source'] | byBird(bird) %}
+  {{ post.list(oss, collections, 'Open Source') }}
 {% elif events %}
   {{ layout.title('Events') }}
   <ol reversed>
