@@ -1,0 +1,18 @@
+[data-grid='open-source'] {
+  --col-gap: var(--spacer);
+  --fit-max: var(--min-page);
+
+  header {
+    --newline: var(--shim);
+  }
+
+  .title {
+    --link: unset;
+  }
+
+  [data-logo] {
+    height: calc(var(--gutter) * 7);
+    width: auto;
+    max-width: 75%;
+  }
+}

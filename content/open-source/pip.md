@@ -7,9 +7,8 @@ links:
   site: https://pip.pypa.io/
   source: https://github.com/pypa/pip/
 author: carl
-oss: maintainer
+oss: core team
+
 summary: |
   The PyPA recommended tool for installing Python packages.
 ---
-
-

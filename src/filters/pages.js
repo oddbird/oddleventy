@@ -37,6 +37,17 @@ const isCurrent = (page) =>
   getDate(page.data.end) >= now;
 
 /* @docs
+label: getCurrent
+category: Filter
+note: Filter to pages that do not have an end date
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+*/
+const getCurrent = (collection) => collection.filter((page) => isCurrent(page));
+
+/* @docs
 label: getPublic
 category: Filter
 note: Return only the public pages from a collection
@@ -281,8 +292,6 @@ params:
 */
 const pageType = (tags) => {
   const types = [
-    'Client Work',
-    'OddTools',
     'Open Source',
     'Talks',
     'Workshops',
@@ -298,6 +307,7 @@ const pageType = (tags) => {
 module.exports = {
   isPublic,
   isCurrent,
+  getCurrent,
   getPublic,
   getPage,
   findPage,

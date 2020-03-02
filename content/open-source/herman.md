@@ -5,13 +5,11 @@ logo: herman
 image:
   src: herman/herman-hero.jpg
 date: 2015-11-08
+oss: owner
 index: Herman
-tags:
-  - OddTools
-  - Sass
-  - Design Systems
-  - Accoutrement
-  - Documentation
+action:
+  text: Hire us for training & implementation
+  url: /contact/
 screenshots:
   - img: herman/screenshots/sq-colors.jpg
     alt: Color Palettes
@@ -36,17 +34,13 @@ quotes:
     role: Frontend Architect
     slug: dream
 summary: |
-  **Design systems streamline development, communication, and
-  consistency** --but often rely on dedicated teams and extended budgets.
+  **Design systems streamline development, communication, and consistency** --
+  but often rely on dedicated teams and extended budgets.
   We wanted a tool that helps create and maintain living style guides &
   pattern libraries in an agile process, and on a budget. Herman helps you
-  keep your development process simple --and your UX consistent --as you
-  iterate on patterns and scale over time.
-
-  Start [using Herman] or [hire us] for design systems training.
-
-  [using Herman]: /herman/docs/
-  [hire us]: /contact/
+  keep your development process simple -- 
+  and your UX consistent -- 
+  as you scale over time.
 ---
 
 {% import 'embed.macros.njk' as embed %}

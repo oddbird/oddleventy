@@ -5,13 +5,11 @@ date: 2013-06-06
 logo: 'true'
 image:
   src: projects/true.jpg
+oss: owner
+index: 'True'
 author:
   - miriam
   - oddbird
-tags:
-  - OddTools
-  - Sass
-  - Testing
 links:
   source: https://github.com/oddbird/true
   docs: /true/docs/

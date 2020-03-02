@@ -8,13 +8,8 @@ image:
 links:
   source: https://github.com/oddbird/accoutrement
   docs: /accoutrement/docs/
+oss: owner
 index: Accoutrement
-tags:
-  - OddTools
-  - Sass
-  - Design Systems
-  - Herman
-  - Documentation
 author:
   - miriam
   - oddbird
@@ -76,7 +71,7 @@ badges:
     src: https://travis-ci.org/oddbird/accoutrement.svg
     url: https://travis-ci.org/oddbird/accoutrement
 summary: |
-  OddBird's Accoutrement tools (now a single package)
+  OddBird's Accoutrement tools
   help keep design tokens meaningful to both humans and machines --
   opening the door for automation, while improving readability.
   These tools also integrate with [Herman](/herman/),

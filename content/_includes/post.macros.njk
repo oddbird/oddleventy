@@ -278,11 +278,16 @@ params:
     type: boolean
     default: true
     note: Optionally remove links for content in linked cards
+  dateformat:
+    type: false | string
+    default: false
+    note: Optionally show the date in a given format
 #}
 {% macro byline(
   post,
   collections=none,
-  links=true
+  links=true,
+  dateformat=false
 ) %}
   <p class="byline">
     {{ byline_type(
@@ -297,8 +302,10 @@ params:
       link=links
     ) }}
 
-    {% if (post.data.oss == 'core team') %}
-      ({{ post.data.oss }})
+    {% if post.data.oss %}
+      {% set plural = not post.data.author | typeCheck('string') %}
+      {% set plural = false if (post.data.oss == 'core team') else plural %}
+      ({{ post.data.oss }}{{ 's' if plural else '' }})
     {% endif %}
 
     {{ linked(
@@ -307,6 +314,10 @@ params:
     ) }}
 
     {{ client(post.data.client) }}
+
+    {% if dateformat %}
+      {{ pubdate(post.date, post.data.end, dateformat) }}
+    {% endif %}
   </p>
 {% endmacro %}
 
@@ -334,8 +345,7 @@ params:
       'Workshops': 'Workshop',
       'Talks': 'Talk',
       'Videos': 'Video',
-      'Podcasts': 'Podcast',
-      'OddTools': 'Created'
+      'Podcasts': 'Podcast'
     } -%}
     <b>{{ byType[type] or type }}</b>
   {%- endif -%}
@@ -359,8 +369,6 @@ params:
   collections=none
 ) %}
   {%- set icons = {
-    'Client Work': 'tools',
-    'OddTools': 'tools',
     'Open Source': 'opensource',
     'Talks': 'talk',
     'Workshops': 'workshop',

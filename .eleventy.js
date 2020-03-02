@@ -73,6 +73,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('isPublic', pages.isPublic);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('isCurrent', pages.isCurrent);
+  eleventyConfig.addFilter('getCurrent', pages.getCurrent);
   eleventyConfig.addFilter('getPage', pages.getPage);
   eleventyConfig.addFilter('findPage', pages.findPage);
   eleventyConfig.addFilter('hasData', pages.hasData);

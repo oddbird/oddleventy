@@ -3,7 +3,8 @@ title: Nunjucks
 sub: Sophisticated templating for JavaScript
 image:
   src: projects/nunjucks.jpg
-oss: maintainer
+oss: core team
+
 date: 2015-09-01
 end: 2016-09-02
 tags:

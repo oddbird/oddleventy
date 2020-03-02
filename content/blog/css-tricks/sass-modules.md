@@ -8,6 +8,7 @@ tags:
   - Code
   - Modules
   - Sass
+  - Open Source
   - Tutorial
 image:
   src: blog/2019/sass-logo.png

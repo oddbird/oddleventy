@@ -1,7 +1,6 @@
 ---
 title: Plone
 sub: Enterprise Web Content Management System
-logo: plone
 date: 2011-01-08
 end: 2018-11-07
 image:
@@ -17,5 +16,3 @@ summary: |
   strengths in user experience for content editors, flexible theming, and
   customizability by developers.
 ---
-
-

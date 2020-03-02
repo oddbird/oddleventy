@@ -7,9 +7,8 @@ links:
   site: https://virtualenv.pypa.io/
   source: https://github.com/pypa/virtualenv
 author: carl
-oss: maintainer
+oss: core team
+
 summary: |
   A tool for creating isolated 'virtual' python environments.
 ---
-
-
