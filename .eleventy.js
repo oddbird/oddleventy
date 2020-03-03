@@ -1,7 +1,9 @@
 'use strict';
 
+const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
+const _ = require('lodash');
 
 const birds = require('./src/filters/birds');
 const events = require('./src/filters/events');
@@ -13,6 +15,7 @@ const utils = require('./src/filters/utils');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
+  eleventyConfig.addPlugin(rss);
   eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addWatchTarget('./src/images/');
@@ -52,15 +55,13 @@ module.exports = (eleventyConfig) => {
   );
 
   // filters
-  eleventyConfig.addFilter('merge', (...args) =>
-    [...args].reduce((all, current) => ({ ...all, ...current }), {}),
-  );
+  eleventyConfig.addFilter('concat', _.concat);
+  eleventyConfig.addFilter('merge', _.merge);
+
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('styles', utils.styles);
 
   eleventyConfig.addFilter('getDate', time.getDate);
-  eleventyConfig.addFilter('rssDate', time.rssDate);
-  eleventyConfig.addFilter('rssLatest', time.rssLatest);
 
   eleventyConfig.addFilter('tagIsPublic', tags.isPublic);
   eleventyConfig.addFilter('publicTags', tags.publicTags);

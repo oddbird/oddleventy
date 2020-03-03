@@ -8,7 +8,6 @@
   --angle: var(--edge);
   --edge: calc(var(--page-margin) / 2);
   --overlap: var(--gutter);
-  margin: 0 calc(var(--page-margin) * -1) var(--gutter);
   grid-template:
     'hero hero' auto
     'title hero2' var(--overlap)
@@ -22,8 +21,7 @@
     padding-top: var(--half-shim);
   }
 
-  #meta,
-  #intro {
+  #meta {
     padding: 0 var(--page-margin);
   }
 
@@ -38,5 +36,16 @@
 
   @include tools.above(50em) {
     --edge: 25%;
+  }
+}
+
+[data-header='angle'] {
+  display: grid;
+  grid-template-columns: var(--page-columns);
+  margin: var(--spacer) 0;
+  place-items: center;
+
+  > * {
+    grid-column: var(--column, page);
   }
 }

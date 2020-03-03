@@ -36,13 +36,13 @@
     }
   }
 
-  [data-header='media'] & {
+  [data-header='angle'] & {
     em {
       font-size: var(--h2);
       font-style: normal;
       font-weight: normal;
 
-      @include tools.above('small-page') {
+      @include tools.above('page') {
         display: inline-block;
         transform: translateY(calc(-1vw));
       }

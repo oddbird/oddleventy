@@ -94,10 +94,8 @@ $theme-sizes: (
 $page-sizes: (
   'grid-item': 16rem,
   'min-page': 22rem,
-  'small-page': 30rem,
-  'media-page': 38rem,
-  'page': 45rem,
-  'large-page': 70rem,
+  'page': 30rem,
+  'wide-page': 38rem,
 );
 
 @include tools.add-sizes($page-sizes);

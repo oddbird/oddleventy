@@ -6,7 +6,6 @@ date: 2011-12-15
 links:
   source: https://github.com/oddbird/mlt
 tags:
-  - _post
   - Client Work
   - Design
   - Development
@@ -27,5 +26,3 @@ summary: |
   pleasure to work with. MLT also includes a RESTful JSON API for querying
   address mapping data.
 ---
-
-

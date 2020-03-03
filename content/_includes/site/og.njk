@@ -1,5 +1,5 @@
 {% set og_image = open_graph.img if (og and og.img == 'default') else og.img or image.src or open_graph.img %}
-{%- set og_image = og_image if ('://' in (og_image or '') | string) else [site.url, site.images, og_image] | join -%}
+{%- set og_image = og_image if ('://' in (og_image or '') | string) else (site.images + og_image) | absoluteUrl(site.url) -%}
 {%- set creatorPage = collections.birds | authorPage(author) if author else none -%}
 {%- set creatorHandle = creatorPage.data.social.twitter if creatorPage else none -%}
 {%- set creator = ['@', creatorPage.data.social.twitter] | join() if creatorHandle else open_graph.site -%}

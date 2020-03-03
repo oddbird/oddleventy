@@ -58,6 +58,7 @@ media:
   - span: full
     <<: *vue
 ---
+
 {% import "quotes.macros.njk" as quotes %}
 {% import "embed.macros.njk" as embed %}
 
@@ -69,7 +70,7 @@ living design systems in an agile and integrated process?
 
 - Using templates and pre-processors for pattern-making in CSS and HTML.
 - Designing and integrating toolkits that force pattern-making.
-- Examples of what weve done, where weve failed, and where were headed.
+- Examples of what we’ve done, where we’ve failed, and where were headed.
 
 {{ quotes.grid(press) }}
 

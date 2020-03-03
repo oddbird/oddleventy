@@ -22,6 +22,7 @@ media:
     - span: full
       iframe: https://www.youtube.com/embed/2etlzLoV9xk
 ---
+
 {% import "embed.macros.njk" as embed %}
 
 {{ embed.figure(

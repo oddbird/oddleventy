@@ -5,7 +5,7 @@ date: 2009-07-13
 feature: large
 logo: susy
 image:
-  type: media
+  type: angle
   svg: logos/susy-mark
 author:
   - miriam
@@ -115,7 +115,7 @@ if necessary.
     src='susy/book-cover.png',
     alt='Learning Susy, by Zell Liew'
   ),
-  attrs={'data-block': 'center media-page rotate'}
+  attrs={'data-block': 'rotate'}
 ) %}
 
 ## Learning Susy (v2)
@@ -124,7 +124,7 @@ if necessary.
 This book will teach you everything you need to know.
 After going through the book and videos,
 you’ll never have to pore over the documentation
-or spend hours searching through Stackoverflow
+or spend hours searching through Stack Overflow
 to figure out how to make Susy work ever again.
 
 [Get the first seven chapters for free][]!

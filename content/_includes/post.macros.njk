@@ -34,11 +34,9 @@ params:
   {%- if posts -%}
     {%- if posts | length > above -%}
       {%- for group in posts | byYear -%}
-        {{ layout.title(group.year) }}
-        {{ list(group.posts, collections) }}
+        {{ list(group.posts, collections, group.year) }}
       {%- endfor -%}
     {%- else -%}
-      {{ layout.title('Resources') }}
       {{ list(posts, collections) }}
     {%- endif -%}
   {%- endif -%}
@@ -55,14 +53,22 @@ params:
   collections:
     type: 11ty collections object
     default: none
+  title:
+    type: string
+    default: 'Resources'
 #}
 {% macro list(
   posts,
-  collections=none
+  collections=none,
+  title='Resources'
 ) %}
 {%- if posts -%}
   {%- set posts = posts if (posts[0].sort) else posts | pageYears  -%}
   {%- set sort = 'sort' if (posts[0].sort) else 'date' -%}
+
+  {%- if title -%}
+    {{ layout.title(title) }}
+  {%- endif -%}
 
   <ol data-grid="resources" reversed>
     {%- for post in posts | sort(true, false, sort) -%}
@@ -205,7 +211,7 @@ params:
 ) %}
   {%- set events = events | getFuture if events else none -%}
   {%- set events = events | sort(false, false, 'date') -%}
-  {%- if events -%}
+  {%- if events | length > 0 -%}
     <ul class="next-event">
       {%- for next in events -%}
         <li>

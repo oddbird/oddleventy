@@ -1,25 +1,24 @@
-// Alignment Patterns
-// ==================
+.contain {
+  display: flow-root;
+}
+
+[class*='align-'] {
+  margin: var(--shim) var(--inline-margin, 0);
+}
 
 .align-left {
   float: left;
-  margin-bottom: size('pad');
-  margin-right: size('pad');
+  margin-right: var(--gutter);
 }
 
 .align-right {
   float: right;
-  margin-bottom: size('pad');
-  margin-left: size('pad');
+  margin-right: var(--left);
 }
 
 .align-center {
+  --inline-margin: auto;
   display: block;
-  margin: 0 auto size('pad');
-}
-
-.align-none {
-  margin-bottom: size('pad');
 }
 
 // Text Centering

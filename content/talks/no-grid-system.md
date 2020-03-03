@@ -93,6 +93,7 @@ media:
   - <<: *clarity
   - <<: *django
 ---
+
 {% import "quotes.macros.njk" as quotes %}
 {% import "embed.macros.njk" as embed %}
 
