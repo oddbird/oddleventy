@@ -1,7 +1,7 @@
 export const collection = [
   {
     inputPath: './test1.md',
-    fileSlug: 'test1', // fileSlug was added in 0.5.3
+    fileSlug: 'test1',
     outputPath: './_site/test1/index.html',
     url: '/test1/',
     date: '2018-01-09T04:10:17.000Z',
@@ -26,7 +26,7 @@ export const collection = [
   },
   {
     inputPath: './test2.md',
-    fileSlug: 'test2', // fileSlug was added in 0.5.3
+    fileSlug: 'test2',
     outputPath: './_site/test2/index.html',
     url: '/test2/',
     date: '2018-03-09T04:10:17.000Z',
@@ -39,7 +39,7 @@ export const collection = [
   },
   {
     inputPath: './test3.md',
-    fileSlug: 'test3', // fileSlug was added in 0.5.3
+    fileSlug: 'test3',
     outputPath: './_site/test3/index.html',
     url: '/test3/',
     date: '2018-03-09T04:10:17.000Z',
@@ -56,7 +56,7 @@ export const collection = [
   },
   {
     inputPath: './test4.md',
-    fileSlug: 'test4', // fileSlug was added in 0.5.3
+    fileSlug: 'test4',
     outputPath: './_site/test4/index.html',
     url: '/test4/',
     date: '2020-04-10T04:10:17.000Z',
