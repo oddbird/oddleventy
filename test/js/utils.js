@@ -110,6 +110,7 @@ export const collection2 = [
       title: 'Test Title',
       tags: ['tag1', 'tag2'],
       author: 'erica',
+      bird: 'erica',
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },

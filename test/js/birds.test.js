@@ -28,6 +28,8 @@ describe('active', () => {
 
 describe('authorPage', () => {
   test('returns author home page', () => {
-    authorPage(collection2, 'erica'); // / this is returning undefined which is not expected
+    const expected = collection2[2];
+
+    expect(authorPage(collection2, 'erica')).toEqual(expected);
   });
 });

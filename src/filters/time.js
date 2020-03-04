@@ -104,7 +104,7 @@ category: RSS
 note: These are used in generating the site RSS output…
 */
 const rssDate = (page) => {
-  const date = page.data ? page.data.start || page.date : page.date;
+  const date = page.data.start || page.date;
   return getDate(date, 'rfc');
 };
 

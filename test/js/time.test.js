@@ -1,20 +1,6 @@
 const { now, getDate, rssDate, rssLatest } = require('#/time');
+import { collection } from './utils';
 
-const page = {
-  inputPath: './test1.md',
-  fileSlug: 'test1',
-  outputPath: './_site/test1/index.html',
-  url: '/test1/',
-  date: new Date('2019-01-09T04:10:17.000Z'),
-  data: {
-    title: 'Test Title',
-    tags: ['tag1', 'tag2'],
-    author: 'miriam',
-    end: 'ongoing',
-    slug: 'news',
-  },
-  templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
-};
 describe('time filters', () => {
   test('getDate', () => {
     const expected = now;
@@ -23,10 +9,17 @@ describe('time filters', () => {
   });
 
   test('rssDate', () => {
-    rssDate(page);
+    const page1 = collection[1];
+    const expected = page1.date;
+
+    expect(rssDate(collection[1])).toEqual(
+      expected.replace('04:10:17.000Z', '12:00:00-06:00'),
+    );
   });
 
   test('rssLatest', () => {
-    rssLatest(page);
+    const expected = '2018-01-09T12:00:00-06:00';
+
+    expect(rssLatest(collection)).toEqual(expected);
   });
 });
