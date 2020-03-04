@@ -1,111 +1,39 @@
-const {
-  isPublic,
-  isCurrent,
-  getPublic,
-  hasData,
+import {
+  byYear,
+  findData,
+  findPage,
   getData,
   getPage,
-  findPage,
-  findData,
-  render,
-  pageYears,
-  byYear,
+  getPublic,
+  hasData,
+  isCurrent,
+  isPublic,
   pageType,
-} = require('#/pages');
+  pageYears,
+  render,
+} from '#/pages';
 
-const collection = [
-  {
-    inputPath: './test1.md',
-    fileSlug: 'test1',
-    outputPath: './_site/test1/index.html',
-    url: '/test1/',
-    date: '2019-01-09T04:10:17.000Z',
-    data: {
-      title: 'Test Title',
-      tags: ['tag1', 'tag2'],
-      author: 'miriam',
-      end: 'ongoing',
-      slug: 'news',
-    },
-    templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
-  },
-  {
-    inputPath: './test2.md',
-    fileSlug: 'test2',
-    outputPath: './_site/test2/index.html',
-    url: '/test2/',
-    date: '2019-01-09T04:10:17.000Z',
-    data: {
-      title: 'Draft Title',
-      tags: ['tag3', 'tag3'],
-      author: 'erica',
-      draft: true,
-    },
-    templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
-  },
-  {
-    inputPath: './test3.md',
-    fileSlug: 'test3',
-    outputPath: './_site/test3/index.html',
-    url: '/test3/',
-    date: '2019-01-09T04:10:17.000Z',
-    data: {
-      title: 'Draft Title',
-      tags: ['tag3', 'tag3'],
-      author: 'erica',
-      end: '2020-01-09T04:10:17.000Z',
-      renderData: { foo: 'bar' },
-    },
-    templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
-  },
-  {
-    inputPath: './test4.md',
-    fileSlug: 'test4',
-    outputPath: './_site/test4/index.html',
-    url: '/test4/',
-    date: '2019-01-09T04:10:17.000Z',
-    data: {
-      title: 'Event Title',
-      tags: ['tag3', 'tag3'],
-      author: 'erica',
-      end: '2020-01-09T04:10:17.000Z',
-      foo: { foo: 'bar' },
-      draft: true,
-      events: [
-        {
-          foo: 'bar',
-          date: '2018-01-09T04:10:17.000Z',
-          end: '2018-01-10T04:10:17.000Z',
-        },
-        {
-          bar: 'baz',
-          date: '2018-02-09T04:10:17.000Z',
-          end: '2018-01-10T04:10:17.000Z',
-        },
-      ],
-    },
-    templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
-  },
-];
+import { collection3 } from './utils';
+
 describe('page filters', () => {
   test('isPublic', () => {
-    expect(isPublic(collection[0])).toBeTruthy();
-    expect(isPublic(collection[1])).toBeFalsy();
+    expect(isPublic(collection3[0])).toBeTruthy();
+    expect(isPublic(collection3[1])).toBeFalsy();
   });
 
   test('isCurrent', () => {
-    expect(isCurrent(collection[0])).toBeTruthy();
-    expect(isCurrent(collection[2])).toBeFalsy();
+    expect(isCurrent(collection3[0])).toBeTruthy();
+    expect(isCurrent(collection3[2])).toBeFalsy();
   });
 
   test('getPublic', () => {
-    const publicPages = [collection[0], collection[2]];
+    const publicPages = [collection3[0], collection3[2]];
 
-    expect(getPublic(collection)).toEqual(publicPages);
+    expect(getPublic(collection3)).toEqual(publicPages);
   });
 
   test('hasData', () => {
-    const page = collection[0];
+    const page = collection3[0];
 
     expect(hasData(page, 'data.slug', 'news')).toBeTruthy();
     expect(hasData(page, 'data.index')).toBeFalsy();
@@ -120,47 +48,47 @@ describe('page filters', () => {
       },
     ];
 
-    expect(getData(collection, 'data.events', 'foo')).toEqual(expected);
+    expect(getData(collection3, 'data.events', 'foo')).toEqual(expected);
 
-    expect(getData(collection)).toEqual(collection);
+    expect(getData(collection3)).toEqual(collection3);
   });
 
   test('findData', () => {
     // this keeps returning undefined...
-    findData(collection, 'author', 'erica');
+    findData(collection3, 'author', 'erica');
   });
 
   test('getPage', () => {
     // this keeps returning undefined...
-    getPage(collection, '/test2/', 'foo', 'bar');
+    getPage(collection3, '/test2/', 'foo', 'bar');
   });
 
   test('findPage', () => {
     // this keeps returning undefined...
-    findPage(collection, '/test2/', 'foo', 'bar');
+    findPage(collection3, '/test2/', 'foo', 'bar');
   });
 
   test('render', () => {
-    expect(render(collection[2], 'foo')).toBe('bar');
-    expect(render(collection[3], 'foo')).toEqual({ foo: 'bar' });
-    expect(render(collection[0], 'title')).toEqual('Test Title');
+    expect(render(collection3[2], 'foo')).toBe('bar');
+    expect(render(collection3[3], 'foo')).toEqual({ foo: 'bar' });
+    expect(render(collection3[0], 'title')).toEqual('Test Title');
   });
 
   test('pageYears', () => {
-    const testPage = pageYears(collection)[0];
+    const testPage = pageYears(collection3)[0];
 
     expect(testPage).toHaveProperty('sort');
     expect(testPage).toHaveProperty('year');
   });
 
   describe('byYear', () => {
-    test('returns empty if no collection', () => {
+    test('returns empty if no collection3', () => {
       const expected = [];
 
       expect(byYear([])).toEqual(expected);
     });
     test('returns pages grouped by year', () => {
-      byYear(collection);
+      byYear(collection3);
     });
   });
 
