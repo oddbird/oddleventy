@@ -6,6 +6,7 @@ url: https://www.sitepoint.com/how-to-choose-the-right-css-toolkits-and-framewor
 author: miriam
 image:
   src: blog/2016/QandA.jpg
+  alt: Miriam Suzanne answers questions on SitePoint
 tags:
   - Links
   - Interview

@@ -12,6 +12,7 @@ tags:
   - Pivotal Tracker
 image:
   src: blog/2016/github-projects.jpg
+  alt: OddBird's GitHub Project Board
 series: Open Design
 summary: |
   With the release of kanban-style project boards, we decided to move our

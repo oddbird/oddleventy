@@ -11,6 +11,7 @@ tags:
   - Code
 image:
   src: blog/2014/sqlalchemy.jpg
+  alt: SQLAlchemy
 summary: |
   SQLAlchemy defaults to implicitly opening a new transaction on your
   first database query. If you prefer to start your transactions

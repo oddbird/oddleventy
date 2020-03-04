@@ -10,6 +10,7 @@ tags:
   - Typography
 image:
   src: blog/2016/brand/type-header.jpg
+  alt: an Odd Bird on watercolor
 summary: |
   What follows is an in-depth look at our brand design process thus far as
   we work towards a new look and feel for this, our OddSite. Details.

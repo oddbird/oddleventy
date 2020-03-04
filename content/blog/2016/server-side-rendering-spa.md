@@ -15,6 +15,7 @@ tags:
   - Marionette
 image:
   src: blog/2016/spa.jpg
+  alt: Marionette puppet visits a spa
 summary: |
   You can't always get away with a single-page app; sometimes you need
   server-side rendering. When you need both, here's one approach.

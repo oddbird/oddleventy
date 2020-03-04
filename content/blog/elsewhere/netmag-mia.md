@@ -12,6 +12,7 @@ tags:
   - Interview
 image:
   src: blog/2016/teacup.jpg
+  alt: World's great band, Teacup Gorilla, jamming out
 figure:
   - img: blog/elsewhere/netmag-mia.jpg
     alt: Full magazine spread
