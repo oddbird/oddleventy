@@ -18,6 +18,6 @@ summary: |
   Compass was the first package-manager
   and toolkit-sharing platform for CSS,
   helping popularize the Sass language –
-  and offering powerful browser-compatability tools
+  and offering powerful browser-compatibility tools
   that changed the landscape for designers developers.
 ---

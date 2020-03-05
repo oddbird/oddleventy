@@ -43,12 +43,10 @@ summary: |
   computer-based educational systems that can accurately diagnoses
   learners' knowledge and recognize what misunderstandings a learner may
   have. In the tutor, learners can work through an entire problem before
-  recieving feedback. This simulates the way a learner would work through
+  receiving feedback. This simulates the way a learner would work through
   a problem without the computer. Mathematical algorithms analyze how the
   problem was solved, and estimate how well the learner understands a
   variety of mathematical skills. The algorithms are relatively general,
   so they can be applied to a variety of computer-based educational tasks,
   such as games or virtual labs.
 ---
-
-

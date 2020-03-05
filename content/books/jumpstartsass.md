@@ -33,6 +33,7 @@ summary: |
   This book provides a thorough introduction to
   Sass for the beginner.
 ---
+
 {% import "quotes.macros.njk" as quotes %}
 
 {{ quotes.grid(press) }}

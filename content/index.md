@@ -74,7 +74,7 @@ and reported easy maintenance for years.
 Our specialties include:
 
 - Strategy, branding, and design
-- Python & Django (*core contributorss*)
+- Python & Django (*core contributors*)
 - CSS & Sass (*core contributors*)
 - JavaScript with Vue, React, Node, etc...
 - WordPress

@@ -121,7 +121,7 @@ and set alerts for relapse prevention and
 escalation of care.
 
 The product has been used by the
-**National Institudes of Health**
+**National Institutes of Health**
 and is [currently being used] by the
 **US Military** and **Coast Guard**
 for internal health coaching.

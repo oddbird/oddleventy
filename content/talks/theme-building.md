@@ -21,7 +21,7 @@ events:
     slides: https://www.slideshare.net/Funstacy/from-scratch-to-launch-series-part1-planning-phase
 summary: |
   This series of related talks
-  helps you take a project from scartch to
+  helps you take a project from scratch to
   launch with WordPress --
   planning, design, and theme-building.
 ---
