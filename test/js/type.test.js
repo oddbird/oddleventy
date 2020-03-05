@@ -1,38 +1,38 @@
 import { heading, md, mdInline, typogr } from '#/type';
 
 const markdown = '## Lorem ipsum dolor sit amet, consectetur';
-const markup = '<h2>Lorem ipsum dolor sit amet, consectetur</h2>';
 const content = 'Lorem ipsum dolor sit amet, consectetur';
+const typogrd =
+  'Lorem ipsum dolor sit amet,<span class="widont">&nbsp;</span>consectetur';
 
 describe('typography filters', () => {
   test('typogr', () => {
-    typogr(markup, false);
-    typogr(content, true);
+    expect(typogr(content)).toEqual(typogrd);
+    expect(typogr('Foo "Bar"', true)).toEqual('Foo &#8220;Bar&#8221;');
+    expect(typogr('')).toEqual('');
   });
 
   test('md', () => {
-    const expected =
-      '<h2>Lorem ipsum dolor sit amet,<span class="widont">&nbsp;</span>consectetur</h2>\n';
-    expect(md()).toBe(undefined);
+    const expected = `<h2>${typogrd}</h2>\n`;
 
+    expect(md()).toBeUndefined();
     expect(md(markdown)).toEqual(expected);
   });
 
   test('mdInline', () => {
-    const expected =
-      '## Lorem ipsum dolor sit amet,<span class="widont">&nbsp;</span>consectetur';
+    const expected = '## Foo “Bar”';
 
-    expect(mdInline(markdown)).toEqual(expected);
-    expect(mdInline()).toBe(undefined);
+    expect(mdInline('## Foo "Bar"')).toEqual(expected);
+    expect(mdInline()).toBeUndefined();
   });
 
   test('heading', () => {
-    const headingWithAttr =
-      '<h2 foo="bar">Lorem ipsum dolor sit amet, consectetur</h2>';
-    const headingWithOutAttr =
-      '<h2 >Lorem ipsum dolor sit amet, consectetur</h2>';
+    const headingWithAttr = `<h2 foo="bar" baz>${content}</h2>`;
+    const headingWithOutAttr = `<h2 >${content}</h2>`;
 
-    expect(heading(content, 2, { foo: 'bar' })).toEqual(headingWithAttr);
+    expect(heading(content, 2, { foo: 'bar', baz: true, buz: false })).toEqual(
+      headingWithAttr,
+    );
     expect(heading(content, 2)).toEqual(headingWithOutAttr);
   });
 });

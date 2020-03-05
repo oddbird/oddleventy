@@ -71,6 +71,19 @@ export const collection = [
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },
+  {
+    inputPath: './test5.md',
+    fileSlug: 'test5',
+    outputPath: './_site/test5/index.html',
+    url: '/test5/',
+    date: '2020-04-10T04:10:17.000Z',
+    data: {
+      title: 'Test Title',
+      index: 'tag1',
+      date: '2020-04-10T04:10:17.000Z',
+    },
+    templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
+  },
 ];
 
 export const collection2 = [

@@ -7,6 +7,11 @@ env:
   node: false
 plugins:
   - simple-import-sort
+  - jest
+extends:
+  - eslint:recommended
+  - plugin:jest/recommended
+  - plugin:jest/style
 rules:
   # Import
   simple-import-sort/sort: 1

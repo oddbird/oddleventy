@@ -44,6 +44,9 @@ const displayName = (tag) => {
   const capitalize = ([first, ...rest]) =>
     first ? first.toUpperCase() + rest.join('') : '';
 
+  if (!tag) {
+    return '';
+  }
   return tag.startsWith('_') ? capitalize(tag.slice(1)) : capitalize(tag);
 };
 

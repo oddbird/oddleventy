@@ -40,36 +40,34 @@ describe('page filters', () => {
   });
 
   test('getData', () => {
-    const expected = [
-      {
-        foo: 'bar',
-        date: '2018-01-09T04:10:17.000Z',
-        end: '2018-01-10T04:10:17.000Z',
-      },
-    ];
-
-    expect(getData(collection3, 'data.events', 'foo')).toEqual(expected);
-
+    expect(getData(collection3, 'data.events', 'foo')).toEqual([
+      collection3[3].data.events[0],
+    ]);
     expect(getData(collection3)).toEqual(collection3);
   });
 
   test('findData', () => {
-    // this keeps returning undefined...
-    findData(collection3, 'author', 'erica');
+    expect(findData(collection3, 'data.events', 'foo')).toEqual(
+      collection3[3].data.events[0],
+    );
   });
 
   test('getPage', () => {
-    // this keeps returning undefined...
-    getPage(collection3, '/test2/', 'foo', 'bar');
+    expect(
+      getPage(collection3, '/test4/', 'data.events', { foo: 'bar' }),
+    ).toEqual([collection3[3].data.events[0]]);
+    expect(getPage(collection3, '/test1/')).toEqual(collection3[0]);
   });
 
   test('findPage', () => {
-    // this keeps returning undefined...
-    findPage(collection3, '/test2/', 'foo', 'bar');
+    expect(findPage(collection3, 'data.author', 'erica')).toEqual(
+      collection3[1],
+    );
   });
 
   test('render', () => {
-    expect(render(collection3[2], 'foo')).toBe('bar');
+    expect(render(collection3[2], 'foo')).toEqual('bar');
+    expect(render(collection3[2], 'title')).toEqual('Draft Title');
     expect(render(collection3[3], 'foo')).toEqual({ foo: 'bar' });
     expect(render(collection3[0], 'title')).toEqual('Test Title');
   });
@@ -83,12 +81,15 @@ describe('page filters', () => {
 
   describe('byYear', () => {
     test('returns empty if no collection3', () => {
-      const expected = [];
-
-      expect(byYear([])).toEqual(expected);
+      expect(byYear([])).toEqual([]);
     });
+
     test('returns pages grouped by year', () => {
-      byYear(collection3);
+      const expected = ['2020', '2019'];
+      const actual = byYear(collection3);
+
+      expect(actual.map((item) => item.year)).toEqual(expected);
+      expect(actual.map((item) => item.posts.length)).toEqual([2, 2]);
     });
   });
 
@@ -98,6 +99,7 @@ describe('page filters', () => {
 
       expect(pageType(tags)).toEqual('Workshops');
       expect(pageType(['foo'])).toBeUndefined();
+      expect(pageType()).toBeUndefined();
     });
   });
 });

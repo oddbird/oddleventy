@@ -36,14 +36,14 @@ describe('event filters', () => {
 
   describe('getEvents', () => {
     test('returns pages without events, and built event pages', () => {
-      expect(getEvents(collection, 'mixed').length).toBe(5);
+      expect(getEvents(collection)).toHaveLength(6);
     });
 
     test('returns all pages and all built events', () => {
-      expect(getEvents(collection, true).length).toBe(6);
+      expect(getEvents(collection, true)).toHaveLength(7);
     });
     test('return just the built events', () => {
-      expect(getEvents(collection, false).length).toBe(2);
+      expect(getEvents(collection, false)).toHaveLength(2);
     });
   });
 
@@ -66,6 +66,6 @@ describe('event filters', () => {
   });
 
   test('getFuture', () => {
-    expect(getFuture(collection).length).toBe(1);
+    expect(getFuture(collection)).toHaveLength(2);
   });
 });

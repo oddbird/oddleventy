@@ -6,6 +6,7 @@ describe('getPages', () => {
   test('returns pages that the "bird" has authored', () => {
     expect(getPages(collection2, 'miriam', true)).toEqual([collection2[0]]);
   });
+
   test('returns "oddbird" authored pages', () => {
     const expected = [collection2[1], collection2[2]];
 
@@ -14,12 +15,13 @@ describe('getPages', () => {
 });
 
 describe('active', () => {
-  test('filters pages from inactive birds', () => {
+  test('filters inactive bird-detail pages', () => {
     const expected = collection2[3];
 
     expect(active(collection2)).toEqual(expect.not.objectContaining(expected));
   });
-  test('returns pages from inactive birds', () => {
+
+  test('returns inactive bird-detail pages', () => {
     const expected = [collection2[3]];
 
     expect(active(collection2, false)).toEqual(expected);
