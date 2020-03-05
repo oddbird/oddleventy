@@ -1,6 +1,6 @@
 'use strict';
 
-const { publicTags } = require('../../src/filters/tags');
+const { publicTags } = require('#/tags');
 
 module.exports = {
   pagination: {

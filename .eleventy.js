@@ -5,14 +5,14 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
 const _ = require('lodash');
 
-const birds = require('./src/filters/birds');
-const events = require('./src/filters/events');
-const pages = require('./src/filters/pages');
-const tags = require('./src/filters/tags');
-const taxonomy = require('./src/filters/taxonomy');
-const time = require('./src/filters/time');
-const type = require('./src/filters/type');
-const utils = require('./src/filters/utils');
+const birds = require('#/birds');
+const events = require('#/events');
+const pages = require('#/pages');
+const tags = require('#/tags');
+const taxonomy = require('#/taxonomy');
+const time = require('#/time');
+const type = require('#/type');
+const utils = require('#/utils');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);

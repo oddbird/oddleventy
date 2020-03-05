@@ -1,5 +1,6 @@
 'use strict';
 
+const _ = require('lodash');
 const removeMd = require('remove-markdown');
 const type = require('typogr');
 const markdown = require('markdown-it');
@@ -87,18 +88,17 @@ params:
     type: object
 */
 const heading = (content, level, attrs = {}) => {
-  const attr_html = Object.keys(attrs)
-    .map((attr) => {
-      const val = attrs[attr];
-      if (val) {
-        return typeof val === 'boolean' || val === ''
-          ? `${attr}`
-          : `${attr}="${val}"`;
+  const attr_html = _(attrs)
+    .map((val, attr) => {
+      if (!val) {
+        return undefined;
       }
-
-      return undefined;
+      return typeof val === 'boolean' || val === ''
+        ? `${attr}`
+        : `${attr}="${val}"`;
     })
-    .filter((attr) => attr)
+    .compact()
+    .uniq()
     .join(' ');
 
   return `<h${level} ${attr_html}>${content}</h${level}>`;
