@@ -97,7 +97,7 @@ describe('page filters', () => {
       const tags = ['Workshops', 'Podcasts', 'foo', 'bar'];
 
       expect(pageType(tags)).toEqual('Workshops');
-      expect(pageType(['foo'])).toEqual('');
+      expect(pageType(['foo'])).toBeUndefined();
     });
   });
 });

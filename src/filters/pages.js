@@ -193,7 +193,6 @@ params:
     type: string
 */
 const render = (page, key) => {
-  /* will pages ever not have data attributes? */
   /* istanbul ignore if */
   if (!page.data) {
     return undefined;
@@ -261,6 +260,7 @@ const byYear = (collection, events = true) => {
   }
 
   const groups = _.groupBy(pageYears(collection, events), 'year');
+
   return Object.keys(groups)
     .reverse()
     .map((year) => ({
@@ -292,7 +292,8 @@ const pageType = (tags) => {
     'Links',
     'News',
   ];
-  return (tags && tags.find((tag) => types.includes(tag))) || '';
+
+  return (tags || []).find((tag) => types.includes(tag));
 };
 
 module.exports = {

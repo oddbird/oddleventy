@@ -23,9 +23,8 @@
   {{ layout.title('Events') }}
   <ol reversed>
     {% for event in events -%}
-      {% set eventPage = {'date': page.date, 'event': event } %}
       <li>
-        {% if eventPage | isFuture %}
+        {% if event | isFuture %}
           <strong>Upcoming!</strong>
         {% endif %}
         [{{ event.start | getDate('iso') }}]

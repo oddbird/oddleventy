@@ -28,7 +28,7 @@ params:
   tags:
     type: array
 */
-const publicTags = (tags) => tags && tags.filter((tag) => isPublic(tag));
+const publicTags = (tags) => (tags || []).filter((tag) => isPublic(tag));
 
 /* @docs
 label: displayName
@@ -102,7 +102,7 @@ const tagData = (collections, tags, sort = 'pageCount') => {
     .map((tag) => ({
       tag,
       url: tagLink(collections.all, tag),
-      pageCount: collections[tag] ? collections[tag].length : 0,
+      pageCount: (collections[tag] || []).length,
     }))
     .sort((a, b) => b[sort] - a[sort]);
 };
