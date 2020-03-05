@@ -156,6 +156,7 @@ export const collection3 = [
       author: 'miriam',
       end: 'ongoing',
       slug: 'news',
+      oss: 'owner',
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },

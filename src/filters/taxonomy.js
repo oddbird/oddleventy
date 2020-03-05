@@ -89,9 +89,12 @@ const pageType = (tags, get) => {
     const tag =
       typeof tags === 'string'
         ? tags
-        : tags.find((item) => fromTaxonomy('post', { item }));
+        : tags.find((item) => fromTaxonomy('post', { tag: item }));
 
-    return get ? fromTaxonomy('post', { tag }, get) : tag;
+    if (!tag || (!get && typeof tags === 'string')) {
+      return false;
+    }
+    return get ? fromTaxonomy('post', { tag }, get) || false : tag;
   }
 
   return false;
