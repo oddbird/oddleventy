@@ -51,9 +51,11 @@ params:
     note: Flip result to show inactive birds
 */
 const active = (collection, current = true) =>
-  collection
-    .filter((page) => page.data.bird !== 'oddbird')
-    .filter((page) => (current ? isCurrent(page) : !isCurrent(page)));
+  collection.filter(
+    (page) =>
+      page.data.bird !== 'oddbird' &&
+      (current ? isCurrent(page) : !isCurrent(page)),
+  );
 
 /* @docs
 label: authorPage

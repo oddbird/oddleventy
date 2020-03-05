@@ -1,7 +1,7 @@
 'use strict';
 
 const slugify = require('slugify');
-const { uniq } = require('lodash');
+const _ = require('lodash');
 
 const { withData, getData } = require('#/pages');
 
@@ -101,7 +101,7 @@ params:
 */
 const tagData = (collections, tags, sort = 'pageCount') => {
   const tagList = tags === 'all' ? getTags(collections.all) : tags;
-  return uniq(publicTags(tagList))
+  return _.uniq(publicTags(tagList))
     .map((tag) => ({
       tag,
       url: tagLink(collections.all, tag),

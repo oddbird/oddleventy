@@ -87,7 +87,7 @@ params:
   events:
     type: array of events
 */
-const getFuture = (events) => events.filter((event) => isFuture(event));
+const getFuture = (events) => events.filter(isFuture);
 
 module.exports = {
   buildEvent,

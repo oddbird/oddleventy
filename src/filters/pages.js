@@ -45,7 +45,7 @@ params:
     type: array
     note: containing 11ty page objects
 */
-const getPublic = (collection) => collection.filter((page) => isPublic(page));
+const getPublic = (collection) => collection.filter(isPublic);
 
 /* @docs
 label: hasData
@@ -63,7 +63,11 @@ params:
     note: Only approve pages where the desired attributes have a given value
 */
 const hasData = (obj, keys, value) =>
-  value ? _.includes(_.get(obj, keys), value) : _.hasIn(obj, keys);
+  value
+    ? _(obj)
+        .get(keys, [])
+        .includes(value)
+    : _.hasIn(obj, keys);
 
 /* @docs
 label: withData
