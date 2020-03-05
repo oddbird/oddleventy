@@ -12,10 +12,10 @@ describe('typography filters', () => {
 
   test('md', () => {
     const expected =
-      '<h2>Lorem ipsum dolor sit amet,<span class="widont">&nbsp;</span>consectetur</h2>';
+      '<h2>Lorem ipsum dolor sit amet,<span class="widont">&nbsp;</span>consectetur</h2>\n';
     expect(md()).toBe(undefined);
 
-    // expect(md(markdown)).toEqual(expected);
+    expect(md(markdown)).toEqual(expected);
   });
 
   test('mdInline', () => {
