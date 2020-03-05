@@ -9,6 +9,7 @@ const birds = require('./src/filters/birds');
 const events = require('./src/filters/events');
 const pages = require('./src/filters/pages');
 const tags = require('./src/filters/tags');
+const taxonomy = require('./src/filters/taxonomy');
 const time = require('./src/filters/time');
 const type = require('./src/filters/type');
 const utils = require('./src/filters/utils');
@@ -81,9 +82,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('findData', pages.findData);
   eleventyConfig.addFilter('withData', pages.withData);
   eleventyConfig.addFilter('render', pages.render);
-  eleventyConfig.addFilter('pageType', pages.pageType);
   eleventyConfig.addFilter('pageYears', pages.pageYears);
   eleventyConfig.addFilter('byYear', pages.byYear);
+
+  eleventyConfig.addFilter('fromTaxonomy', taxonomy.fromTaxonomy);
+  eleventyConfig.addFilter('ossGroups', taxonomy.ossGroups);
+  eleventyConfig.addFilter('pageType', taxonomy.pageType);
 
   eleventyConfig.addFilter('buildEvent', events.buildEvent);
   eleventyConfig.addFilter('getEvents', events.getEvents);

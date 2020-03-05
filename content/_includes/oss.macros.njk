@@ -2,28 +2,17 @@
 {% import 'embed.macros.njk' as embed %}
 {% import 'post.macros.njk' as post %}
 
-
 {% macro by_type(
   posts,
   collections
 ) %}
-  {{ list(
-    posts | withData('data.oss', 'owner'),
-    collections,
-    'OddTools'
-  ) }}
-
-  {{ list(
-    posts | withData('data.oss', 'core team') | getCurrent,
-    collections,
-    'Core Team'
-  ) }}
-
-  {{ list(
-    posts | withData('data.oss', 'contributor'),
-    collections,
-    'Other Contributions'
-  ) }}
+  {% for title, items in posts | ossGroups %}
+    {{ list(
+      items,
+      collections,
+      title
+    ) }}
+  {% endfor %}
 {% endmacro %}
 
 {% macro list(

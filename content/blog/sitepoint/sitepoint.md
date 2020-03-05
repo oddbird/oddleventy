@@ -6,7 +6,6 @@ tags:
   - Q&A
   - Interview
   - Susy
-  - Open Source
 url: https://www.sitepoint.com/how-to-choose-the-right-css-toolkits-and-frameworks/
 image:
   src: blog/2016/QandA.jpg

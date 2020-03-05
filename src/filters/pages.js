@@ -279,31 +279,6 @@ const byYear = (collection, events = true) => {
     }));
 };
 
-/* @docs
-label: pageType
-category: Data
-note: |
-  Return one of several resource "types"
-  which we can use to provide different list styling,
-  or filtering.
-params:
-  tags:
-    type: array
-*/
-const pageType = (tags) => {
-  const types = [
-    'Open Source',
-    'Talks',
-    'Workshops',
-    'Podcasts',
-    'Videos',
-    'Links',
-    'News',
-  ];
-
-  return tags ? tags.find((tag) => types.includes(tag)) : false;
-};
-
 module.exports = {
   isPublic,
   isCurrent,
@@ -314,7 +289,6 @@ module.exports = {
   hasData,
   getData,
   findData,
-  pageType,
   withData,
   render,
   pageYears,

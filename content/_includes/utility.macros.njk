@@ -209,11 +209,11 @@ params:
   } %}
 
   {%- set ongoing = (end == 'ongoing') -%}
-  {%- set range = (start and end) and (start != end) and (not ongoing) -%}
+  {%- set is_range = end and (start != end) and (not ongoing) -%}
 
   {% if prefix %}
     {%- set prefix = 'since' if ongoing else 'on' -%}
-    {%- set prefix = 'from' if range else prefix -%}
+    {%- set prefix = 'from' if is_range else prefix -%}
     <i>{{ prefix }}</i>
   {% endif %}
 
@@ -223,7 +223,7 @@ params:
 
     {% if ongoing %}
       {{ start | getDate('year') }}
-    {% elif range %}
+    {% elif is_range %}
       {% set start_m = start | getDate('month') %}
       {% set start_y = start | getDate('year') %}
       {% set end_m = end | getDate('month') %}

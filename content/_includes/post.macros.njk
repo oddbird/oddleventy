@@ -339,15 +339,9 @@ params:
   tags,
   venue=none
 ) %}
-  {%- set type = tags | pageType -%}
-  {%- if type and (not venue) and not (type in ['News', 'Links']) -%}
-    {%- set byType = {
-      'Workshops': 'Workshop',
-      'Talks': 'Talk',
-      'Videos': 'Video',
-      'Podcasts': 'Podcast'
-    } -%}
-    <b>{{ byType[type] or type }}</b>
+  {%- set type = tags | pageType('byline') -%}
+  {%- if type and not venue -%}
+    <b>{{ type }}</b>
   {%- endif -%}
 {% endmacro %}
 
@@ -368,24 +362,14 @@ params:
   type,
   collections=none
 ) %}
-  {%- set icons = {
-    'Open Source': 'opensource',
-    'Talks': 'talk',
-    'Workshops': 'workshop',
-    'Podcasts': 'audio',
-    'Videos': 'video',
-    'Links': 'link',
-    'News': 'news'
-  } -%}
-  {%- set icon = 'tags' -%}
+  {%- set icon = type | pageType('icon') -%}
   {%- set url = '/tags/' -%}
-  {%- if icons[type] -%}
-    {% set icon = (icons[type] or 'tags') %}
+  {%- if icon -%}
     {% set url = collections.all | tagLink(type) if collections else none %}
   {%- endif -%}
   {{ utility.link_if(
     content=embed.svg(
-      path='icons/' + icon,
+      path='icons/' + (icon or 'tags'),
       alt=['see all', type] | join(' ') if type else 'all tags'
     ),
     url=url,

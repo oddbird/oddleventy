@@ -22,11 +22,11 @@
   grid-gap: var(--shim);
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   margin-top: var(--gutter);
+}
 
-  h2 {
-    grid-column: 1 / -1;
-    margin: 0;
-  }
+[data-ccs-show='color-name'] {
+  grid-column: 1 / -1;
+  margin: 0;
 }
 
 [data-ccs-show='palette'] {

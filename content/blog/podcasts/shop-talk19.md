@@ -9,7 +9,6 @@ image:
   src: blog/elsewhere/shop-talk.png
 tags:
   - Code
-  - Podcasts
   - Sass
   - Open Source
 summary: |
