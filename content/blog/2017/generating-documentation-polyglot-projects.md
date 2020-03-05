@@ -13,6 +13,7 @@ tags:
   - Herman
 image:
   src: blog/2017/docs/style.jpg
+  alt: Style written on sketchbook page
 summary: |
   Code documentation is ideally written as close to the actual code as
   possible, but compiled into a comprehensive set of documentation that

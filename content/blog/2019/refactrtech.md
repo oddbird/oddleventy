@@ -10,6 +10,7 @@ tags:
   - Diversity
 image:
   src: blog/2019/refactr-tech-panel.jpg
+  alt: Panel conversation at Refactr.tech Conference
 summary: |
   As we readied our seats for the first ever [Refactr.tech Conference], I
   pondered the question: What would a technical conference look like if

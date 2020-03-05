@@ -4,6 +4,7 @@ sub: Automated style guides
 logo: herman
 image:
   src: herman/herman-hero.jpg
+  alt: Sample organized color swatches with hex and hsl values
 date: 2015-11-08
 index: Herman
 tags:

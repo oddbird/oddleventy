@@ -14,6 +14,7 @@ tags:
   - Marionette
 image:
   src: blog/2017/server-client/spa2.jpg
+  alt: Marionette puppet in grassy field
 summary: |
   We want the convenience of a client-side single-page application using
   our [MV\* framework][] [of choice], but don't want to sacrifice the SEO

@@ -12,6 +12,7 @@ tags:
   - Business Development
 image:
   src: blog/2017/liveqa-biz/desk-mobile.jpg
+  alt: Workspace
 summary: |
   Are you a startup founder looking to develop a new web app, or a company
   interested in expanding your web services? Here's your chance to ask all

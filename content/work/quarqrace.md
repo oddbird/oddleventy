@@ -6,7 +6,7 @@ url: http://quarqrace.com
 logo: sram
 image:
   src: projects/trig.jpg
-  alt: athlete list tied to their location and elevation
+  alt: Athlete list tied to their location and elevation
 client: SRAM/Quarq
 date: 2016-12-15
 tags:

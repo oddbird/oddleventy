@@ -11,7 +11,7 @@ tags:
   - Community
 image:
   src: blog/bwdraft.jpg
-  alt: small-screen design proposal for the new OddBird website
+  alt: Small-screen design proposal for the new OddBird website
 summary: |
   OddBird met for a work retreat in April.
   On the Oddgenda: grow the company, and redesign OddSite.

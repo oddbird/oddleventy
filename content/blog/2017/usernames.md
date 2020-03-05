@@ -10,6 +10,7 @@ tags:
   - Code
 image:
   src: blog/2017/usernames/nametag.jpg
+  alt: Name tags
 summary: |
   The term "username" is ambiguous. When designing a user model
   there are several kinds of names that are useful to include.

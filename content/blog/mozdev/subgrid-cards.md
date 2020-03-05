@@ -4,6 +4,7 @@ sub: and fallbacks for legacy browsers
 date: 2019-10-15
 image:
   src: mozdev/subgrid_cards.png
+  alt: CSS snippet with card layout demo
 tags:
   - AboutWeb
   - Code

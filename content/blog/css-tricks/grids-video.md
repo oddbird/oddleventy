@@ -5,6 +5,7 @@ date: 2017-02-20
 author: miriam
 image:
   src: blog/elsewhere/css-tricks.jpg
+  alt: CSS-Tricks
 tags:
   - Code
   - CSS

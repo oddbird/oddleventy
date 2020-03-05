@@ -13,6 +13,7 @@ tags:
   - Code
 image:
   src: blog/2017/susy3/media.jpg
+  alt: Viewport size diagram
 summary: |
   **Most grids change with the viewport --
   and Susy needs new settings at each breakpoint.**

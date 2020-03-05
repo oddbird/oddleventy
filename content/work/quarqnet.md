@@ -6,7 +6,7 @@ url: http://quarqnet.com
 logo: sram
 image:
   src: projects/qasper.jpg
-  alt: worlds greatest athlete, stacy kvernmo's latest bike ride stats and mapped route
+  alt: World's greatest athlete, Stacy Kvernmo's latest bike ride stats and mapped route
 client: SRAM/Quarq
 date: 2016-12-15
 tags:

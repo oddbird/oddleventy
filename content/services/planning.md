@@ -4,6 +4,7 @@ sub: Strategy, design concepts, and estimates based on user-research
 index: Research & Concepting
 image:
   src: pages/design-sketch.jpg
+  alt: Sketched design concept
 pitch:
   - title: Project Summary
     icon: icons/map

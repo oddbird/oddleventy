@@ -5,7 +5,7 @@ sub: Responsive platform for integrated health coaching
 logo: orcas
 image:
   src: projects/coachhub.jpg
-  alt: coachhub's services and platform demos
+  alt: CoachHub's services and platform demos
   position: top
 client: &client ORCAS
 people:

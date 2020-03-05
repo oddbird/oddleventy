@@ -7,6 +7,7 @@ canonical: https://shoptalkshow.com/episodes/384/
 author: miriam
 image:
   src: blog/elsewhere/shop-talk.png
+  alt: Shop Talk Show Podcast
 tags:
   - Code
   - Podcasts

@@ -10,6 +10,7 @@ tags:
   - Design
 image:
   src: blog/2017/colors/color.jpg
+  alt: Jonny next to vertical stripes of color
 summary: |
   **How do you select a set of colors that express the attitude of your
   brand**, look great together, and pass WCAG accessibility standards? How

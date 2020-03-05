@@ -12,6 +12,7 @@ tags:
   - Code
 image:
   src: blog/2017/ga-spam/spam-traffic.jpg
+  alt: Spam semi truck
 summary: |
   Google Analytics is great for gathering data on who uses your web
   application, but becomes worthless if spam sessions start infesting your

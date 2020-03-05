@@ -8,6 +8,7 @@ tags:
   - Style Guides
 image:
   src: blog/clarity.jpg
+  alt: Clarity
 summary: |
   It was an honor to be part of the first ever Clarity Conference
   in San Francisco --

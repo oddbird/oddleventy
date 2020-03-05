@@ -6,6 +6,7 @@ date: 2017-06-14
 slides: https://talks.oddbird.net/no-grid-system/
 image:
   src: talks/devconf-best.jpg
+  alt: Giant pencil awarded to Miriam Suzanne for Best of CSS Dev Conf 2017
 tags:
   - Code
   - Susy

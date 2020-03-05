@@ -10,6 +10,7 @@ tags:
   - Design
 image:
   src: blog/2017/typography/type.jpg
+  alt: Sondra looks at large ampersand symbol painted on building exterior
 summary: |
   **How do you choose the best fonts for a brand identity**
   among the thousands of options available on the interwebs these days?

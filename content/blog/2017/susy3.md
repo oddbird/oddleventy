@@ -13,6 +13,7 @@ tags:
   - Code
 image:
   src: blog/2017/susy3/susy-ag.jpg
+  alt: flexible grid column layout
 summary: |
   **We're excited to introduce Susy 3.0**,
   a major update to our popular

@@ -10,6 +10,7 @@ tags:
   - Videos
 image:
   src: mozdev/revert.png
+  alt: CSS snippet showing display revert
 summary: |
   I've often used `initial` and `unset` in my CSS --
   global keywords that can be applied to any property.

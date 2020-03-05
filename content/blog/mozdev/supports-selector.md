@@ -9,6 +9,7 @@ tags:
   - Videos
 image:
   src: mozdev/supports_selector.png
+  alt: CSS @supports statement
 summary: |
   Firefox 69 was the first to implement selector feature queries, but
   other browsers are following suit. I'll show you how it works, and how

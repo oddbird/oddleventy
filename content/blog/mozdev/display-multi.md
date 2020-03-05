@@ -9,6 +9,7 @@ tags:
   - Videos
 image:
   src: mozdev/multi-display.png
+  alt: CSS snippet showing display value options
 summary: |
   The `display` property has been in CSS from the beginning,
   handling everything from `block` and `inline` boxes

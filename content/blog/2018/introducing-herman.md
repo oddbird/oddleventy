@@ -15,6 +15,7 @@ tags:
   - Style Guides
 image:
   src: blog/2017/herman-intro/header.jpg
+  alt: Sample organized color swatches with hex and hsl values
 summary: |
   **Design systems streamline development, communication, and
   consistency** --but often rely on dedicated teams and extended budgets.

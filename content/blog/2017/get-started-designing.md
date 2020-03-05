@@ -10,6 +10,7 @@ tags:
   - User Experience
 image:
   src: blog/2017/get-started-designing/cafe-computer.jpg
+  alt: Tools for design include a computer, sketchbook, pen and paper
 summary: |
   So you'd like to start learning design, but the number of tools and
   tutorials available is overwhelming. Where do you start? I recommend

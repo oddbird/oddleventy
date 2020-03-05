@@ -9,6 +9,7 @@ tags:
   - Diversity
 image:
   src: blog/2017/2016-review/retreat.jpg
+  alt: OddBird team members workshop ideas with post-it notes
 summary: |
   OddBird is a small company --
   a shared vision and brand that transforms

@@ -10,6 +10,7 @@ tags:
   - Typography
 image:
   src: blog/2017/initial-letter/drop-caps.jpg
+  alt: Creative usage of drop caps collage
 summary: |
   Using an emphasized initial letter is a technique that has been used for
   centuries. Let's dive in to see some ways you can apply it to your
