@@ -97,6 +97,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('active', birds.active);
   eleventyConfig.addFilter('authorPage', birds.authorPage);
+  eleventyConfig.addFilter('activeAuthor', birds.activeAuthor);
+  eleventyConfig.addFilter('withActiveAuthor', birds.withActiveAuthor);
 
   eleventyConfig.addFilter('typogr', type.typogr);
   eleventyConfig.addFilter('md', type.md);

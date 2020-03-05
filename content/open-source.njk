@@ -13,6 +13,6 @@ summary: |
 {% import 'oss.macros.njk' as oss %}
 
 {{ oss.by_type(
-  collections.oss,
+  collections.oss | withActiveAuthor(collections.all),
   collections
 ) }}

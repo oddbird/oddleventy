@@ -82,7 +82,7 @@ params:
   get:
     type: string ('tag' | 'byline' | 'icon')
     default: undefined
-    note: Returns the tag by default
+    note: Returns the tag name by default
 */
 const pageType = (tags, get) => {
   if (tags) {
