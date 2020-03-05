@@ -45,7 +45,7 @@ params:
     type: array
     note: containing 11ty page objects
 */
-const getCurrent = (collection) => collection.filter((page) => isCurrent(page));
+const getCurrent = (collection) => collection.filter(isCurrent);
 
 /* @docs
 label: getPublic
