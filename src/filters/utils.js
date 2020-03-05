@@ -1,5 +1,7 @@
 'use strict';
 
+const _ = require('lodash');
+
 /* @docs
 label: Utility Filters
 category: File
@@ -38,12 +40,9 @@ params:
     type: object
     note: CSS property-value pairs
 */
-const styles = (dict) => {
-  const map = Object.keys(dict).map((prop) => {
-    const val = dict[prop];
-    return val ? `${prop}:${val};` : '';
-  });
-  return map.reduce((all, one) => `${all}${one}`, '');
-};
+const styles = (dict) =>
+  _(dict)
+    .map((val, prop) => (val ? `${prop}:${val};` : ''))
+    .reduce((all, one) => `${all}${one}`, '');
 
 module.exports = { typeCheck, styles };

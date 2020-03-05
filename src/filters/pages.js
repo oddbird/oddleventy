@@ -2,7 +2,7 @@
 
 const _ = require('lodash');
 
-const { now, getDate } = require('./time');
+const { now, getDate } = require('#/time');
 
 /* @docs
 label: Page Filters
@@ -18,8 +18,8 @@ params:
     type: 11ty page object
 */
 const isPublic = (page) => {
-  const live = page.data.draft !== true;
-  const title = page.data && page.data.title;
+  const live = !page.data.draft;
+  const title = Boolean(page.data.title);
   return live && title;
 };
 
@@ -45,7 +45,7 @@ params:
     type: array
     note: containing 11ty page objects
 */
-const getPublic = (collection) => collection.filter((page) => isPublic(page));
+const getPublic = (collection) => collection.filter(isPublic);
 
 /* @docs
 label: hasData
@@ -63,7 +63,11 @@ params:
     note: Only approve pages where the desired attributes have a given value
 */
 const hasData = (obj, keys, value) =>
-  value ? _.includes(_.get(obj, keys), value) : _.hasIn(obj, keys);
+  value
+    ? _(obj)
+        .get(keys, [])
+        .includes(value)
+    : _.hasIn(obj, keys);
 
 /* @docs
 label: withData
@@ -193,6 +197,7 @@ params:
     type: string
 */
 const render = (page, key) => {
+  /* istanbul ignore if */
   if (!page.data) {
     return undefined;
   }
@@ -292,7 +297,7 @@ const pageType = (tags) => {
     'News',
   ];
 
-  return tags ? tags.find((tag) => types.includes(tag)) : false;
+  return (tags || []).find((tag) => types.includes(tag));
 };
 
 module.exports = {
