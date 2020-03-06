@@ -21,6 +21,8 @@ summary: |
 date: 2017-02-22
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 So you’re a developer or you’re brand new to the world of web design,
 and you’d like to grow your design chops. How do you even begin to sort
 through the overwhelming assortment of tools and tutorials available? In
@@ -54,7 +56,12 @@ background when I’m finished.
 
 ## Typography: A Practical Guide
 
-<img src="{{ site.images }}blog/2017/get-started-designing/santamaria.jpg" class="img-border img-border" alt="Jason Santa Maria&#39;s website" />
+{% call embed.img(
+    src='blog/2017/get-started-designing/santamaria.jpg',
+    alt='Website by Jason Santa Maria',
+    attrs={'class': 'img-border'}
+) %}
+{% endcall %}
 
 According to typography expert [Jason Santa Maria], “If your type is
 bad, the design fails.” There’s so much to learn in the rich field of

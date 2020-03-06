@@ -17,6 +17,8 @@ summary: |
   project to help guide your reader with visual hierarchy.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 We have some pretty great new(ish) properties we can use in CSS to make
 our designs more unique and help provide useful visual cues for your
 audience. One of these newer techniques can be used to create the drop
@@ -41,7 +43,12 @@ your initial letter to expand.
 This code would give us a drop cap seven lines tall, like the large
 letter "I" in this example:
 
-<img src="{{ site.images }}blog/2017/initial-letter/minions-initial-letter.jpg" class="align-center img-border align-center img-border" alt="Screenshot of inital-letter demo" />
+{% call embed.img(
+    src='blog/2017/initial-letter/minions-initial-letter.jpg',
+    alt='inital-letter demo',
+    attrs={'class': 'img-border align-center'}
+) %}
+{% endcall %}
 
 ------
 
@@ -101,7 +108,12 @@ programmatically, but it will not take into account the x-height of the
 typeface you choose. Here is a screenshot of the resulting fallback and
 enhancement:
 
-<img src="{{ site.images }}blog/2017/initial-letter/fallback-enhancement.jpg" class="align-center img-border align-center img-border" alt="Fallback and Enhancement in Chrome and Safari" />
+{% call embed.img(
+    src='blog/2017/initial-letter/fallback-enhancement.jpg',
+    alt='Fallback and enhancement in Chrome and Safari',
+    attrs={'class': 'img-border align-center'}
+) %}
+{% endcall %}
 
 Here is the CodePen demo:
 
@@ -129,7 +141,12 @@ to drop. A value equal to the initial height value is the default.
 }
 ```
 
-<img src="{{ site.images }}blog/2017/initial-letter/sunken-raised-drop-caps.jpg" class="align-center img-border align-center img-border" alt="Screenshot of raised, sunken, and drop cap demo" />
+{% call embed.img(
+    src='blog/2017/initial-letter/sunken-raised-drop-caps.jpg',
+    alt='Screenshot of raised, sunken, and drop cap demo',
+    attrs={'class': 'img-border align-center'}
+) %}
+{% endcall %}
 
 The following CodePen demo is available in Safari only:
 
