@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Reverse-engineering Ian Bicking's brain
 sub: Inside `pip` and `virtualenv`
 author: carl

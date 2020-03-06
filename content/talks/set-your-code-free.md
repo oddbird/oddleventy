@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Set Your Code Free
 author: carl
 date: 2014-04-13

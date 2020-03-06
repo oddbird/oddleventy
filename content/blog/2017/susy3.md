@@ -1,5 +1,5 @@
 ---
-feature: large
+card: large
 title: Welcome to Susy3!
 sub: Make grid systems your fallback plan
 author: miriam

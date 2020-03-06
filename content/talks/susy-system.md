@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Your Own Damn Susy System
 sub: an introduction to the Susy layout toolkit
 author: miriam

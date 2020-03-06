@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Getting started with automated testing
 author: carl
 date: 2013-03-16

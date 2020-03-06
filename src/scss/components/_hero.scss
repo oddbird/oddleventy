@@ -1,0 +1,28 @@
+[data-hero] {
+  --area: hero;
+
+  img,
+  svg {
+    border: var(--hero-border, 0) solid var(--border);
+    height: 100%;
+    max-height: var(--hero-height, 50vmin);
+    object-fit: cover;
+    object-position: var(--hero-position, center);
+    width: 100%;
+  }
+
+  svg {
+    object-fit: contain;
+  }
+}
+
+[data-hero='large'] {
+  --hero-border: 1px;
+  clip-path: var(--crop);
+}
+
+[data-media='hero'] {
+  --column: wide;
+  --media-content: var(--page);
+  --media-min: 8em;
+}

@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Curing Design Complacency
 sub: It's easy to fall into old habits
 author: stacy

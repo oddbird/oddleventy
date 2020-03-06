@@ -25,7 +25,6 @@
 
     {% if author or client %}
       <p class="byline">
-        {{ post.byline_type(tags, venue) }}
         {{ post.by(author, collections) }}
         {{ linked | safe }}
         {{ post.client(client) }}

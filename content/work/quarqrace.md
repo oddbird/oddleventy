@@ -9,8 +9,6 @@ image:
 client: SRAM/Quarq
 date: 2016-12-15
 tags:
-  - _post
-  - Case Study
   - Client Work
   - Research & Concepting
   - Design
@@ -52,5 +50,3 @@ summary: |
   triathlons, and non-competitive events, including regular IronMan and
   Enduro races.
 ---
-
-

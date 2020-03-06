@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Dynamic CSS
 sub: with grids & custom properties
 author: miriam

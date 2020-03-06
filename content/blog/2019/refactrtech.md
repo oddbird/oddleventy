@@ -1,5 +1,5 @@
 ---
-feature: large
+card: large
 title: Diversity. Inclusion. Tech.
 sub: Refactr.tech 2019 aims to solve tech's diversity problem
 author: erica

@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Python Testing Tools
 author: carl
 date: 2014-02-28

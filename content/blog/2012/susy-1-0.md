@@ -1,5 +1,5 @@
 ---
-feature: large
+card: large
 title: Susy 1.0 Release
 date: 2012-08-14
 author: miriam

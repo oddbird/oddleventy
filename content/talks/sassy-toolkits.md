@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Sassy Toolkits
 sub: a case-study in building and sharing open-source Sass
 author: miriam

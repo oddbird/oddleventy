@@ -1,5 +1,5 @@
 ---
-feature: large
+card: large
 title: How to Choose Beautiful & Accessible Brand Colors for Your Website
 author: sondra
 date: 2017-01-16

@@ -1,5 +1,4 @@
 ---
-feature: true
 title: No Pain No Gain
 sub: CSS Code Reviews
 author: stacy

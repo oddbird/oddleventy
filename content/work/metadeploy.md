@@ -15,8 +15,6 @@ people:
     face: jason-lantz.jpg
     venue: *client
 tags:
-  - _post
-  - Case Study
   - Client Work
   - Research & Concepting
   - Design
@@ -52,5 +50,3 @@ summary: |
   allowing users to customize their installations, and run preflight
   checks before committing to a full install.
 ---
-
-

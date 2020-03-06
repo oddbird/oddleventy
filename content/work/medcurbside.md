@@ -14,8 +14,6 @@ people:
     title: Founder
     venue: *client
 tags:
-  - _post
-  - Case Study
   - Client Work
   - Research & Concepting
   - Branding
@@ -57,5 +55,3 @@ summary: |
   deal with the plethora of information available
   in healthcare today.
 ---
-
-

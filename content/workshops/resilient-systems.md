@@ -2,7 +2,7 @@
 title: Resilient Web Systems
 sub: Upgrade your app with front-end training & consulting
 author: miriam
-feature: large
+card: large
 date: 2020-01-01
 tags:
   - Workshops

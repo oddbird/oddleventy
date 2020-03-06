@@ -1,5 +1,4 @@
 ---
-feature: true
 title: WordPress from Scratch to Launch
 author: stacy
 date: 2017-01-17

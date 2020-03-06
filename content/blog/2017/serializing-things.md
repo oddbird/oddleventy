@@ -1,5 +1,5 @@
 ---
-feature: large
+card: large
 title: Serializing Things for Celery
 author: kit
 tags:

@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Organizing Sass Partials
 author: miriam
 date: 2013-11-19

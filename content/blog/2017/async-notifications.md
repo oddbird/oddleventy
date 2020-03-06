@@ -1,5 +1,5 @@
 ---
-feature: large
+card: large
 title: Django, Background Processes, and Keeping Users in the Loop
 author: kit
 tags:

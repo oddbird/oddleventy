@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Agile Design Systems
 sub: with meaningful code and automation
 author: miriam
