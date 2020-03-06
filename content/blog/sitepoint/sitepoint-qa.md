@@ -12,16 +12,16 @@ tags:
   - Interview
   - Code
   - Susy
+summary: |
+  I did a [live Q&A at SitePoint][qa]
+  talking about:
+
+  - Customizing Susy for your projects
+  - Other ways to do layouts (and why you might not even need a toolkit)
+  - How to select a toolkit, or build your very own!
+
+  [qa]: https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664
 ---
-
-I did a [live Q&A at SitePoint][qa]
-talking about:
-
-- Customizing Susy for your projects
-- Other ways to do layouts (and why you might not even need a toolkit)
-- How to select a toolkit, or build your very own!
-
-[qa]: https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664
 
 > To be clear:
 > now that we have border-box sizing,
