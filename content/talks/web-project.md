@@ -1,4 +1,5 @@
 ---
+feature: true
 title: Planning Your Web Project
 image:
   src: pages/design-sketch.jpg

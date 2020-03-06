@@ -1,4 +1,5 @@
 ---
+feature: true
 title: Testing and Django
 author: carl
 image:

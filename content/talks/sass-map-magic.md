@@ -1,4 +1,5 @@
 ---
+feature: true
 title: Sass Map Magic
 author: miriam
 date: 2014-09-12

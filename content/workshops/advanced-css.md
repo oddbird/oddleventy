@@ -1,4 +1,5 @@
 ---
+feature: true
 title: Advanced CSS Workshop
 banner: Advanced CSS for Modern Applications
 sub: with practical use-cases, tooling, and pitfalls

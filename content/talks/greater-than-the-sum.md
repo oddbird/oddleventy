@@ -1,4 +1,5 @@
 ---
+feature: true
 title: Greater Than the Sum of Parts
 sub: Integrating Pyramid, React, & Plone
 author: david

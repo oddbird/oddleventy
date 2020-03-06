@@ -1,4 +1,5 @@
 ---
+feature: true
 title: Taming dependencies with pip
 author: carl
 date: 2011-09-08

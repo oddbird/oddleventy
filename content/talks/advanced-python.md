@@ -1,4 +1,5 @@
 ---
+feature: true
 title: Advanced Python
 author: carl
 date: 2014-02-27

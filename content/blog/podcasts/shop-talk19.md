@@ -1,5 +1,4 @@
 ---
-feature: true
 title: On Sass & CSS
 venue: Shop Talk Show
 date: 2019-10-28

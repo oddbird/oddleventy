@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Laying out Forms using Subgrid
 sub: and fallbacks for legacy browsers
 date: 2019-10-16

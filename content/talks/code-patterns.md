@@ -1,4 +1,5 @@
 ---
+feature: true
 title: Code Patterns
 banner: Code Patterns for Pattern Making
 author: miriam

@@ -1,4 +1,5 @@
 ---
+feature: large
 title: CoachHub
 banner: CoachHub Application
 sub: Responsive platform for integrated health coaching

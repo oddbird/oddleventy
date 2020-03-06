@@ -1,4 +1,5 @@
 ---
+feature: true
 title: CSS is Rad
 sub: resilient design on an infinite canvas
 author: miriam
