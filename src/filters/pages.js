@@ -31,11 +31,16 @@ params:
   page:
     type: 11ty page object
 */
-const isCurrent = (page) =>
-  page.data.end === 'ongoing' ||
-  !page.data.end ||
-  getDate(page.data.end) >= now;
-
+// eslint-disable-next-line consistent-return
+const isCurrent = (page) => {
+  if (page) {
+    return (
+      page.data.end === 'ongoing' ||
+      !page.data.end ||
+      getDate(page.data.end) >= now
+    );
+  }
+};
 /* @docs
 label: getCurrent
 category: Filter
