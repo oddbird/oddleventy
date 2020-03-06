@@ -94,9 +94,10 @@ params:
 const activeAuthor = (page, all) => {
   const author = page.data.author || [];
   const list = typeof author === 'string' ? [author] : author;
-  return list.includes('oddbird')
-    ? true
-    : Boolean(list.find((name) => isCurrent(authorPage(all, name))));
+  return (
+    list.includes('oddbird') ||
+    list.some((name) => isCurrent(authorPage(all, name)))
+  );
 };
 
 /* @docs

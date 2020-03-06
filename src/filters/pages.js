@@ -31,15 +31,17 @@ params:
   page:
     type: 11ty page object
 */
-// eslint-disable-next-line consistent-return
 const isCurrent = (page) => {
-  if (page) {
-    return (
-      page.data.end === 'ongoing' ||
-      !page.data.end ||
-      getDate(page.data.end) >= now
-    );
+  /* istanbul ignore if */
+  if (!page || !page.data) {
+    return false;
   }
+
+  return (
+    page.data.end === 'ongoing' ||
+    !page.data.end ||
+    getDate(page.data.end) >= now
+  );
 };
 /* @docs
 label: getCurrent
@@ -214,7 +216,7 @@ params:
 */
 const render = (page, key) => {
   /* istanbul ignore if */
-  if (!page.data) {
+  if (!page || !page.data) {
     return undefined;
   }
 
