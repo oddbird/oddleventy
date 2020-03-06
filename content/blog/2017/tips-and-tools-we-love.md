@@ -16,6 +16,8 @@ summary: |
 date: 2017-02-14
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 In the spirit of Valentine’s Day, let’s kick off this post with a CSS
 love poem:
 
@@ -116,11 +118,14 @@ Grid feature speeds up the design process considerably, cutting out all
 that time she use to spend copying, pasting, and spacing repeating
 elements.
 
-![image]
+{% call embed.img(
+    src='blog/2017/tips-tools/adobexd.jpg',
+    alt=' linked prototype in Adobe XD'
+) %}
+{% endcall %}
 
 [Sondra Eby]: /authors/sondra/
 [Adobe Xd]: http://www.adobe.com/products/experience-design.html
-[image]: {{ site.images }}blog/2017/tips-tools/adobexd.jpg
 
 ## TextExpander
 

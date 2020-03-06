@@ -22,6 +22,8 @@ summary: |
 date: 2017-02-10
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 At OddBird we believe that undocumented code is unfinished code. The act
 of documenting clarifies what we are building, and the resulting
 documentation guides consistency in how we do things in different parts
@@ -57,7 +59,11 @@ in the following Sass:
 
 is rendered in the style guide like this:
 
-![image]
+{% call embed.img(
+    src='blog/2017/docs/sassdoc.png',
+    alt='syntax highlighted code block and description of selector'
+) %}
+{% endcall %}
 
 We are working on our own theme for Sassdoc, called [Herman], which
 provides extra tools for rendering samples of things like colors, fonts,
@@ -65,7 +71,6 @@ and icons. (Alas, while we are using it to produce documentation, it is
 not yet very well-documented itself.)
 
 [SassDoc]: http://sassdoc.com/
-[image]: {{ site.images }}blog/2017/docs/sassdoc.png
 [Herman]: https://github.com/oddbird/sassdoc-theme-herman/
 
 ## The Multi-language Challenge

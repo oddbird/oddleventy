@@ -18,6 +18,8 @@ summary: |
 series: Open Design
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 What follows is an in-depth look at our brand design process thus far as
 we work towards a new look and feel for this, our OddSite. Details,
 confessions, what worked, what flopped, and why.
@@ -109,7 +111,11 @@ journey.
 
 ## An Odd Logo
 
-![image]
+{% call embed.img(
+    src='blog/2016/brand/type-logo.jpg',
+    alt='OddBird Logo in Baskerville'
+) %}
+{% endcall %}
 
 In 2008 when OddBird launched, Miriam designed the OddBird logo. It’s
 gone through some small adjustments, but we still love our odd orange
@@ -117,7 +123,6 @@ egg-wing friend, so we’re sticking with it. The text behind the bird is
 up for grabs, though, as we consider what typography best suits the
 overall site. More on that below.
 
-[image]: {{ site.images }}blog/2016/brand/type-logo.jpg
 
 ## The Birds: Design Team
 
@@ -171,15 +176,27 @@ method of mixing and matching, but neither did we feel that any one
 element collage encapsulated our brand. We tried style tiles, but those
 felt both too specific and not specific enough.
 
-![image][1]
+{% call embed.img(
+    src='blog/2016/brand/type-styletiles.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 *Style Tiles - 4 cropped sections*
 
-![image][2]
+{% call embed.img(
+    src='blog/2016/brand/type-elcollage.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 *Element Collage*
 
-![image][3]
+{% call embed.img(
+    src='blog/2016/brand/type-elcollage2.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 *Element Collage*
 
@@ -198,9 +215,6 @@ single element to focus on: typography.
 [mood board]: http://www.creativebloq.com/graphic-design/mood-boards-812470
 [Style Tiles and How They Work]: http://alistapart.com/article/style-tiles-and-how-they-work
 [Element Collages]: http://danielmall.com/articles/rif-element-collages/
-[1]: {{ site.images }}blog/2016/brand/type-styletiles.jpg
-[2]: {{ site.images }}blog/2016/brand/type-elcollage.jpg
-[3]: {{ site.images }}blog/2016/brand/type-elcollage2.jpg
 [Vox Product]: http://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
 
 ## Typography - With a Little Help From Our Friends
@@ -228,19 +242,35 @@ almost tactile feel. We want to convey honesty and thoughtfulness with
 our brand and classic serif fonts like Baskerville are known for
 communicating trustworthiness.
 
-![image][4]
+{% call embed.img(
+    src='blog/2016/brand/bookmania-2.png',
+    alt=''
+) %}
+{% endcall %}
 
 *Bookmania*
 
-![image][5]
+{% call embed.img(
+    src='blog/2016/brand/plume-tisa-2.png',
+    alt=''
+) %}
+{% endcall %}
 
 *Pluma, Tisa*
 
-![image][6]
+{% call embed.img(
+    src='blog/2016/brand/mia-baskerville.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 *Baskerville*
 
-![image][7]
+{% call embed.img(
+    src='blog/2016/brand/typography-freight2.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 *Freight Sans, Freight Text*
 
@@ -253,8 +283,4 @@ this OddSite brand design process has proven how dependent we are on
 each other to do this business of web design to the best of our
 abilities. Thanks!
 
-[4]: {{ site.images }}blog/2016/brand/bookmania-2.png
-[5]: {{ site.images }}blog/2016/brand/plume-tisa-2.png
-[6]: {{ site.images }}blog/2016/brand/mia-baskerville.jpg
-[7]: {{ site.images }}blog/2016/brand/typography-freight2.jpg
 [OddFriends Slack channel]: http://friends.oddbird.net/

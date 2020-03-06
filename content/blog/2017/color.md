@@ -26,6 +26,8 @@ summary: |
 series: Open Design
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 Now that you have [selected excellent typography] that fits your brand
 to a “T”, it’s time to explore brand colors. How do you select a set of
 colors that express the attitude of your brand, look great together, and
@@ -73,48 +75,66 @@ feel about each company?
 
 ## [Canva]
 
-![image]
+{% call embed.img(
+    src='blog/2017/colors/canva.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [Canva]: https://designschool.canva.com/blog/website-color-schemes/
-[image]: {{ site.images }}blog/2017/colors/canva.jpg
 
 ## [Design Seeds]
 
-![image][1]
+{% call embed.img(
+    src='blog/2017/colors/designseeds.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 I looked at the sites of many web development agencies that I know and
 love as I considered OddBird’s color palette.
 
 [Design Seeds]: https://www.design-seeds.com/
-[1]: {{ site.images }}blog/2017/colors/designseeds.jpg
 
 ## [Happy Cog]
 
-![image][2]
+{% call embed.img(
+    src='blog/2017/colors/happycog.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [Happy Cog]: http://happycog.com/
-[2]: {{ site.images }}blog/2017/colors/happycog.jpg
 
 ## [Mild Bunch]
 
-![image][3]
+{% call embed.img(
+    src='blog/2017/colors/mildbunch.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [Mild Bunch]: http://mildbun.ch/
-[3]: {{ site.images }}blog/2017/colors/mildbunch.jpg
 
 ## [Clear Left]
 
-![image][4]
+{% call embed.img(
+    src='blog/2017/colors/clearleft.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [Clear Left]: http://clearleft.com/
-[4]: {{ site.images }}blog/2017/colors/clearleft.jpg
 
 ## [Crush Lovely]
 
-![image][5]
+{% call embed.img(
+    src='blog/2017/colors/crushlovely.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [Crush Lovely]: http://crushlovely.com/
-[5]: {{ site.images }}blog/2017/colors/crushlovely.jpg
 
 ## Step 3 – Start \[Color\] Scheming
 
@@ -123,7 +143,11 @@ from color clash? My favorite tool for the job is Paletton.
 
 ## [Paletton]
 
-![image][6]
+{% call embed.img(
+    src='blog/2017/colors/paletton.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 If you don’t yet have any color ideas in mind, think back to your brand
 goal words. Compare those to the attitudes and personalities of the
@@ -147,25 +171,30 @@ used the sliders to find a very dark color for the text and a very light
 SassMe converts the hex colors into Sass color functions for me.
 
 [Paletton]: http://paletton.com/
-[6]: {{ site.images }}blog/2017/colors/paletton.jpg
 
 ## [SassMe]
 
-![image][7]
+{% call embed.img(
+    src='blog/2017/colors/sassme.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 OddBird saves our colors and typography in a living style guide, making
 it easier for designers like me to grab exact colors when I’m
 prototyping website pages or features.
 
 [SassMe]: http://jim-nielsen.com/sassme/
-[7]: {{ site.images }}blog/2017/colors/sassme.jpg
 
 ## [Living Style Guide]
 
-![image][8]
+{% call embed.img(
+    src='blog/2017/colors/styleguide.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [Living Style Guide]: /styleguide/color.html
-[8]: {{ site.images }}blog/2017/colors/styleguide.jpg
 
 ## Step 4 – Test Colors for Accessibility
 
@@ -187,7 +216,11 @@ Contrast Ratio is my go-to web tool for the job.
 
 ## [Contrast Ratio]
 
-![image][9]
+{% call embed.img(
+    src='blog/2017/colors/contrastratio.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 Enter RGB or hexadecimal values as background and text colors. The
 circle in the middle will turn green if the two colors have high enough
@@ -202,11 +235,14 @@ choose accessible colors, and accessibility articles if you’d like to
 dive deep.
 
 [Contrast Ratio]: http://leaverou.github.io/contrast-ratio/
-[9]: {{ site.images }}blog/2017/colors/contrastratio.jpg
 
 ## [WebAIM: Color Contrast Checker]
 
-![image][10]
+{% call embed.img(
+    src='blog/2017/colors/webaim.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 When I tested OddBird’s signature orange with Contrast Ratio I
 discovered that our dark blue passed AA level for any size text on a
@@ -216,7 +252,6 @@ color so much that it no longer retained the bright, fun feel we needed.
 So I began the search for a new brand color.
 
 [WebAIM: Color Contrast Checker]: #webaim-color-contrast-checker
-[10]: {{ site.images }}blog/2017/colors/webaim.jpg
 
 ## Step 5 - Test Colors in Context
 
@@ -236,7 +271,11 @@ prototypes with ease just an hour after downloading the program.
 
 ## [Adobe Experience Design]
 
-![image][11]
+{% call embed.img(
+    src='blog/2017/colors/xd.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 I created two element collages using exactly the same blog content to
 make the designs easy for me and the rest of the team to compare and
@@ -246,7 +285,11 @@ idea of Trustworthiness. I played with other design elements in the
 collages to create the desired personalities as well, but color was my
 main focus.
 
-![image][12]
+{% call embed.img(
+    src='blog/2017/colors/elementcollages-color.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 Drawing on my research into other brands, I realized it could work well
 to pull in design elements and colors from the [Susy], an open source
@@ -257,7 +300,11 @@ our orange. Bright, odd, and accessible, it was a good counterpoint to
 our serious, dark blue. The team loved the Susy tie-in, and OddBird’s
 new brand colors were born – er, hatched.
 
-![image][13]
+{% call embed.img(
+    src='blog/2017/colors/elementcollage-final.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 In the end, we loved OddBird orange too much to cut it altogether, and
 we snuck it into the OddSite design. Can you find it? Hint: scroll back
@@ -268,69 +315,91 @@ with color. Have you tried Xd? What did you think? We’ll be discussing
 this and more in our [OddFriends Slack channel]. Join us!
 
 [Adobe Experience Design]: http://www.adobe.com/products/experience-design.html
-[11]: {{ site.images }}blog/2017/colors/xd.jpg
-[12]: {{ site.images }}blog/2017/colors/elementcollages-color.jpg
 [Susy]: /susy/
 [Miriam]: /authors/miriam/
-[13]: {{ site.images }}blog/2017/colors/elementcollage-final.jpg
 [OddFriends Slack channel]: http://friends.oddbird.net
 
 ### Bonus - Color Palette Inspiration
 
 ## [Color Palette FX]
 
-![image][14]
+{% call embed.img(
+    src='blog/2017/colors/fx.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [Color Palette FX]: http://www.palettefx.com/
-[14]: {{ site.images }}blog/2017/colors/fx.jpg
 
 ## [HSL Color Picker]
 
-![image][15]
+{% call embed.img(
+    src='blog/2017/colors/hsl.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [HSL Color Picker]: http://hslpicker.com/
-[15]: {{ site.images }}blog/2017/colors/hsl.jpg
 
 ## [Color Me]
 
-![image][16]
+{% call embed.img(
+    src='blog/2017/colors/colorme.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [Color Me]: https://colorme.io/
-[16]: {{ site.images }}blog/2017/colors/colorme.jpg
 
 ## [Culrs]
 
-![image][17]
+{% call embed.img(
+    src='blog/2017/colors/culrs.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [Culrs]: http://culrs.com/
-[17]: {{ site.images }}blog/2017/colors/culrs.jpg
 
 ## [Open Color]
 
-![image][18]
+{% call embed.img(
+    src='blog/2017/colors/opencolor.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [Open Color]: https://yeun.github.io/open-color/
-[18]: {{ site.images }}blog/2017/colors/opencolor.jpg
 
 ### Bonus - Color Contrast Tools for Accessibility
 
 ## [Colour Contrast Check]
 
-![image][19]
+{% call embed.img(
+    src='blog/2017/colors/check.jpg',
+    alt=''
+) %}
+{% endcall %}
 
 [Colour Contrast Check]: https://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333
-[19]: {{ site.images }}blog/2017/colors/check.jpg
 
 ## [Accessible Colors]
 
-![image][20]
+{% call embed.img(
+    src='blog/2017/colors/accessiblecolors.jpg',
+    alt='Check foregournd and background color with font size and weight'
+) %}
+{% endcall %}
 
 [Accessible Colors]: http://accessible-colors.com/
-[20]: {{ site.images }}blog/2017/colors/accessiblecolors.jpg
+
 
 ## [Adobe Plugin Check Contrast Ratio]
 
-![image][21]
+{% call embed.img(
+    src='blog/2017/colors/plugin.jpg',
+    alt='Check Contrast Ratio Photoshop Add-on'
+) %}
+{% endcall %}
 
 [Adobe Plugin Check Contrast Ratio]: https://creative.adobe.com/addons/products/12170#.WHlhCrYrKHp
-[21]: {{ site.images }}blog/2017/colors/plugin.jpg
