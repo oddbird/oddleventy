@@ -7,6 +7,7 @@ tags:
   - News
   - Data Modeling
   - Django
+  - Open Source
   - Code
 image:
   src: blog/2017/usernames/nametag.jpg

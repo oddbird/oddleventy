@@ -3,6 +3,7 @@ title: Susy Next, Alpha 5
 tags:
   - News
   - Susy
+  - Open Source
   - Susy2
   - Layout
   - Grids

@@ -141,6 +141,18 @@ export const collection2 = [
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },
+  {
+    inputPath: './test5.md',
+    fileSlug: 'test5',
+    outputPath: './_site/test5/index.html',
+    url: '/test5/',
+    date: '2018-01-09T04:10:17.000Z',
+    data: {
+      title: 'Test Title',
+      tags: ['tag1', 'tag2'],
+    },
+    templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
+  },
 ];
 
 export const collection3 = [
@@ -156,6 +168,7 @@ export const collection3 = [
       author: 'miriam',
       end: 'ongoing',
       slug: 'news',
+      oss: 'owner',
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },
@@ -217,3 +230,7 @@ export const collection3 = [
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },
 ];
+
+export const collections = {
+  all: [collection, collection2, collection3],
+};

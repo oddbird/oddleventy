@@ -2,13 +2,13 @@ import {
   byYear,
   findData,
   findPage,
+  getCurrent,
   getData,
   getPage,
   getPublic,
   hasData,
   isCurrent,
   isPublic,
-  pageType,
   pageYears,
   render,
 } from '#/pages';
@@ -24,6 +24,12 @@ describe('page filters', () => {
   test('isCurrent', () => {
     expect(isCurrent(collection3[0])).toBeTruthy();
     expect(isCurrent(collection3[2])).toBeFalsy();
+  });
+
+  test('getCurrent', () => {
+    const currentPages = [collection3[0], collection3[1]];
+
+    expect(getCurrent(collection3)).toEqual(currentPages);
   });
 
   test('getPublic', () => {
@@ -90,16 +96,6 @@ describe('page filters', () => {
 
       expect(actual.map((item) => item.year)).toEqual(expected);
       expect(actual.map((item) => item.posts.length)).toEqual([2, 2]);
-    });
-  });
-
-  describe('pageType', () => {
-    test('Return one of several resource "types" from page tags', () => {
-      const tags = ['Workshops', 'Podcasts', 'foo', 'bar'];
-
-      expect(pageType(tags)).toEqual('Workshops');
-      expect(pageType(['foo'])).toBeUndefined();
-      expect(pageType()).toBeUndefined();
     });
   });
 });

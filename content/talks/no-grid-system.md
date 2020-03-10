@@ -9,6 +9,7 @@ image:
 tags:
   - Code
   - Susy
+  - Open Source
   - Layout
 events:
   - venue: Boulder Python

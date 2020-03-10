@@ -7,6 +7,7 @@ slides: http://mirisuzanne.github.io/pres/susy2/
 tags:
   - Code
   - Susy
+  - Open Source
   - Layout
 events:
   - venue: Bmore Sass

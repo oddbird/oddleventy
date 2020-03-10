@@ -31,6 +31,7 @@ work:
   - /work/workflow-builder/
 tools:
   - /django/
+  - /csswg/
   - /sass/
   - /css-remedy/
   - /susy/

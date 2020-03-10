@@ -11,6 +11,7 @@ tags:
   - Interview
   - Code
   - Susy
+  - Open Source
 ---
 
 I did a [live Q&A at SitePoint][qa]
