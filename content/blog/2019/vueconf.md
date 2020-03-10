@@ -4,7 +4,7 @@ sub: Dynamic CSS with Vue
 author: miriam
 date: 2019-04-09
 tags:
-  - News
+  - Articles
   - Vue
   - Conferences
   - Code

@@ -6,7 +6,7 @@ image:
 sub: Go download & play with it!
 date: 2013-05-03
 tags:
-  - News
+  - Articles
   - Susy
   - Open Source
   - Susy2

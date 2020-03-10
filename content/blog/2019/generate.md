@@ -4,7 +4,7 @@ sub: 8 CSS & UX things I learned at GenerateConf 2019
 author: sondra
 date: 2019-05-24
 tags:
-  - News
+  - Articles
   - Conferences
   - Code
   - CSS

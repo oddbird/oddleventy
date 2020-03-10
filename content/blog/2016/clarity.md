@@ -3,7 +3,7 @@ title: Clarity Conference
 author: miriam
 date: 2016-04-04
 tags:
-  - News
+  - Articles
   - Conferences
   - Style Guides
 image:

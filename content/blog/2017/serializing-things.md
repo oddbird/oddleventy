@@ -3,7 +3,7 @@ card: large
 title: Serializing Things for Celery
 author: kit
 tags:
-  - News
+  - Articles
   - Celery
   - Django
   - Open Source

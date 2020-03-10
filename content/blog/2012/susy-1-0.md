@@ -6,7 +6,7 @@ author: miriam
 image:
   src: blog/susy.jpg
 tags:
-  - News
+  - Articles
   - Susy
   - Open Source
   - Code

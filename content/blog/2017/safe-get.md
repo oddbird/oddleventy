@@ -3,7 +3,7 @@ title: Making Function Calls Across Sass Versions
 author: miriam
 sub: You don't need safe-get-function utilities
 tags:
-  - News
+  - Articles
   - Sass
   - Open Source
   - Tools

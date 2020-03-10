@@ -1,7 +1,7 @@
 ---
 title: Susy Next, The First Alpha
 tags:
-  - News
+  - Articles
   - Susy
   - Open Source
   - Susy2

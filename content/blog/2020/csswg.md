@@ -9,7 +9,7 @@ tags:
   - Code
   - CSS
   - CSSWG
-  - News
+  - Articles
 press:
   - text: |
       I think it's a brilliant idea.

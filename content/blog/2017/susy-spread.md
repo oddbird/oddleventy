@@ -1,7 +1,7 @@
 ---
 title: Understanding 'Spread' in Susy3
 tags:
-  - News
+  - Articles
   - Susy
   - Open Source
   - Susy3

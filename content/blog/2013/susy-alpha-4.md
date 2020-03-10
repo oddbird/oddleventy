@@ -1,7 +1,7 @@
 ---
 title: Susy Next, Alpha 4
 tags:
-  - News
+  - Articles
   - Susy
   - Open Source
   - Susy2

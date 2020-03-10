@@ -3,7 +3,7 @@ title: A Visit to the RESTful SPA
 author: kit
 date: 2016-12-16
 tags:
-  - News
+  - Articles
   - Single-Page Applications
   - Server-Side Rendering
   - JavaScript

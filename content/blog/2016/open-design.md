@@ -3,7 +3,7 @@ title: Open Design for OddBird.net
 author: miriam
 date: 2016-07-12
 tags:
-  - News
+  - Articles
   - OddSite
   - Open Design
 image:

@@ -15,7 +15,7 @@ post:
   - tag: Client Work
     icon: tools
     img: true
-  - tag: News
+  - tag: Articles
     icon: news
 oss:
   - title: OddTools
