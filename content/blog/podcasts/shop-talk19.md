@@ -8,8 +8,8 @@ image:
   src: blog/elsewhere/shop-talk.png
 tags:
   - Code
-  - Podcasts
   - Sass
+  - Open Source
 summary: |
   I drop by the show to talk about Sass in 2019,
   design tokens, Oddbird, unused CSS, new CSS properties,

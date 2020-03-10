@@ -31,10 +31,28 @@ params:
   page:
     type: 11ty page object
 */
-const isCurrent = (page) =>
-  page.data.end === 'ongoing' ||
-  !page.data.end ||
-  getDate(page.data.end) >= now;
+const isCurrent = (page) => {
+  /* istanbul ignore if */
+  if (!page || !page.data) {
+    return false;
+  }
+
+  return (
+    page.data.end === 'ongoing' ||
+    !page.data.end ||
+    getDate(page.data.end) >= now
+  );
+};
+/* @docs
+label: getCurrent
+category: Filter
+note: Filter to pages that do not have an end date
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+*/
+const getCurrent = (collection) => collection.filter(isCurrent);
 
 /* @docs
 label: getPublic
@@ -198,7 +216,7 @@ params:
 */
 const render = (page, key) => {
   /* istanbul ignore if */
-  if (!page.data) {
+  if (!page || !page.data) {
     return undefined;
   }
 
@@ -273,43 +291,16 @@ const byYear = (collection, events = true) => {
     }));
 };
 
-/* @docs
-label: pageType
-category: Data
-note: |
-  Return one of several resource "types"
-  which we can use to provide different list styling,
-  or filtering.
-params:
-  tags:
-    type: array
-*/
-const pageType = (tags) => {
-  const types = [
-    'Client Work',
-    'OddTools',
-    'Open Source',
-    'Talks',
-    'Workshops',
-    'Podcasts',
-    'Videos',
-    'Links',
-    'News',
-  ];
-
-  return (tags || []).find((tag) => types.includes(tag));
-};
-
 module.exports = {
   isPublic,
   isCurrent,
+  getCurrent,
   getPublic,
   getPage,
   findPage,
   hasData,
   getData,
   findData,
-  pageType,
   withData,
   render,
   pageYears,

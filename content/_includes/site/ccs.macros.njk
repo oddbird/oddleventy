@@ -1,41 +1,11 @@
----
-title: Cascading Color Samples
-extra_styles:
-  - styleguide.css
-summary: |
-  The Cascading Color logic/code is all described
-  in [our styleguide](/style/),
-  but we haven't yet built a way to preview
-  custom-property colors in Herman.
----
-
 {% import "utility.macros.njk" as utility %}
-
-{% md %}
-## Default Values
-
-Set in both `/content/_data/ccs.json` and `/src/scss/config/color.scss`
-
-- `(prime-)hue: {{ ccs.hue }}`
-- `saturation: {{ ccs.saturation }}`
-- `lightness: {{ ccs.lightness }}`
-- `contrast: {{ ccs.contrast }}`
-- `steps: {{ ccs.steps }}`
-- `fades: {{ ccs.fades }}`
-{% endmd %}
-
-<ul data-ccs-show="modes">
-  <li data-ccs-colors="light">light</li>
-  <li data-ccs-colors="invert">invert</li>
-  <li data-ccs-colors="dark">dark</li>
-</ul>
 
 {% macro preview(
   color,
   ccs
 ) %}
-  <section data-ccs-show="color">
-    <h2>{{ color }}</h2>
+  <section data-ccs-show="color" style='--column: content'>
+    <h3 data-ccs-show="color-name">{{ color }}</h3>
     {{ palette(color, ccs) }}
     {% if ccs.fades %}
       {{ palette(color, ccs, true) }}
@@ -75,7 +45,6 @@ Set in both `/content/_data/ccs.json` and `/src/scss/config/color.scss`
 </ul>
 {% endmacro %}
 
-
 {% macro swatch(
   color,
   version=none,
@@ -92,8 +61,3 @@ Set in both `/content/_data/ccs.json` and `/src/scss/config/color.scss`
       style="--show: var({{ var }})"></div>
   </li>
 {% endmacro %}
-
-
-{% for color in ccs.colors %}
-  {{ preview(color, ccs) }}
-{% endfor %}

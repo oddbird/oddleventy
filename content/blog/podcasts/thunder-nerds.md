@@ -9,7 +9,6 @@ image:
   src: talks/miriam.jpg
 tags:
   - Interview
-  - Podcasts
   - Code
 summary: |
   Thunder Nerds interview me

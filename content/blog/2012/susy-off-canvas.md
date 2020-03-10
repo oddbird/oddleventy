@@ -3,6 +3,7 @@ title: Off-Canvas Layout with Susy
 tags:
   - News
   - Susy
+  - Open Source
   - Susy1
   - Demos
   - Layout

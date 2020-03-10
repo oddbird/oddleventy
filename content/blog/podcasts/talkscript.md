@@ -6,7 +6,6 @@ canonical: https://www.sitepen.com/blog/episode-18-ethics-es6-in-practice-dynami
 author: miriam
 tags:
   - Code
-  - Podcasts
 summary: |
   On Episode 18,
   the TalkScript team continues the live-ish at JSConfUS podcast series

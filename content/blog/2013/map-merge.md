@@ -3,6 +3,7 @@ title: Map-Set vs. Map-Merge
 tags:
   - News
   - Sass
+  - Open Source
   - Sass maps
   - Code
 author: miriam

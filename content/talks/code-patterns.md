@@ -11,6 +11,7 @@ tags:
   - Design Systems
   - Accoutrement
   - Herman
+  - Open Source
 events:
   - venue: Refresh Denver
     url: https://www.meetup.com/refreshdenver/events/241230495/?from=ref

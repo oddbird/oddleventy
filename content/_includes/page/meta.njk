@@ -12,7 +12,7 @@
 {% set sub = renderData.sub or sub %}
 
 {% set dates = utility.datetime(
-  start=start or date or page.date,
+  start=start or page.date,
   end=end,
   prefix=true
 ) if bird and bird != 'oddbird' else none %}
@@ -29,7 +29,7 @@
         {{ linked | safe }}
         {{ post.client(client) }}
         {{ post.pubdate(
-          start=date or page.date,
+          start=page.date,
           end=end
         ) }}
         {{ post.where(adr) }}

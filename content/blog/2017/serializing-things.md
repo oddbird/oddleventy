@@ -6,6 +6,7 @@ tags:
   - News
   - Celery
   - Django
+  - Open Source
   - Serialization
   - Code
 image:

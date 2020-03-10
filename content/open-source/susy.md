@@ -10,10 +10,8 @@ image:
 author:
   - miriam
   - oddbird
-tags:
-  - OddTools
-  - Sass
-  - Layout
+oss: owner
+index: Susy
 links:
   source: https://github.com/oddbird/susy
   docs: /susy/docs/

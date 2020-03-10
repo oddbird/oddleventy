@@ -1,6 +1,12 @@
-import { active, authorPage, getPages } from '#/birds';
+import {
+  active,
+  activeAuthor,
+  authorPage,
+  getPages,
+  withActiveAuthor,
+} from '#/birds';
 
-import { collection2 } from './utils';
+import { collection2, collections } from './utils';
 
 describe('getPages', () => {
   test('returns pages that the "bird" has authored', () => {
@@ -33,5 +39,25 @@ describe('authorPage', () => {
     const expected = collection2[2];
 
     expect(authorPage(collection2, 'erica')).toEqual(expected);
+  });
+});
+
+describe('activeAuthor', () => {
+  test('checks if page author is active', () => {
+    const pageWithAuthor = collection2[1];
+    const pageWithoutAuthor = collection2[4];
+    const pageWithCurrentAuthor = collection2[2];
+
+    expect(activeAuthor(pageWithAuthor, collection2)).toBeTruthy();
+    expect(activeAuthor(pageWithoutAuthor, collection2)).toBeFalsy();
+    expect(activeAuthor(pageWithCurrentAuthor, collection2)).toBeTruthy();
+  });
+});
+
+describe('withActiveAuthor', () => {
+  test('returns pages with active author', () => {
+    const expected = [collection2[1]];
+
+    expect(withActiveAuthor(collection2, collections.all)).toEqual(expected);
   });
 });

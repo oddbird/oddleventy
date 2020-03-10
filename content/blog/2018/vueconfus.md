@@ -12,6 +12,7 @@ tags:
   - Style Guides
   - Accoutrement
   - Herman
+  - Open Source
 image:
   src: blog/2018/vueconf.jpg
 talk: /talks/agile-systems/
