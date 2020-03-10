@@ -5,10 +5,10 @@ import { collection3 } from './utils';
 describe('fromTaxonomy', () => {
   test('Return data from taxonomy', () => {
     expect(fromTaxonomy('post', { icon: 'news' })).toEqual({
-      tag: 'News',
+      tag: 'Articles',
       icon: 'news',
     });
-    expect(fromTaxonomy('post', { icon: 'news' }, 'icon')).toEqual('news');
+    expect(fromTaxonomy('post', { icon: 'news' }, 'tag')).toEqual('Articles');
   });
 });
 
