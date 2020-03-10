@@ -15,8 +15,8 @@
 }
 
 [data-resource='feature'] {
-  --post-type: var(--bg);
-  --post-type-active: var(--callout);
+  --type-flag: var(--bg);
+  --type-flag-active: var(--callout);
   --shadow: transparent;
   background-color: var(--feature-accent);
   background-image: linear-gradient(to bottom, transparent, var(--feature));
@@ -41,7 +41,7 @@
 .type-link {
   &:link,
   &:visited {
-    --fill: var(--post-type, var(--feature));
+    --fill: var(--type-flag, var(--feature));
     display: block;
     grid-area: type;
     line-height: 1;
@@ -51,6 +51,6 @@
   &:hover,
   &:focus,
   &:active {
-    --fill: var(--post-type-active, var(--active));
+    --fill: var(--type-flag-active, var(--active));
   }
 }

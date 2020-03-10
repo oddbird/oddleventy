@@ -80,27 +80,21 @@ params:
   tags:
     type: array
   get:
-    type: string ('tag' | 'byline' | 'icon')
+    type: false | 'tag' | 'byline' | 'icon'
     default: undefined
-    note: Returns the tag name by default
+    note: False will return the entire taxonomy of the type
 */
 const pageType = (tags, get) => {
-  if (tags) {
-    const tag =
-      typeof tags === 'string'
-        ? tags
-        : tags.find((item) => fromTaxonomy('post', { tag: item }));
-
-    if (!tag || (!get && typeof tags === 'string')) {
-      return false;
-    }
-    return get ? fromTaxonomy('post', { tag }, get) || false : tag;
-  }
-
-  return false;
+  const taglist = typeof tags === 'string' ? [tags] : tags || [];
+  const type = taglist.reduce(
+    (found, item) => found || fromTaxonomy('post', { tag: item }, get),
+    null,
+  );
+  return type || false;
 };
 
 module.exports = {
+  taxonomy,
   fromTaxonomy,
   ossGroups,
   pageType,

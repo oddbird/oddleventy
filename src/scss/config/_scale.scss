@@ -96,6 +96,7 @@ $page-sizes: (
   'min-page': 22rem,
   'page': 30rem,
   'wide-page': 38rem,
+  'wide-break': 52rem,
 );
 
 @include tools.add-sizes($page-sizes);

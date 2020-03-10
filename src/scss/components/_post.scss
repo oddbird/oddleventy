@@ -66,7 +66,7 @@
   grid-area: hero;
 }
 
-.post-type {
+.type-flag {
   @include tools.font-family('alt');
   background: var(--highlight);
   color: var(--bg);
@@ -76,6 +76,19 @@
   margin: var(--half-shim) var(--quarter-shim);
   padding-right: var(--fold);
   text-transform: uppercase;
+
+  &:link,
+  &:visited {
+    --fill: var(--bg);
+    text-decoration: none;
+    color: var(--bg);
+  }
+
+  &[href]:hover,
+  &[href]:focus,
+  &[href]:active {
+    background: var(--feature);
+  }
 }
 
 .post-title {

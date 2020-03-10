@@ -1,20 +1,20 @@
 post:
   - tag: Talks
     icon: talk
-    byline: Talk
+    img: true
   - tag: Workshops
     icon: workshop
-    byline: Workshop
+    img: true
+    feature: true
   - tag: Podcasts
     icon: audio
-    byline: Podcast
   - tag: Videos
     icon: video
-    byline: Video
-  - tag: OddTools
-    icon: opensource
   - tag: Links
     icon: link
+  - tag: Client Work
+    icon: tools
+    img: true
   - tag: News
     icon: news
 oss:

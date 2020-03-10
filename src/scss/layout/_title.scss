@@ -6,6 +6,7 @@
   --outset: calc(var(--blur) * -1);
   align-self: center;
   grid-area: title;
+  margin: 0;
   position: relative;
 
   #hero + & {
