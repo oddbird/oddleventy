@@ -1,9 +1,9 @@
 'use strict';
 
 const slugify = require('slugify');
-const { uniq } = require('lodash');
+const _ = require('lodash');
 
-const { withData, getData } = require('./pages');
+const { withData, getData } = require('#/pages');
 
 /* @docs
 label: Tag Filters
@@ -28,8 +28,7 @@ params:
   tags:
     type: array
 */
-const publicTags = (tags) =>
-  tags ? tags.filter((tag) => isPublic(tag)) : tags;
+const publicTags = (tags) => (tags || []).filter((tag) => isPublic(tag));
 
 /* @docs
 label: displayName
@@ -45,7 +44,10 @@ const displayName = (tag) => {
   const capitalize = ([first, ...rest]) =>
     first ? first.toUpperCase() + rest.join('') : '';
 
-  return tag.startsWith('_') ? capitalize(tag.slice(1)) : tag;
+  if (!tag) {
+    return '';
+  }
+  return tag.startsWith('_') ? capitalize(tag.slice(1)) : capitalize(tag);
 };
 
 /* @docs
@@ -98,12 +100,12 @@ params:
     default: 'pageCount'
 */
 const tagData = (collections, tags, sort = 'pageCount') => {
-  const taglist = tags === 'all' ? getTags(collections.all) : tags;
-  return uniq(publicTags(taglist))
+  const tagList = tags === 'all' ? getTags(collections.all) : tags;
+  return _.uniq(publicTags(tagList))
     .map((tag) => ({
       tag,
       url: tagLink(collections.all, tag),
-      pageCount: collections[tag].length,
+      pageCount: (collections[tag] || []).length,
     }))
     .sort((a, b) => b[sort] - a[sort]);
 };

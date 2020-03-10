@@ -1,6 +1,6 @@
 'use strict';
 
-const { now, getDate } = require('./time');
+const { now, getDate } = require('#/time');
 
 /* @docs
 label: Event Filters
@@ -87,24 +87,11 @@ params:
   events:
     type: array of events
 */
-const getFuture = (events) => events.filter((event) => isFuture(event));
-
-/* @docs
-label: withFuture
-category: Upcoming
-note: Return only the pages/events in the future
-params:
-  collection:
-    type: array
-    note: containing 11ty page objects
-*/
-const withFuture = (collection) =>
-  collection.filter((page) => page.data.events && getFuture(page.data.events));
+const getFuture = (events) => events.filter(isFuture);
 
 module.exports = {
   buildEvent,
   getEvents,
   isFuture,
   getFuture,
-  withFuture,
 };
