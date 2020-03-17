@@ -60,11 +60,10 @@ in the following Sass:
 
 is rendered in the style guide like this:
 
-{% call embed.img(
-    src='blog/2017/docs/sassdoc.png',
+{{ embed.img(
+  src='blog/2017/docs/sassdoc.png',
     alt='syntax highlighted code block and description of selector'
-) %}
-{% endcall %}
+) }}
 
 We are working on our own theme for Sassdoc, called [Herman], which
 provides extra tools for rendering samples of things like colors, fonts,

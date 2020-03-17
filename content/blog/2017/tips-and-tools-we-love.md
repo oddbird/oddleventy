@@ -118,11 +118,10 @@ Grid feature speeds up the design process considerably, cutting out all
 that time she use to spend copying, pasting, and spacing repeating
 elements.
 
-{% call embed.img(
-    src='blog/2017/tips-tools/adobexd.jpg',
+{{ embed.img(
+  src='blog/2017/tips-tools/adobexd.jpg',
     alt=' linked prototype in Adobe XD'
-) %}
-{% endcall %}
+) }}
 
 [Sondra Eby]: /authors/sondra/
 [Adobe Xd]: http://www.adobe.com/products/experience-design.html

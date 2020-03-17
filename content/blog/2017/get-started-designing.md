@@ -56,12 +56,11 @@ background when I’m finished.
 
 ## Typography: A Practical Guide
 
-{% call embed.img(
-    src='blog/2017/get-started-designing/santamaria.jpg',
+{{ embed.img(
+  src='blog/2017/get-started-designing/santamaria.jpg',
     alt='Website by Jason Santa Maria',
     attrs={'class': 'img-border'}
-) %}
-{% endcall %}
+) }}
 
 According to typography expert [Jason Santa Maria], “If your type is
 bad, the design fails.” There’s so much to learn in the rich field of

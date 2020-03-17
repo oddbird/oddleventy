@@ -69,11 +69,10 @@ According to a [study by Errol Morris], “Baskerville, a 250-year-old
 serif...was statistically more likely to influence the minds of readers
 than Computer Modern, Georgia, Helvetica, Comic Sans or Trebuchet.”
 
-{% call embed.img(
-    src='blog/2017/typography/librebaskerville.jpg',
+{{ embed.img(
+  src='blog/2017/typography/librebaskerville.jpg',
     alt='Baskerville Type Sample'
-) %}
-{% endcall %}
+) }}
 
 *Google Fonts – Libre Baskerville*
 
@@ -84,11 +83,9 @@ hurt if I had to read several paragraphs at 14px size. Always check the
 description for each typeface to find out what it was designed for and
 whether it is accessible at small sizes.
 
-{% call embed.img(
-    src='blog/2017/typography/amatic.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/amatic.jpg'
+) }}
 
 *Google Fonts – Amatic SC*
 
@@ -104,11 +101,9 @@ Font Squirrel is my go-to resource for typography. Curated for quality
 and free for commercial use, Font Squirrel’s compilation of typefaces is
 easy to filter and download.
 
-{% call embed.img(
-    src='blog/2017/typography/fontsquirrel.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/fontsquirrel.jpg'
+) }}
 
 [Font Squirrel]: https://www.fontsquirrel.com/
 
@@ -121,11 +116,9 @@ through licenses to make the purchasing process straightforward and easy
 to understand for you and your clients. Proxima Nova is a personal
 favorite that OddBird used for the [CoachHub app].
 
-{% call embed.img(
-    src='blog/2017/typography/fontspring.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/fontspring.jpg'
+) }}
 
 [Fontspring]: https://www.fontspring.com/
 [CoachHub app]: /2015/08/14/coachhub-study/
@@ -145,11 +138,9 @@ Merriweather and PT Sans. Not all of these typefaces made it to our
 final round of element collages, but it was an excellent place to start.
 [TypeKit Design Gallery] is an inspiration for typeface pairing as well.
 
-{% call embed.img(
-    src='blog/2017/typography/typekit.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/typekit.jpg'
+) }}
 
 [Adobe TypeKit]: https://typekit.com/
 [licensing details]: https://helpx.adobe.com/typekit/using/font-licensing.html#sync-lic
@@ -165,11 +156,9 @@ descriptions are a handy resource when you need to explain to clients
 how your typeface choices relate back to their brand goals. Google Fonts
 also offers typeface pairing suggestions with each specimen.
 
-{% call embed.img(
-    src='blog/2017/typography/googlefonts.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/googlefonts.jpg'
+) }}
 
 [Google Fonts]: https://fonts.google.com
 
@@ -179,11 +168,9 @@ Typewolf is the first place I go to find lovely typeface pairing with
 samples from live websites as well as expert recommendations. I
 discovered Freight Sans and Freight Text on Typewolf.
 
-{% call embed.img(
-    src='blog/2017/typography/typewolf.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/typewolf.jpg'
+) }}
 
 [Typewolf]: https://www.typewolf.com/
 
@@ -194,11 +181,9 @@ stripped down design. This is where I found the Raleway and Merriweather
 typeface pairing, one option we considered for OddSite. Unfortunately,
 this pair didn’t make the final round of cuts.
 
-{% call embed.img(
-    src='blog/2017/typography/fontpair.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/fontpair.jpg'
+) }}
 
 [Font Pair]: http://fontpair.co/
 
@@ -208,11 +193,9 @@ I found Carrie’s blog on TypeKit typeface pairing to be a very
 informative and hilarious read. She provides intriguing insight into why
 her pairings work well together.
 
-{% call embed.img(
-    src='blog/2017/typography/carriedils.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/carriedils.jpg'
+) }}
 
 [Carrie Dils]: https://carriedils.com/typekit-font-pairings/
 
@@ -245,11 +228,9 @@ but the best four before presenting to the rest of the [Birds]. Each of
 the collages featured serif fonts – trustworthiness is a brand goal –
 with a twist.
 
-{% call embed.img(
-    src='blog/2017/typography/elementcollagecollage.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/elementcollagecollage.jpg'
+) }}
 
 Browse our full element collages in our [Behind the Scenes post].
 
@@ -281,11 +262,9 @@ at several apps, we decided to try using [GitHub Issues] comments and
 emoji reactions. Everyone got two votes and the process worked
 brilliantly with the winning typefaces receiving six thumbs up.
 
-{% call embed.img(
-    src='blog/2017/typography/github.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/github.jpg'
+) }}
 
 [WebAIM]: http://webaim.org/techniques/fonts/
 [Dotmocracy]: https://en.wikipedia.org/wiki/Dotmocracy
@@ -302,11 +281,9 @@ yet odd. Easy to read at a broad range of sizes. These typefaces embody
 the essence of OddBird. Being from the same foundry and family, the
 visual harmony is effortless.
 
-{% call embed.img(
-    src='blog/2017/typography/freight.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/freight.jpg'
+) }}
 
 Warmth, authority, helpfulness: a very accurate description of what
 OddBird would like our users to experience when they work with us and
@@ -329,22 +306,19 @@ continue using Baskerville’s ampersand.
 
 Also, we’re suckers for fonts with lowercase numerals.
 
-{% call embed.img(
-    src='blog/2017/typography/numbers.jpg',
+{{ embed.img(
+  src='blog/2017/typography/numbers.jpg',
     alt='1-9 in lowercase style numbers'
-) %}
-{% endcall %}
+) }}
 
 Freight was developed by [Darden Studio] and is available at [Phil’s
 Fonts] as well as through TypeKit. Without a TypeKit subscription, the
 Freight licenses may have been more of a hassle than we wanted to deal
 with, requiring monthly pageview tracking. With TypeKit, we were golden.
 
-{% call embed.img(
-    src='blog/2017/typography/darden.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2017/typography/darden.jpg'
+) }}
 
 [Typedia]: http://typedia.com/explore/typeface/freight-text/
 [create a custom font stack]: https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/
@@ -356,11 +330,10 @@ with, requiring monthly pageview tracking. With TypeKit, we were golden.
 I've loved typography since I was very young. Just for fun, here's my
 first hand-drawn alphabet from fifth grade.
 
-{% call embed.img(
-    src='blog/2017/typography/alphabet.jpg',
+{{ embed.img(
+  src='blog/2017/typography/alphabet.jpg',
     alt='hand lettering the alphabet'
-) %}
-{% endcall %}
+) }}
 
 ## What Are Your Favorite Typography Tools?
 

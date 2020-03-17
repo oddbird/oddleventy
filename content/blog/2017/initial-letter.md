@@ -43,12 +43,11 @@ your initial letter to expand.
 This code would give us a drop cap seven lines tall, like the large
 letter "I" in this example:
 
-{% call embed.img(
-    src='blog/2017/initial-letter/minions-initial-letter.jpg',
+{{ embed.img(
+  src='blog/2017/initial-letter/minions-initial-letter.jpg',
     alt='inital-letter demo',
     attrs={'class': 'img-border align-center'}
-) %}
-{% endcall %}
+) }}
 
 ------
 
@@ -108,12 +107,11 @@ programmatically, but it will not take into account the x-height of the
 typeface you choose. Here is a screenshot of the resulting fallback and
 enhancement:
 
-{% call embed.img(
-    src='blog/2017/initial-letter/fallback-enhancement.jpg',
+{{ embed.img(
+  src='blog/2017/initial-letter/fallback-enhancement.jpg',
     alt='Fallback and enhancement in Chrome and Safari',
     attrs={'class': 'img-border align-center'}
-) %}
-{% endcall %}
+) }}
 
 Here is the CodePen demo:
 
@@ -141,12 +139,11 @@ to drop. A value equal to the initial height value is the default.
 }
 ```
 
-{% call embed.img(
-    src='blog/2017/initial-letter/sunken-raised-drop-caps.jpg',
+{{ embed.img(
+  src='blog/2017/initial-letter/sunken-raised-drop-caps.jpg',
     alt='Screenshot of raised, sunken, and drop cap demo',
     attrs={'class': 'img-border align-center'}
-) %}
-{% endcall %}
+) }}
 
 The following CodePen demo is available in Safari only:
 

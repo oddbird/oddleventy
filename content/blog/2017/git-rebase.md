@@ -16,6 +16,8 @@ summary: |
   can get hairy quickly. But here's one way to make it work.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 There are [many][] [ways][] [to][] [use][] [git]. It's sometimes said
 that git is not actually a version control system, but rather [a
 content-addressable filesystem, used to track directory trees]. So,
@@ -144,7 +146,10 @@ but they have an understanding that they won't push branches that don't
 As they work on the project, they will end up with branches that look
 like this:
 
-<img src="{{ site.images }}blog/2017/git-rebase/fig_01.png" class="align-center" alt="" />
+{{ embed.img(
+  src='blog/2017/git-rebase/fig_01.png', 
+  attrs={'class': 'align-center'}
+) }}
 
 Black commits are on `master`, blue are by Bao, coral are by Robin. They
 both start their work off of the current state of `master`. Bao has a
@@ -157,7 +162,10 @@ But what if Robin realizes that their work really depends on the work
 Bao did and already merged into `master`? They can just rebase their
 branch on to that work:
 
-<img src="{{ site.images }}blog/2017/git-rebase/fig_02.png" class="align-center" alt="" />
+{{ embed.img(
+  src='blog/2017/git-rebase/fig_02.png', 
+  attrs={'class': 'align-center extend-small'}
+) }}
 
 On Bao's machine, this looks like:
 
@@ -181,7 +189,10 @@ Robin's branch before the rebase. But because Bao's branch tracks
 Robin's branch as its upstream, Bao can, with fresh remote tracking info
 on their local computer, just run `git rebase` and get this:
 
-<img src="{{ site.images }}blog/2017/git-rebase/fig_03.png" class="align-center" alt="" />
+{{ embed.img(
+  src='blog/2017/git-rebase/fig_03.png', 
+  attrs={'class': 'align-center extend-small'}
+) }}
 
 Again, on Bao's machine:
 
@@ -203,7 +214,10 @@ Bao can force-push that back up to GitHub (because only Bao writes to
 that branch, this is safe), Robin can merge it in, and then the whole
 thing can be merged back into `master`:
 
-<img src="{{ site.images }}blog/2017/git-rebase/fig_04.png" class="align-center" alt="" />
+{{ embed.img(
+  src='blog/2017/git-rebase/fig_04.png', 
+  attrs={'class': 'align-center extend-small'}
+) }}
 
 Note: if anyone has merge conflicts at any point, they have to resolve
 them, and those rebased commits (with the prime marks) can differ from

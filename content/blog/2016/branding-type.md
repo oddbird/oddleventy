@@ -111,11 +111,10 @@ journey.
 
 ## An Odd Logo
 
-{% call embed.img(
-    src='blog/2016/brand/type-logo.jpg',
-    alt='OddBird Logo in Baskerville'
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2016/brand/type-logo.jpg',
+  alt='OddBird Logo in Baskerville'
+) }}
 
 In 2008 when OddBird launched, Miriam designed the OddBird logo. It’s
 gone through some small adjustments, but we still love our odd orange
@@ -176,27 +175,21 @@ method of mixing and matching, but neither did we feel that any one
 element collage encapsulated our brand. We tried style tiles, but those
 felt both too specific and not specific enough.
 
-{% call embed.img(
-    src='blog/2016/brand/type-styletiles.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2016/brand/type-styletiles.jpg'
+) }}
 
 *Style Tiles - 4 cropped sections*
 
-{% call embed.img(
-    src='blog/2016/brand/type-elcollage.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2016/brand/type-elcollage.jpg'
+) }}
 
 *Element Collage*
 
-{% call embed.img(
-    src='blog/2016/brand/type-elcollage2.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2016/brand/type-elcollage2.jpg'
+) }}
 
 *Element Collage*
 
@@ -242,35 +235,27 @@ almost tactile feel. We want to convey honesty and thoughtfulness with
 our brand and classic serif fonts like Baskerville are known for
 communicating trustworthiness.
 
-{% call embed.img(
-    src='blog/2016/brand/bookmania-2.png',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2016/brand/bookmania-2.png'
+) }}
 
 *Bookmania*
 
-{% call embed.img(
-    src='blog/2016/brand/plume-tisa-2.png',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2016/brand/plume-tisa-2.png'
+) }}
 
 *Pluma, Tisa*
 
-{% call embed.img(
-    src='blog/2016/brand/mia-baskerville.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2016/brand/mia-baskerville.jpg'
+) }}
 
 *Baskerville*
 
-{% call embed.img(
-    src='blog/2016/brand/typography-freight2.jpg',
-    alt=''
-) %}
-{% endcall %}
+{{ embed.img(
+  src='blog/2016/brand/typography-freight2.jpg'
+) }}
 
 *Freight Sans, Freight Text*
 
