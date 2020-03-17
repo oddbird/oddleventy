@@ -71,7 +71,7 @@ than Computer Modern, Georgia, Helvetica, Comic Sans or Trebuchet.”
 
 {{ embed.img(
   src='blog/2017/typography/librebaskerville.jpg',
-    alt='Baskerville Type Sample'
+  alt='Baskerville Type Sample'
 ) }}
 
 *Google Fonts – Libre Baskerville*
@@ -308,7 +308,7 @@ Also, we’re suckers for fonts with lowercase numerals.
 
 {{ embed.img(
   src='blog/2017/typography/numbers.jpg',
-    alt='1-9 in lowercase style numbers'
+  alt='1-9 in lowercase style numbers'
 ) }}
 
 Freight was developed by [Darden Studio] and is available at [Phil’s
@@ -332,7 +332,7 @@ first hand-drawn alphabet from fifth grade.
 
 {{ embed.img(
   src='blog/2017/typography/alphabet.jpg',
-    alt='hand lettering the alphabet'
+  alt='hand lettering the alphabet'
 ) }}
 
 ## What Are Your Favorite Typography Tools?

@@ -45,7 +45,7 @@ letter "I" in this example:
 
 {{ embed.img(
   src='blog/2017/initial-letter/minions-initial-letter.jpg',
-    alt='inital-letter demo',
+  alt='inital-letter demo',
     attrs={'class': 'img-border align-center'}
 ) }}
 
@@ -109,7 +109,7 @@ enhancement:
 
 {{ embed.img(
   src='blog/2017/initial-letter/fallback-enhancement.jpg',
-    alt='Fallback and enhancement in Chrome and Safari',
+  alt='Fallback and enhancement in Chrome and Safari',
     attrs={'class': 'img-border align-center'}
 ) }}
 
@@ -141,7 +141,7 @@ to drop. A value equal to the initial height value is the default.
 
 {{ embed.img(
   src='blog/2017/initial-letter/sunken-raised-drop-caps.jpg',
-    alt='Screenshot of raised, sunken, and drop cap demo',
+  alt='Screenshot of raised, sunken, and drop cap demo',
     attrs={'class': 'img-border align-center'}
 ) }}
 

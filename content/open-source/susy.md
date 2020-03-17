@@ -111,7 +111,7 @@ if necessary.
 {% call embed.media_block(
   media=embed.img(
   src='susy/book-cover.png',
-    alt='Learning Susy, by Zell Liew'
+  alt='Learning Susy, by Zell Liew'
   ),
   attrs={'data-block': 'rotate'}
 ) %}

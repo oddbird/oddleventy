@@ -347,7 +347,7 @@ this and more in our [OddFriends Slack channel]. Join us!
 
 {{ embed.img(
   src='blog/2017/colors/accessiblecolors.jpg',
-    alt='Check foregournd and background color with font size and weight'
+  alt='Check foregournd and background color with font size and weight'
 ) }}
 
 [Accessible Colors]: http://accessible-colors.com/
@@ -357,7 +357,7 @@ this and more in our [OddFriends Slack channel]. Join us!
 
 {{ embed.img(
   src='blog/2017/colors/plugin.jpg',
-    alt='Check Contrast Ratio Photoshop Add-on'
+  alt='Check Contrast Ratio Photoshop Add-on'
 ) }}
 
 [Adobe Plugin Check Contrast Ratio]: https://creative.adobe.com/addons/products/12170#.WHlhCrYrKHp

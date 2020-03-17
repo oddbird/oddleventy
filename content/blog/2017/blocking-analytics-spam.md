@@ -30,7 +30,7 @@ But a number of months ago we started seeing lots of this:
 
 {{ embed.img(
   src='blog/2017/ga-spam/ga-spam.jpg',
-    alt='Google Analytics spam',
+  alt='Google Analytics spam',
     attrs={'class': 'img-border'}
 ) }}
 
@@ -40,7 +40,7 @@ accounting for anywhere from ten to ninety (!) percent of our sessions.
 
 {{ embed.img(
   src='blog/2017/ga-spam/sessions.jpg',
-    alt='Google Analytics total sessions and filtered (non-spam) sessions',
+  alt='Google Analytics total sessions and filtered (non-spam) sessions',
     attrs={'class': 'img-border'}
 ) }}
 

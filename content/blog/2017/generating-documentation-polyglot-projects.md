@@ -62,7 +62,7 @@ is rendered in the style guide like this:
 
 {{ embed.img(
   src='blog/2017/docs/sassdoc.png',
-    alt='syntax highlighted code block and description of selector'
+  alt='syntax highlighted code block and description of selector'
 ) }}
 
 We are working on our own theme for Sassdoc, called [Herman], which

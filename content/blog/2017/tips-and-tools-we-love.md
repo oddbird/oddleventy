@@ -120,7 +120,7 @@ elements.
 
 {{ embed.img(
   src='blog/2017/tips-tools/adobexd.jpg',
-    alt=' linked prototype in Adobe XD'
+  alt=' linked prototype in Adobe XD'
 ) }}
 
 [Sondra Eby]: /authors/sondra/
