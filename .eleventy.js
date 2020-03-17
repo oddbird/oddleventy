@@ -9,6 +9,7 @@ const birds = require('#/birds');
 const events = require('#/events');
 const pages = require('#/pages');
 const tags = require('#/tags');
+const taxonomy = require('#/taxonomy');
 const time = require('#/time');
 const type = require('#/type');
 const utils = require('#/utils');
@@ -73,6 +74,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('isPublic', pages.isPublic);
   eleventyConfig.addFilter('getPublic', pages.getPublic);
   eleventyConfig.addFilter('isCurrent', pages.isCurrent);
+  eleventyConfig.addFilter('getCurrent', pages.getCurrent);
   eleventyConfig.addFilter('getPage', pages.getPage);
   eleventyConfig.addFilter('findPage', pages.findPage);
   eleventyConfig.addFilter('hasData', pages.hasData);
@@ -80,9 +82,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('findData', pages.findData);
   eleventyConfig.addFilter('withData', pages.withData);
   eleventyConfig.addFilter('render', pages.render);
-  eleventyConfig.addFilter('pageType', pages.pageType);
   eleventyConfig.addFilter('pageYears', pages.pageYears);
   eleventyConfig.addFilter('byYear', pages.byYear);
+
+  eleventyConfig.addFilter('fromTaxonomy', taxonomy.fromTaxonomy);
+  eleventyConfig.addFilter('ossGroups', taxonomy.ossGroups);
+  eleventyConfig.addFilter('pageType', taxonomy.pageType);
 
   eleventyConfig.addFilter('buildEvent', events.buildEvent);
   eleventyConfig.addFilter('getEvents', events.getEvents);
@@ -92,6 +97,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('active', birds.active);
   eleventyConfig.addFilter('authorPage', birds.authorPage);
+  eleventyConfig.addFilter('activeAuthor', birds.activeAuthor);
+  eleventyConfig.addFilter('withActiveAuthor', birds.withActiveAuthor);
 
   eleventyConfig.addFilter('typogr', type.typogr);
   eleventyConfig.addFilter('md', type.md);

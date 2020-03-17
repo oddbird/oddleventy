@@ -34,8 +34,25 @@ const getPages = (collection, bird, solo = false) =>
   );
 
 /* @docs
+label: authorPage
+category: Pages
+note: Return the home page of a given author
+example: |
+  {{ collections.all | authorPage('miriam') }}
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+  bird:
+    type: string
+    note: The name of the bird (as used in `author` settings)
+*/
+const authorPage = (collection, bird) =>
+  withData(collection, 'data.bird', bird)[0];
+
+/* @docs
 label: active
-category: pages
+category: Status
 note: |
   Return all active bird pages in a collection,
   sorted by active date.
@@ -58,20 +75,58 @@ const active = (collection, current = true) =>
   );
 
 /* @docs
-label: authorPage
-category: Pages
-note: Return the home page of a given author
+label: activeAuthor
+category: Status
+note: |
+  Check if any author of a page is currently active
+  (if 'oddbird' is an author, this will returrn true)
 example: |
-  {{ collections.all | authorPage('miriam') }}
+  {{ post | activeAuthor(collections.all) }}
+params:
+  page:
+    type: 11ty page object
+  all:
+    type: array
+    note: |
+      Any collection that includes the author pages,
+      such as `collections.all`
+*/
+const activeAuthor = (page, all) => {
+  const author = page.data.author || [];
+  const list = typeof author === 'string' ? [author] : author;
+  return (
+    list.includes('oddbird') ||
+    list.some((name) => isCurrent(authorPage(all, name)))
+  );
+};
+
+/* @docs
+label: activeAuthor
+category: Status
+note: |
+  Filter a collection to only include
+  pages with a currently active author.
+  (if 'oddbird' is an author, this will returrn true)
+example: |
+  {{ collections.oss | withActiveAuthor(collections.all) }}
 params:
   collection:
+    type: 11ty collection
+    note: |
+      The collection to filter
+  all:
     type: array
-    note: containing 11ty page objects
-  bird:
-    type: string
-    note: The name of the bird (as used in `author` settings)
+    note: |
+      Any collection that includes the author pages,
+      such as `collections.all`
 */
-const authorPage = (collection, bird) =>
-  withData(collection, 'data.bird', bird)[0];
+const withActiveAuthor = (collection, all) =>
+  collection.filter((page) => activeAuthor(page, all));
 
-module.exports = { getPages, active, authorPage };
+module.exports = {
+  getPages,
+  active,
+  authorPage,
+  activeAuthor,
+  withActiveAuthor,
+};

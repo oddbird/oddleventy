@@ -15,6 +15,7 @@ social:
 nav:
   - url: /work/
   - url: /services/
-  - url: /birds/
+  - url: /open-source/
   - url: /blog/
+  - url: /birds/
   - url: /contact/

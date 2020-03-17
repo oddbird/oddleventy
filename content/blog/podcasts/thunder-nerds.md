@@ -10,7 +10,6 @@ image:
   alt: Miriam Suzanne speaking at a conference
 tags:
   - Interview
-  - Podcasts
   - Code
 summary: |
   Thunder Nerds interview me

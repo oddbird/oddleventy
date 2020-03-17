@@ -1,0 +1,60 @@
+{% import 'layout.macros.njk' as layout %}
+{% import 'embed.macros.njk' as embed %}
+{% import 'post.macros.njk' as post %}
+
+{% macro by_type(
+  posts,
+  collections
+) %}
+  {% for title, items in posts | ossGroups %}
+    {{ list(
+      items,
+      collections,
+      title
+    ) }}
+  {% endfor %}
+{% endmacro %}
+
+{% macro list(
+  posts,
+  collections,
+  title='Open Source'
+) %}
+  {% if posts | length > 0 %}
+    {%- if title -%}
+      {{ layout.title(title) }}
+    {%- endif -%}
+
+    {% call layout.grid('open-source') %}
+      {% for item in posts %}
+        {{ summary(item, collections) }}
+      {% endfor %}
+    {% endcall %}
+  {% endif %}
+{% endmacro %}
+
+{% macro summary(
+  item,
+  collections
+) %}
+{% set title = item | render('banner') or item | render('title') %}
+<article>
+  <header>
+    <h2 class="title">
+      <a href="{{ item.url }}">
+        {% if item.data.logo %}
+          {{ embed.svg(
+            path='logos/' + item.data.logo,
+            alt=title
+          ) }}
+        {% else %}
+          {{ title | mdInline | safe }}
+        {% endif %}
+      </a>
+    </h2>
+    {{ post.subtitle(item.data.sub, collections) }}
+    {{ post.byline(item, collections, dateformat='since') }}
+  </header>
+  {{ item.data.summary | md | safe }}
+</article>
+{% endmacro %}

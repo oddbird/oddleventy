@@ -68,15 +68,14 @@ ol {
 
 ul,
 ol {
-  --list-padding--default: 1em;
-  padding-left: var(--list-padding, 0);
+  padding-left: var(--list-padding, var(--list-padding--default, 0));
 
   & & {
-    --list-padding: var(--list-padding--default);
+    --list-padding--default: 1em;
   }
 
   @include tools.below('page') {
-    --list-padding: var(--list-padding--default);
+    --list-padding--default: 1em;
   }
 }
 

@@ -9,6 +9,7 @@ tags:
   - Style Guides
   - Accoutrement
   - Herman
+  - Open Source
   - OddSite
   - Open Design
   - Code

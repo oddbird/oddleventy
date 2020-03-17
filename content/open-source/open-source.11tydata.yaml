@@ -3,5 +3,3 @@ permalink: /{{ page.fileSlug }}/index.html
 end: ongoing
 oss: owner
 author: oddbird
-tags:
-  - Open Source

@@ -11,6 +11,7 @@ tags:
   - Code
   - Accoutrement
   - Herman
+  - Open Source
 image:
   src: blog/2017/docs/style.jpg
   alt: Style written on sketchbook page

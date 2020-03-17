@@ -278,11 +278,16 @@ params:
     type: boolean
     default: true
     note: Optionally remove links for content in linked cards
+  dateformat:
+    type: false | string
+    default: false
+    note: Optionally show the date in a given format
 #}
 {% macro byline(
   post,
   collections=none,
-  links=true
+  links=true,
+  dateformat=false
 ) %}
   <p class="byline">
     {{ byline_type(
@@ -297,8 +302,10 @@ params:
       link=links
     ) }}
 
-    {% if (post.data.oss == 'core team') %}
-      ({{ post.data.oss }})
+    {% if post.data.oss %}
+      {% set plural = not post.data.author | typeCheck('string') %}
+      {% set plural = false if (post.data.oss == 'core team') else plural %}
+      ({{ post.data.oss }}{{ 's' if plural else '' }})
     {% endif %}
 
     {{ linked(
@@ -307,6 +314,10 @@ params:
     ) }}
 
     {{ client(post.data.client) }}
+
+    {% if dateformat %}
+      {{ pubdate(post.date, post.data.end, dateformat) }}
+    {% endif %}
   </p>
 {% endmacro %}
 
@@ -328,16 +339,9 @@ params:
   tags,
   venue=none
 ) %}
-  {%- set type = tags | pageType -%}
-  {%- if type and (not venue) and not (type in ['News', 'Links']) -%}
-    {%- set byType = {
-      'Workshops': 'Workshop',
-      'Talks': 'Talk',
-      'Videos': 'Video',
-      'Podcasts': 'Podcast',
-      'OddTools': 'Created'
-    } -%}
-    <b>{{ byType[type] or type }}</b>
+  {%- set type = tags | pageType('byline') -%}
+  {%- if type and not venue -%}
+    <b>{{ type }}</b>
   {%- endif -%}
 {% endmacro %}
 
@@ -358,26 +362,14 @@ params:
   type,
   collections=none
 ) %}
-  {%- set icons = {
-    'Client Work': 'tools',
-    'OddTools': 'tools',
-    'Open Source': 'opensource',
-    'Talks': 'talk',
-    'Workshops': 'workshop',
-    'Podcasts': 'audio',
-    'Videos': 'video',
-    'Links': 'link',
-    'News': 'news'
-  } -%}
-  {%- set icon = 'tags' -%}
+  {%- set icon = type | pageType('icon') -%}
   {%- set url = '/tags/' -%}
-  {%- if icons[type] -%}
-    {% set icon = (icons[type] or 'tags') %}
+  {%- if icon -%}
     {% set url = collections.all | tagLink(type) if collections else none %}
   {%- endif -%}
   {{ utility.link_if(
     content=embed.svg(
-      path='icons/' + icon,
+      path='icons/' + (icon or 'tags'),
       alt=['see all', type] | join(' ') if type else 'all tags'
     ),
     url=url,
