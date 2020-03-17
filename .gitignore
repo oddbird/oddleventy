@@ -76,8 +76,10 @@ typings/
 
 # Yarn
 .yarn-integrity
-.yarn/unplugged
-.yarn/build-state.yml
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
 
 # dotenv environment variables file
 .env
