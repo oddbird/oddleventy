@@ -31,8 +31,9 @@ press:
       and highly praised by attendees of the conference
       and the workshop alike.
     name: Vitaly Friedman
-    title: Founder of Smashing Magazine & Conference
-    url: https://www.smashingmagazine.com/events/
+    title: Founder 
+    venue: Smashing Magazine & Conference
+    face: vitaly-friedman.jpg
 summary: |
   From building beautiful sites
   to maintaining complex design systems across applications,
@@ -58,11 +59,7 @@ passing data between JS and CSS,
 and combining modern techniques to solve real,
 everyday interface problems.
 
-------
-
-{{ quotes.grid(press) }}
-
-------
+{{ quotes.blockquote(press[0]) }}
 
 ## In this workshop, you’ll learn:
 
