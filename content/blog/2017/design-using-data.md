@@ -3,10 +3,10 @@ title: Designing Using Data
 author: stacy
 date: 2017-01-19
 tags:
-  - Articles
+  - Article
   - Data
   - Design
-  - Videos
+  - Video
   - Recommendations
 image:
   src: blog/2017/video-series/sarah.jpg

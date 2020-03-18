@@ -5,8 +5,6 @@ author: miriam
 date: 2019-10-28
 tags:
   - AboutWeb
-  - Code
-  - Videos
 image:
   src: mozdev/multi-display.png
 summary: |

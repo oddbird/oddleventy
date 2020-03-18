@@ -2,7 +2,7 @@
 title: 'Get Started with Design: 4 Useful Tools & Tutorials'
 author: sondra
 tags:
-  - Articles
+  - Article
   - Tools
   - Color
   - Typography

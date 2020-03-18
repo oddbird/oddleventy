@@ -6,7 +6,7 @@ author: miriam
 image:
   src: blog/elsewhere/css-tricks.jpg
 tags:
-  - Links
+  - Link
   - Code
   - Sass
   - Open Source

@@ -6,7 +6,7 @@ canonical: https://css-tricks.com/interview-miriam-suzanne/
 image:
   src: blog/elsewhere/css-tricks.jpg
 tags:
-  - Links
+  - Link
   - Code
   - CSS Tricks
   - Interview

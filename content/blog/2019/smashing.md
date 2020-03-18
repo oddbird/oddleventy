@@ -3,7 +3,7 @@ title: Smashing CSS Follow-Up Q&A
 sub: Questions about Dynamic CSS
 author: miriam
 tags:
-  - Articles
+  - Article
   - Vue
   - Conferences
   - Code

@@ -2,7 +2,7 @@
 title: How to Write Beautiful Sass
 canonical: https://www.sitepoint.com/writing-beautiful-sass/
 tags:
-  - Links
+  - Link
   - CSS
   - Code
   - Books

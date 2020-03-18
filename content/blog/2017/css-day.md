@@ -3,10 +3,10 @@ title: CSSDay 2016 Recap
 author: stacy
 date: 2017-01-31
 tags:
-  - Articles
+  - Article
   - CSS
   - Front-end
-  - Videos
+  - Video
   - Conferences
 image:
   src: blog/2017/cssday/cssday.jpg

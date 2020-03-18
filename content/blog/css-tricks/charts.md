@@ -5,7 +5,7 @@ date: 2017-08-11
 canonical: https://css-tricks.com/css-charts-grid-custom-properties/
 venue: CSS-Tricks
 tags:
-  - Links
+  - Link
   - CSS
   - Code
   - Layout

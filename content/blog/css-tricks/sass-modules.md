@@ -4,7 +4,7 @@ author: miriam
 date: 2019-10-09
 canonical: https://css-tricks.com/introducing-sass-modules/
 tags:
-  - Links
+  - Link
   - Code
   - Modules
   - Sass

@@ -8,7 +8,7 @@ venue: CSS-Tricks
 image:
   src: birds/miriam.jpg
 tags:
-  - Links
+  - Link
   - Code
   - CSS
   - Accessibility

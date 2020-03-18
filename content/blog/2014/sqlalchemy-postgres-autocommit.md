@@ -3,7 +3,7 @@ card: large
 title: PostgreSQL Transactions and SQLAlchemy
 author: carl
 tags:
-  - Articles
+  - Article
   - Python
   - Sqlalchemy
   - Postgresql

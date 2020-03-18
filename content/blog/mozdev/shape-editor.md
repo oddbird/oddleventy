@@ -5,8 +5,6 @@ author: miriam
 date: 2019-11-25
 tags:
   - DevTools
-  - Code
-  - Videos
 image:
   src: mozdev/shape_path.png
 summary: |

@@ -5,7 +5,6 @@ author: miriam
 card: large
 date: 2020-01-01
 tags:
-  - Workshops
   - CSS
   - Sass
   - Design Systems

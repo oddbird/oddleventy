@@ -6,8 +6,6 @@ image:
   src: mozdev/subgrid_forms.png
 tags:
   - AboutWeb
-  - Code
-  - Videos
 summary: |
   It's a common pattern to align form labels and inputs in grid-like layout.
   I'll show you how to do it quickly using CSS subgrid,

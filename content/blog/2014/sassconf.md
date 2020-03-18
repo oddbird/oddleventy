@@ -2,7 +2,7 @@
 title: SassConf 2014
 author: miriam
 tags:
-  - Articles
+  - Article
   - Conferences
   - Sass
   - Open Source

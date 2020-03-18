@@ -89,6 +89,10 @@
   &[href]:active {
     background: var(--feature);
   }
+
+  [data-icon] {
+    margin-left: var(--half-shim);
+  }
 }
 
 .post-title {

@@ -7,7 +7,7 @@ author: miriam
 image:
   src: blog/2016/QandA.jpg
 tags:
-  - Links
+  - Link
   - Interview
   - Code
   - Susy

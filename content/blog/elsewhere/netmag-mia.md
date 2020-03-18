@@ -6,7 +6,7 @@ date: 2016-12-01
 venue: Net Magazine
 url: https://www.creativebloq.com/net-magazine
 tags:
-  - Links
+  - Link
   - User Experience
   - Net Magazine
   - Interview

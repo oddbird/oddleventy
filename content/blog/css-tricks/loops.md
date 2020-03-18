@@ -4,7 +4,7 @@ canonical: https://css-tricks.com/loops-css-preprocessors/
 date: 2016-12-02
 author: miriam
 tags:
-  - Links
+  - Link
   - Code
   - Sass
   - Open Source

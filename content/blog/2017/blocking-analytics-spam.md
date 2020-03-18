@@ -2,7 +2,7 @@
 title: Blocking Analytics Spam
 author: jonny
 tags:
-  - Articles
+  - Article
   - Spam
   - DevOps
   - Build Tools

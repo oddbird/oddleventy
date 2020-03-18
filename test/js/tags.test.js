@@ -10,7 +10,7 @@ const {
 import { collection } from './utils';
 
 describe('tag filters', () => {
-  const tags = ['workshops', '_foo bar', 'talks'];
+  const tags = ['workshop', '_foo bar', 'talk'];
 
   test('isPublic', () => {
     expect(isPublic(tags[0])).toEqual(true);
@@ -25,7 +25,7 @@ describe('tag filters', () => {
   });
 
   test('displayName', () => {
-    expect(displayName(tags[0])).toEqual('Workshops');
+    expect(displayName(tags[0])).toEqual('Workshop');
     expect(displayName(tags[1])).toEqual('Foo bar');
     expect(displayName('_')).toEqual('');
     expect(displayName()).toEqual('');
@@ -38,8 +38,8 @@ describe('tag filters', () => {
       talks: collection,
     };
     const expected1 = [
-      { tag: 'talks', url: '/tags/talks/', pageCount: 5 },
-      { tag: 'workshops', url: '/tags/workshops/', pageCount: 0 },
+      { tag: 'talk', url: '/tags/talk/', pageCount: 5 },
+      { tag: 'workshop', url: '/tags/workshop/', pageCount: 0 },
     ];
     const expected2 = [
       { tag: 'tag1', url: '/test5/', pageCount: 0 },
