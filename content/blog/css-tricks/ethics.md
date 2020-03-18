@@ -12,6 +12,7 @@ tags:
   - Ethics
 image:
   src: herman/stacy-design-systems-training.jpg
+  alt: Stacy teaching developers at an event
 summary: |
   "**What about building websites has you interested this year?**"
 

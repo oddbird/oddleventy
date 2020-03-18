@@ -10,6 +10,7 @@ tags:
   - Code
 image:
   src: blog/2017/serializing-things/celery-man.jpg
+  alt: Celery stalk resembling a human shape
 summary: |
   Transmitting objects between web processes and worker processes is a
   requirement of many modern web apps. Given that the safest way to do so

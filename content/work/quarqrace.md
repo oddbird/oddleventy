@@ -6,6 +6,7 @@ url: http://quarqrace.com
 logo: sram
 image:
   src: projects/trig.jpg
+  alt: Athlete list tied to their location and elevation
 client: SRAM/Quarq
 date: 2016-12-15
 tags:
@@ -52,5 +53,3 @@ summary: |
   triathlons, and non-competitive events, including regular IronMan and
   Enduro races.
 ---
-
-

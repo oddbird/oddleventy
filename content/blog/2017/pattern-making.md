@@ -15,6 +15,7 @@ tags:
   - Code
 image:
   src: blog/2017/pattern-making/NYC-sign.jpg
+  alt: Blueprint for NYC signage
 summary: |
   Living Style Guide documentation on the web is a difficult problem,
   gaining a lot of attention in the last few years. Let's take an in-depth

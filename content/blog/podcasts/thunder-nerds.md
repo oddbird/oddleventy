@@ -7,6 +7,7 @@ date: 2019-03-26
 author: miriam
 image:
   src: talks/miriam.jpg
+  alt: Miriam Suzanne speaking at a conference
 tags:
   - Interview
   - Code

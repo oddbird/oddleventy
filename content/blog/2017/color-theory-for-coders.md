@@ -11,6 +11,7 @@ tags:
   - Recommendations
 image:
   src: blog/2017/color-theory/decision-tree.jpg
+  alt: Colored circles in a flow chart
 summary: |
   If you write code and you want to delve into design, Natalya Shelburne's
   Practical Color Theory for Coders will get you up and running with a

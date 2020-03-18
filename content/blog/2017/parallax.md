@@ -8,6 +8,7 @@ tags:
   - Recommendations
 image:
   src: blog/2017/parallax/parallax.jpg
+  alt: Diagram of layered squares showing movement with arrows
 summary: |
   If you'd like to learn how to create parallax scrolling for your
   website, Paul Lewis' guide to performant parallaxing is the perfect

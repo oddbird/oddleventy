@@ -15,6 +15,7 @@ tags:
 author: kit
 image:
   src: blog/2018/channel.jpg
+  alt: The English Channel from above
 summary: |
   We've begun exploring some patterns for how to add WebSocket push
   notifications to what is otherwise a RESTful API. This means, for us,

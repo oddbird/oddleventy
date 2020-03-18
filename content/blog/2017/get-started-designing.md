@@ -10,6 +10,7 @@ tags:
   - User Experience
 image:
   src: blog/2017/get-started-designing/cafe-computer.jpg
+  alt: Tools for design include a computer, sketchbook, pen and paper
 summary: |
   So you'd like to start learning design, but the number of tools and
   tutorials available is overwhelming. Where do you start? I recommend
@@ -19,6 +20,8 @@ summary: |
   typography, and Adobe Experience Design for UX prototyping.
 date: 2017-02-22
 ---
+
+{% import 'embed.macros.njk' as embed %}
 
 So you’re a developer or you’re brand new to the world of web design,
 and you’d like to grow your design chops. How do you even begin to sort
@@ -53,7 +56,11 @@ background when I’m finished.
 
 ## Typography: A Practical Guide
 
-<img src="{{ site.images }}blog/2017/get-started-designing/santamaria.jpg" class="img-border img-border" alt="Jason Santa Maria&#39;s website" />
+{{ embed.img(
+  src='blog/2017/get-started-designing/santamaria.jpg',
+  alt='Website by Jason Santa Maria',
+    attrs={'class': 'img-border'}
+) }}
 
 According to typography expert [Jason Santa Maria], “If your type is
 bad, the design fails.” There’s so much to learn in the rich field of

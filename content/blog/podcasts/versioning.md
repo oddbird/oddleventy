@@ -8,6 +8,7 @@ canonical: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
 venue: SitePoint
 image:
   src: blog/2016/versioning.png
+  alt: Miriam Suzanne on the director's chair
 media:
   - audio: VER008_Miriam-Suzanne.mp3
 summary: |

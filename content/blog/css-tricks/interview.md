@@ -5,6 +5,7 @@ date: 2016-10-15
 canonical: https://css-tricks.com/interview-miriam-suzanne/
 image:
   src: blog/elsewhere/css-tricks.jpg
+  alt: CSS-Tricks
 tags:
   - Links
   - Code

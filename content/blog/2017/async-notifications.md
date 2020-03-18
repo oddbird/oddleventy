@@ -11,6 +11,7 @@ tags:
   - Code
 image:
   src: blog/2017/04/17/async-notifications.jpg
+  alt: Old photograph of operators
 summary: |
   When you have out-of-band processing in a web app, how do you let users
   know that the status of a task has changed? Depending on your front-end

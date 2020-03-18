@@ -6,6 +6,7 @@ client: &client Aunalytics
 date: 2020-01-13
 image:
   src: projects/aunalytics/workflow-mockup.png
+  alt: Connected workflow processes shown within the canvas
 tags:
   - Client Work
   - Research & Concepting
