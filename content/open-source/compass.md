@@ -6,8 +6,6 @@ logo: compass
 author: miriam
 date: 2010-04-09
 end: 2016-08-04
-tags:
-  - Sass
 links:
   site: http://compass-style.org
   source: http://github.com/compass/compass

@@ -79,14 +79,21 @@ params:
   value:
     type: any
     note: Only approve pages where the desired attributes have a given value
+  exact:
+    type: boolean
+    note: Force an exact match, rather than inclusion
 */
-const hasData = (obj, keys, value) =>
-  value
-    ? _(obj)
-        .get(keys, [])
-        .includes(value)
-    : _.hasIn(obj, keys);
+const hasData = (obj, keys, value, exact = false) => {
+  if (value) {
+    return exact
+      ? _(obj).get(keys, '') === value
+      : _(obj)
+          .get(keys, [])
+          .includes(value);
+  }
 
+  return _.hasIn(obj, keys);
+};
 /* @docs
 label: withData
 category: Filter
@@ -101,9 +108,12 @@ params:
   value:
     type: any
     note: Only get pages where the desired attributes have this value
+  exact:
+    type: boolean
+    note: Force an exact match, rather than inclusion
 */
-const withData = (collection, keys, value) =>
-  collection.filter((page) => hasData(page, keys, value));
+const withData = (collection, keys, value, exact = false) =>
+  collection.filter((page) => hasData(page, keys, value, exact));
 
 /* @docs
 label: getData

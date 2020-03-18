@@ -34,15 +34,15 @@ describe('tag filters', () => {
   test('tagData', () => {
     const collections = {
       all: collection,
-      workshops: [],
-      talks: collection,
+      workshop: [],
+      talk: collection,
     };
     const expected1 = [
       { tag: 'talk', url: '/tags/talk/', pageCount: 5 },
       { tag: 'workshop', url: '/tags/workshop/', pageCount: 0 },
     ];
     const expected2 = [
-      { tag: 'tag1', url: '/test5/', pageCount: 0 },
+      { tag: 'tag 1', url: '/test5/', pageCount: 0 },
       { tag: 'tag2', url: '/tags/tag2/', pageCount: 0 },
     ];
 
@@ -52,11 +52,12 @@ describe('tag filters', () => {
 
   test('tagLink', () => {
     expect(tagLink(collection, 'foo')).toEqual('/tags/foo/');
-    expect(tagLink(collection, 'tag1')).toEqual('/test5/');
+    expect(tagLink(collection, 'tag 1')).toEqual('/test5/');
+    expect(tagLink(collection, 'tag')).toEqual('/tags/tag/');
   });
 
   test('getTags', () => {
-    const expected = ['tag1', 'tag2'];
+    const expected = ['tag 1', 'tag2'];
     const tagCollection = [collection[0]];
 
     expect(getTags(tagCollection)).toEqual(expected);

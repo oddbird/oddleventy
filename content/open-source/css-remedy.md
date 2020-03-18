@@ -7,9 +7,6 @@ logo: remedy
 image:
   svg: logos/remedy
 date: 2019-07-11
-tags:
-  - CSS
-  - Mozilla
 index: CSS Remedy
 links:
   source: https://github.com/mozdevs/cssremedy/
