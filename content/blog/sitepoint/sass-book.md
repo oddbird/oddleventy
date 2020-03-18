@@ -7,7 +7,7 @@ tags:
   - Link
   - Sass
   - Open Source
-  - Books
+  - Book
 image:
   src: blog/sassbook.jpg
 summary: |

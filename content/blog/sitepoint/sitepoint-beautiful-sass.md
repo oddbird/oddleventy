@@ -5,7 +5,7 @@ tags:
   - Link
   - CSS
   - Code
-  - Books
+  - Book
 image:
   src: blog/sassbook.jpg
 summary: |
