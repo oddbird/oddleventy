@@ -17,10 +17,6 @@ events:
     url: https://2020.webconf.asia/
     adr: Hong Kong
     date: 2020-08-28
-  - venue: CSS Day
-    url: https://cssday.nl/2020
-    adr: Amsterdam, NL
-    date: 2020-06-12
   - venue: Develop Denver
     url: https://developdenver.org/
     date: 2019-08-15
