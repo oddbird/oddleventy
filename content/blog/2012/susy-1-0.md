@@ -1,11 +1,12 @@
 ---
+card: large
 title: Susy 1.0 Release
 date: 2012-08-14
 author: miriam
 image:
   src: blog/susy.jpg
 tags:
-  - News
+  - Article
   - Susy
   - Open Source
   - Code

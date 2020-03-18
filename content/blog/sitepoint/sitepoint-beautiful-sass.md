@@ -2,10 +2,10 @@
 title: How to Write Beautiful Sass
 canonical: https://www.sitepoint.com/writing-beautiful-sass/
 tags:
-  - Links
+  - Link
   - CSS
   - Code
-  - Books
+  - Book
 image:
   src: blog/sassbook.jpg
   alt: Jump Start Sass, by Miriam Suzanne and Hugo Giraudel

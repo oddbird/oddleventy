@@ -1,81 +1,43 @@
 @use '~accoutrement/sass/tools';
 
-// Hero Images
-[data-hero] {
-  img,
-  svg {
-    border: var(--hero-border, 0) solid var(--border);
-    height: 100%;
-    max-height: var(--hero-height, 50vmin);
-    object-fit: cover;
-    object-position: var(--hero-position, center);
-    width: 100%;
-  }
-
-  svg {
-    object-fit: contain;
-  }
-}
-
-[data-hero='large'] {
-  --area: 1 / -1;
-  --hero-border: 1px;
-  clip-path: var(--crop);
-}
-
-[data-hero='card'] {
-  --hero-height: calc(var(--gutter) * 8);
-  margin: calc(var(--gutter) * -1) calc(var(--gutter) * -1) var(--newline);
-}
-
-[data-media='hero'] {
-  --column: wide;
-  --media-content: var(--page);
-  --media-min: 8em;
-}
-
-// Card Grid
-[data-grid='resources'] {
-  --justify: stretch;
-  list-style: none;
-  grid-auto-flow: dense;
-  margin: 0;
-  padding: 0;
-}
-
 [data-post] {
-  display: grid;
-  grid-template:
-    [card-start type-start] auto [type-end] 1fr [card-end]
-    / [card-start] 1fr [type-start] auto [type-end card-end];
-}
-
-// Cards
-[data-card] {
-  --crop-size: var(--triple-gutter);
+  --post-margin: var(--gutter);
+  --fold: var(--triple-gutter);
   --drop: var(--half-shim);
-  --crop: polygon(
-    0 0,
-    calc(100% - var(--crop-size)) 0,
-    100% var(--crop-size),
-    100% 100%,
-    0 100%
+  --drop-focus: var(--shim);
+  --left: calc(var(--drop-focus) * -1);
+  --bottom: calc(100% + var(--drop-focus));
+  clip-path: polygon(
+    var(--left) 0,
+    calc(100% - var(--fold)) 0,
+    100% var(--fold),
+    100% var(--bottom),
+    var(--left) var(--bottom)
   );
-  grid-area: card;
+  display: grid;
+  grid-area: post;
+  grid-row-gap: var(--shim);
+  grid-template:
+    [hero-start] 'left type type' auto
+    [hero-end] 'left main right' 1fr
+    / [hero-start] var(--post-margin) minmax(min-content, var(--page)) var(
+      --post-margin
+    )
+    [hero-end];
 }
 
-[data-card='link'] {
+[data-post='link'] {
   @include tools.transition('pop');
-  display: grid;
+  --hero-height: calc(var(--gutter) * 8);
+  background: var(--card, var(--callout));
   box-shadow: calc(var(--drop) * -1) var(--drop) 0 var(--pop, var(--shadow));
   position: relative;
-  transform: rotate(var(--rotate, 0));
 
   &:hover,
   &:focus-within {
     --img-bright: 1;
     --img-contrast: 1;
-    --drop: var(--shim);
+    --drop: var(--drop-focus);
     --pop: var(--active);
     transition-delay: 20ms;
   }
@@ -86,98 +48,66 @@
 
     &::after {
       @include tools.position(0 0 0 0);
+      @include tools.z-index('bump');
       content: '';
       display: block;
     }
   }
-
-  .byline,
-  .next-event {
-    font-size: var(--xsmall);
-  }
-
-  .next-event {
-    padding-left: 1em;
-  }
 }
 
-.card-inner {
-  background-color: var(--card, var(--callout));
-  clip-path: var(--crop);
-  padding: var(--gutter);
+[data-post='large'] {
+  --post-margin: minmax(0, 1fr);
 }
 
-// Features
-[data-card='hero'] {
-  display: grid;
-  grid-template-columns:
-    minmax(0, 1fr) [main-start] minmax(min-content, var(--page))
-    [main-end] minmax(0, 1fr);
+// Elements
+// --------
 
-  > * {
-    grid-column: var(--area, main);
-  }
+[data-hero='post'] {
+  grid-area: hero;
 }
 
-[data-feature='small'] {
-  --card: var(--bg);
-  --rotate: -3deg;
-  --post-type: var(--bg);
-  --post-type-active: var(--callout);
-  background-color: var(--feature-accent);
-  background-image: linear-gradient(to bottom, transparent, var(--feature));
-  margin: calc(var(--half-shim) * -1);
+.type-flag {
+  @include tools.font-family('alt');
+  background: var(--highlight);
+  color: var(--bg);
+  font-size: var(--xsmall);
+  grid-area: type;
+  place-self: start end;
+  margin: var(--half-shim) var(--quarter-shim);
+  padding-right: var(--fold);
+  text-transform: uppercase;
 
-  [data-card] {
-    --shadow: transparent;
-    margin: var(--quarter-shim);
-  }
-}
-
-[data-feature='large'] {
-  font-size: 1rem;
-  grid-column: 1 / -1;
-  margin: var(--gutter) 0;
-}
-
-// Post Elements
-.post-type {
   &:link,
   &:visited {
-    @include tools.z-index('bump');
-    --fill: var(--post-type, var(--feature));
-    border-radius: var(--radius);
-    display: block;
-    font-size: var(--small);
-    grid-area: type;
-    line-height: 1;
-    padding: var(--half-shim);
-    position: relative;
+    --fill: var(--bg);
+    text-decoration: none;
+    color: var(--bg);
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    --fill: var(--post-type-active, var(--active));
+  &[href]:hover,
+  &[href]:focus,
+  &[href]:active {
+    background: var(--feature);
+  }
+
+  [data-icon] {
+    margin-left: var(--half-shim);
   }
 }
 
 .post-title {
   @include tools.font-family('alt');
+  font-size: 1.25em;
   font-style: normal;
   margin: 0;
 
-  [data-card='link'] & {
-    margin-right: var(--shim);
-  }
-
-  [data-grid] & {
-    font-size: 1.25em;
-  }
-
-  [data-card='feature'] & {
+  [data-post='large'] & {
     font-size: var(--h2);
   }
+}
+
+.post-content {
+  grid-area: main;
 }
 
 .post-header {
@@ -194,8 +124,4 @@
 
 .summary {
   margin: var(--gutter) 0;
-}
-
-.next-event {
-  padding: 0;
 }

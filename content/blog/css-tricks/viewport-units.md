@@ -7,7 +7,7 @@ image:
   src: blog/elsewhere/css-tricks.jpg
   alt: CSS-Tricks
 tags:
-  - Links
+  - Link
   - Code
   - Sass
   - Open Source

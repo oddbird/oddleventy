@@ -3,7 +3,7 @@ title: 'Event: Live Q&A with OddBird'
 author: sondra
 type: event
 tags:
-  - News
+  - Article
   - Events
   - Q&A
   - Tips

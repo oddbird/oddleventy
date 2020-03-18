@@ -4,7 +4,7 @@ sub: Grid Systems & Vue Invaders!
 author: miriam
 date: 2018-05-15
 tags:
-  - News
+  - Article
   - Vue
   - Conferences
   - Design Systems

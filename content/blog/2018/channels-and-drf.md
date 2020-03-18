@@ -1,7 +1,8 @@
 ---
+card: large
 title: Django REST Framework & Channels
 tags:
-  - News
+  - Article
   - Code
   - Python
   - Django

@@ -10,7 +10,7 @@ tags:
   - Code
   - CSS
   - Grids
-  - Videos
+  - Video
 video:
   caption: |
     Exploring CSS Grids with Geoff Graham

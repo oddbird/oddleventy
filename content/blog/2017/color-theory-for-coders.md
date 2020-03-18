@@ -4,7 +4,7 @@ sub: from Natalya Shelburne
 author: sondra
 date: 2017-02-20
 tags:
-  - News
+  - Article
   - Tips
   - Color
   - Design

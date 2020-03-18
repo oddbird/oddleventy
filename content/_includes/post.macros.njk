@@ -72,9 +72,7 @@ params:
 
   <ol data-grid="resources" reversed>
     {%- for post in posts | sort(true, false, sort) -%}
-      {%- set feature = 'large' if (loop.length == 1) else none -%}
-      {%- set feature = 'small' if (feature or post.data.feature) and (loop.length == 2) else feature -%}
-      {{ item(post, collections, feature) }}
+      {{ item(post, collections, loop) }}
     {%- endfor -%}
   </ol>
 {% endif %}
@@ -97,99 +95,71 @@ params:
 {% macro item(
   post,
   collections=none,
-  feature=none
+  loop=none
 ) %}
   {%- set type = post.data.tags | pageType -%}
-  {%- set feature = post.event.feature if (post.event and not feature) else feature -%}
-  {%- set feature = feature or post.data.feature -%}
-  {%- set feature = 'small' if feature and not feature | typeCheck('string') else feature -%}
+  {%- set card = post.data.card or none -%}
+  {%- set card = 'feature' if (card == 'feature') else card -%}
+  {%- set card = card or 'feature' if type.feature else card -%}
 
-  <li data-post="{{ type | slug if type else 'default' }}" {{ utility.attr_if('data-feature', feature) }}>
-    {%- if feature == 'large' -%}
+  {# Adjust card settings based on the number of posts in a list #}
+  {% if loop %}
+    {%- set card = 'large' if (loop.length == 1) else card -%}
+    {%- set card = 'feature' if (card == 'large' and loop.length == 2) else card -%}
+  {% endif %}
+
+  <li data-resource="{{ card }}">
+    {%- if card == 'large' -%}
       {{ type_link(type, collections) }}
-      {{ large(post, collections) }}
+      {{ detail(post, card, type, collections) }}
     {%- else -%}
-      {{ small(post, collections, feature) }}
+      {{ detail(post, card, type, collections) }}
       {{ type_link(type, collections) }}
     {%- endif -%}
   </li>
 {% endmacro %}
 
 {# @docs
-label: small
+label: detail
 category: posts
-note: Content for a small card resource
+note: Content for posts in a list
 params:
   post:
     type: 11ty page object
+  type:
+    type: string
+    default: none
   collections:
     type: 11ty collections object
     default: none
-  feature:
-    type: boolean | 'large'
-    default: none
 #}
-{% macro small(
+{% macro detail(
   post,
-  collections=none,
-  feature=none
+  card='link',
+  type=none,
+  collections=none
 ) %}
-  <article data-card="link">
-    <div class="card-inner">
-      {% if feature and post.data.image and not (post.data.image.type == 'media') %}
-        {{ hero(post.data.image, 'card') }}
-      {% endif %}
-      <div class="post-header">
+  {%- set image = post.data.image -%}
+  {%- set image = image if image and not (image.type == 'media') else none -%}
+  {%- set image = image if (type.img or card == 'large') else none -%}
+
+  <article data-post="{{ 'large' if (card == 'large') else 'link' }}">
+    {{ hero(image, 'post') }}
+    {% if type %}
+      <div class="type-flag" data-flag="left">{{ type.tag }}</div>
+    {% endif %}
+    <div class="post-content">
+      <header class="post-header">
         {{ banner(post) }}
         {{ subtitle(post.data.sub) }}
         {{ byline(post, collections, false) }}
-      </div>
-      {{ upcoming(post.data.events, links=false) }}
+      </header>
+      {% if post.data.events %}
+        {{ upcoming(post.data.events, links=false) }}
+      {% else %}
+        {{ post.data.summary | md | safe }}
+      {% endif %}
     </div>
-  </article>
-{% endmacro %}
-
-{# @docs
-label: large
-category: posts
-note: Content for a large featured resource
-params:
-  post:
-    type: 11ty page object
-  collections:
-    type: 11ty collections object
-    default: none
-#}
-{% macro large(
-  post,
-  collections=none
-) %}
-  {%- set content -%}
-    <div class="post-header">
-      {{ banner(post) }}
-      {{ subtitle(post.data.sub) }}
-      {{ byline(post, collections) }}
-      {{ taglist(post.data.tags, collections) }}
-    </div>
-
-    <div class="summary">
-      {{ post.data.summary | md | safe }}
-      {{ upcoming(post.data.events) }}
-    </div>
-  {%- endset -%}
-  {%- set image = post.data.image -%}
-  <article data-card="{{ 'media' if (image.type === 'media') else 'hero' }}">
-    {%- if image and (image.type === 'media') -%}
-      {{ embed.media_block(
-        media=embed.svg(image.svg, image.alt) if image.svg else embed.img(image.src, image.alt),
-        name='hero',
-        attrs={'data-block': 'rotate'},
-        content=content
-      ) }}
-    {%- else -%}
-      {{ hero(image) }}
-      {{ content | safe }}
-    {%- endif -%}
   </article>
 {% endmacro %}
 
@@ -290,11 +260,6 @@ params:
   dateformat=false
 ) %}
   <p class="byline">
-    {{ byline_type(
-      tags=post.data.tags,
-      venue=post.data.venue
-    ) }}
-
     {{ by(
       post.data.author,
       collections,
@@ -322,30 +287,6 @@ params:
 {% endmacro %}
 
 {# @docs
-label: byline_type
-category: metadata
-note: |
-  Generate post-type label for the byline
-params:
-  tags:
-    type: array
-  venue:
-    type: string
-    default: none
-    note: |
-      We don't show type in the byline when a venue is set
-#}
-{% macro byline_type(
-  tags,
-  venue=none
-) %}
-  {%- set type = tags | pageType('byline') -%}
-  {%- if type and not venue -%}
-    <b>{{ type }}</b>
-  {%- endif -%}
-{% endmacro %}
-
-{# @docs
 label: type_link
 category: metadata
 note: |
@@ -362,18 +303,17 @@ params:
   type,
   collections=none
 ) %}
-  {%- set icon = type | pageType('icon') -%}
   {%- set url = '/tags/' -%}
-  {%- if icon -%}
-    {% set url = collections.all | tagLink(type) if collections else none %}
+  {%- if type.icon -%}
+    {% set url = collections.all | tagLink(type.tag) if collections else none %}
   {%- endif -%}
   {{ utility.link_if(
     content=embed.svg(
-      path='icons/' + (icon or 'tags'),
-      alt=['see all', type] | join(' ') if type else 'all tags'
+      path='icons/' + (type.icon or 'tags'),
+      alt=['see all', type.tag] | join(' ') if type else 'all tags'
     ),
     url=url,
-    class='post-type'
+    class='type-link'
   ) }}
 {% endmacro %}
 

@@ -1,14 +1,14 @@
-import { fromTaxonomy, ossGroups, pageType } from '#/taxonomy';
+import { fromTaxonomy, ossGroups, pageType, taxonomy } from '#/taxonomy';
 
 import { collection3 } from './utils';
 
 describe('fromTaxonomy', () => {
   test('Return data from taxonomy', () => {
     expect(fromTaxonomy('post', { icon: 'news' })).toEqual({
-      tag: 'News',
+      tag: 'Article',
       icon: 'news',
     });
-    expect(fromTaxonomy('post', { icon: 'news' }, 'icon')).toEqual('news');
+    expect(fromTaxonomy('post', { icon: 'news' }, 'tag')).toEqual('Article');
   });
 });
 
@@ -22,9 +22,12 @@ describe('ossGroups', () => {
 
 describe('pageType', () => {
   test('Return one of several resource "types" from page tags', () => {
-    expect(pageType(['foo', 'Workshops'])).toEqual('Workshops');
-    expect(pageType('Workshops', 'icon')).toEqual('workshop');
-    expect(pageType('Workshops')).toBe(false);
+    const workshop = taxonomy.post.find((type) => type.tag === 'Workshop');
+
+    expect(pageType(['foo', 'Workshop'])).toEqual(workshop);
+    expect(pageType(['foo', 'Workshop'], 'tag')).toEqual(workshop.tag);
+    expect(pageType('Workshop', 'icon')).toEqual(workshop.icon);
+    expect(pageType('Workshop')).toBe(workshop);
     expect(pageType('foo')).toBe(false);
     expect(pageType('foo', 'bar')).toBe(false);
     expect(pageType()).toBe(false);

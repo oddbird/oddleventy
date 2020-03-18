@@ -1,4 +1,5 @@
 ---
+card: large
 title: QuarqNet
 banner: QuarqNet Application
 sub: Real-time telemetry for athletes

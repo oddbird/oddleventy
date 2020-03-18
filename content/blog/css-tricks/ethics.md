@@ -6,7 +6,7 @@ date: 2019-11-22
 canonical: https://css-tricks.com/its-my-job-and-yours/
 venue: CSS-Tricks
 tags:
-  - Links
+  - Link
   - Code
   - Design
   - Ethics

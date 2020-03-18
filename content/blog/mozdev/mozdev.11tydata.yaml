@@ -1,9 +1,11 @@
 author: miriam
 venue: Mozilla Developer
 url: https://youtube.com/MozillaDeveloper
+image:
+  position: top
 tags:
   - CSS
   - Mozilla
   - Mozilla Developer
   - Code
-  - Videos
+  - Video

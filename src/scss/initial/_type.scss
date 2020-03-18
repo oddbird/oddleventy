@@ -31,14 +31,6 @@ hr {
   @include tools.is-hidden;
 }
 
-// Widont
-// ------
-/// Hide widont spaces from screen-readers
-/// @group type
-.widont {
-  visibility: hidden;
-}
-
 // Ampersands
 // ----------
 /// All ampersands default to the fancy baskerville italic.

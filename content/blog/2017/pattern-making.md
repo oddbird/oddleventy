@@ -2,7 +2,7 @@
 title: Code Patterns & Style Guides
 author: miriam
 tags:
-  - News
+  - Article
   - Tools
   - Color
   - Typography

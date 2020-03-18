@@ -1,7 +1,7 @@
 @use '~accoutrement/sass/tools';
 
 #hero {
-  grid-area: hero / hero / hero2;
+  grid-area: hero / hero / hero2 / hero2;
   position: relative;
 
   &::before {

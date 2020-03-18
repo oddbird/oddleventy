@@ -85,7 +85,7 @@ blockquote:not([data-quote]) {
   grid-gap: var(--double-gutter);
   margin: var(--spacer) 0;
 
-  @include tools.above('wide-page') {
+  @include tools.above('wide-break') {
     --overlap: calc(var(--gutter) * -1);
     --offset: var(--spacer);
     grid-template: var(--offset) / repeat(2, 1fr);

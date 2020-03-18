@@ -8,7 +8,7 @@ image:
   src: blog/2016/QandA.jpg
   alt: Miriam Suzanne answers questions on SitePoint
 tags:
-  - Links
+  - Link
   - Interview
   - Code
   - Susy

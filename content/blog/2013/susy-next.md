@@ -1,7 +1,8 @@
 ---
+card: large
 title: Sass Layout in 2013 and the Future of Susy
 tags:
-  - News
+  - Article
   - Susy
   - Open Source
   - Susy2

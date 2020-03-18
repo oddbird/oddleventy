@@ -7,7 +7,7 @@ export const collection = [
     date: '2018-01-09T04:10:17.000Z',
     data: {
       title: 'Test Title',
-      tags: ['tag1', 'tag2'],
+      tags: ['tag 1', 'tag2'],
       date: 'Last Modified',
       events: [
         {
@@ -32,7 +32,7 @@ export const collection = [
     date: '2018-03-09T04:10:17.000Z',
     data: {
       title: 'Test Title',
-      tags: ['tag1', 'tag2'],
+      tags: ['tag 1', 'tag2'],
       date: 'Last Modified',
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
@@ -49,7 +49,7 @@ export const collection = [
     },
     data: {
       title: 'Test Title',
-      tags: ['tag1', 'tag2'],
+      tags: ['tag 1', 'tag2'],
       date: '2020-04-10T04:10:17.000',
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
@@ -66,7 +66,7 @@ export const collection = [
     },
     data: {
       title: 'Test Title',
-      tags: ['tag1', 'tag2'],
+      tags: ['tag 1', 'tag2'],
       date: '2020-04-10T04:10:17.000Z',
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
@@ -79,7 +79,7 @@ export const collection = [
     date: '2020-04-10T04:10:17.000Z',
     data: {
       title: 'Test Title',
-      index: 'tag1',
+      index: 'tag 1',
       date: '2020-04-10T04:10:17.000Z',
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
@@ -95,7 +95,7 @@ export const collection2 = [
     date: '2018-01-09T04:10:17.000Z',
     data: {
       title: 'Test Title',
-      tags: ['tag1', 'tag2'],
+      tags: ['tag 1', 'tag2'],
       author: 'miriam',
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
@@ -108,7 +108,7 @@ export const collection2 = [
     date: '2018-01-09T04:10:17.000Z',
     data: {
       title: 'Test Title',
-      tags: ['tag1', 'tag2'],
+      tags: ['tag 1', 'tag2'],
       author: 'oddbird',
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
@@ -121,7 +121,7 @@ export const collection2 = [
     date: '2018-01-09T04:10:17.000Z',
     data: {
       title: 'Test Title',
-      tags: ['tag1', 'tag2'],
+      tags: ['tag 1', 'tag2'],
       author: 'erica',
       bird: 'erica',
     },
@@ -135,7 +135,7 @@ export const collection2 = [
     date: '2018-01-09T04:10:17.000Z',
     data: {
       title: 'Test Title',
-      tags: ['tag1', 'tag2'],
+      tags: ['tag 1', 'tag2'],
       author: 'jimbob',
       end: '2019-01-09T04:10:17.000Z',
     },
@@ -149,7 +149,7 @@ export const collection2 = [
     date: '2018-01-09T04:10:17.000Z',
     data: {
       title: 'Test Title',
-      tags: ['tag1', 'tag2'],
+      tags: ['tag 1', 'tag2'],
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },
@@ -164,7 +164,7 @@ export const collection3 = [
     date: '2019-01-09T04:10:17.000Z',
     data: {
       title: 'Test Title',
-      tags: ['tag1', 'tag2'],
+      tags: ['tag 1', 'tag2'],
       author: 'miriam',
       end: 'ongoing',
       slug: 'news',

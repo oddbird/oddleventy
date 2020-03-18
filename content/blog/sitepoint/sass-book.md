@@ -4,10 +4,10 @@ sub: A preview of Jump Start Sass, chapter 11
 date: 2016-03-01
 canonical: https://www.sitepoint.com/architecture-in-sass/
 tags:
-  - Links
+  - Link
   - Sass
   - Open Source
-  - Books
+  - Book
 image:
   src: blog/sassbook.jpg
   alt: Jump Start Sass, by Miriam Suzanne and Hugo Giraudel

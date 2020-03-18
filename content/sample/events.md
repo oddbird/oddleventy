@@ -9,7 +9,7 @@ sub: Testing out the event filters
 Replaces event-pages with their events,
 while leaving non-event pages un-touched:
 
-{% for post in collections.Workshops | getEvents() %}
+{% for post in collections.Workshop | getEvents() %}
 - [{{ post.date | getDate('iso') }}]
   [{{ post.event.title or post.data.title }}]({{ post.url }})
   {% if post.event.venue %}at {{ post.event.venue }}{% endif %}
@@ -21,7 +21,7 @@ while leaving non-event pages un-touched:
 will add the events as list-items
 in addition to all existing pages in the collection:
 
-{% for post in collections.Workshops | getEvents(true) %}
+{% for post in collections.Workshop | getEvents(true) %}
 - [{{ post.date | getDate('iso') }}]
   [{{ post.event.title or post.data.title }}]({{ post.url }})
   {% if post.event.venue %}at {{ post.event.venue }}{% endif %}
@@ -33,7 +33,7 @@ in addition to all existing pages in the collection:
 will add the events as list-items
 in addition to all existing pages in the collection:
 
-{% for post in collections.Workshops | getEvents(false) %}
+{% for post in collections.Workshop | getEvents(false) %}
 - [{{ post.date | getDate('iso') }}]
   [{{ post.event.title or post.data.title }}]({{ post.url }})
   {% if post.event.venue %}at {{ post.event.venue }}{% endif %}

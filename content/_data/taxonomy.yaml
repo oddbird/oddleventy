@@ -1,21 +1,21 @@
 post:
-  - tag: Talks
+  - tag: Talk
     icon: talk
-    byline: Talk
-  - tag: Workshops
+    img: true
+  - tag: Workshop
     icon: workshop
-    byline: Workshop
-  - tag: Podcasts
+    img: true
+    feature: true
+  - tag: Podcast
     icon: audio
-    byline: Podcast
-  - tag: Videos
+  - tag: Video
     icon: video
-    byline: Video
-  - tag: OddTools
-    icon: opensource
-  - tag: Links
+  - tag: Link
     icon: link
-  - tag: News
+  - tag: Client Work
+    icon: tools
+    img: true
+  - tag: Article
     icon: news
 oss:
   - title: OddTools

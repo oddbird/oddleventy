@@ -5,8 +5,6 @@ author: miriam
 date: 2019-10-03
 tags:
   - AboutWeb
-  - Code
-  - Videos
 image:
   src: mozdev/css-is-weird.png
   alt: CSS cascade diagram

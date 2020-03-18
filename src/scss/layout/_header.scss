@@ -2,6 +2,13 @@
 
 [data-layout='header'] {
   display: grid;
+
+  .type-flag {
+    @include tools.z-index('bump');
+    margin: var(--gutter) 0 var(--shim) auto;
+    padding-block: var(--quarter-shim);
+    padding-right: var(--gutter);
+  }
 }
 
 [data-header='hero'] {
@@ -9,7 +16,7 @@
   --edge: calc(var(--page-margin) / 2);
   --overlap: var(--gutter);
   grid-template:
-    'hero hero' auto
+    'hero type' auto
     'title hero2' var(--overlap)
     'title .' auto
     'meta meta' auto
@@ -47,5 +54,9 @@
 
   > * {
     grid-column: var(--column, page);
+  }
+
+  .type-flag {
+    grid-area: 1 / 1 / span 1 / -1;
   }
 }

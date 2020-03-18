@@ -16,8 +16,6 @@ people:
     face: jason-lantz.jpg
     venue: *client
 tags:
-  - _post
-  - Case Study
   - Client Work
   - Research & Concepting
   - Design

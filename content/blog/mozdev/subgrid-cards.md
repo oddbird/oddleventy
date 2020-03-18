@@ -7,8 +7,6 @@ image:
   alt: CSS snippet with card layout demo
 tags:
   - AboutWeb
-  - Code
-  - Videos
 summary: |
   Card layouts are popular on the web,
   rows and columns of boxes with similar content.

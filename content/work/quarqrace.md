@@ -10,8 +10,6 @@ image:
 client: SRAM/Quarq
 date: 2016-12-15
 tags:
-  - _post
-  - Case Study
   - Client Work
   - Research & Concepting
   - Design

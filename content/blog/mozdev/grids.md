@@ -5,8 +5,6 @@ author: miriam
 date: 2019-10-18
 tags:
   - AboutWeb
-  - Code
-  - Videos
 image:
   src: mozdev/grid.png
   alt: Inspecting grid with Firefox Developer Tools

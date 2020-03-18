@@ -7,8 +7,6 @@ image:
 author: carl
 oss: core team
 logo: django
-tags:
-  - Python
 links:
   site: https://www.djangoproject.com/
   docs: https://docs.djangoproject.com/

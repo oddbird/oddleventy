@@ -1,7 +1,7 @@
 ---
 title: Isolation and Bleed in Susy
 tags:
-  - News
+  - Article
   - Susy
   - Open Source
   - Susy1

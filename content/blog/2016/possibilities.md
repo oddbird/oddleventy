@@ -3,7 +3,7 @@ title: Defining Goals, Exploring Possibilities
 author: sondra
 date: 2016-08-22
 tags:
-  - News
+  - Article
   - OddSite
   - Open Design
   - Research

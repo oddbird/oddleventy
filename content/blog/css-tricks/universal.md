@@ -9,7 +9,7 @@ image:
   src: birds/miriam.jpg
   alt: Miriam Suzanne
 tags:
-  - Links
+  - Link
   - Code
   - CSS
   - Accessibility

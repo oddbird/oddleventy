@@ -5,8 +5,6 @@ author: miriam
 date: 2019-11-20
 tags:
   - AboutWeb
-  - Code
-  - Videos
 image:
   src: mozdev/supports_selector.png
   alt: CSS @supports statement

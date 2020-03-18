@@ -1,10 +1,11 @@
 ---
+card: large
 title: Welcome to Susy3!
 sub: Make grid systems your fallback plan
 author: miriam
 date: 2017-06-28
 tags:
-  - News
+  - Article
   - Susy
   - Open Source
   - Susy3

@@ -2,7 +2,7 @@
 title: Susy
 sub: CSS layout framework
 date: 2009-07-13
-feature: large
+card: large
 logo: susy
 image:
   type: angle

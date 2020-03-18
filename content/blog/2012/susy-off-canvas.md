@@ -1,7 +1,7 @@
 ---
 title: Off-Canvas Layout with Susy
 tags:
-  - News
+  - Article
   - Susy
   - Open Source
   - Susy1
