@@ -11,6 +11,7 @@ tags:
   - Bits and Pieces
 image:
   src: blog/2019/bit-bit.png
+  alt: Bits and Pieces
 summary: |
   *Hooks* are the new hotness in building web applications with React. In
   this article for BitSrc, Erica separates fact from hyperbole to examine

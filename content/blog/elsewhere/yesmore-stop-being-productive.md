@@ -12,6 +12,7 @@ tags:
   - SuperYesMore
 image:
   src: blog/2017/neck.jpg
+  alt: Mechanical neck drawing
 summary: |
   Miriam reflects on the nature and value of productivity for the
   SuperYesMore series: *The Human in the Machine*.

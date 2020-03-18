@@ -5,9 +5,7 @@ sub: Get up to speed with Sass in a weekend...
 author: miriam
 image:
   src: writing/jssass.jpg
-  caption: |
-    co-writen with my friend
-    [Hugo Giraudel](https://hugogiraudel.com/)
+  alt: Jump Start Sass, by Miriam Suzanne and Hugo Giraudel
 venue: SitePoint
 url: https://www.sitepoint.com/premium/books/jump-start-sass
 date: 2016-03-22

@@ -12,6 +12,7 @@ tags:
   - Code
 image:
   src: blog/cssgriddemo.jpg
+  alt: CSS Grid example layout
 summary: |
   CSS Grid Layout is shaping up to be the layout tool we've always wanted
   on the web. How can we use it to start creating interesting layouts?

@@ -7,6 +7,7 @@ tags:
   - DevTools
 image:
   src: mozdev/inactive-css.png
+  alt: Firefox Developer Tools shows helpful information about inactive CSS
 summary: |
   There are a number of property & value combinations
   that can lead to CSS being inactive,

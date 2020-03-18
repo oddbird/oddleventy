@@ -10,6 +10,7 @@ tags:
   - Recommendations
 image:
   src: blog/2017/video-series/sarah.jpg
+  alt: Sarah Parmenter speaking on stage
 summary: |
   Ongoing education in our industry is a must. Attending conferences is a
   great way to learn and network with other industry professionals.

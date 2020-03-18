@@ -5,6 +5,7 @@ author: miriam
 date: 2019-10-15
 image:
   src: talks/miriam.jpg
+  alt: Miriam Suzanne speaking at a conference
 slides: https://sliiides.netlify.com/css-is-rad/
 tags:
   - Code

@@ -10,6 +10,7 @@ tags:
   - CSS
 image:
   src: blog/2019/houdini-bunny.jpg
+  alt: Houdini bunny sticker
 summary: |
   As my first foray into the world of web design conferences, GenerateConf
   2019 in New York did not disappoint. From human-centered AI to Object

@@ -13,6 +13,7 @@ tags:
   - Custom Properties
 image:
   src: blog/2017/trick-charts.jpg
+  alt: Bar graph chart
 summary: |
   Inspired by Robin Rendle, I demonstrate some of my early experiments
   combining CSS Grids and custom properties to create dynamic layouts and

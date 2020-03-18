@@ -2,6 +2,7 @@
 title: Planning Your Web Project
 image:
   src: pages/design-sketch.jpg
+  alt: Sketched design concept
 author: miriam
 date: 2017-12-12
 slides: https://www.oddbooksapp.com/book/web-projects

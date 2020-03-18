@@ -11,6 +11,7 @@ tags:
   - Creative Bloq
 image:
   src: blog/2019/creative-bloq.jpg
+  alt: Robot constructing CSS
 summary: |
   Steve Jenkins interviews Miriam
   about the state of CSS,

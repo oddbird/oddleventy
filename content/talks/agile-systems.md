@@ -5,6 +5,7 @@ author: miriam
 date: 2018-03-21
 image:
   src: herman/herman-hero.jpg
+  alt: Sample organized color swatches with hex and hsl values
 slides: https://talks.oddbird.net/agile-systems/
 tags:
   - Code

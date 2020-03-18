@@ -10,6 +10,7 @@ tags:
   - Conferences
 image:
   src: blog/2017/cssday/cssday.jpg
+  alt: Miriam Suzanne speaking at CSSDay
 summary: |
   CSSDay was held in sunny Arizona on December 3, 2016. The conference is
   geared towards front-end developers who want to dive deeper into

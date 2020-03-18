@@ -6,6 +6,7 @@ date: 2015-11-11
 slides: https://www.oddbooksapp.com/book/software-for-humans
 image:
   src: talks/user-unfriendly.png
+  alt: Rethinking user experience design across media
 tags:
   - Code
   - Art

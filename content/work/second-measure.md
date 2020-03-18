@@ -5,6 +5,7 @@ sub: React design system & component library
 logo: second-measure
 image:
   src: projects/secondmeasure.jpg
+  alt: UI component library color palette options grouped by category
 client: &client Second Measure
 date: 2019-03-29
 tags:

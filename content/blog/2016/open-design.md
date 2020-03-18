@@ -8,6 +8,7 @@ tags:
   - Open Design
 image:
   src: blog/oddsite.jpg
+  alt: Early design concepts for OddBird's new site
 summary: |
   We're re-building our website in the open,
   and writing about our process along the way.

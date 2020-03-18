@@ -7,6 +7,7 @@ tags:
   - AboutWeb
 image:
   src: mozdev/overflow_wrap.png
+  alt: CSS code snippet with overflow wrap options
 summary: |
   Horizontal text overflow has always been difficult to manage on the web.
   The default visible overflow

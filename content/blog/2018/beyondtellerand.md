@@ -12,6 +12,7 @@ tags:
   - Style Guides
 image:
   src: blog/2018/vue-invaders.jpg
+  alt: Generated art in using CSS Grid inspired by Jared Tarbell
 talk: /talks/no-grid-system/
 summary: |
   I love when conferences give me the opportunity to travel around the world.
@@ -49,7 +50,7 @@ Jared Tarbell and the [Levitated Toy Factory], I picked [one of his art
 pieces] to recreate with CSS variables (aka custom properties) and CSS
 grid layouts.
 
-<img src="{{ site.images }}blog/2018/levitated.jpg" class="extend-small img-border img-spacing extend-small img-border img-spacing" alt="image" />
+<img src="{{ site.images }}blog/2018/levitated.jpg" class="extend-small img-border img-spacing extend-small img-border img-spacing" alt="Miriam showing a slide of the CSS Grid generated art inspired by Jared Tarbell" />
 
 I spent that evening studying his image, and translating it into HTML
 and CSS. My first draft relied heavily on `:nth-child()` selectors,

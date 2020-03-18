@@ -10,6 +10,7 @@ tags:
   - Code
 image:
   src: blog/2017/safe-get/phone.jpg
+  alt: Old phone
 summary: |
   The [Sass 3.5 Release Candidate] includes support for [first-class
   functions]. What are they, how do we use them, and what tools can we use

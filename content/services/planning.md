@@ -4,6 +4,7 @@ sub: Strategy, design concepts, and estimates based on user-research
 index: Research & Concepting
 image:
   src: pages/design-sketch.jpg
+  alt: Sketched design concept
 pitch:
   - title: Project Summary
     icon: icons/map
@@ -188,7 +189,7 @@ take the leap into creating your web project!
   caption='Sample Interactive Wireframe showing one laptop sized screen and the mobile view of the same content with clickable links.'
 ) %}
   {{ embed.img(
-    src='pages/interactive-prototypes.png',
+  src='pages/interactive-prototypes.png',
     attrs={'class': 'extend-large'}
   ) }}
 {% endcall %}
@@ -209,7 +210,7 @@ lives easier.
   caption='Sample User Survey using Google Forms.'
 ) %}
   {{ embed.img(
-    src='pages/web-app-survey.jpg',
+  src='pages/web-app-survey.jpg',
     attrs={'class': 'size-full align-center'}
   ) }}
 {% endcall %}

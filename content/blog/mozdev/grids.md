@@ -7,6 +7,7 @@ tags:
   - AboutWeb
 image:
   src: mozdev/grid.png
+  alt: Inspecting grid with Firefox Developer Tools
 summary: |
   For years,
   we've struggled to build resilient layouts on the web,

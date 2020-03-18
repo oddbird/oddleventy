@@ -12,6 +12,7 @@ tags:
 author: miriam
 image:
   src: blog/2017/spread/susy-spread.jpg
+  alt: Narrow and wide spread column math
 summary: |
   **Susy 3.0** will be released in the next week, if all goes well, and
   there's a lot to write about it. I wanted to start with a detailed

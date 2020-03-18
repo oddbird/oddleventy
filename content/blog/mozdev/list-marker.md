@@ -4,6 +4,7 @@ sub: Powerful New CSS for Styling Bullets, Numbers, and List Markers
 date: 2019-10-01
 image:
   src: mozdev/list-markers.png
+  alt: Lists styled with cat emjois
 tags:
   - AboutWeb
 summary: |

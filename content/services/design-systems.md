@@ -4,6 +4,7 @@ sub: Want to reduce technical debt and scale your applications?
 index: Design Systems
 image:
   src: /herman/stacy-design-systems-training.jpg
+  alt: Stacy teaching developers at an event
 summary: |
   **OddBird provides design-system training and implementation**
   --including strategy & design audits, automated style guides & pattern

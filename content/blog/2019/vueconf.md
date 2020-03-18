@@ -12,6 +12,7 @@ tags:
 talk: /talks/dynamic-css/
 image:
   src: blog/2019/vueconf.jpg
+  alt: Miriam Suzanne and former OddBird Una Kravets
 sprites:
   src:
     - iframe: https://talks.oddbird.net/demos/cssSprites

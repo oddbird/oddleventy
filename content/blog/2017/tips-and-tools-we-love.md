@@ -9,11 +9,14 @@ tags:
   - Code
 image:
   src: blog/2017/tips-tools/love-tools.jpg
+  alt: Mac OS Dock with some of our favoite app icons
 summary: |
   We wanted to show some love to a few great tools we use to get us
   through our work days. Do you have any to add to our list?
 date: 2017-02-14
 ---
+
+{% import 'embed.macros.njk' as embed %}
 
 In the spirit of Valentine’s Day, let’s kick off this post with a CSS
 love poem:
@@ -115,11 +118,13 @@ Grid feature speeds up the design process considerably, cutting out all
 that time she use to spend copying, pasting, and spacing repeating
 elements.
 
-![image]
+{{ embed.img(
+  src='blog/2017/tips-tools/adobexd.jpg',
+  alt=' linked prototype in Adobe XD'
+) }}
 
 [Sondra Eby]: /authors/sondra/
 [Adobe Xd]: http://www.adobe.com/products/experience-design.html
-[image]: {{ site.images }}blog/2017/tips-tools/adobexd.jpg
 
 ## TextExpander
 

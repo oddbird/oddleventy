@@ -14,6 +14,7 @@ tags:
   - Open Source
 image:
   src: blog/2017/docs/style.jpg
+  alt: Style written on sketchbook page
 summary: |
   Code documentation is ideally written as close to the actual code as
   possible, but compiled into a comprehensive set of documentation that
@@ -21,6 +22,8 @@ summary: |
   that.
 date: 2017-02-10
 ---
+
+{% import 'embed.macros.njk' as embed %}
 
 At OddBird we believe that undocumented code is unfinished code. The act
 of documenting clarifies what we are building, and the resulting
@@ -57,7 +60,10 @@ in the following Sass:
 
 is rendered in the style guide like this:
 
-![image]
+{{ embed.img(
+  src='blog/2017/docs/sassdoc.png',
+  alt='syntax highlighted code block and description of selector'
+) }}
 
 We are working on our own theme for Sassdoc, called [Herman], which
 provides extra tools for rendering samples of things like colors, fonts,
@@ -65,7 +71,6 @@ and icons. (Alas, while we are using it to produce documentation, it is
 not yet very well-documented itself.)
 
 [SassDoc]: http://sassdoc.com/
-[image]: {{ site.images }}blog/2017/docs/sassdoc.png
 [Herman]: https://github.com/oddbird/sassdoc-theme-herman/
 
 ## The Multi-language Challenge

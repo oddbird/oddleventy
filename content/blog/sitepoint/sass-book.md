@@ -10,6 +10,7 @@ tags:
   - Book
 image:
   src: blog/sassbook.jpg
+  alt: Jump Start Sass, by Miriam Suzanne and Hugo Giraudel
 summary: |
   I'm excited to release [Jump Start Sass], a book I co-authored with
   [Hugo Giraudel]. Digital coppies are available from [SitePoint], wih

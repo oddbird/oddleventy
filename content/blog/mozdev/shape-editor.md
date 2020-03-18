@@ -7,6 +7,7 @@ tags:
   - DevTools
 image:
   src: mozdev/shape_path.png
+  alt: Firefox Developer Tools
 summary: |
   Have you ever wanted to create more interesting shapes on the web, or
   flow text around the details of an image? Shape paths can be hard to

@@ -8,6 +8,7 @@ tags:
   - Community
 image:
   src: blog/2014/adainitiative.jpg
+  alt: Ada Initiative
 summary: |
   Donate to the Ada Initiative today to support women in open technology
   and culture. If we hit $10000 by Friday, Jacob and Alex and Jim and Carl

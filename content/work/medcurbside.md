@@ -3,6 +3,7 @@ title: MedCurbside
 sub: Knowledge-sharing for clinical physicians
 image:
   src: projects/medcurbside.jpg
+  alt: Ask or answer medical questions
 client: &client Lab06
 date: 2017-12-15
 links:

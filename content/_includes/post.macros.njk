@@ -221,7 +221,7 @@ params:
       {%- if image.src -%}
         {%- set position = {'--hero-position': image.position} | styles -%}
         {{ embed.img(
-          src=image.src,
+        src=image.src,
           alt=image.alt,
           attrs={style: position}
         ) }}

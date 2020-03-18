@@ -7,6 +7,7 @@ tags:
   - AboutWeb
 image:
   src: mozdev/css-is-weird.png
+  alt: CSS cascade diagram
 summary: |
   CSS is the design language of the web --
   one of three core web languages --

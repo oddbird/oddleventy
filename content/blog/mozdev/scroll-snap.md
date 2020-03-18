@@ -7,6 +7,7 @@ tags:
   - AboutWeb
 image:
   src: mozdev/scroll-snap.png
+  alt: CSS code snippet of scroll-snap type and align
 summary: |
   When we're scrolling down a page,
   or through a gallery of images,

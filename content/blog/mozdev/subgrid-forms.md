@@ -4,6 +4,7 @@ sub: and fallbacks for legacy browsers
 date: 2019-10-16
 image:
   src: mozdev/subgrid_forms.png
+  alt: CSS Snippet for CSS subgrid to make forms
 tags:
   - AboutWeb
 summary: |
