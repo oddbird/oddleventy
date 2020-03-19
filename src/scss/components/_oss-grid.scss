@@ -1,12 +1,13 @@
 [data-grid='open-source'] {
   --col-gap: var(--spacer);
   --fit-max: var(--min-page);
+  --item-title: var(--h2);
 
   header {
     --newline: var(--shim);
   }
 
-  .title {
+  .item-title {
     --link: unset;
   }
 

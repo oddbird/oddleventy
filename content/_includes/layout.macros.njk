@@ -55,8 +55,11 @@ params:
   data
 ) %}
 {% for item in data %}
-  <article class="grid-item">
-    <h3 class="item-title">{{ item.title | mdInline | safe }}</h3>
+  {% set id = [item.title, loop.index] | join('-') | slug %}
+  <article class="grid-item" aria-labelledby="{{ id }}">
+    <h3 class="item-title" id="{{ id }}">
+      {{ item.title | mdInline | safe }}
+    </h3>
     {{ item.text | md | safe }}
   </article>
 {% endfor %}

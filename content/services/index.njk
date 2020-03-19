@@ -19,7 +19,7 @@ summary: |
 {% call layout.grid() %}
   {% for service in services %}
     {% set page = collections.all | getPage(service) %}
-    <article>
+    <article {{ post.aria_label(page) }}>
       {{ post.banner(page, level=2) }}
       {{ page.data.summary | md | safe }}
     </article>

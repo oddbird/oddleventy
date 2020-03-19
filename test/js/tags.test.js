@@ -38,8 +38,20 @@ describe('tag filters', () => {
       talk: collection,
     };
     const expected1 = [
-      { tag: 'talk', url: '/tags/talk/', pageCount: 5 },
-      { tag: 'workshop', url: '/tags/workshop/', pageCount: 0 },
+      {
+        is_type: true,
+        tag: 'Talk',
+        type: { tag: 'Talk', icon: 'talk', img: true },
+        url: '/tags/talk/',
+        pageCount: 5,
+      },
+      {
+        is_type: true,
+        tag: 'Workshop',
+        type: { tag: 'Workshop', icon: 'workshop', img: true, feature: true },
+        url: '/tags/workshop/',
+        pageCount: 0,
+      },
     ];
     const expected2 = [
       { tag: 'tag 1', url: '/test5/', pageCount: 0 },

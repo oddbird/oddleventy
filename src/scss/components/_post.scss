@@ -29,6 +29,8 @@
 [data-post='link'] {
   @include tools.transition('pop');
   --hero-height: calc(var(--gutter) * 8);
+  --item-title: 1rem;
+  --newline: var(--half-shim);
   background: var(--card, var(--callout));
   box-shadow: calc(var(--drop) * -1) var(--drop) 0 var(--pop, var(--shadow));
   position: relative;
@@ -57,6 +59,7 @@
 
 [data-post='large'] {
   --post-margin: minmax(0, 1fr);
+  --item-title: var(--h2);
 }
 
 // Elements
@@ -95,23 +98,14 @@
   }
 }
 
-.post-title {
-  @include tools.font-family('alt');
-  font-size: 1.25em;
-  font-style: normal;
-  margin: 0;
-
-  [data-post='large'] & {
-    font-size: var(--h2);
-  }
-}
-
 .post-content {
   grid-area: main;
+  padding-bottom: var(--gutter);
 }
 
 .post-header {
-  --newline: var(--shim);
+  --newline: 0;
+  margin-bottom: var(--shim);
 }
 
 .subtitle {

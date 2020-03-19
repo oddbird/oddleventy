@@ -10,7 +10,7 @@
 // Line Height
 // -----------
 /// Going for a readable line-height
-/// that adapts to context
+/// that adapts to context\
 /// @ratios
 /// @group config-scale
 $ratios: (
@@ -26,7 +26,7 @@ $font-sizes: (
   'xsmall': 0.7rem,
   'rem': calc(1.25em + 0.5vw),
   'medium': 1.25rem,
-  'large': calc(1.5rem + 0.5vw),
+  'large': calc(1.25rem + 0.5vw),
   'xlarge': calc(1.75rem + 1vw),
   'h1': '#xlarge',
   'h2': '#large',
