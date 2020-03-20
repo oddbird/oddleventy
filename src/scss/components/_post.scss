@@ -24,6 +24,10 @@
       --post-margin
     )
     [hero-end];
+
+  .post-header {
+    margin-bottom: var(--gutter);
+  }
 }
 
 [data-post='link'] {
@@ -105,7 +109,6 @@
 
 .post-header {
   --newline: 0;
-  margin-bottom: var(--shim);
 }
 
 .subtitle {
