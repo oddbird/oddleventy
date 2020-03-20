@@ -156,8 +156,17 @@ params:
       </header>
       {% if post.data.events %}
         {{ upcoming(post.data.events, links=false) }}
-      {% else %}
-        {{ post.data.summary | md | safe }}
+      {% elif post.data.summary %}
+        {% set maxWords = 50 %}
+        {% set summary = post.data.summary | md %}
+        {% set summaryPlain = summary | striptags %}
+        {% set summary = summaryPlain | elide(maxWords) | typogr
+          if (card != 'large') and (summaryPlain | wordcount > maxWords)
+          else summary
+        %}
+        <p>
+          {{ summary | safe }}
+        </p>
       {% endif %}
     </div>
   </article>

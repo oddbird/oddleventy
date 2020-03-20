@@ -13,12 +13,11 @@ tags:
 image:
   src: projects/sass.jpg
 summary: |
-  [Dart Sass] (the primary Sass implementation) released version `1.23.0`
+  [Dart Sass](https://www.npmjs.com/package/sass)
+  (the primary Sass implementation) released version `1.23.0`
   last night with a major new feature: **modules**. This is a common
   feature in many languages --but for those of us who primarily write CSS,
   it can be a big mental shift. Let's take a look at the basics.
-
-  [Dart Sass]: https://www.npmjs.com/package/sass
 ---
 
 Don't worry if it doesn't make sense right away: this version is

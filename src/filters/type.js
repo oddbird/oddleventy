@@ -76,6 +76,32 @@ const mdInline = (content) =>
   content ? typogr(mdown.renderInline(content), true) : content;
 
 /* @docs
+label: elide
+category: typesetting
+note: |
+  Ellide plaintext at a given character count,
+  and append `...` if ellided.
+params:
+  text:
+    type: string
+  count:
+    type: Number
+    default: 45
+*/
+const elide = (text, count = 45) => {
+  const words = text.trim().split(' ');
+
+  if (words.length <= count) {
+    return text;
+  }
+
+  let short = words.slice(0, count).join(' ');
+  short = short.slice(-1).match(/[^A-Z|a-z|0-9]/g) ? short.slice(0, -1) : short;
+
+  return short.concat('...');
+};
+
+/* @docs
 label: h
 category: headings
 note: Generate a heading at any given level
@@ -104,4 +130,4 @@ const heading = (content, level, attrs = {}) => {
   return `<h${level} ${attr_html}>${content}</h${level}>`;
 };
 
-module.exports = { mdown, typogr, md, mdInline, removeMd, heading };
+module.exports = { mdown, elide, typogr, md, mdInline, removeMd, heading };
