@@ -95,7 +95,10 @@
 // -----
 
 [data-grid] {
-  --fit--default: minmax(var(--fit-min, var(--grid-item)), var(--fit-max, 1fr));
+  --fit--default: minmax(
+    var(---mobile-min, var(--fit-min, var(--grid-item))),
+    var(--fit-max, 1fr)
+  );
   --column: content;
   --item-title: var(--h3);
   --newline: var(--shim);
@@ -111,7 +114,8 @@
   justify-items: stretch;
 
   @include tools.below('page') {
-    --fit-min: 60%;
+    // "private" variable to ensure grid-items fit on mobile…
+    ---mobile-min: 60%;
   }
 
   > * {
