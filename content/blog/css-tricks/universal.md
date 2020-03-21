@@ -17,7 +17,7 @@ tags:
 summary: |
   "**What about building websites has you interested this year?**"
 
-  There are constantly new features appearing in browsers --from subgrid
+  There are constantly new features appearing in browsers -- from subgrid
   to variable fonts to better developer tools. It's a really great time to
   be re-thinking everything we know about design on the web. Responsive
   design has served us well over the years, but it's still rooted in the
