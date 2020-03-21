@@ -88,7 +88,7 @@ params:
     type: Number
     default: 45
 */
-const elide = (text, count = 45) => {
+const elide = (text, count = 50) => {
   const words = text.trim().split(' ');
 
   if (words.length <= count) {
@@ -98,7 +98,7 @@ const elide = (text, count = 45) => {
   let short = words.slice(0, count).join(' ');
   short = short.slice(-1).match(/[^A-Z|a-z|0-9]/g) ? short.slice(0, -1) : short;
 
-  return short.concat('...');
+  return `${short}...`;
 };
 
 /* @docs

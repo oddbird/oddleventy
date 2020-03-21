@@ -28,11 +28,12 @@ describe('typography filters', () => {
 
   test('elide', () => {
     const hello = '  hello world; of wonder ';
-    const hello2 = '  hello world; of wonder ';
+    const hello2 = '  hello world of wonder ';
     const expected = 'hello world...';
+
     expect(elide(hello, 2)).toEqual(expected);
     expect(elide(hello2, 2)).toEqual(expected);
-    expect(elide(hello, 45)).toEqual(hello);
+    expect(elide(hello)).toEqual(hello);
   });
 
   test('heading', () => {
