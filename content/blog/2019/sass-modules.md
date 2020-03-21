@@ -16,7 +16,7 @@ summary: |
   [Dart Sass](https://www.npmjs.com/package/sass)
   (the primary Sass implementation) released version `1.23.0`
   last night with a major new feature: **modules**. This is a common
-  feature in many languages --but for those of us who primarily write CSS,
+  feature in many languages -- but for those of us who primarily write CSS,
   it can be a big mental shift. Let's take a look at the basics.
 ---
 
@@ -47,7 +47,7 @@ One of the most popular Sass features is the ability to split your CSS
 code into multiple smaller files, and then merge them back together into
 a single (often minified) CSS document for the browser.
 
-As our projects get bigger, that becomes even more important --but the
+As our projects get bigger, that becomes even more important -- but the
 relationships between files can also get blurry or confusing. We might
 see a variable, and not know where it was defined, then search through
 our files and find several definitions. We might want to use an outside
@@ -56,7 +56,7 @@ we already have one, so the two would conflict.
 
 Modules are meant to clarify those relationships, both for us as
 developers and for the compiler. Every file is a "module", and
-everything in that module is explicitly defined --including
+everything in that module is explicitly defined -- including
 dependencies.
 
 In my old Sass projects, I could do something like this:
@@ -76,14 +76,14 @@ $font-path: '../fonts/';
 @import 'layout';
 ```
 
-In a module system, that will no longer work --each file that we import
+In a module system, that will no longer work each file that we import
 would become available inside `app-styles.scss`, but they would have no
 access to each other or to the variables (like `$font-path`) that are
 defined locally. If Accoutrement needs access to the `$font-path`, then
 we'll have to make that relationship clear. If `_fonts.scss` needs
 access to Accoutrement, we also need to make that clear.
 
-By making it all explicit, we're not just adding boilerplate --we're
+By making it all explicit, we're not just adding boilerplate -- we're
 making it possible to look at a single file and know:
 
 - Exactly what other files are required
@@ -95,7 +95,7 @@ making it possible to look at a single file and know:
 
 ## Replacing `@import` with `@use` & `@forward`
 
-Sass `@import` is built *on top of* CSS `@import` --it does the same
+Sass `@import` is built *on top of* CSS `@import` -- it does the same
 things, and then some more things. That distinction isn't always clear
 to users. I have to look it up every time. For example, if we
 `@import 'fonts.css'`, Sass will treat it as a CSS import and do nothing
@@ -165,7 +165,7 @@ statement:
 ```
 
 We can even use `as *` to make external members available without a
-namespace --but I don't recommend it very often. Namespaces are a good
+namespace -- but I don't recommend it very often. Namespaces are a good
 thing.
 
 (Note that `as *` does not make members "global" in a project-wide
@@ -175,7 +175,7 @@ sense, it just removes the local namespace.)
 
 I'll often group small Sass files together in a directory like
 `layout/`, and then merge them all together in a file called
-`layout/_index.scss` --so I can import them all at once:
+`layout/_index.scss` -- so I can import them all at once:
 
 ```scss
 // layout/_index.scss
@@ -223,7 +223,7 @@ This is where things can get the most confusing, because
 - A module can only be configured once
 - Configuration has to happen the very first time you `@use` a module
 
-This will take some getting used to, and can be difficult to debug --but
+This will take some getting used to, and can be difficult to debug -- but
 there are a few patterns you can use. Either put configurations at the
 very top of your "entrypoint" (the main file that imports everything
 else), or combine `@use` with `@forward` to create a wrapper around the
@@ -257,7 +257,7 @@ out-of-order configurations:
 
 ## So much more...
 
-There is much more to cover --from Sass core modules (e.g.
+There is much more to cover -- from Sass core modules (e.g.
 `@use 'sass:math'`) to import-only files, public and private members,
 the `load-css()` mixin, and so on. I cover all of that in the [article
 for CSS-Tricks].
@@ -268,7 +268,7 @@ Blog]. I've also created a library called [Cascading Color Systems], and
 a new website for [Teacup Gorilla] that both use the module system. Both
 projects are very much under construction, but feel free to dig around.
 
-Check back soon for more details --and if you have questions, feel free
+Check back soon for more details -- and if you have questions, feel free
 to reach out.
 
 [article for CSS-Tricks]: https://css-tricks.com/introducing-sass-modules/

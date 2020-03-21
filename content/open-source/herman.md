@@ -48,7 +48,7 @@ summary: |
 
 ## Give Your Design System a Home
 
-Documentation should be the default option --the path of least
+Documentation should be the default option -- the path of least
 resistance for developers. Herman combines documentation of design
 tokens and system guidelines, with code patterns, components, and
 rendered visual examples -- all driven by Sass and CSS. By automating as
@@ -56,7 +56,7 @@ much of the documentation as possible, you can help ensure that
 everything stays up-to-date for long-term maintainability.
 
 Help improve communication across stakeholders, with consistency in UX,
-performance, and accessibility --while reducing technical debt and
+performance, and accessibility -- while reducing technical debt and
 minimizing long-term maintenance. Herman is designed to grow with you,
 and keep everything in one place.
 

@@ -29,7 +29,7 @@ summary: |
 My accountant was helping me sort out my taxes, and I wasn’t making it
 easy. I had a successful web agency, a small theatre company, a band
 preparing to tour, my second novel ready for publishing, an art show
-about to open, and an assortment of side projects --all creating a
+about to open, and an assortment of side projects -- all creating a
 tangled mix of income and expenses.
 
 My accountant wasn’t the first to scold me, and she won’t be the last.
@@ -49,14 +49,14 @@ of that work: designing multimedia experiences based on experimentation
 and user feedback, using whatever tools and skills we have on the team,
 and learning new skills when they’re needed.
 
-When I have a team of musicians, we call it a band --and when my team is
+When I have a team of musicians, we call it a band -- and when my team is
 full of developers, we call it an agency. It’s all the same to me.
 
 I never meant to be a graphic designer or web developer, but I learned
 the skills and people started offering me work. I feel very lucky to be
 where I am, and proud of the team we’ve built over the years.
 
-Teacup Gorilla also developed organically --it was originally formed to
+Teacup Gorilla also developed organically -- it was originally formed to
 underscore a devised performance. After the show was over the band
 stayed together, and we’re now a mix of spoken-word stories, subtle
 melodies, and raucous instrumental builds. It’s not a well-established
