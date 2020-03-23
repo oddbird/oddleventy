@@ -56,16 +56,16 @@ describe('tag filters', () => {
     const expected2 = [
       {
         is_type: false,
-        tag: 'tag 1',
+        tag: 'tag2',
         type: false,
-        url: '/test5/',
+        url: '/tags/tag2/',
         pageCount: 0,
       },
       {
         is_type: false,
-        tag: 'tag2',
+        tag: 'tag 1',
         type: false,
-        url: '/tags/tag2/',
+        url: '/test5/',
         pageCount: 0,
       },
     ];

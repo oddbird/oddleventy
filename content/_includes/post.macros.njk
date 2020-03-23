@@ -523,14 +523,16 @@ params:
     <div class="post-tags">
       {%- include "icons/tags.svg" -%}
       <ul class="{{ 'pill-set' if pill else 'inline-list' }}">
-        {%- for item in public_tags -%}
-          <li class="{{ 'pill-item' if pill else 'inline-item' }}">
-            {{- utility.link_if(
-              content=item.tag,
-              url=item.url,
-              class='pill' if pill else none
-            ) -}}
-          </li>
+        {%- for group, items in public_tags | groupby('is_type') -%}
+          {% for item in items | sort(false, false, 'tag') %}
+            <li class="{{ 'pill-item' if pill else 'inline-item' }}">
+              {{- utility.link_if(
+                content=item.tag | typogr,
+                url=item.url,
+                class='pill' if pill else none
+              ) -}}
+            </li>
+          {% endfor %}
         {%- endfor -%}
       </ul>
     </div>
