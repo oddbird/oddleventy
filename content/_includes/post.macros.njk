@@ -159,10 +159,9 @@ params:
       {% elif post.data.summary %}
         {% set maxWords = 50 %}
         {% set summary = post.data.summary | md %}
-        {% set summaryPlain = summary | striptags %}
-        {% set summary = summaryPlain | elide(maxWords) | typogr
-          if (card != 'large') and (summaryPlain | wordcount > maxWords)
-          else summary
+        {% set summary = summary
+          if (card == 'large')
+          else summary | striptags | elide(maxWords) | typogr
         %}
         <p>
           {{ summary | safe }}
