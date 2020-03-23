@@ -6,6 +6,7 @@ update_configs:
     ignored_updates:
       - match:
           dependency_name: '#'
+          version_requirement: '*'
     version_requirement_updates: 'increase_versions'
     default_reviewers:
       - 'jgerigmeyer'
