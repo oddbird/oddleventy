@@ -43,7 +43,7 @@ module.exports = (eleventyConfig) => {
     collection
       .getAll()
       .filter((item) => item.data.bird)
-      .sort((a, b) => b.data.title - a.data.title),
+      .sort((a, b) => a.date - b.date),
   );
   eleventyConfig.addCollection('oss', (collection) =>
     collection
