@@ -40,32 +40,32 @@ describe('tag filters', () => {
     const expected1 = [
       {
         is_type: true,
-        tag: 'Talk',
-        type: { tag: 'Talk', icon: 'talk', img: true },
-        url: '/tags/Talk/',
-        pageCount: 5,
-      },
-      {
-        is_type: true,
         tag: 'Workshop',
         type: { tag: 'Workshop', icon: 'workshop', img: true, feature: true },
         url: '/tags/Workshop/',
         pageCount: 0,
       },
+      {
+        is_type: true,
+        tag: 'Talk',
+        type: { tag: 'Talk', icon: 'talk', img: true },
+        url: '/tags/Talk/',
+        pageCount: 5,
+      },
     ];
     const expected2 = [
-      {
-        is_type: false,
-        tag: 'tag2',
-        type: false,
-        url: '/tags/tag2/',
-        pageCount: 0,
-      },
       {
         is_type: false,
         tag: 'tag 1',
         type: false,
         url: '/test5/',
+        pageCount: 0,
+      },
+      {
+        is_type: false,
+        tag: 'tag2',
+        type: false,
+        url: '/tags/tag2/',
         pageCount: 0,
       },
     ];
