@@ -315,7 +315,7 @@ params:
   {{ utility.link_if(
     content=embed.svg(
       path='icons/' + (type.icon or 'tags'),
-      alt=['see  all', type.tag, 'resources'] | join(' ') if type else 'all tags'
+      alt=['see all', type.tag, 'resources'] | join(' ') if type else 'all tags'
     ),
     url=url,
     class='type-link'
