@@ -4,9 +4,9 @@
 __metadata:
   version: 4
 
-"#@link:./src/filters::locator=oddsite%40workspace%3A.":
+"#@link:./src/filters/::locator=oddsite%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "#@link:./src/filters::locator=oddsite%40workspace%3A."
+  resolution: "#@link:./src/filters/::locator=oddsite%40workspace%3A."
   languageName: node
   linkType: soft
 
@@ -10415,7 +10415,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oddsite@workspace:."
   dependencies:
-    "#": "link:./src/filters"
+    "#": "link:./src/filters/"
     "@11ty/eleventy": ^0.10.0
     "@11ty/eleventy-plugin-rss": ^1.0.7
     "@11ty/eleventy-plugin-syntaxhighlight": ^3.0.1
