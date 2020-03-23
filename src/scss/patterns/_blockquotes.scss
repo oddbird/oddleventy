@@ -5,6 +5,7 @@ blockquote {
   --angle-space: calc(var(--angle) + var(--gutter));
   --edge: minmax(var(--page-margin), 1fr);
   --quote: minmax(min-content, var(--page));
+  align-content: center;
   background-color: var(--callout);
   display: grid;
   margin: var(--newline) 0;

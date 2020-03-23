@@ -12,6 +12,9 @@ author:
   - oddbird
 oss: owner
 index: Susy
+action:
+  text: Contact us for details »
+  url: /contact/
 links:
   source: https://github.com/oddbird/susy
   docs: /susy/docs/
