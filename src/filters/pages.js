@@ -87,9 +87,7 @@ const hasData = (obj, keys, value, exact = false) => {
   if (value) {
     return exact
       ? _(obj).get(keys, '') === value
-      : _(obj)
-          .get(keys, [])
-          .includes(value);
+      : _(obj).get(keys, []).includes(value);
   }
 
   return _.hasIn(obj, keys);
