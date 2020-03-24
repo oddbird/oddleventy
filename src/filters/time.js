@@ -86,14 +86,14 @@ example: |
   {{ pubdate | getDate('iso') }}
 params:
   date:
-    type: date | string
+    type: date | string | 'now'
     note: If no date is given, returns the current date
   format:
     type: string
     note: See js file for a list of available date formats
 */
 const getDate = (date, format) => {
-  const dateObj = typeof date === 'string' ? new Date(date) : date || now;
+  const dateObj = typeof date === 'string' ? new Date(date) : date;
   return format ? formatDate(dateObj, format) : dateObj;
 };
 

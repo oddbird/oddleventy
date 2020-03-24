@@ -1,9 +1,10 @@
-const { now, getDate } = require('#/time');
+const { getDate } = require('#/time');
 
 describe('time filters', () => {
   test('getDate', () => {
-    const expected = now;
+    const date = '2020-02-01';
+    const expected = '02/01/2020';
 
-    expect(getDate()).toEqual(expected);
+    expect(getDate(date, 'slash')).toEqual(expected);
   });
 });
