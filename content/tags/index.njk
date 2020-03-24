@@ -59,14 +59,14 @@ summary: |
 
 {{ layout.title('Resource Types') }}
 {% call layout.grid('tags') %}
-  {% for item in sections['true'] | sort(false, false, 'tag') %}
+  {% for item in sections['true'] | sort(attribute='tag') %}
     {{ show(item, collections) }}
   {% endfor %}
 {% endcall %}
 
 {{ layout.title('More Tags') }}
 {% call layout.grid('tags') %}
-  {% for item in sections['false'] | sort(false, false, 'tag') %}
+  {% for item in sections['false'] | sort(attribute='tag') %}
     {{ show(item, collections) }}
   {% endfor %}
 {% endcall %}

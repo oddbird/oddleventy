@@ -72,7 +72,7 @@ params:
   {%- endif -%}
 
   <ol data-grid="resources" reversed>
-    {%- for post in posts | sort(true, false, sort) -%}
+    {%- for post in posts | sort(reverse=true, attribute=sort) -%}
       {{ item(post, collections, loop) }}
     {%- endfor -%}
   </ol>
@@ -190,7 +190,7 @@ params:
   links=true
 ) %}
   {%- set events = events | getFuture if events else none -%}
-  {%- set events = events | sort(false, false, 'date') -%}
+  {%- set events = events | sort(attribute='date') -%}
   {%- if events | length > 0 -%}
     <ul class="next-event">
       {%- for next in events -%}
@@ -528,8 +528,8 @@ params:
     <div class="post-tags">
       {%- include "icons/tags.svg" -%}
       <ul class="{{ 'pill-set' if pill else 'inline-list' }}">
-        {%- for group, items in public_tags | groupby('is_type') -%}
-          {% for item in items | sort(false, false, 'tag') %}
+        {%- for group, items in public_tags | groupby('is_type') | dictsort | reverse -%}
+          {% for item in items | sort(attribute='tag') %}
             <li class="{{ 'pill-item' if pill else 'inline-item' }}">
               {{- utility.link_if(
                 content=item.tag | typogr,
