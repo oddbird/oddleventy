@@ -72,7 +72,7 @@ params:
   {%- endif -%}
 
   <ol data-grid="resources" reversed>
-    {%- for post in posts | sort(true, false, sort) -%}
+    {%- for post in posts | sort(reverse=true, attribute=sort) -%}
       {{ item(post, collections, loop) }}
     {%- endfor -%}
   </ol>
@@ -144,10 +144,15 @@ params:
   {%- set image = image if image and not (image.type == 'media') else none -%}
   {%- set image = image if (type.img or card == 'large') else none -%}
 
-  <article data-post="{{ 'large' if (card == 'large') else 'link' }}">
+  <article
+    data-post="{{ 'large' if (card == 'large') else 'link' }}"
+    aria-labelledby="{{ id(post) }}">
     {{ hero(image, 'post') }}
     {% if type %}
-      <div class="type-flag" data-flag="left">{{ type.tag }}</div>
+      <div class="type-flag" data-flag="left">
+        {{ type.tag }}
+        <span class="sr-only">resource type</span>
+      </div>
     {% endif %}
     <div class="post-content">
       <header class="post-header">
@@ -185,7 +190,7 @@ params:
   links=true
 ) %}
   {%- set events = events | getFuture if events else none -%}
-  {%- set events = events | sort(false, false, 'date') -%}
+  {%- set events = events | sort(attribute='date') -%}
   {%- if events | length > 0 -%}
     <ul class="next-event">
       {%- for next in events -%}
@@ -315,7 +320,7 @@ params:
   {{ utility.link_if(
     content=embed.svg(
       path='icons/' + (type.icon or 'tags'),
-      alt=['see all', type.tag] | join(' ') if type else 'all tags'
+      alt=['see all', type.tag, 'resources'] | join(' ') if type else 'all tags'
     ),
     url=url,
     class='type-link'
@@ -333,14 +338,44 @@ params:
 {% macro banner(
   post,
   level=3,
-  link=true
+  attrs={},
+  id_prefix='post-',
+  called=false
 ) -%}
-  {%- set title = post | render('banner') or post | render('title') -%}
-  {%- set url = post.url if link else none -%}
-  {%- h level, {'class': 'post-title'} -%}
-    {{ utility.link_if(title | mdInline, url, 'title-link') }}
+  {%- h level, {
+    'class': 'item-title',
+    'id': id(post, id_prefix)
+  } | merge(attrs) -%}
+      {{ utility.link_if(
+        caller() if called else name(post),
+        post.url,
+        'title-link'
+      ) }}
   {%- endh -%}
 {%- endmacro %}
+
+
+{% macro name(
+  post
+) -%}
+  {% set title = post | render('banner') or post | render('title') %}
+  {{ title | mdInline | safe }}
+{%- endmacro %}
+
+
+{% macro id(
+  post,
+  id_prefix='post'
+) -%}
+  {{ [id_prefix, post.url] | join('-') | slug }}
+{%- endmacro %}
+
+
+{% macro aria_label(
+  post,
+  id_prefix='post'
+) %}aria-labelledby="{{ id(post, id_prefix) }}"{% endmacro %}
+
 
 {# @docs
 label: subtitle
@@ -493,14 +528,16 @@ params:
     <div class="post-tags">
       {%- include "icons/tags.svg" -%}
       <ul class="{{ 'pill-set' if pill else 'inline-list' }}">
-        {%- for item in public_tags -%}
-          <li class="{{ 'pill-item' if pill else 'inline-item' }}">
-            {{- utility.link_if(
-              content=item.tag,
-              url=item.url,
-              class='pill' if pill else none
-            ) -}}
-          </li>
+        {%- for group, items in public_tags | groupby('is_type') | dictsort | reverse -%}
+          {% for item in items | sort(attribute='tag') %}
+            <li class="{{ 'pill-item' if pill else 'inline-item' }}">
+              {{- utility.link_if(
+                content=item.tag | typogr,
+                url=item.url,
+                class='pill' if pill else none
+              ) -}}
+            </li>
+          {% endfor %}
         {%- endfor -%}
       </ul>
     </div>

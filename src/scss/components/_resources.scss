@@ -54,3 +54,17 @@
     --fill: var(--type-flag-active, var(--active));
   }
 }
+
+// Browse by Tag
+[data-grid='tags'] {
+  --item-title: 1rem;
+}
+
+.tag-count {
+  font-size: var(--small);
+  font-weight: normal;
+
+  &::before {
+    content: ' | ';
+  }
+}

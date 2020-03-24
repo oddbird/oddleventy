@@ -37,21 +37,19 @@
   item,
   collections
 ) %}
-{% set title = item | render('banner') or item | render('title') %}
-<article>
+{% set title = post.name(item) %}
+<article {{ post.aria_label(item) }}>
   <header>
-    <h2 class="title">
-      <a href="{{ item.url }}">
-        {% if item.data.logo %}
-          {{ embed.svg(
-            path='logos/' + item.data.logo,
-            alt=title
-          ) }}
-        {% else %}
-          {{ title | mdInline | safe }}
-        {% endif %}
-      </a>
-    </h2>
+    {% call post.banner(item, called=true) %}
+      {% if item.data.logo %}
+        {{ embed.svg(
+          path='logos/' + item.data.logo,
+          alt=title
+        ) }}
+      {% else %}
+        {{ title }}
+      {% endif %}
+    {% endcall %}
     {{ post.subtitle(item.data.sub, collections) }}
     {{ post.byline(item, collections, dateformat='since') }}
   </header>

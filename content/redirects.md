@@ -32,8 +32,9 @@ pagination:
 permalink: /{{ redirect.from }}
 ---
 
-{% set to = collections.all | getPage(redirect.to) %}
-{% set name = to | render('banner') or to | render('title') %}
+{% import 'post.macros.njk' as post %}
 
-Redirecting you to [{{ name | mdInline }}]({{ to.url }}).
+{% set to = collections.all | getPage(redirect.to) %}
+
+Redirecting you to [{{ post.name(to) }}]({{ to.url }}).
 If you are not redirected shortly, please click the link.
