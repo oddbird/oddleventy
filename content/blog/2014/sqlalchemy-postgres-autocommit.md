@@ -10,7 +10,6 @@ tags:
   - Transactions
   - Django
   - Open Source
-  - Code
 image:
   src: blog/2014/sqlalchemy.jpg
   alt: SQLAlchemy

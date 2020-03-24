@@ -3,7 +3,6 @@ card: large
 title: Django REST Framework & Channels
 tags:
   - Article
-  - Code
   - Python
   - Django
   - Open Source

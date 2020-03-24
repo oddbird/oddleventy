@@ -7,9 +7,9 @@ image:
   src: blog/susy.jpg
 tags:
   - Article
+  - Susy v1
   - Susy
   - Open Source
-  - Code
 ---
 
 Susy 1.0 has officially launched!

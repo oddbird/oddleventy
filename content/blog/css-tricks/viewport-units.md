@@ -8,7 +8,6 @@ image:
   alt: CSS-Tricks
 tags:
   - Link
-  - Code
   - Sass
   - Open Source
   - CSS

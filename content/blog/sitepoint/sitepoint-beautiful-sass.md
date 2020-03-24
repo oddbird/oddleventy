@@ -4,7 +4,7 @@ canonical: https://www.sitepoint.com/writing-beautiful-sass/
 tags:
   - Link
   - CSS
-  - Code
+  - Sass
   - Book
 image:
   src: blog/sassbook.jpg

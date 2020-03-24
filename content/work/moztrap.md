@@ -10,13 +10,7 @@ date: 2012-03-15
 links:
   source: https://github.com/mozilla/moztrap
 tags:
-  - Client Work
-  - Research & Concepting
-  - Branding
-  - Design
-  - Development
-  - Custom Application
-  - Mozilla
+
 tasks:
   - Product Branding
   - User Experience Design

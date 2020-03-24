@@ -7,7 +7,6 @@ venue: CSS-Tricks
 tags:
   - Link
   - CSS
-  - Code
   - Layout
   - Grids
   - Custom Properties

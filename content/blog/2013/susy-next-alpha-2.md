@@ -9,10 +9,9 @@ tags:
   - Article
   - Susy
   - Open Source
-  - Susy2
+  - Susy v2
   - Layout
   - Grids
-  - Code
 summary: |
   We haven't written full docs yet, and this blog post will be vastly
   incomplete, but I'll give you a quick rundown of where we're going. This

@@ -4,10 +4,9 @@ tags:
   - Article
   - Susy
   - Open Source
-  - Susy2
+  - Susy v2
   - Layout
   - Grids
-  - Code
 author: miriam
 image:
   src: blog/susy.jpg

@@ -7,9 +7,8 @@ tags:
   - Celery
   - Django
   - Open Source
-  - Django-Channels
-  - UX
-  - Code
+  - Django Channels
+  - User Experience
 image:
   src: blog/2017/04/17/async-notifications.jpg
   alt: Old photograph of operators

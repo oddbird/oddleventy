@@ -6,7 +6,7 @@ canonical: https://blog.bitsrc.io/why-we-switched-to-react-hooks-48798c42c7f
 venue: Bits and Pieces
 tags:
   - Link
-  - JS
+  - JavaScript
   - React Hooks
   - Bits and Pieces
 image:

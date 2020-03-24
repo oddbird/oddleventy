@@ -7,11 +7,10 @@ tags:
   - Article
   - Susy
   - Open Source
-  - Susy3
+  - Susy v3
   - CSS
   - Sass
   - Grids
-  - Code
 image:
   src: blog/2017/susy3/media.jpg
   alt: Viewport size diagram

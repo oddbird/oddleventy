@@ -10,7 +10,6 @@ tags:
   - Django
   - Open Source
   - Python
-  - Code
   - Backbone
   - Marionette
 image:

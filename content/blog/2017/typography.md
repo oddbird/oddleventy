@@ -7,6 +7,7 @@ tags:
   - OddSite
   - Open Design
   - Typography
+  - Fonts
   - Design
 image:
   src: blog/2017/typography/type.jpg

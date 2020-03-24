@@ -6,7 +6,6 @@ date: 2019-04-23
 author: miriam
 tags:
   - Link
-  - Code
   - Interview
   - Creative Bloq
 image:

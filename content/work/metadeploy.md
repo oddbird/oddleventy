@@ -16,13 +16,6 @@ people:
     face: jason-lantz.jpg
     venue: *client
 tags:
-  - Client Work
-  - Research & Concepting
-  - Design
-  - Development
-  - Custom Application
-  - React
-  - Salesforce.org
 tasks:
   - User Experience Design
   - Project Architecture

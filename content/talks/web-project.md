@@ -7,8 +7,9 @@ author: miriam
 date: 2017-12-12
 slides: https://www.oddbooksapp.com/book/web-projects
 tags:
-  - Code
+  - Design
   - Process
+  - Business Development
 events:
   - venue: Boost Biz Ed
     url: https://boostbized.com/events/how-to-plan-a-web-project

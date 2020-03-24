@@ -8,7 +8,6 @@ image:
   alt: CSS-Tricks
 tags:
   - Link
-  - Code
   - CSS Tricks
   - Interview
 summary: |

@@ -5,10 +5,11 @@ author: miriam
 date: 2016-03-31
 slides: https://oddbooksapp.com/book/pattern-making
 tags:
-  - Code
   - CSS
   - Sass
   - Design Systems
+  - Style Guides
+  - Component Libraries
   - Accoutrement
   - Herman
   - Open Source

@@ -8,10 +8,11 @@ image:
   src: talks/devconf-best.jpg
   alt: Giant pencil awarded to Miriam Suzanne for Best of CSS Dev Conf 2017
 tags:
-  - Code
   - Susy
   - Open Source
   - Layout
+  - Grids
+  - CSS
 events:
   - venue: Boulder Python
     url: https://www.meetup.com/BoulderPython/events/256868153/

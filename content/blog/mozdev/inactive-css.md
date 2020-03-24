@@ -4,7 +4,8 @@ sub: Have you ever set a `width` in CSS, and... nothing happens?
 date: 2019-10-21
 author: miriam
 tags:
-  - DevTools
+  - Firefox DevTools
+  - CSS
 image:
   src: mozdev/inactive-css.png
   alt: Firefox Developer Tools shows helpful information about inactive CSS

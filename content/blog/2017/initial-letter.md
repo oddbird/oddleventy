@@ -6,8 +6,8 @@ tags:
   - Article
   - CSS
   - Design
-  - Code
   - Typography
+  - Fonts
 image:
   src: blog/2017/initial-letter/drop-caps.jpg
   alt: Creative usage of drop caps collage

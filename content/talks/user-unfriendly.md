@@ -8,11 +8,9 @@ image:
   src: talks/user-unfriendly.png
   alt: Rethinking user experience design across media
 tags:
-  - Code
-  - Art
+  - Fine Art
   - Design
   - Process
-  - Collaboration
 events:
   - venue: Agnes Scott College
     url: https://calendar.agnesscott.edu/event/user_unfriendlynotes_toward_a_queer_web

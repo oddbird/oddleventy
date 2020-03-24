@@ -7,13 +7,13 @@ tags:
   - Article
   - Accoutrement
   - Herman
-  - Herman1
+  - Herman v1
   - Open Source
   - CSS
   - Sass
   - Design Systems
-  - Code
   - Style Guides
+  - Component Libraries
 image:
   src: blog/2017/herman-intro/header.jpg
   alt: Sample organized color swatches with hex and hsl values

@@ -8,7 +8,6 @@ image:
   src: talks/miriam.jpg
   alt: Miriam Suzanne speaking at a conference
 tags:
-  - Code
   - CSS
   - JavaScript
   - Vue

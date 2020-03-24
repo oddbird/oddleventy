@@ -5,6 +5,7 @@ author: miriam
 date: 2019-10-28
 tags:
   - AboutWeb
+  - CSS
 image:
   src: mozdev/multi-display.png
   alt: CSS snippet showing display value options

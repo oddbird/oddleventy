@@ -7,7 +7,6 @@ tags:
   - Article
   - Sass
   - Open Source
-  - Code
   - Tutorial
   - Modules
 image:

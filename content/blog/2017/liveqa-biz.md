@@ -4,7 +4,6 @@ author: sondra
 type: event
 tags:
   - Article
-  - Events
   - Q&A
   - Tips
   - Slack

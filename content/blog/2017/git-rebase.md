@@ -5,8 +5,6 @@ date: 2017-01-05
 tags:
   - Article
   - Git
-  - Workflows
-  - Code
 image:
   src: blog/2017/git-rebase/git-cave.jpg
   alt: Cave with sign reading Your Git History

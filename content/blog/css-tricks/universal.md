@@ -10,7 +10,6 @@ image:
   alt: Miriam Suzanne
 tags:
   - Link
-  - Code
   - CSS
   - Accessibility
   - CSS Tricks

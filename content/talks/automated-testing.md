@@ -5,7 +5,6 @@ date: 2013-03-16
 tags:
   - Python
   - Testing
-  - Code
 events:
   - venue: PyCon
     url: https://us.pycon.org/2013/

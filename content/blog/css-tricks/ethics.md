@@ -7,7 +7,6 @@ canonical: https://css-tricks.com/its-my-job-and-yours/
 venue: CSS-Tricks
 tags:
   - Link
-  - Code
   - Design
   - Ethics
 image:

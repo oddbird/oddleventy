@@ -5,7 +5,7 @@ date: 2017-01-27
 tags:
   - Article
   - Design
-  - Recommendations
+  - Tips
 image:
   src: blog/2017/parallax/parallax.jpg
   alt: Diagram of layered squares showing movement with arrows

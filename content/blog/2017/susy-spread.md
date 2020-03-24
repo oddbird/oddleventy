@@ -4,11 +4,10 @@ tags:
   - Article
   - Susy
   - Open Source
-  - Susy3
+  - Susy v3
   - CSS
   - Sass
   - Grids
-  - Code
 author: miriam
 image:
   src: blog/2017/spread/susy-spread.jpg

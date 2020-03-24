@@ -4,11 +4,10 @@ tags:
   - Article
   - Susy
   - Open Source
-  - Susy1
+  - Susy v1
   - Layout
   - Grids
   - Sub-pixel rounding
-  - Code
 author: miriam
 image:
   src: blog/susy.jpg

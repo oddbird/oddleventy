@@ -4,7 +4,6 @@ author: carl
 tags:
   - Article
   - Year in Review
-  - Community
 image:
   src: blog/2013/review.jpg
 summary: |

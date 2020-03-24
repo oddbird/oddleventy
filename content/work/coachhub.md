@@ -21,12 +21,6 @@ links:
 tags:
   - _post
   - Case Study
-  - Client Work
-  - Research & Concepting
-  - Branding
-  - Design
-  - Development
-  - Custom Application
 tasks:
   - Accessible Interface
   - Custom Django Application

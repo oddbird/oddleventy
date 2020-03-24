@@ -5,7 +5,7 @@ author: miriam
 date: 2013-10-12
 slides: https://www.oddbooksapp.com/book/sassy-toolkits
 tags:
-  - Code
+  - Sass
 events:
   - venue: Frontend Zurich
     url: http://frontendconf.ch

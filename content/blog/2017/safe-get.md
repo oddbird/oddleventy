@@ -7,7 +7,6 @@ tags:
   - Sass
   - Open Source
   - Tools
-  - Code
 image:
   src: blog/2017/safe-get/phone.jpg
   alt: Old phone

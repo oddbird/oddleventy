@@ -6,13 +6,15 @@ tags:
   - Tools
   - Color
   - Typography
+  - Fonts
+  - Design Systems
   - Style Guides
+  - Component Libraries
   - Accoutrement
   - Herman
   - Open Source
   - OddSite
   - Open Design
-  - Code
 image:
   src: blog/2017/pattern-making/NYC-sign.jpg
   alt: Blueprint for NYC signage

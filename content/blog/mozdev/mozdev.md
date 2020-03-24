@@ -5,7 +5,9 @@ author: miriam
 date: 2019-10-01
 tags:
   - AboutWeb
-  - DevTools
+  - Firefox DevTools
+  - Grids
+  - CSS
 image:
   src: mozdev/mozilla-youtube.jpg
 darkmode:

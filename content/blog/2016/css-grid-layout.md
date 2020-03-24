@@ -9,7 +9,6 @@ tags:
   - CSS
   - Layout
   - Design
-  - Code
 image:
   src: blog/cssgriddemo.jpg
   alt: CSS Grid example layout

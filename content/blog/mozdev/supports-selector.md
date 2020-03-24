@@ -5,6 +5,7 @@ author: miriam
 date: 2019-11-20
 tags:
   - AboutWeb
+  - CSS
 image:
   src: mozdev/supports_selector.png
   alt: CSS @supports statement

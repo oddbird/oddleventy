@@ -4,6 +4,9 @@ author: miriam
 date: 2016-10-18
 tags:
   - SitePoint
+  - Sass
+  - CSS
+  - Interview
 canonical: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
 venue: SitePoint
 image:

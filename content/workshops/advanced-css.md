@@ -9,7 +9,6 @@ image:
   alt: Miriam talking with Jen Simmons and others
   position: top
 tags:
-  - Code
   - CSS
   - Sass
 events:

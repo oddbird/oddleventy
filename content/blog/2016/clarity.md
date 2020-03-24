@@ -5,7 +5,9 @@ date: 2016-04-04
 tags:
   - Article
   - Conferences
+  - Design Systems
   - Style Guides
+  - Component Libraries
 image:
   src: blog/clarity.jpg
 summary: |

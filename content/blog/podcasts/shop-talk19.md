@@ -8,7 +8,7 @@ image:
   src: blog/elsewhere/shop-talk.png
   alt: Shop Talk Show Podcast
 tags:
-  - Code
+  - CSS
   - Sass
   - Open Source
 summary: |

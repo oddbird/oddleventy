@@ -8,7 +8,7 @@ image:
   alt: Miriam Suzanne speaking at a conference
 slides: https://sliiides.netlify.com/css-is-rad/
 tags:
-  - Code
+  - Design
   - CSS
 events:
   - venue: Smashing Conf Austin

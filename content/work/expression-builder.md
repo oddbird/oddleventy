@@ -7,13 +7,7 @@ date: 2019-05-14
 image:
   svg: logos/aunalytics
 tags:
-  - Client Work
-  - Research & Concepting
-  - Design
-  - Development
-  - Custom Application
-  - Vue
-  - Aunalytics
+
 people:
   - &james
     name: James Stuckey Weber

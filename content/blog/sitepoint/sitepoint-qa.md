@@ -10,7 +10,7 @@ image:
 tags:
   - Link
   - Interview
-  - Code
+  - Sass
   - Susy
   - Open Source
 summary: |

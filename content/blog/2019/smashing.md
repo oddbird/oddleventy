@@ -6,7 +6,6 @@ tags:
   - Article
   - Vue
   - Conferences
-  - Code
   - CSS
 image:
   src: blog/2019/mia-jen-smashing.jpg

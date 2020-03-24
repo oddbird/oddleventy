@@ -4,10 +4,8 @@ tags:
   - Article
   - Susy
   - Open Source
-  - Susy1
-  - Demos
+  - Susy v1
   - Layout
-  - Code
 author: miriam
 image:
   src: blog/susy.jpg

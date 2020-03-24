@@ -5,7 +5,7 @@ client: Craftisan
 date: 2011-04-15
 tasks:
   - Product Branding
-  - User Experience Design
+  - User Experience 
   - Project Architecture
   - Responsive Styles
 summary: |

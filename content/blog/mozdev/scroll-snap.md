@@ -5,6 +5,8 @@ author: miriam
 date: 2019-10-31
 tags:
   - AboutWeb
+  - CSS
+  - JavaScript
 image:
   src: mozdev/scroll-snap.png
   alt: CSS code snippet of scroll-snap type and align

@@ -5,7 +5,6 @@ date: 2017-01-31
 tags:
   - Article
   - CSS
-  - Front-end
   - Video
   - Conferences
 image:

@@ -3,12 +3,11 @@ title: Generating Code Documentation for Polyglot Projects
 author: david
 tags:
   - Article
-  - Docs
+  - Documentation
   - Tools
   - JavaScript
   - Python
   - Sass
-  - Code
   - Accoutrement
   - Herman
   - Open Source

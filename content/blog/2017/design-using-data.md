@@ -7,7 +7,7 @@ tags:
   - Data
   - Design
   - Video
-  - Recommendations
+  - Tips
 image:
   src: blog/2017/video-series/sarah.jpg
   alt: Sarah Parmenter speaking on stage

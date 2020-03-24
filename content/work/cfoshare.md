@@ -7,7 +7,5 @@ date: 2019-05-29
 links:
   site: https://cfoshare.org/
 tags:
-  - Client Work
-  - Research & Concepting
-  - WordPress
+
 ---

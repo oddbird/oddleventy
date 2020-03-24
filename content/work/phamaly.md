@@ -10,9 +10,7 @@ image:
 links:
   site: https://phamaly.org
 tags:
-  - Client Work
-  - Research & Concepting
-  - WordPress
+
 summary: |
   Phamaly is an award-winning, Colorado-based theatre company
   that produces professional plays and musicals

@@ -5,6 +5,7 @@ author: miriam
 date: 2019-11-06
 tags:
   - AboutWeb
+  - CSS
 image:
   src: mozdev/overflow_wrap.png
   alt: CSS code snippet with overflow wrap options
