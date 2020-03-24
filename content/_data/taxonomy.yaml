@@ -12,7 +12,7 @@ post:
     icon: video
   - tag: Link
     icon: link
-  - tag: Client Work
+  - tag: Case Study
     icon: tools
     img: true
   - tag: Article

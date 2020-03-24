@@ -95,8 +95,13 @@
 // -----
 
 [data-grid] {
-  --fit--default: minmax(var(--fit-min, var(--grid-item)), var(--fit-max, 1fr));
+  --fit--default: minmax(
+    var(---mobile-min, var(--fit-min, var(--grid-item))),
+    var(--fit-max, 1fr)
+  );
   --column: content;
+  --item-title: var(--h3);
+  --newline: var(--shim);
   align-items: var(--align, start);
   display: grid;
   font-size: var(--small);
@@ -106,17 +111,27 @@
   grid-gap: var(--row-gap, var(--gap, var(--double-gutter)))
     var(--col-gap, var(--gap, var(--double-gutter)));
   justify-content: var(--justify, center);
-  justify-items: var(--justify, center);
+  justify-items: stretch;
 
   @include tools.below('page') {
-    --fit-min: 60%;
+    // "private" variable to ensure grid-items fit on mobile…
+    ---mobile-min: 60%;
   }
 
   > * {
     max-width: calc(100vw - var(--page-margin));
   }
+}
 
-  .item-title {
-    font-size: 1rem;
-  }
+.item-title {
+  font-size: var(--item-title, var(--h3));
+  margin: 0 0 var(--newline);
+}
+
+// Special
+[data-grid='birds'] {
+  --fit-min: calc(var(--grid-item) * 1.25);
+  --media-content: var(--min-page);
+  --media-gap: var(--shim);
+  --newline: inherit;
 }

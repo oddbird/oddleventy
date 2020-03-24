@@ -24,7 +24,7 @@ image:
   alt: Miriam talking with Jen Simmons and others
   position: top
 modules:
-  - title: Resilient & Universal Code
+  - title: Resilient Code
     text: |
       Browser support & device compatibility
       don't have to be difficult and expensive.
@@ -33,14 +33,14 @@ modules:
       front end code,
       while taking advantage of new browser features
       as they become available.
-  - title: Intrinsic & Responsive Layouts
+  - title: Modern Layout
     text: |
       We'll cover the web layout system as a whole --
       grids, flow, flexbox, alignment,
       intrinsic sizing, and queries --
       showing when and how to mix and match techniques
       for fast and dynamic layouts.
-  - title: Naming & Organizing Conventions
+  - title: Organizing Conventions
     text: |
       From OOCSS to ITCSS, SMACSS, BEM, and atomic design,
       there are a number of naming and organizing
@@ -49,7 +49,7 @@ modules:
       We'll look at what these systems have in common,
       and how to adapt those principles for the needs
       of your team or project.
-  - title: Design Systems & Component Libraries
+  - title: Design Systems
     text: |
       Reusable design & component systems
       can improve consistency,
@@ -59,7 +59,7 @@ modules:
       to get started.
       We'll talk about planning and designing systems
       in an agile and integrated environment.
-  - title: Style Guides & Documentation
+  - title: Documentation
     text: |
       Documentation is central to maintainable code,
       but how do we make sure the documentation
@@ -76,14 +76,14 @@ modules:
       We'll talk about designing
       the right tooling and testing workflow
       for your team or project.
-  - title: Team Process & Workflow
+  - title: Team Process
     text: |
       Struggling with messy handoff
       or communication between designers & developers?
       We can help you find the
       practical workflows that keep your
       process running smoothly.
-  - title: HTML & CSS in JS Frameworks
+  - title: Using JS Frameworks
     text: |
       With the proliferation of modern JavaScript frameworks,
       we need to rethink exactly how the
