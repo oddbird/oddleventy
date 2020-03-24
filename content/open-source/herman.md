@@ -39,8 +39,8 @@ summary: |
   but often rely on dedicated teams and extended budgets.
   We wanted a tool that helps create and maintain living style guides &
   pattern libraries in an agile process, and on a budget. Herman helps you
-  keep your development process simple -- 
-  and your UX consistent -- 
+  keep your development process simple --
+  and your UX consistent --
   as you scale over time.
 ---
 

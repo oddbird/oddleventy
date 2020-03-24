@@ -28,10 +28,10 @@ markers:
   media:
     - iframe: https://www.youtube.com/embed/2awepiNoaZI
 summary: |
-  Over the summer, we've been working with Mozilla 
+  Over the summer, we've been working with Mozilla
   to help create a new resource for web professionals like us --
   with a mix of videos, articles,
-  demos, and open source tools. 
+  demos, and open source tools.
   Today, we're excited to launch [the video channel][mozdev]!
 
   [mozdev]: https://www.youtube.com/MozillaDeveloper

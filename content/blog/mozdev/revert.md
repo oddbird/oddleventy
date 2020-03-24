@@ -16,7 +16,7 @@ summary: |
   `unset` allows inheritance,
   while `initial` does not.
   But then Firefox implemented `revert` and I was confused --
-  how is this one different from the others?!
+  how is this one different from the others?
 media:
   - iframe: https://www.youtube.com/embed/GAjoVRmipcU
 ---

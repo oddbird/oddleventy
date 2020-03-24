@@ -13,8 +13,8 @@ image:
   alt: Jump Start Sass, by Miriam Suzanne and Hugo Giraudel
 summary: |
   I'm excited to release [Jump Start Sass], a book I co-authored with
-  [Hugo Giraudel]. Digital coppies are available from [SitePoint], wih
-  print edditions sold by [O'Reilly]. Here's an excerpt from Chapter 11,
+  [Hugo Giraudel]. Digital copies are available from [SitePoint], wih
+  print editions sold by [O'Reilly]. Here's an excerpt from Chapter 11,
   [Sass Architecture].
 
   [Jump Start Sass]: https://www.sitepoint.com/premium/books/jump-start-sass
