@@ -214,6 +214,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.4.0"
       ],
       [
+        "striptags",
+        "npm:3.1.1"
+      ],
+      [
         "stylelint",
         "npm:13.2.1"
       ],
@@ -232,6 +236,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "stylelint-scss",
         "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.16.0"
+      ],
+      [
+        "truncate-html",
+        "npm:1.0.3"
       ],
       [
         "typogr",
@@ -291,11 +299,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sassdoc", "npm:2.7.1"],
             ["sassdoc-theme-herman", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.0.2"],
             ["slugify", "npm:1.4.0"],
+            ["striptags", "npm:3.1.1"],
             ["stylelint", "npm:13.2.1"],
             ["stylelint-config-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:8.0.1"],
             ["stylelint-config-recommended", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.0.0"],
             ["stylelint-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.1.2"],
             ["stylelint-scss", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.16.0"],
+            ["truncate-html", "npm:1.0.3"],
             ["typogr", "npm:0.6.8"]
           ],
           "linkType": "SOFT",
@@ -2030,6 +2040,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/babylon", "npm:6.16.5"],
             ["@types/babel-types", "npm:7.0.7"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/cheerio", [
+        ["npm:0.22.17", {
+          "packageLocation": "./.yarn/cache/@types-cheerio-npm-0.22.17-004ebc78f1-2.zip/node_modules/@types/cheerio/",
+          "packageDependencies": [
+            ["@types/cheerio", "npm:0.22.17"],
+            ["@types/node", "npm:13.9.3"]
           ],
           "linkType": "HARD",
         }]
@@ -3974,6 +3994,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["cheerio", [
+        ["npm:0.22.0", {
+          "packageLocation": "./.yarn/cache/cheerio-npm-0.22.0-0450a21558-2.zip/node_modules/cheerio/",
+          "packageDependencies": [
+            ["cheerio", "npm:0.22.0"],
+            ["css-select", "npm:1.2.0"],
+            ["dom-serializer", "npm:0.1.1"],
+            ["entities", "npm:1.1.2"],
+            ["htmlparser2", "npm:3.10.1"],
+            ["lodash.assignin", "npm:4.2.0"],
+            ["lodash.bind", "npm:4.2.1"],
+            ["lodash.defaults", "npm:4.2.0"],
+            ["lodash.filter", "npm:4.6.0"],
+            ["lodash.flatten", "npm:4.4.0"],
+            ["lodash.foreach", "npm:4.5.0"],
+            ["lodash.map", "npm:4.6.0"],
+            ["lodash.merge", "npm:4.6.2"],
+            ["lodash.pick", "npm:4.4.0"],
+            ["lodash.reduce", "npm:4.6.0"],
+            ["lodash.reject", "npm:4.6.0"],
+            ["lodash.some", "npm:4.6.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:1.0.0-rc.3", {
           "packageLocation": "./.yarn/cache/cheerio-npm-1.0.0-rc.3-27acf9bb0c-2.zip/node_modules/cheerio/",
           "packageDependencies": [
@@ -10357,6 +10400,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["lodash.assignin", [
+        ["npm:4.2.0", {
+          "packageLocation": "./.yarn/cache/lodash.assignin-npm-4.2.0-f45fed9160-2.zip/node_modules/lodash.assignin/",
+          "packageDependencies": [
+            ["lodash.assignin", "npm:4.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["lodash.bind", [
         ["npm:2.4.1", {
           "packageLocation": "./.yarn/cache/lodash.bind-npm-2.4.1-d0a7d8f287-2.zip/node_modules/lodash.bind/",
@@ -10364,6 +10416,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash.bind", "npm:2.4.1"],
             ["lodash._createwrapper", "npm:2.4.1"],
             ["lodash._slice", "npm:2.4.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.2.1", {
+          "packageLocation": "./.yarn/cache/lodash.bind-npm-4.2.1-0b68ea9ea1-2.zip/node_modules/lodash.bind/",
+          "packageDependencies": [
+            ["lodash.bind", "npm:4.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -10377,11 +10436,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["lodash.defaults", [
+        ["npm:4.2.0", {
+          "packageLocation": "./.yarn/cache/lodash.defaults-npm-4.2.0-c5dea025ab-2.zip/node_modules/lodash.defaults/",
+          "packageDependencies": [
+            ["lodash.defaults", "npm:4.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["lodash.difference", [
         ["npm:4.5.0", {
           "packageLocation": "./.yarn/cache/lodash.difference-npm-4.5.0-7a179a50e1-2.zip/node_modules/lodash.difference/",
           "packageDependencies": [
             ["lodash.difference", "npm:4.5.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.filter", [
+        ["npm:4.6.0", {
+          "packageLocation": "./.yarn/cache/lodash.filter-npm-4.6.0-21e2aceac9-2.zip/node_modules/lodash.filter/",
+          "packageDependencies": [
+            ["lodash.filter", "npm:4.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.flatten", [
+        ["npm:4.4.0", {
+          "packageLocation": "./.yarn/cache/lodash.flatten-npm-4.4.0-495935e617-2.zip/node_modules/lodash.flatten/",
+          "packageDependencies": [
+            ["lodash.flatten", "npm:4.4.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.foreach", [
+        ["npm:4.5.0", {
+          "packageLocation": "./.yarn/cache/lodash.foreach-npm-4.5.0-ca8531894e-2.zip/node_modules/lodash.foreach/",
+          "packageDependencies": [
+            ["lodash.foreach", "npm:4.5.0"]
           ],
           "linkType": "HARD",
         }]
@@ -10444,11 +10539,65 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["lodash.map", [
+        ["npm:4.6.0", {
+          "packageLocation": "./.yarn/cache/lodash.map-npm-4.6.0-8013e2ad18-2.zip/node_modules/lodash.map/",
+          "packageDependencies": [
+            ["lodash.map", "npm:4.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.merge", [
+        ["npm:4.6.2", {
+          "packageLocation": "./.yarn/cache/lodash.merge-npm-4.6.2-77cb4416bf-2.zip/node_modules/lodash.merge/",
+          "packageDependencies": [
+            ["lodash.merge", "npm:4.6.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["lodash.noop", [
         ["npm:2.4.1", {
           "packageLocation": "./.yarn/cache/lodash.noop-npm-2.4.1-b52c8b9a0f-2.zip/node_modules/lodash.noop/",
           "packageDependencies": [
             ["lodash.noop", "npm:2.4.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.pick", [
+        ["npm:4.4.0", {
+          "packageLocation": "./.yarn/cache/lodash.pick-npm-4.4.0-126deebf95-2.zip/node_modules/lodash.pick/",
+          "packageDependencies": [
+            ["lodash.pick", "npm:4.4.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.reduce", [
+        ["npm:4.6.0", {
+          "packageLocation": "./.yarn/cache/lodash.reduce-npm-4.6.0-a2e428f3e9-2.zip/node_modules/lodash.reduce/",
+          "packageDependencies": [
+            ["lodash.reduce", "npm:4.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.reject", [
+        ["npm:4.6.0", {
+          "packageLocation": "./.yarn/cache/lodash.reject-npm-4.6.0-3ffbb26ce0-2.zip/node_modules/lodash.reject/",
+          "packageDependencies": [
+            ["lodash.reject", "npm:4.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.some", [
+        ["npm:4.6.0", {
+          "packageLocation": "./.yarn/cache/lodash.some-npm-4.6.0-645cee43a3-2.zip/node_modules/lodash.some/",
+          "packageDependencies": [
+            ["lodash.some", "npm:4.6.0"]
           ],
           "linkType": "HARD",
         }]
@@ -11878,11 +12027,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sassdoc", "npm:2.7.1"],
             ["sassdoc-theme-herman", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.0.2"],
             ["slugify", "npm:1.4.0"],
+            ["striptags", "npm:3.1.1"],
             ["stylelint", "npm:13.2.1"],
             ["stylelint-config-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:8.0.1"],
             ["stylelint-config-recommended", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.0.0"],
             ["stylelint-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.1.2"],
             ["stylelint-scss", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.16.0"],
+            ["truncate-html", "npm:1.0.3"],
             ["typogr", "npm:0.6.8"]
           ],
           "linkType": "SOFT",
@@ -15601,6 +15752,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["striptags", [
+        ["npm:3.1.1", {
+          "packageLocation": "./.yarn/cache/striptags-npm-3.1.1-459e508c36-2.zip/node_modules/striptags/",
+          "packageDependencies": [
+            ["striptags", "npm:3.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["style-search", [
         ["npm:0.1.0", {
           "packageLocation": "./.yarn/cache/style-search-npm-0.1.0-e3177d3642-2.zip/node_modules/style-search/",
@@ -16343,6 +16503,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["true-case-path", "npm:1.0.3"],
             ["glob", "npm:7.1.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["truncate-html", [
+        ["npm:1.0.3", {
+          "packageLocation": "./.yarn/cache/truncate-html-npm-1.0.3-fe666430a5-2.zip/node_modules/truncate-html/",
+          "packageDependencies": [
+            ["truncate-html", "npm:1.0.3"],
+            ["@types/cheerio", "npm:0.22.17"],
+            ["cheerio", "npm:0.22.0"]
           ],
           "linkType": "HARD",
         }]

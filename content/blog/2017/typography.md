@@ -17,7 +17,7 @@ summary: |
   Whether you're starting from scratch or rebranding like us,
   this step-by-step guide can help focus and direct your process.
   First, define your brand goals. Next, explore your options.
-  There are many excellect resources that offer free,
+  There are many excellent resources that offer free,
   high quality, and accessible fonts;
   I list 7 of my favorites in this guide.
   Create element collages to test your typeface pairings in context.

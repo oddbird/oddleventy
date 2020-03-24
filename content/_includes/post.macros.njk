@@ -157,8 +157,12 @@ params:
       </header>
       {% if post.data.events %}
         {{ upcoming(post.data.events, links=false) }}
-      {% else %}
-        {{ post.data.summary | md | safe }}
+      {% elif post.data.summary %}
+        {% set summary = post.data.summary | md %}
+        {% set summary = summary if (card == 'large') else summary | elide %}
+        <p>
+          {{ summary | safe }}
+        </p>
       {% endif %}
     </div>
   </article>

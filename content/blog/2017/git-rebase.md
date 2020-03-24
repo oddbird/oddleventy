@@ -147,7 +147,7 @@ As they work on the project, they will end up with branches that look
 like this:
 
 {{ embed.img(
-  src='blog/2017/git-rebase/fig_01.png', 
+  src='blog/2017/git-rebase/fig_01.png',
   attrs={'class': 'align-center'}
 ) }}
 
@@ -163,7 +163,7 @@ Bao did and already merged into `master`? They can just rebase their
 branch on to that work:
 
 {{ embed.img(
-  src='blog/2017/git-rebase/fig_02.png', 
+  src='blog/2017/git-rebase/fig_02.png',
   attrs={'class': 'align-center extend-small'}
 ) }}
 
@@ -190,7 +190,7 @@ Robin's branch as its upstream, Bao can, with fresh remote tracking info
 on their local computer, just run `git rebase` and get this:
 
 {{ embed.img(
-  src='blog/2017/git-rebase/fig_03.png', 
+  src='blog/2017/git-rebase/fig_03.png',
   attrs={'class': 'align-center extend-small'}
 ) }}
 
@@ -215,7 +215,7 @@ that branch, this is safe), Robin can merge it in, and then the whole
 thing can be merged back into `master`:
 
 {{ embed.img(
-  src='blog/2017/git-rebase/fig_04.png', 
+  src='blog/2017/git-rebase/fig_04.png',
   attrs={'class': 'align-center extend-small'}
 ) }}
 

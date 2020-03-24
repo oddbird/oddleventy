@@ -11,7 +11,7 @@ image:
 index: CSSWG
 logo: w3c
 summary: |
-  Miriam is an Invited Expert 
+  Miriam is an Invited Expert
   on the W3C CSS Working Group,
   helping to develop the next level of
   Cascading & Inheritance,

@@ -15,7 +15,7 @@ image:
 summary: |
   It was a pleasure speaking at CSSConf 2016 in Boston!
   Here are some of my notes from the event --
-  coverig everything from creativity and the Bauhaus
+  covering everything from creativity and the Bauhaus
   movement to SVG 2 internals, React styles, CSS grid layouts,
   and custom properties (e.g. CSS-native variables).
   I included links to slides and video whenever possible.

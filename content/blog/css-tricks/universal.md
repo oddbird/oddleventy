@@ -17,7 +17,7 @@ tags:
 summary: |
   "**What about building websites has you interested this year?**"
 
-  There are constantly new features appearing in browsers --from subgrid
+  There are constantly new features appearing in browsers -- from subgrid
   to variable fonts to better developer tools. It's a really great time to
   be re-thinking everything we know about design on the web. Responsive
   design has served us well over the years, but it's still rooted in the
@@ -29,7 +29,7 @@ summary: |
 That's exciting but even more interesting to me in the context of a
 universal web. I began my career during the height of the Web Standards
 Project, CSS Zen Garden, *Designing with Web Standards*, and *A Dao of
-Web Design* --saturated in the philosophy of universally accessible
+Web Design* -- saturated in the philosophy of universally accessible
 design. CSS was relatively new, and explicitly designed to balance the
 desires of a web-creator (like me) with the needs of each individual
 user (also me), on any number of devices. Terms like "progressive
@@ -52,8 +52,8 @@ heading. New CSS features are designed with universal accessibility in
 mind, and we also have new features for managing browser-support on a
 continuum, much like viewport-size.
 
-Whatever we want to call it --Intrinsic Design, Resilient CSS,
-Progressive Enhancement, Universal Accessibility, or something else --I
+Whatever we want to call it Intrinsic Design, Resilient CSS,
+Progressive Enhancement, Universal Accessibility, or something else -- I
 think we're poised for a new movement and a new era of web creation.
 It's time for us to take the lessons we learned from Responsive Web
 Design, adapting to screen sizes, and expand out: adapting to screen

@@ -19,7 +19,7 @@ media:
 
 {% import "embed.macros.njk" as embed %}
 
-CSS provides a number of built-in shapes we can use --from inset boxes
+CSS provides a number of built-in shapes we can use -- from inset boxes
 to circles, ellipses, and polygons. I'll show you how to use the tool to
 inspect, edit, and create shapes directly in the browser.
 
