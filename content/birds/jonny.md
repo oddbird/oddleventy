@@ -2,7 +2,7 @@
 title: Jonny Gerig Meyer
 sub: Co-founder & technical lead
 bird: jonny
-date: 2008-04-01
+date: 2008-04-02
 image:
   src: birds/jonny.jpg
 social:

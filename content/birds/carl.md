@@ -2,7 +2,7 @@
 title: Carl Meyer
 sub: Co-founder & back-end consultant
 bird: carl
-date: 2008-04-02
+date: 2008-04-03
 image:
   src: birds/carl.jpg
 social:
