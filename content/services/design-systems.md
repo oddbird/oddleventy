@@ -7,7 +7,7 @@ image:
   alt: Stacy teaching developers at an event
 summary: |
   **OddBird provides design-system training and implementation**
-  --including strategy & design audits, automated style guides & pattern
+  -- including strategy & design audits, automated style guides & pattern
   libraries, component libraries, integrated toolkits, and robust
   front-end architecture. If you're a project manager, scrum master, or
   team leader, why not make your job easier?

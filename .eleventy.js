@@ -104,6 +104,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('md', type.md);
   eleventyConfig.addFilter('mdInline', type.mdInline);
   eleventyConfig.addFilter('removeMd', type.removeMd);
+  eleventyConfig.addFilter('elide', type.elide);
 
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.md);

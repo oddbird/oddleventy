@@ -32,7 +32,7 @@
         {% if event | isFuture %}
           <strong>Upcoming!</strong>
         {% endif %}
-        [{{ event.start | getDate('iso') }}]
+        [{{ (event.start or event.date) | getDate('iso') }}]
         {{ utility.link_if(event.venue, event.url) }} --
         {{ event.adr }}
       </li>

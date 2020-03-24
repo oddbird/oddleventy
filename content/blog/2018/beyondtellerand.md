@@ -45,7 +45,7 @@ lesson on ethics in tech. How could I even begin to match the
 inspirational scope of these other presenters, while talking about
 layout?
 
-I couldn't --but I did have some fun. Inspired by the generated art from
+I couldn't -- but I did have some fun. Inspired by the generated art from
 Jared Tarbell and the [Levitated Toy Factory], I picked [one of his art
 pieces] to recreate with CSS variables (aka custom properties) and CSS
 grid layouts.
@@ -61,7 +61,7 @@ responsive) result.
 
 That went over well at the conference, but I decided to improve it after
 the conference was over. By moving the component logic into [Vue], I
-could interact with the controls dynamically --and animate the changes:
+could interact with the controls dynamically -- and animate the changes:
 shuffling, resizing, and more. Finally, I pulled in an
 Asteroids-inspired browser snippet so you can destroy your creation.
 Enjoy the invasion!
