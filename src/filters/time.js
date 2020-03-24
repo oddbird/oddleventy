@@ -86,7 +86,7 @@ example: |
   {{ pubdate | getDate('iso') }}
 params:
   date:
-    type: date | string | 'now'
+    type: date | string
     note: If no date is given, returns the current date
   format:
     type: string
