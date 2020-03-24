@@ -1,11 +1,13 @@
 'use strict';
 
 const _ = require('lodash');
-const removeMd = require('remove-markdown');
-const type = require('typogr');
 const markdown = require('markdown-it');
-const mdMark = require('markdown-it-mark');
 const mdFootnote = require('markdown-it-footnote');
+const mdMark = require('markdown-it-mark');
+const removeMd = require('remove-markdown');
+const striptags = require('striptags');
+const truncate = require('truncate-html');
+const type = require('typogr');
 
 const mdown = markdown({
   html: true,
@@ -79,26 +81,31 @@ const mdInline = (content) =>
 label: elide
 category: typesetting
 note: |
-  Ellide plaintext at a given character count,
-  and append `...` if ellided.
+  Elide HTML at a given word count,
+  and append `…` if elided.
 params:
-  text:
+  html:
     type: string
   count:
     type: Number
-    default: 45
+    default: 50
 */
-const elide = (text, count = 50) => {
-  const words = text.trim().split(' ');
-
-  if (words.length <= count) {
-    return text;
+const elide = (html, count = 50) => {
+  // Strip links, paragraph breaks, etc:
+  const stripped = striptags(html.trim(), ['code', 'strong', 'em']);
+  // Truncate stripped html:
+  let truncated = truncate(stripped, count, { byWords: true, ellipsis: '…' });
+  // This will catch both cases where no truncation was needed, but also
+  // (unintentionally) cases where the truncation is within a final tag
+  // (e.g. `<em>final words…</em>`) -- but that's probably good enough for now?
+  if (!truncated.endsWith('…')) {
+    return truncated;
   }
-
-  let short = words.slice(0, count).join(' ');
-  short = short.slice(-1).match(/[^A-Z|a-z|0-9]/g) ? short.slice(0, -1) : short;
-
-  return `${short}...`;
+  // Strip non-alphanumeric trailing chars (e.g. commas, periods):
+  if (truncated.slice(-2, -1).match(/[^A-Z|a-z|0-9]/) !== null) {
+    truncated = `${truncated.slice(0, -2)}…`;
+  }
+  return truncated;
 };
 
 /* @docs

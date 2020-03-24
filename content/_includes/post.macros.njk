@@ -158,12 +158,8 @@ params:
       {% if post.data.events %}
         {{ upcoming(post.data.events, links=false) }}
       {% elif post.data.summary %}
-        {% set maxWords = 50 %}
         {% set summary = post.data.summary | md %}
-        {% set summary = summary
-          if (card == 'large')
-          else summary | striptags | elide(maxWords) | typogr
-        %}
+        {% set summary = summary if (card == 'large') else summary | elide %}
         <p>
           {{ summary | safe }}
         </p>

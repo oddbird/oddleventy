@@ -27,9 +27,9 @@ describe('typography filters', () => {
   });
 
   test('elide', () => {
-    const hello = '  hello world; of wonder ';
-    const hello2 = '  hello world of wonder ';
-    const expected = 'hello world...';
+    const hello = '<em>hello</em> world, of wonder';
+    const hello2 = '  <p><em>hello</em> world of wonder </p>';
+    const expected = '<em>hello</em> world…';
 
     expect(elide(hello, 2)).toEqual(expected);
     expect(elide(hello2, 2)).toEqual(expected);
