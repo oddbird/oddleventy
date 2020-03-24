@@ -34,7 +34,8 @@ params:
   {%- if posts -%}
     {%- if posts | length > above -%}
       {%- for group in posts | byYear -%}
-        {{ list(group.posts, collections, group.year) }}
+        {% set title = [group.year, 'Resources'] | join(' ') if loop.first else group.year %}
+        {{ list(group.posts, collections, title) }}
       {%- endfor -%}
     {%- else -%}
       {{ list(posts, collections) }}
