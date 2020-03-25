@@ -21,8 +21,6 @@ events:
     date: 2019-11-07
     adr: Denver, CO
     video: https://youtu.be/bSITeqDKkb8
-    tags:
-      - code video
     media: &frfe
       iframe: https://www.youtube.com/embed/bSITeqDKkb8
       width: 560
@@ -33,8 +31,6 @@ events:
     end: 2019-10-16
     adr: New York, NY
     video: https://vimeo.com/367890815
-    tags:
-      - code video
     media: &smashNY
       iframe: https://player.vimeo.com/video/367890815
       width: 640
