@@ -4,7 +4,7 @@ author: stacy
 tags:
   - Article
   - Tips
-  - Recommendation
+  - Recommendations
 image:
   src: blog/2017/tips-tools/love-tools.jpg
   alt: Mac OS Dock with some of our favoite app icons

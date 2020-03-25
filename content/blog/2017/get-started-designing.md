@@ -4,7 +4,7 @@ dub: Four useful tools & tutorials
 author: sondra
 tags:
   - Article
-  - Recommendation
+  - Recommendations
   - Color
   - Typography
   - Design

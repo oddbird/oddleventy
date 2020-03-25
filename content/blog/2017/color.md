@@ -9,6 +9,7 @@ tags:
   - Open Design
   - Color
   - Design
+  - Accessibility
 image:
   src: blog/2017/colors/color.jpg
   alt: Jonny next to vertical stripes of color
