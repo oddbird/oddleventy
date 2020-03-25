@@ -5,8 +5,6 @@ client: The Providence Plan
 date: 2011-12-15
 links:
   source: https://github.com/oddbird/mlt
-tags:
-
 tasks:
   - Product Branding
   - User Experience 

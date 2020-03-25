@@ -15,7 +15,6 @@ people:
     title: Sr. Director of Release Engineering
     face: jason-lantz.jpg
     venue: *client
-tags:
 tasks:
   - User Experience Design
   - Project Architecture

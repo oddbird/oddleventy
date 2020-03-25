@@ -6,8 +6,6 @@ client: &client Aunalytics
 date: 2019-05-14
 image:
   svg: logos/aunalytics
-tags:
-
 people:
   - &james
     name: James Stuckey Weber

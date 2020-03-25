@@ -9,8 +9,6 @@ client: Mozilla
 date: 2012-03-15
 links:
   source: https://github.com/mozilla/moztrap
-tags:
-
 tasks:
   - Product Branding
   - User Experience Design

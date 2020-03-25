@@ -14,7 +14,6 @@ people:
     face: rohit-puranik.jpg
     title: Founder
     venue: *client
-tags:
 tasks:
   - Product Branding
   - User Experience Design

@@ -9,8 +9,6 @@ image:
   alt: Phamaly cast performing Chicago
 links:
   site: https://phamaly.org
-tags:
-
 summary: |
   Phamaly is an award-winning, Colorado-based theatre company
   that produces professional plays and musicals

@@ -13,7 +13,6 @@ people:
     face: furman-brown.jpg
     title: Founder
     venue: *client
-tags:
 press:
   - text: |
       OddBird is high-caliber and nimble.
