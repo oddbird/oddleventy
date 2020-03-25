@@ -5,11 +5,11 @@ author: carl
 tags:
   - Article
   - Python
-  - Sqlalchemy
-  - Postgresql
+  - SQLAlchemy
+  - PostgreSQL
   - Transactions
   - Django
-  - Open Source
+  - Tools
 image:
   src: blog/2014/sqlalchemy.jpg
   alt: SQLAlchemy

@@ -5,7 +5,6 @@ tags:
   - Article
   - Conferences
   - Sass
-  - Open Source
 image:
   src: blog/2014/sassconf.jpg
 summary: |

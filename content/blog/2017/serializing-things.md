@@ -6,7 +6,6 @@ tags:
   - Article
   - Celery
   - Django
-  - Open Source
   - Serialization
 image:
   src: blog/2017/serializing-things/celery-man.jpg

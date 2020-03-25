@@ -6,9 +6,8 @@ date: 2019-10-02
 tags:
   - Article
   - Sass
-  - Open Source
   - Tutorial
-  - Modules
+  - Sass Modules
 image:
   src: projects/sass.jpg
 summary: |

@@ -5,9 +5,8 @@ date: 2019-10-09
 canonical: https://css-tricks.com/introducing-sass-modules/
 tags:
   - Link
-  - Modules
+  - Sass Modules
   - Sass
-  - Open Source
   - Tutorial
 image:
   src: blog/2019/sass-logo.png

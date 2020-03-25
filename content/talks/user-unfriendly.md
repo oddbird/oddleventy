@@ -11,6 +11,7 @@ tags:
   - Fine Art
   - Design
   - Process
+  - Agile
 events:
   - venue: Agnes Scott College
     url: https://calendar.agnesscott.edu/event/user_unfriendlynotes_toward_a_queer_web

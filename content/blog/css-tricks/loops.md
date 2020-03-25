@@ -6,7 +6,6 @@ author: miriam
 tags:
   - Link
   - Sass
-  - Open Source
   - CSS
 image:
   src: blog/2016/trick-loops.jpg

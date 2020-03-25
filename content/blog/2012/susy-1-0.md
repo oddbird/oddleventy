@@ -7,8 +7,8 @@ image:
   src: blog/susy.jpg
 tags:
   - Article
-  - Susy v1
   - Susy
+  - Susy v1
   - Open Source
 ---
 

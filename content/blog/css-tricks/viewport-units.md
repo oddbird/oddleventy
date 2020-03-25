@@ -9,7 +9,6 @@ image:
 tags:
   - Link
   - Sass
-  - Open Source
   - CSS
   - Layout
 summary: |

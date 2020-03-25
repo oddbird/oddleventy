@@ -7,7 +7,6 @@ date: 2012-03-10
 tags:
   - Testing
   - Django
-  - Open Source
 events:
   - venue: PyCon
     url: https://us.pycon.org/2012/

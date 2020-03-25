@@ -14,7 +14,7 @@ tags:
   - Style Guides
   - Accoutrement
   - Herman
-  - Open Source
+  - Documentation
 events:
   - venue: Agile Alliance
     url: https://www.agilealliance.org/agile2019/program/

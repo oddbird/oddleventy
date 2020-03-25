@@ -12,7 +12,6 @@ tags:
   - Interview
   - Sass
   - Susy
-  - Open Source
 summary: |
   I did a [live Q&A at SitePoint][qa]
   talking about:

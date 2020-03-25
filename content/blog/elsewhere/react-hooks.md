@@ -7,6 +7,7 @@ venue: Bits and Pieces
 tags:
   - Link
   - JavaScript
+  - React
   - React Hooks
   - Bits and Pieces
 image:

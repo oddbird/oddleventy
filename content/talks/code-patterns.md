@@ -12,7 +12,7 @@ tags:
   - Component Libraries
   - Accoutrement
   - Herman
-  - Open Source
+  - Documentation
 events:
   - venue: Refresh Denver
     url: https://www.meetup.com/refreshdenver/events/241230495/?from=ref

@@ -5,13 +5,10 @@ tags:
   - Article
   - Python
   - Django
-  - Open Source
-  - APIs
-  - ASGI
   - Push Notifications
   - WebSockets
-  - DRF
-  - Channels
+  - Django REST Framework
+  - Django Channels
 author: kit
 image:
   src: blog/2018/channel.jpg

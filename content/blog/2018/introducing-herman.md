@@ -5,6 +5,7 @@ author: miriam
 date: 2018-01-03
 tags:
   - Article
+  - Agile
   - Accoutrement
   - Herman
   - Herman v1
@@ -14,6 +15,8 @@ tags:
   - Design Systems
   - Style Guides
   - Component Libraries
+  - Documentation
+  - Tools
 image:
   src: blog/2017/herman-intro/header.jpg
   alt: Sample organized color swatches with hex and hsl values

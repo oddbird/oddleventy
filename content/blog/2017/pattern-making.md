@@ -15,6 +15,7 @@ tags:
   - Open Source
   - OddSite
   - Open Design
+  - Documentation
 image:
   src: blog/2017/pattern-making/NYC-sign.jpg
   alt: Blueprint for NYC signage

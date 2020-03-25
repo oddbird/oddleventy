@@ -6,7 +6,6 @@ tags:
   - Article
   - Celery
   - Django
-  - Open Source
   - Django Channels
   - User Experience
 image:

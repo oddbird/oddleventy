@@ -8,7 +8,6 @@ tags:
   - JavaScript
   - Jinja2
   - Django
-  - Open Source
   - Python
   - Backbone
   - Marionette

@@ -7,7 +7,6 @@ tags:
   - Article
   - Data Modeling
   - Django
-  - Open Source
 image:
   src: blog/2017/usernames/nametag.jpg
   alt: Name tags

@@ -6,7 +6,6 @@ canonical: https://www.sitepoint.com/architecture-in-sass/
 tags:
   - Link
   - Sass
-  - Open Source
   - Book
 image:
   src: blog/sassbook.jpg
