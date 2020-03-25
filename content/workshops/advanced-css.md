@@ -30,7 +30,7 @@ press:
       and highly praised by attendees of the conference
       and the workshop alike.
     name: Vitaly Friedman
-    title: Founder 
+    title: Founder
     venue: Smashing Magazine & Conference
     face: vitaly-friedman.jpg
 summary: |

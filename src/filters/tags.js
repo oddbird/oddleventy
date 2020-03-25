@@ -3,6 +3,7 @@
 const slugify = require('slugify');
 const _ = require('lodash');
 
+const { pageType } = require('#/taxonomy');
 const { withData, getData } = require('#/pages');
 
 /* @docs
@@ -95,19 +96,19 @@ params:
     type: array | 'all'
     default: undefined
     note: Will return data for all tags when set to `all`
-  sort:
-    type: "'pageCount' | 'tag'"
-    default: 'pageCount'
 */
-const tagData = (collections, tags, sort = 'pageCount') => {
+const tagData = (collections, tags) => {
   const tagList = tags === 'all' ? getTags(collections.all) : tags;
-  return _.uniq(publicTags(tagList))
-    .map((tag) => ({
+  return _.uniq(publicTags(tagList)).map((tag) => {
+    const type = pageType(tag);
+    return {
       tag,
+      type,
+      is_type: Boolean(type),
       url: tagLink(collections.all, tag),
       pageCount: (collections[tag] || []).length,
-    }))
-    .sort((a, b) => b[sort] - a[sort]);
+    };
+  });
 };
 
 module.exports = {

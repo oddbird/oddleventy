@@ -44,7 +44,7 @@ summary: |
   CSS is either awesome or broken.
   CSS is not a programming language, unless it is.
   CSS is too simple and entirely too difficult.
-  CSS is weird --– not like other languages,
+  CSS is weird -- not like other languages,
   and not like print design either --
   but trapped in a strange middle ground
   with unique rules and constraints.

@@ -53,7 +53,7 @@ After learning about Vue from [Sarah Drasner]'s stream of articles on
 [CSS-Tricks], I had the pleasure of speaking at [VueConf 2018]. I really
 enjoyed that conference, and left feeling inspired by the community and
 the framework behind it. I loved that I could build complete and valid
-Vue components in plain HTML/CSS --and slowly integrate JS logic as
+Vue components in plain HTML/CSS -- and slowly integrate JS logic as
 necessary. I started digging, and quickly learned to bind JS data to
 HTML attributes:
 
@@ -65,13 +65,13 @@ HTML attributes:
 
 CSS variables provide a safe approach for passing JS settings to CSS via
 inline HTML. While most inline styles are difficult to override, CSS
-variables can instead be ignored --making their inline specificity
+variables can instead be ignored -- making their inline specificity
 harmless.
 
-I wrote a quick demo for CSS-Tricks --[More CSS Charts, with Grid &
-Custom Properties] --and continued to develop the idea into my latest
+I wrote a quick demo for CSS-Tricks -- [More CSS Charts, with Grid &
+Custom Properties] -- and continued to develop the idea into my latest
 talk: [Dynamic CSS]. This talk explores how data can be used to
-manipulate presentation directly in CSS --a combination of variables,
+manipulate presentation directly in CSS -- a combination of variables,
 `calc()`, grids, `hsl()` and more.
 
 The [slides are online], and you can [sign up for a notification] when
@@ -91,7 +91,7 @@ While learning JS and Vue in more detail, I decided to re-build my
 presentation software to better meet my needs as a speaker.
 
 The result, which I call [VueFinder], allows me to write slides using a
-slightly-extended markdown syntax --with yaml metadata for each slide.
+slightly-extended markdown syntax -- with yaml metadata for each slide.
 That metadata controls slide layout, allows me to embed Vue components
 directly for live demos, and pass in CSS variables for custom styling.
 

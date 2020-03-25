@@ -1,4 +1,4 @@
-import { heading, md, mdInline, typogr } from '#/type';
+import { elide, heading, md, mdInline, typogr } from '#/type';
 
 const markdown = '## Lorem ipsum dolor sit amet, consectetur';
 const content = 'Lorem ipsum dolor sit amet, consectetur';
@@ -24,6 +24,16 @@ describe('typography filters', () => {
 
     expect(mdInline('## Foo "Bar"')).toEqual(expected);
     expect(mdInline()).toBeUndefined();
+  });
+
+  test('elide', () => {
+    const hello = '<em>hello</em> world, of wonder';
+    const hello2 = '  <p><em>hello</em> world of wonder </p>';
+    const expected = '<em>hello</em> world…';
+
+    expect(elide(hello, 2)).toEqual(expected);
+    expect(elide(hello2, 2)).toEqual(expected);
+    expect(elide(hello)).toEqual(hello);
   });
 
   test('heading', () => {

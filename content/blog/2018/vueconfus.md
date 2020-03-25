@@ -19,7 +19,7 @@ talk: /talks/agile-systems/
 summary: |
   I've been excited about [Vue.js] since [Sarah Drasner] first showed me
   the basics. Since then, we've started using it for client work at
-  OddBird, and I'm constantly impressed by the power and simplicity --so
+  OddBird, and I'm constantly impressed by the power and simplicity -- so
   it was a real honor being invited to speak at the first [VueConf US] in
   New Orleans.
 

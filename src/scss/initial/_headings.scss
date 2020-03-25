@@ -15,13 +15,13 @@ h3,
 h4,
 h5,
 h6 {
+  @include tools.font-family('alt');
   --link: currentColor;
   margin-bottom: 0;
 }
 
 h1,
 h2 {
-  @include tools.font-family('alt');
   line-height: 1.2;
   margin: var(--gutter-plus) 0 var(--newline);
 }
@@ -29,7 +29,6 @@ h2 {
 h3,
 h4 {
   margin-top: var(--newline);
-  font-style: italic;
 }
 
 h1 {

@@ -29,7 +29,8 @@ params:
 {% macro form(
   next='/contact/thanks/',
   submit='Send',
-  name='contact'
+  name='contact',
+  attrs={}
 ) %}
 <form
   name="{{ name or 'contact' }}"
@@ -37,7 +38,8 @@ params:
   method="POST"
   action="{{ next }}"
   netlify-honeypot="subject"
-  data-netlify="true">
+  data-netlify="true"
+  {{ utility.show_attrs(attrs) }}>
   <div data-fieldgroup="contact-info">
     <label data-field="name">
       <span data-label>Name:</span>

@@ -19,7 +19,7 @@ image:
   alt: Sample organized color swatches with hex and hsl values
 summary: |
   **Design systems streamline development, communication, and
-  consistency** --but often rely on dedicated teams and extended budgets.
+  consistency** -- but often rely on dedicated teams and extended budgets.
   We wanted a tool to create and maintain living style guides & pattern
   libraries in an agile process, and on a budget. [Herman] helps keep our
   development flow simple, and our UX consistent, as we iterate on
@@ -37,15 +37,15 @@ summary: |
 ---
 
 I spent the week after Thanksgiving in San Francisco, attending (and
-[accidentally speaking at]) [Clarity] --a "[Design Systems]" conference
+[accidentally speaking at]) [Clarity] -- a "[Design Systems]" conference
 organized by the wonderful [Jina Anne]. If you don't have experience
 with design systems, I highly recommend the [Handbook][Design Systems]
-which Jina co-authored --available free online.
+which Jina co-authored -- available free online.
 
 I'm always curious how many attendees at a conference are working on
 enterprise projects over a long period of time vs. those of us who do
 consulting for multiple clients each year. These different contexts can
-lead to very different solutions --affecting team size, budget, process,
+lead to very different solutions -- affecting team size, budget, process,
 architecture, and technical requirements.
 
 I don't know the exact mix at Clarity, but I think that design systems
@@ -55,21 +55,21 @@ ongoing full-time dedicated team. Those of us doing agency work don't
 often have that luxury, but our clients still need a system that will
 work for them.
 
-So how can we make design systems part of an agile process --growing
+So how can we make design systems part of an agile process -- growing
 slowly along-side the application, the same way we write and maintain
 test-coverage as part of any project? How do we make documentation and
 design consistency the path of least resistance?
 
 > **If it's not documented, it doesn't exist.** Documentation should
-> become the default --an integrated part of the development process.
+> become the default -- an integrated part of the development process.
 >
 > --Miriam Suzanne (me)
 
 Design Systems can include a wide array of features, more than just a
-pattern library, and Herman does not cover the full gamut --but it
+pattern library, and Herman does not cover the full gamut -- but it
 doesn't have to. With [Herman] we start small, documenting brand design
-tokens --[colors], [fonts], [sizes], [ratios][sizes], and [icons]
---before expanding into [practical patterns and components], with
+tokens -- [colors], [fonts], [sizes], [ratios][sizes], and [icons]
+-- before expanding into [practical patterns and components], with
 automation to help us scale.
 
   [accidentally speaking at]: https://twitter.com/jina/status/935566434700222465
@@ -89,7 +89,7 @@ automation to help us scale.
 The term "design system" refers generally to documenting & distributing
 isolated patterns and components that can be used across one or more
 applications for consistent user experience. That usually involves some
-combination of "style guides" and/or "pattern libraries" --the detailed
+combination of "style guides" and/or "pattern libraries" -- the detailed
 documentation of design tokens, UI patterns, components, and overall
 system guidelines.
 
@@ -110,11 +110,11 @@ Now we use Herman across a range of products, from large client
 applications to our own internal toolkits. While there are a number of
 possible configuration options, the initial setup can be streamlined to
 make sense on even the smallest projects. We've even used Herman to
-[begin documenting itself] --from design language to components and API.
+[begin documenting itself] -- from design language to components and API.
 
-The project is not complete --and never will be --but that's the point.
+The project is not complete -- and never will be -- but that's the point.
 As time goes on, we'll keep adding features that allow our systems to
-become larger, more complex, and more automated --with support for
+become larger, more complex, and more automated -- with support for
 additional languages.
 
 [begin documenting itself]: /herman/docs/
@@ -175,7 +175,7 @@ features of our own...
 A "design token" is an abstract bit of design language that normally
 becomes visible only when applied to more explicit patterns and
 components. Colors, fonts, scales, and grid-configurations act as
-"sub-atomic" aspects of a design system --often stemming directly from
+"sub-atomic" aspects of a design system -- often stemming directly from
 the brand, before any UI components have been built. This is a good
 place to start defining your system, and Herman can help you visualize
 these abstractions.
@@ -249,8 +249,8 @@ output when necessary:
 
 ## Prose, Pages, and Third-Party Links
 
-In building documentation --from basic reference docs to extensive
-design systems --we often find it useful to include additional prose and
+In building documentation from basic reference docs to extensive
+design systems -- we often find it useful to include additional prose and
 links to third-party docs for dependencies. There are several ways to do
 this in Herman:
 
@@ -258,7 +258,7 @@ this in Herman:
 
 Any SassDoc comments (`///`) that are not attached to a specific
 Sass/CSS objects will appear as free-floating prose, and can be given
-generic annotations --such as `@group`, `@example`, `@link`, etc.
+generic annotations -- such as `@group`, `@example`, `@link`, etc.
 --including the Herman design-token annotations.
 
 ### Additional Markdown Pages
@@ -287,7 +287,7 @@ We're using Herman on many of our production projects, and we have big
 plans for Herman's future. We'll keep adding features, and we invite you
 to do the same. The Herman code is [available on GitHub], and we'd love
 to hear your thoughts. File issues for bug-reports, feature requests, or
-help getting started --or send us your pull requests.
+help getting started -- or send us your pull requests.
 
 We'll keep providing our own tutorials and demos based on the questions
 we hear most, but we'd also love to list any style guides or pattern
@@ -307,8 +307,8 @@ accessibility, performance, and UX clarity. Herman is one part of our
 solution, but no tool can provide the magic bullet.
 
 **If you need help with a refactor** to improve design systems,
-performance, testing, documentation, or accessibility --eliminate
-technical debt, and put better processes in place --we're here for you.
+performance, testing, documentation, or accessibility -- eliminate
+technical debt, and put better processes in place -- we're here for you.
 Our [team of experts] can provide [a range of support, training, and
 consulting] across the full stack of product design & development
 --helping find *the solution that best fits your team*. Don't hesitate

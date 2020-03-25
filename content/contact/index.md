@@ -18,4 +18,4 @@ summary: |
 ---
 
 {% import "contact.macros.njk" as contact %}
-{{ contact.form() }}
+{{ contact.form(attrs={'class': 'extend-small'}) }}

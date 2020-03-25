@@ -23,6 +23,7 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'contact.macros.njk' as contact %}
 {% import 'birds.macros.njk' as birds %}
+{% import 'post.macros.njk' as post %}
 
 {{ embed.figure(
   data=[{
@@ -34,28 +35,21 @@ summary: |
 
 {{ layout.title('Meet the birds') }}
 
-{% call layout.grid(
-  attrs={
-    'style': {
-      '--media-content': 'var(--min-page)',
-      '--media-gap': 'var(--shim)'
-    } | styles
-  }
-) %}
+{% call layout.grid('birds') %}
   {% for bird in collections.birds | active %}
-    {% call embed.media_block(
-      media=embed.svg('faces/' + bird.data.bird),
-      name='bird'
-    ) %}
-      <h3>{{ utility.link_if(bird.data.title, bird.url) }}</h3>
-
-      {{ bird.data.summary | md | safe }}
-
-      {{ contact.social(
-        data=bird.data.social,
-        name=bird.data.bird | capitalize
-      ) }}
-    {% endcall %}
+    <article {{ post.aria_label(bird) }}>
+      {% call embed.media_block(
+        media=embed.svg('faces/' + bird.data.bird),
+        name='bird'
+      ) %}
+        {{ post.banner(bird) }}
+        {{ bird.data.summary | md | safe }}
+        {{ contact.social(
+          data=bird.data.social,
+          name=bird.data.bird | capitalize
+        ) }}
+      {% endcall %}
+    </article>
   {% endfor %}
 {% endcall %}
 

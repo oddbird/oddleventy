@@ -14,7 +14,7 @@ image:
 summary: |
   Sass recently launched a major new feature you might recognize from
   other languages: a module system. The new syntax will replace `@import`
-  with `@use` and `@forward` --a big step forward for making Sass partials
+  with `@use` and `@forward` -- a big step forward for making Sass partials
   (one of the language's most used features) more readable, performant,
   and safe. This article goes into detail, but you can also read our
   "[Sass Modules, a Primer]" article for the quick introduction.

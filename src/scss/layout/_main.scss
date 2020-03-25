@@ -2,6 +2,11 @@
 
 [data-main] {
   grid-area: main;
+  margin: var(--gutter) 0;
+
+  > :first-child {
+    margin-top: 0;
+  }
 }
 
 [data-typeset] {

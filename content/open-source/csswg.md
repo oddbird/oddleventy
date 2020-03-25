@@ -4,14 +4,14 @@ sub: Developing specifications for the CSS language
 url: https://www.w3.org/Style/CSS/
 author: miriam
 oss: invited expert
-start: 2020-03-01
+date: 2020-03-01
 end: ongoing
 image:
   src: projects/w3c.jpg
 index: CSSWG
 logo: w3c
 summary: |
-  Miriam is an Invited Expert 
+  Miriam is an Invited Expert
   on the W3C CSS Working Group,
   helping to develop the next level of
   Cascading & Inheritance,

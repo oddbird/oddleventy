@@ -77,7 +77,7 @@ by default without any adjustments.
 
 Modern CSS features are released module-by-module, without the
 overarching fanfare that we saw with CSS3. That *continuous integration*
-has been great for speed and efficiency --but we can "miss the forest
+has been great for speed and efficiency -- but we can "miss the forest
 for the trees" as they say.
 
 The biggest shift in my workflow has come from realizing that Grid,
@@ -94,7 +94,7 @@ eventually work with standard "flow" layouts as well.
 
 The overall effect is what Jen Simmons has called Intrinsic Design, and
 it has fundamentally changed how I think about CSS and the layouts I
-create --but there are a few pieces missing. Subgrid and universal Box
+create -- but there are a few pieces missing. Subgrid and universal Box
 Alignment will be game-changers.
 
 After seeing Jason talk, I'm also very excited about variable fonts!
@@ -111,13 +111,13 @@ But there are a few big differences:
 CSS custom properties inherit like any other property, with access to
 the DOM. You can change the value of a variable based on media-queries,
 or selector-hooks, or other aspects of the site HTML. That opens up a
-lot of new territory that we're still exploring --something Sass will
+lot of new territory that we're still exploring -- something Sass will
 never be able to do.
 
 While CSS handles that DOM-variation well, Sass provides more tools for
 working with global configuration "constants" and other logical variable
 use-cases, like if/then statements. I use Sass to store global config
-that I want to manipulate programmatically (like colors) --and then
+that I want to manipulate programmatically (like colors) -- and then
 output the results to CSS custom properties if I need them to *also*
 vary based on the DOM.
 
@@ -129,7 +129,7 @@ vary based on the DOM.
 I don't see this happening any time soon, because some logic belongs in
 the browser (DOM-aware variables), while other logic (global
 configuration) is best pre-processed on the server. Static site
-generators are in a similar position --they are not required for any
+generators are in a similar position -- they are not required for any
 special site features, but they help us generate more performant code,
 more efficiently.
 
@@ -148,7 +148,7 @@ easy way to inspect colors, and adjust them on-the-fly (to find a
 complement or contrast for example). You can achieve some of that with a
 mix of <span class="title-ref">hsl()</span> and <span
 class="title-ref">calc()</span> functions, but it takes some careful
-work --and contrast isn't simple to calculate. But if you can keep the
+work -- and contrast isn't simple to calculate. But if you can keep the
 logical requirements simple, or handle them with JavaScript, you're all
 set.
 

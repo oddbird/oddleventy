@@ -87,11 +87,13 @@
     "sassdoc": "^2.7.1",
     "sassdoc-theme-herman": "^3.0.2",
     "slugify": "^1.4.0",
+    "striptags": "^3.1.1",
     "stylelint": "^13.2.1",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.16.0",
+    "truncate-html": "^1.0.3",
     "typogr": "^0.6.8"
   },
   "husky": {

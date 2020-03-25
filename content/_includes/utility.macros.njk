@@ -218,7 +218,7 @@ params:
   {% endif %}
 
   <time
-    datetime="{{ pub | getDate('iso') }}"
+    datetime="{{ start | getDate('iso') }}"
     {{ attr_if('pubdate', not not is_pubdate) }}>
 
     {% if ongoing %}

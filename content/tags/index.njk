@@ -1,0 +1,72 @@
+---
+title: Resources by Tag
+banner: |
+  Resources by Tag \
+  *Read, Watch, & Listen*
+action:
+  text: Browse by date »
+  url: /blog/
+summary: |
+  Learn how to write resilient CSS,
+  add WebSocket push notifications to a RESTful API,
+  and more with these articles, videos,
+  podcasts, and conference talks.
+---
+
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'post.macros.njk' as post %}
+{% import 'utility.macros.njk' as utility %}
+
+{% set sections = collections | tagData('all') | groupby('is_type') %}
+
+{% macro show(item, collections) %}
+  <article {{ post.aria_label(item, 'tag') }}>
+    {%- set item_title -%}
+      {{- item.tag -}}
+      <span class="sr-only">tag</span>
+    {%- endset -%}
+
+    <h3 class="item-title" id="{{ post.id(item, 'tag') }}">
+      {{ utility.link_if(
+        item_title,
+        item.url,
+        attrs={rel: 'bookmark'}
+      ) }}
+      {% if item.type %}
+        {{ embed.svg('icons/' + item.type.icon) }}
+      {% endif %}
+      <span class="tag-count">
+        {{- item.pageCount -}}
+        <span class="sr-only">resources</span>
+      </span>
+    </h3>
+
+    <ul>
+      {% for latest in collections[item.tag] | reverse %}
+        {% if loop.index < 5 %}
+          <li>
+            {{ utility.link_if(
+              post.name(latest),
+              latest.url
+            ) }}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </article>
+{% endmacro %}
+
+{{ layout.title('Resource Types') }}
+{% call layout.grid('tags') %}
+  {% for item in sections['true'] | sort(attribute='tag') %}
+    {{ show(item, collections) }}
+  {% endfor %}
+{% endcall %}
+
+{{ layout.title('More Tags') }}
+{% call layout.grid('tags') %}
+  {% for item in sections['false'] | sort(attribute='tag') %}
+    {{ show(item, collections) }}
+  {% endfor %}
+{% endcall %}
