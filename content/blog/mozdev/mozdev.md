@@ -4,7 +4,7 @@ sub: a gift from Mozilla (and OddBird)
 author: miriam
 date: 2019-10-01
 tags:
-  - AboutWeb
+  - AboutWeb Video
   - Firefox DevTools
   - Grids
   - CSS
