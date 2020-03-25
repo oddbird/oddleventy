@@ -9,7 +9,7 @@ tags:
   - Article
   - Susy
   - Susy v1
-  - Open Source
+  - OddTools
 ---
 
 Susy 1.0 has officially launched!

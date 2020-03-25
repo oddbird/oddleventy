@@ -6,7 +6,6 @@ tags:
   - Article
   - OddSite
   - Open Design
-  - Tools
   - Process
   - GitHub
   - Pivotal Tracker

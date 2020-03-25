@@ -9,7 +9,7 @@ image:
   alt: Giant pencil awarded to Miriam Suzanne for Best of CSS Dev Conf 2017
 tags:
   - Susy
-  - Open Source
+  - OddTools
   - Layout
   - Grids
   - CSS

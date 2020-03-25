@@ -4,13 +4,12 @@ author: david
 tags:
   - Article
   - Documentation
-  - Tools
+  - OddTools
   - JavaScript
   - Python
   - Sass
   - Accoutrement
   - Herman
-  - Open Source
 image:
   src: blog/2017/docs/style.jpg
   alt: Style written on sketchbook page

@@ -9,7 +9,6 @@ tags:
   - PostgreSQL
   - Transactions
   - Django
-  - Tools
 image:
   src: blog/2014/sqlalchemy.jpg
   alt: SQLAlchemy

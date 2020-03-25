@@ -4,7 +4,7 @@ title: Sass Layout in 2013 and the Future of Susy
 tags:
   - Article
   - Susy
-  - Open Source
+  - OddTools
   - Susy v2
   - Layout
   - Grids

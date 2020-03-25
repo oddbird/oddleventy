@@ -3,7 +3,7 @@ title: Isolation and Bleed in Susy
 tags:
   - Article
   - Susy
-  - Open Source
+  - OddTools
   - Susy v1
   - Layout
   - Grids

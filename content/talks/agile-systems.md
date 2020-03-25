@@ -15,6 +15,7 @@ tags:
   - Accoutrement
   - Herman
   - Documentation
+  - OddTools
 events:
   - venue: Agile Alliance
     url: https://www.agilealliance.org/agile2019/program/

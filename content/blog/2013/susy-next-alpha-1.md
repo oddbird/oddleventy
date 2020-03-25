@@ -3,7 +3,7 @@ title: Susy Next, The First Alpha
 tags:
   - Article
   - Susy
-  - Open Source
+  - OddTools
   - Susy v2
   - Layout
   - Grids

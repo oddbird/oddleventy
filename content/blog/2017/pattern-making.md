@@ -3,7 +3,6 @@ title: Code Patterns & Style Guides
 author: miriam
 tags:
   - Article
-  - Tools
   - Color
   - Typography
   - Fonts
@@ -12,7 +11,7 @@ tags:
   - Component Libraries
   - Accoutrement
   - Herman
-  - Open Source
+  - OddTools
   - OddSite
   - Open Design
   - Documentation

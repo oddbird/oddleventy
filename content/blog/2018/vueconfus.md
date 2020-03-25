@@ -13,6 +13,7 @@ tags:
   - Component Libraries
   - Accoutrement
   - Herman
+  - OddTools
 image:
   src: blog/2018/vueconf.jpg
 talk: /talks/agile-systems/
