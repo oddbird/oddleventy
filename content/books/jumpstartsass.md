@@ -9,10 +9,11 @@ image:
 venue: SitePoint
 url: https://www.sitepoint.com/premium/books/jump-start-sass
 date: 2016-03-22
+index: Jump Start Sass
 tags:
   - CSS
   - Sass
-  - Book
+  - Jump Start Sass
 press:
   - text: |
       Miriam and Hugo have become some of the most notable

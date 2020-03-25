@@ -3,18 +3,13 @@
 {% import 'layout.macros.njk' as layout %}
 
 {% set index = renderData.index or index %}
-{% set index = {'slug': index} if index | typeCheck('string') else index %}
 
 {% if index %}
-  {% set event_pages = {
-    'all': true,
-    'only': false,
-    'true': 'mixed'
-  } %}
-  {% set pages = event_pages[index.events] if index.events else 'mixed' %}
-  {% set list = collections[index.slug] if index.slug else none %}
-  {% set list = list | getEvents(pages) if index.events else list %}
-  {{ post.by_year(list, collections) }}
+  {% set list = collections[index] %}
+  {{ post.by_year(
+    list | removePage(page.url) if list else none,
+    collections
+  ) }}
 {% elif bird and (bird != 'oddbird') %}
   {{ oss.list(
     collections.oss | byBird(bird),

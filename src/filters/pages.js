@@ -114,6 +114,23 @@ const withData = (collection, keys, value, exact = false) =>
   collection.filter((page) => hasData(page, keys, value, exact));
 
 /* @docs
+label: removePage
+category: Filter
+note: |
+  Remove any one page from a collection
+  (especially for removing tag index pages from their own resource list)
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+  url:
+    type: url
+    note: URL of the page to remove
+*/
+const removePage = (collection, url) =>
+  collection.filter((page) => page.url !== url);
+
+/* @docs
 label: getData
 category: Data
 note: Return combined data from a collection
@@ -313,4 +330,5 @@ module.exports = {
   render,
   pageYears,
   byYear,
+  removePage,
 };
