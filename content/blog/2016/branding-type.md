@@ -8,6 +8,7 @@ tags:
   - Open Design
   - Design
   - Typography
+  - Fonts
 image:
   src: blog/2016/brand/type-header.jpg
   alt: An odd bird on watercolor

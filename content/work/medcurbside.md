@@ -14,13 +14,6 @@ people:
     face: rohit-puranik.jpg
     title: Founder
     venue: *client
-tags:
-  - Client Work
-  - Research & Concepting
-  - Branding
-  - Design
-  - Development
-  - Custom Application
 tasks:
   - Product Branding
   - User Experience Design

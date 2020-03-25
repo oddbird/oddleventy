@@ -6,9 +6,7 @@ tags:
   - Article
   - Celery
   - Django
-  - Open Source
   - Serialization
-  - Code
 image:
   src: blog/2017/serializing-things/celery-man.jpg
   alt: Celery stalk resembling a human shape

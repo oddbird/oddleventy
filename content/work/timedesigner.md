@@ -13,12 +13,6 @@ people:
     face: furman-brown.jpg
     title: Founder
     venue: *client
-tags:
-  - Client Work
-  - Research & Concepting
-  - Design
-  - Development
-  - Custom Application
 press:
   - text: |
       OddBird is high-caliber and nimble.

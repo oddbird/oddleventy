@@ -8,6 +8,8 @@ tags:
   - CSS
   - Sass
   - Design Systems
+  - Component Libraries
+  - Style Guides
 events:
   - venue: Smashing Conf NY
     url: https://smashingconf.com/ny-2020/

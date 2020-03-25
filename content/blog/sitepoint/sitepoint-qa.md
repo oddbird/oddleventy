@@ -10,9 +10,9 @@ image:
 tags:
   - Link
   - Interview
-  - Code
+  - Sass
   - Susy
-  - Open Source
+  - OddTools
 summary: |
   I did a [live Q&A at SitePoint][qa]
   talking about:

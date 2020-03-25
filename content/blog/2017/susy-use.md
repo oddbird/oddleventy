@@ -6,12 +6,11 @@ date: 2017-09-25
 tags:
   - Article
   - Susy
-  - Open Source
-  - Susy3
+  - OddTools
+  - Susy v3
   - CSS
   - Sass
   - Grids
-  - Code
 image:
   src: blog/2017/susy3/media.jpg
   alt: Viewport size diagram

@@ -8,12 +8,14 @@ image:
   alt: Sample organized color swatches with hex and hsl values
 slides: https://talks.oddbird.net/agile-systems/
 tags:
-  - Code
   - Agile
   - Design Systems
+  - Component Libraries
+  - Style Guides
   - Accoutrement
   - Herman
-  - Open Source
+  - Documentation
+  - OddTools
 events:
   - venue: Agile Alliance
     url: https://www.agilealliance.org/agile2019/program/

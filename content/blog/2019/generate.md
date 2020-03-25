@@ -6,7 +6,6 @@ date: 2019-05-24
 tags:
   - Article
   - Conferences
-  - Code
   - CSS
 image:
   src: blog/2019/houdini-bunny.jpg

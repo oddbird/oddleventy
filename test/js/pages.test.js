@@ -10,7 +10,9 @@ import {
   isCurrent,
   isPublic,
   pageYears,
+  removePage,
   render,
+  withData,
 } from '#/pages';
 
 import { collection3 } from './utils';
@@ -43,6 +45,24 @@ describe('page filters', () => {
 
     expect(hasData(page, 'data.slug', 'news')).toBeTruthy();
     expect(hasData(page, 'data.index')).toBeFalsy();
+  });
+
+  test('withData', () => {
+    expect(withData(collection3, 'data.slug', 'news')).toHaveLength(1);
+    expect(withData(collection3, 'data.slug', 'new')).toHaveLength(1);
+    expect(withData(collection3, 'data.slug', 'new', true)).toHaveLength(0);
+    expect(withData(collection3, 'data.tags')).toHaveLength(4);
+    expect(withData(collection3, 'data.nothing')).toHaveLength(0);
+  });
+
+  test('removePage', () => {
+    const testUrl = '/test2/';
+    const filtered = removePage(collection3, testUrl);
+    const testPage = collection3.find((page) => page.url === testUrl);
+
+    expect(collection3).toContain(testPage);
+    expect(filtered).not.toContain(testPage);
+    expect(filtered).toHaveLength(collection3.length - 1);
   });
 
   test('getData', () => {

@@ -7,7 +7,9 @@ tags:
   - OddSite
   - Open Design
   - Typography
+  - Fonts
   - Design
+  - Accessibility
 image:
   src: blog/2017/typography/type.jpg
   alt: Sondra looks at large ampersand symbol painted on building exterior

@@ -1,9 +1,10 @@
 ---
-title: 'Get Started with Design: 4 Useful Tools & Tutorials'
+title: Get Started with Design
+sub: Four useful tools & tutorials
 author: sondra
 tags:
   - Article
-  - Tools
+  - Recommendations
   - Color
   - Typography
   - Design

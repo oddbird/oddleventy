@@ -7,6 +7,7 @@ slides: https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-g
 tags:
   - CSS
   - Grids
+  - Design
 events:
   - venue: Front-End Camp
     url: http://chicagocamps.org/events/2017/front-end-camp/

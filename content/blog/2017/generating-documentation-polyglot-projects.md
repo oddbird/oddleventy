@@ -3,15 +3,13 @@ title: Generating Code Documentation for Polyglot Projects
 author: david
 tags:
   - Article
-  - Docs
-  - Tools
+  - Documentation
+  - OddTools
   - JavaScript
   - Python
   - Sass
-  - Code
   - Accoutrement
   - Herman
-  - Open Source
 image:
   src: blog/2017/docs/style.jpg
   alt: Style written on sketchbook page

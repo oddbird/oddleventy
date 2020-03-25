@@ -7,7 +7,6 @@ tags:
   - Article
   - Vue
   - Conferences
-  - Code
   - CSS
 talk: /talks/dynamic-css/
 image:

@@ -5,15 +5,17 @@ author: miriam
 date: 2018-01-03
 tags:
   - Article
+  - Agile
   - Accoutrement
   - Herman
-  - Herman1
-  - Open Source
+  - Herman v1
   - CSS
   - Sass
   - Design Systems
-  - Code
   - Style Guides
+  - Component Libraries
+  - Documentation
+  - OddTools
 image:
   src: blog/2017/herman-intro/header.jpg
   alt: Sample organized color swatches with hex and hsl values

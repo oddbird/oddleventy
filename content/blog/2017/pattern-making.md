@@ -3,16 +3,18 @@ title: Code Patterns & Style Guides
 author: miriam
 tags:
   - Article
-  - Tools
   - Color
   - Typography
+  - Fonts
+  - Design Systems
   - Style Guides
+  - Component Libraries
   - Accoutrement
   - Herman
-  - Open Source
+  - OddTools
   - OddSite
   - Open Design
-  - Code
+  - Documentation
 image:
   src: blog/2017/pattern-making/NYC-sign.jpg
   alt: Blueprint for NYC signage

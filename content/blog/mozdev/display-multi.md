@@ -4,7 +4,8 @@ sub: Allow us to be more explicit & expressive about layouts
 author: miriam
 date: 2019-10-28
 tags:
-  - AboutWeb
+  - AboutWeb Video
+  - CSS
 image:
   src: mozdev/multi-display.png
   alt: CSS snippet showing display value options

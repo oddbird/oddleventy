@@ -8,9 +8,8 @@ image:
   src: blog/elsewhere/shop-talk.png
   alt: Shop Talk Show Podcast
 tags:
-  - Code
+  - CSS
   - Sass
-  - Open Source
 summary: |
   I drop by the show to talk about Sass in 2019,
   design tokens, OddBird, unused CSS, new CSS properties,

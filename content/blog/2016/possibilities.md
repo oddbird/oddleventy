@@ -6,9 +6,8 @@ tags:
   - Article
   - OddSite
   - Open Design
-  - Research
+  - Research & Concepting
   - User Experience
-  - Community
 image:
   src: blog/bwdraft.jpg
   alt: Small-screen design proposal for the new OddBird website

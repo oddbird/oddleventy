@@ -7,6 +7,7 @@ tags:
   - Politics
   - Year in Review
   - Diversity
+  - Ethics
 image:
   src: blog/2017/2016-review/retreat.jpg
   alt: OddBird team members workshop ideas with post-it notes

@@ -3,11 +3,10 @@ title: Susy Next, Alpha 5
 tags:
   - Article
   - Susy
-  - Open Source
-  - Susy2
+  - OddTools
+  - Susy v2
   - Layout
   - Grids
-  - Code
 author: miriam
 image:
   src: blog/susy.jpg

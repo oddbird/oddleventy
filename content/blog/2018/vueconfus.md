@@ -5,14 +5,15 @@ author: miriam
 date: 2018-05-14
 tags:
   - Article
+  - Agile
   - Vue
   - Conferences
   - Design Systems
-  - Code
   - Style Guides
+  - Component Libraries
   - Accoutrement
   - Herman
-  - Open Source
+  - OddTools
 image:
   src: blog/2018/vueconf.jpg
 talk: /talks/agile-systems/

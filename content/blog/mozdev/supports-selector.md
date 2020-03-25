@@ -4,7 +4,8 @@ sub: Just in time for Selectors Level 4
 author: miriam
 date: 2019-11-20
 tags:
-  - AboutWeb
+  - AboutWeb Video
+  - CSS
 image:
   src: mozdev/supports_selector.png
   alt: CSS @supports statement

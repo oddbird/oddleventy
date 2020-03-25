@@ -13,12 +13,6 @@ date: 2016-12-15
 tags:
   - _post
   - Case Study
-  - Client Work
-  - Research & Concepting
-  - Design
-  - Development
-  - Custom Application
-  - SRAM/Quarq
 press:
   - text: |
       A mobile-friendly design that will let users see the live tracking

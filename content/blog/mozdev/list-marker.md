@@ -6,7 +6,8 @@ image:
   src: mozdev/list-markers.png
   alt: Lists styled with cat emjois
 tags:
-  - AboutWeb
+  - AboutWeb Video
+  - CSS
 summary: |
   When you create lists in HTML,
   browsers add bullet-points or numbers we call *list markers*.

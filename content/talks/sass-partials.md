@@ -4,7 +4,7 @@ author: miriam
 date: 2013-11-19
 slides: http://mirisuzanne.github.io/pres/sass-partials/
 tags:
-  - Code
+  - Sass
 events:
   - venue: NYCSass Meetup
     url: https://www.meetup.com/nyc-sass/events/146898452/

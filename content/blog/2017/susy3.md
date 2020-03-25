@@ -7,12 +7,11 @@ date: 2017-06-28
 tags:
   - Article
   - Susy
-  - Open Source
-  - Susy3
+  - OddTools
+  - Susy v3
   - CSS
   - Sass
   - Grids
-  - Code
 image:
   src: blog/2017/susy3/susy-ag.jpg
   alt: Flexible grid column layout

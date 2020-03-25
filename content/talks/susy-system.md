@@ -5,9 +5,8 @@ author: miriam
 date: 2014-04-16
 slides: http://mirisuzanne.github.io/pres/susy2/
 tags:
-  - Code
   - Susy
-  - Open Source
+  - OddTools
   - Layout
 events:
   - venue: Bmore Sass

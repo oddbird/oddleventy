@@ -5,7 +5,6 @@ tags:
   - Article
   - JavaScript
   - Conferences
-  - Code
   - jQuery
 image:
   src: blog/2014/jqueryconf.jpg

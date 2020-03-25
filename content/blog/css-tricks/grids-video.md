@@ -7,7 +7,6 @@ image:
   src: blog/elsewhere/css-tricks.jpg
   alt: CSS-Tricks
 tags:
-  - Code
   - CSS
   - Grids
   - Video

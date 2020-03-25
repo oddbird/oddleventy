@@ -8,8 +8,8 @@ tags:
   - Vue
   - Conferences
   - Design Systems
-  - Code
   - Style Guides
+  - Component Libraries
 image:
   src: blog/2018/vue-invaders.jpg
   alt: Generated art in using CSS Grid inspired by Jared Tarbell

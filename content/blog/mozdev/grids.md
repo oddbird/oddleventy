@@ -4,7 +4,9 @@ sub: And `subgrid`, landing on Dec 3
 author: miriam
 date: 2019-10-18
 tags:
-  - AboutWeb
+  - AboutWeb Video
+  - CSS 
+  - Grids
 image:
   src: mozdev/grid.png
   alt: Inspecting grid with Firefox Developer Tools

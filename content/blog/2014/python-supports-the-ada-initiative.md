@@ -5,7 +5,6 @@ tags:
   - Article
   - Python
   - Diversity
-  - Community
 image:
   src: blog/2014/adainitiative.jpg
   alt: Ada Initiative

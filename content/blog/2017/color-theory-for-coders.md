@@ -8,7 +8,6 @@ tags:
   - Tips
   - Color
   - Design
-  - Recommendations
 image:
   src: blog/2017/color-theory/decision-tree.jpg
   alt: Colored circles in a flow chart

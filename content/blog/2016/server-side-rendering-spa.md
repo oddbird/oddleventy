@@ -9,9 +9,8 @@ tags:
   - JavaScript
   - Jinja2
   - Django
-  - Open Source
+  - Django REST Framework
   - Python
-  - Code
   - Backbone
   - Marionette
 image:

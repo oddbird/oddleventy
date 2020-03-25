@@ -3,8 +3,8 @@ title: Susy Next, Alpha 4
 tags:
   - Article
   - Susy
-  - Open Source
-  - Susy2
+  - OddTools
+  - Susy v2
   - Layout
   - Grids
 author: miriam

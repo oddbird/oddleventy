@@ -8,8 +8,8 @@ image:
 tags:
   - Article
   - Susy
-  - Open Source
-  - Code
+  - Susy v1
+  - OddTools
 ---
 
 Susy 1.0 has officially launched!

@@ -6,10 +6,8 @@ tags:
   - Spam
   - DevOps
   - Build Tools
-  - Front-end
   - JavaScript
   - Analytics
-  - Code
 image:
   src: blog/2017/ga-spam/spam-traffic.jpg
   alt: Spam semi truck

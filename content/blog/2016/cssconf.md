@@ -5,10 +5,8 @@ date: 2016-09-30
 tags:
   - Article
   - Conferences
-  - Front-end
   - CSS
   - Article
-  - Code
 image:
   src: blog/2016/cssconf/ns.jpg
   alt:  Nicole Sullivan on stage

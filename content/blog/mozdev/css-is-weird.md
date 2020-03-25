@@ -4,7 +4,8 @@ sub: How can we design for an unknown & infinite canvas?
 author: miriam
 date: 2019-10-03
 tags:
-  - AboutWeb
+  - AboutWeb Video
+  - CSS
 image:
   src: mozdev/css-is-weird.png
   alt: CSS cascade diagram

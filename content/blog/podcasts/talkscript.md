@@ -5,7 +5,9 @@ date: 2018-09-06
 canonical: https://www.sitepen.com/blog/episode-18-ethics-es6-in-practice-dynamic-css-live-at-jsconf-us/
 author: miriam
 tags:
-  - Code
+  - JavaScript
+  - CSS
+  - Ethics
 summary: |
   On Episode 18,
   the TalkScript team continues the live-ish at JSConfUS podcast series

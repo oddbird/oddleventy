@@ -5,14 +5,9 @@ client: The Providence Plan
 date: 2011-12-15
 links:
   source: https://github.com/oddbird/mlt
-tags:
-  - Client Work
-  - Design
-  - Development
-  - Custom Application
 tasks:
   - Product Branding
-  - User Experience Design
+  - User Experience 
   - Project Architecture
   - Responsive Styles
 summary: |

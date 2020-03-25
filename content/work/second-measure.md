@@ -8,11 +8,6 @@ image:
   alt: UI component library color palette options grouped by category
 client: &client Second Measure
 date: 2019-03-29
-tags:
-  - Client Work
-  - Design System
-  - Component Library
-  - React
 tasks:
   - React Component Library
   - Sass/CSS Design System Architecture

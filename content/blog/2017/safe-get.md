@@ -5,9 +5,6 @@ sub: You don't need safe-get-function utilities
 tags:
   - Article
   - Sass
-  - Open Source
-  - Tools
-  - Code
 image:
   src: blog/2017/safe-get/phone.jpg
   alt: Old phone

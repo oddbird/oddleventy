@@ -9,13 +9,6 @@ image:
   alt: Athlete list tied to their location and elevation
 client: SRAM/Quarq
 date: 2016-12-15
-tags:
-  - Client Work
-  - Research & Concepting
-  - Design
-  - Development
-  - Custom Application
-  - SRAM/Quarq
 tasks:
   - Product Branding
   - User Experience Design

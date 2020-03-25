@@ -4,7 +4,8 @@ sub: None of the solutions are perfect, but we have some options
 author: miriam
 date: 2019-11-06
 tags:
-  - AboutWeb
+  - AboutWeb Video
+  - CSS
 image:
   src: mozdev/overflow_wrap.png
   alt: CSS code snippet with overflow wrap options

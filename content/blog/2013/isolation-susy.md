@@ -3,12 +3,11 @@ title: Isolation and Bleed in Susy
 tags:
   - Article
   - Susy
-  - Open Source
-  - Susy1
+  - OddTools
+  - Susy v1
   - Layout
   - Grids
   - Sub-pixel rounding
-  - Code
 author: miriam
 image:
   src: blog/susy.jpg

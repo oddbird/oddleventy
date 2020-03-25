@@ -6,7 +6,6 @@ date: 2020-03-04
 image:
   src: projects/w3c.jpg
 tags:
-  - Code
   - CSS
   - CSSWG
   - Article

@@ -7,6 +7,7 @@ venue: Net Magazine
 url: https://www.creativebloq.com/net-magazine
 tags:
   - Link
+  - Agile
   - User Experience
   - Net Magazine
   - Interview

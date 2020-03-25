@@ -4,7 +4,7 @@ sub: For quick visual adjustments directly on the page
 author: miriam
 date: 2019-11-25
 tags:
-  - DevTools
+  - Firefox DevTools
 image:
   src: mozdev/shape_path.png
   alt: Firefox Developer Tools

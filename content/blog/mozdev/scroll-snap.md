@@ -4,7 +4,9 @@ sub: Without any JavaScript or "scrolljacking"
 author: miriam
 date: 2019-10-31
 tags:
-  - AboutWeb
+  - AboutWeb Video
+  - CSS
+  - JavaScript
 image:
   src: mozdev/scroll-snap.png
   alt: CSS code snippet of scroll-snap type and align

@@ -3,12 +3,11 @@ title: Understanding 'Spread' in Susy3
 tags:
   - Article
   - Susy
-  - Open Source
-  - Susy3
+  - OddTools
+  - Susy v3
   - CSS
   - Sass
   - Grids
-  - Code
 author: miriam
 image:
   src: blog/2017/spread/susy-spread.jpg

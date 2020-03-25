@@ -5,9 +5,7 @@ date: 2016-12-02
 author: miriam
 tags:
   - Link
-  - Code
   - Sass
-  - Open Source
   - CSS
 image:
   src: blog/2016/trick-loops.jpg

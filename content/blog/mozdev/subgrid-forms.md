@@ -6,7 +6,8 @@ image:
   src: mozdev/subgrid_forms.png
   alt: CSS Snippet for CSS subgrid to make forms
 tags:
-  - AboutWeb
+  - AboutWeb Video
+  - CSS
 summary: |
   It's a common pattern to align form labels and inputs in grid-like layout.
   I'll show you how to do it quickly using CSS subgrid,

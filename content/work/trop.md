@@ -7,9 +7,6 @@ client: Trop Magazine
 date: 2017-01-15
 links:
   site: http://tropmag.com/
-tags:
-  - Client Work
-  - WordPress
 quotes:
   - text: |
       Having worked with a handful of web developers,

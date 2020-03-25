@@ -3,11 +3,9 @@ title: Off-Canvas Layout with Susy
 tags:
   - Article
   - Susy
-  - Open Source
-  - Susy1
-  - Demos
+  - OddTools
+  - Susy v1
   - Layout
-  - Code
 author: miriam
 image:
   src: blog/susy.jpg

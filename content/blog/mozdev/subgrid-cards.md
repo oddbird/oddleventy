@@ -6,7 +6,8 @@ image:
   src: mozdev/subgrid_cards.png
   alt: CSS snippet with card layout demo
 tags:
-  - AboutWeb
+  - AboutWeb Video
+  - CSS
 summary: |
   Card layouts are popular on the web,
   rows and columns of boxes with similar content.
