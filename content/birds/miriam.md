@@ -26,7 +26,7 @@ and a pioneer of modern CSS techniques –
 member of the [Sass][sass] core team,
 and creator of the popular [Susy][susy]
 and [True][true] libraries.
-Miriam is a staff writer for [CSS Tricks][tricks],
+Miriam is a staff writer for [CSS-Tricks][tricks],
 co-author of SitePoint’s [Jump Start Sass][jss],
 and internationally known
 [conference speaker][speaking],

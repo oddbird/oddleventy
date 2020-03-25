@@ -4,7 +4,6 @@ sub: CSS-Tricks asked a number of web builders the same question...
 author: miriam
 date: 2019-11-26
 canonical: https://css-tricks.com/embracing-the-universal-web/
-venue: CSS-Tricks
 image:
   src: birds/miriam.jpg
   alt: Miriam Suzanne
@@ -12,7 +11,6 @@ tags:
   - Link
   - CSS
   - Accessibility
-  - CSS Tricks
 summary: |
   "**What about building websites has you interested this year?**"
 

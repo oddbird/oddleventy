@@ -1,6 +1,6 @@
 ---
 title: Get Started with Design
-dub: Four useful tools & tutorials
+sub: Four useful tools & tutorials
 author: sondra
 tags:
   - Article
