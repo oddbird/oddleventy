@@ -1,0 +1,45 @@
+@use '~accoutrement/sass/tools';
+@use '../config/layout';
+
+$break: 'wide-break';
+
+.offset-grid {
+  --column: full;
+  display: grid;
+  grid-gap: var(--double-gutter);
+  margin: var(--spacer) 0;
+  position: relative;
+
+  @include tools.above($break) {
+    --clip-overlap: calc(var(--gutter) * -1);
+    --offset: var(--spacer);
+    grid-template: var(--offset) / repeat(2, 1fr);
+
+    // provide space for the right-hand vertical offset
+    &::before {
+      content: '';
+      grid-column: span 2;
+    }
+  }
+}
+
+.offset-item {
+  @include layout.clip-base;
+
+  &:nth-child(odd) {
+    @include layout.clip('right');
+  }
+
+  &:nth-child(even) {
+    @include layout.clip('left');
+  }
+}
+
+.offset-more {
+  padding: 0 var(--page-margin);
+
+  @include tools.above($break) {
+    @include tools.position(auto auto 0 50%);
+    padding-left: 0;
+  }
+}

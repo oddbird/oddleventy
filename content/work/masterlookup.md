@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 title: Master Lookup Table
 sub: Parcel Mapping for Urban Development
 client: The Providence Plan

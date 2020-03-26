@@ -1,0 +1,32 @@
+[data-work] {
+  --column: full;
+
+  .offset-grid {
+    margin: 0;
+
+    [data-work='summary'] + & {
+      margin-top: calc(var(--offset) * -1);
+    }
+  }
+}
+
+.project-details {
+  --clip-bg: var(--bg-full);
+  display: grid;
+  grid-template-columns:
+    var(--gutter) [page-start] minmax(min-content, var(--page))
+    [page-end] minmax(var(--page-margin), 1fr);
+
+  > * {
+    grid-column: page;
+  }
+
+  .post-header {
+    margin-bottom: var(--shim);
+  }
+}
+
+.work-sample {
+  margin: var(--gutter) var(--page-margin);
+  max-width: var(--wide-page);
+}

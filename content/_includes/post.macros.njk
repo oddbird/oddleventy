@@ -231,7 +231,7 @@ params:
       {%- if image.src -%}
         {%- set position = {'--hero-position': image.position} | styles -%}
         {{ embed.img(
-        src=image.src,
+          src=image.src,
           alt=image.alt,
           attrs={style: position}
         ) }}
@@ -339,7 +339,7 @@ params:
   post,
   level=3,
   attrs={},
-  id_prefix='post-',
+  id_prefix='post',
   called=false
 ) -%}
   {%- h level, {
