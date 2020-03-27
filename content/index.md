@@ -9,7 +9,6 @@ image:
   src: projects/orcas/home-iphone.jpg
   alt: CoachHub App on iPhone
   device: iphone
-  fill: white
 og:
   img: default
 summary: |

@@ -21,6 +21,17 @@ links:
 tags:
   - _post
   - Case Study
+sample:
+  desktop: 
+    src: orcas/desktop.jpg
+    alt: Home screen of CoachHub app, with coaches listed on the side
+  mobile:
+    src: orcas/home-iphone.jpg
+    alt: Mobile home screen of CoachHub app, guidance on the go
+  caption: |
+    CoachHub is a HIPPA-compliant health coaching platform
+    that provides users with anywhere,
+    anytime access to varying levels of support.
 tasks:
   - Accessible Interface
   - Custom Django Application
@@ -97,12 +108,12 @@ planning:
       to help the entire team communicate consistently
       and write code that integrates smoothly.
 summary: |
-  **CoachHub, a responsive coaching web-platform we built with ORCAS,**
-  integrates with their suite of self-management tools
-  to provide users with anywhere,
-  anytime access to varying levels of support --
-  video chat, in-app messaging,
+  A custom appliacation that
+  integrates with the ORCAS suite of self-management tools --
+  providing video chat, in-app messaging,
   public Q&A, webinars, and support groups.
+  Used (with white-label branding) by the 
+  US Coast Guard, Miitary, and National Institutes of Health.
 ---
 
 {% import 'quotes.macros.njk' as quotes %}

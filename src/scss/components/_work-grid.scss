@@ -33,6 +33,40 @@
 }
 
 .work-sample {
+  display: grid;
+  grid:
+    'desktop desktop2 desktop2' var(--spacer)
+    'desktop mobile ..........' min-content
+    '....... mobile ..........' var(--spacer)
+    'caption caption caption' 1fr
+    / minmax(min-content, var(--page)) 8em minmax(var(--gutter), 1fr);
+  grid-gap: var(--gutter);
   margin: var(--gutter) var(--page-margin);
   max-width: var(--wide-page);
+
+  @include tools.above('wide-page') {
+    grid-template-areas:
+      'desktop desktop2 desktop2'
+      'desktop mobile ..........'
+      'caption mobile ..........'
+      'caption ...... ..........';
+  }
+
+  figcaption {
+    grid-area: caption;
+  }
+
+  [data-screen] {
+    align-self: end;
+    grid-area: mobile;
+    transform: rotate(6deg);
+  }
+}
+
+.sample-desktop {
+  border: medium solid var(--border);
+  grid-area: desktop / desktop / desktop / desktop2;
+  object-fit: cover;
+  object-position: var(--img-position, center);
+  place-self: stretch;
 }

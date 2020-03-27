@@ -13,6 +13,21 @@ date: 2016-12-15
 tags:
   - _post
   - Case Study
+sample:
+  desktop: 
+    src: quarqnet/desktop.jpg
+    alt: Full-screen map of a bike ride path, along with ride metrics
+    position: bottom left
+  mobile:
+    src: quarqnet/mobile.jpg
+    alt: Mobile view of a bike ride path, along with ride metrics
+    fit: contain
+  caption: |
+    QuarqNet allows athletes to track and analyze their activities, sharing
+    their location and statistics with friends, family, coaches, and
+    colleagues in real time. QuarqNet also integrates with Quarq's telemetry
+    and reporting hardware, and third-party services like Strava, Training
+    Peaks, Dropbox, and Today's Plan.
 press:
   - text: |
       A mobile-friendly design that will let users see the live tracking
@@ -90,11 +105,11 @@ planning:
       to help the entire team communicate consistently
       and write code that integrates smoothly.
 summary: |
-  QuarqNet allows athletes to track and analyze their activities, sharing
-  their location and statistics with friends, family, coaches, and
-  colleagues in real time. QuarqNet also integrates with Quarq's telemetry
-  and reporting hardware, and third-party services like Strava, Training
-  Peaks, Dropbox, and Today's Plan.
+  A custom application built from scratch
+  in collabortion with Quarq's internal developers --
+  with real-time updates,
+  social networking,
+  and third-party integrations.
 ---
 
 {% import 'quotes.macros.njk' as quotes %}

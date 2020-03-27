@@ -31,13 +31,15 @@ summary: |
             {% call post.banner(item, called=true) -%}
               {{ item.data.title | mdInline | safe }}
             {%- endcall %}
-            {{ post.subtitle(item.data.sub) }}
-            {# {{ utility.datetime(
+            {% set years = utility.datetime(
               start=item.date,
               end=item.data.end,
               format='year',
               prefix=none
-            ) }} #}
+            ) %}
+            {{ post.subtitle(
+              [years, item.data.sub] | join(' -- ')
+            ) }}
           </header>
           <p>
             {{ item.data.summary | md | elide | safe }}
@@ -54,15 +56,30 @@ summary: |
           ) }}
         {% endif %}
       </div>
-      {% if (show == 'details') and item.data.image %}
-        {{ embed.figure(
-          data=[{
-            'img': item.data.image.src,
-            'alt': item.data.image.alt
-          }],
-          caption=item.data.sub,
-          class='work-sample'
-        ) }}
+      {% set sample = item.data.sample %}
+      {% if (show == 'details') and sample %}
+        <figure class="work-sample">
+          {{ embed.img(
+            ['projects', sample.desktop.src] | join('/'),
+            sample.desktop.alt,
+            attrs={
+              'class': 'sample-desktop',
+              'style': {
+                '--img-position': sample.desktop.position
+              } | styles
+            }
+          ) }}
+          {{ embed.screen(
+            fill=sample.mobile.fill,
+            fit=sample.mobile.fit,
+            position=sample.mobile.position,
+            content=embed.img(
+              ['projects', sample.mobile.src] | join('/'),
+              sample.mobile.alt
+            )
+          ) }}
+          <figcaption>{{ sample.caption | mdInline | safe }}</figcaption>
+        </figure>
       {% endif %}
     </article>
   {% endfor %}

@@ -12,17 +12,17 @@
 
   img {
     @include tools.position(1px);
-    background: var(--device-fill);
-    border-radius: var(--device-radius, 0);
-    height: calc(100% - 2px);
-    object-fit: cover;
-    object-position: top left;
+    background: var(--device-img-fill, white);
+    clip-path: inset(2px round var(--device-radius, 0));
+    height: 100%;
+    object-fit: var(--device-img-fit, cover);
+    object-position: var(--device-img-position, top);
     overflow: hidden;
-    padding: var(--device-margin-top, var(--device-margin, var(--shim)))
-      var(--device-margin-right, var(--device-margin, var(--shim)))
-      var(--device-margin-bottom, var(--device-margin, var(--shim)))
-      var(--device-margin-left, var(--device-margin, var(--shim)));
-    width: calc(100% - 2px);
+    padding: var(--device-margin-top, var(--device-margin))
+      var(--device-margin-right, var(--device-margin))
+      var(--device-margin-bottom, var(--device-margin))
+      var(--device-margin-left, var(--device-margin));
+    width: 100%;
     z-index: -1;
   }
 }
