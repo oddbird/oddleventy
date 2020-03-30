@@ -221,10 +221,12 @@ params:
   fill=none,
   fit=none,
   position=none,
+  notch=true,
   content=none
 ) %}
 {%- set content = content if (content != none) else caller() -%}
 {%- set style = {
+  '--device-img-notch': notch,
   '--device-img-fill': fill,
   '--device-img-fit': fit,
   '--device-img-position': position

@@ -21,7 +21,9 @@ sample:
   mobile:
     src: quarqnet/mobile.jpg
     alt: Mobile view of a bike ride path, along with ride metrics
+    position: bottom
     fit: contain
+    notch: 9%
   caption: |
     QuarqNet allows athletes to track and analyze their activities, sharing
     their location and statistics with friends, family, coaches, and

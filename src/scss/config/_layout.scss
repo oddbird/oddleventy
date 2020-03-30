@@ -15,10 +15,14 @@ $z-index: ('bump', 'dropdown', 'skip-link');
   padding: var(--spacer) 0;
 }
 
-@mixin clip($side) {
+@mixin clip($side, $break: 'wide-break') {
   clip-path: var(--clip-#{$side});
-  margin-#{$side}: var(--clip-overlap);
+  margin-#{$side}: calc(var(--clip-overlap) * -0.5);
   padding-#{$side}: var(--clip-space);
+
+  @include above($break) {
+    margin-#{$side}: var(--clip-overlap);
+  }
 
   @if ($side == 'left') {
     transform: translateY(calc(var(--offset) * -1));

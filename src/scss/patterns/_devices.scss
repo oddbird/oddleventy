@@ -7,7 +7,7 @@
 
 [data-screen='iphone'] {
   --device-margin: 5%;
-  --device-margin-top: 15%;
+  --device-margin-top: var(--device-img-notch, 15%);
   --device-radius: var(--double-gutter);
 
   img {

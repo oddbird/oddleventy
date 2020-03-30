@@ -27,11 +27,11 @@ $break: 'wide-break';
   @include layout.clip-base;
 
   &:nth-child(odd) {
-    @include layout.clip('right');
+    @include layout.clip('right', $break);
   }
 
   &:nth-child(even) {
-    @include layout.clip('left');
+    @include layout.clip('left', $break);
   }
 }
 

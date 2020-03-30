@@ -64,7 +64,7 @@
 }
 
 .sample-desktop {
-  border: medium solid var(--border);
+  border: 2px solid var(--border);
   grid-area: desktop / desktop / desktop / desktop2;
   object-fit: cover;
   object-position: var(--img-position, center);
