@@ -8,7 +8,7 @@ links:
   source: https://github.com/oddbird/mlt
 tasks:
   - Product Branding
-  - User Experience 
+  - User Experience
   - Project Architecture
   - Responsive Styles
 summary: |

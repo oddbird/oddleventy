@@ -14,7 +14,7 @@ tags:
   - _post
   - Case Study
 sample:
-  desktop: 
+  desktop:
     src: quarqnet/desktop.jpg
     alt: Full-screen map of a bike ride path, along with ride metrics
     position: bottom left
@@ -106,7 +106,7 @@ planning:
       and write code that integrates smoothly.
 summary: |
   A custom application built from scratch
-  in collabortion with Quarq's internal developers --
+  in collaboration with Quarq's internal developers --
   with real-time updates,
   social networking,
   and third-party integrations.
