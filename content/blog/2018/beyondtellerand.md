@@ -12,7 +12,7 @@ tags:
   - Component Libraries
 image:
   src: blog/2018/vue-invaders.jpg
-  alt: Generated art in using CSS Grid inspired by Jared Tarbell
+  alt: Generated art using CSS Grid inspired by Jared Tarbell
 talk: /talks/no-grid-system/
 summary: |
   I love when conferences give me the opportunity to travel around the world.
