@@ -2,7 +2,7 @@
 card: large
 title: QuarqNet
 banner: QuarqNet Application
-sub: Real-time telemetry for athletes
+sub: Real-time telemetry & sharing for athletes
 url: http://quarqnet.com
 logo: sram
 image:
@@ -25,11 +25,10 @@ sample:
     fit: contain
     notch: 9%
   caption: |
-    QuarqNet allows athletes to track and analyze their activities, sharing
-    their location and statistics with friends, family, coaches, and
-    colleagues in real time. QuarqNet also integrates with Quarq's telemetry
-    and reporting hardware, and third-party services like Strava, Training
-    Peaks, Dropbox, and Today's Plan.
+    We worked closely with the Quarq team and active users -- 
+    iterating on the design and functionality 
+    to give athletes, friends, family, coaches, and colleagues 
+    easy access to location and statistics in real time.
 press:
   - text: |
       A mobile-friendly design that will let users see the live tracking
@@ -107,11 +106,13 @@ planning:
       to help the entire team communicate consistently
       and write code that integrates smoothly.
 summary: |
-  A custom application built from scratch
-  in collaboration with Quarq's internal developers --
-  with real-time updates,
-  social networking,
-  and third-party integrations.
+  A custom application we designed and built 
+  in collaboration with Quarq’s internal developers -- 
+  including responsive interface, 
+  real-time mapping & telemetry, 
+  social networking, 
+  and third-party integrations with 
+  Strava, Training Peaks, Dropbox, and Today’s Plan. 
 ---
 
 {% import 'quotes.macros.njk' as quotes %}

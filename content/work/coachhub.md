@@ -108,12 +108,12 @@ planning:
       to help the entire team communicate consistently
       and write code that integrates smoothly.
 summary: |
-  A custom application that
-  integrates with the ORCAS suite of self-management tools --
-  providing video chat, in-app messaging,
-  public Q&A, webinars, and support groups.
-  Used (with white-label branding) by the
-  US Coast Guard, Military, and National Institutes of Health.
+  A custom application we designed and developed with the ORCAS team -- 
+  integrating their suite of self-management tools. 
+  We built in support for video chat, in-app messaging, 
+  public Q&A, webinars, file sharing, health assesments, and more. 
+  The app has been used internally by the **US Coast Guard**, **Military**, 
+  and **National Institutes of Health**. 
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
@@ -126,14 +126,6 @@ Coaches create a profile, manage daily tasks, make appointments,
 post answers to questions, view user progress,
 and set alerts for relapse prevention and
 escalation of care.
-
-The product has been used by the
-**National Institutes of Health**
-and is [currently being used] by the
-**US Military** and **Coast Guard**
-for internal health coaching.
-
-[currently being used]: https://coachhub.resilienceboost.com/
 
 {{ quotes.grid(press | slice(2) | first ) }}
 
