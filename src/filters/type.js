@@ -8,28 +8,28 @@ const removeMd = require('remove-markdown');
 const striptags = require('striptags');
 const truncate = require('truncate-html');
 const type = require('typogr');
-const markdownItResponsive = require('markdown-it-responsive');
+const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
 
 const option = {
   responsive: {
     srcset: {
-      'header-*': [
+      '*': [
         {
           width: 320,
           rename: {
-            suffix: '-small',
+            suffix: '-320',
           },
         },
         {
-          width: 640,
+          width: 550,
           rename: {
-            suffix: '-medium',
+            suffix: '-550',
           },
         },
       ],
     },
     sizes: {
-      'header-*': '(min-width: 36em) 33.3vw, 100vw',
+      '*': '(max-width: 550px) calc(100vw - 120px), 550px',
     },
   },
 };
