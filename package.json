@@ -34,11 +34,12 @@
     "assets:clean": "rm -rf ./_built/",
     "serve": "npm-run-all build:assets build:site -p eleventy:serve watch:js watch:sass",
     "test": "jest",
-    "build:site": "run-s site:clean sassdoc",
+    "build:site": "run-s site:clean gulp sassdoc",
     "build:assets": "npm-run-all assets:clean -p js sass",
     "build": "run-s build:assets build:site eleventy",
     "update-oss-docs": "./bin/update-oss-docs",
-    "prod": "run-s update-oss-docs build"
+    "prod": "run-s update-oss-docs build",
+    "gulp": "gulp images"
   },
   "devDependencies": {
     "#": "link:./src/filters",
@@ -67,6 +68,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-simple-import-sort": "^5.0.2",
     "fs-extra": "^9.0.0",
+    "gulp": "^4.0.2",
     "husky": "^4.2.3",
     "jest": "^25.1.0",
     "js-yaml": "^3.13.1",
