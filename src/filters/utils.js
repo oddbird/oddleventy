@@ -45,10 +45,23 @@ const styles = (dict) =>
     .map((val, prop) => (val ? `${prop}:${val};` : ''))
     .reduce((all, one) => `${all}${one}`, '');
 
+/* @docs
+label: styles
+category: Images
+note: |
+  Adds suffix to front matter images
+example: |
+  {{src | imgSuffix('320')}}
+params:
+  imgSrc: string
+  sufffix: '320' | '550'
+*/
+
 const imgSuffix = (imgSrc, suffix) => {
   const i = imgSrc.lastIndexOf('.');
   const path = imgSrc.substring(0, i);
   const extension = imgSrc.substring(i + 1);
   return `${path}-${suffix}.${extension}`;
 };
+
 module.exports = { typeCheck, styles, imgSuffix };
