@@ -108,12 +108,12 @@ planning:
       to help the entire team communicate consistently
       and write code that integrates smoothly.
 summary: |
-  A custom application we designed and developed with the ORCAS team -- 
-  integrating their suite of self-management tools. 
-  We built in support for video chat, in-app messaging, 
-  public Q&A, webinars, file sharing, health assesments, and more. 
-  The app has been used internally by the **US Coast Guard**, **Military**, 
-  and **National Institutes of Health**. 
+  A custom application we designed and developed with the ORCAS team --
+  integrating their suite of self-management tools.
+  We built in support for video chat, in-app messaging,
+  public Q&A, webinars, file sharing, health assessments, and more.
+  The app has been used internally by the **US Coast Guard**, **US Military**,
+  and **National Institutes of Health**.
 ---
 
 {% import 'quotes.macros.njk' as quotes %}

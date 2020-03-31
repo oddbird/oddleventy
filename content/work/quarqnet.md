@@ -25,9 +25,9 @@ sample:
     fit: contain
     notch: 9%
   caption: |
-    We worked closely with the Quarq team and active users -- 
-    iterating on the design and functionality 
-    to give athletes, friends, family, coaches, and colleagues 
+    We worked closely with the Quarq team and active users --
+    iterating on the design and functionality
+    to give athletes, friends, family, coaches, and colleagues
     easy access to location and statistics in real time.
 press:
   - text: |
@@ -106,13 +106,13 @@ planning:
       to help the entire team communicate consistently
       and write code that integrates smoothly.
 summary: |
-  A custom application we designed and built 
-  in collaboration with Quarq’s internal developers -- 
-  including responsive interface, 
-  real-time mapping & telemetry, 
-  social networking, 
-  and third-party integrations with 
-  Strava, Training Peaks, Dropbox, and Today’s Plan. 
+  A custom application we designed and built
+  in collaboration with Quarq’s internal developers --
+  including a responsive interface,
+  real-time mapping & telemetry,
+  social networking,
+  and third-party integrations with
+  Strava, Training Peaks, Dropbox, and Today’s Plan.
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
