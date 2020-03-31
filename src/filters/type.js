@@ -8,6 +8,31 @@ const removeMd = require('remove-markdown');
 const striptags = require('striptags');
 const truncate = require('truncate-html');
 const type = require('typogr');
+const markdownItResponsive = require('markdown-it-responsive');
+
+const option = {
+  responsive: {
+    srcset: {
+      'header-*': [
+        {
+          width: 320,
+          rename: {
+            suffix: '-small',
+          },
+        },
+        {
+          width: 640,
+          rename: {
+            suffix: '-medium',
+          },
+        },
+      ],
+    },
+    sizes: {
+      'header-*': '(min-width: 36em) 33.3vw, 100vw',
+    },
+  },
+};
 
 const mdown = markdown({
   html: true,
@@ -15,7 +40,8 @@ const mdown = markdown({
   typographer: true,
 })
   .use(mdMark)
-  .use(mdFootnote);
+  .use(mdFootnote)
+  .use(markdownItResponsive, option);
 
 /* @docs
 label: Typography Filters

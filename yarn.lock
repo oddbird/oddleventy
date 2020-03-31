@@ -10071,6 +10071,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-it-responsive@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "markdown-it-responsive@npm:0.1.0"
+  checksum: 2/92b3886d02a813e9d329696b8149ab10bf5a38d3bf5a95eddedd59baa17da95510999ad179d3ce02c3daf3ba6658ef5d32cb0bff46d923d1c56892bff901536e
+  languageName: node
+  linkType: hard
+
 "markdown-it@npm:^10.0.0":
   version: 10.0.0
   resolution: "markdown-it@npm:10.0.0"
@@ -11212,6 +11219,7 @@ __metadata:
     markdown-it: ^10.0.0
     markdown-it-footnote: ^3.0.2
     markdown-it-mark: ^3.0.0
+    markdown-it-responsive: ^0.1.0
     node-sass: ^4.13.1
     npm-run-all: ^4.1.5
     postcss: ^7.0.27

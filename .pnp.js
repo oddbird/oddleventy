@@ -174,6 +174,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:3.0.0"
       ],
       [
+        "markdown-it-responsive",
+        "npm:0.1.0"
+      ],
+      [
         "node-sass",
         "npm:4.13.1"
       ],
@@ -297,6 +301,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it", "npm:10.0.0"],
             ["markdown-it-footnote", "npm:3.0.2"],
             ["markdown-it-mark", "npm:3.0.0"],
+            ["markdown-it-responsive", "npm:0.1.0"],
             ["node-sass", "npm:4.13.1"],
             ["npm-run-all", "npm:4.1.5"],
             ["postcss", "npm:7.0.27"],
@@ -11522,6 +11527,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["markdown-it-responsive", [
+        ["npm:0.1.0", {
+          "packageLocation": "./.yarn/cache/markdown-it-responsive-npm-0.1.0-b687e9d135-2.zip/node_modules/markdown-it-responsive/",
+          "packageDependencies": [
+            ["markdown-it-responsive", "npm:0.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["markdown-table", [
         ["npm:1.1.3", {
           "packageLocation": "./.yarn/cache/markdown-table-npm-1.1.3-b4e801a569-2.zip/node_modules/markdown-table/",
@@ -12726,6 +12740,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it", "npm:10.0.0"],
             ["markdown-it-footnote", "npm:3.0.2"],
             ["markdown-it-mark", "npm:3.0.0"],
+            ["markdown-it-responsive", "npm:0.1.0"],
             ["node-sass", "npm:4.13.1"],
             ["npm-run-all", "npm:4.1.5"],
             ["postcss", "npm:7.0.27"],
