@@ -5,7 +5,7 @@ author: miriam
 date: 2019-10-18
 tags:
   - AboutWeb Video
-  - CSS 
+  - CSS
   - Grids
 image:
   src: mozdev/grid.png

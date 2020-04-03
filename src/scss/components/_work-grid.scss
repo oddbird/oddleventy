@@ -1,0 +1,72 @@
+@use '~accoutrement/sass/tools';
+
+[data-work] {
+  --column: full;
+
+  [data-work='summary'] + & {
+    --pull-sample: var(--spacer);
+
+    @include tools.above('wide-break') {
+      --pull-sample: calc(var(--spacer) * -1);
+    }
+  }
+
+  .offset-grid {
+    margin: var(--pull-sample, 0) 0 0;
+  }
+}
+
+.project-details {
+  --clip-bg: var(--callout-neutral);
+  display: grid;
+  grid-template-columns:
+    var(--gutter) [page-start] minmax(min-content, var(--page))
+    [page-end] minmax(var(--page-margin), 1fr);
+
+  > * {
+    grid-column: page;
+  }
+
+  .post-header {
+    margin-bottom: var(--shim);
+  }
+}
+
+.work-sample {
+  display: grid;
+  grid:
+    'desktop desktop2 desktop2' var(--spacer)
+    'desktop mobile ..........' min-content
+    '....... mobile ..........' var(--spacer)
+    'caption caption caption' 1fr
+    / minmax(min-content, var(--page)) 8em minmax(var(--gutter), 1fr);
+  grid-gap: var(--gutter);
+  margin: var(--gutter) var(--page-margin);
+  max-width: var(--wide-page);
+
+  @include tools.above('wide-page') {
+    grid-template-areas:
+      'desktop desktop2 desktop2'
+      'desktop mobile ..........'
+      'caption mobile ..........'
+      'caption ...... ..........';
+  }
+
+  figcaption {
+    grid-area: caption;
+  }
+
+  [data-screen] {
+    align-self: end;
+    grid-area: mobile;
+    transform: rotate(6deg);
+  }
+}
+
+.sample-desktop {
+  border: 2px solid var(--border);
+  grid-area: desktop / desktop / desktop / desktop2;
+  object-fit: cover;
+  object-position: var(--img-position, center);
+  place-self: stretch;
+}

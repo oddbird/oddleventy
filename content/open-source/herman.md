@@ -27,7 +27,7 @@ screenshots:
 links:
   source: https://github.com/oddbird/sassdoc-theme-herman
   docs: /herman/docs/
-quotes:
+press:
   - text: |
       Herman is my documentation dream come true,
       especially when it comes to systems design.

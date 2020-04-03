@@ -47,6 +47,7 @@ $background-colors: (
   'bg': var(--ccs-neutral--bg-full),
   'bg-full': var(--ccs--bg-full),
   'callout': hsl(var(--ccs-h--prime), var(--ccs-s--bg3), var(--ccs-l--bg5)),
+  'callout-neutral': var(--ccs-neutral--bg5),
   'callout-fade':
     hsla(
       var(--ccs-h--prime),

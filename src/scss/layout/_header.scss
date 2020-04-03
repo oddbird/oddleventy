@@ -14,10 +14,10 @@
 [data-header='hero'] {
   --angle: var(--edge);
   --edge: calc(var(--page-margin) / 2);
-  --overlap: var(--gutter);
+  --clip-overlap: var(--gutter);
   grid-template:
     'hero type' auto
-    'title hero2' var(--overlap)
+    'title hero2' var(--clip-overlap)
     'title .' auto
     'meta meta' auto
     'intro intro' auto
@@ -33,7 +33,7 @@
   }
 
   @media (min-width: 35em) and (min-height: 35em) {
-    --overlap: var(--h1);
+    --clip-overlap: var(--h1);
   }
 
   @include tools.above(35em) {

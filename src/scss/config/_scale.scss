@@ -96,7 +96,7 @@ $page-sizes: (
   'min-page': 22rem,
   'page': 30rem,
   'wide-page': 38rem,
-  'wide-break': 52rem,
+  'wide-break': 56em,
 );
 
 @include tools.add-sizes($page-sizes);
@@ -106,3 +106,16 @@ $page-sizes: (
   $page-sizes,
   get-function('size', $module: 'tools')
 );
+
+// Breakpoints
+// -----------
+
+@each $name, $size in $page-sizes {
+  $size: tools.convert-units($size, 'em');
+  tools.$breakpoints: map-merge(
+    tools.$breakpoints,
+    (
+      $name: $size,
+    )
+  );
+}

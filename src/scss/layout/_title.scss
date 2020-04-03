@@ -23,8 +23,8 @@
       clip-path: polygon(
         0 0,
         calc(100% - var(--angle)) 0,
-        calc(100% + var(--outset)) var(--overlap),
-        100% var(--overlap),
+        calc(100% + var(--outset)) var(--clip-overlap),
+        100% var(--clip-overlap),
         100% 100%,
         0 100%
       );

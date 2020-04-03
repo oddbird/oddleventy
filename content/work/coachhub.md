@@ -21,6 +21,17 @@ links:
 tags:
   - _post
   - Case Study
+sample:
+  desktop:
+    src: orcas/desktop.jpg
+    alt: Home screen of CoachHub app, with coaches listed on the side
+  mobile:
+    src: orcas/home-iphone.jpg
+    alt: Mobile home screen of CoachHub app, guidance on the go
+  caption: |
+    CoachHub is a HIPAA-compliant health coaching platform
+    that provides users with anywhere,
+    anytime access to varying levels of support.
 tasks:
   - Accessible Interface
   - Custom Django Application
@@ -30,7 +41,7 @@ tasks:
   - Responsive Design
   - Project Architecture
   - User Experience Design
-  - WCAG & HIPPA Compliant
+  - WCAG & HIPAA Compliant
 press:
   - text: |
       OddBird really changed my thinking
@@ -97,12 +108,12 @@ planning:
       to help the entire team communicate consistently
       and write code that integrates smoothly.
 summary: |
-  **CoachHub, a responsive coaching web-platform we built with ORCAS,**
-  integrates with their suite of self-management tools
-  to provide users with anywhere,
-  anytime access to varying levels of support --
-  video chat, in-app messaging,
-  public Q&A, webinars, and support groups.
+  A custom application we designed and developed with the ORCAS team --
+  integrating their suite of self-management tools.
+  We built in support for video chat, in-app messaging,
+  public Q&A, webinars, file sharing, health assessments, and more.
+  The app has been used internally by the **US Coast Guard**, **US Military**,
+  and **National Institutes of Health**.
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
@@ -115,14 +126,6 @@ Coaches create a profile, manage daily tasks, make appointments,
 post answers to questions, view user progress,
 and set alerts for relapse prevention and
 escalation of care.
-
-The product has been used by the
-**National Institutes of Health**
-and is [currently being used] by the
-**US Military** and **Coast Guard**
-for internal health coaching.
-
-[currently being used]: https://coachhub.resilienceboost.com/
 
 {{ quotes.grid(press | slice(2) | first ) }}
 

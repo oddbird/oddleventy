@@ -1,6 +1,6 @@
 {% import "utility.macros.njk" as utility %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'embed.macros.njk' as embed %}
-
 
 {# @docs
 label: Quote Macros
@@ -62,7 +62,7 @@ params:
 {%- set img -%}
   {%- if data.face -%}
     {{- embed.img(
-    src='quotes/' + data.face,
+      src='quotes/' + data.face,
       attrs={
         'class': 'u-photo',
         'height': 60,
@@ -74,7 +74,9 @@ params:
   {%- endif -%}
 {%- endset -%}
 
-<blockquote data-quote="{{ type or '' }}">
+<blockquote
+  data-quote="{{ type or '' }}"
+  {{ utility.attr_if('class', 'offset-item' if (type == 'grid') else none) }}>
 {%- call embed.media_block(
   media=img,
   name='quote'
@@ -126,7 +128,7 @@ params:
           {{- blockquote(quote, 'grid') if quote else none -}}
         {%- endfor -%}
       {%- endset -%}
-      {{- _grid_markup(content) | safe -}}
+      {{- layout.offset(content) | safe -}}
     {%- else -%}
       {{- grid(data) if data else none -}}
     {%- endif -%}
@@ -157,14 +159,9 @@ params:
         {%- endif -%}
       {%- endfor -%}
     {%- endset -%}
-    {{- _grid_markup(content) | safe -}}
+    {{- layout.offset(content) | safe -}}
   {%- endif -%}
 {%- endmacro %}
-
-
-{% macro _grid_markup(content) %}
-<div class="quote-grid">{{- content | safe -}}</div>
-{% endmacro %}
 
 
 {# @docs
