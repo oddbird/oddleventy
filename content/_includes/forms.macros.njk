@@ -1,0 +1,121 @@
+{% import "utility.macros.njk" as utility %}
+
+{% macro label_text(
+  label,
+  required=none
+) %}
+  {{ label | mdInline | safe }}
+  {% if required %}
+    <span aria-hidden="true">*</span>
+    <span class="sr-only">required</span>
+  {% endif %}
+{% endmacro %}
+
+{% macro input(
+  id,
+  type='text',
+  required=none,
+  name=none,
+  attrs={}
+) -%}
+  {%- set text_like = [
+    'email', 'tel', 'url',
+    'password', 'search',
+    'number',
+    'date', 'time', 'datetime-local', 'month', 'week'
+  ] -%}
+  {%- set attrs = {
+    'type': type,
+    'data-input': ['text', type] | join(' ') if (type in text_like) else type,
+    'required': required,
+    'name': name or id,
+    'id': id
+  } | merge(attrs) -%}
+  {% if type == 'textarea' %}
+    <textarea {{ utility.show_attrs(attrs) }}></textarea>
+  {% else %}
+    <input {{ utility.show_attrs(attrs) }}>
+  {% endif %}
+{%- endmacro %}
+
+{% macro select(
+  id,
+  options,
+  required=none,
+  name=none,
+  attrs={}
+) -%}
+  {%- set attrs = {
+    'type': type,
+    'data-select': true,
+    'required': required,
+    'name': name or id,
+    'id': id
+  } | merge(attrs) -%}
+  <select {{ utility.show_attrs(attrs) }}>
+    {{- options -}}
+    {%- for option in options -%}
+      <option value="{{ option }}" {{ 'selected' if loop.first }}>
+        {{ option }}
+      </option>
+    {%- endfor -%}
+  </select>
+{%- endmacro %}
+
+{% macro field_wrapper(
+  label,
+  id,
+  required=none,
+  name=none,
+  attrs={},
+  content=none
+) -%}
+  {%- set attrs = { 'data-field': (name or id) } | merge(attrs) -%}
+  <div {{ utility.show_attrs(attrs) }}>
+    <label for="{{ id }}" data-label>
+      {{ label_text(label, required) }}
+    </label>
+    {{ content | safe if (content != none) else caller() }}
+  </div>
+{%- endmacro %}
+
+{% macro field(
+  label,
+  type='text',
+  required=none,
+  name=none,
+  id=none,
+  field_attrs={},
+  input_attrs={}
+) %}
+  {%- set name = name or label | slug -%}
+  {%- set id = id or ['field', name] | join('-') -%}
+  {%- set content -%}
+    {%- if type | typeCheck('string') -%}
+      {{- input(
+        id=id,
+        type=type,
+        required=required,
+        name=name,
+        attrs=input_attrs
+      ) -}}
+    {%- else -%}
+      {{- select(
+        id=id,
+        options=type,
+        required=required,
+        name=name,
+        attrs=input_attrs
+      ) -}}
+    {%- endif -%}
+  {%- endset -%}
+
+  {{- field_wrapper(
+    label=label,
+    id=id,
+    required=required,
+    name=name,
+    attrs=field_attrs,
+    content=content
+  ) -}}
+{% endmacro %}

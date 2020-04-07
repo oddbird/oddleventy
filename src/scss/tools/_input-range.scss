@@ -59,7 +59,6 @@
 @mixin thumb {
   /* stylelint-disable */
   &::-webkit-slider-thumb {
-    transform: translateY(-35%);
     @content;
   }
   &::-moz-range-thumb {
