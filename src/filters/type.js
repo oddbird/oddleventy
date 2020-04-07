@@ -10,7 +10,7 @@ const truncate = require('truncate-html');
 const type = require('typogr');
 const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
 
-const option = {
+const imgConf = {
   responsive: {
     srcset: {
       '*': [
@@ -45,7 +45,7 @@ const mdown = markdown({
 })
   .use(mdMark)
   .use(mdFootnote)
-  .use(markdownItResponsive, option);
+  .use(markdownItResponsive, imgConf);
 
 /* @docs
 label: Typography Filters
