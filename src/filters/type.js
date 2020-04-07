@@ -28,9 +28,6 @@ const option = {
         },
       ],
     },
-    sizes: {
-      '*': '(max-width: 550px) calc(100vw - 120px), 550px',
-    },
   },
 };
 
