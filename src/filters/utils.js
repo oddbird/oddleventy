@@ -44,7 +44,18 @@ const styles = (dict) =>
   _(dict)
     .map((val, prop) => (val ? `${prop}:${val};` : ''))
     .reduce((all, one) => `${all}${one}`, '');
-
+/* @docs
+label: imgSuffix
+category: images
+note: Add img suffix for responsiveness
+example: |
+  <img srcset="{{src | imgSuffix('320')}} 320w" />
+params:
+  imgSrc:
+    type: string
+  suffix:
+    type: string
+*/
 const imgSuffix = (imgSrc, suffix) => {
   const i = imgSrc.lastIndexOf('.');
   const path = imgSrc.substring(0, i);
