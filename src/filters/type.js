@@ -26,8 +26,15 @@ const option = {
             suffix: '-550',
           },
         },
+        {
+          width: 1200,
+          rename: {
+            suffix: '-1200',
+          },
+        },
       ],
     },
+    sizes: {},
   },
 };
 
