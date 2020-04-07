@@ -8,7 +8,7 @@ gulp.task('images', () =>
     .pipe(
       responsive(
         {
-          // Resize all JPG images to three different sizes: 200, 500, and 630 pixels
+          // Resize all JPG images to three different sizes: 320, 550, and 1200 pixels
           '**/*': [
             {
               width: 320,
@@ -19,7 +19,8 @@ gulp.task('images', () =>
               rename: { suffix: '-550' },
             },
             {
-              // Compress, strip metadata
+              width: 1200,
+              rename: { suffix: '-1200' },
             },
           ],
         },

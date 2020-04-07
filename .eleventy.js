@@ -25,7 +25,7 @@ module.exports = (eleventyConfig) => {
   // pass-through
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
   eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
-  // eleventyConfig.addPassthroughCopy({ 'src/images': 'assets/images' });
+  eleventyConfig.addPassthroughCopy({ 'src/images': 'assets/images' });
   eleventyConfig.addPassthroughCopy({ 'src/media': 'assets/media' });
 
   eleventyConfig.addPassthroughCopy({ 'src/docs/susy': 'susy/docs' });

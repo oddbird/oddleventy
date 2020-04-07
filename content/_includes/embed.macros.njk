@@ -325,7 +325,6 @@ params:
 {%- set src = src if ('://' in src) else ('/assets/images/' + src) -%}
 <img
   srcset="{{src | imgSuffix('320')}} 320w, {{src | imgSuffix('550')}} 550w"
-  sizes= "(max-width: 550px) calc(100vw - 120px), 550px"
   src="{{ src }}"
   alt="{{ alt }}"
   {{ utility.show_attrs(attrs) }}
