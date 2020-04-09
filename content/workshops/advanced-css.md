@@ -5,7 +5,7 @@ sub: with practical use-cases, tooling, and pitfalls
 author: miriam
 date: 2019-04-18
 image:
-  src: blog/2019/mia-jen-smashing.jpg
+  src: blog/2019/advanced-css.jpg
   alt: Miriam talking with Jen Simmons and others
   position: top
 tags:

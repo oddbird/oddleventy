@@ -5,7 +5,7 @@ author: miriam
 date: 2018-08-18
 slides: https://talks.oddbird.net/dynamic-css/
 image:
-  src: talks/miriam.jpg
+  src: talks/dynamic-css.jpg
   alt: Miriam Suzanne speaking at a conference
 tags:
   - CSS
