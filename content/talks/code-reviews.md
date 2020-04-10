@@ -3,6 +3,9 @@ title: No Pain No Gain
 sub: CSS Code Reviews
 author: stacy
 date: 2015-10-27
+image:
+  src: talks/no-pain.jpg
+  alt: sass guidelines and css guidelines
 slides: http://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw
 tags:
   - Process

@@ -4,6 +4,9 @@ banner: A Practical Guide to Losing Control
 slides: https://www.oddbooksapp.com/book/losing-control
 author: miriam
 date: 2017-01-23
+image:
+  src: talks/losing-control.jpg
+  alt: Miriam grimacing with poop, fire, question mark, muscle, and heart icons overlayed on her face
 tags:
   - Fine Art
 events:

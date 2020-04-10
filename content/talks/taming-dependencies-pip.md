@@ -2,6 +2,9 @@
 title: Taming dependencies with pip
 author: carl
 date: 2011-09-08
+image:
+  src: talks/taming-dependencies.jpg
+  alt: DjangoCon US portland 2011 logo
 tags:
   - Python
   - Pip

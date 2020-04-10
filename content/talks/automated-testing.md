@@ -2,6 +2,9 @@
 title: Getting started with automated testing
 author: carl
 date: 2013-03-16
+image:
+  src: talks/automated-testing.jpg
+  alt: Carl talking at a conference
 tags:
   - Python
   - Testing
