@@ -4,8 +4,7 @@ sub: Front-end developer
 bird: erica
 date: 2019-04-01
 image:
-  type: angle
-  svg: faces/erica
+  src: birds/erica.jpg
 social:
   twitter: DuggieMitchell
   github: duggiemitchell
