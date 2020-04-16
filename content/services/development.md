@@ -3,8 +3,8 @@ title: Web Design & Development
 sub: Custom web applications & refactors
 index: Custom Application
 image:
-  src: projects/coachhub.jpg
-  alt: CoachHub's services and platform demos
+  src: pages/design-dev.jpg
+  alt: wireframe sketch and final design in mobile phone
   position: top
 action:
   text: See work samples »
