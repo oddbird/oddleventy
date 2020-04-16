@@ -4,8 +4,8 @@ sub: an introduction to the Susy layout toolkit
 author: miriam
 date: 2014-04-16
 image:
-  src: talks/damn-susy.jpg
-  alt: pink Susy S logo and a scribble
+  src: blog/susy-grid-system.jpg
+  alt: Susy is not a grid system
 slides: http://mirisuzanne.github.io/pres/susy2/
 tags:
   - Susy
