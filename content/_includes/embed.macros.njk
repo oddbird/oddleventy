@@ -140,7 +140,13 @@ params:
       '--width': item.width,
       '--span': item.span
     } | styles -%}
-    {{- img(item.img, item.alt, {'style': style}) | safe -}}
+    {{- img(
+      src=item.img,
+      alt=item.alt,
+      width=item.width,
+      height=item.height,
+      attrs={'style': style}
+    ) | safe -}}
   {%- elif item.svg -%}
     {{- svg(item.svg, item.alt) | safe -}}
   {%- elif item.iframe -%}
@@ -301,6 +307,21 @@ params:
 {%- endif -%}
 {%- endmacro %}
 
+{% macro srcset(
+  src,
+  width=none
+) -%}
+  {%- set width = width or 640 -%}
+  {%- set sizes = 'srcset' | fromTaxonomy -%}
+  {%- if width > sizes[0] -%}
+    {%- for size in sizes -%}
+      {%- if size < width -%}
+        {{- src | imgSuffix(size | string) }} {{ size + 'w,' -}}
+      {%- endif -%}
+    {%- endfor -%}
+    {{- src }} {{ width + 'w' -}}
+  {%- endif -%}
+{%- endmacro %}
 
 {# @docs
 label: img
@@ -319,16 +340,21 @@ params:
 {% macro img(
   src,
   alt='',
+  width=none,
+  height=none,
   attrs={}
 ) -%}
 {%- if src -%}
 {%- set src = src if ('://' in src) else ('/assets/images/' + src) -%}
-<img
-  srcset="{{src | imgSuffix('320')}} 320w, {{src | imgSuffix('550')}} 550w"
-  src="{{ src }}"
-  alt="{{ alt }}"
-  {{ utility.show_attrs(attrs) }}
-/>
+{% set set = srcset(src, width) %}
+{%- set attrs = attrs | merge({
+  'src': src,
+  'alt': alt,
+  'srcset': set if (set != '') else none,
+  'width': width,
+  'height': height
+}) -%}
+<img {{ utility.show_attrs(attrs) }}/>
 {%- endif -%}
 {%- endmacro %}
 

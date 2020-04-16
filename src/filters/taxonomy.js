@@ -26,14 +26,16 @@ params:
     note: Any taxonomy defined in the `taxonomy.yaml` data file
   find:
     type: any
-    note: Find an object in the taxonomy, using lodash `_.find()`
+    default: undefined
+    note: Optionally return an object in the taxonomy, using lodash `_.find()`
   get:
     type: string
     default: undefined
     note: Optionally return a single attribute of the found object
 */
 const fromTaxonomy = (type, find, get) => {
-  const found = _.find(taxonomy[type], find);
+  const source = taxonomy[type];
+  const found = find ? _.find(source, find) : source;
   return found && get ? found[get] : found;
 };
 

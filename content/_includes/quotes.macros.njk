@@ -62,12 +62,10 @@ params:
 {%- set img -%}
   {%- if data.face -%}
     {{- embed.img(
-    src='quotes/' + data.face,
-      attrs={
-        'class': 'u-photo',
-        'height': 60,
-        'width': 60
-      }
+      src='quotes/' + data.face,
+      width=60,
+      height=60,
+      attrs={'class': 'u-photo'}
     ) -}}
   {%- else -%}
     {{ embed.svg(data.icon or 'icons/quote') }}

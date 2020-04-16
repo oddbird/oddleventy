@@ -27,3 +27,8 @@ oss:
       - invited expert
   - title: Other Contributions
     show: contributor
+srcset:
+  - 480
+  - 960
+  - 1280
+  - 2240

@@ -44,6 +44,7 @@ const styles = (dict) =>
   _(dict)
     .map((val, prop) => (val ? `${prop}:${val};` : ''))
     .reduce((all, one) => `${all}${one}`, '');
+
 /* @docs
 label: imgSuffix
 category: images

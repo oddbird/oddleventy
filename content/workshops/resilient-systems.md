@@ -25,6 +25,8 @@ image:
   src: blog/2019/mia-jen-smashing.jpg
   alt: Miriam talking with Jen Simmons and others
   position: top
+  width: 1600
+  height: 1067
 modules:
   - title: Resilient Code
     text: |

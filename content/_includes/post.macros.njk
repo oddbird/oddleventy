@@ -231,8 +231,10 @@ params:
       {%- if image.src -%}
         {%- set position = {'--hero-position': image.position} | styles -%}
         {{ embed.img(
-        src=image.src,
+          src=image.src,
           alt=image.alt,
+          width=image.width,
+          height=image.height,
           attrs={style: position}
         ) }}
       {%- elif image.svg -%}

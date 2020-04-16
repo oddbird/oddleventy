@@ -11,16 +11,20 @@ gulp.task('images', () =>
           // Resize all JPG images to three different sizes: 320, 550, and 1200 pixels
           '**/*': [
             {
-              width: 320,
-              rename: { suffix: '-320' },
+              width: 480,
+              rename: { suffix: '-480' },
             },
             {
-              width: 550,
-              rename: { suffix: '-550' },
+              width: 960,
+              rename: { suffix: '-960' },
             },
             {
-              width: 1200,
-              rename: { suffix: '-1200' },
+              width: 1280,
+              rename: { suffix: '-1280' },
+            },
+            {
+              width: 2240,
+              rename: { suffix: '-2240' },
             },
           ],
         },
