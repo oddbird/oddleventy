@@ -5,7 +5,6 @@ index: Custom Application
 image:
   src: pages/design-dev.jpg
   alt: wireframe sketch and final design in mobile phone
-  position: top
 action:
   text: See work samples »
   url: /work/

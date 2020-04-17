@@ -5,8 +5,9 @@ logo: aunalytics
 client: &client Aunalytics
 date: 2019-05-14
 image:
-  src: projects/exbldr-wireframe.jpg
+  src: projects/exbldr.jpg
   alt: Tools for data analytics
+  position: top
 people:
   - &james
     name: James Stuckey Weber
