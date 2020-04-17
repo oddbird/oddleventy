@@ -28,7 +28,7 @@
   {% if device %}
     {% set hero = embed.screen(
       fill=image.fill,
-      content=embed.img(image.src, image.alt)
+      content=embed.img(image.src, image.alt, image.width, image.height)
     ) %}
 
     {{ embed.media_block(

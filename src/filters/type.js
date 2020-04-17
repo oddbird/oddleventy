@@ -10,29 +10,17 @@ const truncate = require('truncate-html');
 const type = require('typogr');
 const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
 
+const { taxonomy } = require('#/taxonomy');
+
 const imgConf = {
   responsive: {
     srcset: {
-      '*': [
-        {
-          width: 320,
-          rename: {
-            suffix: '-320',
-          },
+      '*': taxonomy.srcset.map((size) => ({
+        width: Number(size),
+        rename: {
+          suffix: `-${size}`,
         },
-        {
-          width: 550,
-          rename: {
-            suffix: '-550',
-          },
-        },
-        {
-          width: 1200,
-          rename: {
-            suffix: '-1200',
-          },
-        },
-      ],
+      })),
     },
     sizes: {},
   },
