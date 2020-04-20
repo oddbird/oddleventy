@@ -44,3 +44,6 @@ summary: |
   triathlons, and non-competitive events, including regular IronMan and
   Enduro races.
 ---
+
+{% import 'quotes.macros.njk' as quotes %}
+{{ quotes.grid(press) }}
