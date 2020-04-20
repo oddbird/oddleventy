@@ -57,7 +57,7 @@ describe('event filters', () => {
       {
         bar: 'baz',
         date: '2018-04-09T04:10:17.000Z',
-        end: '2020-04-10T04:10:17.000Z',
+        end: '2025-04-10T04:10:17.000Z',
       },
     ];
 
@@ -66,6 +66,6 @@ describe('event filters', () => {
   });
 
   test('getFuture', () => {
-    expect(getFuture(collection)).toHaveLength(2);
+    expect(getFuture(collection)).toHaveLength(0);
   });
 });

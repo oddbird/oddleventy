@@ -4,11 +4,22 @@ import { collection3 } from './utils';
 
 describe('fromTaxonomy', () => {
   test('Return data from taxonomy', () => {
+    const allPosts = [
+      { tag: 'Talk', icon: 'talk', img: true },
+      { tag: 'Workshop', icon: 'workshop', img: true, feature: true },
+      { tag: 'Podcast', icon: 'audio' },
+      { tag: 'Video', icon: 'video' },
+      { tag: 'Link', icon: 'link' },
+      { tag: 'Case Study', icon: 'tools', img: true },
+      { tag: 'Article', icon: 'news' },
+    ];
+
     expect(fromTaxonomy('post', { icon: 'news' })).toEqual({
       tag: 'Article',
       icon: 'news',
     });
     expect(fromTaxonomy('post', { icon: 'news' }, 'tag')).toEqual('Article');
+    expect(fromTaxonomy('post')).toEqual(allPosts);
   });
 });
 
