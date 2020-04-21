@@ -363,7 +363,7 @@ params:
 {%- set attrs = attrs | merge({
   'src': src,
   'alt': alt,
-  'srcset': imgSrcSet or none,
+  'srcset': imgSrcSet if imgSrcSet != "" else none,
   'width': width,
   'height': height
 }) -%}
