@@ -1,3 +1,5 @@
+import MockDate from 'mockdate';
+
 import { buildEvent, getEvents, getFuture, isFuture } from '#/events';
 
 import { collection } from './utils';
@@ -20,6 +22,14 @@ const event = {
 };
 
 describe('event filters', () => {
+  beforeAll(() => {
+    MockDate.set('2020-02-01');
+  });
+
+  afterAll(() => {
+    MockDate.reset();
+  });
+
   describe('buildEvent', () => {
     test('sets page date from event date', () => {
       const expected = event.date;
@@ -57,7 +67,7 @@ describe('event filters', () => {
       {
         bar: 'baz',
         date: '2018-04-09T04:10:17.000Z',
-        end: '2025-04-10T04:10:17.000Z',
+        end: '2020-04-10T04:10:17.000Z',
       },
     ];
 
@@ -66,6 +76,6 @@ describe('event filters', () => {
   });
 
   test('getFuture', () => {
-    expect(getFuture(collection)).toHaveLength(0);
+    expect(getFuture(collection)).toHaveLength(2);
   });
 });

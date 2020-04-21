@@ -4,10 +4,10 @@ sub: User experience designer & developer
 bird: stacy
 date: 2016-04-18
 image:
-  src: /herman/stacy-design-systems-training.jpg
+  src: pages/stacy-design-systems-training.jpg
   alt: Stacy teaching developers at an event
-  width: 1500 
-  height:  499
+  width: 1500
+  height: 499
 social:
   twitter: stacykvernmo
   github: stacyk

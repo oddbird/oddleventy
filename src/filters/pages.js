@@ -40,7 +40,7 @@ const isCurrent = (page) => {
   return (
     page.data.end === 'ongoing' ||
     !page.data.end ||
-    getDate(page.data.end) >= now
+    getDate(page.data.end) >= now()
   );
 };
 /* @docs

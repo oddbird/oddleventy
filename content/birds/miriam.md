@@ -5,8 +5,8 @@ bird: miriam
 date: 2008-04-01
 image:
   src: birds/miriam.jpg
-  width: 2160 
-  height:  743
+  width: 2160
+  height: 743
 social:
   twitter: mirisuzanne
   github: mirisuzanne

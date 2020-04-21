@@ -5,7 +5,7 @@ author: stacy
 date: 2016-04-30
 image:
   src: talks/complacency.jpg
-  alt: Woman grimacing beside the words, How many revisions? In Photoshop? In all screen sizes?
+  alt: woman grimacing beside the words, How many revisions? In Photoshop? In all screen sizes?
 slides: http://www.slideshare.net/Funstacy/curing-design-complacency-61550889
 tags:
   - Design
