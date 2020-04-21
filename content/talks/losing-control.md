@@ -4,6 +4,11 @@ banner: A Practical Guide to Losing Control
 slides: https://www.oddbooksapp.com/book/losing-control
 author: miriam
 date: 2017-01-23
+image:
+  src: talks/losing-control.jpg
+  alt: Riding SideSaddle, Miriam's novel on shuffled note cards
+  width: 1362
+  height: 892
 tags:
   - Fine Art
 events:

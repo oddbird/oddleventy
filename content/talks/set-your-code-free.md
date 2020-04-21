@@ -2,6 +2,9 @@
 title: Set Your Code Free
 author: carl
 date: 2014-04-13
+image:
+  src: talks/set-your-code-free.jpg
+  alt: Pycon 2014, Montreal, April 9-17
 tags:
   - Python
 events:

@@ -3,6 +3,9 @@ title: The Great State of Design
 sub: with CSS Grid Layout and Friends
 author: stacy
 date: 2016-12-03
+image:
+  src: talks/great-state.jpg
+  alt: repeated grid of the same dog picture in different colors
 slides: https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends
 tags:
   - CSS

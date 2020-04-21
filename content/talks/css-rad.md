@@ -4,8 +4,10 @@ sub: resilient design on an infinite canvas
 author: miriam
 date: 2019-10-15
 image:
-  src: talks/miriam.jpg
-  alt: Miriam Suzanne speaking at a conference
+  src: talks/mia-smashing19-rad.jpg
+  alt: Miriam speaking at Smashing Conf NY
+  width: 2240
+  height: 1493
 slides: https://sliiides.netlify.com/css-is-rad/
 tags:
   - Design

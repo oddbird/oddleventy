@@ -3,6 +3,9 @@ title: Sassy Toolkits
 sub: a case-study in building and sharing open-source Sass
 author: miriam
 date: 2013-10-12
+image:
+  src: talks/sassy-toolkits.jpg
+  alt: Tools should fit you. Sorry, this hammer only builds patio chairs...
 slides: https://www.oddbooksapp.com/book/sassy-toolkits
 tags:
   - Sass

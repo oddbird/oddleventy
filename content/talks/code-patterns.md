@@ -3,6 +3,9 @@ title: Code Patterns
 banner: Code Patterns for Pattern Making
 author: miriam
 date: 2016-03-31
+image:
+  src: talks/code-patterns.jpg
+  alt: the text color(kevin bacon) on a pink background
 slides: https://oddbooksapp.com/book/pattern-making
 tags:
   - CSS

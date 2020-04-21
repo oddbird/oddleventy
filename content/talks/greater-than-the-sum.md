@@ -3,7 +3,10 @@ title: Greater Than the Sum of Parts
 sub: Integrating Pyramid, React, & Plone
 author: david
 date: 2016-10-20
-slides: https://www.oddbooksapp.com/book/web-projects
+image:
+  src: talks/greater-than.jpg
+  alt: David speaking about his slide showing legos and toy car
+slides: https://davisagli.github.io/slides/ploneconf2016/#/step-1
 tags:
   - React
   - Plone

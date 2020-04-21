@@ -5,8 +5,10 @@ author: miriam
 date: 2018-08-18
 slides: https://talks.oddbird.net/dynamic-css/
 image:
-  src: talks/miriam.jpg
-  alt: Miriam Suzanne speaking at a conference
+  src: talks/mia-dvlpdnvr19-dynamic.jpg
+  alt: Miriam speaking at Develop Denver, 2019
+  width: 1500
+  height: 844
 tags:
   - CSS
   - JavaScript
@@ -91,6 +93,14 @@ press:
     venue: W3C
     icon: social/twitter
     url: https://twitter.com/jpamental/status/1118585546803036160
+  - text: |
+      Best CSS talk I've ever seen was from @MiriSuzanne
+      today at #dvlpdnvr. Simply amazing.
+    name: Michael Dowden
+    title: President
+    venue: FlexePark
+    icon: social/twitter
+    url: https://twitter.com/mrdowden/status/1162121756699746307
   - text: |
       Well that was awesome!!!
       “If you think CSS is a dumb language,

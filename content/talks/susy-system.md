@@ -3,6 +3,9 @@ title: Your Own Damn Susy System
 sub: an introduction to the Susy layout toolkit
 author: miriam
 date: 2014-04-16
+image:
+  src: blog/susy-grid-system.jpg
+  alt: Susy is not a grid system
 slides: http://mirisuzanne.github.io/pres/susy2/
 tags:
   - Susy

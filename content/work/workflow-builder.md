@@ -5,8 +5,10 @@ logo: aunalytics
 client: &client Aunalytics
 date: 2020-01-13
 image:
-  src: projects/aunalytics/workflow-mockup.png
+  src: projects/aunalytics/workflow.jpg
   alt: Connected workflow processes shown within the canvas
+  width: 2804
+  height: 1131
 people:
   - &james
     name: James Stuckey Weber

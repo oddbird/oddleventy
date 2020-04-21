@@ -30,3 +30,6 @@ summary: |
   product managers. MozTrap also includes a RESTful JSON API to allow
   automated tools to run tests and report results.
 ---
+
+{% import 'quotes.macros.njk' as quotes %}
+{{ quotes.grid(press) }}
