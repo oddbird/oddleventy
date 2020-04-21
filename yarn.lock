@@ -9909,6 +9909,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mockdate@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "mockdate@npm:2.0.5"
+  checksum: 2/fd120ca7a51f14a9ec20491563298483cafa5d8e88b0d8a6473535b7706664f8328b1731f02c1de947782281f52b82adb6b3e59804c6aaa8325c179b612409e6
+  languageName: node
+  linkType: hard
+
 "moo@npm:^0.5.1":
   version: 0.5.1
   resolution: "moo@npm:0.5.1"
@@ -10566,6 +10573,7 @@ __metadata:
     markdown-it: ^10.0.0
     markdown-it-footnote: ^3.0.2
     markdown-it-mark: ^3.0.0
+    mockdate: ^2.0.5
     node-sass: ^4.13.1
     npm-run-all: ^4.1.5
     postcss: ^7.0.27

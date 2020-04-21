@@ -39,7 +39,7 @@ summary: |
 
 You can read
 [a summary of the conversation][summary]
-as well —
+as well –
 but it leaves out some good bits. ;)
 
 [summary]: https://www.sitepoint.com/how-to-choose-the-right-css-toolkits-and-frameworks/

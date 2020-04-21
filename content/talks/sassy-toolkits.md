@@ -40,7 +40,7 @@ Now pre-processors like Sass
 have opened the door for more flexible toolkits,
 and a thriving open-source community.
 You don't need 3 million followers
-and your own clearfix to contribute —
+and your own clearfix to contribute –
 just a willingness to participate and learn.
 Together, we can build more flexible and powerful toolkits
 that respect our unique styles and constraints!

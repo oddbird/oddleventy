@@ -11,7 +11,7 @@ example: |
   Copyright &copy; {% getDate 'year' %}
 */
 
-const now = new Date();
+const now = () => new Date();
 
 const months = [
   'January',

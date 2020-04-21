@@ -166,6 +166,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:3.0.0"
       ],
       [
+        "mockdate",
+        "npm:2.0.5"
+      ],
+      [
         "node-sass",
         "npm:4.13.1"
       ],
@@ -287,6 +291,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it", "npm:10.0.0"],
             ["markdown-it-footnote", "npm:3.0.2"],
             ["markdown-it-mark", "npm:3.0.0"],
+            ["mockdate", "npm:2.0.5"],
             ["node-sass", "npm:4.13.1"],
             ["npm-run-all", "npm:4.1.5"],
             ["postcss", "npm:7.0.27"],
@@ -11313,6 +11318,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["mockdate", [
+        ["npm:2.0.5", {
+          "packageLocation": "./.yarn/cache/mockdate-npm-2.0.5-3a5f5cdec4-2.zip/node_modules/mockdate/",
+          "packageDependencies": [
+            ["mockdate", "npm:2.0.5"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["moo", [
         ["npm:0.5.1", {
           "packageLocation": "./.yarn/cache/moo-npm-0.5.1-6281c30315-2.zip/node_modules/moo/",
@@ -12015,6 +12029,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it", "npm:10.0.0"],
             ["markdown-it-footnote", "npm:3.0.2"],
             ["markdown-it-mark", "npm:3.0.0"],
+            ["mockdate", "npm:2.0.5"],
             ["node-sass", "npm:4.13.1"],
             ["npm-run-all", "npm:4.1.5"],
             ["postcss", "npm:7.0.27"],

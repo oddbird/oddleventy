@@ -21,7 +21,7 @@ events:
 **As creators, it’s tempting to grab and consolidate our power**,
 but sometimes the medium or audience has a different opinion.
 Maybe we’ll look at my experiences of chaos
-as a professional web developer and mixed-media artist —
+as a professional web developer and mixed-media artist –
 what’s worked and what hasn’t.
 Maybe we’ll talk about differences in media, or how they mix.
 Maybe we’ll talk about the performative turn,

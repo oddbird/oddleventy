@@ -77,7 +77,7 @@ params:
     type: event object
 */
 const isFuture = (event) =>
-  event.end ? getDate(event.end) >= now : getDate(event.date) >= now;
+  event.end ? getDate(event.end) >= now() : getDate(event.date) >= now();
 
 /* @docs
 label: getFuture

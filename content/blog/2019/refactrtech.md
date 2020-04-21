@@ -112,7 +112,7 @@ during happy hour, to learn that she is struggling to learn Angular
 during her day job, just like me.
 
 I sat in on a panel with A\* members of [/dev/color] from Netflix on
-being authentic leading teams while black in Silicon Valley  –  showing
+being authentic leading teams while black in Silicon Valley – showing
 there is strength in a shared experience and knowing that you’re not
 alone.
 

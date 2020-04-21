@@ -5,8 +5,8 @@ bird: carl
 date: 2008-04-03
 image:
   src: birds/carl.jpg
-  width: 2160 
-  height:  743
+  width: 2160
+  height: 743
 social:
   twitter: carljm
   github: carljm

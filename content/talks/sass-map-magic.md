@@ -33,7 +33,7 @@ events:
     date: 2014-09-12
     video: http://teamtreehouse.com/library/sass-map-magic
 summary: |
-  **Maps are a powerful data type in Sass** —
+  **Maps are a powerful data type in Sass** –
   perfect for managing color and scale palettes,
   framework configuration, data storage, and more.
 media:
