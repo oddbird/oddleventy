@@ -103,8 +103,8 @@ media:
 For those few cases where a grid really is required,
 we'll talk about the best ways to roll your own,
 so you're not relying on a bloated library to make decisions for you.
-We'll also look at the new layout toys —
-from flexbox to CSS Grid —
+We'll also look at the new layout toys –
+from flexbox to CSS Grid –
 and how to get started with only a few lines of code.
 
 - When to use floats, CSS Grid, flexbox, custom properties, and other techniques.

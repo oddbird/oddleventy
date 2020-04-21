@@ -10,6 +10,10 @@
   margin-bottom: var(--shim);
 }
 
+[data-honey] {
+  @include tools.is-hidden;
+}
+
 // Labels
 // ------
 /// Form label text uses a span inside the wrapper label
@@ -32,7 +36,7 @@
   color: var(--text);
   display: block;
   font: inherit;
-  font-size: var(--small);
+  font-size: var(--xsmall);
   padding: var(--half-shim);
   width: 100%;
 
@@ -55,6 +59,8 @@ textarea {
 // ------
 /// @group forms
 select {
+  font: inherit;
+  font-size: var(--xsmall);
   width: 100%;
 }
 

@@ -121,7 +121,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPairedShortcode('h', type.heading);
   eleventyConfig.addShortcode(
     'getDate',
-    (format) => `${time.getDate(time.now, format)}`,
+    (format) => `${time.getDate(time.now(), format)}`,
   );
 
   // config

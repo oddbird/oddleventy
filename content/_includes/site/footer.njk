@@ -3,9 +3,11 @@
 
 <div
   data-layout="footer">
-  <aside aria-label="contact">
-    {{ contact.form() }}
-  </aside>
+  {% if page.url != '/contact/' %}
+    <aside aria-label="contact">
+      {{ contact.form() }}
+    </aside>
+  {% endif %}
 
   <footer role="contentinfo">
     <div class="colophon">

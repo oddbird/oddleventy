@@ -3,7 +3,7 @@ title: Integrated Design Systems
 sub: Want to reduce technical debt and scale your applications?
 index: Design Systems
 image:
-  src: /herman/stacy-design-systems-training.jpg
+  src: pages/stacy-design-systems-training.jpg
   alt: Stacy teaching developers at an event
 summary: |
   **OddBird provides design-system training and implementation**

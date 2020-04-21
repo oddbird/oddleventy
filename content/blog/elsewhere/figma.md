@@ -21,7 +21,7 @@ summary: |
 
 ## Improvements in CSS will affect web design in surprising ways
 
-There’s a lot to be excited about in CSS — integrating new tools,
+There’s a lot to be excited about in CSS – integrating new tools,
 like Grid and Custom Properties,
 with existing features like Calc and Viewport Units.
 Modern CSS allow a new level of interaction,
