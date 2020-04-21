@@ -19,7 +19,7 @@ brag: |
   used by spectators & coaches
   at **IronMan** & **Enduro** events
   around the world.
-quotes:
+press:
   - text: |
       Just like the Quarq power meters
       changed the playing field for power measurement,

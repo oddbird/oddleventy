@@ -16,7 +16,7 @@ people:
     role: Assistant Professor of Computer Science
     face: anna-rafferty.jpg
     venue: *client
-quotes:
+press:
   - text: |
       The first meeting I had with Miriam helped me decide.
       **She was excited about the project but also realistic**

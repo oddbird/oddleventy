@@ -9,7 +9,7 @@ tags:
   - Article
 image:
   src: blog/2016/cssconf/ns.jpg
-  alt:  Nicole Sullivan on stage
+  alt: Nicole Sullivan on stage
 summary: |
   It was a pleasure speaking at CSSConf 2016 in Boston!
   Here are some of my notes from the event --

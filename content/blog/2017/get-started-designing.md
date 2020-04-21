@@ -60,7 +60,7 @@ background when I’m finished.
 {{ embed.img(
   src='blog/2017/get-started-designing/santamaria.jpg',
   alt='Website by Jason Santa Maria',
-    attrs={'class': 'img-border'}
+  attrs={'class': 'img-border'}
 ) }}
 
 According to typography expert [Jason Santa Maria], “If your type is

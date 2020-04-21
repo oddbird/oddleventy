@@ -1,0 +1,87 @@
+---
+title: Work
+banner: Work Samples
+sub: Applications, websites, & design systems
+index: Client Work
+summary: |
+  **We love what we do**, we do great work,
+  and we have a track record of happy clients to show for it.
+---
+
+{% import "layout.macros.njk" as layout %}
+{% import 'embed.macros.njk' as embed %}
+{% import 'post.macros.njk' as post %}
+{% import 'quotes.macros.njk' as quotes %}
+{% import 'utility.macros.njk' as utility %}
+
+{% for client, list in collections.work | withData('data.press') | group('data.client') %}
+  {{ layout.title(client) }}
+
+  {% for item in list %}
+    {% set type = item.data.tags | pageType('tag') %}
+    {% set show = 'details' if (type == 'Case Study') else 'summary' %}
+    <article {{ post.aria_label(item) }} data-work="{{ show }}">
+      <div class="offset-grid">
+        {{ quotes.blockquote(
+          data=item.data.press | findData('feature') or item.data.press[0],
+          type='grid'
+        ) }}
+        <div class="offset-item project-details">
+          <header class="post-header">
+            {% call post.banner(item, called=true) -%}
+              {{ item.data.title | mdInline | safe }}
+            {%- endcall %}
+            {% set years = utility.datetime(
+              start=item.date,
+              end=item.data.end,
+              format='year',
+              prefix=none
+            ) %}
+            {{ post.subtitle(
+              [years, item.data.sub] | join(' -- ')
+            ) }}
+          </header>
+          <p>
+            {{ item.data.summary | md | elide | safe }}
+          </p>
+        </div>
+        {% if (show == 'details') %}
+          {%- set context -%}
+            <span class="sr-only"> {{ item.data.title | mdInline }} </span>
+          {%- endset -%}
+          {{ utility.link_if(
+            ['Read', context, 'Case Study »'] | join,
+            item.url,
+            attrs={'class': 'offset-more'}
+          ) }}
+        {% endif %}
+      </div>
+      {% set sample = item.data.sample %}
+      {% if (show == 'details') and sample %}
+        <figure class="work-sample">
+          {{ embed.img(
+            ['projects', sample.desktop.src] | join('/'),
+            sample.desktop.alt,
+            attrs={
+              'class': 'sample-desktop',
+              'style': {
+                '--img-position': sample.desktop.position
+              } | styles
+            }
+          ) }}
+          {{ embed.screen(
+            fill=sample.mobile.fill,
+            fit=sample.mobile.fit,
+            position=sample.mobile.position,
+            notch=sample.mobile.notch,
+            content=embed.img(
+              ['projects', sample.mobile.src] | join('/'),
+              sample.mobile.alt
+            )
+          ) }}
+          <figcaption>{{ sample.caption | mdInline | safe }}</figcaption>
+        </figure>
+      {% endif %}
+    </article>
+  {% endfor %}
+{% endfor %}

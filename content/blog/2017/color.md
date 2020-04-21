@@ -349,7 +349,7 @@ this and more in our [OddFriends Slack channel]. Join us!
 
 {{ embed.img(
   src='blog/2017/colors/accessiblecolors.jpg',
-  alt='Check foregournd and background color with font size and weight'
+  alt='Check foreground and background color with font size and weight'
 ) }}
 
 [Accessible Colors]: http://accessible-colors.com/

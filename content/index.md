@@ -62,9 +62,7 @@ tools:
 {% call embed.media_block(
   media=embed.img(
     src='writing/jssass.png',
-    alt='Jump Start Sass, by Miriam Suzanne and Hugo Giraudel',
-    width=259,
-    height=449
+    alt='Jump Start Sass, by Miriam Suzanne and Hugo Giraudel'
   )
 ) %}
 

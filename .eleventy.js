@@ -51,6 +51,12 @@ module.exports = (eleventyConfig) => {
       .filter((item) => item.data.oss)
       .sort((a, b) => b.date - a.date),
   );
+  eleventyConfig.addCollection('work', (collection) =>
+    collection
+      .getAll()
+      .filter((item) => item.data.client)
+      .sort((a, b) => b.date - a.date),
+  );
   eleventyConfig.addCollection('sample', (collection) =>
     collection.getAll().filter((item) => item.data.sample),
   );
@@ -58,6 +64,7 @@ module.exports = (eleventyConfig) => {
   // filters
   eleventyConfig.addFilter('concat', _.concat);
   eleventyConfig.addFilter('merge', _.merge);
+  eleventyConfig.addFilter('group', _.groupBy);
 
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('styles', utils.styles);

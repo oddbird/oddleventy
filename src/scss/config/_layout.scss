@@ -6,3 +6,25 @@
 /// @type list
 /// @group config-layout
 $z-index: ('bump', 'dropdown', 'skip-link');
+
+@mixin clip-base {
+  align-content: center;
+  background-color: var(--clip-bg, var(--callout));
+  display: grid;
+  margin: 0;
+  padding: var(--spacer) 0;
+}
+
+@mixin clip($side, $break: 'wide-break') {
+  clip-path: var(--clip-#{$side});
+  margin-#{$side}: calc(var(--clip-overlap) * -0.5);
+  padding-#{$side}: var(--clip-space);
+
+  @include above($break) {
+    margin-#{$side}: var(--clip-overlap);
+  }
+
+  @if ($side == 'left') {
+    transform: translateY(calc(var(--offset) * -1));
+  }
+}

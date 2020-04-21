@@ -14,7 +14,7 @@ tasks:
   - User Experience Design
   - Project Architecture
   - Responsive Styles
-quotes:
+press:
   - text: |
       I consider **Mozilla's MozTrap** to be one of the best
       open source test case management systems out there.
