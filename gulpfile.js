@@ -24,5 +24,5 @@ gulp.task('images', () =>
         },
       ),
     )
-    .pipe(gulp.dest('_site/assets/images')),
+    .pipe(gulp.dest('_built/images')),
 );

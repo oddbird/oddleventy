@@ -12,12 +12,14 @@ const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
 
 const { taxonomy } = require('#/taxonomy');
 
-const responsiveConfig = taxonomy.srcset.map((size) => ({
-  width: size,
-  rename: {
-    suffix: `-${size}`,
-  },
-}));
+const responsiveConfig = taxonomy.srcset
+  .map((size) => ({
+    width: size,
+    rename: {
+      suffix: `-${size}`,
+    },
+  }))
+  .concat([{}]);
 
 const imgConf = {
   responsive: {

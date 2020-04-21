@@ -317,8 +317,9 @@ params:
 
 {% macro srcset(
   src,
-  width=640
+  width=none
 ) -%}
+  {%- set width = width or 640 -%}
   {%- set sizes = 'srcset' | fromTaxonomy -%}
   {%- if width > sizes[0] -%}
     {%- for size in sizes -%}

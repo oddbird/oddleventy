@@ -6,7 +6,7 @@ author: miriam
 date: 2019-04-18
 image:
   src: blog/2019/advanced-css.jpg
-  alt: Miriam talking with Jen Simmons and others
+  alt: text CSS is Awesome on background of sunset over water
   position: top
 tags:
   - CSS
