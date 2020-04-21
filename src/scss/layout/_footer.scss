@@ -31,6 +31,10 @@ $two-column: 45em;
     text-align: right;
   }
 
+  &:only-child {
+    grid-column: 1 / -1;
+  }
+
   a {
     display: inline-block;
     font-weight: bold;
