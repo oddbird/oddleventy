@@ -4,8 +4,9 @@ sub: Back-end developer
 bird: kit
 date: 2016-04-18
 image:
-  type: angle
-  svg: faces/kit
+  src: birds/kit.jpg
+  width: 2048 
+  height:  960
 social:
   twitter: wlonk
   github: wlonk

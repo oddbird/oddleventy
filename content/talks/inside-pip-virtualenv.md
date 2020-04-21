@@ -3,6 +3,9 @@ title: Reverse-engineering Ian Bicking's brain
 sub: Inside `pip` and `virtualenv`
 author: carl
 date: 2011-03-12
+image:
+  src: talks/reverse-engineering.jpg
+  alt: Carl speaking at a conference
 tags:
   - Python
   - Pip

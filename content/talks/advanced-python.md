@@ -2,6 +2,9 @@
 title: Advanced Python
 author: carl
 date: 2014-02-27
+image:
+  src: talks/advanced-python.jpg
+  alt: Carl speaking at a conference
 tags:
   - Python
 events:

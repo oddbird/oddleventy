@@ -43,3 +43,6 @@ summary: |
   allowing users to customize their installations, and run preflight
   checks before committing to a full install.
 ---
+
+{% import 'quotes.macros.njk' as quotes %}
+{{ quotes.grid(press) }}

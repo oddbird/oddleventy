@@ -2,6 +2,9 @@
 title: Organizing Sass Partials
 author: miriam
 date: 2013-11-19
+image:
+  src: talks/sass-partials.jpg
+  alt: never fight the cascade, general to specific
 slides: http://mirisuzanne.github.io/pres/sass-partials/
 tags:
   - Sass
