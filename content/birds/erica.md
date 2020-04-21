@@ -5,6 +5,8 @@ bird: erica
 date: 2019-04-01
 image:
   src: birds/erica.jpg
+  width: 2048 
+  height: 960
 social:
   twitter: DuggieMitchell
   github: duggiemitchell

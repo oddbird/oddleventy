@@ -6,6 +6,8 @@ date: 2014-08-01
 image:
   src: birds/sondra.jpg
   position: top
+  width: 3091 
+  height:  1623
 social:
   twitter: sondraeby
   github: sondrae
