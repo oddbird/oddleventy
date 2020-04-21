@@ -5,8 +5,8 @@ bird: jonny
 date: 2008-04-02
 image:
   src: birds/jonny.jpg
-  width: 2160 
-  height:  743
+  width: 2160
+  height: 743
 social:
   twitter: jgerigmeyer
   github: jgerigmeyer

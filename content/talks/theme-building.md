@@ -4,7 +4,7 @@ author: stacy
 date: 2017-01-17
 image:
   src: talks/wp-from-scratch.jpg
-  alt: title of the talk in Naperville, From Scratch to Launch #1 Planning Phase
+  alt: title of the talk in Naperville, From Scratch to Launch \#1 Planning Phase
 tags:
   - WordPress
 events:

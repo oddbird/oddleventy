@@ -52,7 +52,7 @@ to kick things off. There are two in our “about:web” series on web
 technologies, and one in our “Firefox” series on browser tools for web
 professionals.
 
-Get started with an intro to Dark Mode on the web, by Deja Hodge — and
+Get started with an intro to Dark Mode on the web, by Deja Hodge – and
 check out her [dark mode demo].
 
 {{ embed.figure(darkmode.media, darkmode.caption) }}
