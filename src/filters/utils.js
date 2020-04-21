@@ -50,18 +50,18 @@ label: imgSuffix
 category: images
 note: Add img suffix for responsiveness
 example: |
-  <img srcset="{{src | imgSuffix('320')}} 320w" />
+  <img srcset="{{ src | imgSuffix('320') }} 320w" />
 params:
   imgSrc:
     type: string
   suffix:
-    type: string
+    type: string | number
 */
 const imgSuffix = (imgSrc, suffix) => {
-  const i = imgSrc.lastIndexOf('.');
-  const path = imgSrc.substring(0, i);
-  const extension = imgSrc.substring(i + 1);
-  return `${path}-${suffix}.${extension}`;
+  const idx = imgSrc.lastIndexOf('.');
+  const imgPath = imgSrc.substring(0, idx);
+  const ext = imgSrc.substring(idx + 1);
+  return `${imgPath}-${suffix}.${ext}`;
 };
 
 module.exports = { typeCheck, styles, imgSuffix };

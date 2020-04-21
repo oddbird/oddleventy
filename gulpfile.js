@@ -1,4 +1,5 @@
 'use strict';
+
 const gulp = require('gulp');
 const responsive = require('gulp-responsive');
 
@@ -19,6 +20,7 @@ gulp.task('images', () =>
           withoutEnlargement: true,
           errorOnUnusedImage: false,
           errorOnEnlargement: false,
+          silent: true,
         },
       ),
     )

@@ -19,6 +19,6 @@ describe('utility filters', () => {
     const image = 'birds/carl.jpg';
     const expected = 'birds/carl-550.jpg';
 
-    expect(imgSuffix(image, '550')).toEqual(expected);
+    expect(imgSuffix(image, 550)).toEqual(expected);
   });
 });

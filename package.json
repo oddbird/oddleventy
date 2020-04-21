@@ -23,7 +23,7 @@
     "lint:js": "run-s prettier:js eslint",
     "lint:sass": "stylelint \"**/*.scss\" --fix",
     "eleventy": "eleventy",
-    "eleventy:serve": " eleventy --serve",
+    "eleventy:serve": "eleventy --serve",
     "watch:sass:compile": "chokidar \"src/scss/**/*.scss\" \"./.sassdocrc\" -c \"yarn run-p sass sassdoc\"",
     "watch:sass:lint": "chokidar \"**/.stylelintrc.yml\" -c \"yarn lint:sass\"",
     "watch:sass": "run-p watch:sass:compile watch:sass:lint",
@@ -32,14 +32,14 @@
     "watch:js": "run-p watch:js:compile watch:sass:lint",
     "site:clean": "rm -rf ./_site/",
     "assets:clean": "rm -rf ./_built/",
+    "images": "gulp images",
     "serve": "npm-run-all build:assets build:site -p eleventy:serve watch:js watch:sass",
     "test": "jest",
-    "build:site": "run-s site:clean gulp sassdoc",
-    "build:assets": "npm-run-all assets:clean -p js sass",
+    "build:site": "run-s site:clean sassdoc",
+    "build:assets": "npm-run-all assets:clean -p js sass images",
     "build": "run-s build:assets build:site eleventy",
     "update-oss-docs": "./bin/update-oss-docs",
-    "prod": "run-s update-oss-docs build",
-    "gulp": "gulp images"
+    "prod": "run-s update-oss-docs build"
   },
   "devDependencies": {
     "#": "link:./src/filters",

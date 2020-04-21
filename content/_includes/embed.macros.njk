@@ -317,14 +317,13 @@ params:
 
 {% macro srcset(
   src,
-  width=none
+  width=640
 ) -%}
-  {%- set width = width or 640 -%}
   {%- set sizes = 'srcset' | fromTaxonomy -%}
   {%- if width > sizes[0] -%}
     {%- for size in sizes -%}
       {%- if size < width -%}
-        {{- src | imgSuffix(size | string) }} {{ size + 'w,' -}}
+        {{- src | imgSuffix(size) }} {{ size + 'w, ' -}}
       {%- endif -%}
     {%- endfor -%}
     {{- src }} {{ width + 'w' -}}
@@ -360,11 +359,11 @@ params:
 ) -%}
 {%- if src -%}
 {%- set src = src if ('://' in src) else ('/assets/images/' + src) -%}
-{% set set = srcset(src, width) %}
+{%- set imgSrcSet = srcset(src, width) -%}
 {%- set attrs = attrs | merge({
   'src': src,
   'alt': alt,
-  'srcset': set if (set != '') else none,
+  'srcset': imgSrcSet or none,
   'width': width,
   'height': height
 }) -%}
