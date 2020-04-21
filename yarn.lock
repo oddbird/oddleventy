@@ -5245,16 +5245,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^6.10.1":
-  version: 6.10.1
-  resolution: "eslint-config-prettier@npm:6.10.1"
+"eslint-config-prettier@npm:^6.11.0":
+  version: 6.11.0
+  resolution: "eslint-config-prettier@npm:6.11.0"
   dependencies:
     get-stdin: ^6.0.0
   peerDependencies:
     eslint: ">=3.14.1"
   bin:
     eslint-config-prettier-check: bin/cli.js
-  checksum: 2/0c3d82e10e0758456668b711968adeb0c306b1375cd7ab5f3f95f70df6c9bdbabf5aaf7d52efbc6e57cf217f556255e282c93f58f7e8afa1a2325972b3773372
+  checksum: 2/59efd906c78d47753a673c205ef515fdab19cd6ea0fd992c9cb2366804861746238244526ab565ccc7448569f5472ce7646a77d0c9998787192e4ebae95df71d
   languageName: node
   linkType: hard
 
@@ -11036,7 +11036,7 @@ __metadata:
     cssremedy: ^0.1.0-beta.2
     doxray: ^0.10.0
     eslint: ^6.8.0
-    eslint-config-prettier: ^6.10.1
+    eslint-config-prettier: ^6.11.0
     eslint-import-resolver-node: ^0.3.3
     eslint-plugin-import: ^2.20.2
     eslint-plugin-jest: ^23.8.2
@@ -11057,7 +11057,7 @@ __metadata:
     postcss: ^7.0.27
     prettier: ^2.0.5
     remove-markdown: ^0.3.0
-    rollup: ^2.6.1
+    rollup: ^2.7.0
     rollup-plugin-babel: ^4.4.0
     rollup-plugin-terser: ^5.3.0
     sass: ^1.26.3
@@ -13208,9 +13208,9 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.6.1":
-  version: 2.6.1
-  resolution: "rollup@npm:2.6.1"
+"rollup@npm:^2.7.0":
+  version: 2.7.0
+  resolution: "rollup@npm:2.7.0"
   dependencies:
     fsevents: ~2.1.2
   dependenciesMeta:
@@ -13218,7 +13218,7 @@ resolve@1.1.7:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 2/85e76e07875d75e7511073574d917613418e5a3beb11229cd1e246d5cacb2086ea00b3b53d62a65e3116843ced4803a92c5113a37db2af7832b63497961f07f7
+  checksum: 2/b9a4aeadc6e56dcd0760169c61749ffb14aa374004738133cf880fa4b76336dddf86ccece14fc2473dc2130576ef25bb81fe9aae18bfe594b1ec390c15d8eb9a
   languageName: node
   linkType: hard
 
