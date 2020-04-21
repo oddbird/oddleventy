@@ -4,8 +4,10 @@ sub: Brand & user experience designer
 bird: sondra
 date: 2014-08-01
 image:
-  type: angle
-  svg: faces/sondra
+  src: birds/sondra.jpg
+  position: top
+  width: 3091 
+  height:  1623
 social:
   twitter: sondraeby
   github: sondrae

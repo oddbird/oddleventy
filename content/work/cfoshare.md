@@ -2,6 +2,10 @@
 title: CFOshare Website
 sub: WordPress CMS & responsive design
 logo: cfoshare
+image:
+  src: projects/cfoshare.jpg
+  alt: CFOshare's wordpress articles about finance
+  position: top
 client: &client CFOshare
 date: 2019-05-29
 press:
@@ -10,9 +14,9 @@ press:
       I’m not an expert in web development,
       so I really appreciated that.
     name: LJ Suzuki
+    face: lj-suzuki.jpg
     title: Founder & Fractional CFO
     venue: *client
-    face: lj-suzuki.jpg
 links:
   site: https://cfoshare.org/
 summary: |
@@ -27,3 +31,6 @@ summary: |
 CFOshare is a "fractional CFO"
 that serves as an outsourced finance and accounting department
 for a range of businesses.
+
+{% import 'quotes.macros.njk' as quotes %}
+{{ quotes.grid(press) }}

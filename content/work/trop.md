@@ -23,3 +23,6 @@ summary: |
   especially if it does not quite fit in at traditional
   journals or humor sites.
 ---
+
+{% import 'quotes.macros.njk' as quotes %}
+{{ quotes.grid(press) }}

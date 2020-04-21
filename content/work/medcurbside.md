@@ -49,3 +49,6 @@ summary: |
   deal with the plethora of information available
   in healthcare today.
 ---
+
+{% import 'quotes.macros.njk' as quotes %}
+{{ quotes.grid(press) }}

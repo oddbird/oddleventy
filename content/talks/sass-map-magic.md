@@ -2,6 +2,9 @@
 title: Sass Map Magic
 author: miriam
 date: 2014-09-12
+image:
+  src: talks/sass-map.jpg
+  alt: Miriam being interviewed at a conference
 slides: https://www.oddbooksapp.com/book/sass-map-magic
 tags:
   - Sass
