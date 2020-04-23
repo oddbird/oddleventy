@@ -110,6 +110,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('elide', type.elide);
   eleventyConfig.addFilter('imgSuffix', utils.imgSuffix);
 
+  eleventyConfig.addFilter('max', (array) => Math.max(...array));
+
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.md);
   eleventyConfig.addPairedShortcode('mdInline', type.mdInline);

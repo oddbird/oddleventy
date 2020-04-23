@@ -140,11 +140,13 @@ params:
       '--width': item.width,
       '--span': item.span
     } | styles -%}
+    {% set full_width = (loop.length == 1) or (item.span == 'full') or (item.span > 1) %}
     {{- img(
       src=item.img,
       alt=item.alt,
       width=item.width,
       height=item.height,
+      sizes=none if full_width else 'gallery',
       attrs={'style': style}
     ) | safe -}}
   {%- elif item.svg -%}
@@ -315,20 +317,29 @@ params:
 {%- endif -%}
 {%- endmacro %}
 
+{# @docs
+label: srcset
+cateogry: Embed
+note: Generate a `srcset` attribute for responsive images
+params:
+  src:
+    type: url
+  width:
+    type: number
+    default: none
+#}
 {% macro srcset(
   src,
   width=none
 ) -%}
-  {%- set width = width or 640 -%}
-  {%- set sizes = 'srcset' | fromTaxonomy -%}
-  {%- if width > sizes[0] -%}
-    {%- for size in sizes -%}
-      {%- if size < width -%}
-        {{- src | imgSuffix(size) }} {{ size + 'w, ' -}}
-      {%- endif -%}
-    {%- endfor -%}
-    {{- src }} {{ width + 'w' -}}
-  {%- endif -%}
+  {%- set config = 'img' | fromTaxonomy -%}
+  {%- set width = width or config.srcset | max -%}
+  {%- for size in config.srcset -%}
+    {%- if size <= width -%}
+      {%- if not loop.first %},{% endif -%}
+      {{- src | imgSuffix(size) }} {{ size + 'w' -}}
+    {%- endif -%}
+  {%- endfor -%}
 {%- endmacro %}
 
 {# @docs
@@ -347,6 +358,13 @@ params:
   height:
     type: number
     default: none
+  sizes:
+    type: string | none
+    default: none
+    note: |
+      Only required for small images, since the default is 100vw.
+      See taxonomy data for named sizes
+      like "card", "media", and "gallery".
   attrs:
     type: object
     default: '{}'
@@ -356,17 +374,24 @@ params:
   alt='',
   width=none,
   height=none,
+  sizes=none,
   attrs={}
 ) -%}
 {%- if src -%}
-{%- set src = src if ('://' in src) else ('/assets/images/' + src) -%}
-{%- set imgSrcSet = srcset(src, width) -%}
+{%- set config = 'img' | fromTaxonomy -%}
+{%- if not ('://' in src) -%}
+  {%- set src = ('/assets/images/' + src) -%}
+  {%- set imgSrcSet = srcset(src, width) -%}
+  {%- set imgSrcSet = imgSrcSet if (imgSrcSet != "") else none -%}
+  {%- set respSrc = src | imgSuffix(config.fallback) -%}
+{%- endif -%}
 {%- set attrs = attrs | merge({
-  'src': src,
+  'src': respSrc or src,
   'alt': alt,
-  'srcset': imgSrcSet if imgSrcSet != "" else none,
+  'srcset': imgSrcSet,
   'width': width,
-  'height': height
+  'height': height,
+  'sizes': (config.sizes[sizes] or sizes) if imgSrcSet else none
 }) -%}
 <img {{ utility.show_attrs(attrs) }}/>
 {%- endif -%}

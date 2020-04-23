@@ -30,7 +30,13 @@
       fill=image.fill,
       fit=image.fit,
       position=image.position,
-      content=embed.img(image.src, image.alt)
+      content=embed.img(
+        src=image.src,
+        alt=image.alt,
+        width=image.width,
+        height=image.height,
+        sizes='media'
+      )
     ) %}
 
     {{ embed.media_block(
@@ -42,7 +48,16 @@
     ) }}
   {% elif media %}
     {{ embed.media_block(
-      media=embed.svg(image.svg, image.alt) if image.svg else embed.img(image.src, image.alt),
+      media=embed.svg(
+        image.svg,
+        image.alt
+      ) if image.svg else embed.img(
+        src=image.src,
+        alt=image.alt,
+        width=image.width,
+        height=image.height,
+        sizes='media'
+      ),
       name='hero',
       attrs={'data-block': 'rotate'},
       content=details

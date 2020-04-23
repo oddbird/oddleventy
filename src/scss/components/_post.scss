@@ -28,6 +28,10 @@
   .post-header {
     margin-bottom: var(--gutter);
   }
+
+  [data-hero] {
+    grid-area: hero;
+  }
 }
 
 [data-post='link'] {
@@ -68,10 +72,6 @@
 
 // Elements
 // --------
-
-[data-hero='post'] {
-  grid-area: hero;
-}
 
 .type-flag {
   @include tools.font-family('alt');
