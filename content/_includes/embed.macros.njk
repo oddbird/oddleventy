@@ -336,7 +336,7 @@ params:
   {%- set width = width or config.srcset | max -%}
   {%- for size in config.srcset -%}
     {%- if size <= width -%}
-      {%- if not loop.first %},{% endif -%}
+      {%- if not loop.first %}, {% endif -%}
       {{- src | imgSuffix(size) }} {{ size + 'w' -}}
     {%- endif -%}
   {%- endfor -%}

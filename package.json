@@ -29,7 +29,7 @@
     "watch:sass": "run-p watch:sass:compile watch:sass:lint",
     "watch:js:compile": "rollup -c --watch",
     "watch:js:lint": "chokidar \"**/.eslintrc.yml\" -c \"yarn lint:js\"",
-    "watch:js": "run-p watch:js:compile watch:sass:lint",
+    "watch:js": "run-p watch:js:compile watch:js:lint",
     "site:clean": "rm -rf ./_site/",
     "assets:clean": "rm -rf ./_built/",
     "images": "gulp images",

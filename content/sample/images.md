@@ -38,7 +38,7 @@ sub: Using nunjucks and markdown
 ## For Testing
 
 {% set srcsetA %}
-  {%- for width in taxonomy.srcset -%}
+  {%- for width in taxonomy.img.srcset -%}
     {{- ['https://via.placeholder.com/', width, 'x', width / 2] | join  -}}
     {{- ' ' + width }}w{{ '' if loop.last else ', ' -}}
   {%- endfor -%}
@@ -52,7 +52,7 @@ sub: Using nunjucks and markdown
 <img {{ utility.show_attrs(attrs) }}>
 
 {% set srcsetB %}
-  {%- for width in taxonomy.srcset -%}
+  {%- for width in taxonomy.img.srcset -%}
     {{- ['https://via.placeholder.com/', width, 'x', width / 2 + 10] | join  -}}
     {{- ' ' + width }}w{{ '' if loop.last else ', ' -}}
   {%- endfor -%}

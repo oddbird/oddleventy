@@ -11,7 +11,7 @@ gulp.task('images', () =>
     .pipe(
       responsive(
         {
-          '**/*': responsiveConfig,
+          '**/*': responsiveConfig.concat([{}]),
         },
         {
           quality: 80,
