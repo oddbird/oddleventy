@@ -9,6 +9,9 @@ image:
   src: projects/orcas/home-iphone.jpg
   alt: CoachHub App on iPhone
   device: iphone
+  fill: white
+  width: 1190
+  height: 2575
 og:
   img: default
 summary: |
@@ -59,7 +62,10 @@ tools:
 {% call embed.media_block(
   media=embed.img(
     src='writing/jssass.png',
-    alt='Jump Start Sass, by Miriam Suzanne and Hugo Giraudel'
+    alt='Jump Start Sass, by Miriam Suzanne and Hugo Giraudel',
+    width=259,
+    height=449,
+    sizes='media'
   )
 ) %}
 

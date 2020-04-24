@@ -61,8 +61,8 @@ export const collection = [
     url: '/test4/',
     date: '2020-04-10T04:10:17.000Z',
     event: {
-      date: '2020-04-10T04:10:17.000Z',
-      end: '2020-04-11T04:10:17.000Z',
+      date: '2018-04-09T04:10:17.000Z',
+      end: '2021-04-10T04:10:17.000Z',
     },
     data: {
       title: 'Test Title',

@@ -203,6 +203,8 @@ CoachHub logo and overall brand are bright, cheerful, and hopeful.
 {{ embed.img(
   src='work/coachhub/avatars-small.jpg',
   alt='leaf avatar collage',
+  width=250,
+  height=244,
   attrs={
     'class': 'align-left'
   }

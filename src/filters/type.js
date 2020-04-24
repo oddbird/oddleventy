@@ -8,6 +8,25 @@ const removeMd = require('remove-markdown');
 const striptags = require('striptags');
 const truncate = require('truncate-html');
 const type = require('typogr');
+const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
+
+const { taxonomy } = require('#/taxonomy');
+
+const responsiveConfig = taxonomy.img.srcset.map((size) => ({
+  width: size,
+  rename: {
+    suffix: `-${size}`,
+  },
+}));
+
+const imgConf = {
+  responsive: {
+    srcset: {
+      '*': responsiveConfig,
+    },
+    sizes: {},
+  },
+};
 
 const mdown = markdown({
   html: true,
@@ -15,7 +34,8 @@ const mdown = markdown({
   typographer: true,
 })
   .use(mdMark)
-  .use(mdFootnote);
+  .use(mdFootnote)
+  .use(markdownItResponsive, imgConf);
 
 /* @docs
 label: Typography Filters
@@ -137,4 +157,13 @@ const heading = (content, level, attrs = {}) => {
   return `<h${level} ${attr_html}>${content}</h${level}>`;
 };
 
-module.exports = { mdown, elide, typogr, md, mdInline, removeMd, heading };
+module.exports = {
+  mdown,
+  elide,
+  typogr,
+  md,
+  mdInline,
+  removeMd,
+  heading,
+  responsiveConfig,
+};

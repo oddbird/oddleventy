@@ -4,7 +4,13 @@
 
 {% if cta %}
   <aside data-layout="cta" aria-labelledby="cta-title">
-    {{ embed.img(cta.data.image.src, cta.data.image.alt) }}
+    {% set image = cta.data.image %}
+    {{ embed.img(
+      src=image.src,
+      alt=image.alt,
+      width=image.width,
+      height=image.height
+    ) }}
 
     {% set cta_content %}
       <h2 id="cta-title">{{ cta.data.title | mdInline | safe }}</h2>

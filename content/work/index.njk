@@ -58,25 +58,32 @@ summary: |
       </div>
       {% set sample = item.data.sample %}
       {% if (show == 'details') and sample %}
+        {%- set desktop = sample.desktop -%}
         <figure class="work-sample">
           {{ embed.img(
-            ['projects', sample.desktop.src] | join('/'),
-            sample.desktop.alt,
+            src=['projects', desktop.src] | join('/'),
+            alt=desktop.alt,
+            width=desktop.width,
+            height=desktop.height,
             attrs={
               'class': 'sample-desktop',
               'style': {
-                '--img-position': sample.desktop.position
+                '--img-position': desktop.position
               } | styles
             }
           ) }}
+          {%- set mobile = sample.mobile -%}
           {{ embed.screen(
-            fill=sample.mobile.fill,
-            fit=sample.mobile.fit,
-            position=sample.mobile.position,
-            notch=sample.mobile.notch,
+            fill=mobile.fill,
+            fit=mobile.fit,
+            position=mobile.position,
+            notch=mobile.notch,
             content=embed.img(
-              ['projects', sample.mobile.src] | join('/'),
-              sample.mobile.alt
+              src=['projects', mobile.src] | join('/'),
+              alt=mobile.alt,
+              width=mobile.width,
+              height=mobile.height,
+              sizes='media'
             )
           ) }}
           <figcaption>{{ sample.caption | mdInline | safe }}</figcaption>

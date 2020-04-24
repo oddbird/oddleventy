@@ -19,13 +19,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(rss);
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  eleventyConfig.addWatchTarget('./src/images/');
-  eleventyConfig.addWatchTarget('./src/media/');
-
   // pass-through
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
-  eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
-  eleventyConfig.addPassthroughCopy({ 'src/images': 'assets/images' });
   eleventyConfig.addPassthroughCopy({ 'src/media': 'assets/media' });
 
   eleventyConfig.addPassthroughCopy({ 'src/docs/susy': 'susy/docs' });
@@ -113,6 +108,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('mdInline', type.mdInline);
   eleventyConfig.addFilter('removeMd', type.removeMd);
   eleventyConfig.addFilter('elide', type.elide);
+  eleventyConfig.addFilter('imgSuffix', utils.imgSuffix);
+
+  eleventyConfig.addFilter('max', (array) => Math.max(...array));
 
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.md);

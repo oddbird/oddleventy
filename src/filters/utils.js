@@ -45,4 +45,23 @@ const styles = (dict) =>
     .map((val, prop) => (val ? `${prop}:${val};` : ''))
     .reduce((all, one) => `${all}${one}`, '');
 
-module.exports = { typeCheck, styles };
+/* @docs
+label: imgSuffix
+category: images
+note: Add img suffix for responsiveness
+example: |
+  <img srcset="{{ src | imgSuffix('320') }} 320w" />
+params:
+  imgSrc:
+    type: string
+  suffix:
+    type: string | number
+*/
+const imgSuffix = (imgSrc, suffix) => {
+  const idx = imgSrc.lastIndexOf('.');
+  const imgPath = imgSrc.substring(0, idx);
+  const ext = imgSrc.substring(idx + 1);
+  return `${imgPath}-${suffix}.${ext}`;
+};
+
+module.exports = { typeCheck, styles, imgSuffix };
