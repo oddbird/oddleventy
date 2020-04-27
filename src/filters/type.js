@@ -10,14 +10,7 @@ const truncate = require('truncate-html');
 const type = require('typogr');
 const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
 
-const { taxonomy } = require('#/taxonomy');
-
-const responsiveConfig = taxonomy.img.srcset.map((size) => ({
-  width: size,
-  rename: {
-    suffix: `-${size}`,
-  },
-}));
+const { responsiveConfig } = require('#/images');
 
 const imgConf = {
   responsive: {
@@ -165,5 +158,4 @@ module.exports = {
   mdInline,
   removeMd,
   heading,
-  responsiveConfig,
 };

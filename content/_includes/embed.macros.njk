@@ -319,7 +319,7 @@ params:
 
 {# @docs
 label: srcset
-cateogry: Embed
+category: Embed
 note: Generate a `srcset` attribute for responsive images
 params:
   src:
@@ -385,12 +385,13 @@ params:
   {%- set imgSrcSet = imgSrcSet if (imgSrcSet != "") else none -%}
   {%- set respSrc = src | imgSuffix(config.fallback) -%}
 {%- endif -%}
+{% set resize = width | imgSize(height) %}
 {%- set attrs = attrs | merge({
   'src': respSrc or src,
   'alt': alt,
   'srcset': imgSrcSet,
-  'width': width,
-  'height': height,
+  'width': resize.width,
+  'height': resize.height,
   'sizes': (config.sizes[sizes] or sizes) if imgSrcSet else none
 }) -%}
 <img {{ utility.show_attrs(attrs) }}/>

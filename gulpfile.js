@@ -3,7 +3,7 @@
 const gulp = require('gulp');
 const responsive = require('gulp-responsive');
 
-const { responsiveConfig } = require('#/type');
+const { responsiveConfig } = require('#/images');
 
 gulp.task('images', () =>
   gulp

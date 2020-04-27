@@ -106,9 +106,10 @@ along with refactors for **integrated design systems,
 accessibility, performance,
 and long-term sustainability**.
 
-Since then OddBird has become an industry leaders --
+Since then OddBird has become an industry leader --
 from our work on Django, Sass, and Susy,
-to the **Mozilla Developer Channel**,
+to the Mozilla Developer Channel,
+**CSS Working Group**,
 and in-depth **trainings on front-end architecture, workflow,
 component libraries, testing, and documentation**.
 
