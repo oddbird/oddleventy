@@ -43,16 +43,21 @@ params:
     type: number
     default: null
 */
-const imgSize = (width = null, height = null) => {
-  const fallback = taxonomy.img.fallback;
-  const size = { width, height };
+const imgSize = (width = null, height = null, size) => {
+  const img = { width, height };
+  const explicitSize = taxonomy.img.sizes[size]
+    ? taxonomy.img.sizes[size].fallback
+    : size;
+
+  const fallback =
+    typeof explicitSize === 'number' ? explicitSize : taxonomy.img.fallback;
 
   if (width && width > fallback) {
-    size.width = fallback;
-    size.height = height ? Math.round((fallback / width) * height) : height;
+    img.width = fallback;
+    img.height = height ? Math.round((fallback / width) * height) : height;
   }
 
-  return size;
+  return img;
 };
 
 module.exports = {

@@ -27,6 +27,24 @@ describe('utility filters', () => {
       });
     });
 
+    test('takes size into account', () => {
+      expect(imgSize(2880, 3000, 960)).toEqual({
+        width: 960,
+        height: 1000,
+      });
+      expect(imgSize(2880, 3000, 'media')).toEqual({
+        width: 960,
+        height: 1000,
+      });
+    });
+
+    test('ignores unknown size', () => {
+      expect(imgSize(2880, 3000, 'nothing-ever')).toEqual({
+        width: 1280,
+        height: 1333,
+      });
+    });
+
     test('does not scale up', () => {
       expect(imgSize(200, 100)).toEqual({
         width: 200,
