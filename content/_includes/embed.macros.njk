@@ -319,7 +319,7 @@ params:
 
 {# @docs
 label: srcset
-cateogry: Embed
+category: Embed
 note: Generate a `srcset` attribute for responsive images
 params:
   src:
@@ -380,18 +380,21 @@ params:
 {%- if src -%}
 {%- set config = 'img' | fromTaxonomy -%}
 {%- if not ('://' in src) -%}
+  {%- set fallback = config.sizes[sizes].fallback if config.sizes[sizes] else none -%}
   {%- set src = ('/assets/images/' + src) -%}
   {%- set imgSrcSet = srcset(src, width) -%}
   {%- set imgSrcSet = imgSrcSet if (imgSrcSet != "") else none -%}
-  {%- set respSrc = src | imgSuffix(config.fallback) -%}
+  {%- set respSrc = src | imgSuffix(fallback or config.fallback) -%}
+  {%- set configSizes = config.sizes[sizes].html if config.sizes[sizes] else none -%}
 {%- endif -%}
+{%- set resize = width | imgSize(height, sizes) -%}
 {%- set attrs = attrs | merge({
   'src': respSrc or src,
   'alt': alt,
   'srcset': imgSrcSet,
-  'width': width,
-  'height': height,
-  'sizes': (config.sizes[sizes] or sizes) if imgSrcSet else none
+  'width': resize.width,
+  'height': resize.height,
+  'sizes': configSizes or sizes
 }) -%}
 <img {{ utility.show_attrs(attrs) }}/>
 {%- endif -%}

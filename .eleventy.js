@@ -13,6 +13,7 @@ const taxonomy = require('#/taxonomy');
 const time = require('#/time');
 const type = require('#/type');
 const utils = require('#/utils');
+const images = require('#/images');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
@@ -108,7 +109,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('mdInline', type.mdInline);
   eleventyConfig.addFilter('removeMd', type.removeMd);
   eleventyConfig.addFilter('elide', type.elide);
-  eleventyConfig.addFilter('imgSuffix', utils.imgSuffix);
+
+  eleventyConfig.addFilter('imgSuffix', images.imgSuffix);
+  eleventyConfig.addFilter('imgSize', images.imgSize);
 
   eleventyConfig.addFilter('max', (array) => Math.max(...array));
 
