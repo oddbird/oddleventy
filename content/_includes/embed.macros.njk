@@ -387,7 +387,7 @@ params:
   {%- set respSrc = src | imgSuffix(fallback or config.fallback) -%}
   {%- set configSizes = config.sizes[sizes].html if config.sizes[sizes] else none -%}
 {%- endif -%}
-{% set resize = width | imgSize(height, sizes) %}
+{%- set resize = width | imgSize(height, sizes) -%}
 {%- set attrs = attrs | merge({
   'src': respSrc or src,
   'alt': alt,
