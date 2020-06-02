@@ -46,6 +46,8 @@ herman:
     - name: Herman
       url: https://oddbird.net/herman/
   fontpath: src/fonts/
+  nunjucks:
+    templatepath: content/_includes/
   sass:
     implementation: sass
     jsonfile: _built/css/json.css

@@ -17,6 +17,7 @@ const images = require('#/images');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
+  eleventyConfig.setWatchThrottleWaitTime(100);
   eleventyConfig.addPlugin(rss);
   eleventyConfig.addPlugin(syntaxHighlight);
 
