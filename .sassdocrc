@@ -47,4 +47,5 @@ herman:
       url: https://oddbird.net/herman/
   fontpath: src/fonts/
   sass:
+    implementation: sass
     jsonfile: _built/css/json.css
