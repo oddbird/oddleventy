@@ -11,7 +11,7 @@ summary: |
 
 {% for item in collections.sample -%}
 {%- if item.url != page.url -%}
-{%- set name = (item.data.title or item.renderData.title or item.url) %}
+{%- set name = (item.data.title or item.url) %}
 - [{{ name | mdInline | safe }}]({{ item.url }})
 {%- endif -%}
 {%- endfor %}

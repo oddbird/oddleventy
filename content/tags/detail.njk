@@ -1,5 +1,7 @@
 ---
 layout: base
+eleventyComputed:
+  title: 'Tag: {{ tag | displayName }}'
 image:
   svg: icons/tags
   type: angle
@@ -16,8 +18,6 @@ pagination:
     - all
     - sample
 permalink: /tags/{{ tag | slug }}/
-renderData:
-  title: 'Tag: {{ tag | displayName }}'
 ---
 
 {% import 'post.macros.njk' as post %}
