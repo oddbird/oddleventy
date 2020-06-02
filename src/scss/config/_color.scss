@@ -135,6 +135,13 @@ $_ccs: (
 // CCS "Get" Function
 // ------------------
 /// Get settings from the `$ccs` configuration map.
+///
+///   ```
+///   @use 'config/color';
+///
+///   $prime-hue: color.ccs('prime');
+///   ```
+///
 /// @param {string} $token -
 ///   Name of a token key in the `$ccs` map.
 ///   See map for valid tokens.
