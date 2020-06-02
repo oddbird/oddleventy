@@ -1,9 +1,7 @@
-'use strict';
-
-const resolve = require('@rollup/plugin-node-resolve');
-const commonjs = require('@rollup/plugin-commonjs');
-const babel = require('rollup-plugin-babel');
-const terser = require('rollup-plugin-terser').terser;
+import babel from '@rollup/plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import { terser } from 'rollup-plugin-terser';
 
 module.exports = {
   input: 'src/js/index.js',
@@ -12,5 +10,10 @@ module.exports = {
     format: 'iife',
     sourcemap: true,
   },
-  plugins: [resolve({ browser: true }), commonjs(), babel(), terser()],
+  plugins: [
+    resolve({ browser: true }),
+    commonjs(),
+    babel({ babelHelpers: 'bundled' }),
+    terser(),
+  ],
 };

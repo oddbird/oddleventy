@@ -230,27 +230,6 @@ const findPage = (collection, keys, value) =>
   collection.find((page) => hasData(page, keys, value));
 
 /* @docs
-label: render
-category: Data
-note: Returns the value for a given key from either `renderData` or `data`
-params:
-  page:
-    type: 11ty page object
-  key:
-    type: string
-*/
-const render = (page, key) => {
-  /* istanbul ignore if */
-  if (!page || !page.data) {
-    return undefined;
-  }
-
-  return page.data.renderData
-    ? page.data.renderData[key] || page.data[key]
-    : page.data[key];
-};
-
-/* @docs
 label: pageYears
 category: Sorting
 note: |
@@ -327,7 +306,6 @@ module.exports = {
   getData,
   findData,
   withData,
-  render,
   pageYears,
   byYear,
   removePage,

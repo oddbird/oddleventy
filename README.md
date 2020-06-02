@@ -36,6 +36,7 @@ To upgrade the yarn version used by OddLeventy, update the version number in
 these places and then run `yarn set version <new-version>` to upgrade:
 
 - `package.json` (`engines.yarn` field)
+- `.yarnrc` (`yarn-path` line)
 
 ### Install dependencies
 

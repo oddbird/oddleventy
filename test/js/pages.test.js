@@ -11,7 +11,6 @@ import {
   isPublic,
   pageYears,
   removePage,
-  render,
   withData,
 } from '#/pages';
 
@@ -89,13 +88,6 @@ describe('page filters', () => {
     expect(findPage(collection3, 'data.author', 'erica')).toEqual(
       collection3[1],
     );
-  });
-
-  test('render', () => {
-    expect(render(collection3[2], 'foo')).toEqual('bar');
-    expect(render(collection3[2], 'title')).toEqual('Draft Title');
-    expect(render(collection3[3], 'foo')).toEqual({ foo: 'bar' });
-    expect(render(collection3[0], 'title')).toEqual('Test Title');
   });
 
   test('pageYears', () => {

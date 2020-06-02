@@ -17,6 +17,7 @@ const images = require('#/images');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
+  eleventyConfig.setWatchThrottleWaitTime(100);
   eleventyConfig.addPlugin(rss);
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -84,7 +85,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('getData', pages.getData);
   eleventyConfig.addFilter('findData', pages.findData);
   eleventyConfig.addFilter('withData', pages.withData);
-  eleventyConfig.addFilter('render', pages.render);
   eleventyConfig.addFilter('pageYears', pages.pageYears);
   eleventyConfig.addFilter('byYear', pages.byYear);
   eleventyConfig.addFilter('removePage', pages.removePage);

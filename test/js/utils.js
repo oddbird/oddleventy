@@ -197,7 +197,6 @@ export const collection3 = [
       tags: ['tag3', 'tag3'],
       author: 'erica',
       end: '2020-01-09T04:10:17.000Z',
-      renderData: { foo: 'bar' },
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },
