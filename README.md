@@ -89,7 +89,7 @@ at the URL: `/style/`.
 ## Deployment
 
 The site is auto-deployed on [Netlify](https://www.netlify.com/) from the
-`master` branch on GitHub. Deploys are automated on push to master.
+`main` branch on GitHub. Deploys are automated on push to `main`.
 
 Use branches and PRs for changes, and Netlify will create staging previews for
 functional review before merge.
