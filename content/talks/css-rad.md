@@ -15,8 +15,8 @@ tags:
 events:
   - venue: Smashing Conf Austin
     url: https://smashingconf.com/austin-2020/
-    date: 2020-06-09
-    end: 2020-06-10
+    date: 2020-10-13
+    end: 2020-10-14
     adr: Austin, TX
   - venue: Front Range Front End
     url: https://www.meetup.com/front-range-front-end/events/bxrfwqyzpbkb/

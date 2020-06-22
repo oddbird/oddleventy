@@ -18,8 +18,8 @@ events:
     adr: New York
   - venue: Smashing Conf Austin
     url: https://smashingconf.com/austin-2020/
-    date: 2020-06-08
-    end: 2020-06-10
+    date: 2020-10-12
+    end: 2020-10-14
     adr: Austin, TX
 image:
   src: blog/2019/mia-jen-smashing.jpg

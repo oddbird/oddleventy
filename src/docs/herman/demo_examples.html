@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-herman="root">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
 
   
 </head>
-<body>
+<body data-herman="body">
   <svg xmlns="http://www.w3.org/2000/svg" hidden>
   <symbol id="icon-logo" viewBox="0 0 16 16">
     <path d="M.2 8L0 7.8v-.2C.8 6.9 1.9 5.9 2.7 5l.4.3c-.5.8-1.1 1.6-1.8 2.3 1 1.2 1 1.3 1.7 2.4l-.4.3c-.4-.4-.5-.6-1-1C1 8.6 1.1 8.7.2 8zM13 10c.6-1.1.7-1.1 1.7-2.4-.6-.6-1.3-1.5-1.7-2.3l.3-.3c.8.8 1.8 1.8 2.7 2.6v.2l-.8.7c-.3.3-1.2 1.1-1.8 1.7L13 10z"/><path d="M2.6 13.1H3c.9 0 1.1-.2 1.1-1.4V4.2c0-1.1-.2-1.4-1.1-1.4h-.4v-.6h4.5v.7h-.3c-.9 0-1.1.2-1.1 1.4v3.2h4.6V4.2c0-1.1-.2-1.4-1.1-1.4h-.3v-.6h4.5v.7H13c-.9 0-1.1.2-1.1 1.4v7.5c0 1.1.2 1.4 1.1 1.4h.4v.7H8.9v-.7h.3c.9 0 1.1-.2 1.1-1.4V8.2H5.7v3.5c0 1.1.2 1.4 1.1 1.4h.3v.7H2.6v-.7z"/>
@@ -42,7 +42,7 @@
       <div class="project-title">
         <a href="index.html" rel="home" class="project-name">Herman</a>
         
-          <span class="project-version">3.0.2</span>
+          <span class="project-version">3.2.0</span>
         
       </div>
     </header>
@@ -452,7 +452,7 @@ with an API for supporting additional<span class="widont">&nbsp;</span>languages
 <p>Example annotations with language set to <code>sass</code> or <code>scss</code>
 will be compiled by Herman,
 and display the output along with the<span class="widont">&nbsp;</span>source.</p>
-<p>Note that Sass/Scss examples require <code>node-sass</code>
+<p>Note that Sass/Scss examples require <code>node-sass</code> or <code>sass</code>
 to be installed, if it isn’t already: <code>npm install node-sass</code>.</p>
 <p>All Sass examples must be complete and valid,
 with the ability to import Sass partials inside each example.
@@ -466,9 +466,10 @@ an array of places to look for Sass<span class="widont">&nbsp;</span>includes:</
       - 'static/sass'
       - 'node_modules'
 </code></pre>
-<p>You can also set an array of default <code>includes</code>
+<p>You can also set an array of default <code>includes</code> or <code>use</code>
 (relative to any <code>includepaths</code>)
 to include for all Sass<span class="widont">&nbsp;</span>examples:</p>
+<p>To <code>@import</code> files:</p>
 <pre><code class="lang-yaml"># .sassdocrc (yaml)
 herman:
   sass:
@@ -477,6 +478,15 @@ herman:
     includes:
       - 'utilities'
       - 'config/manifest'
+</code></pre>
+<p>Or to <code>@use</code> files:</p>
+<pre><code class="lang-yaml"># .sassdocrc (yaml)
+herman:
+  sass:
+    includepaths:
+      - 'static/sass'
+    use:
+      - 'config/tools'
 </code></pre>
 <p>Generally, included Sass files should not contain
 any CSS output of their own,
@@ -583,9 +593,8 @@ herman:
       
       
       <pre class="hljs-pre"><code class="lang-css">.sass-nesting {
-  content: &#39;Example: Compiling Sass...&#39;;
-}
-</code></pre>
+  content: &quot;Example: Compiling Sass...&quot;;
+}</code></pre>
     </div>
   
 
@@ -790,19 +799,19 @@ sassdoc(src, {
   &lt;title&gt;example&lt;/title&gt;
 
   
+    &lt;!-- Custom CSS --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/custom/app_styles.min.css&quot; /&gt;
+  
+
+  
     &lt;!-- Custom Font HTML --&gt;
     
 &lt;link href=&quot;https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i&quot; rel=&quot;stylesheet&quot;&gt;
 &lt;link href=&quot;https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600&quot; rel=&quot;stylesheet&quot;&gt;
 &lt;link href=&quot;https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&quot; rel=&quot;stylesheet&quot;&gt;
   
-
-  
-    &lt;!-- Custom CSS --&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/custom/app_styles.min.css&quot; /&gt;
-  
 &lt;/head&gt;
-&lt;body class=&quot;sassdoc&quot;&gt;
+&lt;body&gt;
   
     &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; hidden&gt;
   &lt;symbol id=&quot;icon-logo&quot; viewBox=&quot;0 0 16 16&quot;&gt;
