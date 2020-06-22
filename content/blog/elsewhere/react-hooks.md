@@ -1,6 +1,7 @@
 ---
 title: Why We Switched to React Hooks
 author: erica
+card: feature
 date: 2019-09-11
 canonical: https://blog.bitsrc.io/why-we-switched-to-react-hooks-48798c42c7f
 venue: Bits and Pieces

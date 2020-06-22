@@ -2,6 +2,7 @@
 title: It's My Job, and Yours
 sub: CSS-Tricks asked a number of web builders the same question...
 author: stacy
+card: feature
 date: 2019-11-22
 canonical: https://css-tricks.com/its-my-job-and-yours/
 tags:

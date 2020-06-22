@@ -2,6 +2,7 @@
 title: Mozilla Developer Videos, Articles, & Tools
 sub: a gift from Mozilla (and OddBird)
 author: miriam
+card: feature
 date: 2019-10-01
 tags:
   - AboutWeb Video
