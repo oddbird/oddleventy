@@ -1,7 +1,8 @@
 #!/bin/sh
 set -e
 
-npm install @oddbird/blend susy sass-true sassdoc-theme-herman accoutrement --force --no-package-lock --no-save --ignore-scripts --no-bin-links --only=prod --prefix=temp
+npm install cascading-color-systems @oddbird/blend susy sass-true sassdoc-theme-herman accoutrement --force --no-package-lock --no-save --ignore-scripts --no-bin-links --only=prod --prefix=temp
+rm -rf ./src/docs/cascading-colors/; cp -a ./temp/node_modules/cascading-color-systems/docs ./src/docs/cascading-colors/
 rm -rf ./src/docs/blend/; cp -a ./temp/node_modules/@oddbird/blend/docs ./src/docs/blend/
 rm -rf ./src/docs/susy/; cp -a ./temp/node_modules/susy/docs ./src/docs/susy/
 rm -rf ./src/docs/true/; cp -a ./temp/node_modules/sass-true/docs ./src/docs/true/
