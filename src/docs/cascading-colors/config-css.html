@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <title>Contributing | Cascading Color Systems Documentation</title>
+  <title>Global CSS Settings | Cascading Color Systems Documentation</title>
 
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
@@ -71,7 +71,7 @@
           
             
             <li class="nav-item">
-              <a href="CONTRIBUTING.html" data-nav="is-active">Contributing</a>
+              <a href="CONTRIBUTING.html" data-nav="is-not-active">Contributing</a>
             </li>
           
             
@@ -92,7 +92,7 @@
                 
   
     <li class="nav-item">
-      <a href="config-css.html" data-nav="is-not-active">Global CSS<span class="widont">&nbsp;</span>Settings</a>
+      <a href="config-css.html" data-nav="is-active">Global CSS<span class="widont">&nbsp;</span>Settings</a>
     </li>
   
   
@@ -188,60 +188,102 @@
   <nav class="breadcrumb">
     
     <a href="index.html" >Cascading Color Systems</a> »
-    <strong>Contributing</strong>
+    <strong>Global CSS Settings</strong>
   </nav>
 
 
-        <div data-page="CONTRIBUTING">
+        <div data-page="config-css">
           
-  <div class="text-block">
-    <h1 id="contributing">Contributing</h1>
-<p>Run <code>yarn</code> to install<span class="widont">&nbsp;</span>dependencies…</p>
-<h2 id="organization">Organization</h2>
-<ul>
-<li><code>css/</code>: GENERATED CSS for use without a build<span class="widont">&nbsp;</span>step</li>
-<li><code>docs/</code>: GENERATED SassDoc/Herman<span class="widont">&nbsp;</span>documentation</li>
-<li><code>sass/</code>: the tool itself
-<ul>
-<li><code>config/</code>: all the use-defined<span class="widont">&nbsp;</span>variables</li>
-<li><code>partials/</code>: all the logic and<span class="widont">&nbsp;</span>output</li>
-<li><code>_ccs.scss</code>: forwards the combined Sass<span class="widont">&nbsp;</span>module</li>
-<li><code>_output.scss</code>: generates the default CSS<span class="widont">&nbsp;</span>output</li>
-</ul>
-</li>
-<li><code>site/</code>: Styles for the demo site (also used for<span class="widont">&nbsp;</span>testing)</li>
-<li><code>_index.scss</code>: Root-level index file for importing the<span class="widont">&nbsp;</span>module</li>
-</ul>
-<h2 id="development">Development</h2>
-<p>The following scripts can help you<span class="widont">&nbsp;</span>work:</p>
-<ul>
-<li><code>yarn build-sass</code>: compiles the <code>output</code> file to <code>css/ccs.css</code></li>
-<li><code>yarn build-docs</code>: compiles SassDoc/Herman<span class="widont">&nbsp;</span>documentation</li>
-<li><code>yarn build-js</code>: compiles <code>dist.js</code> for packaging</li>
-<li><code>yarn build-site</code>: compiles the demo site<span class="widont">&nbsp;</span>styles</li>
-<li><code>yarn build</code> or <code>yarn commit</code>: all the build steps at<span class="widont">&nbsp;</span>once</li>
-<li><code>yarn watch</code>: a watcher for the site<span class="widont">&nbsp;</span>styles</li>
-</ul>
-<h2 id="process">Process</h2>
-<ol>
-<li>Create a new branch for each feature/bug being<span class="widont">&nbsp;</span>addressed</li>
-<li>Make any changes<span class="widont">&nbsp;</span>required</li>
-<li>Update inline documentation as you<span class="widont">&nbsp;</span>go</li>
-<li>Document changes in <a href="./CHANGELOG.md">CHANGELOG.md</a></li>
-<li>Run <code>yarn commit</code></li>
-<li>Commit your changes</li>
-<li>Create a Pull Request on<span class="widont">&nbsp;</span>GitHub</li>
-</ol>
-<h2 id="release">Release</h2>
-<ol>
-<li>Update <code>package.json</code></li>
-<li>Run <code>yarn commit</code> to update generated<span class="widont">&nbsp;</span>docs</li>
-<li>Commit and push<span class="widont">&nbsp;</span>changes</li>
-<li>Create release through GitHub<span class="widont">&nbsp;</span>UI</li>
-<li>Pull changes, and <code>npm publish</code></li>
-</ol>
+  
+    
+    
 
-  </div>
+
+
+
+
+
+
+
+
+
+<section class="item" >
+  
+    
+  
+  
+  
+  
+
+  
+    <div data-item-section="prose" class="text-block">
+      <h1 id="css-global-settings">CSS Global Settings</h1>
+<p>Global configuration options will be defined
+with custom properties on the <code>html</code> element
+or <code>[data-ccs='root']</code> selector.
+You can do that manually,
+or by setting the <a href="config.html">Sass configuration</a><span class="widont">&nbsp;</span>variables.</p>
+<ul>
+<li><code>--ccs-#{$name}--config</code> (for each desired<span class="widont">&nbsp;</span>hue)</li>
+<li><code>--ccs-lightness--config</code></li>
+<li><code>--ccs-saturation--config</code></li>
+<li><code>--ccs-contrast--config</code></li>
+<li><code>--ccs-fade-background--config</code></li>
+<li><code>--ccs-s-neutral--config</code> (neutral saturation)</li>
+<li><code>--ccs-fade</code></li>
+</ul>
+
+      
+  
+
+      
+  
+
+      
+  
+
+    </div>
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+  
+    
+    
+  
+
+  
+
+  
+  
+
+
+  
+  
+
+  
+  
+
+</section>
+
+  
 
         </div>
       </main>

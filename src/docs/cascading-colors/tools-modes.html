@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <title>Import CSS or Sass | Cascading Color Systems Documentation</title>
+  <title>If-Mode | Cascading Color Systems Documentation</title>
 
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
@@ -42,7 +42,7 @@
       <div class="project-title">
         <a href="index.html" rel="home" class="project-name">Cascading Color Systems</a>
         
-          <span class="project-version">0.1.0-beta.11</span>
+          <span class="project-version">0.1.0-beta.12</span>
         
       </div>
     </header>
@@ -87,17 +87,12 @@
     <div class="nav-subsection">
       <ul>
             <li class="nav-subsection">
-              <h3 class="nav-title">Getting Started</h3>
+              <h3 class="nav-title">CSS Usage</h3>
               <ul>
                 
   
     <li class="nav-item">
-      <a href="import.html" data-nav="is-active">Import CSS or<span class="widont">&nbsp;</span>Sass</a>
-    </li>
-  
-  
-    <li class="nav-item">
-      <a href="config.html" data-nav="is-not-active">Global Settings</a>
+      <a href="config-css.html" data-nav="is-not-active">Global CSS<span class="widont">&nbsp;</span>Settings</a>
     </li>
   
   
@@ -117,17 +112,22 @@
   </ul>
             </li>
             <li class="nav-subsection">
-              <h3 class="nav-title">Sass (optional)</h3>
+              <h3 class="nav-title">Sass Tools</h3>
               <ul>
                 
   
     <li class="nav-item">
-      <a href="palettes.html" data-nav="is-not-active">Color Palettes</a>
+      <a href="config.html" data-nav="is-not-active">Global Sass<span class="widont">&nbsp;</span>Settings</a>
     </li>
   
   
     <li class="nav-item">
-      <a href="tools.html" data-nav="is-not-active">Additional Tools</a>
+      <a href="palettes.html" data-nav="is-not-active">Generating Palettes</a>
+    </li>
+  
+  
+    <li class="nav-item">
+      <a href="tools-modes.html" data-nav="is-active">If-Mode</a>
     </li>
   </ul>
             </li></ul>
@@ -143,7 +143,7 @@
         <ul>
           
             <li class="nav-item">
-              <a href="https://cascading-colors.netlify.com/" data-nav="is-not-active">Demo</a>
+              <a href="https://cascading-colors.netlify.app/" data-nav="is-not-active">Demo</a>
             </li>
           
             <li class="nav-item">
@@ -188,11 +188,11 @@
   <nav class="breadcrumb">
     
     <a href="index.html" >Cascading Color Systems</a> »
-    <strong>Import CSS or Sass</strong>
+    <strong>If-Mode</strong>
   </nav>
 
 
-        <div data-page="import">
+        <div data-page="tools-modes">
           
   
     
@@ -217,7 +217,7 @@
 
   
     <div data-item-section="prose" class="text-block">
-      <h1 id="import-css-or-sass">Import CSS or<span class="widont">&nbsp;</span>Sass</h1>
+      <h1 id="if-mode">If-Mode</h1>
 
       
   
@@ -282,8 +282,37 @@
 
 
 
-<section class="item" >
+<section class="item" id="function--if-mode">
   
+    
+  
+  
+
+  
+  
+  
+  
+
+  <div data-item-section="header">
+    <h2 class="item-title">
+      
+        <span class="item-type">@function</span>
+      
+
+      
+        <a href="#function--if-mode" class="item-name">if-mode()</a>
+      
+
+      
+
+      
+    </h2>
+
+    
+  
+
+
+    
     
   
   
@@ -291,14 +320,10 @@
   
 
   
-    <div data-item-section="prose" class="text-block">
-      <h2 id="css">CSS</h2>
-<p>If you are happy with the default settings,
-you can import the generated CSS directly.
-The default import includes 4 themes,
-with 4 tints and 4 shades for each<span class="widont">&nbsp;</span>color:</p>
-<pre><code>&lt;path-to-package&gt;/css/ccs.css
-</code></pre>
+    <div class="text-block">
+      <p>Toggles between two number values
+(or CSS <code>var()</code> functions that return numbers),
+depending on the current light/dark<span class="widont">&nbsp;</span>mode.</p>
 
       
   
@@ -312,81 +337,112 @@ with 4 tints and 4 shades for each<span class="widont">&nbsp;</span>color:</p>
     </div>
   
 
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-
-  
-  
-
-
-  
-  
-  
-  
-    
-    
-  
+  </div>
 
   
 
   
   
-
-
   
   
-
   
   
-
-</section>
 
   
     
+  <div data-item-section="parameter">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Parameters &amp;<span class="widont">&nbsp;</span>Return</span>
+        
+      </h3>
     
 
+    
+      
+        
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">$light:</span>
+      
+      
+      <span class="value-type">(number |<span class="widont">&nbsp;</span>var())</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>The value to use for light<span class="widont">&nbsp;</span>mode</p>
+
+      </div>
+    
+  </div>
 
 
+      
+        
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">$dark:</span>
+      
+      
+      <span class="value-type">(number |<span class="widont">&nbsp;</span>var())</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>The value to use for dark<span class="widont">&nbsp;</span>mode</p>
+
+      </div>
+    
+  </div>
 
 
+      
 
+      
+  
 
-
-
-
-<section class="item" >
+      
   
     
-  
-  
-  
-  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">@return</span>
+      
+      
+      <span class="value-type">(calc())</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>A CSS <code>calc()</code> function that will toggle the proper values
+based on the value of <code>--ccs-mode--zero</code> and <code>--ccs-invert--zero</code></p>
+
+      </div>
+    
+  </div>
 
   
-    <div data-item-section="prose" class="text-block">
-      <h2 id="sass">Sass</h2>
-<p>If you are using Sass
-(Dart-Sass v1.23+ required)
-Import the <code>_index.scss</code> file with your custom configuration.
-Sass imports index files by default,
-so you can drop the file name from your import if you<span class="widont">&nbsp;</span>like:</p>
-<pre><code class="lang-scss"> @use '&lt;path-to-package&gt;/';
-</code></pre>
-<p>You can also configure the namespace and default<span class="widont">&nbsp;</span>settngs:</p>
-<pre><code class="lang-scss"> @use '&lt;path-to-package&gt;/' as 'colors' with (
-   $build: true,
-   $steps: 6,
- );
-</code></pre>
 
       
   
@@ -394,25 +450,189 @@ so you can drop the file name from your import if you<span class="widont">&nbsp;
       
   
 
-      
+    
+  </div>
+
   
 
+
+  
+  
+    
+
+    <div data-item-section="examples">
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Examples</span>
+      </h3>
+
+      
+        
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  <div class="example">
+    <div class="example-code">
+      
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            scss
+          </span>
+
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-scss">[data-ccs-theme] {
+  --ccs-accent--theme: #{tools.if-mode(
+    $light: var(--ccs-theme--1),
+    $dark: var(--ccs-theme--2)
+  )};
+  --ccs-special--theme: #{tools.if-mode(
+    $light: var(--ccs-theme--2),
+    $dark: var(--ccs-theme--1)
+  )};
+}</code></pre>
     </div>
   
 
   
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            css
+          </span>
+
+          
+            <span class='code-description'>
+              compiled
+            </span>
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-css">[data-ccs-theme] {
+  --ccs-accent--theme: calc(
+    var(--ccs-mode--zero) * var(--ccs-theme--1) + var(--ccs-invert--zero) * var(--ccs-theme--2)
+  );
+  --ccs-special--theme: calc(
+    var(--ccs-mode--zero) * var(--ccs-theme--2) + var(--ccs-invert--zero) * var(--ccs-theme--1)
+  );
+}</code></pre>
+    </div>
+  
+
+    </div>
+
+    
+  </div>
+
+      
+        
+  
+  
 
   
   
   
-  
+
   
   
 
   
-
+  
 
   
+  <div class="example">
+    <div class="example-code">
+      
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            scss
+          </span>
+
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-scss">[data-ccs-theme=&#39;oddbird&#39;] {
+  --ccs-prime--config: 195;
+  --ccs-accent--config: 330;
+  --ccs-prime--theme: #{tools.if-mode(
+    $light: var(--ccs-prime--config),
+    $dark: var(--ccs-accent--config)
+  )};
+  --ccs-accent--theme: #{tools.if-mode(
+    $light: var(--ccs-accent--config),
+    $dark: var(--ccs-prime--config)
+  )};
+  --ccs-custom-hue: none;
+}</code></pre>
+    </div>
+  
+
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            css
+          </span>
+
+          
+            <span class='code-description'>
+              compiled
+            </span>
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-css">[data-ccs-theme=oddbird] {
+  --ccs-prime--config: 195;
+  --ccs-accent--config: 330;
+  --ccs-prime--theme: calc(
+    var(--ccs-mode--zero) * var(--ccs-prime--config) + var(--ccs-invert--zero) * var(--ccs-accent--config)
+  );
+  --ccs-accent--theme: calc(
+    var(--ccs-mode--zero) * var(--ccs-accent--config) + var(--ccs-invert--zero) * var(--ccs-prime--config)
+  );
+  --ccs-custom-hue: none;
+}</code></pre>
+    </div>
+  
+
+    </div>
+
+    
+  </div>
+
+      
+    </div>
   
 
 

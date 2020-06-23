@@ -8,7 +8,7 @@ image:
   alt: Miriam speaking at Smashing Conf NY
   width: 2240
   height: 1493
-slides: https://sliiides.netlify.com/css-is-rad/
+slides: https://sliiides.netlify.app/css-is-rad/
 tags:
   - Design
   - CSS
