@@ -68,7 +68,7 @@ the Font Editor, the Animations Tools, Tracked Changes, and more.
 If you’ve ever struggled to style lists with customized bullets and
 numbers, Miriam Suzanne has a video all about the `::marker`
 pseudo-element and list counters. Watch the video, and go play with the
-[demo on codepen].
+[demo on CodePen].
 
 {{ embed.figure(markers.media, markers.caption) }}
 
@@ -81,4 +81,4 @@ articles, demos, and some exciting new open source tools.
 
 [channel]: https://www.youtube.com/MozillaDeveloper
 [dark mode demo]: https://empathic-dev.github.io/HelloDarkness/
-[demo on codepen]: https://codepen.io/mirisuzanne/pen/BaBKowO?editors=0100
+[demo on CodePen]: https://codepen.io/mirisuzanne/pen/BaBKowO?editors=0100
