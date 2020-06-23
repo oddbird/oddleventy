@@ -1,5 +1,5 @@
 theme: herman
-dest: _site/style/
+dest: _site/styleguide/
 
 package: ./package.json
 shortcutIcon: ./content/favicon.ico
