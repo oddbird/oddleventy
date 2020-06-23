@@ -1,6 +1,6 @@
 # OddLeventy
 
-[![CircleCI](https://circleci.com/gh/oddbird/oddleventy.svg?style=svg)](https://circleci.com/gh/oddbird/oddleventy) [![Netlify Status](https://api.netlify.com/api/v1/badges/4f75b5a7-8412-4586-bad0-b4de64bb4f17/deploy-status)](https://app.netlify.com/sites/oddleventy/deploys)
+[![CircleCI](https://circleci.com/gh/oddbird/oddleventy/tree/main.svg?style=svg)](https://circleci.com/gh/oddbird/oddleventy) [![Netlify Status](https://api.netlify.com/api/v1/badges/4f75b5a7-8412-4586-bad0-b4de64bb4f17/deploy-status)](https://app.netlify.com/sites/oddleventy/deploys)
 
 This site is built using:
 
