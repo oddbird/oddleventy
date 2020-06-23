@@ -1,7 +1,24 @@
+{% import 'embed.macros.njk' as embed %}
 {% import 'utility.macros.njk' as utility %}
 
 {% if summary or action %}
   <div id="intro" class="summary">
+    {% if badges %}
+      <ul class="oss-badges">
+        {% for badge in badges %}
+          <li>
+            {{ utility.link_if(
+              content=embed.img(
+                src=badge.src,
+                alt=badge.name
+              ),
+              url=badge.url
+            ) }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
     {{ summary | md | safe }}
 
     {% if action %}
