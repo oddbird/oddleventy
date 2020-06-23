@@ -34,7 +34,7 @@ groups:
 
 herman:
   extraDocs:
-    - name: Getting Started
+    - name: Content and Writing
       path: ./styleguide.md
   extraLinks:
     - name: Eleventy
