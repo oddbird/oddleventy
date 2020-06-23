@@ -4,6 +4,20 @@ root: true
 parserOptions:
   sourceType: script
   ecmaVersion: 2018
+overrides:
+  - files:
+      - rollup.config.js
+    parserOptions:
+      sourceType: module
+    env:
+      browser: true
+      commonjs: true
+      node: false
+    plugins:
+      - simple-import-sort
+    rules:
+      simple-import-sort/sort: 1
+      import/order: 0
 env:
   es6: true
   node: true

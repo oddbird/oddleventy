@@ -68,7 +68,7 @@ badges:
     src: https://badge.fury.io/js/accoutrement.svg
     url: https://www.npmjs.com/package/accoutrement
   - name: build
-    src: https://travis-ci.org/oddbird/accoutrement.svg
+    src: https://travis-ci.org/oddbird/accoutrement.svg?branch=master
     url: https://travis-ci.org/oddbird/accoutrement
 summary: |
   OddBird's Accoutrement tools

@@ -9,10 +9,7 @@
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0" />
 
-    {% set title = renderData.title or title %}
-    {% set banner = renderData.banner or banner or title %}
-    {% set sub = renderData.sub or sub %}
-    {% set index = renderData.index or index %}
+    {% set banner = banner or title %}
     {% set description = (sub or summary or site.description) | removeMd %}
     {% set perma = redirect.to if redirect else canonical or (page.url | absoluteUrl(site.url)) %}
 

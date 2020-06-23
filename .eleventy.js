@@ -13,21 +13,23 @@ const taxonomy = require('#/taxonomy');
 const time = require('#/time');
 const type = require('#/type');
 const utils = require('#/utils');
+const images = require('#/images');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
+  eleventyConfig.setWatchThrottleWaitTime(100);
   eleventyConfig.addPlugin(rss);
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  eleventyConfig.addWatchTarget('./src/images/');
-  eleventyConfig.addWatchTarget('./src/media/');
-
   // pass-through
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
-  eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
-  eleventyConfig.addPassthroughCopy({ 'src/images': 'assets/images' });
   eleventyConfig.addPassthroughCopy({ 'src/media': 'assets/media' });
 
+  // Open Source project documentation
+  eleventyConfig.addPassthroughCopy({
+    'src/docs/cascading-colors': 'cascading-colors/docs',
+  });
+  eleventyConfig.addPassthroughCopy({ 'src/docs/blend': 'blend/docs' });
   eleventyConfig.addPassthroughCopy({ 'src/docs/susy': 'susy/docs' });
   eleventyConfig.addPassthroughCopy({ 'src/docs/herman': 'herman/docs' });
   eleventyConfig.addPassthroughCopy({ 'src/docs/true': 'true/docs' });
@@ -88,7 +90,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('getData', pages.getData);
   eleventyConfig.addFilter('findData', pages.findData);
   eleventyConfig.addFilter('withData', pages.withData);
-  eleventyConfig.addFilter('render', pages.render);
   eleventyConfig.addFilter('pageYears', pages.pageYears);
   eleventyConfig.addFilter('byYear', pages.byYear);
   eleventyConfig.addFilter('removePage', pages.removePage);
@@ -113,6 +114,11 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('mdInline', type.mdInline);
   eleventyConfig.addFilter('removeMd', type.removeMd);
   eleventyConfig.addFilter('elide', type.elide);
+
+  eleventyConfig.addFilter('imgSuffix', images.imgSuffix);
+  eleventyConfig.addFilter('imgSize', images.imgSize);
+
+  eleventyConfig.addFilter('max', (array) => Math.max(...array));
 
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.md);

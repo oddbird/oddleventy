@@ -10,9 +10,7 @@
 /// This works like a selector,
 /// with content rather than arguments.
 ///
-/// @content
-///   The styles to apply to range input tracks
-/// @example scss
+///   ```scss
 ///   @use 'tools/input-range' as range;
 ///
 ///   @include range.track {
@@ -20,6 +18,10 @@
 ///     height: 1em;
 ///     cursor: pointer;
 ///   }
+///   ```
+///
+/// @content
+///   The styles to apply to range input tracks
 /// @group tools-range
 @mixin track {
   /* stylelint-disable */
@@ -35,7 +37,7 @@
   /* stylelint-enable */
 }
 
-// Track
+// Thumb
 // -----
 /// Generate browser-prefixed selector blocks
 /// for styling range input 'thumbs' --
@@ -43,9 +45,7 @@
 /// This works like a selector,
 /// with content rather than arguments.
 ///
-/// @content
-///   The styles to apply to range input thumbs
-/// @example scss
+///   ```scss
 ///   @use 'tools/input-range' as range;
 ///
 ///   @include range.thumb {
@@ -55,6 +55,10 @@
 ///     background: var(--ccs-prime);
 ///     cursor: pointer;
 ///   }
+///   ```
+///
+/// @content
+///   The styles to apply to range input thumbs
 /// @group tools-range
 @mixin thumb {
   /* stylelint-disable */

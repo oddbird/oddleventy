@@ -1,6 +1,6 @@
 # OddLeventy
 
-[![CircleCI](https://circleci.com/gh/oddbird/oddleventy.svg?style=svg)](https://circleci.com/gh/oddbird/oddleventy) [![Netlify Status](https://api.netlify.com/api/v1/badges/4f75b5a7-8412-4586-bad0-b4de64bb4f17/deploy-status)](https://app.netlify.com/sites/oddleventy/deploys)
+[![CircleCI](https://circleci.com/gh/oddbird/oddleventy/tree/main.svg?style=svg)](https://circleci.com/gh/oddbird/oddleventy) [![Netlify Status](https://api.netlify.com/api/v1/badges/4f75b5a7-8412-4586-bad0-b4de64bb4f17/deploy-status)](https://app.netlify.com/sites/oddleventy/deploys)
 
 This site is built using:
 
@@ -36,6 +36,7 @@ To upgrade the yarn version used by OddLeventy, update the version number in
 these places and then run `yarn set version <new-version>` to upgrade:
 
 - `package.json` (`engines.yarn` field)
+- `.yarnrc` (`yarn-path` line)
 
 ### Install dependencies
 
@@ -88,7 +89,7 @@ at the URL: `/style/`.
 ## Deployment
 
 The site is auto-deployed on [Netlify](https://www.netlify.com/) from the
-`master` branch on GitHub. Deploys are automated on push to master.
+`main` branch on GitHub. Deploys are automated on push to `main`.
 
 Use branches and PRs for changes, and Netlify will create staging previews for
 functional review before merge.

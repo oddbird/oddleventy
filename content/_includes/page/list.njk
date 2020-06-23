@@ -2,8 +2,6 @@
 {% import 'oss.macros.njk' as oss %}
 {% import 'layout.macros.njk' as layout %}
 
-{% set index = renderData.index or index %}
-
 {% if index %}
   {% set list = collections[index] %}
   {{ post.by_year(

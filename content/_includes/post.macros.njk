@@ -147,7 +147,7 @@ params:
   <article
     data-post="{{ 'large' if (card == 'large') else 'link' }}"
     aria-labelledby="{{ id(post) }}">
-    {{ hero(image, 'post') }}
+    {{ hero(image, card or 'post') }}
     {% if type %}
       <div class="type-flag" data-flag="left">
         {{ type.tag }}
@@ -233,6 +233,9 @@ params:
         {{ embed.img(
           src=image.src,
           alt=image.alt,
+          width=image.width,
+          height=image.height,
+          sizes='card' if (type == 'post') else none,
           attrs={style: position}
         ) }}
       {%- elif image.svg -%}
@@ -358,7 +361,7 @@ params:
 {% macro name(
   post
 ) -%}
-  {% set title = post | render('banner') or post | render('title') %}
+  {% set title = post.data.banner or post.data.title %}
   {{ title | mdInline | safe }}
 {%- endmacro %}
 

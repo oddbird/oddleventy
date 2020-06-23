@@ -6,7 +6,7 @@ pagination:
   size: 1
   alias: file
 permalink: /sample/macros/{{ file.slug | slug }}/
-renderData:
+eleventyComputed:
   title: '{{ file.info.label or file.name }}'
   sub: '`{{ file.path }}`'
 eleventyExcludeFromCollections: true

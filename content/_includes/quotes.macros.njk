@@ -63,10 +63,10 @@ params:
   {%- if data.face -%}
     {{- embed.img(
       src='quotes/' + data.face,
+      width=60,
+      height=60,
       attrs={
-        'class': 'u-photo',
-        'height': 60,
-        'width': 60
+        'class': 'u-photo'
       }
     ) -}}
   {%- else -%}
