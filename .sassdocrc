@@ -35,7 +35,7 @@ groups:
 herman:
   extraDocs:
     - name: Content and Writing
-      path: ./styleguide.md
+      path: ./writing.md
   extraLinks:
     - name: Eleventy
       url: http://www.11ty.io

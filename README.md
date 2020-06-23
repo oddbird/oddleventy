@@ -83,8 +83,8 @@ yarn lint:js
 yarn sassdoc
 ```
 
-Sass Docs are compiled into the `_site/style/` folder, which is then available
-at the URL: `/style/`.
+Sass Docs are compiled into the `_site/styleguide/` folder, which is then available
+at the URL: `/styleguide/`.
 
 ## Deployment
 
