@@ -17,6 +17,9 @@ $ratios: (
   'line-height': 1.4,
 );
 
+@include tools.add-ratios($ratios);
+@include herman.herman-add('ratios', 'ratios', $ratios);
+
 // Font Sizes
 // ----------
 /// @sizes {text}
