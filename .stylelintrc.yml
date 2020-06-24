@@ -8,13 +8,6 @@ plugins:
   - stylelint-scss
   - stylelint-prettier
 
-ignoreFiles:
-  - '**/*.js'
-  - '**/*.jsx'
-  - '**/*.ts'
-  - '**/*.tsx'
-  - '**/*.md'
-
 rules:
   prettier/prettier: true
 
