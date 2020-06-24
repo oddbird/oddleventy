@@ -1,5 +1,5 @@
 """
-Script to migrate content from rstblog to oddleventy.
+Script to migrate content from rstblog to oddsite.
 
 Prerequisites:
 

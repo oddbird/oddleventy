@@ -1,4 +1,4 @@
-# OddLeventy
+# OddSite
 
 [![CircleCI](https://circleci.com/gh/oddbird/oddleventy/tree/main.svg?style=svg)](https://circleci.com/gh/oddbird/oddleventy) [![Netlify Status](https://api.netlify.com/api/v1/badges/4f75b5a7-8412-4586-bad0-b4de64bb4f17/deploy-status)](https://app.netlify.com/sites/oddleventy/deploys)
 
@@ -20,20 +20,20 @@ This site is built using:
 We recommend using [nvm](https://github.com/nvm-sh/nvm) for node version
 management. [Install it](https://github.com/nvm-sh/nvm#installation-and-update)
 if necessary, then run `nvm install` (once per active shell) to use the correct
-version of node for OddLeventy development.
+version of node for OddSite development.
 
 The correct [Yarn](https://yarnpkg.com/) version is included in the repo, and
 will be used automatically for any `yarn` command.
 
-To upgrade the node version used by OddLeventy, update the version number in
-these places and then run `nvm install` to upgrade:
+To upgrade the node version used by OddSite, update the version number in these
+places and then run `nvm install` to upgrade:
 
 - `.nvmrc`
 - `package.json` (`engines.node` field)
 - `.circleci/config.yml` (`docker.image` field)
 
-To upgrade the yarn version used by OddLeventy, update the version number in
-these places and then run `yarn set version <new-version>` to upgrade:
+To upgrade the yarn version used by OddSite, update the version number in these
+places and then run `yarn set version <new-version>` to upgrade:
 
 - `package.json` (`engines.yarn` field)
 - `.yarnrc` (`yarn-path` line)
