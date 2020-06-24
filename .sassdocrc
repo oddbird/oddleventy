@@ -42,7 +42,7 @@ herman:
     - name: Accoutrement
       url: https://oddbird.net/accoutrement/
     - name: Cascading Color Systems
-      url: https://cascading-colors.netlify.com/
+      url: https://oddbird.net/cascading-colors/
     - name: Herman
       url: https://oddbird.net/herman/
   fontpath: src/fonts/

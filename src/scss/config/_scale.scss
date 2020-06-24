@@ -17,6 +17,9 @@ $ratios: (
   'line-height': 1.4,
 );
 
+@include tools.add-ratios($ratios);
+@include herman.herman-add('ratios', 'ratios', $ratios);
+
 // Font Sizes
 // ----------
 /// @sizes {text}
@@ -48,7 +51,8 @@ $font-sizes: (
 /// @group config-scale
 $spacing-sizes: (
   'gutter': 0.75rem,
-  'newline': '#gutter',
+  'newline--default': '#gutter',
+  'newline': '#newline--default',
   'gutter-plus': calc(var(--gutter) * 1.5),
   'double-gutter': calc(var(--gutter) * 2),
   'triple-gutter': calc(var(--gutter) * 3),
