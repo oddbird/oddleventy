@@ -6,7 +6,7 @@ describe('fromTaxonomy', () => {
   test('Return data from taxonomy', () => {
     const allPosts = [
       { tag: 'Talk', icon: 'talk', img: true },
-      { tag: 'Workshop', icon: 'workshop', img: true, feature: true },
+      { tag: 'Workshop', icon: 'workshop', img: true },
       { tag: 'Podcast', icon: 'audio' },
       { tag: 'Video', icon: 'video' },
       { tag: 'Link', icon: 'link' },
