@@ -2,6 +2,7 @@
 title: Get Started with Design
 sub: Four useful tools & tutorials
 author: sondra
+card: feature
 tags:
   - Article
   - Recommendations

@@ -1,6 +1,7 @@
 ---
 title: 'We Are Not Neutral: 2016 in Review'
 author: miriam
+card: feature
 date: 2017-01-26
 tags:
   - Article

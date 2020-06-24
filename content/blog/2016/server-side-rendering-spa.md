@@ -1,6 +1,7 @@
 ---
 title: A Visit to the RESTful SPA
 author: kit
+card: feature
 date: 2016-12-16
 tags:
   - Article

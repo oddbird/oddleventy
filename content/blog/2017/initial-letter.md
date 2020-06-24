@@ -1,6 +1,7 @@
 ---
 title: "What's Old is New: Drop Caps in CSS"
 author: stacy
+card: feature
 date: 2017-01-03
 tags:
   - Article
