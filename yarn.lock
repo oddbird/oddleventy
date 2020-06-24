@@ -1799,9 +1799,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 14.0.13
-  resolution: "@types/node@npm:14.0.13"
-  checksum: 2f2be6f7f1a916b0f4d58949bd934a8e41c0dcb15c493c17c3eaf78da3065c09650030f0dfe2e8c11880d597ee001d7cd925129218037fdb4432e80f7d895673
+  version: 14.0.14
+  resolution: "@types/node@npm:14.0.14"
+  checksum: 0a2072aa7de32e6535ce6bc7383965fc0a4b7bbf6d76f69027db72e86381921c820a8a2173f75fa210d9fb3286c707079d3804ef33c76a065bcb890858e50ee9
   languageName: node
   linkType: hard
 
@@ -2736,20 +2736,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^9.8.0, autoprefixer@npm:^9.8.3":
-  version: 9.8.3
-  resolution: "autoprefixer@npm:9.8.3"
+"autoprefixer@npm:^9.8.0, autoprefixer@npm:^9.8.4":
+  version: 9.8.4
+  resolution: "autoprefixer@npm:9.8.4"
   dependencies:
     browserslist: ^4.12.0
     caniuse-lite: ^1.0.30001087
-    kleur: ^4.0.1
+    colorette: ^1.2.0
     normalize-range: ^0.1.2
     num2fraction: ^1.2.2
     postcss: ^7.0.32
     postcss-value-parser: ^4.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: 61604a0cbeb31ef281252b0fe414b2031902dc0659cd053e1f971f7949734e9f8cc9a225178fdd414133456ee98e2aec5cd76c735c5264b0839b1ba7e49eefc9
+  checksum: 0b3aa6fccff8d48b1375d9c009ebde4cb45f54a9cd540f46a4c3a2efcf34e56128a9daef211916cce01da51280ab2bea4814fde0176ce1d65bf6a1d5c3569f04
   languageName: node
   linkType: hard
 
@@ -3506,9 +3506,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001043, caniuse-lite@npm:^1.0.30001087":
-  version: 1.0.30001087
-  resolution: "caniuse-lite@npm:1.0.30001087"
-  checksum: be31dcbce8799a38a3d2923b88bfb4577dbe7c62f0dc2fba58296f1767d59fa603143925bf3367c5b1682fef2e720ad9be950e277566ceeaea903c7a83968765
+  version: 1.0.30001088
+  resolution: "caniuse-lite@npm:1.0.30001088"
+  checksum: 4f87a29c5906b3ff65eda27a8bc4434051475a8a8af5c0df685b03fde818688e6ad1e56dfcd7268ff06fe9eac978870b29909e6234b86610b73272c7e8ec280a
   languageName: node
   linkType: hard
 
@@ -4135,6 +4135,13 @@ __metadata:
     color-convert: ^1.9.1
     color-string: ^1.5.2
   checksum: 3fd5d29d43fd10a85a6ba8926e1917ce06ecab7c6be282d1f7e8f13d1482cc1075509edc5811301a1f541180530c4054d37b978729054fc9d46cee283e0e253b
+  languageName: node
+  linkType: hard
+
+"colorette@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "colorette@npm:1.2.0"
+  checksum: eed33a36778d6038f217a322960b775fa1603c301edc223ad13ad03f3c33e035b4ae12ac5ff3aa06637d0b8234b95f86d7f36f128845ddd11bcff5d1f5cf6237
   languageName: node
   linkType: hard
 
@@ -9041,14 +9048,14 @@ __metadata:
   linkType: hard
 
 "jest-pnp-resolver@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "jest-pnp-resolver@npm:1.2.1"
+  version: 1.2.2
+  resolution: "jest-pnp-resolver@npm:1.2.2"
   peerDependencies:
     jest-resolve: "*"
   peerDependenciesMeta:
     jest-resolve:
       optional: true
-  checksum: ab48e45c3985a8ea89dceba6c7867017addb38a6da6121211fb533000207c56e4de1a662c3d5715524e7e3b25faaeaf242c5749a1257aecbd2d9343cbc2ddf04
+  checksum: d91c86e3899f35ac1a6d40fa29e94212fc9b8e5e70d31d77ff281413441c844ec44a3673a3860f9b2155fed6738548f52eee9e63845e8d5f8550a890533c78cc
   languageName: node
   linkType: hard
 
@@ -9595,13 +9602,6 @@ __metadata:
   version: 3.0.3
   resolution: "kleur@npm:3.0.3"
   checksum: 20ef0e37fb3f9aebbec8a75b61f547051aa61e3a6c51bd2678e77a11d69d73885a76966aea77f09c40677c7dfa274a5e16741ec89859213c9f798d4a96f77521
-  languageName: node
-  linkType: hard
-
-"kleur@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "kleur@npm:4.0.1"
-  checksum: 174fd2dc4775619ec3d90f75ec06adbc94575cd38f42e5d5dc5b5e189ac435d77ce72bef07daae3913910def38d1b3f6d9ab2fe7e711521c4e46065e11582c21
   languageName: node
   linkType: hard
 
@@ -11454,7 +11454,7 @@ __metadata:
     "@rollup/plugin-node-resolve": ^8.1.0
     "@yarnpkg/pnpify": 2.0.0-rc.25
     accoutrement: ^2.1.3
-    autoprefixer: ^9.8.3
+    autoprefixer: ^9.8.4
     babel-jest: ^26.1.0
     cascading-color-systems: 0.1.0-beta.12
     chalk: ^4.1.0
@@ -15443,11 +15443,12 @@ __metadata:
   linkType: hard
 
 "through2@npm:^3.0.0, through2@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "through2@npm:3.0.1"
+  version: 3.0.2
+  resolution: "through2@npm:3.0.2"
   dependencies:
+    inherits: ^2.0.4
     readable-stream: 2 || 3
-  checksum: f0ff930ba9ce2309b05c8621bb053f99733b0fa0d0cd4fe475e9a980b35f7ccd71141192ecd88b45d97249db5c0e158778397f77842ad47bab0384eac75ad31c
+  checksum: 26c76a8989c8870e422c262506b55020ab42ae9c0888b8096dd140f8d6ac09ada59f71cddd630ccc5b3aa0bba373c223a27b969e830ee6040f12db952c15a8cd
   languageName: node
   linkType: hard
 

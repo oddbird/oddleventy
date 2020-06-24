@@ -54,7 +54,7 @@
     "@rollup/plugin-node-resolve": "^8.1.0",
     "@yarnpkg/pnpify": "2.0.0-rc.25",
     "accoutrement": "^2.1.3",
-    "autoprefixer": "^9.8.3",
+    "autoprefixer": "^9.8.4",
     "babel-jest": "^26.1.0",
     "cascading-color-systems": "0.1.0-beta.12",
     "chalk": "^4.1.0",
