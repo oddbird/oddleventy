@@ -2,7 +2,7 @@
 title: Resilient Web Systems
 sub: Upgrade your app with front-end training & consulting
 author: miriam
-card: large
+card: feature
 date: 2020-01-01
 tags:
   - CSS
@@ -14,13 +14,20 @@ events:
   - venue: Smashing Conf NY
     url: https://smashingconf.com/ny-2020/
     date: 2020-10-19
-    end: 2020-10-21
     adr: New York
   - venue: Smashing Conf Austin
     url: https://smashingconf.com/austin-2020/
     date: 2020-10-12
-    end: 2020-10-14
     adr: Austin, TX
+  - venue: Webconf.asia
+    url: https://2020.webconf.asia/
+    adr: Hong Kong
+    date: 2020-08-28
+  - venue: Smashing Workshops
+    url: https://smashingconf.com/online-workshops/workshops/miriam-suzanne
+    date: 2020-05-07
+    end: 2020-05-22
+    adr: Online
 image:
   src: blog/2019/mia-jen-smashing.jpg
   alt: Miriam talking with Jen Simmons and others

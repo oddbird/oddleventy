@@ -5,7 +5,6 @@ post:
   - tag: Workshop
     icon: workshop
     img: true
-    feature: true
   - tag: Podcast
     icon: audio
   - tag: Video

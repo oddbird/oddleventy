@@ -1,6 +1,7 @@
 ---
 title: Open Design for OddBird.net
 author: miriam
+card: feature
 date: 2016-07-12
 tags:
   - Article

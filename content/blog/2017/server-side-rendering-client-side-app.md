@@ -1,6 +1,7 @@
 ---
 title: Server-Side Rendering For Client-Side Apps
 author: jonny
+card: feature
 tags:
   - Article
   - Single-Page Applications

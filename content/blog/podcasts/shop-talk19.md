@@ -4,6 +4,7 @@ venue: Shop Talk Show
 date: 2019-10-28
 canonical: https://shoptalkshow.com/episodes/384/
 author: miriam
+card: feature
 image:
   src: blog/elsewhere/shop-talk.png
   alt: Shop Talk Show Podcast

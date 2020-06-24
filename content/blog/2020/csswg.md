@@ -2,6 +2,7 @@
 title: W3C Invited Expert on the CSS Working Group
 sub: Helping define the future of styles on the web
 author: miriam
+card: feature
 date: 2020-03-04
 image:
   src: projects/w3c.jpg
