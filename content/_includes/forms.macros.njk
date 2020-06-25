@@ -99,6 +99,47 @@ params:
   </select>
 {%- endmacro %}
 
+{% macro radio_group(
+  legend,
+  name,
+  attrs={}
+) %}
+  {%- set attrs = {
+    'data-field': name,
+    'data-radio': 'group'
+  } | merge(attrs) -%}
+  <fieldset {{ utility.show_attrs(attrs) }}>
+    {% if legend %}
+      <legend data-radio="legend">{{ legend | mdInline | safe }}</legend>
+    {% endif %}
+    {{ caller() }}
+  </fieldset>
+{% endmacro %}
+
+{% macro radio(
+  label,
+  id,
+  group,
+  attrs={},
+  input_attrs={}
+) %}
+  {% set input_attrs = {
+    'type': 'radio',
+    'name': group,
+    'id': id,
+    'data-radio': 'input'
+  } | merge(input_attrs) %}
+  <input {{ utility.show_attrs(input_attrs) }}>
+
+  {% set attrs = {
+    'for': id,
+    'data-radio': 'option'
+  } | merge(attrs) %}
+  <label {{ utility.show_attrs(attrs) }}>
+    {{ label | mdInline | safe }}
+  </label>
+{% endmacro %}
+
 {# @docs
 label: field_label
 category: Fields
@@ -196,6 +237,7 @@ params:
   required=false,
   name=none,
   id=none,
+  options=none,
   field_attrs={},
   input_attrs={}
 ) %}
@@ -207,18 +249,18 @@ params:
       id=id,
       required=required
     ) -}}
-    {%- if type | typeCheck('string') -%}
-      {{- input(
+    {%- if (type == 'select') -%}
+      {{- select(
         id=id,
-        type=type,
+        options=options,
         required=required,
         name=name,
         attrs=input_attrs
       ) -}}
     {%- else -%}
-      {{- select(
+      {{- input(
         id=id,
-        options=type,
+        type=type,
         required=required,
         name=name,
         attrs=input_attrs

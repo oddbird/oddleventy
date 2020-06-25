@@ -1,5 +1,16 @@
 @use '~accoutrement/sass/tools';
 
+fieldset {
+  border-color: var(--border-fade);
+  margin: 0 0 var(--newline);
+  padding: var(--shim);
+}
+
+legend {
+  font-size: var(--xsmall);
+  padding: 0 var(--shim);
+}
+
 // Fields
 // ------
 /// Form fields (using the `label` for markup)
@@ -44,6 +55,39 @@
     border-color: var(--action);
     outline: medium solid var(--action);
     outline-offset: 0;
+  }
+}
+
+[data-radio='group'] {
+  --radio-border: var(--text);
+  --radio-focus: var(--active);
+  display: flex;
+}
+
+[data-radio='input'] {
+  @include tools.is-hidden;
+}
+
+[data-radio='option'] {
+  border: thin solid var(--radio-border);
+  border-radius: var(--first, 0) var(--last, 0) var(--last, 0) var(--first, 0);
+  cursor: pointer;
+  flex: auto;
+  padding: var(--quarter-shim) var(--gutter);
+  text-align: center;
+  text-transform: capitalize;
+
+  [data-radio='input']:checked + & {
+    border: medium solid var(--radio-focus);
+    font-weight: bold;
+  }
+
+  &:first-of-type {
+    --first: var(--radius);
+  }
+
+  &:last-of-type {
+    --last: var(--radius);
   }
 }
 

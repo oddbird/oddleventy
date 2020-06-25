@@ -13,10 +13,10 @@
   @include tools.font-family('alt');
   @include tools.transition('colors');
   align-items: center;
-  background: var(--highlight);
-  border: 0;
+  background: var(--btn-bg, var(--highlight));
+  border: thin solid var(--btn-border, var(--btn-text, transparent));
   border-radius: var(--radius);
-  color: var(--bg);
+  color: var(--btn-text, var(--bg));
   cursor: pointer;
   display: inline-flex;
   font-size: inherit;
@@ -24,12 +24,14 @@
 
   &:hover,
   &:focus {
-    background: var(--accent);
+    --btn-bg: var(--accent);
+    --btn-text: var(--bg);
   }
 
   &:active,
   &[aria-pressed='true'] {
-    background: var(--active);
+    --btn-bg: var(--active);
+    --btn-text: var(--bg);
   }
 }
 
@@ -41,4 +43,33 @@
 [data-btn~='small'] {
   --btn-padding: var(--gutter);
   font-size: var(--small);
+}
+
+// Small
+// -----
+/// "xSmall" buttons override both the font-size
+/// and the inline padding.
+/// @group buttons
+[data-btn~='xsmall'] {
+  --btn-padding: var(--shim);
+  font-size: var(--xsmall);
+}
+
+// Menu
+// -----
+/// @group buttons
+[data-btn~='menu'] {
+  @include tools.font-family('body');
+  --btn-bg: transparent;
+  --btn-border: var(--border-fade);
+  --btn-text: var(--action);
+  --marker: var(--btn-text);
+  display: list-item;
+
+  [open] & {
+    --btn-bg: var(--active);
+    --btn-border: var(--btn-bg);
+    --btn-text: var(--bg);
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
 }
