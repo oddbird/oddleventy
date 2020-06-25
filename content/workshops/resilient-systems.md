@@ -2,7 +2,7 @@
 title: Resilient Web Systems
 sub: Upgrade your app with front-end training & consulting
 author: miriam
-card: large
+card: feature
 date: 2020-01-01
 tags:
   - CSS
@@ -14,13 +14,20 @@ events:
   - venue: Smashing Conf NY
     url: https://smashingconf.com/ny-2020/
     date: 2020-10-19
-    end: 2020-10-21
     adr: New York
   - venue: Smashing Conf Austin
     url: https://smashingconf.com/austin-2020/
-    date: 2020-06-08
-    end: 2020-06-10
+    date: 2020-10-12
     adr: Austin, TX
+  - venue: Webconf.asia
+    url: https://2020.webconf.asia/
+    adr: Hong Kong
+    date: 2020-08-27
+  - venue: Smashing Workshops
+    url: https://smashingconf.com/online-workshops/workshops/miriam-suzanne
+    date: 2020-05-07
+    end: 2020-05-22
+    adr: Online
 image:
   src: blog/2019/mia-jen-smashing.jpg
   alt: Miriam talking with Jen Simmons and others
@@ -28,6 +35,14 @@ image:
   width: 1600
   height: 1067
 modules:
+  - title: CSS Fundamentals In-Depth
+    text: |
+      It's possible to write CSS for years
+      without fully understanding
+      the core features of the language:
+      from the cascade & inheritance,
+      to the declarative & contextual
+      programming paradigm.
   - title: Resilient Code
     text: |
       Browser support & device compatibility
@@ -96,10 +111,20 @@ modules:
       we can take advantage of all the new power
       in tools like React and Vue
       without losing sight of what HTML & CSS provide.
+  - title: Sass Modules & Pre-Processing
+    text: |
+      Sass has become one of the fundamental tools
+      for writing clear & maintainable CSS,
+      and is growing quickly
+      with a new modular syntax,
+      more powerful math,
+      and new features landing regularly.
+      We'll help you get the most out of
+      everything Sass has to offer.
 summary: |
   **Take full advantage of the universal web, and reduce maintenance over
   the long term** with resilient HTML, CSS, and JS systems. OddBird
-  provides **custom consulting and in-depth trainings** on front-end
+  provides **in-depth workshops, with ongoing consulting** on front-end
   architecture and workflow --from advanced HTML/CSS to integrated design
   systems, component libraries, testing, and documentation.
 ---
@@ -112,7 +137,9 @@ challenges and opportunities for our web applications.
 
 We offer 1-3 day workshops with ongoing consulting to help you take full
 advantage of the web, improve team process, and reduce maintenance over
-the long term.
+the long term. Prices are negotiable,
+depending on the event size, location, and context.
+[Contact us](/contact/) for details.
 
 {{ layout.title('Choose Your Own Adventure') }}
 {{ layout.grid(content=modules) }}

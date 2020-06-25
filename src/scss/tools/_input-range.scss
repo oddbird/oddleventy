@@ -24,7 +24,6 @@
 ///   The styles to apply to range input tracks
 /// @group tools-range
 @mixin track {
-  /* stylelint-disable */
   &::-webkit-slider-runnable-track {
     @content;
   }
@@ -34,7 +33,6 @@
   &::-ms-track {
     @content;
   }
-  /* stylelint-enable */
 }
 
 // Thumb
@@ -61,7 +59,6 @@
 ///   The styles to apply to range input thumbs
 /// @group tools-range
 @mixin thumb {
-  /* stylelint-disable */
   &::-webkit-slider-thumb {
     @content;
   }
@@ -71,5 +68,4 @@
   &::-ms-thumb {
     @content;
   }
-  /* stylelint-enable */
 }

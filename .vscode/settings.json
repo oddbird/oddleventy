@@ -14,10 +14,16 @@
   "eslint.validate": [
     "javascript"
   ],
+  "css.validate": false,
+  "scss.validate": false,
   "eslint.enable": true,
-  "eslint.nodePath": ".vscode/pnpify",
-  "prettier.prettierPath": ".vscode/pnpify/prettier/index.js",
-  "stylelint.stylelintPath": ".vscode/pnpify/stylelint/lib/index.js",
+  "eslint.nodePath": ".yarn/sdks",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+  "stylelint.stylelintPath": ".yarn/sdks/stylelint/lib/index.js",
+  "stylelint.validate": [
+    "css",
+    "scss"
+  ],
   "search.exclude": {
     ".pnp.js": true,
     ".vscode": true,

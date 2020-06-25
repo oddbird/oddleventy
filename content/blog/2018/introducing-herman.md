@@ -2,6 +2,7 @@
 title: Herman Style Guides
 sub: An agile approach to design systems on a budget
 author: miriam
+card: feature
 date: 2018-01-03
 tags:
   - Article

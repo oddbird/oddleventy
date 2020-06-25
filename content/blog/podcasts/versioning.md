@@ -1,6 +1,7 @@
 ---
 title: Versioning Show Ep.8
 author: miriam
+card: feature
 date: 2016-10-18
 tags:
   - SitePoint

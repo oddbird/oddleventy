@@ -1,6 +1,7 @@
 ---
 title: Python for Ada
 author: carl
+card: feature
 tags:
   - Article
   - Python

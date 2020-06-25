@@ -2,6 +2,7 @@
 title: Why is CSS so Weird?
 sub: How can we design for an unknown & infinite canvas?
 author: miriam
+card: feature
 date: 2019-10-03
 tags:
   - AboutWeb Video

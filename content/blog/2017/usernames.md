@@ -2,6 +2,7 @@
 title: Three Names to Include in Your User Model
 sub: (None of them is the username)
 author: david
+card: feature
 date: 2017-04-11
 tags:
   - Article

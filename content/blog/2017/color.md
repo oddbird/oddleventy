@@ -178,7 +178,7 @@ prototyping website pages or features.
   src='blog/2017/colors/styleguide.jpg'
 ) }}
 
-[Living Style Guide]: /styleguide/color.html
+[Living Style Guide]: /styleguide/config-color.html
 
 ## Step 4 – Test Colors for Accessibility
 

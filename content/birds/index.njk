@@ -33,7 +33,8 @@ summary: |
   class='extend-large'
 ) }}
 
-{{ layout.title('Meet the birds') }}
+
+{{ layout.title('Meet the Birds') }}
 
 {% call layout.grid('birds') %}
   {% for bird in collections.birds | active %}
@@ -53,9 +54,9 @@ summary: |
   {% endfor %}
 {% endcall %}
 
-{{ layout.title('Birds emeritus') }}
-
 {% md %}
+### Birds Emeritus
+
 Over time,
 some OddBirds move on to other work.
 We're grateful for the time they spent with us,
@@ -73,3 +74,26 @@ and proud of the careers they've built since.
   <li>{{ name | safe }}, {{ utility.datetime(bird.date, bird.data.end) }}</li>
 {% endfor %}
 </ul>
+
+
+{{ layout.title('Sponsorships & Donations') }}
+
+{% md %}
+We are proud to sponsor organizations
+that increase diversity in the community --
+from race and gender, to identity and sexuality --
+and events that bring the whole community together
+in thoughtful and inclusive ways.
+And then, on occasion, we also sponsor the communities and events
+that keep us entertained and fulfilled outside of work.
+
+{% for grouper, list in giving | groupby('type') %}
+### {{ grouper | capitalize }}
+
+{% for project in list %}
+- **{{ utility.link_if(project.name, project.url) }}**
+  [{{ project.years }}]
+  {{ project.description | mdInline | safe }}
+{%- endfor %}
+{% endfor %}
+{% endmd %}

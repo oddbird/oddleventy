@@ -9,9 +9,9 @@ Built with
 Styled with
 [Sass](https://sass-lang.com/),
 [Accoutrement](/accoutrement/), &
-[Cascading Color Systems](https://cascading-colors.netlify.com/).
+[Cascading Color Systems](/cascading-colors/).
 
-[Documented](/style/) with
+[Documented](/styleguide/) with
 [Herman](/herman/) & [SassDoc](https://sassdoc.com/).\
 See [sample pages](/sample/)
 for basic usage.

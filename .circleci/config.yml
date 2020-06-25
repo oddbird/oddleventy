@@ -2,13 +2,13 @@ version: 2.1
 
 jobs:
   build:
-    working_directory: ~/oddleventy
+    working_directory: ~/oddsite
     docker:
-      - image: circleci/node:12.17.0
+      - image: circleci/node:12.18.1
     steps:
       - checkout
       - restore_cache:
-          key: oddleventy-{{ checksum ".pnp.js" }}-{{ checksum "yarn.lock" }}
+          key: oddsite-{{ checksum ".pnp.js" }}-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --immutable --immutable-cache
@@ -19,14 +19,14 @@ jobs:
             - ./.yarn/build-state.yml
             - ./.yarn/install-state.gz
       - save_cache:
-          key: oddleventy-{{ checksum ".pnp.js" }}-{{ checksum "yarn.lock" }}
+          key: oddsite-{{ checksum ".pnp.js" }}-{{ checksum "yarn.lock" }}
           paths:
             - ./.yarn/unplugged
             - ./.yarn/build-state.yml
             - ./.yarn/install-state.gz
 
   lint:
-    working_directory: ~/oddleventy
+    working_directory: ~/oddsite
     docker:
       - image: circleci/node:12.15.0
     steps:
@@ -38,7 +38,7 @@ jobs:
           command: yarn lint
 
   test:
-    working_directory: ~/oddleventy
+    working_directory: ~/oddsite
     docker:
       - image: circleci/node:12.15.0
     steps:

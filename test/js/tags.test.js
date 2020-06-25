@@ -41,7 +41,7 @@ describe('tag filters', () => {
       {
         is_type: true,
         tag: 'Workshop',
-        type: { tag: 'Workshop', icon: 'workshop', img: true, feature: true },
+        type: { tag: 'Workshop', icon: 'workshop', img: true },
         url: '/tags/Workshop/',
         pageCount: 0,
       },

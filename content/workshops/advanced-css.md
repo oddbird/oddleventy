@@ -12,10 +12,6 @@ tags:
   - CSS
   - Sass
 events:
-  - venue: Webconf.asia
-    url: https://2020.webconf.asia/
-    adr: Hong Kong
-    date: 2020-08-28
   - venue: Generate New York
     url: https://www.generateconf.com/
     adr: San Francisco, CA
