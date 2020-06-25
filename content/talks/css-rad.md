@@ -1,11 +1,12 @@
 ---
 title: CSS is Rad
-sub: resilient design on an infinite canvas
+sub: Resilient design on an infinite canvas
 author: miriam
 date: 2019-10-15
 image:
   src: talks/mia-smashing19-rad.jpg
   alt: Miriam speaking at Smashing Conf NY
+  position: top
   width: 2240
   height: 1493
 slides: https://sliiides.netlify.app/css-is-rad/
