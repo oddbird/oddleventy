@@ -135,3 +135,21 @@
   --media-gap: var(--shim);
   --newline: inherit;
 }
+
+// Section with background variation and cutout triangles
+[data-grid='special-bg'] {
+  background: var(--callout-fade);
+  clip-path: polygon(
+    0 0,
+    calc(50% - var(--double-gutter)) 0,
+    50% var(--double-gutter),
+    calc(50% + var(--double-gutter)) 0,
+    100% 0,
+    100% calc(100% - var(--double-gutter)),
+    calc(50% + var(--double-gutter)) calc(100% - var(--double-gutter)),
+    50% 100%,
+    calc(50% - var(--double-gutter)) calc(100% - var(--double-gutter)),
+    0 calc(100% - var(--double-gutter))
+  );
+  display: grid;
+}

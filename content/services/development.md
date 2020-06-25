@@ -67,7 +67,7 @@ summary: |
 
 {{ quotes.find(
   collections.all,
-  slugs=['realistic', 'curious']
+  slugs=['investment', 'curious']
 ) }}
 
 {{ layout.title('Services') }}
@@ -104,11 +104,9 @@ summary: |
 
 {% endcall %}
 
-
-
 {{ quotes.find(
   collections.all,
-  slugs=['realistic', 'curious']
+  slugs=['investment', 'curious']
 ) }}
 
 {{ layout.title('Experience') }}
@@ -149,8 +147,12 @@ summary: |
 
 {% endcall %}
 
-## Our Process Is ... 
+## Our Process Is ...
 
-{{ layout.grid(content=process) }}
+
+{{ layout.grid(
+  name='special-bg',
+  content=process
+) }}
 
 {{ embed.icon_block(promise, 'We Promise to Be') }}
