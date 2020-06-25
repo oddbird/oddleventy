@@ -10,6 +10,11 @@ const responsiveConfig = taxonomy.img.srcset.map((size) => ({
 }));
 
 /* @docs
+label: Responsive Images
+category: File
+*/
+
+/* @docs
 label: imgSuffix
 category: responsive images
 note: Add img suffix for responsiveness

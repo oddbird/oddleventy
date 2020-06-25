@@ -11,7 +11,7 @@ Styled with
 [Accoutrement](/accoutrement/), &
 [Cascading Color Systems](/cascading-colors/).
 
-[Documented](/style/) with
+[Documented](/styleguide/) with
 [Herman](/herman/) & [SassDoc](https://sassdoc.com/).\
 See [sample pages](/sample/)
 for basic usage.

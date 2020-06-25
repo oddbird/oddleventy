@@ -11,6 +11,11 @@ const taxonomy = yaml.safeLoad(
 );
 
 /* @docs
+label: Taxonomy Filters
+category: File
+*/
+
+/* @docs
 label: fromTaxonomy
 category: general
 note: |
