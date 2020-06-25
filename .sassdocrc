@@ -1,5 +1,5 @@
 theme: herman
-dest: _site/style/
+dest: _site/styleguide/
 
 package: ./package.json
 shortcutIcon: ./content/favicon.ico
@@ -34,8 +34,8 @@ groups:
 
 herman:
   extraDocs:
-    - name: Getting Started
-      path: ./styleguide.md
+    - name: Content and Writing
+      path: ./writing.md
   extraLinks:
     - name: Eleventy
       url: http://www.11ty.io

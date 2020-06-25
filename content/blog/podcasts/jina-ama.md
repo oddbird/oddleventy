@@ -11,8 +11,7 @@ tags:
   - Sass
   - Design Systems
 summary: |
-  Jina and I answer questions about CSS, Sass,
-  Design Systems, and more!
+  Jina and I answer questions about CSS, Sass, Design Systems, and more!
 media:
   - iframe: https://www.youtube.com/embed/sCJbiOMl2qA
 ---

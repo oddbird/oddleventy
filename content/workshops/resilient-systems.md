@@ -22,7 +22,7 @@ events:
   - venue: Webconf.asia
     url: https://2020.webconf.asia/
     adr: Hong Kong
-    date: 2020-08-28
+    date: 2020-08-27
   - venue: Smashing Workshops
     url: https://smashingconf.com/online-workshops/workshops/miriam-suzanne
     date: 2020-05-07
