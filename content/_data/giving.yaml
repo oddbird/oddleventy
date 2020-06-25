@@ -7,6 +7,15 @@
     and a community that empowers and helps women to organize free,
     one-day programming workshops by providing tools,
     resources and support.
+- name: Goshen Ultimate Summer League
+  url: http://goshenultimate.com/
+  type: sponsorships
+  years: 2014--2020
+  description: |
+    provides opportunities to learn, play,
+    and teach spirited Ultimate in Goshen, IN and surrounding areas.
+    We're just glad they keep Jonny out of trouble
+    when he's not busy writing JavaScript.
 - name: Black Girls CODE
   url: http://blackgirlscode.com/
   type: donations
@@ -102,15 +111,6 @@
     is the largest annual gathering
     for the people who use and develop
     the open source Python programming language.
-- name: Goshen Ultimate Summer League
-  url: http://goshenultimate.com/
-  type: sponsorships
-  years: 2014--2020
-  description: |
-    provides opportunities to learn, play,
-    and teach spirited Ultimate in Goshen, IN and surrounding areas.
-    We're just glad they keep Jonny out of trouble
-    when he's not busy writing JavaScript.
 - name: The Mixin
   url: http://themixinsf.com/
   type: sponsorships
