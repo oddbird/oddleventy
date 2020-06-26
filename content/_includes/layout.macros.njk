@@ -71,3 +71,25 @@ params:
 {%- set content = content if (content != none) else caller() -%}
 <div class="offset-grid">{{- content | safe -}}</div>
 {% endmacro %}
+
+{# @docs
+label: block
+note: Create an generic container for grouping elements
+params:
+  name:
+    type: string
+    default: group
+  content:
+    type: string | none
+    default: none
+    note: Expects `caller()` if no  value is given
+  attrs: object
+#}
+{% macro block(
+  name='group',
+  content=none,
+  attrs={}
+) -%}
+  {%- set content = content if (content != none) else caller() -%}
+  <div data-block="{{ name }}" {{ utility.show_attrs(attrs) }}>{{ content | safe }}</div>
+{%- endmacro %}
