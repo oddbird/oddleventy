@@ -138,6 +138,7 @@
 
 // Section with background variation and cutout triangles
 [data-grid='special-bg'] {
+  --column: full;
   background: var(--callout-fade);
   clip-path: polygon(
     0 0,

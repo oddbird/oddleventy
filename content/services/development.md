@@ -58,7 +58,7 @@ process:
 summary: |
   **We integrate design and development in an agile process**, so you only need to hire one team – completely focused on achieving your goals with smooth and efficient progress from concept to launch and beyond. Starting from user needs, we collaborate with you to deliver usable features quickly and efficiently.
 
-  We provide expertise across a range of technologies, including Python/Django, accessible HTML, modern Sass/CSS, Vue, Node, Backbone/Marionette, and more.
+  We provide expertise across a range of technologies, including **Python/Django**, accessible **HTML**, modern **Sass/CSS**, **Vue**, **Node**, **Backbone/Marionette**, and more.
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -67,7 +67,7 @@ summary: |
 
 {{ quotes.find(
   collections.all,
-  slugs=['investment', 'curious']
+  slugs=['realistic', 'curious']
 ) }}
 
 {{ layout.title('Services') }}
@@ -154,5 +154,31 @@ summary: |
   name='special-bg',
   content=process
 ) }}
+
+
+{% call layout.grid('fancy-list') %}
+
+## We Promise to Be
+
+  - **Accessible**
+  *The world is diverse, and no person is an edge case.*
+  - **Approachable**
+  *Your friend in digital design, development, and performance*
+  - **Human**
+  *Great software requires a personal touch.*
+  - **Nimble**
+  *Our tightly-integrated team can adapt quickly to your needs*
+  - **Queer**
+  *Moving past assumptions of “normal” to explore new possibilities.*
+  - **Robust**
+  *100% test coverage and documentation keep maintenance costs low*
+  - **Thoughtful**
+  *We don’t have all the answers, but we know how to get there.*
+  - **Top-shelf**
+  *From CSS/Sass & Django to Susy & Herman, we build the tools that millions of developers rely on.*
+  - **Transparent**
+  *Daily communication keeps you in control of budget & priorities from start to finish.*
+
+{% endcall %}
 
 {{ embed.icon_block(promise, 'We Promise to Be') }}
