@@ -118,24 +118,24 @@ Thanks for listening,
 
 Carl
 
-[ada initiative]: http://adainitiative.org/
-[jacob]: http://jacobian.org/
-[alex]: http://alexgaynor.net/
-[jim meyer]: http://blog.geekdaily.org
+[ada initiative]: https://adainitiative.org/
+[jacob]: https://jacobian.org/
+[alex]: https://alexgaynor.net/
+[jim meyer]: https://blog.geekdaily.org/
 [pitched in]: https://twitter.com/purp/status/514453504253886464
 [start a company]: /2013/12/30/sixth-year/
-[become a public speaker]: http://pyvideo.org/speaker/35/carl-meyer
-[recognized for my contributions]: https://docs.djangoproject.com/en/dev/internals/team/
-[first pycon talk]: http://pyvideo.org/video/389/pycon-2011--reverse-engineering-ian-bicking--39-s
-[pyladies]: http://www.pyladies.com/
-[zoe quinn]: http://www.cracked.com/blog/5-things-i-learned-as-internets-most-hated-person/
-[any number of other women]: http://geekfeminism.wikia.com/wiki/Timeline_of_incidents
-[pervasive sexual harassment]: http://anontechlady.wordpress.com/2014/08/04/my-first-oscon/
-[playing on the easy setting]: http://whatever.scalzi.com/2012/05/15/straight-white-male-the-lowest-difficulty-setting-there-is/
-[other attributes that i did nothing to earn]: http://www.confreaks.com/videos/4454-DjangoCon2014-all-you-need-is-l
-[leading]: http://www.forbes.com/sites/women2/2013/04/09/record-number-of-women-give-tech-talks-at-pycon-2013/
-[way]: http://adainitiative.org/2012/10/leading-open-source-conference-pycon-us-shares-responsereport-guidelines-for-harassment/
+[become a public speaker]: https://pyvideo.org/speaker/carl-meyer.html
+[recognized for my contributions]: https://www.djangoproject.com/foundation/teams/
+[first pycon talk]: https://pyvideo.org/pycon-us-2011/pycon-2011--reverse-engineering-ian-bicking--39-s.html
+[pyladies]: https://www.pyladies.com/
+[zoe quinn]: https://www.cracked.com/blog/5-things-i-learned-as-internets-most-hated-person/
+[any number of other women]: https://geekfeminism.wikia.org/wiki/Timeline_of_incidents
+[pervasive sexual harassment]: https://anontechlady.wordpress.com/2014/08/04/my-first-oscon/
+[playing on the easy setting]: https://whatever.scalzi.com/2012/05/15/straight-white-male-the-lowest-difficulty-setting-there-is/
+[other attributes that i did nothing to earn]: https://pyvideo.org/djangocon-us-2014/all-you-need-is-l.html
+[leading]: https://www.forbes.com/sites/women2/2013/04/09/record-number-of-women-give-tech-talks-at-pycon-2013/#461d34407967
+[way]: https://adainitiative.org/2012/10/22/leading-open-source-conference-pycon-us-shares-responsereport-guidelines-for-harassment/
 [code of conduct]: https://www.djangoproject.com/conduct/
-["that time i wasn't harassed at a conference"]: http://geekfeminism.org/2013/08/15/that-time-i-wasnt-harassed-at-a-conference/
-[working every day]: http://adainitiative.org/what-we-do/workshops-and-training/
-[make it a reality]: http://adacamp.org/
+["that time i wasn't harassed at a conference"]: https://geekfeminismdotorg.wordpress.com/2013/08/15/that-time-i-wasnt-harassed-at-a-conference/
+[working every day]: https://adainitiative.org/continue-our-work/workshops-and-training/
+[make it a reality]: https://adacamp.org/

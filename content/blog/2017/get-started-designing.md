@@ -82,7 +82,7 @@ typography for your web project, here’s a list of [my favorite
 resources]. You can also read about the process I use to select
 typography for a brand identity.
 
-  [Jason Santa Maria]: http://jasonsantamaria.com/
+  [Jason Santa Maria]: https://jasonsantamaria.com/
   [Choosing the Right Font - A Practical Guide to Typography on the Web]:
     https://webdesign.tutsplus.com/articles/choosing-the-right-font-a-practical-guide-to-typography-on-the-web--webdesign-15
   [Jason Santa Maria On Web Typography]: https://www.youtube.com/watch?v=ipbbbMsvTEI
@@ -107,7 +107,7 @@ including a list of several tools for generating color palettes and
 testing contrast.
 
   [Natalya's color theory decision tree]: {{ site.images }}blog/2017/get-started-designing/decision-tree.jpg
-  [Practical Color Theory for People Who Code]: http://tallys.github.io/color-theory/
+  [Practical Color Theory for People Who Code]: https://tallys.github.io/color-theory/
   [process for choosing brand colors]: /2017/1/16/color/
 
 ## Prototype: Adobe Experience Design

@@ -13,7 +13,7 @@ summary: |
   functions]. What are they, how do we use them, and what tools can we use
   to future-proof our Sass toolkits in advance?
 
-  [Sass 3.5 Release Candidate]: http://sass.logdown.com/posts/809572-sass-35-release-candidate
+  [Sass 3.5 Release Candidate]: https://sass-lang.com/blog/sass-35-release-candidate
   [first-class functions]: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
 date: 2017-03-30
 ---
@@ -27,7 +27,7 @@ functions] and the resulting `get-function()` function. I just said
 more. We'll explain the problem, and help you call all the functions in
 every version of Sass!
 
-[Sass 3.5 Release Candidate]: http://sass.logdown.com/posts/809572-sass-35-release-candidate
+[Sass 3.5 Release Candidate]: https://sass-lang.com/blog/sass-35-release-candidate
 [first-class functions]: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
 
 ## Calling Functions

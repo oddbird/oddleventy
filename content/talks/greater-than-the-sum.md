@@ -13,7 +13,7 @@ tags:
   - Pyramid
 events:
   - venue: Plone Digital Experience Conference
-    url: http://2016.ploneconf.org/
+    url: https://2016.ploneconf.org/
     date: 2016-10-20
     adr: Boston, MA
 summary: |

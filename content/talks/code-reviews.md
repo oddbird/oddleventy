@@ -6,19 +6,19 @@ date: 2015-10-27
 image:
   src: talks/no-pain.jpg
   alt: sass guidelines and css guidelines
-slides: http://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw
+slides: https://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw
 tags:
   - Process
   - CSS
 events:
   - venue: SassConf 2015
-    url: http://sassconf.com
+    url: https://twitter.com/sassconf
     date: 2015-11-11
-    slides: http://www.slideshare.net/Funstacy/sass-code-reviews-how-one-code-review-changed-my-life-sassconf2015
+    slides: https://www.slideshare.net/Funstacy/sass-code-reviews-how-one-code-review-changed-my-life-sassconf2015
   - venue: CSS Dev Conf
-    url: http://2015.cssdevconf.com
+    url: https://twitter.com/cssdevconf
     date: 2015-10-27
-    slides: http://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw
+    slides: https://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw
 summary: |
   **Sure, you can write CSS but can you describe each decision you made
   with confidence?** While there are many ways to do the same thing,

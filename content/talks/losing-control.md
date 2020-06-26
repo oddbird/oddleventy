@@ -13,7 +13,7 @@ tags:
   - Fine Art
 events:
   - venue: UVA Scholars’ Lab
-    url: http://cal.lib.virginia.edu/event/3088981
+    url: https://cal.lib.virginia.edu/event/3088981
     adr: Charlottesville, VA
     date: 2017-01-23
 ---

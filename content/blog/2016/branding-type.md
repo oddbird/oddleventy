@@ -206,10 +206,10 @@ article from [Vox Product] detailing their brand design process. When
 their design team got to the step we reached, they wisely picked a
 single element to focus on: typography.
 
-[mood board]: http://www.creativebloq.com/graphic-design/mood-boards-812470
-[Style Tiles and How They Work]: http://alistapart.com/article/style-tiles-and-how-they-work
-[Element Collages]: http://danielmall.com/articles/rif-element-collages/
-[Vox Product]: http://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
+[mood board]: https://www.creativebloq.com/graphic-design/mood-boards-812470
+[Style Tiles and How They Work]: https://alistapart.com/article/style-tiles-and-how-they-work/
+[Element Collages]: https://v3.danielmall.com/articles/rif-element-collages/
+[Vox Product]: https://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
 
 ## Typography - With a Little Help From Our Friends
 

@@ -13,7 +13,7 @@ image:
 summary: |
   [Susy Next alpha 4] is now available.
 
-  [Susy Next alpha 4]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.4
+  [Susy Next alpha 4]: https://rubygems.org/gems/susy/versions/2.0.0.alpha.4
 date: 2013-09-05
 ---
 
@@ -33,7 +33,7 @@ now, the [test folder] provides the best documentation – with
 `index.html` showing the True results and `ag.html` showing several
 standard grid-types. Explore, download, and play!
 
-[susy next alpha 4]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.4
+[susy next alpha 4]: https://rubygems.org/gems/susy/versions/2.0.0.alpha.4
 [susy next changelog]: https://github.com/oddbird/susy/blob/susy-next/CHANGELOG-NEXT.md
 [alpha 2]: /2013/05/03/susy-next-alpha-2/
 [true]: /true/

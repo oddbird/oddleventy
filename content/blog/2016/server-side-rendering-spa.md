@@ -167,13 +167,13 @@ When we continue this series in the next month, we'll talk about how to
 wire up Backbone and Marionette to take over from the server-rendered
 page.
 
-[Backbone]: http://backbonejs.org/
-[Marionette]: http://marionettejs.com/
+[Backbone]: https://backbonejs.org/
+[Marionette]: https://marionettejs.com/
 [Django]: https://www.djangoproject.com/
 [RESTful]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [SPA]: https://en.wikipedia.org/wiki/Single-page_application
 [not yet quite]: https://allotment.digital/learn/technical-seo/advanced-concepts/angularjs-seo/
 [Ember fastboot]: https://www.ember-fastboot.com/
 [Nunjucks]: https://mozilla.github.io/nunjucks/
-[Jinja2]: http://jinja.pocoo.org/docs/dev/
-[Django REST Framework]: http://www.django-rest-framework.org/
+[Jinja2]: https://jinja.palletsprojects.com/en/master/
+[Django REST Framework]: https://www.django-rest-framework.org/

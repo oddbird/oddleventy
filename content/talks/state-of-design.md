@@ -13,11 +13,10 @@ tags:
   - Design
 events:
   - venue: Front-End Camp
-    url: http://chicagocamps.org/events/2017/front-end-camp/
+    url: https://chicagocamps.org/events/2017/front-end-camp/
     date: 2017-06-03
     adr: Chicago, IL
   - venue: CSSDay.io
-    url: http://cssday.io/
     date: 2016-12-03
     adr: Chandler, AZ
     slides: https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends

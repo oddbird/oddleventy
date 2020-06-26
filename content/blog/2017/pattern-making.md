@@ -283,7 +283,7 @@ color (`#339` above), and then call the adjustment function mentioned
 
 You can play with it yourself in this CodePen demo:
 
-<p data-height="420" data-theme-id="0" data-slug-hash="xqOwxe" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Accoutrement Color Example" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/mirisuzanne/pen/xqOwxe/">Accoutrement Color Example</a> by Miriam Suzanne (<a href="http://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="420" data-theme-id="0" data-slug-hash="xqOwxe" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Accoutrement Color Example" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/xqOwxe/">Accoutrement Color Example</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 As you can see, that demo also generates a rough style guide on-the-fly,
@@ -387,8 +387,8 @@ our [handy contact form]. Happy coding!
 [Herman]: https://github.com/oddbird/sassdoc-theme-herman
 [OddSite config]: https://github.com/oddbird/oddsite/tree/master/static/sass/config
 [see the generated docs]: /styleguide/
-[Codepen]: http://codepen.io/
-[Sassmeister]: http://sassmeister.com/
+[Codepen]: https://codepen.io/
+[Sassmeister]: https://www.sassmeister.com/
 [Twitter]: https://twitter.com/oddbird
 [public Slack channel]: http://friends.oddbird.net
 [handy contact form]: /contact/

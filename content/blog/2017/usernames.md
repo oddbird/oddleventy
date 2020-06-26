@@ -64,7 +64,7 @@ cultures (so avoid calling them “first name” and “last name”). And keep
 in mind that they may change over time. [Names are hard.]
 
 [one of the hard problems in computer science]: https://martinfowler.com/bliki/TwoHardThings.html
-[Names are hard.]: http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/
+[Names are hard.]: https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/
 
 ## Building this User Model in Django
 

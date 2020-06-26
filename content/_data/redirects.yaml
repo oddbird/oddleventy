@@ -11,7 +11,7 @@
 - from: /accoutrement-type/
   to: /accoutrement/
 - from: /community/
-  to: /birds/
+  to: /birds/#sponsorships-and-donations
 - from: /services/design-systems-training/
   to: /workshops/resilient-systems/
 - from: /talks/resilient-systems/

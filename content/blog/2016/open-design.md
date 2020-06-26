@@ -37,7 +37,7 @@ in the open – sharing our thoughts while we work.
     work. We'll update the [timeline] at the bottom of this page.
 
 [open Slack channel]: http://friends.oddbird.net
-[Twitter]: http://twitter.com/oddbird
+[Twitter]: https://twitter.com/oddbird
 [Github]: https://github.com/oddbird/oddsite/
 [project board]: https://github.com/oddbird/oddsite/projects/1
 [Pivotal Tracker]: https://www.pivotaltracker.com/projects/22378
@@ -66,7 +66,7 @@ making. We also have our [source code] available on GitHub, and will
 talk about the open source tools we use, and share any tools we build.
 
 [open source collaboration]: /open-source/
-[we're not the first to do it]: http://bradfrost.com/blog/post/designing-in-the-open/
+[we're not the first to do it]: https://bradfrost.com/blog/post/designing-in-the-open/
 [continuous integration]: https://en.wikipedia.org/wiki/Continuous_integration
 [source code]: https://github.com/oddbird/oddsite/
 

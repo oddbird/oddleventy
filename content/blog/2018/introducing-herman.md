@@ -169,7 +169,7 @@ syntax. Here are just a few of their options:
 Herman supports [all SassDoc annotations], and we've added style guide
 features of our own...
 
-[KSS]: http://warpspire.com/kss/
+[KSS]: https://warpspire.com/kss/
 [SassDoc]: http://sassdoc.com/
 [all SassDoc annotations]: http://sassdoc.com/annotations/
 
@@ -247,7 +247,7 @@ output when necessary:
 [<img src="{{ site.images }}blog/2017/herman-intro/examples.jpg" class="extend-small img-border img-shadow" alt="Herman rendered example" />][documentation of CSS selectors and markup patterns]
 
 [documentation of CSS selectors and markup patterns]: /herman/docs/demo_examples.html
-[Sass]: http://sass-lang.com
+[Sass]: https://sass-lang.com/
 [Nunjucks]: https://mozilla.github.io/nunjucks/
 
 ## Prose, Pages, and Third-Party Links

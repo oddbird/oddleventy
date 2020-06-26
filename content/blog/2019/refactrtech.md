@@ -18,7 +18,7 @@ summary: |
   its organizers were intentional about inclusiveness but still centered
   on tech?
 
-  [Refactr.tech Conference]: http://refactr.tech/
+  [Refactr.tech Conference]: https://www.refactr.tech/
 ---
 
 {% import "quotes.macros.njk" as quotes %}
@@ -59,7 +59,7 @@ work towards gender, racial and ethnic diversity see financial gains
 above industry medians; but I love how the organizers of this conference
 took the conversation further than just its economic benefits.
 
-[Refactr.tech]: http://refactr.tech/
+[Refactr.tech]: https://www.refactr.tech/
 [Vue Vixens]: https://vuevixens.org/
 [We RISE]: https://www.womenwhocode.com/blog/women-who-code-announces-we-rise-tech-conference-in-atlanta
 
@@ -134,8 +134,8 @@ own goals to join the conference circuit – it’s refreshing to know that
 not everyone is a rock star and that there is space for me to one day
 present my ideas and experiences to my peers.
 
-[GraphQL]: http://https://graphql.org/
-[Flutter]: http://flutter.io
+[GraphQL]: https://graphql.org/
+[Flutter]: https://flutter.dev/
 [Gatsby]: https://gatsbyjs.org/
 [Vue Skulk]: https://vuevixens.org/
 [Tracy Lee]: https://twitter.com/ladyleet

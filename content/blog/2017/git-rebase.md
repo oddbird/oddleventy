@@ -32,12 +32,12 @@ later.
 Now that you have enough links to take you away from this post for a day
 at least, let's get started.
 
-[many]: https://grimoire.ca/git/pull-request-workflow
-[ways]: http://nvie.com/posts/a-successful-git-branching-model/
-[to]: https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow
+[many]: https://grimoire.ca/git/pull-request-workflow/
+[ways]: https://nvie.com/posts/a-successful-git-branching-model/
+[to]: https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow
 [use]: https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
-[git]: http://blog.endpoint.com/2014/05/git-workflows-that-work.html
-[a content-addressable filesystem, used to track directory trees]: http://marc.info/?l=linux-kernel&m=111293537202443
+[git]: https://www.endpoint.com/blog/2014/05/02/git-workflows-that-work
+[a content-addressable filesystem, used to track directory trees]: https://marc.info/?l=linux-kernel&m=111293537202443
 
 ## Git is a DAG-Manipulation Tool
 
@@ -253,7 +253,7 @@ excuse.
 
 [reflog]: https://git-scm.com/docs/git-reflog
 [Owen]: https://grimoire.ca/git/config
-[good commit messages]: http://alistapart.com/article/the-art-of-the-commit
+[good commit messages]: https://alistapart.com/article/the-art-of-the-commit/
 
 ## What Do the OddBirds Do?
 

@@ -16,7 +16,7 @@ summary: |
   improvements. We're getting real close to launch, and we'd love to know
   what you think. Play around, and let us know!
 
-  [Susy Next alpha 5]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.5
+  [Susy Next alpha 5]: https://rubygems.org/gems/susy/versions/2.0.0.alpha.5
 date: 2013-11-27
 ---
 

@@ -58,10 +58,10 @@ us on our toes.
   [Eric Meyer’s Reset]: https://meyerweb.com/eric/tools/css/reset/
   [Carl]: /authors/carl/
   [Jonny]: /authors/jonny/
-  [Natalie Downe]: http://blog.natbat.net/post/46614243624/css-systems
-  [Chris Eppstein]: http://chriseppstein.github.io/blog/
-  [Sass]: http://sass-lang.com/
-  [Compass]: http://compass-style.org/
+  [Natalie Downe]: https://blog.natbat.net/post/46614243624/css-systems
+  [Chris Eppstein]: https://chriseppstein.github.io/blog/
+  [Sass]: https://sass-lang.com/
+  [Compass]: https://github.com/Compass/compass
   [Singularity]: https://github.com/at-import/Singularity
 
 ## A Whole New World
@@ -120,10 +120,10 @@ fallback by wrapping your grid code in the
 around to help with the fallback options, until all your required
 browsers catch up.
 
-  [browser-support matrix]: http://caniuse.com/#feat=css-grid
+  [browser-support matrix]: https://caniuse.com/#feat=css-grid
   [CSS Grid module]: https://css-tricks.com/snippets/css/complete-guide-grid/
   [Rachel Andrew]: https://gridbyexample.com/
-  [Jen Simmons]: http://jensimmons.com/post/feb-27-2017/learn-css-grid
+  [Jen Simmons]: https://jensimmons.com/post/feb-27-2017/learn-css-grid
 
 ### Susy Columns & `grid-template-columns`
 

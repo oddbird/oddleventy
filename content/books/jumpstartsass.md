@@ -39,7 +39,7 @@ summary: |
 
 {{ quotes.grid(press) }}
 
-[buy the book](http://shop.oreilly.com/product/9780994182678.do)
+[buy the book](https://www.oreilly.com/library/view/jump-start-sass/9781457199851/)
 or [download the e-book »](https://www.sitepoint.com/premium/books/jump-start-sass)
 
 ------

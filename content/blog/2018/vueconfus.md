@@ -26,7 +26,7 @@ summary: |
 
   [Vue.js]: https://vuejs.org/
   [Sarah Drasner]: https://sarahdrasnerdesign.com/
-  [VueConf US]: http://us.vuejs.org/
+  [VueConf US]: https://us.vuejs.org/
 ---
 
 {% import "quotes.macros.njk" as quotes %}

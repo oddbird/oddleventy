@@ -2,7 +2,7 @@
 title: Quarq Race Intelligence
 banner: Quarq Race Intelligence Case Study
 sub: Real-time race analytics
-url: http://quarqrace.com
+url: https://www.quarqrace.com/
 logo: sram
 image:
   src: projects/trig.jpg
@@ -25,7 +25,7 @@ press:
       changed the playing field for power measurement,
       this new technology is going to change the way people watch races.
     name: Triathlon Magazine
-    url: http://triathlonmagazine.ca/feature/introducing-quarq-race-intelligence-quollectors/
+    url: https://triathlonmagazine.ca/feature/introducing-quarq-race-intelligence-quollectors/
     slug: change
   - text: |
       Seguimiento GPS de atletas en **IronMan Kona**

@@ -48,7 +48,7 @@ events:
       width: 640
       height: 360
   - venue: VueConf US
-    url: http://vueconf.us/
+    url: https://vueconf.us/
     adr: Tampa, FL
     date: 2019-03-26
     end: 2019-03-27

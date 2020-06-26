@@ -35,7 +35,7 @@ you have a chance to watch the videos.
 
 [Nicole Sullivan]: https://twitter.com/stubbornella
 [Bocoup]: https://twitter.com/bocoup
-[Claudina Sarahe]: http://twitter.com/itsmisscs
+[Claudina Sarahe]: https://twitter.com/itsmisscs
 [slides]: https://oddbooksapp.com/book/sass-map-magic
 [video]: https://youtu.be/MdwtoFt2LOI
 
@@ -63,11 +63,11 @@ Of course, this summary barely does justice to the beautiful
 demonstrantions Sarah included. Check out her [CodePen] page for a whole
 load of amazing and beautiful samples.
 
-- [Sarah Drasner Slides](http://slides.com/sdrasner/creativity-programming#/)
+- [Sarah Drasner Slides](https://slides.com/sdrasner/creativecode)
 - [Sarah Drasner Video](https://youtu.be/HVtYasAhsY0)
 
-[Sarah Drasner]: http://twitter.com/sarah_edo
-[CodePen]: http://codepen.io/sdras/
+[Sarah Drasner]: https://twitter.com/sarah_edo
+[CodePen]: https://codepen.io/sdras/
 
 ## No Bugs in Sight
 
@@ -88,9 +88,9 @@ were a few philisophical points that stood out:
 - [Brian Jordan Slides](https://speakerdeck.com/bcjordan/no-bugs-in-sight-continuous-visual-testing-at-code-dot-org-cssconf-2016)
 - [Brian Jordan Video](https://youtu.be/8nSUIAFpNhE)
 
-[Brian Jordan]: http://twitter.com/bcjordan
-[PhantomJS]: http://phantomjs.org/
-[code.org]: http://code.org
+[Brian Jordan]: https://twitter.com/bcjordan
+[PhantomJS]: https://phantomjs.org/
+[code.org]: https://code.org/
 
 ## Nativize Is the New Normalize
 
@@ -111,8 +111,8 @@ class="title-ref">cursor: pointer</span> and "rubber-band" scrolling.
 
 - [Jessica Lord Video](https://youtu.be/H6IDoraEpO0)
 
-[Jessica Lord]: http://twitter.com/jllord
-[Electron]: http://electron.atom.io/
+[Jessica Lord]: https://twitter.com/jllord
+[Electron]: https://www.electronjs.org/
 
 ## Component-Based Style Reuse
 
@@ -150,10 +150,10 @@ processor:
 
 - [Pete Hunt Video](https://youtu.be/_70Yp8KPXH8)
 
-[Pete Hunt]: http://twitter.com/floydophone
-[React]: https://facebook.github.io/react/
-[JSX]: https://facebook.github.io/react/docs/jsx-in-depth.html
-[JSX Style]: https://github.com/smyte/jsxstyle
+[Pete Hunt]: https://twitter.com/floydophone
+[React]: https://reactjs.org/
+[JSX]: https://reactjs.org/docs/jsx-in-depth.html
+[JSX Style]: https://github.com/jsxstyle/jsxstyle
 
 ## CSS4 Grid: True Layout Finally Arrives
 
@@ -182,12 +182,12 @@ behind flags, and buggy across all browsers. Jen recommends using Chrome
 to explore the new possibilities – but it will be some time before we
 can use it in production.
 
-- [Jen Kramer Slides](http://www.slideshare.net/jen4web/css-grid-true-layout-finally-arrives)
+- [Jen Kramer Slides](https://www.slideshare.net/jen4web/css-grid-true-layout-finally-arrives)
 - [Jen Kramer Video](https://youtu.be/jl164y-Vb5E)
 
-[Jen Kramer]: http://twitter.com/jen4web
+[Jen Kramer]: https://twitter.com/jen4web
 [CSS Grid]: https://css-tricks.com/snippets/css/complete-guide-grid/
-[implementations are sparse]: http://caniuse.com/#feat=css-grid
+[implementations are sparse]: https://caniuse.com/#feat=css-grid
 
 ## Silky Smooth Animation with CSS
 
@@ -231,7 +231,7 @@ initially try to achieve with other properties.
 
 - [Will Boyd Video](https://youtu.be/bEoLCZzWZX8)
 
-[Will Boyd]: http://twitter.com/lonekorean
+[Will Boyd]: https://twitter.com/lonekorean
 
 ## Stop Thinking in Pixels
 
@@ -282,10 +282,10 @@ Keith also provides more detail on using viewport-relative `vw` units
 for your root font-size. Hint: they work great inside `calc()`, but
 provide terrible results on their own.
 
-- [Keith Grant Slides](http://keithjgrant.com/talks/stop-thinking-in-pixels/)
+- [Keith Grant Slides](https://keithjgrant.com/talks/stop-thinking-in-pixels/)
 - [Keith Grant Video](https://youtu.be/XanhwddQ-PM)
 
-[Keith J. Grant]: http://twitter.com/keithjgrant
+[Keith J. Grant]: https://twitter.com/keithjgrant
 
 ## CSS Variables: var(--subtitle)
 
@@ -379,10 +379,10 @@ Some custom-property gotchas:
 
 There's so much more! I highly recommend watching the video.
 
-- [Lea Verou Slides](http://leaverou.github.io/css-variables)
+- [Lea Verou Slides](https://leaverou.github.io/talks/css-variables/)
 - [Lea Verou Video](https://youtu.be/2an6-WVPuJU)
 
-[Lea Verou]: http://twitter.com/leaverou
+[Lea Verou]: https://twitter.com/leaverou
 
 ## Creative Solutions for Creative Design Challenges with CSS and SVG
 
@@ -404,10 +404,9 @@ web. Did you know mp4 videos have better performance than gif images?
 Sites like Twitter convert your animated gif into mp4 format for
 display.
 
-- [Henri Helvetica Slides](http://www.afast.site/2016/09/27/hello-css-conf-2016/)
 - [Henri Helvetica Video](https://youtu.be/7zd3veCXNgA)
 
-[Henri Helvetica]: http://twitter.com/HenriHelvetica
+[Henri Helvetica]: https://twitter.com/HenriHelvetica
 
 ## Sass Map Magic
 
@@ -431,8 +430,8 @@ this, recovering from my own talk.
 
 - [Zach Green Video](https://youtu.be/UmP9WcBzZvU)
 
-[Zach Green]: http://twitter.com/zgreen_
-[Webpack]: https://webpack.github.io/
+[Zach Green]: https://twitter.com/zgreen_
+[Webpack]: https://webpack.js.org/
 
 ## It's Time To Ditch the Grid System
 
@@ -447,7 +446,7 @@ start.
 
 - [Emily Hayman Video](https://youtu.be/5N9RkIs31Ok)
 
-[Emily Hayman]: http://twitter.com/eehayman
+[Emily Hayman]: https://twitter.com/eehayman
 
 ## Bauhaus in the Browser
 
@@ -461,7 +460,7 @@ known as the "vertigo effect") in CSS.
 - [Justin McDowell Slides](https://www.dropbox.com/s/8fr5amxfafpwnxq/bauhaus-cssconf.pdf)
 - [Justin McDowell Video](https://youtu.be/BaQl84nDBNY)
 
-[Justin McDowell]: http://twitter.com/revoltpuppy
+[Justin McDowell]: https://twitter.com/revoltpuppy
 [Bauhaus]: https://en.wikipedia.org/wiki/Bauhaus
 
 ## The Great SVG RetCon
@@ -475,7 +474,7 @@ information, if you are using SVG in any way.
 - [Amelia Bellamy-Royds Slides](https://ameliabr.github.io/great-svg-retcon/)
 - [Amelia Bellamy-Royds Video](https://youtu.be/qnGIw7CK7pQ)
 
-[Amelia Bellamy-Royds]: http://twitter.com/AmeliasBrain
+[Amelia Bellamy-Royds]: https://twitter.com/AmeliasBrain
 [SVG2]: https://www.w3.org/TR/SVG2/
 
 ## Coding is a Privilege
@@ -500,6 +499,6 @@ should find my local [Black Girls Code] (or similar) to volunteer.
 - [Alisha Ramos Slides](https://speakerdeck.com/alishalisha/coding-is-a-privilege)
 - [Alisha Ramos Video](https://youtu.be/PtKOzKNJF-s)
 
-[Alisha Ramos]: http://twitter.com/alishalisha
+[Alisha Ramos]: https://twitter.com/alishalisha
 [watch the video]: https://www.youtube.com/watch?v=PtKOzKNJF-s
-[Black Girls Code]: http://www.blackgirlscode.com/
+[Black Girls Code]: https://www.blackgirlscode.com/

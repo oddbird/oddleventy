@@ -16,7 +16,7 @@ summary: |
   application, but becomes worthless if spam sessions start infesting your
   data. Here's how we've tried to combat the problem for [oddbird.net].
 
-  [oddbird.net]: https://oddbird.net/
+  [oddbird.net]: https://www.oddbird.net/
 date: 2017-03-23
 ---
 
@@ -108,7 +108,7 @@ And in our HTML, after the JS file has been executed:
 [free services]: https://referrerspamblocker.com/
 [spam-referrals-blocker]: https://github.com/MohamedBassem/spam-referrals-blocker/
 [community-contributed list of referrer spammers]: https://github.com/piwik/referrer-spam-blacklist
-[gulp]: http://gulpjs.com/
+[gulp]: https://gulpjs.com/
 [gulp-download]: https://github.com/Metrime/gulp-download
 [webpack]: https://webpack.js.org/
 [raw-loader]: https://github.com/webpack-contrib/raw-loader

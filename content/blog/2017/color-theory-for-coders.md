@@ -19,7 +19,7 @@ summary: |
   time.
 action:
   text: Color Theory Demo
-  url: http://tallys.github.io/color-theory/
+  url: https://tallys.github.io/color-theory/
 ---
 
 So you write code, but design intrigues you and you'd like to delve
@@ -29,7 +29,7 @@ recommendations for how to get started, but while you're waiting, check
 out [Natalya Shelburne's][] [Practical Color Theory for People WhoCode][].
 
 [Natalya Shelburne's]: https://twitter.com/natalyathree
-[Practical Color Theory for People Who Code]: http://tallys.github.io/color-theory/
+[Practical Color Theory for People Who Code]: https://tallys.github.io/color-theory/
 
 ## Sass Color Functions
 

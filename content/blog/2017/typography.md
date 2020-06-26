@@ -93,7 +93,7 @@ whether it is accessible at small sizes.
 
 Dive deep and luxuriate.
 
-[study by Errol Morris]: http://www.fastcodesign.com/3046365/errol-morris-how-typography-shapes-our-perception-of-truth
+[study by Errol Morris]: https://www.fastcompany.com/3046365/errol-morris-how-typography-shapes-our-perception-of-truth
 
 ### 7 Resources – Free and High Quality Typography and Typeface Pairing
 
@@ -187,7 +187,7 @@ this pair didn’t make the final round of cuts.
   src='blog/2017/typography/fontpair.jpg'
 ) }}
 
-[Font Pair]: http://fontpair.co/
+[Font Pair]: https://fontpair.co/
 
 ## [Carrie Dils]
 
@@ -236,7 +236,7 @@ with a twist.
 
 Browse our full element collages in our [Behind the Scenes post].
 
-[WebAIM]: http://webaim.org/techniques/fonts/
+[WebAIM]: https://webaim.org/techniques/fonts/
 [Vox Product’s]: https://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
 [Birds]: /birds/
 [Behind the Scenes post]: /2016/11/04/branding-type/
@@ -268,7 +268,7 @@ brilliantly with the winning typefaces receiving six thumbs up.
   src='blog/2017/typography/github.jpg'
 ) }}
 
-[WebAIM]: http://webaim.org/techniques/fonts/
+[WebAIM]: https://webaim.org/techniques/fonts/
 [Dotmocracy]: https://en.wikipedia.org/wiki/Dotmocracy
 [OddFriends Slack channel]: http://friends.oddbird.net
 [GitHub Issues]: https://github.com/oddbird/oddsite/issues/49

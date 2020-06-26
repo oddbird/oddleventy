@@ -3,7 +3,7 @@ card: large
 title: QuarqNet
 banner: QuarqNet Application
 sub: Real-time telemetry & sharing for athletes
-url: http://quarqnet.com
+url: https://www.quarqnet.com/
 logo: sram
 image:
   src: projects/qasper.jpg
@@ -38,7 +38,7 @@ press:
       with others while out on a ride.
     name: BikeRumor
     face: bike-rumor.jpg
-    url: https://www.bikerumor.com/2016/09/28/share-ride-real-time-quarq-qollector/
+    url: https://bikerumor.com/2016/09/28/share-ride-real-time-quarq-qollector/
     slug: mobile
   - text: |
       **QuarqNet** captures the data
@@ -163,7 +163,7 @@ Maps to establish front-end development patterns as well as an automated
   }
 ) }}
 
-[style guide]: http://quarqnet.com/styleguide/config-colors.html
+[style guide]: https://quarqnet.com/styleguide/config-colors.html
 
 ### User Story
 
@@ -213,7 +213,7 @@ present themselves during implementation.
   }
 ) }}
 
-[Adobe Xd]: http://www.adobe.com/products/experience-design.html
+[Adobe Xd]: https://www.adobe.com/products/xd.html
 
 ### Implementation
 
