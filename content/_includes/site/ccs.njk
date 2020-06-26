@@ -7,9 +7,10 @@
   </summary>
   <form data-dropdown="pad rtl">
 
-    {% call forms.radio_group(
+    {% call forms.fieldset(
       legend='Color Mode',
-      name='ccs-modes'
+      name='ccs-modes',
+      attrs={'data-radio': 'group'}
     ) %}
       {% for mode in ['light', 'dark', 'auto'] %}
         {{ forms.radio(

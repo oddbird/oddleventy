@@ -24,6 +24,7 @@ groups:
     forms: Form Fields & Inputs
     tools-range: Range Input Tools
     input-range: Range Inputs
+    input-radio: Radio Buttons
     buttons: Buttons
   Patterns:
     a11y: Accessibility

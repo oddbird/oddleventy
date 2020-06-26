@@ -99,23 +99,34 @@ params:
   </select>
 {%- endmacro %}
 
-{% macro radio_group(
-  legend,
-  name,
-  attrs={}
-) %}
-  {%- set attrs = {
-    'data-field': name,
-    'data-radio': 'group'
-  } | merge(attrs) -%}
-  <fieldset {{ utility.show_attrs(attrs) }}>
-    {% if legend %}
-      <legend data-radio="legend">{{ legend | mdInline | safe }}</legend>
-    {% endif %}
-    {{ caller() }}
-  </fieldset>
-{% endmacro %}
-
+{# @docs
+label: radio
+category: Inputs
+note: |
+  Radio inputs are displayed as a series of buttons,
+  and expect to be nested in a fieldset
+  with `data-radio='group'` applied.
+params:
+  label:
+    type: string
+  id:
+    type: string
+    note: Must be unique on the page
+  group:
+    type: string
+    note: All related radio inputs must have the same group name
+  required:
+    type: boolean
+    default: false
+  attrs:
+    type: object
+    default: '{}'
+    note: Applied to the label
+  input_attrs:
+    type: object
+    default: '{}'
+    note: Applied to the input
+#}
 {% macro radio(
   label,
   id,
@@ -137,6 +148,43 @@ params:
     required=required,
     attrs={'data-radio': 'option'} | merge(attrs)
   ) }}
+{% endmacro %}
+
+{# @docs
+label: fieldset
+category: Fields
+note: Create a
+params:
+  legend:
+    type: string | none
+  name:
+    type: string | none
+    default: 'none'
+    note: |
+      Used in the `data-fieldset` attribute,
+      as a unique hook for the fieldset.
+      Generates a slug of the legend if no name is provided.
+  content:
+    type: string | none
+    default: none
+    note: Expects a `caller()` block when no content is provided
+  attrs:
+    type: object
+    default: '{}'
+#}
+{% macro fieldset(
+  legend,
+  name,
+  content=none,
+  attrs={}
+) %}
+  {%- set content = content if (content != none) else caller() -%}
+  <fieldset data-fieldset="{{ name or legend | slug }}" {{ utility.show_attrs(attrs) }}>
+    {%- if legend -%}
+      <legend>{{ legend | mdInline | safe }}</legend>
+    {%- endif -%}
+    {{ content | safe }}
+  </fieldset>
 {% endmacro %}
 
 {# @docs

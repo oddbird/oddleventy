@@ -1,0 +1,12 @@
+// Focus
+// -----
+/// Consistent focus ring,
+/// is applied by default on element-focus,
+/// but some patterns (like radio-buttons) also require
+/// focus-ring applied to a sibling element.
+/// @group config-focus
+@mixin focus-ring() {
+  outline: medium dotted currentColor;
+  outline-color: var(--focus-ring, var(--text, currentColor));
+  outline-offset: var(--quarter-shim);
+}
