@@ -157,11 +157,10 @@ action:
 summary: |
   **Most projects start with Research & Concepting**
   to make sure we thoroughly understand your project.
-  We'll help you pinpoint the right
-  digital product -- a combination of customer/user needs and business
-  goals -- with a robust plan for development and launch. We'll create an
-  interactive wireframe to visualize your application or website, and a
-  prioritized estimate to keep you in control of cost.
+  We'll help you pinpoint the right digital product -- 
+  with interactive wireframes,
+  prioritized estimates,
+  and a robust plan for development and launch, 
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
