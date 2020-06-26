@@ -69,7 +69,8 @@
 // ------
 
 [data-block] {
-  margin-block: var(--double-gutter);
+  margin-bottom: var(--double-gutter);
+  margin-top: var(--double-gutter);
   max-width: var(--block-max);
 }
 
@@ -82,6 +83,17 @@
 
   @include tools.above('wide-page') {
     --rotate: -6deg;
+  }
+}
+
+[data-block~='full'] {
+  --column: full;
+}
+
+[data-block~='item'] {
+  [data-grid] & {
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
@@ -136,9 +148,8 @@
   --newline: inherit;
 }
 
-// Section with background variation and cutout triangles
-[data-grid='special-bg'] {
-  --column: full;
+// Container with centered top/bottom triangles
+.has-angles {
   background: var(--callout-fade);
   clip-path: polygon(
     0 0,
@@ -152,5 +163,7 @@
     calc(50% - var(--double-gutter)) calc(100% - var(--double-gutter)),
     0 calc(100% - var(--double-gutter))
   );
-  display: grid;
+  margin-bottom: var(--double-gutter);
+  margin-top: var(--double-gutter);
+  padding: var(--spacer) var(--page-margin) calc(var(--spacer) + var(--gutter));
 }

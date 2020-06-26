@@ -8,53 +8,6 @@ image:
 action:
   text: See work samples »
   url: /work/
-promise:
-  - title: Accessible
-    icon: icons/big-circle
-    text: |
-      *The world is diverse, and no person is an edge case.*
-  - title: Approachable
-    icon: icons/big-circle
-    text: |
-      *Your friend in digital design, development, and performance*
-  - title: Human
-    icon: icons/big-circle
-    text: |
-      *Great software requires a personal touch.*
-  - title: Nimble
-    icon: icons/big-circle
-    text: |
-      *Our tightly-integrated team can adapt quickly to your needs*
-  - title: Queer
-    icon: icons/big-circle
-    text: |
-      *Moving past assumptions of “normal” to explore new possibilities.*
-  - title: Robust
-    icon: icons/big-circle
-    text: |
-      *100% test coverage and documentation keep maintenance costs low*
-  - title: Thoughtful
-    icon: icons/big-circle
-    text: |
-      *We don’t have all the answers, but we know how to get there.*
-  - title: Top-shelf
-    icon: icons/big-circle
-    text: |
-      *From CSS/Sass & Django to Susy & Herman, we build the tools that millions of developers rely on.*
-  - title: Transparent
-    icon: icons/big-circle
-    text: |
-      *Daily communication keeps you in control of budget & priorities from start to finish.*
-process:
-  - title: Lean & Agile
-    text: |
-      We use a lean and agile process to deploy & integrate new functionality frequently, aiming to deliver usable product launches as early and often as possible.
-  - title: Transparent & Interactive
-    text: |
-      We encourage clients to stay closely connected with the daily progress, offering frequent feedback and re-prioritization via Trello or Pivotal Tracker.
-  - title: Accessible & Responsive
-    text: |
-      We use the accessible open web stack: semantic HTML5, unobtrusive JavaScript, and advanced CSS – backed by Python & Django on the server.
 summary: |
   **We integrate design and development in an agile process**, so you only need to hire one team – completely focused on achieving your goals with smooth and efficient progress from concept to launch and beyond. Starting from user needs, we collaborate with you to deliver usable features quickly and efficiently.
 
@@ -106,7 +59,7 @@ summary: |
 
 {{ quotes.find(
   collections.all,
-  slugs=['investment', 'curious']
+  slugs=['iterate', 'handoff']
 ) }}
 
 {{ layout.title('Experience') }}
@@ -147,38 +100,65 @@ summary: |
 
 {% endcall %}
 
+
+{% call layout.block(
+  name='full',
+  attrs={'class': 'has-angles'}
+) %}
+
 ## Our Process Is ...
 
+{% call layout.grid('inner') %}
 
-{{ layout.grid(
-  name='special-bg',
-  content=process
-) }}
+{% call layout.block('item') %}
 
+### Lean & Agile
 
-{% call layout.grid('fancy-list') %}
-
-## We Promise to Be
-
-  - **Accessible**
-  *The world is diverse, and no person is an edge case.*
-  - **Approachable**
-  *Your friend in digital design, development, and performance*
-  - **Human**
-  *Great software requires a personal touch.*
-  - **Nimble**
-  *Our tightly-integrated team can adapt quickly to your needs*
-  - **Queer**
-  *Moving past assumptions of “normal” to explore new possibilities.*
-  - **Robust**
-  *100% test coverage and documentation keep maintenance costs low*
-  - **Thoughtful**
-  *We don’t have all the answers, but we know how to get there.*
-  - **Top-shelf**
-  *From CSS/Sass & Django to Susy & Herman, we build the tools that millions of developers rely on.*
-  - **Transparent**
-  *Daily communication keeps you in control of budget & priorities from start to finish.*
+We use a lean and agile process to deploy & integrate new functionality frequently, aiming to deliver usable product launches as early and often as possible.
 
 {% endcall %}
 
-{{ embed.icon_block(promise, 'We Promise to Be') }}
+{% call layout.block('item') %}
+
+### Transparent & Interactive
+
+We encourage clients to stay closely connected with the daily progress, offering frequent feedback and re-prioritization via Trello or other Project Management tool.
+
+{% endcall %}
+
+{% call layout.block('item') %}
+
+### Accessible & Responsive
+
+We use the accessible open web stack: semantic HTML5, unobtrusive JavaScript, and advanced CSS – backed by Python & Django on the server.
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
+
+{% call layout.block('fancy-list') %}
+
+## We Promise to Be
+
+  - **Accessible** \
+  *The world is diverse, and no person is an edge case.*
+  - **Approachable** \
+  *Your friend in digital design, development, and performance*
+  - **Human** \
+  *Great software requires a personal touch.*
+  - **Nimble** \
+  *Our tightly-integrated team can adapt quickly to your needs*
+  - **Queer** \
+  *Moving past assumptions of “normal” to explore new possibilities.*
+  - **Robust** \
+  *100% test coverage and documentation keep maintenance costs low*
+  - **Thoughtful** \
+  *We don’t have all the answers, but we know how to get there.*
+  - **Top-shelf** \
+  *From CSS/Sass & Django to Susy & Herman, we build the tools that millions of developers rely on.*
+  - **Transparent** \
+  *Daily communication keeps you in control of budget & priorities from start to finish.*
+
+{% endcall %}

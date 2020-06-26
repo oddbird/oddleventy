@@ -1,0 +1,58 @@
+@use '~accoutrement/sass/tools';
+@use '../config/scale';
+@use 'sass:map';
+
+// Lists
+// -----
+/// Apply spacing after lists.
+/// @group type
+ul,
+ol {
+  margin-bottom: var(--newline);
+  margin-top: 0;
+}
+
+ul,
+ol {
+  padding-left: var(--list-padding, var(--list-padding--default, 0));
+
+  & & {
+    --list-padding--default: 1em;
+  }
+
+  @include tools.below('wide-page') {
+    --list-padding--default: 1em;
+  }
+}
+
+// List Markers
+// ------------
+/// Lighter markers and smaller bullet points…
+/// @group type
+::marker {
+  color: var(--text-light);
+
+  ul & {
+    font-size: 0.75em;
+  }
+}
+
+// Fancy Lists
+// -----------
+[data-block='fancy-list'] {
+  ul {
+    ::marker {
+      color: var(--markers);
+      font-size: var(--h2);
+    }
+  }
+
+  li {
+    padding-bottom: var(--newline);
+  }
+
+  strong {
+    @include tools.font-family('alt');
+    font-size: var(--h3);
+  }
+}

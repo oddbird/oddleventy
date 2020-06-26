@@ -3,7 +3,7 @@
 {% set cta = collections.all | findPage('data.cta_slug', cta or 'default') %}
 
 {% if cta %}
-  <aside data-layout="cta" aria-labelledby="cta-title">
+  <aside data-layout="cta" class="has-angles" aria-labelledby="cta-title">
     {% set image = cta.data.image %}
     {{ embed.img(
       src=image.src,
