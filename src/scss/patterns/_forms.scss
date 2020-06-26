@@ -78,8 +78,9 @@ legend {
   text-transform: capitalize;
 
   [data-radio='input']:checked + & {
-    border: medium solid var(--radio-focus);
+    --radio-border: var(--radio-focus);
     font-weight: bold;
+    box-shadow: 0 0 0 var(--quarter-shim) var(--radio-focus) inset;
   }
 
   &:first-of-type {

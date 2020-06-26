@@ -120,24 +120,23 @@ params:
   label,
   id,
   group,
+  required=false,
   attrs={},
   input_attrs={}
 ) %}
-  {% set input_attrs = {
-    'type': 'radio',
-    'name': group,
-    'id': id,
-    'data-radio': 'input'
-  } | merge(input_attrs) %}
-  <input {{ utility.show_attrs(input_attrs) }}>
-
-  {% set attrs = {
-    'for': id,
-    'data-radio': 'option'
-  } | merge(attrs) %}
-  <label {{ utility.show_attrs(attrs) }}>
-    {{ label | mdInline | safe }}
-  </label>
+  {{ input(
+    id=id,
+    type='radio',
+    required=required,
+    name=group,
+    attrs={'data-radio': 'input'} | merge(input_attrs)
+  ) }}
+  {{ field_label(
+    label=label,
+    id=id,
+    required=required,
+    attrs={'data-radio': 'option'} | merge(attrs)
+  ) }}
 {% endmacro %}
 
 {# @docs
@@ -153,13 +152,17 @@ params:
   required:
     type: boolean
     default: false
+  attrs:
+    type: object
+    default: '{}'
 #}
 {% macro field_label(
   label,
   id,
-  required=false
+  required=false,
+  attrs={}
 ) %}
-<label for="{{ id }}" data-label>
+<label for="{{ id }}" data-label {{ utility.show_attrs(attrs) }}>
   {{- label | mdInline | safe -}}
   {%- if required -%}
     <span aria-hidden="true">*</span>
