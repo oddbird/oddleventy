@@ -240,12 +240,8 @@ params:
   collection:
     type: array
     note: containing 11ty page objects
-  events:
-    type: boolean
-    default: 'true'
-    note: optionally include events in sort/year dates
 */
-const pageYears = (collection, events = true) =>
+const pageYears = (collection) =>
   collection.map((page) => {
     const dates = [page.date];
 
@@ -253,9 +249,11 @@ const pageYears = (collection, events = true) =>
       dates.push(page.data.end);
     }
 
-    if (events && page.data.events) {
+    if (page.data.events) {
       page.data.events.forEach((event) => {
-        dates.push(event.date);
+        if (getDate(event.date) <= now()) {
+          dates.push(event.date);
+        }
       });
     }
 
@@ -264,6 +262,9 @@ const pageYears = (collection, events = true) =>
 
     return page;
   });
+
+const eventSort = (collection) =>
+  pageYears(collection).sort((a, b) => a.sort > b.sort);
 
 /* @docs
 label: byYear
@@ -275,17 +276,13 @@ params:
   collection:
     type: array
     note: containing 11ty page objects
-  events:
-    type: boolean
-    default: 'true'
-    note: optionally include events in sort/year dates
 */
-const byYear = (collection, events = true) => {
+const byYear = (collection) => {
   if (!collection || collection.length === 0) {
     return [];
   }
 
-  const groups = _.groupBy(pageYears(collection, events), 'year');
+  const groups = _.groupBy(pageYears(collection), 'year');
 
   return Object.keys(groups)
     .reverse()
@@ -307,6 +304,7 @@ module.exports = {
   findData,
   withData,
   pageYears,
+  eventSort,
   byYear,
   removePage,
 };

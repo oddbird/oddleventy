@@ -575,3 +575,20 @@ params:
     </ul>
   {% endif %}
 {% endmacro %}
+
+{% macro page_nav(title, pagination) %}
+<nav class="pagination" aria-labeledby="resource-nav-title">
+  <h2 id="resource-nav-title" class="sr-only">{{ title | mdInline | safe }}</h2>
+  <p>
+    {{ utility.link_if('« previous', pagination.href.previous) }}
+    |
+    <span class="current">
+      <strong>{{ pagination.pageNumber + 1 }}</strong>
+      <i>of</i>
+      <strong>{{ pagination.pages | length }}</strong>
+    </span>
+    |
+    {{ utility.link_if('next »', pagination.href.next) }}
+  </p>
+</nav>
+{% endmacro %}
