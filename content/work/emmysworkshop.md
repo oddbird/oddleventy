@@ -1,5 +1,4 @@
 ---
-eleventyExcludeFromCollections: true
 title: Emmy's Workshop
 sub: Individualized algebra tutor
 image:
