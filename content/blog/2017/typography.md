@@ -43,7 +43,7 @@ have typography, but you need a beautiful color palette, check out this
 guide to [choosing brand colors for your website].
 
 [open redesign process]: /2016/07/12/open-design/
-[choosing brand colors for your website]: /2017/1/16/color/
+[choosing brand colors for your website]: /2017/01/16/color/
 
 ## Step 1 – Define Brand Goals
 
@@ -123,7 +123,7 @@ favorite that OddBird used for the [CoachHub app].
 ) }}
 
 [Fontspring]: https://www.fontspring.com/
-[CoachHub app]: /2015/08/14/coachhub-study/
+[CoachHub app]: /work/coachhub/
 
 ## [Adobe TypeKit]
 

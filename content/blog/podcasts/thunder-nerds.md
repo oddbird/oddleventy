@@ -17,7 +17,7 @@ media:
   caption: Audio and video of the podcast...
   src:
     - span: full
-      audio: https://media.blubrry.com/thundernerds/s/thundernerds.s3.amazonaws.com/vueconf/206-miriam-suzanne-vueconf-us-2019.mp3
+      audio: http://media.blubrry.com/thundernerds/s/thundernerds.s3.amazonaws.com/vueconf/206-miriam-suzanne-vueconf-us-2019.mp3
     - span: full
       iframe: https://www.youtube.com/embed/2etlzLoV9xk
 ---

@@ -18,15 +18,33 @@
   to: /workshops/resilient-systems/
 - from: /talks/advanced-css-workshop/
   to: /workshops/advanced-css/
+- from: /talks/data-design/
+  to: /talks/dynamic-css/
 - from: /speaking/
   to: /services/speaking/
 - from: /work/services/
   to: /services/
 - from: /herman/articles/
-  to: /tags/Herman/
+  to: /tags/herman/
 - from: /susy/articles/
-  to: /tags/Susy/
+  to: /tags/susy/
 - from: /susy/styleguide/
   to: /susy/
 - from: /susy/sites/
   to: /susy/
+- from: /2017/1/3/initial-letter/
+  to: /2017/01/03/initial-letter/
+- from: /2017/1/5/git-rebase/
+  to: /2017/01/05/git-rebase/
+- from: /2017/1/11/typography/
+  to: /2017/01/11/typography/
+- from: /2017/1/16/color/
+  to: /2017/01/16/color/
+- from: /2017/1/19/design-using-data/
+  to: /2017/01/19/design-using-data/
+- from: /2017/1/26/we-are-not-neutral/
+  to: /2017/01/26/we-are-not-neutral/
+- from: /2017/1/27/parallax/
+  to: /2017/01/27/parallax/
+- from: /2017/1/31/css-day/
+  to: /2017/01/31/css-day/

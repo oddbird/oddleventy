@@ -9,7 +9,6 @@ tags:
   - Agile
   - Accoutrement
   - Herman
-  - Herman v1
   - CSS
   - Sass
   - Design Systems

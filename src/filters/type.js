@@ -2,6 +2,7 @@
 
 const _ = require('lodash');
 const markdown = require('markdown-it');
+const mdAnchor = require('markdown-it-anchor');
 const mdFootnote = require('markdown-it-footnote');
 const mdMark = require('markdown-it-mark');
 const removeMd = require('remove-markdown');
@@ -26,6 +27,7 @@ const mdown = markdown({
   breaks: false,
   typographer: true,
 })
+  .use(mdAnchor)
   .use(mdMark)
   .use(mdFootnote)
   .use(markdownItResponsive, imgConf);

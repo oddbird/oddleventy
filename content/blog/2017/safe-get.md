@@ -135,7 +135,7 @@ be sure to `get` the function before passing it in. Meanwhile, our tools
 will continue to use `call` internally, without any changes.
 
 [Sass Accoutrement]: /accoutrement/
-[pass in an arbitrary function]: ../07/pattern-making/
+[pass in an arbitrary function]: /2017/03/07/pattern-making/
 
 ## One Exception
 

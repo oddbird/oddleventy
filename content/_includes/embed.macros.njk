@@ -154,7 +154,7 @@ params:
   {%- elif item.iframe -%}
     {{- iframe(item.iframe, item.width, item.height, item.span) -}}
   {%- elif item.audio -%}
-    {{- audio(item.audio, span) -}}
+    {{- audio(item.audio, item.span) -}}
   {%- endif -%}
 {%- endfor -%}
 {%- endmacro %}

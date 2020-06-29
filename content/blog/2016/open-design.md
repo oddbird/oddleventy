@@ -33,8 +33,6 @@ in the open – sharing our thoughts while we work.
 - **Open Plans:** Find our to-do list, and watch our process on our
     Github [project board]. (note: we were using [Pivotal Tracker], but
     wanted to [test the new Github features])
-- **Articles and Artifacts:** Check back here for regular posts as we
-    work. We'll update the [timeline] at the bottom of this page.
 
 [open Slack channel]: http://friends.oddbird.net
 [Twitter]: https://twitter.com/oddbird
@@ -42,7 +40,6 @@ in the open – sharing our thoughts while we work.
 [project board]: https://github.com/oddbird/oddsite/projects/1
 [Pivotal Tracker]: https://www.pivotaltracker.com/projects/22378
 [test the new Github features]: /2016/10/07/github-projects/
-[timeline]: #open-design-articles
 
 ## What is Open Design?
 

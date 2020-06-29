@@ -8,7 +8,6 @@ date: 2010-04-09
 end: 2016-08-04
 links:
   source: https://github.com/Compass/compass
-  status: end-of-life
 summary: |
   An open source CSS authoring framework
   which uses the Sass language

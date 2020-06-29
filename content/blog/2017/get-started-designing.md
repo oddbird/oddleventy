@@ -87,7 +87,7 @@ typography for a brand identity.
     https://webdesign.tutsplus.com/articles/choosing-the-right-font-a-practical-guide-to-typography-on-the-web--webdesign-15
   [Jason Santa Maria On Web Typography]: https://www.youtube.com/watch?v=ipbbbMsvTEI
   [On Web Typography]: https://abookapart.com/products/on-web-typography
-  [my favorite resources]: /2017/1/11/typography/
+  [my favorite resources]: /2017/01/11/typography/
 
 ## Color: Sass Color Functions
 
@@ -108,7 +108,7 @@ testing contrast.
 
   [Natalya's color theory decision tree]: {{ site.images }}blog/2017/get-started-designing/decision-tree.jpg
   [Practical Color Theory for People Who Code]: https://tallys.github.io/color-theory/
-  [process for choosing brand colors]: /2017/1/16/color/
+  [process for choosing brand colors]: /2017/01/16/color/
 
 ## Prototype: Adobe Experience Design
 

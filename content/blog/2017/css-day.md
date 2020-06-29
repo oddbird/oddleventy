@@ -32,7 +32,7 @@ from our very own OddBirds.
 Sarah has become one of the primary voices on web-SVG and animation,
 leading to her recent [SVG Animations] book from O'Reilly.
 
-*(video unavaliable)*
+*(video unavailable)*
 
 [Sarah Drasner]: https://twitter.com/sarah_edo
 [SVG Animations]: https://www.oreilly.com/library/view/svg-animations/9781491939697/

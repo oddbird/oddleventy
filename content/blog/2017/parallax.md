@@ -27,7 +27,7 @@ quick summary or **head over to Paul's article right away!**
 
 ### [Performant Parallaxing &gt;]
 
-  [Performant Parallaxing &gt;]: #performant-parallaxing-1
+  [Performant Parallaxing &gt;]: https://developers.google.com/web/updates/2016/12/performant-parallaxing
 
 ## Don'ts
 
@@ -57,5 +57,3 @@ message via [Twitter] or join our public [Slack channel].
   [Slack channel]: http://friends.oddbird.net/
 
 ### [Performant Parallaxing &gt;]
-
-  [Performant Parallaxing &gt;]: #performant-parallaxing-1

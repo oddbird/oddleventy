@@ -46,7 +46,7 @@ continues with a Q&A in [Smashing CSS Followup].
 Watch Miriam's talk & view slides: [Dynamic CSS: Layouts & Beyond]
 
   [Smashing CSS Followup]: /2019/05/17/smashing/
-  [Dynamic CSS: Layouts & Beyond]: #dynamic-css-layouts-beyond
+  [Dynamic CSS: Layouts & Beyond]: /talks/dynamic-css/
 
 ## Sam Richard
 
@@ -106,7 +106,7 @@ Watch Aaron's talk: [Laying the Groundwork: Building Foundations for
 High-Performing Teams]
 
   [Laying the Groundwork: Building Foundations for High-Performing Teams]:
-    #laying-the-groundwork-building-foundations-for-high-performing-teams
+    https://vimeo.com/296445890
 
 ## Jen Simmons
 

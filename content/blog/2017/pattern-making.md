@@ -60,7 +60,7 @@ My first goal is to make these patterns tangible in our code, so they
 (which will include colors, fonts, and sizes) must be based on real and
 meaningful code, or it's nothing but theory.
 
-[OddSite design]: /tags/Open%20Design/
+[OddSite design]: /tags/open-design/
 
 ## Grouping Variables into Maps
 
@@ -292,9 +292,9 @@ proof-of-concept for the more robust style guide generator we'll develop
 later.
 
 [Accoutrement]: /accoutrement/
-[color]: /accoutrement-color/docs/
-[scale]: /accoutrement-scale/docs/
-[type]: /accoutrement-type/docs/
+[color]: /accoutrement/docs/color.html
+[scale]: /accoutrement/docs/scale.html
+[type]: /accoutrement/docs/type.html
 
 ### The Theming Option
 

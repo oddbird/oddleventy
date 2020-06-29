@@ -39,7 +39,7 @@ overwhelmed? Color toolkit to the rescue! Over the years, I’ve collected
 several resources to help guide me through these challenges – many of
 which I used during OddBird’s [open redesign process].
 
-[selected excellent typography]: /2017/1/11/typography/
+[selected excellent typography]: /2017/01/11/typography/
 [open redesign process]: /2016/07/12/open-design/
 
 ## Step 1 – Define Brand Goals
@@ -231,7 +231,7 @@ Darkening our orange to the point that it passed AA level changed the
 color so much that it no longer retained the bright, fun feel we needed.
 So I began the search for a new brand color.
 
-[WebAIM: Color Contrast Checker]: #webaim-color-contrast-checker
+[WebAIM: Color Contrast Checker]: https://webaim.org/resources/contrastchecker/
 
 ## Step 5 - Test Colors in Context
 
