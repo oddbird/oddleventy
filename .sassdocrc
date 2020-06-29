@@ -45,9 +45,7 @@ herman:
       url: https://oddbird.net/cascading-colors/
     - name: Herman
       url: https://oddbird.net/herman/
-  fontpath: src/fonts/
-  nunjucks:
-    templatepath: content/_includes/
+  customCSS: _built/css/styleguide.css
   sass:
     implementation: sass
     jsonfile: _built/css/json.css
