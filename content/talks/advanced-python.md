@@ -10,6 +10,7 @@ tags:
 events:
   - venue: ConFoo
     url: https://confoo.ca/
+    adr: Montreal, Canada
     date: 2014-02-27
     slides: /advanced-python-preso/
 summary: |

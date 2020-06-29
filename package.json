@@ -39,7 +39,8 @@
     "build:assets": "npm-run-all assets:clean -p js sass images",
     "build": "run-s build:assets build:site eleventy",
     "update-oss-docs": "./bin/update-oss-docs",
-    "prod": "run-s update-oss-docs build"
+    "prod": "run-s update-oss-docs build",
+    "checklinks": "hyperlink --canonicalroot https://www.oddbird.net/ -r -p _site/index.html"
   },
   "devDependencies": {
     "#": "link:./src/filters",
