@@ -2,9 +2,9 @@
 title: Software For Humans
 banner: |
   Custom Web App
-  *[Design](services/),
-  [Development](services/), &
-  [Training](services/)*
+  *[Design](services/design-systems/),
+  [Development](services/development/), &
+  [Training](services/speaking/)*
 image:
   src: projects/orcas/home-iphone.jpg
   alt: CoachHub App on iPhone
