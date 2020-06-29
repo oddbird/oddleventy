@@ -29,7 +29,7 @@ bias as Josh suggested, I’m all in.
 
 Watch Josh's talk: [A.I. Is Your New Design Material]
 
-  [Forbes]: https://www.forbes.com/sites/bernardmarr/2019/01/29/3-steps-to-tackle-the-problem-of-bias-in-artificial-intelligence/#36c9eff87a12
+  [Forbes]: https://www.forbes.com/sites/bernardmarr/2019/01/29/3-steps-to-tackle-the-problem-of-bias-in-artificial-intelligence/
   [A.I. Is Your New Design Material]: https://bigmedium.com/speaking/ai-is-your-new-design-material.html
 
 ## Miriam Suzanne
@@ -150,7 +150,7 @@ Learn more about [Anton & Irene].
 
   [One Shared House]: http://work.antonandirene.com/onesharedhouse/
   [One Shared House 2030]: http://work.antonandirene.com/onesharedhouse2030/
-  [Anton & Irene]: http://antonandirene.com/
+  [Anton & Irene]: https://antonandirene.com/
 
 ## What's Next?
 

@@ -116,6 +116,6 @@ Did we miss anything important? Let us know via [Twitter] or our public
 
 [Django]: https://www.djangoproject.com/
 [How to Extend the Django User Model]: https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html
-[AUTH\_USER\_MODEL setting]: https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-AUTH_USER_MODEL
+[AUTH\_USER\_MODEL setting]: https://docs.djangoproject.com/en/1.10/ref/settings/#auth-user-model
 [Twitter]: https://twitter.com/oddbird
 [Slack channel]: http://friends.oddbird.net/

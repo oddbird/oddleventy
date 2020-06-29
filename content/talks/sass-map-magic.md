@@ -5,7 +5,7 @@ date: 2014-09-12
 image:
   src: talks/sass-map.jpg
   alt: Miriam being interviewed at a conference
-slides: https://www.oddbooksapp.com/book/sass-map-magic
+slides: https://oddbooksapp.com/book/sass-map-magic
 tags:
   - Sass
 events:
@@ -28,7 +28,6 @@ events:
     date: 2014-10-02
   - venue: BlendConf
     adr: Charlotte, NC
-    url: https://www.blendconf.com/
     date: 2014-09-12
     video: https://teamtreehouse.com/library/sass-map-magic
 summary: |

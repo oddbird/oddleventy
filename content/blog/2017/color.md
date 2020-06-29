@@ -81,7 +81,7 @@ feel about each company?
   src='blog/2017/colors/canva.jpg'
 ) }}
 
-[Canva]: https://designschool.canva.com/blog/website-color-schemes/
+[Canva]: https://www.canva.com/learn/website-color-schemes/
 
 ## [Design Seeds]
 

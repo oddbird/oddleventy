@@ -64,7 +64,7 @@ press:
       It's precisely what you need, and nothing more.
     name: Stephany Varga
     role: Zendesk Creative Collection
-    url: https://medium.com/zendesk-creative-blog/responsive-a-harrowing-meditation-on-the-brutal-realities-of-web-content-organization-in-5-acts-1d33ce25f062
+    url: https://medium.com/@stephanyvee/responsive-a-harrowing-meditation-on-the-brutal-realities-of-web-content-organization-in-5-acts-1d33ce25f062
     slug: zendesk
 badges:
   - name: npm

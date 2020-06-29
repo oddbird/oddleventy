@@ -134,7 +134,7 @@ Qollector, Quarq's wearable, activity-tracking hardware. The QuarqNet
 brand also matches [Quarq Race Intelligence], another Quarq web
 application OddBird had the privilege to design and develop.
 
-[Quarq]: https://www.quarq.com
+[Quarq]: https://www.sram.com/en/quarq
 [Quarq Race Intelligence]: https://www.quarqrace.com/
 
 {{ embed.icon_block(planning, 'Planning & Discovery Phase') }}
@@ -285,7 +285,7 @@ the interactive [InVision sketch].
   }
 ) }}
 
-[InVision sketch]: https://invis.io/YC8PAW1K3#/191020362_Map_Only
+[InVision sketch]: https://projects.invisionapp.com/share/YC8PAW1K3#/screens/191020362_Map_Only
 
 ### Hi-Fi Mockup
 

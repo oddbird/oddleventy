@@ -3,7 +3,7 @@ title: User Unfriendly
 sub: designing software for humans, with other humans
 author: miriam
 date: 2015-11-11
-slides: https://www.oddbooksapp.com/book/software-for-humans
+slides: https://oddbooksapp.com/book/software-for-humans
 image:
   src: talks/user-unfriendly.png
   alt: Rethinking user experience design across media
@@ -36,7 +36,6 @@ events:
     date: 2019-03-18
     slides: https://talks.oddbird.net/user-unfriendly/agiledenver19
   - venue: AIGA Colorado
-    url: https://colorado.aiga.org/event/04-26-18-rethinking-ux-design/
     adr: Denver, CO
     date: 2018-04-26
     slides: https://oddbooksapp.com/release/e5bd52de-a9db-4e59-a2af-ffa8a68f9100
@@ -48,12 +47,12 @@ events:
   - venue: Metro State Mobile Prototyping
     adr: Denver, CO
     date: 2018-04-05
-    slides: https://www.oddbooksapp.com/book/mobile-prototype
+    slides: https://oddbooksapp.com/book/mobile-prototype
   - venue: SassConf 2015
     url: https://twitter.com/sassconf
     adr: Austin, TX
     date: 2015-11-11
-    slides: https://www.oddbooksapp.com/book/user-unfriendly
+    slides: https://oddbooksapp.com/book/user-unfriendly
 press:
   - text: |
       Thought provoking talk on rethinking who the user is

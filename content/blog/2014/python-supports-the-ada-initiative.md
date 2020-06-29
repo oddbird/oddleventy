@@ -133,7 +133,7 @@ Carl
 [pervasive sexual harassment]: https://anontechlady.wordpress.com/2014/08/04/my-first-oscon/
 [playing on the easy setting]: https://whatever.scalzi.com/2012/05/15/straight-white-male-the-lowest-difficulty-setting-there-is/
 [other attributes that i did nothing to earn]: https://pyvideo.org/djangocon-us-2014/all-you-need-is-l.html
-[leading]: https://www.forbes.com/sites/women2/2013/04/09/record-number-of-women-give-tech-talks-at-pycon-2013/#461d34407967
+[leading]: https://www.forbes.com/sites/women2/2013/04/09/record-number-of-women-give-tech-talks-at-pycon-2013/
 [way]: https://adainitiative.org/2012/10/22/leading-open-source-conference-pycon-us-shares-responsereport-guidelines-for-harassment/
 [code of conduct]: https://www.djangoproject.com/conduct/
 ["that time i wasn't harassed at a conference"]: https://geekfeminismdotorg.wordpress.com/2013/08/15/that-time-i-wasnt-harassed-at-a-conference/

@@ -6,7 +6,7 @@ date: 2016-10-20
 image:
   src: talks/greater-than.jpg
   alt: David speaking about his slide showing legos and toy car
-slides: https://davisagli.github.io/slides/ploneconf2016/#/step-1
+slides: https://davisagli.github.io/slides/ploneconf2016/
 tags:
   - React
   - Plone

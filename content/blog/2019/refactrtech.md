@@ -136,17 +136,17 @@ present my ideas and experiences to my peers.
 
 [GraphQL]: https://graphql.org/
 [Flutter]: https://flutter.dev/
-[Gatsby]: https://gatsbyjs.org/
-[Vue Skulk]: https://vuevixens.org/
+[Gatsby]: https://www.gatsbyjs.org/
+[Vue Skulk]: https://www.vuevixens.org/
 [Tracy Lee]: https://twitter.com/ladyleet
-[This Dot Labs]: https://www.thisdot.co/labs
+[This Dot Labs]: https://labs.thisdot.co/
 [Dr. Kortney Ziegler]: https://twitter.com/fakerapper?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
 [ZaMLabs]: https://sites.google.com/zamlabs.info/medialab/about
 [Mike Harington]: https://twitter.com/mhartington
 [Ionic]: https://ionicframework.com/
 [Tae’lur Alexis]: https://twitter.com/TaelurAlexis
 [codeeveryday.io]: https://codeeveryday.io/
-[the most diverse panel of technologists]: https://refactr.tech/detail/sessions.html#forging-a-path-through-inclusive-entrepreneurship
+[the most diverse panel of technologists]: https://www.youtube.com/watch?v=S6rfMzcw-S0
 [Sangeeta Nori]: https://twitter.com/norisangeeta
 [quantum computing]: https://en.wikipedia.org/wiki/Quantum_computing
 [/dev/color]: https://www.devcolor.org/

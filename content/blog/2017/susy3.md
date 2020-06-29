@@ -123,7 +123,7 @@ browsers catch up.
   [browser-support matrix]: https://caniuse.com/#feat=css-grid
   [CSS Grid module]: https://css-tricks.com/snippets/css/complete-guide-grid/
   [Rachel Andrew]: https://gridbyexample.com/
-  [Jen Simmons]: https://jensimmons.com/post/feb-27-2017/learn-css-grid
+  [Jen Simmons]: https://labs.jensimmons.com/
 
 ### Susy Columns & `grid-template-columns`
 

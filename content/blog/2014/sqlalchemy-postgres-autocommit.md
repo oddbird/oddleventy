@@ -141,7 +141,7 @@ transactions).
 
 [sqlalchemy]: https://www.sqlalchemy.org/
 [django]: https://www.djangoproject.com/
-[transactions api]: https://docs.djangoproject.com/en/stable/topics/db/transactions/#transactions-upgrading-from-1-5
+[transactions api]: https://docs.djangoproject.com/en/stable/releases/1.6/#new-transaction-management-model
 [aymeric augustin]: https://myks.org/en/
 [prior work by christophe pettus]: https://github.com/Xof/xact
 [transactions.atomic]: https://docs.djangoproject.com/en/stable/topics/db/transactions/#django.db.transaction.atomic
@@ -178,7 +178,7 @@ send queries that change the database. It doesn't put the database
 connections into true autocommit mode, so it still wraps reads in
 unnecessary transactions.
 
-[autocommit mode]: https://docs.sqlalchemy.org/en/13/orm/session.html#autocommit-mode
+[autocommit mode]: https://docs.sqlalchemy.org/en/13/orm/session_transaction.html#autocommit-mode
 
 ### Turning on Real Autocommit
 
@@ -269,7 +269,7 @@ off the Session's autoflush and autoexpire features. So far I haven't
 done the latter; waiting to see what (if any) problems ensue in
 practice.
 
-[vague warnings]: https://docs.sqlalchemy.org/en/13/orm/session.html#autocommit-mode
+[vague warnings]: https://docs.sqlalchemy.org/en/13/orm/session_api.html#sqlalchemy.orm.session.Session.params.autocommit
 
 ### Back to Autocommit When the Transaction Ends
 

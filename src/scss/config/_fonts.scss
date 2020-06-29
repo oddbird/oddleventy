@@ -26,7 +26,7 @@ $body-font: (
     'Georgia',
     'serif',
   ),
-  'source': 'https://typekit.com/fonts/freight-text',
+  'source': 'https://fonts.adobe.com/fonts/freight-text',
 );
 
 @include tools.add-font('body', $body-font);
@@ -50,7 +50,7 @@ $alt-font: (
     'Arial',
     'sans-serif',
   ),
-  'source': 'https://typekit.com/fonts/freight-sans',
+  'source': 'https://fonts.adobe.com/fonts/freight-sans',
 );
 
 @include tools.add-font('alt', $alt-font);
@@ -75,7 +75,7 @@ $code-font: (
     'Courier New',
     'monospace',
   ),
-  'source': 'https://typekit.com/fonts/source-code-pro',
+  'source': 'https://fonts.adobe.com/fonts/source-code-pro',
 );
 
 @include tools.add-font('code', $code-font);

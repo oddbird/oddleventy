@@ -138,15 +138,13 @@ Since OddBird already subscribes to Creative Cloud, I found several font
 options there: Freight Sans and Freight Text, Abril and Raleway,
 Merriweather and PT Sans. Not all of these typefaces made it to our
 final round of element collages, but it was an excellent place to start.
-[TypeKit Design Gallery] is an inspiration for typeface pairing as well.
 
 {{ embed.img(
   src='blog/2017/typography/typekit.jpg'
 ) }}
 
-[Adobe TypeKit]: https://typekit.com/
-[licensing details]: https://helpx.adobe.com/typekit/using/font-licensing.html#sync-lic
-[TypeKit Design Gallery]: https://typekit.com/gallery
+[Adobe TypeKit]: https://fonts.adobe.com/typekit
+[licensing details]: https://helpx.adobe.com/fonts/using/font-licensing.html
 
 ## [Google Fonts]
 
@@ -325,7 +323,7 @@ with, requiring monthly pageview tracking. With TypeKit, we were golden.
 [Typedia]: http://typedia.com/explore/typeface/freight-text/
 [create a custom font stack]: https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/
 [Darden Studio]: https://www.dardenstudio.com/
-[Phil’s Fonts]: https://philsfonts.com/index.php/fonts/overview/GF060021X1
+[Phil’s Fonts]: https://philsfonts.com/font-family/garagefonts/freight-family/GF060021X1/
 
 ## Getting Personal
 

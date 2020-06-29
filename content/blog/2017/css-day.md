@@ -115,7 +115,7 @@ together.
 This was the second year [Brad Westfall] organized this event. We are
 very thankful for conference organizers like Brad and his team, who post
 [videos] of the sessions, making this knowledge accessible for those who
-could not join us live. [Photos] from CSSDay are also posted.
+could not join us live.
 
 As always, we would love to discuss the content covered in these videos
 shared from CSS Day 2016. Send us a message via [Twitter] or join our
@@ -123,6 +123,5 @@ public [Slack channel].
 
 [Brad Westfall]: https://twitter.com/bradwestfall
 [videos]: https://www.youtube.com/playlist?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_
-[Photos]: https://drive.google.com/drive/folders/0B0xOcf_BzQVlZGJHaGVWa3Bhc0k
 [Twitter]: https://twitter.com/oddbird
 [Slack channel]: http://friends.oddbird.net

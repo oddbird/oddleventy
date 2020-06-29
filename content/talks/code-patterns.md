@@ -19,7 +19,7 @@ tags:
   - Documentation
 events:
   - venue: Refresh Denver
-    url: https://www.meetup.com/refreshdenver/events/241230495/?from=ref
+    url: https://www.meetup.com/refreshdenver/events/241230495/
     adr: Denver, CO
     date: 2017-09-13
     slides: https://oddbooksapp.com/release/7564d481-b132-4636-be3b-0907452955c7
@@ -29,7 +29,6 @@ events:
     date: 2017-06-01
     slides: https://oddbooksapp.com/release/06f61771-0205-4cbc-a478-050ac52cfe92
   - venue: Gotham Sass
-    url: https://www.meetup.com/gothamsass/events/235946893/
     adr: New York, NY
     date: 2017-01-12
     slides: https://oddbooksapp.com/release/e063d143-df07-4392-a6f3-3ae53e7fa2ca

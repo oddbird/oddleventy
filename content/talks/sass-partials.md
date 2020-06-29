@@ -10,7 +10,6 @@ tags:
   - Sass
 events:
   - venue: NYCSass Meetup
-    url: https://www.meetup.com/nyc-sass/events/146898452/
     date: 2013-11-19
 ---
 

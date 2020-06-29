@@ -125,6 +125,6 @@ hear your recommendations. Join the conversation on [Twitter] or join
 our public [Slack channel].
 
   [Adobe Experience Design]: {{ site.images }}blog/2017/get-started-designing/xd.jpg
-  [1]: https://helpx.adobe.com/experience-design/how-to/xd-ui-ux-design.html
+  [1]: https://helpx.adobe.com/xd/how-to/web-mobile-app-ui-ux-design-basics.html
   [Twitter]: https://twitter.com/oddbird
   [Slack channel]: http://friends.oddbird.net/

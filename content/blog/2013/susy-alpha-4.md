@@ -34,10 +34,10 @@ now, the [test folder] provides the best documentation – with
 standard grid-types. Explore, download, and play!
 
 [susy next alpha 4]: https://rubygems.org/gems/susy/versions/2.0.0.alpha.4
-[susy next changelog]: https://github.com/oddbird/susy/blob/susy-next/CHANGELOG-NEXT.md
+[susy next changelog]: https://github.com/oddbird/susy/blob/2.0.0.alpha.5/CHANGELOG-NEXT.md
 [alpha 2]: /2013/05/03/susy-next-alpha-2/
 [true]: /true/
-[test folder]: https://github.com/oddbird/susy/blob/susy-next/test/
+[test folder]: https://github.com/oddbird/susy/tree/2.0.0.alpha.5/test
 
 ## Alpha 3
 

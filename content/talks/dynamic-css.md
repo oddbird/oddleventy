@@ -37,7 +37,7 @@ events:
     media: &generate
       iframe: https://www.youtube.com/embed/oXEsYwtTT6I
   - venue: Smashing Conf
-    url: https://www.smashingconf.com/sf-2019/
+    url: https://smashingconf.com/sf-2019/
     adr: San Francisco, CA
     date: 2019-04-16
     end: 2019-04-17
@@ -61,7 +61,6 @@ events:
     slides: https://talks.oddbird.net/dynamic-css/frontrange18/
     video: https://www.vuemastery.com/conferences/vueconf-us-2019/dynamic-css-with-vue/
   - venue: Full Stack Fest
-    url: https://2018.fullstackfest.com/
     adr: Barcelona, Spain
     date: 2018-09-06
     slides: https://talks.oddbird.net/dynamic-css/fullstack18/
