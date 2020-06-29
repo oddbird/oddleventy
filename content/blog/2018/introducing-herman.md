@@ -292,15 +292,10 @@ to do the same. The Herman code is [available on GitHub], and we'd love
 to hear your thoughts. File issues for bug-reports, feature requests, or
 help getting started -- or send us your pull requests.
 
-We'll keep providing our own tutorials and demos based on the questions
-we hear most, but we'd also love to list any style guides or pattern
-libraries you build with Herman, or any [tutorials] you've written.
-
 We're always excited to collaborate, and we've provided some
 ["contributing" documentation] to help you get involved.
 
 [available on GitHub]: https://github.com/oddbird/sassdoc-theme-herman
-[tutorials]: /herman/articles/
 ["contributing" documentation]: /herman/docs/CONTRIBUTING.html
 
 ## Need help with your design system?

@@ -672,18 +672,3 @@ Grid module will replace all third-party systems.
 While we're confident that this is a step forward for Susy, we never
 claim to know what's best for you. We'd love your feedback, and
 real-world examples of how you make Susy work for you.
-
-We'll keep providing our own tutorials and demos, based on the questions
-we hear most, but we also love linking to your [sites built with Susy],
-and any [third-party tutorials] that we hear about. [Contact us], or
-[submit a pull request]. You can also talk to [SassSusy] or [OddBird] on
-twitter, or join our [public Slack] (with a \#Susy channel). We're
-excited to hear from you!
-
-[sites built with Susy]: /susy/sites/
-[third-party tutorials]: /susy/articles/
-[Contact us]: /contact/
-[submit a pull request]: https://github.com/oddbird/oddsite/tree/master/content/susy
-[SassSusy]: https://twitter.com/sasssusy
-[OddBird]: https://twitter.com/oddbird
-[public Slack]: http://friends.oddbird.net

@@ -22,3 +22,11 @@
   to: /services/speaking/
 - from: /work/services/
   to: /services/
+- from: /herman/articles/
+  to: /tags/Herman/
+- from: /susy/articles/
+  to: /tags/Susy/
+- from: /susy/styleguide/
+  to: /susy/
+- from: /susy/sites/
+  to: /susy/
