@@ -80,6 +80,7 @@ $theme-sizes: (
   'page-margin': calc(var(--quarter-shim) + 4vw),
   'border-width': medium,
   'radius': var(--half-shim),
+  'grid-hero': calc(var(--gutter) * 8),
 );
 
 @include tools.add-sizes($theme-sizes);

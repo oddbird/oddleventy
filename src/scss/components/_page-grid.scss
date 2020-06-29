@@ -1,0 +1,5 @@
+.page-summary {
+  display: grid;
+  grid-gap: var(--shim);
+  grid-template: 'hero' var(--grid-hero) / 1fr;
+}
