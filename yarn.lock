@@ -1695,17 +1695,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/estree@npm:*":
+  version: 0.0.45
+  resolution: "@types/estree@npm:0.0.45"
+  checksum: 9d339cbcf29a96a32e9d40efc21009c2342e93c4f653294dd1ef081ae474bca9e54707e5d4a1cff90b9e3566e8bdd71ac31e0c3d24bc2ff1d3d5aa75058b3937
+  languageName: node
+  linkType: hard
+
 "@types/estree@npm:0.0.39":
   version: 0.0.39
   resolution: "@types/estree@npm:0.0.39"
   checksum: 43e5361de39969def145f32f4599391ab13055ec94841f1633a7cfe10f0e8a940ebf0e9a4b2770454a6bddd034b57e7e0d51a4d565cb2714ee2accf10a7718be
-  languageName: node
-  linkType: hard
-
-"@types/estree@npm:0.0.44":
-  version: 0.0.44
-  resolution: "@types/estree@npm:0.0.44"
-  checksum: b8b905f9dabd23ff3f566397a60e24cff5e56f076b89ef34acf4281e6819c75a534c827f473d777cf1bed06d054b3e717fad3816308febc3bc55018db9b9a1e9
   languageName: node
   linkType: hard
 
@@ -3058,9 +3058,9 @@ __metadata:
   linkType: hard
 
 "binary-extensions@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "binary-extensions@npm:2.0.0"
-  checksum: 76cc6a33dc69bc989c938d46b5333aaa28ad9d57bc7aa3b1ffcb5def448702328243298f331e91b62059545320db754c61158cece018db6998876125d2b3b7e5
+  version: 2.1.0
+  resolution: "binary-extensions@npm:2.1.0"
+  checksum: 12bee2817930b211b88f6de5da2edb64f924ffde79e01516fcb17005a39e75374fae1ce1a9c58b52557a4d81eb6eb7a804cbe7170ea3a553919a7ce0053e2e4f
   languageName: node
   linkType: hard
 
@@ -3252,16 +3252,16 @@ __metadata:
   linkType: hard
 
 "browserslist@npm:^4.12.0, browserslist@npm:^4.8.5":
-  version: 4.12.0
-  resolution: "browserslist@npm:4.12.0"
+  version: 4.12.2
+  resolution: "browserslist@npm:4.12.2"
   dependencies:
-    caniuse-lite: ^1.0.30001043
-    electron-to-chromium: ^1.3.413
-    node-releases: ^1.1.53
-    pkg-up: ^2.0.0
+    caniuse-lite: ^1.0.30001088
+    electron-to-chromium: ^1.3.483
+    escalade: ^3.0.1
+    node-releases: ^1.1.58
   bin:
     browserslist: cli.js
-  checksum: 564af87b3300321d885c22b6fb010a4d702b1cc77591d684d8f79411d5df65b9290a043348bcb5e4ca96b423c703aeb83fa25979ee3b140b28c48fc965dea0ed
+  checksum: d590e11792902564ad943367ff68b121be573f3868ff505c6d939aa14ff55eab772898f2141a1125f370983bfa86cc06cd4e6c36cd12490304d1769c6df97ba0
   languageName: node
   linkType: hard
 
@@ -3505,10 +3505,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001043, caniuse-lite@npm:^1.0.30001087":
-  version: 1.0.30001088
-  resolution: "caniuse-lite@npm:1.0.30001088"
-  checksum: 4f87a29c5906b3ff65eda27a8bc4434051475a8a8af5c0df685b03fde818688e6ad1e56dfcd7268ff06fe9eac978870b29909e6234b86610b73272c7e8ec280a
+"caniuse-lite@npm:^1.0.30001087, caniuse-lite@npm:^1.0.30001088":
+  version: 1.0.30001090
+  resolution: "caniuse-lite@npm:1.0.30001090"
+  checksum: b3978238e6a335df32e371dd5948580747d1c11f2a33f5ee9bc0b50837c4080f3287209fc24b764915b40a9899d51c7ff67dd59bb15ff1e0be0849b49ecdbec8
   languageName: node
   linkType: hard
 
@@ -5308,10 +5308,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.3.413":
-  version: 1.3.481
-  resolution: "electron-to-chromium@npm:1.3.481"
-  checksum: 6b0e3038225dbc9761334a2db981529006fb8e6a9037322389d51c6753e945febe512b42b2d619ed229457098448402503f5c725fd87a559af1bbe382a515658
+"electron-to-chromium@npm:^1.3.483":
+  version: 1.3.483
+  resolution: "electron-to-chromium@npm:1.3.483"
+  checksum: dad4120418cd8a672661ece7163afae50529076698fb956ca952795665fe86ab167b815f09672c9daa65b01429efadf94e1843897080cb86c9c1f8216d52a96d
   languageName: node
   linkType: hard
 
@@ -5591,6 +5591,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"escalade@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "escalade@npm:3.0.1"
+  checksum: 457614c67ce0eb2a3c582af020b6dbad3768c5626583a6fe6c9da264c024182ba233833e383d2b53c85d166c9b1cce3944ee287a034329bf9320ed13b4d7ad56
+  languageName: node
+  linkType: hard
+
 "escape-html@npm:~1.0.3":
   version: 1.0.3
   resolution: "escape-html@npm:1.0.3"
@@ -5664,9 +5671,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.21.2":
-  version: 2.21.2
-  resolution: "eslint-plugin-import@npm:2.21.2"
+"eslint-plugin-import@npm:^2.22.0":
+  version: 2.22.0
+  resolution: "eslint-plugin-import@npm:2.22.0"
   dependencies:
     array-includes: ^3.1.1
     array.prototype.flat: ^1.2.3
@@ -5683,7 +5690,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
   peerDependencies:
     eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0
-  checksum: 7568b049460079e439a282bc5daeed9cb908a7a63f8f55570940a0e84f59f2813d6ce3a20aeece3cef793a5e87d9e998df4e9f859a056d2020bd757d20571fe5
+  checksum: ad41aec63d8986e0a0e279bb2877e1f36029573b8f310112159509fd52d7344a2e91bd4bb9c6d2b131838a3538a0bc5e3998217df1b88304df9872ad9fb30c84
   languageName: node
   linkType: hard
 
@@ -8537,11 +8544,11 @@ __metadata:
   linkType: hard
 
 "is-reference@npm:^1.1.2":
-  version: 1.2.0
-  resolution: "is-reference@npm:1.2.0"
+  version: 1.2.1
+  resolution: "is-reference@npm:1.2.1"
   dependencies:
-    "@types/estree": 0.0.44
-  checksum: 22aff976372e9879de9ee1718fb57b9402853f5c8659f75d252a4fb827c85507c3fa47e436b20792b420154dd52d7c754590c971fccce08befb977aef3ffb577
+    "@types/estree": "*"
+  checksum: 9daa3d7c4dc159e326be68c025a43bf714b36a6d065c2cc6907f7c44d010867dd10ec7f74bff37cb5d2000ac8b03c94cde3d69c85dc9a56a887ce576200ad01f
   languageName: node
   linkType: hard
 
@@ -11058,7 +11065,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-releases@npm:^1.1.53":
+"node-releases@npm:^1.1.58":
   version: 1.1.58
   resolution: "node-releases@npm:1.1.58"
   checksum: cd590a387e59206a3ed3c3624234f5848f8176e04f61b8e67c4f52df631c7e61f2ef2b7b320a2f5a42c92b65d31b2911d3a5aedacc86267e06f39155a6ce4d13
@@ -11465,7 +11472,7 @@ __metadata:
     eslint: ^7.3.1
     eslint-config-prettier: ^6.11.0
     eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.21.2
+    eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^23.17.1
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-simple-import-sort: ^5.0.3
@@ -11485,12 +11492,12 @@ __metadata:
     postcss: ^7.0.32
     prettier: ^2.0.5
     remove-markdown: ^0.3.0
-    rollup: ^2.18.0
+    rollup: ^2.18.1
     rollup-plugin-terser: ^6.1.0
     sass: ^1.26.9
     sassdoc: ^2.7.2
     sassdoc-theme-herman: ^3.2.0
-    slugify: ^1.4.2
+    slugify: ^1.4.4
     striptags: ^3.1.1
     stylelint: ^13.6.1
     stylelint-config-prettier: ^8.0.2
@@ -12209,15 +12216,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pkg-up@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "pkg-up@npm:2.0.0"
-  dependencies:
-    find-up: ^2.1.0
-  checksum: 0a8fcbebf0f1aadc7a52c576352a698abef6c389cb00a0847db2d370d05d4c005f855e196d29618b088062f1394711ca6dadd232692ed225511d7e75a198d246
-  languageName: node
-  linkType: hard
-
 "please-upgrade-node@npm:^3.2.0":
   version: 3.2.0
   resolution: "please-upgrade-node@npm:3.2.0"
@@ -12424,8 +12422,8 @@ __metadata:
   linkType: hard
 
 "prebuild-install@npm:^5.3.3":
-  version: 5.3.4
-  resolution: "prebuild-install@npm:5.3.4"
+  version: 5.3.5
+  resolution: "prebuild-install@npm:5.3.5"
   dependencies:
     detect-libc: ^1.0.3
     expand-template: ^2.0.3
@@ -12444,7 +12442,7 @@ __metadata:
     which-pm-runs: ^1.0.0
   bin:
     prebuild-install: ./bin.js
-  checksum: 34c354c1d3c887b9d6f599f0838d1ca104c5f6ff7fed417556e7945d5b38c0858365e4573aed21faa2f430618dc5ab98858474c55f5697e11fc6440237bac9e0
+  checksum: 0bb1e1cc211713feedb095b69efc16f8d60f04f5782491622857a266052d4fc8607411d1e14506b2086ac4ae265441c776c1f043bd11819503f65a8cd79f734e
   languageName: node
   linkType: hard
 
@@ -13653,9 +13651,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.18.0":
-  version: 2.18.0
-  resolution: "rollup@npm:2.18.0"
+"rollup@npm:^2.18.1":
+  version: 2.18.1
+  resolution: "rollup@npm:2.18.1"
   dependencies:
     fsevents: ~2.1.2
   dependenciesMeta:
@@ -13663,7 +13661,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 6841c56239b26a665362c7db9c6a7f3e2b9628f800755ef7f927f6f65f6df13ff7bcc0fc7af4efca6c35a4eb5e67a6c31616d54b55f0e60c8b9a7a1ef9a47a8b
+  checksum: d4ebbe86b90a7ed14e2b4a44739ffacd427526bea81bedc438bdb182a3dcb687a32ac857bcb73ef87cc6041609844cfe4672f1f57417486bad532223d274bd2a
   languageName: node
   linkType: hard
 
@@ -14271,10 +14269,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slugify@npm:^1.4.0, slugify@npm:^1.4.2":
-  version: 1.4.2
-  resolution: "slugify@npm:1.4.2"
-  checksum: 8922f4e290861882abe1a4b093c97a509e59ff74f9bc05fadba9c8a7632068555f9e50f0f67fad3123845b196543749462435512cbddf9646f71bc2b6b63432f
+"slugify@npm:^1.4.0, slugify@npm:^1.4.4":
+  version: 1.4.4
+  resolution: "slugify@npm:1.4.4"
+  checksum: 707c9d4743094dcf4502658073d6f8222bbec56f13737626a4b8b870449209737144f5bcb535cbc2849f70a900a347bcd07608be7b315201682d82ee23a7a61b
   languageName: node
   linkType: hard
 
