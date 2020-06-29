@@ -160,7 +160,7 @@ summary: |
   We'll help you pinpoint the right digital product -- 
   with interactive wireframes,
   prioritized estimates,
-  and a robust plan for development and launch, 
+  and a robust plan for development and launch.
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
