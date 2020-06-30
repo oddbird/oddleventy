@@ -158,12 +158,17 @@ params:
       <header class="post-header">
         {{ banner(post) }}
         {{ subtitle(post.data.sub) }}
-        {{ byline(post, collections, false) }}
+        {{ byline(
+          post=post,
+          collections=collections,
+          links=false,
+          dateformat='md'
+          ) }}
       </header>
       {% if post.data.events %}
         {{ upcoming(post.data.events, links=false) }}
       {% elif post.data.summary %}
-        {% set summary = post.data.summary | md %}
+        {% set summary = post.data.summary | mdInline %}
         {% set summary = summary if (card == 'large') else summary | elide %}
         <p>
           {{ summary | safe }}
