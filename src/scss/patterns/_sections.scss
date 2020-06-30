@@ -148,6 +148,11 @@
   --newline: inherit;
 }
 
+// Allows for smaller columns of text, like when used inside a media block
+[data-grid='narrow-columns'] {
+  --fit-min: calc(var(--grid-item) * 0.75);
+}
+
 // Container with centered top/bottom triangles
 .has-angles {
   background: var(--callout-fade);

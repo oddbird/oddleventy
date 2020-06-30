@@ -37,6 +37,10 @@ summary: |
   )
 ) %}
 
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('item') %}
+
 ### Design
 
 - User Experience (UX) - OOUX Certified
@@ -46,6 +50,10 @@ summary: |
 - Usability Testing
 - Information Architecture
 
+{% endcall %}
+
+{% call layout.block('item') %}
+
 ### Development
 
 - Full-stack Frontend & Backend
@@ -54,6 +62,10 @@ summary: |
 - Automated Pattern Libraries
 - WCAG Accessibility
 - Refactors & Performance
+
+{% endcall %}
+
+{% endcall %}
 
 {% endcall %}
 
@@ -76,6 +88,10 @@ summary: |
   )
 ) %}
 
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('item') %}
+
 ### Languages & Platforms
 
 - Python **with** Django (*core contributor*)
@@ -84,6 +100,10 @@ summary: |
 - Backbone/Marionette
 - Node
 - WordPress
+
+{% endcall %}
+
+{% call layout.block('item') %}
 
 ### Client Industries
 
@@ -97,6 +117,10 @@ summary: |
 - Data analysts
 - Software companies
 - Theaters, writers, & other artists
+
+{% endcall %}
+
+{% endcall %}
 
 {% endcall %}
 
