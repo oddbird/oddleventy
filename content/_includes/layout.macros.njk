@@ -6,7 +6,6 @@ category: File
 note: For sectioning content in posts
 #}
 
-
 {# @docs
 label: title
 note: Section titles are flag-like
@@ -21,11 +20,8 @@ params:
       but the CSS defaults to a centered layout
       if no valid alignment is given.
 #}
-{% macro title(
-  content,
-  align='right'
-) %}
-<h2 data-section-title="{{ align }}">{{ content | mdInline | safe }}</h2>
+{% macro title(content, align = 'right') %}
+  <h2 data-section-title="{{ align }}">{{ content | mdInline | safe }}</h2>
 {% endmacro %}
 
 {# @docs
@@ -46,35 +42,31 @@ params:
   content=none,
   attrs={}
 ) -%}
-{%- set content = _grid_content(content) if content and (content | typeCheck('object')) else content -%}
-{%- set content = content if (content != none) else caller() -%}
-<div data-grid="{{ name }}" {{ utility.show_attrs(attrs) }}>{{ content | safe }}</div>
+  {%- set content = _grid_content(content) if content and (content | typeCheck('object')) else content -%}
+  {%- set content = content if (content != none) else caller() -%}
+  <div data-grid="{{ name }}" {{ utility.show_attrs(attrs) }}>{{ content | safe }}</div>
 {%- endmacro %}
 
-{% macro _grid_content(
-  data
-) %}
-{% for item in data %}
-  {% set id = [item.title, loop.index] | join('-') | slug %}
-  <article class="grid-item" aria-labelledby="{{ id }}">
-    <h3 class="item-title" id="{{ id }}">
-      {{ item.title | mdInline | safe }}
-    </h3>
-    {{ item.text | md | safe }}
-  </article>
-{% endfor %}
+{% macro _grid_content(data) %}
+  {% for item in data %}
+    {% set id = [item.title, loop.index] | join('-') | slug %}
+    <article class="grid-item" aria-labelledby="{{ id }}">
+      <h3 class="item-title" id="{{ id }}">
+        {{ item.title | mdInline | safe }}
+      </h3>
+      {{ item.text | md | safe }}
+    </article>
+  {% endfor %}
 {% endmacro %}
 
-{% macro offset(
-  content=none
-) %}
-{%- set content = content if (content != none) else caller() -%}
-<div class="offset-grid">{{- content | safe -}}</div>
+{% macro offset(content = none) %}
+  {%- set content = content if (content != none) else caller() -%}
+  <div class="offset-grid">{{- content | safe -}}</div>
 {% endmacro %}
 
 {# @docs
 label: block
-note: Create an generic container for grouping elements
+note: Create a generic container for grouping elements
 params:
   name:
     type: string
