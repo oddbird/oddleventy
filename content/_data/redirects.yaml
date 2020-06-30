@@ -104,7 +104,7 @@
   to: /2019/11/20/supports-selector/
 
 - from: /blog-index/
-  to: /tags/article/
+  to: /blog/
 - from: /2017/1/3/initial-letter/
   to: /2017/01/03/initial-letter/
 - from: /2017/1/5/git-rebase/
@@ -121,3 +121,7 @@
   to: /2017/01/27/parallax/
 - from: /2017/1/31/css-day/
   to: /2017/01/31/css-day/
+
+# This was an already-broken link from the old OddSite...
+- from: /2015/08/14/coachhub-study/
+  to: /work/coachhub/
