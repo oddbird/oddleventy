@@ -28,15 +28,11 @@
   .post-header {
     margin-bottom: var(--gutter);
   }
-
-  [data-hero] {
-    grid-area: hero;
-  }
 }
 
 [data-post='link'] {
   @include tools.transition('pop');
-  --hero-height: calc(var(--gutter) * 8);
+  --hero-height: var(--grid-hero);
   --item-title: 1rem;
   --newline: var(--half-shim);
   background: var(--card, var(--callout));

@@ -6,7 +6,6 @@ services:
   - /services/planning/
   - /services/design-systems/
   - /services/speaking/
-  - /open-source/
 summary: |
   **Let’s solve real problems for your business and users** --
   pairing your industry-expertise,
@@ -14,14 +13,9 @@ summary: |
 ---
 
 {% import 'post.macros.njk' as post %}
-{% import 'layout.macros.njk' as layout %}
 
-{% call layout.grid() %}
-  {% for service in services %}
-    {% set page = collections.all | getPage(service) %}
-    <article {{ post.aria_label(page) }}>
-      {{ post.banner(page, level=2) }}
-      {{ page.data.summary | md | safe }}
-    </article>
-  {% endfor %}
-{% endcall %}
+{{ post.grid(
+  pages=services,
+  level=2,
+  collections=collections
+) }}
