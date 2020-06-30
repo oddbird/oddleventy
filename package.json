@@ -9,7 +9,7 @@
   },
   "private": true,
   "engines": {
-    "node": "12.18.1",
+    "node": "12.18.2",
     "yarn": "^2.0.0-rc.36"
   },
   "scripts": {
@@ -47,14 +47,14 @@
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "@babel/core": "^7.10.3",
-    "@babel/preset-env": "^7.10.3",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
     "@gerhobbelt/markdown-it-responsive": "^0.1.1-3",
     "@rollup/plugin-babel": "^5.0.4",
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
     "@yarnpkg/pnpify": "2.0.0-rc.25",
-    "accoutrement": "^2.1.3",
+    "accoutrement": "^2.1.4",
     "autoprefixer": "^9.8.4",
     "babel-jest": "^26.1.0",
     "cascading-color-systems": "0.1.0-beta.12",
