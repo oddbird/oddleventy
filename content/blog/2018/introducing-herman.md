@@ -75,7 +75,7 @@ tokens -- [colors], [fonts], [sizes], [ratios][sizes], and [icons]
 automation to help us scale.
 
   [accidentally speaking at]: https://twitter.com/jina/status/935566434700222465
-  [Clarity]: https://www.clarityconf.com/2017
+  [Clarity]: https://www.clarityconf.com/2017-archive
   [Design Systems]: https://www.designbetter.co/design-systems-handbook/
   [Jina Anne]: https://www.patreon.com/sushiandrobots
   [Salesforce Lightning Design System]: https://www.lightningdesignsystem.com/

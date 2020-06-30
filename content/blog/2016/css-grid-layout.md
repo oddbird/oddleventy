@@ -116,8 +116,8 @@ grid cells. Grid areas can be named in CSS.
 ### Grid-specific CSS Properties
 
 Over the next few months we will be writing more about CSS Grid Layout.
-In the meantime, [CSS-Tricks posted a guide] from Chris House [Chris
-House] that explains each of the below properties in great detail.
+In the meantime, [CSS-Tricks posted a guide] from [Chris House]
+that explains each of the below properties in great detail.
 
 [CSS-Tricks posted a guide]: https://css-tricks.com/snippets/css/complete-guide-grid/
 [Chris House]: https://chris.house/

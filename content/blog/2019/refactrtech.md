@@ -60,7 +60,7 @@ above industry medians; but I love how the organizers of this conference
 took the conversation further than just its economic benefits.
 
 [Refactr.tech]: https://www.refactr.tech/
-[Vue Vixens]: https://vuevixens.org/
+[Vue Vixens]: https://www.vuevixens.org/
 [We RISE]: https://www.womenwhocode.com/blog/women-who-code-announces-we-rise-tech-conference-in-atlanta
 
 ## Here's a recap.

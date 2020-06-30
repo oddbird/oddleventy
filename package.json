@@ -40,7 +40,7 @@
     "build": "run-s build:assets build:site eleventy",
     "update-oss-docs": "./bin/update-oss-docs",
     "prod": "run-s update-oss-docs build",
-    "checklinks": "hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" _site/index.html"
+    "checklinks": "hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" _site/index.html"
   },
   "devDependencies": {
     "#": "link:./src/filters",

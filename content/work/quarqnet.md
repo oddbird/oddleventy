@@ -285,7 +285,7 @@ the interactive [InVision sketch].
   }
 ) }}
 
-[InVision sketch]: https://projects.invisionapp.com/share/YC8PAW1K3#/screens/191020362_Map_Only
+[InVision sketch]: https://projects.invisionapp.com/share/YC8PAW1K3
 
 ### Hi-Fi Mockup
 

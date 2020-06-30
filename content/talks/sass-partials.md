@@ -5,7 +5,7 @@ date: 2013-11-19
 image:
   src: talks/sass-partials.jpg
   alt: never fight the cascade, general to specific
-slides: hhttps://mirisuzanne.github.io/pres/sass-partials/
+slides: https://mirisuzanne.github.io/pres/sass-partials/
 tags:
   - Sass
 events:
