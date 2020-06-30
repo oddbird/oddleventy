@@ -28,9 +28,8 @@ will be used automatically for any `yarn` command.
 To upgrade the node version used by OddSite, update the version number in these
 places and then run `nvm install` to upgrade:
 
-- `.nvmrc`
 - `package.json` (`engines.node` field)
-- `.circleci/config.yml` (`docker.image` field)
+- `.nvmrc`
 
 To upgrade the yarn version used by OddSite, update the version number in these
 places and then run `yarn set version <new-version>` to upgrade:
