@@ -56,7 +56,7 @@
     "accoutrement": "^2.1.3",
     "autoprefixer": "^9.8.4",
     "babel-jest": "^26.1.0",
-    "cascading-color-systems": "0.1.0-beta.12",
+    "cascading-color-systems": "0.1.0-beta.13",
     "chalk": "^4.1.0",
     "chokidar-cli": "^2.1.0",
     "core-js": "^3.6.5",
