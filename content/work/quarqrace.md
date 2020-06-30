@@ -2,7 +2,8 @@
 title: Quarq Race Intelligence
 banner: Quarq Race Intelligence Case Study
 sub: Real-time race analytics
-url: https://www.quarqrace.com/
+links:
+  site: https://www.quarqrace.com/
 logo: sram
 image:
   src: projects/trig.jpg

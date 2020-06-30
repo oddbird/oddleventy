@@ -26,7 +26,7 @@ action:
 work:
   - /work/coachhub/
   - /work/moztrap/
-  - /work/quarqrace/
+  - /work/quarqnet/
   - /work/metadeploy/
   - /work/timedesigner/
   - /work/phamaly/

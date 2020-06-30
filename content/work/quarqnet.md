@@ -3,7 +3,8 @@ card: large
 title: QuarqNet
 banner: QuarqNet Application
 sub: Real-time telemetry & sharing for athletes
-url: https://www.quarqnet.com/
+links:
+  site: https://www.quarqnet.com/
 logo: sram
 image:
   src: projects/qasper.jpg
@@ -135,7 +136,7 @@ brand also matches [Quarq Race Intelligence], another Quarq web
 application OddBird had the privilege to design and develop.
 
 [Quarq]: https://www.sram.com/en/quarq
-[Quarq Race Intelligence]: https://www.quarqrace.com/
+[Quarq Race Intelligence]: /work/quarqrace/
 
 {{ embed.icon_block(planning, 'Planning & Discovery Phase') }}
 
