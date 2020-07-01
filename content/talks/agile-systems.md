@@ -18,7 +18,7 @@ tags:
   - OddTools
 events:
   - venue: Agile Alliance
-    url: https://www.agilealliance.org/agile2019/program/
+    url: https://agile2019.sched.com/event/OD2f
     adr: Washington, DC
     date: 2019-08-06
   - venue: Agile Denver
@@ -32,7 +32,7 @@ events:
     slides: https://oddbooksapp.com/book/agile-design-vue
     date: 2018-04-05
   - venue: VueConf US
-    url: http://vueconf.us/
+    url: https://vueconf.us/
     adr: New Orleans, LA
     slides: https://oddbooksapp.com/release/9edb34c9-8789-4201-9f14-64bf5ab11b0a
     date: 2018-03-26
@@ -44,7 +44,7 @@ events:
   - venue: Tech Confluence
     url: https://www.meetup.com/TechConfluence/events/nxcfhlyxfbcc/
     adr: Denver, CO
-    slides: https://www.oddbooksapp.com/book/design-systems-10m
+    slides: https://oddbooksapp.com/book/design-systems-10m
     date: 2018-03-21
 press:
   - text: |

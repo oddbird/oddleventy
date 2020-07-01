@@ -16,7 +16,7 @@ summary: |
   application, but becomes worthless if spam sessions start infesting your
   data. Here's how we've tried to combat the problem for [oddbird.net].
 
-  [oddbird.net]: https://oddbird.net/
+  [oddbird.net]: https://www.oddbird.net/
 date: 2017-03-23
 ---
 
@@ -48,11 +48,11 @@ There are [many solutions out there]; since we mostly saw spam in the
 being included in our analytics data.
 
 [Google Analytics]: https://analytics.google.com/
-[many solutions out there]: https://www.google.com/#q=how+to+block+google+analytics+spam
+[many solutions out there]: https://www.google.com/search?q=how+to+block+google+analytics+spam
 
 ## Blocking Spam Referrals
 
-One common approach is to blacklist any site visits where
+One common approach is to disallow any site visits where
 `document.referrer` matches a known spam domain. There are [free
 services] that create the necessary Google Analytics "filters" for you,
 but they must be re-configured frequently as new spammers are added to
@@ -61,7 +61,7 @@ the list.
 Instead, we tried [spam-referrals-blocker], which is a script that
 blocks referrals found on a [community-contributed list of referrer
 spammers]. Rather than relying on the owner of the script to update it
-periodically with the latest blacklist – or maintaining our own fork of
+periodically with the latest disallowed-list – or maintaining our own fork of
 the repo – we decided to fetch the latest list as part of our
 build/deploy process, using [gulp] and [gulp-download][]:
 
@@ -70,12 +70,12 @@ const gulp = require('gulp');
 const download = require('gulp-download');
 
 gulp.task('update-spammers', () => {
-  const url = 'https://raw.githubusercontent.com/piwik/referrer-spam-blacklist/master/spammers.txt';
+  const url = 'https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt';
   return download(url).pipe(gulp.dest('path/to/js/'));
 });
 ```
 
-Once we have an up-to-date blacklist, we import it with the [webpack][]
+Once we have an up-to-date disallowed-list, we import it with the [webpack][]
 [raw-loader] and block any referrer found on the list:
 
 ```js
@@ -107,8 +107,8 @@ And in our HTML, after the JS file has been executed:
 
 [free services]: https://referrerspamblocker.com/
 [spam-referrals-blocker]: https://github.com/MohamedBassem/spam-referrals-blocker/
-[community-contributed list of referrer spammers]: https://github.com/piwik/referrer-spam-blacklist
-[gulp]: http://gulpjs.com/
+[community-contributed list of referrer spammers]: https://github.com/matomo-org/referrer-spam-list
+[gulp]: https://gulpjs.com/
 [gulp-download]: https://github.com/Metrime/gulp-download
 [webpack]: https://webpack.js.org/
 [raw-loader]: https://github.com/webpack-contrib/raw-loader
@@ -145,15 +145,15 @@ This approach has worked relatively well – in the first two weeks, we
 only saw nine spam sessions sneak through. But we weren't entirely
 thrilled with it, either.
 
-First of all, a blacklist of domains-to-block is much more difficult to
-maintain than a whitelist of domains-to-allow (even if we've off-loaded
+First of all, a disallowed-list of domains-to-block is much more difficult to
+maintain than an allowed-list of domains-to-allow (even if we've off-loaded
 most of the maintenance to the community). And second, there's something
 less-than-ideal about fetching a raw `.txt` file directly from someone
 else's GitHub repo, making assumptions about the format of the file
 contents, and then relying on it as part of our build/deploy process.
 
 So we've recently also implemented many of the methods outlined in [this
-guide], most notably [using a whitelist filter to exclude any hostnames
+guide], most notably [using an allowed-list filter to exclude any hostnames
 we haven't explicitly authorized]. This takes care of most of the spam,
 and is arguably cleaner and easier to maintain.
 
@@ -165,8 +165,8 @@ If you use Google Analytics, how have you tackled the problem of spam
 infecting your data? Let us know via [Twitter] or our public [Slack
 channel]!
 
-[this guide]: https://www.ohow.co/ultimate-guide-to-removing-irrelevant-traffic-in-google-analytics/
-[using a whitelist filter to exclude any hostnames we haven't explicitly authorized]:
-  https://www.ohow.co/ultimate-guide-to-removing-irrelevant-traffic-in-google-analytics/#a-creating-a-valid-hostname-filter-for-ghost-spam
+[this guide]: https://carloseo.com/removing-google-analytics-spam/
+[using an allowed-list filter to exclude any hostnames we haven't explicitly authorized]:
+  https://carloseo.com/removing-google-analytics-spam/#b-valid-hostname-filter-to-stop-ghost-spam-and-development-environments
 [Twitter]: https://twitter.com/oddbird
 [Slack channel]: http://friends.oddbird.net/

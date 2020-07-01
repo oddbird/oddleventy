@@ -5,9 +5,9 @@ const responsive = require('gulp-responsive');
 
 const { responsiveConfig } = require('#/images');
 
-gulp.task('images', () =>
+gulp.task('responsive-images', () =>
   gulp
-    .src(`src/images/**/*.{jpg,png}`)
+    .src('src/images/**/*.{jpg,png,jpeg,tiff,raw}')
     .pipe(
       responsive(
         {
@@ -26,3 +26,11 @@ gulp.task('images', () =>
     )
     .pipe(gulp.dest('_built/images')),
 );
+
+gulp.task('copy-images', () =>
+  gulp
+    .src('src/images/**/!(*.jpg|*.png|*.jpeg|*.tiff|*.raw)')
+    .pipe(gulp.dest('_built/images')),
+);
+
+gulp.task('images', gulp.parallel('responsive-images', 'copy-images'));

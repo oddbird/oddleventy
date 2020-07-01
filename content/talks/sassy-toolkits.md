@@ -6,17 +6,17 @@ date: 2013-10-12
 image:
   src: talks/sassy-toolkits.jpg
   alt: Tools should fit you. Sorry, this hammer only builds patio chairs...
-slides: https://www.oddbooksapp.com/book/sassy-toolkits
+slides: https://oddbooksapp.com/book/sassy-toolkits
 tags:
   - Sass
 events:
   - venue: Frontend Zurich
-    url: http://frontendconf.ch
+    url: https://frontconference.com/
     adr: Zurich, Switzerland
     date: 2015-08-28
     video: https://www.youtube.com/watch?v=9w0pgUTYy5k
   - venue: WordCamp Denver
-    url: http://denver.wordcamp.org/2015/
+    url: https://2015.denver.wordcamp.org/
     adr: Denver, CO
     date: 2015-06-13
   - title: Show Your Work & Share Your Toys
@@ -24,13 +24,13 @@ events:
     url: http://campsass.com/2014/
     adr: San Francisco, CA
     date: 2014-04-19
-    slides: http://mirisuzanne.github.io/pres/show-yr-work/
+    slides: https://mirisuzanne.github.io/pres/show-yr-work/
   - title: Show Your Work & Share Your Toys
     venue: SassConf 2013
-    url: http://sassconf.com/2013/
+    url: https://twitter.com/sassconf
     adr: New York, NY
     date: 2013-10-12
-    slides: http://mirisuzanne.github.io/pres/show-yr-work/
+    slides: https://mirisuzanne.github.io/pres/show-yr-work/
     video: https://vimeo.com/channels/sassconf2013/86306775
 ---
 

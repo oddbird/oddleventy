@@ -108,7 +108,7 @@ Python ecosystem. So Sphinx autodoc extensions to pull in inline
 documentation from other languages are not consistently available or
 well-maintained.
 
-[Sphinx]: http://www.sphinx-doc.org/
+[Sphinx]: https://www.sphinx-doc.org/
 
 ## A Way Forward
 

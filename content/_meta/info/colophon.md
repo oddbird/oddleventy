@@ -4,7 +4,7 @@ title: colophon
 ---
 
 Built with
-[Eleventy](https://11ty.io/).
+[Eleventy](https://www.11ty.dev/).
 
 Styled with
 [Sass](https://sass-lang.com/),
@@ -12,6 +12,6 @@ Styled with
 [Cascading Color Systems](/cascading-colors/).
 
 [Documented](/styleguide/) with
-[Herman](/herman/) & [SassDoc](https://sassdoc.com/).\
+[Herman](/herman/) & [SassDoc](http://sassdoc.com/).\
 See [sample pages](/sample/)
 for basic usage.

@@ -103,7 +103,7 @@ about our process and make it easy to find case studies and quotes from
 past clients so new clients know what to expect.
 
 [oddsite user profiles]: {{ site.images }}blog/userprofiles.jpg
-[donations]: /community/
+[donations]: /birds/#sponsorships-and-donations
 [speaking]: /services/speaking/
 [public Slack chat]: http://friends.oddbird.net/
 [Twitter]: https://twitter.com/OddBird

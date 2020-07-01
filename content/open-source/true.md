@@ -30,5 +30,5 @@ summary: |
   pass the results to a Javascript test-runner for command-line control
   and reporting.
 
-  [Sass]: http://sass-lang.com/
+  [Sass]: https://sass-lang.com/
 ---

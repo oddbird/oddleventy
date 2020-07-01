@@ -51,14 +51,14 @@ name.
 
 Please welcome the Susy Next team:
 
-- [Jina Bolton][] \[[@jina]\] is a Product Designer at [Do], a regular
+- [Jina Bolton][] \[[@jina]\] is a Product Designer at Do, a regular
   speaker at web conferences, co-creator of the [320 and Up]
   responsive design boilerplate, curator of [Art in My Coffee], and an
   active part of [Team Sass Design].
 - [Scott Kellum][] \[[@scottkellum]\] is a designer at [VOX Media]. He
   created [Singularity] for managing asymmetric grids, as well as
   [Sassy Math], [Modular Scale], and more.
-- [Rachel Nabors][] \[[@crowchick]\] is a front-ender & UI lead at
+- [Rachel Nabors][] \[[@rachelnabors]\] is a front-ender & UI lead at
   [Ruzuku] an award-winning comicker, developer, Susy contributor, and
   a regular speaker at web conferences.
 - [Danny Palmer][] \[[@dannyprose]\] is an interactive creative and
@@ -84,34 +84,33 @@ CSS. We're excited to build a layout syntax that spans existing
 frameworks, techniques, and systems. We hope you'll get involved, and
 help make it a community project. Stay tuned!
 
-[singularity]: http://singularity.gs/
-[salsa]: http://tsi.github.com/Salsa/
+[singularity]: https://singularity.gs/
+[salsa]: https://tsi.github.io/Salsa/
 [breakpoint]: http://breakpoint-sass.com
 [susy]: /susy/
-[jina bolton]: http://github.com/jina/
-[@jina]: http://twitter.com/jina
-[do]: http://do.com/
-[320 and up]: http://stuffandnonsense.co.uk/projects/320andup/
-[art in my coffee]: http://artinmycoffee.com/
-[team sass design]: http://teamsassdesign.tumblr.com/
-[scott kellum]: http://github.com/scottkellum/
-[@scottkellum]: http://twitter.com/scottkellum
-[vox media]: http://voxmedia.com/
-[sassy math]: http://github.com/scottkellum/sassy-math
-[modular scale]: http://github.com/scottkellum/modular-scale
-[rachel nabors]: http://github.com/CrowChick/
-[@crowchick]: http://twitter.com/crowchick
-[ruzuku]: http://ruzuku.com/
-[danny palmer]: http://github.com/dannyprose/
+[jina bolton]: https://github.com/jina/
+[@jina]: https://twitter.com/jina
+[320 and up]: https://stuffandnonsense.co.uk/blog/320_and_up/
+[art in my coffee]: https://artinmycoffee.com/
+[team sass design]: https://www.sass.hk/en/styleguide/team.htm
+[scott kellum]: https://github.com/scottkellum/
+[@scottkellum]: https://twitter.com/scottkellum
+[vox media]: https://www.voxmedia.com/
+[sassy math]: https://github.com/scottkellum/sassy-math
+[modular scale]: https://github.com/modularscale/modularscale-sass
+[rachel nabors]: https://github.com/rachelnabors
+[@rachelnabors]: https://twitter.com/rachelnabors
+[ruzuku]: https://www.ruzuku.com/
+[danny palmer]: https://github.com/dannyprose/
 [@dannyprose]: https://twitter.com/dannyprose/
-[middleman-html5bp-haml]: http://github.com/dannyprose/Middleman-HTML5BP-HAML
-[sam richard]: http://github.com/snugug/
-[@snugug]: http://twitter.com/Snugug
-[nbcuniversal]: http://www.nbcuni.com/
-[tsachi shlidor]: http://github.com/tsi/
-[@shlidor]: http://twitter.com/shlidor
-[sasson]: http://drupal.org/project/sasson
-[mason wendell]: http://github.com/canarymason/
-[@codingdesigner]: http://twitter.com/codingdesigner
-[zivtech]: http://zivtech.com
-[sassymothereffingtextshadow]: http://sassymothereffingtextshadow.com
+[middleman-html5bp-haml]: https://github.com/dannyprose/Middleman-HTML5BP-HAML
+[sam richard]: https://github.com/snugug/
+[@snugug]: https://twitter.com/Snugug
+[nbcuniversal]: https://www.nbcuniversal.com/
+[tsachi shlidor]: https://github.com/tsi/
+[@shlidor]: https://twitter.com/shlidor
+[sasson]: https://www.drupal.org/project/sasson
+[mason wendell]: https://github.com/codingdesigner
+[@codingdesigner]: https://twitter.com/codingdesigner
+[zivtech]: https://www.zivtech.com/
+[sassymothereffingtextshadow]: https://sassymothereffingtextshadow.com/

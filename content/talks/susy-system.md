@@ -6,17 +6,17 @@ date: 2014-04-16
 image:
   src: blog/susy-grid-system.jpg
   alt: Susy is not a grid system
-slides: http://mirisuzanne.github.io/pres/susy2/
+slides: https://mirisuzanne.github.io/pres/susy2/
 tags:
   - Susy
   - OddTools
   - Layout
 events:
   - venue: Bmore Sass
-    url: http://bmore-sass.com/
+    url: https://twitter.com/bmoresass
     adr: Baltimore, MD
     date: 2014-04-24
-    video: http://vimeo.com/miriamsuzanne/susy-2-system
+    video: https://vimeo.com/93045089
   - venue: The Mixin
     url: https://themixin.eventbrite.com/
     adr: San Francisco, CA

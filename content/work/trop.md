@@ -7,7 +7,7 @@ image:
 client: Trop Magazine
 date: 2017-01-15
 links:
-  site: http://tropmag.com/
+  site: https://tropmag.com/
 press:
   - text: |
       Having worked with a handful of web developers,

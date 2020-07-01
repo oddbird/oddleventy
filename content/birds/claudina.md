@@ -11,7 +11,7 @@ summary: |
   code architect,
   and [Sass][sass] community organizer.
 
-  [sass]: http://sass-lang.com
+  [sass]: https://sass-lang.com
 ---
 
 **Claudina Sarahe**
@@ -19,4 +19,4 @@ is a front-end developer,
 code architect,
 and [Sass][sass] community organizer.
 
-[sass]: http://sass-lang.com
+[sass]: https://sass-lang.com

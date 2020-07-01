@@ -27,8 +27,8 @@ speakers, and I recommend reading them.
 I talked about the [code patterns] we use to represent design patterns,
 especially in our front-end Sass, HTML (Jinja?), and JavaScript code.
 
-[Clarity Conference]: http://clarityconf.com/
-[Jina]: https://github.com/sushiandrobots
-[Chris Coyier]: http://codepen.io/chriscoyier/post/clarity-2016-wrapup
-[Brad Frost]: http://bradfrost.com/blog/post/clarity-conf-code-patterns-for-pattern-making/
-[code patterns]: http://oddbooksapp.com/book/pattern-making
+[Clarity Conference]: https://www.clarityconf.com/
+[Jina]: https://github.com/jina/
+[Chris Coyier]: https://codepen.io/chriscoyier/post/clarity-2016-wrapup
+[Brad Frost]: https://bradfrost.com/blog/post/clarity-conf-code-patterns-for-pattern-making/
+[code patterns]: https://oddbooksapp.com/book/pattern-making

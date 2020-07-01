@@ -13,17 +13,16 @@ tags:
   - Design
 events:
   - venue: Front-End Camp
-    url: http://chicagocamps.org/events/2017/front-end-camp/
+    url: https://chicagocamps.org/events/2017/front-end-camp/
     date: 2017-06-03
     adr: Chicago, IL
   - venue: CSSDay.io
-    url: http://cssday.io/
     date: 2016-12-03
     adr: Chandler, AZ
     slides: https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends
     media:
       iframe: https://www.youtube.com/embed/pnbT4HdcSwM
-    post: /2017/1/31/css-day
+    post: /2017/01/31/css-day
 summary: |
   **For far too long we've been forced to reuse layout patterns** that
   have worked in the past, creating a web full of sites that all look the

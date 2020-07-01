@@ -63,7 +63,7 @@ runtime error.
 web processes in different languages. That's beyond what I'll talk about
 here, but it's worth thinking about!)
 
-[Celery]: http://docs.celeryproject.org/en/latest/index.html
+[Celery]: https://docs.celeryproject.org/en/latest/index.html
 [Django Channels]: https://channels.readthedocs.io/en/stable/
 [AMQP]: https://www.rabbitmq.com/
 [Redis]: https://redis.io/
