@@ -116,7 +116,7 @@ enhancement:
 
 Here is the CodePen demo:
 
-<p data-height="530" data-theme-id="light" data-slug-hash="JbgvRe" data-default-tab="css,result" data-user="stacy" data-embed-version="2" data-pen-title="Initial Letter, with fallback and enhancement" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/JbgvRe/">Initial Letter, with fallback and enhancement</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="530" data-theme-id="light" data-slug-hash="JbgvRe" data-default-tab="css,result" data-user="stacy" data-embed-version="2" data-pen-title="Initial Letter, with fallback and enhancement" class="codepen">See the Pen <a href="https://codepen.io/stacy/pen/JbgvRe/">Initial Letter, with fallback and enhancement</a> by Stacy (<a href="https://codepen.io/stacy">@stacy</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 [CSS Grid Layout]: /2016/09/19/css-grid-layout/
@@ -148,7 +148,7 @@ to drop. A value equal to the initial height value is the default.
 
 The following CodePen demo is available in Safari only:
 
-<p data-height="830" data-theme-id="light" data-slug-hash="GNrYgY" data-default-tab="css,result" data-user="stacy" data-embed-version="2" data-pen-title="Initial Letter, showing multiple positions" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/GNrYgY/">Initial Letter, showing multiple positions</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="830" data-theme-id="light" data-slug-hash="GNrYgY" data-default-tab="css,result" data-user="stacy" data-embed-version="2" data-pen-title="Initial Letter, showing multiple positions" class="codepen">See the Pen <a href="https://codepen.io/stacy/pen/GNrYgY/">Initial Letter, showing multiple positions</a> by Stacy (<a href="https://codepen.io/stacy">@stacy</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 We'd love to see how you use `initial-letter` in your design. Send us a

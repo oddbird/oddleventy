@@ -3,7 +3,7 @@ title: Helium
 sub: A Floating Browser Window for OS X
 date: 2015-10-16
 links:
-  site: http://heliumfloats.com/
+  site: https://heliumfloats.com/
   source: https://github.com/JadenGeller/Helium
 author: kit
 oss: contributor

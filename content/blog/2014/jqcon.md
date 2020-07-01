@@ -19,10 +19,8 @@ practical takeaways that I can immediately begin working into my code.
 Some of them are new, while others are common techniques that I'm just
 not in the habit of doing.
 
-So what got my attention at [jQuery Conference Chicago 2014]? In no
+So what got my attention at jQuery Conference Chicago 2014? In no
 particular order:
-
-[jquery conference chicago 2014]: http://events.jquery.org/2014/chicago/
 
 ## Web Workers
 
@@ -79,16 +77,16 @@ warnings?
 
 HT: [@potch] for the [talk] that got me started.
 
-[web workers]: https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers
-[close enough to ready]: http://caniuse.com/#feat=webworkers
+[web workers]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+[close enough to ready]: https://caniuse.com/#feat=webworkers
 [sharedworkers]: https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker
-[serviceworkers]: https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API
-[support]: http://caniuse.com/#feat=sharedworkers
-[another (contrived) example]: http://codepen.io/jgerigmeyer/pen/vKixI
-[blob() constructor]: https://developer.mozilla.org/en-US/docs/Web/API/Blob.Blob
-[html5 rocks article]: http://www.html5rocks.com/en/tutorials/workers/basics/
-[@potch]: http://twitter.com/potch
-[talk]: http://potch.github.io/workers-talk/
+[serviceworkers]: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
+[support]: https://caniuse.com/#feat=sharedworkers
+[another (contrived) example]: https://codepen.io/jgerigmeyer/pen/vKixI
+[blob() constructor]: https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob
+[html5 rocks article]: https://www.html5rocks.com/en/tutorials/workers/basics/
+[@potch]: https://twitter.com/potch
+[talk]: https://potch.github.io/workers-talk/
 
 ## ECMAScript 6
 
@@ -125,15 +123,15 @@ parameters, modules), compile ES6 code into ES5 using Google's [Traceur]
 
 HT: [John K. Paul] for his [talk][1] encouraging devs to use ES6 now.
 
-[ecmascript 6]: http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts#draft_specification_for_es.next_ecma-262_edition_6
-[helpful summary]: http://git.io/es6features
-[browser support chart]: http://kangax.github.io/compat-table/es6/
-[es6 shim]: http://github.com/paulmillr/es6-shim/
-[traceur]: http://github.com/google/traceur-compiler
-[gulp-traceur]: http://github.com/sindresorhus/gulp-traceur
-[grunt-traceur]: http://github.com/aaronfrost/grunt-traceur
-[john k. paul]: http://twitter.com/johnkpaul
-[1]: http://johnkpaul.github.io/presentations/jqcon/2014/es6-now/
+[ecmascript 6]: https://www.ecma-international.org/ecma-262/6.0/
+[helpful summary]: https://github.com/lukehoban/es6features#readme
+[browser support chart]: https://kangax.github.io/compat-table/es6/
+[es6 shim]: https://github.com/paulmillr/es6-shim/
+[traceur]: https://github.com/google/traceur-compiler
+[gulp-traceur]: https://github.com/sindresorhus/gulp-traceur
+[grunt-traceur]: https://github.com/aaronfrost/grunt-traceur
+[john k. paul]: https://twitter.com/johnkpaul
+[1]: https://twitter.com/johnkpaul
 
 ## Throw More Errors
 
@@ -183,15 +181,14 @@ When to consider throwing Errors?
 - When using promises (every promise should have an error handler
   using `.catch()` or `.then()`)
 
-HT: [Ralph Holzmann] for his helpful [talk][2].
+HT: [Ralph Holzmann] for his helpful talk.
 
 [error objects]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
-[ralph holzmann]: http://twitter.com/rlph
-[2]: http://blog.ralphholzmann.com/presentations/2014/jquerychicago/throw_new_error.pdf
+[ralph holzmann]: https://twitter.com/ralphholzmann
 
 ## Debugging by Proxy
 
-[Brian Arnold][] [demoed] how to use proxy tools for development and
+[Brian Arnold][] demoed how to use proxy tools for development and
 debugging.
 
 [Charles] is a really powerful tool for anything from Ajax debugging and
@@ -202,9 +199,8 @@ essentially turn my computer into a dev environment for any website with
 resource mapping, throttle my bandwidth to mimic 3G or LTE, or disable
 caching or cookies entirely.
 
-[brian arnold]: http://twitter.com/brianarn
-[demoed]: http://www.randomthink.net/presentations/jqcon-chicago-2014-beyond-devtools/presentation/
-[charles]: http://www.charlesproxy.com/
+[brian arnold]: https://twitter.com/brianarn
+[charles]: https://www.charlesproxy.com/
 
 ## JS Testing With Intern
 
@@ -218,9 +214,9 @@ tests in standalone browsers, and built-in [Travis CI] integration).
 
 Have you used either of these tools, or have further pros/cons to offer?
 
-[karma]: http://karma-runner.github.io/
-[phantomjs]: http://phantomjs.org/
-[istanbul]: http://gotwarlost.github.io/istanbul/
-[intern]: http://theintern.io/
-[selenium]: http://www.seleniumhq.org/
+[karma]: https://karma-runner.github.io/
+[phantomjs]: https://phantomjs.org/
+[istanbul]: https://istanbul.js.org/
+[intern]: https://theintern.io/
+[selenium]: https://www.selenium.dev/
 [travis ci]: https://travis-ci.com/

@@ -69,7 +69,7 @@ const tagLink = (all, tag) => {
   const index =
     withData(all, 'data.index', tag, true)[0] ||
     withData(all, 'data.index.slug', tag, true)[0];
-  return index ? index.url : `/tags/${slugify(tag)}/`;
+  return index ? index.url : `/tags/${slugify(tag, { lower: true })}/`;
 };
 
 /* @docs

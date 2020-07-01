@@ -26,7 +26,7 @@ summary: |
 
   [Vue.js]: https://vuejs.org/
   [Sarah Drasner]: https://sarahdrasnerdesign.com/
-  [VueConf US]: http://us.vuejs.org/
+  [VueConf US]: https://us.vuejs.org/
 ---
 
 {% import "quotes.macros.njk" as quotes %}
@@ -70,4 +70,4 @@ them out!
 
   [Herman]: /herman/
   [built-in functionality]: https://vuejs.org/v2/guide/transitions.html
-  [VueConf talks]: https://www.vuemastery.com/vueconf
+  [VueConf talks]: https://www.vuemastery.com/conferences/vueconf-us-2018/

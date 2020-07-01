@@ -43,7 +43,7 @@ have typography, but you need a beautiful color palette, check out this
 guide to [choosing brand colors for your website].
 
 [open redesign process]: /2016/07/12/open-design/
-[choosing brand colors for your website]: /2017/1/16/color/
+[choosing brand colors for your website]: /2017/01/16/color/
 
 ## Step 1 – Define Brand Goals
 
@@ -93,7 +93,7 @@ whether it is accessible at small sizes.
 
 Dive deep and luxuriate.
 
-[study by Errol Morris]: http://www.fastcodesign.com/3046365/errol-morris-how-typography-shapes-our-perception-of-truth
+[study by Errol Morris]: https://www.fastcompany.com/3046365/errol-morris-how-typography-shapes-our-perception-of-truth
 
 ### 7 Resources – Free and High Quality Typography and Typeface Pairing
 
@@ -123,7 +123,7 @@ favorite that OddBird used for the [CoachHub app].
 ) }}
 
 [Fontspring]: https://www.fontspring.com/
-[CoachHub app]: /2015/08/14/coachhub-study/
+[CoachHub app]: /work/coachhub/
 
 ## [Adobe TypeKit]
 
@@ -138,15 +138,13 @@ Since OddBird already subscribes to Creative Cloud, I found several font
 options there: Freight Sans and Freight Text, Abril and Raleway,
 Merriweather and PT Sans. Not all of these typefaces made it to our
 final round of element collages, but it was an excellent place to start.
-[TypeKit Design Gallery] is an inspiration for typeface pairing as well.
 
 {{ embed.img(
   src='blog/2017/typography/typekit.jpg'
 ) }}
 
-[Adobe TypeKit]: https://typekit.com/
-[licensing details]: https://helpx.adobe.com/typekit/using/font-licensing.html#sync-lic
-[TypeKit Design Gallery]: https://typekit.com/gallery
+[Adobe TypeKit]: https://fonts.adobe.com/typekit
+[licensing details]: https://helpx.adobe.com/fonts/using/font-licensing.html
 
 ## [Google Fonts]
 
@@ -187,7 +185,7 @@ this pair didn’t make the final round of cuts.
   src='blog/2017/typography/fontpair.jpg'
 ) }}
 
-[Font Pair]: http://fontpair.co/
+[Font Pair]: https://fontpair.co/
 
 ## [Carrie Dils]
 
@@ -236,7 +234,7 @@ with a twist.
 
 Browse our full element collages in our [Behind the Scenes post].
 
-[WebAIM]: http://webaim.org/techniques/fonts/
+[WebAIM]: https://webaim.org/techniques/fonts/
 [Vox Product’s]: https://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
 [Birds]: /birds/
 [Behind the Scenes post]: /2016/11/04/branding-type/
@@ -268,7 +266,7 @@ brilliantly with the winning typefaces receiving six thumbs up.
   src='blog/2017/typography/github.jpg'
 ) }}
 
-[WebAIM]: http://webaim.org/techniques/fonts/
+[WebAIM]: https://webaim.org/techniques/fonts/
 [Dotmocracy]: https://en.wikipedia.org/wiki/Dotmocracy
 [OddFriends Slack channel]: http://friends.oddbird.net
 [GitHub Issues]: https://github.com/oddbird/oddsite/issues/49
@@ -325,7 +323,7 @@ with, requiring monthly pageview tracking. With TypeKit, we were golden.
 [Typedia]: http://typedia.com/explore/typeface/freight-text/
 [create a custom font stack]: https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/
 [Darden Studio]: https://www.dardenstudio.com/
-[Phil’s Fonts]: https://philsfonts.com/index.php/fonts/overview/GF060021X1
+[Phil’s Fonts]: https://philsfonts.com/font-family/garagefonts/freight-family/GF060021X1/
 
 ## Getting Personal
 

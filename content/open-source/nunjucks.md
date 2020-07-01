@@ -7,8 +7,8 @@ oss: maintainer
 date: 2015-09-01
 end: 2016-09-02
 links:
-  site: http://mozilla.github.io/nunjucks/
-  source: https://github.com/mozilla/nunjucks/
+  site: https://mozilla.github.io/nunjucks/
+  source: https://github.com/mozilla/nunjucks
 author:
   - carl
   - jonny

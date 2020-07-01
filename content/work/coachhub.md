@@ -145,8 +145,8 @@ easily access one another in dynamic and effective ways.
 
 {{ embed.icon_block(planning, 'Planning & Discovery Phase') }}
 
-[orcas]: http://orcasinc.com
-[moodhacker]: http://www.orcasinc.com/products/moodhacker/
+[orcas]: https://orcasinc.com/
+[moodhacker]: https://orcasinc.com/products/moodhacker/index.html
 
 ## Design and Development Phase
 
@@ -255,7 +255,7 @@ also used Lea Verou's [Contrast Ratio] tool to select colors for text
 that passed WCAG AA level at all sizes. We also built a WCAG contrast
 test into our [Sass Accoutrement toolkits].
 
-[contrast ratio]: http://leaverou.github.io/contrast-ratio/
+[contrast ratio]: https://contrast-ratio.com/
 [sass accoutrement toolkits]: /accoutrement/
 
 ### Landing Pages

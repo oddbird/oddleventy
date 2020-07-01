@@ -28,7 +28,7 @@ to work.
 There are several different layers at play, so let's review from the
 top:
 
-[sqlalchemy]: http://www.sqlalchemy.org/
+[sqlalchemy]: https://www.sqlalchemy.org/
 
 ## Transactions in PostgreSQL
 
@@ -72,9 +72,9 @@ conn = psycopg2.connect('dbname=test')
 conn.autocommit = True
 ```
 
-[pep 249]: http://legacy.python.org/dev/peps/pep-0249/
-[psycopg2]: http://initd.org/psycopg/docs/
-[autocommit property]: http://initd.org/psycopg/docs/connection.html#connection.autocommit
+[pep 249]: https://legacy.python.org/dev/peps/pep-0249/
+[psycopg2]: https://www.psycopg.org/docs/
+[autocommit property]: https://www.psycopg.org/docs/connection.html#connection.autocommit
 
 ## Postgres Has it Right
 
@@ -139,13 +139,13 @@ manager to define an atomic unit of database work (it can also be
 nested, using a stack of [savepoints] to achieve the effect of nested
 transactions).
 
-[sqlalchemy]: http://www.sqlalchemy.org/
-[django]: http://www.djangoproject.com
-[transactions api]: https://docs.djangoproject.com/en/stable/topics/db/transactions/#transactions-upgrading-from-1-5
+[sqlalchemy]: https://www.sqlalchemy.org/
+[django]: https://www.djangoproject.com/
+[transactions api]: https://docs.djangoproject.com/en/stable/releases/1.6/#new-transaction-management-model
 [aymeric augustin]: https://myks.org/en/
 [prior work by christophe pettus]: https://github.com/Xof/xact
 [transactions.atomic]: https://docs.djangoproject.com/en/stable/topics/db/transactions/#django.db.transaction.atomic
-[savepoints]: http://www.postgresql.org/docs/9.2/static/sql-savepoint.html
+[savepoints]: https://www.postgresql.org/docs/9.2/sql-savepoint.html
 
 ## SQLAlchemy
 
@@ -165,7 +165,7 @@ supported databases.
 But I'm using Postgres, I know how its native autocommit mode works, and
 that's the behavior I want with SQLAlchemy. Can I make that work?
 
-[sqlalchemy]: http://www.sqlalchemy.org/
+[sqlalchemy]: https://www.sqlalchemy.org/
 
 ### SQLAlchemy's Autocommit Mode -- Not What You Think
 
@@ -178,7 +178,7 @@ send queries that change the database. It doesn't put the database
 connections into true autocommit mode, so it still wraps reads in
 unnecessary transactions.
 
-[autocommit mode]: http://docs.sqlalchemy.org/en/rel_0_9/orm/session.html#autocommit-mode
+[autocommit mode]: https://docs.sqlalchemy.org/en/13/orm/session_transaction.html#autocommit-mode
 
 ### Turning on Real Autocommit
 
@@ -208,8 +208,8 @@ But regardless, `isolation_level='AUTOCOMMIT'` is the incantation needed
 to get all of our SQLAlchemy psycopg2 connections into true autocommit
 mode.
 
-[postgres documentation]: http://www.postgresql.org/docs/9.2/static/transaction-iso.html
-[and psycopg2]: http://initd.org/psycopg/docs/extensions.html#psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT
+[postgres documentation]: https://www.postgresql.org/docs/9.2/transaction-iso.html
+[and psycopg2]: https://www.psycopg.org/docs/extensions.html#psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT
 
 ### Starting a Transaction
 
@@ -269,7 +269,7 @@ off the Session's autoflush and autoexpire features. So far I haven't
 done the latter; waiting to see what (if any) problems ensue in
 practice.
 
-[vague warnings]: http://docs.sqlalchemy.org/en/rel_0_9/orm/session.html#autocommit-mode
+[vague warnings]: https://docs.sqlalchemy.org/en/13/orm/session_api.html#sqlalchemy.orm.session.Session.params.autocommit
 
 ### Back to Autocommit When the Transaction Ends
 
@@ -408,5 +408,5 @@ behavior, and [Aymeric Augustin] for the excellent implementation in
 Django 1.6+.
 
 [mike bayer]: https://twitter.com/zzzeek
-[christophe pettus]: http://thebuild.com/blog/
+[christophe pettus]: https://thebuild.com/blog/
 [aymeric augustin]: https://myks.org/en/

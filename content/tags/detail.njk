@@ -17,7 +17,7 @@ pagination:
   filter:
     - all
     - sample
-permalink: /tags/{{ tag | slug }}/
+permalink: /tags/{{ tag | lower | slug }}/
 ---
 
 {% import 'post.macros.njk' as post %}

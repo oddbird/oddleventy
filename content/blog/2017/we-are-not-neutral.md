@@ -65,7 +65,7 @@ a start. We're here, [we're listening][building a community on Slack],
 and we're not neutral.
 
   [Carl]: /authors/carl/
-  [Instagram]: http://instagram.com
+  [Instagram]: https://www.instagram.com/
   [Sondra]: /authors/sondra/
   [David]: /authors/david/
   [Stacy]: /authors/stacy/
@@ -76,6 +76,6 @@ and we're not neutral.
   [re-designing our website and brand in the open]: /tags/open-design/
   [building a community on Slack]: http://friends.oddbird.net/
   [open source projects]: /open-source/
-  [cause real pain]: http://meyerweb.com/eric/thoughts/2014/12/24/inadvertent-algorithmic-cruelty/
+  [cause real pain]: https://meyerweb.com/eric/thoughts/2014/12/24/inadvertent-algorithmic-cruelty/
   [code of conduct]: /conduct/
-  [donations]: /community/#community-giving
+  [donations]: /birds/#sponsorships-and-donations

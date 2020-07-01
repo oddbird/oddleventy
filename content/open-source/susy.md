@@ -39,7 +39,7 @@ press:
   - text: I like the idea of grids-on-demand, rather than a strict framework.
     name: Chris Coyier
     role: CSS-Tricks
-    url: http://css-tricks.com/build-web-layouts-easily-susy/
+    url: https://css-tricks.com/build-web-layouts-easily-susy/
     slug: on-demand
   - text: |
       My experiments have left me impressed.
@@ -57,14 +57,14 @@ press:
       be sure to look at Susy's source code!
     name: Hugo Giraudel
     role: SitePoint
-    url: http://www.sitepoint.com/my-favorite-sass-tools/
+    url: https://www.sitepoint.com/my-favorite-sass-tools/
     slug: poetry
   - text: |
       **Susy** & **Zendesk** have been getting along magically.
       It's precisely what you need, and nothing more.
     name: Stephany Varga
     role: Zendesk Creative Collection
-    url: https://medium.com/zendesk-creative-blog/responsive-a-harrowing-meditation-on-the-brutal-realities-of-web-content-organization-in-5-acts-1d33ce25f062
+    url: https://medium.com/@stephanyvee/responsive-a-harrowing-meditation-on-the-brutal-realities-of-web-content-organization-in-5-acts-1d33ce25f062
     slug: zendesk
 badges:
   - name: npm
@@ -109,7 +109,7 @@ if necessary.
 {{ quotes.grid(press) }}
 
 [CodeKit]: https://codekitapp.com/index.html?referrer=susy
-[Black Girls Code]: http://blackgirlscode.com
+[Black Girls Code]: https://www.blackgirlscode.com/
 
 {% call embed.media_block(
   media=embed.img(

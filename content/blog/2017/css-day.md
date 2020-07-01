@@ -18,7 +18,7 @@ summary: |
 
 {% import "embed.macros.njk" as embed %}
 
-[CSS Day 2016] covered a wide range of topics for a one day conference
+CSS Day 2016 covered a wide range of topics for a one day conference
 including SVG, animation, color theory, design, layout and more.
 Throughout the day, a focus on code architecture was a theme. Attendees
 heard a few different perspectives which were interesting to listen to
@@ -27,17 +27,15 @@ and compare.
 Below are the available videos and slides of each session, including two
 from our very own OddBirds.
 
-[CSS Day 2016]: http://cssday.io/
-
 ## SVG: from Practical to Wild by [Sarah Drasner]
 
 Sarah has become one of the primary voices on web-SVG and animation,
 leading to her recent [SVG Animations] book from O'Reilly.
 
-*(video unavaliable)*
+*(video unavailable)*
 
-[Sarah Drasner]: http://twitter.com/sarah_edo
-[SVG Animations]: http://shop.oreilly.com/product/0636920045335.do
+[Sarah Drasner]: https://twitter.com/sarah_edo
+[SVG Animations]: https://www.oreilly.com/library/view/svg-animations/9781491939697/
 
 ## Color Theory for people who code SVG and CSS by [Natalya Shelburne]
 
@@ -51,7 +49,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 {{ embed.video('https://www.youtube.com/embed/7g0BHu0kWXo') }}
 
-- [Slides](http://css-day.surge.sh/#/?_k=xpchzn)
+- [Slides](https://css-day.surge.sh/)
 
 [Ben Adam]: https://twitter.com/benadam11
 
@@ -81,7 +79,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 {{ embed.video('https://www.youtube.com/embed/pnbT4HdcSwM') }}
 
-- [Slides](http://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends)
+- [Slides](https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends)
 
 [Stacy Kvernmo]: https://twitter.com/stacykvernmo
 
@@ -100,8 +98,6 @@ jQuery to CSS for web and mobile applications.
 
 {{ embed.video('https://www.youtube.com/embed/CbPYf9FslXw') }}
 
-- [Slides](http://cenizal.com/projects/solving_css_at_scale/)
-
 [CJ Cenizal]: https://twitter.com/TheCJCenizal
 
 ## Showing Gratitude
@@ -119,7 +115,7 @@ together.
 This was the second year [Brad Westfall] organized this event. We are
 very thankful for conference organizers like Brad and his team, who post
 [videos] of the sessions, making this knowledge accessible for those who
-could not join us live. [Photos] from CSSDay are also posted.
+could not join us live.
 
 As always, we would love to discuss the content covered in these videos
 shared from CSS Day 2016. Send us a message via [Twitter] or join our
@@ -127,6 +123,5 @@ public [Slack channel].
 
 [Brad Westfall]: https://twitter.com/bradwestfall
 [videos]: https://www.youtube.com/playlist?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_
-[Photos]: https://drive.google.com/drive/folders/0B0xOcf_BzQVlZGJHaGVWa3Bhc0k
 [Twitter]: https://twitter.com/oddbird
 [Slack channel]: http://friends.oddbird.net

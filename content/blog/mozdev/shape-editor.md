@@ -45,7 +45,7 @@ Shape Demos shown:
 
 [MDN Article]: https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes
 [Clippy]: https://bennettfeely.com/clippy/
-[widehive.com]: http://www.widehive.com/artists
+[widehive.com]: https://www.widehive.com/artists
 [miriamsuzanne.com]: https://www.miriamsuzanne.com/2019/10/03/css-is-weird/
 [Stacy ellipse pen]: https://codepen.io/stacy/full/449546ec58c27981aa764fe6a8d0d02b
 [Stacy starfish pen]: https://codepen.io/stacy/full/zjOeWa

@@ -5,7 +5,7 @@ description: |
   with a human-centered design.
 email: birds@oddbird.net
 images: /assets/images/
-feed: /feed.xml
+feed: /feed.atom
 styles:
   - screen.css
 facebook_id: 1820980378150914

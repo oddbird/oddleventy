@@ -39,13 +39,13 @@ herman:
       path: ./writing.md
   extraLinks:
     - name: Eleventy
-      url: http://www.11ty.io
+      url: https://www.11ty.dev/
     - name: Accoutrement
-      url: https://oddbird.net/accoutrement/
+      url: https://www.oddbird.net/accoutrement/
     - name: Cascading Color Systems
-      url: https://oddbird.net/cascading-colors/
+      url: https://www.oddbird.net/cascading-colors/
     - name: Herman
-      url: https://oddbird.net/herman/
+      url: https://www.oddbird.net/herman/
   fontpath: src/fonts/
   nunjucks:
     templatepath: content/_includes/

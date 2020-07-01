@@ -6,7 +6,7 @@ This site is built using:
 
 - HTML, of course
 - CSS w/ a load of Grids & Variables
-- [Eleventy](http://www.11ty.io) JS w/ Markdown & Nunjucks
+- [Eleventy](https://www.11ty.dev/) JS w/ Markdown & Nunjucks
 - Sass w/ OddBird's [Accoutrement](https://www.oddbird.net/accoutrement/) &
   [Herman](https://www.oddbird.net/herman/)
 - [CircleCI](https://circleci.com/) for continuous integration
@@ -28,9 +28,8 @@ will be used automatically for any `yarn` command.
 To upgrade the node version used by OddSite, update the version number in these
 places and then run `nvm install` to upgrade:
 
-- `.nvmrc`
 - `package.json` (`engines.node` field)
-- `.circleci/config.yml` (`docker.image` field)
+- `.nvmrc`
 
 To upgrade the yarn version used by OddSite, update the version number in these
 places and then run `yarn set version <new-version>` to upgrade:
@@ -46,7 +45,7 @@ yarn
 
 ### Development tasks
 
-Compile and run [Eleventy](http://www.11ty.io) server, with a watcher for file
+Compile and run [Eleventy](https://www.11ty.dev/) server, with a watcher for file
 changes:
 
 ```

@@ -10,11 +10,10 @@ author: miriam
 image:
   src: blog/susy.jpg
 summary: |
-  The [off-canvas](http://jasonweaver.name/lab/offcanvas/) layout pattern
-  for responsive web design has been getting all the attention lately, and
-  I've had several people ask how [Susy One](https://susyone.oddbird.net/)
-  might play along. I'll show you how easy it is, and how much flexibility
-  Susy can add along the way.
+  The off-canvas layout pattern for responsive web design has been getting all
+  the attention lately, and I've had several people ask how
+  [Susy One](https://susyone.oddbird.net/) might play along. I'll show you how
+  easy it is, and how much flexibility Susy can add along the way.
 date: 2012-11-27
 ---
 
@@ -26,22 +25,20 @@ The fix is actually simpler than the original code: just set and leave a
 100% negative right-margin on the main area, removing all state changes
 to that margin._
 
-The [off-canvas](http://jasonweaver.name/lab/offcanvas/) layout pattern
-for responsive websites has been getting all the attention lately, and
-I've had several people ask how [Susy](/susy/) might play along.
+The off-canvas layout pattern for responsive websites has been getting all the
+attention lately, and I've had several people ask how [Susy](/susy/) might play
+along.
 
 The truth is, Susy handles off-canvas layout the same as any other
 layout. All you need to do is pull some of your columns off the screen.
 I'll show you how, following Jason's lead, and adding in the Susy bits.
 
 Check out the
-[demo](https://codepen.io/mirisuzanne/pen/c84837d2f8c478b6a3accca409c790eb),
-and make sure you understand
-[off-canvas](http://jasonweaver.name/lab/offcanvas/) layouts before you
-go on.
+[demo](https://codepen.io/mirisuzanne/pen/c84837d2f8c478b6a3accca409c790eb), and
+make sure you understand off-canvas layouts before you go on.
 
 I've used a few shortcuts that require the [latest Susy
-release](http://rubygems.org/gems/susy) (1.0.5), but the concepts remain
+release](https://rubygems.org/gems/susy) (1.0.5), but the concepts remain
 true in older versions as well.
 
 ## Basic Markup:

@@ -80,5 +80,5 @@ our [work].
 
 **Join channel `#q-a` on the OddBird Friends Slack.**
 
-[Adobe Xd]: http://www.adobe.com/products/experience-design.html
+[Adobe Xd]: https://www.adobe.com/products/xd.html
 [InVision]: https://www.invisionapp.com/
