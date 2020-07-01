@@ -9,9 +9,15 @@ action:
   text: See work samples »
   url: /work/
 summary: |
-  **We integrate design and development in an agile process**, so you only need to hire one team – completely focused on achieving your goals with smooth and efficient progress from concept to launch and beyond. Starting from user needs, we collaborate with you to deliver usable features quickly and efficiently.
+  **We integrate design and development in an agile process**, so you only need
+  to hire one team – completely focused on achieving your goals with smooth and
+  efficient progress from concept to launch and beyond. Starting from user
+  needs, we collaborate with you to deliver usable features quickly and
+  efficiently.
 
-  We provide expertise across a range of technologies, including **Python/Django**, accessible **HTML**, modern **Sass/CSS**, **Vue**, **Node**, **Backbone/Marionette**, and more.
+  We provide expertise across a range of technologies, including
+  **Python/Django**, accessible **HTML**, modern **Sass/CSS**, **React**,
+  **Vue**, **Node**, and more.
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -138,7 +144,9 @@ summary: |
 
 ### Lean & Agile
 
-We use a lean and agile process to deploy & integrate new functionality frequently, aiming to deliver usable product launches as early and often as possible.
+We use a lean and agile process to deploy & integrate new functionality
+frequently, aiming to deliver usable product launches as early and often as
+possible.
 
 {% endcall %}
 
@@ -146,7 +154,9 @@ We use a lean and agile process to deploy & integrate new functionality frequent
 
 ### Transparent & Interactive
 
-We encourage clients to stay closely connected with the daily progress, offering frequent feedback and re-prioritization via Trello or other Project Management tool.
+We encourage clients to stay closely connected with the daily progress, offering
+frequent feedback and re-prioritization via Trello or other Project Management
+tools.
 
 {% endcall %}
 
@@ -154,7 +164,8 @@ We encourage clients to stay closely connected with the daily progress, offering
 
 ### Accessible & Responsive
 
-We use the accessible open web stack: semantic HTML5, unobtrusive JavaScript, and advanced CSS – backed by Python & Django on the server.
+We use the accessible open web stack: semantic HTML5, unobtrusive JavaScript,
+and advanced CSS – backed by Python & Django on the server.
 
 {% endcall %}
 
@@ -164,25 +175,27 @@ We use the accessible open web stack: semantic HTML5, unobtrusive JavaScript, an
 
 {% call layout.block('fancy-list') %}
 
-## We Promise to Be
+## We Promise to Be ...
 
   - **Accessible** \
-  *The world is diverse, and no person is an edge case.*
+    *The world is diverse, and no person is an edge case.*
   - **Approachable** \
-  *Your friend in digital design, development, and performance*
+    *Your friend in digital design, development, and performance.*
   - **Human** \
-  *Great software requires a personal touch.*
+    *Great software requires a personal touch.*
   - **Nimble** \
-  *Our tightly-integrated team can adapt quickly to your needs*
+    *Our tightly-integrated team can adapt quickly to your needs.*
   - **Queer** \
-  *Moving past assumptions of “normal” to explore new possibilities.*
+    *Moving past assumptions of “normal” to explore new possibilities.*
   - **Robust** \
-  *100% test coverage and documentation keep maintenance costs low*
+    *100% test coverage and documentation keep maintenance costs low.*
   - **Thoughtful** \
-  *We don’t have all the answers, but we know how to get there.*
+    *We don’t have all the answers, but we know how to get there.*
   - **Top-shelf** \
-  *From CSS/Sass & Django to Susy & Herman, we build the tools that millions of developers rely on.*
+    *From CSS/Sass & Django to Susy & Herman, we build the tools that millions
+    of developers rely on.*
   - **Transparent** \
-  *Daily communication keeps you in control of budget & priorities from start to finish.*
+    *Daily communication keeps you in control of budget & priorities from start
+    to finish.*
 
 {% endcall %}
