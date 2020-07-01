@@ -146,6 +146,11 @@ to drop. A value equal to the initial height value is the default.
   attrs={'class': 'img-border align-center'}
 ) }}
 
+The following CodePen demo is available in Safari only:
+
+<p data-height="830" data-theme-id="light" data-slug-hash="GNrYgY" data-default-tab="css,result" data-user="stacy" data-embed-version="2" data-pen-title="Initial Letter, showing multiple positions" class="codepen">See the Pen <a href="https://codepen.io/stacy/pen/GNrYgY/">Initial Letter, showing multiple positions</a> by Stacy (<a href="https://codepen.io/stacy">@stacy</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 We'd love to see how you use `initial-letter` in your design. Send us a
 message via [Twitter] or join our public [Slack channel].
 
