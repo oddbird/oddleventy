@@ -10,10 +10,6 @@ ul,
 ol {
   margin-bottom: var(--newline);
   margin-top: 0;
-}
-
-ul,
-ol {
   padding-left: var(--list-padding, var(--list-padding--default, 0));
 
   & & {
