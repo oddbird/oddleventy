@@ -9,7 +9,8 @@ tags:
   - Python
 events:
   - venue: ConFoo
-    url: http://confoo.ca/
+    url: https://confoo.ca/
+    adr: Montreal, Canada
     date: 2014-02-27
     slides: /advanced-python-preso/
 summary: |

@@ -31,18 +31,14 @@ in the open – sharing our thoughts while we work.
 - **Live Site and Open Code:** Follow our progress here and on
     [Github].
 - **Open Plans:** Find our to-do list, and watch our process on our
-    Github [project board]. (note: we were using [Pivotal Tracker], but
+    Github [project board]. (note: we were using Pivotal Tracker, but
     wanted to [test the new Github features])
-- **Articles and Artifacts:** Check back here for regular posts as we
-    work. We'll update the [timeline] at the bottom of this page.
 
 [open Slack channel]: http://friends.oddbird.net
-[Twitter]: http://twitter.com/oddbird
+[Twitter]: https://twitter.com/oddbird
 [Github]: https://github.com/oddbird/oddsite/
 [project board]: https://github.com/oddbird/oddsite/projects/1
-[Pivotal Tracker]: https://www.pivotaltracker.com/projects/22378
 [test the new Github features]: /2016/10/07/github-projects/
-[timeline]: #open-design-articles
 
 ## What is Open Design?
 
@@ -66,7 +62,7 @@ making. We also have our [source code] available on GitHub, and will
 talk about the open source tools we use, and share any tools we build.
 
 [open source collaboration]: /open-source/
-[we're not the first to do it]: http://bradfrost.com/blog/post/designing-in-the-open/
+[we're not the first to do it]: https://bradfrost.com/blog/post/designing-in-the-open/
 [continuous integration]: https://en.wikipedia.org/wiki/Continuous_integration
 [source code]: https://github.com/oddbird/oddsite/
 

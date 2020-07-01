@@ -2,7 +2,7 @@
 title: On Sass & CSS
 venue: Shop Talk Show
 date: 2019-10-28
-canonical: https://shoptalkshow.com/episodes/384/
+canonical: https://shoptalkshow.com/384/
 author: miriam
 card: feature
 image:

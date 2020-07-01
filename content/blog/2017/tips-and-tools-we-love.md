@@ -19,7 +19,7 @@ date: 2017-02-14
 In the spirit of Valentine’s Day, let’s kick off this post with a CSS
 love poem:
 
-<p data-height="238" data-theme-id="light" data-slug-hash="jydWVB" data-default-tab="result" data-user="stacy" data-embed-version="2" data-pen-title="CSS Love Poem" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/jydWVB/">CSS Love Poem</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p data-height="238" data-theme-id="light" data-slug-hash="jydWVB" data-default-tab="result" data-user="stacy" data-embed-version="2" data-pen-title="CSS Love Poem" class="codepen">See the Pen <a href="https://codepen.io/stacy/pen/jydWVB/">CSS Love Poem</a> by Stacy (<a href="https://codepen.io/stacy">@stacy</a>) on <a href="https://codepen.io">CodePen</a>.</p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 Obviously, there are some pieces missing from the above sample, like
 where is the `you` [mixin defined]? And why aren’t you even using the
@@ -28,7 +28,7 @@ but today’s post is about the tips and tools that have our approval and
 praise. I asked each OddBird to share one work-related item they
 wouldn’t want to be without and why.
 
-[mixin defined]: http://codepen.io/stacy/pen/249235ffa47cbe123358452508c554b9
+[mixin defined]: https://codepen.io/stacy/pen/249235ffa47cbe123358452508c554b9
 
 ## JSON Viewer
 
@@ -122,7 +122,7 @@ elements.
 ) }}
 
 [Sondra Eby]: /authors/sondra/
-[Adobe Xd]: http://www.adobe.com/products/experience-design.html
+[Adobe Xd]: https://www.adobe.com/products/xd.html
 
 ## TextExpander
 
@@ -194,6 +194,6 @@ and [Slack].
 [TextExpander]: https://textexpander.com
 [Smile]: https://smilesoftware.com
 [Fill-in text dialog box]: {{ site.images }}blog/2017/tips-tools/fill-ins.jpg
-[in this Pen]: http://codepen.io/stacy/pen/9b76e7d9eb9d730e734aa776a7078fc5/
+[in this Pen]: https://codepen.io/stacy/pen/9b76e7d9eb9d730e734aa776a7078fc5/
 [Twitter]: https://twitter.com/oddbird
 [Slack]: http://friends.oddbird.net

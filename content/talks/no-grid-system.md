@@ -20,11 +20,11 @@ events:
     date: 2019-02-12
     slides: https://talks.oddbird.net/no-grid-system/covalence19/
   - venue: Covalence Conf
-    url: http://www.covalenceconf.com/
+    url: https://www.covalenceconf.com/
     adr: San Francisco, CA
     date: 2019-01-16
   - venue: Beyond Tellerand
-    url: https://beyondtellerrand.com/events/duesseldorf-2018
+    url: https://beyondtellerrand.com/events/dusseldorf-2018
     adr: Düsseldorf, Germany
     date: 2018-05-07
     slides: https://oddbooksapp.com/release/ce37ef91-8bd8-43e2-932a-66931b4b25ce
@@ -34,7 +34,7 @@ events:
       width: 640
       height: 360
   - venue: Clarity
-    url: https://www.clarityconf.com/2017
+    url: https://www.clarityconf.com/2017-archive
     adr: San Francisco, CA
     date: 2017-11-28
     slides: https://oddbooksapp.com/release/ae641b90-8efa-4b1e-8da8-16940edf420d
@@ -42,7 +42,7 @@ events:
     media: &clarity
       iframe: https://www.youtube.com/embed/Prc_V-j6yS4
   - venue: CSS Dev Conf
-    url: http://2017.cssdevconf.com/
+    url: https://2017.cssdevconf.com/
     adr: New Orleans, LA
     date: 2017-10-09
     slides: https://oddbooksapp.com/release/0434d9c1-4e89-4827-abfc-4d3942fa305d
@@ -50,7 +50,7 @@ events:
     url: https://2017.djangocon.us/
     adr: Spokane, WA
     date: 2017-08-14
-    slides: https://www.oddbooksapp.com/book/djangocon-layout
+    slides: https://oddbooksapp.com/book/djangocon-layout
     video: https://youtu.be/mDRfFEcj3-Q
     media: &django
       iframe: https://www.youtube.com/embed/mDRfFEcj3-Q
@@ -89,7 +89,7 @@ summary: |
   how they work,
   and practical tips to avoid using them.
 
-  [susy]: https://oddbird.net/susy/
+  [susy]: /susy/
 media:
   - span: full
     <<: *bt

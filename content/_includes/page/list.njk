@@ -26,8 +26,8 @@
           <strong>Upcoming!</strong>
         {% endif %}
         [{{ event.date | getDate('iso') }}]
-        {{ utility.link_if(event.venue, event.url) }} {{ '--' | typogr | safe }}
-        {{ event.adr }}
+        {{ utility.link_if(event.venue, event.url) }}{% if event.adr %} {{ '--' | typogr | safe }}
+        {{ event.adr }}{% endif %}
       </li>
     {% endfor %}
   </ol>

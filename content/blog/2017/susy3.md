@@ -58,10 +58,10 @@ us on our toes.
   [Eric Meyer’s Reset]: https://meyerweb.com/eric/tools/css/reset/
   [Carl]: /authors/carl/
   [Jonny]: /authors/jonny/
-  [Natalie Downe]: http://blog.natbat.net/post/46614243624/css-systems
-  [Chris Eppstein]: http://chriseppstein.github.io/blog/
-  [Sass]: http://sass-lang.com/
-  [Compass]: http://compass-style.org/
+  [Natalie Downe]: https://blog.natbat.net/post/46614243624/css-systems
+  [Chris Eppstein]: https://chriseppstein.github.io/blog/
+  [Sass]: https://sass-lang.com/
+  [Compass]: https://github.com/Compass/compass
   [Singularity]: https://github.com/at-import/Singularity
 
 ## A Whole New World
@@ -120,10 +120,10 @@ fallback by wrapping your grid code in the
 around to help with the fallback options, until all your required
 browsers catch up.
 
-  [browser-support matrix]: http://caniuse.com/#feat=css-grid
+  [browser-support matrix]: https://caniuse.com/#feat=css-grid
   [CSS Grid module]: https://css-tricks.com/snippets/css/complete-guide-grid/
   [Rachel Andrew]: https://gridbyexample.com/
-  [Jen Simmons]: http://jensimmons.com/post/feb-27-2017/learn-css-grid
+  [Jen Simmons]: https://labs.jensimmons.com/
 
 ### Susy Columns & `grid-template-columns`
 
@@ -672,18 +672,3 @@ Grid module will replace all third-party systems.
 While we're confident that this is a step forward for Susy, we never
 claim to know what's best for you. We'd love your feedback, and
 real-world examples of how you make Susy work for you.
-
-We'll keep providing our own tutorials and demos, based on the questions
-we hear most, but we also love linking to your [sites built with Susy],
-and any [third-party tutorials] that we hear about. [Contact us], or
-[submit a pull request]. You can also talk to [SassSusy] or [OddBird] on
-twitter, or join our [public Slack] (with a \#Susy channel). We're
-excited to hear from you!
-
-[sites built with Susy]: /susy/sites/
-[third-party tutorials]: /susy/articles/
-[Contact us]: /contact/
-[submit a pull request]: https://github.com/oddbird/oddsite/tree/master/content/susy
-[SassSusy]: https://twitter.com/sasssusy
-[OddBird]: https://twitter.com/oddbird
-[public Slack]: http://friends.oddbird.net

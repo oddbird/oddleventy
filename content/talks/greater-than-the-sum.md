@@ -6,14 +6,14 @@ date: 2016-10-20
 image:
   src: talks/greater-than.jpg
   alt: David speaking about his slide showing legos and toy car
-slides: https://davisagli.github.io/slides/ploneconf2016/#/step-1
+slides: https://davisagli.github.io/slides/ploneconf2016/
 tags:
   - React
   - Plone
   - Pyramid
 events:
   - venue: Plone Digital Experience Conference
-    url: http://2016.ploneconf.org/
+    url: https://2016.ploneconf.org/
     date: 2016-10-20
     adr: Boston, MA
 summary: |

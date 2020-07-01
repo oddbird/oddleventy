@@ -34,8 +34,8 @@ Feel free to pull it apart, hack on it, and let us know what you think.
 We still have a long way to go, but we're very excited about the power
 and flexability this engine has to offer.
 
-Check out the [susy-next branch on GitHub].
+Check out the [susy-next tag on GitHub].
 
-[alpha build]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.1
+[alpha build]: https://rubygems.org/gems/susy/versions/2.0.0.alpha.1
 [susy next]: /2013/01/01/susy-next/
-[susy-next branch on github]: https://github.com/oddbird/susy/tree/susy-next
+[susy-next tag on github]: https://github.com/oddbird/susy/tree/v2.0.0.alpha.1

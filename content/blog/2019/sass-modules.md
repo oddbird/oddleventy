@@ -270,7 +270,7 @@ Check back soon for more details -- and if you have questions, feel free
 to reach out.
 
 [article for CSS-Tricks]: https://css-tricks.com/introducing-sass-modules/
-[new documentation]: https://sass-lang.com/documentation/
-[an overview on the Sass Blog]: http://sass.logdown.com/posts/7858341-the-module-system-is-launched
+[new documentation]: https://sass-lang.com/documentation
+[an overview on the Sass Blog]: https://sass-lang.com/blog/the-module-system-is-launched
 [Cascading Color Systems]: https://github.com/oddbird/cascading-color-system/
 [Teacup Gorilla]: https://github.com/mirisuzanne/teacup

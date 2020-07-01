@@ -63,7 +63,7 @@ And how to use it:
 Jina has posted a demo and explanation
 on [CodePen][cp].
 
-[cp]: http://codepen.io/jina/pen/iosjp
+[cp]: https://codepen.io/jina/pen/iosjp
 
 (The real lesson here
 is that all the colors of the rainbow

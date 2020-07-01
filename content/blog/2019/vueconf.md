@@ -14,7 +14,7 @@ image:
   alt: Miriam Suzanne and former OddBird Una Kravets
 sprites:
   src:
-    - iframe: https://talks.oddbird.net/demos/cssSprites
+    - iframe: https://talks.oddbird.net/demos/csssprites/
       width: 600
       height: 300
   caption: |
@@ -25,7 +25,7 @@ sprites:
 
     [Krystal Campioni]: https://twitter.com/krystalcampioni
     [Monster Slayer]: https://github.com/krystalcampioni/monster-slayer
-    [permalink]: https://talks.oddbird.net/demos/cssSprites
+    [permalink]: https://talks.oddbird.net/demos/csssprites/
     [source]: https://github.com/oddbird/vuefinder/blob/master/components/demos/cssSprites.vue
 summary: |
   Inspired by [VueConf 2018] I spent some time learning JS and Vue in more

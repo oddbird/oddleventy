@@ -17,7 +17,7 @@ summary: |
   help you manage the worst effects of [sub-pixel rounding], while
   `bleed()` helps you break items out of the box.
 
-  [sub-pixel rounding]: http://palantir.net/blog/responsive-design-s-dirty-little-secret
+  [sub-pixel rounding]: https://www.palantir.net/blog/responsive-design-s-dirty-little-secret
 date: 2013-03-20
 ---
 
@@ -36,7 +36,7 @@ John Albin Wilkins has a [demo] of the problem, as well as a proposed
 [solution]. He hasn't eliminated rounding errors, he just found a way to
 keep them from piling up. Every float is positioned relative to its
 container, rather than the float before it. It's a bit of a hack, and
-removes content from the flow, so I don't recommned building your entire
+removes content from the flow, so I don't recommend building your entire
 layout on isolated floats, but it can be very useful as a spot-check
 when rounding errors are really causing you a headache.
 
@@ -67,9 +67,9 @@ removed from the flow:
 The items can overlap, and stack in any order – almost as though they
 are positioned absolutely.
 
-[sub-pixel rounding]: http://ejohn.org/blog/sub-pixel-problems-in-css/
-[demo]: http://johnalbin.github.com/fluid-grid-rounding-errors/
-[solution]: http://palantir.net/blog/responsive-design-s-dirty-little-secret
+[sub-pixel rounding]: https://johnresig.com/blog/sub-pixel-problems-in-css/
+[demo]: https://johnalbin.github.io/fluid-grid-rounding-errors/
+[solution]: https://www.palantir.net/blog/responsive-design-s-dirty-little-secret
 [isolate any grid element in susy]: https://susyone.oddbird.net/guides/reference/#ref-helper-isolation
 
 ## Isolation Grid
