@@ -24,8 +24,8 @@ summary: |
   worlds, all the while keeping duplication of logic or code between the
   front-end and back-end worlds to a minimum.
 
-  [MV\* framework]: http://backbonejs.org/
-  [of choice]: http://marionettejs.com/
+  [MV\* framework]: https://backbonejs.org/
+  [of choice]: https://marionettejs.com/
 date: 2017-02-06
 ---
 
@@ -46,7 +46,7 @@ still need to turn that server-rendered markup into an interactive
 single-page application.
 
 [greenfield projects]: https://en.wikipedia.org/wiki/Greenfield_project
-[MV\* framework]: http://backbonejs.org/
+[MV\* framework]: https://backbonejs.org/
 [Kit]: /authors/kit/
 [already laid out]: /2016/12/16/server-side-rendering-spa/
 
@@ -93,7 +93,7 @@ might look like this:
 </div>
 ```
 
-[Jinja2]: http://jinja.pocoo.org/docs/dev/
+[Jinja2]: https://jinja.palletsprojects.com/en/master/
 [Nunjucks]: https://mozilla.github.io/nunjucks/
 
 ## Brief `<aside>`
@@ -223,8 +223,8 @@ Now we have a model (or collection of models) instantiated with data
 from our server-rendered markup, all being managed by Marionette views!
 🎉
 
-[Backbone.js]: http://backbonejs.org/
-[Marionette]: http://marionettejs.com/
+[Backbone.js]: https://backbonejs.org/
+[Marionette]: https://marionettejs.com/
 
 ## Where Do We Go From Here?
 
@@ -251,6 +251,6 @@ with server-side rendering? What are we missing, or where could we
 improve our methods? Drop us a line via [Twitter] or chime in on our
 public [Slack channel]!
 
-[behavior]: http://marionettejs.com/docs/v3.1.0/marionette.behavior.html
+[behavior]: https://marionettejs.com/docs/v3.1.0/marionette.behavior.html
 [Twitter]: https://twitter.com/oddbird
 [Slack channel]: http://friends.oddbird.net/

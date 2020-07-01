@@ -64,7 +64,7 @@ cultures (so avoid calling them “first name” and “last name”). And keep
 in mind that they may change over time. [Names are hard.]
 
 [one of the hard problems in computer science]: https://martinfowler.com/bliki/TwoHardThings.html
-[Names are hard.]: http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/
+[Names are hard.]: https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/
 
 ## Building this User Model in Django
 
@@ -116,6 +116,6 @@ Did we miss anything important? Let us know via [Twitter] or our public
 
 [Django]: https://www.djangoproject.com/
 [How to Extend the Django User Model]: https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html
-[AUTH\_USER\_MODEL setting]: https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-AUTH_USER_MODEL
+[AUTH\_USER\_MODEL setting]: https://docs.djangoproject.com/en/stable/ref/settings/#auth-user-model
 [Twitter]: https://twitter.com/oddbird
 [Slack channel]: http://friends.oddbird.net/

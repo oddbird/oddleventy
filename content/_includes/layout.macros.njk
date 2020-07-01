@@ -6,6 +6,7 @@ category: File
 note: For sectioning content in posts
 #}
 
+
 {# @docs
 label: title
 note: Section titles are flag-like
@@ -20,8 +21,11 @@ params:
       but the CSS defaults to a centered layout
       if no valid alignment is given.
 #}
-{% macro title(content, align = 'right') %}
-  <h2 data-section-title="{{ align }}">{{ content | mdInline | safe }}</h2>
+{% macro title(
+  content,
+  align='right'
+) %}
+<h2 id="{{ content | slug }}" data-section-title="{{ align }}">{{ content | mdInline | safe }}</h2>
 {% endmacro %}
 
 {# @docs
@@ -59,7 +63,7 @@ params:
   {% endfor %}
 {% endmacro %}
 
-{% macro offset(content = none) %}
+{% macro offset(content=none) %}
   {%- set content = content if (content != none) else caller() -%}
   <div class="offset-grid">{{- content | safe -}}</div>
 {% endmacro %}

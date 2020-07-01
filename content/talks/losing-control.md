@@ -1,7 +1,7 @@
 ---
 title: Losing Control
 banner: A Practical Guide to Losing Control
-slides: https://www.oddbooksapp.com/book/losing-control
+slides: https://oddbooksapp.com/book/losing-control
 author: miriam
 date: 2017-01-23
 image:
@@ -13,7 +13,7 @@ tags:
   - Fine Art
 events:
   - venue: UVA Scholars’ Lab
-    url: http://cal.lib.virginia.edu/event/3088981
+    url: https://cal.lib.virginia.edu/event/3088981
     adr: Charlottesville, VA
     date: 2017-01-23
 ---

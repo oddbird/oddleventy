@@ -9,7 +9,6 @@ tags:
   - Agile
   - Accoutrement
   - Herman
-  - Herman v1
   - CSS
   - Sass
   - Design Systems
@@ -76,7 +75,7 @@ tokens -- [colors], [fonts], [sizes], [ratios][sizes], and [icons]
 automation to help us scale.
 
   [accidentally speaking at]: https://twitter.com/jina/status/935566434700222465
-  [Clarity]: https://www.clarityconf.com/2017
+  [Clarity]: https://www.clarityconf.com/2017-archive
   [Design Systems]: https://www.designbetter.co/design-systems-handbook/
   [Jina Anne]: https://www.patreon.com/sushiandrobots
   [Salesforce Lightning Design System]: https://www.lightningdesignsystem.com/
@@ -169,7 +168,7 @@ syntax. Here are just a few of their options:
 Herman supports [all SassDoc annotations], and we've added style guide
 features of our own...
 
-[KSS]: http://warpspire.com/kss/
+[KSS]: https://warpspire.com/kss/
 [SassDoc]: http://sassdoc.com/
 [all SassDoc annotations]: http://sassdoc.com/annotations/
 
@@ -247,7 +246,7 @@ output when necessary:
 [<img src="{{ site.images }}blog/2017/herman-intro/examples.jpg" class="extend-small img-border img-shadow" alt="Herman rendered example" />][documentation of CSS selectors and markup patterns]
 
 [documentation of CSS selectors and markup patterns]: /herman/docs/demo_examples.html
-[Sass]: http://sass-lang.com
+[Sass]: https://sass-lang.com/
 [Nunjucks]: https://mozilla.github.io/nunjucks/
 
 ## Prose, Pages, and Third-Party Links
@@ -292,15 +291,10 @@ to do the same. The Herman code is [available on GitHub], and we'd love
 to hear your thoughts. File issues for bug-reports, feature requests, or
 help getting started -- or send us your pull requests.
 
-We'll keep providing our own tutorials and demos based on the questions
-we hear most, but we'd also love to list any style guides or pattern
-libraries you build with Herman, or any [tutorials] you've written.
-
 We're always excited to collaborate, and we've provided some
 ["contributing" documentation] to help you get involved.
 
 [available on GitHub]: https://github.com/oddbird/sassdoc-theme-herman
-[tutorials]: /herman/articles/
 ["contributing" documentation]: /herman/docs/CONTRIBUTING.html
 
 ## Need help with your design system?

@@ -6,7 +6,7 @@ end: 2018-11-07
 image:
   src: projects/plone.jpg
 links:
-  site: http://plone.org/
+  site: https://plone.org/
   source: https://github.com/plone/Products.CMFPlone
 author: david
 oss: core team

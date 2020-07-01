@@ -39,7 +39,7 @@ overwhelmed? Color toolkit to the rescue! Over the years, I’ve collected
 several resources to help guide me through these challenges – many of
 which I used during OddBird’s [open redesign process].
 
-[selected excellent typography]: /2017/1/11/typography/
+[selected excellent typography]: /2017/01/11/typography/
 [open redesign process]: /2016/07/12/open-design/
 
 ## Step 1 – Define Brand Goals
@@ -81,7 +81,7 @@ feel about each company?
   src='blog/2017/colors/canva.jpg'
 ) }}
 
-[Canva]: https://designschool.canva.com/blog/website-color-schemes/
+[Canva]: https://www.canva.com/learn/website-color-schemes/
 
 ## [Design Seeds]
 
@@ -100,7 +100,7 @@ love as I considered OddBird’s color palette.
   src='blog/2017/colors/happycog.jpg'
 ) }}
 
-[Happy Cog]: http://happycog.com/
+[Happy Cog]: https://www.happycog.com/
 
 ## [Mild Bunch]
 
@@ -116,7 +116,7 @@ love as I considered OddBird’s color palette.
   src='blog/2017/colors/clearleft.jpg'
 ) }}
 
-[Clear Left]: http://clearleft.com/
+[Clear Left]: https://clearleft.com/
 
 ## [Crush Lovely]
 
@@ -124,7 +124,7 @@ love as I considered OddBird’s color palette.
   src='blog/2017/colors/crushlovely.jpg'
 ) }}
 
-[Crush Lovely]: http://crushlovely.com/
+[Crush Lovely]: https://crushlovely.com/
 
 ## Step 3 – Start \[Color\] Scheming
 
@@ -158,7 +158,7 @@ used the sliders to find a very dark color for the text and a very light
 “callout” background color for highlighting important information.
 SassMe converts the hex colors into Sass color functions for me.
 
-[Paletton]: http://paletton.com/
+[Paletton]: https://paletton.com/
 
 ## [SassMe]
 
@@ -170,7 +170,7 @@ OddBird saves our colors and typography in a living style guide, making
 it easier for designers like me to grab exact colors when I’m
 prototyping website pages or features.
 
-[SassMe]: http://jim-nielsen.com/sassme/
+[SassMe]: https://sassme.jim-nielsen.com/
 
 ## [Living Style Guide]
 
@@ -196,7 +196,7 @@ between background and text colors.
 
 Contrast Ratio is my go-to web tool for the job.
 
-[WebAIM]: http://webaim.org/techniques/fonts/
+[WebAIM]: https://webaim.org/techniques/fonts/
 
 ## [Contrast Ratio]
 
@@ -216,7 +216,7 @@ two that work. Plus, Checker provides detailed descriptions of how to
 choose accessible colors, and accessibility articles if you’d like to
 dive deep.
 
-[Contrast Ratio]: http://leaverou.github.io/contrast-ratio/
+[Contrast Ratio]: https://contrast-ratio.com/
 
 ## [WebAIM: Color Contrast Checker]
 
@@ -231,7 +231,7 @@ Darkening our orange to the point that it passed AA level changed the
 color so much that it no longer retained the bright, fun feel we needed.
 So I began the search for a new brand color.
 
-[WebAIM: Color Contrast Checker]: #webaim-color-contrast-checker
+[WebAIM: Color Contrast Checker]: https://webaim.org/resources/contrastchecker/
 
 ## Step 5 - Test Colors in Context
 
@@ -288,20 +288,18 @@ As always, we want to know what your favorite web tools are for playing
 with color. Have you tried Xd? What did you think? We’ll be discussing
 this and more in our [OddFriends Slack channel]. Join us!
 
-[Adobe Experience Design]: http://www.adobe.com/products/experience-design.html
+[Adobe Experience Design]: https://www.adobe.com/products/xd.html
 [Susy]: /susy/
 [Miriam]: /authors/miriam/
 [OddFriends Slack channel]: http://friends.oddbird.net
 
 ### Bonus - Color Palette Inspiration
 
-## [Color Palette FX]
+## Color Palette FX
 
 {{ embed.img(
   src='blog/2017/colors/fx.jpg'
 ) }}
-
-[Color Palette FX]: http://www.palettefx.com/
 
 ## [HSL Color Picker]
 
@@ -325,7 +323,7 @@ this and more in our [OddFriends Slack channel]. Join us!
   src='blog/2017/colors/culrs.jpg'
 ) }}
 
-[Culrs]: http://culrs.com/
+[Culrs]: https://www.culrs.com/
 
 ## [Open Color]
 
@@ -352,7 +350,7 @@ this and more in our [OddFriends Slack channel]. Join us!
   alt='Check foreground and background color with font size and weight'
 ) }}
 
-[Accessible Colors]: http://accessible-colors.com/
+[Accessible Colors]: https://accessible-colors.com/
 
 
 ## [Adobe Plugin Check Contrast Ratio]
@@ -362,4 +360,4 @@ this and more in our [OddFriends Slack channel]. Join us!
   alt='Check Contrast Ratio Photoshop Add-on'
 ) }}
 
-[Adobe Plugin Check Contrast Ratio]: https://creative.adobe.com/addons/products/12170#.WHlhCrYrKHp
+[Adobe Plugin Check Contrast Ratio]: https://exchange.adobe.com/creativecloud.details.12170.html

@@ -4,7 +4,8 @@ sub: Individualized algebra tutor
 image:
   src: projects/emmys.jpg
 client: &client Carleton College
-url: https://turing.mathcs.carleton.edu/production/AlgebraSolving.html
+links:
+  site: https://turing.mathcs.carleton.edu/production/AlgebraSolving.html
 date: 2017-01-15
 tasks:
   - Branding

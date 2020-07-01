@@ -9,7 +9,7 @@ image:
 date: 2019-07-11
 index: CSS Remedy
 links:
-  source: https://github.com/mozdevs/cssremedy/
+  source: https://github.com/jensimmons/cssremedy/
 summary: |
   **CSS Remedy provides a modern proposal
   for how CSS should work by default**.

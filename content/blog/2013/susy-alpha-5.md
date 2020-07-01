@@ -16,7 +16,7 @@ summary: |
   improvements. We're getting real close to launch, and we'd love to know
   what you think. Play around, and let us know!
 
-  [Susy Next alpha 5]: http://rubygems.org/gems/susy/versions/2.0.0.alpha.5
+  [Susy Next alpha 5]: https://rubygems.org/gems/susy/versions/2.0.0.alpha.5
 date: 2013-11-27
 ---
 
@@ -31,7 +31,7 @@ Sass.
 
 Sass 3.3 is awesome, and we've made a lot of changes in Susy to take
 full advantage of the new toys. We started integrating the new
-[SassScript Maps] data type (not to be confused with [Source Maps]), and
+SassScript Maps data type (not to be confused with Source Maps), and
 the side benefits were huge. We're also using the new
 `variable-exists()` and `mixin-exists()` functions to check for the
 presence of various compass features, and degrade gracefully if they
@@ -40,9 +40,6 @@ aren't available.
 In brief: **Sass 3.3 is now required** and **Compass is no longer
 required**, although we do tie in with Compass features such as
 vertical-rhythms if they are available.
-
-[sassscript maps]: https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md#sassscript-maps
-[source maps]: https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md#source-maps
 
 ## Settings
 

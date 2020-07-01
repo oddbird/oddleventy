@@ -20,7 +20,7 @@ summary: |
   other fields. [Beyond Tellerand] (Düsseldorf, Germany) was the best possible
   combination.
 
-  [Beyond Tellerand]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers
+  [Beyond Tellerand]: https://beyondtellerrand.com/events/dusseldorf-2018/speakers
 ---
 
 {% import "quotes.macros.njk" as quotes %}
@@ -95,7 +95,7 @@ favorites:
 [one of his art pieces]: http://levitated.net/daily/levInvaderFractal.html
 [second draft]: https://codepen.io/mirisuzanne/pen/gzXqOP
 [Vue]: https://vuejs.org/
-[A Tinker Story]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/dina-amin#talk
-[Broad Band]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/claire-evans#talk
-[Generative Spaces]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/jared-tarbell#talk
-[How to Build an Atomic Bomb]: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/mike-monteiro#talk
+[A Tinker Story]: https://beyondtellerrand.com/events/dusseldorf-2018/speakers/dina-amin#talk
+[Broad Band]: https://beyondtellerrand.com/events/dusseldorf-2018/speakers/claire-evans#talk
+[Generative Spaces]: https://beyondtellerrand.com/events/dusseldorf-2018/speakers/jared-tarbell#talk
+[How to Build an Atomic Bomb]: https://beyondtellerrand.com/events/dusseldorf-2018/speakers/mike-monteiro#talk
