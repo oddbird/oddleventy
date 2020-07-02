@@ -2250,10 +2250,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-colors@npm:^3.2.1":
-  version: 3.2.4
-  resolution: "ansi-colors@npm:3.2.4"
-  checksum: 86ec4a476ae8661237c0da58c0b4c48ea57719fdd80eed00132db09ee88d69f5caa5889e13ccd07489e710bf3b9fd85123729e0660384d4373e92ef6125c1fad
+"ansi-colors@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "ansi-colors@npm:4.1.1"
+  checksum: 50d8dfbce25602caea1b170ecf4c71c4c9c58d2d1e3186fb5712848c0610d05fe60b8bb6a9eaebd9b54f1db3baf6f603e04214cce597cc7799bc9f47fd9a797a
   languageName: node
   linkType: hard
 
@@ -3652,9 +3652,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001087, caniuse-lite@npm:^1.0.30001088":
-  version: 1.0.30001090
-  resolution: "caniuse-lite@npm:1.0.30001090"
-  checksum: b3978238e6a335df32e371dd5948580747d1c11f2a33f5ee9bc0b50837c4080f3287209fc24b764915b40a9899d51c7ff67dd59bb15ff1e0be0849b49ecdbec8
+  version: 1.0.30001093
+  resolution: "caniuse-lite@npm:1.0.30001093"
+  checksum: 0171e3afbf7721e2f5e2e848c2acca2f7d31fe393540fccafa7d01d16e980c4b3b2ac33a80d9e816069fd9d14aa0e45bade05f9165c821faa480f08fe6662402
   languageName: node
   linkType: hard
 
@@ -3674,10 +3674,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cascading-color-systems@npm:0.1.0-beta.13":
-  version: 0.1.0-beta.13
-  resolution: "cascading-color-systems@npm:0.1.0-beta.13"
-  checksum: 88c124a1af7cdcda518f79f0d1b9bca2cd1d613130453fd7a643fa86f1af7a26da0b60a48b4b1a6eba84deb5d7bc4d583dd536e9ee6180cef96975da31ce75bc
+"cascading-color-systems@npm:0.1.0-beta.14":
+  version: 0.1.0-beta.14
+  resolution: "cascading-color-systems@npm:0.1.0-beta.14"
+  checksum: 1f38862d428a74b443242b9ac33e3bf366a3cbd5a7312982a629cf56ffe9616773558c0440efd5d2bb1d4b78fd9be71b445ce611116887dd3d416c549559a0e1
   languageName: node
   linkType: hard
 
@@ -5663,9 +5663,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.3.483":
-  version: 1.3.483
-  resolution: "electron-to-chromium@npm:1.3.483"
-  checksum: dad4120418cd8a672661ece7163afae50529076698fb956ca952795665fe86ab167b815f09672c9daa65b01429efadf94e1843897080cb86c9c1f8216d52a96d
+  version: 1.3.484
+  resolution: "electron-to-chromium@npm:1.3.484"
+  checksum: 8afd97df42597dc1fab476b7fb5499a0ea7f2b636f3bf55656bbec2cbfacdb7563d540c5a74e59a56e55e13542ed7d3b0cefd856a7bb9e7a2171e09280efa7e5
   languageName: node
   linkType: hard
 
@@ -5801,11 +5801,11 @@ __metadata:
   linkType: hard
 
 "enquirer@npm:^2.3.5":
-  version: 2.3.5
-  resolution: "enquirer@npm:2.3.5"
+  version: 2.3.6
+  resolution: "enquirer@npm:2.3.6"
   dependencies:
-    ansi-colors: ^3.2.1
-  checksum: 1745db4e9d40624abe89301ada7ab79771a8e8ad500d27e6d01b811ca43095b894b9c2b1cb82a4d441a338c5ad19e03cdf31c8a5a573f14013feaecc2c2f1073
+    ansi-colors: ^4.1.1
+  checksum: e249bb97bf7d5a91d51081547ea5aa1d849604e5de74feff2c48f7174fc6c9dfcfeea42ef5536e9a3be58964a248c322d6897269ae7bba3e1b6d24f152d9d685
   languageName: node
   linkType: hard
 
@@ -10412,8 +10412,8 @@ __metadata:
   linkType: hard
 
 "listr2@npm:^2.1.0":
-  version: 2.1.8
-  resolution: "listr2@npm:2.1.8"
+  version: 2.1.9
+  resolution: "listr2@npm:2.1.9"
   dependencies:
     chalk: ^4.0.0
     cli-truncate: ^2.1.0
@@ -10425,7 +10425,7 @@ __metadata:
     through: ^2.3.8
   peerDependencies:
     enquirer: ">= 2.3.0 < 3"
-  checksum: 1537edf403dde8a2feee284612e1198cba3a017f24d9ea1ceb99dd90f159f60d0a2f756ccc38995647447cd06db83c0907a1a23fc178c637b568f7da98c48293
+  checksum: d22f9993116ab5d740cb6fefe17201626a692a67dce361d987ea00142f194bed7fc315512d5aadbbb76c2b5116e948c1ef492dd13beb73919eb11423516a561d
   languageName: node
   linkType: hard
 
@@ -12170,7 +12170,7 @@ __metadata:
     accoutrement: ^2.1.4
     autoprefixer: ^9.8.4
     babel-jest: ^26.1.0
-    cascading-color-systems: 0.1.0-beta.13
+    cascading-color-systems: 0.1.0-beta.14
     chalk: ^4.1.0
     chokidar-cli: ^2.1.0
     core-js: ^3.6.5
@@ -12201,7 +12201,7 @@ __metadata:
     postcss: ^7.0.32
     prettier: ^2.0.5
     remove-markdown: ^0.3.0
-    rollup: ^2.18.1
+    rollup: ^2.18.2
     rollup-plugin-terser: ^6.1.0
     sass: ^1.26.9
     sassdoc: ^2.7.2
@@ -13684,13 +13684,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"private@npm:^0.1.8":
-  version: 0.1.8
-  resolution: "private@npm:0.1.8"
-  checksum: 4507890e0e59e27909b714e52d6e8de7e06c83c731721e8c974117bfa96c720173c2aeff048022a0ba5faefa8a354f15120fb4088729b1241fc22e78f3a25912
-  languageName: node
-  linkType: hard
-
 "process-nextick-args@npm:^2.0.0, process-nextick-args@npm:~2.0.0":
   version: 2.0.1
   resolution: "process-nextick-args@npm:2.0.1"
@@ -14292,12 +14285,11 @@ __metadata:
   linkType: hard
 
 "regenerator-transform@npm:^0.14.2":
-  version: 0.14.4
-  resolution: "regenerator-transform@npm:0.14.4"
+  version: 0.14.5
+  resolution: "regenerator-transform@npm:0.14.5"
   dependencies:
     "@babel/runtime": ^7.8.4
-    private: ^0.1.8
-  checksum: f663bcc3a38299259ba2bbac80d8079f2139809c46f796e85089fe90bf299bfaa2a4abef07eaddb4e7c23b8c5f95868850f935a40c6cb7042b0e83b82afc1b93
+  checksum: ed07c2c1d08f4828807f9366621ca1d62102969f5af575662c9e5f085f7b49df068e4944e17c7016898bc125cdc7b0d74014e9856bff3a6a147714c4e7de3ed9
   languageName: node
   linkType: hard
 
@@ -14824,9 +14816,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.18.1":
-  version: 2.18.1
-  resolution: "rollup@npm:2.18.1"
+"rollup@npm:^2.18.2":
+  version: 2.18.2
+  resolution: "rollup@npm:2.18.2"
   dependencies:
     fsevents: ~2.1.2
   dependenciesMeta:
@@ -14834,7 +14826,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: d4ebbe86b90a7ed14e2b4a44739ffacd427526bea81bedc438bdb182a3dcb687a32ac857bcb73ef87cc6041609844cfe4672f1f57417486bad532223d274bd2a
+  checksum: 5c1c980627c619acbd17ec8d10b40edd37e4edcef30649321afb0bd3ee04d4052c17c85d77fda392a79ba10e8be38a5636a73eac23da4bea3d122f2da3bcdc5c
   languageName: node
   linkType: hard
 
@@ -14869,11 +14861,11 @@ __metadata:
   linkType: hard
 
 "rxjs@npm:^6.5.5":
-  version: 6.5.5
-  resolution: "rxjs@npm:6.5.5"
+  version: 6.6.0
+  resolution: "rxjs@npm:6.6.0"
   dependencies:
     tslib: ^1.9.0
-  checksum: a3882e0374af8aa32459ea9219fdcf24cb5a943cdf35f50da4ded48435ec474647c315b85c3e7b703927a55689e54037538cbd24789548d07b74e4865c4adb78
+  checksum: 32d733487caf42cc87bb0f93da5be400f2817f94a9f8af9580ab36f480aa553f584e0cfb4625b8321e8f9490094a510f9eb5e951a1d6219281d1eac1525d007b
   languageName: node
   linkType: hard
 
