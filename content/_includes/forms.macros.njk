@@ -179,11 +179,13 @@ params:
   attrs={}
 ) %}
   {%- set content = content if (content != none) else caller() -%}
-  <fieldset data-fieldset="{{ name or legend | slug }}" {{ utility.show_attrs(attrs) }}>
+  <fieldset data-fieldset="{{ name or legend | slug }}">
     {%- if legend -%}
       <legend>{{ legend | mdInline | safe }}</legend>
     {%- endif -%}
-    {{ content | safe }}
+    <div class="fieldset-content" {{ utility.show_attrs(attrs) }}>
+      {{ content | safe }}
+    </div>
   </fieldset>
 {% endmacro %}
 
