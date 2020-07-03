@@ -13,6 +13,26 @@
   position: relative;
 }
 
+// Dropdown Button
+// ---------------
+/// Generates a fixed overlay of the viewport when open.
+/// The overlay is part of the summary button,
+/// between the dropdown itself and the rest of the page,
+/// and acts as a click target to close the dropdown.
+/// @group dropdown
+[data-btn~='summary'] {
+  [open] > & {
+    @include tools.z-index('dropdown');
+
+    @include tools.before('') {
+      @include tools.position(0 fixed);
+      @include tools.z-index('bump');
+      cursor: default;
+      display: block;
+    }
+  }
+}
+
 // Dropdown
 // --------
 /// The basic dropdown box,
