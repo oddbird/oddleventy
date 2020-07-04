@@ -12,6 +12,7 @@ groups:
     config-fonts: Fonts
     config-scale: Spacing & Sizes
     config-layout: Layout Tokens
+    config-focus: Focus Styling
   CSS Variables:
     init-colors: Global Colors
     init-themes: Preset Themes
@@ -34,6 +35,7 @@ groups:
     media: Media Blocks & Ratios
 
 herman:
+  customCSS: _built/css/styleguide.css
   extraDocs:
     - name: Content and Writing
       path: ./writing.md
