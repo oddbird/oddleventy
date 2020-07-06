@@ -113,6 +113,11 @@
 
 .byline {
   font-size: var(--small);
+
+  time,
+  span {
+    display: inline-block;
+  }
 }
 
 .summary {

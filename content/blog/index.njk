@@ -1,10 +1,12 @@
 ---
 banner: Resources by Date
-sub: Read, watch, & listen
 override:tags: []
+action:
+  text: Browse by tag »
+  url: /tags/
 pagination:
   data: collections._sorted-posts
-  size: 20
+  size: 15
   alias: posts
   reverse: true
 permalink: /blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
@@ -12,6 +14,13 @@ eleventyComputed:
   title: |
     Resources
     {% if pagination.pageNumber > 0 %}(page {{ pagination.pageNumber + 1 }}){% endif %}
+  sub: |
+    {% if pagination.pageNumber == 0 %}
+    Read, watch, & listen
+    {% else %}
+    {% import 'post.macros.njk' as post %}
+    {{ post.page_current(pagination, prefix='Page') }}
+    {% endif %}
   summary: |
     {% if pagination.pageNumber == 0 %}
     Learn how to write resilient CSS,
@@ -19,22 +28,9 @@ eleventyComputed:
     and more with these articles, videos,
     podcasts, and conference talks.
     {% endif %}
-  action:
-    text: |
-      {%- if pagination.pageNumber == 0 -%}
-      Browse by tag »
-      {%- else -%}
-      « Previous page
-      {%- endif -%}
-    url: |
-      {%- if pagination.pageNumber == 0 -%}
-      /tags/
-      {%- else -%}
-      {{ pagination.href.previous }}
-      {%- endif -%}
 ---
 
 {% import 'post.macros.njk' as post %}
 
-{{ post.by_year(posts, collections) }}
-{{ post.page_nav('Resource pages', pagination) }}
+{{ post.by_year(posts, collections, 0, pagination) }}
+{{ post.page_nav('Resources', pagination, current=true, id='after') }}
