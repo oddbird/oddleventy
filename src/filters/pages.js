@@ -43,6 +43,7 @@ const isCurrent = (page) => {
     getDate(page.data.end) >= now()
   );
 };
+
 /* @docs
 label: getCurrent
 category: Filter
@@ -92,6 +93,7 @@ const hasData = (obj, keys, value, exact = false) => {
 
   return _.hasIn(obj, keys);
 };
+
 /* @docs
 label: withData
 category: Filter
@@ -263,6 +265,17 @@ const pageYears = (collection) =>
     return page;
   });
 
+/* @docs
+label: eventSort
+category: Sorting
+note: |
+  Sort pages based on either the page date,
+  or the most recently past event date.
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+*/
 const eventSort = (collection) =>
   pageYears(collection).sort((a, b) => a.sort > b.sort);
 

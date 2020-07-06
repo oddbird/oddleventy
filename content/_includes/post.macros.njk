@@ -25,6 +25,9 @@ params:
   above:
     type: number
     default: 6
+  pagination:
+    type: 11ty pagination object
+    default: none
 #}
 {% macro by_year(
   posts,
@@ -63,6 +66,9 @@ params:
   title:
     type: string
     default: 'Resources'
+  pagination:
+    type: 11ty pagination object
+    default: none
 #}
 {% macro list(
   posts,
@@ -627,7 +633,33 @@ params:
   {% endif %}
 {% endmacro %}
 
-{% macro page_nav(title, pagination, current=false, id='', level=2) %}
+{# @docs
+label: page_nav
+category: pagination
+note: Navigate paginated collections
+params:
+  title:
+    type: string
+    note: Will be hidden, for screen-readers only
+  pagination:
+    type: 11ty pagination object
+    default: none
+  current:
+    type: boolean
+    default: false
+    note: Show the current location in pagination?
+  id:
+    type: string
+    default: ''
+    note: |
+      When repeating the pagination on a page,
+      each instance should get a unique ID
+  level:
+    type: integer [1-6]
+    default: 2
+    note: Heading level
+#}
+{% macro page_nav(title, pagination, current=true, id='', level=2) %}
 {% if pagination %}
 {% set id = ['resource-nav-title', id] | join('-') %}
 <nav class="pagination" aria-labeledby="{{ id }}">
@@ -654,6 +686,21 @@ params:
 {% endif %}
 {% endmacro %}
 
+{# @docs
+label: page_current
+category: pagination
+note: |
+  Show the current active page number &
+  total page-count in a paginated list
+params:
+  pagination:
+    type: 11ty pagination object
+    default: none
+  prefix:
+    type: string | none
+    default: none
+    note: Prefix "x of y" with more context, e.g. "page x of y"
+#}
 {% macro page_current(pagination, prefix=none) %}
 {% if pagination %}
   <span class="current">
