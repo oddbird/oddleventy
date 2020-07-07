@@ -61,7 +61,7 @@ jobs:
           command: yarn add --dev jest-junit
       - run:
           name: Test JS
-          command: yarn jest --ci --runInBand --reporters=default --reporters=jest-junit
+          command: yarn test --ci --runInBand --reporters=default --reporters=jest-junit
           environment:
             JEST_JUNIT_OUTPUT_DIR: './coverage'
       - store_artifacts:
