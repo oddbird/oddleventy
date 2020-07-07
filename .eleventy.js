@@ -54,7 +54,7 @@ module.exports = (eleventyConfig) => {
     collection
       .getAll()
       .filter((item) => item.data.oss)
-      .sort((a, b) => b.sort - a.sort),
+      .sort((a, b) => b.date - a.date),
   );
   eleventyConfig.addCollection('work', (collection) =>
     collection
