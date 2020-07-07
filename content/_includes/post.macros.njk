@@ -77,7 +77,7 @@ params:
   pagination=none
 ) %}
 {%- if posts -%}
-  {%- set posts = posts if (posts[0].sort) else posts | pageYears  -%}
+  {%- set posts = posts if (posts[0].sort) else posts | pageYears -%}
   {%- set sort = 'sort' if (posts[0].sort) else 'date' -%}
 
   {% if pagination %}
@@ -181,7 +181,7 @@ params:
           collections=collections,
           links=false,
           dateformat='md'
-          ) }}
+        ) }}
       </header>
       {% if post.data.events %}
         {{ upcoming(post.data.events, links=false) }}

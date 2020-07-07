@@ -277,7 +277,7 @@ params:
     note: containing 11ty page objects
 */
 const eventSort = (collection) =>
-  pageYears(collection).sort((a, b) => a.sort > b.sort);
+  pageYears(collection).sort((a, b) => a.sort - b.sort);
 
 /* @docs
 label: byYear
