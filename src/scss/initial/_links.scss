@@ -1,4 +1,5 @@
 @use '~accoutrement/sass/tools';
+@use '../config';
 
 /// # Link Defaults
 /// Initial global defaults for links…
@@ -10,9 +11,7 @@
 /// In practice, we can override this when other focus styles exist.
 /// @group links
 :focus {
-  outline: medium dotted currentColor;
-  outline-color: var(--outline-color, var(--text, currentColor));
-  outline-offset: var(--quarter-shim);
+  @include config.focus-ring;
 }
 
 // Links
