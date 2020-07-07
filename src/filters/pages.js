@@ -277,7 +277,17 @@ params:
     note: containing 11ty page objects
 */
 const eventSort = (collection) =>
-  pageYears(collection).sort((a, b) => a.sort - b.sort);
+  pageYears(collection).sort((a, b) => {
+    if (a.sort < b.sort) {
+      return -1;
+    }
+    /* istanbul ignore else */
+    if (a.sort > b.sort) {
+      return 1;
+    }
+    /* istanbul ignore next */
+    return 0;
+  });
 
 /* @docs
 label: byYear

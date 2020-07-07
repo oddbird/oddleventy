@@ -99,8 +99,8 @@ describe('page filters', () => {
   });
 
   test('eventSort', () => {
-    const slugs = ['test1', 'events', 'test3'];
-    const years = ['2020', '2019', '2018'];
+    const slugs = ['test3', 'events', 'test1'];
+    const years = [2018, 2019, 2020];
     const actual = eventSort(collection4);
 
     expect(actual.map((item) => item.fileSlug)).toEqual(slugs);
