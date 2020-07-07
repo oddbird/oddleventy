@@ -15,10 +15,6 @@ tags:
   - Vue
   - Layout
 events:
-  - venue: Webconf.asia
-    url: https://2020.webconf.asia/
-    adr: Hong Kong
-    date: 2020-08-28
   - venue: Develop Denver
     url: https://developdenver.org/
     date: 2019-08-15
