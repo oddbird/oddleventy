@@ -40,7 +40,8 @@
     "build": "run-s build:assets build:site eleventy",
     "update-oss-docs": "./bin/update-oss-docs",
     "prod": "run-s update-oss-docs build",
-    "checklinks": "hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" _site/index.html"
+    "checklinks": "hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" _site/index.html",
+    "test:performance": "start-server-and-test serve http://localhost:8080 jest lighthouse.test.js"
   },
   "devDependencies": {
     "#": "link:./src/filters",
@@ -60,6 +61,8 @@
     "cascading-color-systems": "0.1.0-beta.14",
     "chalk": "^4.1.0",
     "chokidar-cli": "^2.1.0",
+    "chrome-launcher": "^0.13.3",
+    "cli-table": "^0.3.1",
     "core-js": "^3.6.5",
     "cssremedy": "0.1.0-beta.2",
     "doxray": "^0.10.0",
@@ -77,6 +80,7 @@
     "hyperlink": "^4.5.0",
     "jest": "^26.1.0",
     "js-yaml": "^3.14.0",
+    "lighthouse": "^6.1.0",
     "lint-staged": "^10.2.11",
     "lodash": "^4.17.15",
     "markdown-it": "^11.0.0",
@@ -94,6 +98,7 @@
     "sassdoc": "^2.7.2",
     "sassdoc-theme-herman": "^3.2.0",
     "slugify": "^1.4.4",
+    "start-server-and-test": "^1.11.0",
     "striptags": "^3.1.1",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",

@@ -1,0 +1,499 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200706.202838.20624.0.001.json",
+    "dumpEventTime": "2020-07-06T20:28:38Z",
+    "dumpEventTimeStamp": "1594081718014",
+    "processId": 20624,
+    "cwd": "/home/erica/Projects/Oddbird/oddleventy",
+    "commandLine": [
+      "/home/erica/.nvm/versions/node/v12.16.1/bin/node",
+      "/home/erica/Projects/Oddbird/oddleventy/.yarn/cache/chokidar-cli-npm-2.1.0-3bc4fdea14-6d174178b4.zip/node_modules/chokidar-cli/index.js",
+      "**/.stylelintrc.yml",
+      "-c",
+      "yarn lint:sass"
+    ],
+    "nodejsVersion": "v12.16.1",
+    "glibcVersionRuntime": "2.27",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.16.1",
+      "v8": "7.8.279.23-node.31",
+      "uv": "1.34.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.15.0-1090-oem",
+    "osVersion": "#100-Ubuntu SMP Mon Jun 22 16:20:17 UTC 2020",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+        "speed": 2300,
+        "user": 3812100,
+        "nice": 87800,
+        "sys": 700900,
+        "idle": 35535800,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+        "speed": 2299,
+        "user": 3887600,
+        "nice": 22700,
+        "sys": 779300,
+        "idle": 35493200,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+        "speed": 2300,
+        "user": 3850900,
+        "nice": 4100,
+        "sys": 599000,
+        "idle": 35435800,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+        "speed": 2300,
+        "user": 3775000,
+        "nice": 2100,
+        "sys": 606400,
+        "idle": 35814400,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+        "speed": 2299,
+        "user": 3648300,
+        "nice": 2700,
+        "sys": 641700,
+        "idle": 35907400,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+        "speed": 2299,
+        "user": 3753100,
+        "nice": 5700,
+        "sys": 827100,
+        "idle": 35452200,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+        "speed": 2300,
+        "user": 3749700,
+        "nice": 39600,
+        "sys": 626900,
+        "idle": 35785700,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+        "speed": 2299,
+        "user": 3777600,
+        "nice": 16700,
+        "sys": 648400,
+        "idle": 35664900,
+        "irq": 0
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "wlp2s0",
+        "internal": false,
+        "mac": "9c:b6:d0:9a:0f:19",
+        "address": "192.168.84.228",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "br-515aaac5ddf6",
+        "internal": false,
+        "mac": "02:42:2e:f5:80:71",
+        "address": "172.18.0.1",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "br-626da06240c0",
+        "internal": false,
+        "mac": "02:42:fd:c4:ec:73",
+        "address": "172.25.0.1",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wlp2s0",
+        "internal": false,
+        "mac": "9c:b6:d0:9a:0f:19",
+        "address": "fe80::aabe:ca0e:d10b:ff7f",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 2
+      },
+      {
+        "name": "br-515aaac5ddf6",
+        "internal": false,
+        "mac": "02:42:2e:f5:80:71",
+        "address": "fe80::42:2eff:fef5:8071",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 3
+      },
+      {
+        "name": "br-626da06240c0",
+        "internal": false,
+        "mac": "02:42:fd:c4:ec:73",
+        "address": "fe80::42:fdff:fec4:ec73",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 4
+      },
+      {
+        "name": "vethbc1bd4d",
+        "internal": false,
+        "mac": "da:8f:85:4f:c3:e0",
+        "address": "fe80::d88f:85ff:fe4f:c3e0",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 8
+      },
+      {
+        "name": "veth375daa5",
+        "internal": false,
+        "mac": "0e:38:9b:5a:a4:df",
+        "address": "fe80::c38:9bff:fe5a:a4df",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 10
+      }
+    ],
+    "host": "erica-xps"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000b278f5",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    },
+    {
+      "pc": "0x00000000009f13ec",
+      "symbol": "node::OnFatalError(char const*, char const*) [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b5da9e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b5de19",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d0a765",
+      "symbol": " [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d0adf6",
+      "symbol": "v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d1760a",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d18515",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d1afcc",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000ce19bb",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    },
+    {
+      "pc": "0x00000000010246ce",
+      "symbol": "v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    },
+    {
+      "pc": "0x00000000013a71b9",
+      "symbol": " [/home/erica/.nvm/versions/node/v12.16.1/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2152648704,
+    "totalCommittedMemory": 2151353800,
+    "usedMemory": 2147377216,
+    "availableMemory": 47161688,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 33088,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 1440544,
+        "capacity": 1047456,
+        "used": 456040,
+        "available": 591416
+      },
+      "old_space": {
+        "memorySize": 2143961088,
+        "committedMemory": 2143708448,
+        "capacity": 2141355808,
+        "used": 2140999584,
+        "available": 356224
+      },
+      "code_space": {
+        "memorySize": 692224,
+        "committedMemory": 587648,
+        "capacity": 483520,
+        "used": 483520,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 528384,
+        "committedMemory": 476360,
+        "capacity": 366000,
+        "used": 366000,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 5058560,
+        "committedMemory": 5058560,
+        "capacity": 5036480,
+        "used": 5036480,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 2784,
+        "used": 2784,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047456,
+        "used": 0,
+        "available": 1047456
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 241.849,
+    "kernelCpuSeconds": 23.2571,
+    "cpuConsumptionPercent": 27.6153,
+    "maxRss": 3064754176,
+    "pageFaults": {
+      "IORequired": 16,
+      "IONotRequired": 2308471
+    },
+    "fsActivity": {
+      "reads": 7992,
+      "writes": 24
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 102.695,
+    "kernelCpuSeconds": 5.80073,
+    "cpuConsumptionPercent": 11.3017,
+    "fsActivity": {
+      "reads": 5992,
+      "writes": 24
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "GJS_DEBUG_TOPICS": "JS ERROR;JS LOG",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "USER": "erica",
+    "npm_config_user_agent": "yarn/2.0.0-rc.36 npm/? node/12.16.1 linux x64",
+    "TEXTDOMAIN": "im-config",
+    "XDG_SEAT": "seat0",
+    "SSH_AGENT_PID": "1527",
+    "XDG_SESSION_TYPE": "x11",
+    "GIT_ASKPASS": "/snap/code/35/usr/share/code/resources/app/extensions/git/dist/askpass.sh",
+    "npm_node_execpath": "/tmp/xfs-f2c18279/node",
+    "SHLVL": "3",
+    "OLDPWD": "/home/erica",
+    "CHROME_DESKTOP": "code-url-handler.desktop",
+    "QT4_IM_MODULE": "xim",
+    "HOME": "/home/erica",
+    "DESKTOP_SESSION": "ubuntu",
+    "TERM_PROGRAM_VERSION": "1.46.1",
+    "NVM_BIN": "/home/erica/.nvm/versions/node/v12.16.1/bin",
+    "NVM_NODEJS_ORG_MIRROR": "https://nodejs.org/dist",
+    "GNOME_SHELL_SESSION_MODE": "ubuntu",
+    "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL": "true",
+    "GTK_MODULES": "gail:atk-bridge",
+    "VSCODE_GIT_ASKPASS_MAIN": "/snap/code/35/usr/share/code/resources/app/extensions/git/dist/askpass-main.js",
+    "NODE_OPTIONS": "--require /home/erica/Projects/Oddbird/oddleventy/.pnp.js",
+    "VSCODE_GIT_ASKPASS_NODE": "/snap/code/35/usr/share/code/code",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1001/bus",
+    "COLORTERM": "truecolor",
+    "NVM_DIR": "/home/erica/.nvm",
+    "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+    "IM_CONFIG_PHASE": "2",
+    "LOGNAME": "erica",
+    "GTK_IM_MODULE": "ibus",
+    "_": "/home/erica/.yarn/bin/yarn",
+    "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+    "USERNAME": "erica",
+    "XDG_SESSION_ID": "3",
+    "TERM": "xterm-256color",
+    "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+    "WINDOWPATH": "1",
+    "PATH": "/tmp/xfs-f2c18279:/tmp/xfs-d5d810a2:/tmp/xfs-07a920f7:/home/erica/Tools/flutter/bin:/home/erica/.yarn/bin:/home/erica/.config/yarn/global/node_modules/.bin:/home/erica/.nvm/versions/node/v12.16.1/bin:/home/erica/Tools/flutter/bin:/home/erica/.yarn/bin:/home/erica/.config/yarn/global/node_modules/.bin:/home/erica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "NVM_IOJS_ORG_MIRROR": "https://iojs.org/dist",
+    "SESSION_MANAGER": "local/erica-xps:@/tmp/.ICE-unix/1429,unix/erica-xps:/tmp/.ICE-unix/1429",
+    "XDG_MENU_PREFIX": "gnome-",
+    "GNOME_TERMINAL_SCREEN": "/org/gnome/Terminal/screen/9a6bb8db_b5d0_4553_86c3_e7e006b3a8ff",
+    "XDG_RUNTIME_DIR": "/run/user/1001/snap.code",
+    "DISPLAY": ":0",
+    "LANG": "en_US.UTF-8",
+    "XDG_CURRENT_DESKTOP": "Unity",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "TERM_PROGRAM": "vscode",
+    "XDG_SESSION_DESKTOP": "ubuntu",
+    "XMODIFIERS": "@im=ibus",
+    "GNOME_TERMINAL_SERVICE": ":1.109",
+    "VSCODE_GIT_IPC_HANDLE": "/run/user/1001/snap.code/vscode-git-5832682cfd.sock",
+    "XAUTHORITY": "/run/user/1001/gdm/Xauthority",
+    "DESKTOP_MODE": "1",
+    "ORIGINAL_XDG_CURRENT_DESKTOP": "ubuntu:GNOME",
+    "SSH_AUTH_SOCK": "/run/user/1001/keyring/ssh",
+    "GSETTINGS_SCHEMA_DIR": "/snap/code/35/usr/share/glib-2.0/schemas",
+    "DISABLE_WAYLAND": "1",
+    "SHELL": "/bin/bash",
+    "npm_lifecycle_event": "watch:sass:lint",
+    "QT_ACCESSIBILITY": "1",
+    "GDMSESSION": "ubuntu",
+    "YARN_IGNORE_CWD": "1",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "TEXTDOMAINDIR": "/usr/share/locale/",
+    "GJS_DEBUG_OUTPUT": "stderr",
+    "GPG_AGENT_INFO": "/run/user/1001/gnupg/S.gpg-agent:0:1",
+    "XDG_VTNR": "1",
+    "QT_IM_MODULE": "ibus",
+    "GPG_TTY": "not a tty",
+    "PWD": "/home/erica/Projects/Oddbird/oddleventy",
+    "BERRY_BIN_FOLDER": "/tmp/xfs-f2c18279",
+    "npm_execpath": "/tmp/xfs-f2c18279/yarn",
+    "CLUTTER_IM_MODULE": "xim",
+    "NVM_CD_FLAGS": "",
+    "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop",
+    "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/etc/xdg",
+    "VTE_VERSION": "5202",
+    "MANPATH": "/home/erica/.nvm/versions/node/v12.16.1/share/man:/usr/local/man:/usr/local/share/man:/usr/share/man",
+    "INIT_CWD": "/home/erica/Projects/Oddbird/oddleventy"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 16777216,
+      "hard": 16777216
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 4096,
+      "hard": 4096
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 62302,
+      "hard": 62302
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2"
+  ]
+}

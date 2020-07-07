@@ -1,6 +1,17 @@
 version: 2.1
 
 jobs:
+  test-lighthouse:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: oddsite-{{ checksum ".pnp.js" }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: Lighthouse Testing
+          command: yarn test:performance
+
   build:
     working_directory: ~/oddsite
     docker:
@@ -68,5 +79,8 @@ workflows:
           requires:
             - build
       - test:
+          requires:
+            - build
+      - test-lighthouse:
           requires:
             - build
