@@ -33,4 +33,4 @@ eleventyComputed:
 {% import 'post.macros.njk' as post %}
 
 {{ post.by_year(posts, collections, 0, pagination) }}
-{{ post.page_nav('Resources', pagination, current=true, id='after') }}
+{{ post.page_nav(pagination, current=true) }}

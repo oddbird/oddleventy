@@ -5,6 +5,7 @@
 .resource-header {
   --column: full;
   --justify-nav: end;
+  --title-margin: 0;
   align-items: center;
   grid-gap: var(--gutter);
   display: grid;
@@ -25,26 +26,18 @@
       [title-end];
   }
 
-  [data-section-title] {
-    --title-margin: 0;
-    grid-column: title;
-  }
-
-  .pagination {
-    grid-column: nav;
-    justify-self: var(--justify-nav, start);
+  * {
+    grid-column: var(--nav-column, title);
   }
 }
 
 .pagination {
   --column: content;
+  --nav-column: nav;
+  justify-self: var(--justify-nav, start);
 
   [data-grid='resources'] + & {
     margin-top: var(--double-gutter);
-  }
-
-  p {
-    margin: 0;
   }
 
   a {
@@ -88,6 +81,10 @@
 [data-resource='large'] {
   grid-column: 1 / -1;
   margin: var(--gutter) 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   [data-post] {
     font-size: 1rem;

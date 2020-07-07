@@ -83,7 +83,7 @@ params:
   {% if pagination %}
     <header class="resource-header">
       {{ layout.title(title) }}
-      {{ page_nav('Resources', pagination, current=false, id='before', level=3) }}
+      {{ page_nav(pagination, current=false) }}
     </header>
   {% else %}
     {{ layout.title(title) }}
@@ -659,29 +659,20 @@ params:
     default: 2
     note: Heading level
 #}
-{% macro page_nav(title, pagination, current=true, id='', level=2) %}
+{% macro page_nav(pagination, current=true, labelledby='title') %}
 {% if pagination %}
-{% set id = ['resource-nav-title', id] | join('-') %}
-<nav class="pagination" aria-labeledby="{{ id }}">
-  {% h level, {
-    'id': id,
-    'class': 'sr-only'
-  } %}
-    {{ title | mdInline | safe }}
-  {% endh %}
-  <p>
-    {% if pagination.href.next %}
-      {{ utility.link_if('« older', pagination.href.next) }}
-    {% endif %}
-    {% if current %}
-      {{ page_current(pagination) }}
-    {% elif pagination.href.next and pagination.href.previous %}
-      |
-    {% endif %}
-    {% if pagination.href.previous %}
-      {{ utility.link_if('newer »', pagination.href.previous) }}
-    {% endif %}
-  </p>
+<nav class="pagination" aria-labelledby="{{ labelledby }}">
+  {% if pagination.href.next %}
+    {{ utility.link_if('« older', pagination.href.next) }}
+  {% endif %}
+  {% if current %}
+    {{ page_current(pagination) }}
+  {% elif pagination.href.next and pagination.href.previous %}
+    |
+  {% endif %}
+  {% if pagination.href.previous %}
+    {{ utility.link_if('newer »', pagination.href.previous) }}
+  {% endif %}
 </nav>
 {% endif %}
 {% endmacro %}
