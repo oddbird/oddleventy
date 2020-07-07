@@ -34,15 +34,16 @@
 .pagination {
   --column: content;
   --nav-column: nav;
+  color: var(--text-light);
   justify-self: var(--justify-nav, start);
 
   [data-grid='resources'] + & {
     margin-top: var(--double-gutter);
   }
+}
 
-  a {
-    padding: 0 var(--shim);
-  }
+.pagination-link {
+  padding: 0 var(--shim);
 }
 
 // list

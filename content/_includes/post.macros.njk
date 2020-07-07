@@ -662,17 +662,23 @@ params:
 {% macro page_nav(pagination, current=true, labelledby='title') %}
 {% if pagination %}
 <nav class="pagination" aria-labelledby="{{ labelledby }}">
-  {% if pagination.href.next %}
-    {{ utility.link_if('« older', pagination.href.next) }}
-  {% endif %}
+  {{ utility.link_if(
+    content='« newer' if pagination.href.previous else 'newest',
+    url=pagination.href.previous,
+    class="pagination-link")
+  }}
+
   {% if current %}
     {{ page_current(pagination) }}
-  {% elif pagination.href.next and pagination.href.previous %}
+  {% else %}
     |
   {% endif %}
-  {% if pagination.href.previous %}
-    {{ utility.link_if('newer »', pagination.href.previous) }}
-  {% endif %}
+
+  {{ utility.link_if(
+    content='older »' if pagination.href.next else 'oldest',
+    url=pagination.href.next,
+    class="pagination-link")
+  }}
 </nav>
 {% endif %}
 {% endmacro %}
