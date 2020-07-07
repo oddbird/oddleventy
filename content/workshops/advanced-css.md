@@ -17,7 +17,7 @@ events:
     adr: San Francisco, CA
     date: 2019-04-24
   - venue: Smashing Conf
-    url: https://www.smashingconf.com/sf-2019/
+    url: https://smashingconf.com/sf-2019/
     adr: San Francisco, CA
     date: 2019-04-18
 press:

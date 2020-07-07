@@ -121,7 +121,7 @@ We use the same conversion math, originally written in JS by [Chris
 Lilley] and [Tab Atkins].
 
 [LCH Color Picker]: https://css.land/lch/
-[Lea Verou]: http://lea.verou.me/
+[Lea Verou]: https://lea.verou.me/
 [Chris Lilley]: https://svgees.us/
 [Tab Atkins]: https://www.xanthir.com/
 

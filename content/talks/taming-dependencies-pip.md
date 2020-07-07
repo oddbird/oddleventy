@@ -13,8 +13,8 @@ events:
     url: https://2011.djangocon.us/
     date: 2011-09-08
     adr: Portland, OR
-    slides: http://carljm.github.io/tamingdeps/
-    video_link: http://pyvideo.org/djangocon-us-2011/djangocon-2011--taming-dependencies-with-pip.html
+    slides: https://carljm.github.io/tamingdeps/
+    video_link: https://pyvideo.org/djangocon-us-2011/djangocon-2011--taming-dependencies-with-pip.html
 summary: |
   **Dependency management sucks.** Pip provides some options for making it
   suck a bit less, but not all of them are immediately obvious. This talk

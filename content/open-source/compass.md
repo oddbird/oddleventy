@@ -7,9 +7,7 @@ author: miriam
 date: 2010-04-09
 end: 2016-08-04
 links:
-  site: http://compass-style.org
-  source: http://github.com/compass/compass
-  status: end-of-life
+  source: https://github.com/Compass/compass
 summary: |
   An open source CSS authoring framework
   which uses the Sass language

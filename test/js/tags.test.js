@@ -42,14 +42,14 @@ describe('tag filters', () => {
         is_type: true,
         tag: 'Workshop',
         type: { tag: 'Workshop', icon: 'workshop', img: true },
-        url: '/tags/Workshop/',
+        url: '/tags/workshop/',
         pageCount: 0,
       },
       {
         is_type: true,
         tag: 'Talk',
         type: { tag: 'Talk', icon: 'talk', img: true },
-        url: '/tags/Talk/',
+        url: '/tags/talk/',
         pageCount: 5,
       },
     ];

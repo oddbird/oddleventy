@@ -52,7 +52,7 @@ by sending us a message via [Twitter] or join our public [Slack
 channel]. For other great talks from An Event Apart speakers, [visit
 their website].
 
-[Sarah Parmenter]: http://www.sazzy.co.uk/
+[Sarah Parmenter]: https://www.sazzy.co.uk/
 [video]: https://vimeo.com/120804557
 [Twitter]: https://twitter.com/oddbird
 [Slack channel]: http://friends.oddbird.net/

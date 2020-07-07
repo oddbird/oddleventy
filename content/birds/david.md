@@ -35,4 +35,4 @@ and the Pyramid web framework.
 When he's not coding,
 David can be found experimenting in the kitchen.
 
-[salesforce]: http://www.salesforce.org/
+[salesforce]: https://www.salesforce.org/

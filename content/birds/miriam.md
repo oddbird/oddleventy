@@ -40,7 +40,7 @@ writing, music, and visual art.
 [sass]: https://sass-lang.com
 [susy]: /susy/
 [true]: /true/
-[tricks]: http://css-tricks.com
+[tricks]: https://css-tricks.com/
 [jss]: https://www.sitepoint.com/premium/books/jump-start-sass
 [speaking]: /services/speaking/
 [dev]: https://blog.cssdevconf.com/slides-and-resources-from-css-dev-conf-2017-new-orleans-8e2a5edb06b0#2b07

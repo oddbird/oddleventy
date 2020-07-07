@@ -4,6 +4,7 @@ const markdown = '## Lorem ipsum dolor sit amet, consectetur';
 const content = 'Lorem ipsum dolor sit amet, consectetur';
 const typogrd =
   'Lorem ipsum dolor sit amet,<span class="widont">&nbsp;</span>consectetur';
+const slugifyd = 'lorem-ipsum-dolor-sit-amet%2C-consectetur';
 
 describe('typography filters', () => {
   test('typogr', () => {
@@ -13,7 +14,7 @@ describe('typography filters', () => {
   });
 
   test('md', () => {
-    const expected = `<h2>${typogrd}</h2>\n`;
+    const expected = `<h2 id="${slugifyd}">${typogrd}</h2>\n`;
 
     expect(md()).toBeUndefined();
     expect(md(markdown)).toEqual(expected);

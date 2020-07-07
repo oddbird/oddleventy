@@ -10,7 +10,7 @@ tags:
   - Testing
 events:
   - venue: ConFoo
-    url: http://confoo.ca/
+    url: https://confoo.ca/
     date: 2014-02-28
     slides: /python-testing-tools-preso/
 summary: |

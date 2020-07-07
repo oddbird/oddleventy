@@ -29,7 +29,7 @@ bias as Josh suggested, I’m all in.
 
 Watch Josh's talk: [A.I. Is Your New Design Material]
 
-  [Forbes]: https://www.forbes.com/sites/bernardmarr/2019/01/29/3-steps-to-tackle-the-problem-of-bias-in-artificial-intelligence/#36c9eff87a12
+  [Forbes]: https://www.forbes.com/sites/bernardmarr/2019/01/29/3-steps-to-tackle-the-problem-of-bias-in-artificial-intelligence/
   [A.I. Is Your New Design Material]: https://bigmedium.com/speaking/ai-is-your-new-design-material.html
 
 ## Miriam Suzanne
@@ -46,7 +46,7 @@ continues with a Q&A in [Smashing CSS Followup].
 Watch Miriam's talk & view slides: [Dynamic CSS: Layouts & Beyond]
 
   [Smashing CSS Followup]: /2019/05/17/smashing/
-  [Dynamic CSS: Layouts & Beyond]: #dynamic-css-layouts-beyond
+  [Dynamic CSS: Layouts & Beyond]: /talks/dynamic-css/
 
 ## Sam Richard
 
@@ -106,7 +106,7 @@ Watch Aaron's talk: [Laying the Groundwork: Building Foundations for
 High-Performing Teams]
 
   [Laying the Groundwork: Building Foundations for High-Performing Teams]:
-    #laying-the-groundwork-building-foundations-for-high-performing-teams
+    https://vimeo.com/296445890
 
 ## Jen Simmons
 
@@ -150,7 +150,7 @@ Learn more about [Anton & Irene].
 
   [One Shared House]: http://work.antonandirene.com/onesharedhouse/
   [One Shared House 2030]: http://work.antonandirene.com/onesharedhouse2030/
-  [Anton & Irene]: http://antonandirene.com/
+  [Anton & Irene]: https://antonandirene.com/
 
 ## What's Next?
 

@@ -20,5 +20,5 @@ proud this year to have [one of the organizers] on our team.
 But who cares about pride, I have a flight to catch! See you all in
 SoHo!
 
-[sassconf]: http://sassconf.com/
-[one of the organizers]: /birds/#bird-claudina
+[sassconf]: https://twitter.com/sassconf
+[one of the organizers]: https://twitter.com/itsmisscs

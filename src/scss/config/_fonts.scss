@@ -15,7 +15,7 @@
 /// @font body (normal, italic, bold, bold italic)
 ///   <script src="https://use.typekit.net/slx1xnq.js"></script>
 ///   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-/// @link https://oddbird.net/accoutrement-type/docs/
+/// @link https://www.oddbird.net/accoutrement/docs/type.html
 ///   Accoutrement Type
 $body-font: (
   'name': 'freight-text-pro',
@@ -26,7 +26,7 @@ $body-font: (
     'Georgia',
     'serif',
   ),
-  'source': 'https://typekit.com/fonts/freight-text',
+  'source': 'https://fonts.adobe.com/fonts/freight-text',
 );
 
 @include tools.add-font('body', $body-font);
@@ -40,7 +40,7 @@ $body-font: (
 /// @font alt (normal, italic, bold, bold italic)
 ///   <script src="https://use.typekit.net/slx1xnq.js"></script>
 ///   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-/// @link https://oddbird.net/accoutrement-type/docs/
+/// @link https://www.oddbird.net/accoutrement/docs/type.html
 ///   Accoutrement Type
 $alt-font: (
   'name': 'freight-sans-pro',
@@ -50,7 +50,7 @@ $alt-font: (
     'Arial',
     'sans-serif',
   ),
-  'source': 'https://typekit.com/fonts/freight-sans',
+  'source': 'https://fonts.adobe.com/fonts/freight-sans',
 );
 
 @include tools.add-font('alt', $alt-font);
@@ -64,7 +64,7 @@ $alt-font: (
 /// @font code (normal, italic, bold, bold italic)
 ///   <script src="https://use.typekit.net/slx1xnq.js"></script>
 ///   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-/// @link https://oddbird.net/accoutrement-type/docs/
+/// @link https://www.oddbird.net/accoutrement/docs/type.html
 ///   Accoutrement Type
 $code-font: (
   'name': 'SourceCodePro',
@@ -75,7 +75,7 @@ $code-font: (
     'Courier New',
     'monospace',
   ),
-  'source': 'https://typekit.com/fonts/source-code-pro',
+  'source': 'https://fonts.adobe.com/fonts/source-code-pro',
 );
 
 @include tools.add-font('code', $code-font);
@@ -87,7 +87,7 @@ $code-font: (
 /// embedded as a base-64 data-uri.
 /// @group config-fonts
 /// @font amp
-/// @link https://oddbird.net/accoutrement-type/docs/
+/// @link https://www.oddbird.net/accoutrement/docs/type.html
 ///   Accoutrement Type
 $amp-font: (
   'name': 'BaskervilleAmp',

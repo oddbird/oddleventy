@@ -101,7 +101,7 @@ some resources that I recommend:
 - Brainstorm Design 2019 -[The Ethics of Design I Fortune]
 - Cathy O'Neil -[Weapons of Math Destruction]
 
-[Book]: https://www.future-ethics.com/
+[Book]: https://nownext.studio/future-ethics
 [Talk]: https://www.youtube.com/watch?v=DfxMv9mIjFU&t=381s
 [Code of Ethics]: https://muledesign.com/2017/07/a-designers-code-of-ethics
 [How Designers Destroyed the World]: https://vimeo.com/122022963

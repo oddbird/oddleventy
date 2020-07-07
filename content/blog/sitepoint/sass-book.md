@@ -18,9 +18,9 @@ summary: |
   [Sass Architecture].
 
   [Jump Start Sass]: https://www.sitepoint.com/premium/books/jump-start-sass
-  [Hugo Giraudel]: http://hugogiraudel.com/
+  [Hugo Giraudel]: https://hugogiraudel.com/
   [SitePoint]: https://www.sitepoint.com/
-  [O'Reilly]: http://shop.oreilly.com/product/9780994182678.do
+  [O'Reilly]: https://www.oreilly.com/library/view/jump-start-sass/9781457199851/
   [Sass Architecture]: https://www.sitepoint.com/architecture-in-sass/
 ---
 
@@ -82,4 +82,4 @@ you should never assume that the best solution for InstaFace or
 MyPinBook is going to be the best solution for you.
 
 [Natalie Downe]: https://twitter.com/Natbat
-[CSS Systems]: http://www.slideshare.net/nataliedowne/css-systems-presentation
+[CSS Systems]: https://www.slideshare.net/nataliedowne/css-systems-presentation
