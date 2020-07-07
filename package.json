@@ -34,7 +34,7 @@
     "assets:clean": "rm -rf ./_built/",
     "images": "gulp images",
     "serve": "npm-run-all build:assets build:site -p eleventy:serve watch:js watch:sass",
-    "test": "jest",
+    "test": "jest 'test/js/*'",
     "build:site": "run-s site:clean sassdoc",
     "build:assets": "npm-run-all assets:clean -p js sass images",
     "build": "run-s build:assets build:site eleventy",

@@ -102,6 +102,7 @@ module.exports = {
     {
       displayName: 'unit',
       testMatch: ['<rootDir>test/js/**/?(*.)+(spec|test).js?(x)'],
+      testPathIgnorePatterns: ['<rootDir>test/performance/'],
     },
     {
       displayName: 'performance',
@@ -154,10 +155,10 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  // testMatch: [
-  //   '<rootDir>test/js/**/?(*.)+(spec|test).js?(x)',
-  //   '<rootDir>test/performance/**/?(*.)+(spec|test).js?(x)',
-  // ],
+  testMatch: [
+    '<rootDir>test/js/**/?(*.)+(spec|test).js?(x)',
+    '<rootDir>test/performance/**/?(*.)+(spec|test).js?(x)',
+  ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
