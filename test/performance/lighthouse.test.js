@@ -46,8 +46,8 @@ test('Lighthouse Prformance Audit', async () => {
   // eslint-disable-next-line no-console
   console.log(printCLITable(scores));
 
-  expect(scores.performance).toBeGreaterThanOrEqual(0.95); // 95%
+  expect(scores.performance).toBeGreaterThanOrEqual(0.9);
   expect(scores.accessibility).toBe(1);
-  expect(scores['best-practices']).toBeGreaterThanOrEqual(0.93);
+  expect(scores['best-practices']).toBeGreaterThanOrEqual(0.9);
   expect(scores.seo).toBe(1);
 }, 30000);

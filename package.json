@@ -41,7 +41,8 @@
     "update-oss-docs": "./bin/update-oss-docs",
     "prod": "run-s update-oss-docs build",
     "checklinks": "hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" _site/index.html",
-    "test:performance": "start-server-and-test serve http://localhost:8080 jest lighthouse.test.js"
+    "performance": "jest lighthouse.test.js",
+    "test:performance": "start-server-and-test serve http://localhost:8080 performance"
   },
   "devDependencies": {
     "#": "link:./src/filters",
