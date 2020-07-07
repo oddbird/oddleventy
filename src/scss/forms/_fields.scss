@@ -5,13 +5,10 @@
 /// Form fields (using the `label` for markup)
 /// are set to block display, with a margin.
 /// @group forms
-[data-field] {
+[data-field],
+[data-fieldset] {
   display: var(--ccs-custom-display, block);
   margin-bottom: var(--shim);
-}
-
-[data-honey] {
-  @include tools.is-hidden;
 }
 
 // Labels
@@ -47,23 +44,6 @@
   }
 }
 
-// Text Areas
-// ----------
-/// @group forms
-textarea {
-  min-height: calc(6em + 4vw);
-  resize: vertical;
-}
-
-// Select
-// ------
-/// @group forms
-select {
-  font: inherit;
-  font-size: var(--xsmall);
-  width: 100%;
-}
-
 // Form Actions
 // ------------
 /// A wrapper element to provide layout and spacing
@@ -71,4 +51,12 @@ select {
 /// @group forms
 .form-actions {
   margin-top: var(--newline);
+}
+
+// Honey
+// -----
+/// Apply to honey-pot SPAM-protection fields…
+/// @group forms
+[data-honey] {
+  @include tools.is-hidden;
 }

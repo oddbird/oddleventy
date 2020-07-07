@@ -4,20 +4,6 @@
   @supports (--custom: props) {
     display: flex;
   }
-
-  .menu-item {
-    display: inline-block;
-  }
-
-  ::-webkit-details-marker {
-    display: none;
-  }
-}
-
-[data-ccs='buttons'] {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: var(--shim);
 }
 
 $rainbow: ();

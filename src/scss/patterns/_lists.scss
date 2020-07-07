@@ -26,7 +26,7 @@ ol {
 /// Lighter markers and smaller bullet points…
 /// @group type
 ::marker {
-  color: var(--text-light);
+  color: var(--marker, var(--text-light));
 
   ul & {
     font-size: 0.75em;
