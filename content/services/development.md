@@ -45,7 +45,7 @@ summary: |
 
 {% call layout.grid('narrow-columns') %}
 
-{% call layout.block('item') %}
+{% call layout.block('column') %}
 
 ### Design
 
@@ -58,7 +58,7 @@ summary: |
 
 {% endcall %}
 
-{% call layout.block('item') %}
+{% call layout.block('column') %}
 
 ### Development
 
@@ -96,7 +96,7 @@ summary: |
 
 {% call layout.grid('narrow-columns') %}
 
-{% call layout.block('item') %}
+{% call layout.block('column') %}
 
 ### Languages & Platforms
 
@@ -109,7 +109,7 @@ summary: |
 
 {% endcall %}
 
-{% call layout.block('item') %}
+{% call layout.block('column') %}
 
 ### Client Industries
 
@@ -140,7 +140,7 @@ summary: |
 
 {% call layout.grid('inner') %}
 
-{% call layout.block('item') %}
+{% call layout.block('column') %}
 
 ### Lean & Agile
 
@@ -150,7 +150,7 @@ possible.
 
 {% endcall %}
 
-{% call layout.block('item') %}
+{% call layout.block('column') %}
 
 ### Transparent & Interactive
 
@@ -160,7 +160,7 @@ tools.
 
 {% endcall %}
 
-{% call layout.block('item') %}
+{% call layout.block('column') %}
 
 ### Accessible & Responsive
 
