@@ -25,20 +25,21 @@ ol {
 /// @group type
 ::marker {
   color: var(--marker-color, var(--text-light));
+  font-size: var(--marker-size, 1em);
 
   ul & {
-    font-size: 0.75em;
+    --marker-size: 0.75em;
   }
 }
 
 // Fancy Lists
 // -----------
+/// Larger markers w/spaced out list items like on bottom of design/dev services page
+/// @group type
 [data-block='fancy-list'] {
-  ul {
-    ::marker {
-      color: var(--markers);
-      font-size: var(--h2);
-    }
+  ::marker {
+    --marker-color: var(--icon);
+    --marker-size: var(--h2);
   }
 
   li {

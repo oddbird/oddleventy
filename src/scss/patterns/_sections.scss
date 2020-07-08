@@ -69,8 +69,8 @@
 // ------
 
 [data-block] {
-  margin-bottom: var(--double-gutter);
-  margin-top: var(--double-gutter);
+  margin-bottom: var(--block-spacer, var(--double-gutter));
+  margin-top: var(--block-spacer, var(--double-gutter));
   max-width: var(--block-max);
 }
 
@@ -90,10 +90,9 @@
   --column: full;
 }
 
-[data-block~='item'] {
+[data-block~='column'] {
   [data-grid] & {
-    margin-bottom: 0;
-    margin-top: 0;
+    --block-spacer: 0;
   }
 }
 
