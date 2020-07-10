@@ -4,7 +4,6 @@
 
 .resource-header {
   --column: full;
-  --justify-nav: end;
   --title-margin: 0;
   align-items: center;
   grid-gap: var(--gutter);
@@ -35,7 +34,6 @@
   --column: content;
   --nav-column: nav;
   color: var(--text-light);
-  justify-self: var(--justify-nav, start);
 
   [data-grid='resources'] + & {
     margin-top: var(--double-gutter);
