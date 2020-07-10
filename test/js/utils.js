@@ -230,6 +230,51 @@ export const collection3 = [
   },
 ];
 
+export const collection4 = [
+  {
+    inputPath: './test1.md',
+    fileSlug: 'test1',
+    outputPath: './_site/test1/index.html',
+    url: '/test1/',
+    date: '2020-01-09T04:10:17.000Z',
+    data: {
+      title: 'Draft Title',
+    },
+    templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
+  },
+  {
+    inputPath: './test3.md',
+    fileSlug: 'test3',
+    outputPath: './_site/test3/index.html',
+    url: '/test3/',
+    date: '2018-01-09T04:10:17.000Z',
+    data: {
+      title: 'Draft Title',
+    },
+    templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
+  },
+  {
+    inputPath: './events.md',
+    fileSlug: 'events',
+    outputPath: './_site/events/index.html',
+    url: '/events/',
+    date: '2011-01-09T04:10:17.000Z',
+    data: {
+      title: 'Draft Title',
+      events: [
+        {
+          foo: 'bar',
+          date: '2019-12-09T04:10:17.000Z',
+        },
+        {
+          bar: 'baz',
+          date: '2030-02-09T04:10:17.000Z',
+        },
+      ],
+    },
+    templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
+  },
+];
 export const collections = {
-  all: [collection, collection2, collection3],
+  all: [collection, collection2, collection3, collection4],
 };

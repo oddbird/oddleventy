@@ -11,18 +11,6 @@ tags:
   - Component Libraries
   - Style Guides
 events:
-  - venue: Smashing Conf NY
-    url: https://smashingconf.com/ny-2020/
-    date: 2020-10-19
-    adr: New York
-  - venue: Smashing Conf Austin
-    url: https://smashingconf.com/austin-2020/
-    date: 2020-10-12
-    adr: Austin, TX
-  - venue: Webconf.asia
-    url: https://2020.webconf.asia/
-    adr: Hong Kong
-    date: 2020-08-27
   - venue: Smashing Workshops
     url: https://smashingconf.com/online-workshops/workshops/miriam-suzanne
     date: 2020-05-07

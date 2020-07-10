@@ -1,5 +1,6 @@
 import {
   byYear,
+  eventSort,
   findData,
   findPage,
   getCurrent,
@@ -14,7 +15,7 @@ import {
   withData,
 } from '#/pages';
 
-import { collection3 } from './utils';
+import { collection3, collection4 } from './utils';
 
 describe('page filters', () => {
   test('isPublic', () => {
@@ -95,6 +96,15 @@ describe('page filters', () => {
 
     expect(testPage).toHaveProperty('sort');
     expect(testPage).toHaveProperty('year');
+  });
+
+  test('eventSort', () => {
+    const slugs = ['test3', 'events', 'test1'];
+    const years = [2018, 2019, 2020];
+    const actual = eventSort(collection4);
+
+    expect(actual.map((item) => item.fileSlug)).toEqual(slugs);
+    expect(actual.map((item) => item.year)).toEqual(years);
   });
 
   describe('byYear', () => {

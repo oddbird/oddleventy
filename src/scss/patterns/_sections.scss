@@ -52,7 +52,7 @@
   background: var(--feature);
   color: var(--bg);
   padding: var(--quarter-shim) var(--spacer) var(--half-shim);
-  margin: var(--double-gutter) auto;
+  margin: var(--title-margin, var(--double-gutter)) auto;
 }
 
 [data-section-title='left'] {
