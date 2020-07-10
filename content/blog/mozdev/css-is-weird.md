@@ -23,6 +23,7 @@ summary: |
   How did we get here?
 media:
   - iframe: https://www.youtube.com/embed/aHUtMbJw8iA
+    slug: css-is-weird
 ---
 
 {% import "embed.macros.njk" as embed %}

@@ -25,7 +25,7 @@ action:
   url: /contact/
 work:
   - /work/coachhub/
-  - /work/moztrap/
+  - /work/mozdev/
   - /work/quarqnet/
   - /work/metadeploy/
   - /work/timedesigner/
