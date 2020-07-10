@@ -47,6 +47,9 @@ module.exports = (eleventyConfig) => {
       .filter((item) => item.data.bird)
       .sort((a, b) => a.date - b.date),
   );
+  eleventyConfig.addCollection('_sorted-posts', (collection) =>
+    pages.eventSort(collection.getFilteredByTag('_post')),
+  );
   eleventyConfig.addCollection('oss', (collection) =>
     collection
       .getAll()
@@ -91,6 +94,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('findData', pages.findData);
   eleventyConfig.addFilter('withData', pages.withData);
   eleventyConfig.addFilter('pageYears', pages.pageYears);
+  eleventyConfig.addFilter('eventSort', pages.eventSort);
   eleventyConfig.addFilter('byYear', pages.byYear);
   eleventyConfig.addFilter('removePage', pages.removePage);
 

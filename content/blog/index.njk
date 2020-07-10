@@ -1,16 +1,36 @@
 ---
-title: Resources
 banner: Resources by Date
-sub: Read, watch, & listen
-permalink: blog/index.html
-index: _post
 override:tags: []
 action:
   text: Browse by tag »
   url: /tags/
-summary: |
-  Learn how to write resilient CSS,
-  add WebSocket push notifications to a RESTful API,
-  and more with these articles, videos,
-  podcasts, and conference talks.
+pagination:
+  data: collections._sorted-posts
+  size: 15
+  alias: posts
+  reverse: true
+permalink: /blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+eleventyComputed:
+  title: |
+    Resources
+    {% if pagination.pageNumber > 0 %}(page {{ pagination.pageNumber + 1 }}){% endif %}
+  sub: |
+    {% if pagination.pageNumber == 0 %}
+    Read, watch, & listen
+    {% else %}
+    {% import 'post.macros.njk' as post %}
+    {{ post.page_current(pagination, prefix='Page') }}
+    {% endif %}
+  summary: |
+    {% if pagination.pageNumber == 0 %}
+    Learn how to write resilient CSS,
+    add WebSocket push notifications to a RESTful API,
+    and more with these articles, videos,
+    podcasts, and conference talks.
+    {% endif %}
 ---
+
+{% import 'post.macros.njk' as post %}
+
+{{ post.by_year(posts, collections, 0, pagination) }}
+{{ post.page_nav(pagination, current=true) }}

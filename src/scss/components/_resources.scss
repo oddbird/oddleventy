@@ -1,3 +1,51 @@
+@use '~accoutrement/sass/tools';
+
+// pagination
+
+.resource-header {
+  --column: full;
+  --title-margin: 0;
+  align-items: center;
+  grid-gap: var(--gutter);
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns:
+    var(--page-margin)
+    [nav-start title-start] 1fr
+    [nav-end] var(--page-margin)
+    [title-end];
+  margin: var(--double-gutter) 0;
+
+  @include tools.above('wide-break') {
+    --justify-nav: initial;
+    grid-template-columns:
+      var(--page-margin)
+      [nav-start] auto
+      [nav-end title-start] 1fr
+      [title-end];
+  }
+
+  * {
+    grid-column: var(--nav-column, title);
+  }
+}
+
+.pagination {
+  --column: content;
+  --nav-column: nav;
+  color: var(--text-light);
+
+  [data-grid='resources'] + & {
+    margin-top: var(--double-gutter);
+  }
+}
+
+.pagination-link {
+  padding: 0 var(--shim);
+}
+
+// list
+
 [data-grid='resources'] {
   --align: stretch;
   --justify: stretch;
@@ -32,6 +80,10 @@
 [data-resource='large'] {
   grid-column: 1 / -1;
   margin: var(--gutter) 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   [data-post] {
     font-size: 1rem;

@@ -43,6 +43,7 @@ const isCurrent = (page) => {
     getDate(page.data.end) >= now()
   );
 };
+
 /* @docs
 label: getCurrent
 category: Filter
@@ -92,6 +93,7 @@ const hasData = (obj, keys, value, exact = false) => {
 
   return _.hasIn(obj, keys);
 };
+
 /* @docs
 label: withData
 category: Filter
@@ -240,12 +242,8 @@ params:
   collection:
     type: array
     note: containing 11ty page objects
-  events:
-    type: boolean
-    default: 'true'
-    note: optionally include events in sort/year dates
 */
-const pageYears = (collection, events = true) =>
+const pageYears = (collection) =>
   collection.map((page) => {
     const dates = [page.date];
 
@@ -253,9 +251,11 @@ const pageYears = (collection, events = true) =>
       dates.push(page.data.end);
     }
 
-    if (events && page.data.events) {
+    if (page.data.events) {
       page.data.events.forEach((event) => {
-        dates.push(event.date);
+        if (getDate(event.date) <= now()) {
+          dates.push(event.date);
+        }
       });
     }
 
@@ -263,6 +263,30 @@ const pageYears = (collection, events = true) =>
     page.year = getDate(page.sort, 'year');
 
     return page;
+  });
+
+/* @docs
+label: eventSort
+category: Sorting
+note: |
+  Sort pages based on either the page date,
+  or the most recently past event date.
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+*/
+const eventSort = (collection) =>
+  pageYears(collection).sort((a, b) => {
+    if (a.sort < b.sort) {
+      return -1;
+    }
+    /* istanbul ignore else */
+    if (a.sort > b.sort) {
+      return 1;
+    }
+    /* istanbul ignore next */
+    return 0;
   });
 
 /* @docs
@@ -275,17 +299,13 @@ params:
   collection:
     type: array
     note: containing 11ty page objects
-  events:
-    type: boolean
-    default: 'true'
-    note: optionally include events in sort/year dates
 */
-const byYear = (collection, events = true) => {
+const byYear = (collection) => {
   if (!collection || collection.length === 0) {
     return [];
   }
 
-  const groups = _.groupBy(pageYears(collection, events), 'year');
+  const groups = _.groupBy(pageYears(collection), 'year');
 
   return Object.keys(groups)
     .reverse()
@@ -307,6 +327,7 @@ module.exports = {
   findData,
   withData,
   pageYears,
+  eventSort,
   byYear,
   removePage,
 };

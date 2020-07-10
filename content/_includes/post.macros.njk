@@ -25,20 +25,29 @@ params:
   above:
     type: number
     default: 6
+  pagination:
+    type: 11ty pagination object
+    default: none
 #}
 {% macro by_year(
   posts,
   collections=none,
-  above=6
+  above=6,
+  pagination=none
 ) %}
   {%- if posts -%}
     {%- if posts | length > above -%}
       {%- for group in posts | byYear -%}
         {% set title = [group.year, 'Resources'] | join(' ') if loop.first else group.year %}
-        {{ list(group.posts, collections, title) }}
+        {{ list(
+          posts=group.posts,
+          collections=collections,
+          title=title,
+          pagination=pagination if loop.first else none
+        ) }}
       {%- endfor -%}
     {%- else -%}
-      {{ list(posts, collections) }}
+      {{ list(posts, collections, pagination=pagination) }}
     {%- endif -%}
   {%- endif -%}
 {% endmacro %}
@@ -57,19 +66,28 @@ params:
   title:
     type: string
     default: 'Resources'
+  pagination:
+    type: 11ty pagination object
+    default: none
 #}
 {% macro list(
   posts,
   collections=none,
-  title='Resources'
+  title='Resources',
+  pagination=none
 ) %}
 {%- if posts -%}
-  {%- set posts = posts if (posts[0].sort) else posts | pageYears  -%}
+  {%- set posts = posts if (posts[0].sort) else posts | pageYears -%}
   {%- set sort = 'sort' if (posts[0].sort) else 'date' -%}
 
-  {%- if title -%}
+  {% if pagination %}
+    <header class="resource-header">
+      {{ layout.title(title) }}
+      {{ page_nav(pagination, current=false) }}
+    </header>
+  {% else %}
     {{ layout.title(title) }}
-  {%- endif -%}
+  {% endif %}
 
   <ol data-grid="resources" reversed>
     {%- for post in posts | sort(reverse=true, attribute=sort) -%}
@@ -158,12 +176,17 @@ params:
       <header class="post-header">
         {{ banner(post) }}
         {{ subtitle(post.data.sub) }}
-        {{ byline(post, collections, false) }}
+        {{ byline(
+          post=post,
+          collections=collections,
+          links=false,
+          dateformat='md'
+        ) }}
       </header>
       {% if post.data.events %}
         {{ upcoming(post.data.events, links=false) }}
       {% elif post.data.summary %}
-        {% set summary = post.data.summary | md %}
+        {% set summary = post.data.summary | mdInline %}
         {% set summary = summary if (card == 'large') else summary | elide %}
         <p>
           {{ summary | safe }}
@@ -608,4 +631,80 @@ params:
       {% endfor %}
     </ul>
   {% endif %}
+{% endmacro %}
+
+{# @docs
+label: page_nav
+category: pagination
+note: Navigate paginated collections
+params:
+  title:
+    type: string
+    note: Will be hidden, for screen-readers only
+  pagination:
+    type: 11ty pagination object
+    default: none
+  current:
+    type: boolean
+    default: false
+    note: Show the current location in pagination?
+  id:
+    type: string
+    default: ''
+    note: |
+      When repeating the pagination on a page,
+      each instance should get a unique ID
+  level:
+    type: integer [1-6]
+    default: 2
+    note: Heading level
+#}
+{% macro page_nav(pagination, current=true, labelledby='title') %}
+{% if pagination %}
+<nav class="pagination" aria-labelledby="{{ labelledby }}">
+  {{ utility.link_if(
+    content='« newer' if pagination.href.previous else 'newest',
+    url=pagination.href.previous,
+    class="pagination-link")
+  }}
+
+  {% if current %}
+    {{ page_current(pagination) }}
+  {% else %}
+    |
+  {% endif %}
+
+  {{ utility.link_if(
+    content='older »' if pagination.href.next else 'oldest',
+    url=pagination.href.next,
+    class="pagination-link")
+  }}
+</nav>
+{% endif %}
+{% endmacro %}
+
+{# @docs
+label: page_current
+category: pagination
+note: |
+  Show the current active page number &
+  total page-count in a paginated list
+params:
+  pagination:
+    type: 11ty pagination object
+    default: none
+  prefix:
+    type: string | none
+    default: none
+    note: Prefix "x of y" with more context, e.g. "page x of y"
+#}
+{% macro page_current(pagination, prefix=none) %}
+{% if pagination %}
+  <span class="current">
+    {% if prefix %}<i>{{ prefix }}</i>{% endif %}
+    <strong>{{ pagination.pageNumber + 1 }}</strong>
+    <i>of</i>
+    <strong>{{ pagination.pages | length }}</strong>
+  </span>
+{% endif %}
 {% endmacro %}
