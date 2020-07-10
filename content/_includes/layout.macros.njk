@@ -46,28 +46,46 @@ params:
   content=none,
   attrs={}
 ) -%}
-{%- set content = _grid_content(content) if content and (content | typeCheck('object')) else content -%}
-{%- set content = content if (content != none) else caller() -%}
-<div data-grid="{{ name }}" {{ utility.show_attrs(attrs) }}>{{ content | safe }}</div>
+  {%- set content = _grid_content(content) if content and (content | typeCheck('object')) else content -%}
+  {%- set content = content if (content != none) else caller() -%}
+  <div data-grid="{{ name }}" {{ utility.show_attrs(attrs) }}>{{ content | safe }}</div>
 {%- endmacro %}
 
-{% macro _grid_content(
-  data
-) %}
-{% for item in data %}
-  {% set id = [item.title, loop.index] | join('-') | slug %}
-  <article class="grid-item" aria-labelledby="{{ id }}">
-    <h3 class="item-title" id="{{ id }}">
-      {{ item.title | mdInline | safe }}
-    </h3>
-    {{ item.text | md | safe }}
-  </article>
-{% endfor %}
+{% macro _grid_content(data) %}
+  {% for item in data %}
+    {% set id = [item.title, loop.index] | join('-') | slug %}
+    <article class="grid-item" aria-labelledby="{{ id }}">
+      <h3 class="item-title" id="{{ id }}">
+        {{ item.title | mdInline | safe }}
+      </h3>
+      {{ item.text | md | safe }}
+    </article>
+  {% endfor %}
 {% endmacro %}
 
-{% macro offset(
-  content=none
-) %}
-{%- set content = content if (content != none) else caller() -%}
-<div class="offset-grid">{{- content | safe -}}</div>
+{% macro offset(content=none) %}
+  {%- set content = content if (content != none) else caller() -%}
+  <div class="offset-grid">{{- content | safe -}}</div>
 {% endmacro %}
+
+{# @docs
+label: block
+note: Create a generic container for grouping elements
+params:
+  name:
+    type: string
+    default: group
+  content:
+    type: string | none
+    default: none
+    note: Expects `caller()` if no  value is given
+  attrs: object
+#}
+{% macro block(
+  name='group',
+  content=none,
+  attrs={}
+) -%}
+  {%- set content = content if (content != none) else caller() -%}
+  <div data-block="{{ name }}" {{ utility.show_attrs(attrs) }}>{{ content | safe }}</div>
+{%- endmacro %}

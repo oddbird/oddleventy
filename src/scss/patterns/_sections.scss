@@ -69,7 +69,8 @@
 // ------
 
 [data-block] {
-  margin-block: var(--double-gutter);
+  margin-bottom: var(--block-spacer, var(--double-gutter));
+  margin-top: var(--block-spacer, var(--double-gutter));
   max-width: var(--block-max);
 }
 
@@ -82,6 +83,16 @@
 
   @include tools.above('wide-page') {
     --rotate: -6deg;
+  }
+}
+
+[data-block~='full'] {
+  --column: full;
+}
+
+[data-block~='column'] {
+  [data-grid] & {
+    --block-spacer: 0;
   }
 }
 
@@ -134,4 +145,29 @@
   --media-content: var(--min-page);
   --media-gap: var(--shim);
   --newline: inherit;
+}
+
+// Allows for smaller columns of text, like when used inside a media block
+[data-grid='narrow-columns'] {
+  --fit-min: calc(var(--grid-item) * 0.75);
+}
+
+// Container with centered top/bottom triangles
+.has-angles {
+  background: var(--callout-fade);
+  clip-path: polygon(
+    0 0,
+    calc(50% - var(--double-gutter)) 0,
+    50% var(--double-gutter),
+    calc(50% + var(--double-gutter)) 0,
+    100% 0,
+    100% calc(100% - var(--double-gutter)),
+    calc(50% + var(--double-gutter)) calc(100% - var(--double-gutter)),
+    50% 100%,
+    calc(50% - var(--double-gutter)) calc(100% - var(--double-gutter)),
+    0 calc(100% - var(--double-gutter))
+  );
+  margin-bottom: var(--double-gutter);
+  margin-top: var(--double-gutter);
+  padding: var(--spacer) var(--page-margin) calc(var(--spacer) + var(--gutter));
 }

@@ -28,7 +28,7 @@ blockquote {
 
   &:not([data-quote]) {
     &::before {
-      color: var(--icons);
+      color: var(--icon);
       content: '“';
       font-size: 4em;
       grid-column: icon;
@@ -65,7 +65,7 @@ blockquote:not([data-quote]) {
 }
 
 [data-media='quote'] {
-  --fill: var(--icons);
+  --fill: var(--icon);
   --media-size: var(--double-gutter);
   --media-min: 3em;
   grid-area: quote;

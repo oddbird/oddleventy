@@ -3,24 +3,10 @@
 [data-layout='cta'] {
   --media-min: 6em;
   --media-size: calc(4em + 5vw);
-  background: var(--callout-fade);
-  clip-path: polygon(
-    0 0,
-    calc(50% - var(--double-gutter)) 0,
-    50% var(--double-gutter),
-    calc(50% + var(--double-gutter)) 0,
-    100% 0,
-    100% calc(100% - var(--double-gutter)),
-    calc(50% + var(--double-gutter)) calc(100% - var(--double-gutter)),
-    50% 100%,
-    calc(50% - var(--double-gutter)) calc(100% - var(--double-gutter)),
-    0 calc(100% - var(--double-gutter))
-  );
   display: grid;
   font-size: var(--small);
   grid-area: cta;
   grid-template-columns: minmax(min-content, var(--page));
   justify-content: center;
-  margin-top: var(--spacer);
-  padding: var(--spacer) var(--page-margin) calc(var(--spacer) + var(--gutter));
+  margin-bottom: 0;
 }

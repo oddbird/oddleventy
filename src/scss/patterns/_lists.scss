@@ -1,0 +1,57 @@
+@use '~accoutrement/sass/tools';
+
+/// # Typography
+/// Basic typographic styles for the site.
+/// @group type
+
+// Lists
+// -----
+/// Apply spacing after lists.
+/// @group type
+ul,
+ol {
+  margin-bottom: var(--newline);
+  margin-top: 0;
+  padding-left: var(--list-padding, var(--list-padding--default, 0));
+
+  & & {
+    --list-padding--default: 1em;
+  }
+
+  @include tools.below('wide-page') {
+    --list-padding--default: 1em;
+  }
+}
+
+// List Markers
+// ------------
+/// Lighter markers and smaller bullet points…
+/// @group type
+::marker {
+  color: var(--marker-color, var(--text-light));
+  font-size: var(--marker-size, 1em);
+
+  ul & {
+    --marker-size: 0.75em;
+  }
+}
+
+// Fancy Lists
+// -----------
+/// Larger markers w/spaced out list items like on bottom of design/dev services page
+/// @group type
+[data-block='fancy-list'] {
+  ::marker {
+    --marker-color: var(--icon);
+    --marker-size: var(--h2);
+  }
+
+  li {
+    padding-bottom: var(--newline);
+  }
+
+  strong {
+    @include tools.font-family('alt');
+    font-size: var(--h3);
+  }
+}
