@@ -33,6 +33,7 @@ summary: |
 
 {% call embed.media_block(
   media=embed.screen(
+    notch='0',
     content=embed.img(
       src='pages/trig-phone.jpg',
       alt='trig race screen',
@@ -84,6 +85,7 @@ summary: |
 
 {% call embed.media_block(
   media=embed.screen(
+    fill='hsl(202.5, 7.5%, 42%)',
     content=embed.img(
       src='pages/medcurbside-phone.jpg',
       alt='medcurbside welcome screen',
