@@ -40,11 +40,11 @@ press:
     slug: informed
 summary: |
   Emmy's Workshop is part of a research project to improve
-  computer-based educational systems. 
+  computer-based educational systems.
   Learners can work through an entire problem before receiving feedback.
-  Mathematical algorithms analyze how the problem was solved, 
-  and estimate how well the learner understands 
-  a variety of mathematical skills. 
+  Mathematical algorithms analyze how the problem was solved,
+  and estimate how well the learner understands
+  a variety of mathematical skills.
   Students and faculty built the application
   using Google Web Toolkit --
   then brought us on to help design & implement
