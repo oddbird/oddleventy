@@ -15,6 +15,10 @@ tags:
   - Vue
   - Layout
 events:
+  - venue: Shift Remote
+    url: https://remote.shiftconf.co/
+    date: 2020-08-06
+    adr: Online
   - venue: Develop Denver
     url: https://developdenver.org/
     date: 2019-08-15
@@ -153,11 +157,7 @@ without all the invasive Javascript.
 - Practical examples and use-cases for data-infused design.
 - Integrating with CSS Grids to build layouts on-the-fly.
 
-------
-
 {{ quotes.grid(press) }}
-
-------
 
 {{ embed.figure(
   data=media,

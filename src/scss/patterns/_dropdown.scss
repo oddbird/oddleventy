@@ -21,6 +21,8 @@
 /// and acts as a click target to close the dropdown.
 /// @group dropdown
 [data-btn~='summary'] {
+  --marker-color: currentColor;
+
   [open] > & {
     @include tools.z-index('dropdown');
 
