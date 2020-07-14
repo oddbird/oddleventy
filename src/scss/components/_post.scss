@@ -105,6 +105,7 @@
 
 .post-header {
   --newline: 0;
+  --span-display: inline-block;
 }
 
 .subtitle {
@@ -116,7 +117,7 @@
 
   time,
   span {
-    display: inline-block;
+    display: var(--span-display, initial);
   }
 }
 
