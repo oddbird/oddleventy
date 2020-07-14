@@ -13,7 +13,7 @@ tags:
 summary: |
   A spinoff of the Party Corgi Network discord.
   I chat with Chris Biscardi about
-  The CSS Working Group, 
+  The CSS Working Group,
   open-source projects,
   art, and music.
 media:

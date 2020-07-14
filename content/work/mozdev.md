@@ -1,0 +1,53 @@
+---
+title: Mozilla Developer Channel
+sub: Videos, articles, & tools for web professionals
+image:
+  src: mozdev/mozilla-youtube.jpg
+logo: mozilla
+client: Mozilla
+date: 2019-10-01
+links:
+  youtube: https://www.youtube.com/MozillaDeveloper
+index: Mozilla Developer Channel
+press:
+  - text: |
+      Miriam does not only explain “why CSS is how it is”
+      but also neatly **summarizes the basic principles
+      of what make the Web the Web.**
+      If you know those principles,
+      many implementation details will be less baffling to you.
+    name: Eric Eggert
+    title: Accessibility Advocate
+  - text: |
+      Are you following @MiriSuzanne yet? She's amazing.
+      **I'm so lucky to get to work with her on this video series & more.**
+    name: Jen Simmons
+    title: Designer & Developer Advocate
+    face: jen-simmons.jpg
+    slug: amazing
+summary: |
+  We worked with Mozilla Developer Relations
+  to research & address developer needs around
+  open web standards, CSS features, accessibility, Firefox,
+  and developer tools.
+  Over the course of six months,
+  we released 30 videos to nearly twenty thousand subscribers.
+---
+
+{% import 'quotes.macros.njk' as quotes %}
+{% import "embed.macros.njk" as embed %}
+
+{{ quotes.grid(press) }}
+
+{% set mdc = collections['Mozilla Developer Channel'] %}
+
+{{ embed.figure(
+  [
+    mdc | findData('data.media', {'slug': 'css-is-weird'}),
+    mdc | findData('data.media', {'slug': 'fast-grids'})
+  ],
+  "
+    Two of the most popular videos from Miriam.
+    Check out the resources below for links to the rest...
+  "
+) }}

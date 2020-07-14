@@ -157,7 +157,7 @@ action:
 summary: |
   **Most projects start with Research & Concepting**
   to make sure we thoroughly understand your project.
-  We'll help you pinpoint the right digital product -- 
+  We'll help you pinpoint the right digital product --
   with interactive wireframes,
   prioritized estimates,
   and a robust plan for development and launch.

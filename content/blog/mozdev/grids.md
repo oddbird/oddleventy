@@ -18,6 +18,7 @@ summary: |
   with only a few properties and basic concepts.
 media:
   - iframe: https://www.youtube.com/embed/KOvGeFUHAC0
+    slug: fast-grids
 ---
 
 {% import "embed.macros.njk" as embed %}

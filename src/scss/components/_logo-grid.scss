@@ -10,9 +10,9 @@
   margin: var(--spacer) 0;
 
   > * {
-    flex: var(--logo-flex, 1 1 40%);
-    margin: var(--gutter);
-    max-width: 10em;
+    flex: var(--logo-flex);
+    margin: var(--double-gutter);
+    width: var(--logo-item);
   }
 
   > a {

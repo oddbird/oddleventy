@@ -14,7 +14,7 @@ summary: |
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'utility.macros.njk' as utility %}
 
-{% for client, list in collections.work | withData('data.press') | group('data.client') %}
+{% for client, list in collections.work | getPublic | withData('data.press') | group('data.client') %}
   {{ layout.title(client) }}
 
   {% for item in list %}

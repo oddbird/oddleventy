@@ -2,7 +2,7 @@
 title: MetaDeploy
 banner: MetaDeploy Case Study
 sub: Salesforce product installer
-logo: salesforce
+logo: salesforce-metadeploy
 links:
   site: https://install.salesforce.org/
 image:

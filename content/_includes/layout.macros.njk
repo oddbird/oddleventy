@@ -52,15 +52,15 @@ params:
 {%- endmacro %}
 
 {% macro _grid_content(data) %}
-  {% for item in data %}
-    {% set id = [item.title, loop.index] | join('-') | slug %}
-    <article class="grid-item" aria-labelledby="{{ id }}">
-      <h3 class="item-title" id="{{ id }}">
-        {{ item.title | mdInline | safe }}
-      </h3>
-      {{ item.text | md | safe }}
-    </article>
-  {% endfor %}
+{%- for item in data -%}
+  {%- set id = [item.title, loop.index] | join('-') | slug -%}
+  <article class="grid-item" aria-labelledby="{{ id }}">
+    <h3 class="item-title" id="{{ id }}">
+      {{ item.title | mdInline | safe }}
+    </h3>
+    {{ item.text | md | safe }}
+  </article>
+{%- endfor -%}
 {% endmacro %}
 
 {% macro offset(content=none) %}

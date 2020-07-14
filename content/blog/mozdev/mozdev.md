@@ -1,5 +1,5 @@
 ---
-title: Mozilla Developer Videos, Articles, & Tools
+title: Announcing the Mozilla Developer Channel
 sub: a gift from Mozilla (and OddBird)
 author: miriam
 card: feature
