@@ -79,9 +79,10 @@ press:
       instead of heavy library for your grid!
       Very useful and inspiring. Thanks!
     name: Sami Stein
-    slug: useful
     title: Frontend Developer at XING
     url: https://twitter.com/frontend_cat/status/993799732018532352
+    icon: social/twitter-circle
+    slug: useful
 summary: |
   Explore the history of web layout
   with the creator of [Susy][susy] --

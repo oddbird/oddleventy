@@ -48,10 +48,14 @@ events:
     date: 2018-03-21
 press:
   - text: |
-      Every time I hear Miriam talk, I learn a ton and laugh a ton...
+      Every time I hear @mirisuzanne
+      talk I learn a ton and laugh a ton. 
+      She’s an amazing speaker...
       Watch this talk when it’s published!
     name: Sarah Drasner
-    title: Microsoft Sr. Developer Advocate & Vue Core Team member
+    title: VP of Developer Experience 
+    venue: Netlify
+    face: sarah-drasner.jpg
     url: https://twitter.com/sarah_edo/status/979023728611905536
     slug: audit
 summary: |

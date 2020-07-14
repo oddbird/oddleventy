@@ -17,7 +17,8 @@ press:
       and just start talking syntax.
     name: Florian Rivoal
     face: florian-rivoal.jpg
-    title: W3C Invited Expert
+    title: Invited Expert
+    venue: W3C CSSWG
     slug: on-demand
 summary: |
   **I've joined the CSS Working Group as a W3C Invited Expert** to help to

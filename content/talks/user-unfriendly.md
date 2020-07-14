@@ -59,8 +59,10 @@ press:
       and who we are writing for as developers.
       Wow! Made me think.
     name: Nithya Ruff
-    title: Leader of Comcast Open Source Office
+    title: Head of Open Source Office
+    venue: Comcast
     url: https://twitter.com/nithyaruff/status/1141803102376550402
+    face: nithya-ruff.jpg
 summary: |
   A project-manager’s reflections on human-centered problem-solving,
   client communication,

@@ -10,7 +10,7 @@ image:
 people:
   - &furman
     name: Furman Brown
-    face: furman-brown.jpg
+    # face: furman-brown.jpg
     title: Founder
     venue: *client
 press:

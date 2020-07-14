@@ -38,7 +38,9 @@ screenshots:
 press:
   - text: I like the idea of grids-on-demand, rather than a strict framework.
     name: Chris Coyier
-    role: CSS-Tricks
+    role: Founder
+    venue: CSS-Tricks
+    face: chris-coyier.jpg
     url: https://css-tricks.com/build-web-layouts-easily-susy/
     slug: on-demand
   - text: |
@@ -49,21 +51,25 @@ press:
       The output CSS is pretty much what I'd come up with myself,
       which to me is the acid test for tool use.
     name: Rachel Andrew
-    role: Invited Expert to the CSS Working Group
+    role: Invited Expert
+    venue: W3C CSSWG
+    face: rachel-andrew.jpg
     url: https://rachelandrew.co.uk/archives/2015/02/04/css-grid-layout-creating-complex-grids/
     slug: impressed
   - text: |
       If you're interested in reading Sass poetry,
       be sure to look at Susy's source code!
     name: Hugo Giraudel
-    role: SitePoint
+    venue: SitePoint
+    face: hugo-giraudel.jpg
     url: https://www.sitepoint.com/my-favorite-sass-tools/
     slug: poetry
   - text: |
       **Susy** & **Zendesk** have been getting along magically.
       It's precisely what you need, and nothing more.
     name: Stephany Varga
-    role: Zendesk Creative Collection
+    face: stephany-varga.png
+    venue: Zendesk Creative Collection
     url: https://medium.com/@stephanyvee/responsive-a-harrowing-meditation-on-the-brutal-realities-of-web-content-organization-in-5-acts-1d33ce25f062
     slug: zendesk
 badges:
@@ -76,7 +82,7 @@ badges:
 summary: |
   **Susy was a responsive layout engine for Sass**,
   before `flexbox` and CSS `grid` were available.
-  These days, we recommend letting the browser handle your layouts.
+  Susy is now deprecated, and will not receive updates.
   If you need help moving off Susy,
   or learning the latest in web layout,
   **we offer [training](/services/speaking/)

@@ -14,7 +14,7 @@ people:
   - &anna
     name: Anna Rafferty
     role: Assistant Professor of Computer Science
-    face: anna-rafferty.jpg
+    # face: anna-rafferty.jpg
     venue: *client
 press:
   - text: |

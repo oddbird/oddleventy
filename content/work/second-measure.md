@@ -17,12 +17,12 @@ people:
   - &matt
     name: Matthew King
     role: Engineering Manager
-    face: matthew-king.jpg
+    # face: matthew-king.jpg
     venue: *client
   - &tara
     name: Tara Kelly
     role: Director Of Product Design
-    face: tara-kelly.jpg
+    # face: tara-kelly.jpg
     venue: *client
 press:
   - text: |

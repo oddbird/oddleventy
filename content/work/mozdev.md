@@ -11,20 +11,24 @@ links:
 index: Mozilla Developer Channel
 press:
   - text: |
-      Miriam does not only explain “why CSS is how it is”
+      Are you following @MiriSuzanne yet? She's amazing.
+      **I'm so lucky to get to work with her on this video series & more.**
+    name: Jen Simmons
+    title: Designer & Developer Advocate
+    face: jen-simmons.jpg
+    url: https://twitter.com/jensimmons/status/1182658268457512961
+    slug: amazing
+  - text: |
+      @MiriSuzanne does not only explain “why CSS is how it is”
       but also neatly **summarizes the basic principles
       of what make the Web the Web.**
       If you know those principles,
       many implementation details will be less baffling to you.
     name: Eric Eggert
     title: Accessibility Advocate
-  - text: |
-      Are you following @MiriSuzanne yet? She's amazing.
-      **I'm so lucky to get to work with her on this video series & more.**
-    name: Jen Simmons
-    title: Designer & Developer Advocate
-    face: jen-simmons.jpg
-    slug: amazing
+    url: https://mobile.twitter.com/yatil/status/1179359053572640770
+    icon: social/twitter-circle
+    slug: basic-principles
 summary: |
   We worked with Mozilla Developer Relations
   to research & address developer needs around

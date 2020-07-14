@@ -90,15 +90,15 @@ press:
     name: Jason Pamental
     title: Invited Expert
     venue: W3C
-    icon: social/twitter
+    face: jason-pamental.jpg
     url: https://twitter.com/jpamental/status/1118585546803036160
   - text: |
       Best CSS talk I've ever seen was from @MiriSuzanne
       today at #dvlpdnvr. Simply amazing.
     name: Michael Dowden
-    title: President
-    venue: FlexePark
-    icon: social/twitter
+    title: Co-Author
+    venue: Architecting CSS
+    face: michael-dowden.jpg
     url: https://twitter.com/mrdowden/status/1162121756699746307
   - text: |
       Well that was awesome!!!
@@ -107,7 +107,7 @@ press:
       @MiriSuzanne thank you so much for the amazing talk!
     name: Nour Saud
     title: Software Engineer
-    icon: social/twitter
+    face: nour-saud.jpg
     url: https://twitter.com/Nour_ASoud/status/1118588349994823681
   - text: |
       Miriam has always been nothing but spot-on,
@@ -116,17 +116,7 @@ press:
     name: Vitaly Friedman
     title: Founder
     venue: Smashing Magazine & Conference
-    icon: social/twitter
-    url: https://www.smashingmagazine.com/events/
-  - text: |
-      So stoked @mirisuzanne is @vueconfus !!!
-      look at how cool CSS is ~ and all the squishy things it does.
-    name: Ngan Hoang
-    title: Principal Designer
-    venue: Prefect.io
-    icon: social/twitter
-    url: https://twitter.com/itsngansense/status/1111001282528063488
-    slug: squishy
+    face: vitaly-friedman.jpg
 summary: |
   Don't let the declarative syntax fool you --
   CSS is a powerful and dynamic programming language.

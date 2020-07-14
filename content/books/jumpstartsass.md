@@ -16,17 +16,21 @@ tags:
   - Jump Start Sass
 press:
   - text: |
-      Miriam and Hugo have become some of the most notable
-      creators of Sass plugins and best practices.
-    name: Chris Eppstein
-  - text: |
       This is hands down the best book on Sass
       if you want to learn the most important parts of the Sass language
       that will help you architect a good application.
     name: Kaelig Deloumeau-Prigent
+    title: Technical Editor
     venue: SitePoint
+    face: kaelig-dp.png
     url: https://www.sitepoint.com/premium/books/jump-start-sass#reviews
     datetime: 2016-03-23
+  - text: |
+      Miriam and Hugo have become some of the most notable
+      creators of Sass plugins and best practices.
+    name: Chris Eppstein
+    title: Sr. Staff Engineer 
+    venue: LinkedIn
 summary: |
   Using Sass, you can write your stylesheets in a more concise,
   dynamic, and readable way, and cut down many of

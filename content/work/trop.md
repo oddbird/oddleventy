@@ -4,7 +4,7 @@ title: Trop
 sub: A cool little lit mag from Los Angeles.
 image:
   src: projects/trop.jpg
-client: Trop Magazine
+client: &client Trop Magazine
 date: 2017-01-15
 links:
   site: https://tropmag.com/
@@ -14,7 +14,8 @@ press:
       OddBird was by far the best, the nicest,
       and the most fun to work with.
     name: Tom Dibblee
-    role: Editor
+    title: Editor
+    venue: *client
 summary: |
   Trop is a cool little lit mag that lives in Los Angeles
   and publishes on the internet.
