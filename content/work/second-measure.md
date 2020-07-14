@@ -17,7 +17,7 @@ people:
   - &matt
     name: Matthew King
     title: Engineering Manager
-    # face: matthew-king.jpg
+    face: matthew-king.jpg
     venue: *client
   - &tara
     name: Tara Kelly
