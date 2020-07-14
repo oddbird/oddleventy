@@ -16,12 +16,12 @@ tasks:
 people:
   - &matt
     name: Matthew King
-    role: Engineering Manager
+    title: Engineering Manager
     # face: matthew-king.jpg
     venue: *client
   - &tara
     name: Tara Kelly
-    role: Director Of Product Design
+    title: Director Of Product Design
     # face: tara-kelly.jpg
     venue: *client
 press:

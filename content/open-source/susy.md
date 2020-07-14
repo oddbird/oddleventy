@@ -38,7 +38,7 @@ screenshots:
 press:
   - text: I like the idea of grids-on-demand, rather than a strict framework.
     name: Chris Coyier
-    role: Founder
+    title: Founder
     venue: CSS-Tricks
     face: chris-coyier.jpg
     url: https://css-tricks.com/build-web-layouts-easily-susy/
@@ -51,7 +51,7 @@ press:
       The output CSS is pretty much what I'd come up with myself,
       which to me is the acid test for tool use.
     name: Rachel Andrew
-    role: Invited Expert
+    title: Invited Expert
     venue: W3C CSSWG
     face: rachel-andrew.jpg
     url: https://rachelandrew.co.uk/archives/2015/02/04/css-grid-layout-creating-complex-grids/

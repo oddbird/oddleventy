@@ -42,7 +42,7 @@ press:
       Herman is my documentation dream come true,
       especially when it comes to systems design.
     name: Claudina Sarahe
-    role: Frontend Architect
+    title: Frontend Architect
     slug: dream
 summary: |
   **Design systems streamline development, communication, and consistency** --

@@ -13,7 +13,7 @@ tasks:
 people:
   - &anna
     name: Anna Rafferty
-    role: Assistant Professor of Computer Science
+    title: Assistant Professor of Computer Science
     # face: anna-rafferty.jpg
     venue: *client
 press:

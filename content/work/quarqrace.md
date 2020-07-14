@@ -32,7 +32,7 @@ press:
       Seguimiento GPS de atletas en **IronMan Kona**
       gracias a **Quarq Race Intelligence**.
     name: Eduardo Mateos
-    role: User
+    title: User
     slug: gracias
 summary: |
   Quarq Race Intelligence captures and interprets race performance and
