@@ -22,7 +22,7 @@ people:
   - &tara
     name: Tara Kelly
     title: Director Of Product Design
-    # face: tara-kelly.jpg
+    face: tara-kelly.jpg
     venue: *client
 press:
   - text: |
