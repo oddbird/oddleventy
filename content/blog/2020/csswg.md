@@ -26,8 +26,8 @@ summary: |
   CSS standards. I'm also currently active in the [CSS4] and [Design
   Token] Community Groups.
 
-    [CSS4]: https://www.w3.org/community/css4/
-    [Design Token]: https://www.w3.org/community/design-tokens/
+  [CSS4]: https://www.w3.org/community/css4/
+  [Design Token]: https://www.w3.org/community/design-tokens/
 ---
 
 {% import "quotes.macros.njk" as quotes %}

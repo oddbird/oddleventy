@@ -186,11 +186,14 @@ params:
       {% if post.data.events %}
         {{ upcoming(post.data.events, links=false) }}
       {% elif post.data.summary %}
-        {% set summary = post.data.summary | mdInline %}
-        {% set summary = summary if (card == 'large') else summary | elide %}
-        <p>
+        {% set summary = post.data.summary | md %}
+        {% if (card == 'large') %}
           {{ summary | safe }}
-        </p>
+        {% else  %}
+          <p>
+            {{ summary | elide | safe }}
+          </p>
+        {% endif %}
       {% endif %}
     </div>
   </article>
