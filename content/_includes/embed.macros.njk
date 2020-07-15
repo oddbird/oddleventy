@@ -200,7 +200,7 @@ params:
   -%}
   {%- if event.media -%}
     {{- figure(
-      data=event.media,
+      data=[event.media],
       caption=caption
     ) -}}
   {%- endif -%}
