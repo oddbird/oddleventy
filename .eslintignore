@@ -4,6 +4,7 @@
 .pnp.js
 .vscode/
 .yarn/
+.yarnrc.yml
 _built/
 _site/
 coverage/

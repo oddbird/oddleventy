@@ -32,7 +32,7 @@ directory, but even that is un-explained.
 
 Feel free to pull it apart, hack on it, and let us know what you think.
 We still have a long way to go, but we're very excited about the power
-and flexability this engine has to offer.
+and flexibility this engine has to offer.
 
 Check out the [susy-next tag on GitHub].
 
