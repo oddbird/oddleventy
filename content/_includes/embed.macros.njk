@@ -371,7 +371,7 @@ params:
 #}
 {% macro img(
   src,
-  alt='',
+  alt=none,
   width=none,
   height=none,
   sizes=none,
@@ -390,12 +390,13 @@ params:
 {%- set resize = width | imgSize(height, sizes) -%}
 {%- set attrs = attrs | merge({
   'src': respSrc or src,
+  'alt': alt or true,
   'srcset': imgSrcSet,
   'width': resize.width,
   'height': resize.height,
   'sizes': configSizes or sizes
 }) -%}
-<img alt="{{ alt or '' }}" {{ utility.show_attrs(attrs) }}/>
+<img {{ utility.show_attrs(attrs) }}/>
 {%- endif -%}
 {%- endmacro %}
 
