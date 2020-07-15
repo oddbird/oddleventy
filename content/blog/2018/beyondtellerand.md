@@ -87,10 +87,6 @@ favorites:
   caption='Video from Beyond Tellerand'
 ) }}
 
-{{ contact.subscribe(
-  interests=['oddnews', 'beyondtellerand19']
-) }}
-
 [Levitated Toy Factory]: http://levitated.guru/
 [one of his art pieces]: http://levitated.net/daily/levInvaderFractal.html
 [second draft]: https://codepen.io/mirisuzanne/pen/gzXqOP

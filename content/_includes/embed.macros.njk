@@ -200,7 +200,7 @@ params:
   -%}
   {%- if event.media -%}
     {{- figure(
-      data=event.media,
+      data=[event.media],
       caption=caption
     ) -}}
   {%- endif -%}
@@ -371,7 +371,7 @@ params:
 #}
 {% macro img(
   src,
-  alt='',
+  alt=none,
   width=none,
   height=none,
   sizes=none,
@@ -390,7 +390,7 @@ params:
 {%- set resize = width | imgSize(height, sizes) -%}
 {%- set attrs = attrs | merge({
   'src': respSrc or src,
-  'alt': alt,
+  'alt': alt or true,
   'srcset': imgSrcSet,
   'width': resize.width,
   'height': resize.height,

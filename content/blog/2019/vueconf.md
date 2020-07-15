@@ -38,16 +38,6 @@ summary: |
 ---
 
 {% import "embed.macros.njk" as embed %}
-{% import 'contact.macros.njk' as contact %}
-{% import "quotes.macros.njk" as quotes %}
-
-{{ quotes.find(
-  collections.all,
-  page=talk,
-  slugs='squishy'
-) }}
-
-------
 
 After learning about Vue from [Sarah Drasner]'s stream of articles on
 [CSS-Tricks], I had the pleasure of speaking at [VueConf 2018]. I really
@@ -124,12 +114,6 @@ last-minute features to my slide deck, while [Maria Lamardo] and
 ) }}
 
 You can find all the available [speaker slides linked from gist].
-
-------
-
-{{ contact.subscribe(
-  interests=['oddnews', 'vueconfus19']
-) }}
 
 [Vue Vixens]: https://vuevixens.org/
 [Chris Fritz]: https://twitter.com/chrisvfritz
