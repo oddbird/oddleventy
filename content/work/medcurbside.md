@@ -11,7 +11,7 @@ links:
 people:
   - &rohit
     name: Rohit Puranik
-    # face: rohit-puranik.jpg
+    face: rohit-puranik.jpg
     title: Founder
     venue: *client
 tasks:
