@@ -103,6 +103,9 @@
     "truncate-html": "^1.0.3",
     "typogr": "^0.6.8"
   },
+  "resolutions": {
+    "lodash": "^4.17.19"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
