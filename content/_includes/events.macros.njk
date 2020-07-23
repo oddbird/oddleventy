@@ -1,6 +1,31 @@
 {% import 'layout.macros.njk' as layout %}
 {% import 'utility.macros.njk' as utility %}
 
+{# @docs
+label: Event Macros
+category: File
+note: Showing stand-alone event lists
+#}
+
+{# @docs
+label: list
+note: Display an array of events as a simple list with section-title
+params:
+  title:
+    type: markdown
+    note: Section title
+  events:
+    type: array
+    note: |
+      At minimum, events need a venue and date
+  all:
+    type: boolean
+    default: true
+    note: |
+      When set to false,
+      this will filter to upcoming events,
+      and order them with soonest first.
+#}
 {% macro list(
   title,
   events,
