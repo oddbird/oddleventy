@@ -15,6 +15,11 @@ tags:
   - Vue
   - Layout
 events:
+  - venue: Webconf.asia
+    url: https://webconf.asia/
+    date: 2021-06-04
+    end: 2021-06-05
+    adr: Hong Kong
   - venue: Shift Remote
     url: https://remote.shiftconf.co/
     date: 2020-08-06

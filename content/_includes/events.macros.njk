@@ -1,0 +1,34 @@
+{% import 'layout.macros.njk' as layout %}
+{% import 'utility.macros.njk' as utility %}
+
+{% macro list(
+  title,
+  events,
+  all=true
+) %}
+  {%- set reverse = all -%}
+  {%- set events = events if all else events | getFuture -%}
+  {%- set events = events | sort(reverse, false, 'date') -%}
+  {%- if events -%}
+    {%- if title -%}
+      {{- layout.title(title) -}}
+    {%- endif -%}
+    <ol {{ 'reversed' if reverse else '' }}>
+      {%- for event in events -%}
+        <li>
+          {%- if event | isFuture -%}
+            <strong>[{{ datetime(event) }}]</strong>
+          {%- else -%}
+            [{{ datetime(event) }}]
+          {%- endif %}
+          {{ utility.link_if(event.venue, event.url) }}{% if event.adr %} {{ '--' | typogr | safe }}
+          {{ event.adr }}{% endif %}
+        </li>
+      {%- endfor -%}
+    </ol>
+  {%- endif -%}
+{% endmacro %}
+
+{% macro datetime(event) -%}
+  <time datetime="{{ event.date | getDate('iso') }}">{{ event.date | getDate('short') }}</time>
+{%- endmacro %}

@@ -14,6 +14,11 @@ tags:
   - Design
   - CSS
 events:
+  - venue: SmashingConf Live
+    url: https://smashingconf.com/live/
+    date: 2020-08-20
+    end: 2020-08-21
+    adr: Online
   - venue: Front Range Front End
     url: https://www.meetup.com/front-range-front-end/events/bxrfwqyzpbkb/
     date: 2019-11-07

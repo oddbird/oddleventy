@@ -1,6 +1,6 @@
 {% import 'post.macros.njk' as post %}
 {% import 'oss.macros.njk' as oss %}
-{% import 'layout.macros.njk' as layout %}
+{% import 'events.macros.njk' as confs %}
 
 {% if index %}
   {% set list = collections[index] %}
@@ -9,6 +9,11 @@
     collections
   ) }}
 {% elif bird and (bird != 'oddbird') %}
+  {{ confs.list(
+    title='Upcoming Events',
+    events=collections.all | byBird(bird) | getData('data.events'),
+    all=false
+  ) }}
   {{ oss.list(
     collections.oss | byBird(bird),
     collections
@@ -18,17 +23,5 @@
     collections
   ) }}
 {% elif events %}
-  {{ layout.title('Events') }}
-  <ol reversed>
-    {% for event in events -%}
-      <li>
-        {% if event | isFuture %}
-          <strong>Upcoming!</strong>
-        {% endif %}
-        [{{ event.date | getDate('iso') }}]
-        {{ utility.link_if(event.venue, event.url) }}{% if event.adr %} {{ '--' | typogr | safe }}
-        {{ event.adr }}{% endif %}
-      </li>
-    {% endfor %}
-  </ol>
+  {{ confs.list('Events', events) }}
 {% endif %}
