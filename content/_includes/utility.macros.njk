@@ -197,7 +197,7 @@ params:
   is_pubdate=false,
   prefix=none
 ) %}
-  {% set ranges = {
+  {%- set ranges = {
     'same-y': {
       'start': 'M',
       'end': 'range'
@@ -206,16 +206,16 @@ params:
       'start': 'md',
       'end': 'd' if (format == 'md') else 'dy'
     }
-  } %}
+  } -%}
 
   {%- set ongoing = (end == 'ongoing') -%}
   {%- set is_range = end and (start != end) and (not ongoing) -%}
 
-  {% if prefix %}
+  {%- if prefix %}
     {%- set prefix = 'since' if ongoing else 'on' -%}
     {%- set prefix = 'from' if is_range else prefix -%}
     <i>{{ prefix }}</i>
-  {% endif %}
+  {% endif -%}
 
   <time
     datetime="{{ start | getDate('iso') }}"

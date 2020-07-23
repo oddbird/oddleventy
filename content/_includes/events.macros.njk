@@ -9,7 +9,7 @@
   {%- set reverse = all -%}
   {%- set events = events if all else events | getFuture -%}
   {%- set events = events | sort(reverse, false, 'date') -%}
-  {%- if events -%}
+  {%- if events and (events | length > 0) -%}
     {%- if title -%}
       {{- layout.title(title) -}}
     {%- endif -%}
@@ -17,9 +17,9 @@
       {%- for event in events -%}
         <li>
           {%- if event | isFuture -%}
-            <strong>[{{ datetime(event) }}]</strong>
+            <strong>[{{ utility.datetime(event.date) }}]</strong>
           {%- else -%}
-            [{{ datetime(event) }}]
+            [{{ utility.datetime(event.date) }}]
           {%- endif %}
           {{ utility.link_if(event.venue, event.url) }}{% if event.adr %} {{ '--' | typogr | safe }}
           {{ event.adr }}{% endif %}
@@ -28,7 +28,3 @@
     </ol>
   {%- endif -%}
 {% endmacro %}
-
-{% macro datetime(event) -%}
-  <time datetime="{{ event.date | getDate('iso') }}">{{ event.date | getDate('short') }}</time>
-{%- endmacro %}
