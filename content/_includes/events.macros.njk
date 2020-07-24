@@ -1,0 +1,55 @@
+{% import 'layout.macros.njk' as layout %}
+{% import 'utility.macros.njk' as utility %}
+
+{# @docs
+label: Event Macros
+category: File
+note: Showing stand-alone event lists
+#}
+
+{# @docs
+label: list
+note: Display an array of events as a simple list with section-title
+params:
+  title:
+    type: markdown
+    note: Section title
+  events:
+    type: array
+    note: |
+      At minimum, events need a venue and date
+  all:
+    type: boolean
+    default: true
+    note: |
+      When set to false,
+      this will filter to upcoming events,
+      and order them with soonest first.
+#}
+{% macro list(
+  title,
+  events,
+  all=true
+) %}
+  {%- set reverse = all -%}
+  {%- set events = events if all else events | getFuture -%}
+  {%- set events = events | sort(reverse, false, 'date') -%}
+  {%- if events and (events | length > 0) -%}
+    {%- if title -%}
+      {{- layout.title(title) -}}
+    {%- endif -%}
+    <ol {{ 'reversed' if reverse else '' }}>
+      {%- for event in events -%}
+        <li>
+          {%- if event | isFuture -%}
+            <strong>[{{ utility.datetime(event.date) }}]</strong>
+          {%- else -%}
+            [{{ utility.datetime(event.date) }}]
+          {%- endif %}
+          {{ utility.link_if(event.venue, event.url) }}{% if event.adr %} {{ '--' | typogr | safe }}
+          {{ event.adr }}{% endif %}
+        </li>
+      {%- endfor -%}
+    </ol>
+  {%- endif -%}
+{% endmacro %}
