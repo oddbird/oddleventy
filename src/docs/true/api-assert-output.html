@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-herman="root">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <title>Comparing Output | True Documentation</title>
+  <title>Testing CSS Output | True Documentation</title>
 
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
@@ -18,7 +18,7 @@
 
   
 </head>
-<body>
+<body data-herman="body">
   <svg xmlns="http://www.w3.org/2000/svg" hidden>
   <symbol id="icon-logo" viewBox="0 0 16 16">
     <path d="M.2 8L0 7.8v-.2C.8 6.9 1.9 5.9 2.7 5l.4.3c-.5.8-1.1 1.6-1.8 2.3 1 1.2 1 1.3 1.7 2.4l-.4.3c-.4-.4-.5-.6-1-1C1 8.6 1.1 8.7.2 8zM13 10c.6-1.1.7-1.1 1.7-2.4-.6-.6-1.3-1.5-1.7-2.3l.3-.3c.8.8 1.8 1.8 2.7 2.6v.2l-.8.7c-.3.3-1.2 1.1-1.8 1.7L13 10z"/><path d="M2.6 13.1H3c.9 0 1.1-.2 1.1-1.4V4.2c0-1.1-.2-1.4-1.1-1.4h-.4v-.6h4.5v.7h-.3c-.9 0-1.1.2-1.1 1.4v3.2h4.6V4.2c0-1.1-.2-1.4-1.1-1.4h-.3v-.6h4.5v.7H13c-.9 0-1.1.2-1.1 1.4v7.5c0 1.1.2 1.4 1.1 1.4h.4v.7H8.9v-.7h.3c.9 0 1.1-.2 1.1-1.4V8.2H5.7v3.5c0 1.1.2 1.4 1.1 1.4h.3v.7H2.6v-.7z"/>
@@ -42,7 +42,7 @@
       <div class="project-title">
         <a href="index.html" rel="home" class="project-name">True</a>
         
-          <span class="project-version">5.0.0</span>
+          <span class="project-version">6.0.0</span>
         
       </div>
     </header>
@@ -87,9 +87,14 @@
     <div class="nav-subsection">
       <ul>
             <li class="nav-subsection">
-              <h3 class="nav-title">Public API</h3>
+              <h3 class="nav-title">Structure</h3>
               <ul>
                 
+  
+    <li class="nav-item">
+      <a href="api-settings.html" data-nav="is-not-active">Optional Configuration</a>
+    </li>
+  
   
     <li class="nav-item">
       <a href="api-test.html" data-nav="is-not-active">Describing Tests</a>
@@ -97,47 +102,27 @@
   
   
     <li class="nav-item">
-      <a href="api-assert-values.html" data-nav="is-not-active">Comparing Values</a>
-    </li>
-  
-  
-    <li class="nav-item">
-      <a href="api-assert-output.html" data-nav="is-active">Comparing Output</a>
-    </li>
-  
-  
-    <li class="nav-item">
-      <a href="api-xreport.html" data-nav="is-not-active">Reporting Results</a>
+      <a href="api-report.html" data-nav="is-not-active">Reporting Results</a>
     </li>
   </ul>
             </li>
             <li class="nav-subsection">
-              <h3 class="nav-title">Internal Helpers [Private]</h3>
+              <h3 class="nav-title">Assertions</h3>
               <ul>
                 
   
     <li class="nav-item">
-      <a href="private-utils.html" data-nav="is-not-active">Utilities</a>
+      <a href="api-assert-values.html" data-nav="is-not-active">Testing Return<span class="widont">&nbsp;</span>Values</a>
     </li>
   
   
     <li class="nav-item">
-      <a href="private-context.html" data-nav="is-not-active">Data Management</a>
+      <a href="api-assert-output.html" data-nav="is-active">Testing CSS<span class="widont">&nbsp;</span>Output</a>
     </li>
   
   
     <li class="nav-item">
-      <a href="private-test.html" data-nav="is-not-active">Tests</a>
-    </li>
-  
-  
-    <li class="nav-item">
-      <a href="private-assert.html" data-nav="is-not-active">Assertions</a>
-    </li>
-  
-  
-    <li class="nav-item">
-      <a href="private-message.html" data-nav="is-not-active">Reporting</a>
+      <a href="api-errors.html" data-nav="is-not-active">Catching &amp; Testing<span class="widont">&nbsp;</span>Errors</a>
     </li>
   </ul>
             </li></ul>
@@ -176,12 +161,87 @@
   <nav class="breadcrumb">
     
     <a href="index.html" >True</a> »
-    <strong>Comparing Output</strong>
+    <strong>Testing CSS Output</strong>
   </nav>
 
 
         <div data-page="api-assert-output">
           
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+<section class="item" >
+  
+    
+  
+  
+  
+  
+
+  
+    <div data-item-section="prose" class="text-block">
+      <h1 id="testing-css-output">Testing CSS Output</h1>
+
+      
+  
+
+      
+  
+
+      
+  
+
+    </div>
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+  
+    
+    
+  
+
+  
+
+  
+  
+
+
+  
+  
+
+  
+  
+
+</section>
+
   
     
     
@@ -245,7 +305,7 @@ as nested<span class="widont">&nbsp;</span>contents.</li>
 <code>assert-equal</code> comparison on output CSS.
 The compiled CSS-results of the <code>output()</code> mixin
 will be compared against the results of the <code>expect()</code> mixin.</li>
-<li>When using Mocha integration, the output comparison is automated –
+<li>When using Mocha/Jest integration, the output comparison is automated –
 otherwise you will have to compare the output manually.
 Using <code>git diff</code> is a great way to watch for changes in<span class="widont">&nbsp;</span>output.</li>
 </ul>
@@ -396,12 +456,12 @@ A <code>null</code> of <code>false</code> value generates a default<span class="
 
       
       
-      <pre class="hljs-pre"><code class="lang-scss">@include test(&#39;Sass math compiles before output&#39;) {
-  @include assert(&#39;You can also describe the assertion...&#39;) {
-    @include output {
+      <pre class="hljs-pre"><code class="lang-scss">@include true.test(&#39;Sass math compiles before output&#39;) {
+  @include true.assert(&#39;You can also describe the assertion...&#39;) {
+    @include true.output {
       width: 14em + 2;
     }
-    @include expect {
+    @include true.expect {
       width: 16em;
     }
   }
@@ -442,8 +502,7 @@ A <code>null</code> of <code>false</code> value generates a default<span class="
 
 /*   END_EXPECTED   */
 /*   END_ASSERT   */
-/*  */
-</code></pre>
+/*  */</code></pre>
     </div>
   
 
@@ -493,235 +552,12 @@ A <code>null</code> of <code>false</code> value generates a default<span class="
   
   <div class="param-list">
     <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-context.html#mixin--_true-output-context" class="item-name">_true-output-context()</a>
       
       
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-context.html#mixin--_true-context" class="item-name">_true-context()</a>
+        <span class="item-name">$output</span>
       
       
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-message.html#mixin--_true-message" class="item-name">_true-message()</a>
-      
-      
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-context.html#mixin--_true-update-test" class="item-name">_true-update-test()</a>
-      
-      
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-context.html#mixin--_true-update-stats-count" class="item-name">_true-update-stats-count()</a>
-      
-      
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-context.html#mixin--_true-context-pop" class="item-name">_true-context-pop()</a>
-      
-      
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@function</span>
-      
-        <a href="
-  private-context.html#function--_true-context" class="item-name">_true-context()</a>
-      
-      
-      
+      <span class="value-type">(bool)</span>
       <span class="item-note">[private]</span>
     </h4>
 
@@ -816,7 +652,7 @@ along with a single <code>expect()</code> block.</li>
 <code>assert-equal</code> comparison on output CSS.
 The compiled CSS-results of the <code>output()</code> mixin
 will be compared against the results of the <code>expect()</code> mixin.</li>
-<li>When using Mocha integration, the output comparison is automated –
+<li>When using Mocha/Jest integration, the output comparison is automated –
 otherwise you will have to compare the output manually.
 Using <code>git diff</code> is a great way to watch for changes in<span class="widont">&nbsp;</span>output.</li>
 </ul>
@@ -966,12 +802,12 @@ so you can test property-value output<span class="widont">&nbsp;</span>directly.
 
       
       
-      <pre class="hljs-pre"><code class="lang-scss">@include test(&#39;Sass math compiles before output&#39;) {
-  @include assert {
-    @include output {
+      <pre class="hljs-pre"><code class="lang-scss">@include true.test(&#39;Sass math compiles before output&#39;) {
+  @include true.assert {
+    @include true.output {
       width: 14em + 2;
     }
-    @include expect {
+    @include true.expect {
       width: 16em;
     }
   }
@@ -1012,8 +848,7 @@ so you can test property-value output<span class="widont">&nbsp;</span>directly.
 
 /*   END_EXPECTED   */
 /*   END_ASSERT   */
-/*  */
-</code></pre>
+/*  */</code></pre>
     </div>
   
 
@@ -1032,98 +867,6 @@ so you can test property-value output<span class="widont">&nbsp;</span>directly.
   
   
     
-    
-  <div data-item-section="requires">
-    
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Requires</span>
-        
-      </h3>
-    
-
-    
-      
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-context.html#mixin--_true-output-context" class="item-name">_true-output-context()</a>
-      
-      
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-message.html#mixin--_true-message" class="item-name">_true-message()</a>
-      
-      
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-      
-    
-  </div>
-
-  
     
   
 
@@ -1204,7 +947,7 @@ to define the expected results of the<span class="widont">&nbsp;</span>test.</p>
 <code>assert-equal</code> comparison on output CSS.
 The compiled CSS-results of the <code>output()</code> mixin
 will be compared against the results of the <code>expect()</code> mixin.</li>
-<li>When using Mocha integration, the output comparison is automated –
+<li>When using Mocha/Jest integration, the output comparison is automated –
 otherwise you will have to compare the output manually.
 Using <code>git diff</code> is a great way to watch for changes in<span class="widont">&nbsp;</span>output.</li>
 </ul>
@@ -1354,12 +1097,12 @@ so you can test property-value output<span class="widont">&nbsp;</span>directly.
 
       
       
-      <pre class="hljs-pre"><code class="lang-scss">@include test(&#39;Sass math compiles before output&#39;) {
-  @include assert {
-    @include output {
+      <pre class="hljs-pre"><code class="lang-scss">@include true.test(&#39;Sass math compiles before output&#39;) {
+  @include true.assert {
+    @include true.output {
       width: 14em + 2;
     }
-    @include expect {
+    @include true.expect {
       width: 16em;
     }
   }
@@ -1400,8 +1143,7 @@ so you can test property-value output<span class="widont">&nbsp;</span>directly.
 
 /*   END_EXPECTED   */
 /*   END_ASSERT   */
-/*  */
-</code></pre>
+/*  */</code></pre>
     </div>
   
 
@@ -1420,98 +1162,6 @@ so you can test property-value output<span class="widont">&nbsp;</span>directly.
   
   
     
-    
-  <div data-item-section="requires">
-    
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Requires</span>
-        
-      </h3>
-    
-
-    
-      
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-context.html#mixin--_true-output-context" class="item-name">_true-output-context()</a>
-      
-      
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-message.html#mixin--_true-message" class="item-name">_true-message()</a>
-      
-      
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-      
-    
-  </div>
-
-  
     
   
 
@@ -1593,7 +1243,7 @@ comparison on output CSS.
 The compiled CSS-results of the <code>contains()</code> mixin
 will be compared against the results of the <code>output()</code> mixin
 to see if all of the <code>contains</code> CSS is within the <code>output</code> CSS.</li>
-<li>When using Mocha integration, the output comparison is automated –
+<li>When using Mocha/Jest integration, the output comparison is automated –
 otherwise you will have to compare the output manually.
 Using <code>git diff</code> is a great way to watch for changes in<span class="widont">&nbsp;</span>output.</li>
 </ul>
@@ -1743,13 +1393,13 @@ so you can test property-value output<span class="widont">&nbsp;</span>directly.
 
       
       
-      <pre class="hljs-pre"><code class="lang-scss">@include test(&#39;Sass math compiles before output&#39;) {
-  @include assert {
-    @include output {
+      <pre class="hljs-pre"><code class="lang-scss">@include true.test(&#39;Sass math compiles before output&#39;) {
+  @include true.assert {
+    @include true.output {
       height: 100%;
       width: 14em + 2;
     }
-    @include contains {
+    @include true.contains {
       width: 16em;
     }
   }
@@ -1791,8 +1441,7 @@ so you can test property-value output<span class="widont">&nbsp;</span>directly.
 
 /*   END_CONTAINED   */
 /*   END_ASSERT   */
-/*  */
-</code></pre>
+/*  */</code></pre>
     </div>
   
 
@@ -1811,98 +1460,6 @@ so you can test property-value output<span class="widont">&nbsp;</span>directly.
   
   
     
-    
-  <div data-item-section="requires">
-    
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Requires</span>
-        
-      </h3>
-    
-
-    
-      
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-context.html#mixin--_true-output-context" class="item-name">_true-output-context()</a>
-      
-      
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  private-message.html#mixin--_true-message" class="item-name">_true-message()</a>
-      
-      
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-      
-    
-  </div>
-
-  
     
   
 
