@@ -169,8 +169,8 @@ params:
   content=none,
   url=none
 ) %}
-{%- set content = content if (content != none) else caller() -%}
-<p class="main-action">{{ link_if(content, url) }}</p>
+  {%- set content = content if (content != none) else caller() -%}
+  <p class="main-action">{{ link_if(content, url) }}</p>
 {% endmacro %}
 
 
