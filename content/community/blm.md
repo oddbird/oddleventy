@@ -95,7 +95,7 @@ orgs:
 
 {% import 'embed.macros.njk' as embed %}
 
-Make a donation to any of the people & organizations listed below -- 
+Make a donation to any of the people and organizations listed below -- 
 on or after June 4, with funds under your own name --
 and then show us a receipt with the donation amount.
 
