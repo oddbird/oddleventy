@@ -40,6 +40,7 @@ body {
 body {
   display: grid;
   grid-template:
+    'alert' auto
     'banner' auto
     'main' 1fr
     'cta' auto

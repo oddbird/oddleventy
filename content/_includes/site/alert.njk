@@ -1,0 +1,7 @@
+{% set alert = collections.all | findPage('data.info_slug', 'alert') %}
+
+{% if alert and (alert.data.live) %}
+  <aside data-layout="alert" data-ccs-colors="dark">
+    {{ alert.templateContent | safe }}
+  </aside>
+{% endif %}
