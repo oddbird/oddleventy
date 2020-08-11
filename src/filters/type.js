@@ -27,6 +27,7 @@ const mdown = markdown({
   breaks: false,
   typographer: true,
 })
+  .disable('code')
   .use(mdAnchor)
   .use(mdMark)
   .use(mdFootnote)
