@@ -14,10 +14,18 @@ tags:
   - Design
   - CSS
 events:
+  - venue: Design 4 Drupal Webinar Series
+    url: https://design4drupal.org/webinar-series
+    date: 2020-09-09
+    adr: Online
   - venue: SmashingConf Live
     url: https://smashingconf.com/live/
     date: 2020-08-20
     end: 2020-08-21
+    adr: Online
+  - venue: Shopify UX Summer Series
+    url: /work/shopify/
+    date: 2020-08-15
     adr: Online
   - venue: Front Range Front End
     url: https://www.meetup.com/front-range-front-end/events/bxrfwqyzpbkb/

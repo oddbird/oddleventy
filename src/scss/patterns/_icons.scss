@@ -28,3 +28,16 @@
 .eyes {
   fill: var(--eyes, black);
 }
+
+// shopify logo
+// [data-shopify='light'] » #95bf47
+// [data-shopify='shadow'] » #5e8e3e
+// [data-shopify='cutout'] » #fff
+// [data-shopify='wordmark'] » #000
+[data-shopify='shadow'] {
+  fill: var(--border);
+}
+
+[data-shopify='cutout'] {
+  fill: var(--bg);
+}
