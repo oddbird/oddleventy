@@ -25,10 +25,10 @@ note: |
 {% macro pullquote(
   content=none
 ) -%}
-{%- set content = content if (content != none) else caller() -%}
-{%- if content -%}
-<div class="pullquote">{{ content | md | safe }}</div>
-{%- endif -%}
+  {%- set content = content if (content != none) else caller() -%}
+  {%- if content -%}
+    <div class="pullquote">{{ content | md | safe }}</div>
+  {%- endif -%}
 {%- endmacro %}
 
 
@@ -77,13 +77,13 @@ params:
 <blockquote
   data-quote="{{ type or '' }}"
   {{ utility.attr_if('class', 'offset-item' if (type == 'grid') else none) }}>
-{%- call embed.media_block(
-  media=img,
-  name='quote'
-) -%}
-{{- data.text | md | safe -}}
-{{- cite(data) | safe -}}
-{%- endcall -%}
+  {%- call embed.media_block(
+    media=img,
+    name='quote'
+  ) -%}
+    {{- data.text | md | safe -}}
+    {{- cite(data) | safe -}}
+  {%- endcall -%}
 </blockquote>
 {%- endmacro %}
 
@@ -182,7 +182,7 @@ params:
 {% macro cite(
   data
 ) -%}
-<p class="byline h-card">---{{ _cite(data) | safe }}</p>
+  <p class="byline h-card">---{{ _cite(data) | safe }}</p>
 {%- endmacro %}
 
 

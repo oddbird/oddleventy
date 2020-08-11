@@ -45,15 +45,15 @@ params:
   reverse=none,
   content=none
 ) %}
-{%- set content = content if (content != none) else caller() -%}
-{%- set core = {
-  'data-media': name,
-  'data-reverse': reverse
-} -%}
-<div {{ utility.show_attrs(core) }} {{ utility.show_attrs(attrs) }}>
-<div class="media-image">{{ media | safe }}</div>
-<div class="media-content">{{ content | safe }}</div>
-</div>
+  {%- set content = content if (content != none) else caller() -%}
+  {%- set core = {
+    'data-media': name,
+    'data-reverse': reverse
+  } -%}
+  <div {{ utility.show_attrs(core) }} {{ utility.show_attrs(attrs) }}>
+    <div class="media-image">{{ media | safe }}</div>
+    <div class="media-content">{{ content | safe }}</div>
+  </div>
 {% endmacro %}
 
 
@@ -79,19 +79,20 @@ params:
   caption=none,
   class=''
 ) -%}
-{%- set content = _fig_content(data) if (data != none) else caller() -%}
-{% if content %}
-<figure class="embed{{ ' ' + class if class else '' }}">
-<div class="gallery">
-{{- content | safe -}}
-</div>
-{%- if caption -%}
-<figcaption class="caption">
-{{- caption | mdInline | safe -}}
-</figcaption>
-{%- endif -%}
-</figure>
-{% endif %}
+  {%- set content = _fig_content(data) if (data != none) else caller() -%}
+  {% if content %}
+    <figure class="embed{{ ' ' + class if class else '' }}">
+      <div class="gallery">
+      {{- content | safe -}}
+      </div>
+
+      {%- if caption -%}
+        <figcaption class="caption">
+        {{- caption | mdInline | safe -}}
+        </figcaption>
+      {%- endif -%}
+    </figure>
+  {% endif %}
 {%- endmacro %}
 
 
