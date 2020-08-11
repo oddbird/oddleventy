@@ -1,7 +1,10 @@
 @use '~accoutrement/sass/tools';
 
-[data-main] {
+[data-layout='main'] {
   grid-area: main;
+}
+
+[data-main] {
   margin: var(--gutter) 0;
 
   > :first-child {

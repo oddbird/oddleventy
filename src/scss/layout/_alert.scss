@@ -1,0 +1,19 @@
+@use '~cascading-color-systems' as ccs;
+
+// change how much we fade the background color based on overall page mode
+html {
+  --alert-fade: #{ccs.if-mode($light: 0.9, $dark: 0.8)};
+}
+
+[data-layout='alert'] {
+  --ccs-fade: var(--alert-fade);
+  background: var(--callout-fade);
+  font-size: var(--small);
+  grid-area: alert;
+  padding: var(--gutter) var(--page-margin);
+  text-align: center;
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
