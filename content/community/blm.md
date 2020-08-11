@@ -113,7 +113,7 @@ or via [email to birds@oddbird.net][email]
 We understand that software is political, tech is complicit, and
 anti-Blackness is systemic to our nation and our industry. We'll
 continue to fight for diversity & inclusion in our communities, in our
-work, and in our own company --from training & hiring, to equal pay,
+work, and in our own company -- from training & hiring, to equal pay,
 speaking opportunities, mentorship, decision-making, and shared
 ownership.
 
