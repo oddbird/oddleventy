@@ -1,6 +1,6 @@
 ---
 title: Cascade Aligned Programming
-sub: Understanding & improving on CSS conventions
+sub: What does it mean to style a universal medium?
 author: miriam
 date: 2020-07-15
 image:
@@ -23,21 +23,27 @@ media:
   - span: full
     <<: *frfe
 summary: |
-  How do we write code that is modular & maintainable,
-  in a language designed to be systematic & contextual?
-  Over the years developers have explored various programming methods,
-  frameworks, and naming conventions to achieve that goal --
-  from Nicole Sullivan's OOCSS and Natalie Downe's CSS Systems,
-  to BEM, SMACSS, ITCSS, CUBE,
-  and recent attempts at purely "functional" or "utility-based" CSS.
+  From the very start, 
+  “web design” has posed a nearly impossible paradox. 
+  What does it mean to style a medium that must adapt universally 
+  across languages, devices, operating systems, 
+  user-preferences, browsers, and interfaces -- 
+  from a monochrome terminal to 4k monitors, 
+  watches, braille-readers, and smart speakers?
 ---
 
 {% import "embed.macros.njk" as embed %}
 
-We'll look at what these systems have in common,
-where they differ,
-and how the Cascade changes everything we know about
-writing resilient code.
+The result is CSS, a programming language unlike any other -- 
+built around a resilient “cascade” 
+of hints & suggestions for the browser 
+to interpret in each context. 
+Still, as an industry 
+we rely heavily on “Object Oriented” and “Functional” paradigms 
+developed for controlled environments. 
+
+What might it look like to create a new, 
+cascade-informed, approach to writing code?
 
 {{ embed.figure(
   data=media,
