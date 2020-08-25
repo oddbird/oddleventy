@@ -21,9 +21,9 @@ summary: |
   and recent attempts at purely "utility-based" CSS.
 ---
 
-We’ll look at what these systems have in common, 
-where they differ, and how they are informed by CSS itself. 
-By understanding the trade-offs involved, 
-we can make more informed decisions 
-about how to mix, match, adjust, 
+We’ll look at what these systems have in common,
+where they differ, and how they are informed by CSS itself.
+By understanding the trade-offs involved,
+we can make more informed decisions
+about how to mix, match, adjust,
 or re-write these conventions to meet our needs.
