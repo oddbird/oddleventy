@@ -29,7 +29,9 @@
     ".vscode": true,
     ".yarn": true,
     "src/docs": true,
-    "yarn.lock": true
+    "yarn.lock": true,
+    "**/.yarn": true,
+    "**/.pnp.*": true
   },
   "[markdown]": {
     "files.trimTrailingWhitespace": false,
