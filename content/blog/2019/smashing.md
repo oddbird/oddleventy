@@ -7,6 +7,7 @@ tags:
   - Vue
   - Conferences
   - CSS
+  - Custom Properties
 image:
   src: blog/2019/mia-jen-smashing.jpg
   alt: Miriam talking with Jen Simmons and others
