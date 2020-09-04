@@ -59,7 +59,7 @@
         sizes='media'
       ),
       name='hero',
-      attrs={'data-block': 'rotate'},
+      attrs={'data-block': 'rotate'} | merge(image.attrs or {}),
       content=details
     ) }}
   {% else %}
