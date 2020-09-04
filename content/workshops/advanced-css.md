@@ -11,6 +11,8 @@ image:
 tags:
   - CSS
   - Sass
+  - Custom Properties
+  - Cascade
 events:
   - venue: Generate New York
     url: https://www.generateconf.com/
