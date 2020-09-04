@@ -2,7 +2,7 @@
 title: Jobs
 banner: Web Project Manager
 image:
-  svg: logos/oddbird
+  svg: logos/oddbird-mark
   type: angle
   attrs:
     style: '--align: center'
@@ -20,7 +20,7 @@ OddBird is looking for a Project Manager to join the team.
 - Is not tied to a single methodology,
   but can help guide the team in finding & implementing
   processes that work for us
-- Is located in a US time-zone
+- Is located in a continental North America timezone (Eastern-Alaska)
 
 ## Responsibilities:
 - Take ownership over internal and client meetings:
