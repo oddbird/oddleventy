@@ -36,7 +36,7 @@ OddBird is looking for a Project Manager to join the team.
 - Monitor project timelines and budgets
 - Ensure team is clear on what to work on and when it is due
 
-## At OddBird We:
+## At OddBird, We:
 
 - Are a small team (you'll be #7)
 - Enjoy working collaboratively on complex problems
