@@ -49,11 +49,11 @@ events:
 press:
   - text: |
       Every time I hear @mirisuzanne
-      talk I learn a ton and laugh a ton. 
+      talk I learn a ton and laugh a ton.
       She’s an amazing speaker...
       Watch this talk when it’s published!
     name: Sarah Drasner
-    title: VP of Developer Experience 
+    title: VP of Developer Experience
     venue: Netlify
     face: sarah-drasner.jpg
     url: https://twitter.com/sarah_edo/status/979023728611905536

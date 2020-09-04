@@ -35,12 +35,12 @@ summary: |
 I'm a fan of all these authors,
 and excited to read the whole book.
 They also include [interviews][] with
-Ire Aderinokun, Brenda Storer, Stephanie Rewis, 
+Ire Aderinokun, Brenda Storer, Stephanie Rewis,
 Anna Vu, and Matt Rothenberg.
 
 [interviews]: https://www.youtube.com/playlist?list=PLeWHfyz6lrQWTBtkU6kbxXTjgJ3ltQZId
 
-The full book is available free 
+The full book is available free
 as a website, epub, PDF, or audiobook.
 I talked to them about pairing designers with developers,
 and finding the right levels of fidelity for a mockup

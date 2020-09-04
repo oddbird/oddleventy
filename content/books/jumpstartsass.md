@@ -29,7 +29,7 @@ press:
       Miriam and Hugo have become some of the most notable
       creators of Sass plugins and best practices.
     name: Chris Eppstein
-    title: Sr. Staff Engineer 
+    title: Sr. Staff Engineer
     venue: LinkedIn
 summary: |
   Using Sass, you can write your stylesheets in a more concise,
