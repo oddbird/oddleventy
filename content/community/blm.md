@@ -4,14 +4,14 @@ sub: Donate to the cause, and we'll match you
 image:
   src: pages/blm.jpg
 summary: |
-  **OddBird stands with the Black community 
-  in grieving and protesting racist police violence and murder.** 
-  We must all demand an end to the 
-  state-sanctioned assault on Black people, 
-  and take action to confront anti-Blackness in all our systems. 
-  There is much to do, but one action is simple and clear: 
-  we want to support the organizations 
-  already working in the streets and behind the scenes -- 
+  **OddBird stands with the Black community
+  in grieving and protesting racist police violence and murder.**
+  We must all demand an end to the
+  state-sanctioned assault on Black people,
+  and take action to confront anti-Blackness in all our systems.
+  There is much to do, but one action is simple and clear:
+  we want to support the organizations
+  already working in the streets and behind the scenes --
   and **we're inviting you to join us**.
 orgs:
   - title: Black Lives Matter & their "Places To Donate"
@@ -28,7 +28,7 @@ orgs:
       We'll match direct donations to BLM
       or anyone
       they list on their donation page.
-      
+
       [Donate through Black Lives Matter »](https://blacklivesmatters.carrd.co/#donate)
   - title: Black Visions Collective
     url: https://www.blackvisionsmn.org/
@@ -95,11 +95,11 @@ orgs:
 
 {% import 'embed.macros.njk' as embed %}
 
-Make a donation to any of the people and organizations listed below -- 
+Make a donation to any of the people and organizations listed below --
 on or after June 4, with funds under your own name --
 and then show us a receipt with the donation amount.
 
-You can contact us [@OddBird on Twitter][twitter], 
+You can contact us [@OddBird on Twitter][twitter],
 or via [email to birds@oddbird.net][email]
 
 ---
