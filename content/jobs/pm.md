@@ -1,5 +1,5 @@
 ---
-title: Jobs
+title: Web Project Manager | Jobs
 banner: Web Project Manager
 image:
   svg: logos/oddbird-mark
