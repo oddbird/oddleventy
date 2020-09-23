@@ -1,12 +1,7 @@
-layout: base
-image:
-  svg: logos/oddbird-mark
-  type: angle
-  attrs:
-    style: '--align: center'
-
-# override hours as needed
+# override hours as needed on individual postings
 hours: 10 to 20
+
+# shared job posting data
 team_size: 6
 eleventyComputed:
   title: |
@@ -31,9 +26,13 @@ eleventyComputed:
       (UTC-4 to UTC-8 most of the time, but trips further afield are fine!)
     - Listen to users, and enjoy having our assumptions challenged/tested
     - Care about diversity in the tech community
+      and in our own work.
+    - Maintain and enforce a [code of conduct](/conduct/)
+      for everyone involved with OddBird work
     - Care about the accessibility of our projects
     - Are engaged in the software community --
-      writing articles, sharing tools, and giving talks
+      writing articles, sharing tools, and giving talks --
+      and pay ourselves for that work
 
     ## Compensation:
 
@@ -68,3 +67,11 @@ eleventyComputed:
     Tell us about yourself and your work.
     Contact [jobs@oddbird.net](mailto:jobs@oddbird.net)
     to start the conversation.
+
+# base site data
+layout: base
+image:
+  svg: logos/oddbird-mark
+  type: angle
+  attrs:
+    style: '--align: center'
