@@ -10,7 +10,7 @@ and we'd love to hear from you!
 
 ## You:
 
-- Have experience working with Django, and Python more generally
+- Have experience working with Python for the web, and ideally Django
 - Care about designing usable and consistent web APIs
   in communication with the front-end developers who’ll be using them
 - Know how to design and structure a database
