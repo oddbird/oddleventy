@@ -8,10 +8,10 @@ client: &client Shopify
 date: 2020-08-15
 press:
   - text: |
-      We take submissions from our team, 
-      and **Miriam was a highly desired expert we wanted to learn from**! 
-      I really appreciated the different topics 
-      you presented as options 
+      We take submissions from our team,
+      and **Miriam was a highly desired expert we wanted to learn from**!
+      I really appreciated the different topics
+      you presented as options
       to best talk to our internal audience.
     name: Jen Rogers
     face: jen-rogers.jpg
