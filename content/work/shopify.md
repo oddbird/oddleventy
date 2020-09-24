@@ -1,16 +1,32 @@
 ---
 title: Shopify UX Summer Series
-sub: Asynchronous CSS training, with Q&A
+sub: Asynchronous CSS training with Q&A
 image:
   svg: logos/shopify
 logo: shopify
-client: Shopify
+client: &client Shopify
 date: 2020-08-15
+press:
+  - text: |
+      We take submissions from our team,
+      and **Miriam was a highly desired expert we wanted to learn from**!
+      I really appreciated the different topics
+      you presented as options
+      to best talk to our internal audience.
+    name: Jen Rogers
+    face: jen-rogers.jpg
+    title: UX Operations
+    venue: *client
+    slug: desired
 summary: |
   Shopify is a popular e-commerce platform
   for building & hosting online stores
-  or retail point-of-sale systems.
-  We provided the Shopify UX team with
-  custom CSS training materials,
-  and follow-up Q&A response videos.
+  and retail systems.
+  We provided Shopify UX with
+  custom CSS training videos
+  based on the needs & interests of their team,
+  with a follow-up Q&A.
 ---
+
+{% import 'quotes.macros.njk' as quotes %}
+{{ quotes.blockquote(press[0]) }}
