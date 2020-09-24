@@ -1,0 +1,77 @@
+# override hours as needed on individual postings
+hours: 10 to 20
+
+# shared job posting data
+team_size: 6
+eleventyComputed:
+  title: |
+    {{ banner }} | Jobs
+  team: |
+    ## At OddBird, We:
+
+    - Are a small team (currently {{ team_size }})
+    - Enjoy working collaboratively on complex problems
+    - Collectively set the vision & direction of the company:
+      how we work, who we work for, and how we manage resources
+    - Pay ourselves a competitive hourly rate,
+      equally across the entire team,
+      with total transparency
+    - Are free to take on tasks and explore roles
+      beyond the initial job posting
+      (if you have other skills & interests, we want to know about them!)
+    - All contribute to writing and reviewing documentation
+    - Give and receive design critiques and code reviews as collaborators
+    - Have lives & interests outside of work
+    - Set our own hours, and work remote
+      (UTC-4 to UTC-8 most of the time, but trips further afield are fine!)
+    - Listen to users, and enjoy having our assumptions challenged/tested
+    - Care about diversity in the tech community
+      and in our own work.
+    - Maintain and enforce a [code of conduct](/conduct/)
+      for everyone involved with OddBird work
+    - Care about the accessibility of our projects
+    - Are engaged in the software community --
+      writing articles, sharing tools, and giving talks --
+      and pay ourselves for that work
+
+    ## Compensation:
+
+    This isn't a cubicle job with dental, a 401k, and paid vacation.
+    We're also not a start-up
+    expecting you to work nights and weekends towards future equity.
+    This is a contract job with long term potential,
+    a good hourly rate, a collective vision, and a lot of flexibility.
+    We work together to find clients,
+    and we work together to build them the best tools we can.
+    When there's work to be done,
+    we all do what we can,
+    and we get paid for our time.
+
+    We’re looking for
+    **{{ hours }} billable hours per week**
+    to start,
+    with potential for more.
+
+    Note that contract hours & rates
+    don't map cleanly to a 40hr work week.
+    Our most active members rarely bill
+    more than 30 hours in a week.
+    Both our external and internal rates
+    (what we charge clients, and what we pay ourselves)
+    are set collaboratively as a team,
+    and change over time.
+
+    ## Interested?
+
+    Let's talk!
+    Tell us about yourself and your work.
+    Contact [jobs@oddbird.net](mailto:jobs@oddbird.net)
+    to start the conversation.
+
+# base site data
+layout: base
+image:
+  svg: logos/oddbird-mark
+  type: angle
+  attrs:
+    style: '--align: center'
