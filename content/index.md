@@ -24,13 +24,13 @@ action:
   text: Start a conversation »
   url: /contact/
 work:
-  - /work/coachhub/
   - /work/mozdev/
-  - /work/quarqnet/
+  - /work/shopify/
+  - /work/workflow-builder/
   - /work/metadeploy/
+  - /work/quarqnet/
   - /work/timedesigner/
   - /work/phamaly/
-  - /work/workflow-builder/
 tools:
   - /django/
   - /csswg/

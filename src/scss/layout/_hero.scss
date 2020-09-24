@@ -1,6 +1,7 @@
 @use '~accoutrement/sass/tools';
 
 #hero {
+  --fill: var(--feature);
   grid-area: hero / hero / hero2 / hero2;
   position: relative;
 
