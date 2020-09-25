@@ -19,7 +19,7 @@ and we'd love to hear from you!
 - Can explain the decisions behind your work, and the tradeoffs involved
 - Enjoy the push-and-pull of a tight feedback cycle
 - Enjoy exploring outside what you know, and questioning your assumptions
-- Are located in a continental North America timezone (Eastern-Alaska)
+- Are based in a timezone from UTC-4 (Eastern) to UTC-8 (Alaska)
 
 Our process keeps design and development tightly integrated.
 You’ll be mostly working on APIs and integrations with external services,
