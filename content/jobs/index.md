@@ -7,9 +7,9 @@ eleventyComputed:
   title: Jobs
 ---
 
-Learn more about our team structure,
+Learn more about our team structure --
 what we're offering,
-and what we expect from you,
+and what we expect from you --
 in our full
 [OddBirding Guide](/quickstart/).
 

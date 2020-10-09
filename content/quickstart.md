@@ -4,17 +4,17 @@ sub: Welcome to OddBird!
 image:
   svg: faces/oddbird
   alt: |
-    Illustrated faces: 
+    Illustrated faces:
     Carl, Kit, Stacy, Miriam, Sondra, Erica, and Jonny
-summary: | 
+summary: |
   OddBird was founded in 2008 by three siblings --
-  [Miriam](/authors/miriam/), 
-  [Jonny](/authors/jonny/), and 
+  [Miriam](/authors/miriam/),
+  [Jonny](/authors/jonny/), and
   [Carl](/authors/carl/).
-  Since then we've grown to be 
+  Since then we've grown to be
   a small team of web contractors
-  collaborating on custom web sites, 
-  applications, and tools. 
+  collaborating on custom web sites,
+  applications, and tools.
   This is your guide to working with our team:
   *what we’re offering,
   and what we expect in return*.
@@ -41,7 +41,7 @@ summary: |
 
 We want your time with OddBird to be fun,
 challenging, educational, and rewarding.
-One of the owners will schedule 
+One of the owners will schedule
 a regular check-in with you
 to see how things are going,
 and help along the way.
@@ -68,7 +68,7 @@ and the owners will give a financial report
 at the beginning of every month.
 We will also maintain a yearly spreadsheet
 showing the company finances, income, and expenses —
-including the hours worked,
+including the hours worked
 and pay invoiced by each contractor.
 
 ### Consistency
@@ -182,7 +182,7 @@ of all our contributors.
 We take harassment seriously,
 and want to look out for your well-being.
 
-[coc]: http://oddbird.net/conduct
+[coc]: /conduct
 
 ### Yearly Bonus
 
