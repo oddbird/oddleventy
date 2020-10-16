@@ -1,6 +1,7 @@
 ---
 layout: base
 ---
+{% import 'layout.macros.njk' as layout %}
 
 {# Macros ------------------------------- #}
 
@@ -42,7 +43,7 @@ layout: base
 
   {% if pattern.example %}
     <h4>Example:</h4>
-    {% highlight doc_lang %}{{ pattern.example | safe }}{% endhighlight %}
+    {% highlight 'django' %}{{ pattern.example | safe }}{% endhighlight %}
   {% endif %}
 
   {% if pattern.todo %}
@@ -71,20 +72,16 @@ layout: base
 
 {{ describe(file.info) }}
 
-<hr>
-
 {% for group, patterns in file.patterns | groupby("category") %}
-{% set group = none if (group | lower == 'undefined') else group %}
-{% set doxType = 'Macros' if macros else 'Filters' %}
-<section>
-  {% set title = value %}
-  <h2>{{ group or doxType }}</h2>
-  {{ show(patterns) }}
-</section>
-{% else %}
-<p>No patterns documented…</p>
-{% endfor %}
+  {% set group = none if (group | lower == 'undefined') else group %}
+  {% set doxType = 'Macros' if macros else 'Filters' %}
 
-<hr>
+  <section data-typeset>
+    {{ layout.title(group or doxType) }}
+    {{ show(patterns) }}
+  </section>
+{% else %}
+  <p>No patterns documented…</p>
+{% endfor %}
 
 {{ content | safe }}

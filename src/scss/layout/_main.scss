@@ -19,4 +19,8 @@
   > * {
     grid-column: var(--column, page);
   }
+
+  & > & {
+    grid-column: full;
+  }
 }
