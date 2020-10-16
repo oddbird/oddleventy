@@ -21,48 +21,52 @@ params:
 */
 const buildEvent = (page, event) => ({
   date: event.date ? getDate(event.date) : page.date,
+  end: event.end ? getDate(event.end) : null,
   url: page.url,
   inputPath: page.inputPath,
   fileSlug: page.fileSlug,
   outputPath: page.outputPath,
-  data: page.data,
-  event,
+  page: page.data,
+  data: event,
 });
+
+/* @docs
+label: pageEvents
+category: List
+note: |
+  Turn page events
+  into a structured event collection
+links:
+  - '[Event-list samples](/sample/events/)'
+params:
+  page:
+    type: 11ty page
+*/
+const pageEvents = (page) => {
+  const events = page.data.events || [];
+
+  return events
+    .map((event) => buildEvent(page, event))
+    .sort((a, b) => b.date - a.date);
+};
 
 /* @docs
 label: getEvents
 category: List
 note: |
-  Turn collection-events into top-level pages,
-  either in-addition-to or replacing their source pages
+  Turn events from multiple pages
+  into a structured event collection
 links:
   - '[Event-list samples](/sample/events/)'
 params:
   collection:
     type: 11ty collection
-  pages:
-    type: boolean | mixed
-    default: 'mixed'
-    note: |
-      Set `true` to leave event-source pages in the list,
-      or `false` to remove all pages from the list
-      and show events only
 */
-const getEvents = (collection, pages = 'mixed') => {
+const getEvents = (collection) => {
   const results = [];
 
   collection.forEach((page) => {
-    if (page.data.events) {
-      page.data.events.forEach((event) => {
-        results.push(buildEvent(page, event));
-      });
-
-      if (Boolean(pages) && pages !== 'mixed') {
-        results.push(page);
-      }
-    } else if (pages) {
-      results.push(page);
-    }
+    Array.prototype.push.apply(results, pageEvents(page));
   });
 
   return results.sort((a, b) => b.date - a.date);
@@ -92,6 +96,7 @@ const getFuture = (events) => events.filter(isFuture);
 module.exports = {
   buildEvent,
   getEvents,
+  pageEvents,
   isFuture,
   getFuture,
 };

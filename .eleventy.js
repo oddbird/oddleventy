@@ -104,6 +104,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('buildEvent', events.buildEvent);
   eleventyConfig.addFilter('getEvents', events.getEvents);
+  eleventyConfig.addFilter('pageEvents', events.pageEvents);
   eleventyConfig.addFilter('isFuture', events.isFuture);
   eleventyConfig.addFilter('getFuture', events.getFuture);
 

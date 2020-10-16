@@ -24,6 +24,8 @@ events:
     url: https://remote.shiftconf.co/
     date: 2020-08-06
     adr: Online
+    video: https://youtu.be/aMBRl35GUrg?t=4317
+    slides: https://slides.oddbird.net/dynamic-css/shiftremote20/
   - venue: Develop Denver
     url: https://developdenver.org/
     date: 2019-08-15

@@ -9,9 +9,11 @@
     collections
   ) }}
 {% elif bird and (bird != 'oddbird') %}
+  {% set this_page = collections.all | getCollectionItem(page) %}
+  {% set bird_pages = collections.all | byBird(bird) %}
   {{ confs.list(
     title='Upcoming Events',
-    events=collections.all | byBird(bird) | getData('data.events'),
+    events=bird_pages | concat([this_page]) | getEvents,
     all=false
   ) }}
   {{ oss.list(
@@ -23,5 +25,8 @@
     collections
   ) }}
 {% elif events %}
-  {{ confs.list('Events', events) }}
+  {{ confs.list(
+    'Events',
+    collections.all | getCollectionItem(page) | pageEvents
+  ) }}
 {% endif %}

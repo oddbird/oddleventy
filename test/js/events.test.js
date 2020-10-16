@@ -1,9 +1,19 @@
 import MockDate from 'mockdate';
 
-import { buildEvent, getEvents, getFuture, isFuture } from '#/events';
+import {
+  buildEvent,
+  getEvents,
+  getFuture,
+  isFuture,
+  pageEvents,
+} from '#/events';
 
 import { collection } from './utils';
 
+const event = {
+  date: new Date('2011-04-11T10:20:30Z'),
+  venue: 'SmashingConf',
+};
 const page = {
   inputPath: './test1.md',
   fileSlug: 'test1',
@@ -14,11 +24,9 @@ const page = {
     title: 'Test Title',
     tags: ['tag1', 'tag2'],
     author: 'miriam',
+    events: [event],
   },
   templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
-};
-const event = {
-  date: new Date('2011-04-11T10:20:30Z'),
 };
 
 describe('event filters', () => {
@@ -45,15 +53,13 @@ describe('event filters', () => {
   });
 
   describe('getEvents', () => {
-    test('returns pages without events, and built event pages', () => {
-      expect(getEvents(collection)).toHaveLength(6);
+    test('return the built events from a collection', () => {
+      expect(getEvents(collection)).toHaveLength(2);
     });
-
-    test('returns all pages and all built events', () => {
-      expect(getEvents(collection, true)).toHaveLength(7);
-    });
-    test('return just the built events', () => {
-      expect(getEvents(collection, false)).toHaveLength(2);
+  });
+  describe('pageEvents', () => {
+    test('return the built events from a page', () => {
+      expect(pageEvents(page)).toHaveLength(1);
     });
   });
 

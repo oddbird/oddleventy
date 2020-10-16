@@ -17,7 +17,8 @@ params:
   events:
     type: array
     note: |
-      At minimum, events need a venue and date
+      Array of event objects.
+      See the event filters for data structure.
   all:
     type: boolean
     default: true
@@ -38,16 +39,50 @@ params:
     {%- if title -%}
       {{- layout.title(title) -}}
     {%- endif -%}
-    <ol {{ 'reversed' if reverse else '' }}>
+    <ol {{ 'reversed' if reverse else '' }} class="event-list">
       {%- for event in events -%}
-        <li>
-          {%- if event | isFuture -%}
-            <strong>[{{ utility.datetime(event.date) }}]</strong>
-          {%- else -%}
-            [{{ utility.datetime(event.date) }}]
-          {%- endif %}
-          {{ utility.link_if(event.venue, event.url) }}{% if event.adr %} {{ '--' | typogr | safe }}
-          {{ event.adr }}{% endif %}
+        {% set event_slug = [event.date, loop.index] | join('-') | slug %}
+        <li class="event-item">
+          <article class="event" aria-labelledby="{{ event_slug }}">
+            <footer class="event-meta">
+              {%- if event | isFuture -%}
+                <strong>{{ utility.datetime(event.date) }}</strong>
+              {%- else -%}
+                {{ utility.datetime(event.date) }}
+              {%- endif %}
+              {% if event.data.adr %}
+                {{ '--' | typogr | safe }} {{ event.data.adr }}
+              {% endif %}
+            </footer>
+
+            <h3 class="event-title" id="{{ event_slug }}">
+              {{ utility.link_if(
+                event.data.venue,
+                event.data.url or event.url
+              ) }}
+            </h3>
+
+            {%- set links = [
+              {
+                'title': 'slides',
+                'url': none if event | isFuture else (event.data.slides or event.page.slides)
+              },
+              {
+                'title': 'video',
+                'url': event.data.video
+              }
+            ] | selectattr('url') -%}
+
+            {% if links | length > 0 %}
+              <ul class="event-links" inline-list="comma">
+                {%- for link in links -%}
+                  <li class="event-link">
+                    {{- utility.link_if(link.title, link.url) -}}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {% endif %}
+          </article>
         </li>
       {%- endfor -%}
     </ol>
