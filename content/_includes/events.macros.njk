@@ -41,7 +41,7 @@ params:
     {%- endif -%}
     <ol {{ 'reversed' if reverse else '' }} class="event-list">
       {%- for event in events -%}
-        {% set event_slug = [event.date, loop.index] | join('-') | slug %}
+        {% set event_slug = [event.data.venue, event.date | getDate('iso'), loop.index] | join('-') | slug %}
         <li class="event-item">
           <article class="event" aria-labelledby="{{ event_slug }}">
             <footer class="event-meta">
