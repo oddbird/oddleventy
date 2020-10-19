@@ -15,6 +15,7 @@ people:
     name: Anna Rafferty
     title: Assistant Professor of Computer Science
     # face: anna-rafferty.jpg
+    url: https://emmysworkshop.com/
     venue: *client
 press:
   - text: |

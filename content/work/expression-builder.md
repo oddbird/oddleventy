@@ -14,11 +14,13 @@ people:
   - &james
     name: James Stuckey Weber
     face: james-weber.jpg
+    url: https://www.linkedin.com/in/jamessw/
     title: UI/UX Design & Development Director
     venue: *client
   - &greg
     name: Gregory Davis
     face: gregory-davis.jpg
+    url: https://www.linkedin.com/in/gregory-davis-7546a419/
     title: Chief Architect
     venue: *client
 press:

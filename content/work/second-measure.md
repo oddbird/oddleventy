@@ -18,11 +18,13 @@ people:
     name: Matthew King
     title: Engineering Manager
     face: matthew-king.jpg
+    url: https://www.linkedin.com/in/mking8/
     venue: *client
   - &tara
     name: Tara Kelly
     title: Director Of Product Design
     face: tara-kelly.jpg
+    url: https://www.linkedin.com/in/taralynkelly/
     venue: *client
 press:
   - text: |

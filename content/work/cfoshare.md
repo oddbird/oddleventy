@@ -15,6 +15,7 @@ press:
       so I really appreciated that.
     name: LJ Suzuki
     face: lj-suzuki.jpg
+    url: https://cfoshare.org/
     title: Founder & Fractional CFO
     venue: *client
 links:
