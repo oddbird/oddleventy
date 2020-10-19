@@ -590,10 +590,10 @@ params:
   {%- if public_tags -%}
     <div class="post-tags">
       {%- include "icons/tags.svg" -%}
-      <ul class="{{ 'pill-set' if pill else 'inline-list' }}">
+      <ul inline-list="{{ 'pill-set' if pill else 'comma' }}">
         {%- for group, items in public_tags | groupby('is_type') | dictsort | reverse -%}
           {% for item in items | sort(attribute='tag') %}
-            <li class="{{ 'pill-item' if pill else 'inline-item' }}">
+            <li {% if pill %}class="pill-item"{% endif %}>
               {{- utility.link_if(
                 content=item.tag | typogr,
                 url=item.url,

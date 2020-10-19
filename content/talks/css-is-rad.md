@@ -9,7 +9,7 @@ image:
   position: top
   width: 2240
   height: 1493
-slides: https://sliiides.netlify.app/css-is-rad/
+slides: https://slides.oddbird.net/rad/
 tags:
   - Design
   - CSS
@@ -18,20 +18,27 @@ events:
     url: https://design4drupal.org/webinar-series
     date: 2020-09-09
     adr: Online
+    slides: https://slides.oddbird.net/rad/design4drupal/
+    video: https://youtu.be/JTzYGWYjQdg
+    media: &d4d
+      iframe: https://www.youtube.com/embed/JTzYGWYjQdg
   - venue: SmashingConf Live
     url: https://smashingconf.com/live/
     date: 2020-08-20
     end: 2020-08-21
     adr: Online
+    slides: https://slides.oddbird.net/rad/smashing20/
   - venue: Shopify UX Summer Series
     url: /work/shopify/
     date: 2020-08-15
     adr: Online
+    slides: https://slides.oddbird.net/rad/shopify/
   - venue: Front Range Front End
     url: https://www.meetup.com/front-range-front-end/events/bxrfwqyzpbkb/
     date: 2019-11-07
     adr: Denver, CO
     video: https://youtu.be/bSITeqDKkb8
+    slides: https://slides.oddbird.net/css-is-rad/
     media: &frfe
       iframe: https://www.youtube.com/embed/bSITeqDKkb8
       width: 560
@@ -41,6 +48,7 @@ events:
     date: 2019-10-15
     end: 2019-10-16
     adr: New York, NY
+    slides: https://slides.oddbird.net/css-is-rad/
     video: https://vimeo.com/367890815
     media: &smashNY
       iframe: https://player.vimeo.com/video/367890815
@@ -56,6 +64,8 @@ summary: |
   but trapped in a strange middle ground
   with unique rules and constraints.
 media:
+  - <<: *d4d
+    span: full
   - <<: *smashNY
   - <<: *frfe
 ---

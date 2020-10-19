@@ -1,6 +1,5 @@
 ---
 layout: docs
-doc_lang: django
 pagination:
   data: macros
   size: 1
@@ -11,8 +10,9 @@ eleventyComputed:
   sub: '`{{ file.path }}`'
 eleventyExcludeFromCollections: true
 ---
+{% import 'layout.macros.njk' as layout %}
 
-## See Also:
+{{ layout.title('See Also') }}
 
 {% for other in macros -%}
 {%- if other.slug != file.slug %}

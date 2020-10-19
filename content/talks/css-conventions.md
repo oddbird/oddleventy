@@ -12,11 +12,11 @@ tags:
   - CSS
   - Methodology
 events:
-  - venue: An Event Apart
+  - venue: An Event Apart Fall Summit
     url: https://aneventapart.com/event/online-1020
     date: 2020-10-26
     end: 2020-10-28
-    adr: Fall Summit, Online
+    adr: Online
 summary: |
   How do we write code that is modular & maintainable,
   in a language designed to be systematic & contextual?

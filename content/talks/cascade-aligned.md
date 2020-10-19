@@ -16,6 +16,7 @@ events:
     url: https://frontrangefrontend.com/
     date: 2020-08-06
     adr: Online
+    slides: https://slides.oddbird.net/cascade-aligned/front-range20/
     video: https://www.youtube.com/watch?v=-wlokRJRepY
     media: &frfe
       iframe: https://www.youtube.com/embed/-wlokRJRepY

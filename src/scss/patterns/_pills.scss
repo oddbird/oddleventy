@@ -1,12 +1,8 @@
-.pill-set,
-.inline-list {
-  display: inline;
-  list-style: none;
-  padding: 0;
+[inline-list~='pill-set'] {
+  --item-display: inline-block;
 }
 
 .pill-item {
-  display: inline-block;
   font-size: var(--xsmall);
   margin: var(--half-shim);
 }
@@ -30,14 +26,5 @@
   &:hover,
   &:focus {
     border-color: var(--ccs-special);
-  }
-}
-
-.inline-item {
-  display: inline-block;
-  margin-right: 0.4em;
-
-  &:not(:last-child)::after {
-    content: ', ';
   }
 }
