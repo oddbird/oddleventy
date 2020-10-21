@@ -24,6 +24,7 @@ action:
   text: Start a conversation »
   url: /contact/
 work:
+  - /work/adobe/
   - /work/mozdev/
   - /work/shopify/
   - /work/workflow-builder/
