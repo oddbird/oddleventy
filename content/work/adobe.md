@@ -1,7 +1,6 @@
 ---
-title: Adobe Fonts
-banner: Adobe Fonts
-sub: Adobe Fonts typography superpower game
+title: Typographic Superpower Game
+sub: A meditation on typography
 logo: adobe
 links:
   site: https://game.fonts.adobe.com/
@@ -25,24 +24,14 @@ tasks:
   - Front-End Development
 press:
   - text: |
-      This was such a fun project to work on 
-      **with @TypeTasting, @OddBird & my @AdobeFonts** colleagues.
+      **This was such a fun project to work on** with 
+      @TypeTasting, @OddBird & my @AdobeFonts
+      colleagues.
     <<: *meghan
     slug: fun
 summary: |
-  A meditation on typography, 
-  Adobe Fonts' Game allows players to choose 
-  the fonts that they feel apply best to different scenarios. 
-  Players' input helps Adobe Fonts continue 
-  to improve on their new browse-by-tags feature. 
-  OddBird worked with Adobe's internal back-end and type teams 
-  to create illustrations for each question. 
-  Using Greensock and CSS, 
-  we animated the illustrations and page transitions. 
-  We integrated numerous fonts and images 
-  while maintaining high performance standards. 
-  The game is responsive 
-  and accessible across screens sizes and browsers.
+  A meditation on typography, Adobe Fonts' Game allows players to choose the fonts that they feel apply best to different scenarios. Players' input helps Adobe Fonts continue to improve on their new browse-by-tags feature. We worked closely with Adobe to create animated & interactive illustrations using Greensock, Nuxt, and CSS -- while maintaining high performance standards, and responsive, accessible design.
+  
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
