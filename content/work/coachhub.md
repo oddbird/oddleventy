@@ -13,6 +13,7 @@ people:
   - &sara
     name: Sara Taillon
     face: sara-taillon.jpg
+    url: https://www.linkedin.com/in/sarataillon/
     title: CTO
     venue: *client
 date: 2015-09-15

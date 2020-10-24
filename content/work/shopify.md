@@ -15,6 +15,7 @@ press:
       to best talk to our internal audience.
     name: Jen Rogers
     face: jen-rogers.jpg
+    url: https://www.linkedin.com/in/jenrogers1/
     title: UX Operations
     venue: *client
     slug: desired

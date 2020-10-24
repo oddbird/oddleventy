@@ -12,6 +12,7 @@ people:
   - &rohit
     name: Rohit Puranik
     face: rohit-puranik.jpg
+    url: https://medium.com/medcurbside
     title: Founder
     venue: *client
 tasks:

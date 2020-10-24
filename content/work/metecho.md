@@ -10,6 +10,7 @@ people:
     name: Jason Lantz
     title: Sr. Director of Release Engineering
     face: jason-lantz.jpg
+    url: https://www.linkedin.com/in/jasonlantz/
     venue: *client
 tasks:
   - User Experience Design
