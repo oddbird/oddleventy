@@ -11,12 +11,14 @@ tags:
   - Cascade
   - CSS
   - Custom Properties
+slides: https://slides.oddbird.net/variables/
 events:
   - venue: SmashingConf Austin/NY
     url: https://smashingconf.com/austin-2020/
     date: 2020-10-13
     end: 2020-10-14
     adr: Online
+    slides: https://slides.oddbird.net/variables/smashing1020/
 summary: |
   The Cascade makes CSS unique as a language –
   forcing us to revisit
