@@ -24,14 +24,18 @@ tasks:
   - Front-End Development
 press:
   - text: |
-      **This was such a fun project to work on** with 
+      **This was such a fun project to work on** with
       @TypeTasting, @OddBird & my @AdobeFonts
       colleagues.
     <<: *meghan
     slug: fun
 summary: |
-  A meditation on typography, Adobe Fonts' Game allows players to choose the fonts that they feel apply best to different scenarios. Players' input helps Adobe Fonts continue to improve on their new browse-by-tags feature. We worked closely with Adobe to create animated & interactive illustrations using Greensock, Nuxt, and CSS -- while maintaining high performance standards, and responsive, accessible design.
-  
+  A meditation on typography, Adobe Fonts' Game allows players to choose the
+  fonts that they feel apply best to different scenarios. Players' input helps
+  Adobe Fonts continue to improve on their new browse-by-tags feature. We worked
+  closely with Adobe to create animated & interactive illustrations using
+  GreenSock, NuxtJS, and CSS -- while maintaining high performance standards and
+  responsive, accessible design.
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
