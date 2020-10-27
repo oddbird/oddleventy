@@ -22,10 +22,12 @@
   &:link,
   &:visited {
     @include tools.transition('move');
+    @include tools.z-index('bump');
     align-self: start;
     display: block;
     grid-area: logo;
     margin-top: var(--half-shim);
+    position: relative;
     transform-origin: top center;
   }
 
