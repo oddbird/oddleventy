@@ -27,7 +27,8 @@ in our full
 
 {% else %}
 
-No positions are currently open.
+## No Positions are Currently Open
+
 Check back later!
 
 {% endif %}
