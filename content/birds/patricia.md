@@ -14,10 +14,4 @@ summary: |
   and artist.
 ---
 
-**Patricia steers engineers through the development process**,
-to ensure a smooth and clear journey for our clients.
-They...
-[background in software engineering]
-[studied business marketing]
-[passionate about user empathy, high impact contributions with measurable results, and refining process]
-[formerly, speaking and community organizing]
+**Patricia navigates projects through development**, to ensure smooth sailing for our clients and an enchanting experience for their users. With experience in software engineering and a background in art & marketing, they harness their passions to act as a conduit for empathetic user experience, high impact contributions with measurable results, and refining process through facilitation and iterative organization. Patricia has volunteered extensively in the JavaScript community for organizations including Node.js, Node Together, EmpireJS, BrooklynJS, and MaptimeLA and spoken at tech conferences around the globe. 
