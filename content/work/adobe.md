@@ -22,13 +22,14 @@ tags:
   - Case Study
 sample:
   desktop:
-    src: 
-    alt: 
+    src: adobe/desktop.jpg
+    alt: Options for the vintage font tag with ferriswheel illustrations
   mobile:
-    src: 
-    alt: 
+    src: adobe/mobile.jpg
+    alt: Mobile view of the vintage font tag question
   caption: |
-    @@@
+    Adobe's font tags game is a meditation in typography
+    with illustrated and animated questions.
 tasks:
   - User Experience Design
   - Graphic Design
@@ -42,17 +43,21 @@ press:
       colleagues.
     <<: *meghan
     slug: fun
+  - text: |
+      Oddbird developers know what they’re doing. Your project goals questionnaire helped us structure the project. We appreciate you all driving us to the goals. **I’m glad usability testing was baked into the process. It really was so valuable.** We are super super happy.
+    <<: *meghan
+    slug: usability
 planning:
   - title: Game Goals
     icon: icons/map
     text: |
       We started with a conversation about goals for the game — create a happy place for designers to connect with fonts and a method for Adobe to collect their feedback. We talked about what the game should not do like sell things, store player information, or become a social media platform. We defined technical and accessibility requirements, collected specifics about the content, and established a deadline. 
-    - title: Object Map
+  - title: Object Map
     icon: icons/site-map
     text: |
       Using Sophia Prater’s Object Oriented UX strategy, we mapped out the objects in the web application. Though this project had only four objects, the map helped us agree on terms and get organized. We fleshed out the content of each object and the relationships between the four objects that would make up the game: question, option, superpower, and session user.
   - title: Interactive Wireframe
-    icon: icons/map
+    icon: icons/interact
     text: |
       We sketched a wireframe of the game showing the flow of a player through the objects and ways to navigate from one object to another. Illustrations and animations make up the bulk of this game, but we didn’t get into those details yet at this stage. Keeping the wireframe basic and grayscale helped us nail down when animations should occur, what illustrations we would need, and where important Calls to Action should be highlighted throughout the game. 
   - title: User Profiles
@@ -62,7 +67,13 @@ planning:
   - title: User Stories
     icon: icons/theater
     text: |
-      Each user story defined one task that a player might want to accomplish during the game. (As a Player, I want to select a font option.) We listed each user story and provided itemized estimates per story. This allowed Adobe to add, prioritize, and remove stories before we began development, and throughout the project as needs and timeline constraints changed.
+      Using Goals, Object Map, Wireframe, and User Profiles we will created a list of expected features or ‘stories’ written from the perspective of an individual player.
+      Each user story defined one task that a player might want to accomplish during the game. (As a Player, I want to select a font option.)
+  - title: Itemized & Prioritized Estimate
+    icon: icons/estimate
+    text: |
+      We estimated each user story, providing Adobe with an itemized hourly estimate, organized into phases.
+      This allowed Adobe to add, prioritize, and remove stories before we began development, and throughout the project as needs and timeline constraints changed.
 summary: |
   A meditation on typography, Adobe Fonts' Game allows players to choose the
   fonts that they feel apply best to different scenarios. Players' input helps
@@ -89,15 +100,21 @@ Adobe wanted to make their fonts more searchable, tagged with natural language t
 
 ### Illustrations / Web Graphic
 
-While part of the team began setting up the infrastructure of the game, the designers got to work on illustrations. Sarah Hyndman of Type Tasting (https://www.typetasting.com/) provided initial sketches. In collaboration with the animator, we established a style — solid, filled SVGs — for easy layer grouping and relatively small file size. In Illustrator, we created unique graphics for ten font questions and five typographic superpowers. We used Asset Export to ensure that our gradients and other styles would translate well to SVG. A tight back-and-forth via Slack between designers, animators, and Adobe helped us moved swiftly through drafting to final designs in order to meet the project deadline.
+While part of the team began setting up the infrastructure of the game, the designers got to work on illustrations. Sarah Hyndman of [Type Tasting] provided initial sketches. In collaboration with the animator, we established a style — solid, filled SVGs — for easy layer grouping and relatively small file size. In Illustrator, we created unique graphics for ten font questions and five typographic superpowers. We used Asset Export to ensure that our gradients and other styles would translate well to SVG. A tight back-and-forth via Slack between designers, animators, and Adobe helped us moved swiftly through drafting to final designs in order to meet the project deadline.
+
+[type tasting]: https://www.typetasting.com/
+
 
 ### Audio & Nuxt.js
 
 Audio implementation provided an interesting challenging. First, we tried Web Audio API and a Nuxt.js plugin that automatically played and paused the sounds on each page of the game. When we tested it, the sounds played simultaneously. Uh oh! We switched to HTML5 Audio and added an ID for each question tag. The correct sound played when the ID and tag matched. Yay!
 
-During testing across different browsers and devices, we discovered that our audio solution didn’t work correctly everywhere — returning auto-play errors. We had to get clever. Using HTML5 audio made recovery trivial if autoplay failed. (https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide)
+During testing across different browsers and devices, we discovered that our audio solution didn’t work correctly everywhere — returning auto-play errors. We had to get clever. Using [HTML5 audio] made recovery trivial if autoplay failed.
 
-It was fun collaborating with audio specialist, Rob Taliesin Owen of Potion SoundWorks (https://potionsoundworks.com/). Adding sound elevated the whole experience of game play. 
+It was fun collaborating with audio specialist, Rob Taliesin Owen of [Potion SoundWorks]. Adding sound elevated the whole experience of game play. 
+
+[html5 audio]: https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide
+[Potion SoundWorks]: https://potionsoundworks.com/
 
 ### CSS Custom Properties
 
@@ -105,7 +122,9 @@ Each question in the game has nine options and each option consists of the same 
 
 ### SVG Animation
 
-We were privileged to have Christina Gorton (https://www.christinagorton.com/) join us for this project. Christina worked with our designers to create clean and optimized SVGs for animating. She used the GreenSock animation library to create varied animations for each font question. Each font had a certain personality she put in to each animation. She worked with the whole team and Adobe to adjust timing and easing on animations. GreenSock mades it easier to iterate on animations helping us to meet the project deadline.
+We were privileged to have [Christina Gorton] join us for this project. Christina worked with our designers to create clean and optimized SVGs for animating. She used the GreenSock animation library to create varied animations for each font question. Each font had a certain personality she put in to each animation. She worked with the whole team and Adobe to adjust timing and easing on animations. GreenSock mades it easier to iterate on animations helping us to meet the project deadline.
+
+[Christina Gorton]: https://www.christinagorton.com/
 
 ### Usability Testing
 
