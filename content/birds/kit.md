@@ -3,6 +3,7 @@ title: Kit La Touche
 sub: Back-end developer
 bird: kit
 date: 2016-04-18
+end: 2020-10-13
 image:
   src: birds/kit.jpg
   width: 2048

@@ -24,34 +24,28 @@ social:
   codepen: mirisuzanne
   stackoverflow: 1930386
 summary: |
-  Miriam is a co-founder,
-  product manager,
-  and user-experience developer.
-  She's a core contributor to the
-  [Sass](https://sass-lang.com) language.
+  Miriam is a co-founder and front-end architect --
+  helping oversee the user-experience
+  & overall cohesion of a project.
 ---
 
-**Miriam leads the OddBird process**,
-working with clients and users to set priorities
-and find solutions to their unique problems.
-She is a user-experience expert,
-and a pioneer of modern CSS techniques –
-member of the [Sass][sass] core team,
-and creator of the popular [Susy][susy]
-and [True][true] libraries.
-Miriam is a staff writer for [CSS-Tricks][tricks],
-co-author of SitePoint’s [Jump Start Sass][jss],
-and internationally known
-[conference speaker][speaking],
-winning "Best of" [CSS Dev Conf][dev] in 2017.
-She is also a multimedia artist
+**Miriam is a teacher, open-source contributor,
+and a pioneer of modern CSS** --
+a core contributor to the
+[Sass](https://sass-lang.com) language,
+and Invited Expert on the
+[W3C CSS Working Group](/csswg/).
+She's a writer for [CSS-Tricks][tricks] &
+[Smashing Magazine][smashing],
+co-founder of the [Mozilla Developer Channel][mozdev],
+co-author SitePoint’s [Jump Start Sass][jss].
+and international [conference speaker][speaking].
+Miriam is also a multimedia artist
 with extensive experience in theatre,
 writing, music, and visual art.
 
-[sass]: https://sass-lang.com
-[susy]: /susy/
-[true]: /true/
-[tricks]: https://css-tricks.com/
+[tricks]: /tags/css-tricks/
+[smashing]: /tags/smashing-magazine/
+[mozdev]: http://localhost:8080/work/mozdev/
 [jss]: https://www.sitepoint.com/premium/books/jump-start-sass
 [speaking]: /services/speaking/
-[dev]: https://blog.cssdevconf.com/slides-and-resources-from-css-dev-conf-2017-new-orleans-8e2a5edb06b0#2b07

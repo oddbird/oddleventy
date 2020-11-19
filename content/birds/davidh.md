@@ -1,7 +1,7 @@
 ---
 title: David A. Herron
 sub: Front-end developer
-bird: david
+bird: davidh
 date: 2020-09-28
 image:
   src: birds/davidh.jpg
