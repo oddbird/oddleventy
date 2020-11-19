@@ -1,0 +1,63 @@
+[data-face] {
+  --eyes: hsla(
+    var(--ccs-h--neutral),
+    var(--ccs-s--bg6),
+    var(--ccs-l--bg6),
+    var(--ccs-invert--zero)
+  );
+  overflow: visible;
+}
+
+.eyes {
+  fill: var(--eyes, black);
+}
+
+// combined SVG
+[data-face='oddbird'] {
+  height: 1500;
+  width: 1400;
+
+  [data-face] {
+    transform: translate(var(--x, 0), var(--y, 0));
+  }
+
+  :nth-child(odd) {
+    --y: 80px;
+  }
+
+  [data-face='stacy'] {
+    --x: 380px;
+  }
+
+  [data-face='davidh'] {
+    --x: 685px;
+  }
+
+  [data-face='sondra'] {
+    --x: 970px;
+  }
+
+  [data-face='erica'] {
+    --x: 1400px;
+  }
+
+  [data-face='miriam'] {
+    --x: 1830px;
+    --y: -20px;
+  }
+
+  [data-face='ed'] {
+    --x: 2130px;
+    --y: 100px;
+  }
+
+  [data-face='patricia'] {
+    --x: 2475px;
+    --y: -10px;
+  }
+
+  [data-face='jonny'] {
+    --x: 2840px;
+    --y: 100px;
+  }
+}
