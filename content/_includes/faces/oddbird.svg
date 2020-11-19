@@ -8,13 +8,13 @@
   width="3300"
   height="600"
 >
-{% include 'faces/carl.svg' %}
-{% include 'faces/stacy.svg' %}
-{% include 'faces/davidh.svg' %}
-{% include 'faces/sondra.svg' %}
-{% include 'faces/erica.svg' %}
-{% include 'faces/miriam.svg' %}
-{% include 'faces/ed.svg' %}
-{% include 'faces/patricia.svg' %}
-{% include 'faces/jonny.svg' %}
+<g data-nest="carl">{% include 'faces/carl.svg' %}</g>
+<g data-nest="stacy">{% include 'faces/stacy.svg' %}</g>
+<g data-nest="davidh">{% include 'faces/davidh.svg' %}</g>
+<g data-nest="sondra">{% include 'faces/sondra.svg' %}</g>
+<g data-nest="erica">{% include 'faces/erica.svg' %}</g>
+<g data-nest="miriam">{% include 'faces/miriam.svg' %}</g>
+<g data-nest="ed">{% include 'faces/ed.svg' %}</g>
+<g data-nest="patricia">{% include 'faces/patricia.svg' %}</g>
+<g data-nest="jonny">{% include 'faces/jonny.svg' %}</g>
 </svg>
