@@ -14,11 +14,15 @@
 
 // combined SVG
 [data-nest] {
-  transform: translate(var(--x, 0), var(--y, 0));
+  transform: translate(var(--x, 0), var(--y, var(--row, 0)));
 
   &:nth-child(odd) {
-    --y: 80px;
+    --row: 80px;
   }
+}
+
+[data-nest='carl'] {
+  --x: -10px;
 }
 
 [data-nest='stacy'] {
