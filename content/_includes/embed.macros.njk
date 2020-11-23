@@ -77,11 +77,13 @@ params:
 {% macro figure(
   data=none,
   caption=none,
-  class=''
+  class='',
+  attrs={}
 ) -%}
   {%- set content = _fig_content(data) if (data != none) else caller() -%}
   {% if content %}
-    <figure class="embed{{ ' ' + class if class else '' }}">
+    {% set class = ['embed', class] | join(' ') | trim %}
+    <figure class="{{ class }}" {{ utility.show_attrs(attrs) }}>
       <div class="gallery">
       {{- content | safe -}}
       </div>

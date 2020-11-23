@@ -13,20 +13,8 @@
   display: inline-block;
   height: var(--icon-height, var(--icon-size, 1em));
   transform: translateY(-0.1em);
+  overflow: visible;
   width: var(--icon-width, var(--icon-size, 1em));
-}
-
-[data-face] {
-  --eyes: hsla(
-    var(--ccs-h--neutral),
-    var(--ccs-s--bg6),
-    var(--ccs-l--bg6),
-    var(--ccs-invert--zero)
-  );
-}
-
-.eyes {
-  fill: var(--eyes, black);
 }
 
 // shopify logo

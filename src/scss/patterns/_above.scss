@@ -1,0 +1,13 @@
+@use '~accoutrement/sass/tools';
+
+[data-above] {
+  display: none;
+}
+
+@each $break, $point in tools.$breakpoints {
+  [data-above='#{$break}'] {
+    @include tools.above($point) {
+      display: revert;
+    }
+  }
+}
