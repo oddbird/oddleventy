@@ -5,6 +5,7 @@ bird: patricia
 date: 2020-11-02
 image:
   src: birds/patricia.jpg
+  position: top
 social:
   twitter: patriciarealini
   github: patriciarealini
