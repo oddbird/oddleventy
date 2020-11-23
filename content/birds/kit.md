@@ -19,7 +19,8 @@ summary: |
   and game designer.
 ---
 
-**Kit leads our server-side development**,
+**Kit is a developer emeritus**
+who led our server-side development --
 managing code architecture,
 database design,
 and deployment.
