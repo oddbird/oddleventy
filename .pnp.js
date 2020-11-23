@@ -51,7 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["accoutrement", "npm:2.2.0"],
             ["autoprefixer", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:10.0.2"],
             ["babel-jest", "virtual:caddf51df4928b33a437ca87b8f5ddfb6205ebd6d8231f74d4ee7223f3866e6f815b221aa1e2bd33e98915f701e95bae72a93d2288b49a34a6246bdbc2a4a132#npm:26.6.3"],
-            ["cascading-color-systems", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:0.1.0-beta.14"],
+            ["cascading-color-systems", "npm:0.1.0-beta.14"],
             ["chalk", "npm:4.1.0"],
             ["chokidar-cli", "npm:2.1.0"],
             ["core-js", "npm:3.7.0"],
@@ -85,7 +85,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:2.33.3"],
             ["rollup-plugin-terser", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:7.0.2"],
             ["sass", "npm:1.29.0"],
-            ["sassdoc", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:2.7.3"],
+            ["sassdoc", "npm:2.7.3"],
             ["sassdoc-theme-herman", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.2.0"],
             ["slugify", "npm:1.4.6"],
             ["striptags", "npm:3.1.1"],
@@ -4842,16 +4842,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["cascading-color-systems", [
-        ["virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:0.1.0-beta.14", {
-          "packageLocation": "./.yarn/$$virtual/cascading-color-systems-virtual-302813af2e/0/cache/cascading-color-systems-npm-0.1.0-beta.14-567c8a6701-1f38862d42.zip/node_modules/cascading-color-systems/",
+        ["npm:0.1.0-beta.14", {
+          "packageLocation": "./.yarn/cache/cascading-color-systems-npm-0.1.0-beta.14-567c8a6701-1f38862d42.zip/node_modules/cascading-color-systems/",
           "packageDependencies": [
-            ["cascading-color-systems", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:0.1.0-beta.14"],
-            ["@types/core-js", null],
-            ["core-js", "npm:3.7.0"]
-          ],
-          "packagePeers": [
-            "@types/core-js",
-            "core-js"
+            ["cascading-color-systems", "npm:0.1.0-beta.14"]
           ],
           "linkType": "HARD",
         }]
@@ -7555,18 +7549,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["eslint-module-utils", [
-        ["virtual:0af7a875212a05c11fd9518e28158591f623ef37679e3f998a3a0df850250c4b088dd151723adad3a5d0f0780893257c9e8b7836899f6105db44aa15db9656bb#npm:2.6.0", {
-          "packageLocation": "./.yarn/$$virtual/eslint-module-utils-virtual-998ce63980/0/cache/eslint-module-utils-npm-2.6.0-5126b2ea8a-f584af1764.zip/node_modules/eslint-module-utils/",
+        ["npm:2.6.0", {
+          "packageLocation": "./.yarn/cache/eslint-module-utils-npm-2.6.0-5126b2ea8a-f584af1764.zip/node_modules/eslint-module-utils/",
           "packageDependencies": [
-            ["eslint-module-utils", "virtual:0af7a875212a05c11fd9518e28158591f623ef37679e3f998a3a0df850250c4b088dd151723adad3a5d0f0780893257c9e8b7836899f6105db44aa15db9656bb#npm:2.6.0"],
-            ["@types/eslint", null],
+            ["eslint-module-utils", "npm:2.6.0"],
             ["debug", "virtual:49da7761f14c39be47aef793d385c5d9772cb83cbafe666acd6dcac0493fcf843442edf106f6c89d68bb082ba8e126076947421b9d182cda0cf92ead7d5f809b#npm:2.6.9"],
-            ["eslint", "npm:7.14.0"],
             ["pkg-dir", "npm:2.0.0"]
-          ],
-          "packagePeers": [
-            "@types/eslint",
-            "eslint"
           ],
           "linkType": "HARD",
         }]
@@ -7584,7 +7572,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["doctrine", "npm:1.5.0"],
             ["eslint", "npm:7.14.0"],
             ["eslint-import-resolver-node", "npm:0.3.4"],
-            ["eslint-module-utils", "virtual:0af7a875212a05c11fd9518e28158591f623ef37679e3f998a3a0df850250c4b088dd151723adad3a5d0f0780893257c9e8b7836899f6105db44aa15db9656bb#npm:2.6.0"],
+            ["eslint-module-utils", "npm:2.6.0"],
             ["has", "npm:1.0.3"],
             ["minimatch", "npm:3.0.4"],
             ["object.values", "npm:1.1.1"],
@@ -7621,18 +7609,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["eslint-plugin-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.1.4"],
             ["@types/eslint", null],
-            ["@types/eslint-config-prettier", null],
             ["@types/prettier", null],
             ["eslint", "npm:7.14.0"],
-            ["eslint-config-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:6.15.0"],
             ["prettier", "npm:2.2.0"],
             ["prettier-linter-helpers", "npm:1.0.0"]
           ],
           "packagePeers": [
-            "@types/eslint-config-prettier",
             "@types/eslint",
             "@types/prettier",
-            "eslint-config-prettier",
             "eslint",
             "prettier"
           ],
@@ -14393,7 +14377,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["accoutrement", "npm:2.2.0"],
             ["autoprefixer", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:10.0.2"],
             ["babel-jest", "virtual:caddf51df4928b33a437ca87b8f5ddfb6205ebd6d8231f74d4ee7223f3866e6f815b221aa1e2bd33e98915f701e95bae72a93d2288b49a34a6246bdbc2a4a132#npm:26.6.3"],
-            ["cascading-color-systems", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:0.1.0-beta.14"],
+            ["cascading-color-systems", "npm:0.1.0-beta.14"],
             ["chalk", "npm:4.1.0"],
             ["chokidar-cli", "npm:2.1.0"],
             ["core-js", "npm:3.7.0"],
@@ -14427,7 +14411,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:2.33.3"],
             ["rollup-plugin-terser", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:7.0.2"],
             ["sass", "npm:1.29.0"],
-            ["sassdoc", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:2.7.3"],
+            ["sassdoc", "npm:2.7.3"],
             ["sassdoc-theme-herman", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.2.0"],
             ["slugify", "npm:1.4.6"],
             ["striptags", "npm:3.1.1"],
@@ -17449,11 +17433,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["sassdoc", [
-        ["virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:2.7.3", {
-          "packageLocation": "./.yarn/$$virtual/sassdoc-virtual-f11d072cfb/0/cache/sassdoc-npm-2.7.3-63f15ed79b-946d69cbcf.zip/node_modules/sassdoc/",
+        ["npm:2.7.3", {
+          "packageLocation": "./.yarn/cache/sassdoc-npm-2.7.3-63f15ed79b-946d69cbcf.zip/node_modules/sassdoc/",
           "packageDependencies": [
-            ["sassdoc", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:2.7.3"],
-            ["@types/sassdoc-theme-herman", null],
+            ["sassdoc", "npm:2.7.3"],
             ["ansi-styles", "npm:4.3.0"],
             ["babel-runtime", "npm:6.26.0"],
             ["chalk", "npm:2.4.2"],
@@ -17471,7 +17454,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["safe-wipe", "npm:0.2.5"],
             ["sass-convert", "npm:0.5.2"],
             ["sassdoc-theme-default", "npm:2.8.3"],
-            ["sassdoc-theme-herman", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.2.0"],
             ["scss-comment-parser", "npm:0.8.4"],
             ["strip-indent", "npm:3.0.0"],
             ["through2", "npm:1.1.1"],
@@ -17479,10 +17461,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["vinyl-fs", "npm:3.0.3"],
             ["vinyl-source-stream", "npm:1.1.2"],
             ["vinyl-string", "npm:1.0.2"]
-          ],
-          "packagePeers": [
-            "@types/sassdoc-theme-herman",
-            "sassdoc-theme-herman"
           ],
           "linkType": "HARD",
         }]
@@ -17532,7 +17510,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it", "npm:10.0.0"],
             ["markdown-it-anchor", "virtual:bc89c9adc9e67c61972daa799fadcc2f2672681a15e7ac93a286bc463d77896f01fb068ba57e7a1d5019623b951a83d7dc90000aa44c37170061847c7d804e4a#npm:5.3.0"],
             ["nunjucks", "npm:2.5.2"],
-            ["sassdoc", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:2.7.3"],
+            ["sassdoc", "npm:2.7.3"],
             ["sassdoc-extras", "npm:2.5.1"],
             ["strip-indent", "npm:2.0.0"],
             ["through2", "npm:3.0.2"],
@@ -18935,18 +18913,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stylelint-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.1.2"],
             ["@types/prettier", null],
             ["@types/stylelint", null],
-            ["@types/stylelint-config-prettier", null],
             ["prettier", "npm:2.2.0"],
             ["prettier-linter-helpers", "npm:1.0.0"],
-            ["stylelint", "npm:13.8.0"],
-            ["stylelint-config-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:8.0.2"]
+            ["stylelint", "npm:13.8.0"]
           ],
           "packagePeers": [
             "@types/prettier",
-            "@types/stylelint-config-prettier",
             "@types/stylelint",
             "prettier",
-            "stylelint-config-prettier",
             "stylelint"
           ],
           "linkType": "HARD",
