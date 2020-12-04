@@ -50,6 +50,10 @@ hr {
 p {
   margin-bottom: var(--newline);
   margin-top: 0;
+
+  &:empty {
+    display: none;
+  }
 }
 
 // Summary

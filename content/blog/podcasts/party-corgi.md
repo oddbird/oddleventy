@@ -16,13 +16,9 @@ summary: |
   The CSS Working Group,
   open-source projects,
   art, and music.
-media:
-  - audio: https://cdn.simplecast.com/audio/48d1af/48d1af50-375d-456d-9121-5d53cf4b58ad/19712059-5c56-495f-bea2-47a5c7c99137/miriam-mixdown_tc.mp3
+audio: https://cdn.simplecast.com/audio/48d1af/48d1af50-375d-456d-9121-5d53cf4b58ad/19712059-5c56-495f-bea2-47a5c7c99137/miriam-mixdown_tc.mp3
 ---
 
 {% import "embed.macros.njk" as embed %}
 
-{{ embed.figure(
-  data=media,
-  caption='Listen to the podcast…'
-) }}
+{{ embed.audio(audio) }}

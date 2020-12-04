@@ -11,7 +11,6 @@ note: |
   like media/icon-blocks, logo arrays, figures, galleries, etc.
 #}
 
-
 {# @docs
 label: media_block
 category: Patterns
@@ -38,13 +37,7 @@ params:
     default: none
     note: Provide either the content parameter *or* a `caller()` block
 #}
-{% macro media_block(
-  media,
-  name='',
-  attrs={},
-  reverse=none,
-  content=none
-) %}
+{% macro media_block(media, name = '', attrs = {}, reverse = none, content = none) %}
   {%- set content = content if (content != none) else caller() -%}
   {%- set core = {
     'data-media': name,
@@ -55,7 +48,6 @@ params:
     <div class="media-content">{{ content | safe }}</div>
   </div>
 {% endmacro %}
-
 
 {# @docs
 label: figure
@@ -85,18 +77,17 @@ params:
     {% set class = ['embed', class] | join(' ') | trim %}
     <figure class="{{ class }}" {{ utility.show_attrs(attrs) }}>
       <div class="gallery">
-      {{- content | safe -}}
+        {{- content | safe -}}
       </div>
 
       {%- if caption -%}
         <figcaption class="caption">
-        {{- caption | mdInline | safe -}}
+          {{- caption | mdInline | safe -}}
         </figcaption>
       {%- endif -%}
     </figure>
   {% endif %}
 {%- endmacro %}
-
 
 {# @docs
 label: video
@@ -116,12 +107,7 @@ params:
     type: string
     default: none
 #}
-{% macro video(
-  src,
-  height=none,
-  width=none,
-  caption=none
-) %}
+{% macro video(src, height = none, width = none, caption = none) %}
   {{ figure(
     data=[{
       'iframe': src,
@@ -132,19 +118,18 @@ params:
   ) }}
 {% endmacro %}
 
-
 {# Private macro used to generate figure content from data #}
 {% macro _fig_content(
   data
 ) -%}
-{%- for item in data -%}
-  {%- if item.img -%}
-    {%- set style = {
+  {%- for item in data -%}
+    {%- if item.img -%}
+      {%- set style = {
       '--width': item.width,
       '--span': item.span
     } | styles -%}
-    {% set full_width = (loop.length == 1) or (item.span == 'full') or (item.span > 1) %}
-    {{- img(
+      {% set full_width = (loop.length == 1)or(item.span == 'full')or(item.span > 1) %}
+      {{- img(
       src=item.img,
       alt=item.alt,
       width=item.width,
@@ -152,16 +137,15 @@ params:
       sizes=none if full_width else 'gallery',
       attrs={'style': style}
     ) | safe -}}
-  {%- elif item.svg -%}
-    {{- svg(item.svg, item.alt) | safe -}}
-  {%- elif item.iframe -%}
-    {{- iframe(item.iframe, item.width, item.height, item.span) -}}
-  {%- elif item.audio -%}
-    {{- audio(item.audio, item.span) -}}
-  {%- endif -%}
-{%- endfor -%}
+    {%- elif item.svg -%}
+      {{- svg(item.svg, item.alt) | safe -}}
+    {%- elif item.iframe -%}
+      {{- iframe(item.iframe, item.width, item.height, item.span) -}}
+    {%- elif item.audio -%}
+      {{- audio(item.audio, item.span) -}}
+    {%- endif -%}
+  {%- endfor -%}
 {%- endmacro %}
-
 
 {# @docs
 label: from_event
@@ -209,7 +193,6 @@ params:
   {%- endif -%}
 {%- endmacro %}
 
-
 {# @docs
 label: screen
 category: Patterns
@@ -227,27 +210,19 @@ params:
     default: none
     note: The image to embed (can also be passed into a `caller()` block)
 #}
-{% macro screen(
-  device='iphone',
-  fill=none,
-  fit=none,
-  position=none,
-  notch='15%',
-  content=none
-) %}
-{%- set content = content if (content != none) else caller() -%}
-{%- set style = {
+{% macro screen(device = 'iphone', fill = none, fit = none, position = none, notch = '15%', content = none) %}
+  {%- set content = content if (content != none) else caller() -%}
+  {%- set style = {
   '--device-img-notch': notch,
   '--device-img-fill': fill,
   '--device-img-fit': fit,
   '--device-img-position': position
 } -%}
-<div data-screen="{{ device }}" {{ utility.style_if(style) }}>
-{{ content | safe }}
-{% include 'devices/' + device + '.svg' %}
-</div>
+  <div data-screen="{{ device }}" {{ utility.style_if(style) }}>
+    {{ content | safe }}
+    {% include 'devices/' + device + '.svg' %}
+  </div>
 {% endmacro %}
-
 
 {# @docs
 label: logos
@@ -261,27 +236,23 @@ params:
       Names of svg files to include from `content/_includes/logos/`,
       without the path or `.svg` extension.
 #}
-{% macro logos(
-  projects,
-  collection
-) %}
-<div class="logo-grid">
-  {%- for project in projects -%}
-    {%- set page = collection | getPage(project) if collection else none -%}
-    {%- set logo = page.data.logo if page else project -%}
-    {%- set client = page.data.client -%}
-    {%- set title = page.data.banner or page.data.title -%}
-    {{ utility.link_if(
+{% macro logos(projects, collection) %}
+  <div class="logo-grid">
+    {%- for project in projects -%}
+      {%- set page = collection | getPage(project) if collection else none -%}
+      {%- set logo = page.data.logo if page else project -%}
+      {%- set client = page.data.client -%}
+      {%- set title = page.data.banner or page.data.title -%}
+      {{ utility.link_if(
       content=svg(
         path='logos/' + logo,
         alt=[client, title] | join(': ') if (client and title) else title
       ),
       url=page.url if page else none
     ) }}
-  {%- endfor -%}
-</div>
+    {%- endfor -%}
+  </div>
 {% endmacro %}
-
 
 {# @docs
 label: icon_block
@@ -302,22 +273,23 @@ params:
   data,
   title=none
 ) -%}
-{%- if data -%}
-<section class="icon-blocks" data-typeset>
-{%- if title %}{{ layout.title(title) }}{% endif -%}
-{%- for item in data -%}
-{%- call media_block(
+  {%- if data -%}
+    <section class="icon-blocks" data-typeset="data-typeset">
+      {%- if title %}{{ layout.title(title) }}
+      {% endif -%}
+      {%- for item in data -%}
+        {%- call media_block(
   media=svg(item.icon, item.alt),
   name='icon-block'
 ) -%}
-{%- if item.title -%}
-<h3>{{ utility.link_if(item.title, item.url) }}</h3>
-{%- endif -%}
-{{ item.text | md | safe }}
-{%- endcall -%}
-{%- endfor -%}
-</section>
-{%- endif -%}
+        {%- if item.title -%}
+          <h3>{{ utility.link_if(item.title, item.url) }}</h3>
+        {%- endif -%}
+        {{ item.text | md | safe }}
+        {%- endcall -%}
+      {%- endfor -%}
+    </section>
+  {%- endif -%}
 {%- endmacro %}
 
 {# @docs
@@ -339,8 +311,10 @@ params:
   {%- set width = width or config.srcset | max -%}
   {%- for size in config.srcset -%}
     {%- if size <= width -%}
-      {%- if not loop.first %}, {% endif -%}
-      {{- src | imgSuffix(size) }} {{ size + 'w' -}}
+      {%- if not loop.first %},
+      {% endif -%}
+      {{- src | imgSuffix(size) }}
+      {{ size + 'w' -}}
     {%- endif -%}
   {%- endfor -%}
 {%- endmacro %}
@@ -380,18 +354,18 @@ params:
   sizes=none,
   attrs={}
 ) -%}
-{%- if src -%}
-{%- set config = 'img' | fromTaxonomy -%}
-{%- if not ('://' in src) -%}
-  {%- set fallback = config.sizes[sizes].fallback if config.sizes[sizes] else none -%}
-  {%- set src = ('/assets/images/' + src) -%}
-  {%- set imgSrcSet = srcset(src, width) -%}
-  {%- set imgSrcSet = imgSrcSet if (imgSrcSet != "") else none -%}
-  {%- set respSrc = src | imgSuffix(fallback or config.fallback) -%}
-  {%- set configSizes = config.sizes[sizes].html if config.sizes[sizes] else none -%}
-{%- endif -%}
-{%- set resize = width | imgSize(height, sizes) -%}
-{%- set attrs = attrs | merge({
+  {%- if src -%}
+    {%- set config = 'img' | fromTaxonomy -%}
+    {%- if not ('://' in src) -%}
+      {%- set fallback = config.sizes[sizes].fallback if config.sizes[sizes] else none -%}
+      {%- set src = ('/assets/images/' + src) -%}
+      {%- set imgSrcSet = srcset(src, width) -%}
+      {%- set imgSrcSet = imgSrcSet if (imgSrcSet != "") else none -%}
+      {%- set respSrc = src | imgSuffix(fallback or config.fallback) -%}
+      {%- set configSizes = config.sizes[sizes].html if config.sizes[sizes] else none -%}
+    {%- endif -%}
+    {%- set resize = width | imgSize(height, sizes) -%}
+    {%- set attrs = attrs | merge({
   'src': respSrc or src,
   'alt': alt or true,
   'srcset': imgSrcSet,
@@ -399,10 +373,9 @@ params:
   'height': resize.height,
   'sizes': configSizes or sizes
 }) -%}
-<img {{ utility.show_attrs(attrs) }}/>
-{%- endif -%}
+    <img {{ utility.show_attrs(attrs) }}/>
+  {%- endif -%}
 {%- endmacro %}
-
 
 {# @docs
 label: svg
@@ -417,9 +390,9 @@ params:
   alt=none
 ) -%}
   {%- include path + '.svg' -%}
-  {% if alt %}<span class="sr-only">{{ alt }}</span>{% endif %}
+  {% if alt %}
+    <span class="sr-only">{{ alt }}</span>{% endif %}
 {%- endmacro %}
-
 
 {# @docs
 label: iframe
@@ -442,12 +415,7 @@ params:
     default: 'none'
     note: Span multiple columns of a gallery
 #}
-{% macro iframe(
-  src,
-  width=none,
-  height=none,
-  span=none
-) %}
+{% macro iframe(src, width = none, height = none, span = none) %}
   {%- set width = width or 560 -%}
   {%- set height = height or 315 -%}
   {%- set attrs = {
@@ -459,7 +427,8 @@ params:
     'mozallowfullscreen': true,
     'allowfullscreen': true
   } -%}
-  {%- set content %}<iframe {{ utility.show_attrs(attrs) }}></iframe>{% endset -%}
+  {%- set content %}
+  <iframe {{ utility.show_attrs(attrs) }}></iframe>{% endset -%}
   {{- ratio(width, height, span, content) | safe -}}
 {% endmacro %}
 
@@ -476,16 +445,15 @@ params:
 #}
 {% macro audio(
   src,
-  span
+  span=none
 ) -%}
-{%- set style = {
+  {%- set style = {
   '--width': '100%',
   '--span': span
 } -%}
-{%- set src = src if ('://' in src) else ('/assets/media/' + src) -%}
-<audio src="{{ src }}" {{ utility.style_if(style) }} controls>{{ src | mdInline }}</audio>
+  {%- set src = src if ('://' in src) else ('/assets/media/' + src) -%}
+  <audio src="{{ src }}" {{ utility.style_if(style) }} controls="controls">{{ src | mdInline }}</audio>
 {%- endmacro %}
-
 
 {# @docs
 label: ratio
@@ -507,19 +475,14 @@ params:
     default: 'none'
     note: The content to embed (can also be a `caller()` block)
 #}
-{% macro ratio(
-  width=none,
-  height=none,
-  span=none,
-  content=none
-) %}
-{%- set content = content if (content != none) else caller() -%}
-{%- if width | typeCheck('number') and height | typeCheck('number') -%}
-  {%- set style = {
+{% macro ratio(width = none, height = none, span = none, content = none) %}
+  {%- set content = content if (content != none) else caller() -%}
+  {%- if width | typeCheck('number') and height | typeCheck('number') -%}
+    {%- set style = {
     '--ratio': (width / height),
     '--span': span
   } -%}
-<div class="ratio" {{ utility.style_if(style) }}>{{ content | safe }}</div>
+    <div class="ratio" {{ utility.style_if(style) }}>{{ content | safe }}</div>
   {%- else -%}
     {{- content | safe -}}
   {%- endif -%}
@@ -561,17 +524,8 @@ params:
     type: array
     default: '{}'
 #}
-{% macro codepen(
-  id,
-  title,
-  user,
-  tab='result',
-  height=500,
-  theme=none,
-  preview=none,
-  attrs={}
-) %}
-<p {{ utility.show_attrs({
+{% macro codepen(id, title, user, tab = 'result', height = 500, theme = none, preview = none, attrs = {}) %}
+  <p {{ utility.show_attrs({
   'class': 'codepen',
   'data-height': height,
   'data-theme-id': theme,
@@ -580,14 +534,20 @@ params:
   'data-user': user,
   'data-embed-version': "2",
   "data-preview": preview
-} | merge(attrs)) }}>See the Pen {{ utility.link_if(
+} | merge(attrs)) }}>See the Pen
+    {{ utility.link_if(
   content=title,
   url=('https://codepen.io/' + user + '/pen/' + id)
-) }} by {{ utility.link_if(
+) }}
+    by
+    {{ utility.link_if(
   content='@' + user,
   url='https://codepen.io/' + user
-) }} on {{ utility.link_if(
+) }}
+    on
+    {{ utility.link_if(
   content='CodePen',
   url='https://codepen.io'
-) }}.</p><script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+) }}.</p>
+  <script async="async" src="https://static.codepen.io/assets/embed/ei.js"></script>
 {% endmacro %}
