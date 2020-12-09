@@ -16,7 +16,7 @@ tags:
   - Enjoy The Vue
 summary: |
   I join Ari, Ben, and Tessa to talk about
-  getting into CSS from other languages, 
+  getting into CSS from other languages,
   the absurdly massive problem CSS is designed to solve,
   and the mental model behind the language.
 audio: https://aphid.fireside.fm/d/1437767933/41abfd1d-87a1-43d7-94d9-7fda3a5120e1/5cb7f3eb-086b-41fa-9940-5688a81b64f9.mp3
