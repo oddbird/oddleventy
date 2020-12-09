@@ -31,13 +31,12 @@ summary: |
   but still find it surprising every time: 
   the way people are able to make such fluid and beautiful images 
   out of little boxes.
+  I always end up digging around in dev tools 
+  to see how things are done,
+  but I had never seen the process unfold.
 ---
 
 {% import 'embed.macros.njk' as embed %}
-
-I always end up digging around in dev tools 
-to see how things are done, 
-but I had never seen the process unfold.
 
 Any time CSS art starts getting attention, 
 there is always someone around to say 
