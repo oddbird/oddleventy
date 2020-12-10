@@ -121,6 +121,15 @@ Audio implementation provided an interesting challenging. First, we tried Web Au
 
 During testing across different browsers and devices, we discovered that our audio solution didn’t work correctly everywhere — returning auto-play errors. We had to get clever. Using [HTML5 audio] made recovery trivial if autoplay failed.
 
+```javascript
+controlSound(on) {
+  const bg = this.$refs.audioBackground;
+  if (bg) {
+    on ? bg.play().catch(() =>  
+    this.toggleSetting(this.sound)) : bg.pause();
+  }
+},
+```
 It was fun collaborating with audio specialist, Rob Taliesin Owen of [Potion SoundWorks]. Adding sound elevated the whole experience of game play. 
 
 [html5 audio]: https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide
