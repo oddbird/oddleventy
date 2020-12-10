@@ -44,9 +44,13 @@ press:
     <<: *meghan
     slug: fun
   - text: |
-      Oddbird developers know what they’re doing. Your project goals questionnaire helped us structure the project. We appreciate you all driving us to the goals. **I’m glad usability testing was baked into the process. It really was so valuable.** We are super super happy.
+      Oddbird developers know what they’re doing. 
+      We appreciate you all driving us to our goals.
+      **I’m glad usability testing was baked into the process.
+      It really was so valuable.** We are super super happy.
     <<: *meghan
     slug: usability
+  - text: |
 planning:
   - title: Game Goals
     icon: icons/map
@@ -98,11 +102,17 @@ Adobe wanted to make their fonts more searchable, tagged with natural language t
 
 ## Design and Development Phase
 
-### Illustrations / Web Graphic
+### Illustrations / Web Graphics
 
 While part of the team began setting up the infrastructure of the game, the designers got to work on illustrations. Sarah Hyndman of [Type Tasting] provided initial sketches. In collaboration with the animator, we established a style — solid, filled SVGs — for easy layer grouping and relatively small file size. In Illustrator, we created unique graphics for ten font questions and five typographic superpowers. We used Asset Export to ensure that our gradients and other styles would translate well to SVG. A tight back-and-forth via Slack between designers, animators, and Adobe helped us moved swiftly through drafting to final designs in order to meet the project deadline.
 
 [type tasting]: https://www.typetasting.com/
+
+<figure>
+<img src="{{ site.images }}work/adobe/enter-here.png" class="extend-full" alt="" /><figcaption>The vintage Ferris wheel
+went through a sketch phase and a couple of drafts before
+the design was finalized.</figcaption>
+</figure>
 
 
 ### Audio & Nuxt.js
