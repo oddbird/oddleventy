@@ -16,7 +16,7 @@ people:
     venue: *client
 date: 2020-10-20
 links:
-  site: https://game.fonts.adobe.com/
+  play game: https://game.fonts.adobe.com/
 tags:
   - _post
   - Case Study
@@ -90,7 +90,9 @@ summary: |
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
 
-More detailed description of what users can do here?
+At the end of the game, players discover their own their 
+typographic superpower. Players have the option to share their superpower on social media, access the typeface on Adobe, view
+similar typefaces, and download their superpower badge.
 
 {{ quotes.grid(press | slice(2) | first ) }}
 
@@ -114,7 +116,7 @@ went through a sketch phase and a couple of drafts before
 the design was finalized.</figcaption>
 </figure>
 <figure>
-<img src="{{ site.images }}work/adobe/edgy.png" class="extend-full" alt="" /><figcaption>Near the end of the Edgy Superpower design, the team realized the word "edgy" looked a bit weird in the lowercase Totally Gothic typeface.</figcaption>
+<img src="{{ site.images }}work/adobe/edgy.png" class="extend-full" alt="" /><figcaption>Near the end of the edgy superpower design, the team realized the word "edgy" was hard to read in the lowercase Totally Gothic typeface.</figcaption>
 </figure>
 
 
@@ -147,6 +149,14 @@ Each question in the game has nine options and each option consists of the same 
 We were privileged to have [Christina Gorton] join us for this project. Christina worked with our designers to create clean and optimized SVGs for animating. She used the GreenSock animation library to create varied animations for each font question. Each font had a certain personality she put in to each animation. She worked with the whole team and Adobe to adjust timing and easing on animations. GreenSock mades it easier to iterate on animations helping us to meet the project deadline.
 
 [Christina Gorton]: https://www.christinagorton.com/
+
+{% import 'embed.macros.njk' as embed %}
+
+{{ embed.codepen(
+  id='rNedLbN',
+  title='Relax Question',
+  user='cgorton'
+) }}
 
 ### Usability Testing
 
