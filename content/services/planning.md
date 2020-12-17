@@ -117,15 +117,11 @@ planning2:
       - to select specific services from a list.
 
       </figure>
-  - title: Data Model/Glossary
+  - title: Object Map & Data Model
     icon: icons/site-map
     text: |
-      What are the core concepts/objects around which the application is
-      built? These are the data models. What are the relationships between
-      the models? What data attributes does each model have, and what is the
-      data-type for each attribute? Giving everything a name and describing
-      the relationships will help guide development, and keep the entire team
-      on the same page.
+      What are the core concepts or "objects" that users want to interact with in the application? What are the relationships between these objects? What attributes does each object have, and what is the data-type for each attribute? Our certified Object-Oriented UX strategist will map out the objects in the web application to create an Object Map -- giving every object a unique name and describing the relationships between them. This Object Map will guide development and keep the entire team on the same page.
+
   - title: Itemized & Prioritized Estimate
     icon: icons/estimate
     text: |
@@ -190,6 +186,17 @@ take the leap into creating your web project!
   {{ embed.img(
     src='pages/interactive-prototypes.png',
     attrs={'class': 'extend-large'}
+  ) }}
+{% endcall %}
+
+{{ embed.icon_block(objectmap) }}
+
+{% call embed.figure(
+  caption='Sample Object Map of Mighty Networks.'
+) %}
+  {{ embed.img(
+    src='pages/object-map.jpg',
+    attrs={'class': 'size-full align-center'}
   ) }}
 {% endcall %}
 
