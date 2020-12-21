@@ -80,7 +80,8 @@ been acquired,
 and reported easy maintenance for years.
 Our specialties include:
 
-- Strategy, branding, and design
+- Branding & Design
+- Object-Oriented UX & Strategy
 - Python & Django (*core contributors*)
 - CSS & Sass (*core contributors*)
 - JavaScript with Vue, React, Node, etc...

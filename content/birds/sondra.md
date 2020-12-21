@@ -14,9 +14,9 @@ social:
   dribbble: sondraeby
 summary: |
   Sondra
-  is a brand and interface designer --
+  is a brand and UX/UI designer --
   as well as a marketing expert,
-  and usability tester.
+   usability tester, and OOUX strategist.
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -24,7 +24,7 @@ summary: |
 **Sondra spearheads our design process**
 through brand development, user experience design, and usability testing.
 She has been creating custom brands
-and integrated web graphics for over thirteen years.
+and integrated web graphics for over 17 years.
 She has lead the marketing teams
 for a variety of small businesses,
 and acted as co-founder and Chief Marketing Officer
@@ -38,7 +38,7 @@ to audience engagement and interaction.
 <div class="contain">
 
 {{ embed.img(
-  src='birds/medrescertificationbadge.png',
+  src='birds/lorescertificationbadge.png',
   alt='certified object-oriented ux',
     attrs={
     'class': 'align-left'
@@ -52,13 +52,14 @@ In 2020, Sondra became a Certified Object-Oriented UX Strategist.
 OOUX Strategists can:
 
 - break down user experience complexity 
-- understand convoluted business requirements 
-- synthesize research 
-- facilitate collaboration around system design with stakeholders, SMEs, and developers
-- lead the ORCA process
+- untangle convoluted business requirements 
+- synthesize user research 
+- facilitate collaboration with stakeholders, SMEs, and developers
 - analyze objects, relationships, calls-to-action, and attributes
 - strategize and design complex systems
 - create naturally intuitive digital experiences 
+- deliver Object Maps 
+- recommend project priorities
 
 [ObjectOrientedUX.com]
 
