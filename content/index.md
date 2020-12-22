@@ -15,11 +15,12 @@ image:
 og:
   img: default
 summary: |
-  **We help companies create better web applications**
-  with resilient design systems & well-tested code.
-  As experts in digital product design and development,
-  we focus on performance, accessibility, and architecture --
-  for low maintenance costs over the long term.
+  **As experts in digital product design and development,** 
+  we focus on performance, accessibility, and architecture -- 
+  delivering resilient design systems and well-tested code
+  for low maintenance costs over the long term.  We’ll help 
+  clarify & prioritize your goals as we work towards them 
+  together. 
 action:
   text: Start a conversation »
   url: /contact/
