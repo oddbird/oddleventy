@@ -163,5 +163,5 @@ We were privileged to have [Christina Gorton] join us for this project. Christin
 Testing web applications with users for the first time is exciting and a bit nerve wracking. Are we headed in the right direction? We tested the Font Tags Game with users as early in the process as possible — as soon as we had the questions, options, and animations in place, but before adding sounds and superpowers. Since our timeline was tight, we ran half hour sessions via video with two volunteer designers. Their feedback was invaluable. They caught typeface alignment issues, pointed out confusing language, and helped us imagine new features for phase two. Most importantly, they let us know we were hitting our goals, describing their feelings afterwards as curious, optimistic, empowered, and ready to explore typography!
 
 <figure>
-<img src="{{ site.images }}work/adobe/organic-usability.jpg" class="extend-full" alt="" /><figcaption>Two testers helped us discover that the "link to heroes" was distracting them from playing the game.</figcaption>
+<img src="{{ site.images }}work/adobe/organic-usability.png" class="extend-full" alt="" /><figcaption>Two testers helped us discover that the "link to heroes" was distracting them from playing the game.</figcaption>
 </figure>
