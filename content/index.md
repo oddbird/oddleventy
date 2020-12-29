@@ -15,12 +15,12 @@ image:
 og:
   img: default
 summary: |
-  **As experts in digital product design and development,** 
-  we focus on performance, accessibility, and architecture -- 
-  delivering resilient design systems and well-tested code
-  for low maintenance costs over the long term.  We’ll help 
-  clarify & prioritize your goals as we work towards them 
-  together. 
+  **As experts in digital product design and development,**
+  we focus on accessibility, performance, and architecture.
+  We deliver resilient design systems and well-tested code,
+  giving you low maintenance costs for years. We’ll help 
+  clarify & prioritize your goals 
+  as we work toward them together.
 action:
   text: Start a conversation »
   url: /contact/

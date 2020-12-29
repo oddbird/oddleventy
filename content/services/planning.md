@@ -169,11 +169,12 @@ summary: |
   prioritized estimates,
   and a robust plan for development and launch.
 
-  Our [certified object-oriented user experience strategist]
-  will guide you through a process to define the concepts 
-  or "objects" that make up your web app, 
+  Using an object-oriented user experience strategy
+  (OOUX), we'll guide you through a
+  process to define the concepts or 
+  "objects" that make up your web app, 
   the relationships between those objects, 
-  and the ways users want to interaction with those objects.
+  and the ways users want to interact with those objects.
   We will deliver an Object Map
   to streamline communication 
   between designers, developers, and stakeholders 
