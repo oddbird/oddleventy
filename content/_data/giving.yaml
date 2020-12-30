@@ -7,19 +7,10 @@
     and a community that empowers and helps women to organize free,
     one-day programming workshops by providing tools,
     resources and support.
-- name: Goshen Ultimate Summer League
-  url: https://goshenultimate.com/
-  type: sponsorships
-  years: 2014--2020
-  description: |
-    provides opportunities to learn, play,
-    and teach spirited Ultimate in Goshen, IN and surrounding areas.
-    We're just glad they keep Jonny out of trouble
-    when he's not busy writing JavaScript.
 - name: Black Girls CODE
   url: https://www.blackgirlscode.com/
   type: donations
-  years: 2013--2016, 2018--2019
+  years: 2013--2016, 2018--2020
   description: |
     has set out to prove to the world
     that girls of every color have the skills
@@ -29,6 +20,84 @@
     working in technology,
     and give underprivileged girls a chance
     to become the masters of their technological worlds.
+- name: Natives in Tech
+  url: https://nativesintech.org/
+  type: donations
+  years: 2020
+  description: |
+    strives to build a collective of Native technologists
+    crafting free and open source technology for Native communities.
+- name: The Innocence Project
+  url: https://innocenceproject.org/
+  type: donations
+  years: 2020
+  description: |
+    works to free the staggering number of innocent people
+    who remain incarcerated,
+    and to bring reform to the system
+    responsible for their unjust imprisonment.
+- name: Campaign Zero
+  url: https://www.joincampaignzero.org/
+  type: donations
+  years: 2020
+  description: |
+    strives to end police violence in America.
+    Funds donated to Campaign Zero
+    support the analysis of policing practices across the country,
+    research to identify effective solutions to end police violence,
+    technical assistance to organizers
+    leading police accountability campaigns
+    and the development of model legislation and advocacy
+    to end police violence nationwide.
+- name: Black Tech 4 Black Lives
+  url: https://www.blacktechforblacklives.com/
+  type: donations
+  years: 2020
+  description: |
+    is a collective of Black tech entrepreneurs,
+    investors, creatives, changemakers, and workers,
+    united to use our social, political,
+    and economic capital for the advancement of our communities.
+- name: Colorado Freedom Fund
+  url: http://www.blackbailout.org/
+  type: donations
+  years: 2020
+  description: |
+    is a revolving community bond fund
+    that pays ransom for our neighbors
+    unjustly detained in cages across Colorado
+    who cannot afford to buy their own freedom.
+- name: #BlackTransLivesMatter
+  url: http://actforblacktranslives.org/
+  type: donations
+  years: 2020
+  description: |
+    is a collaborative effort between people
+    who stand in solidarity with Black trans women
+    and wanted to make a difference,
+    and some of the foremost Black trans leaders
+    in community and culture.
+- name: Southern Poverty Law Center
+  url: https://www.splcenter.org/
+  type: donations
+  years: 2020
+  description: |
+    is dedicated to fighting hate and bigotry
+    and to seeking justice
+    for the most vulnerable members of our society.
+    Using litigation, education,
+    and other forms of advocacy,
+    the SPLC works toward the day when the ideals of equal justice
+    and equal opportunity will be a reality.
+- name: Goshen Ultimate Summer League
+  url: https://goshenultimate.com/
+  type: sponsorships
+  years: 2014--2020
+  description: |
+    provides opportunities to learn, play,
+    and teach spirited Ultimate in Goshen, IN and surrounding areas.
+    We're just glad they keep Jonny out of trouble
+    when he's not busy writing JavaScript.
 - name: CallbackWomen
   url: https://www.callbackwomen.com/
   type: donations
