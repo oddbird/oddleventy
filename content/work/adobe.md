@@ -121,7 +121,7 @@ Audio implementation provided an interesting challenging. First, we tried Web Au
 
 During testing across different browsers and devices, we discovered that our audio solution didn’t work correctly everywhere — returning auto-play errors. We had to get clever. Using [HTML5 audio] made recovery trivial if autoplay failed.
 
-```javascript
+```js
 controlSound(on) {
   const bg = this.$refs.audioBackground;
   if (bg) {
@@ -130,6 +130,7 @@ controlSound(on) {
   }
 },
 ```
+
 It was fun collaborating with audio specialist, Rob Taliesin Owen of [Potion SoundWorks]. Adding sound elevated the whole experience of game play. 
 
 [html5 audio]: https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide
@@ -138,6 +139,35 @@ It was fun collaborating with audio specialist, Rob Taliesin Owen of [Potion Sou
 ### CSS Custom Properties
 
 Each question in the game has nine options and each option consists of the same identical image plus a unique font. Typefaces have a wide array of letter heights and widths. When we placed the typefaces on top of the images, some barely filled the space, some hung off the edges of the illustrations. CSS Custom Properties to the rescue! Custom Properties made it possible to adjust individual typefaces.
+
+```js
+computed: {
+  fontStyles() {
+    return {
+      '--svg-adjust': this.font.adjust,
+    };
+  }
+}
+```
+
+```css
+/* Global */
+.svg-text {
+  font-size: calc(var(--svg-base, 4em) * var(--svg-adjust, 1));
+}
+
+/* Scoped to the Calligraphic Illustration in the Vue file */
+<style lang="scss" scoped>
+.svg-text {
+  --svg-base: 87px;
+}
+</style>
+```
+
+```md
+  - name: Chapman Bold Extended Italic
+    adjust: .675
+```
 
 ### SVG Animation
 
