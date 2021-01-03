@@ -16,7 +16,7 @@ people:
     venue: *client
 date: 2020-10-20
 links:
-  site: https://game.fonts.adobe.com/
+  play game: https://game.fonts.adobe.com/
 tags:
   - _post
   - Case Study
@@ -90,7 +90,9 @@ summary: |
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
 
-More detailed description of what users can do here?
+At the end of the game, players discover their own their 
+typographic superpower. Players have the option to share their superpower on social media, access the typeface on Adobe, view
+similar typefaces, and download their superpower badge.
 
 {{ quotes.grid(press | slice(2) | first ) }}
 
@@ -112,6 +114,9 @@ While part of the team began setting up the infrastructure of the game, the desi
 <img src="{{ site.images }}work/adobe/enter-here.png" class="extend-full" alt="" /><figcaption>The vintage Ferris wheel
 went through a sketch phase and a couple of drafts before
 the design was finalized.</figcaption>
+</figure>
+<figure>
+<img src="{{ site.images }}work/adobe/edgy.png" class="extend-full" alt="" /><figcaption>Near the end of the edgy superpower design, the team realized the word "edgy" was hard to read in the lowercase Totally Gothic typeface.</figcaption>
 </figure>
 
 
@@ -175,10 +180,18 @@ We were privileged to have [Christina Gorton] join us for this project. Christin
 
 [Christina Gorton]: https://www.christinagorton.com/
 
+{% import 'embed.macros.njk' as embed %}
+
+{{ embed.codepen(
+  id='rNedLbN',
+  title='Relax Question',
+  user='cgorton'
+) }}
+
 ### Usability Testing
 
 Testing web applications with users for the first time is exciting and a bit nerve wracking. Are we headed in the right direction? We tested the Font Tags Game with users as early in the process as possible — as soon as we had the questions, options, and animations in place, but before adding sounds and superpowers. Since our timeline was tight, we ran half hour sessions via video with two volunteer designers. Their feedback was invaluable. They caught typeface alignment issues, pointed out confusing language, and helped us imagine new features for phase two. Most importantly, they let us know we were hitting our goals, describing their feelings afterwards as curious, optimistic, empowered, and ready to explore typography!
 
 <figure>
-<img src="{{ site.images }}work/adobe/organic-usability.jpg" class="extend-full" alt="" /><figcaption>Tester: “What is that link to heroes button down there? It seems kind of distracting.” OddBird: Excellent point!</figcaption>
+<img src="{{ site.images }}work/adobe/organic-usability.png" class="extend-full" alt="" /><figcaption>Two testers helped us discover that the "link to heroes" was distracting them from playing the game.</figcaption>
 </figure>
