@@ -28,7 +28,7 @@ $brand-colors: (
 );
 
 @include tools.add-colors($brand-colors);
-@include herman.herman-add(
+@include herman.add(
   'colors',
   'brand-colors',
   $brand-colors,
@@ -135,18 +135,15 @@ $_ccs: (
 // CCS "Get" Function
 // ------------------
 /// Get settings from the `$ccs` configuration map.
-///
-///   ```
-///   @use 'config/color';
-///
-///   $prime-hue: color.ccs('prime');
-///   ```
-///
 /// @param {string} $token -
 ///   Name of a token key in the `$ccs` map.
 ///   See map for valid tokens.
 /// @return {*} -
 ///   Value from `$ccs` map, based on given key
+/// @example scss
+///   @use 'config/color';
+///
+///   $prime-hue: color.ccs('prime');
 /// @group config-color
 @function ccs($token) {
   @return map-get($_ccs, $token);

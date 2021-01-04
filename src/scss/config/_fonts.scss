@@ -30,7 +30,7 @@ $body-font: (
 );
 
 @include tools.add-font('body', $body-font);
-@include herman.herman-add('font', 'body', $body-font);
+@include herman.add('font', 'body', $body-font);
 
 // Alt Font
 // --------
@@ -54,7 +54,7 @@ $alt-font: (
 );
 
 @include tools.add-font('alt', $alt-font);
-@include herman.herman-add('font', 'alt', $alt-font);
+@include herman.add('font', 'alt', $alt-font);
 
 // Code Font
 // ---------
@@ -79,7 +79,7 @@ $code-font: (
 );
 
 @include tools.add-font('code', $code-font);
-@include herman.herman-add('font', 'code', $code-font);
+@include herman.add('font', 'code', $code-font);
 
 // Amp Font
 // --------
@@ -106,4 +106,4 @@ $amp-font: (
 );
 
 @include tools.add-font('amp', $amp-font);
-@include herman.herman-add('font', 'amp', $amp-font);
+@include herman.add('font', 'amp', $amp-font);

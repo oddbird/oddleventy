@@ -5,7 +5,7 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 const _ = require('lodash');
 
-const taxonomy = yaml.safeLoad(
+const taxonomy = yaml.load(
   // eslint-disable-next-line no-sync
   fs.readFileSync('./content/_data/taxonomy.yaml', 'utf8'),
 );
