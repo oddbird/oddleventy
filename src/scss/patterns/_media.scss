@@ -24,7 +24,7 @@
 
   @include tools.above('wide-page') {
     grid-template-areas: var(--reverse-x, 'image content');
-    grid-template-columns: fit-content(33%) minmax(
+    grid-template-columns: fit-content(25%) minmax(
         min-content,
         var(--media-content, 1fr)
       );
@@ -32,7 +32,7 @@
     &[data-reverse~='horizontal'] {
       --reverse-x: 'content image';
       grid-template-columns: minmax(min-content, var(--media-content, 1fr)) fit-content(
-          33%
+          25%
         );
     }
   }
