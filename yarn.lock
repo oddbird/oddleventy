@@ -1860,16 +1860,16 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 14.14.19
-  resolution: "@types/node@npm:14.14.19"
-  checksum: 218ff4a93978cf41f4dd3d6aea7555d119873b50905889b1a3f14737f1e135a688672fa1f8e02ed856922fb828703bb064f7733f7e6998173c4714a7a3ec4c4c
+  version: 14.14.20
+  resolution: "@types/node@npm:14.14.20"
+  checksum: 84a9fd73de978967723f951173ff4d07dca259941d3e37c7a3dbb236c09b3f2294bb2098678a806afe6fd6cac39a7d0a1d399f602378c951bd5d01ede535d570
   languageName: node
   linkType: hard
 
 "@types/node@npm:^13.7.0":
-  version: 13.13.38
-  resolution: "@types/node@npm:13.13.38"
-  checksum: b373d9285c7c6c867144d83df00095b201b9d6ea9211694c9b5df25bcd0f78f70e46da22aed3e31f7cc3ea4a326fb59c15326a051805e1cac5ae5df6dee56008
+  version: 13.13.39
+  resolution: "@types/node@npm:13.13.39"
+  checksum: f618cab2f86dc6dada7600d51a552cb3d4e40f19e3e299a148ff13d9d5fba10e55d010db77e3e3267030f1d490e600e01f0fc21ed1d371fb4083e3bc8045695c
   languageName: node
   linkType: hard
 
@@ -5536,14 +5536,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"doxray@npm:^0.10.0":
-  version: 0.10.0
-  resolution: "doxray@npm:0.10.0"
+"doxray@npm:^0.10.1":
+  version: 0.10.1
+  resolution: "doxray@npm:0.10.1"
   dependencies:
     deep-equal: ~0.2.1
     glob: ~5.0.5
-    js-yaml: ">=3.13.1"
-  checksum: 4a7d43c6be72afecf88bf1680e5aea5913949d586063adc9471f50cbdd0876ba1478a83920a556ec3f5afd3469eb802abd8159c2b357ff5fbb605ee39e5b71ef
+    js-yaml: 3.13.1
+  checksum: 91714fb7283833b2c0f43b87637eb4e2b1419148eb82f8b23e3b1883908fc64fa336268ae733085781e57600504d59ffc9b200e48e4661af2eb44dd472d043f3
   languageName: node
   linkType: hard
 
@@ -9493,7 +9493,19 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:>=3.13.1 <4, js-yaml@npm:^3.10.0, js-yaml@npm:^3.11.0, js-yaml@npm:^3.13.1, js-yaml@npm:^3.14.0":
+"js-yaml@npm:3.13.1":
+  version: 3.13.1
+  resolution: "js-yaml@npm:3.13.1"
+  dependencies:
+    argparse: ^1.0.7
+    esprima: ^4.0.0
+  bin:
+    js-yaml: bin/js-yaml.js
+  checksum: 277157fdf235757b71cfbf24f6bef57576a26d9b4cf89b63d89c9044da7b0f9d16c3629c8b5fd549ae343523727a0df1598794e9a4429763cee4e17056ff8523
+  languageName: node
+  linkType: hard
+
+"js-yaml@npm:^3.10.0, js-yaml@npm:^3.11.0, js-yaml@npm:^3.13.1, js-yaml@npm:^3.14.0":
   version: 3.14.1
   resolution: "js-yaml@npm:3.14.1"
   dependencies:
@@ -11325,9 +11337,9 @@ fsevents@~2.1.2:
   linkType: hard
 
 "node-releases@npm:^1.1.67":
-  version: 1.1.68
-  resolution: "node-releases@npm:1.1.68"
-  checksum: 04be5c2b78e4f409baa0288cae3b3725c956f6b2108fdee30f48a3651148ee1994d163f7ad1baf18dea4d6aac4c953340ea8f54d8817bb86b06cc24c60d9ad1f
+  version: 1.1.69
+  resolution: "node-releases@npm:1.1.69"
+  checksum: 240b2534f32c8bbdfefb1fb052d2b1c198f3a745141ce245c6c5241a6efefae22d356b66965e5250869013c3c4777050cdca78d39f3b46965166b5f3e02b08d7
   languageName: node
   linkType: hard
 
@@ -11711,7 +11723,7 @@ fsevents@~2.1.2:
     chokidar-cli: ^2.1.0
     core-js: ^3.8.2
     cssremedy: 0.1.0-beta.2
-    doxray: ^0.10.0
+    doxray: ^0.10.1
     eslint: ^7.17.0
     eslint-config-prettier: ^7.1.0
     eslint-import-resolver-node: ^0.3.4
@@ -11741,7 +11753,7 @@ fsevents@~2.1.2:
     rollup-plugin-terser: ^7.0.2
     sass: ^1.32.0
     sassdoc: ^2.7.3
-    sassdoc-theme-herman: ^4.0.0-rc
+    sassdoc-theme-herman: ^4.0.0
     slugify: ^1.4.6
     striptags: ^3.1.1
     stylelint: ^13.8.0
@@ -14351,9 +14363,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"sassdoc-theme-herman@npm:^4.0.0-rc":
-  version: 4.0.0-rc.1
-  resolution: "sassdoc-theme-herman@npm:4.0.0-rc.1"
+"sassdoc-theme-herman@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "sassdoc-theme-herman@npm:4.0.0"
   dependencies:
     bluebird: ^3.7.2
     cheerio: ^1.0.0-rc.5
@@ -14374,7 +14386,7 @@ fsevents@~2.1.2:
     vinyl-fs: ^3.0.3
   peerDependencies:
     sassdoc: ^2.5.0
-  checksum: 637a488e50c1997f2984b629b6c21b1c59dfb36989494b023be16cf311ba8936f631c6395e1ebabea92f24edea9354675fe38dd725d0659cd51191a34641c3e6
+  checksum: 10704f0590e838311ab74e2094bf4fcca8b658099a58eb42901794af238f77ef8e520f1fe509aea350d26f6998da0833262cf4303913018873841156ed28996e
   languageName: node
   linkType: hard
 

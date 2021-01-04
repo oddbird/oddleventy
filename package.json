@@ -62,7 +62,7 @@
     "chokidar-cli": "^2.1.0",
     "core-js": "^3.8.2",
     "cssremedy": "0.1.0-beta.2",
-    "doxray": "^0.10.0",
+    "doxray": "^0.10.1",
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-import-resolver-node": "^0.3.4",
@@ -92,7 +92,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.32.0",
     "sassdoc": "^2.7.3",
-    "sassdoc-theme-herman": "^4.0.0-rc",
+    "sassdoc-theme-herman": "^4.0.0",
     "slugify": "^1.4.6",
     "striptags": "^3.1.1",
     "stylelint": "^13.8.0",
@@ -105,7 +105,6 @@
   },
   "resolutions": {
     "dot-prop": ">=5.1.1",
-    "doxray/js-yaml": ">=3.13.1 <4",
     "sassdoc-extras": "^3.0.0"
   },
   "husky": {
