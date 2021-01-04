@@ -30,6 +30,15 @@ sample:
   caption: |
     Adobe's font tags game is a meditation in typography
     with illustrated and animated questions.
+before:
+  - img: work/adobe/before-adobe-font-game-calligraphic.jpg
+    alt: Before we applied the size adjustment
+compare:
+  - img: work/adobe/before-and-after-adobe-size-adjust.jpg
+    alt: Samples showing size comparison
+after:
+  - img: work/adobe/after-adobe-font-game-calligraphic.jpg
+    alt: After making font-size adjustments
 tasks:
   - User Experience Design
   - Graphic Design
@@ -145,6 +154,13 @@ It was fun collaborating with audio specialist, Rob Taliesin Owen of [Potion Sou
 
 Each question in the game has nine options and each option consists of the same identical image plus a unique font. Typefaces have a wide array of letter heights and widths. When we placed the typefaces on top of the images, some barely filled the space, some hung off the edges of the illustrations. CSS Custom Properties to the rescue! Custom Properties made it possible to adjust individual typefaces.
 
+{{ embed.figure(
+  data=before,
+  caption='All font-sizes started the same',
+) }}
+
+We started with some js....
+
 ```js
 computed: {
   fontStyles() {
@@ -155,13 +171,18 @@ computed: {
 }
 ```
 
+We set a global font-size using a calc statement. The first value was the `--svg-base` custom property for the set of illustrations (or 4em if it wasn't assigned). We multiplied that by the `--svg-adjust` custom property of each individual font-family used in a set of illustrations (or 1 if it wasn't assigned).
+
 ```css
-/* Global */
+/* Global CSS */
 .svg-text {
   font-size: calc(var(--svg-base, 4em) * var(--svg-adjust, 1));
 }
+```
 
-/* Scoped to the Calligraphic Illustration in the Vue file */
+In the calligraphic page's Vue file, we set `--svg-base` scoped to this page only:
+
+```css
 <style lang="scss" scoped>
 .svg-text {
   --svg-base: 87px;
@@ -169,18 +190,34 @@ computed: {
 </style>
 ```
 
+Each page had a markdown file that listed the font families 
+used along with some additional data. This is where we were 
+able to finely-tune each font size for each font-family.
+
 ```md
   - name: Chapman Bold Extended Italic
     adjust: .675
 ```
+
+We also used custom properties to then edit the positioning, 
+especially on the illustrations that had more than one line of text.
+
+{{ embed.figure(
+  data=compare,
+  caption='Before and after',
+  class='extend-small size-quarter'
+) }}
+
+{{ embed.figure(
+  data=after,
+  caption='After the custom property size adjustment'
+) }}
 
 ### SVG Animation
 
 We were privileged to have [Christina Gorton] join us for this project. Christina worked with our designers to create clean and optimized SVGs for animating. She used the GreenSock animation library to create varied animations for each font question. Each font had a certain personality she put in to each animation. She worked with the whole team and Adobe to adjust timing and easing on animations. GreenSock mades it easier to iterate on animations helping us to meet the project deadline.
 
 [Christina Gorton]: https://www.christinagorton.com/
-
-{% import 'embed.macros.njk' as embed %}
 
 {{ embed.codepen(
   id='rNedLbN',
