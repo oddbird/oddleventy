@@ -15,7 +15,7 @@ social:
 summary: |
   Sondra
   is a brand and user experience/interface designer --
-  as well as a marketing expert, usability tester, 
+  as well as a marketing expert, usability tester,
   and Object-Oriented UX Strategist.
 ---
 
