@@ -16,7 +16,7 @@ summary: |
   Sondra
   is a brand and user experience/interface designer --
   as well as a marketing expert, usability tester, 
-  and object-oriented UX strategist.
+  and Object-Oriented UX Strategist.
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -51,5 +51,5 @@ checkout our [Research & Concepting] service.
 
 {% endcall %}
 
-[Certified Object-Oriented UX Strategist]:https://www.objectorientedux.com/strategists/SondraEby
+[Certified Object-Oriented UX Strategist]: https://www.objectorientedux.com/strategists/SondraEby
 [Research & Concepting]: /services/planning/
