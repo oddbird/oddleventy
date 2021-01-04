@@ -9,19 +9,18 @@
 /// for styling range input 'tracks'.
 /// This works like a selector,
 /// with content rather than arguments.
-///
-///   ```scss
-///   @use 'tools/input-range' as range;
-///
-///   @include range.track {
-///     appearance: none;
-///     height: 1em;
-///     cursor: pointer;
-///   }
-///   ```
-///
 /// @content
 ///   The styles to apply to range input tracks
+/// @example scss
+///   @use 'tools/input-range' as range;
+///
+///   .track {
+///     @include range.track {
+///       appearance: none;
+///       height: 1em;
+///       cursor: pointer;
+///     }
+///   }
 /// @group tools-range
 @mixin track {
   &::-webkit-slider-runnable-track {
@@ -42,21 +41,20 @@
 /// the handle that can be moved along a track.
 /// This works like a selector,
 /// with content rather than arguments.
-///
-///   ```scss
-///   @use 'tools/input-range' as range;
-///
-///   @include range.thumb {
-///     appearance: none;
-///     height: 1em;
-///     width: 0.5em;
-///     background: var(--ccs-prime);
-///     cursor: pointer;
-///   }
-///   ```
-///
 /// @content
 ///   The styles to apply to range input thumbs
+/// @example scss
+///   @use 'tools/input-range' as range;
+///
+///   .thumb {
+///     @include range.thumb {
+///       appearance: none;
+///       height: 1em;
+///       width: 0.5em;
+///       background: var(--ccs-prime);
+///       cursor: pointer;
+///     }
+///   }
 /// @group tools-range
 @mixin thumb {
   &::-webkit-slider-thumb {
