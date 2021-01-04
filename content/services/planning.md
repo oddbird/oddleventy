@@ -169,7 +169,7 @@ summary: |
   prioritized estimates,
   and a robust plan for development and launch.
 
-  Using an object-oriented user experience strategy
+  Using an [object-oriented user experience strategy]
   (OOUX), we'll guide you through a
   process to define the concepts or 
   "objects" that make up your web app, 
@@ -180,7 +180,7 @@ summary: |
   between designers, developers, and stakeholders 
   throughout the project.
 
-  [certified object-oriented user experience strategist]: /authors/sondra/
+  [object-oriented user experience strategy]: /authors/sondra/
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
