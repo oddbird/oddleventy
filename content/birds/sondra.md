@@ -37,12 +37,12 @@ to audience engagement and interaction.
 
 {% call embed.media_block(
   media=embed.img(
-    src='birds/lorescertificationbadge.png',
-    alt='OOUX certification badge'
+    src='birds/medrescertificationbadge.png',
+    alt='OOUX certification badge',
+    width='725px',
+    height='725px'
   ),
-  column='page',
-  align='center',
-  min='8rem'
+  align='center'
 ) %}
 
 In 2020, Sondra became a [Certified Object-Oriented UX Strategist].
