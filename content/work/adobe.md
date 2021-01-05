@@ -155,7 +155,7 @@ Each question in the game has nine options and each option consists of the same 
 
 {{ embed.figure(
   data=before,
-  caption='All font-sizes started the same',
+  caption='All font-sizes started the same'
 ) }}
 
 We started with some js....
