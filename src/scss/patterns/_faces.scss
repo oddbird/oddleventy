@@ -1,0 +1,62 @@
+[data-face] {
+  --eyes: hsla(
+    var(--ccs-h--neutral),
+    var(--ccs-s--bg6),
+    var(--ccs-l--bg6),
+    var(--ccs-invert--zero)
+  );
+  overflow: visible;
+}
+
+.eyes {
+  fill: var(--eyes, black);
+}
+
+// combined SVG
+[data-nest] {
+  transform: translate(var(--x, 0), var(--y, var(--row, 0)));
+
+  &:nth-child(odd) {
+    --row: 80px;
+  }
+}
+
+[data-nest='carl'] {
+  --x: -10px;
+}
+
+[data-nest='stacy'] {
+  --x: 380px;
+}
+
+[data-nest='davidh'] {
+  --x: 685px;
+}
+
+[data-nest='sondra'] {
+  --x: 970px;
+}
+
+[data-nest='erica'] {
+  --x: 1400px;
+}
+
+[data-nest='miriam'] {
+  --x: 1830px;
+  --y: -20px;
+}
+
+[data-nest='ed'] {
+  --x: 2130px;
+  --y: 100px;
+}
+
+[data-nest='patricia'] {
+  --x: 2475px;
+  --y: -10px;
+}
+
+[data-nest='jonny'] {
+  --x: 2840px;
+  --y: 100px;
+}

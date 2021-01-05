@@ -15,11 +15,12 @@ image:
 og:
   img: default
 summary: |
-  **We help companies create better web applications**
-  with resilient design systems & well-tested code.
-  As experts in digital product design and development,
-  we focus on performance, accessibility, and architecture --
-  for low maintenance costs over the long term.
+  **As experts in digital product design and development,**
+  we focus on accessibility, performance, and architecture.
+  We deliver resilient design systems and well-tested code,
+  giving you low maintenance costs for years. We’ll help 
+  clarify & prioritize your goals 
+  as we work toward them together.
 action:
   text: Start a conversation »
   url: /contact/
@@ -80,7 +81,8 @@ been acquired,
 and reported easy maintenance for years.
 Our specialties include:
 
-- Strategy, branding, and design
+- Branding & Design
+- Object-Oriented UX & Strategy
 - Python & Django (*core contributors*)
 - CSS & Sass (*core contributors*)
 - JavaScript with Vue, React, Node, etc...

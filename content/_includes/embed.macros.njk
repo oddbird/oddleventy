@@ -77,18 +77,20 @@ params:
 {% macro figure(
   data=none,
   caption=none,
-  class=''
+  class='',
+  attrs={}
 ) -%}
   {%- set content = _fig_content(data) if (data != none) else caller() -%}
   {% if content %}
-    <figure class="embed{{ ' ' + class if class else '' }}">
+    {% set class = ['embed', class] | join(' ') | trim %}
+    <figure class="{{ class }}" {{ utility.show_attrs(attrs) }}>
       <div class="gallery">
-      {{- content | safe -}}
+        {{- content | safe -}}
       </div>
 
       {%- if caption -%}
         <figcaption class="caption">
-        {{- caption | mdInline | safe -}}
+          {{- caption | mdInline | safe -}}
         </figcaption>
       {%- endif -%}
     </figure>
@@ -135,29 +137,29 @@ params:
 {% macro _fig_content(
   data
 ) -%}
-{%- for item in data -%}
-  {%- if item.img -%}
-    {%- set style = {
-      '--width': item.width,
-      '--span': item.span
-    } | styles -%}
-    {% set full_width = (loop.length == 1) or (item.span == 'full') or (item.span > 1) %}
-    {{- img(
-      src=item.img,
-      alt=item.alt,
-      width=item.width,
-      height=item.height,
-      sizes=none if full_width else 'gallery',
-      attrs={'style': style}
-    ) | safe -}}
-  {%- elif item.svg -%}
-    {{- svg(item.svg, item.alt) | safe -}}
-  {%- elif item.iframe -%}
-    {{- iframe(item.iframe, item.width, item.height, item.span) -}}
-  {%- elif item.audio -%}
-    {{- audio(item.audio, item.span) -}}
-  {%- endif -%}
-{%- endfor -%}
+  {%- for item in data -%}
+    {%- if item.img -%}
+      {%- set style = {
+        '--width': item.width,
+        '--span': item.span
+      } | styles -%}
+      {% set full_width = (loop.length == 1) or (item.span == 'full') or (item.span > 1) %}
+      {{- img(
+        src=item.img,
+        alt=item.alt,
+        width=item.width,
+        height=item.height,
+        sizes=none if full_width else 'gallery',
+        attrs={'style': style}
+      ) | safe -}}
+    {%- elif item.svg -%}
+      {{- svg(item.svg, item.alt) | safe -}}
+    {%- elif item.iframe -%}
+      {{- iframe(item.iframe, item.width, item.height, item.span) -}}
+    {%- elif item.audio -%}
+      {{- audio(item.audio, item.span) -}}
+    {%- endif -%}
+  {%- endfor -%}
 {%- endmacro %}
 
 
@@ -233,17 +235,17 @@ params:
   notch='15%',
   content=none
 ) %}
-{%- set content = content if (content != none) else caller() -%}
-{%- set style = {
-  '--device-img-notch': notch,
-  '--device-img-fill': fill,
-  '--device-img-fit': fit,
-  '--device-img-position': position
-} -%}
-<div data-screen="{{ device }}" {{ utility.style_if(style) }}>
-{{ content | safe }}
-{% include 'devices/' + device + '.svg' %}
-</div>
+  {%- set content = content if (content != none) else caller() -%}
+  {%- set style = {
+    '--device-img-notch': notch,
+    '--device-img-fill': fill,
+    '--device-img-fit': fit,
+    '--device-img-position': position
+  } -%}
+  <div data-screen="{{ device }}" {{ utility.style_if(style) }}>
+    {{ content | safe }}
+    {% include 'devices/' + device + '.svg' %}
+  </div>
 {% endmacro %}
 
 
@@ -263,21 +265,21 @@ params:
   projects,
   collection
 ) %}
-<div class="logo-grid">
-  {%- for project in projects -%}
-    {%- set page = collection | getPage(project) if collection else none -%}
-    {%- set logo = page.data.logo if page else project -%}
-    {%- set client = page.data.client -%}
-    {%- set title = page.data.banner or page.data.title -%}
-    {{ utility.link_if(
-      content=svg(
-        path='logos/' + logo,
-        alt=[client, title] | join(': ') if (client and title) else title
-      ),
-      url=page.url if page else none
-    ) }}
-  {%- endfor -%}
-</div>
+  <div class="logo-grid">
+    {%- for project in projects -%}
+      {%- set page = collection | getPage(project) if collection else none -%}
+      {%- set logo = page.data.logo if page else project -%}
+      {%- set client = page.data.client -%}
+      {%- set title = page.data.banner or page.data.title -%}
+      {{ utility.link_if(
+        content=svg(
+          path='logos/' + logo,
+          alt=[client, title] | join(': ') if (client and title) else title
+        ),
+        url=page.url if page else none
+      ) }}
+    {%- endfor -%}
+  </div>
 {% endmacro %}
 
 
@@ -300,22 +302,22 @@ params:
   data,
   title=none
 ) -%}
-{%- if data -%}
-<section class="icon-blocks" data-typeset>
-{%- if title %}{{ layout.title(title) }}{% endif -%}
-{%- for item in data -%}
-{%- call media_block(
-  media=svg(item.icon, item.alt),
-  name='icon-block'
-) -%}
-{%- if item.title -%}
-<h3>{{ utility.link_if(item.title, item.url) }}</h3>
-{%- endif -%}
-{{ item.text | md | safe }}
-{%- endcall -%}
-{%- endfor -%}
-</section>
-{%- endif -%}
+  {%- if data -%}
+    <section class="icon-blocks" data-typeset>
+      {%- if title %}{{ layout.title(title) }}{% endif -%}
+      {%- for item in data -%}
+        {%- call media_block(
+          media=svg(item.icon, item.alt),
+          name='icon-block'
+        ) -%}
+          {%- if item.title -%}
+            <h3>{{ utility.link_if(item.title, item.url) }}</h3>
+          {%- endif -%}
+          {{ item.text | md | safe }}
+        {%- endcall -%}
+      {%- endfor -%}
+    </section>
+  {%- endif -%}
 {%- endmacro %}
 
 {# @docs
@@ -378,27 +380,27 @@ params:
   sizes=none,
   attrs={}
 ) -%}
-{%- if src -%}
-{%- set config = 'img' | fromTaxonomy -%}
-{%- if not ('://' in src) -%}
-  {%- set fallback = config.sizes[sizes].fallback if config.sizes[sizes] else none -%}
-  {%- set src = ('/assets/images/' + src) -%}
-  {%- set imgSrcSet = srcset(src, width) -%}
-  {%- set imgSrcSet = imgSrcSet if (imgSrcSet != "") else none -%}
-  {%- set respSrc = src | imgSuffix(fallback or config.fallback) -%}
-  {%- set configSizes = config.sizes[sizes].html if config.sizes[sizes] else none -%}
-{%- endif -%}
-{%- set resize = width | imgSize(height, sizes) -%}
-{%- set attrs = attrs | merge({
-  'src': respSrc or src,
-  'alt': alt or true,
-  'srcset': imgSrcSet,
-  'width': resize.width,
-  'height': resize.height,
-  'sizes': configSizes or sizes
-}) -%}
-<img {{ utility.show_attrs(attrs) }}/>
-{%- endif -%}
+  {%- if src -%}
+    {%- set config = 'img' | fromTaxonomy -%}
+    {%- if not ('://' in src) -%}
+      {%- set fallback = config.sizes[sizes].fallback if config.sizes[sizes] else none -%}
+      {%- set src = ('/assets/images/' + src) -%}
+      {%- set imgSrcSet = srcset(src, width) -%}
+      {%- set imgSrcSet = imgSrcSet if (imgSrcSet != "") else none -%}
+      {%- set respSrc = src | imgSuffix(fallback or config.fallback) -%}
+      {%- set configSizes = config.sizes[sizes].html if config.sizes[sizes] else none -%}
+    {%- endif -%}
+    {%- set resize = width | imgSize(height, sizes) -%}
+    {%- set attrs = attrs | merge({
+      'src': respSrc or src,
+      'alt': alt or true,
+      'srcset': imgSrcSet,
+      'width': resize.width,
+      'height': resize.height,
+      'sizes': configSizes or sizes
+    }) -%}
+    <img {{ utility.show_attrs(attrs) }}/>
+  {%- endif -%}
 {%- endmacro %}
 
 
@@ -474,14 +476,14 @@ params:
 #}
 {% macro audio(
   src,
-  span
+  span=none
 ) -%}
-{%- set style = {
-  '--width': '100%',
-  '--span': span
-} -%}
-{%- set src = src if ('://' in src) else ('/assets/media/' + src) -%}
-<audio src="{{ src }}" {{ utility.style_if(style) }} controls>{{ src | mdInline }}</audio>
+  {%- set style = {
+    '--width': '100%',
+    '--span': span
+  } -%}
+  {%- set src = src if ('://' in src) else ('/assets/media/' + src) -%}
+  <audio src="{{ src }}" {{ utility.style_if(style) }} controls="controls">{{ src | mdInline }}</audio>
 {%- endmacro %}
 
 
@@ -511,13 +513,13 @@ params:
   span=none,
   content=none
 ) %}
-{%- set content = content if (content != none) else caller() -%}
-{%- if width | typeCheck('number') and height | typeCheck('number') -%}
-  {%- set style = {
-    '--ratio': (width / height),
-    '--span': span
-  } -%}
-<div class="ratio" {{ utility.style_if(style) }}>{{ content | safe }}</div>
+  {%- set content = content if (content != none) else caller() -%}
+  {%- if width | typeCheck('number') and height | typeCheck('number') -%}
+    {%- set style = {
+      '--ratio': (width / height),
+      '--span': span
+    } -%}
+    <div class="ratio" {{ utility.style_if(style) }}>{{ content | safe }}</div>
   {%- else -%}
     {{- content | safe -}}
   {%- endif -%}
@@ -568,24 +570,24 @@ params:
   theme=none,
   preview=none,
   attrs={}
-) %}
-<p {{ utility.show_attrs({
-  'class': 'codepen',
-  'data-height': height,
-  'data-theme-id': theme,
-  'data-slug-hash': id,
-  'data-default-tab': tab,
-  'data-user': user,
-  'data-embed-version': "2",
-  "data-preview": preview
-} | merge(attrs)) }}>See the Pen {{ utility.link_if(
-  content=title,
-  url=('https://codepen.io/' + user + '/pen/' + id)
-) }} by {{ utility.link_if(
-  content='@' + user,
-  url='https://codepen.io/' + user
-) }} on {{ utility.link_if(
-  content='CodePen',
-  url='https://codepen.io'
-) }}.</p><script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-{% endmacro %}
+) -%}
+  <p {{ utility.show_attrs({
+    'class': 'codepen',
+    'data-height': height,
+    'data-theme-id': theme,
+    'data-slug-hash': id,
+    'data-default-tab': tab,
+    'data-user': user,
+    'data-embed-version': "2",
+    "data-preview": preview
+  } | merge(attrs)) }}>See the Pen {{ utility.link_if(
+    content=title,
+    url=('https://codepen.io/' + user + '/pen/' + id)
+  ) }} by {{ utility.link_if(
+    content='@' + user,
+    url='https://codepen.io/' + user
+  ) }} on {{ utility.link_if(
+    content='CodePen',
+    url='https://codepen.io'
+  ) }}.</p><script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+{%- endmacro %}

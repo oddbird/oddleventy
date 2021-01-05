@@ -16,7 +16,7 @@ overrides:
     plugins:
       - simple-import-sort
     rules:
-      simple-import-sort/sort: 1
+      simple-import-sort/imports: 1
       import/order: 0
 env:
   es6: true
