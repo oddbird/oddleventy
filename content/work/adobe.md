@@ -155,10 +155,10 @@ Each question in the game has nine options and each option consists of the same 
 
 {{ embed.figure(
   data=before,
-  caption='All font-sizes started the same'
+  caption='By default, a single shared font-size does not work well across different fonts.'
 ) }}
 
-We started with some js....
+First, we added the `svg-adjust` custom preoerty with js or something? ...
 
 ```js
 computed: {
@@ -170,7 +170,7 @@ computed: {
 }
 ```
 
-We set a global font-size using a calc statement. The first value was the `--svg-base` custom property for the set of illustrations (or 4em if it wasn't assigned). We multiplied that by the `--svg-adjust` custom property of each individual font-family used in a set of illustrations (or 1 if it wasn't assigned).
+We set a global font-size using a CSS calc statement. The first value was the `--svg-base` custom property for the set of illustrations (with a fallback of 4em). We multiplied that by the `--svg-adjust` custom property of each individual font-family used in a set of illustrations (or 1 if it wasn't assigned).
 
 ```css
 /* Global CSS */
@@ -189,23 +189,24 @@ In the calligraphic page's Vue file, we set `--svg-base` scoped to this page onl
 </style>
 ```
 
-Each page had a markdown file that listed the font families 
-used along with some additional data. This is where we were 
-able to finely-tune each font size for each font-family.
+Each page has a markdown file that lists the font families 
+along with some additional data. This is where we are 
+able to fine-tune each font-size per font-family.
 
 ```md
   - name: Chapman Bold Extended Italic
     adjust: .675
 ```
 
-We also used custom properties to then edit the positioning, 
-especially on the illustrations that had more than one line of text.
-
 {{ embed.figure(
   data=compare,
   caption='Before and after',
   class='extend-small size-quarter'
 ) }}
+
+This method was easily replicated across the entire project and allowed us have more control over the design, 
+while writing less code.
+
 
 {{ embed.figure(
   data=after,
