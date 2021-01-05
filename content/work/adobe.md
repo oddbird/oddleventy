@@ -59,7 +59,6 @@ press:
       It really was so valuable.** We are super super happy.
     <<: *meghan
     slug: usability
-  - text: |
 planning:
   - title: Game Goals
     icon: icons/map
