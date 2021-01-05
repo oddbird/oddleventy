@@ -155,10 +155,11 @@ Each question in the game has nine options and each option consists of the same 
 
 {{ embed.figure(
   data=before,
-  caption='By default, a single shared font-size does not work well across different fonts.'
+  caption='A default font-size does not work well with different typefaces'
 ) }}
 
-First, we added the `svg-adjust` custom preoerty with js or something? ...
+First, we add the `svg-adjust` custom property with js to the outer container 
+of each illustration.
 
 ```js
 computed: {
@@ -170,7 +171,12 @@ computed: {
 }
 ```
 
-We set a global font-size using a CSS calc statement. The first value was the `--svg-base` custom property for the set of illustrations (with a fallback of 4em). We multiplied that by the `--svg-adjust` custom property of each individual font-family used in a set of illustrations (or 1 if it wasn't assigned).
+We set a global font-size using a CSS calc function. 
+The first value was the `--svg-base` custom property for the set of 
+illustrations (with a fallback of 4em). 
+We multiplied that by the `--svg-adjust` custom property of each 
+individual font-family used in a set of illustrations 
+(or 1 if it wasn't assigned).
 
 ```css
 /* Global CSS */
@@ -179,7 +185,13 @@ We set a global font-size using a CSS calc statement. The first value was the `-
 }
 ```
 
-In the calligraphic page's Vue file, we set `--svg-base` scoped to this page only:
+In each page's Vue file, we set `--svg-base` 
+to a size that fits the majority of the typefaces
+within each set of illustrations. 
+Since the illustrations are all designed with 
+different orientations and space available 
+for the text, this allows us to start from a place 
+that worked best to maximize the typeface shown.
 
 ```css
 <style lang="scss" scoped>
@@ -197,20 +209,18 @@ able to fine-tune each font-size per font-family.
   - name: Chapman Bold Extended Italic
     adjust: .675
 ```
-
 {{ embed.figure(
   data=compare,
   caption='Before and after',
   class='extend-small size-quarter'
 ) }}
 
-This method was easily replicated across the entire project and allowed us have more control over the design, 
-while writing less code.
-
+This method was easily replicated across the entire project and allowed us 
+have more control over the design, while writing less code.
 
 {{ embed.figure(
   data=after,
-  caption='After the custom property size adjustment'
+  caption='2 After the custom property size adjustment'
 ) }}
 
 ### SVG Animation
