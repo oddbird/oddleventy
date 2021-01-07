@@ -49,5 +49,6 @@ herman:
     - name: Herman
       url: https://www.oddbird.net/herman/
   sass:
-    implementation: sass
-    jsonfile: _built/css/json.css
+    jsonFile: _built/css/json.css
+    includePaths:
+      - src/scss/
