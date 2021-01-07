@@ -43,14 +43,26 @@ params:
   name='',
   attrs={},
   reverse=none,
+  column=none,
+  align=none,
+  max=none,
+  min=none,
+  size=none,
   content=none
 ) %}
   {%- set content = content if (content != none) else caller() -%}
-  {%- set core = {
+  {%- set attrs = {
     'data-media': name,
     'data-reverse': reverse
+  } | merge(attrs) -%}
+  {%- set style = {
+    '--column': column,
+    '--align': align,
+    '--media-max': max,
+    '--media-min': min,
+    '--media-size': size
   } -%}
-  <div {{ utility.show_attrs(core) }} {{ utility.show_attrs(attrs) }}>
+  <div {{ utility.style_if(style) }} {{ utility.show_attrs(attrs) }}>
     <div class="media-image">{{ media | safe }}</div>
     <div class="media-content">{{ content | safe }}</div>
   </div>
