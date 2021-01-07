@@ -16,7 +16,7 @@ og:
   img: default
 summary: |
   **As experts in digital product creation,**
-  we’ll help you clarify the goals & priorities
+  we’ll help to clarify your goals & priorities
   as we work towards them together.
   Our focus on accessibility, performance, and architecture --
   resilient design systems & well-tested code --
