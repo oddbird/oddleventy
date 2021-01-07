@@ -18,7 +18,7 @@ $ratios: (
 );
 
 @include tools.add-ratios($ratios);
-@include herman.herman-add('ratios', 'ratios', $ratios);
+@include herman.add('ratios', 'ratios', $ratios);
 
 // Font Sizes
 // ----------
@@ -38,7 +38,7 @@ $font-sizes: (
 );
 
 @include tools.add-sizes($font-sizes);
-@include herman.herman-add(
+@include herman.add(
   'sizes',
   'font-sizes',
   $font-sizes,
@@ -64,7 +64,7 @@ $spacing-sizes: (
 );
 
 @include tools.add-sizes($spacing-sizes);
-@include herman.herman-add(
+@include herman.add(
   'sizes',
   'spacing-sizes',
   $spacing-sizes,
@@ -84,7 +84,7 @@ $theme-sizes: (
 );
 
 @include tools.add-sizes($theme-sizes);
-@include herman.herman-add(
+@include herman.add(
   'sizes',
   'theme-sizes',
   $theme-sizes,
@@ -106,7 +106,7 @@ $page-sizes: (
 );
 
 @include tools.add-sizes($page-sizes);
-@include herman.herman-add(
+@include herman.add(
   'sizes',
   'page-sizes',
   $page-sizes,
