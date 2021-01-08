@@ -42,7 +42,7 @@ note: |
   There is no need for a macro
   when creating one-off quotes in markdown content.
 example: |
-  {{ quotes.blockquote(press | withData('slug', 'extension')) }}
+  {{ quotes.blockquote(press | findData('slug', 'extension')) }}
 params:
   data:
     type: object
