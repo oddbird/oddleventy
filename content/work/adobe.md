@@ -23,7 +23,7 @@ tags:
 sample:
   desktop:
     src: adobe/desktop.jpg
-    alt: Options for the vintage font tag with ferriswheel illustrations
+    alt: Options for the vintage font tag with Ferris wheel illustrations
   mobile:
     src: adobe/mobile.jpg
     alt: Mobile view of the vintage font tag question
@@ -53,7 +53,7 @@ press:
     <<: *meghan
     slug: fun
   - text: |
-      Oddbird developers know what they’re doing. 
+      Oddbird developers know what they’re doing.
       We appreciate you all driving us to our goals.
       **I’m glad usability testing was baked into the process.
       It really was so valuable.** We are super super happy.
@@ -63,50 +63,85 @@ planning:
   - title: Game Goals
     icon: icons/map
     text: |
-      We started with a conversation about goals for the game — create a happy place for designers to connect with fonts and a method for Adobe to collect their feedback. We talked about what the game should not do like sell things, store player information, or become a social media platform. We defined technical and accessibility requirements, collected specifics about the content, and established a deadline. 
+      We started with a conversation about goals for the game – to create a
+      happy place for designers to connect with fonts and a method for Adobe to
+      collect their feedback. We talked about what the game should _not_ do –
+      sell things, store player information, or become a social media platform.
+      We defined technical and accessibility requirements, collected specifics
+      about the content, and established a deadline.
   - title: Object Map
     icon: icons/site-map
     text: |
-      Using Sophia Prater’s Object Oriented UX strategy, we mapped out the objects in the web application. Though this project had only four objects, the map helped us agree on terms and get organized. We fleshed out the content of each object and the relationships between the four objects that would make up the game: question, option, superpower, and session user.
+      Using Sophia Prater’s [Object-Oriented UX strategy], we mapped out the
+      objects in the web application. Though this project had only four objects,
+      the map helped us agree on terms and get organized. We fleshed out the
+      content of each object and the relationships between the four objects that
+      would make up the game: question, option, superpower, and session user.
+
+      [Object-Oriented UX strategy]: https://www.objectorientedux.com/
   - title: Interactive Wireframe
     icon: icons/interact
     text: |
-      We sketched a wireframe of the game showing the flow of a player through the objects and ways to navigate from one object to another. Illustrations and animations make up the bulk of this game, but we didn’t get into those details yet at this stage. Keeping the wireframe basic and grayscale helped us nail down when animations should occur, what illustrations we would need, and where important Calls to Action should be highlighted throughout the game. 
+      We sketched a wireframe of the game showing the flow of a player through
+      the objects, and ways to navigate from one object to another.
+      Illustrations and animations make up the bulk of this game, but we didn’t
+      get into those details yet at this stage. Keeping the wireframe basic and
+      grayscale helped us nail down when animations should occur, what
+      illustrations we would need, and where important Calls to Action should be
+      highlighted throughout the game.
   - title: User Profiles
     icon: icons/users
     text: |
-      For the user profile, we described the game play of a typical player. Thinking through where the player may be coming from — an Adobe promo or a social media post — helped us hone our ideas for the landing page. In order to make the game accessible to as many players as possible, we establish that both sound and animation should start in the off position, with prominent toggles to turn them on at the player’s discretion.
+      For the user profile, we described the game play of a typical player.
+      Thinking through where the player may be coming from – an Adobe promo or a
+      social media post – helped us hone our ideas for the landing page. In
+      order to make the game accessible to as many players as possible, we
+      established that both sound and animation should start in the off
+      position, with prominent toggles to turn them on at the player’s
+      discretion.
   - title: User Stories
     icon: icons/theater
     text: |
-      Using Goals, Object Map, Wireframe, and User Profiles we will created a list of expected features or ‘stories’ written from the perspective of an individual player.
-      Each user story defined one task that a player might want to accomplish during the game. (As a Player, I want to select a font option.)
+      Using the Goals, Object Map, Wireframe, and User Profiles we created a
+      list of expected features or ‘stories’ written from the perspective of an
+      individual player. Each user story defined one task that a player might
+      want to accomplish during the game: "As a Player, I want to select a font
+      option."
   - title: Itemized & Prioritized Estimate
     icon: icons/estimate
     text: |
-      We estimated each user story, providing Adobe with an itemized hourly estimate, organized into phases.
-      This allowed Adobe to add, prioritize, and remove stories before we began development, and throughout the project as needs and timeline constraints changed.
+      We estimated each user story, providing Adobe with an itemized hourly
+      estimate, organized into phases.
+      This allowed Adobe to add, prioritize, and remove stories before we began
+      development, and throughout the project as needs and timeline constraints
+      changed.
 summary: |
   A meditation on typography, Adobe Fonts' Game allows players to choose the
   fonts that they feel apply best to different scenarios. Players' input helps
   Adobe Fonts continue to improve on their new browse-by-tags feature. We worked
   closely with Adobe to create animated & interactive illustrations using
-  GreenSock, NuxtJS, and CSS -- while maintaining high performance standards and
+  GreenSock, NuxtJS, and CSS – while maintaining high performance standards and
   responsive, accessible design.
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
 
-At the end of the game, players discover their own their 
-typographic superpower. Players have the option to share their superpower on social media, access the typeface on Adobe, view
-similar typefaces, and download their superpower badge.
+At the end of the game, players discover their own typographic superpower.
+Players have the option to share their superpower on social media, access the
+typeface on Adobe, view similar typefaces, and download their superpower badge.
 
 {{ quotes.grid(press | slice(2) | first ) }}
 
 ## What Adobe Needed
 
-Adobe wanted to make their fonts more searchable, tagged with natural language terms like “organic,” “edgy,” and “calligraphic.” They envisioned a fun and meditative game — a bit of joy in a difficult day — that would let players pick the tags for each font, and give Adobe the tools to track the user input. Adobe described it as “a game for people who have feelings about fonts” and requested custom illustrations, animations, and sound design. As typography and game lovers ourselves, the OddBird team was excited to dive in!
+Adobe wanted to make their fonts more searchable, tagged with natural language
+terms like “organic,” “edgy,” and “calligraphic.” They envisioned a fun and
+meditative game – a bit of joy in a difficult day – that would let players pick
+the tags for each font, and give Adobe the tools to track user input. Adobe
+described it as “a game for people who have feelings about fonts” and requested
+custom illustrations, animations, and sound design. As typography and game
+lovers ourselves, the OddBird team was excited to dive in!
 
 {{ embed.icon_block(planning, 'Planning & Discovery Phase') }}
 
@@ -114,69 +149,95 @@ Adobe wanted to make their fonts more searchable, tagged with natural language t
 
 ### Illustrations / Web Graphics
 
-While part of the team began setting up the infrastructure of the game, the designers got to work on illustrations. Sarah Hyndman of [Type Tasting] provided initial sketches. In collaboration with the animator, we established a style — solid, filled SVGs — for easy layer grouping and relatively small file size. In Illustrator, we created unique graphics for ten font questions and five typographic superpowers. We used Asset Export to ensure that our gradients and other styles would translate well to SVG. A tight back-and-forth via Slack between designers, animators, and Adobe helped us moved swiftly through drafting to final designs in order to meet the project deadline.
+While part of the team began setting up the infrastructure of the game, the
+designers got to work on illustrations. Sarah Hyndman of [Type Tasting] provided
+initial sketches. In collaboration with the animator, we established a style –
+solid, filled SVGs – for easy layer grouping and relatively small file size. In
+Illustrator, we created unique graphics for ten font questions and five
+typographic superpowers. We used Asset Export to ensure that our gradients and
+other styles would translate well to SVG. A tight back-and-forth via Slack
+between designers, animators, and Adobe helped us move swiftly through drafting
+to final designs in order to meet the project deadline.
 
 [type tasting]: https://www.typetasting.com/
 
 <figure>
-<img src="{{ site.images }}work/adobe/enter-here.png" class="extend-full" alt="" /><figcaption>The vintage Ferris wheel
-went through a sketch phase and a couple of drafts before
-the design was finalized.</figcaption>
+<img src="{{ site.images }}work/adobe/enter-here.png" class="extend-full" alt="" />
+<figcaption>
+The vintage Ferris wheel went through a sketch phase and a couple of drafts
+before the design was finalized.
+</figcaption>
 </figure>
 <figure>
-<img src="{{ site.images }}work/adobe/edgy.png" class="extend-full" alt="" /><figcaption>Near the end of the edgy superpower design, the team realized the word "edgy" was hard to read in the lowercase Totally Gothic typeface.</figcaption>
+<img src="{{ site.images }}work/adobe/edgy.png" class="extend-full" alt="" />
+<figcaption>
+Near the end of the edgy superpower design, the team realized the word "edgy"
+was hard to read in the lowercase Totally Gothic typeface.
+</figcaption>
 </figure>
-
 
 ### Audio & Nuxt.js
 
-Audio implementation provided an interesting challenging. First, we tried Web Audio API and a Nuxt.js plugin that automatically played and paused the sounds on each page of the game. When we tested it, the sounds played simultaneously. Uh oh! We switched to HTML5 Audio and added an ID for each question tag. The correct sound played when the ID and tag matched. Yay!
+Audio implementation provided an interesting challenging. First, we tried Web
+Audio API and a Nuxt.js plugin that automatically played and paused the sounds
+on each page of the game. When we tested it, the sounds played simultaneously.
+Uh oh! We switched to HTML5 Audio and added an ID for each question tag. The
+correct sound played when the ID and tag matched. Yay!
 
-During testing across different browsers and devices, we discovered that our audio solution didn’t work correctly everywhere — returning auto-play errors. We had to get clever. Using [HTML5 audio] made recovery trivial if autoplay failed.
+During testing across different browsers and devices, we discovered that our
+audio solution didn’t work correctly everywhere – returning autoplay errors. We
+had to get clever. Using [HTML5 Audio] made recovery trivial if autoplay failed.
 
 ```js
 controlSound(on) {
   const bg = this.$refs.audioBackground;
   if (bg) {
-    on ? bg.play().catch(() =>  
-    this.toggleSetting(this.sound)) : bg.pause();
+    if (on) {
+      bg.play().catch(() => this.toggleSetting(this.sound));
+    } else {
+      bg.pause();
+    }
   }
 },
 ```
 
-It was fun collaborating with audio specialist, Rob Taliesin Owen of [Potion SoundWorks]. Adding sound elevated the whole experience of game play. 
+It was fun collaborating with audio specialist Rob Taliesin Owen of [Potion
+SoundWorks]. Adding sound elevated the whole experience of game play.
 
 [html5 audio]: https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide
 [Potion SoundWorks]: https://potionsoundworks.com/
 
 ### CSS Custom Properties
 
-Each question in the game has nine options and each option consists of the same identical image plus a unique font. Typefaces have a wide array of letter heights and widths. When we placed the typefaces on top of the images, some barely filled the space, some hung off the edges of the illustrations. CSS Custom Properties to the rescue! Custom Properties made it possible to adjust individual typefaces.
+Each question in the game has nine options, and each option consists of the same
+identical image plus a unique font. Typefaces have a wide array of letter
+heights and widths. When we placed the typefaces on top of the images, some
+barely filled the space while others hung off the edges of the illustrations.
+CSS Custom Properties to the rescue! Custom Properties made it possible to
+adjust individual typefaces.
 
 {{ embed.figure(
   data=before,
   caption='A default font-size does not work well with different typefaces'
 ) }}
 
-First, we add the `svg-adjust` custom property with js to the outer container 
-of each illustration.
+First, we add the `svg-adjust` custom property to the outer container of each
+illustration using JavaScript.
 
 ```js
-computed: {
-  fontStyles() {
-    return {
-      '--svg-adjust': this.font.adjust,
-    };
-  }
+fontStyles() {
+  return {
+    '--svg-adjust': this.font.adjust,
+  };
 }
 ```
 
-We set a global font-size using a CSS calc function. 
-The first value was the `--svg-base` custom property for the set of 
-illustrations (with a fallback of 4em). 
-We multiplied that by the `--svg-adjust` custom property of each 
-individual font-family used in a set of illustrations 
-(or 1 if it wasn't assigned).
+We set a global font-size using a CSS calc function.
+The first value was the `--svg-base` custom property for the set of
+illustrations (with a fallback of `4em`).
+We multiplied that by the `--svg-adjust` custom property of each
+individual font-family used in a set of illustrations
+(or `1` if it wasn't assigned).
 
 ```css
 /* Global CSS */
@@ -185,49 +246,56 @@ individual font-family used in a set of illustrations
 }
 ```
 
-In each page's Vue file, we set `--svg-base` 
+In each page's Vue file, we set `--svg-base`
 to a size that fits the majority of the typefaces
-within each set of illustrations. 
-Since the illustrations are all designed with 
-different orientations and space available 
-for the text, this allows us to start from a place 
+within each set of illustrations.
+Since the illustrations are all designed with
+different orientations and space available
+for the text, this allows us to start from a place
 that worked best to maximize the typeface shown.
 
 ```css
-<style lang="scss" scoped>
+/* Vue component scoped CSS */
 .svg-text {
   --svg-base: 87px;
 }
-</style>
 ```
 
-Each page has a markdown file that lists the font families 
-along with some additional data. This is where we are 
+Each page has a markdown file that lists the font families
+along with some additional data. This is where we are
 able to fine-tune each font-size per font-family.
 
 ```md
   - name: Chapman Bold Extended Italic
     adjust: .675
 ```
+
 {{ embed.figure(
   data=compare,
   caption='Before and after',
   class='extend-small size-quarter'
 ) }}
 
-This method was easily replicated across the entire project and allowed us 
+This method was easily replicated across the entire project and allowed us to
 have more control over the design, while writing less code.
 
 {{ embed.figure(
   data=after,
-  caption='2 After the custom property size adjustment'
+  caption='After the custom property size adjustment'
 ) }}
 
 ### SVG Animation
 
-We were privileged to have [Christina Gorton] join us for this project. Christina worked with our designers to create clean and optimized SVGs for animating. She used the GreenSock animation library to create varied animations for each font question. Each font had a certain personality she put in to each animation. She worked with the whole team and Adobe to adjust timing and easing on animations. GreenSock mades it easier to iterate on animations helping us to meet the project deadline.
+We were privileged to have [Christina Gorton] join us for this project.
+Christina worked with our designers to create clean and optimized SVGs for
+animating. She used the [GreenSock animation library] to create varied
+animations for each font question. Each font had a distinct personality she
+built into the animation. She worked with the whole team and Adobe to adjust
+timing and easing on animations. GreenSock made it easier to iterate on
+animations, helping us to meet the project deadline.
 
 [Christina Gorton]: https://www.christinagorton.com/
+[GreenSock animation library]: https://greensock.com/
 
 {{ embed.codepen(
   id='rNedLbN',
@@ -237,8 +305,21 @@ We were privileged to have [Christina Gorton] join us for this project. Christin
 
 ### Usability Testing
 
-Testing web applications with users for the first time is exciting and a bit nerve wracking. Are we headed in the right direction? We tested the Font Tags Game with users as early in the process as possible — as soon as we had the questions, options, and animations in place, but before adding sounds and superpowers. Since our timeline was tight, we ran half hour sessions via video with two volunteer designers. Their feedback was invaluable. They caught typeface alignment issues, pointed out confusing language, and helped us imagine new features for phase two. Most importantly, they let us know we were hitting our goals, describing their feelings afterwards as curious, optimistic, empowered, and ready to explore typography!
+Testing web applications with users for the first time is exciting and a bit
+nerve-racking. Are we headed in the right direction? We tested the Font Tags
+Game with users as early in the process as possible – as soon as we had the
+questions, options, and animations in place, but before adding sounds and
+superpowers. Since our timeline was tight, we ran half-hour sessions via video
+with two volunteer designers. Their feedback was invaluable. They caught
+typeface alignment issues, pointed out confusing language, and helped us imagine
+new features for phase two. Most importantly, they let us know we were hitting
+our goals, describing their feelings afterwards as curious, optimistic,
+empowered, and ready to explore typography!
 
 <figure>
-<img src="{{ site.images }}work/adobe/organic-usability.png" class="extend-full" alt="" /><figcaption>Two testers helped us discover that the "link to heroes" was distracting them from playing the game.</figcaption>
+<img src="{{ site.images }}work/adobe/organic-usability.png" class="extend-full" alt="" />
+<figcaption>
+Two testers helped us discover that the "link to heroes" was distracting them
+from playing the game.
+</figcaption>
 </figure>

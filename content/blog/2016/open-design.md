@@ -70,12 +70,12 @@ talk about the open source tools we use, and share any tools we build.
 
 These are the rough stages we expect to go through:
 
-1.  **Planning and Rough Drafts** — You're looking at a first rough
+1.  **Planning and Rough Drafts** – You're looking at a first rough
     outline of the site contents and organization. [Miriam] and [Sondra]
     put together this draft based on conversations with the team, as a
     proposal to discuss. At this point everything is still up for
     debate.
-2.  **Information Architecture** — Before we dive into the fun design
+2.  **Information Architecture** – Before we dive into the fun design
     work, we want to make sure that all our content is in place,
     visitors can find the information they need, and we're telling the
     story we want to tell. We need to spend some time looking at it,
@@ -88,7 +88,7 @@ These are the rough stages we expect to go through:
     some customization and a lot of documentation to make sure we have a
     maintainable site going forward. We want to encourage regular
     updates, so it's important that we get the development flow right.
-4.  **Design and Interaction** — We save most of our graphic design work
+4.  **Design and Interaction** – We save most of our graphic design work
     for the end of the process. In reality, our designers are involved
     at every stage, guiding the planning and architecture from the
     start. [Sondra] made a few photoshop sketches to get us started on
