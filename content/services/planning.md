@@ -125,7 +125,7 @@ planning2:
       What are the relationships between these objects?
       What attributes does each object have,
       and what is the data-type for each attribute?
-      Our Certified Object-Oriented UX Strategist
+      Our certified object-oriented UX strategist
       will map out the objects in the web application
       to create an Object Map --
       giving every object a unique name
@@ -169,7 +169,7 @@ summary: |
   prioritized estimates,
   and a robust plan for development and launch.
 
-  Using an object-oriented user experience strategy (OOUX), 
+  Using an object-oriented user experience strategy (OOUX),
   we'll guide you through a
   process to define the concepts or
   "objects" that make up your web app,
