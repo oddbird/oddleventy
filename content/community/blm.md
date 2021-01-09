@@ -78,7 +78,6 @@ orgs:
       BLVC is committed to a long term vision in which
       ALL Black lives not only matter, but are able to thrive.
 
-      [Donate to Black Visions Collective »](https://secure.everyaction.com/4omQDAR0oUiUagTu0EG-Ig2)
   - title: The Innocence Project
     url: https://innocenceproject.org/
     icon: icons/fist
