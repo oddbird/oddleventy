@@ -77,7 +77,6 @@ orgs:
       and we are in right relationship within our ecosystems.
       BLVC is committed to a long term vision in which
       ALL Black lives not only matter, but are able to thrive.
-
   - title: The Innocence Project
     url: https://innocenceproject.org/
     icon: icons/fist
