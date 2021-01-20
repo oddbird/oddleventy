@@ -13,11 +13,27 @@ summary: |
 ---
 
 {% import 'post.macros.njk' as post %}
+{% import 'embed.macros.njk' as embed %}
 
-{# placeholder for layout template changes #}
-
-{{ post.grid(
-  pages=services,
-  level=2,
-  collections=collections
-) }}
+{% for item in services %}
+  {% set page = collections.all | getPage(item) %}
+    <article {{ post.aria_label(page) }} data-work="summary">
+      <div class="offset-grid">
+        <div class="offset-item offset-media">
+            {% set image = page.data.image %}
+              {{ embed.img(
+                src=image.src,
+                alt=image.alt
+              ) }}
+        </div>
+        <div class="offset-item project-details">
+        <header class="post-header">
+          {% call post.banner(page, level=2,called=true) -%}
+           {{  page.data.title | mdInline | safe }}
+          {%- endcall %}
+        </header>
+          <p>{{ page.data.summary | md | elide | safe }}</p>
+        </div>
+      </div>
+    </article>
+{% endfor %}

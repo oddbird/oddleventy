@@ -43,3 +43,23 @@ $break: 'wide-break';
     padding-left: 0;
   }
 }
+
+//services page
+
+.offset-media {
+  display: block;
+  padding: 0;
+
+  &:nth-child(odd) {
+    padding: 0;
+  }
+
+  &:nth-child(even) {
+    padding: 0;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
