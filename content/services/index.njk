@@ -20,11 +20,11 @@ summary: |
     <article {{ post.aria_label(page) }} data-work="summary">
       <div class="offset-grid">
         <div class="offset-item offset-media">
-            {% set image = page.data.image %}
-              {{ embed.img(
-                src=image.src,
-                alt=image.alt
-              ) }}
+          {% set image = page.data.image %}
+            {{ embed.img(
+              src=image.src,
+              alt=image.alt
+            ) }}
         </div>
         <div class="offset-item project-details">
         <header class="post-header">

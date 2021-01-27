@@ -49,14 +49,9 @@ $break: 'wide-break';
 .offset-media {
   --offset-media-padding: 0;
   display: block;
-  padding: var(--offset-media-padding);
 
-  &:nth-child(odd) {
-    padding: var(--offset-media-padding);
-  }
-
-  &:nth-child(even) {
-    padding: var(--offset-media-padding);
+  & > * {
+    --offset-media-padding: 0;
   }
 
   img {
