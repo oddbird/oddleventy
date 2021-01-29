@@ -23,7 +23,12 @@ summary: |
           {% set image = page.data.image %}
             {{ embed.img(
               src=image.src,
-              alt=image.alt
+              alt=image.alt,
+              attrs={
+                'style': {
+                'object-position': image.position
+              } | styles
+              }
             ) }}
         </div>
         <div class="offset-item project-details">
