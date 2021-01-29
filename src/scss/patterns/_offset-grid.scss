@@ -48,14 +48,10 @@ $break: 'wide-break';
 
 .offset-media {
   --offset-media-padding: 0;
-  display: block;
-
-  & > * {
-    --offset-media-padding: 0;
-  }
+  display: flex;
 
   img {
-    height: 100%;
+    flex: 1 0 auto;
     object-fit: cover;
   }
 }
