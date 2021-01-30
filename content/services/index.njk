@@ -8,7 +8,7 @@ services:
   - /services/speaking/
 summary: |
   **Let’s solve real problems for your business and users** --
-  pairing your industry-expertise,
+  pairing your industry-expertise
   with our product-design experience.
 ---
 
@@ -24,17 +24,13 @@ summary: |
             {{ embed.img(
               src=image.src,
               alt=image.alt,
-              attrs={
-                'style': {
-                'object-position': image.position
-              } | styles
-              }
+              attrs={ 'style': { 'object-position': image.position } | styles }
             ) }}
         </div>
         <div class="offset-item project-details">
         <header class="post-header">
           {% call post.banner(page, level=2,called=true) -%}
-           {{  page.data.title | mdInline | safe }}
+           {{ page.data.title | mdInline | safe }}
           {%- endcall %}
         </header>
           <p>{{ page.data.summary | md | elide | safe }}</p>
