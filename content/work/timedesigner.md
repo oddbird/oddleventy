@@ -81,4 +81,5 @@ summary: |
 
 {% import 'quotes.macros.njk' as quotes %}
 
+<!-- all but the first quote -->
 {{ quotes.grid(press | slice(2) | first ) }}

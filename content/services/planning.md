@@ -120,17 +120,17 @@ planning2:
   - title: Object Map & Data Model
     icon: icons/site-map
     text: |
-      What are the core concepts or "objects" 
-      that users want to interact with in the application? 
-      What are the relationships between these objects? 
-      What attributes does each object have, 
-      and what is the data-type for each attribute? 
-      Our certified Object-Oriented UX strategist 
-      will map out the objects in the web application 
-      to create an Object Map -- 
-      giving every object a unique name 
-      and describing the relationships between them. 
-      This Object Map will guide development 
+      What are the core concepts or "objects"
+      that users want to interact with in the application?
+      What are the relationships between these objects?
+      What attributes does each object have,
+      and what is the data-type for each attribute?
+      Our certified object-oriented UX strategist
+      will map out the objects in the web application
+      to create an Object Map --
+      giving every object a unique name
+      and describing the relationships between them.
+      This Object Map will guide development
       and keep the entire team on the same page.
 planning3:
   - title: Itemized & Prioritized Estimate
@@ -169,18 +169,16 @@ summary: |
   prioritized estimates,
   and a robust plan for development and launch.
 
-  Using an [object-oriented user experience strategy]
-  (OOUX), we'll guide you through a
-  process to define the concepts or 
-  "objects" that make up your web app, 
-  the relationships between those objects, 
+  Using an object-oriented user experience strategy (OOUX),
+  we'll guide you through a
+  process to define the concepts or
+  "objects" that make up your web app,
+  the relationships between those objects,
   and the ways users want to interact with those objects.
   We will deliver an Object Map
-  to streamline communication 
-  between designers, developers, and stakeholders 
+  to streamline communication
+  between designers, developers, and stakeholders
   throughout the project.
-
-  [object-oriented user experience strategy]: /authors/sondra/
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
@@ -212,7 +210,6 @@ take the leap into creating your web project!
     attrs={'class': 'extend-large'}
   ) }}
 {% endcall %}
-
 
 {{ embed.icon_block(planning2) }}
 

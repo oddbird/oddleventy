@@ -69,7 +69,7 @@ Watch Sam's talk: [Magic Tricks with Houdini]
 
 I was sad to miss Sophia Prater’s talk and workshop, but I had the
 opportunity to meet her and really appreciated her offer to discuss my
-recent experiments in Object Oriented UX. It was challenging to think
+recent experiments in Object-Oriented UX. It was challenging to think
 about design like a data model, but it was also useful. As a designer, I
 was able to communicate more clearly with developers about the objects
 that would make up the application and define a glossary of terms.

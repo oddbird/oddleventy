@@ -128,6 +128,7 @@ post answers to questions, view user progress,
 and set alerts for relapse prevention and
 escalation of care.
 
+<!-- all but the first quote -->
 {{ quotes.grid(press | slice(2) | first ) }}
 
 ## What They Needed
