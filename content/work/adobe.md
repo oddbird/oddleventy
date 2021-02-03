@@ -221,7 +221,7 @@ adjust individual typefaces.
   caption='A default font-size does not work well with different typefaces'
 ) }}
 
-First, we add the `svg-adjust` custom property to the outer container of each
+First, we added the `svg-adjust` custom property to the outer container of each
 illustration using JavaScript.
 
 ```js
@@ -247,12 +247,12 @@ individual font-family used in a set of illustrations
 ```
 
 In each page's Vue file, we set `--svg-base`
-to a size that fits the majority of the typefaces
+to a size that fit the majority of typefaces
 within each set of illustrations.
-Since the illustrations are all designed with
+Since the illustrations were designed with
 different orientations and space available
-for the text, this allows us to start from a place
-that worked best to maximize the typeface shown.
+for the text, this allowed us to start from a place
+that worked best to maximize the type.
 
 ```css
 /* Vue component scoped CSS */
@@ -261,8 +261,8 @@ that worked best to maximize the typeface shown.
 }
 ```
 
-Each page has a markdown file that lists the font families
-along with some additional data. This is where we are
+A markdown file for each page listed font families
+along with some additional data. This is where we were
 able to fine-tune each font-size per font-family.
 
 ```md
