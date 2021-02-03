@@ -271,7 +271,7 @@ able to fine-tune each font-size per font-family.
 
 {{ embed.figure(
   data=compare,
-  caption='Before and after',
+  caption='The example on the left shows the type extending outside it's container and the right example is what this illustration looked like after we adjusted the font-size',
   class='extend-small size-quarter'
 ) }}
 
@@ -280,7 +280,8 @@ have more control over the design, while writing less code.
 
 {{ embed.figure(
   data=after,
-  caption='After the custom property size adjustment'
+  caption='After applying adjustments to only the fonts that needed it,
+  the result shows visually similar type size.'
 ) }}
 
 ### SVG Animation
