@@ -1,6 +1,6 @@
 ---
 title: Black Lives Matter
-sub: Donate to the cause, and we'll match you
+sub: Donate to the cause
 image:
   src: pages/blm.jpg
 summary: |
@@ -14,22 +14,59 @@ summary: |
   already working in the streets and behind the scenes --
   and **we're inviting you to join us**.
 orgs:
-  - title: Black Lives Matter & their "Places To Donate"
-    url: https://blacklivesmatters.carrd.co/
+  - title: Black Tech 4 Black Lives
+    url: https://www.blacktechforblacklives.com/
     icon: icons/fist
     text: |
-      #BlackLivesMatter was founded in 2013
-      in response to the acquittal of
-      Trayvon Martin's murderer.
-      Their mission is to eradicate white supremacy
-      and build local power to intervene in violence
-      inflicted on Black communities
-      by the state and vigilantes.
-      We'll match direct donations to BLM
-      or anyone
-      they list on their donation page.
-
-      [Donate through Black Lives Matter »](https://blacklivesmatters.carrd.co/#donate)
+      is a collective of Black tech entrepreneurs,
+      investors, creatives, changemakers, and workers,
+      united to use our social, political,
+      and economic capital for the advancement of our communities.
+  - title: Colorado Freedom Fund
+    url: http://www.blackbailout.org/
+    icon: icons/fist
+    text: |
+      is a revolving community bond fund
+      that pays ransom for our neighbors
+      unjustly detained in cages across Colorado
+      who cannot afford to buy their own freedom.
+  - title: '#BlackTransLivesMatter'
+    url: http://actforblacktranslives.org/
+    icon: icons/fist
+    text: |
+      is a collaborative effort between people
+      who stand in solidarity with Black trans women
+      and wanted to make a difference,
+      and some of the foremost Black trans leaders
+      in community and culture.
+  - title: Southern Poverty Law Center
+    url: https://www.splcenter.org/
+    icon: icons/fist
+    text: |
+      is dedicated to fighting hate and bigotry
+      and to seeking justice
+      for the most vulnerable members of our society.
+      Using litigation, education,
+      and other forms of advocacy,
+      the SPLC works toward the day when the ideals of equal justice
+      and equal opportunity will be a reality.
+  - title: Black Transwomen
+    url: https://blacktranswomen.org/
+    icon: icons/fist
+    text: |
+      is a national nonprofit organization
+      established to specifically address
+      the urgent concerns facing African American transwomen
+      in minority communities.
+  - title: National Bail Out
+    url: https://www.nationalbailout.org/
+    icon: icons/fist
+    text: |
+      is a Black-led and Black-centered collective
+      of abolitionist organizers, lawyers and activists
+      building a community-based movement
+      to support our folks and end systems of pretrial detention
+      and ultimately mass incarceration.
   - title: Black Visions Collective
     url: https://www.blackvisionsmn.org/
     icon: icons/fist
@@ -40,36 +77,19 @@ orgs:
       and we are in right relationship within our ecosystems.
       BLVC is committed to a long term vision in which
       ALL Black lives not only matter, but are able to thrive.
-
-      [Donate to Black Visions Collective »](https://secure.everyaction.com/4omQDAR0oUiUagTu0EG-Ig2)
-  - title: Southern Poverty Law Center
-    url: https://www.splcenter.org/
+  - title: The Innocence Project
+    url: https://innocenceproject.org/
     icon: icons/fist
     text: |
-      The SPLC is dedicated to fighting hate and bigotry
-      and to seeking justice
-      for the most vulnerable members of our society.
-      Using litigation, education,
-      and other forms of advocacy,
-      the SPLC works toward the day when the ideals of equal justice
-      and equal opportunity will be a reality.
-
-      [Donate to Southern Poverty Law Center »](https://donate.splcenter.org/)
-  - title: Innocence Project
-    url: https://www.innocenceproject.org/
-    icon: icons/fist
-    text: |
-      The Innocence Project's mission
-      is to free the staggering number of innocent people
+      works to free the staggering number of innocent people
       who remain incarcerated,
       and to bring reform to the system
       responsible for their unjust imprisonment.
-
-      [Donate to the Innocence Project »](https://www.innocenceproject.org/donate/)
   - title: Campaign Zero
     url: https://www.joincampaignzero.org/
     icon: icons/fist
     text: |
+      strives to end police violence in America.
       Funds donated to Campaign Zero
       support the analysis of policing practices across the country,
       research to identify effective solutions to end police violence,
@@ -77,32 +97,12 @@ orgs:
       leading police accountability campaigns
       and the development of model legislation and advocacy
       to end police violence nationwide.
-
-      [Donate to Campaign Zero »](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZHQKRGV7JHCWC&source=url)
-  - title: Black Tech 4 Black Lives
-    url: https://www.blacktechforblacklives.com/
-    icon: icons/fist
-    text: |
-      "#BlackTech4BlackLives is a collective of Black tech entrepreneurs,
-      investors, creatives, changemakers, and workers,
-      united to use our social, political,
-      and economic capital for the advancement of our communities."
-      We'll match donations to any of the organizations they support,
-      mostly in and around the Bay Area.
-
-      [Donate through Black Tech for Black Lives »](https://www.blacktechforblacklives.com/)
 ---
 
 {% import 'embed.macros.njk' as embed %}
 
-Make a donation to any of the people and organizations listed below --
-on or after June 4, with funds under your own name --
-and then show us a receipt with the donation amount.
-
-You can contact us [@OddBird on Twitter][twitter],
-or via [email to birds@oddbird.net][email]
-
----
+Here are a few of the organizations
+that our team has decided to support:
 
 {{ embed.icon_block(orgs) }}
 

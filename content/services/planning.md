@@ -5,6 +5,7 @@ index: Research & Concepting
 image:
   src: pages/design-sketch.jpg
   alt: Sketched design concept
+  position: 20% 40%
 pitch:
   - title: Project Summary
     icon: icons/map

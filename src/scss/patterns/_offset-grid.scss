@@ -43,3 +43,15 @@ $break: 'wide-break';
     padding-left: 0;
   }
 }
+
+//services page
+
+.offset-media {
+  --offset-media-padding: 0;
+  display: flex;
+
+  img {
+    flex: 1 0 auto;
+    object-fit: cover;
+  }
+}
