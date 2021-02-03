@@ -30,15 +30,24 @@ sample:
   caption: |
     Adobe's font tags game is a meditation in typography
     with illustrated and animated questions.
+vintage:
+  - img: work/adobe/enter-here.png
+    alt: Vintage Carnival Illustration
+edgy:
+  - img: work/adobe/edgy.png
+    alt: Edgy Illustration
 before:
   - img: work/adobe/before-adobe-font-game-calligraphic.jpg
     alt: Before we applied the size adjustment
 compare:
-  - img: work/adobe/before-and-after-adobe-size-adjust.jpg
+  - img: work/adobe/before-and-after-adobe-size-adjust.png
     alt: Samples showing size comparison
 after:
   - img: work/adobe/after-adobe-font-game-calligraphic.jpg
     alt: After making font-size adjustments
+herolink:
+  - img: work/adobe/organic-usability.png
+    alt: Layout showing the link to heroes in the bottom right corner
 tasks:
   - User Experience Design
   - Graphic Design
@@ -161,22 +170,21 @@ to final designs in order to meet the project deadline.
 
 [type tasting]: https://www.typetasting.com/
 
-<figure>
-<img src="{{ site.images }}work/adobe/enter-here.png" class="extend-full" alt="" />
-<figcaption>
-The vintage Ferris wheel went through a sketch phase and a couple of drafts
-before the design was finalized.
-</figcaption>
-</figure>
-<figure>
-<img src="{{ site.images }}work/adobe/edgy.png" class="extend-full" alt="" />
-<figcaption>
-Near the end of the edgy superpower design, the team realized the word "edgy"
-was hard to read in the lowercase Totally Gothic typeface.
-</figcaption>
-</figure>
+{{ embed.figure(
+  data=vintage,
+  caption='The vintage Ferris wheel went through a sketch phase and a couple
+  of drafts before the design was finalized.',
+  class='extend-small'
+) }}
 
-### Audio & Nuxt.js
+{{ embed.figure(
+  data=edgy,
+  caption='Near the end of the edgy superpower design, the team realized the
+  word “edgy” was hard to read in the lowercase Totally Gothic typeface.',
+  class='extend-small'
+) }}
+
+  ### Audio & Nuxt.js
 
 Audio implementation provided an interesting challenging. First, we tried Web
 Audio API and a Nuxt.js plugin that automatically played and paused the sounds
@@ -218,7 +226,10 @@ adjust font-size individually.
 
 {{ embed.figure(
   data=before,
-  caption='We started with a default font-size for all typefaces and found there was too much variation. We needed a solution to individually scale each typeface in order to fit within the assigned space in each illustration.'
+  caption='We started with a default font-size for all typefaces and found
+  there was too much variation. We needed a solution to individually scale
+  each typeface in order to fit within the assigned space in each
+  illustration.'
 ) }}
 
 First, we added the `svg-adjust` custom property to the outer container of each
@@ -245,7 +256,7 @@ individual font-family used in a set of illustrations.
 }
 ```
 
-In each page's Vue file, we set `--svg-base`
+In each page’s Vue file, we set `--svg-base`
 to a size that fit the majority of typefaces
 within each set of illustrations.
 Since the illustrations were designed with
@@ -271,7 +282,9 @@ able to fine-tune each font-size per font-family.
 
 {{ embed.figure(
   data=compare,
-  caption='The example on the left shows the type extending outside it's container and the right example is what this illustration looked like after we adjusted the font-size',
+  caption='The example on the left shows the type extending outside it’s
+  container and the right example is what this illustration looked like
+  after we adjusted the font-size',
   class='extend-small size-quarter'
 ) }}
 
@@ -316,10 +329,8 @@ new features for phase two. Most importantly, they let us know we were hitting
 our goals, describing their feelings afterwards as curious, optimistic,
 empowered, and ready to explore typography!
 
-<figure>
-<img src="{{ site.images }}work/adobe/organic-usability.png" class="extend-full" alt="" />
-<figcaption>
-Two testers helped us discover that the "link to heroes" was distracting them
-from playing the game.
-</figcaption>
-</figure>
+{{ embed.figure(
+  data=herolink,
+  caption='Two testers helped us discover that the “link to heroes” was
+  distracting them from playing the game.'
+) }}
