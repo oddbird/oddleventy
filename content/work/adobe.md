@@ -48,6 +48,9 @@ after:
 herolink:
   - img: work/adobe/organic-usability.png
     alt: Layout showing the link to heroes in the bottom right corner
+funky:
+  - img: work/adobe/funky.png
+    alt: Colorful square badge that says, my typographic superpower is funky. fonts.adobe.com
 tasks:
   - User Experience Design
   - Graphic Design
@@ -81,13 +84,12 @@ planning:
   - title: Object Map
     icon: icons/site-map
     text: |
-      Using Sophia Prater’s [Object-Oriented UX strategy], we mapped out the
+      Using an object-oriented UX strategy, we mapped out the
       objects in the web application. Though this project had only four objects,
       the map helped us agree on terms and get organized. We fleshed out the
       content of each object and the relationships between the four objects that
       would make up the game: question, option, superpower, and session user.
 
-      [Object-Oriented UX strategy]: https://www.objectorientedux.com/
   - title: Interactive Wireframe
     icon: icons/interact
     text: |
@@ -96,7 +98,7 @@ planning:
       Illustrations and animations make up the bulk of this game, but we didn’t
       get into those details yet at this stage. Keeping the wireframe basic and
       grayscale helped us nail down when animations should occur, what
-      illustrations we would need, and where important Calls to Action should be
+      illustrations we would need, and where important Calls To Action (CTA) should be
       highlighted throughout the game.
   - title: User Profiles
     icon: icons/users
@@ -158,17 +160,27 @@ lovers ourselves, the OddBird team was excited to dive in!
 
 ### Illustrations / Web Graphics
 
-While part of the team began setting up the infrastructure of the game, the
-designers got to work on illustrations. Sarah Hyndman of [Type Tasting] provided
-initial sketches. In collaboration with the animator, we established a style –
-solid, filled SVGs – for easy layer grouping and relatively small file size. In
-Illustrator, we created unique graphics for ten font questions and five
-typographic superpowers. We used Asset Export to ensure that our gradients and
-other styles would translate well to SVG. A tight back-and-forth via Slack
-between designers, animators, and Adobe helped us move swiftly through drafting
+While part of the team 
+began setting up the infrastructure of the game, 
+the designers got to work on illustrations. 
+Sarah Hyndman of [Type Tasting] 
+provided initial sketches
+to convey basic concepts and directions
+based on her extensive typography research. 
+In collaboration with animator [Christina Gorton],
+we established a style –
+solid, filled SVGs – 
+for easy layer grouping and relatively small file size. 
+In Illustrator, we created unique graphics 
+for ten font questions 
+and five typographic superpowers. 
+A tight back-and-forth via Slack
+between designers, animators, and Adobe 
+helped us move swiftly through drafting
 to final designs in order to meet the project deadline.
 
 [type tasting]: https://www.typetasting.com/
+[Christina Gorton]: https://www.christinagorton.com/
 
 {{ embed.figure(
   data=vintage,
@@ -301,15 +313,19 @@ have more control over the design, while writing less code.
 
 ### SVG Animation
 
-We were privileged to have [Christina Gorton] join us for this project.
-Christina worked with our designers to create clean and optimized SVGs for
-animating. She used the [GreenSock animation library] to create varied
-animations for each font question. Each font had a distinct personality she
-built into the animation. She worked with the whole team and Adobe to adjust
-timing and easing on animations. GreenSock made it easier to iterate on
-animations, helping us to meet the project deadline.
+We were privileged to have Christina 
+join us for this project.
+Christina worked with our designers 
+to create clean and optimized SVGs foranimating. 
+She used the [GreenSock animation library] 
+to create varied animations for each font question. 
+Each font had a distinct personality 
+she built into the animation. 
+She worked with the whole team and Adobe 
+to adjust timing and easing on animations. 
+GreenSock made it easier to iterate on animations, 
+helping us to meet the project deadline.
 
-[Christina Gorton]: https://www.christinagorton.com/
 [GreenSock animation library]: https://greensock.com/
 
 {{ embed.codepen(
@@ -336,3 +352,25 @@ empowered, and ready to explore typography!
   caption='Two testers helped us discover that the “link to heroes” was
     distracting them from playing the game.'
 ) }}
+
+### Launch
+
+Adobe launched the game in October 2020. 
+They were able to begin collecting and analyzing data 
+from users via Google Analytics right away. 
+Visitors reported a fun experience 
+and shared their typographic superpowers on social media. 
+
+"Adobe you see right through me! 'Being too confrontational' 😂 Such a fun game. Check it out!" - @StatUXofLiberty
+
+"okay this was actually very cool and fun. good job, adobe 😂 I found my typographic superpower. What's yours?" - @manic_femme
+
+"I got... Funky!! 🤣✨ Of course these lyrics come to mind: 🎵 Shining through the city with a little funk and soul / So I'ma light it up like dynamite, whoa oh oh 🎵" - @froznberry
+
+{{ embed.figure(
+  data=funky,
+  caption='Each typographic superpower has a badge to share on social media.',
+  class='extend-small'
+) }}
+
+
