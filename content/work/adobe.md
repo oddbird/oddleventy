@@ -233,15 +233,14 @@ fontStyles() {
 ```
 
 We set a global font-size using a CSS calc function.
-The first value was the `--svg-base` custom property for the set of
-illustrations (with a fallback of `4em`).
+The `--svg-base` custom property set a base font-size.
 We multiplied that by the `--svg-adjust` custom property of each
-individual font-family used in a set of illustrations
-(or `1` if it wasn't assigned).
+individual font-family used in a set of illustrations.
 
 ```css
 /* Global CSS */
 .svg-text {
+  /* include fallbacks for each custom property */
   font-size: calc(var(--svg-base, 4em) * var(--svg-adjust, 1));
 }
 ```
