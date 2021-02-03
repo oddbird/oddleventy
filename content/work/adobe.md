@@ -218,7 +218,7 @@ adjust individual typefaces.
 
 {{ embed.figure(
   data=before,
-  caption='A default font-size does not work well with different typefaces'
+  caption='We started with a default font-size for all typefaces and found there was too much variation. We needed a solution to individually scale each typeface in order to fit within the assigned space in each illustration.'
 ) }}
 
 First, we added the `svg-adjust` custom property to the outer container of each
