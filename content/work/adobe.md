@@ -218,11 +218,18 @@ SoundWorks]. Adding sound elevated the whole experience of game play.
 ### CSS Custom Properties
 
 Each question in the game has nine options, and each option consists of the same
-identical image plus a unique font. Typefaces have a wide array of letter
-heights and widths. When we placed the typefaces within the illustrations, some
-barely filled the space while others extended past the edges.
-CSS Custom Properties to the rescue! Custom Properties made it possible to
-adjust font-size individually.
+identical image plus a unique font. Instead of using a seperate image for each
+item on the page, we wanted to give Adobe more flexibility to easily edit or
+add new font options and questions.
+We used a single SVG, and controlled the text and fonts via HTML/CSS.
+
+First, we used a YAML file containing the questions, answers,
+and fonts to generate the page in Vue.
+We soon realized the problem: **the type overflowed**.
+Typefaces have a wide array of letter heights and widths.
+When we placed the typefaces within the illustrations,
+some barely filled the space while others extended past the edges.
+CSS Custom Properties to the rescue!
 
 {{ embed.figure(
   data=before,
@@ -232,33 +239,8 @@ adjust font-size individually.
   illustration.'
 ) }}
 
-First, we added the `svg-adjust` custom property to the outer container of each
-illustration using JavaScript.
-
-```js
-fontStyles() {
-  return {
-    '--svg-adjust': this.font.adjust,
-  };
-}
-```
-
-We set a global font-size using a CSS calc function.
-The `--svg-base` custom property set a base font-size.
-We multiplied that by the `--svg-adjust` custom property of each
-individual font-family used in a set of illustrations.
-
-```css
-/* Global CSS */
-.svg-text {
-  /* include fallbacks for each custom property */
-  font-size: calc(var(--svg-base, 4em) * var(--svg-adjust, 1));
-}
-```
-
-In each page’s Vue file, we set `--svg-base`
-to a size that fit the majority of typefaces
-within each set of illustrations.
+We established a default font-size for each illustration,
+and called it the `--svg-base`.
 Since the illustrations were designed with
 different orientations and space available
 for the text, this allowed us to start from a place
@@ -271,13 +253,32 @@ that worked best to maximize the type.
 }
 ```
 
-A markdown file for each page listed font families
-along with some additional data. This is where we were
-able to fine-tune each font-size per font-family.
+Knowing our goal was to be able to edit each font individually, we wrote some
+CSS calc() logic to allow adjustments from that base size.
+
+```css
+/* Global CSS */
+.svg-text {
+  /* include fallbacks for each custom property */
+  font-size: calc(var(--svg-base, 4em) * var(--svg-adjust, 1));
+}
+```
+
+Now we were able to edit how each typeface should scale in the YAML file.
 
 ```md
   - name: Chapman Bold Extended Italic
     adjust: .675
+```
+
+Using Vue, we converted that data into an `--svg-adjust` custom property on each font/illustration
+
+```js
+fontStyles() {
+  return {
+    '--svg-adjust': this.font.adjust,
+  };
+}
 ```
 
 {{ embed.figure(
