@@ -131,7 +131,7 @@ At the end of the game, players discover their own typographic superpower.
 Players have the option to share their superpower on social media, access the
 typeface on Adobe, view similar typefaces, and download their superpower badge.
 
-{{ quotes.grid(press | slice(2) | first ) }}
+{{ quotes.grid(press) }}
 
 ## What Adobe Needed
 
