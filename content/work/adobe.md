@@ -173,18 +173,18 @@ to final designs in order to meet the project deadline.
 {{ embed.figure(
   data=vintage,
   caption='The vintage Ferris wheel went through a sketch phase and a couple
-  of drafts before the design was finalized.',
+    of drafts before the design was finalized.',
   class='extend-small'
 ) }}
 
 {{ embed.figure(
   data=edgy,
   caption='Near the end of the edgy superpower design, the team realized the
-  word “edgy” was hard to read in the lowercase Totally Gothic typeface.',
+    word “edgy” was hard to read in the lowercase Totally Gothic typeface.',
   class='extend-small'
 ) }}
 
-  ### Audio & Nuxt.js
+### Audio & Nuxt.js
 
 Audio implementation provided an interesting challenging. First, we tried Web
 Audio API and a Nuxt.js plugin that automatically played and paused the sounds
@@ -218,10 +218,10 @@ SoundWorks]. Adding sound elevated the whole experience of game play.
 ### CSS Custom Properties
 
 Each question in the game has nine options, and each option consists of the same
-identical image plus a unique font. Instead of using a seperate image for each
-item on the page, we wanted to give Adobe more flexibility to easily edit or
-add new font options and questions.
-We used a single SVG, and controlled the text and fonts via HTML/CSS.
+identical image plus a unique font. Instead of using a separate image for each
+item on the page, we wanted to give Adobe more flexibility to easily edit or add
+new font options and questions. We used a single SVG, and controlled the text
+and fonts via HTML/CSS.
 
 First, we used a YAML file containing the questions, answers,
 and fonts to generate the page in Vue.
@@ -234,9 +234,9 @@ CSS Custom Properties to the rescue!
 {{ embed.figure(
   data=before,
   caption='We started with a default font-size for all typefaces and found
-  there was too much variation. We needed a solution to individually scale
-  each typeface in order to fit within the assigned space in each
-  illustration.'
+    there was too much variation. We needed a solution to individually scale
+    each typeface in order to fit within the assigned space in each
+    illustration.'
 ) }}
 
 We established a default font-size for each illustration,
@@ -266,12 +266,13 @@ CSS calc() logic to allow adjustments from that base size.
 
 Now we were able to edit how each typeface should scale in the YAML file.
 
-```md
-  - name: Chapman Bold Extended Italic
-    adjust: .675
+```yml
+- name: Chapman Bold Extended Italic
+  adjust: .675
 ```
 
-Using Vue, we converted that data into an `--svg-adjust` custom property on each font/illustration
+Using Vue, we converted that data into an `--svg-adjust` custom property on each
+font/illustration:
 
 ```js
 fontStyles() {
@@ -284,8 +285,8 @@ fontStyles() {
 {{ embed.figure(
   data=compare,
   caption='The example on the left shows the type extending outside it’s
-  container and the right example is what this illustration looked like
-  after we adjusted the font-size',
+    container and the right example is what this illustration looked like
+    after we adjusted the font-size',
   class='extend-small size-quarter'
 ) }}
 
@@ -295,7 +296,7 @@ have more control over the design, while writing less code.
 {{ embed.figure(
   data=after,
   caption='After applying adjustments to only the fonts that needed it,
-  the result shows visually similar type size.'
+    the result shows visually similar type size.'
 ) }}
 
 ### SVG Animation
@@ -333,5 +334,5 @@ empowered, and ready to explore typography!
 {{ embed.figure(
   data=herolink,
   caption='Two testers helped us discover that the “link to heroes” was
-  distracting them from playing the game.'
+    distracting them from playing the game.'
 ) }}
