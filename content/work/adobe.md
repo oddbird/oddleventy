@@ -114,8 +114,8 @@ planning:
       Using the Goals, Object Map, Wireframe, and User Profiles we created a
       list of expected features or ‘stories’ written from the perspective of an
       individual player. Each user story defined one task that a player might
-      want to accomplish during the game: "As a Player, I want to select a font
-      option."
+      want to accomplish during the game: "_As a Player, I want to select a font
+      option._"
   - title: Itemized & Prioritized Estimate
     icon: icons/estimate
     text: |
