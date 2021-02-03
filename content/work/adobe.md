@@ -211,10 +211,10 @@ SoundWorks]. Adding sound elevated the whole experience of game play.
 
 Each question in the game has nine options, and each option consists of the same
 identical image plus a unique font. Typefaces have a wide array of letter
-heights and widths. When we placed the typefaces on top of the images, some
-barely filled the space while others hung off the edges of the illustrations.
+heights and widths. When we placed the typefaces within the illustrations, some
+barely filled the space while others extended past the edges.
 CSS Custom Properties to the rescue! Custom Properties made it possible to
-adjust individual typefaces.
+adjust font-size individually.
 
 {{ embed.figure(
   data=before,
