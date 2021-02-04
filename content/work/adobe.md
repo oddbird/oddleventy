@@ -50,7 +50,9 @@ herolink:
     alt: Layout showing the link to heroes in the bottom right corner
 funky:
   - img: work/adobe/funky.png
-    alt: Colorful square badge that says, my typographic superpower is funky. fonts.adobe.com
+    alt: |
+      Colorful square that says, "My typographic superpower is
+      Funky. fonts.adobe.com"
 tasks:
   - User Experience Design
   - Graphic Design
