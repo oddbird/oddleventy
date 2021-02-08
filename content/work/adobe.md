@@ -115,19 +115,28 @@ planning:
   - title: User Stories
     icon: icons/theater
     text: |
-      Using the Goals, Object Map, Wireframe, and User Profiles we created a
-      list of expected features or ‘stories’ written from the perspective of an
-      individual player. Each user story defined one task that a player might
-      want to accomplish during the game: "_As a Player, I want to select a font
-      option._"
+      Using the Goals, Object Map, Wireframe, and User Profiles 
+      we created a list of expected features or ‘stories.’ 
+      Each user story defined one task 
+      that a player might want to accomplish 
+      during the game. 
+      For example, _As a Player, I want to select a font 
+      option._  Adobe appreciated this outline of the project.
+      It help our big team,
+      which included people from multiple companies, 
+      stay organized and on task –
+      focused on the goals.
   - title: Itemized & Prioritized Estimate
     icon: icons/estimate
     text: |
-      We estimated each user story, providing Adobe with an itemized hourly
-      estimate, organized into phases.
-      This allowed Adobe to add, prioritize, and remove stories before we began
-      development, and throughout the project as needs and timeline constraints
-      changed.
+      We estimated each user story, 
+      providing Adobe with an itemized hourly estimate, 
+      organized into phases.
+      Structuring the estimate in this way
+      allowed Adobe to adjust priorities,
+      such as limiting the typographic superpowers to five
+      for the initial release.
+
 summary: |
   A meditation on typography, Adobe Fonts' Game allows players to choose the
   fonts that they feel apply best to different scenarios. Players' input helps
