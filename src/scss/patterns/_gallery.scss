@@ -39,8 +39,10 @@ figure {
   }
 }
 
+figcaption,
 .caption {
   font-size: var(--small);
+  font-style: italic;
   margin-top: var(--shim);
 }
 
