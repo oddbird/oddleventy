@@ -86,12 +86,11 @@ planning:
   - title: Object Map
     icon: icons/site-map
     text: |
-      Using an object-oriented UX strategy, we mapped out the
-      objects in the web application. Though this project had only four objects,
-      the map helped us agree on terms and get organized. We fleshed out the
-      content of each object and the relationships between the four objects that
-      would make up the game: question, option, superpower, and session user.
-
+      Using an object-oriented UX strategy, we mapped out the objects in the web
+      application. Though this project had only four objects, the map helped us
+      agree on terms and get organized. We fleshed out the content of each
+      object and the relationships between the four objects that would make up
+      the game: question, option, superpower, and session user.
   - title: Interactive Wireframe
     icon: icons/interact
     text: |
@@ -100,8 +99,8 @@ planning:
       Illustrations and animations make up the bulk of this game, but we didn’t
       get into those details yet at this stage. Keeping the wireframe basic and
       grayscale helped us nail down when animations should occur, what
-      illustrations we would need, and where important Calls To Action (CTA) should be
-      highlighted throughout the game.
+      illustrations we would need, and where important Calls To Action (CTA)
+      should be highlighted throughout the game.
   - title: User Profiles
     icon: icons/users
     text: |
@@ -115,28 +114,27 @@ planning:
   - title: User Stories
     icon: icons/theater
     text: |
-      Using the Goals, Object Map, Wireframe, and User Profiles 
-      we created a list of expected features or ‘stories.’ 
-      Each user story defined one task 
-      that a player might want to accomplish 
-      during the game. 
-      For example, _As a Player, I want to select a font 
-      option._  Adobe appreciated this outline of the project.
+      Using the Goals, Object Map, Wireframe, and User Profiles
+      we created a list of expected features or ‘stories.’
+      Each user story defined one task
+      that a player might want to accomplish
+      during the game.
+      For example, _As a Player, I want to select a font
+      option._ Adobe appreciated this outline of the project.
       It help our big team,
-      which included people from multiple companies, 
+      which included people from multiple companies,
       stay organized and on task –
       focused on the goals.
   - title: Itemized & Prioritized Estimate
     icon: icons/estimate
     text: |
-      We estimated each user story, 
-      providing Adobe with an itemized hourly estimate, 
+      We estimated each user story,
+      providing Adobe with an itemized hourly estimate,
       organized into phases.
       Structuring the estimate in this way
       allowed Adobe to adjust priorities,
       such as limiting the typographic superpowers to five
       for the initial release.
-
 summary: |
   A meditation on typography, Adobe Fonts' Game allows players to choose the
   fonts that they feel apply best to different scenarios. Players' input helps
