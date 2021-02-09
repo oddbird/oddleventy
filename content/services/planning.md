@@ -170,7 +170,8 @@ summary: |
   prioritized estimates,
   and a robust plan for development and launch.
 
-  Using an object-oriented user experience strategy (OOUX),
+  Using an object-oriented user experience strategy (OOUX) --
+  popularized by [Sophia Prater] --
   we'll guide you through a
   process to define the concepts or
   "objects" that make up your web app,
@@ -180,6 +181,9 @@ summary: |
   to streamline communication
   between designers, developers, and stakeholders
   throughout the project.
+
+  [Sophia Prater]: https://www.objectorientedux.com
+
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
