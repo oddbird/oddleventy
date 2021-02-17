@@ -35,11 +35,11 @@ summary: |
 Over the last decade
 Object-Oriented & Responsive design
 have become the norm --
-with tools like Flexbox, Grid, 
+with tools like Flexbox, Grid,
 intrinsic sizing, and `aspect-ratio`
 giving us even more layout control.
 CSS has always been designed for a responsive web,
-but that goal-post can shift over time.
+but that goalpost can shift over time.
 These new features will help bring CSS up-to-speed
 with the latest patterns in modern web design.
 Let's see how they work!
