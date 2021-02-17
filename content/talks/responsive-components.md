@@ -1,11 +1,12 @@
 ---
 title: Container Queries & The Future of CSS
-sub: A path towards responsive components & design systems
+sub: Modernizing the cascade for responsive design systems
 author: miriam
 image:
-  src: talks/vars-cascade.jpg
-  width: 2898
-  height: 1522
+  src: talks/container-query.jpg
+  width: 1279
+  height: 696
+  position: top
 tags:
   - Cascade
   - CSS
@@ -25,22 +26,20 @@ events:
     end: 2021-05-28
     adr: Online
 summary: |
-  From Container Queries
-  to Cascade Layers and (likely) Scoped Styles,
-  a number of new CSS specifications
-  are aimed at modernizing the cascade
-  and making fully responsive components 
-  and design systems a reality.
+  New CSS proposals like Container Queries,
+  Cascade Layers, Scoped Styles, and Nesting
+  are all aimed at improving the way we write
+  responsive components and design systems.
 ---
 
 Over the last decade
 Object-Oriented & Responsive design
 have become the norm --
-with tools like Flexbox, Grid, and `aspect-ratio`
-giving us even more "intrinsic" layout options.
-Many of these ideals are baked into CSS,
-but there have always been a few limitations
-we have to work around.
-These three new features are all designed
-with responsive components & grid systems at the core.
+with tools like Flexbox, Grid, 
+intrinsic sizing, and `aspect-ratio`
+giving us even more layout control.
+CSS has always been designed for a responsive web,
+but that goal-post can shift over time.
+These new features will help bring CSS up-to-speed
+with the latest patterns in modern web design.
 Let's see how they work!
