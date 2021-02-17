@@ -36,7 +36,7 @@ summary: |
 Over the last decade
 Object-Oriented & Responsive design
 have become the norm --
-with tools like flexbox, grid, and aspect-ratio
+with tools like Flexbox, Grid, and `aspect-ratio`
 giving us even more "intrinsic" layout options.
 Many of these ideals are baked into CSS,
 but there have always been a few limitations
