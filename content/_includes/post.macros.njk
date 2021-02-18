@@ -259,12 +259,14 @@ params:
             next.venue,
             next.url if links else none
           ) }}
-          <i>on</i>
-          {{ utility.datetime(
-            next.date,
-            next.end,
-            format='md'
-          ) }}
+          <span class="next-on">
+            <i>on</i>
+            {{ utility.datetime(
+              next.date,
+              next.end,
+              format='md'
+            ) }}
+          </span>
         </li>
       {%- endfor -%}
     </ul>
