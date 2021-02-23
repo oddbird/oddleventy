@@ -40,6 +40,6 @@ intrinsic sizing, and `aspect-ratio`
 giving us even more layout control.
 CSS has always been designed for a responsive web,
 but that goalpost can shift over time.
-Join Miriam to explore how these new features 
+Join Miriam to explore how these new features
 help us write more modern, encapsulated,
 and responsive CSS.
