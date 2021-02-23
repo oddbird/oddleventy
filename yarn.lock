@@ -2177,10 +2177,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"accoutrement@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "accoutrement@npm:2.2.0"
-  checksum: 103f3b22d14c035b587490946581f16abc9bbce6b8cd56742936febcf536fcac0ba7d2fa39e1ae7164902bded86548d57e02186c996c3e9a320b6ccc01f5a0a0
+"accoutrement@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "accoutrement@npm:3.0.0"
+  checksum: f55fc4ea5e93947b156db6cbb41a016d1859812ab738bc2ca9fa400b65d6be8146cea159101e496f4060bc79206a7e46b2c0cc70ce8f31eb005c43ae61e87e13
   languageName: node
   linkType: hard
 
@@ -11622,7 +11622,7 @@ fsevents@^1.2.7:
     "@rollup/plugin-commonjs": ^17.1.0
     "@rollup/plugin-node-resolve": ^11.1.1
     "@yarnpkg/pnpify": ^2.4.0
-    accoutrement: ^2.2.0
+    accoutrement: ^3.0.0
     autoprefixer: ^10.2.4
     babel-jest: ^26.6.3
     cascading-color-systems: 0.1.0-beta.14

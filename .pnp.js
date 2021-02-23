@@ -48,7 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-commonjs", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:17.1.0"],
             ["@rollup/plugin-node-resolve", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:11.1.1"],
             ["@yarnpkg/pnpify", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:2.4.0"],
-            ["accoutrement", "npm:2.2.0"],
+            ["accoutrement", "npm:3.0.0"],
             ["autoprefixer", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:10.2.4"],
             ["babel-jest", "virtual:caddf51df4928b33a437ca87b8f5ddfb6205ebd6d8231f74d4ee7223f3866e6f815b221aa1e2bd33e98915f701e95bae72a93d2288b49a34a6246bdbc2a4a132#npm:26.6.3"],
             ["cascading-color-systems", "npm:0.1.0-beta.14"],
@@ -3446,10 +3446,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["accoutrement", [
-        ["npm:2.2.0", {
-          "packageLocation": "./.yarn/cache/accoutrement-npm-2.2.0-79582cd5b4-103f3b22d1.zip/node_modules/accoutrement/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/accoutrement-npm-3.0.0-5779aafea7-f55fc4ea5e.zip/node_modules/accoutrement/",
           "packageDependencies": [
-            ["accoutrement", "npm:2.2.0"]
+            ["accoutrement", "npm:3.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -14000,7 +14000,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-commonjs", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:17.1.0"],
             ["@rollup/plugin-node-resolve", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:11.1.1"],
             ["@yarnpkg/pnpify", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:2.4.0"],
-            ["accoutrement", "npm:2.2.0"],
+            ["accoutrement", "npm:3.0.0"],
             ["autoprefixer", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:10.2.4"],
             ["babel-jest", "virtual:caddf51df4928b33a437ca87b8f5ddfb6205ebd6d8231f74d4ee7223f3866e6f815b221aa1e2bd33e98915f701e95bae72a93d2288b49a34a6246bdbc2a4a132#npm:26.6.3"],
             ["cascading-color-systems", "npm:0.1.0-beta.14"],
