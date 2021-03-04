@@ -59,9 +59,9 @@ press:
   - text: |
       If you're interested in reading Sass poetry,
       be sure to look at Susy's source code!
-    name: Hugo Giraudel
+    name: Kitty Giraudel
     venue: SitePoint
-    face: hugo-giraudel.jpg
+    face: kitty-giraudel.jpg
     url: https://www.sitepoint.com/my-favorite-sass-tools/
     slug: poetry
   - text: |

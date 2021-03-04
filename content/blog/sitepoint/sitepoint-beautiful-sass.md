@@ -10,7 +10,7 @@ tags:
   - Jump Start Sass
 image:
   src: blog/sassbook.jpg
-  alt: Jump Start Sass, by Miriam Suzanne and Hugo Giraudel
+  alt: Jump Start Sass, by Miriam Suzanne and Kitty Giraudel
 summary: |
   Clean, beautiful code should be a goal in every project. If other
   developers need to make a change, they should be able to read what is

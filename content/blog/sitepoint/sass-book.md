@@ -10,15 +10,15 @@ tags:
   - Jump Start Sass
 image:
   src: blog/sassbook.jpg
-  alt: Jump Start Sass, by Miriam Suzanne and Hugo Giraudel
+  alt: Jump Start Sass, by Miriam Suzanne and Kitty Giraudel
 summary: |
   I'm excited to release [Jump Start Sass], a book I co-authored with
-  [Hugo Giraudel]. Digital copies are available from [SitePoint], wih
+  [Kitty Giraudel]. Digital copies are available from [SitePoint], wih
   print editions sold by [O'Reilly]. Here's an excerpt from Chapter 11,
   [Sass Architecture].
 
   [Jump Start Sass]: https://www.sitepoint.com/premium/books/jump-start-sass
-  [Hugo Giraudel]: https://hugogiraudel.com/
+  [Kitty Giraudel]: https://kittygiraudel.com/
   [SitePoint]: https://www.sitepoint.com/
   [O'Reilly]: https://www.oreilly.com/library/view/jump-start-sass/9781457199851/
   [Sass Architecture]: https://www.sitepoint.com/architecture-in-sass/

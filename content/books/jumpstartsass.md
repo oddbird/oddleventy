@@ -5,7 +5,7 @@ sub: Get up to speed with Sass in a weekend...
 author: miriam
 image:
   src: writing/jssass.jpg
-  alt: Jump Start Sass, by Miriam Suzanne and Hugo Giraudel
+  alt: Jump Start Sass, by Miriam Suzanne and Kitty Giraudel
 venue: SitePoint
 url: https://www.sitepoint.com/premium/books/jump-start-sass
 date: 2016-03-22
@@ -26,7 +26,7 @@ press:
     url: https://www.sitepoint.com/premium/books/jump-start-sass#reviews
     datetime: 2016-03-23
   - text: |
-      Miriam and Hugo have become some of the most notable
+      Miriam and Kitty have become some of the most notable
       creators of Sass plugins and best practices.
     name: Chris Eppstein
     title: Sr. Staff Engineer
