@@ -13,7 +13,7 @@ image:
   alt: Jump Start Sass, by Miriam Suzanne and Kitty Giraudel
 summary: |
   I'm excited to release [Jump Start Sass], a book I co-authored with
-  [Kitty Giraudel]. Digital copies are available from [SitePoint], wih
+  [Kitty Giraudel]. Digital copies are available from [SitePoint], with
   print editions sold by [O'Reilly]. Here's an excerpt from Chapter 11,
   [Sass Architecture].
 
