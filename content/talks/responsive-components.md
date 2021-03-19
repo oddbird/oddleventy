@@ -17,7 +17,7 @@ tags:
 events:
   - venue: Web Directions, Hover
     url: https://webdirections.org/hover/
-    date: 2021-04-09
+    date: 2021-04-23
     end: 2021-04-30
     adr: Online
   - venue: Modern Web Conference
