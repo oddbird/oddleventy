@@ -18,7 +18,7 @@ events:
     adr: Online
     date: 2021-01-21
     slides: https://slides.oddbird.net/unfriendly/ethics2101/
-    video: bit.ly/GAEthicsAccess
+    video: https://bit.ly/GAEthicsAccess
   - venue: Agnes Scott College
     url: https://calendar.agnesscott.edu/event/user_unfriendlynotes_toward_a_queer_web
     adr: Atlanta, GA
