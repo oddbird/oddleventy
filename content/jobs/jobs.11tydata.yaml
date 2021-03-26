@@ -2,7 +2,7 @@
 hours: 10 to 20
 
 # shared job posting data
-team_size: 6
+team_size: 7
 eleventyComputed:
   title: |
     {{ banner }} | Jobs
