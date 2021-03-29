@@ -136,7 +136,7 @@ we want the entire team involved in the conversation.
   of travel, lodging, and food when we get together —
   and pays a daily rate
   (currently \$400/day)
-  during the retreat.
+  during the retreat. (For the safety of our bird & our communities, due to the COVID pandemic our retreats are currently being conducted remotely.)
 - We pay for internal OddBird work required to grow the company,
   or improve our processes.
   If you have ideas you’d like to help implement,
