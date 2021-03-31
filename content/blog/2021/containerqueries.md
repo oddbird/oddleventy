@@ -1,8 +1,7 @@
 ---
 title: Getting Started With Container Queries
 sub: TK
-author: david
-card: feature
+author: davidh
 date: 2021-04-01
 image:
   src: projects/w3c.jpg
@@ -11,54 +10,48 @@ tags:
   - CSSWG
   - Article
   - Container Queries
-  - 
 summary: |
-  **TK** TK.
-
-  [CSS4]: https://www.w3.org/community/css4/
-  [Design Token]: https://www.w3.org/community/design-tokens/
+  summary: |
+  [Chrome Canary](https://www.google.com/chrome/canary)
+  released a version last week with an early prototype version of **container queries**. 
+  What are they and how will they change the way we build layouts?
 ---
 
- The container query, that elusive feature developers have requested and proposed for years, has finally made its debut in browsers. Well, sort of. As of Chrome Canary <!--[version]  -->, the most recent container query proprosal, submitted by OddBird's own Miriam Suzanne, is available for use behind an experimental flag. What _are_ container queries exactly? And why should you care? 
+ The `@container` query, that elusive feature developers have been requesting and proposing for years, has finally made its debut in browsers. Well, sort of. As of Chrome Canary <!--[version]  -->, the most recent @container query proprosal, developed by OddBird's own Miriam Suzanne, is available for use behind an experimental flag. What _are_ container queries exactly? And why should you care? 
 
 
 What are container queries, and why?
 
-`@Media` queries sparked a responsive design revolution by allowing developers to change the styles for elements based on the size of the entire viewport. Up until now, what could not be done, was change the style of an element based on the size of its parent element. 
+`@Media` queries sparked a responsive design revolution by allowing developers to change the styles of elements based on the size of the entire viewport. Up until now, what could not be done, was change the style of an element based on the size of its parent element. 
 
-Let's say you had an article headline component that could end up almost anywhere on a site. It could be part of a featured article, big and bold, spanning the full width of the page. That same headline could sit in a list of other articles in a sidebar. Or it could be a teaser that sits in between another article. In a word, like most components you are building today, it could show up almost anywhere and probably only rarely directly correlates to the size of the viewport. 
+Let's say you had an article headline component that could end up almost anywhere on a site. It could be part of a featured article, big and bold, spanning the full width of the page. That same headline could sit in a list of other articles in a sidebar. Or it could be a teaser that sits in between other content. In a word, it could show up almost anywhere and the way it should be styled probably only rarely directly correlates to the size of the viewport. 
 
-Instead of changing styles based on the size of the viewport, `@container` queries allow developers to change the style of elements based on the size of their parent element or nearest container.  
+Instead of changing styles based on the size of the viewport, `@container` queries allow authors to change the style of elements based on the size of their parent element or nearest container.  
 
-As currently proposed, the  `@container` query syntax feels a lot like writing a `@media` query, but the big difference is that a `@container` query has to be implemented in two parts.
+The current `@container` query syntax feels a lot like writing a `@media` query, but a main difference is that a `@container` query has to be implemented in two parts.
 
-First, a containment definition has to be made. This let's the browser know that this will be the container you will be querying against later. 
+First, a containment context has to be defined. This lets the browser know which container you will be querying against later. 
 
-The second part is determining when you want styles of elements inside of that container to change and then writing the styles that should be applied. 
+```
+section {
+  /* establishes a new containment context on the inline axis */
+  contain: layout inline-size;
+} 
+```
 
-`@container (min-width: 30em) { /* do this */};`
+The `contain` property is part of the existing [CSS Containment Module](https://drafts.csswg.org/css-contain/). The `layout` value turns on [layout contaiment](https://drafts.csswg.org/css-contain/#valdef-contain-layout), which ensures that "nothing outside can affect its internal layout, and vice versa." The `inline-size` value is a proposed change to the Containment Module that would let authors explicitly declare in which dimension containment should be applied. 
+
+The second part of a container query is determining the conditions for when styles of elements inside of a defined containment context should change and then writing the styles to be applied
+
+```
+@container (min-width: 30em) { 
+  .some-element {
+     /* styles to apply */
+   }
+  };
+```
+Any styles inside of this block will be applied when the container fulfills the condition of the query. 
 
 Just as with `@media` queries, you can write as many `@container` queries as needed.
-
-`@container (min-width: 45em) { /* do this */};`
-
-`@container (min-width: 60em) { /* do this */};`
-
-
-
-[Maybe an example of a use case here?]
-
-To get started using container queries, first we have to define a containment context. What is the container I want to query against? 
-
-[show code defining containment]
-
-explain contain property
-explain layout inline size
-
-Once a containment context has been defined, use  @container to declare what should happen to elements at different sizes. This works a lot like media queries, so the syntax will look familiar.
-
-[example of using @container]
-
-Any styles inside of this block will be applied when the container fulfills the condition of the query. 
 
 [How to turn on the flag]
