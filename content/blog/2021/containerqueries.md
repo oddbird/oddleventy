@@ -50,7 +50,7 @@ section {
 }
 ```
 
-The `contain` property is part of the existing [CSS Containment Module](https://drafts.csswg.org/css-contain/). The `layout` value activates [layout contaiment](https://drafts.csswg.org/css-contain/#valdef-contain-layout) on the container, which ensures that "nothing outside can affect its internal layout, and vice versa." `Size` also [currently exists](https://drafts.csswg.org/css-contain/#size-containment) as a value and enables laying out a containment box without accounting for its descendents in either the inline or block axes. 
+The `contain` property is part of the existing [CSS Containment Module](https://drafts.csswg.org/css-contain/). The `layout` value activates [layout contaiment](https://drafts.csswg.org/css-contain/#valdef-contain-layout) on the container, which ensures that "nothing outside can affect its internal layout, and vice versa." `Size` also [currently exists](https://drafts.csswg.org/css-contain/#size-containment) as a value for the `contain` property, and enables laying out a containment box without accounting for its descendents in either the inline or block axes. 
 
 ```scss
 article,
@@ -63,6 +63,14 @@ With `inline-size`, a proposed change to the Containment Module, authors can be 
 
 ### Apply @-rules at desired breakpoints
 Now that a containment context has been defined, the `@container` rule is used to tell the browser when and how styles should change inside each container. 
+
+With a narrow parent container, the `blockquote` features the image stacked on top of the text. 
+
+{{ embed.figure(
+  data=[{'img': 'blog/2021/narrowquote.png',
+         alt: 'profile image on top of quote'}],
+  caption='The profile image sits on top of the quote in narrow containers.'
+) }}
 
 At the first breakpoint, the layout for the `blockquote` changes so that the profile image moves from being above the quote to sitting next to it, and the text describing the speaker gets a heavier weight applied. 
 
@@ -129,17 +137,9 @@ Just as with `@media` queries, authors can write as many `@container` queries as
 
 It's still very early in the proposal process, so a lot regarding how container queries work could change. 
 
-Block-size containment might also be possible, as well as querying against physical values like `width` and `height`:
+There might be a way to contain only the block axis. Queries could also be made against properties like `aspect-ratio` or `orientation.`
 
-```css
-.block-container {
-  /* establishes a new containment context on the block axis */
-  contain: layout block-size;
-}
-```
-
-If containment on both inline and block axes is possible, queries might also be made against properties like `aspect-ratio` or `orientation`.
-
+Bookmark Miriam's scratch site for updates: [Miriam's CSS Sandbox](https://css.oddbird.net/rwd/query/). 
 
 ## Experiment and share
 
@@ -148,7 +148,5 @@ Follow these steps to get started experimenting and making your own demos:
 - Navigate to `chrome://flags`.
 - Search for "CSS container queries" and select `Enabled`.
 - Restart the browser.
-
- Bookmark Miriam's scratch site for updates: [Miriam's CSS Sandbox](https://css.oddbird.net/rwd/query/). 
 
 The OddBird team would love to see what you come up with. Tag us on [Twitter](https://twitter.com/OddBird) with a link to whatever you create. In the meantime, check out our collection of demos on [CodePen](https://codepen.io/collection/XQrgJo?grid_type=grid&sort_by=item_created_at&sort_order=desc) for inspiration.
