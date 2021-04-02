@@ -4,28 +4,27 @@ sub: Now is the time to begin experimenting with a long requested layout tool.
 author: davidh
 date: 2021-04-01
 image:
-  src: projects/w3c.jpg
-  alt: W3C logo
+  src: blog/2021/widequote.jpg
+  alt: blockquote with magenta background and polygonal clip-path
 tags:
   - CSS
   - CSSWG
   - Article
   - Container Queries
 summary: |
-  An early prototype version of **container queries** is now available in [Chrome Canary](https://www.google.com/chrome/canary). What are container queries exactly and how will they change the way we build layouts?
+  The `@container` query, that elusive feature developers have been requesting and proposing for years, has finally made its debut in browsers. Well, sort of. What are **container queries** exactly and how do they work?
 ---
 
 {% import 'embed.macros.njk' as embed %}
 
- The `@container` query, that elusive feature developers have been requesting and proposing for years, has finally made its debut in browsers. Well, sort of. As of the latest version of [Chrome Canary](https://www.google.com/chrome/canary), the most recent `@container` query proprosal, developed by OddBird's own [Miriam Suzanne](https://www.oddbird.net/authors/miriam/), is available for use behind an experimental flag. What _are_ container queries exactly? And how do they work?
+  In the latest version of [Chrome Canary](https://www.google.com/chrome/canary), the most recent `@container` query proprosal, developed by OddBird's own [Miriam Suzanne](https://www.oddbird.net/authors/miriam/), is available for use behind an experimental flag. Miriam's [proposal](https://github.com/w3c/csswg-drafts/issues/5796) builds upon the ideas previously proposed by others, in particular David Baron, who wrote the [original draft](https://github.com/dbaron/container-queries-implementability). 
 
- David Baron's original Container Queries draft: [Thoughts on an implementable path forward for Container Queries](https://github.com/dbaron/container-queries-implementability).
 
- Bookmark Miriam's scratch site for updates: [Miriam's CSS Sandbox](https://css.oddbird.net/rwd/query/). 
+
 
  ## Background
 
-`@Media` queries sparked a responsive design revolution by allowing authors to change the styles of elements based on the size of the entire viewport. Up until now, what could not be done was changing the style of an element based on the size of its parent element. 
+`@Media` queries sparked a responsive design revolution by allowing authors to change the style of elements based on the size of the entire viewport. Up until now, what could not be done was changing the style of an element based on the size of its parent element. 
 
 ## Syntax and an example
 
@@ -42,7 +41,7 @@ In this demo (which only works in the latest version of [Chrome Canary](https://
 
 ### Define a containment context
 
-To achieve this, first a containment context must be defined. This lets the browser know which container to query against later. 
+To achieve this, first define a containment context. This lets the browser know which container to query against later. 
 
 ```scss
 article,
@@ -51,7 +50,7 @@ section {
 }
 ```
 
-The `contain` property is part of the existing [CSS Containment Module](https://drafts.csswg.org/css-contain/). The `layout` value activates [layout contaiment](https://drafts.csswg.org/css-contain/#valdef-contain-layout) on the container, which ensures that "nothing outside can affect its internal layout, and vice versa." `Size` also [currently exists](https://drafts.csswg.org/css-contain/#size-containment) as a value that enables laying out a containment box without accounting for its descendents in either the inline or block axes. 
+The `contain` property is part of the existing [CSS Containment Module](https://drafts.csswg.org/css-contain/). The `layout` value activates [layout contaiment](https://drafts.csswg.org/css-contain/#valdef-contain-layout) on the container, which ensures that "nothing outside can affect its internal layout, and vice versa." `Size` also [currently exists](https://drafts.csswg.org/css-contain/#size-containment) as a value and enables laying out a containment box without accounting for its descendents in either the inline or block axes. 
 
 ```scss
 article,
@@ -65,7 +64,13 @@ With `inline-size`, a proposed change to the Containment Module, authors can be 
 ### Apply @-rules at desired breakpoints
 Now that a containment context has been defined, the `@container` rule is used to tell the browser when and how styles should change inside each container. 
 
-At the first breakpoint, the layout for the `blockquote` changes so that the profile image moves from being above the quote to sitting next to it and the text describing the speaker gets a heavier weight applied. 
+At the first breakpoint, the layout for the `blockquote` changes so that the profile image moves from being above the quote to sitting next to it, and the text describing the speaker gets a heavier weight applied. 
+
+{{ embed.figure(
+  data=[{'img': 'blog/2021/break1.jpg',
+         alt: 'profile image next to quote'}],
+  caption='The profile image changes position at the first breakpoint to sit next to the quote.'
+) }}
 
 ```scss
 /* change styles according to container size */
@@ -87,6 +92,13 @@ At the first breakpoint, the layout for the `blockquote` changes so that the pro
 ```
 
 At the second breakpoint, the text for the quote and the attribution gets bigger, the background changes color, and the overall shape of the `blockquote` changes by way of a `clip-path`. 
+
+{{ embed.figure(
+  data=[{'img': 'blog/2021/break2.jpg',
+          alt: 'blockquote with magenta background and clip-path'}],
+  caption='At a wider breakpoint, the blockquote gets a 
+  clip-path and a different background color.'
+) }}
 
 ```scss
 @container (min-width: 60em) {
@@ -131,10 +143,12 @@ If containment on both inline and block axes is possible, queries might also be 
 
 ## Experiment and share
 
-To get started experimenting and making your own demos:
+Follow these steps to get started experimenting and making your own demos:
 - Download [Chrome Canary](https://www.google.com/chrome/canary) or update to the latest version. 
-- Navigate to `chrome://flags`
+- Navigate to `chrome://flags`.
 - Search for "CSS container queries" and select `Enabled`.
-- Restart the browser. 
+- Restart the browser.
 
-We'd love to see what you come up with. Tag us on [Twitter](https://twitter.com/OddBird) with a link to whatever you create and check out our collection of demos on [Codepen](https://codepen.io/collection/XQrgJo) for inspiration.
+ Bookmark Miriam's scratch site for updates: [Miriam's CSS Sandbox](https://css.oddbird.net/rwd/query/). 
+
+The OddBird team would love to see what you come up with. Tag us on [Twitter](https://twitter.com/OddBird) with a link to whatever you create. In the meantime, check out our collection of demos on [CodePen](https://codepen.io/collection/XQrgJo?grid_type=grid&sort_by=item_created_at&sort_order=desc) for inspiration.
