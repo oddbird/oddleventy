@@ -65,22 +65,13 @@ With `inline-size`, a proposed change to the Containment Module, authors can be 
 ### Apply @-rules at desired breakpoints
 Now that a containment context has been defined, the `@container` rule is used to tell the browser when and how styles should change inside each container. 
 
+At the first breakpoint, the layout for the `blockquote` changes so that the profile image moves from being above the quote to sitting next to it and the text describing the speaker gets a heavier weight applied. 
+
 ```scss
 /* change styles according to container size */
 @container (min-width: 35em) {
 
-  .first {
-    --column: full;
-    margin-bottom: 0.5rem;
-  }
-
-  .title {
-    --title-background: forestgreen;
-  }
-
-  
-
-  [data-quote] {
+  .quote {
     grid-gap: 1rem;
     grid-template: "media quote" auto/ max-content 1fr;
   }
@@ -93,24 +84,14 @@ Now that a containment context has been defined, the `@container` rule is used t
     font-weight: bold;
   }
 }
+```
 
-@container (min-width: 40em) {
+At the second breakpoint, the text for the quote and the attribution gets bigger, the background changes color, and the overall shape of the `blockquote` changes by way of a `clip-path`. 
 
-  .spread {
-    --column: full;
-    display: grid;
-    grid-template-columns: minmax(50%, 1fr) minmax(min-content, 20em);
-    gap: 2rem;
-  }
-}
-
+```scss
 @container (min-width: 60em) {
 
-  .title {
-    --title-background: goldenrod;
-  }
-
-  [data-quote] {
+  .quote {
     --quote-size: 1.5rem;
     --quote-background: darkmagenta;
     clip-path: polygon(
