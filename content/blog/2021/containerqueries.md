@@ -20,8 +20,6 @@ summary: |
   In the latest version of [Chrome Canary](https://www.google.com/chrome/canary), the most recent `@container` query proprosal, developed by OddBird's own [Miriam Suzanne](https://www.oddbird.net/authors/miriam/), is available for use behind an experimental flag. Miriam's [proposal](https://github.com/w3c/csswg-drafts/issues/5796) builds upon the ideas previously proposed by others, in particular David Baron, who wrote the [original draft](https://github.com/dbaron/container-queries-implementability). 
 
 
-
-
  ## Background
 
 `@Media` queries sparked a responsive design revolution by allowing authors to change the style of elements based on the size of the entire viewport. Up until now, what could not be done was changing the style of an element based on the size of its parent element. 
@@ -129,9 +127,21 @@ At the second breakpoint, the text for the quote and the attribution gets bigger
   }
 }
 ```
+
 Any styles inside of one of these `@container` blocks will be applied when the container fulfills the condition of the query. 
 
 Just as with `@media` queries, authors can write as many `@container` queries as needed.
+
+## All together now
+
+With each `blockquote` sitting in a different sized container, they all look slightly different, at the same viewport size. 
+
+{{ embed.figure(
+  data=[{'img': 'blog/2021/allquotes.png',
+          alt: 'three blockquotes, styled differently'}],
+  caption='The same blockquote component gets styled differently depending on its container size.'
+) }}
+
 
 ## What's next?
 
