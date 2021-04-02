@@ -19,6 +19,8 @@ summary: |
 
  The `@container` query, that elusive feature developers have been requesting and proposing for years, has finally made its debut in browsers. Well, sort of. As of the latest version of [Chrome Canary](https://www.google.com/chrome/canary), the most recent `@container` query proprosal, developed by OddBird's own [Miriam Suzanne](https://www.oddbird.net/authors/miriam/), is available for use behind an experimental flag. What _are_ container queries exactly? And how do they work?
 
+ David Baron's original Container Queries draft: [Thoughts on an implementable path forward for Container Queries](https://github.com/dbaron/container-queries-implementability).
+
  Bookmark Miriam's scratch site for updates: [Miriam's CSS Sandbox](https://css.oddbird.net/rwd/query/). 
 
  ## Background
@@ -49,10 +51,19 @@ section {
 }
 ```
 
-The `contain` property is part of the existing [CSS Containment Module](https://drafts.csswg.org/css-contain/). The `layout` value turns on [layout contaiment](https://drafts.csswg.org/css-contain/#valdef-contain-layout) on the container, which ensures that "nothing outside can affect its internal layout, and vice versa." The `inline-size` value is a proposed change to the Containment Module that would let authors explicitly declare in which dimension containment should be applied. 
+The `contain` property is part of the existing [CSS Containment Module](https://drafts.csswg.org/css-contain/). The `layout` value activates [layout contaiment](https://drafts.csswg.org/css-contain/#valdef-contain-layout) on the container, which ensures that "nothing outside can affect its internal layout, and vice versa." `Size` also [currently exists](https://drafts.csswg.org/css-contain/#size-containment) as a value that enables laying out a containment box without accounting for its descendents in either the inline or block axes. 
+
+```scss
+article,
+section {
+  contain: layout size;
+}
+```
+
+With `inline-size`, a proposed change to the Containment Module, authors can be more specific when declaring in which dimension containment should be applied. (`Block-size` is also being considered as a containment type in the new proposal. `Inline-size` seemed to satisfy more use-cases, so is being developed first.)
 
 ### Apply @-rules at desired breakpoints
-Now that the containment context has been defined, the `@container` rule is used to tell the browser when and how styles should change. 
+Now that a containment context has been defined, the `@container` rule is used to tell the browser when and how styles should change inside each container. 
 
 ```scss
 /* change styles according to container size */
@@ -66,6 +77,8 @@ Now that the containment context has been defined, the `@container` rule is used
   .title {
     --title-background: forestgreen;
   }
+
+  
 
   [data-quote] {
     grid-gap: 1rem;
