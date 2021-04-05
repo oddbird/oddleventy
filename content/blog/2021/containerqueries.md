@@ -152,6 +152,7 @@ It's still very early in the proposal process, so a lot regarding how container 
 - We already have viewport-relative units like `vh` and `vw`. Container-relative units could be on the horizon as well. 
 
 Bookmark Miriam's scratch site for updates: [Miriam's CSS Sandbox](https://css.oddbird.net/rwd/query/). 
+To follow along more directly with the discussions and implementation questions around container queries, stay tuned to this project board: [Open Issues & Work on the Contain 3 Spec](https://github.com/w3c/csswg-drafts/projects/18).
 
 ## Experiment and share
 
