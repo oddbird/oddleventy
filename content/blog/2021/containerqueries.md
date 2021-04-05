@@ -1,4 +1,5 @@
 ---
+card: large
 title: Getting Started with Container Queries
 sub: Now is the time to begin experimenting with a long requested layout tool. 
 author: davidh
@@ -12,7 +13,7 @@ tags:
   - Article
   - Container Queries
 summary: |
-  The `@container` query, that elusive feature developers have been requesting and proposing for years, has finally made its debut in browsers. Well, sort of. Here we'll explain what container queries are, how they work, and what other features they might come with once they are fully supported in browsers. 
+  The `@container` query, that elusive feature developers have been requesting and proposing for years, has finally made its debut in a browser. Well, sort of. Here we'll explain what container queries are, how they work, and what other features they might come with once fully supported in browsers. 
 ---
 
 {% import 'embed.macros.njk' as embed %}
