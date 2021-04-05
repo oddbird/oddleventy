@@ -2,7 +2,7 @@
 hours: 10 to 20
 
 # shared job posting data
-team_size: 6
+team_size: 7
 eleventyComputed:
   title: |
     {{ banner }} | Jobs
@@ -26,7 +26,7 @@ eleventyComputed:
       (UTC-4 to UTC-8 most of the time, but trips further afield are fine!)
     - Listen to users, and enjoy having our assumptions challenged/tested
     - Care about diversity in the tech community
-      and in our own work.
+      and in our own work
     - Maintain and enforce a [code of conduct](/conduct/)
       for everyone involved with OddBird work
     - Care about the accessibility of our projects
