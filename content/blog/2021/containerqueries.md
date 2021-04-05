@@ -2,7 +2,7 @@
 title: Getting Started with Container Queries
 sub: Now is the time to begin experimenting with a long requested layout tool. 
 author: davidh
-date: 2021-04-02
+date: 2021-04-05
 image:
   src: blog/2021/widequote.jpg
   alt: blockquote with magenta background and polygonal clip-path
