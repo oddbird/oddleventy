@@ -98,7 +98,7 @@ At the first breakpoint, the layout for the `blockquote` changes so that the pro
 }
 ```
 
-At the second breakpoint, the text for the quote and the attribution gets bigger, the background changes color, and the overall shape of the `blockquote` changes by way of a `clip-path`. 
+At the second breakpoint, the size of the text for the quote and the attribution grows, the background changes color, and the overall shape of the `blockquote` changes by way of a `clip-path`. 
 
 {{ embed.figure(
   data=[{'img': 'blog/2021/break2.png',
