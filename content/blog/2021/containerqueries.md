@@ -12,12 +12,12 @@ tags:
   - Article
   - Container Queries
 summary: |
-  The `@container` query, that elusive feature developers have been requesting and proposing for years, has finally made its debut in browsers. Well, sort of. Here we'll explain what container queries are, how they work, and what other feautures they might come with once they are fully supported in browsers. 
+  The `@container` query, that elusive feature developers have been requesting and proposing for years, has finally made its debut in browsers. Well, sort of. Here we'll explain what container queries are, how they work, and what other features they might come with once they are fully supported in browsers. 
 ---
 
 {% import 'embed.macros.njk' as embed %}
 
-In the latest version of [Chrome Canary](https://www.google.com/chrome/canary), the most recent `@container` query proprosal is available for use behind an experimental flag. Developed by OddBird's own [Miriam Suzanne](https://www.oddbird.net/authors/miriam/), the [draft](https://github.com/w3c/csswg-drafts/issues/5796) builds upon the ideas previously proposed by other web standards experts like David Baron, who wrote the [original draft](https://github.com/dbaron/container-queries-implementability). 
+In the latest version of [Chrome Canary](https://www.google.com/chrome/canary), the most recent `@container` query proposal is available for use behind an experimental flag. Developed by OddBird's own [Miriam Suzanne](https://www.oddbird.net/authors/miriam/), the [draft](https://github.com/w3c/csswg-drafts/issues/5796) builds upon the ideas previously proposed by other web standards experts like David Baron, who wrote the [original draft](https://github.com/dbaron/container-queries-implementability). 
 
 
  ## Background
@@ -48,7 +48,7 @@ section {
 }
 ```
 
-The `contain` property is part of the existing [CSS Containment Module](https://drafts.csswg.org/css-contain/). The `layout` value activates [layout contaiment](https://drafts.csswg.org/css-contain/#valdef-contain-layout) on the container, which ensures that "nothing outside can affect its internal layout, and vice versa." `Size` also [currently exists](https://drafts.csswg.org/css-contain/#size-containment) as a value for the `contain` property, and enables laying out a containment box without accounting for its descendents in either the inline or block axes. 
+The `contain` property is part of the existing [CSS Containment Module](https://drafts.csswg.org/css-contain/). The `layout` value activates [layout containment](https://drafts.csswg.org/css-contain/#valdef-contain-layout) on the container, which ensures that "nothing outside can affect its internal layout, and vice versa." `Size` also [currently exists](https://drafts.csswg.org/css-contain/#size-containment) as a value for the `contain` property, and enables laying out a containment box without accounting for its descendants in either the inline or block axes. 
 
 ```scss
 article,
@@ -152,7 +152,7 @@ It's still very early in the proposal process, so a lot regarding how container 
 - We already have viewport-relative units like `vh` and `vw`. [Container-relative units](https://github.com/w3c/csswg-drafts/issues/5888) could be on the horizon as well. 
 
 Bookmark Miriam's scratch site for updates: [Miriam's CSS Sandbox](https://css.oddbird.net/rwd/query/). 
-To follow along more directly with the discussions and implementation questions around container queries, stay tuned to this project board: [Open Issues & Work on the Contain 3 Spec](https://github.com/w3c/csswg-drafts/projects/18).
+To participate in discussions and implementation questions related to `container` queries, visit this project board: [Open Issues & Work on the Contain 3 Spec](https://github.com/w3c/csswg-drafts/projects/18).
 
 ## Experiment and share
 
