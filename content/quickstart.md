@@ -138,8 +138,8 @@ we want the entire team involved in the conversation.
   (currently \$400/day)
   during the retreat.
   (For the safety of our Birds and our communities,
-      due to the COVID pandemic 
-      our retreats are currently being conducted remotely.)
+  due to the COVID pandemic
+  our retreats are currently being conducted remotely.)
 - We pay for internal OddBird work required to grow the company,
   or improve our processes.
   If you have ideas you’d like to help implement,
