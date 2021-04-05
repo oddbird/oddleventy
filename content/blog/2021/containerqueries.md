@@ -4,7 +4,7 @@ sub: Now is the time to begin experimenting with a long requested layout tool.
 author: davidh
 date: 2021-04-05
 image:
-  src: blog/2021/widequote.jpg
+  src: blog/2021/widequote.png
   alt: blockquote with magenta background and polygonal clip-path
 tags:
   - CSS
@@ -73,7 +73,7 @@ With a narrow parent container, the `blockquote` features the image stacked on t
 At the first breakpoint, the layout for the `blockquote` changes so that the profile image moves from being above the quote to sitting next to it, and the text describing the speaker gets a heavier weight applied. 
 
 {{ embed.figure(
-  data=[{'img': 'blog/2021/break1.jpg',
+  data=[{'img': 'blog/2021/break1.png',
          alt: 'profile image next to quote'}],
   caption='The profile image changes position at the first breakpoint to sit next to the quote.'
 ) }}
@@ -100,7 +100,7 @@ At the first breakpoint, the layout for the `blockquote` changes so that the pro
 At the second breakpoint, the text for the quote and the attribution gets bigger, the background changes color, and the overall shape of the `blockquote` changes by way of a `clip-path`. 
 
 {{ embed.figure(
-  data=[{'img': 'blog/2021/break2.jpg',
+  data=[{'img': 'blog/2021/break2.png',
           alt: 'blockquote with magenta background and clip-path'}],
   caption='At a wider breakpoint, the blockquote gets a 
   clip-path and a different background color.'
