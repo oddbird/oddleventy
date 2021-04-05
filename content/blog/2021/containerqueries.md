@@ -17,7 +17,7 @@ summary: |
 
 {% import 'embed.macros.njk' as embed %}
 
-  In the latest version of [Chrome Canary](https://www.google.com/chrome/canary), the most recent `@container` query proprosal, developed by OddBird's own [Miriam Suzanne](https://www.oddbird.net/authors/miriam/), is available for use behind an experimental flag. Miriam's [proposal](https://github.com/w3c/csswg-drafts/issues/5796) builds upon the ideas previously proposed by others, in particular David Baron, who wrote the [original draft](https://github.com/dbaron/container-queries-implementability). 
+In the latest version of [Chrome Canary](https://www.google.com/chrome/canary), the most recent `@container` query proprosal is available for use behind an experimental flag. Developed by OddBird's own [Miriam Suzanne](https://www.oddbird.net/authors/miriam/), the [draft](https://github.com/w3c/csswg-drafts/issues/5796) builds upon the ideas previously proposed by other web standards experts like David Baron, who wrote the [original draft](https://github.com/dbaron/container-queries-implementability). 
 
 
  ## Background
