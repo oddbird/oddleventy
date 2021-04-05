@@ -149,7 +149,7 @@ It's still very early in the proposal process, so a lot regarding how container 
 
 - There might be a way to contain only the block axis. 
 - Queries could also be made against properties like `aspect-ratio`, `orientation,` or even [custom properties and layout states](https://github.com/w3c/csswg-drafts/issues/5989).
-- We already have viewport-relative units like `vh` and `vw`. Container-relative units could be on the horizon as well. 
+- We already have viewport-relative units like `vh` and `vw`. [Container-relative units](https://github.com/w3c/csswg-drafts/issues/5888) could be on the horizon as well. 
 
 Bookmark Miriam's scratch site for updates: [Miriam's CSS Sandbox](https://css.oddbird.net/rwd/query/). 
 To follow along more directly with the discussions and implementation questions around container queries, stay tuned to this project board: [Open Issues & Work on the Contain 3 Spec](https://github.com/w3c/csswg-drafts/projects/18).
