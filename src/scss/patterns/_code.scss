@@ -29,6 +29,14 @@ pre {
   white-space: pre;
 }
 
+code:not([class^='language']) {
+  background: var(--ccs-special--bg5-fade);
+  border-radius: var(--quarter-shim);
+  color: var(--ccs-accent--fg1);
+  padding-left: var(--quarter-shim);
+  padding-right: var(--quarter-shim);
+}
+
 .token.comment,
 .token.prolog,
 .token.doctype,
