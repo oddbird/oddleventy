@@ -39,12 +39,12 @@ In this demo (which only works in the latest version of [Chrome Canary](https://
 
 ### Define a containment context
 
-To achieve this, first define a containment context. This lets the browser know which container to query against later. 
+To achieve this, first define a containment context. This lets the browser know which container to query against later and how exactly to query that specific container. 
 
 ```scss
 article,
 section {
-  contain: layout inline-size;
+  contain: layout size;
 }
 ```
 
@@ -53,7 +53,7 @@ The `contain` property is part of the existing [CSS Containment Module](https://
 ```scss
 article,
 section {
-  contain: layout size;
+  contain: layout inline-size;
 }
 ```
 
@@ -147,7 +147,9 @@ With each `blockquote` sitting in a different sized container, they all look sli
 
 It's still very early in the proposal process, so a lot regarding how container queries work could change. 
 
-There might be a way to contain only the block axis. Queries could also be made against properties like `aspect-ratio` or `orientation.`
+- There might be a way to contain only the block axis. 
+- Queries could also be made against properties like `aspect-ratio`, `orientation,` or even [custom properties and layout states](https://github.com/w3c/csswg-drafts/issues/5989).
+- We already have viewport-relative units like `vh` and `vw`. Container-relative units could be on the horizon as well. 
 
 Bookmark Miriam's scratch site for updates: [Miriam's CSS Sandbox](https://css.oddbird.net/rwd/query/). 
 
