@@ -12,7 +12,7 @@ tags:
   - Article
   - Container Queries
 summary: |
-  The `@container` query, that elusive feature developers have been requesting and proposing for years, has finally made its debut in browsers. Well, sort of. What are **container queries** exactly and how do they work?
+  The `@container` query, that elusive feature developers have been requesting and proposing for years, has finally made its debut in browsers. Well, sort of. Here we'll explain what container queries are, how they work, and what other feautures they might come with once they are fully supported in browsers. 
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -22,7 +22,7 @@ In the latest version of [Chrome Canary](https://www.google.com/chrome/canary), 
 
  ## Background
 
-`@Media` queries sparked a responsive design revolution by allowing authors to change the style of elements based on the size of the entire viewport. Up until now, what could not be done was changing the style of an element based on the size of its parent element. 
+`@Media` queries sparked a responsive design revolution by allowing authors to change the style of elements based on the size of the entire viewport. Up until now, what could not be done was changing the style of an element based on the size of one of its nearest containers. 
 
 ## Syntax and an example
 
