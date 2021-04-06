@@ -1,6 +1,6 @@
 ---
 card: large
-title: Getting Started with Container Queries
+title: "Container Queries: a Quick Start Guide"
 sub: Now is the time to begin experimenting with a long requested layout tool.
 author: davidh
 date: 2021-04-05
