@@ -66,7 +66,7 @@
   --type-flag: var(--bg);
   --type-flag-active: var(--callout);
   --shadow: transparent;
-  background-color: var(--feature-accent);
+  background-color: var(--feature-accent, var(--accent));
   background-image: linear-gradient(to bottom, transparent, var(--feature));
   margin: calc(var(--half-shim) * -1);
 

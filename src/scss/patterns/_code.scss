@@ -30,9 +30,9 @@ pre {
 }
 
 code:not([class^='language']) {
-  background: var(--ccs-special--bg5-fade);
+  background: var(--callout-special);
   border-radius: var(--quarter-shim);
-  color: var(--ccs-accent--fg1);
+  color: var(--accent);
   padding-left: var(--quarter-shim);
   padding-right: var(--quarter-shim);
 }
