@@ -34,7 +34,7 @@ $font-sizes: (
   'h1': '#xlarge',
   'h2': '#large',
   'h3': '#medium',
-  'code': 0.9em,
+  'code': 0.8rem,
 );
 
 @include tools.add-sizes($font-sizes);

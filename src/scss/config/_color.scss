@@ -55,6 +55,7 @@ $background-colors: (
       var(--ccs-l--bg5),
       var(--ccs-fade)
     ),
+  'callout-special': var(--ccs-special--bg5-fade),
   'overlay': var(--ccs-neutral--bg6-fade),
   'overlay-banner':
     hsla(var(--ccs-h--neutral), var(--ccs-s--bg6), var(--ccs-l--bg6), 0.4),
@@ -74,7 +75,6 @@ $content-colors: (
   'accent': var(--ccs-accent--fg1),
   'highlight': var(--ccs-accent--fg3),
   'feature': var(--ccs-prime--fg4),
-  'feature-accent': var(--ccs-accent--fg1),
   'border': var(--ccs-neutral),
   'border-fade': var(--ccs-neutral--fade),
   'shadow':
