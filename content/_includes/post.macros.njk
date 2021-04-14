@@ -184,7 +184,7 @@ params:
         ) }}
       </header>
       {% if post.data.events %}
-        {{ upcoming(post.data.events, links=false) }}
+        {{ eventpreview(post.data.events, links=false) }}
       {% elif post.data.summary %}
         {% set summary = post.data.summary | md %}
         {% if (card == 'large') %}
@@ -234,9 +234,11 @@ params:
 {% endmacro %}
 
 {# @docs
-label: upcoming
+label: eventpreview
 category: events
-note: List of upcoming events from a post
+note: |
+  List of up to 2 upcoming events from a talk post,
+  shows up to 2 past events if no upcoming events are available
 params:
   events:
     type: array
@@ -245,17 +247,24 @@ params:
     default: true
     note: Optionally remove event links for content in linked-cards
 #}
-{% macro upcoming(
+{% macro eventpreview(
   events,
-  links=true,
-  all=true
+  links=true
 ) %}
-  {%- set events = events if all else events | getFuture -%}
+  {%- set events = events -%}
   {%- set events = events | sort(attribute='date') -%}
-  {# if events and (events | length > 0) #}
-  {%- if events | getFuture (events | length < 1) -%}
+  {%- set pastevents = events -%}
+  {%- set futureevents = events | getFuture  -%}
+  {%- if futureevents | length > 0 -%}
+    <h4>Upcoming</h4>
+  {%- elif pastevents | length > 0 -%}
+    <h4>Past</h4>
+  {%- endif -%}
+
+  {%- if events and (events | length > 0) -%}
     <ul class="next-event">
-      {%- for next in events -%}
+    {%- for next in events -%}
+      {% if (loop.index <= 2) %}
         <li>
           {{ linked(
             next.venue,
@@ -270,6 +279,7 @@ params:
             ) }}
           </span>
         </li>
+       {%- endif -%}
       {%- endfor -%}
     </ul>
   {%- endif -%}
