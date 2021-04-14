@@ -189,7 +189,7 @@ params:
         {% set summary = post.data.summary | md %}
         {% if (card == 'large') %}
           {{ summary | safe }}
-        {% else  %}
+        {% else %}
           <p>
             {{ summary | elide | safe }}
           </p>
@@ -236,7 +236,7 @@ params:
 {# @docs
 label: upcoming
 category: events
-note: Listof upcoming events from a post
+note: List of upcoming events from a post
 params:
   events:
     type: array
@@ -355,8 +355,10 @@ params:
 
     {{ client(post.data.client) }}
 
-    {% if dateformat %}
-      {{ pubdate(post.date, post.data.end, dateformat) }}
+    {% if not post.data.events %}
+      {% if dateformat %}
+        {{ pubdate(post.date, post.data.end, dateformat) }}
+      {% endif %}
     {% endif %}
   </p>
 {% endmacro %}
