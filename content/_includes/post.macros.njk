@@ -247,11 +247,13 @@ params:
 #}
 {% macro upcoming(
   events,
-  links=true
+  links=true,
+  all=true
 ) %}
-  {%- set events = events | getFuture if events else none -%}
+  {%- set events = events if all else events | getFuture -%}
   {%- set events = events | sort(attribute='date') -%}
-  {%- if events | length > 0 -%}
+  {# if events and (events | length > 0) #}
+  {%- if events | getFuture (events | length < 1) -%}
     <ul class="next-event">
       {%- for next in events -%}
         <li>
