@@ -255,15 +255,11 @@ params:
   {%- set events = events | sort(attribute='date') -%}
   {%- set pastevents = events -%}
   {%- set futureevents = events | getFuture  -%}
+
   {%- if futureevents | length > 0 -%}
     <h4>Upcoming</h4>
-  {%- elif pastevents | length > 0 -%}
-    <h4>Past</h4>
-  {%- endif -%}
-
-  {%- if events and (events | length > 0) -%}
     <ul class="next-event">
-    {%- for next in events -%}
+    {%- for next in futureevents -%}
       {% if (loop.index <= 2) %}
         <li>
           {{ linked(
@@ -282,6 +278,32 @@ params:
        {%- endif -%}
       {%- endfor -%}
     </ul>
+
+
+  {%- elif pastevents | length > 0 -%}
+    <h4>Past</h4>
+  {%- if pastevents and (pastevents | length > 0) -%}
+    <ul class="next-event">
+    {%- for next in pastevents | reverse -%}
+      {% if (loop.index <= 2) %}
+        <li>
+          {{ linked(
+            next.venue,
+            next.url if links else none
+          ) }}
+          <span class="next-on">
+            <i>on</i>
+            {{ utility.datetime(
+              next.date,
+              next.end,
+              format='md'
+            ) }}
+          </span>
+        </li>
+       {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
   {%- endif -%}
 {% endmacro %}
 
