@@ -341,18 +341,20 @@ params:
   post,
   collections=none,
   links=true,
-  dateformat=false
+  dateformat=false,
+  prefix='by'
 ) %}
   <p class="byline">
     {{ by(
       post.data.author,
       collections,
-      prefix=none if post.data.venue else 'by',
+      prefix=none if post.data.venue else prefix,
       link=links
     ) }}
 
     {% if post.data.oss %}
       {% set plural = not post.data.author | typeCheck('string') %}
+      {% set plural = (post.data.author == 'oddbird') or plural %}
       {% set plural = false if (post.data.oss == 'core team') else plural %}
       ({{ post.data.oss }}{{ 's' if plural else '' }})
     {% endif %}

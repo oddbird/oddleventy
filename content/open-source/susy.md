@@ -2,6 +2,7 @@
 title: Susy
 sub: CSS layout framework
 date: 2009-07-13
+end: 2020-07-13
 card: large
 logo: susy
 image:
@@ -9,7 +10,8 @@ image:
   svg: logos/susy-mark
 author:
   - miriam
-  - oddbird
+  - carl
+  - jonny
 oss: owner
 index: Susy
 action:

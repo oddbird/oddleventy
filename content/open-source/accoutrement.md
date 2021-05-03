@@ -1,6 +1,7 @@
 ---
 title: Accoutrement
 sub: Integrated design-system management in Sass
+feature: true
 date: 2014-10-30
 logo: accoutrement
 image:
@@ -12,7 +13,8 @@ oss: owner
 index: Accoutrement
 author:
   - miriam
-  - oddbird
+  - stacy
+  - jonny
 accoutrement_modules:
   - title: Core
     url: /accoutrement/docs/core.html

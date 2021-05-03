@@ -1,6 +1,7 @@
 ---
 title: W3C CSS Working Group
 sub: Developing specifications for the CSS language
+feature: true
 url: https://www.w3.org/Style/CSS/
 author: miriam
 oss: invited expert

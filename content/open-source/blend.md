@@ -7,7 +7,7 @@ image:
 oss: owner
 author:
   - miriam
-  - oddbird
+  - jonny
 index: Blend
 links:
   docs: /blend/docs/

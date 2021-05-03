@@ -40,12 +40,14 @@ params:
     ) }}
   {% else %}
     {% for name in names %}
-      {% set tween = ' & ' | mdInline if (loop.length == 2) else ',' %}
+      {{ '&' if loop.last and (loop.length > 2) }}
       {{ author(
         name=name,
         collections=collections,
-        link=link
+        link=link,
+        fullname=false
       ) }}
+      {%- set tween = ' & ' | mdInline if (loop.length == 2) else ',' -%}
       {{- tween | safe if not loop.last }}
     {% endfor %}
   {% endif %}
@@ -76,11 +78,14 @@ params:
   name,
   collections=none,
   page=none,
-  link=true
+  link=true,
+  fullname=true
 ) -%}
   {%- set page = collections.birds | authorPage(name) if (collections and not page) else page -%}
   {%- if page.data -%}
-    {%- set name = page.data.title if (name != 'oddbird') else 'OddBird' -%}
+    {%- set all = 'OddBird' if (name == 'oddbird') else none -%}
+    {%- set bird = page.data.title if fullname else (page.data.shortname or name | capitalize) -%}
+    {%- set name =  all or bird -%}
     {{ utility.link_if(
       content=name | mdInline | safe,
       url=page.url if link else none,
