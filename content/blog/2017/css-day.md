@@ -59,7 +59,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 - [Slides](https://oddbooksapp.com/book/pattern-making)
 
-[Miriam Suzanne]: https://twitter.com/mirisuzanne/
+[Miriam Suzanne]: https://twitter.com/TerribleMia/
 
 ## The In-Betweeners of Responsive Web Design by [Pralie Dutzel]
 

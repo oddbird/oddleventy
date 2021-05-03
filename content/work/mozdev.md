@@ -11,7 +11,7 @@ links:
 index: Mozilla Developer Channel
 press:
   - text: |
-      Are you following @MiriSuzanne yet? She's amazing.
+      Are you following @TerribleMia yet? She's amazing.
       **I'm so lucky to get to work with her on this video series & more.**
     name: Jen Simmons
     title: Designer & Developer Advocate
@@ -19,7 +19,7 @@ press:
     url: https://twitter.com/jensimmons/status/1182658268457512961
     slug: amazing
   - text: |
-      @MiriSuzanne does not only explain “why CSS is how it is”
+      @TerribleMia does not only explain “why CSS is how it is”
       but also neatly **summarizes the basic principles
       of what make the Web the Web.**
       If you know those principles,

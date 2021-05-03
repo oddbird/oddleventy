@@ -111,7 +111,7 @@ code:
 {{ embed.codepen(
   id='0229f885f9a574c6d049b9d30dffc609',
   title='CSS Grid Demo',
-  user='mirisuzanne'
+  user='miriamsuzanne'
 ) }}
 
 In most cases, you can also provide a float, flexbox, or css-table
@@ -247,7 +247,7 @@ of CSS [custom properties] (aka variables):
 {{ embed.codepen(
   id='d05d2ea9339419df7070f9c393a9c080',
   title='Calc() + Custom Properties',
-  user='mirisuzanne'
+  user='miriamsuzanne'
 ) }}
 
 That will also work with css-tables, etc. Add any padding you like, and
@@ -259,7 +259,7 @@ experiment, but I don't recommend using it in production:
 {{ embed.codepen(
   id='PboVrw',
   title='SusyCSS Demo',
-  user='mirisuzanne'
+  user='miriamsuzanne'
 ) }}
 
 Susy is designed to handle any layout, but if you are designing grids in
@@ -282,7 +282,7 @@ Here's an example flexbox layout, without Susy:
 {{ embed.codepen(
   id='657a71f05b9c044d0235bab212abdbdc',
   title='Full-height Flexbox',
-  user='mirisuzanne'
+  user='miriamsuzanne'
 ) }}
 
 If you do want to use Susy with flexbox to achieve more consistent
@@ -320,7 +320,7 @@ do that work for you, but it can be a powerful fallback:
 {{ embed.codepen(
   id='70b5a2cf411542e74d1cd42d5ddbe446',
   title='Floats with Calc',
-  user='mirisuzanne'
+  user='miriamsuzanne'
 ) }}
 
 ## Introducing Susy3

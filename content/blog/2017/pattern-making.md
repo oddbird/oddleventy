@@ -283,7 +283,7 @@ color (`#339` above), and then call the adjustment function mentioned
 
 You can play with it yourself in this CodePen demo:
 
-<p data-height="420" data-theme-id="0" data-slug-hash="xqOwxe" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Accoutrement Color Example" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/xqOwxe/">Accoutrement Color Example</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="420" data-theme-id="0" data-slug-hash="xqOwxe" data-default-tab="css,result" data-user="miriamsuzanne" data-embed-version="2" data-pen-title="Accoutrement Color Example" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/miriamsuzanne/pen/xqOwxe/">Accoutrement Color Example</a> by Miriam Suzanne (<a href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 As you can see, that demo also generates a rough style guide on-the-fly,
