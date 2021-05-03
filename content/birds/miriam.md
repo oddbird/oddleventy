@@ -8,9 +8,9 @@ image:
   width: 2160
   height: 743
 social:
-  twitter: mirisuzanne
-  github: mirisuzanne
-  codepen: mirisuzanne
+  twitter: TerribleMia
+  github: MiriSuzanne
+  codepen: MiriamSuzanne
   stackoverflow: 1930386
 summary: |
   Miriam is a co-founder and front-end architect --

@@ -51,7 +51,7 @@ action:
 {{ embed.codepen(
   id='NadbNR',
   title='CSS Variable Breakpoints',
-  user='mirisuzanne'
+  user='miriamsuzanne'
 ) }}
 
 ## Sass Limitations

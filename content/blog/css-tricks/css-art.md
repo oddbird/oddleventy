@@ -88,7 +88,7 @@ with a few custom properties to make adjustment easier:
 {{ embed.codepen(
   id='eYdJvWE',
   title='CSS gradient-art decorations',
-  user='mirisuzanne'
+  user='miriamsuzanne'
 ) }}
 
 Last week we used a similar trick

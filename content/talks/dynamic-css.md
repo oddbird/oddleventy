@@ -15,11 +15,11 @@ tags:
   - Vue
   - Layout
 events:
-  - venue: Webconf.asia
-    url: https://webconf.asia/
-    date: 2021-06-04
-    end: 2021-06-05
-    adr: Hong Kong
+  # - venue: Webconf.asia
+  #   url: https://webconf.asia/
+  #   date: 2021-06-04
+  #   end: 2021-06-05
+  #   adr: Hong Kong
   - venue: Shift Remote
     url: https://remote.shiftconf.co/
     date: 2020-08-06
@@ -90,7 +90,7 @@ events:
 press:
   - text: |
       Some pretty mind-bendingly cool uses for CSS custom props
-      from @MiriSuzanne --
+      from @TerribleMia --
       color, layout & animation all in css
       and only using JS to feed data.
     slug: mind-bending
@@ -100,7 +100,7 @@ press:
     face: jason-pamental.jpg
     url: https://twitter.com/jpamental/status/1118585546803036160
   - text: |
-      Best CSS talk I've ever seen was from @MiriSuzanne
+      Best CSS talk I've ever seen was from @TerribleMia
       today at #dvlpdnvr. Simply amazing.
     name: Michael Dowden
     title: Co-Author
@@ -111,7 +111,7 @@ press:
       Well that was awesome!!!
       “If you think CSS is a dumb language,
       you’re a dumb language – CSS IS AWESOME!”
-      @MiriSuzanne thank you so much for the amazing talk!
+      @TerribleMia thank you so much for the amazing talk!
     name: Nour Saud
     title: Software Engineer
     face: nour-saud.jpg

@@ -82,4 +82,4 @@ articles, demos, and some exciting new open source tools.
 
 [channel]: https://www.youtube.com/MozillaDeveloper
 [dark mode demo]: https://empathic-dev.github.io/HelloDarkness/
-[demo on CodePen]: https://codepen.io/mirisuzanne/pen/BaBKowO?editors=0100
+[demo on CodePen]: https://codepen.io/miriamsuzanne/pen/BaBKowO?editors=0100
