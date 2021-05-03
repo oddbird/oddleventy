@@ -30,5 +30,5 @@ to structured documents and Web applications.
 By separating the presentation style from the content,
 CSS simplifies Web authoring and site maintenance.
 
-All my research, explainers, and proposals 
-are available at [css.oddbird.net](https://css.oddbird.net/)
+All my research, explainers, and proposals
+are available at [css.oddbird.net](https://css.oddbird.net/).
