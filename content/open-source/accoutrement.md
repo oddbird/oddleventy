@@ -15,6 +15,7 @@ author:
   - miriam
   - stacy
   - jonny
+  - claudina
 accoutrement_modules:
   - title: Core
     url: /accoutrement/docs/core.html
