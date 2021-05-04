@@ -85,7 +85,7 @@ params:
   {%- if page.data -%}
     {%- set all = 'OddBird' if (name == 'oddbird') else none -%}
     {%- set bird = page.data.title if fullname else (page.data.shortname or name | capitalize) -%}
-    {%- set name =  all or bird -%}
+    {%- set name = all or bird -%}
     {{ utility.link_if(
       content=name | mdInline | safe,
       url=page.url if link else none,
