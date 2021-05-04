@@ -40,7 +40,7 @@ params:
     ) }}
   {% else %}
     {% for name in names %}
-      {{ '&' if loop.last and (loop.length > 2) }}
+      {{ '&' | mdInline if loop.last and (loop.length > 2) }}
       {{ author(
         name=name,
         collections=collections,
