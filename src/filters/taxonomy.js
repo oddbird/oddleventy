@@ -70,7 +70,7 @@ const ossGroups = (collection, only) => {
       const past = type.past || [];
       const oss = page.data.oss;
 
-      if (page.data.end && page.data.end !== 'ongoing') {
+      if (page.data.end) {
         return all.includes(oss) || past.includes(oss);
       }
 

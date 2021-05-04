@@ -56,7 +56,7 @@ category: file
       {% endif %}
     {% endcall %}
     {{ post.subtitle(item.data.sub, collections) }}
-    {{ post.byline(item, collections, dateformat='since', prefix=none) }}
+    {{ post.byline(item, collections, dateformat='range', prefix=none) }}
   </header>
   {% if item.data.feature %}
     {{ item.data.summary | md | safe }}

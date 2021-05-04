@@ -63,10 +63,10 @@ module.exports = (eleventyConfig) => {
         }
 
         if (a.data.end !== b.data.end) {
-          if (a.data.end === 'ongoing') {
+          if (!a.data.end) {
             return -1;
           }
-          if (b.data.end === 'ongoing') {
+          if (!b.data.end) {
             return 1;
           }
           return b.data.end - a.data.end;

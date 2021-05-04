@@ -6,7 +6,6 @@ url: https://www.w3.org/Style/CSS/
 author: miriam
 oss: invited expert
 date: 2020-03-01
-end: ongoing
 image:
   src: projects/w3c.jpg
 index: CSSWG
