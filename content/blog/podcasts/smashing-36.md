@@ -21,9 +21,9 @@ tags:
   - CSSWG
   - Smashing Magazine
 summary: |
-  Starting a new season of the Smashing Podcast 
-  with a look at the future of CSS. 
-  What new specs will be landing in browsers soon? 
+  Starting a new season of the Smashing Podcast
+  with a look at the future of CSS.
+  What new specs will be landing in browsers soon?
   Drew McLellan talks to Miriam to find out.
 audio: https://aphid.fireside.fm/d/1437767933/41abfd1d-87a1-43d7-94d9-7fda3a5120e1/5cb7f3eb-086b-41fa-9940-5688a81b64f9.mp3
 ---
