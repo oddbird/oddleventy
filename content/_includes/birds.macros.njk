@@ -40,15 +40,16 @@ params:
     ) }}
   {% else %}
     {% for name in names %}
-      {{ '&' | mdInline if loop.last and (loop.length > 2) }}
+      {{ ' & ' if loop.last and (loop.length > 2) }}
       {{ author(
         name=name,
         collections=collections,
         link=link,
         fullname=false
       ) }}
-      {%- set tween = ' & ' | mdInline if (loop.length == 2) else ',' -%}
-      {{- tween | safe if not loop.last }}
+      {%- if not loop.last -%}
+        {{ ' & ' if loop.length == 2 else ', ' }}
+      {%- endif -%}
     {% endfor %}
   {% endif %}
 {% endmacro %}
