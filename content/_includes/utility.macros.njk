@@ -32,7 +32,7 @@ params:
   attr,
   value=none
 ) %}
-  {%- if (value and (value | string | lower == 'true')) or (value == '') -%}
+  {%- if (value and (value | string | lower == 'true')) or (value === '') -%}
     {{ attr }}
   {%- elif value -%}
     {{ attr }}="{{ value }}"
@@ -199,17 +199,17 @@ params:
 ) %}
   {%- set ranges = {
     'same-y': {
-      'start': 'M',
+      'start': 'short_month',
       'end': 'range'
     },
     'same-m': {
-      'start': 'md',
-      'end': 'd' if (format == 'md') else 'dy'
+      'start': 'month_date',
+      'end': 'date' if (format == 'month_date') else 'date_year'
     }
   } -%}
 
   {%- set ongoing = (format == 'range') and not end -%}
-  {%- set is_range = end and (start != end) and (not ongoing) -%}
+  {%- set is_range = end and (start | string != end | string) and (not ongoing) -%}
 
   {%- if prefix %}
     {%- set prefix = 'since' if ongoing else 'on' -%}
@@ -219,7 +219,7 @@ params:
 
   <time
     datetime="{{ start | getDate('iso') }}"
-    {{ attr_if('pubdate', not not is_pubdate) }}>
+    {{ attr_if('pubdate', is_pubdate) }}>
 
     {% if ongoing %}
       {{ start | getDate('year') }}

@@ -1,5 +1,8 @@
 'use strict';
 
+const dateFormat = require('date-fns/format');
+const { utcToZonedTime } = require('date-fns-tz');
+
 /* @docs
 label: Date & Time Filters
 category: File
@@ -13,68 +16,23 @@ example: |
 
 const now = () => new Date();
 
-const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-
-const days = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-];
-
 const formatDate = (date, format) => {
-  const m0 = date.getUTCMonth();
-  const mm = `${m0 + 1}`.padStart(2, '0');
-  const MM = months[m0];
-  const M = MM.slice(0, 3);
-  const d = date.getUTCDate();
-  const dd = `${d}`.padStart(2, '0');
-  const D = days[date.getUTCDay()];
-  const yyyy = date.getUTCFullYear();
-  const md = `${M} ${d}`;
-  const iso = `${yyyy}-${mm}-${dd}`;
-  const range = `${M} ${yyyy}`;
-
+  // https://date-fns.org/v2.21.2/docs/format
   const formats = {
-    dd,
-    d,
-    D,
-    mm,
-    MM,
-    M,
-    yyyy,
-    md,
-    iso,
-    range,
-    day: D,
-    date: d,
-    month: MM,
-    year: yyyy,
-    mmd: `${MM} ${d}`,
-    dy: `${d}, ${yyyy}`,
-    slash: `${mm}/${dd}/${yyyy}`,
-    url: `${yyyy}/${mm}/${dd}`,
-    short: `${M} ${d}, ${yyyy}`,
-    long: `${MM} ${d}, ${yyyy}`,
+    month_date: 'MMM d',
+    iso: 'yyyy-MM-dd',
+    range: 'MMM yyyy',
+    date: 'd',
+    short_month: 'MMM',
+    month: 'MMMM',
+    year: 'yyyy',
+    date_year: 'd, yyyy',
+    url: 'yyyy/MM/dd',
+    short: 'PP',
+    long: 'MMMM d, yyyy',
   };
 
-  return formats[format];
+  return dateFormat(utcToZonedTime(date, '+00:00'), formats[format] || format);
 };
 
 /* @docs

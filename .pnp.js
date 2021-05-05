@@ -56,6 +56,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chokidar-cli", "npm:2.1.0"],
             ["core-js", "npm:3.9.1"],
             ["cssremedy", "npm:0.1.0-beta.2"],
+            ["date-fns", "npm:2.21.2"],
+            ["date-fns-tz", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.1.4"],
             ["doxray", "npm:0.10.1"],
             ["eslint", "npm:7.21.0"],
             ["eslint-config-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:8.1.0"],
@@ -6677,6 +6679,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["abab", "npm:2.0.5"],
             ["whatwg-mimetype", "npm:2.3.0"],
             ["whatwg-url", "npm:8.4.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["date-fns", [
+        ["npm:2.21.2", {
+          "packageLocation": "./.yarn/cache/date-fns-npm-2.21.2-26d7f5a4ca-044e5af3aa.zip/node_modules/date-fns/",
+          "packageDependencies": [
+            ["date-fns", "npm:2.21.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["date-fns-tz", [
+        ["npm:1.1.4", {
+          "packageLocation": "./.yarn/cache/date-fns-tz-npm-1.1.4-da26bfd277-2c835e068d.zip/node_modules/date-fns-tz/",
+          "packageDependencies": [
+            ["date-fns-tz", "npm:1.1.4"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.1.4", {
+          "packageLocation": "./.yarn/$$virtual/date-fns-tz-virtual-1a7d83de85/0/cache/date-fns-tz-npm-1.1.4-da26bfd277-2c835e068d.zip/node_modules/date-fns-tz/",
+          "packageDependencies": [
+            ["date-fns-tz", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.1.4"],
+            ["@types/date-fns", null],
+            ["date-fns", "npm:2.21.2"]
+          ],
+          "packagePeers": [
+            "@types/date-fns",
+            "date-fns"
           ],
           "linkType": "HARD",
         }]
@@ -14151,6 +14184,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chokidar-cli", "npm:2.1.0"],
             ["core-js", "npm:3.9.1"],
             ["cssremedy", "npm:0.1.0-beta.2"],
+            ["date-fns", "npm:2.21.2"],
+            ["date-fns-tz", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.1.4"],
             ["doxray", "npm:0.10.1"],
             ["eslint", "npm:7.21.0"],
             ["eslint-config-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:8.1.0"],

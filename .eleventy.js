@@ -148,9 +148,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPairedShortcode('md', type.md);
   eleventyConfig.addPairedShortcode('mdInline', type.mdInline);
   eleventyConfig.addPairedShortcode('h', type.heading);
-  eleventyConfig.addShortcode(
-    'getDate',
-    (format) => `${time.getDate(time.now(), format)}`,
+  eleventyConfig.addShortcode('getDate', (format) =>
+    time.getDate(time.now(), format),
   );
 
   // config
