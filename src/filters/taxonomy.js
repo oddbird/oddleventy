@@ -64,9 +64,18 @@ const ossGroups = (collection, only) => {
   const grouped = {};
 
   taxonomy.oss.forEach((type) => {
-    const pages = collection.filter((page) =>
-      type.show.includes(page.data.oss),
-    );
+    const pages = collection.filter((page) => {
+      const all = type.all || [];
+      const current = type.current || [];
+      const past = type.past || [];
+      const oss = page.data.oss;
+
+      if (page.data.end) {
+        return all.includes(oss) || past.includes(oss);
+      }
+
+      return all.includes(oss) || current.includes(oss);
+    });
     if (pages.length) {
       grouped[type.title] = pages;
     }

@@ -1,6 +1,7 @@
 ---
 title: Herman
 sub: Automated style guides
+feature: true
 logo: herman
 image:
   src: herman/herman-hero.jpg
@@ -8,6 +9,7 @@ image:
 date: 2015-11-08
 oss: owner
 index: Herman
+author: oddbird
 action:
   text: Hire us for training & implementation
   url: /contact/

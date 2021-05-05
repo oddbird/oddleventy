@@ -1,6 +1,7 @@
 ---
 title: Cascading Colors
 sub: Dynamic & interactive color palettes using CSS
+feature: true
 logo: cascading-colors
 image:
   src: projects/cascading-colors.jpg
@@ -8,7 +9,8 @@ image:
   height: 1077
 author:
   - miriam
-  - oddbird
+  - jonny
+  - erica
 oss: owner
 date: 2019-09-07
 index: Cascading Colors
@@ -30,7 +32,6 @@ summary: |
 
 {{ layout.title('OddSite Colors') }}
 
-{% md %}
 We use Cascading Colors on this site,
 with user-settings available in the top banner
 "colors" menu.
@@ -50,7 +51,6 @@ The system includes a light and dark mode,
 along with an `invert` option
 which results in the opposite
 of the currently active mode:
-{% endmd %}
 
 <ul data-ccs-show="modes">
   <li data-ccs-colors="light">light</li>

@@ -1,6 +1,7 @@
 ---
 title: 'True'
 sub: Unit-testing for Sass developers
+feature: true
 date: 2013-06-06
 logo: 'true'
 image:
@@ -9,7 +10,10 @@ oss: owner
 index: 'True'
 author:
   - miriam
-  - oddbird
+  - jonny
+  - carl
+  - david
+  - kit
 links:
   source: https://github.com/oddbird/true
   docs: /true/docs/

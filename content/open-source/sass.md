@@ -1,6 +1,7 @@
 ---
 title: Sass
 sub: CSS with superpowers
+feature: true
 author: miriam
 oss: core team
 image:
