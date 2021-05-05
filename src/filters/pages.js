@@ -37,11 +37,7 @@ const isCurrent = (page) => {
     return false;
   }
 
-  return (
-    page.data.end === 'ongoing' ||
-    !page.data.end ||
-    getDate(page.data.end) >= now()
-  );
+  return !page.data.end || getDate(page.data.end) >= now();
 };
 
 /* @docs
@@ -247,7 +243,7 @@ const pageYears = (collection) =>
   collection.map((page) => {
     const dates = [page.date];
 
-    if (page.data.end && page.data.end !== 'ongoing') {
+    if (page.data.end) {
       dates.push(page.data.end);
     }
 

@@ -8,7 +8,6 @@ links:
   source: https://github.com/pypa/pip/
 author: carl
 oss: core team
-
 summary: |
   The PyPA recommended tool for installing Python packages.
 ---

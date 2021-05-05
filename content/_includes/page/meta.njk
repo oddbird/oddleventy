@@ -12,8 +12,9 @@
 {% set dates = utility.datetime(
   start=start or page.date,
   end=end,
+  format='range',
   prefix=true
-) if bird and bird != 'oddbird' else none %}
+) if (bird and bird != 'oddbird') else none %}
 
 {% if sub or linklist or taglist or linked or author or links or slides %}
   <div id="meta">
@@ -28,7 +29,8 @@
         {{ post.client(client) }}
         {{ post.pubdate(
           start=page.date,
-          end=end
+          end=end,
+          format='range' if oss else 'long'
         ) }}
         {{ post.where(adr) }}
       </p>

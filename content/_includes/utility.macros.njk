@@ -208,7 +208,7 @@ params:
     }
   } -%}
 
-  {%- set ongoing = (end == 'ongoing') -%}
+  {%- set ongoing = (format == 'range') and not end -%}
   {%- set is_range = end and (start != end) and (not ongoing) -%}
 
   {%- if prefix %}

@@ -2,6 +2,7 @@
 title: David Glick
 sub: Python & JavaScript developer
 bird: david
+shortname: David G
 date: 2016-01-19
 end: 2018-07-06
 image:
