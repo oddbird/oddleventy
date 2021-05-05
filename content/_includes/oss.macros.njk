@@ -56,7 +56,7 @@ category: file
       {% endif %}
     {% endcall %}
     {{ post.subtitle(item.data.sub, collections) }}
-    {{ post.byline(item, collections, dateformat='since') }}
+    {{ post.byline(item, collections, dateformat='short') }}
   </header>
   {{ item.data.summary | md | safe }}
 </article>
