@@ -208,7 +208,7 @@ params:
     }
   } -%}
 
-  {%- set ongoing = (format == 'month_year') and not end -%}
+  {%- set ongoing = (format == 'range') and not end -%}
   {%- set is_range = end and (start | string != end | string) and (not ongoing) -%}
 
   {%- if prefix %}
@@ -237,7 +237,7 @@ params:
       {{ end | getDate(ranges[same].end or 'month_year') }}
 
     {% else %}
-      {{ start | getDate(format) }}
+      {{ start | getDate('month_year' if format == 'range' else format) }}
     {% endif %}
   </time>
 {% endmacro %}

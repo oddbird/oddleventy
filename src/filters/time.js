@@ -33,6 +33,7 @@ const formatDate = (date, format) => {
   };
 
   if (!formats[format]) {
+    // eslint-disable-next-line no-console
     console.warn(`Unknown date format used: "${format}"`);
   }
   return dateFormat(utcToZonedTime(date, '+00:00'), formats[format] || format);
