@@ -4,7 +4,6 @@ parserOptions:
   sourceType: module
 env:
   jest: true
-  node: false
 plugins:
   - simple-import-sort
   - jest

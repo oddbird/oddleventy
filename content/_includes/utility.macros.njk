@@ -199,12 +199,12 @@ params:
 ) %}
   {%- set ranges = {
     'same-y': {
-      'start': 'short_month',
-      'end': 'range'
+      'start': 'month',
+      'end': 'month_year'
     },
     'same-m': {
-      'start': 'month_date',
-      'end': 'date' if (format == 'month_date') else 'date_year'
+      'start': 'month_day',
+      'end': 'day' if (format == 'month_day') else 'day_year'
     }
   } -%}
 
@@ -224,20 +224,20 @@ params:
     {% if ongoing %}
       {{ start | getDate('year') }}
     {% elif is_range %}
-      {% set start_m = start | getDate('month') %}
+      {% set start_m = start | getDate('long_month') %}
       {% set start_y = start | getDate('year') %}
-      {% set end_m = end | getDate('month') %}
+      {% set end_m = end | getDate('long_month') %}
       {% set end_y = end | getDate('year') %}
 
       {% set same = 'same-y' if (start_y == end_y) else none %}
       {% set same = 'same-m' if same and (start_m == end_m) else same %}
 
-      {{ start | getDate(ranges[same].start or 'range') }}
+      {{ start | getDate(ranges[same].start or 'month_year') }}
       {{- '--' | typogr | safe -}}
-      {{ end | getDate(ranges[same].end or 'range') }}
+      {{ end | getDate(ranges[same].end or 'month_year') }}
 
     {% else %}
-      {{ start | getDate(format) }}
+      {{ start | getDate('month_year' if format == 'range' else format) }}
     {% endif %}
   </time>
 {% endmacro %}
