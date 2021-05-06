@@ -63,7 +63,7 @@ container.
 ```scss
 article,
 section {
-  contain: layout size;
+  contain: layout size style;
 }
 ```
 
@@ -75,12 +75,12 @@ container, which ensures that "nothing outside can affect its internal layout,
 and vice versa." `Size` also [currently
 exists](https://drafts.csswg.org/css-contain/#size-containment) as a value for
 the `contain` property, and enables laying out a containment box without
-accounting for its descendants in either the inline or block axes.
+accounting for its descendants in either the inline or block axes. `Style` containment isolates counters inside of the container. 
 
 ```scss
 article,
 section {
-  contain: layout inline-size;
+  contain: layout inline-size style;
 }
 ```
 
