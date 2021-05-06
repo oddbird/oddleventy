@@ -1,3 +1,8 @@
+- from: /birds/
+  to: /about/
+- from: /open-source/
+  to: /tools/
+
 - from: /community/
   to: /birds/#sponsorships-and-donations
 - from: /speaking/

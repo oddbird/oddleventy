@@ -236,7 +236,7 @@ Browse our full element collages in our [Behind the Scenes post].
 
 [WebAIM]: https://webaim.org/techniques/fonts/
 [Vox Product’s]: https://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
-[Birds]: /birds/
+[Birds]: /about/
 [Behind the Scenes post]: /2016/11/04/branding-type/
 
 ## Step 4 – Vote Remotely Using...GitHub?

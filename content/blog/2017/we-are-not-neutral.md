@@ -75,7 +75,7 @@ and we're not neutral.
   [taking on more clients]: /work/
   [re-designing our website and brand in the open]: /tags/open-design/
   [building a community on Slack]: http://friends.oddbird.net/
-  [open source projects]: /open-source/
+  [open source projects]: /tools/
   [cause real pain]: https://meyerweb.com/eric/thoughts/2014/12/24/inadvertent-algorithmic-cruelty/
   [code of conduct]: /conduct/
-  [donations]: /birds/#sponsorships-and-donations
+  [donations]: /about/#sponsorships-and-donations

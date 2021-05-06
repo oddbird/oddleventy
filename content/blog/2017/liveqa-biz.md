@@ -62,7 +62,7 @@ our [work].
 [Django]: https://www.djangoproject.com/
 [Susy]: /susy/
 [Plone]: https://plone.org/
-[experts]: /birds/
+[experts]: /about/
 [CoachHub]: /work/coachhub/
 [work]: /work/
 
