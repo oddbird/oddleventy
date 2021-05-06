@@ -75,7 +75,9 @@ container, which ensures that "nothing outside can affect its internal layout,
 and vice versa." `Size` also [currently
 exists](https://drafts.csswg.org/css-contain/#size-containment) as a value for
 the `contain` property, and enables laying out a containment box without
-accounting for its descendants in either the inline or block axes. `Style` [containment](https://drafts.csswg.org/css-contain/#style-containment) isolates counters that might exist inside of the container. 
+accounting for its descendants in either the inline or block axes. 
+`Style` [containment](https://drafts.csswg.org/css-contain/#style-containment) 
+isolates counters that might exist inside of the container. 
 
 ```scss
 article,
