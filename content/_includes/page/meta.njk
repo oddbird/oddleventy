@@ -12,7 +12,7 @@
 {% set dates = utility.datetime(
   start=start or page.date,
   end=end,
-  format='range',
+  format='month_year',
   prefix=true
 ) if (bird and bird != 'oddbird') else none %}
 
@@ -30,7 +30,7 @@
         {{ post.pubdate(
           start=page.date,
           end=end,
-          format='range' if oss else 'long'
+          format='month_year' if oss else 'long'
         ) }}
         {{ post.where(adr) }}
       </p>
