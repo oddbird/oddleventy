@@ -18,7 +18,7 @@ tags:
 press:
   - text: |
       Had a phenomenal discussion last night with @TerribleMia
-      on her role in shaping CSS as we know it today, 
+      on her role in shaping CSS as we know it today,
       and some exciting things on the way in the world of CSS.
     name: Schalk Venter
     title: Organizer
@@ -26,7 +26,7 @@ press:
     url: https://twitter.com/schalkventerdev/status/1390205495110246400
     slug: shaping-css
 events:
-  - venue: Front-end Development, South Africa
+  - venue: Front-end Development South Africa
     url: https://www.meetup.com/fedsa-community/events/276328093/
     date: 2021-05-05
     adr: Online
