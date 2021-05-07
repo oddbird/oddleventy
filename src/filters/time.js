@@ -19,19 +19,23 @@ const now = () => new Date();
 const formatDate = (date, format) => {
   // https://date-fns.org/v2.21.2/docs/format
   const formats = {
-    month_date: 'MMM d',
-    iso: 'yyyy-MM-dd',
-    range: 'MMM yyyy',
-    date: 'd',
-    short_month: 'MMM',
-    month: 'MMMM',
+    day: 'd',
+    month: 'MMM',
     year: 'yyyy',
-    date_year: 'd, yyyy',
-    url: 'yyyy/MM/dd',
+    long_month: 'MMMM',
+    day_year: 'd, yyyy',
+    month_day: 'MMM d',
+    month_year: 'MMM yyyy',
     short: 'PP',
     long: 'MMMM d, yyyy',
+    iso: 'yyyy-MM-dd',
+    url: 'yyyy/MM/dd',
   };
 
+  if (!formats[format]) {
+    // eslint-disable-next-line no-console
+    console.warn(`Unknown date format used: "${format}"`);
+  }
   return dateFormat(utcToZonedTime(date, '+00:00'), formats[format] || format);
 };
 
