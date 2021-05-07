@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: ~/oddsite
     docker:
-      - image: cimg/python:3.8-node
+      - image: cimg/python:3.7-node
     steps:
       - checkout
       - restore_cache:
@@ -28,7 +28,7 @@ jobs:
   lint:
     working_directory: ~/oddsite
     docker:
-      - image: cimg/python:3.8-node
+      - image: cimg/python:3.7-node
     steps:
       - checkout
       - attach_workspace:
@@ -40,7 +40,7 @@ jobs:
   test:
     working_directory: ~/oddsite
     docker:
-      - image: cimg/python:3.8-node
+      - image: cimg/python:3.7-node
     steps:
       - checkout
       - attach_workspace:
