@@ -3,6 +3,7 @@ title: Erica Mitchell
 sub: Front-end developer
 bird: erica
 date: 2019-04-01
+end: 2021-03-31
 image:
   src: birds/erica.jpg
   width: 2048
@@ -18,8 +19,9 @@ summary: |
   and advocate for users.
 ---
 
-**Erica brings design and application data alive for your users**,
-co-leading the front end development process.
+**Erica is a developer emeritus**
+who co-led the front end development process --
+bringing design and application data alive.
 She's a military veteran who fell in love with coding,
 and she's worked on an array of projects --
 from large scale systems maintenance to

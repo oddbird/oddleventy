@@ -61,7 +61,7 @@ planning documents), and telling stories about our process and decision
 making. We also have our [source code] available on GitHub, and will
 talk about the open source tools we use, and share any tools we build.
 
-[open source collaboration]: /open-source/
+[open source collaboration]: /tools/
 [we're not the first to do it]: https://bradfrost.com/blog/post/designing-in-the-open/
 [continuous integration]: https://en.wikipedia.org/wiki/Continuous_integration
 [source code]: https://github.com/oddbird/oddsite/

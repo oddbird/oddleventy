@@ -17,6 +17,7 @@ events:
     date: 2020-10-26
     end: 2020-10-28
     adr: Online
+    slides: https://slides.oddbird.net/conventions/aea1020/
 summary: |
   How do we write code that is modular & maintainable,
   in a language designed to be systematic & contextual?
