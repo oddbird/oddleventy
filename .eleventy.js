@@ -4,7 +4,7 @@ const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
 const _ = require('lodash');
-const Image = require('@11ty/eleventy-img');
+const image = require('@11ty/eleventy-img');
 
 const birds = require('#/birds');
 const events = require('#/events');
@@ -17,26 +17,30 @@ const utils = require('#/utils');
 const images = require('#/images');
 
 // eleventy image plugin
-function imageShortcode(src, cls, alt, sizes, widths) {
-  let options = {
-    widths: widths,
-    formats: ['jpeg'],
+const imageShortcode = (src, alt, sizes) => {
+  const options = {
+    widths: [300, 600, 900, 1200],
+    formats: ['avif', 'webp', 'jpeg'],
+
+    // test path and directory that will be changed in this PR
+    urlPath: '/img/',
+    outputDir: './_site/img/',
   };
 
   // generate images, while this is async we don’t wait
-  Image(src, options);
+  image(src, options);
 
-  let imageAttributes = {
-    class: cls,
+  const imageAttributes = {
     alt,
-    sizes,
+    sizes: sizes || '(min-width: 45em) 50vw, 100vw',
     loading: 'lazy',
     decoding: 'async',
   };
-  // get metadata even the images are not fully generated
-  metadata = Image.statsSync(src, options);
-  return Image.generateHTML(metadata, imageAttributes);
-}
+
+  // eslint-disable-next-line no-sync
+  const metadata = image.statsSync(src, options);
+  return image.generateHTML(metadata, imageAttributes);
+};
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
@@ -174,7 +178,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode('getDate', (format) =>
     time.getDate(time.now(), format),
   );
-  eleventyConfig.addNunjucksShortcode('myImage', imageShortcode);
+  eleventyConfig.addNunjucksShortcode('image', imageShortcode);
 
   // config
   eleventyConfig.setLibrary('md', type.mdown);
