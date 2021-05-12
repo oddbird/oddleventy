@@ -2,6 +2,7 @@
 title: David A. Herron
 sub: Front-end developer
 bird: davidh
+shortname: David H
 date: 2020-09-28
 image:
   src: birds/davidh.jpg

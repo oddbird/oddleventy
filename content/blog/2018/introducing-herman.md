@@ -315,7 +315,7 @@ You can use our handy [contact form], talk to [@OddBird] on Twitter, or
 join our [public Slack] (with a dedicated `#herman` channel). We're
 excited to hear from you!
 
-[team of experts]: /birds/
+[team of experts]: /about/
 [a range of support, training, and consulting]: /services/design-systems/
 [contact form]: /contact/
 [@OddBird]: https://twitter.com/oddbird

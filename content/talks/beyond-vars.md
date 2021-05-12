@@ -2,6 +2,7 @@
 title: Beyond CSS Variables
 sub: Pushing past global design tokens
 author: miriam
+date: 2021-01-04
 image:
   src: talks/vars-cascade.jpg
   width: 2898
@@ -16,6 +17,7 @@ events:
     date: 2021-04-19
     end: 2021-04-21
     adr: Online
+    slides: https://slides.oddbird.net/variables/aea2104/
 summary: |
   CSS Custom Properties (aka Cascading Variables)
   have gained broad browser support since 2015 --

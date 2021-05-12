@@ -1,0 +1,21 @@
+---
+title: Tools
+banner: Open Source Tools
+sub: We build tools that millions of developers rely on
+cta: workshop
+action:
+  text: Related articles & resources »
+  url: /tags/oddtools/
+summary: |
+  **We use open source software regularly**,
+  and try to contribute back to the projects we use.
+  We also develop a number of our own tools,
+  that might be useful to others.
+---
+
+{% import 'oss.macros.njk' as oss %}
+
+{{ oss.by_type(
+  collections.oss | withActiveAuthor(collections.all),
+  collections
+) }}

@@ -2,7 +2,7 @@
 title: About
 banner: About OddBird
 sub: Founded in 2008 by three odd siblings
-permalink: birds/index.html
+permalink: about/index.html
 bird: oddbird
 social:
   twitter: oddbird
@@ -64,7 +64,7 @@ and proud of the careers they've built since.
 {% endmd %}
 
 <ul>
-{% for bird in collections.birds | active(false) %}
+{% for bird in collections.birds | active(false) | sort(reverse=true, attribute='data.end') %}
   {% set is_author = collections._post | byBird(bird.data.bird, 'solo') | length > 0 %}
   {% set name = birds.author(
     name=bird.data.bird,
