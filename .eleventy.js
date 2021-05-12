@@ -4,6 +4,7 @@ const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
 const _ = require('lodash');
+const Image = require('@11ty/eleventy-img');
 
 const birds = require('#/birds');
 const events = require('#/events');
@@ -14,6 +15,28 @@ const time = require('#/time');
 const type = require('#/type');
 const utils = require('#/utils');
 const images = require('#/images');
+
+// eleventy image plugin
+function imageShortcode(src, cls, alt, sizes, widths) {
+  let options = {
+    widths: widths,
+    formats: ['jpeg'],
+  };
+
+  // generate images, while this is async we don’t wait
+  Image(src, options);
+
+  let imageAttributes = {
+    class: cls,
+    alt,
+    sizes,
+    loading: 'lazy',
+    decoding: 'async',
+  };
+  // get metadata even the images are not fully generated
+  metadata = Image.statsSync(src, options);
+  return Image.generateHTML(metadata, imageAttributes);
+}
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
@@ -133,6 +156,7 @@ module.exports = (eleventyConfig) => {
     'getDate',
     (format) => `${time.getDate(time.now(), format)}`,
   );
+  eleventyConfig.addNunjucksShortcode('myImage', imageShortcode);
 
   // config
   eleventyConfig.setLibrary('md', type.mdown);
