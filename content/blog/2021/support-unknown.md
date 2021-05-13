@@ -76,7 +76,7 @@ browsers don't need to update anything --
 the new tests can be written in the existing syntax,
 and even legacy browsers give us the proper answer.
 
-But sometimes need to test CSS features
+But sometimes we need to test CSS features
 that are not based on a property/values pair.
 Over the last couple years, 
 browsers have mostly implemented a syntax 
