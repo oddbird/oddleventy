@@ -338,7 +338,7 @@ we can use right away.
 ## The conclusion
 
 While we wait for browsers to standardize
-how they handle "negation of unknown support",
+how they handle _negation of unknown support_,
 developers should wrap any new test syntax in parenthesis:
 
 ```css
