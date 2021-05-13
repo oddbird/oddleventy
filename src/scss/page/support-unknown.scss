@@ -66,19 +66,4 @@
       content: 'true';
     }
   }
-
-  th,
-  td {
-    padding: 0.25em 1em 0.25em 0.5em;
-  }
-
-  th {
-    background: var(--callout);
-    border-width: thin 0;
-    text-align: left;
-  }
-
-  td {
-    font-family: monospace;
-  }
 }
