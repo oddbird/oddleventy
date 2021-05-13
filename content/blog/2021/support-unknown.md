@@ -3,6 +3,11 @@ title: Support (Not) Unknown
 sub: Adding Container Query tests to CSS `@support`
 author: miriam
 date: 2021-05-13
+image:
+  src: blog/2021/support.jpg
+  alt: |
+    A large, carved, wooden hand
+    supporting a tree that has nearly fallen over
 tags:
   - CSS
   - CSSWG
@@ -369,3 +374,9 @@ developers should wrap any new test syntax in parenthesis:
   /* true, across the board! */
 }
 ```
+
+------
+
+_Cover photo by
+[Neil Thomas](https://unsplash.com/@finleydesign)
+on [Unsplash](https://unsplash.com/s/photos/support)._
