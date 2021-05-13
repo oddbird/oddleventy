@@ -204,7 +204,7 @@ We want to use the negation syntax:
 ```
 
 And this is where browsers disagree.
-This is where we can see the result
+We can see the result
 of their internal differences
 when interacting with unknown syntax.
 
