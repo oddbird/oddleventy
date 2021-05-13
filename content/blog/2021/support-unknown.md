@@ -17,7 +17,7 @@ summary: |
   a way for developers to start integrating the new code,
   without breaking their sites on legacy browsers.
   That looks different depending on the feature,
-  but can often include new tests 
+  but can often include new tests
   for the `@supports` conditional rule.
 ---
 
@@ -51,10 +51,10 @@ isolated property-value pairs:
 ```
 
 Since CSS is already resilient,
-allowing browsers to ignores code they don't understand,
+allowing browsers to ignore code they don't understand,
 we can often use new features without any explicit test.
-The `@supports` rule is only necessary 
-when we need support for one property 
+The `@supports` rule is only necessary
+when we need support for one property
 to impact how we use other properties --
 like changing a margin based on support for subgrid.
 
@@ -78,8 +78,8 @@ and even legacy browsers give us the proper answer.
 
 But sometimes we need to test CSS features
 that are not based on a property/values pair.
-Over the last couple years, 
-browsers have mostly implemented a syntax 
+Over the last couple years,
+browsers have mostly implemented a syntax
 for testing support on selectors:
 
 ```css
@@ -93,7 +93,7 @@ for testing support on selectors:
 }
 ```
 
-Now we're also planning to add 
+Now we're also planning to add
 a new syntax for testing
 if [container queries][cq] are supported:
 
@@ -133,10 +133,10 @@ and skip the code-block in question,
 even if they do support the new feature.
 
 For some time now,
-WebKit browsers (like Safari) have had support 
+WebKit browsers (like Safari) have had support
 for the `::marker` pseudo-element selector,
 but do not yet support the `@supports selector()` syntax.
-Several versions of Safari 
+Several versions of Safari
 would give us a false negative
 when we test for support of the `::marker` selector,
 even though they understand it just fine.
@@ -144,7 +144,7 @@ The problem isn't lack of support for the selector,
 but lack of support for the new `@supports` syntax.
 
 (The [relevant bug has been closed][webkit-bug],
-and the `selector()` syntax now works in 
+and the `selector()` syntax now works in
 [Safari Technology Preview][stp],
 so I expect this will be out-of-date soon.)
 
@@ -152,10 +152,10 @@ so I expect this will be out-of-date soon.)
 [stp]: https://developer.apple.com/safari/technology-preview/
 
 While there's some potential for false-negatives,
-at least browsers all agree 
+at least browsers all agree
 on how to handle this situation...
 at least on the surface.
-Behind the scenes 
+Behind the scenes
 they are doing something slightly different,
 which we'll see in a minute.
 
@@ -167,9 +167,9 @@ Selectors wrap around any number of declarations,
 and the `@container` query rule wraps around
 any number of selector rule-blocks.
 
-Since browsers ignore blocks of code 
+Since browsers ignore blocks of code
 that they don't understand,
-these wrapping features often act as their own 
+these wrapping features often act as their own
 `@supports` conditional test:
 
 ```css
@@ -208,16 +208,16 @@ We can see the result
 of their internal differences
 when interacting with unknown syntax.
 
-- Some browsers consider unknown syntax 
+- Some browsers consider unknown syntax
   to mean _lack of support_, a value of `false`
 - Other browsers consider unknown syntax to be... unknown.
   They return a value of `unknown`
 
-Those two values, 
+Those two values,
 `false` and `unknown`,
 act the same when we're testing basic support --
 both of them act like `false`.
-But these values behave very differently 
+But these values behave very differently
 when we negate them:
 
 - `not false` is the same as `true`
@@ -244,7 +244,7 @@ so let's look at it in context:
 }
 ```
 
-I opened an issue 
+I opened an issue
 with the CSS Working Group,
 where Oriol Brufau pointed out
 that the answer depends on
@@ -257,9 +257,9 @@ or wrapping our query in parenthesis.
 
 I've expanded on his table here
 to show the different results across browsers.
-You can see the live result from your current browser, 
+You can see the live result from your current browser,
 along with known results from the other major browsers.
-I'm using `value` and `fn()` as placeholders 
+I'm using `value` and `fn()` as placeholders
 for "unknown tests" --
 since neither of these are supported anywhere:
 
@@ -323,10 +323,10 @@ That would mean we can add future support for
 unknown features (e.g. `value` and `fn()`),
 and have old browsers acknowledge their lack of support.
 
-Earlier this week, 
+Earlier this week,
 the CSS Working Group resolved that
 [unknown `@supports` expressions
-should evaluate to false 
+should evaluate to false
 for all `@supports` rules][resolution] --
 which is good news moving forward.
 But the table above
