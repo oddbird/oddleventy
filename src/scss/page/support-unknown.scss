@@ -1,0 +1,84 @@
+#unknown-support {
+  --false: var(--ccs-special--bg4);
+  --true: var(--ccs-prime--bg4);
+
+  .false,
+  .live {
+    background: var(--false);
+  }
+  .live::before {
+    content: 'false';
+  }
+  .true {
+    background: var(--true);
+  }
+
+  @supports not value {
+    .value .live {
+      background: var(--true);
+    }
+    .value .live::before {
+      content: 'true';
+    }
+  }
+
+  @supports not (value) {
+    .value-wrap .live {
+      background: var(--true);
+    }
+    .value-wrap .live::before {
+      content: 'true';
+    }
+  }
+
+  @supports not fn() {
+    .empty-fn .live {
+      background: var(--true);
+    }
+    .empty-fn .live::before {
+      content: 'true';
+    }
+  }
+
+  @supports not fn(value) {
+    .fn .live {
+      background: var(--true);
+    }
+    .fn .live::before {
+      content: 'true';
+    }
+  }
+
+  @supports not (fn()) {
+    .empty-wrap .live {
+      background: var(--true);
+    }
+    .empty-wrap .live::before {
+      content: 'true';
+    }
+  }
+
+  @supports not (fn(value)) {
+    .wrap-fn .live {
+      background: var(--true);
+    }
+    .wrap-fn .live::before {
+      content: 'true';
+    }
+  }
+
+  th,
+  td {
+    padding: 0.25em 1em 0.25em 0.5em;
+  }
+
+  th {
+    background: var(--callout);
+    border-width: thin 0;
+    text-align: left;
+  }
+
+  td {
+    font-family: monospace;
+  }
+}
