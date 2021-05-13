@@ -74,7 +74,8 @@ by adding a "negation" (`not`) to our test:
 When new properties and values are added to CSS,
 browsers don't need to update anything --
 the new tests can be written in the existing syntax,
-and even legacy browsers give us the proper answer.
+and even legacy browsers give us the proper answer
+(as long as they understand the basics of `@supports`).
 
 But sometimes we need to test CSS features
 that are not based on a property/values pair.
@@ -92,6 +93,12 @@ for testing support on selectors:
   /* applied if `::marker` IS NOT supported */
 }
 ```
+
+I covered that in more detail
+with a [video about selector support queries][mozdev]
+back in 2019.
+
+[mozdev]: https://www.oddbird.net/2019/11/20/supports-selector/
 
 Now we're also planning to add
 a new syntax for testing
@@ -115,6 +122,14 @@ This will also allow us to test
 as they get added to the specification.
 
 [query-features]: https://github.com/w3c/csswg-drafts/issues/5989
+
+Over time,
+I imagine CSS will continue to add
+even more features that need testing,
+and some of those will require new testing syntax.
+We should be planning ahead to make sure those new features,
+and new feature-tests,
+work as-expected in our current browsers.
 
 ## Unknown feature or unknown test?
 
@@ -272,44 +287,52 @@ since neither of these are supported anywhere:
     <th>WebKit</th>
   </thead>
   <tbody>
-    <tr class="value">
-      <th><code>not value</code></th>
-      <td class="live"></td>
-      <td class="false">false</td>
-      <td class="false">false</td>
-      <td class="false">false</td>
-    </tr>
     <tr class="value-wrap">
       <th><code>not (value)</code></th>
-      <td class="live"></td>
+      <td class="live">
+        <span data-live="true">true</span>
+        <span data-live="false">false</span>
+      </td>
       <td class="true">true</td>
       <td class="true">true</td>
       <td class="true">true</td>
     </tr>
     <tr class="empty-fn">
       <th><code>not fn()</code></th>
-      <td class="live"></td>
+      <td class="live">
+        <span data-live="true">true</span>
+        <span data-live="false">false</span>
+      </td>
       <td class="true">true</td>
       <td class="false">false</td>
       <td class="false">false</td>
     </tr>
     <tr class="fn">
       <th><code>not fn(value)</code></th>
-      <td class="live"></td>
+      <td class="live">
+        <span data-live="true">true</span>
+        <span data-live="false">false</span>
+      </td>
       <td class="true">true</td>
       <td class="true">true</td>
       <td class="false">false</td>
     </tr>
     <tr class="empty-wrap">
       <th><code>not (fn())</code></th>
-      <td class="live"></td>
+      <td class="live">
+        <span data-live="true">true</span>
+        <span data-live="false">false</span>
+      </td>
       <td class="true">true</td>
       <td class="false">false</td>
       <td class="true">true</td>
     </tr>
     <tr class="wrap-fn">
       <th><code>not (fn(value))</code></th>
-      <td class="live"></td>
+      <td class="live">
+        <span data-live="true">true</span>
+        <span data-live="false">false</span>
+      </td>
       <td class="true">true</td>
       <td class="true">true</td>
       <td class="true">true</td>
