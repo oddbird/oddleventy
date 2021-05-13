@@ -13,14 +13,17 @@
     background: var(--true);
   }
 
-  @supports not value {
-    .value .live {
-      background: var(--true);
-    }
-    .value .live::before {
-      content: 'true';
-    }
-  }
+  // @@@ This triggers a Sass compilation error:
+  //   `Error: Expected @supports condition`
+  //
+  // @supports not value {
+  //   .value .live {
+  //     background: var(--true);
+  //   }
+  //   .value .live::before {
+  //     content: 'true';
+  //   }
+  // }
 
   @supports not (value) {
     .value-wrap .live {
