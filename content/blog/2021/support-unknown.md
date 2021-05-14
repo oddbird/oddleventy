@@ -171,8 +171,8 @@ so I expect this will be out-of-date soon.)
 [webkit-bug]: https://bugs.webkit.org/show_bug.cgi?id=199237
 [stp]: https://developer.apple.com/safari/technology-preview/
 
-While there's some potential for false-negatives,
-at least browsers all agree
+While there's some potential for a false-negative,
+browsers all agree
 on how to handle this situation...
 at least on the surface.
 Behind the scenes
@@ -223,10 +223,9 @@ We want to use the negation syntax:
 }
 ```
 
-And this is where browsers disagree.
-We can see the result
-of their internal differences
-when interacting with unknown syntax.
+This is where browsers disagree,
+and we start to see the implications
+around how they handle unknown syntax internally:
 
 - Some browsers consider unknown syntax
   to mean _lack of support_, a value of `false`
@@ -235,7 +234,7 @@ when interacting with unknown syntax.
 
 Those two values,
 `false` and `unknown`,
-act the same when we're testing basic support --
+behave the same when we're testing basic support --
 both of them act like `false`.
 But these values behave very differently
 when we negate them:
@@ -374,6 +373,15 @@ developers should wrap any new test syntax in parentheses:
   /* true, across the board! */
 }
 ```
+
+Any legacy browser that understands `@supports`
+will parse and apply the CSS inside this block.
+Then, as browsers start to implement container queries,
+they will also implement the new testing syntax --
+hiding the fallback for you.
+
+🥳 Migration path achieved! \
+🎉 Progressive enhancement!
 
 ------
 
