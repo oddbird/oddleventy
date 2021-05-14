@@ -2,7 +2,7 @@
 title: Support (Not) Unknown
 sub: Adding Container Query tests to CSS `@support`
 author: miriam
-date: 2021-05-13
+date: 2021-05-14
 image:
   src: blog/2021/support.jpg
   alt: |
