@@ -283,7 +283,7 @@ I'm using `value` and `fn()` as placeholders
 for "unknown tests" --
 since neither of these are supported anywhere:
 
-<table id="unknown-support">
+<table id="unknown-support" data-table>
   <thead>
     <th><code>@supports</code>…</th>
     <th>Live Result</th>
