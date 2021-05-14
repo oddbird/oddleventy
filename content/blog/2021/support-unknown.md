@@ -134,7 +134,7 @@ even more features that need testing,
 and some of those will require new testing syntax.
 We should be planning ahead to make sure those new features,
 and new feature-tests,
-work as-expected in our current browsers.
+work as expected in our current browsers.
 
 ## Unknown feature or unknown test?
 
@@ -367,7 +367,7 @@ we can use right away.
 
 While we wait for browsers to standardize
 how they handle _negation of unknown support_,
-developers should wrap any new test syntax in parenthesis:
+developers should wrap any new test syntax in parentheses:
 
 ```css
 @supports not (container(min-width: 1em)) {
