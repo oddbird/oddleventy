@@ -1,0 +1,63 @@
+@use '../config'; /* run config setup before calling tools */
+@use '~accoutrement/sass/tools';
+
+#unknown-support {
+  --false: var(--ccs-special--bg4);
+  --true: var(--ccs-prime--bg4);
+
+  td {
+    @include tools.font-family('code');
+    font-size: var(--code);
+  }
+
+  .false {
+    background: var(--false);
+  }
+  .true {
+    background: var(--true);
+  }
+  .live {
+    --if-true: var(--is-true) var(--true);
+    background: var(--if-true, var(--false));
+  }
+
+  [data-live] {
+    --is-false: var(--is-true) none;
+  }
+  [data-live='false'] {
+    display: var(--is-false, initial);
+  }
+  [data-live='true'] {
+    display: var(--is-true, none);
+  }
+
+  @supports not (value) {
+    .value-wrap .live {
+      --is-true: /* space toggle */ ;
+    }
+  }
+
+  @supports not fn() {
+    .empty-fn .live {
+      --is-true: /* space toggle */ ;
+    }
+  }
+
+  @supports not fn(value) {
+    .fn .live {
+      --is-true: /* space toggle */ ;
+    }
+  }
+
+  @supports not (fn()) {
+    .empty-wrap .live {
+      --is-true: /* space toggle */ ;
+    }
+  }
+
+  @supports not (fn(value)) {
+    .wrap-fn .live {
+      --is-true: /* space toggle */ ;
+    }
+  }
+}

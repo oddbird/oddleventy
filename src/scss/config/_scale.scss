@@ -27,6 +27,7 @@ $ratios: (
 $font-sizes: (
   'small': 0.8rem,
   'xsmall': 0.7rem,
+  'xxsmall': 0.6rem,
   'rem': calc(1.25em + 0.5vw),
   'medium': 1.25rem,
   'large': calc(1.25rem + 0.5vw),
@@ -35,7 +36,7 @@ $font-sizes: (
   'h2': '#large',
   'h3': '#medium',
   'h4': '#small',
-  'code': 0.8rem,
+  'code': 0.8em,
 );
 
 @include tools.add-sizes($font-sizes);

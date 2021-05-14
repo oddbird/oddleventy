@@ -35,7 +35,6 @@
     "**/.pnp.*": true
   },
   "[markdown]": {
-    "files.trimTrailingWhitespace": false,
     "editor.formatOnSave": false
   },
   "[scss]": {

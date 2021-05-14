@@ -1,0 +1,40 @@
+@use '~accoutrement/sass/tools';
+
+[data-table] {
+  border-collapse: collapse;
+  margin: var(--newline) 0;
+  width: 100%;
+
+  th {
+    @include tools.font-family('alt');
+    font-weight: bold;
+  }
+
+  th,
+  td {
+    border: thin solid var(--cell-border, var(--border));
+    padding: var(--cell-padding, var(--half-shim));
+    font-style: inherit;
+    text-align: left;
+
+    @include tools.above('page') {
+      --cell-padding: var(--shim);
+    }
+  }
+}
+
+thead {
+  font-size: var(--thead-size, var(--xxsmall));
+
+  @include tools.above('page') {
+    --thead-size: var(--small);
+  }
+}
+
+tbody {
+  font-size: var(--tbody-size, var(--xsmall));
+
+  @include tools.above('page') {
+    --tbody-size: var(--small);
+  }
+}
