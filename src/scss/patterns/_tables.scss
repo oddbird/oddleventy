@@ -13,9 +13,13 @@
   th,
   td {
     border: thin solid var(--cell-border, var(--border));
-    padding: var(--cell-padding, var(--shim));
+    padding: var(--cell-padding, var(--half-shim));
     font-style: inherit;
     text-align: left;
+
+    @include tools.above('page') {
+      --cell-padding: var(--shim);
+    }
   }
 }
 
