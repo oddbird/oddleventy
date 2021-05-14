@@ -17,12 +17,20 @@
     font-style: inherit;
     text-align: left;
   }
+}
 
-  thead {
-    font-size: var(--thead-size, var(--xsmall));
+thead {
+  font-size: var(--thead-size, var(--xxsmall));
+
+  @include tools.above('page') {
+    --thead-size: var(--small);
   }
+}
 
-  tbody {
-    font-size: var(--tbody-size, var(--xsmall));
+tbody {
+  font-size: var(--tbody-size, var(--xsmall));
+
+  @include tools.above('page') {
+    --tbody-size: var(--small);
   }
 }
