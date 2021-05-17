@@ -65,8 +65,6 @@ tools:
   media=embed.img(
     src='writing/jssass.png',
     alt='Jump Start Sass, by Miriam Suzanne and Kitty Giraudel',
-    width=259,
-    height=449,
     sizes='media'
   )
 ) %}

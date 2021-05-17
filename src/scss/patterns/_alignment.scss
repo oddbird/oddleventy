@@ -10,20 +10,17 @@
   float: left;
   margin-right: var(--gutter);
   max-width: 45%;
-  width: auto;
 }
 
 .align-right {
   float: right;
   margin-right: var(--left);
   max-width: 45%;
-  width: auto;
 }
 
 .align-center {
   --inline-margin: auto;
   display: block;
-  width: auto;
 }
 
 // Text Centering

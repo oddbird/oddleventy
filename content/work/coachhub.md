@@ -205,8 +205,6 @@ CoachHub logo and overall brand are bright, cheerful, and hopeful.
 {{ embed.img(
   src='work/coachhub/avatars-small.jpg',
   alt='leaf avatar collage',
-  width=250,
-  height=244,
   attrs={
     'class': 'align-left'
   }
@@ -229,11 +227,19 @@ allowing us to move quickly and efficiently. Integrating design and
 implementation helped us minimize time and money waste.
 
 <figure>
-<img src="{{ site.images }}work/coachhub/profiles.jpg" class="extend-full" alt="" /><figcaption>Starting with designs for the smallest, mobile screens sizes helped clarify and prioritize relevant information for each user.</figcaption>
+{{ embed.img(
+  src="work/coachhub/profiles.jpg", 
+  attrs={"class":"extend-full"}
+) }}
+<figcaption>Starting with designs for the smallest, mobile screens sizes helped clarify and prioritize relevant information for each user.</figcaption>
 </figure>
 
 <figure>
-<img src="{{ site.images }}work/coachhub/interactive.jpg" class="extend-small img-shadow" alt="" /><figcaption>Interaction can become distracting if implemented for its own sake. Sliding side panels and realtime chat serve the needs of the user, highlighting particular features or important information.</figcaption>
+{{ embed.img(
+  src="work/coachhub/interactive.jpg", 
+  attrs={"class":"extend-small img-shadow"}
+) }}
+<figcaption>Interaction can become distracting if implemented for its own sake. Sliding side panels and realtime chat serve the needs of the user, highlighting particular features or important information.</figcaption>
 </figure>
 
 ### Usability Testing
@@ -243,7 +249,11 @@ adjusting UX design along the way, ensuring that CoachHub would be
 useful and relevant to users and partners.
 
 <figure>
-<img src="{{ site.images }}work/coachhub/calendars.jpg" class="extend-large" alt="" /><figcaption>As we observed users navigating the app, it became clear that the appointment calendar needed distinct views and interactions for coaches and clients.</figcaption>
+{{ embed.img(
+  src="work/coachhub/calendars.jpg", 
+  attrs={"class":"extend-large"}
+) }}
+<figcaption>As we observed users navigating the app, it became clear that the appointment calendar needed distinct views and interactions for coaches and clients.</figcaption>
 </figure>
 
 ### Accessibility
@@ -267,7 +277,13 @@ recommended and edited text, and identified important “call to action”
 steps to create a relevant and compelling landing pages for different
 users.
 
-<img src="{{ site.images }}work/coachhub/splash-final-2.jpg" class="extend-full img-shadow extend-full img-shadow" alt="final design for landing page" />
+<figure>
+{{ embed.img(
+  src="work/coachhub/splash-final-2.jpg", 
+  alt="final design for landing page",
+  attrs={"class":"extend-large img-shadow"}
+) }}
+</figure>
 
 ## On-Going Design
 

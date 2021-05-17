@@ -304,8 +304,6 @@ params:
         {{ embed.img(
           src=image.src,
           alt=image.alt,
-          width=image.width,
-          height=image.height,
           sizes='card' if (type == 'post') else none,
           attrs={style: position}
         ) }}

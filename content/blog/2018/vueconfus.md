@@ -62,12 +62,16 @@ Revisiting an internal OddBird project, still in early development, I
 was finally able to create the page transitions that I wanted all along.
 
 <figure>
-<img src="{{ site.images }}blog/2018/oddbooks.gif" class="size-full img-border" alt="" /><figcaption>The image is low-resolution in order to show more animations, without a massive file size...</figcaption>
+{{ embed.img(
+  src="blog/2018/oddbooks.gif",
+  attrs={"class":"size-full img-border"}
+) }}
+<figcaption>The image is low-resolution in order to show more animations, without a massive file size...</figcaption>
 </figure>
 
 All the [VueConf talks] are available online, and I recommend checking
 them out!
 
-  [Herman]: /herman/
-  [built-in functionality]: https://vuejs.org/v2/guide/transitions.html
-  [VueConf talks]: https://www.vuemastery.com/conferences/vueconf-us-2018/
+[Herman]: /herman/
+[built-in functionality]: https://vuejs.org/v2/guide/transitions.html
+[VueConf talks]: https://www.vuemastery.com/conferences/vueconf-us-2018/

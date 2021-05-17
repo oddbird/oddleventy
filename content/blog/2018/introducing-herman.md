@@ -37,6 +37,7 @@ summary: |
   [contact us]: /contact/
   [putting your design system in place]: /services/design-systems/
 ---
+{% import 'embed.macros.njk' as embed %}
 
 I spent the week after Thanksgiving in San Francisco, attending (and
 [accidentally speaking at]) [Clarity] -- a "[Design Systems]" conference
@@ -131,7 +132,11 @@ add a pattern in the stylesheet, they can document their work right at
 the source. When a pattern changes, all the edits can be made in a
 single location, so documentation is more likely to stay up-to-date.
 
-[<img src="{{ site.images }}blog/2017/herman-intro/sassdoc.jpg" class="extend-small img-border img-shadow" alt="SassDoc screenshot" />][SassDoc]
+[{{ embed.img(
+  src="blog/2017/herman-intro/sassdoc.jpg", 
+  alt="SassDoc screenshot", 
+  attrs={"class":"extend-small img-border img-shadow" }
+) }}][SassDoc]
 
 Those tools are great, but neither one is built to handle more complex
 design systems, integrated with markup templates and other languages. On
@@ -193,9 +198,17 @@ Herman provides display annotations for [colors] (`@colors`), [fonts]
 /// @ratios my-modular-scale
 ```
 
-[<img src="{{ site.images }}blog/2017/herman-intro/colors.jpg" class="extend-large img-border img-shadow img-spacing" alt="Herman color palettes" />][colors]
+[{{ embed.img(
+  src="blog/2017/herman-intro/colors.jpg",
+  alt="Herman color palettes",
+  attrs={"class":"extend-large img-border img-shadow img-spacing"}
+) }}][colors]
 
-[<img src="{{ site.images }}blog/2017/herman-intro/sizes.jpg" class="extend-small img-border img-shadow" alt="Herman size palettes" />][sizes]
+[{{ embed.img(
+  src="blog/2017/herman-intro/sizes.jpg",
+  alt="Herman size palettes",
+  attrs={"class":"extend-small img-border img-shadow"} 
+) }}][sizes]
 
 In order to display that data, you will need to export all your Sass
 tokens to json, using our provided [Sass export utilities]. We're
@@ -208,7 +221,11 @@ given folder:
 /// @icons path-to/my-assets/svg/
 ```
 
-[<img src="{{ site.images }}blog/2017/herman-intro/icons.jpg" class="extend-small img-border img-shadow" alt="Herman icon palettes" />][img]
+[{{ embed.img(
+  src="blog/2017/herman-intro/icons.jpg",
+  alt="Herman icon palettes",
+  attrs={"class":"extend-small img-border img-shadow"}
+) }}][img]
 
 [colors]: /herman/docs/demo_colors.html
 [fonts]: /herman/docs/demo_fonts.html
@@ -243,7 +260,11 @@ output when necessary:
 }
 ```
 
-[<img src="{{ site.images }}blog/2017/herman-intro/examples.jpg" class="extend-small img-border img-shadow" alt="Herman rendered example" />][documentation of CSS selectors and markup patterns]
+[{{ embed.img(
+  src="blog/2017/herman-intro/examples.jpg",
+  alt="Herman rendered example",
+  attrs={"class":"extend-small img-border img-shadow"}
+) }}][documentation of CSS selectors and markup patterns]
 
 [documentation of CSS selectors and markup patterns]: /herman/docs/demo_examples.html
 [Sass]: https://sass-lang.com/

@@ -16,13 +16,18 @@ const taxonomy = require('#/taxonomy');
 const time = require('#/time');
 const type = require('#/type');
 const utils = require('#/utils');
-const images = require('#/images');
 
 // eleventy image plugin
-const imageShortcode = (src, alt, sizes) => {
+const imageShortcode = (src, alt, attrs, sizes, getUrl) => {
+  const imgConfig = taxonomy.fromTaxonomy('img');
+  const imgSizes =
+    sizes && imgConfig.sizes[sizes]
+      ? imgConfig.sizes[sizes]
+      : sizes || imgConfig.sizes.default;
+
   const options = {
-    widths: [300, 600, 900, 1200],
-    formats: ['avif', 'webp', 'jpeg'],
+    widths: imgConfig.widths,
+    formats: imgConfig.formats,
     // test path and directory that will be changed in this PR
     urlPath: '/img/',
     outputDir: './_site/img/',
@@ -38,16 +43,27 @@ const imageShortcode = (src, alt, sizes) => {
   // generate images, while this is async we don’t wait
   image(src, options);
 
-  const imageAttributes = {
-    alt,
-    sizes: sizes || '(min-width: 45em) 50vw, 100vw',
-    loading: 'lazy',
-    decoding: 'async',
-  };
-
   // eslint-disable-next-line no-sync
   const metadata = image.statsSync(src, options);
-  return image.generateHTML(metadata, imageAttributes);
+
+  if (getUrl) {
+    const data = metadata.jpeg[metadata.jpeg.length - 1];
+    return data.url;
+  }
+
+  const imageAttributes = _.merge(
+    {
+      alt,
+      sizes: imgSizes,
+      loading: 'lazy',
+      decoding: 'async',
+    },
+    attrs,
+  );
+
+  return image.generateHTML(metadata, imageAttributes, {
+    whitespaceMode: 'inline',
+  });
 };
 
 module.exports = (eleventyConfig) => {
@@ -174,10 +190,11 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('removeMd', type.removeMd);
   eleventyConfig.addFilter('elide', type.elide);
 
-  eleventyConfig.addFilter('imgSuffix', images.imgSuffix);
-  eleventyConfig.addFilter('imgSize', images.imgSize);
-
   eleventyConfig.addFilter('max', (array) => Math.max(...array));
+
+  eleventyConfig.addFilter('imgSrc', (src) =>
+    imageShortcode(src, null, null, null, true),
+  );
 
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.md);

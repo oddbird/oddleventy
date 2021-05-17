@@ -4,7 +4,7 @@ description: |
   Scalable, accessible, and performant web applications
   with a human-centered design.
 email: birds@oddbird.net
-images: /assets/images/
+images: ./src/images/
 feed: /feed.atom
 styles:
   - screen.css

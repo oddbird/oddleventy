@@ -22,7 +22,7 @@
     <content type="html">
       {% if post.data.image.src -%}
       {%- filter escape -%}
-      <img src="{{ (site.images + post.data.image.src) | absoluteUrl(site.url) }}" alt="{{ post.data.image.alt }}"/>
+      <img src="{{ (site.images + post.data.image.src) | imgSrc | absoluteUrl(site.url) }}" alt="{{ post.data.image.alt }}"/>
       {%- endfilter -%}
       {%- endif %}
       {% if post.data.summary -%}
