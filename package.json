@@ -36,7 +36,7 @@
     "serve": "npm-run-all build:assets build:site -p eleventy:serve watch:js watch:sass",
     "test": "jest",
     "build:site": "run-s site:clean sassdoc",
-    "build:assets": "npm-run-all assets:clean -p js sass images",
+    "build:assets": "npm-run-all assets:clean -p js sass",
     "build": "run-s build:assets build:site eleventy",
     "update-oss-docs": "./bin/update-oss-docs",
     "prod": "ELEVENTY_ENV=production run-s update-oss-docs build",

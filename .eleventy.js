@@ -1,5 +1,7 @@
 'use strict';
 
+const path = require('path');
+
 const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
@@ -21,10 +23,16 @@ const imageShortcode = (src, alt, sizes) => {
   const options = {
     widths: [300, 600, 900, 1200],
     formats: ['avif', 'webp', 'jpeg'],
-
     // test path and directory that will be changed in this PR
     urlPath: '/img/',
     outputDir: './_site/img/',
+    // eslint-disable-next-line
+    filenameFormat: function (id, src, width, format, options) {
+      const extension = path.extname(src);
+      const name = path.basename(src, extension);
+
+      return `${name}-${width}w.${format}`;
+    },
   };
 
   // generate images, while this is async we don’t wait
