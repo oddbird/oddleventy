@@ -26,7 +26,7 @@ press:
     url: https://twitter.com/schalkventerdev/status/1390205495110246400
     slug: shaping-css
 events:
-  - venue: Front Range Front-end
+  - venue: Front Range Front-End
     url: https://www.meetup.com/front-range-front-end/events/kvckcsyccjbfb/
     date: 2021-06-03
     adr: Online
