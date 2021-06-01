@@ -19,9 +19,9 @@ tags:
   - CSS Scope
 summary: |
   I talk with Claire and Steph
-  my journey into webdev and onto the CSSWG,
-  what I finds frustrating about how others use CSS,
-  and the the three specs I'm working on.
+  about my journey into webdev and onto the CSSWG,
+  what I find frustrating about how others use CSS,
+  and the three specs I'm working on.
 audio: https://wordwrap.ams3.cdn.digitaloceanspaces.com/Word%20Wrap%20-%20Episode%2011.mp3
 ---
 
