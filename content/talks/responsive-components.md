@@ -35,7 +35,7 @@ events:
     date: 2021-06-03
     adr: Online
     media: &frfe
-      iframe: https://www.youtube.com/embed/GuMvZuUrJaY?start=294
+      iframe: https://www.youtube.com/embed/GuMvZuUrJaY
   - venue: Front-end Development South Africa
     url: https://www.meetup.com/fedsa-community/events/276328093/
     date: 2021-05-05
