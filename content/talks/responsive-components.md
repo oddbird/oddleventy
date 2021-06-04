@@ -26,10 +26,16 @@ press:
     url: https://twitter.com/schalkventerdev/status/1390205495110246400
     slug: shaping-css
 events:
+  - venue: Smashing Meets CSSummer
+    url: https://smashingconf.com/meets-css/
+    date: 2021-07-08
+    adr: Online
   - venue: Front Range Front-End
     url: https://www.meetup.com/front-range-front-end/events/kvckcsyccjbfb/
     date: 2021-06-03
     adr: Online
+    media: &frfe
+      iframe: https://www.youtube.com/embed/GuMvZuUrJaY
   - venue: Front-end Development South Africa
     url: https://www.meetup.com/fedsa-community/events/276328093/
     date: 2021-05-05
@@ -50,6 +56,7 @@ events:
   #   end: 2021-05-28
   #   adr: Online
 media:
+  - <<: *frfe
   - <<: *fedsa
 summary: |
   New CSS proposals like Container Queries,
