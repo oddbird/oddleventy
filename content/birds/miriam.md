@@ -7,16 +7,10 @@ image:
   src: birds/miriam.jpg
   width: 2160
   height: 743
-events:
-  - venue: Modern Web Summit
-    url: https://modernwebsummit.com/
-    date: 2021-03-22
-    end: 2021-03-26
-    adr: Online
 social:
-  twitter: mirisuzanne
-  github: mirisuzanne
-  codepen: mirisuzanne
+  twitter: TerribleMia
+  github: MiriSuzanne
+  codepen: MiriamSuzanne
   stackoverflow: 1930386
 summary: |
   Miriam is a co-founder and front-end architect --

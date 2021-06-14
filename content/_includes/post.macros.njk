@@ -35,7 +35,7 @@ params:
   above=6,
   pagination=none
 ) %}
-  {%- if posts -%}
+  {%- if posts | length > 0 -%}
     {%- if posts | length > above -%}
       {%- for group in posts | byYear -%}
         {% set title = [group.year, 'Resources'] | join(' ') if loop.first else group.year %}
@@ -180,16 +180,16 @@ params:
           post=post,
           collections=collections,
           links=false,
-          dateformat='md'
+          dateformat='month_day'
         ) }}
       </header>
       {% if post.data.events %}
-        {{ upcoming(post.data.events, links=false) }}
+        {{ eventpreview(post.data.events, links=false) }}
       {% elif post.data.summary %}
         {% set summary = post.data.summary | md %}
         {% if (card == 'large') %}
           {{ summary | safe }}
-        {% else  %}
+        {% else %}
           <p>
             {{ summary | elide | safe }}
           </p>
@@ -234,9 +234,11 @@ params:
 {% endmacro %}
 
 {# @docs
-label: upcoming
+label: eventpreview
 category: events
-note: Listof upcoming events from a post
+note: |
+  List of up to 2 upcoming events from a talk post,
+  shows up to 2 past events if no upcoming events are available
 params:
   events:
     type: array
@@ -245,27 +247,36 @@ params:
     default: true
     note: Optionally remove event links for content in linked-cards
 #}
-{% macro upcoming(
+{% macro eventpreview(
   events,
   links=true
 ) %}
-  {%- set events = events | getFuture if events else none -%}
+  {%- set events = events -%}
   {%- set events = events | sort(attribute='date') -%}
-  {%- if events | length > 0 -%}
+  {%- set futureevents = events | getFuture -%}
+  {%- set isfuture = futureevents | length > 0 -%}
+  {%- set showevents = futureevents if isfuture else events | reverse -%}
+
+  {%- if showevents | length > 0 -%}
+    <h4>{{ 'Upcoming' if isfuture else 'Past' }}</h4>
     <ul class="next-event">
-      {%- for next in events -%}
+    {%- for next in showevents -%}
+      {% if (loop.index <= 2) %}
         <li>
           {{ linked(
             next.venue,
             next.url if links else none
           ) }}
-          <i>on</i>
-          {{ utility.datetime(
-            next.date,
-            next.end,
-            format='md'
-          ) }}
+          <span class="next-on">
+            <i>on</i>
+            {{ utility.datetime(
+              next.date,
+              next.end,
+              format='long'
+            ) }}
+          </span>
         </li>
+       {%- endif -%}
       {%- endfor -%}
     </ul>
   {%- endif -%}
@@ -330,18 +341,20 @@ params:
   post,
   collections=none,
   links=true,
-  dateformat=false
+  dateformat=false,
+  prefix='by'
 ) %}
   <p class="byline">
     {{ by(
       post.data.author,
       collections,
-      prefix=none if post.data.venue else 'by',
+      prefix=none if post.data.venue else prefix,
       link=links
     ) }}
 
     {% if post.data.oss %}
       {% set plural = not post.data.author | typeCheck('string') %}
+      {% set plural = (post.data.author == 'oddbird') or plural %}
       {% set plural = false if (post.data.oss == 'core team') else plural %}
       ({{ post.data.oss }}{{ 's' if plural else '' }})
     {% endif %}
@@ -353,8 +366,10 @@ params:
 
     {{ client(post.data.client) }}
 
-    {% if dateformat %}
-      {{ pubdate(post.date, post.data.end, dateformat) }}
+    {% if not post.data.events %}
+      {% if dateformat %}
+        {{ pubdate(post.date, post.data.end, dateformat) }}
+      {% endif %}
     {% endif %}
   </p>
 {% endmacro %}

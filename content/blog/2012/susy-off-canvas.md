@@ -34,7 +34,7 @@ layout. All you need to do is pull some of your columns off the screen.
 I'll show you how, following Jason's lead, and adding in the Susy bits.
 
 Check out the
-[demo](https://codepen.io/mirisuzanne/pen/c84837d2f8c478b6a3accca409c790eb), and
+[demo](https://codepen.io/miriamsuzanne/pen/c84837d2f8c478b6a3accca409c790eb), and
 make sure you understand off-canvas layouts before you go on.
 
 I've used a few shortcuts that require the [latest Susy
@@ -231,14 +231,14 @@ have leftover classes, and you're done.
 {{ embed.codepen(
   id='c84837d2f8c478b6a3accca409c790eb',
   title='Susy1 Off-Canvas Demo',
-  user='mirisuzanne'
+  user='miriamsuzanne'
 ) }}
 
 ## Final Tweaks
 
 I've added a number of styles to make it obvious what's going on and
 highlight the transitions in our
-[demo](https://codepen.io/mirisuzanne/pen/c84837d2f8c478b6a3accca409c790eb).
+[demo](https://codepen.io/miriamsuzanne/pen/c84837d2f8c478b6a3accca409c790eb).
 You also need a bit of JS to make the toggles work, but this is all you
 need for the Susy setup.
 

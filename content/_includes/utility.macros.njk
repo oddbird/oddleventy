@@ -32,7 +32,7 @@ params:
   attr,
   value=none
 ) %}
-  {%- if (value and (value | string | lower == 'true')) or (value == '') -%}
+  {%- if (value and (value | string | lower == 'true')) or (value === '') -%}
     {{ attr }}
   {%- elif value -%}
     {{ attr }}="{{ value }}"
@@ -199,17 +199,17 @@ params:
 ) %}
   {%- set ranges = {
     'same-y': {
-      'start': 'M',
-      'end': 'range'
+      'start': 'month',
+      'end': 'month_year'
     },
     'same-m': {
-      'start': 'md',
-      'end': 'd' if (format == 'md') else 'dy'
+      'start': 'month_day',
+      'end': 'day' if (format == 'month_day') else 'day_year'
     }
   } -%}
 
-  {%- set ongoing = (end == 'ongoing') -%}
-  {%- set is_range = end and (start != end) and (not ongoing) -%}
+  {%- set ongoing = (format == 'range') and not end -%}
+  {%- set is_range = end and (start | string != end | string) and (not ongoing) -%}
 
   {%- if prefix %}
     {%- set prefix = 'since' if ongoing else 'on' -%}
@@ -219,25 +219,25 @@ params:
 
   <time
     datetime="{{ start | getDate('iso') }}"
-    {{ attr_if('pubdate', not not is_pubdate) }}>
+    {{ attr_if('pubdate', is_pubdate) }}>
 
     {% if ongoing %}
       {{ start | getDate('year') }}
     {% elif is_range %}
-      {% set start_m = start | getDate('month') %}
+      {% set start_m = start | getDate('long_month') %}
       {% set start_y = start | getDate('year') %}
-      {% set end_m = end | getDate('month') %}
+      {% set end_m = end | getDate('long_month') %}
       {% set end_y = end | getDate('year') %}
 
       {% set same = 'same-y' if (start_y == end_y) else none %}
       {% set same = 'same-m' if same and (start_m == end_m) else same %}
 
-      {{ start | getDate(ranges[same].start or 'range') }}
+      {{ start | getDate(ranges[same].start or 'month_year') }}
       {{- '--' | typogr | safe -}}
-      {{ end | getDate(ranges[same].end or 'range') }}
+      {{ end | getDate(ranges[same].end or 'month_year') }}
 
     {% else %}
-      {{ start | getDate(format) }}
+      {{ start | getDate('month_year' if format == 'range' else format) }}
     {% endif %}
   </time>
 {% endmacro %}

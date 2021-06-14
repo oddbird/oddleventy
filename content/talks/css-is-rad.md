@@ -70,7 +70,6 @@ media:
   - <<: *frfe
 ---
 
-{% import 'utility.macros.njk' as utility %}
 {% import 'embed.macros.njk' as embed %}
 
 The web is designed to work across platforms,

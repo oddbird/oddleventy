@@ -17,8 +17,10 @@
   "css.validate": false,
   "scss.validate": false,
   "eslint.nodePath": ".yarn/sdks",
+  "eslint.packageManager": "yarn",
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "stylelint.stylelintPath": ".yarn/sdks/stylelint/lib/index.js",
+  "stylelint.packageManager": "yarn",
   "stylelint.validate": [
     "css",
     "scss"
@@ -33,7 +35,6 @@
     "**/.pnp.*": true
   },
   "[markdown]": {
-    "files.trimTrailingWhitespace": false,
     "editor.formatOnSave": false
   },
   "[scss]": {

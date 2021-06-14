@@ -48,7 +48,7 @@ events:
     date: 2018-03-21
 press:
   - text: |
-      Every time I hear @mirisuzanne
+      Every time I hear @TerribleMia
       talk I learn a ton and laugh a ton.
       She’s an amazing speaker...
       Watch this talk when it’s published!

@@ -67,7 +67,7 @@ Asteroids-inspired browser snippet so you can destroy your creation.
 Enjoy the invasion!
 
 <figure class="extend-large">
-  <p data-height="600" data-theme-id="0" data-slug-hash="LmrEmb" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Vue Invaders!" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/LmrEmb/">Vue Invaders!</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+  <p data-height="600" data-theme-id="0" data-slug-hash="LmrEmb" data-default-tab="result" data-user="miriamsuzanne" data-embed-version="2" data-pen-title="Vue Invaders!" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/miriamsuzanne/pen/LmrEmb/">Vue Invaders!</a> by Miriam Suzanne (<a href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </figure>
 
@@ -89,7 +89,7 @@ favorites:
 
 [Levitated Toy Factory]: http://levitated.guru/
 [one of his art pieces]: http://levitated.net/daily/levInvaderFractal.html
-[second draft]: https://codepen.io/mirisuzanne/pen/gzXqOP
+[second draft]: https://codepen.io/miriamsuzanne/pen/gzXqOP
 [Vue]: https://vuejs.org/
 [A Tinker Story]: https://beyondtellerrand.com/events/dusseldorf-2018/speakers/dina-amin#talk
 [Broad Band]: https://beyondtellerrand.com/events/dusseldorf-2018/speakers/claire-evans#talk

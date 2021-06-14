@@ -50,7 +50,7 @@ with the simple `isolate()` mixin:
 {{ embed.codepen(
   id='ad41121d402b5faccd1dbee4e88e35d1',
   title='Susy Isolation Demo: Syntax',
-  user='mirisuzanne',
+  user='miriamsuzanne',
   height=300
 ) }}
 
@@ -60,7 +60,7 @@ removed from the flow:
 {{ embed.codepen(
   id='93faa807c78fb4e9b1e15af2727d22d1',
   title='Susy Isolation Demo: Multiple',
-  user='mirisuzanne',
+  user='miriamsuzanne',
   height=300
 ) }}
 
@@ -85,7 +85,7 @@ Change the span-width, and we'll update everything for you:
 {{ embed.codepen(
   id='c891305b8d32d1306fc305846cfd926f',
   title='Susy Isolation Demo: Gallery',
-  user='mirisuzanne'
+  user='miriamsuzanne'
 ) }}
 
 ## Bleed
@@ -100,7 +100,7 @@ Here's an element bleeding 1-column outside our 6-column page layout:
 {{ embed.codepen(
   id='351a144615300d48574188af838764ea',
   title='Susy1 Bleed Demo: Syntax',
-  user='mirisuzanne',
+  user='miriamsuzanne',
   height=300
 ) }}
 
@@ -114,7 +114,7 @@ pass arbitrary widths in the first argument:
 {{ embed.codepen(
   id='c8eb354821f8441e8c4b28864f92a8dd',
   title='Susy1 Bleed Demo: Sides',
-  user='mirisuzanne',
+  user='miriamsuzanne',
   height=300
 ) }}
 

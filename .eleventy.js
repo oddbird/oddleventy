@@ -54,7 +54,26 @@ module.exports = (eleventyConfig) => {
     collection
       .getAll()
       .filter((item) => item.data.oss)
-      .sort((a, b) => b.date - a.date),
+      .sort((a, b) => {
+        if (a.data.feature && !b.data.feature) {
+          return -1;
+        }
+        if (b.data.feature && !a.data.feature) {
+          return 1;
+        }
+
+        if (a.data.end !== b.data.end) {
+          if (!a.data.end) {
+            return -1;
+          }
+          if (!b.data.end) {
+            return 1;
+          }
+          return b.data.end - a.data.end;
+        }
+
+        return b.date - a.date;
+      }),
   );
   eleventyConfig.addCollection('work', (collection) =>
     collection
@@ -129,9 +148,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPairedShortcode('md', type.md);
   eleventyConfig.addPairedShortcode('mdInline', type.mdInline);
   eleventyConfig.addPairedShortcode('h', type.heading);
-  eleventyConfig.addShortcode(
-    'getDate',
-    (format) => `${time.getDate(time.now(), format)}`,
+  eleventyConfig.addShortcode('getDate', (format) =>
+    time.getDate(time.now(), format),
   );
 
   // config

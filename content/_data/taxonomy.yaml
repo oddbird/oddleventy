@@ -18,14 +18,21 @@ post:
     icon: news
 oss:
   - title: OddTools
-    show: owner
+    all:
+      - owner
   - title: Core Team
-    show:
+    current:
       - core team
       - maintainer
       - invited expert
   - title: Other Contributions
-    show: contributor
+    all:
+      - contributor
+    past:
+      - core team
+      - maintainer
+      - invited expert
+
 img:
   # The size to use in src attribute, when srcset is not supported
   fallback: 1280

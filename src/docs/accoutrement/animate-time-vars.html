@@ -42,7 +42,7 @@
       <div class="project-title">
         <a href="index.html" rel="home" class="project-name">Accoutrement</a>
         
-          <span class="project-version">2.2.0</span>
+          <span class="project-version">3.0.1</span>
         
       </div>
     </header>
@@ -377,7 +377,7 @@
 
     
       <aside class="footer-credit">
-        <a href="http://oddbird.net/herman/" class="footer-icon">
+        <a href="https://www.oddbird.net/herman/" class="footer-icon">
           
   <svg data-icon="logo" data-icon-size="footer-logo" ><use xlink:href="#icon-logo" />
   </svg>
@@ -385,13 +385,13 @@
         </a>
         <span>
           Documented with
-          <a href="http://oddbird.net/herman/" class="footer-link">
+          <a href="https://www.oddbird.net/herman/" class="footer-link">
             Herman
           </a>
         </span>
         <span>
           by
-          <a href="http://oddbird.net/" class="footer-link">
+          <a href="https://www.oddbird.net/" class="footer-link">
             OddBird
           </a>
         </span>
@@ -649,7 +649,7 @@ Set to <code>null</code> or <code>''</code> (empty string) for no<span class="wi
       
       <pre class="hljs-pre"><code class="lang-scss">$times: (&#39;my-time&#39;: 1s);
 $time-var-prefix: &#39;prefix_&#39;;
-:root { @include time--(&#39;my-time&#39;) }</code></pre>
+html { @include time--(&#39;my-time&#39;) }</code></pre>
     </div>
   
 
@@ -671,10 +671,9 @@ $time-var-prefix: &#39;prefix_&#39;;
 
       
       
-      <pre class="hljs-pre"><code class="lang-css">:root {
+      <pre class="hljs-pre"><code class="lang-css">html {
   --prefix_my-time: 1s;
-}
-</code></pre>
+}</code></pre>
     </div>
   
 
@@ -1042,7 +1041,7 @@ map of times to set as css<span class="widont">&nbsp;</span>variables</p>
   &#39;text&#39;: &#39;#_fast&#39;,
   &#39;fade&#39;: &#39;#text&#39;,
 );
-:root {
+html {
   @include times--;
 }</code></pre>
     </div>
@@ -1066,11 +1065,10 @@ map of times to set as css<span class="widont">&nbsp;</span>variables</p>
 
       
       
-      <pre class="hljs-pre"><code class="lang-css">:root {
+      <pre class="hljs-pre"><code class="lang-css">html {
   --time-text: 200ms;
   --time-fade: var(--time-text, 200ms);
-}
-</code></pre>
+}</code></pre>
     </div>
   
 
@@ -1502,8 +1500,7 @@ css-variable and then to the token’s calculated<span class="widont">&nbsp;</sp
       <pre class="hljs-pre"><code class="lang-css">.example {
   --time-fade: var(--time-text, 250ms);
   --time-color-change: var(--time-fade, 0.2s);
-}
-</code></pre>
+}</code></pre>
     </div>
   
 
@@ -1927,8 +1924,7 @@ css-variable and then to the token’s calculated<span class="widont">&nbsp;</sp
       
       <pre class="hljs-pre"><code class="lang-css">.example {
   transition: opacity var(--time-fade, 250ms), color var(--time-text, 150ms);
-}
-</code></pre>
+}</code></pre>
     </div>
   
 

@@ -166,7 +166,6 @@ export const collection3 = [
       title: 'Test Title',
       tags: ['tag 1', 'tag2'],
       author: 'miriam',
-      end: 'ongoing',
       slug: 'news',
       oss: 'owner',
     },
