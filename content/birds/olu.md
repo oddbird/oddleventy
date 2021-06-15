@@ -1,9 +1,10 @@
+---
 title: Olu Niyi-Awosusi
 sub: Javascript Developer
 bird: olu
 date: 2021-06-07
-image:
-  src: [`birds/bird.jpg`]
+# image:
+#   src: [`birds/bird.jpg`]
 social:
   twitter: oluoluoxenfree
   github: oluoluoxenfree
