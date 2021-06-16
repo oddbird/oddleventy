@@ -25,3 +25,12 @@ audio: https://traffic.libsyn.com/syntax/Syntax362.mp3
 
 {% import "embed.macros.njk" as embed %}
 {{ embed.audio(audio) }}
+
+At one point we mention
+that the Container Query syntax
+is likely to change.
+That happened!
+You can find the latest syntax
+in the [CSS draft specification](https://drafts.csswg.org/css-contain-3/).
+Some (but not all) of the new syntax
+is already supported in the Chrome prototype.
