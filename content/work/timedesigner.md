@@ -24,6 +24,16 @@ press:
     <<: *furman
     slug: innovative
   - text: |
+      I have been having so much fun with this 
+      tool. The tool has been very helpful and 
+      you all have really **helped me think about 
+      scheduling creatively.** Thanks again!
+    name: Dr. Amy Vondra
+    face: amy-vondra.jpg
+    url: https://www.cps.edu/about/leadership/principal-advisory/
+    title: Principal, Chicago Public Schools
+    slug: scheduling
+  - text: |
       **I really enjoy this iterative design process.**
       Seeing how OddBird does the iteration
       has improved my own iterative system with schools.
