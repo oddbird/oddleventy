@@ -3,6 +3,8 @@ title: Olu Niyi-Awosusi
 sub: JavaScript developer
 bird: olu
 date: 2021-06-07
+image:
+  svg: faces/olu
 social:
   twitter: oluoluoxenfree
   github: oluoluoxenfree
