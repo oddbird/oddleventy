@@ -7,13 +7,13 @@ const _ = require('lodash');
 
 const birds = require('#/birds');
 const events = require('#/events');
+const images = require('#/images');
 const pages = require('#/pages');
 const tags = require('#/tags');
 const taxonomy = require('#/taxonomy');
 const time = require('#/time');
 const type = require('#/type');
 const utils = require('#/utils');
-const images = require('#/images');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);

@@ -1,5 +1,6 @@
 'use strict';
 
+const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
 const _ = require('lodash');
 const markdown = require('markdown-it');
 const mdAnchor = require('markdown-it-anchor');
@@ -9,7 +10,6 @@ const removeMd = require('remove-markdown');
 const striptags = require('striptags');
 const truncate = require('truncate-html');
 const type = require('typogr');
-const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
 
 const { responsiveConfig } = require('#/images');
 
