@@ -1,7 +1,7 @@
 'use strict';
 
-const dateFormat = require('date-fns/format');
 const { utcToZonedTime } = require('date-fns-tz');
+const dateFormat = require('date-fns/format');
 
 /* @docs
 label: Date & Time Filters
