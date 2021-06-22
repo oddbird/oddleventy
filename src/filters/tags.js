@@ -1,10 +1,10 @@
 'use strict';
 
-const slugify = require('slugify');
 const _ = require('lodash');
+const slugify = require('slugify');
 
-const { pageType } = require('#/taxonomy');
 const { withData, getData } = require('#/pages');
+const { pageType } = require('#/taxonomy');
 
 /* @docs
 label: Tag Filters
