@@ -191,7 +191,7 @@ brand identity. Like their existing apps – MoodHacker and BlipHub – the
 CoachHub logo and overall brand are bright, cheerful, and hopeful.
 
 {{ embed.figure(
-  data=[{'img': 'work/coachhub/color-palette.jpg'}],
+  data=[{'img': 'work/coachhub/color-palette1.png'}],
   caption='Full color palette derived from three basic brand colors.'
 ) }}
 
@@ -203,7 +203,7 @@ CoachHub logo and overall brand are bright, cheerful, and hopeful.
 <div class="contain">
 
 {{ embed.img(
-  src='work/coachhub/avatars-small.jpg',
+  src='work/coachhub/avatars.png',
   alt='leaf avatar collage',
   attrs={
     'class': 'align-left'
@@ -227,16 +227,12 @@ allowing us to move quickly and efficiently. Integrating design and
 implementation helped us minimize time and money waste.
 
 <figure>
-{{ embed.img(
-  src="work/coachhub/profiles.jpg", 
-  attrs={"class":"extend-full"}
-) }}
-<figcaption>Starting with designs for the smallest, mobile screens sizes helped clarify and prioritize relevant information for each user.</figcaption>
+<img src="{{ site.images }}work/coachhub/profiles.png" class="extend-full" alt="" /><figcaption>Starting with designs for the smallest, mobile screens sizes helped clarify and prioritize relevant information for each user.</figcaption>
 </figure>
 
 <figure>
 {{ embed.img(
-  src="work/coachhub/interactive.jpg", 
+  src="work/coachhub/interactive.jpg",
   attrs={"class":"extend-small img-shadow"}
 ) }}
 <figcaption>Interaction can become distracting if implemented for its own sake. Sliding side panels and realtime chat serve the needs of the user, highlighting particular features or important information.</figcaption>
@@ -249,11 +245,15 @@ adjusting UX design along the way, ensuring that CoachHub would be
 useful and relevant to users and partners.
 
 <figure>
+<<<<<<< HEAD
 {{ embed.img(
-  src="work/coachhub/calendars.jpg", 
+  src="work/coachhub/calendars.jpg",
   attrs={"class":"extend-large"}
 ) }}
 <figcaption>As we observed users navigating the app, it became clear that the appointment calendar needed distinct views and interactions for coaches and clients.</figcaption>
+=======
+<img src="{{ site.images }}work/coachhub/calendars.png" class="extend-large" alt="" /><figcaption>As we observed users navigating the app, it became clear that the appointment calendar needed distinct views and interactions for coaches and clients.</figcaption>
+>>>>>>> main
 </figure>
 
 ### Accessibility
@@ -279,7 +279,7 @@ users.
 
 <figure>
 {{ embed.img(
-  src="work/coachhub/splash-final-2.jpg", 
+  src="work/coachhub/splash-final-2.jpg",
   alt="final design for landing page",
   attrs={"class":"extend-large img-shadow"}
 ) }}

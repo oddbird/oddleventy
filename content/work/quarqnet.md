@@ -157,7 +157,7 @@ Maps to establish front-end development patterns as well as an automated
 "living" [style guide].
 
 {{ embed.img(
-  src='work/quarqnet/communication.jpg',
+  src='work/quarqnet/communication.png',
   alt='user story in Pivotal Tracker and Sass color maps',
   attrs={
     'class': 'extend-large'
@@ -207,7 +207,7 @@ step or attempt pixel perfection, as new UX problems nearly always
 present themselves during implementation.
 
 {{ embed.img(
-  src='work/quarqnet/mockup1.jpg',
+  src='work/quarqnet/mockup1.png',
   alt='initial mockups of activity map and data',
   attrs={
     'class': 'extend-large'
@@ -228,7 +228,7 @@ story we improved the dotted line, font size, and spacing of the
 activity data within the browser.
 
 {{ embed.img(
-  src='work/quarqnet/implementation.jpg',
+  src='work/quarqnet/implementation.png',
   alt='initial implementation of activity map and data',
   attrs={
     'class': 'extend-large'
@@ -263,7 +263,7 @@ collapsed view, make the tabs more compact, and move navigation to the
 bottom of the activity box.
 
 {{ embed.img(
-  src='work/quarqnet/compact.jpg',
+  src='work/quarqnet/compact.png',
   alt='sketch of new, compact navigation',
   attrs={
     'class': 'extend-full'
@@ -279,7 +279,7 @@ user flow between activity list, data, and collapsed views. Play with
 the interactive [InVision sketch].
 
 {{ embed.img(
-  src='work/quarqnet/interactive.jpg',
+  src='work/quarqnet/interactive.png',
   alt='interactive sketch of new, compact navigation',
   attrs={
     'class': 'extend-large'
@@ -307,7 +307,7 @@ After minor design tweaks in the browser, we had our solution! View the
 current, live application at [QuarqNet.com].
 
 {{ embed.img(
-  src='work/quarqnet/implementation3.jpg',
+  src='work/quarqnet/implementation3.png',
   alt='current, live application tab navigation',
   attrs={
     'class': 'extend-large'
