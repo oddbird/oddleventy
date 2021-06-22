@@ -30,7 +30,7 @@ events:
     url: https://smashingconf.com/meets-css/
     date: 2021-07-08
     adr: Online
-  - venue: CSS Cafe
+  - venue: CSS Café
     url: https://www.meetup.com/CSS-Cafe/events/278822813/
     date: 2021-06-24
     adr: Online
