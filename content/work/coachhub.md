@@ -191,7 +191,7 @@ brand identity. Like their existing apps – MoodHacker and BlipHub – the
 CoachHub logo and overall brand are bright, cheerful, and hopeful.
 
 {{ embed.figure(
-  data=[{'img': 'work/coachhub/color-palette.jpg'}],
+  data=[{'img': 'work/coachhub/color-palette1.png'}],
   caption='Full color palette derived from three basic brand colors.'
 ) }}
 
@@ -203,7 +203,7 @@ CoachHub logo and overall brand are bright, cheerful, and hopeful.
 <div class="contain">
 
 {{ embed.img(
-  src='work/coachhub/avatars-small.jpg',
+  src='work/coachhub/avatars.png',
   alt='leaf avatar collage',
   width=250,
   height=244,
@@ -229,7 +229,7 @@ allowing us to move quickly and efficiently. Integrating design and
 implementation helped us minimize time and money waste.
 
 <figure>
-<img src="{{ site.images }}work/coachhub/profiles.jpg" class="extend-full" alt="" /><figcaption>Starting with designs for the smallest, mobile screens sizes helped clarify and prioritize relevant information for each user.</figcaption>
+<img src="{{ site.images }}work/coachhub/profiles.png" class="extend-full" alt="" /><figcaption>Starting with designs for the smallest, mobile screens sizes helped clarify and prioritize relevant information for each user.</figcaption>
 </figure>
 
 <figure>
@@ -243,7 +243,7 @@ adjusting UX design along the way, ensuring that CoachHub would be
 useful and relevant to users and partners.
 
 <figure>
-<img src="{{ site.images }}work/coachhub/calendars.jpg" class="extend-large" alt="" /><figcaption>As we observed users navigating the app, it became clear that the appointment calendar needed distinct views and interactions for coaches and clients.</figcaption>
+<img src="{{ site.images }}work/coachhub/calendars.png" class="extend-large" alt="" /><figcaption>As we observed users navigating the app, it became clear that the appointment calendar needed distinct views and interactions for coaches and clients.</figcaption>
 </figure>
 
 ### Accessibility
