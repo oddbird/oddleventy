@@ -21,38 +21,41 @@
   }
 }
 
-[data-nest='carl'] {
+[data-nest='olu'] {
   --x: -10px;
 }
 
 [data-nest='stacy'] {
-  --x: 380px;
+  --x: 330px;
 }
 
 [data-nest='davidh'] {
-  --x: 685px;
+  --x: 645px;
 }
 
 [data-nest='sondra'] {
-  --x: 970px;
+  --x: 950px;
 }
 
 [data-nest='miriam'] {
-  --x: 1400px;
-  --y: -20px;
+  --x: 1310px;
+}
+
+[data-nest='carl'] {
+  --x: 1660px;
 }
 
 [data-nest='ed'] {
-  --x: 1700px;
+  --x: 2030px;
   --y: 100px;
 }
 
 [data-nest='patricia'] {
-  --x: 2045px;
+  --x: 2385px;
   --y: -10px;
 }
 
 [data-nest='jonny'] {
-  --x: 2410px;
+  --x: 2760px;
   --y: 100px;
 }
