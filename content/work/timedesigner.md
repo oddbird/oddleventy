@@ -14,6 +14,28 @@ people:
     url: https://www.tegy.tools/profile/furman/profile
     title: Founder
     venue: *client
+tags:
+  - _post
+  - Case Study
+sample:
+  desktop:
+    src: timedesigner/SOMETHING HERE.jpg
+    alt: SOMETHING HERE
+  mobile:
+    src: timedesigner/SOMETHING HERE.jpg
+    alt: SOMETHING HERE
+  caption: |
+    SOMETHING HERE
+tasks:
+  - Accessible Interface
+  - Custom Django Application
+  - Integrated Style Guide
+  - Information Architecture
+  - Logo and Brand Identity
+  - Responsive Design
+  - Project Architecture
+  - User Experience Design
+  - WCAG & HIPAA Compliant  
 press:
   - text: |
       OddBird is high-caliber and nimble.
@@ -90,6 +112,99 @@ summary: |
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
+{% import 'embed.macros.njk' as embed %}
 
 <!-- all but the first quote -->
 {{ quotes.grid(press | slice(2) | first ) }}
+
+## What They Needed
+
+[TEGY] 
+
+## Research & Concepting
+
+Tegy came to OddBird 
+with a multi-year plan
+and a vision for
+a suite of web applications
+to help educators 
+improve their students' school experience
+through organization design.
+
+## Project Management
+
+Research & Concepting helped
+with initial sorting,
+goal setting,
+and prioritization.
+But with such a huge need
+and broad vision,
+on-going guidance
+was key 
+to moving the project
+toward the successful launch
+of a usable tool.
+
+At regular intervals,
+throughout the design & development phase,
+OddBird met with Furman
+on video calls 
+and in person.
+We spent time listening to the vision
+and asking strategic questions --
+getting to the heart of the project,
+understanding the reason behind
+each new feature suggestion,
+and identifying top priorities.
+When presented with proposals
+for small features,
+we asked how each would support
+Tegy's long-term goals.
+When presented with big-picture vision,
+we helped suggest specific,
+small tasks
+that would move the project 
+in the desired direction.
+
+> When presented with small feature ideas, 
+we keep asking why. 
+When presented with a big vision, 
+> we keep asking how.
+
+Together,
+we dug into the details
+of new features
+to determine the implications --
+both technical
+and for usability.
+Drawing on our many years of experience,
+deep knowledge of web app development,
+and involvement at the cutting edge our fields,
+OddBird guided Tegy
+in a direction that would 
+have the biggest impact for users
+without blowing the budget.
+
+At the end of our conversations,
+we documented proposed features
+in the Trello project management tool.
+We organized 
+and prioritized Trello cards
+into a two-week plan --
+what's the most important feature
+right now --
+and saved long-term feature goals
+to be priorized later.
+
+<figure>
+<img src="{{ site.images }}work/timedesigner/trello-sample.jpg" class="extend-full" alt="" /><figcaption>Trello board project management sample.</figcaption>
+</figure>
+
+
+## Design and Development
+
+### CSS Grid
+
+### Drag-and-Drop Schedule Interface
+
+## On-Going
