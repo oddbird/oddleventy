@@ -13,7 +13,8 @@
     {% set description = (sub or summary or site.description) | removeMd %}
     {% set perma = redirect.to if redirect else canonical or (page.url | absoluteUrl(site.url)) %}
 
-    <title>{{ [title, site.title] | join(' | ') }}</title>
+    {% set title_parts = [site.title, title] if (page.url == '/') else [title, site.title] %}
+    <title>{{ title_parts | join(' | ') }}</title>
     <meta name="description"
       content="{{ description }}" />
 
