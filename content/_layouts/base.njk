@@ -5,8 +5,6 @@
   data-ccs-theme="{{ ccs.themes | first }}"
   data-ccs-colors>
   <head>
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f1f3f4">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0d0e">
     <meta charset="utf-8" />
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0" />
@@ -44,6 +42,9 @@
     {% block extra_og %}{% endblock extra_og %}
 
     {% include 'site/feed.njk' %}
+
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#d9e4e7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#632645">
 
     <!-- TypeKit Fonts -->
     <script src="https://use.typekit.net/slx1xnq.js"></script>
