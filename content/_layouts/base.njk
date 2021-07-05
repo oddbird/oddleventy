@@ -13,7 +13,8 @@
     {% set description = (sub or summary or site.description) | removeMd %}
     {% set perma = redirect.to if redirect else canonical or (page.url | absoluteUrl(site.url)) %}
 
-    <title>{{ [title, site.title] | join(' | ') }}</title>
+    {% set title_parts = [site.title, title] if (page.url == '/') else [title, site.title] %}
+    <title>{{ title_parts | join(' | ') }}</title>
     <meta name="description"
       content="{{ description }}" />
 
@@ -41,6 +42,9 @@
     {% block extra_og %}{% endblock extra_og %}
 
     {% include 'site/feed.njk' %}
+
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#d9e4e7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e393e">
 
     <!-- TypeKit Fonts -->
     <script src="https://use.typekit.net/slx1xnq.js"></script>

@@ -1,5 +1,5 @@
 ---
-title: Software For Humans
+title: Custom Web App Design & Development For Humans
 banner: |
   Custom Web App
   *[Design](/services/design-systems/),

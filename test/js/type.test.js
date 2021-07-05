@@ -14,7 +14,7 @@ describe('typography filters', () => {
   });
 
   test('md', () => {
-    const expected = `<h2 id="${slugifyd}">${typogrd}</h2>\n`;
+    const expected = `<h2 id="${slugifyd}" tabindex="-1">${typogrd}</h2>\n`;
 
     expect(md()).toBeUndefined();
     expect(md(markdown)).toEqual(expected);

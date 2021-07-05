@@ -2,14 +2,15 @@
 
 const path = require('path');
 
+const image = require('@11ty/eleventy-img');
 const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
 const _ = require('lodash');
-const image = require('@11ty/eleventy-img');
 
 const birds = require('#/birds');
 const events = require('#/events');
+// const images = require('#/images');
 const pages = require('#/pages');
 const tags = require('#/tags');
 const taxonomy = require('#/taxonomy');
