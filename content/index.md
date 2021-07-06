@@ -6,7 +6,7 @@ banner: |
   [Development](/services/development/), &
   [Training](/services/speaking/)*
 image:
-  src: projects/orcas/home-iphone.jpg
+  src: projects/orcas/coachhub-home-iphone.jpg
   alt: CoachHub App on iPhone
   device: iphone
   fill: white

@@ -24,10 +24,10 @@ tags:
   - Case Study
 sample:
   desktop:
-    src: orcas/desktop.jpg
+    src: orcas/coachhub-desktop.jpg
     alt: Home screen of CoachHub app, with coaches listed on the side
   mobile:
-    src: orcas/home-iphone.jpg
+    src: orcas/coachhub-home-iphone.jpg
     alt: Mobile home screen of CoachHub app, guidance on the go
   caption: |
     CoachHub is a HIPAA-compliant health coaching platform
