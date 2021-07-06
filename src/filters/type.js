@@ -1,6 +1,5 @@
 'use strict';
 
-// const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
 const _ = require('lodash');
 const markdown = require('markdown-it');
 const mdAnchor = require('markdown-it-anchor');

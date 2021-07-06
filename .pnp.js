@@ -44,7 +44,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@11ty/eleventy-plugin-syntaxhighlight", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.1.1"],
             ["@babel/core", "npm:7.14.6"],
             ["@babel/preset-env", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:7.14.7"],
-            ["@gerhobbelt/markdown-it-responsive", "npm:0.1.1-3"],
             ["@rollup/plugin-babel", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.3.0"],
             ["@rollup/plugin-commonjs", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:19.0.0"],
             ["@rollup/plugin-node-resolve", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:13.0.0"],
@@ -2568,15 +2567,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["js-yaml", "npm:3.14.1"],
             ["minimatch", "npm:3.0.4"],
             ["strip-json-comments", "npm:3.1.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@gerhobbelt/markdown-it-responsive", [
-        ["npm:0.1.1-3", {
-          "packageLocation": "./.yarn/cache/@gerhobbelt-markdown-it-responsive-npm-0.1.1-3-168584e5ef-7f28d918c8.zip/node_modules/@gerhobbelt/markdown-it-responsive/",
-          "packageDependencies": [
-            ["@gerhobbelt/markdown-it-responsive", "npm:0.1.1-3"]
           ],
           "linkType": "HARD",
         }]
@@ -13590,7 +13580,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@11ty/eleventy-plugin-syntaxhighlight", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:3.1.1"],
             ["@babel/core", "npm:7.14.6"],
             ["@babel/preset-env", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:7.14.7"],
-            ["@gerhobbelt/markdown-it-responsive", "npm:0.1.1-3"],
             ["@rollup/plugin-babel", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.3.0"],
             ["@rollup/plugin-commonjs", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:19.0.0"],
             ["@rollup/plugin-node-resolve", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:13.0.0"],

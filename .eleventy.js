@@ -10,7 +10,6 @@ const _ = require('lodash');
 
 const birds = require('#/birds');
 const events = require('#/events');
-// const images = require('#/images');
 const pages = require('#/pages');
 const tags = require('#/tags');
 const taxonomy = require('#/taxonomy');
@@ -29,9 +28,9 @@ const imageShortcode = (src, alt, attrs, sizes, getUrl) => {
   const options = {
     widths: imgConfig.widths,
     formats: imgConfig.formats,
-    // test path and directory that will be changed in this PR
     urlPath: '/img/',
     outputDir: './_site/img/',
+
     // eslint-disable-next-line
     filenameFormat: function (id, src, width, format, options) {
       const extension = path.extname(src);
@@ -194,7 +193,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('max', (array) => Math.max(...array));
 
   eleventyConfig.addFilter('imgSrc', (src) =>
-    imageShortcode(src, null, null, null, true),
+    imageShortcode(src, null, null, null, false),
   );
 
   // shortcodes

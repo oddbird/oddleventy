@@ -35,14 +35,13 @@ oss:
 
 img:
   formats:
-    - avif
     - webp
     - jpeg
   widths:
     - 480
     - 960
-    - 1280
-    - 2240
+    - 1920
+
   # named `sizes` for smaller images
   sizes:
     default: '(min-width: 45em) 50vw, 100vw'
