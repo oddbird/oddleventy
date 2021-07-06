@@ -10,6 +10,7 @@ _built
 *.swo
 *.css.map
 *.js.map
+report.*.json
 
 # Logs
 logs

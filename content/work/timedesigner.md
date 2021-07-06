@@ -119,10 +119,6 @@ summary: |
 
 ## What They Needed
 
-[TEGY] 
-
-## Research & Concepting
-
 Tegy came to OddBird 
 with a multi-year plan
 and a vision for
@@ -130,6 +126,22 @@ a suite of web applications
 to help educators 
 improve their students' school experience
 through organization design.
+They needed project planning and guidance,
+wireframes and itemized estimates
+for investor pitches.
+They needed
+graphic and user experience design,
+front- and back-end development,
+and on-going maintenance.
+
+## Research & Concepting
+
+As with most OddBird web projects,
+we started with a planning phase
+to look deeply into the needs 
+of the educators who would use Tegy Time,
+as well as Tegy's vision
+for their business.
 
 ## Project Management
 
@@ -208,3 +220,23 @@ to be priorized later.
 ### Drag-and-Drop Schedule Interface
 
 ## On-Going
+
+In the three years 
+since TimeDesigner launched,
+OddBird has continued 
+to support the project.
+We have provided periodic maintenance - 
+though the site has needed relatively little -
+and bug fixes.
+For three years,
+Tegy has been training school teams
+and scheduling engineers
+in organization design using Tegy Time.
+As of 2021, 
+we are excited to work with Tegy again
+to create Phase 2 of Tegy Time,
+enabling more schools
+to innovate organization models,
+make better use of their resources,
+and improve the learning environment 
+for everyone.
