@@ -31,9 +31,7 @@ const imageShortcode = (src, alt, attrs, sizes, getUrl) => {
     urlPath: '/img/',
     outputDir: './_site/img/',
     sharpWebpOptions: {
-      alphaQuality: 50,
-      quality: 50,
-      reductionEffort: 2,
+      quality: 100,
     },
 
     // eslint-disable-next-line
