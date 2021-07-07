@@ -30,6 +30,11 @@ const imageShortcode = (src, alt, attrs, sizes, getUrl) => {
     formats: imgConfig.formats,
     urlPath: '/img/',
     outputDir: './_site/img/',
+    sharpWebpOptions: {
+      alphaQuality: 50,
+      quality: 50,
+      reductionEffort: 2,
+    },
 
     // eslint-disable-next-line
     filenameFormat: function (id, src, width, format, options) {

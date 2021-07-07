@@ -40,7 +40,8 @@ img:
   widths:
     - 480
     - 960
-    - 1920
+    - 1280
+    - 2240
 
   # named `sizes` for smaller images
   sizes:
