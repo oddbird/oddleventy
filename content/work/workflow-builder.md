@@ -38,13 +38,24 @@ press:
     <<: *james
     slug: configurations
 summary: |
-  Aunalytics provides a full suite of data-analytics and management tools.
+  Aunalytics provides a full suite of data-analytics 
+  and management tools.
   The "workflow builder" is an embedded Vue application
   allowing data scientists to visually create and navigate
   through data flows of various kinds.
   The interface is an integration between standard HTML
   and an interactive SVG canvas, built with D3.
 ---
+
+**Dates**: 2019 - 2020 
+
+**Sector**: Data-Analytics & Management Technology
+
+**What We Did**: 
+  - Project Management
+  - User Interface Design Consulting
+  - Front-end Development
+  - Vue & D3 Development
 
 {% import 'quotes.macros.njk' as quotes %}
 
