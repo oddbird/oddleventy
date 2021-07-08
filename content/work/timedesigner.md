@@ -223,21 +223,19 @@ Each scenario has an editable start and end time which we
 use to calculate the total number of minutes in a school day. 
 We pass this data to a CSS variable on the grid container.
 
-```css
+```html
 <div class="row-grid" style="--day: 420;">
 ```
 
 In our CSS grid definition, 
 we use this variable to set the number of columns.
 
+```css
 grid-template-columns: repeat(var(--day),minmax(1px,1fr));
+```
 
 TODO …The grid’s vertical lines are drawn every 30 minutes… 
-Using a css border and inline style with 
-
-```css  
-grid-column: X (30 minute increments)…
-```
+Using a css border and inline style with ...
 
 Each item on the grid is placed using it’s start time 
 in minutes from the day start and duration.
