@@ -78,8 +78,34 @@ and [`size`](https://drafts.csswg.org/css-contain/#size-containment)
 containment are applied automatically as well.
 
 (`Block-size` is also being considered as a containment type in the new
-proposal. `Inline-size` seemed to satisfy more use-cases, so is being developed
-first.)
+proposal. `Inline-size` seemed to satisfy more use-cases, so is
+being developed first.)
+
+Containers can also be named:
+
+```scss
+article,
+section {
+  container-name: demo;
+  container-type: inline-size;
+}
+```
+
+And the `container-type` and `container-name` properties can be combined
+by using the `container` shorthand property:
+
+```scss
+article,
+section {
+  container: inline-size / demo;
+}
+
+ @container demo (min-width: 30em) {
+   .element {
+      /* styles to apply */
+   }
+ }
+```
 
 ### Apply @-rules at desired breakpoints
 
