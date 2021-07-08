@@ -30,8 +30,14 @@ const imageShortcode = (src, alt, attrs, sizes, getUrl) => {
     formats: imgConfig.formats,
     urlPath: '/img/',
     outputDir: './_site/img/',
+    sharpJpegOptions: {
+      progressive: true,
+      quality: 80,
+    },
     sharpWebpOptions: {
-      quality: 100,
+      quality: 50,
+      nearLossless: true,
+      reductionEffort: 3,
     },
 
     // eslint-disable-next-line
