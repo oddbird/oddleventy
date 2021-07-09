@@ -242,7 +242,7 @@ The OddBird team would love to see what you come up with. Tag us on
 the meantime, check out our collection of demos on
 [CodePen](https://codepen.io/collection/XQrgJo?grid_type=grid&sort_by=item_created_at&sort_order=desc)
 for inspiration.
-### Changelog
+## Changelog
 - **July 09, 2021:** _Updates the syntax for establishing a
   containment context. Adds new `container-type` and `container-name`
   properties._
