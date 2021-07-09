@@ -68,7 +68,8 @@ section {
 ```
 
 The `container-type` property turns on containment for the selected elements,
-allowing for the testing of aspects such as style, size, and state.
+allowing for the testing of aspects such as style, size, and state _(**Note:**
+updated on 07/09/21. See [changelog](#changelog))_.
 
 The `inline-size` value specifies that, in this case, queries will
 be made against the containing element's
@@ -241,3 +242,9 @@ The OddBird team would love to see what you come up with. Tag us on
 the meantime, check out our collection of demos on
 [CodePen](https://codepen.io/collection/XQrgJo?grid_type=grid&sort_by=item_created_at&sort_order=desc)
 for inspiration.
+### Changelog
+- **July 09, 2021:** _Updates the syntax for establishing a
+  containment context. Adds new `container-type` and `container-name`
+  properties._
+- **May 07, 2021:** _Adds `style` as necessary value for `contain`
+  property when establishing a containment context._
