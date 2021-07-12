@@ -67,16 +67,18 @@ section {
 }
 ```
 
-The `container-type` property turns on containment for the selected elements,
-allowing for the testing of aspects such as style, size, and state _(**Note:**
-updated on 07/09/21. See [changelog](#changelog))_.
+The `container-type`^[_Syntax for establishing a
+containment context updated **July 12, 2021**. Adds new `container-type` and `container-name` properties._] property turns on containment for the selected
+elements, allowing for the testing of aspects such as style, size, and state.
 
 The `inline-size` value specifies that, in this case, queries will
 be made against the containing element's
 [inline axis](https://drafts.csswg.org/css-writing-modes-4/#inline-axis).
 [`Layout`](https://drafts.csswg.org/css-contain/#valdef-contain-layout)
 and [`size`](https://drafts.csswg.org/css-contain/#size-containment)
-containment are applied automatically as well.
+^[_`Style` added as necessary value for `contain` property when
+establishing a containment context._ Updated **May 07, 2021**.] containment
+are applied automatically as well.
 
 (`Block-size` is also being considered as a containment type in the new
 proposal. `Inline-size` seemed to satisfy more use-cases, so is
@@ -242,9 +244,3 @@ The OddBird team would love to see what you come up with. Tag us on
 the meantime, check out our collection of demos on
 [CodePen](https://codepen.io/collection/XQrgJo?grid_type=grid&sort_by=item_created_at&sort_order=desc)
 for inspiration.
-## Changelog
-- **July 09, 2021:** _Updates the syntax for establishing a
-  containment context. Adds new `container-type` and `container-name`
-  properties._
-- **May 07, 2021:** _Adds `style` as necessary value for `contain`
-  property when establishing a containment context._
