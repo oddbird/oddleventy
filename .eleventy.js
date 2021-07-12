@@ -35,7 +35,7 @@ const imageShortcode = (src, alt, attrs, sizes, getUrl) => {
       quality: 80,
     },
     sharpWebpOptions: {
-      quality: 50,
+      quality: 60,
       nearLossless: true,
       reductionEffort: 3,
     },
