@@ -68,8 +68,9 @@ section {
 ```
 
 The `container-type`^[_Syntax for establishing a
-containment context updated **July 12, 2021**. Adds new `container-type` and `container-name` properties._] property turns on containment for the selected
-elements, allowing for the testing of aspects such as style, size, and state.
+containment context updated **July 12, 2021**. Uses new `container-type` and `container-name` properties instead of `contain`._] property turns
+on containment for the selected elements, allowing for the testing of
+aspects such as style, size, and state.
 
 The `inline-size` value specifies that, in this case, queries will
 be made against the containing element's
