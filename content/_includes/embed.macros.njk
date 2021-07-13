@@ -365,12 +365,11 @@ params:
   attrs={}
 ) -%}
   {%- if src -%}
-    {%- set config = 'img' | fromTaxonomy -%}
     {%- if not ('://' in src) -%}
       {%- set src = ('./src/images/' + src) -%}
       {%- image src, alt or "", attrs, sizes -%}
     {%- else -%}
-      <img src="src" alt="{{ alt or '' }}" {{ utility.show_attrs(attrs) }}>
+      <img src="{{ src }}" alt="{{ alt or '' }}" {{ utility.show_attrs(attrs) }}>
     {%- endif -%}
   {%- endif -%}
 {%- endmacro %}

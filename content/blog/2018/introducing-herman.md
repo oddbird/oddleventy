@@ -133,8 +133,8 @@ the source. When a pattern changes, all the edits can be made in a
 single location, so documentation is more likely to stay up-to-date.
 
 [{{ embed.img(
-  src="blog/2017/herman-intro/sassdoc.jpg", 
-  alt="SassDoc screenshot", 
+  src="blog/2017/herman-intro/sassdoc.jpg",
+  alt="SassDoc screenshot",
   attrs={"class":"extend-small img-border img-shadow" }
 ) }}][SassDoc]
 
@@ -207,7 +207,7 @@ Herman provides display annotations for [colors] (`@colors`), [fonts]
 [{{ embed.img(
   src="blog/2017/herman-intro/sizes.jpg",
   alt="Herman size palettes",
-  attrs={"class":"extend-small img-border img-shadow"} 
+  attrs={"class":"extend-small img-border img-shadow"}
 ) }}][sizes]
 
 In order to display that data, you will need to export all your Sass

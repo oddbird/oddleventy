@@ -1,15 +1,11 @@
 ---
 title: Responsive Images
-sub: Using nunjucks and markdown
+sub: Using nunjucks
 ---
 
-{% import 'utility.macros.njk' as utility %}
 {% import 'embed.macros.njk' as embed %}
 
 ## srcSet
-
-### markdown:
-![](/assets/images/blog/2016/trick-loops.jpg)
 
 ### embed (no width):
 {{ embed.img(

@@ -1,8 +1,5 @@
 'use strict';
 
-const path = require('path');
-
-const image = require('@11ty/eleventy-img');
 const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
@@ -10,70 +7,13 @@ const _ = require('lodash');
 
 const birds = require('#/birds');
 const events = require('#/events');
+const images = require('#/images');
 const pages = require('#/pages');
 const tags = require('#/tags');
 const taxonomy = require('#/taxonomy');
 const time = require('#/time');
 const type = require('#/type');
 const utils = require('#/utils');
-
-// eleventy image plugin
-const imageShortcode = (src, alt, attrs, sizes, getUrl) => {
-  const imgConfig = taxonomy.fromTaxonomy('img');
-  const imgSizes =
-    sizes && imgConfig.sizes[sizes]
-      ? imgConfig.sizes[sizes]
-      : sizes || imgConfig.sizes.default;
-
-  const options = {
-    widths: imgConfig.widths,
-    formats: imgConfig.formats,
-    urlPath: '/img/',
-    outputDir: './_site/img/',
-    sharpJpegOptions: {
-      progressive: true,
-      quality: 80,
-    },
-    sharpWebpOptions: {
-      quality: 60,
-      nearLossless: true,
-      reductionEffort: 3,
-    },
-
-    // eslint-disable-next-line
-    filenameFormat: function (id, src, width, format, options) {
-      const extension = path.extname(src);
-      const name = path.basename(src, extension);
-
-      return `${name}-${width}w.${format}`;
-    },
-  };
-
-  // generate images, while this is async we don’t wait
-  image(src, options);
-
-  // eslint-disable-next-line no-sync
-  const metadata = image.statsSync(src, options);
-
-  if (getUrl) {
-    const data = metadata.jpeg[metadata.jpeg.length - 1];
-    return data.url;
-  }
-
-  const imageAttributes = _.merge(
-    {
-      alt,
-      sizes: imgSizes,
-      loading: 'lazy',
-      decoding: 'async',
-    },
-    attrs,
-  );
-
-  return image.generateHTML(metadata, imageAttributes, {
-    whitespaceMode: 'inline',
-  });
-};
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
@@ -202,7 +142,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('max', (array) => Math.max(...array));
 
   eleventyConfig.addFilter('imgSrc', (src) =>
-    imageShortcode(src, null, null, null, false),
+    images.image(src, null, null, null, true),
   );
 
   // shortcodes
@@ -212,7 +152,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode('getDate', (format) =>
     time.getDate(time.now(), format),
   );
-  eleventyConfig.addNunjucksShortcode('image', imageShortcode);
+  eleventyConfig.addNunjucksShortcode('image', images.image);
 
   // config
   eleventyConfig.setLibrary('md', type.mdown);
