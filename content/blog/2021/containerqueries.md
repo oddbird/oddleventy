@@ -67,23 +67,24 @@ section {
 }
 ```
 
-The `container-type`^[_Syntax for establishing a
-containment context updated **July 12, 2021**. Uses new `container-type` and `container-name` properties instead of `contain`._] property turns
-on containment for the selected elements, allowing for the testing of
-aspects such as style, size, and state.
+The `container-type`^[_Syntax for establishing a containment context was updated
+**July 12, 2021** to use the new `container-type` and `container-name`
+properties instead of `contain`._] property turns on containment for the
+selected elements, allowing for the testing of aspects such as style, size, and
+state.
 
-The `inline-size` value specifies that, in this case, queries will
-be made against the containing element's
-[inline axis](https://drafts.csswg.org/css-writing-modes-4/#inline-axis).
-[`Layout`](https://drafts.csswg.org/css-contain/#valdef-contain-layout)
-and [`size`](https://drafts.csswg.org/css-contain/#size-containment)
-^[_`Style` added as necessary value for `contain` property when
-establishing a containment context._ Updated **May 07, 2021**.] containment
-are applied automatically as well.
+The `inline-size` value specifies that, in this case, queries will be made
+against the containing element's [inline
+axis](https://drafts.csswg.org/css-writing-modes-4/#inline-axis).
+[`Layout`](https://drafts.csswg.org/css-contain/#valdef-contain-layout) and
+[`size`](https://drafts.csswg.org/css-contain/#size-containment)^[_`Style` added
+as necessary value for `contain` property when establishing a containment
+context._ Updated **May 07, 2021**.] containment are applied automatically as
+well.
 
 (`Block-size` is also being considered as a containment type in the new
-proposal. `Inline-size` seemed to satisfy more use-cases, so is
-being developed first.)
+proposal. `Inline-size` seemed to satisfy more use-cases, so is being developed
+first.)
 
 Containers can also be named:
 
@@ -95,8 +96,8 @@ section {
 }
 ```
 
-And the `container-type` and `container-name` properties can be combined
-by using the `container` shorthand property:
+And the `container-type` and `container-name` properties can be combined by
+using the `container` shorthand property:
 
 ```scss
 article,
