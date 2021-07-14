@@ -82,12 +82,12 @@ const image = (src, alt, attrs, sizes, getUrl) => {
 
   const imageAttributes = _.merge(
     {
-      alt,
+      alt: alt || '',
       sizes: imgSizes,
       loading: 'lazy',
       decoding: 'async',
     },
-    attrs,
+    attrs || {},
   );
 
   return eleventyImg.generateHTML(metadata, imageAttributes, {
