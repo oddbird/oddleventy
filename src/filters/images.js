@@ -65,7 +65,9 @@ const image = (src, alt, attrs, sizes, getUrl) => {
     filenameFormat: (id, imgSrc, width, format) => {
       const extension = path.extname(imgSrc);
       const name = path.basename(imgSrc, extension);
-      return `${name}-${width}w.${format}`;
+      // Include `id` to prevent images with the same filename from overriding
+      // one another (see: https://github.com/11ty/eleventy-img/issues/112)
+      return `${name}-${width}w-${id}.${format}`;
     },
   };
 
