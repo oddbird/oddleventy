@@ -1,13 +1,13 @@
 'use strict';
 
-const { taxonomy } = require('#/taxonomy');
+const path = require('path');
 
-const responsiveConfig = taxonomy.img.srcset.map((size) => ({
-  width: size,
-  rename: {
-    suffix: `-${size}`,
-  },
-}));
+const eleventyImg = require('@11ty/eleventy-img');
+const _ = require('lodash');
+
+const { fromTaxonomy } = require('#/taxonomy');
+
+const imgConfig = fromTaxonomy('img');
 
 /* @docs
 label: Responsive Images
@@ -15,58 +15,88 @@ category: File
 */
 
 /* @docs
-label: imgSuffix
+label: image
 category: responsive images
-note: Add img suffix for responsiveness
+note: Generate responsive image using eleventy img plugin
 example: |
-  <img srcset="{{ src | imgSuffix('320') }} 320w" />
+  {%- image src, "alt text", {"class":"my-image"}, "media" -%}
 params:
-  imgSrc:
+  src:
     type: string
-  suffix:
-    type: string | number
+  alt:
+    type: string | none
+    default: none
+  attrs:
+    type: object
+    default: '{}'
+  sizes:
+    type: string | none
+    default: none
+    note: |
+      Only required for small images, since the default is 100vw.
+      See taxonomy data for named sizes
+      like "card", "media", and "gallery".
+  getUrl:
+    type: boolean | none
+    default: none
+    note: |
+      Returns url to largest jpeg image instead of full HTML
 */
-const imgSuffix = (imgSrc, suffix) => {
-  const idx = imgSrc.lastIndexOf('.');
-  const imgPath = imgSrc.substring(0, idx);
-  const ext = imgSrc.substring(idx + 1);
-  return `${imgPath}-${suffix}.${ext}`;
-};
+const image = (src, alt, attrs, sizes, getUrl) => {
+  const imgSizes =
+    sizes && imgConfig.sizes[sizes]
+      ? imgConfig.sizes[sizes]
+      : sizes || imgConfig.sizes.default;
 
-/* @docs
-label: imgSize
-category: responsive images
-note: Resize image height/width attributes to match output
-example: |
-  {% set size = img.width | imgSize(img.height) %}
-  <img src="..." width="{{ size.width }}" height="{{ size.height }}" />
-params:
-  width:
-    type: number
-    default: null
-  height:
-    type: number
-    default: null
-*/
-const imgSize = (width = null, height = null, size) => {
-  const img = { width, height };
-  const explicitSize = taxonomy.img.sizes[size]
-    ? taxonomy.img.sizes[size].fallback
-    : size;
+  const options = {
+    widths: imgConfig.widths,
+    formats: imgConfig.formats,
+    urlPath: '/assets/images/',
+    outputDir: './_site/assets/images/',
+    sharpJpegOptions: {
+      progressive: true,
+      quality: 80,
+    },
+    sharpWebpOptions: {
+      quality: 60,
+      nearLossless: true,
+      reductionEffort: 3,
+    },
+    filenameFormat: (id, imgSrc, width, format) => {
+      const extension = path.extname(imgSrc);
+      const name = path.basename(imgSrc, extension);
+      // Include `id` to prevent images with the same filename from overriding
+      // one another (see: https://github.com/11ty/eleventy-img/issues/112)
+      return `${name}-${width}w-${id}.${format}`;
+    },
+  };
 
-  const fallback =
-    typeof explicitSize === 'number' ? explicitSize : taxonomy.img.fallback;
+  // generate images; this is async but we don’t wait
+  eleventyImg(src, options);
 
-  if (width && width > fallback) {
-    img.width = fallback;
-    img.height = height ? Math.round((fallback / width) * height) : height;
+  // eslint-disable-next-line no-sync
+  const metadata = eleventyImg.statsSync(src, options);
+
+  if (getUrl) {
+    const data = metadata.jpeg[metadata.jpeg.length - 1];
+    return data.url;
   }
 
-  return img;
+  const imageAttributes = _.merge(
+    {
+      alt: alt || '',
+      sizes: imgSizes,
+      loading: 'lazy',
+      decoding: 'async',
+    },
+    attrs || {},
+  );
+
+  return eleventyImg.generateHTML(metadata, imageAttributes, {
+    whitespaceMode: 'inline',
+  });
 };
 
 module.exports = {
-  imgSize,
-  imgSuffix,
-  responsiveConfig,
+  image,
 };

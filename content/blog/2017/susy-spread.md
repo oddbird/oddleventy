@@ -18,6 +18,7 @@ summary: |
   overview of one core concept: **spread**.
 date: 2017-06-13
 ---
+{% import 'embed.macros.njk' as embed %}
 
 Spread isn't new to Susy3, [or even to Susy generally], but its full
 power is usually hidden behind other settings (like `gutter-position` in
@@ -37,19 +38,31 @@ available gutters. Most grids only put gutters between the columns. That
 means there will be one less gutter than there are columns. We call that
 a `narrow` container-spread, and make it the default.
 
-<img src="{{ site.images }}blog/2017/spread/context-narrow.jpg" class="extend-small" alt="container-spread: narrow" />
+{{ embed.img(
+  src="blog/2017/spread/context-narrow.jpg",
+  alt="container-spread: narrow",
+  attrs={"class":"extend-small"}
+) }}
 
 Some grids use "split" gutters, with half of a gutter on either side of
 a column – forming full-gutters between columns, and an extra half at
 the edges. Mathematically, that means we have an equal number of gutters
 and columns. We call that a `wide` spread.
 
-<img src="{{ site.images }}blog/2017/spread/context-wide.jpg" class="extend-small" alt="container-spread: wide" />
+{{ embed.img(
+  src="blog/2017/spread/context-wide.jpg",
+  alt="container-spread: wide",
+  attrs={"class":"extend-small"}
+) }}
 
 Occasionally, a grid will have full gutters on both sides, meaning there
 is one more gutter than columns. We call that a `wider` spread.
 
-<img src="{{ site.images }}blog/2017/spread/context-wider.jpg" class="extend-small" alt="container-spread: wider" />
+{{ embed.img(
+  src="blog/2017/spread/context-wider.jpg",
+  alt="container-spread: wider",
+  attrs={"class":"extend-small"}
+) }}
 
 ## Spread on Spans
 
@@ -58,19 +71,31 @@ grid-spanning elements. In most systems, including the new [CSS Grid
 module], all spans are `narrow` – meaning they only span intermediate
 gutters.
 
-<img src="{{ site.images }}blog/2017/spread/span-narrow.jpg" class="extend-small" alt="spread: narrow" />
+{{ embed.img(
+  src="blog/2017/spread/span-narrow.jpg",
+  alt="spread: narrow",
+  attrs={"class":"extend-small"}
+) }}
 
 Occasionally it's useful to span as many gutters as columns – a `wide`
 spread – if you have split-padding gutters, for example, or if you want
 elements to touch at certain places, or if you are pushing and pulling
 elements in the grid.
 
-<img src="{{ site.images }}blog/2017/spread/span-wide.jpg" class="extend-small" alt="spread: wide" />
+{{ embed.img(
+  src="blog/2017/spread/span-wide.jpg",
+  alt="spread: wide",
+  attrs={"class":"extend-small"}
+) }}
 
 It's rare that you need to span a `wider` spread, but we'll let you
 decide if it's useful.
 
-<img src="{{ site.images }}blog/2017/spread/span-wider.jpg" class="extend-small" alt="spread: wider" />
+{{ embed.img(
+  src="blog/2017/spread/span-wider.jpg",
+  alt="spread: wider",
+  attrs={"class":"extend-small"}
+) }}
 
 [CSS Grid module]: /2016/09/19/css-grid-layout/
 

@@ -5,7 +5,7 @@ logo: tegy
 client: &client Tegy
 date: 2018-07-15
 image:
-  src: projects/tegy/desktop.jpg
+  src: projects/tegy/grid-desktop.jpg
   alt: School schedule grid
 people:
   - &furman
@@ -24,9 +24,9 @@ press:
     <<: *furman
     slug: innovative
   - text: |
-      I have been having so much fun with this 
-      tool. The tool has been very helpful and 
-      you all have really **helped me think about 
+      I have been having so much fun with this
+      tool. The tool has been very helpful and
+      you all have really **helped me think about
       scheduling creatively.** Thanks again!
     name: Dr. Amy Vondra
     face: amy-vondra.jpg

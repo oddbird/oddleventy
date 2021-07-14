@@ -21,6 +21,22 @@ img {
     contrast(var(--img-contrast, var(--img-contrast--default, 1)));
 }
 
+// Picture
+// -------
+/// The picture element shouldn't be part of the DOM tree
+/// @group init-media
+picture {
+  display: contents;
+}
+
+// Source
+// -------
+/// The source element is never shown
+/// @group init-media
+source {
+  display: none;
+}
+
 // Audio
 // -----
 /// Audio is full-width by default.
