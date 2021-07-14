@@ -63,34 +63,56 @@ container.
 ```scss
 article,
 section {
-  contain: layout size style;
+  container-type: inline-size;
 }
 ```
 
-The `contain` property is part of the existing [CSS Containment
-Module](https://drafts.csswg.org/css-contain/). The `layout` value activates
-[layout
-containment](https://drafts.csswg.org/css-contain/#valdef-contain-layout) on the
-container, which ensures that "nothing outside can affect its internal layout,
-and vice versa." `Size` also [currently
-exists](https://drafts.csswg.org/css-contain/#size-containment) as a value for
-the `contain` property, and enables laying out a containment box without
-accounting for its descendants in either the inline or block axes.
-`Style` [containment](https://drafts.csswg.org/css-contain/#style-containment)
-isolates counters that might exist inside of the container.
+The `container-type`^[_Syntax for establishing a containment context was updated
+**July 14, 2021** to use the new `container-type` and `container-name`
+properties instead of `contain`._] property turns on containment for the
+selected elements, allowing for the testing of aspects such as style, size, and
+state.
+
+The `inline-size` value specifies that, in this case, queries will be made
+against the containing element's [inline
+axis](https://drafts.csswg.org/css-writing-modes-4/#inline-axis).
+[`Layout`](https://drafts.csswg.org/css-contain/#valdef-contain-layout) and
+[`size`](https://drafts.csswg.org/css-contain/#size-containment)^[_A previous
+version of this article listed `style` and `layout` as required values for the
+`contain` property when establishing a containment context. These values are now
+automatically applied when using the new `container-type` and `container-name`
+properties. Updated **July 14, 2021**_.] containment are applied automatically
+as well.
+
+(`Block-size` is also being considered as a containment type in the new
+proposal. `Inline-size` seemed to satisfy more use-cases, so is being developed
+first.)
+
+Containers can also be named:
 
 ```scss
 article,
 section {
-  contain: layout inline-size style;
+  container-name: demo;
+  container-type: inline-size;
 }
 ```
 
-With `inline-size`, a proposed change to the Containment Module, authors can be
-more specific when declaring in which dimension containment should be applied.
-(`Block-size` is also being considered as a containment type in the new
-proposal. `Inline-size` seemed to satisfy more use-cases, so is being developed
-first.)
+And the `container-type` and `container-name` properties can be combined by
+using the `container` shorthand property:
+
+```scss
+article,
+section {
+  container: inline-size / demo;
+}
+
+ @container demo (min-width: 30em) {
+   .element {
+      /* styles to apply */
+   }
+ }
+```
 
 ### Apply @-rules at desired breakpoints
 
