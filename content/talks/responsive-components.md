@@ -30,6 +30,8 @@ events:
     url: https://smashingconf.com/meets-css/
     date: 2021-07-08
     adr: Online
+    slides: https://slides.oddbird.net/css-next/smashing/
+    video: https://vimeo.com/showcase/8659526
   - venue: CSS Café
     url: https://www.meetup.com/CSS-Cafe/events/278822813/
     date: 2021-06-24
