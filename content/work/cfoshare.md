@@ -27,11 +27,23 @@ summary: |
   migrating content,
   optimizing responsive images,
   and training CFOshare staff in continued maintenance.
+  CFOshare is a "fractional CFO"
+  that serves as an outsourced finance 
+  and accounting department
+  for a range of businesses.
 ---
 
-CFOshare is a "fractional CFO"
-that serves as an outsourced finance and accounting department
-for a range of businesses.
+**Dates**: 2018 - 2020 
+
+**Sector**: Finance & Accounting
+
+**What We Did**: 
+- Transitioned website to WordPress CMS
+- Brand implementation
+- Content migration
+- Image optimization
+- Trained staff in on-going maintenance  
+
 
 {% import 'quotes.macros.njk' as quotes %}
 {{ quotes.grid(press) }}

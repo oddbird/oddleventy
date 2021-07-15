@@ -29,5 +29,17 @@ summary: |
   with a follow-up Q&A.
 ---
 
+**Dates**: 2020 
+
+**Sector**: Multinational E-Commerce Technology
+
+**What We Did**: 
+  - Analysis of team needs & interests
+  - Custom CSS training videos
+  - Follow-up Q&A
+
+
+
 {% import 'quotes.macros.njk' as quotes %}
 {{ quotes.blockquote(press[0]) }}
+

@@ -37,7 +37,8 @@ press:
     <<: *greg
     slug: future
 summary: |
-  Aunalytics provides a full suite of data-analytics and management tools,
+  Aunalytics provides a full suite of data-analytics 
+  and management tools,
   including the Aunsight Dataflow service.
   The "expression builder" is an embedded Vue application
   allowing users to create and update the dataflows
@@ -46,6 +47,18 @@ summary: |
   Advanced users can also edit flows directly in JSON,
   or move seamlessly between the two modes.
 ---
+
+**Dates**: 2018 - 2019 
+
+**Sector**: Data-Analysis & Management Technology
+
+**What We Did**: 
+  - Research & Concepting
+  - User Interviews
+  - User Experience Design
+  - Front-end & Vue Development
+  - Back-end Development
+  - Usability Testing
 
 {% import 'quotes.macros.njk' as quotes %}
 
