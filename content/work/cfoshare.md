@@ -7,7 +7,8 @@ image:
   alt: CFOshare's wordpress articles about finance
   position: top
 client: &client CFOshare
-date: 2019-05-29
+date: 2018-05-29
+end: 2020-05-29
 press:
   - text: |
       OddBird is very pleasant to work with and responsive.
