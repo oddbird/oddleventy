@@ -3,7 +3,8 @@ title: Expression Builder
 sub: Tools for data analytics
 logo: aunalytics
 client: &client Aunalytics
-date: 2019-05-14
+date: 2018-05-14
+end: 2019-05-14
 image:
   src: projects/aunalytics/exbldr.jpg
   alt: Tools for data analytics
@@ -36,8 +37,14 @@ press:
       and excited to continue with future projects.
     <<: *greg
     slug: future
+sector:
+  - Data-Analysis
+  - Management Technology
+tags:
+  - Data-Analysis
+  - Management Technology
 summary: |
-  Aunalytics provides a full suite of data-analytics 
+  Aunalytics provides a full suite of data-analytics
   and management tools,
   including the Aunsight Dataflow service.
   The "expression builder" is an embedded Vue application
@@ -48,18 +55,50 @@ summary: |
   or move seamlessly between the two modes.
 ---
 
-**Dates**: 2018 - 2019 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'quotes.macros.njk' as quotes %}
 
-**Sector**: Data-Analysis & Management Technology
 
-**What We Did**: 
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    notch='0',
+    content=embed.img(
+      src='pages/trig-phone.jpg',
+      alt='trig race screen',
+      width=744 ,
+      height=1611,
+      sizes='media'
+    )
+  )
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Design & UX
+
   - Research & Concepting
   - User Interviews
   - User Experience Design
-  - Front-end & Vue Development
-  - Back-end Development
   - Usability Testing
 
-{% import 'quotes.macros.njk' as quotes %}
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Development
+
+  - Front-end & Vue Development
+  - Back-end Development
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
 
 {{ quotes.grid(press) }}
