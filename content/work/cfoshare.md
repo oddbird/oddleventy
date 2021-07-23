@@ -7,8 +7,8 @@ image:
   alt: CFOshare's wordpress articles about finance
   position: top
 client: &client CFOshare
-date: 2018-05-29
-end: 2020-05-29
+date: 2018-07-01
+end: 2020-07-01
 press:
   - text: |
       OddBird is very pleasant to work with and responsive.
@@ -21,6 +21,12 @@ press:
     venue: *client
 links:
   site: https://cfoshare.org/
+sector:
+  - Finance
+  - Accounting
+tags:
+  - Finance
+  - Accounting
 summary: |
   OddBird helped CFOshare transition their marketing site
   to WordPress CMS --

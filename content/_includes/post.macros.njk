@@ -366,6 +366,8 @@ params:
 
     {{ client(post.data.client) }}
 
+    {{ sectors(post.data.sector) }}
+
     {% if not post.data.events %}
       {% if dateformat %}
         {{ pubdate(post.date, post.data.end, dateformat) }}
@@ -558,6 +560,23 @@ params:
     </span>
   {% endif %}
 {% endmacro %}
+
+{# @docs
+label: sectors
+category: metadata
+note: Show the sectors clients work in.
+params:
+  names:
+    type: string | list
+#}
+{% macro sectors(names) -%}
+  {%- if names %}
+    <i>in</i>
+    {% for name in names %}
+    <b>{{ name | mdInline | safe }}</b>
+      {% endfor %}
+  {% endif -%}
+{%- endmacro %}
 
 {# @docs
 label: linked
