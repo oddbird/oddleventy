@@ -573,7 +573,11 @@ params:
   {%- if names %}
     <i>in</i>
     {% for name in names %}
+    {{ ' & ' if loop.last and (loop.length > 2) }}
     <b>{{ name | mdInline | safe }}</b>
+      {%- if not loop.last -%}
+        {{ ' & ' if loop.length == 2 else ', ' }}
+      {%- endif -%}
       {% endfor %}
   {% endif -%}
 {%- endmacro %}
