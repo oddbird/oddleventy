@@ -7,6 +7,12 @@ date: 2018-07-15
 image:
   src: projects/tegy/desktop.jpg
   alt: School schedule grid
+experiencegrid:
+  - img: work/timedesigner/experience-editing.jpg
+    alt: Browser inspector showing grid markup and css for a single experience
+scenariogrid:
+  - img: work/timedesigner/setting-up-scenario-grid.jpg
+    alt: A new resource planning grid showing the start and end times
 people:
   - &furman
     name: Furman Brown
@@ -35,7 +41,7 @@ tasks:
   - Responsive Design
   - Project Architecture
   - User Experience Design
-  - WCAG & HIPAA Compliant  
+  - WCAG & HIPAA Compliant
 press:
   - text: |
       OddBird is high-caliber and nimble.
@@ -46,9 +52,9 @@ press:
     <<: *furman
     slug: innovative
   - text: |
-      I have been having so much fun with this 
-      tool. The tool has been very helpful and 
-      you all have really **helped me think about 
+      I have been having so much fun with this
+      tool. The tool has been very helpful and
+      you all have really **helped me think about
       scheduling creatively.** Thanks again!
     name: Dr. Amy Vondra
     face: amy-vondra.jpg
@@ -119,11 +125,11 @@ summary: |
 
 ## What They Needed
 
-Tegy came to OddBird 
+Tegy came to OddBird
 with a multi-year plan
 and a vision for
 a suite of web applications
-to help educators 
+to help educators
 improve their students' school experience
 through organization design.
 They needed project planning and guidance,
@@ -138,7 +144,7 @@ and on-going maintenance.
 
 As with most OddBird web projects,
 we started with a planning phase
-to look deeply into the needs 
+to look deeply into the needs
 of the educators who would use Tegy Time,
 as well as Tegy's vision
 for their business.
@@ -152,7 +158,7 @@ and prioritization.
 But with such a huge need
 and broad vision,
 on-going guidance
-was key 
+was key
 to moving the project
 toward the successful launch
 of a usable tool.
@@ -160,7 +166,7 @@ of a usable tool.
 At regular intervals,
 throughout the design & development phase,
 OddBird met with Furman
-on video calls 
+on video calls
 and in person.
 We spent time listening to the vision
 and asking strategic questions --
@@ -175,12 +181,12 @@ Tegy's long-term goals.
 When presented with big-picture vision,
 we helped suggest specific,
 small tasks
-that would move the project 
+that would move the project
 in the desired direction.
 
-> When presented with small feature ideas, 
-we keep asking why. 
-When presented with a big vision, 
+> When presented with small feature ideas,
+we keep asking why.
+When presented with a big vision,
 > we keep asking how.
 
 Together,
@@ -193,14 +199,14 @@ Drawing on our many years of experience,
 deep knowledge of web app development,
 and involvement at the cutting edge our fields,
 OddBird guided Tegy
-in a direction that would 
+in a direction that would
 have the biggest impact for users
 without blowing the budget.
 
 At the end of our conversations,
 we documented proposed features
 in the Trello project management tool.
-We organized 
+We organized
 and prioritized Trello cards
 into a two-week plan --
 what's the most important feature
@@ -217,55 +223,77 @@ to be priorized later.
 
 ### CSS Grid
 
-One of the key features we needed to build was a flexible 
-resource planning area. 
-Each scenario has an editable start and end time which we 
-use to calculate the total number of minutes in a school day. 
+One of the key features we built was a flexible resource planning area.
+Each scenario has an editable start and end time which we
+use to calculate the total number of minutes in a school day.
 We pass this data to a CSS variable on the grid container.
 
 ```html
 <div class="row-grid" style="--day: 420;">
 ```
 
-In our CSS grid definition, 
-we use this variable to set the number of columns.
+In our CSS grid definition,
+we use this variable to set the total number of columns.
+We end up with 1 column for each minute of the school day.
 
 ```css
-grid-template-columns: repeat(var(--day),minmax(1px,1fr));
+.row-grid {
+  grid-template-columns: repeat(var(--day),minmax(1px,1fr));
+}
 ```
 
-TODO …The grid’s vertical lines are drawn every 30 minutes… 
-Using a css border and inline style with ...
+{{ embed.figure(
+  data=scenariogrid,
+  caption='After creating a new scenario, the start and end times are used to make the overall grid.'
+) }}
 
-Each item on the grid is placed using it’s start time 
-in minutes from the day start and duration.
-These values are stored Inline as variables and
-used as the grid start and span amounts in our CSS:
+The example above shows the vertical grid lines drawn with CSS borders using a style for the hour (`major`) and half hour (`minor`) segments.
+
+Every item (`exp`) on the grid is placed using a start time (`--start`)
+and duration (`--span`).
+We include the option to add a transition period (`--plus`) to each item.
+
+```html
+<div style="--start: 410; --span: 55; --plus: 10;" class="exp">
+```
+
+The duration and transition period are added to create a `--total`
+span amount for the grid-column.
 
 ```css
-grid-column: calc(var(--start) + 1)/span var(--total);
+.exp {
+  --total: calc(var(--span) + var(--plus));
+  grid-column: calc(var(--start) + 1) / span var(--total);
+}
+
 ```
+
+{{ embed.figure(
+  data=experiencegrid,
+  caption='Using the Inspector, we see how an items variables are defined and used in the markup and css.'
+) }}
+
 
 ### Drag-and-Drop Schedule Interface
 
 ## On-Going
 
-In the three years 
+In the three years
 since TimeDesigner launched,
-OddBird has continued 
+OddBird has continued
 to support the project.
-We have provided periodic maintenance - 
+We have provided periodic maintenance -
 though the site has needed relatively little -
 and bug fixes.
 For three years,
 Tegy has been training school teams
 and scheduling engineers
 in organization design using Tegy Time.
-As of 2021, 
+As of 2021,
 we are excited to work with Tegy again
 to create Phase 2 of Tegy Time,
 enabling more schools
 to innovate organization models,
 make better use of their resources,
-and improve the learning environment 
+and improve the learning environment
 for everyone.
