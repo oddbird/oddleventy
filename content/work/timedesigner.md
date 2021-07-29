@@ -145,9 +145,38 @@ and on-going maintenance.
 As with most OddBird web projects,
 we started with a planning phase
 to look deeply into the needs
-of the educators who would use Tegy Time,
+of the educators who would use TimeDesigner,
 as well as Tegy's vision
 for their business.
+R&C included creation of a 
+project goals document,
+user profiles to understand
+the actions different users
+may want to take a different stages
+in their journey through the app.
+We created a data model
+and glossary of terms,
+with database requirements and relationships.
+We designed wireframes --
+unbranded and interactive
+sketches of TimeDesigner's core features.
+
+<figure>
+<img src="{{ site.images }}work/timedesigner/wireframe.jpg" class="extend-full" alt="" /><figcaption>Wireframe of TimeDesigner's schedule builder</figcaption>
+</figure>
+
+Based on our research
+and designs,
+we compiled a full list of 
+all the required features 
+to reach Tegy's goals --
+itemized, estimated, and prioritized
+into several development phases.
+Tegy used the R&C deliverables
+to pitch investors 
+and to raise funding.
+They were successful!
+
 
 ## Project Management
 
@@ -184,10 +213,10 @@ small tasks
 that would move the project
 in the desired direction.
 
-> When presented with small feature ideas,
+> When clients present us with small feature ideas,
 we keep asking why.
 When presented with a big vision,
-> we keep asking how.
+> we keep asking how. - Miriam Suzanne
 
 Together,
 we dug into the details
@@ -203,13 +232,13 @@ in a direction that would
 have the biggest impact for users
 without blowing the budget.
 
-At the end of our conversations,
+At the end of each planning conversation,
 we documented proposed features
 in the Trello project management tool.
 We organized
 and prioritized Trello cards
-into a two-week plan --
-what's the most important feature
+into two-week plans --
+what are the most important features
 right now --
 and saved long-term feature goals
 to be priorized later.
@@ -274,9 +303,36 @@ span amount for the grid-column.
 ) }}
 
 
-### Drag-and-Drop Schedule Interface
+### Drag-and-Drop Schedule Interface with CSS Grid
+
+We combined drag-and-drop interface 
+with CSS grid. Anytime you drag an 'experience,' 
+the software updates CSS variables 
+which makes the grid move around responsively.
+
+<figure>
+<img src="{{ site.images }}work/timedesigner/dragdrop.jpg" class="extend-full" alt="" /><figcaption>Each rectangle or "experience" can be dragged and dropped, updating the CSS variables.</figcaption>
+</figure>
+
+
+### Print-to-PDF Reports
+
+We used print-to-pdf to generate reports which is cool.
+
+<figure>
+<img src="{{ site.images }}work/timedesigner/reports.jpg" class="extend-full" alt="" /><figcaption>Reports generated with print-to-pdf</figcaption>
+</figure>
+
+### Site-Wide Undo & Redo
+
+There is a site-wide undo & redo.
+
 
 ## On-Going
+
+<figure>
+<img src="{{ site.images }}work/timedesigner/fullapp.jpg" class="extend-full" alt="" /><figcaption>Selecting a color for experiences in a TimeDesigner schedule</figcaption>
+</figure>
 
 In the three years
 since TimeDesigner launched,
@@ -288,10 +344,10 @@ and bug fixes.
 For three years,
 Tegy has been training school teams
 and scheduling engineers
-in organization design using Tegy Time.
+in organization design using TimeDesigner.
 As of 2021,
 we are excited to work with Tegy again
-to create Phase 2 of Tegy Time,
+to create Phase 2 of TimeDesigner,
 enabling more schools
 to innovate organization models,
 make better use of their resources,
