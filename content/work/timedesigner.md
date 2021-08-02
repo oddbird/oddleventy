@@ -7,12 +7,21 @@ date: 2018-07-15
 image:
   src: projects/tegy/desktop.jpg
   alt: School schedule grid
+fullgrid:
+  - img: work/timedesigner/full-grid.jpg
+    alt: A completed scenario with experiences laid out in a grid
 experiencegrid:
   - img: work/timedesigner/experience-editing.jpg
     alt: Browser inspector showing grid markup and css for a single experience
+emptygridoverlay:
+  - img: work/timedesigner/empty-grid-overlay.jpg
+    alt: The Firefox Grid Inspector tool includes an overlay of the grid lines
 scenariogrid:
   - img: work/timedesigner/setting-up-scenario-grid.jpg
-    alt: A new resource planning grid showing the start and end times
+    alt: An empty resource planning grid showing the start and end times
+overlapexperience:
+  - img: work/timedesigner/overlap-experience.jpg
+    alt: A row with overlapping experiences
 people:
   - &furman
     name: Furman Brown
@@ -221,9 +230,16 @@ to be priorized later.
 
 ## Design and Development
 
-### CSS Grid
+### Creating a Flexible Schedule with CSS Grid and Custom Properties
 
-One of the key features we built was a flexible resource planning area.
+One of the key features we built was a flexible resource planning `scenario`.
+
+{{ embed.figure(
+  data=fullgrid,
+  caption='An example of a scenario when many items, or experiences,
+  are added to the planning grid.'
+) }}
+
 Each scenario has an editable start and end time which we
 use to calculate the total number of minutes in a school day.
 We pass this data to a CSS variable on the grid container.
@@ -233,7 +249,7 @@ We pass this data to a CSS variable on the grid container.
 ```
 
 In our CSS grid definition,
-we use this variable to set the total number of columns.
+we use this `--day` variable to set the total number of columns.
 We end up with 1 column for each minute of the school day.
 
 ```css
@@ -244,14 +260,25 @@ We end up with 1 column for each minute of the school day.
 
 {{ embed.figure(
   data=scenariogrid,
-  caption='After creating a new scenario, the start and end times are used to make the overall grid.'
+  caption='After creating a new scenario,
+  the start and end times are used to make the overall grid.
+  This example also shows vertical grid lines drawn with
+  CSS borders using two different colors for the hour
+  (`major`) and half hour (`minor`) segments.'
 ) }}
 
-The example above shows the vertical grid lines drawn with CSS borders using a style for the hour (`major`) and half hour (`minor`) segments.
 
-Every item (`exp`) on the grid is placed using a start time (`--start`)
+{{ embed.figure(
+  data=emptygridoverlay,
+  caption='We can see a great overview of the grid by
+  using the grid inspector tool in Firefox.'
+) }}
+
+Each experience (`exp`) on the grid is placed
+using a start time (`--start`)
 and duration (`--span`).
-We include the option to add a transition period (`--plus`) to each item.
+We include the option to add a transition period (`--plus`)
+as well.
 
 ```html
 <div style="--start: 410; --span: 55; --plus: 10;" class="exp">
@@ -265,12 +292,34 @@ span amount for the grid-column.
   --total: calc(var(--span) + var(--plus));
   grid-column: calc(var(--start) + 1) / span var(--total);
 }
-
 ```
 
 {{ embed.figure(
   data=experiencegrid,
-  caption='Using the Inspector, we see how an items variables are defined and used in the markup and css.'
+  caption='Using the Inspector, we see how variables are defined and
+  used in the markup and css to place experiences anywhere on the grid.'
+) }}
+
+For optimal flexibilty,
+an experience may overlap in time with each other.
+Thanks to CSS Grid,
+we are able to place these in a sensible way with minimal effort.
+By using `grid-auto-flow` with a value of `dense`
+we can allow the row to place experiences where they
+fit regardless of when they were added in the markup.
+Additionally, we can assign the row a minumum height
+and allow it to grow taller as needed by using `minmax`.
+
+```css
+.row-grid {
+  grid-auto-flow: dense;
+  grid-auto-rows: minmax(1.75rem,auto);
+}
+```
+
+{{ embed.figure(
+  data=overlapexperience,
+  caption='CSS Grid allows us to backfill available space of items regardless of document ordering. This can lead to accessiblity issues if not applied with care.'
 ) }}
 
 
