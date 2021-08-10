@@ -6,6 +6,10 @@ image:
 logo: shopify
 client: &client Shopify
 date: 2020-08-15
+end: 2020-06-15
+tags: 
+  - E-Commerce Sector
+  - Technology Sector
 press:
   - text: |
       We take submissions from our team,

@@ -14,12 +14,15 @@ people:
     face: meghan-arnold.jpg
     url: https://twitter.com/MeghanCArnold/status/1318671589618061312
     venue: *client
-date: 2020-10-20
+date: 2020-06-29
+end: 2020-10-20
 links:
   play game: https://game.fonts.adobe.com/
 tags:
   - _post
   - Case Study
+  - Design Sector
+  - Technology Sector
 sample:
   desktop:
     src: adobe/desktop.jpg

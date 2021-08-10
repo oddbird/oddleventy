@@ -21,12 +21,9 @@ press:
     venue: *client
 links:
   site: https://cfoshare.org/
-sector:
-  - Finance
-  - Accounting
 tags:
-  - Finance
-  - Accounting
+  - Financial Sector
+  - Accounting Sector
 summary: |
   OddBird helped CFOshare transition their marketing site
   to WordPress CMS --

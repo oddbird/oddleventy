@@ -9,7 +9,11 @@ image:
   src: projects/trig.jpg
   alt: Athlete list tied to their location and elevation
 client: SRAM/Quarq
-date: 2016-12-15
+date: 2015-01-01
+ends: 2016-12-15
+tags: 
+  - Sports Sector
+  - Wellness Sector
 tasks:
   - Product Branding
   - User Experience Design

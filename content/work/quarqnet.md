@@ -12,10 +12,13 @@ image:
   width: 2786
   height: 958
 client: SRAM/Quarq
-date: 2016-12-15
+date: 2015-01-01
+end: 2016-12-15
 tags:
   - _post
   - Case Study
+  - Sports Sector
+  - Wellness Sector
 sample:
   desktop:
     src: quarqnet/desktop.jpg

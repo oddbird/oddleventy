@@ -8,6 +8,9 @@ image:
   alt: UI component library color palette options grouped by category
 client: &client Second Measure
 date: 2019-03-29
+end: 2020-12-15
+tags:
+  - Analytics Sector
 tasks:
   - React Component Library
   - Sass/CSS Design System Architecture

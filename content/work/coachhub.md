@@ -16,12 +16,14 @@ people:
     url: https://www.linkedin.com/in/sarataillon/
     title: CTO
     venue: *client
-date: 2015-09-15
+date: 2016-01-01
+end: 2014-01-01
 links:
   site: https://coachhub.resilienceboost.com/
 tags:
   - _post
   - Case Study
+  - Wellness Sector
 sample:
   desktop:
     src: orcas/desktop.jpg

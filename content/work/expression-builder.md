@@ -41,8 +41,8 @@ sector:
   - Data-Analysis
   - Management Technology
 tags:
-  - Data-Analysis
-  - Management Technology
+  - Analysis Sector
+  - Management Technology Sector
 summary: |
   Aunalytics provides a full suite of data-analytics
   and management tools,
