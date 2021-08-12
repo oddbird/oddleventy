@@ -33,16 +33,47 @@ summary: |
   with a follow-up Q&A.
 ---
 
-**Dates**: 2020
-
-**Sector**: Multinational E-Commerce Technology
-
-**What We Did**:
-  - Analysis of team needs & interests
-  - Custom CSS training videos
-  - Follow-up Q&A
-
-
-
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
-{{ quotes.blockquote(press[0]) }}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    notch='0',
+    content=embed.img(
+      src='pages/shopify-phone.jpg',
+      alt='trig race screen',
+      width=744 ,
+      height=1611,
+      sizes='media'
+    )
+  )
+) %}
+
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Training
+
+- Analysis of team needs & interests
+- Custom CSS training video
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Q&A
+
+- Follow-up question & answer session
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
+
+{{ quotes.grid(press) }}
