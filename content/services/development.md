@@ -38,8 +38,6 @@ summary: |
     content=embed.img(
       src='pages/trig-phone.jpg',
       alt='trig race screen',
-      width=744 ,
-      height=1611,
       sizes='media'
     )
   )
@@ -90,8 +88,6 @@ summary: |
     content=embed.img(
       src='pages/medcurbside-phone.jpg',
       alt='medcurbside welcome screen',
-      width=758 ,
-      height=1640,
       sizes='media'
     )
   )

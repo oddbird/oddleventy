@@ -63,8 +63,6 @@ summary: |
           {{ embed.img(
             src=['projects', desktop.src] | join('/'),
             alt=desktop.alt,
-            width=desktop.width,
-            height=desktop.height,
             attrs={
               'class': 'sample-desktop',
               'style': {
@@ -81,8 +79,6 @@ summary: |
             content=embed.img(
               src=['projects', mobile.src] | join('/'),
               alt=mobile.alt,
-              width=mobile.width,
-              height=mobile.height,
               sizes='media'
             )
           ) }}

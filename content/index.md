@@ -6,7 +6,7 @@ banner: |
   [Development](/services/development/), &
   [Training](/services/speaking/)*
 image:
-  src: projects/orcas/home-iphone.jpg
+  src: projects/orcas/coachhub-home-iphone.jpg
   alt: CoachHub App on iPhone
   device: iphone
   fill: white
@@ -65,8 +65,6 @@ tools:
   media=embed.img(
     src='writing/jssass.png',
     alt='Jump Start Sass, by Miriam Suzanne and Kitty Giraudel',
-    width=259,
-    height=449,
     sizes='media'
   )
 ) %}

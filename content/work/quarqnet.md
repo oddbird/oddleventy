@@ -21,11 +21,11 @@ tags:
   - Wellness Sector
 sample:
   desktop:
-    src: quarqnet/desktop.jpg
+    src: quarqnet/bike-desktop.jpg
     alt: Full-screen map of a bike ride path, along with ride metrics
     position: bottom left
   mobile:
-    src: quarqnet/mobile.jpg
+    src: quarqnet/bike-mobile.jpg
     alt: Mobile view of a bike ride path, along with ride metrics
     position: bottom
     fit: contain

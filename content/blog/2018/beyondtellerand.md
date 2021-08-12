@@ -50,7 +50,11 @@ Jared Tarbell and the [Levitated Toy Factory], I picked [one of his art
 pieces] to recreate with CSS variables (aka custom properties) and CSS
 grid layouts.
 
-<img src="{{ site.images }}blog/2018/levitated.jpg" class="extend-small img-border img-spacing extend-small img-border img-spacing" alt="Miriam showing a slide of the CSS Grid generated art inspired by Jared Tarbell" />
+{{ embed.img(
+  src="blog/2018/levitated.jpg",
+  alt="Miriam showing a slide of the CSS Grid generated art inspired by Jared Tarbell",
+  attrs={'class': 'extend-small img-border img-spacing'}
+) }}
 
 I spent that evening studying his image, and translating it into HTML
 and CSS. My first draft relied heavily on `:nth-child()` selectors,

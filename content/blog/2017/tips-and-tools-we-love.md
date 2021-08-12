@@ -38,7 +38,11 @@ formats any response with a content-type of text/json, making it easy to
 read, searchable, and collapsible. Below is a screenshot comparing the
 default json view to the enhanced view after enabling this extension.
 
-<img src="{{ site.images }}blog/2017/tips-tools/before-after-json-viewer.jpg" class="img-border img-border" alt="clean and messy json screenshots" />
+{{ embed.img(
+  src="blog/2017/tips-tools/before-after-json-viewer.jpg",
+  alt="clean and messy json screenshots",
+  attrs={"class":"img-border img-border"}
+) }}
 
 [David Glick]: /authors/david/
 [JSON Viewer]: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
@@ -54,7 +58,11 @@ shortcuts to quickly jump to the next change in the file, show the
 details of a modification, or revert a change. Jonny uses the plugin
 with [Sublime Text], but there are versions for [most text editors].
 
-<img src="{{ site.images }}blog/2017/tips-tools/gitgutter.jpg" class="align-center" alt="screenshot of the Git Gutter plugin in use" />
+{{ embed.img(
+  src="blog/2017/tips-tools/gitgutter.jpg",
+  alt="screenshot of the Git Gutter plugin in use",
+  attrs={"class":"align-center"}
+) }}
 
 [Jonny Gerig Meyer]: /authors/jonny/
 [Git Gutter]: https://github.com/jisaacks/GitGutter
@@ -85,7 +93,10 @@ realizing how vital it is until you use someone else’s computer. Two of
 [Miriam Suzanne’s] most used Alfred features are the [launcher] and
 [searchable clipboard].
 
-![screenshot of the Alfred application launcher in use]
+{{ embed.img(
+  src="blog/2017/tips-tools/alfred-launcher.jpg",
+  alt="screenshot of the Alfred application launcher in use"
+) }}
 
 The launcher allows you to find and open files or applications on your
 computer with just a few keyboard commands and inputs. The Alfred
@@ -102,7 +113,6 @@ non-developers as well.
 [Miriam Suzanne’s]: /authors/miriam/
 [launcher]: https://www.alfredapp.com/help/features/default-results/
 [searchable clipboard]: https://www.alfredapp.com/help/features/clipboard/
-[screenshot of the Alfred application launcher in use]: {{ site.images }}blog/2017/tips-tools/alfred-launcher.jpg
 [created by the Alfred community]: https://www.alfredapp.com/workflows/
 
 ## Adobe Experience Design
@@ -180,7 +190,10 @@ body:before {
 I used six single-line fill-in fields for the breakpoint names and
 values. Breakpoints can be added or removed later if necessary.
 
-![Fill-in text dialog box]
+{{ embed.img(
+  src="blog/2017/tips-tools/fill-ins.jpg",
+  alt="Fill-in text dialog box"
+) }}
 
 This snippet is very useful when you need a fast way to easily see which
 breakpoint you are in when your design needs to change. You can see it
@@ -193,7 +206,6 @@ and [Slack].
 
 [TextExpander]: https://textexpander.com
 [Smile]: https://smilesoftware.com
-[Fill-in text dialog box]: {{ site.images }}blog/2017/tips-tools/fill-ins.jpg
 [in this Pen]: https://codepen.io/stacy/pen/9b76e7d9eb9d730e734aa776a7078fc5/
 [Twitter]: https://twitter.com/oddbird
 [Slack]: http://friends.oddbird.net

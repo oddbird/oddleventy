@@ -25,10 +25,10 @@ tags:
   - Technology Sector
 sample:
   desktop:
-    src: adobe/desktop.jpg
+    src: adobe/vintage-desktop.jpg
     alt: Options for the vintage font tag with Ferris wheel illustrations
   mobile:
-    src: adobe/mobile.jpg
+    src: adobe/vintage-mobile.jpg
     alt: Mobile view of the vintage font tag question
   caption: |
     Adobe's font tags game is a meditation in typography
@@ -54,8 +54,8 @@ herolink:
 funky:
   - img: work/adobe/funky.png
     alt: |
-      Colorful square that says, "My typographic superpower is
-      Funky. fonts.adobe.com"
+      Colorful square that says, 'My typographic superpower is
+      Funky. fonts.adobe.com'
 tasks:
   - User Experience Design
   - Graphic Design
