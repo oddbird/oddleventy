@@ -47,7 +47,7 @@ summary: |
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='pages/trig-phone.jpg',
+      src='pages/cfo-phone.jpg',
       alt='trig race screen',
       width=744 ,
       height=1611,
