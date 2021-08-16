@@ -157,7 +157,7 @@ to look deeply into the needs
 of the educators who would use TimeDesigner,
 as well as Tegy's vision
 for their business.
-R&C included creation of a 
+R&C included creation of a
 project goals document,
 user profiles to understand
 the actions different users
@@ -168,21 +168,25 @@ and glossary of terms,
 with database requirements and relationships.
 We designed wireframes --
 unbranded and interactive
-sketches of TimeDesigner's core features.
+sketches of TimeDesigner’s core features.
 
-<figure>
-<img src="{{ site.images }}work/timedesigner/wireframe.jpg" class="extend-full" alt="" /><figcaption>Wireframe of TimeDesigner's schedule builder</figcaption>
-</figure>
+{{ embed.figure(
+  data=[{
+    img: 'work/timedesigner/wireframe.jpg',
+    alt: 'This early wireframe concept shows a clean table-like display with teachers and times as the column and row headers'
+  }],
+  caption='Wireframe of TimeDesigner’s schedule builder.'
+) }}
 
 Based on our research
 and designs,
-we compiled a full list of 
-all the required features 
+we compiled a full list of
+all the required features
 to reach Tegy's goals --
 itemized, estimated, and prioritized
 into several development phases.
 Tegy used the R&C deliverables
-to pitch investors 
+to pitch investors
 and to raise funding.
 They were successful!
 
@@ -252,10 +256,13 @@ right now --
 and saved long-term feature goals
 to be priorized later.
 
-<figure>
-<img src="{{ site.images }}work/timedesigner/trello-sample.jpg" class="extend-full" alt="" /><figcaption>Trello board project management sample.</figcaption>
-</figure>
-
+{{ embed.figure(
+  data=[{
+    img: 'work/timedesigner/trello-sample.jpg',
+    alt: 'close up of our project management tool with sample user story cards'
+  }],
+  caption='Trello board project management sample.'
+) }}
 
 ## Design and Development
 
@@ -326,7 +333,7 @@ span amount for the grid-column.
 {{ embed.figure(
   data=experiencegrid,
   caption='Using the Inspector, we see how variables are defined and
-  used in the markup and css to place experiences anywhere on the grid.'
+    used in the markup and css to place experiences anywhere on the grid.'
 ) }}
 
 For optimal flexibilty,
@@ -348,29 +355,38 @@ and allow it to grow taller as needed by using `minmax`.
 
 {{ embed.figure(
   data=overlapexperience,
-  caption='CSS Grid allows us to backfill available space of items regardless of document ordering. This can lead to accessiblity issues if not applied with care.'
+  caption='CSS Grid allows us to backfill available
+    space of items regardless of document ordering.
+    This can lead to accessiblity issues if not applied with care.'
 ) }}
 
 
 ### Drag-and-Drop Schedule Interface with CSS Grid
 
-We combined drag-and-drop interface 
-with CSS grid. Anytime you drag an 'experience,' 
-the software updates CSS variables 
+We combined drag-and-drop interface
+with CSS grid. Anytime you drag an 'experience,'
+the software updates CSS variables
 which makes the grid move around responsively.
 
-<figure>
-<img src="{{ site.images }}work/timedesigner/dragdrop.jpg" class="extend-full" alt="" /><figcaption>Each rectangle or "experience" can be dragged and dropped, updating the CSS variables.</figcaption>
-</figure>
-
+{{ embed.figure(
+  data=[{
+    img: 'work/timedesigner/dragdrop.jpg',
+    alt: 'A close up of an experience being dragged on the scheduling grid'
+  }],
+  caption='Each rectangle or "experience" can be dragged and dropped, updating the CSS variables.'
+) }}
 
 ### Print-to-PDF Reports
 
 We used print-to-pdf to generate reports which is cool.
 
-<figure>
-<img src="{{ site.images }}work/timedesigner/reports.jpg" class="extend-full" alt="" /><figcaption>Reports generated with print-to-pdf</figcaption>
-</figure>
+{{ embed.figure(
+  data=[{
+    img: 'work/timedesigner/reports.jpg',
+    alt: 'A preview of the schedule in a table view filled with color coded expereinces with times on top, and categories on the left.'
+  }],
+  caption='Reports generated with print-to-pdf'
+) }}
 
 ### Site-Wide Undo & Redo
 
@@ -379,9 +395,14 @@ There is a site-wide undo & redo.
 
 ## On-Going
 
-<figure>
-<img src="{{ site.images }}work/timedesigner/fullapp.jpg" class="extend-full" alt="" /><figcaption>Selecting a color for experiences in a TimeDesigner schedule</figcaption>
-</figure>
+{{ embed.figure(
+  data=[{
+    img: 'work/timedesigner/fullapp.jpg',
+    alt: ''
+  }],
+  caption='Selecting a color for experiences in a TimeDesigner schedule'
+) }}
+
 
 In the three years
 since TimeDesigner launched,
