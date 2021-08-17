@@ -66,7 +66,7 @@ summary: |
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='pages/expression-phone.jpg',
+      src='pages/expression-sample.jpg',
       alt='trig race screen',
       width=744 ,
       height=1611,

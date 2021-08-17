@@ -59,18 +59,20 @@ summary: |
 
 {{ layout.title('What We Did') }}
 
+
 {% call embed.media_block(
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='pages/trig-phone.jpg',
-      alt='trig race screen',
+      src='pages/workflow-sample.jpg',
+      alt='map of all workflow block colors',
       width=744 ,
       height=1611,
       sizes='media'
     )
   )
 ) %}
+
 
 {% call layout.grid('narrow-columns') %}
 
