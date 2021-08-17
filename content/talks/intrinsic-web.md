@@ -5,6 +5,7 @@ author: miriam
 date: 2021-08-18
 image:
   src: talks/aea-fall-21.png
+  alt: 'Online Together Fall Summit 2021, October 11-13'
 tags:
   - Cascade
   - CSS
