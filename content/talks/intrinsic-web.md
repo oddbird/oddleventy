@@ -36,10 +36,10 @@ This evolution of the responsive web
 is becoming more clear with several new features in CSS.
 We'll look at a number of these developments,
 with a special focus on Cascade Layers
-(giving you control over your own cascade),
+(giving you control over your own cascade)
 and Container Queries
 (allowing components to respond to their immediate context).
 Not only do these features build on
 what we love most about responsive components,
-but they they're designed to address
+but they're designed to address
 some of the biggest challenges in CSS today.
