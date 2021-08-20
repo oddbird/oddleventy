@@ -49,7 +49,7 @@ summary: |
     content=embed.img(
       src='pages/cfo-phone.jpg',
       alt='trig race screen',
-      width=744 ,
+      width=743,
       height=1611,
       sizes='media'
     )
