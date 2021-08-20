@@ -38,9 +38,6 @@ press:
       That worked really well.
     <<: *james
     slug: configurations
-sector:
-  - Data-Analytics
-  - Management Technology
 tags:
   - Analytics Sector
   - Management Technology Sector

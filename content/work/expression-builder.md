@@ -37,9 +37,6 @@ press:
       and excited to continue with future projects.
     <<: *greg
     slug: future
-sector:
-  - Data-Analysis
-  - Management Technology
 tags:
   - Analysis Sector
   - Management Technology Sector
