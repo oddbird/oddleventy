@@ -32,15 +32,15 @@ people:
 tags:
   - _post
   - Case Study
-# sample:
-#   desktop:
-#     src: timedesigner/@@@.jpg
-#     alt: @@@
-#   mobile:
-#     src: timedesigner/@@@.jpg
-#     alt: @@@
-#   caption: |
-#     @@@
+sample:
+  desktop:
+    src: tegy/timedesigner-desktop.jpg
+    alt: Chicago K-8 School schedule iteration
+  mobile:
+    src: tegy/timedesigner-mobile.jpg
+    alt: Chicago K-8 School schedule iteration
+  caption: |
+     Chicago K-8 School schedule iteration with 1/2 hour added
 tasks:
   - Accessible Interface
   - Custom Django Application
