@@ -63,16 +63,14 @@ summary: |
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
-  media=embed.screen(
-    notch='0',
-    content=embed.img(
+  media=embed.img(
       src='pages/expression-sample.jpg',
       alt='trig race screen',
-      width=744 ,
-      height=1611,
-      sizes='media'
-    )
-  )
+      attrs={
+       'width':'1280',
+       'height':'1047'
+     }),
+     name='work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}

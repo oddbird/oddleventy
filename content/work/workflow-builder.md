@@ -61,18 +61,15 @@ summary: |
 
 
 {% call embed.media_block(
-  media=embed.screen(
-    notch='0',
-    content=embed.img(
-      src='pages/workflow-sample.jpg',
-      alt='map of all workflow block colors',
-      width=744 ,
-      height=1611,
-      sizes='media'
-    )
-  )
+  media=embed.img(
+  src='pages/workflow-sample.jpg',
+   alt='map of all workflow block colors',
+   attrs={
+    'width':'1280',
+    'height':'730'
+   }),
+   name='work'
 ) %}
-
 
 {% call layout.grid('narrow-columns') %}
 
