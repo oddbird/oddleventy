@@ -5,7 +5,7 @@ logo: tegy
 client: &client Tegy
 date: 2018-07-15
 image:
-  src: projects/tegy/desktop.jpg
+  src: projects/tegy/grid-desktop.jpg
   alt: School schedule grid
 fullgrid:
   - img: work/timedesigner/full-grid.jpg

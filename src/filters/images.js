@@ -1,72 +1,113 @@
 'use strict';
 
-const { taxonomy } = require('#/taxonomy');
+const path = require('path');
 
-const responsiveConfig = taxonomy.img.srcset.map((size) => ({
-  width: size,
-  rename: {
-    suffix: `-${size}`,
-  },
-}));
+const eleventyImg = require('@11ty/eleventy-img');
+const _ = require('lodash');
+
+const { fromTaxonomy } = require('#/taxonomy');
 
 /* @docs
 label: Responsive Images
 category: File
 */
 
-/* @docs
-label: imgSuffix
-category: responsive images
-note: Add img suffix for responsiveness
-example: |
-  <img srcset="{{ src | imgSuffix('320') }} 320w" />
-params:
-  imgSrc:
-    type: string
-  suffix:
-    type: string | number
-*/
-const imgSuffix = (imgSrc, suffix) => {
-  const idx = imgSrc.lastIndexOf('.');
-  const imgPath = imgSrc.substring(0, idx);
-  const ext = imgSrc.substring(idx + 1);
-  return `${imgPath}-${suffix}.${ext}`;
+const imgConfig = fromTaxonomy('img');
+const imgOptions = {
+  widths: imgConfig.widths,
+  formats: imgConfig.formats,
+  sharpJpegOptions: {
+    progressive: true,
+    quality: 80,
+  },
+  sharpWebpOptions: {
+    quality: 60,
+    nearLossless: true,
+    reductionEffort: 3,
+  },
+  filenameFormat: (id, imgSrc, width, format) => {
+    const extension = path.extname(imgSrc);
+    const name = path.basename(imgSrc, extension);
+    return `${name}-${width}w.${format}`;
+  },
 };
+const IMG_SRC = './src/images/';
 
 /* @docs
-label: imgSize
+label: image
 category: responsive images
-note: Resize image height/width attributes to match output
+note: Generate responsive image using eleventy img plugin
 example: |
-  {% set size = img.width | imgSize(img.height) %}
-  <img src="..." width="{{ size.width }}" height="{{ size.height }}" />
+  {%- image src, "alt text", {"class":"my-image"}, "media" -%}
 params:
-  width:
-    type: number
-    default: null
-  height:
-    type: number
-    default: null
+  src:
+    type: string
+  alt:
+    type: string | none
+    default: none
+  attrs:
+    type: object
+    default: '{}'
+  sizes:
+    type: string | none
+    default: none
+    note: |
+      Only required for small images, since the default is 100vw.
+      See taxonomy data for named sizes
+      like "card", "media", and "gallery".
+  getUrl:
+    type: boolean | none
+    default: none
+    note: |
+      Returns url to largest jpeg image instead of full HTML
 */
-const imgSize = (width = null, height = null, size) => {
-  const img = { width, height };
-  const explicitSize = taxonomy.img.sizes[size]
-    ? taxonomy.img.sizes[size].fallback
-    : size;
+const image = (src, alt, attrs, sizes, getUrl) => {
+  let outputDir = './_site/assets/images/';
+  let urlPath = '/assets/images/';
+  if (src.startsWith(IMG_SRC)) {
+    const dir = path.dirname(src.slice(IMG_SRC.length));
+    outputDir = `${outputDir}${dir}`;
+    urlPath = `${urlPath}${dir}`;
+  } else {
+    // eslint-disable-next-line no-console
+    console.warn(`Unexpected image source path: "${src}"`);
+  }
+  const opts = {
+    ...imgOptions,
+    outputDir,
+    urlPath,
+  };
 
-  const fallback =
-    typeof explicitSize === 'number' ? explicitSize : taxonomy.img.fallback;
+  // generate images; this is async but we don’t wait
+  eleventyImg(src, opts);
 
-  if (width && width > fallback) {
-    img.width = fallback;
-    img.height = height ? Math.round((fallback / width) * height) : height;
+  // eslint-disable-next-line no-sync
+  const metadata = eleventyImg.statsSync(src, opts);
+
+  if (getUrl) {
+    const data = metadata.jpeg[metadata.jpeg.length - 1];
+    return data.url;
   }
 
-  return img;
+  const imgSizes =
+    sizes && imgConfig.sizes[sizes]
+      ? imgConfig.sizes[sizes]
+      : sizes || imgConfig.sizes.default;
+  const imageAttributes = _.merge(
+    {
+      alt: alt || '',
+      sizes: imgSizes,
+      loading: 'lazy',
+      decoding: 'async',
+    },
+    attrs || {},
+  );
+
+  return eleventyImg.generateHTML(metadata, imageAttributes, {
+    whitespaceMode: 'inline',
+  });
 };
 
 module.exports = {
-  imgSize,
-  imgSuffix,
-  responsiveConfig,
+  image,
 };

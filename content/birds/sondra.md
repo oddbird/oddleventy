@@ -38,9 +38,7 @@ to audience engagement and interaction.
 {% call embed.media_block(
   media=embed.img(
     src='birds/medrescertificationbadge.png',
-    alt='OOUX certification badge',
-    width='725px',
-    height='725px'
+    alt='OOUX certification badge'
   ),
   align='center'
 ) %}

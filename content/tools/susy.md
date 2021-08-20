@@ -123,8 +123,6 @@ if necessary.
   media=embed.img(
     src='susy/book-cover.png',
     alt='Learning Susy, by Zell Liew',
-    width=344,
-    height=485,
     sizes='media'
   ),
   attrs={'data-block': 'rotate'}

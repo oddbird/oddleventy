@@ -139,10 +139,11 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('removeMd', type.removeMd);
   eleventyConfig.addFilter('elide', type.elide);
 
-  eleventyConfig.addFilter('imgSuffix', images.imgSuffix);
-  eleventyConfig.addFilter('imgSize', images.imgSize);
-
   eleventyConfig.addFilter('max', (array) => Math.max(...array));
+
+  eleventyConfig.addFilter('imgSrc', (src) =>
+    images.image(src, null, null, null, true),
+  );
 
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.md);
@@ -151,6 +152,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode('getDate', (format) =>
     time.getDate(time.now(), format),
   );
+  eleventyConfig.addNunjucksShortcode('image', images.image);
 
   // config
   eleventyConfig.setLibrary('md', type.mdown);

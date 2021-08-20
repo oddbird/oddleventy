@@ -34,7 +34,7 @@ useful tutorials that will get you started designing right away.
 
 ## Start Sketching: Paper
 
-![Paper sketching tool]
+{{ embed.img('blog/2017/get-started-designing/paper.jpg', 'Paper sketching tool') }}
 
 When tackling a complex UX design challenge, I start with sketches. My
 go-to tool is aptly named [Paper]. Paper, by 53, is free for iPad and
@@ -44,17 +44,15 @@ styles, seven colors, and an eraser is all I need to sketch rough drafts
 of web features. Here are two sample sketches I drew using Paper during
 the development of the [QuarqNet] web app.
 
-![QuarqNet sketches on Paper]
+{{ embed.img('blog/2017/get-started-designing/sketches.jpg', 'QuarqNet sketches on Paper') }}
 
 With Paper, I can auto-straighten uneven lines and zoom in for detail
 work. When drafting logos, I often trace images. Paper lets me upload an
 image, draw on top of it, and easily delete the image from the
 background when I’m finished.
 
-  [Paper sketching tool]: {{ site.images }}blog/2017/get-started-designing/paper.jpg
-  [Paper]: https://www.fiftythree.com/
-  [QuarqNet]: https://www.quarqnet.com/
-  [QuarqNet sketches on Paper]: {{ site.images }}blog/2017/get-started-designing/sketches.jpg
+[Paper]: https://www.fiftythree.com/
+[QuarqNet]: https://www.quarqnet.com/
 
 ## Typography: A Practical Guide
 
@@ -82,16 +80,16 @@ typography for your web project, here’s a list of [my favorite
 resources]. You can also read about the process I use to select
 typography for a brand identity.
 
-  [Jason Santa Maria]: https://jasonsantamaria.com/
-  [Choosing the Right Font - A Practical Guide to Typography on the Web]:
-    https://webdesign.tutsplus.com/articles/choosing-the-right-font-a-practical-guide-to-typography-on-the-web--webdesign-15
-  [Jason Santa Maria On Web Typography]: https://www.youtube.com/watch?v=ipbbbMsvTEI
-  [On Web Typography]: https://abookapart.com/products/on-web-typography
-  [my favorite resources]: /2017/01/11/typography/
+[Jason Santa Maria]: https://jasonsantamaria.com/
+[Choosing the Right Font - A Practical Guide to Typography on the Web]:
+  https://webdesign.tutsplus.com/articles/choosing-the-right-font-a-practical-guide-to-typography-on-the-web--webdesign-15
+[Jason Santa Maria On Web Typography]: https://www.youtube.com/watch?v=ipbbbMsvTEI
+[On Web Typography]: https://abookapart.com/products/on-web-typography
+[my favorite resources]: /2017/01/11/typography/
 
 ## Color: Sass Color Functions
 
-![Natalya's color theory decision tree]
+{{ embed.img('blog/2017/get-started-designing/decision-tree.jpg', "Natalya's color theory decision tree") }}
 
 It’s important for any designer to be able to create pleasing and
 accessible color palettes. If you write code, Natalya Shelburne’s Sass
@@ -106,13 +104,12 @@ learn more, here's an outlined of my [process for choosing brand colors]
 including a list of several tools for generating color palettes and
 testing contrast.
 
-  [Natalya's color theory decision tree]: {{ site.images }}blog/2017/get-started-designing/decision-tree.jpg
-  [Practical Color Theory for People Who Code]: https://tallys.github.io/color-theory/
-  [process for choosing brand colors]: /2017/01/16/color/
+[Practical Color Theory for People Who Code]: https://tallys.github.io/color-theory/
+[process for choosing brand colors]: /2017/01/16/color/
 
 ## Prototype: Adobe Experience Design
 
-![Adobe Experience Design]
+{{ embed.img('blog/2017/get-started-designing/xd.jpg', 'Adobe Experience Design') }}
 
 My new favorite UX design tool, [Adobe Experience Design][1], is still
 in beta. Xd has a built-in tutorial that’s fun, beautiful, and takes
@@ -124,7 +121,6 @@ What design tools and tutorials have you found most useful? I’d love to
 hear your recommendations. Join the conversation on [Twitter] or join
 our public [Slack channel].
 
-  [Adobe Experience Design]: {{ site.images }}blog/2017/get-started-designing/xd.jpg
-  [1]: https://helpx.adobe.com/xd/how-to/web-mobile-app-ui-ux-design-basics.html
-  [Twitter]: https://twitter.com/oddbird
-  [Slack channel]: http://friends.oddbird.net/
+[1]: https://helpx.adobe.com/xd/how-to/web-mobile-app-ui-ux-design-basics.html
+[Twitter]: https://twitter.com/oddbird
+[Slack channel]: http://friends.oddbird.net/

@@ -1,6 +1,5 @@
 'use strict';
 
-const markdownItResponsive = require('@gerhobbelt/markdown-it-responsive');
 const _ = require('lodash');
 const markdown = require('markdown-it');
 const mdAnchor = require('markdown-it-anchor');
@@ -11,17 +10,6 @@ const striptags = require('striptags');
 const truncate = require('truncate-html');
 const type = require('typogr');
 
-const { responsiveConfig } = require('#/images');
-
-const imgConf = {
-  responsive: {
-    srcset: {
-      '*': responsiveConfig,
-    },
-    sizes: {},
-  },
-};
-
 const mdown = markdown({
   html: true,
   breaks: false,
@@ -30,8 +18,7 @@ const mdown = markdown({
   .disable('code')
   .use(mdAnchor)
   .use(mdMark)
-  .use(mdFootnote)
-  .use(markdownItResponsive, imgConf);
+  .use(mdFootnote);
 
 /* @docs
 label: Typography Filters

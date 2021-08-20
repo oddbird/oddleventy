@@ -20,6 +20,7 @@ summary: |
   in order to attract new clients.
 series: Open Design
 ---
+{% import 'embed.macros.njk' as embed %}
 
 This spring, after roughly four years as CMO at a health and wellness
 products manufacturer, I said a bittersweet goodbye. I was thrilled
@@ -50,7 +51,7 @@ make up our team are the defining characteristic of the OddBird brand*.
 
 ## Site Map
 
-![oddsite site map]
+{{ embed.img('blog/sitemap.jpg', 'oddsite site map') }}
 
 The site outline I created next – showing the flow of users through the
 website – pivots around our core value: people. Each section of content
@@ -68,12 +69,11 @@ development process into case studies of work for past clients or give
 *process* a page of its own? We haven’t settled on an answer yet, and
 we’d love to [hear what you think].
 
-[oddsite site map]: {{ site.images }}blog/sitemap.jpg
 [hear what you think]: /contact/
 
 ## User Profiles
 
-![oddsite user profiles]
+{{ embed.img('blog/userprofiles.jpg', 'oddsite user profiles') }}
 
 I created user profiles next – an audit of the goals, usage and behavior
 of each user type – to focus our content around their specific needs.
@@ -102,7 +102,6 @@ identify key elements to include on OddSite. We aim to be transparent
 about our process and make it easy to find case studies and quotes from
 past clients so new clients know what to expect.
 
-[oddsite user profiles]: {{ site.images }}blog/userprofiles.jpg
 [donations]: /about/#sponsorships-and-donations
 [speaking]: /services/speaking/
 [public Slack chat]: http://friends.oddbird.net/
@@ -111,7 +110,7 @@ past clients so new clients know what to expect.
 
 ## User Stories
 
-![user stories in pivotal tracker]
+{{ embed.img('blog/pivotal.jpg', 'user stories in pivotal tracker') }}
 
 User tasks, or stories, that drive interactions on the site flowed
 naturally out of my thinking about types of users. User stories, written
@@ -121,12 +120,11 @@ assigned each story to a team member. These blog posts about our open
 design process are top priority user stories for the OddSite project.
 *Pop!* (The sound of my brain exploding.)
 
-[user stories in pivotal tracker]: {{ site.images }}blog/pivotal.jpg
 [Pivotal Tracker]: https://www.pivotaltracker.com/n/projects/22378
 
 ## Visual Design
 
-![draft mockup of navigation for mobile]
+{{ embed.img('blog/navdraft.jpg', 'draft mockup of navigation for mobile') }}
 
 To give ourselves a basic structure for the open design process [Stacy]
 and [Miriam] implemented a prototype based on the site map. We included
@@ -137,13 +135,12 @@ design drafts. Through pairing and conversation, we continue to improve
 the visual design and user experience as it moves from a static mockup
 to the interactive and responsive web.
 
-[draft mockup of navigation for mobile]: {{ site.images }}blog/navdraft.jpg
 [Stacy]: /authors/stacy/
 [Miriam]: /authors/miriam/
 
 ## Banner
 
-![draft mockup of banner for mobile]
+{{ embed.img('blog/mobilebannerdraft.jpg', 'draft mockup of banner for mobile') }}
 
 My final task before launching our draft was to design a simple banner
 with an explanation of our open design process and an invitation to get
@@ -152,5 +149,3 @@ make the angled design look great across devices, a challenge Stacy was
 more than up to, but I’ll let her tell that story. And I'll be writing
 more detailed posts in the weeks to come about each stage of the process
 outlined here.
-
-[draft mockup of banner for mobile]: {{ site.images }}blog/mobilebannerdraft.jpg
