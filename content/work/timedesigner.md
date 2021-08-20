@@ -32,15 +32,15 @@ people:
 tags:
   - _post
   - Case Study
-sample:
-  desktop:
-    src: timedesigner/SOMETHING HERE.jpg
-    alt: SOMETHING HERE
-  mobile:
-    src: timedesigner/SOMETHING HERE.jpg
-    alt: SOMETHING HERE
-  caption: |
-    SOMETHING HERE
+# sample:
+#   desktop:
+#     src: timedesigner/@@@.jpg
+#     alt: @@@
+#   mobile:
+#     src: timedesigner/@@@.jpg
+#     alt: @@@
+#   caption: |
+#     @@@
 tasks:
   - Accessible Interface
   - Custom Django Application
@@ -161,7 +161,7 @@ R&C included creation of a
 project goals document,
 user profiles to understand
 the actions different users
-may want to take a different stages
+may want to take at different stages
 in their journey through the app.
 We created a data model
 and glossary of terms,
@@ -205,7 +205,7 @@ to moving the project
 toward the successful launch
 of a usable tool.
 
-At regular intervals,
+At regular intervals
 throughout the design & development phase,
 OddBird met with Furman
 on video calls
@@ -227,9 +227,11 @@ that would move the project
 in the desired direction.
 
 > When clients present us with small feature ideas,
-we keep asking why.
-When presented with a big vision,
-> we keep asking how. - Miriam Suzanne
+> we keep asking why.
+> When presented with a big vision,
+> we keep asking how.
+>
+> ---Miriam Suzanne
 
 Together,
 we dug into the details
@@ -239,7 +241,7 @@ both technical
 and for usability.
 Drawing on our many years of experience,
 deep knowledge of web app development,
-and involvement at the cutting edge our fields,
+and involvement at the cutting edge of our fields,
 OddBird guided Tegy
 in a direction that would
 have the biggest impact for users
@@ -254,7 +256,7 @@ into two-week plans --
 what are the most important features
 right now --
 and saved long-term feature goals
-to be priorized later.
+to be prioritized later.
 
 {{ embed.figure(
   data=[{
@@ -272,8 +274,8 @@ One of the key features we built was a flexible resource planning `scenario`.
 
 {{ embed.figure(
   data=fullgrid,
-  caption='An example of a scenario when many items, or experiences,
-  are added to the planning grid.'
+  caption='An example of a scenario when many items -- or experiences --
+    are added to the planning grid.'
 ) }}
 
 Each scenario has an editable start and end time which we
@@ -290,27 +292,27 @@ We end up with 1 column for each minute of the school day.
 
 ```css
 .row-grid {
-  grid-template-columns: repeat(var(--day),minmax(1px,1fr));
+  grid-template-columns: repeat(var(--day), minmax(1px, 1fr));
 }
 ```
 
 {{ embed.figure(
   data=scenariogrid,
   caption='After creating a new scenario,
-  the start and end times are used to make the overall grid.
-  This example also shows vertical grid lines drawn with
-  CSS borders using two different colors for the hour
-  (`major`) and half hour (`minor`) segments.'
+    the start and end times are used to make the overall grid.
+    This example also shows vertical grid lines drawn with
+    CSS borders using two different colors for the hour
+    (`major`) and half hour (`minor`) segments.'
 ) }}
 
 
 {{ embed.figure(
   data=emptygridoverlay,
   caption='We can see a great overview of the grid by
-  using the grid inspector tool in Firefox.'
+    using the grid inspector tool in Firefox.'
 ) }}
 
-Each experience (`exp`) on the grid is placed
+Each experience (`.exp`) on the grid is placed
 using a start time (`--start`)
 and duration (`--span`).
 We include the option to add a transition period (`--plus`)
@@ -336,20 +338,20 @@ span amount for the grid-column.
     used in the markup and css to place experiences anywhere on the grid.'
 ) }}
 
-For optimal flexibilty,
-an experience may overlap in time with each other.
+For optimal flexibility,
+an experience may overlap in time with another experience.
 Thanks to CSS Grid,
 we are able to place these in a sensible way with minimal effort.
 By using `grid-auto-flow` with a value of `dense`
 we can allow the row to place experiences where they
-fit regardless of when they were added in the markup.
-Additionally, we can assign the row a minumum height
+fit regardless of where they were added in the markup.
+Additionally, we can assign the row a minimum height
 and allow it to grow taller as needed by using `minmax`.
 
 ```css
 .row-grid {
   grid-auto-flow: dense;
-  grid-auto-rows: minmax(1.75rem,auto);
+  grid-auto-rows: minmax(1.75rem, auto);
 }
 ```
 
@@ -357,14 +359,14 @@ and allow it to grow taller as needed by using `minmax`.
   data=overlapexperience,
   caption='CSS Grid allows us to backfill available
     space of items regardless of document ordering.
-    This can lead to accessiblity issues if not applied with care.'
+    This can lead to accessibility issues if not applied with care.'
 ) }}
 
 
 ### Drag-and-Drop Schedule Interface with CSS Grid
 
-We combined drag-and-drop interface
-with CSS grid. Anytime you drag an 'experience,'
+We combined a drag-and-drop interface
+with CSS grid. Anytime you drag an experience,
 the software updates CSS variables
 which makes the grid move around responsively.
 
@@ -383,7 +385,9 @@ We used print-to-pdf to generate reports which is cool.
 {{ embed.figure(
   data=[{
     img: 'work/timedesigner/reports.jpg',
-    alt: 'A preview of the schedule in a table view filled with color coded expereinces with times on top, and categories on the left.'
+    alt: 'A preview of the schedule in a table view
+      filled with color coded experiences with times on top,
+      and categories on the left.'
   }],
   caption='Reports generated with print-to-pdf'
 ) }}
@@ -398,19 +402,19 @@ There is a site-wide undo & redo.
 {{ embed.figure(
   data=[{
     img: 'work/timedesigner/fullapp.jpg',
-    alt: ''
+    alt: '@@@'
   }],
   caption='Selecting a color for experiences in a TimeDesigner schedule'
 ) }}
 
 
-In the three years
+In the years
 since TimeDesigner launched,
 OddBird has continued
 to support the project.
-We have provided periodic maintenance -
-though the site has needed relatively little -
-and bug fixes.
+We have provided periodic maintenance
+and bug fixes --
+though the site has needed relatively little.
 For three years,
 Tegy has been training school teams
 and scheduling engineers

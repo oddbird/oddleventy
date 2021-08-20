@@ -66,7 +66,7 @@ design consistency the path of least resistance?
 > **If it's not documented, it doesn't exist.** Documentation should
 > become the default -- an integrated part of the development process.
 >
-> --Miriam Suzanne (me)
+> ---Miriam Suzanne (me)
 
 Design Systems can include a wide array of features, more than just a
 pattern library, and Herman does not cover the full gamut -- but it

@@ -110,7 +110,7 @@ together.
 > that I've been able to do in my career. I’ve met so many amazing and
 > talented people along the way. It has been an experience.
 >
-> --Brad Westfall
+> ---Brad Westfall
 
 This was the second year [Brad Westfall] organized this event. We are
 very thankful for conference organizers like Brad and his team, who post

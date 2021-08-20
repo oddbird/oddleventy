@@ -211,7 +211,7 @@ various weights – bold, italic, condensed – and sizes.
 > technologies. However, it is important that your design accommodate
 > increased text sizes without loss of readability or functionality.
 >
-> --[WebAIM]
+> ---[WebAIM]
 
 Additionally, avoid using all caps wherever possible. It’s more
 difficult to read. Plus, **IT LOOKS LIKE YOU’RE SHOUTING**.
@@ -250,7 +250,7 @@ for accessibility.)
 > reading disorders, learning disabilities, or attention deficit
 > disorders.
 >
-> --[WebAIM]
+> ---[WebAIM]
 
 To keep the process moving forward, it helps to take a vote. There are
 many ways to take a vote. [Dotmocracy] is a classic for team voting.
@@ -293,7 +293,7 @@ goals.
 > Freight Text series was designed for extended reading in periodicals
 > and data-intensive documents.
 >
-> --[Typedia]
+> ---[Typedia]
 
 Freight Text was originally developed for print, and we love the classic
 feel this evokes, but it’s also very easy to read online, especially for

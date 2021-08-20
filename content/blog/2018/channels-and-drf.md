@@ -27,7 +27,7 @@ said:
 > lack of tutorials or blog posts on using Channels and REST framework
 > together.
 >
-> -- [Tom Christie]
+> ---[Tom Christie]
 
 I realized that's *exactly* what we're working on lately at OddBird, so
 I thought I'd write up an in-progress report. I'm not at all convinced
