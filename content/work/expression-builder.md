@@ -67,7 +67,7 @@ summary: |
        'width':'1280',
        'height':'1047'
      }),
-     name='work'
+     name='desktop-work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}

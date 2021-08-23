@@ -70,12 +70,3 @@
   object-position: var(--img-position, center);
   place-self: stretch;
 }
-
-[data-media='work'] {
-  grid-template-areas: 'image' 'content';
-  grid-template-columns: 100%;
-
-  .media-image {
-    justify-self: auto;
-  }
-}
