@@ -129,8 +129,7 @@ summary: |
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
 
-<!-- all but the first quote -->
-{{ quotes.grid(press | slice(2) | first ) }}
+{{ quotes.find(collections.all, ['innovative', 'range']) }}
 
 ## What They Needed
 
@@ -189,6 +188,8 @@ Tegy used the R&C deliverables
 to pitch investors
 and to raise funding.
 They were successful!
+
+{{ quotes.find(collections.all, ['iterate', 'process']) }}
 
 
 ## Project Management
@@ -265,6 +266,10 @@ to be prioritized later.
   }],
   caption='Trello board project management sample.'
 ) }}
+
+{{ quotes.find(collections.all, ['needs', 'scheduling']) }}
+
+
 
 ## Design and Development
 
@@ -427,3 +432,5 @@ to innovate organization models,
 make better use of their resources,
 and improve the learning environment
 for everyone.
+
+{{ quotes.find(collections.all, ['investment', 'mvp']) }}
