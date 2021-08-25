@@ -16,8 +16,8 @@ people:
     url: https://www.linkedin.com/in/sarataillon/
     title: CTO
     venue: *client
-date: 2016-01-01
-end: 2014-01-01
+date: 2014-01-01
+end: 2016-01-01
 links:
   site: https://coachhub.resilienceboost.com/
 tags:
