@@ -82,41 +82,41 @@ press:
       **we would have paid for it manifold in the long run**.
     <<: *furman
     slug: investment
-  - text: |
-      The internet was useless in deciding who to hire,
-      with too much conflicting info.
-      Then I found OddBird,
-      providing **a focused team
-      with a wide range of talent.**
-    <<: *furman
-    slug: range
-  - text: |
-      OddBird allowed me to **transform my vision
-      into an MVP that has momentum**.
-      I'm confident I'll be able to land big venture capital
-      and increase my revenue from courses,
-      because the tool has sped up the process.
-    <<: *furman
-    slug: mvp
+#  - text: |
+#     The internet was useless in deciding who to hire,
+#     with too much conflicting info.
+#     Then I found OddBird,
+#     providing **a focused team
+#     with a wide range of talent.**
+#    <<: *furman
+#    slug: range
+#  - text: |
+#      OddBird allowed me to **transform my vision
+#      into an MVP that has momentum**.
+#      I'm confident I'll be able to land big venture capital
+#      and increase my revenue from courses,
+#      because the tool has sped up the process.
+#    <<: *furman
+#    slug: mvp
   - text: |
       I love working with Miriam as a project manager,
       She's excellent at reigning me in.
     <<: *furman
     slug: focus
-  - text: |
-      When we were close to testing with actual users,
-      I started to panic.
-      But Miriam asked "what do you need?"
-      and then we built that, and it worked.
-    <<: *furman
-    slug: needs
-  - text: |
-      OddBird already had so many processes
-      in place as a team
-      and knew how to work together;
-      that allowed us get to where we are now.
-    <<: *furman
-    slug: process
+#  - text: |
+#      When we were close to testing with actual users,
+#      I started to panic.
+#      But Miriam asked "what do you need?"
+#      and then we built that, and it worked.
+#    <<: *furman
+#    slug: needs
+#  - text: |
+#      OddBird already had so many processes
+#      in place as a team
+#      and knew how to work together;
+#      that allowed us get to where we are now.
+#    <<: *furman
+#    slug: process
 summary: |
   Tegy TimeDesigner helps school teams
   easily create multiple scheduling scenarios
@@ -129,7 +129,7 @@ summary: |
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
 
-{{ quotes.find(collections.all, ['innovative', 'range']) }}
+{{ quotes.find(collections.all, ['innovative', 'scheduling']) }}
 
 ## What They Needed
 
@@ -189,7 +189,7 @@ to pitch investors
 and to raise funding.
 They were successful!
 
-{{ quotes.find(collections.all, ['iterate', 'process']) }}
+{{ quotes.find(collections.all, ['iterate', 'investment']) }}
 
 
 ## Project Management
@@ -232,7 +232,7 @@ in the desired direction.
 > When presented with a big vision,
 > we keep asking how.
 >
-> ---Miriam Suzanne
+> ---Miriam Suzanne, Co-founder at OddBird
 
 Together,
 we dug into the details
@@ -267,7 +267,7 @@ to be prioritized later.
   caption='Trello board project management sample.'
 ) }}
 
-{{ quotes.find(collections.all, ['needs', 'scheduling']) }}
+{{ quotes.find(collections.all, ['needs', 'needs']) }}
 
 
 
@@ -417,14 +417,13 @@ In the years
 since TimeDesigner launched,
 OddBird has continued
 to support the project.
-We have provided periodic maintenance
-and bug fixes --
+We have provided periodic bug fixes 
+and maintenance --
 though the site has needed relatively little.
-For three years,
 Tegy has been training school teams
 and scheduling engineers
 in organization design using TimeDesigner.
-As of 2021,
+After several years,
 we are excited to work with Tegy again
 to create Phase 2 of TimeDesigner,
 enabling more schools
@@ -433,4 +432,4 @@ make better use of their resources,
 and improve the learning environment
 for everyone.
 
-{{ quotes.find(collections.all, ['investment', 'mvp']) }}
+{{ quotes.find(collections.all, ['mvp', 'mvp']) }}
