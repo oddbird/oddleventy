@@ -128,8 +128,58 @@ summary: |
 
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 
 {{ quotes.find(collections.all, ['innovative', 'scheduling']) }}
+
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    notch='0',
+    content=embed.img(
+      src='pages/timedesigner-phone.jpg',
+      alt='trig race screen',
+      width=744 ,
+      height=1611,
+      sizes='media'
+    )
+  )
+) %}
+
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Design
+
+- Wireframes & mockups
+- Brand identity & implementation
+- Accessible user interface (UI)
+- User experience design (UX)
+- Integrated style guide
+- Information architecture
+- Responsive across devices
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Development
+
+- CSS grid & custom properties
+- Drag-and-drop interface
+- Django 
+- Front-end
+- Back-end
+- On-going maintenance
+
+{% endcall %}
+
+
+
 
 ## What They Needed
 
