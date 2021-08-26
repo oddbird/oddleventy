@@ -41,6 +41,8 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
+{{ quotes.grid(press) }}
+
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
@@ -72,14 +74,12 @@ summary: |
 
 ### Development
 
-- Transitioned website to WordPress CMS
+- Transitioned original marketing website to WordPress CMS
 - Content migration
-- Trained staff in on-going maintenance
+- Trained staff in on-going site maintenance
 
 {% endcall %}
 
 {% endcall %}
 
 {% endcall %}
-
-{{ quotes.grid(press) }}
