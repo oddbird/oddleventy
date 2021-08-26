@@ -25,7 +25,7 @@ overlapexperience:
 people:
   - &furman
     name: Furman Brown
-    # face: furman-brown.jpg
+    face: furman-brown.jpg
     url: https://www.tegy.tools/profile/furman/profile
     title: Founder
     venue: *client
@@ -50,7 +50,6 @@ tasks:
   - Responsive Design
   - Project Architecture
   - User Experience Design
-  - WCAG & HIPAA Compliant
 press:
   - text: |
       OddBird is high-caliber and nimble.
@@ -82,41 +81,41 @@ press:
       **we would have paid for it manifold in the long run**.
     <<: *furman
     slug: investment
-#  - text: |
-#     The internet was useless in deciding who to hire,
-#     with too much conflicting info.
-#     Then I found OddBird,
-#     providing **a focused team
-#     with a wide range of talent.**
-#    <<: *furman
-#    slug: range
-#  - text: |
-#      OddBird allowed me to **transform my vision
-#      into an MVP that has momentum**.
-#      I'm confident I'll be able to land big venture capital
-#      and increase my revenue from courses,
-#      because the tool has sped up the process.
-#    <<: *furman
-#    slug: mvp
+  - text: |
+      The internet was useless in deciding who to hire,
+      with too much conflicting info.
+      Then I found OddBird,
+      providing **a focused team
+      with a wide range of talent.**
+    <<: *furman
+    slug: range
+  - text: |
+      OddBird allowed me to **transform my vision
+      into an MVP that has momentum**.
+      I'm confident I'll be able to land big venture capital
+      and increase my revenue from courses,
+      because the tool has sped up the process.
+    <<: *furman
+    slug: mvp
   - text: |
       I love working with Miriam as a project manager,
       She's excellent at reigning me in.
     <<: *furman
     slug: focus
-#  - text: |
-#      When we were close to testing with actual users,
-#      I started to panic.
-#      But Miriam asked "what do you need?"
-#      and then we built that, and it worked.
-#    <<: *furman
-#    slug: needs
-#  - text: |
-#      OddBird already had so many processes
-#      in place as a team
-#      and knew how to work together;
-#      that allowed us get to where we are now.
-#    <<: *furman
-#    slug: process
+  - text: |
+      When we were close to testing with actual users,
+      I started to panic.
+      But Miriam asked "what do you need?"
+      and then we built that, and it worked.
+    <<: *furman
+    slug: needs
+  - text: |
+      OddBird already had so many processes
+      in place as a team
+      and knew how to work together;
+      that allowed us get to where we are now.
+    <<: *furman
+    slug: process
 summary: |
   Tegy TimeDesigner helps school teams
   easily create multiple scheduling scenarios
@@ -132,22 +131,18 @@ summary: |
 
 {{ quotes.find(collections.all, ['innovative', 'scheduling']) }}
 
-
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='pages/timedesigner-phone.jpg',
-      alt='trig race screen',
-      width=744 ,
-      height=1611,
+      src='projects/tegy/timedesigner-mobile.jpg',
+      alt='time designer screen',
       sizes='media'
     )
   )
 ) %}
-
 
 {% call layout.grid('narrow-columns') %}
 
@@ -171,15 +166,16 @@ summary: |
 
 - CSS grid & custom properties
 - Drag-and-drop interface
-- Django 
+- Django
 - Front-end
 - Back-end
 - On-going maintenance
 
 {% endcall %}
 
+{% endcall %}
 
-
+{% endcall %}
 
 ## What They Needed
 
@@ -240,7 +236,6 @@ and to raise funding.
 They were successful!
 
 {{ quotes.find(collections.all, ['iterate', 'investment']) }}
-
 
 ## Project Management
 
@@ -317,10 +312,6 @@ to be prioritized later.
   caption='Trello board project management sample.'
 ) }}
 
-{{ quotes.find(collections.all, ['needs', 'needs']) }}
-
-
-
 ## Design and Development
 
 ### Creating a Flexible Schedule with CSS Grid and Custom Properties
@@ -359,7 +350,6 @@ We end up with 1 column for each minute of the school day.
     CSS borders using two different colors for the hour
     (`major`) and half hour (`minor`) segments.'
 ) }}
-
 
 {{ embed.figure(
   data=emptygridoverlay,
@@ -417,7 +407,6 @@ and allow it to grow taller as needed by using `minmax`.
     This can lead to accessibility issues if not applied with care.'
 ) }}
 
-
 ### Drag-and-Drop Schedule Interface with CSS Grid
 
 We combined a drag-and-drop interface
@@ -451,7 +440,6 @@ We used print-to-pdf to generate reports which is cool.
 
 There is a site-wide undo & redo.
 
-
 ## On-Going
 
 {{ embed.figure(
@@ -462,12 +450,11 @@ There is a site-wide undo & redo.
   caption='Selecting a color for experiences in a TimeDesigner schedule'
 ) }}
 
-
 In the years
 since TimeDesigner launched,
 OddBird has continued
 to support the project.
-We have provided periodic bug fixes 
+We have provided periodic bug fixes
 and maintenance --
 though the site has needed relatively little.
 Tegy has been training school teams
@@ -481,5 +468,3 @@ to innovate organization models,
 make better use of their resources,
 and improve the learning environment
 for everyone.
-
-{{ quotes.find(collections.all, ['mvp', 'mvp']) }}
