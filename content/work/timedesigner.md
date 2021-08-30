@@ -137,7 +137,7 @@ summary: |
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='projects/tegy/timedesigner-mobile.jpg',
+      src='pages/timedesigner-phone.jpg',
       alt='time designer screen',
       sizes='media'
     )
