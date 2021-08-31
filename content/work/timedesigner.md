@@ -37,7 +37,7 @@ sample:
     src: tegy/timedesigner-desktop.jpg
     alt: Chicago K-8 School schedule iteration
   mobile:
-    src: tegy/timedesigner-mobile.jpg
+    src: tegy/mobile-summary.jpg
     alt: Chicago K-8 School schedule iteration
   caption: |
      Chicago K-8 School schedule iteration with 1/2 hour added
@@ -82,10 +82,7 @@ press:
     <<: *furman
     slug: investment
   - text: |
-      The internet was useless in deciding who to hire,
-      with too much conflicting info.
-      Then I found OddBird,
-      providing **a focused team
+      OddBird, provided **a focused team
       with a wide range of talent.**
     <<: *furman
     slug: range
@@ -129,7 +126,7 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
 
-{{ quotes.find(collections.all, ['innovative', 'scheduling']) }}
+{{ quotes.find(collections.all, ['range', 'scheduling']) }}
 
 {{ layout.title('What We Did') }}
 
@@ -137,8 +134,8 @@ summary: |
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='pages/timedesigner-phone.jpg',
-      alt='time designer screen',
+      src='work/timedesigner/mobile-lg.jpg',
+      alt='Small screen showing schedule grid filled with items',
       sizes='media'
     )
   )
