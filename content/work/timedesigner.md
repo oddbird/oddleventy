@@ -82,7 +82,7 @@ press:
     <<: *furman
     slug: investment
   - text: |
-      OddBird, provided **a focused team
+      OddBird provided **a focused team
       with a wide range of talent.**
     <<: *furman
     slug: range
