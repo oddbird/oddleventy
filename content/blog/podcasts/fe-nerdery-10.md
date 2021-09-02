@@ -1,5 +1,5 @@
 ---
-title: What's happening in CSS & Sass
+title: What's Happening in CSS & Sass
 venue: Front End Nerdery
 canonical: https://anchor.fm/frontendnerdery/episodes/10---Miriam-Suzanne-e14kfst
 date: 2021-08-15
