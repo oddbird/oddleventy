@@ -11,7 +11,7 @@ image:
 client: &client Salesforce.org
 date: 2018-01-01
 end: 2019-05-15
-tags: 
+tags:
   - Technology Sector
 people:
   - &jason

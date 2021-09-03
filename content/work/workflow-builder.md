@@ -46,7 +46,7 @@ summary: |
   and management tools.
   The "workflow builder" is an embedded Vue application
   allowing data scientists to visually create and navigate
-  through data flows of various kinds.
+  through dataflows of various kinds.
   The interface is an integration between standard HTML
   and an interactive SVG canvas, built with D3.
 ---

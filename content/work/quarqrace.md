@@ -11,7 +11,7 @@ image:
 client: SRAM/Quarq
 date: 2015-01-01
 ends: 2016-12-15
-tags: 
+tags:
   - Sports Sector
   - Wellness Sector
 tasks:

@@ -58,7 +58,6 @@ summary: |
   )
 ) %}
 
-
 {% call layout.grid('narrow-columns') %}
 
 {% call layout.block('column') %}

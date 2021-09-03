@@ -45,7 +45,7 @@ summary: |
   and management tools,
   including the Aunsight Dataflow service.
   The "expression builder" is an embedded Vue application
-  allowing users to create and update the dataflows
+  allowing users to create and update dataflows
   using a visual UI that describes data transformation
   without having to write code.
   Advanced users can also edit flows directly in JSON,
@@ -61,13 +61,13 @@ summary: |
 
 {% call embed.media_block(
   media=embed.img(
-      src='pages/expression-sample.jpg',
-      alt='trig race screen',
-      attrs={
-       'width':'1280',
-       'height':'1047'
-     }),
-     name='desktop-work'
+    src='pages/expression-sample.jpg',
+    alt='trig race screen',
+    attrs={
+      'width':'1280',
+      'height':'1047'
+    }),
+    name='desktop-work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}

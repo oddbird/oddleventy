@@ -9,7 +9,7 @@ date: 2016-01-01
 end: 2017-12-15
 links:
   site: https://www.medcurbside.com/
-tags: 
+tags:
   - Wellness Sector
 people:
   - &rohit

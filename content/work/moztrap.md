@@ -10,7 +10,7 @@ date: 2011-01-01
 end: 2012-03-15
 links:
   source: https://github.com/mozilla/moztrap
-tags: 
+tags:
   - Technology Sector
 tasks:
   - Product Branding

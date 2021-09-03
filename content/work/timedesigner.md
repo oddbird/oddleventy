@@ -5,7 +5,7 @@ logo: tegy
 client: &client Tegy
 date: 2016-01-01
 end: 2018-07-15
-tags: 
+tags:
   - Education Sector
 image:
   src: projects/tegy/grid-desktop.jpg
