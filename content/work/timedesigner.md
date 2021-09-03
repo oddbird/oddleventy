@@ -406,10 +406,11 @@ and allow it to grow taller as needed by using `minmax`.
 
 ### Drag-and-Drop Schedule Interface with CSS Grid
 
-We combined a drag-and-drop interface
-with CSS grid. Anytime you drag an experience,
-the software updates CSS variables
-which makes the grid move around responsively.
+This use of CSS grid combined beautifully
+with an intuitive drag-and-drop interface.
+An experience's `--start` variable is
+updated continuously while being dragged,
+allowing it to move responsively along the grid.
 
 {{ embed.figure(
   data=[{
@@ -421,7 +422,14 @@ which makes the grid move around responsively.
 
 ### Print-to-PDF Reports
 
-We used print-to-pdf to generate reports which is cool.
+Users needed the ability to view, print or download
+PDF reports of their scenarios
+using print-specific layouts.
+To do this, we created
+custom print styles,
+and used print-to-pdf
+in a [headless Chrome](https://github.com/fate0/pychrome) instance
+to render an HTML string to a PDF.
 
 {{ embed.figure(
   data=[{
@@ -430,12 +438,32 @@ We used print-to-pdf to generate reports which is cool.
       filled with color coded experiences with times on top,
       and categories on the left.'
   }],
-  caption='Reports generated with print-to-pdf'
+  caption='Viewable reports can be printed or downloaded via print-to-pdf.'
 ) }}
 
 ### Site-Wide Undo & Redo
 
-There is a site-wide undo & redo.
+We also implemented a site-wide undo/redo feature
+(available via visible buttons
+or familiar `Ctrl-Z`/`Ctrl-Shift-Z`/`Ctrl-Y` keyboard shortcuts)
+through a custom action manager.
+Each action taken on the site
+is added to a stack,
+storing both "forward" and "backward" effects.
+Undoing an action
+triggers the "backward" effect
+of the most recent action,
+popping it off the end of the stack.
+Redoing an action runs the "forward" effect again,
+adding the action back to the end of the stack.
+
+{{ embed.figure(
+  data=[{
+    img: 'work/timedesigner/undo-redo.png',
+    alt: '@@@'
+  }],
+  caption='@@@ This could be replaced with a better screenshot?'
+) }}
 
 ## On-Going
 
