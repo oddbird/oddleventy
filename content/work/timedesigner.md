@@ -114,11 +114,17 @@ press:
     <<: *furman
     slug: process
 summary: |
-  Tegy TimeDesigner helps school teams
-  easily create multiple scheduling scenarios
+  TimeDesigner helps school teams
+  rapidly create multiple scheduling scenarios
   from various perspectives,
   and plan ahead for future iterations.
-  Currently the software is only available to schools in
+  OddBird helped Tegy
+  plan, design, develop, launch, and maintain
+  their school scheduling web app
+  using CSS grid and custom property wizardry
+  on the front-end,
+  and well-tested Django/Python on back-end.
+  Currently, the software is only available to schools in
   Tegy training programs.
 ---
 
@@ -187,28 +193,29 @@ They needed project planning and guidance,
 wireframes and itemized estimates
 for investor pitches.
 They needed
-graphic and user experience design,
+brand and user experience design,
 front- and back-end development,
-and on-going maintenance.
+and on-going maintenance
+for their first web application, TimeDesigner.
 
 ## Research & Concepting
 
 As with most OddBird web projects,
 we started with a planning phase
-to look deeply into the needs
+to delve deep into the needs
 of the educators who would use TimeDesigner,
 as well as Tegy's vision
 for their business.
-R&C included creation of a
-project goals document,
-user profiles to understand
+Research & Concepting included creation of a
+Project Goals document,
+and User Profiles to understand
 the actions different users
 may want to take at different stages
 in their journey through the app.
-We created a data model
+We created a Data Model
 and glossary of terms,
 with database requirements and relationships.
-We designed wireframes --
+We designed Wireframes --
 unbranded and interactive
 sketches of TimeDesigner’s core features.
 
@@ -226,30 +233,38 @@ we compiled a full list of
 all the required features
 to reach Tegy's goals --
 itemized, estimated, and prioritized
-into several development phases.
+into several phases.
 Tegy used the R&C deliverables
 to pitch investors
-and to raise funding.
-They were successful!
+and to raise funding 
+for an innovative school scheduling tool
+called TimeDesigner.
+They were successful,
+and together,
+we moved to the next phase,
+Design & Development.
+
 
 {{ quotes.find(collections.all, ['iterate', 'investment']) }}
 
 ## Project Management
 
-Research & Concepting helped
+Before digging into 
+the juicy details 
+of Design & Development 
+for TimeDesigner, 
+a word about Project Management.
+While Research & Concepting helped
 with initial sorting,
 goal setting,
-and prioritization.
-But with such a huge need
-and broad vision,
-on-going guidance
-was key
-to moving the project
-toward the successful launch
-of a usable tool.
+and feature prioritization,
+on-going Project Management
+was key to distilling Tegy's broad vision
+into a useful, digital product.
 
 At regular intervals
-throughout the design & development phase,
+throughout the design & development
+of the TimeDesigner web application,
 OddBird met with Furman
 on video calls
 and in person.
@@ -280,7 +295,7 @@ Together,
 we dug into the details
 of new features
 to determine the implications --
-both technical
+both for technology
 and for usability.
 Drawing on our many years of experience,
 deep knowledge of web app development,
@@ -288,7 +303,7 @@ and involvement at the cutting edge of our fields,
 OddBird guided Tegy
 in a direction that would
 have the biggest impact for users
-without blowing the budget.
+without blowing their budget.
 
 At the end of each planning conversation,
 we documented proposed features
@@ -309,11 +324,13 @@ to be prioritized later.
   caption='Trello board project management sample.'
 ) }}
 
-## Design and Development
+## Design & Development
 
 ### Creating a Flexible Schedule with CSS Grid and Custom Properties
 
-One of the key features we built was a flexible resource planning `scenario`.
+One of the key features we built 
+for the TimeDesigner web application 
+was a flexible resource planning `scenario`.
 
 {{ embed.figure(
   data=fullgrid,
@@ -323,7 +340,8 @@ One of the key features we built was a flexible resource planning `scenario`.
 
 Each scenario has an editable start and end time which we
 use to calculate the total number of minutes in a school day.
-We pass this data to a CSS variable on the grid container.
+Behind the scenes, we pass this data 
+to a CSS variable on the grid container.
 
 ```html
 <div class="row-grid" style="--day: 420;">
@@ -384,11 +402,11 @@ For optimal flexibility,
 an experience may overlap in time with another experience.
 Thanks to CSS Grid,
 we are able to place these in a sensible way with minimal effort.
-By using `grid-auto-flow` with a value of `dense`
+Using `grid-auto-flow` with a value of `dense`,
 we can allow the row to place experiences where they
-fit regardless of where they were added in the markup.
+fit, regardless of where they were added in the markup.
 Additionally, we can assign the row a minimum height
-and allow it to grow taller as needed by using `minmax`.
+and allow it to grow taller as needed using `minmax`.
 
 ```css
 .row-grid {
@@ -459,13 +477,13 @@ adding the action back to the end of the stack.
 
 {{ embed.figure(
   data=[{
-    img: 'work/timedesigner/undo-redo.png',
+    img: 'work/timedesigner/undo-redo.jpg',
     alt: '@@@'
   }],
-  caption='@@@ This could be replaced with a better screenshot?'
+  caption='Each action taken on the site is added to a stack, storing both “forward” and “backward” effects.'
 ) }}
 
-## On-Going
+## On-Going Development
 
 {{ embed.figure(
   data=[{
