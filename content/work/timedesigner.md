@@ -123,7 +123,7 @@ summary: |
   their school scheduling web app
   using CSS grid and custom property wizardry
   on the front-end,
-  and well-tested Django/Python on back-end.
+  and well-tested Django/Python on the back-end.
   Currently, the software is only available to schools in
   Tegy training programs.
 ---
@@ -236,23 +236,22 @@ itemized, estimated, and prioritized
 into several phases.
 Tegy used the R&C deliverables
 to pitch investors
-and to raise funding 
+and to raise funding
 for an innovative school scheduling tool
 called TimeDesigner.
 They were successful,
-and together,
+and together
 we moved to the next phase,
 Design & Development.
-
 
 {{ quotes.find(collections.all, ['iterate', 'investment']) }}
 
 ## Project Management
 
-Before digging into 
-the juicy details 
-of Design & Development 
-for TimeDesigner, 
+Before digging into
+the juicy details
+of Design & Development
+for TimeDesigner,
 a word about Project Management.
 While Research & Concepting helped
 with initial sorting,
@@ -263,7 +262,7 @@ was key to distilling Tegy's broad vision
 into a useful, digital product.
 
 At regular intervals
-throughout the design & development
+throughout design & development
 of the TimeDesigner web application,
 OddBird met with Furman
 on video calls
@@ -295,7 +294,7 @@ Together,
 we dug into the details
 of new features
 to determine the implications --
-both for technology
+both for the application itself
 and for usability.
 Drawing on our many years of experience,
 deep knowledge of web app development,
@@ -328,19 +327,19 @@ to be prioritized later.
 
 ### Creating a Flexible Schedule with CSS Grid and Custom Properties
 
-One of the key features we built 
-for the TimeDesigner web application 
+One of the key features we built
+for the TimeDesigner web application
 was a flexible resource planning `scenario`.
 
 {{ embed.figure(
   data=fullgrid,
-  caption='An example of a scenario when many items -- or experiences --
+  caption='An example of a scenario when many items -- or "experiences" --
     are added to the planning grid.'
 ) }}
 
 Each scenario has an editable start and end time which we
 use to calculate the total number of minutes in a school day.
-Behind the scenes, we pass this data 
+Behind the scenes, we pass this data
 to a CSS variable on the grid container.
 
 ```html
@@ -435,7 +434,9 @@ allowing it to move responsively along the grid.
     img: 'work/timedesigner/dragdrop.jpg',
     alt: 'A close up of an experience being dragged on the scheduling grid'
   }],
-  caption='Each rectangle or "experience" can be dragged and dropped, updating the CSS variables.'
+  caption='Each rectangle -- or "experience" --
+    can be dragged and dropped,
+    updating the CSS variables.'
 ) }}
 
 ### Print-to-PDF Reports
@@ -478,9 +479,10 @@ adding the action back to the end of the stack.
 {{ embed.figure(
   data=[{
     img: 'work/timedesigner/undo-redo.jpg',
-    alt: '@@@'
+    alt: 'A scenario with "redo" button highlighted.'
   }],
-  caption='Each action taken on the site is added to a stack, storing both “forward” and “backward” effects.'
+  caption='Each action taken on the site is added to a stack,
+    storing both "forward" and "backward" effects.'
 ) }}
 
 ## On-Going Development
@@ -488,9 +490,9 @@ adding the action back to the end of the stack.
 {{ embed.figure(
   data=[{
     img: 'work/timedesigner/fullapp.jpg',
-    alt: '@@@'
+    alt: 'A scenario with multiple experiences selected.'
   }],
-  caption='Selecting a color for experiences in a TimeDesigner schedule'
+  caption='Selecting a color for experiences in a TimeDesigner schedule.'
 ) }}
 
 In the years
