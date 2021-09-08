@@ -50,7 +50,7 @@ summary: |
     notch='0',
     content=embed.img(
       src='work/cfoshare/cfo-phone.jpg',
-      alt='cfoshare mobile screen',
+      alt='team page examples showing name, title, headshot, and bio',
       width=743,
       height=1611,
       sizes='media'
