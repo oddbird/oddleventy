@@ -8,7 +8,7 @@ end: 2018-07-15
 tags:
   - Education Sector
 image:
-  src: projects/tegy/grid-desktop.jpg
+  src: work/timedesigner/grid-desktop.jpg
   alt: School schedule grid
 people:
   - &furman

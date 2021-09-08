@@ -6,7 +6,7 @@ client: &client Aunalytics
 date: 2019-01-13
 end: 2020-01-13
 image:
-  src: projects/aunalytics/workflow.jpg
+  src: work/workflow-builder/workflow.jpg
   alt: Connected workflow processes shown within the canvas
   width: 2804
   height: 1131
@@ -50,22 +50,20 @@ summary: |
   The interface is an integration between standard HTML
   and an interactive SVG canvas, built with D3.
 ---
+
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-{{ layout.title('What We Did') }}
 
+{{ layout.title('What We Did') }}
 
 {% call embed.media_block(
   media=embed.img(
-  src='pages/workflow-sample.jpg',
-   alt='map of all workflow block colors',
-   attrs={
-    'width':'1280',
-    'height':'730'
-   }),
-   name='desktop-work'
+    src='work/workflow-builder/wb-example.jpg',
+    alt='canvas with color coded workflow cards'
+  ),
+  name='desktop-work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}
@@ -74,12 +72,12 @@ summary: |
 
 ### Services
 
- - Project Management
- - User Interface Design Consulting
+  - Project Management
+  - User Interface Design Consulting
 
- {% endcall %}
+{% endcall %}
 
- {% call layout.block('column') %}
+{% call layout.block('column') %}
 
 ### Development
 

@@ -6,7 +6,7 @@ client: &client Aunalytics
 date: 2018-05-14
 end: 2019-05-14
 image:
-  src: projects/aunalytics/exbldr.jpg
+  src: work/expression-builder/exbldr.jpg
   alt: Tools for data analytics
   position: top
   width: 2048
@@ -61,8 +61,8 @@ summary: |
 
 {% call embed.media_block(
   media=embed.img(
-    src='pages/expression-sample.jpg',
-    alt='trig race screen',
+    src='work/expression-builder/expression-sample.jpg',
+    alt='modal showing visual builder tool with list of expressions',
     attrs={
       'width':'1280',
       'height':'1047'

@@ -6,7 +6,7 @@ logo: salesforce-metadeploy
 links:
   site: https://install.salesforce.org/
 image:
-  src: projects/metadeploy.jpg
+  src: work/metadeploy/metadeploy.jpg
   alt: App UI of product installation flow
 client: &client Salesforce.org
 date: 2018-01-01

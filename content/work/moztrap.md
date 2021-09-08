@@ -2,7 +2,7 @@
 title: MozTrap
 sub: Distributed quality assurance tools
 image:
-  src: projects/moztrap.jpg
+  src: work/moztrap/moztrap.jpg
   alt: Tabular data showing recent software test results
 logo: mozilla
 client: Mozilla

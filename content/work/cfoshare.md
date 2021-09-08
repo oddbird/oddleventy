@@ -3,7 +3,7 @@ title: CFOshare Website
 sub: WordPress CMS & responsive design
 logo: cfoshare
 image:
-  src: projects/cfoshare.jpg
+  src: work/cfoshare/cfoshare.jpg
   alt: CFOshare's wordpress articles about finance
   position: top
 client: &client CFOshare
@@ -49,8 +49,8 @@ summary: |
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='pages/cfo-phone.jpg',
-      alt='trig race screen',
+      src='work/cfoshare/cfo-phone.jpg',
+      alt='cfoshare mobile screen',
       width=743,
       height=1611,
       sizes='media'
@@ -73,7 +73,7 @@ summary: |
 
 ### Development
 
-- Transitioned original marketing website to WordPress CMS
+- Transitioned original marketing website to WordPress
 - Content migration
 - Trained staff in on-going site maintenance
 

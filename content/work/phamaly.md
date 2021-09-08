@@ -5,7 +5,7 @@ logo: phamaly
 client: Phamaly
 date: 2019-12-06
 image:
-  src: projects/phamaly/chicago.jpg
+  src: work/phamaly/chicago.jpg
   alt: Phamaly cast performing Chicago
 links:
   site: https://phamaly.org

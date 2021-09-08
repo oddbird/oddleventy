@@ -4,7 +4,7 @@ title: Typographic Superpower Game
 sub: A meditation on typography
 logo: adobe
 image:
-  src: projects/adobegame.jpg
+  src: work/adobe/adobegame.jpg
   alt: Illustrated game question about which font is most calligraphic
 client: &client Adobe Fonts
 people:

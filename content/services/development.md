@@ -36,7 +36,7 @@ summary: |
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='pages/trig-phone.jpg',
+      src='work/quarqrace/trig-phone.jpg',
       alt='trig race screen',
       sizes='media'
     )
@@ -86,7 +86,7 @@ summary: |
   media=embed.screen(
     fill='hsl(202.5, 7.5%, 42%)',
     content=embed.img(
-      src='pages/medcurbside-phone.jpg',
+      src='work/medcurbside/medcurbside-phone.jpg',
       alt='medcurbside welcome screen',
       sizes='media'
     )

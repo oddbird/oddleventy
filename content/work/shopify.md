@@ -43,8 +43,8 @@ summary: |
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='pages/shopify-phone.jpg',
-      alt='trig race screen',
+      src='work/shopify/shopify-phone.jpg',
+      alt='Miriam speaking on video for a virtual training session',
       width=744 ,
       height=1611,
       sizes='media'
