@@ -9,19 +9,19 @@ image:
   alt: School schedule grid
 fullgrid:
   - img: work/timedesigner/full-grid.jpg
-    alt: A completed scenario with experiences laid out in a grid
+    alt: a completed scenario with experiences laid out in a grid
 experiencegrid:
   - img: work/timedesigner/experience-editing.jpg
-    alt: Browser inspector showing grid markup and css for a single experience
+    alt: browser inspector showing grid markup and css for a single experience
 emptygridoverlay:
   - img: work/timedesigner/empty-grid-overlay.jpg
-    alt: The Firefox Grid Inspector tool includes an overlay of the grid lines
+    alt: Firefox Grid Inspector tool including an overlay of the grid lines
 scenariogrid:
   - img: work/timedesigner/setting-up-scenario-grid.jpg
-    alt: An empty resource planning grid showing the start and end times
+    alt: an empty resource planning grid showing the start and end times
 overlapexperience:
   - img: work/timedesigner/overlap-experience.jpg
-    alt: A row with overlapping experiences
+    alt: a row with overlapping experiences
 people:
   - &furman
     name: Furman Brown
@@ -141,7 +141,7 @@ summary: |
     notch='0',
     content=embed.img(
       src='work/timedesigner/mobile-lg.jpg',
-      alt='Small screen showing schedule grid filled with items',
+      alt='small screen showing schedule grid filled with items',
       sizes='media'
     )
   )
@@ -222,7 +222,8 @@ sketches of TimeDesigner’s core features.
 {{ embed.figure(
   data=[{
     img: 'work/timedesigner/wireframe.jpg',
-    alt: 'This early wireframe concept shows a clean table-like display with teachers and times as the column and row headers'
+    alt: 'early wireframe concept showing a clean table-like display
+      with teachers and times as the column and row headers'
   }],
   caption='Wireframe of TimeDesigner’s schedule builder.'
 ) }}
@@ -432,7 +433,7 @@ allowing it to move responsively along the grid.
 {{ embed.figure(
   data=[{
     img: 'work/timedesigner/dragdrop.jpg',
-    alt: 'A close up of an experience being dragged on the scheduling grid'
+    alt: 'close up of an experience being dragged on the scheduling grid'
   }],
   caption='Each rectangle -- or "experience" --
     can be dragged and dropped,
@@ -453,9 +454,9 @@ to render an HTML string to a PDF.
 {{ embed.figure(
   data=[{
     img: 'work/timedesigner/reports.jpg',
-    alt: 'A preview of the schedule in a table view
+    alt: 'preview of the schedule in a table view
       filled with color coded experiences with times on top,
-      and categories on the left.'
+      and categories on the left'
   }],
   caption='Viewable reports can be printed or downloaded via print-to-pdf.'
 ) }}
@@ -479,7 +480,7 @@ adding the action back to the end of the stack.
 {{ embed.figure(
   data=[{
     img: 'work/timedesigner/undo-redo.jpg',
-    alt: 'A scenario with "redo" button highlighted.'
+    alt: 'scenario with redo button highlighted'
   }],
   caption='Each action taken on the site is added to a stack,
     storing both "forward" and "backward" effects.'
@@ -490,7 +491,7 @@ adding the action back to the end of the stack.
 {{ embed.figure(
   data=[{
     img: 'work/timedesigner/fullapp.jpg',
-    alt: 'A scenario with multiple experiences selected.'
+    alt: 'scenario with multiple experiences selected'
   }],
   caption='Selecting a color for experiences in a TimeDesigner schedule.'
 ) }}
