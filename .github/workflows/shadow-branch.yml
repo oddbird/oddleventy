@@ -1,0 +1,19 @@
+name: shadow-branch
+
+on: create
+
+jobs:
+  create-branch:
+    runs-on: ubuntu-latest
+    env:
+      API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      SHADOW_OWNER: ${{ secrets.SHADOW_OWNER }}
+      SHADOW_REPO: ${{ secrets.SHADOW_REPO }}
+    steps:
+      - name: Get branch name
+        run: echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
+      - name: Create branch on shadow repo
+        run: |
+          git clone --single-branch "https://$API_TOKEN_GITHUB@github.com/$SHADOW_OWNER/$SHADOW_REPO.git" REPOTMP
+          cd REPOTMP
+          git push origin "main:$BRANCH_NAME"
