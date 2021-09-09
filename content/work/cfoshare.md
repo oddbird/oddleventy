@@ -41,8 +41,6 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-{{ quotes.grid(press) }}
-
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
@@ -82,3 +80,5 @@ summary: |
 {% endcall %}
 
 {% endcall %}
+
+{{ quotes.grid(press) }}

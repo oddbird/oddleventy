@@ -37,19 +37,18 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
+
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
-  media=embed.screen(
-    notch='0',
-    content=embed.img(
-      src='work/shopify/shopify-phone.jpg',
-      alt='Miriam speaking on video for a virtual training session',
-      width=744 ,
-      height=1611,
-      sizes='media'
-    )
-  )
+  media=embed.img(
+    src='work/shopify/shopify.jpg',
+    alt='Miriam speaking in the UX Summer Shopify Series',
+    attrs={
+      'width':'1800',
+      'height':'807'
+    }),
+    name='desktop-work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}
