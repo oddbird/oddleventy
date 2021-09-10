@@ -10,8 +10,6 @@ image:
   alt: CoachHub App on iPhone
   device: iphone
   fill: white
-  width: 1190
-  height: 2575
 og:
   img: default
 summary: |

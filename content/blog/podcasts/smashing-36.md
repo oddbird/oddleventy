@@ -10,8 +10,6 @@ action:
 image:
   src: blog/elsewhere/smashing-36.jpg
   alt: 'Smashing Podcast #36, Miriam Suzanne, What is the future of CSS?'
-  height: 1200
-  width: 630
 tags:
   - Cascade
   - CSS

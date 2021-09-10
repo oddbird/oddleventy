@@ -5,8 +5,6 @@ bird: ed
 date: 2020-11-02
 image:
   src: birds/ed.jpg
-  width: 2160
-  height: 743
 social:
   twitter: je92rivas
   github: jerivas

@@ -7,8 +7,6 @@ date: 2016-01-19
 end: 2018-07-06
 image:
   src: birds/david.jpg
-  width: 1440
-  height: 495
 social:
   twitter: davisagli
   github: davisagli

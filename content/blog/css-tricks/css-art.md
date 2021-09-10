@@ -10,8 +10,6 @@ image:
     A whole CSS-art cabinet of single-div objects drawn by Lynn Fisher,
     from a mirror and skull, to abacus, clock, viewfinder, plants,
     snow globe, hot air balloon, and lightsaber.
-  width: 2824
-  height: 1300
 tags:
   - CSS
   - Art

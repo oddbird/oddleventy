@@ -5,8 +5,6 @@ author: miriam
 date: 2021-02-16
 image:
   src: talks/container-query.jpg
-  width: 1279
-  height: 696
   position: top
 tags:
   - Cascade

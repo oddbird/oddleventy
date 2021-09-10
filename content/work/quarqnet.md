@@ -9,8 +9,6 @@ logo: sram
 image:
   src: work/quarqnet/quarqnet-hero.jpg
   alt: World's greatest athlete, Stacy Kvernmo's latest bike ride stats and mapped route
-  width: 2786
-  height: 958
 client: SRAM/Quarq
 date: 2015-01-01
 end: 2016-12-15

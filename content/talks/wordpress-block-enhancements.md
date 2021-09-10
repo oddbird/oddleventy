@@ -6,8 +6,6 @@ date: 2020-11-17
 image:
   src: talks/wp-blocks.jpg
   alt: Stacy Kvernmo walks through the WordPress editor palette function code
-  width: 1600
-  height: 818
 tags:
   - WordPress
   - Video

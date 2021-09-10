@@ -6,8 +6,6 @@ shortname: David H
 date: 2020-09-28
 image:
   src: birds/davidh.jpg
-  width: 2300
-  height: 1533
 social:
   twitter: shipslinky
   github: dvdherron
