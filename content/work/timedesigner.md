@@ -395,7 +395,7 @@ span amount for the grid-column.
 {{ embed.figure(
   data=experiencegrid,
   caption='Using the Inspector, we see how variables are defined and
-    used in the markup and css to place experiences anywhere on the grid.'
+    used in the markup and CSS to place experiences anywhere on the grid.'
 ) }}
 
 For optimal flexibility,
