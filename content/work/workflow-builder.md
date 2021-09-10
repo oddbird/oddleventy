@@ -8,8 +8,6 @@ end: 2020-01-13
 image:
   src: work/workflow-builder/workflow.jpg
   alt: Connected workflow processes shown within the canvas
-  width: 2804
-  height: 1131
 people:
   - &james
     name: James Stuckey Weber

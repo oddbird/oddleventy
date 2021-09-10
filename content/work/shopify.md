@@ -43,11 +43,8 @@ summary: |
 {% call embed.media_block(
   media=embed.img(
     src='work/shopify/shopify.jpg',
-    alt='Miriam speaking in the UX Summer Shopify Series',
-    attrs={
-      'width':'1800',
-      'height':'807'
-    }),
+    alt='Miriam speaking in the UX Summer Shopify Series'
+  ),
     name='desktop-work'
 ) %}
 

@@ -9,8 +9,6 @@ image:
   src: work/expression-builder/exbldr.jpg
   alt: Tools for data analytics
   position: top
-  width: 2048
-  height: 959
 people:
   - &james
     name: James Stuckey Weber
@@ -62,11 +60,8 @@ summary: |
 {% call embed.media_block(
   media=embed.img(
     src='work/expression-builder/expression-sample.jpg',
-    alt='modal showing visual builder tool with list of expressions',
-    attrs={
-      'width':'1280',
-      'height':'1047'
-    }),
+    alt='modal showing visual builder tool with list of expressions'
+  ),
     name='desktop-work'
 ) %}
 

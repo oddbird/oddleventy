@@ -49,8 +49,6 @@ summary: |
     content=embed.img(
       src='work/cfoshare/cfo-phone.jpg',
       alt='team page examples showing name, title, headshot, and bio',
-      width=743,
-      height=1611,
       sizes='media'
     )
   )
