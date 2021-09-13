@@ -42,7 +42,9 @@ sample:
     src: timedesigner/mobile-summary.jpg
     alt: Chicago K-8 School schedule iteration
   caption: |
-     Chicago K-8 School schedule iteration with 1/2 hour added
+     School scheduling -- from typical schedule 
+     to an iteration with expanded planning time 
+     for teachers -- built with CSS grid.
 tasks:
   - Accessible Interface
   - Custom Django Application
@@ -139,14 +141,11 @@ summary: |
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
-  media=embed.screen(
-    notch='0',
-    content=embed.img(
-      src='work/timedesigner/mobile-lg.jpg',
-      alt='small screen showing schedule grid filled with items',
-      sizes='media'
-    )
-  )
+  media=embed.img(
+    src='work/timedesigner/timedesigner-sample.jpg',
+    alt='scenario with grouped experiences colored green'
+  ),
+  name='desktop-work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}
