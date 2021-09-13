@@ -5,8 +5,6 @@ author: miriam
 date: 2020-08-24
 image:
   src: talks/conventions.jpg
-  width: 2000
-  height: 1687
 tags:
   - Cascade
   - CSS

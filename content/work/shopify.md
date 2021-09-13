@@ -5,7 +5,11 @@ image:
   svg: logos/shopify
 logo: shopify
 client: &client Shopify
-date: 2020-08-15
+date: 2020-06-15
+end: 2020-08-15
+tags:
+  - E-Commerce Sector
+  - Technology Sector
 press:
   - text: |
       We take submissions from our team,
@@ -29,5 +33,42 @@ summary: |
   with a follow-up Q&A.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
-{{ quotes.blockquote(press[0]) }}
+
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/shopify/shopify.jpg',
+    alt='Miriam speaking in the UX Summer Shopify Series'
+  ),
+    name='desktop-work'
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Training
+
+- Analysis of team needs & interests
+- Custom CSS training video
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Q&A
+
+- Follow-up question & answer session
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
+
+{{ quotes.grid(press) }}

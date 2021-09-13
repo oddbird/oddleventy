@@ -6,8 +6,6 @@ date: 2016-04-18
 end: 2020-10-13
 image:
   src: birds/kit.jpg
-  width: 2048
-  height: 960
 social:
   twitter: wlonk
   github: wlonk

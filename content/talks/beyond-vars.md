@@ -5,8 +5,6 @@ author: miriam
 date: 2021-01-04
 image:
   src: talks/vars-cascade.jpg
-  width: 2898
-  height: 1522
 tags:
   - Cascade
   - CSS

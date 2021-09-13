@@ -6,10 +6,13 @@ logo: salesforce-metadeploy
 links:
   site: https://install.salesforce.org/
 image:
-  src: projects/metadeploy.jpg
+  src: work/metadeploy/metadeploy.jpg
   alt: App UI of product installation flow
 client: &client Salesforce.org
-date: 2019-05-15
+date: 2018-01-01
+end: 2019-05-15
+tags:
+  - Technology Sector
 people:
   - &jason
     name: Jason Lantz

@@ -232,9 +232,9 @@ params:
       {% set same = 'same-y' if (start_y == end_y) else none %}
       {% set same = 'same-m' if same and (start_m == end_m) else same %}
 
-      {{ start | getDate(ranges[same].start or 'month_year') }}
+      {{ start | getDate(ranges[same].start or 'year') }}
       {{- '--' | typogr | safe -}}
-      {{ end | getDate(ranges[same].end or 'month_year') }}
+      {{ end | getDate(ranges[same].end or 'year') }}
 
     {% else %}
       {{ start | getDate('month_year' if format == 'range' else format) }}

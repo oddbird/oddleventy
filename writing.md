@@ -55,3 +55,22 @@ guidelines to help:
   - Talk
   - Workshop
   - Video
+
+*Case Study* posts include tags for their industry, for example `Technology Sector`
+
+### Image Organization
+
+Type of Content | Source Image Folder
+----------------|--------------------
+ OddBird Heros | `birds`
+ Blog | `blog`
+ Static Pages | `pages`
+ Open Source | `projects`
+ Testimonials | `quotes`
+ Susy | `susy`
+ Talks | `talks`
+ Work | `work/projectname`
+ Books | `writing`
+
+
+There are a few additional image folders for specific use cases.

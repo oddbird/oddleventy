@@ -3,13 +3,12 @@ title: Expression Builder
 sub: Tools for data analytics
 logo: aunalytics
 client: &client Aunalytics
-date: 2019-05-14
+date: 2018-05-14
+end: 2019-05-14
 image:
-  src: projects/aunalytics/exbldr.jpg
+  src: work/expression-builder/exbldr.jpg
   alt: Tools for data analytics
   position: top
-  width: 2048
-  height: 959
 people:
   - &james
     name: James Stuckey Weber
@@ -36,17 +35,60 @@ press:
       and excited to continue with future projects.
     <<: *greg
     slug: future
+tags:
+  - Analysis Sector
+  - Management Technology Sector
 summary: |
-  Aunalytics provides a full suite of data-analytics and management tools,
+  Aunalytics provides a full suite of data-analytics
+  and management tools,
   including the Aunsight Dataflow service.
   The "expression builder" is an embedded Vue application
-  allowing users to create and update the dataflows
+  allowing users to create and update dataflows
   using a visual UI that describes data transformation
   without having to write code.
   Advanced users can also edit flows directly in JSON,
   or move seamlessly between the two modes.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
+
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/expression-builder/expression-sample.jpg',
+    alt='modal showing visual builder tool with list of expressions'
+  ),
+    name='desktop-work'
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Design & UX
+
+  - Research & Concepting
+  - User Interviews
+  - User Experience Design
+  - Usability Testing
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Development
+
+  - Front-end & Vue Development
+  - Back-end Development
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
 
 {{ quotes.grid(press) }}

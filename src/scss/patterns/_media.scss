@@ -102,3 +102,12 @@
   @include tools.position(0);
   @include tools.square(100%);
 }
+
+[data-media='desktop-work'] {
+  grid-template-areas: 'image' 'content';
+  grid-template-columns: 100%;
+
+  .media-image {
+    justify-self: auto;
+  }
+}

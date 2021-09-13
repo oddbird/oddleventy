@@ -7,8 +7,6 @@ author: miriam
 image:
   src: blog/elsewhere/etv-cover-ep-44.png
   alt: Enjoy the Vue! (#44)
-  height: 3000
-  width: 3000
 tags:
   - CSS
   - Sass

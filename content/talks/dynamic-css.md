@@ -7,8 +7,6 @@ slides: https://talks.oddbird.net/dynamic-css/
 image:
   src: talks/mia-dvlpdnvr19-dynamic.jpg
   alt: Miriam speaking at Develop Denver, 2019
-  width: 1500
-  height: 844
 tags:
   - CSS
   - JavaScript

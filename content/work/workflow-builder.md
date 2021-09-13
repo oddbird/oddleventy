@@ -3,12 +3,11 @@ title: Workflow Builder
 sub: Tools for data analytics
 logo: aunalytics
 client: &client Aunalytics
-date: 2020-01-13
+date: 2019-01-13
+end: 2020-01-13
 image:
-  src: projects/aunalytics/workflow.jpg
+  src: work/workflow-builder/workflow.jpg
   alt: Connected workflow processes shown within the canvas
-  width: 2804
-  height: 1131
 people:
   - &james
     name: James Stuckey Weber
@@ -37,15 +36,56 @@ press:
       That worked really well.
     <<: *james
     slug: configurations
+tags:
+  - Analytics Sector
+  - Management Technology Sector
 summary: |
-  Aunalytics provides a full suite of data-analytics and management tools.
+  Aunalytics provides a full suite of data-analytics
+  and management tools.
   The "workflow builder" is an embedded Vue application
   allowing data scientists to visually create and navigate
-  through data flows of various kinds.
+  through dataflows of various kinds.
   The interface is an integration between standard HTML
   and an interactive SVG canvas, built with D3.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
+
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/workflow-builder/wb-example.jpg',
+    alt='canvas with color coded workflow cards'
+  ),
+  name='desktop-work'
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+  - Project Management
+  - User Interface Design Consulting
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Development
+
+  - Front-end Development
+  - Vue & D3 Development
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
 
 {{ quotes.grid(press) }}

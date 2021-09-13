@@ -7,8 +7,6 @@ author: miriam
 image:
   src: blog/elsewhere/wordwrap.jpg
   alt: F-Word
-  width: 1280
-  height: 500
 tags:
   - CSS
   - Sass

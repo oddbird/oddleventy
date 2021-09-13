@@ -3,9 +3,12 @@ title: TimeDesigner
 sub: Whole-School Design Thinking & Scheduling
 logo: tegy
 client: &client Tegy
-date: 2018-07-15
+date: 2016-01-01
+end: 2018-07-15
+tags:
+  - Education Sector
 image:
-  src: projects/tegy/grid-desktop.jpg
+  src: work/timedesigner/grid-desktop.jpg
   alt: School schedule grid
 people:
   - &furman
