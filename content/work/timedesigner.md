@@ -36,10 +36,10 @@ tags:
   - Education Sector
 sample:
   desktop:
-    src: work/timedesigner/timedesigner-desktop.jpg
+    src: timedesigner/timedesigner-desktop.jpg
     alt: Chicago K-8 School schedule iteration
   mobile:
-    src: work/timedesigner/mobile-summary.jpg
+    src: timedesigner/mobile-summary.jpg
     alt: Chicago K-8 School schedule iteration
   caption: |
      Chicago K-8 School schedule iteration with 1/2 hour added
