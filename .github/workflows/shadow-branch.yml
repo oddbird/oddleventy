@@ -34,4 +34,4 @@ jobs:
         with:
           issue-number: ${{ github.event.number }}
           body: |
-            View diff of compiled files: https://github.com/${{ env.SHADOW_OWNER }}/${{ env.SHADOW_REPO }}/compare/${{ github.event.pull_request.base.ref }}..${{ github.event.pull_request.head.ref }}
+            View diff of compiled files (may take a few minutes): https://github.com/${{ env.SHADOW_OWNER }}/${{ env.SHADOW_REPO }}/compare/${{ github.event.pull_request.base.ref }}..${{ github.event.pull_request.head.ref }}
