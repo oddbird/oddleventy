@@ -3,9 +3,12 @@ title: TimeDesigner
 sub: Whole-School Design Thinking & Scheduling
 logo: tegy
 client: &client Tegy
-date: 2018-07-15
+date: 2016-01-01
+end: 2018-07-15
+tags:
+  - Education Sector
 image:
-  src: projects/tegy/grid-desktop.jpg
+  src: work/timedesigner/grid-desktop.jpg
   alt: School schedule grid
 fullgrid:
   - img: work/timedesigner/full-grid.jpg
@@ -34,10 +37,10 @@ tags:
   - Case Study
 sample:
   desktop:
-    src: tegy/timedesigner-desktop.jpg
+    src: work/timedesigner/timedesigner-desktop.jpg
     alt: Chicago K-8 School schedule iteration
   mobile:
-    src: tegy/mobile-summary.jpg
+    src: work/timedesigner/mobile-summary.jpg
     alt: Chicago K-8 School schedule iteration
   caption: |
      Chicago K-8 School schedule iteration with 1/2 hour added

@@ -2,12 +2,15 @@
 title: MedCurbside
 sub: Knowledge-sharing for clinical physicians
 image:
-  src: projects/medcurbside.jpg
+  src: work/medcurbside/medcurbside.jpg
   alt: Ask or answer medical questions
 client: &client Lab06
-date: 2017-12-15
+date: 2016-01-01
+end: 2017-12-15
 links:
   site: https://www.medcurbside.com/
+tags:
+  - Wellness Sector
 people:
   - &rohit
     name: Rohit Puranik

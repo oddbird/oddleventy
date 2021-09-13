@@ -3,7 +3,7 @@ eleventyExcludeFromCollections: true
 title: The Carrot Project
 sub: A community tool for social responsibility
 image:
-  src: projects/carrot.jpg
+  src: work/carrot/carrot.jpg
 client: &client The Carrot Project
 people:
   - name: Jake de Grazia

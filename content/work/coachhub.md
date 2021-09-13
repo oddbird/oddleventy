@@ -5,7 +5,7 @@ banner: CoachHub Application
 sub: Responsive platform for integrated health coaching
 logo: orcas
 image:
-  src: projects/coachhub.jpg
+  src: work/coachhub/coachhub.jpg
   alt: CoachHub's services and platform demos
   position: top
 client: &client ORCAS
@@ -16,18 +16,20 @@ people:
     url: https://www.linkedin.com/in/sarataillon/
     title: CTO
     venue: *client
-date: 2015-09-15
+date: 2014-01-01
+end: 2016-01-01
 links:
   site: https://coachhub.resilienceboost.com/
 tags:
   - _post
   - Case Study
+  - Wellness Sector
 sample:
   desktop:
-    src: orcas/coachhub-desktop.jpg
+    src: coachhub/coachhub-desktop.jpg
     alt: Home screen of CoachHub app, with coaches listed on the side
   mobile:
-    src: orcas/coachhub-home-iphone.jpg
+    src: coachhub/coachhub-home-iphone.jpg
     alt: Mobile home screen of CoachHub app, guidance on the go
   caption: |
     CoachHub is a HIPAA-compliant health coaching platform

@@ -5,8 +5,6 @@ author: miriam
 date: 2020-07-15
 image:
   src: talks/cascade.jpg
-  width: 2500
-  height: 1150
 tags:
   - Cascade
   - CSS

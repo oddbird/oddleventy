@@ -5,8 +5,6 @@ feature: true
 logo: cascading-colors
 image:
   src: projects/cascading-colors.jpg
-  width: 2854
-  height: 1077
 author:
   - miriam
   - jonny

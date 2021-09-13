@@ -61,7 +61,7 @@ summary: |
         {%- set desktop = sample.desktop -%}
         <figure class="work-sample">
           {{ embed.img(
-            src=['projects', desktop.src] | join('/'),
+            src=['work', desktop.src] | join('/'),
             alt=desktop.alt,
             attrs={
               'class': 'sample-desktop',
@@ -77,7 +77,7 @@ summary: |
             position=mobile.position,
             notch=mobile.notch,
             content=embed.img(
-              src=['projects', mobile.src] | join('/'),
+              src=['work', mobile.src] | join('/'),
               alt=mobile.alt,
               sizes='media'
             )

@@ -7,8 +7,6 @@ image:
   src: talks/mia-smashing19-rad.jpg
   alt: Miriam speaking at Smashing Conf NY
   position: top
-  width: 2240
-  height: 1493
 slides: https://slides.oddbird.net/rad/
 tags:
   - Design

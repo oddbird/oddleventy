@@ -3,7 +3,7 @@ eleventyExcludeFromCollections: true
 title: Trop
 sub: A cool little lit mag from Los Angeles.
 image:
-  src: projects/trop.jpg
+  src: work/trop/trop.jpg
 client: &client Trop Magazine
 date: 2017-01-15
 links:

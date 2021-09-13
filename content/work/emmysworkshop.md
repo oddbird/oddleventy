@@ -2,7 +2,7 @@
 title: Emmy's Workshop
 sub: Individualized algebra tutor
 image:
-  src: projects/emmys.jpg
+  src: work/emmys-workshop/emmys.jpg
 client: &client Carleton College
 links:
   site: https://turing.mathcs.carleton.edu/production/AlgebraSolving.html
