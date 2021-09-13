@@ -451,6 +451,10 @@ and used print-to-pdf
 in a [headless Chrome](https://github.com/fate0/pychrome) instance
 to render an HTML string to a PDF.
 
+In addition to showing the scenario grid,
+the reports included an expanded table view for each row
+and a chart of the total minutes per color for the scenario.
+
 {{ embed.figure(
   data=[{
     img: 'work/timedesigner/reports.jpg',
