@@ -1,4 +1,4 @@
-name: shadow-push
+name: Push commits to shadow repo
 
 on: push
 
