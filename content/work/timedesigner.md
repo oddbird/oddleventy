@@ -5,8 +5,6 @@ logo: tegy
 client: &client Tegy
 date: 2016-01-01
 end: 2018-07-15
-tags:
-  - Education Sector
 image:
   src: work/timedesigner/grid-desktop.jpg
   alt: School schedule grid
@@ -35,6 +33,7 @@ people:
 tags:
   - _post
   - Case Study
+  - Education Sector
 sample:
   desktop:
     src: work/timedesigner/timedesigner-desktop.jpg
