@@ -38,12 +38,9 @@ sample:
   desktop:
     src: timedesigner/timedesigner-desktop.jpg
     alt: Chicago K-8 School schedule iteration
-  mobile:
-    src: timedesigner/mobile-summary.jpg
-    alt: Chicago K-8 School schedule iteration
   caption: |
-     School scheduling -- from typical schedule 
-     to an iteration with expanded planning time 
+     School scheduling -- from typical schedule
+     to an iteration with expanded planning time
      for teachers -- built with CSS grid.
 tasks:
   - Accessible Interface
