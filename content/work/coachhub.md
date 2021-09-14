@@ -287,7 +287,7 @@ users.
 ) }}
 </figure>
 
-## On-Going Design
+## Ongoing Design
 
 CoachHub launched with a minimum viable set of features, and room to
 grow. We continue to work periodically with ORCAS's internal development

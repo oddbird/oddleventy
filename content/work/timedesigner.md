@@ -170,7 +170,7 @@ summary: |
 - Django
 - Front-end
 - Back-end
-- On-going maintenance
+- Ongoing maintenance
 
 {% endcall %}
 
@@ -193,7 +193,7 @@ for investor pitches.
 They needed
 brand and user experience design,
 front- and back-end development,
-and on-going maintenance
+and ongoing maintenance
 for their first web application, TimeDesigner.
 
 ## Research & Concepting
@@ -256,7 +256,7 @@ While Research & Concepting helped
 with initial sorting,
 goal setting,
 and feature prioritization,
-on-going Project Management
+ongoing Project Management
 was key to distilling Tegy's broad vision
 into a useful, digital product.
 
@@ -488,7 +488,7 @@ adding the action back to the end of the stack.
     storing both "forward" and "backward" effects.'
 ) }}
 
-## On-Going Development
+## Ongoing Development
 
 {{ embed.figure(
   data=[{
