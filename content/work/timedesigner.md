@@ -39,9 +39,11 @@ sample:
     src: timedesigner/timedesigner-desktop.jpg
     alt: Chicago K-8 School schedule iteration
   caption: |
-     School scheduling -- from typical schedule
-     to an iteration with expanded planning time
-     for teachers -- built with CSS grid.
+     School scheduling tool
+     built with CSS Grid -- 
+     moving from a typical schedule
+     to an iteration with expanded 
+     planning time for teachers.
 tasks:
   - Accessible Interface
   - Custom Django Application
