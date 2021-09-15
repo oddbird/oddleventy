@@ -40,9 +40,9 @@ sample:
     alt: Chicago K-8 School schedule iteration
   caption: |
      School scheduling tool
-     built with CSS Grid -- 
+     built with CSS Grid --
      moving from a typical schedule
-     to an iteration with expanded 
+     to an iteration with expanded
      planning time for teachers.
 tasks:
   - Accessible Interface
@@ -124,7 +124,7 @@ summary: |
   OddBird helped Tegy
   plan, design, develop, launch, and maintain
   their school scheduling web app
-  using CSS grid and custom property wizardry
+  using CSS Grid and custom property wizardry
   on the front-end,
   and well-tested Django/Python on the back-end.
   Currently, the software is only available to schools in
@@ -167,7 +167,7 @@ summary: |
 
 ### Development
 
-- CSS grid & custom properties
+- CSS Grid & custom properties
 - Drag-and-drop interface
 - Django
 - Front-end
@@ -347,7 +347,7 @@ to a CSS variable on the grid container.
 <div class="row-grid" style="--day: 420;">
 ```
 
-In our CSS grid definition,
+In our CSS Grid definition,
 we use this `--day` variable to set the total number of columns.
 We end up with 1 column for each minute of the school day.
 
@@ -424,7 +424,7 @@ and allow it to grow taller as needed using `minmax`.
 
 ### Drag-and-Drop Schedule Interface with CSS Grid
 
-This use of CSS grid combined beautifully
+This use of CSS Grid combined beautifully
 with an intuitive drag-and-drop interface.
 An experience's `--start` variable is
 updated continuously while being dragged,
