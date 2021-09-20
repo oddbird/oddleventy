@@ -70,18 +70,22 @@ summary: |
               } | styles
             }
           ) }}
-          {%- set mobile = sample.mobile -%}
-          {{ embed.screen(
-            fill=mobile.fill,
-            fit=mobile.fit,
-            position=mobile.position,
-            notch=mobile.notch,
-            content=embed.img(
-              src=['work', mobile.src] | join('/'),
-              alt=mobile.alt,
-              sizes='media'
-            )
-          ) }}
+
+          {% if item.data.sample.mobile %}
+            {%- set mobile = sample.mobile -%}
+            {{ embed.screen(
+              fill=mobile.fill,
+              fit=mobile.fit,
+              position=mobile.position,
+              notch=mobile.notch,
+              content=embed.img(
+                src=['work', mobile.src] | join('/'),
+                alt=mobile.alt,
+                sizes='media'
+              )
+            ) }}
+          {% endif %}
+
           <figcaption class="caption">{{ sample.caption | mdInline | safe }}</figcaption>
         </figure>
       {% endif %}

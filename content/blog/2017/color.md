@@ -192,7 +192,7 @@ between background and text colors.
 > ensure a high degree of contrast for the general population of
 > readers.
 >
-> --[WebAIM]
+> ---[WebAIM]
 
 Contrast Ratio is my go-to web tool for the job.
 

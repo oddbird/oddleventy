@@ -71,7 +71,7 @@ summary: |
 
 - Transitioned original marketing website to WordPress
 - Content migration
-- Trained staff in on-going site maintenance
+- Trained staff in ongoing site maintenance
 
 {% endcall %}
 
