@@ -1,6 +1,6 @@
-import babel from '@rollup/plugin-babel';
+import { babel } from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
-import resolve from '@rollup/plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
     sourcemap: true,
   },
   plugins: [
-    resolve({ browser: true }),
+    nodeResolve({ browser: true }),
     commonjs(),
     babel({ babelHelpers: 'bundled' }),
     terser(),

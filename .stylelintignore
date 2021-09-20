@@ -1,7 +1,7 @@
 !.*
 .git/
 .nyc_output/
-.pnp.js
+.pnp.cjs
 .vscode/
 .yarn/
 _built/

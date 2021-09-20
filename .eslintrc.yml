@@ -28,6 +28,12 @@ settings:
   import/external-module-folders:
     - 'node_modules'
     - '.yarn'
+  import/parsers:
+    '@typescript-eslint/parser':
+      - '.ts'
+      - '.tsx'
+  import/resolver:
+    typescript: {}
 extends:
   - eslint:recommended
   - plugin:import/recommended
