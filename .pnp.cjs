@@ -79,6 +79,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it-footnote", "npm:3.0.3"],
             ["markdown-it-mark", "npm:3.0.1"],
             ["mockdate", "npm:3.0.5"],
+            ["netlify-plugin-11ty", "npm:1.1.0"],
             ["npm-run-all", "npm:4.1.5"],
             ["postcss", "npm:8.3.6"],
             ["prettier", "npm:2.4.1"],
@@ -170,7 +171,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@11ty/eleventy-cache-assets", "npm:2.3.0"],
             ["debug", "virtual:acb7749644ea27cca7c6d30e9236202fc712de0578556ddde3f10b28f861f9099c4a3eecfc812e134bbcffd2e524bd2b933ad0fcf98ea3e58a1f6745db5e10d9#npm:4.3.2"],
             ["flat-cache", "npm:3.0.4"],
-            ["node-fetch", "npm:2.6.2"],
+            ["node-fetch", "npm:2.6.4"],
             ["p-queue", "npm:6.6.2"],
             ["short-hash", "npm:1.0.0"]
           ],
@@ -4533,7 +4534,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["autoprefixer", "npm:9.8.6"],
             ["browserslist", "npm:4.17.0"],
-            ["caniuse-lite", "npm:1.0.30001258"],
+            ["caniuse-lite", "npm:1.0.30001259"],
             ["colorette", "npm:1.4.0"],
             ["normalize-range", "npm:0.1.2"],
             ["num2fraction", "npm:1.2.2"],
@@ -4548,7 +4549,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:10.3.4"],
             ["@types/postcss", null],
             ["browserslist", "npm:4.17.0"],
-            ["caniuse-lite", "npm:1.0.30001258"],
+            ["caniuse-lite", "npm:1.0.30001259"],
             ["colorette", "npm:1.4.0"],
             ["fraction.js", "npm:4.1.1"],
             ["normalize-range", "npm:0.1.2"],
@@ -5133,9 +5134,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/browserslist-npm-4.17.0-98801cc7f5-9b45ec283d.zip/node_modules/browserslist/",
           "packageDependencies": [
             ["browserslist", "npm:4.17.0"],
-            ["caniuse-lite", "npm:1.0.30001258"],
+            ["caniuse-lite", "npm:1.0.30001259"],
             ["colorette", "npm:1.4.0"],
-            ["electron-to-chromium", "npm:1.3.843"],
+            ["electron-to-chromium", "npm:1.3.845"],
             ["escalade", "npm:3.1.1"],
             ["node-releases", "npm:1.1.76"]
           ],
@@ -5375,7 +5376,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["caniuse-api", "npm:3.0.0"],
             ["browserslist", "npm:4.17.0"],
-            ["caniuse-lite", "npm:1.0.30001258"],
+            ["caniuse-lite", "npm:1.0.30001259"],
             ["lodash.memoize", "npm:4.1.2"],
             ["lodash.uniq", "npm:4.5.0"]
           ],
@@ -5383,10 +5384,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["caniuse-lite", [
-        ["npm:1.0.30001258", {
-          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001258-9014d665ba-2e87875a77.zip/node_modules/caniuse-lite/",
+        ["npm:1.0.30001259", {
+          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001259-4ffa9c26fd-4b04236936.zip/node_modules/caniuse-lite/",
           "packageDependencies": [
-            ["caniuse-lite", "npm:1.0.30001258"]
+            ["caniuse-lite", "npm:1.0.30001259"]
           ],
           "linkType": "HARD",
         }]
@@ -7571,10 +7572,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["electron-to-chromium", [
-        ["npm:1.3.843", {
-          "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.843-bd790cc8f5-4adb18cf1c.zip/node_modules/electron-to-chromium/",
+        ["npm:1.3.845", {
+          "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.845-27b782943d-2e14aa3731.zip/node_modules/electron-to-chromium/",
           "packageDependencies": [
-            ["electron-to-chromium", "npm:1.3.843"]
+            ["electron-to-chromium", "npm:1.3.845"]
           ],
           "linkType": "HARD",
         }]
@@ -13204,6 +13205,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["netlify-plugin-11ty", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/netlify-plugin-11ty-npm-1.1.0-c86b36d558-8e19d122d1.zip/node_modules/netlify-plugin-11ty/",
+          "packageDependencies": [
+            ["netlify-plugin-11ty", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["nice-try", [
         ["npm:1.0.5", {
           "packageLocation": "./.yarn/cache/nice-try-npm-1.0.5-963856b16f-0b4af3b5bb.zip/node_modules/nice-try/",
@@ -13244,10 +13254,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["node-fetch", [
-        ["npm:2.6.2", {
-          "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.2-2820154539-de367eae1d.zip/node_modules/node-fetch/",
+        ["npm:2.6.4", {
+          "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.4-973188f12d-0ab0e1f167.zip/node_modules/node-fetch/",
           "packageDependencies": [
-            ["node-fetch", "npm:2.6.2"]
+            ["node-fetch", "npm:2.6.4"],
+            ["whatwg-url", "npm:5.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -13676,6 +13687,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it-footnote", "npm:3.0.3"],
             ["markdown-it-mark", "npm:3.0.1"],
             ["mockdate", "npm:3.0.5"],
+            ["netlify-plugin-11ty", "npm:1.1.0"],
             ["npm-run-all", "npm:4.1.5"],
             ["postcss", "npm:8.3.6"],
             ["prettier", "npm:2.4.1"],
@@ -16110,7 +16122,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:26.6.2"],
             ["rollup", "npm:2.56.3"],
             ["serialize-javascript", "npm:4.0.0"],
-            ["terser", "npm:5.8.0"]
+            ["terser", "npm:5.9.0"]
           ],
           "packagePeers": [
             "@types/rollup",
@@ -17748,10 +17760,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:5.8.0", {
-          "packageLocation": "./.yarn/cache/terser-npm-5.8.0-3ae5b6eec3-770b7d3fad.zip/node_modules/terser/",
+        ["npm:5.9.0", {
+          "packageLocation": "./.yarn/cache/terser-npm-5.9.0-16d6a713ce-11c1246b19.zip/node_modules/terser/",
           "packageDependencies": [
-            ["terser", "npm:5.8.0"],
+            ["terser", "npm:5.9.0"],
             ["commander", "npm:2.20.3"],
             ["source-map", "npm:0.7.3"],
             ["source-map-support", "npm:0.5.20"]
@@ -17996,6 +18008,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["tr46", [
+        ["npm:0.0.3", {
+          "packageLocation": "./.yarn/cache/tr46-npm-0.0.3-de53018915-726321c5ea.zip/node_modules/tr46/",
+          "packageDependencies": [
+            ["tr46", "npm:0.0.3"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:1.0.1", {
           "packageLocation": "./.yarn/cache/tr46-npm-1.0.1-9547f343a4-96d4ed46bc.zip/node_modules/tr46/",
           "packageDependencies": [
@@ -18871,6 +18890,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["webidl-conversions", [
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/webidl-conversions-npm-3.0.1-60310f6a2b-c92a0a6ab9.zip/node_modules/webidl-conversions/",
+          "packageDependencies": [
+            ["webidl-conversions", "npm:3.0.1"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:4.0.2", {
           "packageLocation": "./.yarn/cache/webidl-conversions-npm-4.0.2-1d159e6409-c93d8dfe90.zip/node_modules/webidl-conversions/",
           "packageDependencies": [
@@ -18913,6 +18939,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["whatwg-url", [
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/whatwg-url-npm-5.0.0-374fb45e60-b8daed4ad3.zip/node_modules/whatwg-url/",
+          "packageDependencies": [
+            ["whatwg-url", "npm:5.0.0"],
+            ["tr46", "npm:0.0.3"],
+            ["webidl-conversions", "npm:3.0.1"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:7.1.0", {
           "packageLocation": "./.yarn/cache/whatwg-url-npm-7.1.0-d6cae01571-fecb07c872.zip/node_modules/whatwg-url/",
           "packageDependencies": [

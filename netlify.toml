@@ -1,2 +1,5 @@
-[build.environment]
-  PYTHON_VERSION = "3.7"
+[[plugins]]
+    package = "netlify-plugin-11ty"
+
+    [plugins.inputs]
+        cache_img = './assets/images'
