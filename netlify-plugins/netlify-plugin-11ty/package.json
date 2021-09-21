@@ -1,0 +1,67 @@
+{
+  "author": {
+    "name": "Aravind Reddy Voggu",
+    "email": "aravind.reddy@iiitb.org",
+    "url": "https://www.avoggu.com"
+  },
+  "bugs": {
+    "url": "https://github.com/zeroby0/netlify-plugin-11ty/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A plugin to make building with Eleventy and Netlify a joy!",
+  "devDependencies": {
+    "@netlify/build": "^15.11.0",
+    "ava": "^3.13.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "execa": "^5.0.0",
+    "netlify-cli": "^4.1.18",
+    "prettier": "^2.1.2",
+    "release-it": "^14.0.3"
+  },
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=12.18.0"
+  },
+  "files": [
+    "src/**/*.js",
+    "src/**/*.json",
+    "src/**/*.sh",
+    "src/**/*.html",
+    "src/**/*.ejs",
+    "manifest.yml"
+  ],
+  "homepage": "https://github.com/zeroby0/netlify-plugin-11ty#readme",
+  "keywords": [
+    "netlify-plugin",
+    "netlify"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "netlify-plugin-11ty",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeroby0/netlify-plugin-11ty.git"
+  },
+  "scripts": {
+    "ava": "cross-env FORCE_COLOR=1 ava --verbose",
+    "build": "netlify-build",
+    "eslint": "eslint --ignore-path .gitignore --fix --cache --format=codeframe --max-warnings=0 \"{src,init}/**/*.js\"",
+    "lint": "npm run eslint && npm run prettier",
+    "prettier": "prettier --ignore-path .gitignore --write --loglevel warn \"{.github,src,init}/**/*.{js,md,yml,json}\" \"*.{js,md,yml,json}\"",
+    "release": "release-it",
+    "test": "npm run lint && npm run ava"
+  },
+  "version": "1.1.0"
+}

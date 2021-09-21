@@ -1,9 +1,10 @@
 .git/
 .nyc_output/
-.pnp.js
+.pnp.cjs
 .vscode/
 .yarn/
 coverage/
 htmlcov/
 jscache/
+netlify-plugins/
 node_modules/
