@@ -1,4 +1,13 @@
 [[plugins]]
+    # Netlify does not support build plugins installed with Yarn v2/3 PnP,
+    # so we need to use a local version for now.
+    # The unused package is still included in package.json
+    # to better surface updated releases.
+    #
+    # See:
+    # - https://answers.netlify.com/t/build-plugin-error-netlify-plugin-x-plugin-not-installed-or-found/7625/4?u=jgerigmeyer
+    # - https://github.com/netlify/build-image/issues/612
+    # - https://github.com/netlify/build/issues/1535
     package = "/netlify-plugins/netlify-plugin-11ty"
 
     [plugins.inputs]
