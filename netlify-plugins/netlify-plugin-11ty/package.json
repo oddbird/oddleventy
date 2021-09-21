@@ -1,27 +1,4 @@
 {
-  "_from": "netlify-plugin-11ty",
-  "_id": "netlify-plugin-11ty@1.1.0",
-  "_inBundle": false,
-  "_integrity": "sha512-5NXhGIK+giWoHm6O2SbDeHEASLkkJp3nm0jcEoSMGblNdFQgY0V+3aF/ILORXjCqxx6GY+w63pbI2m7OdRxUmQ==",
-  "_location": "/netlify-plugin-11ty",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "netlify-plugin-11ty",
-    "name": "netlify-plugin-11ty",
-    "escapedName": "netlify-plugin-11ty",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/netlify-plugin-11ty/-/netlify-plugin-11ty-1.1.0.tgz",
-  "_shasum": "2edd2ef0f66c82f8f1eeb86248963e45127459bf",
-  "_spec": "netlify-plugin-11ty",
-  "_where": "/Users/jonny/Sites/oddleventy",
   "author": {
     "name": "Aravind Reddy Voggu",
     "email": "aravind.reddy@iiitb.org",
