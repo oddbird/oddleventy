@@ -6,4 +6,5 @@
 coverage/
 htmlcov/
 jscache/
+netlify-plugins/
 node_modules/

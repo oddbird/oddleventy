@@ -9,5 +9,6 @@ _site/
 coverage/
 htmlcov/
 jscache/
+netlify-plugins/
 node_modules/
 src/docs/
