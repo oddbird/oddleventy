@@ -180,7 +180,7 @@ summary: |
 
 {% endcall %}
 
-## What They Needed
+## What Tegy Needed
 
 Tegy came to OddBird
 with a multi-year plan

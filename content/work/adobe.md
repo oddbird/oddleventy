@@ -147,14 +147,64 @@ summary: |
   responsive, accessible design.
 ---
 
-{% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'quotes.macros.njk' as quotes %}
 
 At the end of the game, players discover their own typographic superpower.
 Players have the option to share their superpower on social media, access the
 typeface on Adobe, view similar typefaces, and download their superpower badge.
 
 {{ quotes.grid(press) }}
+
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'quotes.macros.njk' as quotes %}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    notch='0',
+    content=embed.img(
+      src='work/adobe/game-phone.jpg',
+      alt='game play example showing vintage TVs
+      with the words Play Me in different font styles',
+      sizes='media'
+    )
+  )
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Design
+
+- Wireframes & mockups
+- Graphic design 
+- Illustration
+- Animation
+- Accessible user interface (UI)
+- User experience design (UX)
+- Information architecture
+- Responsive across devices
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Development
+
+- Front-end Development 
+- Sass & CSS
+- JavaScript
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
 
 ## What Adobe Needed
 
