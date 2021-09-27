@@ -51,9 +51,8 @@ detailed instructions for how to do just that. Anticipating the bugs for
 us, Paul includes various workarounds.
 
 Have you used this approach? Did it work? Let us know by sending us a
-message via [Twitter] or join our public [Slack channel].
+message via [Twitter].
 
   [Twitter]: https://twitter.com/oddbird
-  [Slack channel]: http://friends.oddbird.net/
 
 ### [Performant Parallaxing &gt;]

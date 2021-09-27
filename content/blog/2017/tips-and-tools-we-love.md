@@ -201,11 +201,9 @@ in action [in this Pen].
 
 There are so many more tools we use that completely deserve to make this
 list. What are the tips or tools you wouldn’t want to be without? Let’s
-continue this conversation on two additional tools we love, [Twitter]
-and [Slack].
+continue this conversation on [Twitter].
 
 [TextExpander]: https://textexpander.com
 [Smile]: https://smilesoftware.com
 [in this Pen]: https://codepen.io/stacy/pen/9b76e7d9eb9d730e734aa776a7078fc5/
 [Twitter]: https://twitter.com/oddbird
-[Slack]: http://friends.oddbird.net

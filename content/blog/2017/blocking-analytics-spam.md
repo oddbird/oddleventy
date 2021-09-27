@@ -162,11 +162,9 @@ have been positive. If it continues to work well, we'll likely remove
 the referral-blocking code entirely.
 
 If you use Google Analytics, how have you tackled the problem of spam
-infecting your data? Let us know via [Twitter] or our public [Slack
-channel]!
+infecting your data? Let us know via [Twitter]!
 
 [this guide]: https://carloseo.com/removing-google-analytics-spam/
 [using an allowed-list filter to exclude any hostnames we haven't explicitly authorized]:
   https://carloseo.com/removing-google-analytics-spam/#b-valid-hostname-filter-to-stop-ghost-spam-and-development-environments
 [Twitter]: https://twitter.com/oddbird
-[Slack channel]: http://friends.oddbird.net/

@@ -240,10 +240,8 @@ If you have more snippets that you've written for Susy3, send them our
 way! We love to see how other people are using these tools, and we're
 always happy to share the shortcuts you find most useful.
 
-Follow us on [Twitter], join our [public Slack chat] (there's even a
-**\#susy** channel), or [contact us] online. We're excited to hear from
+Follow us on [Twitter], or [contact us] online. We're excited to hear from
 you!
 
 [Twitter]: https://twitter.com/oddbird
-[public Slack chat]: http://friends.oddbird.net
 [contact us]: /contact/

@@ -118,9 +118,7 @@ sketches, and to play with colors, typography, and layout. Xd is also an
 excellent tool for working out how users will flow through the content.
 
 What design tools and tutorials have you found most useful? I’d love to
-hear your recommendations. Join the conversation on [Twitter] or join
-our public [Slack channel].
+hear your recommendations. Join the conversation on [Twitter].
 
 [1]: https://helpx.adobe.com/xd/how-to/web-mobile-app-ui-ux-design-basics.html
 [Twitter]: https://twitter.com/oddbird
-[Slack channel]: http://friends.oddbird.net/

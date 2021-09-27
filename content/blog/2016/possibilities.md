@@ -88,8 +88,7 @@ posts about our processes and the tools we use or create to make this
 work easier. We’ll continue supporting the community in myriad ways,
 through [donations], [sponsorships][donations], writing, and [speaking].
 And, just as you’ve reached out to us, we’ll reach out to you with
-client referrals and project collaborations of all kinds. We’ve created
-a new [public Slack chat] for just that, and you can find us on
+client referrals and project collaborations of all kinds. You can find us on
 [Twitter] or test out our shiny new [contact form]. See that contact
 link at the bottom of every page? That’s intentional. We want to be in
 conversation with you.
@@ -104,7 +103,6 @@ past clients so new clients know what to expect.
 
 [donations]: /about/#sponsorships-and-donations
 [speaking]: /services/speaking/
-[public Slack chat]: http://friends.oddbird.net/
 [Twitter]: https://twitter.com/OddBird
 [contact form]: /contact/
 

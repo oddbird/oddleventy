@@ -111,11 +111,9 @@ from the start), configure it using the [AUTH\_USER\_MODEL setting], and
 you'll be well on your way to never having to say the word “username”
 again.
 
-Did we miss anything important? Let us know via [Twitter] or our public
-[Slack channel]!
+Did we miss anything important? Let us know via [Twitter]!
 
 [Django]: https://www.djangoproject.com/
 [How to Extend the Django User Model]: https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html
 [AUTH\_USER\_MODEL setting]: https://docs.djangoproject.com/en/stable/ref/settings/#auth-user-model
 [Twitter]: https://twitter.com/oddbird
-[Slack channel]: http://friends.oddbird.net/

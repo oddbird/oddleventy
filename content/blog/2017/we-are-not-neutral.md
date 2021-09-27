@@ -30,7 +30,7 @@ seven remote contractors into a *Web Software Agency*.
 [Instagram], [Sondra] came on full-time, and we added [David], [Stacy],
 and [Kit] to the team. We're [writing more], [speaking more], [taking on
 more clients], [re-designing our website and brand in the open],
-[building a community on Slack], and contributing to more [open source
+building a community on Slack, and contributing to more [open source
 projects].
 
 It was hard to lose one of the founders (and a sibling!) from our daily
@@ -61,7 +61,7 @@ I don't have any magic words, but it's important to all of us here that
 OddBird double-down on our commitment to *people* in all their
 diversity, especially when they are pushed to the margins. We know that
 we have work to do – that our [code of conduct] and [donations] are only
-a start. We're here, [we're listening][building a community on Slack],
+a start. We're here, we're listening,
 and we're not neutral.
 
   [Carl]: /authors/carl/
@@ -74,7 +74,6 @@ and we're not neutral.
   [speaking more]: /services/speaking/
   [taking on more clients]: /work/
   [re-designing our website and brand in the open]: /tags/open-design/
-  [building a community on Slack]: http://friends.oddbird.net/
   [open source projects]: /tools/
   [cause real pain]: https://meyerweb.com/eric/thoughts/2014/12/24/inadvertent-algorithmic-cruelty/
   [code of conduct]: /conduct/
