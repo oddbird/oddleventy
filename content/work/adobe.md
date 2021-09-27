@@ -157,10 +157,6 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
 
 {{ quotes.grid(press) }}
 
-{% import 'embed.macros.njk' as embed %}
-{% import 'layout.macros.njk' as layout %}
-{% import 'quotes.macros.njk' as quotes %}
-
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
@@ -169,7 +165,7 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
     content=embed.img(
       src='work/adobe/game-phone.jpg',
       alt='game play example showing vintage TVs
-      with the words Play Me in different font styles',
+        with the words Play Me in different font styles',
       sizes='media'
     )
   )
@@ -182,7 +178,7 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
 ### Design
 
 - Wireframes & mockups
-- Graphic design 
+- Graphic design
 - Illustration
 - Animation
 - Accessible user interface (UI)
@@ -196,7 +192,7 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
 
 ### Development
 
-- Front-end Development 
+- Front-end Development
 - Sass & CSS
 - JavaScript
 
