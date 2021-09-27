@@ -4,7 +4,6 @@ sub: Whole-School Design Thinking & Scheduling
 logo: tegy
 client: &client Tegy
 date: 2017-01-11
-end: 2018-07-15
 image:
   src: work/timedesigner/grid-desktop.jpg
   alt: School schedule grid
