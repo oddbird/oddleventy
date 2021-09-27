@@ -6,7 +6,8 @@ image:
 client: &client Carleton College
 links:
   site: https://turing.mathcs.carleton.edu/production/AlgebraSolving.html
-date: 2017-01-15
+date: 2016-08-01
+end: 2018-06-30
 tasks:
   - Branding
   - Responsive front-end architecture

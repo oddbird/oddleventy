@@ -81,14 +81,10 @@ module.exports = (eleventyConfig) => {
       .filter((item) => item.data.client)
       .sort((a, b) => {
         if (!a.data.end) {
-          if (a.date > b.data.end) {
-            return -1;
-          }
+          return b.data.end ? -1 : b.date - a.date;
         }
         if (!b.data.end) {
-          if (a.data.end > b.date) {
-            return -1;
-          }
+          return 1;
         }
         return b.data.end - a.data.end;
       }),
