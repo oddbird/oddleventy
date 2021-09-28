@@ -152,7 +152,6 @@ The following CodePen demo is available in Safari only:
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 We'd love to see how you use `initial-letter` in your design. Send us a
-message via [Twitter] or join our public [Slack channel].
+message via [Twitter].
 
 [Twitter]: https://twitter.com/oddbird
-[Slack channel]: http://friends.oddbird.net/

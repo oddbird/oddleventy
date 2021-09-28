@@ -22,17 +22,15 @@ action:
   url: http://friends.oddbird.net
 ---
 
-Date: **Thursday, June 1** Time: **11:30am - 12:30pm** (MST) Location:
-[OddFriends Slack]
+- Date: **Thursday, June 1**
+- Time: **11:30am - 12:30pm** (MST)
+- Location: OddFriends Slack^[_The OddFriends Slack channel is no longer available._]
 
 OddBird is holding an open question and answer session on a free slack
 channel to talk with you about developing a web app from start to finish
 – the decisions you need to make about team and technology and testing,
 budget and development costs, and how to build a user-base without
-relying on "viral" mysticism. **Join channel \#q-a on the OddBird
-Friends Slack.**
-
-[OddFriends Slack]: http://friends.oddbird.net
+relying on "viral" mysticism.
 
 ## Questions like:
 
@@ -77,8 +75,6 @@ our [work].
    mockup in [Adobe Xd] or [InVision], and without paying for a single line
    of code you can rapidly test your ideas with users, updating the
    features to fit their needs.
-
-**Join channel `#q-a` on the OddBird Friends Slack.**
 
 [Adobe Xd]: https://www.adobe.com/products/xd.html
 [InVision]: https://www.invisionapp.com/

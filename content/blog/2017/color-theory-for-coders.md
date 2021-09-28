@@ -50,8 +50,7 @@ instructions. If you're that person who's always asking why, she's even
 provided a special toggle for you!
 
 Have some color theories of your own? Let's discuss. Send us a message
-via [Twitter] or join our public [Slack channel].
+via [Twitter].
 
 [speaker]: /2017/01/31/css-day/#color-theory-for-people-who-code-svg-and-css-by-natalya-shelburne
 [Twitter]: https://twitter.com/oddbird
-[Slack channel]: http://friends.oddbird.net/

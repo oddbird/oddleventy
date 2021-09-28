@@ -47,13 +47,11 @@ use both research and experience to create the best results.
   attrs={'class': 'align-center'}
 ) }}][video]
 
-How do you use research to help you make design decisions? Let us know
-by sending us a message via [Twitter] or join our public [Slack
-channel]. For other great talks from An Event Apart speakers, [visit
-their website].
+How do you use research to help you make design decisions? Let us know by
+sending us a message via [Twitter]. For other great talks from An Event Apart
+speakers, [visit their website].
 
 [Sarah Parmenter]: https://www.sazzy.co.uk/
 [video]: https://vimeo.com/120804557
 [Twitter]: https://twitter.com/oddbird
-[Slack channel]: http://friends.oddbird.net/
 [visit their website]: https://aneventapart.com/

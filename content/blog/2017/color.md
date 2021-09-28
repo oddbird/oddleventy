@@ -284,14 +284,14 @@ In the end, we loved OddBird orange too much to cut it altogether, and
 we snuck it into the OddSite design. Can you find it? Hint: scroll back
 to the top and try refreshing the page.
 
-As always, we want to know what your favorite web tools are for playing
-with color. Have you tried Xd? What did you think? We’ll be discussing
-this and more in our [OddFriends Slack channel]. Join us!
+As always, we want to know what your favorite web tools are for playing with
+color. Have you tried Xd? What did you think? Let us know
+via [Twitter].
 
 [Adobe Experience Design]: https://www.adobe.com/products/xd.html
 [Susy]: /susy/
 [Miriam]: /authors/miriam/
-[OddFriends Slack channel]: http://friends.oddbird.net
+[Twitter]: https://twitter.com/oddbird
 
 ### Bonus - Color Palette Inspiration
 

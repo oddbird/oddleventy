@@ -248,9 +248,7 @@ installment in this series.
 
 How have you tackled the problem of wiring up a single-page application
 with server-side rendering? What are we missing, or where could we
-improve our methods? Drop us a line via [Twitter] or chime in on our
-public [Slack channel]!
+improve our methods? Drop us a line via [Twitter]!
 
 [behavior]: https://marionettejs.com/docs/v3.1.0/marionette.behavior.html
 [Twitter]: https://twitter.com/oddbird
-[Slack channel]: http://friends.oddbird.net/

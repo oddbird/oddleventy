@@ -165,8 +165,7 @@ only be used internally, calling local functions** (e.g. known functions
 defined in the same partial).
 
 Have you played with Sass 3.5 already? Did we miss anything important?
-Let us know via [Twitter] or our public [Slack channel]!
+Let us know via [Twitter]!
 
 [Kaelig's solution]: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
 [Twitter]: https://twitter.com/oddbird
-[Slack channel]: http://friends.oddbird.net/

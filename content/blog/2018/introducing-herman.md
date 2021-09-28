@@ -332,12 +332,10 @@ consulting] across the full stack of product design & development
 --helping find *the solution that best fits your team*. Don't hesitate
 to reach out.
 
-You can use our handy [contact form], talk to [@OddBird] on Twitter, or
-join our [public Slack] (with a dedicated `#herman` channel). We're
+You can use our handy [contact form], or talk to [@OddBird] on Twitter. We're
 excited to hear from you!
 
 [team of experts]: /about/
 [a range of support, training, and consulting]: /services/design-systems/
 [contact form]: /contact/
 [@OddBird]: https://twitter.com/oddbird
-[public Slack]: http://friends.oddbird.net
