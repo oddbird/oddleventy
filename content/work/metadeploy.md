@@ -9,8 +9,7 @@ image:
   src: work/metadeploy/metadeploy.jpg
   alt: App UI of product installation flow
 client: &client Salesforce.org
-date: 2018-01-01
-end: 2019-05-15
+date: 2018-05-31
 tags:
   - Technology Sector
 people:

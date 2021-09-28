@@ -3,8 +3,8 @@ title: Expression Builder
 sub: Tools for data analytics
 logo: aunalytics
 client: &client Aunalytics
-date: 2018-05-14
-end: 2019-05-14
+date: 2018-11-19
+end: 2019-05-31
 image:
   src: work/expression-builder/exbldr.jpg
   alt: Tools for data analytics

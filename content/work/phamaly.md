@@ -3,7 +3,8 @@ title: Phamaly Theatre Website
 sub: Built with WordPress
 logo: phamaly
 client: Phamaly
-date: 2019-12-06
+date: 2019-08-01
+end: 2021-03-02
 image:
   src: work/phamaly/chicago.jpg
   alt: Phamaly cast performing Chicago

@@ -79,7 +79,15 @@ module.exports = (eleventyConfig) => {
     collection
       .getAll()
       .filter((item) => item.data.client)
-      .sort((a, b) => b.date - a.date),
+      .sort((a, b) => {
+        if (!a.data.end) {
+          return b.data.end ? -1 : b.date - a.date;
+        }
+        if (!b.data.end) {
+          return 1;
+        }
+        return b.data.end - a.data.end;
+      }),
   );
   eleventyConfig.addCollection('sample', (collection) =>
     collection.getAll().filter((item) => item.data.sample),

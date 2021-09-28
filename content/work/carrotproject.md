@@ -8,7 +8,8 @@ client: &client The Carrot Project
 people:
   - name: Jake de Grazia
     venue: *client
-date: 2010-03-15
+date: 2008-09-30
+end: 2010-03-28
 tasks:
   - Product Branding
   - User Experience Design

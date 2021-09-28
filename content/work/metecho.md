@@ -4,7 +4,7 @@ title: Metecho (preview)
 sub: Collaboration for Salesforce projects
 logo: salesforce
 client: &client Salesforce.org
-date: 2020-05-15
+date: 2019-03-21
 people:
   - &jason
     name: Jason Lantz

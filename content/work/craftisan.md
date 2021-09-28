@@ -2,7 +2,8 @@
 eleventyExcludeFromCollections: true
 title: Craftisan
 client: Craftisan
-date: 2011-04-15
+date: 2010-07-31
+end: 2011-06-01
 tasks:
   - Product Branding
   - User Experience
