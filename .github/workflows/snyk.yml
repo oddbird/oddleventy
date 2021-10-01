@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@v0.3.0
+        uses: snyk/actions/node@0.3.0
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
