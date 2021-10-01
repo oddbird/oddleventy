@@ -192,7 +192,7 @@ helped us move swiftly through drafting
 to final designs in order to meet the project deadline.
 
 [type tasting]: https://www.typetasting.com/
-[Christina Gorton]: https://www.christinagorton.com/
+[Christina Gorton]: https://twitter.com/coffeecraftcode
 
 {{ embed.figure(
   data=vintage,

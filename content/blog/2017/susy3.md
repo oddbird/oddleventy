@@ -120,7 +120,7 @@ fallback by wrapping your grid code in the
 around to help with the fallback options, until all your required
 browsers catch up.
 
-  [browser-support matrix]: https://caniuse.com/#feat=css-grid
+  [browser-support matrix]: https://caniuse.com/css-grid
   [CSS Grid module]: https://css-tricks.com/snippets/css/complete-guide-grid/
   [Rachel Andrew]: https://gridbyexample.com/
   [Jen Simmons]: https://labs.jensimmons.com/

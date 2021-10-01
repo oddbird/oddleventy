@@ -5,8 +5,6 @@ on: push
 jobs:
   snyk:
     runs-on: ubuntu-latest
-    env:
-      API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
     steps:
       - uses: actions/checkout@v2
       - name: Run Snyk to check for vulnerabilities

@@ -47,5 +47,5 @@ checkout our [Research & Concepting] service.
 
 {% endcall %}
 
-[certified object-oriented UX strategist]: https://www.objectorientedux.com/strategists/SondraEby
+[certified object-oriented UX strategist]: https://www.ooux.com/strategists/sondraeby()
 [Research & Concepting]: /services/planning/

@@ -95,7 +95,7 @@ help make it a community project. Stay tuned!
 [team sass design]: https://www.sass.hk/en/styleguide/team.htm
 [scott kellum]: https://github.com/scottkellum/
 [@scottkellum]: https://twitter.com/scottkellum
-[vox media]: https://www.voxmedia.com/
+[vox media]: https://corp.voxmedia.com/
 [sassy math]: https://github.com/scottkellum/sassy-math
 [modular scale]: https://github.com/modularscale/modularscale-sass
 [rachel nabors]: https://github.com/rachelnabors

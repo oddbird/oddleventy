@@ -21,7 +21,7 @@ summary: |
 
 {% import 'embed.macros.njk' as embed %}
 
-In the latest version of [Chrome Canary](https://www.google.com/chrome/canary),
+In the latest version of [Chrome Canary](https://www.google.com/chrome/canary/),
 the most recent `@container` query proposal is available for use behind an
 experimental flag. Developed by OddBird's own [Miriam
 Suzanne](https://www.oddbird.net/authors/miriam/), the
@@ -44,7 +44,7 @@ query, but a main difference is that a `@container` query has to be implemented
 in two parts.
 
 In this demo (which only works in the latest version of [Chrome
-Canary](https://www.google.com/chrome/canary)), a `blockquote` is styled
+Canary](https://www.google.com/chrome/canary/)), a `blockquote` is styled
 differently depending on the size of its container.
 
 {{ embed.codepen(
@@ -237,7 +237,7 @@ Contain 3 Spec](https://github.com/w3c/csswg-drafts/projects/18).
 ## Experiment and share
 
 Follow these steps to get started experimenting and making your own demos:
-- Download [Chrome Canary](https://www.google.com/chrome/canary) or update to
+- Download [Chrome Canary](https://www.google.com/chrome/canary/) or update to
   the latest version.
 - Navigate to `chrome://flags`.
 - Search for "CSS container queries" and select `Enabled`.

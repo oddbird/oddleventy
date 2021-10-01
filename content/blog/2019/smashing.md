@@ -190,6 +190,6 @@ that allow us to move forward, even while we support old browsers.
 I use [Dank Mono], recommended by [Sarah Drasner] as the perfect font
 for her [Night Owl] VS Code theme.
 
-[Dank Mono]: https://dank.sh/
+[Dank Mono]: https://philpl.gumroad.com/l/dank-mono
 [Sarah Drasner]: https://sarahdrasnerdesign.com/
 [Night Owl]: https://github.com/sdras/night-owl-vscode-theme

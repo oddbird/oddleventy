@@ -74,9 +74,9 @@ about design like a data model, but it was also useful. As a designer, I
 was able to communicate more clearly with developers about the objects
 that would make up the application and define a glossary of terms.
 
-Watch videos & read more about OOUX on [rewiredux].
+Learn more about OOUX at [rewiredux].
 
-  [rewiredux]: https://www.rewiredux.com/resources
+  [rewiredux]: https://www.rewiredux.com/
 
 ## Adekunle Oduye
 
@@ -89,7 +89,7 @@ It’s a super efficient way to communicate designs to developers.
 Start prototyping with [Gatsby], or learn more about [Adekunle].
 
   [Gatsby]: https://www.gatsbyjs.org/
-  [Adekunle]: http://www.adekunleoduye.com/speaking/
+  [Adekunle]: https://www.adekunleoduye.com/speaking
 
 ## Aaron Irizarry
 

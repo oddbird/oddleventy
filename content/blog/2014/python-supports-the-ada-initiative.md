@@ -92,7 +92,7 @@ gender, skin color, cultural similarity to those in positions of power,
 and [other attributes that I did nothing to earn].
 
 But I know we can change our industry. I'm proud to be a part of the
-Python community when I see it [leading] the [way] in working towards
+Python community when I see it [leading] the way in working towards
 being welcoming to people who don't all look, talk, and act like me. I'm
 happy to be in the Python community (and humbled by all the hard work it
 took to get here) when I see this:
@@ -127,14 +127,13 @@ Carl
 [become a public speaker]: https://pyvideo.org/speaker/carl-meyer.html
 [recognized for my contributions]: https://www.djangoproject.com/foundation/teams/
 [first pycon talk]: https://pyvideo.org/pycon-us-2011/pycon-2011--reverse-engineering-ian-bicking--39-s.html
-[pyladies]: https://www.pyladies.com/
-[zoe quinn]: https://www.cracked.com/blog/5-things-i-learned-as-internets-most-hated-person/
+[pyladies]: https://pyladies.com/
+[zoe quinn]: https://www.cracked.com/blog/5-things-i-learned-as-internets-most-hated-person
 [any number of other women]: https://geekfeminism.wikia.org/wiki/Timeline_of_incidents
 [pervasive sexual harassment]: https://anontechlady.wordpress.com/2014/08/04/my-first-oscon/
 [playing on the easy setting]: https://whatever.scalzi.com/2012/05/15/straight-white-male-the-lowest-difficulty-setting-there-is/
 [other attributes that i did nothing to earn]: https://pyvideo.org/djangocon-us-2014/all-you-need-is-l.html
 [leading]: https://www.forbes.com/sites/women2/2013/04/09/record-number-of-women-give-tech-talks-at-pycon-2013/
-[way]: https://adainitiative.org/2012/10/22/leading-open-source-conference-pycon-us-shares-responsereport-guidelines-for-harassment/
 [code of conduct]: https://www.djangoproject.com/conduct/
 ["that time i wasn't harassed at a conference"]: https://geekfeminismdotorg.wordpress.com/2013/08/15/that-time-i-wasnt-harassed-at-a-conference/
 [working every day]: https://adainitiative.org/continue-our-work/workshops-and-training/

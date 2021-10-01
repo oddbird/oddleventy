@@ -36,7 +36,7 @@ at least, let's get started.
 [ways]: https://nvie.com/posts/a-successful-git-branching-model/
 [to]: https://www.atlassian.com/git/tutorials/comparing-workflows
 [use]: https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
-[git]: https://www.endpoint.com/blog/2014/05/02/git-workflows-that-work
+[git]: https://www.endpoint.com/blog/2014/05/git-workflows-that-work/
 [a content-addressable filesystem, used to track directory trees]: https://marc.info/?l=linux-kernel&m=111293537202443
 
 ## Git is a DAG-Manipulation Tool

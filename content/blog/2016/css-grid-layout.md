@@ -87,7 +87,7 @@ Internet Explorer and Opera Mini:
     'width': '1980',
     'height': '1288'
   }
-) }}](https://caniuse.com/#feat=css-featurequeries)
+) }}](https://caniuse.com/css-featurequeries)
 
 ### Grid Introduces New Vocabulary
 

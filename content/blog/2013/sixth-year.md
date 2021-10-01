@@ -53,6 +53,6 @@ Thanks for a great year, everyone. See you around in 2014!
 [we]: https://github.com/jgerigmeyer
 [released]: https://github.com/carljm
 [code]: https://github.com/mirisuzanne/
-[pyladies]: https://www.pyladies.com/
+[pyladies]: https://pyladies.com/
 [ada initiative]: https://adainitiative.org/
 [black girls code]: https://www.blackgirlscode.com/

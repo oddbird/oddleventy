@@ -11,7 +11,7 @@ tags:
   - Design
 events:
   - venue: WordCamp Chicago
-    url: https://2016.chicago.wordcamp.org/
+    url: https://chicago.wordcamp.org/2016/
     date: 2016-05-01
   - venue: UX Camp
     url: https://chicagocamps.org/events/2016/ux-camp/
