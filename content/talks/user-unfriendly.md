@@ -53,7 +53,6 @@ events:
   - venue: Metro State Mobile Prototyping
     adr: Denver, CO
     date: 2018-04-05
-    slides: #this-is-broken-@@@
   - venue: SassConf 2015
     url: https://twitter.com/sassconf
     adr: Austin, TX
