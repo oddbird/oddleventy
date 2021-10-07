@@ -12,7 +12,7 @@ events:
     url: https://confoo.ca/
     adr: Montreal, Canada
     date: 2014-02-27
-    slides: /advanced-python-preso/
+    slides: https://oddbird.github.io/advanced-python-preso/
 summary: |
   **Come along for a tour of Python's more advanced features:**
   decorators, context managers, descriptors, iterators, generators, and

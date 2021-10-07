@@ -92,10 +92,9 @@ makes a website a progressive web app and demonstrated through code and
 personal experience which of the big three JavaScript frameworks offers
 the most support out of the box.
 
-[Tae’lur Alexis] of [codeeveryday.io] gave us the tea on her newfound
-passion with accessibility. The inspiration for her talk just might have
-been divine providence as she’s been apparently working through issues
-with her eyesight.
+[Tae’lur Alexis] gave us the tea on her newfound passion with accessibility. The
+inspiration for her talk just might have been divine providence as she’s been
+apparently working through issues with her eyesight.
 
 I got to sit in on perhaps [the most diverse panel of technologists]
 I’ve ever seen giving clutch information on what it’s like betting on
@@ -136,7 +135,7 @@ present my ideas and experiences to my peers.
 
 [GraphQL]: https://graphql.org/
 [Flutter]: https://flutter.dev/
-[Gatsby]: https://www.gatsbyjs.org/
+[Gatsby]: https://www.gatsbyjs.com/
 [Vue Skulk]: https://www.vuevixens.org/
 [Tracy Lee]: https://twitter.com/ladyleet
 [This Dot Labs]: https://labs.thisdot.co/
@@ -145,11 +144,10 @@ present my ideas and experiences to my peers.
 [Mike Harington]: https://twitter.com/mhartington
 [Ionic]: https://ionicframework.com/
 [Tae’lur Alexis]: https://twitter.com/TaelurAlexis
-[codeeveryday.io]: https://codeeveryday.io/
 [the most diverse panel of technologists]: https://www.youtube.com/watch?v=S6rfMzcw-S0
 [Sangeeta Nori]: https://twitter.com/norisangeeta
 [quantum computing]: https://en.wikipedia.org/wiki/Quantum_computing
-[/dev/color]: https://www.devcolor.org/
+[/dev/color]: https://devcolor.org/
 [Alexandra Millatmal]: https://twitter.com/halfghaninne?lang=en
 [Newsela]: https://newsela.com/
 [Nick Caldwell]: https://twitter.com/nickcald?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor

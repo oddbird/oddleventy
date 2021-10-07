@@ -182,7 +182,7 @@ summary: |
   between designers, developers, and stakeholders
   throughout the project.
 
-  [Sophia Prater]: https://www.objectorientedux.com
+  [Sophia Prater]: https://www.ooux.com/
 
 ---
 

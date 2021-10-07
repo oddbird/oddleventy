@@ -29,7 +29,7 @@ events:
   - venue: BlendConf
     adr: Charlotte, NC
     date: 2014-09-12
-    video: https://teamtreehouse.com/library/sass-map-magic
+    video: https://vimeo.com/115826194
 summary: |
   **Maps are a powerful data type in Sass** –
   perfect for managing color and scale palettes,

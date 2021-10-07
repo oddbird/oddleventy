@@ -13,7 +13,7 @@ events:
     url: https://us.pycon.org/2013/
     date: 2013-03-16
     adr: Santa Clara, CA
-    slides: /start-testing-preso/
+    slides: https://oddbird.github.io/start-testing-preso/
     media: &pycon
       iframe: https://www.youtube.com/embed/ukm64IUANwE
 summary: |

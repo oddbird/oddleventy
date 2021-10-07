@@ -185,7 +185,7 @@ this pair didn’t make the final round of cuts.
   src='blog/2017/typography/fontpair.jpg'
 ) }}
 
-[Font Pair]: https://fontpair.co/
+[Font Pair]: https://www.fontpair.co/
 
 ## [Carrie Dils]
 
@@ -310,10 +310,10 @@ Also, we’re suckers for fonts with lowercase numerals.
   alt='1-9 in lowercase style numbers'
 ) }}
 
-Freight was developed by [Darden Studio] and is available at [Phil’s
-Fonts] as well as through TypeKit. Without a TypeKit subscription, the
-Freight licenses may have been more of a hassle than we wanted to deal
-with, requiring monthly pageview tracking. With TypeKit, we were golden.
+Freight was developed by [Darden Studio] and is available through TypeKit.
+Without a TypeKit subscription, the Freight licenses may have been more of a
+hassle than we wanted to deal with, requiring monthly pageview tracking. With
+TypeKit, we were golden.
 
 {{ embed.img(
   src='blog/2017/typography/darden.jpg'
@@ -322,7 +322,6 @@ with, requiring monthly pageview tracking. With TypeKit, we were golden.
 [Typedia]: http://typedia.com/explore/typeface/freight-text/
 [create a custom font stack]: https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/
 [Darden Studio]: https://www.dardenstudio.com/
-[Phil’s Fonts]: https://philsfonts.com/font-family/garagefonts/freight-family/GF060021X1/
 
 ## Getting Personal
 

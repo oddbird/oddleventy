@@ -108,7 +108,7 @@ love as I considered OddBird’s color palette.
   src='blog/2017/colors/mildbunch.jpg'
 ) }}
 
-[Mild Bunch]: http://mildbun.ch/
+[Mild Bunch]: https://mildbun.ch/
 
 ## [Clear Left]
 
@@ -307,7 +307,7 @@ via [Twitter].
   src='blog/2017/colors/hsl.jpg'
 ) }}
 
-[HSL Color Picker]: http://hslpicker.com/
+[HSL Color Picker]: https://hslpicker.com/
 
 ## [Color Me]
 
