@@ -88,7 +88,7 @@ It’s a super efficient way to communicate designs to developers.
 
 Start prototyping with [Gatsby], or learn more about [Adekunle].
 
-  [Gatsby]: https://www.gatsbyjs.org/
+  [Gatsby]: https://www.gatsbyjs.com/
   [Adekunle]: https://www.adekunleoduye.com/speaking
 
 ## Aaron Irizarry

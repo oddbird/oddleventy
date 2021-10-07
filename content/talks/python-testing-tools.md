@@ -12,7 +12,7 @@ events:
   - venue: ConFoo
     url: https://confoo.ca/
     date: 2014-02-28
-    slides: /python-testing-tools-preso/
+    slides: https://oddbird.github.io/python-testing-tools-preso/
 summary: |
   **Come check out some battle-tested tools for improving your Python
   testing.** I'll demonstrate intermediate and advanced features of

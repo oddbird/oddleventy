@@ -11,7 +11,7 @@ events:
   - venue: PyCon
     url: https://us.pycon.org/2014/
     date: 2014-04-13
-    slides: /set-your-code-free-preso/
+    slides: https://oddbird.github.io/set-your-code-free-preso/
     media:
       iframe: https://www.youtube.com/embed/nHWRN5gCPSI
 summary: |
