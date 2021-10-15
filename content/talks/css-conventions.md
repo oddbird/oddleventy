@@ -8,7 +8,6 @@ image:
 tags:
   - Cascade
   - CSS
-  - Methodology
 events:
   - venue: An Event Apart Fall Summit
     url: https://aneventapart.com/event/online-1020

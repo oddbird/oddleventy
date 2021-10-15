@@ -8,7 +8,7 @@ image:
   src: talks/user-unfriendly.png
   alt: Rethinking user experience design across media
 tags:
-  - Fine Art
+  - Art
   - Design
   - Process
   - Agile
