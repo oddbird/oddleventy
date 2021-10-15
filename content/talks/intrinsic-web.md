@@ -10,7 +10,6 @@ tags:
   - Cascade
   - CSS
   - CSS Scope
-  - CSSWG
   - Container Queries
   - Cascade Layers
   - CSSWG
