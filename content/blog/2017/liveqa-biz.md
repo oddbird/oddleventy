@@ -17,9 +17,6 @@ summary: |
   interested in expanding your web services? Here's your chance to ask all
   those questions that keep you up at night.
 date: 2017-05-27
-action:
-  text: Join the channel for our Q&A
-  url: http://friends.oddbird.net
 ---
 
 - Date: **Thursday, June 1**
