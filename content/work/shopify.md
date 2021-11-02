@@ -52,18 +52,22 @@ summary: |
 
 {% call layout.block('column') %}
 
-### Training
+### Services
 
-- Analysis of team needs & interests
-- Custom CSS training video
+- Research
+- Custom CSS Training 
+- Q&A
+
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Q&A
+### Languages & Tools
 
-- Follow-up question & answer session
+- CSS
+- Video
+
 
 {% endcall %}
 

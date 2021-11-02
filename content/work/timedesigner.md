@@ -151,28 +151,28 @@ summary: |
 
 {% call layout.block('column') %}
 
-### Design
+### Services
 
-- Wireframes & mockups
-- Brand identity & implementation
-- Accessible user interface (UI)
-- User experience design (UX)
-- Integrated style guide
-- Information architecture
-- Responsive across devices
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Back-end Development
+- Ongoing Maintenance
+
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Development
+### Languages & Tools
 
-- CSS Grid & custom properties
-- Drag-and-drop interface
-- Django
-- Front-end
-- Back-end
-- Ongoing maintenance
+- Adobe Xd 
+- Django & Python
+- Herman
+- JavaScript
+- Sass & CSS
+
 
 {% endcall %}
 

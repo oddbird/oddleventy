@@ -175,26 +175,25 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
 
 {% call layout.block('column') %}
 
-### Design
+### Services
 
-- Wireframes & mockups
-- Graphic design
-- Illustration
-- Animation
-- Accessible user interface (UI)
-- User experience design (UX)
-- Information architecture
-- Responsive across devices
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Usability Testing
+
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Development
+### Languages & Tools
 
-- Front-end Development
+- Adobe XD
+- JavaScript with NuxtJS
 - Sass & CSS
-- JavaScript
+
 
 {% endcall %}
 

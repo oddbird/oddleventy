@@ -58,20 +58,24 @@ summary: |
 
 {% call layout.block('column') %}
 
-### Design
+### Services
 
-- Brand implementation
-- Image optimization
+- UX & UI Design
+- Content Migration
+- Front-end Development
+- Ongoing Maintenance
+
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Development
+### Languages & Tools
 
-- Transitioned original marketing website to WordPress
-- Content migration
-- Trained staff in ongoing site maintenance
+- PHP
+- Sass & CSS
+- WordPress
+
 
 {% endcall %}
 
