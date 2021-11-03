@@ -61,6 +61,12 @@ and help along the way.
 - Intern compensation
   is determined on a case-by-case basis.
 
+### PTO
+
+All contractors are encouraged to take
+5 days of PTO annually,
+paid at \$400/day.
+
 ### Transparency
 
 Our books are open to the team,
