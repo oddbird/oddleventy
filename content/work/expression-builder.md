@@ -69,21 +69,24 @@ summary: |
 
 {% call layout.block('column') %}
 
-### Design & UX
+### Services
 
   - Research & Concepting
-  - User Interviews
-  - User Experience Design
-  - Usability Testing
+  - Project Management
+  - UX & UI Design
+  - Front-end Development
+
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Development
+### Languages
 
-  - Front-end & Vue Development
-  - Back-end Development
+  - Adobe XD
+  - JavaScript with Vue.js
+  - Sass & CSS 
+
 
 {% endcall %}
 

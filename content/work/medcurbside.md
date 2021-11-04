@@ -54,5 +54,56 @@ summary: |
   in healthcare today.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    notch='0',
+    content=embed.img(
+      src='work/cfoshare/cfo-phone.jpg',
+      alt='team page examples showing name, title, headshot, and bio',
+      sizes='media'
+    )
+  )
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Back-end Development
+- Ongoing Maintenance
+
+
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+- Adobe Xd 
+- Django & Python
+- Herman
+- JavaScript
+- Sass & CSS
+
+
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
+
 {{ quotes.grid(press) }}

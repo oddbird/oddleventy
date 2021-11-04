@@ -1,40 +1,34 @@
 ---
-title: Workflow Builder
-sub: Tools for data analytics
-logo: aunalytics
-client: &client Aunalytics
-date: 2019-01-13
-end: 2020-01-13
+title: Top Dog
+sub: Bet on live sports with play money
+logo: topdog
+client: &client Top Dog
+date: 2020-06-01
+end: 2021-04-01
 image:
   src: work/workflow-builder/workflow.jpg
-  alt: Connected workflow processes shown within the canvas
+  alt: 
 people:
-  - &james
-    name: James Stuckey Weber
+  - &griffin
+    name: Griffin Parker
     face: james-weber.jpg
     url: https://www.linkedin.com/in/jamessw/
     title: UI/UX Design & Development Director
     venue: *client
-  - &greg
-    name: Gregory Davis
+  - &kevin
+    name: Kevin Guy
     face: gregory-davis.jpg
     url: https://www.linkedin.com/in/gregory-davis-7546a419/
     title: Chief Architect
     venue: *client
 press:
   - text: |
-      The Workflow Builder project met and exceeded expectations.
-      The project was finished in budget and on time,
-      and we were super excited to get the outcome we did.
-    <<: *greg
+      T
+    <<: *griffin
     slug: excited
   - text: |
-      We appreciate that there’s not one package deal at OddBird.
-      Depending on the project,
-      different configurations of the OddBird team
-      were able to integrate with our internal developers.
-      That worked really well.
-    <<: *james
+      W
+    <<: *kevin
     slug: configurations
 tags:
   - Analytics Sector
@@ -70,18 +64,26 @@ summary: |
 
 ### Services
 
+  - Research & Concepting
   - Project Management
-  - UX & UI Design Consulting
+  - UX & UI Design
   - Front-end Development
+  - Back-end Development
+  - Ongoing Maintenance
+  - Design System
+  - Usability Testing
 
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Languages
+### Languages & Tools
 
-  - JavaScript with Vue.js and D3
+  - Adobe XD
+  - Django & Python
+  - Herman
+  - JavaScript with Vue.js
   - Sass & CSS
 
 

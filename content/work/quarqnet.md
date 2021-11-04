@@ -119,10 +119,62 @@ summary: |
   Strava, Training Peaks, Dropbox, and Today’s Plan.
 ---
 
-{% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'quotes.macros.njk' as quotes %}
+
+At the end of the game, players discover their own typographic superpower.
+Players have the option to share their superpower on social media, access the
+typeface on Adobe, view similar typefaces, and download their superpower badge.
 
 {{ quotes.grid(press) }}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    notch='0',
+    content=embed.img(
+      src='work/adobe/game-phone.jpg',
+      alt='game play example showing vintage TVs
+        with the words Play Me in different font styles',
+      sizes='media'
+    )
+  )
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Ongoing Maintenance
+- Usability Testing
+
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+- Adobe Xd 
+- Django & Python
+- Herman
+- JavaScript
+- Sass & CSS
+
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
 
 ## What They Needed
 
