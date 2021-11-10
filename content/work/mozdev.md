@@ -48,8 +48,8 @@ summary: |
 
 {% call embed.media_block(
   media=embed.img(
-    src='work/expression-builder/expression-sample.jpg',
-    alt='modal showing visual builder tool with list of expressions'
+    src='mozdev/mozdev-example.jpg',
+    alt='Mozilla Developer YouTube channel with 24.3K subscribers and a grid of videos'
   ),
     name='desktop-work'
 ) %}
