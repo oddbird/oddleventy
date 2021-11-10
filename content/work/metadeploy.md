@@ -58,7 +58,7 @@ summary: |
 
 {% call embed.media_block(
   media=embed.img(
-    src='work/workflow-builder/wb-example.jpg',
+    src='work/metadeploy/md-example.jpg',
     alt='canvas with color coded workflow cards'
   ),
   name='desktop-work'

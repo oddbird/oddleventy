@@ -39,8 +39,48 @@ summary: |
   we released 30 videos to nearly twenty thousand subscribers.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
-{% import "embed.macros.njk" as embed %}
+
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/expression-builder/expression-sample.jpg',
+    alt='modal showing visual builder tool with list of expressions'
+  ),
+    name='desktop-work'
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+  - Research
+  - Tutorials
+
+
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+  - CSS
+  - Video
+ 
+
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
 
 {{ quotes.grid(press) }}
 
