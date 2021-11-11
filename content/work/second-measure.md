@@ -73,8 +73,8 @@ summary: |
 
 {% call embed.media_block(
   media=embed.img(
-    src='work/shopify/shopify.jpg',
-    alt='Miriam speaking in the UX Summer Shopify Series'
+    src='work/second-measure/second-measure-sample.jpg',
+    alt='spacing and margin components in Storybooks'
   ),
     name='desktop-work'
 ) %}

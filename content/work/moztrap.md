@@ -43,8 +43,8 @@ summary: |
 
 {% call embed.media_block(
   media=embed.img(
-    src='work/expression-builder/expression-sample.jpg',
-    alt='modal showing visual builder tool with list of expressions'
+    src='work/moztrap/moztrap-sample.jpg',
+    alt='list of tests run and their results'
   ),
     name='desktop-work'
 ) %}

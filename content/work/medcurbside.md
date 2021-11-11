@@ -64,8 +64,8 @@ summary: |
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='work/cfoshare/cfo-phone.jpg',
-      alt='team page examples showing name, title, headshot, and bio',
+      src='work/medcurbside/medcurbside-phone.jpg',
+      alt='clinician questions with one answer and one source cited',
       sizes='media'
     )
   )
