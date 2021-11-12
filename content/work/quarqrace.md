@@ -1,6 +1,6 @@
 ---
 title: Quarq Race Intelligence
-banner: Quarq Race Intelligence Case Study
+banner: Quarq Race Intelligence
 sub: Real-time race analytics
 links:
   site: https://www.quarqrace.com/
@@ -60,8 +60,8 @@ summary: |
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='work/cfoshare/cfo-phone.jpg',
-      alt='team page examples showing name, title, headshot, and bio',
+      src='work/quarqrace/qri-phone.jpg',
+      alt='t',
       sizes='media'
     )
   )
