@@ -135,9 +135,9 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='work/adobe/game-phone.jpg',
-      alt='game play example showing vintage TVs
-        with the words Play Me in different font styles',
+      src='work/quarqnet/quarqnet-phone.jpg',
+      alt='sign-in form with bike race mountain road
+      scene in the background',
       sizes='media'
     )
   )

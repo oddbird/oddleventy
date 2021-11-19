@@ -139,9 +139,9 @@ escalation of care.
   media=embed.screen(
     notch='0',
     content=embed.img(
-      src='work/adobe/game-phone.jpg',
-      alt='game play example showing vintage TVs
-        with the words Play Me in different font styles',
+      src='work/coachhub/coachhub-phone.jpg',
+      alt='list of coaches with location, specialty, and
+      provider type filters',
       sizes='media'
     )
   )

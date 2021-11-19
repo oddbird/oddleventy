@@ -6,8 +6,9 @@ client: &client Top Dog
 date: 2020-06-01
 end: 2021-04-01
 image:
-  src: work/workflow-builder/workflow.jpg
-  alt: 
+  src: work/top-dog/topdog.jpg
+  alt: three lists of games to bet on including NFL and NHL
+  position: top
 people:
   - &griffin
     name: Griffin Parker
@@ -34,13 +35,13 @@ tags:
   - Analytics Sector
   - Management Technology Sector
 summary: |
-  Aunalytics provides a full suite of data-analytics
-  and management tools.
-  The "workflow builder" is an embedded Vue application
-  allowing data scientists to visually create and navigate
-  through dataflows of various kinds.
-  The interface is an integration between standard HTML
-  and an interactive SVG canvas, built with D3.
+  OddBird worked with Top Dog to plan, design, 
+  develop, and test a responsive web application
+  that includes an automated style guide.
+  The Top Dog app provides a tournament-style community 
+  experience in which people bet on live sports
+  using play money, and winners get real prizes.
+  
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -52,8 +53,8 @@ summary: |
 
 {% call embed.media_block(
   media=embed.img(
-    src='work/workflow-builder/wb-example.jpg',
-    alt='canvas with color coded workflow cards'
+    src='work/top-dog/topdog.jpg',
+    alt='three lists of games to bet on including NFL and NHL'
   ),
   name='desktop-work'
 ) %}
