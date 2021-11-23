@@ -3,8 +3,8 @@ title: Estimating Engine
 sub: Tools for data analytics
 logo: aunalytics
 client: &client General Stamping & Metalworks
-date: 2018-05-14
-end: 2019-05-14
+date: 2020-01-20
+end: 2021-12-31
 image:
   src: work/expression-builder/exbldr.jpg
   alt: 
@@ -24,30 +24,20 @@ people:
     venue: *client
 press:
   - text: |
-      Some of our developers are junior,
-      and we appreciated the opportunity to work
-      with senior developers at OddBird.
-      We all learned from that experience.
+      Need quote
     <<: *ryan
     slug: learned
   - text: |
-      We feel grateful for having found our relationship with OddBird
-      and excited to continue with future projects.
+      Need quote
     <<: *jeff
     slug: future
 tags:
-  - Analysis Sector
-  - Management Technology Sector
+  - Manufacturing Sector
 summary: |
-  Aunalytics provides a full suite of data-analytics
-  and management tools,
-  including the Aunsight Dataflow service.
-  The "expression builder" is an embedded Vue application
-  allowing users to create and update dataflows
-  using a visual UI that describes data transformation
-  without having to write code.
-  Advanced users can also edit flows directly in JSON,
-  or move seamlessly between the two modes.
+  Estimating Engine is a web application
+  enabling estimators at GSM to efficiently 
+  create and track custom quotes to manufacture parts
+  for their customers.
 ---
 
 {% import 'embed.macros.njk' as embed %}

@@ -4,9 +4,10 @@ sub: Individualized algebra tutor
 image:
   src: work/emmys-workshop/emmys.jpg
 client: &client Carleton College
+date: 2016-06-30
+end: 2017-01-15
 links:
   site: https://turing.mathcs.carleton.edu/production/AlgebraSolving.html
-date: 2017-01-15
 tasks:
   - Branding
   - Responsive front-end architecture
@@ -17,6 +18,8 @@ people:
     # face: anna-rafferty.jpg
     url: https://emmysworkshop.com/
     venue: *client
+tags:
+  - Education Sector
 press:
   - text: |
       The first meeting I had with Miriam helped me decide.
