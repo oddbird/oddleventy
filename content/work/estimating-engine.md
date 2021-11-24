@@ -1,12 +1,12 @@
 ---
 title: Estimating Engine
-sub: Tools for data analytics
+sub: Create & manage custom manufacturing quotes
 logo: aunalytics
 client: &client General Stamping & Metalworks
 date: 2020-01-20
 end: 2021-12-31
 image:
-  src: work/expression-builder/exbldr.jpg
+  src: work/estimating-engine/estimating-engine.jpg
   alt: 
   position: top
 people:
@@ -14,13 +14,13 @@ people:
     name: Ryan Hochstetler
     face: james-weber.jpg
     url: https://www.linkedin.com/in/jamessw/
-    title: UI/UX Design & Development Director
+    title: Information Systems Administrator
     venue: *client
   - &jeff
     name: Jeff Jamrose
     face: gregory-davis.jpg
     url: https://www.linkedin.com/in/gregory-davis-7546a419/
-    title: Chief Architect
+    title: Senior Program / Pricing Manager
     venue: *client
 press:
   - text: |
@@ -34,10 +34,14 @@ press:
 tags:
   - Manufacturing Sector
 summary: |
-  Estimating Engine is a web application
-  enabling estimators at GSM to efficiently 
-  create and track custom quotes to manufacture parts
-  for their customers.
+  OddBird helped General Stamping & Metalworks
+  plan, design, and develop Estimating Engine,
+  a responive web application.
+  Estimating Engine enables estimators at GSM 
+  to efficiently 
+  create and manage custom quotes 
+  to manufacture parts
+  for their customers. 
 ---
 
 {% import 'embed.macros.njk' as embed %}
