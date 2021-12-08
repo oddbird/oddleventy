@@ -29,6 +29,7 @@
     @include tools.before('') {
       @include tools.position(0 fixed);
       @include tools.z-index('bump');
+
       cursor: default;
       display: block;
     }
@@ -42,6 +43,7 @@
 /// @group dropdown
 [data-dropdown] {
   @include tools.z-index('dropdown');
+
   background: var(--bg);
   border: thin solid var(--active);
   box-shadow: 0 0 var(--quarter-shim) var(--shadow);

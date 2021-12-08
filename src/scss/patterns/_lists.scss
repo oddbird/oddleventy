@@ -52,6 +52,7 @@ ol {
 
   strong {
     @include tools.font-family('alt');
+
     font-size: var(--h3);
   }
 }

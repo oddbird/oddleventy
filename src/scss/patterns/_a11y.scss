@@ -39,7 +39,9 @@
   &:link,
   &:visited {
     @include tools.z-index('skip-link');
+
     --underline-color: currentColor;
+
     background: var(--active);
     color: var(--bg);
     opacity: 0;

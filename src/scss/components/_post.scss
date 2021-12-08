@@ -7,6 +7,7 @@
   --drop-focus: var(--shim);
   --left: calc(var(--drop-focus) * -1);
   --bottom: calc(100% + var(--drop-focus));
+
   clip-path: polygon(
     var(--left) 0,
     calc(100% - var(--fold)) 0,
@@ -32,9 +33,11 @@
 
 [data-post='link'] {
   @include tools.transition('pop');
+
   --hero-height: var(--grid-hero);
   --item-title: 1rem;
   --newline: var(--half-shim);
+
   background: var(--card, var(--callout));
   box-shadow: calc(var(--drop) * -1) var(--drop) 0 var(--pop, var(--shadow));
   position: relative;
@@ -45,16 +48,19 @@
     --img-contrast: 1;
     --drop: var(--drop-focus);
     --pop: var(--active);
+
     transition-delay: 20ms;
   }
 
   .title-link {
     --underline-color: transparent;
+
     display: block;
 
     &::after {
       @include tools.position(0 0 0 0);
       @include tools.z-index('bump');
+
       content: '';
       display: block;
     }
@@ -71,6 +77,7 @@
 
 .type-flag {
   @include tools.font-family('alt');
+
   background: var(--highlight);
   color: var(--bg);
   font-size: var(--xsmall);
@@ -83,6 +90,7 @@
   &:link,
   &:visited {
     --fill: var(--bg);
+
     text-decoration: none;
     color: var(--bg);
   }

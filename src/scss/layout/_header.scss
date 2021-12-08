@@ -5,6 +5,7 @@
 
   .type-flag {
     @include tools.z-index('bump');
+
     margin: var(--gutter) 0 var(--shim) auto;
     padding-block: var(--quarter-shim);
     padding-right: var(--gutter);
@@ -15,6 +16,7 @@
   --angle: var(--edge);
   --edge: calc(var(--page-margin) / 2);
   --clip-overlap: var(--gutter);
+
   grid-template:
     'hero type' auto
     'title hero2' var(--clip-overlap)

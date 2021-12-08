@@ -6,6 +6,7 @@
 
 .event-meta {
   @include tools.font-family('alt');
+
   font-size: var(--small);
 }
 
@@ -15,6 +16,7 @@
 
 .event-links {
   @include tools.wrap-content('[' ']');
+
   font-size: var(--small);
   font-style: italic;
 }

@@ -10,6 +10,7 @@
 /// @group links
 .main-action {
   --link: var(--accent);
+
   font-size: var(--medium);
   margin-top: var(--double-gutter);
 }
@@ -28,6 +29,7 @@
     100% 100%,
     0 100%
   );
+
   padding-right: calc(var(--flag-indent, var(--shim)) + var(--shim));
 }
 
@@ -40,6 +42,7 @@
     0 100%,
     var(--flag-indent, var(--shim)) 50%
   );
+
   padding-left: calc(var(--flag-indent, var(--shim)) + var(--shim));
 }
 
@@ -49,6 +52,7 @@
 [data-section-title] {
   --flag-indent: var(--gutter-plus);
   --column: full;
+
   background: var(--feature);
   color: var(--bg);
   padding: var(--quarter-shim) var(--spacer) var(--half-shim);
@@ -113,6 +117,7 @@
   --column: content;
   --item-title: var(--h3);
   --newline: var(--shim);
+
   align-items: var(--align, start);
   display: grid;
   font-size: var(--small);
