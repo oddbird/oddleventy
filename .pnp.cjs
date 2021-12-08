@@ -46,7 +46,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-commonjs", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:21.0.1"],
             ["@rollup/plugin-node-resolve", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:13.0.6"],
             ["@tommoor/remove-markdown", "npm:0.3.2"],
-            ["@types/markdown-it", "npm:12.2.3"],
             ["@typescript-eslint/parser", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.6.0"],
             ["@yarnpkg/sdks", "npm:2.5.1-rc.5"],
             ["accoutrement", "npm:3.0.1"],
@@ -3261,35 +3260,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/keyv", "npm:3.1.3"],
             ["@types/node", "npm:16.11.12"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@types/linkify-it", [
-        ["npm:3.0.2", {
-          "packageLocation": "./.yarn/cache/@types-linkify-it-npm-3.0.2-ccb33717e7-dff8f10faf.zip/node_modules/@types/linkify-it/",
-          "packageDependencies": [
-            ["@types/linkify-it", "npm:3.0.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@types/markdown-it", [
-        ["npm:12.2.3", {
-          "packageLocation": "./.yarn/cache/@types-markdown-it-npm-12.2.3-ef47108ac6-868824a3e4.zip/node_modules/@types/markdown-it/",
-          "packageDependencies": [
-            ["@types/markdown-it", "npm:12.2.3"],
-            ["@types/linkify-it", "npm:3.0.2"],
-            ["@types/mdurl", "npm:1.0.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@types/mdurl", [
-        ["npm:1.0.2", {
-          "packageLocation": "./.yarn/cache/@types-mdurl-npm-1.0.2-5b57c94d95-79c7e523b3.zip/node_modules/@types/mdurl/",
-          "packageDependencies": [
-            ["@types/mdurl", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -11486,7 +11456,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/markdown-it-anchor-virtual-2b30b7d749/0/cache/markdown-it-anchor-npm-8.4.1-f24c555714-76ea34640a.zip/node_modules/markdown-it-anchor/",
           "packageDependencies": [
             ["markdown-it-anchor", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:8.4.1"],
-            ["@types/markdown-it", "npm:12.2.3"],
+            ["@types/markdown-it", null],
             ["markdown-it", "npm:12.2.0"]
           ],
           "packagePeers": [
@@ -12348,7 +12318,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-commonjs", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:21.0.1"],
             ["@rollup/plugin-node-resolve", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:13.0.6"],
             ["@tommoor/remove-markdown", "npm:0.3.2"],
-            ["@types/markdown-it", "npm:12.2.3"],
             ["@typescript-eslint/parser", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.6.0"],
             ["@yarnpkg/sdks", "npm:2.5.1-rc.5"],
             ["accoutrement", "npm:3.0.1"],
