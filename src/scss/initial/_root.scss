@@ -4,6 +4,7 @@
 
 html {
   @include tools.font-family('body');
+
   --clip-overlap: var(--page-margin);
   --clip-angle: var(--double-gutter);
   --clip-space: calc(var(--clip-angle) + var(--gutter));
@@ -14,6 +15,7 @@ html {
     calc(100% - var(--clip-angle)) 100%,
     0 100%
   );
+
   font-size: tools.size('rem');
   line-height: tools.ratio('line-height');
 }

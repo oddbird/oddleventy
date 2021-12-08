@@ -2,8 +2,10 @@
 
 #title {
   @include tools.z-index('bump');
+
   --blur: var(--quarter-shim);
   --outset: calc(var(--blur) * -1);
+
   align-self: center;
   grid-area: title;
   margin: 0;

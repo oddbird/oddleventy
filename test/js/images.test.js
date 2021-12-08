@@ -34,7 +34,7 @@ describe('image filters', () => {
 
       expect(options.widths).toEqual([480, 960, 1600]);
       expect(options.formats).toEqual(['webp', 'jpeg']);
-      expect(options.filenameFormat('hash', src, 480, 'webp')).toEqual(
+      expect(options.filenameFormat('hash', src, 480, 'webp')).toBe(
         'img-480w.webp',
       );
       expect(eleventyImg.statsSync).toHaveBeenCalledTimes(1);
@@ -63,7 +63,7 @@ describe('image filters', () => {
     test('can return url', () => {
       const url = image(src, null, null, null, true);
 
-      expect(url).toEqual('/assets/images/img-960w.webp');
+      expect(url).toBe('/assets/images/img-960w.webp');
     });
 
     test('warns if unexpected src prefix', () => {

@@ -2,8 +2,11 @@
 .git/
 .nyc_output/
 .pnp.cjs
+.pnp.loader.mjs
 .vscode/
 .yarn/
+.yarnrc
+.yarnrc.yml
 _built/
 _site/
 coverage/

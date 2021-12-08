@@ -7,5 +7,6 @@
 
 [data-styleguide='focus'] {
   @include config.focus-ring;
+
   margin: var(--gutter);
 }

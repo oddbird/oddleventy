@@ -16,7 +16,9 @@ h4,
 h5,
 h6 {
   @include tools.font-family('alt');
+
   --link: currentColor;
+
   margin-bottom: 0;
 }
 

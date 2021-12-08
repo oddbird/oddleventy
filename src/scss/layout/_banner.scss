@@ -2,7 +2,9 @@
 
 [data-layout='banner'] {
   @include tools.font-family('alt');
+
   --banner-space: calc(var(--shim) + 1vw);
+
   display: grid;
   grid-area: banner;
   grid-template:
@@ -23,6 +25,7 @@
   &:visited {
     @include tools.transition('move');
     @include tools.z-index('bump');
+
     align-self: start;
     display: block;
     grid-area: logo;

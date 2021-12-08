@@ -1,5 +1,6 @@
 #intro {
   --newline: var(--newline--default);
+
   grid-area: intro;
 
   [data-header='hero'] & {

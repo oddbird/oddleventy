@@ -3,6 +3,7 @@
 [data-layout='cta'] {
   --media-min: 6em;
   --media-size: calc(4em + 5vw);
+
   display: grid;
   font-size: var(--small);
   grid-area: cta;

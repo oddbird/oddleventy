@@ -7,26 +7,32 @@
 
   td {
     @include tools.font-family('code');
+
     font-size: var(--code);
   }
 
   .false {
     background: var(--false);
   }
+
   .true {
     background: var(--true);
   }
+
   .live {
     --if-true: var(--is-true) var(--true);
+
     background: var(--if-true, var(--false));
   }
 
   [data-live] {
     --is-false: var(--is-true) none;
   }
+
   [data-live='false'] {
     display: var(--is-false, initial);
   }
+
   [data-live='true'] {
     display: var(--is-true, none);
   }

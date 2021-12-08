@@ -9,6 +9,7 @@
 pre,
 code {
   @include tools.font-family('code');
+
   font-size: var(--code);
   hyphens: none;
   line-height: 1.5;

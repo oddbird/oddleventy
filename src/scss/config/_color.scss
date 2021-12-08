@@ -22,9 +22,9 @@
 /// @type map
 /// @group config-color
 $brand-colors: (
-  'brand-blue': hsl(195, 52%, 31%),
-  'brand-orange': hsl(24, 100%, 62%),
-  'brand-pink': hsl(330, 100%, 45%),
+  'brand-blue': hsl(195deg, 52%, 31%),
+  'brand-orange': hsl(24deg, 100%, 62%),
+  'brand-pink': hsl(330deg, 100%, 45%),
 );
 
 @include tools.add-colors($brand-colors);
@@ -58,7 +58,7 @@ $background-colors: (
   'callout-special': var(--ccs-special--bg5-fade),
   'overlay': var(--ccs-neutral--bg6-fade),
   'overlay-banner':
-    hsla(var(--ccs-h--neutral), var(--ccs-s--bg6), var(--ccs-l--bg6), 0.4),
+    hsla(var(--ccs-h--neutral), var(--ccs-s--bg6), var(--ccs-l--bg6), 40%),
 );
 
 // Content Colors
@@ -78,7 +78,7 @@ $content-colors: (
   'border': var(--ccs-neutral),
   'border-fade': var(--ccs-neutral--fade),
   'shadow':
-    hsla(var(--ccs-h--neutral), var(--ccs-s--fg6), var(--ccs-l--fg6), 0.25),
+    hsla(var(--ccs-h--neutral), var(--ccs-s--fg6), var(--ccs-l--fg6), 25%),
   'action': var(--ccs-prime--fg3),
   'active': '#highlight',
   'icon': var(--ccs-special--fg1),

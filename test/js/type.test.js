@@ -9,8 +9,8 @@ const slugifyd = 'lorem-ipsum-dolor-sit-amet%2C-consectetur';
 describe('typography filters', () => {
   test('typogr', () => {
     expect(typogr(content)).toEqual(typogrd);
-    expect(typogr('Foo "Bar"', true)).toEqual('Foo &#8220;Bar&#8221;');
-    expect(typogr('')).toEqual('');
+    expect(typogr('Foo "Bar"', true)).toBe('Foo &#8220;Bar&#8221;');
+    expect(typogr('')).toBe('');
   });
 
   test('md', () => {
