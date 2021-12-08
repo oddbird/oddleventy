@@ -5,14 +5,6 @@ logo: topdog
 client: &client Top Dog
 date: 2020-06-01
 end: 2021-04-01
-press:
-  - text: |
-      Need quote
-    name: Griffin Parker
-    face: lj-suzuki.jpg
-    url: https://www.bettopdog.com/
-    title: Founder
-    venue: *client
 image:
   src: work/top-dog/topdog.jpg
   alt: three lists of games to bet on including NFL and NHL
@@ -33,15 +25,17 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
-  media=embed.img(
-    src='work/top-dog/topdog.jpg',
-    alt='three lists of games to bet on including NFL and NHL'
-  ),
-  name='desktop-work'
+  media=embed.screen(
+    notch='0',
+    content=embed.img(
+      src='work/top-dog/topdog-phone.jpg',
+      alt='mobile view of placing a bet within a specific tournament',
+      sizes='media'
+    )
+  )
 ) %}
 
 {% call layout.grid('narrow-columns') %}
@@ -50,14 +44,16 @@ summary: |
 
 ### Services
 
-  - Research & Concepting
-  - Project Management
-  - UX & UI Design
-  - Front-end Development
-  - Back-end Development
-  - Ongoing Maintenance
-  - Design System
-  - Usability Testing
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Back-end Development
+- Ongoing Maintenance
+- Design System
+- Usability Testing
+
+
 
 
 {% endcall %}
@@ -66,11 +62,12 @@ summary: |
 
 ### Languages & Tools
 
-  - Adobe XD
-  - Django & Python
-  - Herman
-  - JavaScript with Vue.js
-  - Sass & CSS
+- Adobe XD
+- Django & Python
+- Herman
+- JavaScript with Vue.js
+- Sass & CSS
+
 
 
 {% endcall %}
