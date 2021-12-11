@@ -11,6 +11,18 @@ date: 2020-01-20
 end: 2021-12-01
 tags:
   - Manufacturing Sector
+people:
+  - &ryan
+    name: Ryan Hochstetler
+    face: james-weber.jpg
+    url: https://www.linkedin.com/in/ryanhochstetler/
+    title: Information Systems Administrator
+    venue: *client
+press:
+  - text: |
+      @@@
+    <<: *ryan
+    slug: configurations
 summary: |
   OddBird helped General Stamping & Metalworks
   plan, design, and develop Estimating Engine,

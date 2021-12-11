@@ -11,6 +11,18 @@ image:
   position: top
 tags:
   - Sports Sector
+people:
+  - &griffin
+    name: Griffin Parker
+    face: james-weber.jpg
+    url: https://www.linkedin.com/in/jamessw/
+    title: Founder
+    venue: *client
+press:
+  - text: |
+      @@@
+    <<: *griffin
+    slug: configurations
 summary: |
   OddBird worked with Top Dog to plan, design, 
   develop, and test a responsive web application
