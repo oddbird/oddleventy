@@ -1,7 +1,7 @@
 ---
 position: filled
 banner: Senior JavaScript Developer
-sub: Collaborating on our front-end development process
+sub: This position has been filled
 date: 2021-11-02
 hours: 15 to 20
 ---
