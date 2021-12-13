@@ -1,5 +1,5 @@
 ---
-position: open
+position: filled
 banner: Senior JavaScript Developer
 sub: Collaborating on our front-end development process
 date: 2021-11-02
