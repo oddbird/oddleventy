@@ -1,7 +1,7 @@
 ---
 position: filled
 banner: Senior JavaScript Developer
-sub: This position has been filled
+sub: No longer accepting applications for this position
 date: 2021-11-02
 hours: 15 to 20
 ---
