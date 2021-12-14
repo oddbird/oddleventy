@@ -1,7 +1,7 @@
 ---
-position: open
+position: filled
 banner: Senior JavaScript Developer
-sub: Collaborating on our front-end development process
+sub: No longer accepting applications for this position
 date: 2021-11-02
 hours: 15 to 20
 ---
