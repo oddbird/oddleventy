@@ -41,9 +41,9 @@ $break: 'wide-break';
   padding: 0 var(--page-margin);
 
   @include tools.above($break) {
-    @include tools.position(auto auto 0 50%);
-
+    inset: auto auto 0 50%;
     padding-left: 0;
+    position: absolute;
   }
 }
 

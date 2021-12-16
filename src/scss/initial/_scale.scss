@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use '../config/scale';
 @use '~accoutrement/sass/tools';
 
@@ -21,7 +22,7 @@ html {
   @include tools.tokens--(scale.$theme-sizes);
   @include tools.tokens--(scale.$page-sizes);
 
-  --extra: #{(tools.size('wide-page') - tools.size('page')) / 2};
+  --extra: #{math.div(tools.size('wide-page') - tools.size('page'), 2)};
   --main-min: calc(100vw - var(--page-margin) * 2);
   --page-columns: [full-start] var(--page-margin) [content-start wide-start
     page-start] minmax(var(--main-min), var(--page)) [page-end wide-end

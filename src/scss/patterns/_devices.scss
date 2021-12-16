@@ -11,11 +11,10 @@
   --device-radius: var(--double-gutter);
 
   img {
-    @include tools.position(1px);
-
     background: var(--device-img-fill, white);
     clip-path: inset(2px round var(--device-radius, 0));
     height: 100%;
+    inset: 1px;
     object-fit: var(--device-img-fit, cover);
     object-position: var(--device-img-position, top);
     overflow: hidden;
@@ -23,6 +22,7 @@
       var(--device-margin-right, var(--device-margin))
       var(--device-margin-bottom, var(--device-margin))
       var(--device-margin-left, var(--device-margin));
+    position: absolute;
     width: 100%;
     z-index: -1;
   }

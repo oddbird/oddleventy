@@ -7,11 +7,11 @@
   position: relative;
 
   &::before {
-    @include tools.position(0 -1em 0 -1em);
-
     box-shadow: 0 0 var(--quarter-shim) var(--shadow) inset;
     content: '';
+    inset: 0 -1em 0 -1em;
     pointer-events: none;
+    position: absolute;
     z-index: 1;
   }
 }

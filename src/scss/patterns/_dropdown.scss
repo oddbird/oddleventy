@@ -27,11 +27,12 @@
     @include tools.z-index('dropdown');
 
     @include tools.before('') {
-      @include tools.position(0 fixed);
       @include tools.z-index('bump');
 
       cursor: default;
       display: block;
+      inset: 0;
+      position: fixed;
     }
   }
 }
