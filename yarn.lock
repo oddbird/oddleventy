@@ -2350,10 +2350,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"accoutrement@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "accoutrement@npm:3.0.1"
-  checksum: 65d0385a1a7ec161b2c763257667714b353af7e649cdd3de5a943cdaa8089184a573870ff2171de3566cd836aaedcb3c779a8224190f6eb58aad8a9adc96c0d9
+"accoutrement@npm:^4.0.0-beta.2":
+  version: 4.0.0-beta.2
+  resolution: "accoutrement@npm:4.0.0-beta.2"
+  checksum: 052b8475ab58423acb1ed247579e504289bb73931d4f5a75182e5c5350c836e25c871a397e65f5ba22d489fef2101277ea491919415527871d7656ef5bd04666
   languageName: node
   linkType: hard
 
@@ -6608,6 +6608,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"immutable@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "immutable@npm:4.0.0"
+  checksum: 4b5e9181e4d5fa06728a481835ec09c86367e5d03268666c95b522b7644ab891098022e4479a43c4c81a68f2ed82f10751ce5d33e208d7b873b6e7f9dfaf4d87
+  languageName: node
+  linkType: hard
+
 "import-fresh@npm:^3.0.0, import-fresh@npm:^3.2.1":
   version: 3.3.0
   resolution: "import-fresh@npm:3.3.0"
@@ -9601,7 +9608,7 @@ __metadata:
     "@tommoor/remove-markdown": ^0.3.2
     "@typescript-eslint/parser": ^5.7.0
     "@yarnpkg/sdks": ^2.5.1-rc.6
-    accoutrement: ^3.0.1
+    accoutrement: ^4.0.0-beta.2
     autoprefixer: ^10.4.0
     babel-jest: ^27.4.5
     cascading-color-systems: 0.1.0-beta.15
@@ -9638,7 +9645,7 @@ __metadata:
     rimraf: ^3.0.2
     rollup: ^2.61.1
     rollup-plugin-terser: ^7.0.2
-    sass: 1.32.13
+    sass: ^1.45.0
     sassdoc: ^2.7.3
     sassdoc-theme-herman: ^4.0.2
     slugify: ^1.6.3
@@ -11304,14 +11311,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.32.13":
-  version: 1.32.13
-  resolution: "sass@npm:1.32.13"
+"sass@npm:^1.45.0":
+  version: 1.45.0
+  resolution: "sass@npm:1.45.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
+    immutable: ^4.0.0
+    source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 51b798280bd96c8e8d580592bcd40947075e9e55109bbc5e21037427ac2a78e58d3c3cf4b8b33ac9d592758376597d15cd28ddde1cda2885d19791d6321989d4
+  checksum: f20d22ddf91e3571926535cdec9e1092780b0bf133ee6a68d25ee21fd3fcb94f4b1df90823fdc60cabf468776d3a6bb693fd89305698e70609eb47bcfb905f10
   languageName: node
   linkType: hard
 
@@ -11843,7 +11852,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.0.1":
+"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.1":
   version: 1.0.1
   resolution: "source-map-js@npm:1.0.1"
   checksum: 22606113d62bbd468712b0cb0c46e9a8629de7eb081049c62a04d977a211abafd7d61455617f8b78daba0b6c0c7e7c88f8c6b5aaeacffac0a6676ecf5caac5ce
