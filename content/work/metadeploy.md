@@ -59,7 +59,8 @@ summary: |
 {% call embed.media_block(
   media=embed.img(
     src='work/metadeploy/md-example.jpg',
-    alt='canvas with color coded workflow cards'
+    alt='view of a successful NPSP installation showing
+    each step of the process'
   ),
   name='desktop-work'
 ) %}

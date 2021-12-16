@@ -131,7 +131,7 @@ post answers to questions, view user progress,
 and set alerts for relapse prevention and
 escalation of care.
 
-{{ quotes.grid(press) }}
+
 
 {{ layout.title('What We Did') }}
 

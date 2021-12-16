@@ -61,7 +61,9 @@ summary: |
     notch='0',
     content=embed.img(
       src='work/quarqrace/qri-phone.jpg',
-      alt='t',
+      alt='ironman leader board showing 
+      real-time order of athletes and expanded
+      speed, cadence, and power of one athlete',
       sizes='media'
     )
   )

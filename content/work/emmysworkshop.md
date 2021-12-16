@@ -66,7 +66,8 @@ summary: |
     notch='0',
     content=embed.img(
       src='work/emmys-workshop/emmy-phone.jpg',
-      alt='team page examples showing name, title, headshot, and bio',
+      alt='mobile view of algebra equation to solve in steps 
+      and submit for analysis',
       sizes='media'
     )
   )
