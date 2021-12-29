@@ -61,7 +61,8 @@ summary: |
 ### Services
 
   - Research
-  - Tutorials
+  - CSS & Firefox DevTooling Tutorials
+  - Developer Relations
 
 
 
@@ -72,7 +73,8 @@ summary: |
 ### Languages & Tools
 
   - CSS
-  - Video
+  - Firefox
+  - 4k filming, lighting, and screen-capture
  
 
 

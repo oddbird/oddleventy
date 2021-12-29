@@ -71,6 +71,7 @@ summary: |
   - Django & Python
   - JavaScript
   - Sass & CSS
+  - Susy
 
 
 

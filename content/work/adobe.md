@@ -182,6 +182,7 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
 - UX & UI Design
 - Front-end Development
 - Usability Testing
+- Animation Design
 
 
 {% endcall %}
@@ -193,6 +194,7 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
 - Adobe XD
 - JavaScript with NuxtJS
 - Sass & CSS
+- GreenSock Animation Platform
 
 
 {% endcall %}
