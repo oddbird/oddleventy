@@ -1,6 +1,5 @@
 ---
 title: Quarq Race Intelligence
-banner: Quarq Race Intelligence
 sub: Real-time race analytics
 links:
   site: https://www.quarqrace.com/
@@ -61,9 +60,9 @@ summary: |
     notch='0',
     content=embed.img(
       src='work/quarqrace/qri-phone.jpg',
-      alt='ironman leader board showing 
-      real-time order of athletes and expanded
-      speed, cadence, and power of one athlete',
+      alt='ironman leader board showing
+        real-time order of athletes and expanded
+        speed, cadence, and power of one athlete',
       sizes='media'
     )
   )
@@ -80,21 +79,16 @@ summary: |
 - Front-end Development
 - Ongoing Maintenance
 
-
-
 {% endcall %}
 
 {% call layout.block('column') %}
 
 ### Languages & Tools
 
-- Adobe Xd 
-- Django & Python
+- Adobe Xd
 - Herman
-- JavaScript
+- JavaScript with Backbone & Marionette
 - Sass & CSS
-
-
 
 {% endcall %}
 

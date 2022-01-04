@@ -37,7 +37,6 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
@@ -45,7 +44,7 @@ summary: |
     src='work/shopify/shopify.jpg',
     alt='Miriam speaking in the UX Summer Shopify Series'
   ),
-    name='desktop-work'
+  name='desktop-work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}
@@ -55,9 +54,8 @@ summary: |
 ### Services
 
 - Research
-- Custom CSS Training 
+- Custom CSS Training
 - Q&A
-
 
 {% endcall %}
 
@@ -67,7 +65,6 @@ summary: |
 
 - CSS
 - Video
-
 
 {% endcall %}
 

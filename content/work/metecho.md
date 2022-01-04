@@ -7,7 +7,6 @@ image:
   alt: A task with assigned developer and tester
 client: &client Salesforce.org
 date: 2019-03-21
-end: 2021-12-15
 tags:
   - Technology Sector
 people:
@@ -49,14 +48,13 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
   media=embed.img(
     src='work/metecho/metecho-example.jpg',
     alt='an epic with one task in progress
-    and two collaborators'
+      and two collaborators'
   ),
   name='desktop-work'
 ) %}
@@ -75,7 +73,6 @@ summary: |
   - Ongoing Maintenance
   - Usability Testing
 
-
 {% endcall %}
 
 {% call layout.block('column') %}
@@ -87,7 +84,6 @@ summary: |
   - JavaScript with React & Redux
   - Sass & CSS
   - Storybook
-
 
 {% endcall %}
 

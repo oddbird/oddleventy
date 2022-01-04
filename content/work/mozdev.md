@@ -43,15 +43,15 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
   media=embed.img(
     src='mozdev/mozdev-example.jpg',
-    alt='Mozilla Developer YouTube channel with 24.3K subscribers and a grid of videos'
+    alt='Mozilla Developer YouTube channel with 24.3K subscribers
+      and a grid of videos'
   ),
-    name='desktop-work'
+  name='desktop-work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}
@@ -64,8 +64,6 @@ summary: |
   - CSS & Firefox DevTooling Tutorials
   - Developer Relations
 
-
-
 {% endcall %}
 
 {% call layout.block('column') %}
@@ -74,9 +72,7 @@ summary: |
 
   - CSS
   - Firefox
-  - 4k filming, lighting, and screen-capture
- 
-
+  - 4k filming, lighting, & screen-capture
 
 {% endcall %}
 

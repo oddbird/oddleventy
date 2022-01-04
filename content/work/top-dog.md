@@ -24,13 +24,12 @@ press:
     <<: *griffin
     slug: configurations
 summary: |
-  OddBird worked with Top Dog to plan, design, 
+  OddBird worked with Top Dog to plan, design,
   develop, and test a responsive web application
   that includes an automated style guide.
-  The Top Dog app provides a tournament-style community 
+  The Top Dog app provides a tournament-style community
   experience in which people bet on live sports
   using play money, and winners get real prizes.
-  
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -65,9 +64,6 @@ summary: |
 - Design System
 - Usability Testing
 
-
-
-
 {% endcall %}
 
 {% call layout.block('column') %}
@@ -77,10 +73,8 @@ summary: |
 - Adobe XD
 - Django & Python
 - Herman
-- JavaScript with Vue.js
+- JavaScript with Vue
 - Sass & CSS
-
-
 
 {% endcall %}
 

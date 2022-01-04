@@ -74,16 +74,14 @@ summary: |
   - UX & UI Design Consulting
   - Front-end Development
 
-
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Languages
+### Languages & Tools
 
-  - JavaScript with Vue.js and D3
+  - JavaScript with Vue and D3
   - Sass & CSS
-
 
 {% endcall %}
 

@@ -38,7 +38,6 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
@@ -46,7 +45,7 @@ summary: |
     src='work/moztrap/moztrap-sample.jpg',
     alt='list of tests run and their results'
   ),
-    name='desktop-work'
+  name='desktop-work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}
@@ -60,8 +59,6 @@ summary: |
   - Front-end Development
   - Back-end Development
 
-
-
 {% endcall %}
 
 {% call layout.block('column') %}
@@ -72,8 +69,6 @@ summary: |
   - JavaScript
   - Sass & CSS
   - Susy
-
-
 
 {% endcall %}
 

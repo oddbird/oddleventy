@@ -159,19 +159,17 @@ summary: |
 - Back-end Development
 - Ongoing Maintenance
 
-
 {% endcall %}
 
 {% call layout.block('column') %}
 
 ### Languages & Tools
 
-- Adobe Xd 
+- Adobe Xd
 - Django & Python
 - Herman
-- JavaScript
+- JavaScript with Backbone & Marionette
 - Sass & CSS
-
 
 {% endcall %}
 

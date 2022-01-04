@@ -131,8 +131,6 @@ post answers to questions, view user progress,
 and set alerts for relapse prevention and
 escalation of care.
 
-
-
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
@@ -141,7 +139,7 @@ escalation of care.
     content=embed.img(
       src='work/coachhub/coachhub-phone.jpg',
       alt='list of coaches with location, specialty, and
-      provider type filters',
+        provider type filters',
       sizes='media'
     )
   )
@@ -160,8 +158,6 @@ escalation of care.
 - Back-end Development
 - Ongoing Maintenance
 
-
-
 {% endcall %}
 
 {% call layout.block('column') %}
@@ -172,17 +168,14 @@ escalation of care.
 - Adobe Photoshop
 - Django & Python
 - Herman
-- JavaScript
+- JavaScript with Backbone & Marionette
 - Sass & CSS
 
-
-
 {% endcall %}
 
 {% endcall %}
 
 {% endcall %}
-
 
 <!-- all but the first quote -->
 {{ quotes.grid(press | slice(2) | first ) }}

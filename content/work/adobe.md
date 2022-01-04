@@ -184,7 +184,6 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
 - Usability Testing
 - Animation Design
 
-
 {% endcall %}
 
 {% call layout.block('column') %}
@@ -195,7 +194,6 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
 - JavaScript with NuxtJS
 - Sass & CSS
 - GreenSock Animation Platform
-
 
 {% endcall %}
 

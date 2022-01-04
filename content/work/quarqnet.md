@@ -1,7 +1,6 @@
 ---
 card: large
 title: QuarqNet
-banner: QuarqNet Application
 sub: Real-time telemetry & sharing for athletes
 links:
   site: https://www.quarqnet.com/
@@ -123,10 +122,6 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-At the end of the game, players discover their own typographic superpower.
-Players have the option to share their superpower on social media, access the
-typeface on Adobe, view similar typefaces, and download their superpower badge.
-
 {{ quotes.grid(press) }}
 
 {{ layout.title('What We Did') }}
@@ -137,7 +132,7 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
     content=embed.img(
       src='work/quarqnet/quarqnet-phone.jpg',
       alt='sign-in form with bike race mountain road
-      scene in the background',
+        scene in the background',
       sizes='media'
     )
   )
@@ -156,19 +151,16 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
 - Ongoing Maintenance
 - Usability Testing
 
-
 {% endcall %}
 
 {% call layout.block('column') %}
 
 ### Languages & Tools
 
-- Adobe Xd 
-- Django & Python
+- Adobe Xd
 - Herman
-- JavaScript
+- JavaScript with Backbone & Marionette
 - Sass & CSS
-
 
 {% endcall %}
 

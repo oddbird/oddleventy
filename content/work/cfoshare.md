@@ -65,7 +65,6 @@ summary: |
 - Front-end Development
 - Ongoing Maintenance
 
-
 {% endcall %}
 
 {% call layout.block('column') %}
@@ -75,7 +74,6 @@ summary: |
 - PHP
 - Sass & CSS
 - WordPress
-
 
 {% endcall %}
 

@@ -62,7 +62,7 @@ summary: |
     src='work/expression-builder/expression-sample.jpg',
     alt='modal showing visual builder tool with list of expressions'
   ),
-    name='desktop-work'
+  name='desktop-work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}
@@ -76,17 +76,15 @@ summary: |
   - UX & UI Design
   - Front-end Development
 
-
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Languages
+### Languages & Tools
 
   - Adobe XD
-  - JavaScript with Vue.js
-  - Sass & CSS 
-
+  - JavaScript with Vue
+  - Sass & CSS
 
 {% endcall %}
 

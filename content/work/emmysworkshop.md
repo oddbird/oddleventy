@@ -67,7 +67,7 @@ summary: |
     content=embed.img(
       src='work/emmys-workshop/emmy-phone.jpg',
       alt='mobile view of algebra equation to solve in steps
-      and submit for analysis',
+        and submit for analysis',
       sizes='media'
     )
   )
@@ -85,8 +85,6 @@ summary: |
 - Front-end Development
 - Back-end Development
 
-
-
 {% endcall %}
 
 {% call layout.block('column') %}
@@ -95,11 +93,10 @@ summary: |
 
 - Adobe Xd
 - Herman
+- Google Web Toolkit
 - Java
 - PHP
 - Sass & CSS
-
-
 
 {% endcall %}
 

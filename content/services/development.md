@@ -97,12 +97,11 @@ summary: |
 
 {% call layout.block('column') %}
 
-### Languages & Platforms
+### Languages & Tools
 
 - Python **with** Django (*core contributor*)
 - HTML/CSS **with** Sass (*core contributor*)
 - JavaScript **with** Vue & React
-- Backbone/Marionette
 - Node
 - WordPress
 

@@ -52,14 +52,13 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
   media=embed.img(
     src='work/metadeploy/md-example.jpg',
     alt='view of a successful NPSP installation showing
-    each step of the process'
+      each step of the process'
   ),
   name='desktop-work'
 ) %}
@@ -78,8 +77,6 @@ summary: |
   - Ongoing Maintenance
   - Usability Testing
 
-
-
 {% endcall %}
 
 {% call layout.block('column') %}
@@ -91,8 +88,6 @@ summary: |
   - JavaScript with React & Redux
   - Sass & CSS
   - Storybook
-
-
 
 {% endcall %}
 

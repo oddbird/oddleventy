@@ -7,8 +7,7 @@ image:
   alt: manufacturing quote details
   position: top
 client: &client General Stamping & Metalworks
-date: 2020-01-20
-end: 2021-12-01
+date: 2020-01-31
 tags:
   - Manufacturing Sector
 people:
@@ -26,18 +25,17 @@ press:
 summary: |
   OddBird helped General Stamping & Metalworks
   plan, design, and develop Estimating Engine,
-  a responive web application.
-  Estimating Engine enables estimators at GSM 
-  to efficiently 
-  create and manage custom quotes 
+  a responsive web application.
+  Estimating Engine enables estimators at GSM
+  to efficiently
+  create and manage custom quotes
   to manufacture parts
-  for their customers. 
+  for their customers.
 ---
 
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
-
 
 {{ layout.title('What We Did') }}
 
@@ -46,7 +44,7 @@ summary: |
     src='work/estimating-engine/ee-example.jpg',
     alt='details of part for manufacturing quote'
   ),
-    name='desktop-work'
+  name='desktop-work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}
@@ -63,21 +61,17 @@ summary: |
   - Ongoing Maintenance
   - Design System
 
-
-
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Languages
+### Languages & Tools
 
   - Adobe XD
   - Django & Python
   - Herman
-  - JavaScript with Vue.js
+  - JavaScript with Vue
   - Sass & CSS
-
-
 
 {% endcall %}
 

@@ -68,15 +68,14 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
   media=embed.img(
     src='work/second-measure/second-measure-sample.jpg',
-    alt='spacing and margin components in Storybooks'
+    alt='spacing and margin documentation in Storybook'
   ),
-    name='desktop-work'
+  name='desktop-work'
 ) %}
 
 {% call layout.grid('narrow-columns') %}
@@ -87,7 +86,6 @@ summary: |
 
 - Design System workflow training
 
-
 {% endcall %}
 
 {% call layout.block('column') %}
@@ -97,8 +95,6 @@ summary: |
 - CSS
 - JavaScript with React styled-components
 - Storybook
-
-
 
 {% endcall %}
 
