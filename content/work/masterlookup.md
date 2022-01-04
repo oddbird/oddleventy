@@ -3,7 +3,8 @@ eleventyExcludeFromCollections: true
 title: Master Lookup Table
 sub: Parcel Mapping for Urban Development
 client: The Providence Plan
-date: 2011-12-15
+date: 2011-04-11
+end: 2012-01-06
 links:
   source: https://github.com/oddbird/mlt
 tasks:

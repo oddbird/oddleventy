@@ -12,6 +12,6 @@ describe('utility filters', () => {
     const emptyStyles = { foo: '' };
 
     expect(styles(testStyles)).toEqual(expected);
-    expect(styles(emptyStyles)).toEqual('');
+    expect(styles(emptyStyles)).toBe('');
   });
 });

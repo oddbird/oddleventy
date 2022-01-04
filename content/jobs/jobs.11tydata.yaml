@@ -2,7 +2,7 @@
 hours: 10 to 20
 
 # shared job posting data
-team_size: 7
+team_size: 8
 eleventyComputed:
   title: |
     {{ banner }} | Jobs
@@ -36,7 +36,7 @@ eleventyComputed:
 
     ## Compensation:
 
-    This isn't a cubicle job with dental, a 401k, and paid vacation.
+    This isn't a cubicle job with health/dental and a 401k.
     We're also not a start-up
     expecting you to work nights and weekends towards future equity.
     This is a contract job with long term potential,

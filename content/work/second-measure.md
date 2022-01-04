@@ -7,7 +7,7 @@ image:
   src: work/second-measure/secondmeasure.jpg
   alt: UI component library color palette options grouped by category
 client: &client Second Measure
-date: 2019-03-29
+date: 2019-01-22
 end: 2020-12-15
 tags:
   - Analytics Sector

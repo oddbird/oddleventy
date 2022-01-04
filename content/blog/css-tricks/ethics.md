@@ -107,4 +107,4 @@ some resources that I recommend:
 [How Designers Destroyed the World]: https://vimeo.com/122022963
 [How to Build an Atomic Bomb]: https://vimeo.com/268704084
 [The Ethics of Design I Fortune]: https://www.youtube.com/watch?v=X24twMoJYt4&
-[Weapons of Math Destruction]: https://weaponsofmathdestructionbook.com/
+[Weapons of Math Destruction]: https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction

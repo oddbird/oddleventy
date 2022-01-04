@@ -76,7 +76,7 @@ tokens -- [colors], [fonts], [sizes], [ratios][sizes], and [icons]
 automation to help us scale.
 
   [accidentally speaking at]: https://twitter.com/jina/status/935566434700222465
-  [Clarity]: https://www.clarityconf.com/2017-archive
+  [Clarity]: https://www.clarityconf.com/event/2017
   [Design Systems]: https://www.designbetter.co/design-systems-handbook/
   [Jina Anne]: https://www.patreon.com/sushiandrobots
   [Salesforce Lightning Design System]: https://www.lightningdesignsystem.com/
@@ -332,12 +332,10 @@ consulting] across the full stack of product design & development
 --helping find *the solution that best fits your team*. Don't hesitate
 to reach out.
 
-You can use our handy [contact form], talk to [@OddBird] on Twitter, or
-join our [public Slack] (with a dedicated `#herman` channel). We're
+You can use our handy [contact form], or talk to [@OddBird] on Twitter. We're
 excited to hear from you!
 
 [team of experts]: /about/
 [a range of support, training, and consulting]: /services/design-systems/
 [contact form]: /contact/
 [@OddBird]: https://twitter.com/oddbird
-[public Slack]: http://friends.oddbird.net

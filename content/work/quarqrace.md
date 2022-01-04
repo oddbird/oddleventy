@@ -9,8 +9,8 @@ image:
   src: work/quarqrace/trig.jpg
   alt: Athlete list tied to their location and elevation
 client: SRAM/Quarq
-date: 2015-01-01
-ends: 2016-12-15
+date: 2015-09-01
+end: 2017-01-31
 tags:
   - Sports Sector
   - Wellness Sector

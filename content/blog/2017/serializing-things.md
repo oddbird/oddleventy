@@ -216,9 +216,9 @@ def some_task(some_class):
     inst = SomeClass(**some_class)
 ```
 
-How have you handled object serialization in your projects? We'd love to
-hear your thoughts on [Twitter], on our [public Slack channel], or
-through our [handy contact form]. Happy coding, and serialize safely!
+How have you handled object serialization in your projects? We'd love to hear
+your thoughts on [Twitter], or through our [handy contact form]. Happy coding,
+and serialize safely!
 
 Header image courtesy of [Dan Morelle].
 
@@ -253,6 +253,5 @@ be much more!
 
 [attrs]: https://attrs.readthedocs.io/en/stable/
 [Twitter]: https://twitter.com/oddbird
-[public Slack channel]: http://friends.oddbird.net
 [handy contact form]: /contact/
 [Dan Morelle]: https://www.flickr.com/photos/doodledan/5623812207/in/photolist-9yXvrr-9W139J-rPYrZp-7BkxKT-aWPwCP-pkqpEu-8iimgZ-pkpuKF-pkqpm1-nvKV6q-4mVgtJ-pzSGYY-6qjB4E-pBVzNr-8JG1Ja-6qfuMn-pBTApN-bo34GB-pBUVaK-7NVtXW-5XJRQK-dM3hhG-aWPxoT-dQD6zK-pBURD6-pBVjRH-9VXd56-5x1PMy-7NVt7U-5qMsjU-pkqPdu-pkqWKT-4vkwsh-8WvmVA-3NBhJG-pkqCzq-pBD7rv-aWPvP4-pBUNx6-dLWDRk-7NRvR6-aWPuQB-7jnkHb-8oZuCB-DPKaV-pkqtML-pdG1Hz-6qfsrZ-pBCy9e-8Zhx4A

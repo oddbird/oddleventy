@@ -18,7 +18,7 @@ describe('fromTaxonomy', () => {
       tag: 'Article',
       icon: 'news',
     });
-    expect(fromTaxonomy('post', { icon: 'news' }, 'tag')).toEqual('Article');
+    expect(fromTaxonomy('post', { icon: 'news' }, 'tag')).toBe('Article');
     expect(fromTaxonomy('post')).toEqual(allPosts);
   });
 });

@@ -260,13 +260,11 @@ communicating trustworthiness.
 
 *Freight Sans, Freight Text*
 
-And this is where you come in. We’re having a conversation on our
-[OddFriends Slack channel], and we want to hear from you. There are
-other design elements, but we are only interested here in choosing the
-new OddSite typeface. Please weigh in with your opinions and thoughts
-and things you’ve learned the hard way. If we didn’t know it before,
-this OddSite brand design process has proven how dependent we are on
-each other to do this business of web design to the best of our
-abilities. Thanks!
-
-[OddFriends Slack channel]: http://friends.oddbird.net/
+And this is where you come in. We’re having a conversation on our OddFriends
+Slack channel^[_The OddFriends Slack channel is no longer available._], and we
+want to hear from you. There are other design elements, but we are only
+interested here in choosing the new OddSite typeface. Please weigh in with your
+opinions and thoughts and things you’ve learned the hard way. If we didn’t know
+it before, this OddSite brand design process has proven how dependent we are on
+each other to do this business of web design to the best of our abilities.
+Thanks!

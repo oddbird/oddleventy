@@ -3,8 +3,8 @@ title: Workflow Builder
 sub: Tools for data analytics
 logo: aunalytics
 client: &client Aunalytics
-date: 2019-01-13
-end: 2020-01-13
+date: 2019-11-01
+end: 2020-01-31
 image:
   src: work/workflow-builder/workflow.jpg
   alt: Connected workflow processes shown within the canvas

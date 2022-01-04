@@ -5,6 +5,7 @@
 .resource-header {
   --column: full;
   --title-margin: 0;
+
   align-items: center;
   grid-gap: var(--gutter);
   display: grid;
@@ -18,6 +19,7 @@
 
   @include tools.above('wide-break') {
     --justify-nav: initial;
+
     grid-template-columns:
       var(--page-margin)
       [nav-start] auto
@@ -33,6 +35,7 @@
 .pagination {
   --column: content;
   --nav-column: nav;
+
   color: var(--text-light);
 
   [data-grid='resources'] + & {
@@ -49,6 +52,7 @@
 [data-grid='resources'] {
   --align: stretch;
   --justify: stretch;
+
   list-style: none;
   grid-auto-flow: dense;
   margin: 0;
@@ -66,12 +70,14 @@
   --type-flag: var(--bg);
   --type-flag-active: var(--callout);
   --shadow: transparent;
+
   background-color: var(--feature-accent, var(--accent));
   background-image: linear-gradient(to bottom, transparent, var(--feature));
   margin: calc(var(--half-shim) * -1);
 
   [data-post] {
     --card: var(--bg);
+
     margin: var(--quarter-shim);
     transform: rotate(-3deg);
   }
@@ -94,6 +100,7 @@
   &:link,
   &:visited {
     --fill: var(--type-flag, var(--feature));
+
     display: block;
     grid-area: type;
     line-height: 1;

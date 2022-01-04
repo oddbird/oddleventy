@@ -24,17 +24,16 @@ in the open – sharing our thoughts while we work.
 
 ## You Can Get Involved in Several Ways:
 
-- **Feedback and Conversation:** Join our [open Slack channel] for
-    front-row access to the process. Ask us questions, provide feedback,
-    and hang-out with us along the way. You can also talk to us on
-    [Twitter].
+- **Feedback and Conversation:** Join our open Slack channel^[_The OddFriends
+    Slack channel is no longer available._] for front-row access to the process.
+    Ask us questions, provide feedback, and hang-out with us along the way. You
+    can also talk to us on [Twitter].
 - **Live Site and Open Code:** Follow our progress here and on
     [Github].
 - **Open Plans:** Find our to-do list, and watch our process on our
     Github [project board]. (note: we were using Pivotal Tracker, but
     wanted to [test the new Github features])
 
-[open Slack channel]: http://friends.oddbird.net
 [Twitter]: https://twitter.com/oddbird
 [Github]: https://github.com/oddbird/oddsite/
 [project board]: https://github.com/oddbird/oddsite/projects/1

@@ -185,7 +185,7 @@ this pair didn’t make the final round of cuts.
   src='blog/2017/typography/fontpair.jpg'
 ) }}
 
-[Font Pair]: https://fontpair.co/
+[Font Pair]: https://www.fontpair.co/
 
 ## [Carrie Dils]
 
@@ -255,12 +255,12 @@ for accessibility.)
 To keep the process moving forward, it helps to take a vote. There are
 many ways to take a vote. [Dotmocracy] is a classic for team voting.
 
-The Birds are spread out across five states and three time zones, and
-while we love dot-voting, we needed a web tool to help out. We also
-wanted our [OddFriends Slack channel] members to weigh in. After looking
-at several apps, we decided to try using [GitHub Issues] comments and
-emoji reactions. Everyone got two votes and the process worked
-brilliantly with the winning typefaces receiving six thumbs up.
+The Birds are spread out across five states and three time zones, and while we
+love dot-voting, we needed a web tool to help out. We also wanted our OddFriends
+Slack channel^[_The OddFriends Slack channel is no longer available._] members
+to weigh in. After looking at several apps, we decided to try using [GitHub
+Issues] comments and emoji reactions. Everyone got two votes and the process
+worked brilliantly with the winning typefaces receiving six thumbs up.
 
 {{ embed.img(
   src='blog/2017/typography/github.jpg'
@@ -268,7 +268,6 @@ brilliantly with the winning typefaces receiving six thumbs up.
 
 [WebAIM]: https://webaim.org/techniques/fonts/
 [Dotmocracy]: https://en.wikipedia.org/wiki/Dotmocracy
-[OddFriends Slack channel]: http://friends.oddbird.net
 [GitHub Issues]: https://github.com/oddbird/oddsite/issues/49
 
 ## Pros and Cons of Freight Sans and Freight Text Font Pair
@@ -311,10 +310,10 @@ Also, we’re suckers for fonts with lowercase numerals.
   alt='1-9 in lowercase style numbers'
 ) }}
 
-Freight was developed by [Darden Studio] and is available at [Phil’s
-Fonts] as well as through TypeKit. Without a TypeKit subscription, the
-Freight licenses may have been more of a hassle than we wanted to deal
-with, requiring monthly pageview tracking. With TypeKit, we were golden.
+Freight was developed by [Darden Studio] and is available through TypeKit.
+Without a TypeKit subscription, the Freight licenses may have been more of a
+hassle than we wanted to deal with, requiring monthly pageview tracking. With
+TypeKit, we were golden.
 
 {{ embed.img(
   src='blog/2017/typography/darden.jpg'
@@ -323,7 +322,6 @@ with, requiring monthly pageview tracking. With TypeKit, we were golden.
 [Typedia]: http://typedia.com/explore/typeface/freight-text/
 [create a custom font stack]: https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/
 [Darden Studio]: https://www.dardenstudio.com/
-[Phil’s Fonts]: https://philsfonts.com/font-family/garagefonts/freight-family/GF060021X1/
 
 ## Getting Personal
 
@@ -339,7 +337,7 @@ first hand-drawn alphabet from fifth grade.
 
 OddBird loves typography, and we’re big fans of sharing resources. What
 font sites do you use? What is your favorite tool or method for typeface
-pairing? Let’s talk web typography on the [OddFriends Slack channel].
+pairing? Let’s talk web typography on [Twitter].
 Typography nerds unite!
 
-[OddFriends Slack channel]: http://friends.oddbird.net
+[Twitter]: https://twitter.com/oddbird

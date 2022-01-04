@@ -5,8 +5,8 @@ image:
   src: work/medcurbside/medcurbside.jpg
   alt: Ask or answer medical questions
 client: &client Lab06
-date: 2016-01-01
-end: 2017-12-15
+date: 2016-02-01
+end: 2018-03-01
 links:
   site: https://www.medcurbside.com/
 tags:

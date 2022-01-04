@@ -13,7 +13,7 @@ describe('tag filters', () => {
   const tags = ['Workshop', '_foo bar', 'Talk'];
 
   test('isPublic', () => {
-    expect(isPublic(tags[0])).toEqual(true);
+    expect(isPublic(tags[0])).toBe(true);
     expect(isPublic(tags[1])).toBe(false);
   });
 
@@ -25,10 +25,10 @@ describe('tag filters', () => {
   });
 
   test('displayName', () => {
-    expect(displayName(tags[0])).toEqual('Workshop');
-    expect(displayName(tags[1])).toEqual('Foo bar');
-    expect(displayName('_')).toEqual('');
-    expect(displayName()).toEqual('');
+    expect(displayName(tags[0])).toBe('Workshop');
+    expect(displayName(tags[1])).toBe('Foo bar');
+    expect(displayName('_')).toBe('');
+    expect(displayName()).toBe('');
   });
 
   test('tagData', () => {
@@ -75,9 +75,9 @@ describe('tag filters', () => {
   });
 
   test('tagLink', () => {
-    expect(tagLink(collection, 'foo')).toEqual('/tags/foo/');
-    expect(tagLink(collection, 'tag 1')).toEqual('/test5/');
-    expect(tagLink(collection, 'tag')).toEqual('/tags/tag/');
+    expect(tagLink(collection, 'foo')).toBe('/tags/foo/');
+    expect(tagLink(collection, 'tag 1')).toBe('/test5/');
+    expect(tagLink(collection, 'tag')).toBe('/tags/tag/');
   });
 
   test('getTags', () => {

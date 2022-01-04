@@ -78,10 +78,10 @@ warnings?
 HT: [@potch] for the [talk] that got me started.
 
 [web workers]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
-[close enough to ready]: https://caniuse.com/#feat=webworkers
+[close enough to ready]: https://caniuse.com/webworkers
 [sharedworkers]: https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker
 [serviceworkers]: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
-[support]: https://caniuse.com/#feat=sharedworkers
+[support]: https://caniuse.com/sharedworkers
 [another (contrived) example]: https://codepen.io/jgerigmeyer/pen/vKixI
 [blob() constructor]: https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob
 [html5 rocks article]: https://www.html5rocks.com/en/tutorials/workers/basics/
@@ -123,7 +123,7 @@ parameters, modules), compile ES6 code into ES5 using Google's [Traceur]
 
 HT: [John K. Paul] for his [talk][1] encouraging devs to use ES6 now.
 
-[ecmascript 6]: https://www.ecma-international.org/ecma-262/6.0/
+[ecmascript 6]: https://262.ecma-international.org/6.0/
 [helpful summary]: https://github.com/lukehoban/es6features#readme
 [browser support chart]: https://kangax.github.io/compat-table/es6/
 [es6 shim]: https://github.com/paulmillr/es6-shim/
@@ -219,4 +219,4 @@ Have you used either of these tools, or have further pros/cons to offer?
 [istanbul]: https://istanbul.js.org/
 [intern]: https://theintern.io/
 [selenium]: https://www.selenium.dev/
-[travis ci]: https://travis-ci.com/
+[travis ci]: https://www.travis-ci.com/

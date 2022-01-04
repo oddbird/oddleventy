@@ -174,9 +174,8 @@ you use padding gutters, there's a good chance you don't need Susy.
 More about that in my next post. Until then: Happy coding!
 
 Keep an eye out for the Susy3 release, coming soon! Follow us on
-[Twitter], join our [public Slack channel], or [contact us] online.
+[Twitter], or [contact us] online.
 We're excited to hear from you!
 
 [Twitter]: https://twitter.com/oddbird
-[public Slack channel]: http://friends.oddbird.net
 [contact us]: /contact/

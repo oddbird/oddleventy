@@ -8,7 +8,7 @@ image:
   src: talks/user-unfriendly.png
   alt: Rethinking user experience design across media
 tags:
-  - Fine Art
+  - Art
   - Design
   - Process
   - Agile
@@ -27,7 +27,7 @@ events:
     url: https://design4drupal.org/
     adr: Boston, MA
     date: 2019-06-26
-    slides: https://talks.oddbird.net/user-unfriendly/design4drupal19
+    slides: https://talks.oddbird.net/user-unfriendly/design4drupal19/
     video: https://drupal.tv/external-video/2019-06-28/user-unfriendly-practical-guide-losing-control
     media: &drupal
       iframe: https://www.youtube.com/embed/2MkQBQb43gE
@@ -35,12 +35,12 @@ events:
     url: https://www.comcastlabsconnect.com/open-source-2019
     adr: Denver, CO
     date: 2019-06-20
-    slides: https://talks.oddbird.net/user-unfriendly/opensource19
+    slides: https://talks.oddbird.net/user-unfriendly/opensource19/
   - venue: Agile Denver
     url: https://www.meetup.com/Agile-Denver2/events/258957862/
     adr: Denver, CO
     date: 2019-03-18
-    slides: https://talks.oddbird.net/user-unfriendly/agiledenver19
+    slides: https://talks.oddbird.net/user-unfriendly/agiledenver19/
   - venue: AIGA Colorado
     adr: Denver, CO
     date: 2018-04-26
@@ -53,7 +53,6 @@ events:
   - venue: Metro State Mobile Prototyping
     adr: Denver, CO
     date: 2018-04-05
-    slides: https://oddbooksapp.com/book/mobile-prototype
   - venue: SassConf 2015
     url: https://twitter.com/sassconf
     adr: Austin, TX

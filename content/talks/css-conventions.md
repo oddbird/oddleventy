@@ -8,7 +8,6 @@ image:
 tags:
   - Cascade
   - CSS
-  - Methodology
 events:
   - venue: An Event Apart Fall Summit
     url: https://aneventapart.com/event/online-1020
@@ -16,6 +15,8 @@ events:
     end: 2020-10-28
     adr: Online
     slides: https://slides.oddbird.net/conventions/aea1020/
+    media: &aea
+      iframe: https://player.vimeo.com/video/657632307
 summary: |
   How do we write code that is modular & maintainable,
   in a language designed to be systematic & contextual?
@@ -24,7 +25,11 @@ summary: |
   from Nicole Sullivan's OOCSS and Natalie Downe's CSS Systems,
   to BEM, SMACSS, ITCSS, CUBE,
   and recent attempts at purely "utility-based" CSS.
+media:
+  - <<: *aea
+    span: full
 ---
+{% import 'embed.macros.njk' as embed %}
 
 We’ll look at what these systems have in common,
 where they differ, and how they are informed by CSS itself.
@@ -32,3 +37,12 @@ By understanding the trade-offs involved,
 we can make more informed decisions
 about how to mix, match, adjust,
 or re-write these conventions to meet our needs.
+
+[More resources »](https://slides.oddbird.net/conventions/resources/)
+
+------
+
+{{ embed.figure(
+  data=media,
+  caption='Conference video...'
+) }}

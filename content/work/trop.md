@@ -5,7 +5,8 @@ sub: A cool little lit mag from Los Angeles.
 image:
   src: work/trop/trop.jpg
 client: &client Trop Magazine
-date: 2017-01-15
+date: 2016-05-01
+end: 2017-01-31
 links:
   site: https://tropmag.com/
 press:

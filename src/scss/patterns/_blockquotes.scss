@@ -3,6 +3,7 @@
 blockquote {
   --edge: minmax(var(--page-margin), 1fr);
   --quote: minmax(min-content, var(--page));
+
   background-color: var(--callout);
   display: grid;
   margin: var(--newline) 0;
@@ -11,11 +12,13 @@ blockquote {
 
   &:nth-of-type(odd) {
     @include layout.clip('right');
+
     grid: 'edge icon quote' auto / var(--edge) auto var(--quote);
   }
 
   &:nth-of-type(even) {
     @include layout.clip('left');
+
     grid: 'icon quote edge' auto / auto var(--quote) var(--edge);
   }
 
@@ -42,6 +45,7 @@ blockquote {
 
     > p:last-child:not(:first-child) {
       --newline: 0;
+
       font-size: var(--small);
     }
   }
@@ -54,12 +58,14 @@ blockquote {
 blockquote:not([data-quote]) {
   &:nth-of-type(odd) {
     --column: full / wide;
+
     margin-left: 0;
     padding-left: var(--page-margin);
   }
 
   &:nth-of-type(even) {
     --column: wide / full;
+
     margin-right: 0;
     padding-right: var(--page-margin);
   }
@@ -69,6 +75,7 @@ blockquote:not([data-quote]) {
   --fill: var(--icon);
   --media-size: var(--double-gutter);
   --media-min: 3em;
+
   grid-area: quote;
 }
 

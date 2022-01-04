@@ -27,6 +27,7 @@ a {
     --underline-color--default: var(--accent);
     --underline-thickness--default: 0.1em;
     --underline-offset--default: 0.15em;
+
     color: var(--link, var(--action));
   }
 
@@ -36,6 +37,7 @@ a {
     --img-contrast: 1;
     --underline-color: var(--active);
     --underline-thickness: 0.2em;
+
     color: var(--link-focus, var(--active));
   }
 
@@ -44,6 +46,7 @@ a {
   &:link,
   &:visited {
     @include tools.transition('underline');
+
     text-decoration: underline;
     text-decoration-color: var(
       --underline-color,

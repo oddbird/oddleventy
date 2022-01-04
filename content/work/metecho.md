@@ -6,7 +6,7 @@ image:
   src: work/metecho/metecho.jpg
   alt: A task with assigned developer and tester
 client: &client Salesforce.org
-date: 2020-05-15
+date: 2019-03-21
 end: 2021-12-15
 tags:
   - Technology Sector
@@ -39,9 +39,9 @@ summary: |
   OddBird collaborated with Salesforce
   to develop a responsive web application
   designed with Lightning Design System
-  and its React implementation. 
-  Metecho makes it easier for people to 
-  view, test, and contribute to Salesforce Projects 
+  and its React implementation.
+  Metecho makes it easier for people to
+  view, test, and contribute to Salesforce Projects
   without learning GitHub.
 ---
 

@@ -36,7 +36,7 @@ events:
     adr: New Orleans, LA
     slides: https://oddbooksapp.com/release/9edb34c9-8789-4201-9f14-64bf5ab11b0a
     date: 2018-03-26
-    video: https://www.vuemastery.com/conferences/vueconf-2018/agile-design-systems-in-vue-miriam-suzanne/
+    video: https://www.vuemastery.com/conferences/vueconf-us-2018/agile-design-systems-in-vue-miriam-suzanne/
     media: &vue
       iframe: https://player.vimeo.com/video/264296381
       width: 640

@@ -132,10 +132,8 @@ As a proof of concept, in the near future we intend to add a feature to
 Herman to automatically include documentation of macros from Nunjucks
 templates. Stay tuned!
 
-If you have thoughts about how to make documentation better, feel free
-to [join the conversation on our Slack channel]. Or if you'd like to
-hire us to help set up a living style guide or other tools, please [get
-in touch].
+If you have thoughts about how to make documentation better, or if you'd like to
+hire us to help set up a living style guide or other tools, please [get in
+touch].
 
-[join the conversation on our Slack channel]: http://friends.oddbird.net/
 [get in touch]: /contact/

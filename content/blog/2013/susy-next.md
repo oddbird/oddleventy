@@ -90,12 +90,12 @@ help make it a community project. Stay tuned!
 [susy]: /susy/
 [jina bolton]: https://github.com/jina/
 [@jina]: https://twitter.com/jina
-[320 and up]: https://stuffandnonsense.co.uk/blog/320_and_up/
+[320 and up]: https://responsivedesign.is/resources/boilerplates/320-and-up/
 [art in my coffee]: https://artinmycoffee.com/
 [team sass design]: https://www.sass.hk/en/styleguide/team.htm
 [scott kellum]: https://github.com/scottkellum/
 [@scottkellum]: https://twitter.com/scottkellum
-[vox media]: https://www.voxmedia.com/
+[vox media]: https://corp.voxmedia.com/
 [sassy math]: https://github.com/scottkellum/sassy-math
 [modular scale]: https://github.com/modularscale/modularscale-sass
 [rachel nabors]: https://github.com/rachelnabors

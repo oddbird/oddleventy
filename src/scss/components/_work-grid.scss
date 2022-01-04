@@ -18,6 +18,7 @@
 
 .project-details {
   --clip-bg: var(--callout-neutral);
+
   display: grid;
   grid-template-columns:
     var(--gutter) [page-start] minmax(min-content, var(--page))

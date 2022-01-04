@@ -6,8 +6,8 @@ image:
   alt: Tabular data showing recent software test results
 logo: mozilla
 client: Mozilla
-date: 2011-01-01
-end: 2012-03-15
+date: 2010-11-12
+end: 2012-10-11
 links:
   source: https://github.com/mozilla/moztrap
 tags:

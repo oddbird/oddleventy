@@ -189,7 +189,7 @@ can use it in production.
 
 [Jen Kramer]: https://twitter.com/jen4web
 [CSS Grid]: https://css-tricks.com/snippets/css/complete-guide-grid/
-[implementations are sparse]: https://caniuse.com/#feat=css-grid
+[implementations are sparse]: https://caniuse.com/css-grid
 
 ## Silky Smooth Animation with CSS
 
@@ -381,7 +381,7 @@ Some custom-property gotchas:
 
 There's so much more! I highly recommend watching the video.
 
-- [Lea Verou Slides](https://leaverou.github.io/talks/css-variables/)
+- [Lea Verou Slides](https://projects.verou.me/talks/css-variables/)
 - [Lea Verou Video](https://youtu.be/2an6-WVPuJU)
 
 [Lea Verou]: https://twitter.com/leaverou

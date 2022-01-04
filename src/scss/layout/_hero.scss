@@ -2,11 +2,13 @@
 
 #hero {
   --fill: var(--feature);
+
   grid-area: hero / hero / hero2 / hero2;
   position: relative;
 
   &::before {
     @include tools.position(0 -1em 0 -1em);
+
     box-shadow: 0 0 var(--quarter-shim) var(--shadow) inset;
     content: '';
     pointer-events: none;

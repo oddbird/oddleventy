@@ -12,6 +12,7 @@
 [data-btn] {
   @include tools.font-family('alt');
   @include tools.transition('colors');
+
   align-items: center;
   background: var(--btn-bg, var(--highlight));
   border: thin solid var(--btn-border, var(--btn-text, transparent));
@@ -42,6 +43,7 @@
 /// @group buttons
 [data-btn~='small'] {
   --btn-padding: var(--gutter);
+
   font-size: var(--small);
 }
 
@@ -52,6 +54,7 @@
 /// @group buttons
 [data-btn~='xsmall'] {
   --btn-padding: var(--shim);
+
   font-size: var(--xsmall);
 }
 
@@ -60,16 +63,19 @@
 /// @group buttons
 [data-btn~='menu'] {
   @include tools.font-family('body');
+
   --btn-bg: transparent;
   --btn-border: var(--border-fade);
   --btn-text: var(--action);
   --marker: var(--btn-text);
+
   display: list-item;
 
   [open] & {
     --btn-bg: var(--active);
     --btn-border: var(--btn-bg);
     --btn-text: var(--bg);
+
     border-radius: var(--radius) var(--radius) 0 0;
   }
 }

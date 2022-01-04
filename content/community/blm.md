@@ -23,7 +23,7 @@ orgs:
       united to use our social, political,
       and economic capital for the advancement of our communities.
   - title: Colorado Freedom Fund
-    url: http://www.blackbailout.org/
+    url: https://www.coloradofreedomfund.org/
     icon: icons/fist
     text: |
       is a revolving community bond fund
@@ -31,7 +31,7 @@ orgs:
       unjustly detained in cages across Colorado
       who cannot afford to buy their own freedom.
   - title: '#BlackTransLivesMatter'
-    url: http://actforblacktranslives.org/
+    url: https://blacktranslivesmatter.carrd.co/
     icon: icons/fist
     text: |
       is a collaborative effort between people
@@ -86,7 +86,7 @@ orgs:
       and to bring reform to the system
       responsible for their unjust imprisonment.
   - title: Campaign Zero
-    url: https://www.joincampaignzero.org/
+    url: https://campaignzero.org/
     icon: icons/fist
     text: |
       strives to end police violence in America.

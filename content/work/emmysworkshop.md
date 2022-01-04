@@ -4,8 +4,8 @@ sub: Individualized algebra tutor
 image:
   src: work/emmys-workshop/emmys.jpg
 client: &client Carleton College
-date: 2016-06-30
-end: 2017-01-15
+date: 2016-08-01
+end: 2018-06-30
 links:
   site: https://turing.mathcs.carleton.edu/production/AlgebraSolving.html
 tasks:
@@ -66,7 +66,7 @@ summary: |
     notch='0',
     content=embed.img(
       src='work/emmys-workshop/emmy-phone.jpg',
-      alt='mobile view of algebra equation to solve in steps 
+      alt='mobile view of algebra equation to solve in steps
       and submit for analysis',
       sizes='media'
     )
@@ -93,7 +93,7 @@ summary: |
 
 ### Languages & Tools
 
-- Adobe Xd 
+- Adobe Xd
 - Herman
 - Java
 - PHP

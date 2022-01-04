@@ -8,7 +8,6 @@ image:
 tags:
   - Cascade
   - CSS
-  - Methodology
 events:
   - venue: Front Range Front End
     url: https://frontrangefrontend.com/

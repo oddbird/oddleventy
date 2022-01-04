@@ -8,7 +8,7 @@ image:
   src: talks/losing-control.jpg
   alt: Riding SideSaddle, Miriam's novel on shuffled note cards
 tags:
-  - Fine Art
+  - Art
 events:
   - venue: UVA Scholars’ Lab
     url: https://cal.lib.virginia.edu/event/3088981

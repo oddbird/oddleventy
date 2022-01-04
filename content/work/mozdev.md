@@ -5,7 +5,7 @@ image:
   src: mozdev/mozilla-youtube.jpg
 logo: mozilla
 client: Mozilla
-date: 2019-10-01
+date: 2019-07-01
 end: 2020-01-06
 links:
   youtube: https://www.youtube.com/MozillaDeveloper

@@ -3,7 +3,8 @@ eleventyExcludeFromCollections: true
 title: Streams Resource Library
 sub: Curation Tools for Teachers
 client: Junyo
-date: 2014-09-15
+date: 2013-05-09
+end: 2015-03-01
 tasks:
   - Product Branding
   - User Experience Design

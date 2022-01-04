@@ -35,5 +35,5 @@ like `::marker` or `:focus-visible`!
 
 - [Firefox 69 Release Notes](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/69)
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports#Testing_for_the_support_of_a_selector)
-- [Caniuse](https://caniuse.com/#feat=mdn-css_at-rules_supports_selector)
+- [Caniuse](https://caniuse.com/mdn-css_at-rules_supports_selector)
 - [Demos](https://mozdemos.netlify.app/support-selector/)

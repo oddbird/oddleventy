@@ -9,6 +9,7 @@
   --focus-ring: var(--text);
   --radio-border: var(--text);
   --radio-focus: var(--active);
+
   display: flex;
 }
 
@@ -29,6 +30,7 @@
 
   [data-radio='input']:checked + & {
     --radio-border: var(--radio-focus);
+
     box-shadow: 0 0 0 var(--quarter-shim) var(--radio-focus) inset;
     color: var(--active);
   }
@@ -36,6 +38,7 @@
   [data-radio='input']:focus + & {
     @include config.focus-ring;
     @include tools.z-index('bump');
+
     position: relative;
   }
 

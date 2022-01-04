@@ -34,8 +34,8 @@ summary: |
             {% set years = utility.datetime(
               start=item.date,
               end=item.data.end,
-              format='year',
-              prefix=none
+              format='year' if item.data.end else 'range',
+              prefix=none if item.data.end else true
             ) %}
             {{ post.subtitle(
               [years, item.data.sub] | join(' -- ')

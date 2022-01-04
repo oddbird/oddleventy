@@ -10,8 +10,8 @@ image:
   src: work/quarqnet/quarqnet-hero.jpg
   alt: World's greatest athlete, Stacy Kvernmo's latest bike ride stats and mapped route
 client: SRAM/Quarq
-date: 2015-01-01
-end: 2016-12-15
+date: 2015-09-02
+end: 2017-01-31
 tags:
   - _post
   - Case Study

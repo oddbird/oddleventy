@@ -16,7 +16,7 @@ events:
     date: 2015-08-28
     video: https://www.youtube.com/watch?v=9w0pgUTYy5k
   - venue: WordCamp Denver
-    url: https://2015.denver.wordcamp.org/
+    url: https://denver.wordcamp.org/2015/
     adr: Denver, CO
     date: 2015-06-13
   - title: Show Your Work & Share Your Toys

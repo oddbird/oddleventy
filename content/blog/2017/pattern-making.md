@@ -377,10 +377,9 @@ of the project. No solution is one-size fits all. We hope some of these
 issues can be resolved in our toolkit – like adding a hosted sandbox to
 our style guides – but your milage will almost certainly vary.
 
-How have you handled site configuration and documentation in your
-projects? How would you improve on our map solution? We'd love to hear
-your thoughts on [Twitter], on our [public Slack channel], or through
-our [handy contact form]. Happy coding!
+How have you handled site configuration and documentation in your projects? How
+would you improve on our map solution? We'd love to hear your thoughts on
+[Twitter], or through our [handy contact form]. Happy coding!
 
 [export all that data to JSON]: https://github.com/oddbird/sass-json-export
 [SassDoc]: http://sassdoc.com
@@ -390,5 +389,4 @@ our [handy contact form]. Happy coding!
 [Codepen]: https://codepen.io/
 [Sassmeister]: https://www.sassmeister.com/
 [Twitter]: https://twitter.com/oddbird
-[public Slack channel]: http://friends.oddbird.net
 [handy contact form]: /contact/
