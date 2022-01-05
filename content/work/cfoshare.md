@@ -45,7 +45,7 @@ summary: |
 
 {% call embed.media_block(
   media=embed.screen(
-  notch="10%",
+    notch='10%',
     content=embed.img(
       src='work/cfoshare/cfo-phone.jpg',
       alt='team page examples showing name, title, headshot, and bio',

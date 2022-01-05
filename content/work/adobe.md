@@ -161,7 +161,7 @@ typeface on Adobe, view similar typefaces, and download their superpower badge.
 
 {% call embed.media_block(
   media=embed.screen(
-  fill="#DA282C",
+    fill='#DA282C',
     content=embed.img(
       src='work/adobe/game-phone.jpg',
       alt='game play example showing vintage TVs
