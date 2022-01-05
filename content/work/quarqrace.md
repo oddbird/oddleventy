@@ -57,7 +57,8 @@ summary: |
 
 {% call embed.media_block(
   media=embed.screen(
-    notch='0',
+    notch='1%',
+    fill='#000',
     content=embed.img(
       src='work/quarqrace/qri-phone.jpg',
       alt='ironman leader board showing

@@ -135,7 +135,7 @@ escalation of care.
 
 {% call embed.media_block(
   media=embed.screen(
-    notch='0',
+    notch='5%',
     content=embed.img(
       src='work/coachhub/coachhub-phone.jpg',
       alt='list of coaches with location, specialty, and

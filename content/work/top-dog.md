@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 title: Top Dog
 sub: Bet on live sports with play money
 logo: topdog
@@ -40,7 +41,6 @@ summary: |
 
 {% call embed.media_block(
   media=embed.screen(
-    notch='0',
     content=embed.img(
       src='work/top-dog/topdog-phone.jpg',
       alt='mobile view of placing a bet within a specific tournament',

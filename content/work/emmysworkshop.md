@@ -63,7 +63,8 @@ summary: |
 
 {% call embed.media_block(
   media=embed.screen(
-    notch='0',
+    notch='2%',
+    fill='#69638F',
     content=embed.img(
       src='work/emmys-workshop/emmy-phone.jpg',
       alt='mobile view of algebra equation to solve in steps

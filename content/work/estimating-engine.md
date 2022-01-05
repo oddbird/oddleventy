@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 title: Estimating Engine
 sub: Create & manage custom manufacturing quotes
 logo:
