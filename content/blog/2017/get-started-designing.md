@@ -112,9 +112,9 @@ testing contrast.
 {{ embed.img('blog/2017/get-started-designing/xd.jpg', 'Adobe Experience Design') }}
 
 My new favorite UX design tool, [Adobe Experience Design][1], is still
-in beta. Xd has a built-in tutorial that’s fun, beautiful, and takes
-less than an hour to complete. I use Xd prototypes to flesh out my
-sketches, and to play with colors, typography, and layout. Xd is also an
+in beta. XD has a built-in tutorial that’s fun, beautiful, and takes
+less than an hour to complete. I use XD prototypes to flesh out my
+sketches, and to play with colors, typography, and layout. XD is also an
 excellent tool for working out how users will flow through the content.
 
 What design tools and tutorials have you found most useful? I’d love to

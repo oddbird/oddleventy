@@ -86,7 +86,7 @@ summary: |
 
 ### Languages & Tools
 
-- Adobe Xd
+- Adobe XD
 - Herman
 - JavaScript with Backbone & Marionette
 - Sass & CSS

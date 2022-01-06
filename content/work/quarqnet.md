@@ -157,7 +157,7 @@ summary: |
 
 ### Languages & Tools
 
-- Adobe Xd
+- Adobe XD
 - Herman
 - JavaScript with Backbone & Marionette
 - Sass & CSS
@@ -243,7 +243,7 @@ mobile and larger screens.
 ### Hi-Fi Mockups
 
 After the design direction for a user story is approved, we create
-static or interactive mockups, often using [Adobe Xd]. These mockups
+static or interactive mockups, often using [Adobe XD]. These mockups
 allow us to experiment with brand implementation as well as clarify user
 flow and interaction – identifying sticking points and iterating
 quickly. In conversation with Quarq, we worked to create a simple,
@@ -259,7 +259,7 @@ present themselves during implementation.
   }
 ) }}
 
-[Adobe Xd]: https://www.adobe.com/products/xd.html
+[Adobe XD]: https://www.adobe.com/products/xd.html
 
 ### Implementation
 

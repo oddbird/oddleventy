@@ -165,7 +165,7 @@ summary: |
 
 ### Languages & Tools
 
-- Adobe Xd
+- Adobe XD
 - Django & Python
 - Herman
 - JavaScript with Backbone & Marionette

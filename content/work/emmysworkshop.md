@@ -92,7 +92,7 @@ summary: |
 
 ### Languages & Tools
 
-- Adobe Xd
+- Adobe XD
 - Herman
 - Google Web Toolkit
 - Java

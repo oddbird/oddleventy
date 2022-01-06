@@ -117,7 +117,7 @@ non-developers as well.
 
 ## Adobe Experience Design
 
-[Sondra Eby] can’t say enough about [Adobe Xd], a new prototyping app
+[Sondra Eby] can’t say enough about [Adobe XD], a new prototyping app
 that’s still in beta. The tutorial is quick, fun, and easy to follow!
 Create clickable mockups of user flows to share with team members and
 clients. The latest updates makes it possible for everyone – even people
@@ -132,7 +132,7 @@ elements.
 ) }}
 
 [Sondra Eby]: /authors/sondra/
-[Adobe Xd]: https://www.adobe.com/products/xd.html
+[Adobe XD]: https://www.adobe.com/products/xd.html
 
 ## TextExpander
 
