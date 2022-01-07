@@ -30,6 +30,7 @@ sample:
   mobile:
     src: adobe/vintage-mobile.jpg
     alt: Mobile view of the vintage font tag question
+    fill: '#78080A'
   caption: |
     Adobe's font tags game is a meditation in typography
     with illustrated and animated questions.
