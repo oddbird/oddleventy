@@ -72,7 +72,7 @@ summary: |
 
   - CSS
   - Firefox
-  - 4k filming, lighting, & screen-capture
+  - 4k screen and video recording
 
 {% endcall %}
 
