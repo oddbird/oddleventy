@@ -28,12 +28,6 @@ press:
       It didn't feel like outsourcing at all.
     <<: *jason
     slug: outsourcing
-  - text: |
-      **OddBird became an extension of our team**
-      bringing UX, frontend, and backend brilliance
-      to take MetaDeploy from an idea into a production application.
-    <<: *jason
-    slug: extension
 summary: |
   OddBird collaborated with Salesforce
   to develop a responsive web application
@@ -54,7 +48,7 @@ summary: |
   media=embed.img(
     src='work/metecho/metecho-example.jpg',
     alt='an epic with one task in progress
-      and two collaborators'
+      and one collaborator'
   ),
   name='desktop-work'
 ) %}

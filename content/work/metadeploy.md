@@ -26,17 +26,17 @@ tasks:
   - Lightning Design System React Implementation
 press:
   - text: |
-      Working with OddBird was
-      **the best outsourcing experience I've ever had.**
-      It didn't feel like outsourcing at all.
-    <<: *jason
-    slug: outsourcing
-  - text: |
       **OddBird became an extension of our team**
       bringing UX, frontend, and backend brilliance
       to take MetaDeploy from an idea into a production application.
     <<: *jason
     slug: extension
+  - text: |
+      Working with OddBird was
+      **the best outsourcing experience I've ever had.**
+      It didn't feel like outsourcing at all.
+    <<: *jason
+    slug: outsourcing
 summary: |
   MetaDeploy helps nonprofit Salesforce admins and developers configure,
   install, and test packaged products -- providing a graphic web interface

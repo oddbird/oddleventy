@@ -62,7 +62,7 @@ summary: |
 
 {% call embed.media_block(
   media=embed.screen(
-    notch='0',
+    notch='8%',
     content=embed.img(
       src='work/medcurbside/medcurbside-phone.jpg',
       alt='clinician questions with one answer and one source cited',
