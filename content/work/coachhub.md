@@ -119,8 +119,9 @@ summary: |
   and **National Institutes of Health**.
 ---
 
-{% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'quotes.macros.njk' as quotes %}
 
 Users browse coaches, send messages,
 request appointments, post questions, and grant
@@ -129,6 +130,52 @@ Coaches create a profile, manage daily tasks, make appointments,
 post answers to questions, view user progress,
 and set alerts for relapse prevention and
 escalation of care.
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    notch='5%',
+    content=embed.img(
+      src='work/coachhub/coachhub-phone.jpg',
+      alt='list of coaches with location, specialty, and
+        provider type filters',
+      sizes='media'
+    )
+  )
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Back-end Development
+- Ongoing Maintenance
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+- Adobe Illustrator
+- Adobe Photoshop
+- Django & Python
+- Herman
+- JavaScript with Backbone & Marionette
+- Sass & CSS
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
 
 <!-- all but the first quote -->
 {{ quotes.grid(press | slice(2) | first ) }}

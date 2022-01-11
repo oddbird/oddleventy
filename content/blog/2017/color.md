@@ -244,7 +244,7 @@ background or vice versa? Try different combinations. Apply your colors
 to prototypes of actual content and elements.
 
 To test OddBird’s colors in context I created element collages using a
-brand new tool still in beta, Adobe Experience Design. Xd is packaged
+brand new tool still in beta, Adobe Experience Design. XD is packaged
 with a Creative Cloud subscription and has been a delight to use. The
 tutorial is quick and clear and I was up and running, creating
 prototypes with ease just an hour after downloading the program.
@@ -285,7 +285,7 @@ we snuck it into the OddSite design. Can you find it? Hint: scroll back
 to the top and try refreshing the page.
 
 As always, we want to know what your favorite web tools are for playing with
-color. Have you tried Xd? What did you think? Let us know
+color. Have you tried XD? What did you think? Let us know
 via [Twitter].
 
 [Adobe Experience Design]: https://www.adobe.com/products/xd.html

@@ -26,17 +26,17 @@ tasks:
   - Lightning Design System React Implementation
 press:
   - text: |
-      Working with OddBird was
-      **the best outsourcing experience I've ever had.**
-      It didn't feel like outsourcing at all.
-    <<: *jason
-    slug: outsourcing
-  - text: |
       **OddBird became an extension of our team**
       bringing UX, frontend, and backend brilliance
       to take MetaDeploy from an idea into a production application.
     <<: *jason
     slug: extension
+  - text: |
+      Working with OddBird was
+      **the best outsourcing experience I've ever had.**
+      It didn't feel like outsourcing at all.
+    <<: *jason
+    slug: outsourcing
 summary: |
   MetaDeploy helps nonprofit Salesforce admins and developers configure,
   install, and test packaged products -- providing a graphic web interface
@@ -48,5 +48,51 @@ summary: |
   checks before committing to a full install.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/metadeploy/md-example.jpg',
+    alt='view of a successful NPSP installation showing
+      each step of the process'
+  ),
+  name='desktop-work'
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+  - Research & Concepting
+  - Project Management
+  - UX & UI Design
+  - Front-end Development
+  - Back-end Development
+  - Ongoing Maintenance
+  - Usability Testing
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+  - Adobe XD
+  - Django & Python
+  - JavaScript with React & Redux
+  - Sass & CSS
+  - Storybook
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
+
 {{ quotes.grid(press) }}

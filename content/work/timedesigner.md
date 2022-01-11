@@ -150,36 +150,34 @@ summary: |
 
 {% call layout.block('column') %}
 
-### Design
+### Services
 
-- Wireframes & mockups
-- Brand identity & implementation
-- Accessible user interface (UI)
-- User experience design (UX)
-- Integrated style guide
-- Information architecture
-- Responsive across devices
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Back-end Development
+- Ongoing Maintenance
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Development
+### Languages & Tools
 
-- CSS Grid & custom properties
-- Drag-and-drop interface
-- Django
-- Front-end
-- Back-end
-- Ongoing maintenance
-
-{% endcall %}
+- Adobe XD
+- Django & Python
+- Herman
+- JavaScript with Backbone & Marionette
+- Sass & CSS
 
 {% endcall %}
 
 {% endcall %}
 
-## What They Needed
+{% endcall %}
+
+## What Tegy Needed
 
 Tegy came to OddBird
 with a multi-year plan

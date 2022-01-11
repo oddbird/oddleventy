@@ -30,6 +30,7 @@ sample:
   mobile:
     src: adobe/vintage-mobile.jpg
     alt: Mobile view of the vintage font tag question
+    fill: '#78080A'
   caption: |
     Adobe's font tags game is a meditation in typography
     with illustrated and animated questions.
@@ -147,14 +148,59 @@ summary: |
   responsive, accessible design.
 ---
 
-{% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'quotes.macros.njk' as quotes %}
 
 At the end of the game, players discover their own typographic superpower.
 Players have the option to share their superpower on social media, access the
 typeface on Adobe, view similar typefaces, and download their superpower badge.
 
 {{ quotes.grid(press) }}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    fill='#DA282C',
+    content=embed.img(
+      src='work/adobe/game-phone.jpg',
+      alt='game play example showing vintage TVs
+        with the words Play Me in different font styles',
+      sizes='media'
+    )
+  )
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Usability Testing
+- Animation Design
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+- Adobe XD
+- JavaScript with NuxtJS
+- Sass & CSS
+- GreenSock Animation Platform
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
 
 ## What Adobe Needed
 

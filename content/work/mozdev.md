@@ -39,8 +39,46 @@ summary: |
   we released 30 videos to nearly twenty thousand subscribers.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
-{% import "embed.macros.njk" as embed %}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.img(
+    src='mozdev/mozdev-example.jpg',
+    alt='Mozilla Developer YouTube channel with 24.3K subscribers
+      and a grid of videos'
+  ),
+  name='desktop-work'
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+  - Research
+  - CSS & Firefox DevTooling Tutorials
+  - Developer Relations
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+  - CSS
+  - Firefox
+  - 4K screen and video recording
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
 
 {{ quotes.grid(press) }}
 

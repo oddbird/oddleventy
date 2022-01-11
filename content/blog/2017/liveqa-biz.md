@@ -69,9 +69,9 @@ our [work].
    a fraction of the time and money to create.
 
 2. Consider hiring a user experience designer to create an interactive
-   mockup in [Adobe Xd] or [InVision], and without paying for a single line
+   mockup in [Adobe XD] or [InVision], and without paying for a single line
    of code you can rapidly test your ideas with users, updating the
    features to fit their needs.
 
-[Adobe Xd]: https://www.adobe.com/products/xd.html
+[Adobe XD]: https://www.adobe.com/products/xd.html
 [InVision]: https://www.invisionapp.com/

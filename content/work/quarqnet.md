@@ -1,7 +1,6 @@
 ---
 card: large
 title: QuarqNet
-banner: QuarqNet Application
 sub: Real-time telemetry & sharing for athletes
 links:
   site: https://www.quarqnet.com/
@@ -119,10 +118,55 @@ summary: |
   Strava, Training Peaks, Dropbox, and Today’s Plan.
 ---
 
-{% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'quotes.macros.njk' as quotes %}
 
 {{ quotes.grid(press) }}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    notch='0',
+    content=embed.img(
+      src='work/quarqnet/quarqnet-phone.jpg',
+      alt='sign-in form with bike race mountain road
+        scene in the background',
+      sizes='media'
+    )
+  )
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Ongoing Maintenance
+- Usability Testing
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+- Adobe XD
+- Herman
+- JavaScript with Backbone & Marionette
+- Sass & CSS
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
 
 ## What They Needed
 
@@ -199,7 +243,7 @@ mobile and larger screens.
 ### Hi-Fi Mockups
 
 After the design direction for a user story is approved, we create
-static or interactive mockups, often using [Adobe Xd]. These mockups
+static or interactive mockups, often using [Adobe XD]. These mockups
 allow us to experiment with brand implementation as well as clarify user
 flow and interaction – identifying sticking points and iterating
 quickly. In conversation with Quarq, we worked to create a simple,
@@ -215,7 +259,7 @@ present themselves during implementation.
   }
 ) }}
 
-[Adobe Xd]: https://www.adobe.com/products/xd.html
+[Adobe XD]: https://www.adobe.com/products/xd.html
 
 ### Implementation
 
