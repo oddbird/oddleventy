@@ -64,5 +64,42 @@ summary: |
   integrated design system.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/second-measure/second-measure-sample.jpg',
+    alt='spacing and margin documentation in Storybook'
+  ),
+  name='desktop-work'
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+- Design System workflow training
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+- CSS
+- JavaScript with React styled-components
+- Storybook
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
+
 {{ quotes.grid(press) }}

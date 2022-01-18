@@ -54,5 +54,52 @@ summary: |
   in healthcare today.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    notch='8%',
+    content=embed.img(
+      src='work/medcurbside/medcurbside-phone.jpg',
+      alt='clinician questions with one answer and one source cited',
+      sizes='media'
+    )
+  )
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Back-end Development
+- Ongoing Maintenance
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+- Adobe XD
+- Django & Python
+- Herman
+- JavaScript with Backbone & Marionette
+- Sass & CSS
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
+
 {{ quotes.grid(press) }}

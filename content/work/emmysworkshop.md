@@ -4,10 +4,10 @@ sub: Individualized algebra tutor
 image:
   src: work/emmys-workshop/emmys.jpg
 client: &client Carleton College
-links:
-  site: https://turing.mathcs.carleton.edu/production/AlgebraSolving.html
 date: 2016-08-01
 end: 2018-06-30
+links:
+  site: https://turing.mathcs.carleton.edu/production/AlgebraSolving.html
 tasks:
   - Branding
   - Responsive front-end architecture
@@ -18,6 +18,8 @@ people:
     # face: anna-rafferty.jpg
     url: https://emmysworkshop.com/
     venue: *client
+tags:
+  - Education Sector
 press:
   - text: |
       The first meeting I had with Miriam helped me decide.
@@ -53,5 +55,54 @@ summary: |
   a responsive interface.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    notch='2%',
+    fill='#69638F',
+    content=embed.img(
+      src='work/emmys-workshop/emmy-phone.jpg',
+      alt='mobile view of algebra equation to solve in steps
+        and submit for analysis',
+      sizes='media'
+    )
+  )
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Back-end Development
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+- Adobe XD
+- Herman
+- Google Web Toolkit
+- Java
+- PHP
+- Sass & CSS
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
+
 {{ quotes.grid(press) }}

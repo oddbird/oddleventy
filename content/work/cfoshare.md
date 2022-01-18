@@ -1,10 +1,10 @@
 ---
 title: CFOshare Website
-sub: WordPress CMS & responsive design
+sub: WordPress & responsive design
 logo: cfoshare
 image:
   src: work/cfoshare/cfoshare.jpg
-  alt: CFOshare's wordpress articles about finance
+  alt: CFOshare's WordPress articles about finance
   position: top
 client: &client CFOshare
 date: 2018-07-01
@@ -26,7 +26,7 @@ tags:
   - Accounting Sector
 summary: |
   OddBird helped CFOshare transition their marketing site
-  to WordPress CMS --
+  to WordPress --
   implementing the brand,
   migrating content,
   optimizing responsive images,
@@ -45,7 +45,7 @@ summary: |
 
 {% call embed.media_block(
   media=embed.screen(
-    notch='0',
+    notch='10%',
     content=embed.img(
       src='work/cfoshare/cfo-phone.jpg',
       alt='team page examples showing name, title, headshot, and bio',
@@ -58,20 +58,22 @@ summary: |
 
 {% call layout.block('column') %}
 
-### Design
+### Services
 
-- Brand implementation
-- Image optimization
+- UX & UI Design
+- Content Migration
+- Front-end Development
+- Ongoing Maintenance
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Development
+### Languages & Tools
 
-- Transitioned original marketing website to WordPress
-- Content migration
-- Trained staff in ongoing site maintenance
+- PHP
+- Sass & CSS
+- WordPress
 
 {% endcall %}
 

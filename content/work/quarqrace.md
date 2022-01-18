@@ -1,6 +1,5 @@
 ---
 title: Quarq Race Intelligence
-banner: Quarq Race Intelligence Case Study
 sub: Real-time race analytics
 links:
   site: https://www.quarqrace.com/
@@ -50,5 +49,51 @@ summary: |
   Enduro races.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.screen(
+    notch='1%',
+    content=embed.img(
+      src='work/quarqrace/qri-phone.jpg',
+      alt='ironman leader board showing
+        real-time order of athletes and expanded
+        speed, cadence, and power of one athlete',
+      sizes='media'
+    )
+  )
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Ongoing Maintenance
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+- Adobe XD
+- Herman
+- JavaScript with Backbone & Marionette
+- Sass & CSS
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
+
 {{ quotes.grid(press) }}

@@ -34,5 +34,46 @@ summary: |
   automated tools to run tests and report results.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
+
+{{ layout.title('What We Did') }}
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/moztrap/moztrap-sample.jpg',
+    alt='list of tests run and their results'
+  ),
+  name='desktop-work'
+) %}
+
+{% call layout.grid('narrow-columns') %}
+
+{% call layout.block('column') %}
+
+### Services
+
+  - Project Management
+  - UX & UI Design
+  - Front-end Development
+  - Back-end Development
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Languages & Tools
+
+  - Django & Python
+  - JavaScript
+  - Sass & CSS
+  - Susy
+
+{% endcall %}
+
+{% endcall %}
+
+{% endcall %}
+
 {{ quotes.grid(press) }}

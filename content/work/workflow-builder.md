@@ -71,16 +71,17 @@ summary: |
 ### Services
 
   - Project Management
-  - User Interface Design Consulting
+  - UX & UI Design Consulting
+  - Front-end Development
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Development
+### Languages & Tools
 
-  - Front-end Development
-  - Vue & D3 Development
+  - JavaScript with Vue and D3
+  - Sass & CSS
 
 {% endcall %}
 
