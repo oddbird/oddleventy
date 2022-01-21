@@ -48,7 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tommoor/remove-markdown", "npm:0.3.2"],
             ["@typescript-eslint/parser", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.7.0"],
             ["@yarnpkg/sdks", "npm:2.5.1-rc.6"],
-            ["accoutrement", "npm:4.0.0-beta.2"],
+            ["accoutrement", "npm:4.0.0-beta.3"],
             ["autoprefixer", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:10.4.0"],
             ["babel-jest", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:27.4.5"],
             ["cascading-color-systems", "npm:0.1.0-beta.15"],
@@ -3743,10 +3743,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["accoutrement", [
-        ["npm:4.0.0-beta.2", {
-          "packageLocation": "./.yarn/cache/accoutrement-npm-4.0.0-beta.2-70d54dd418-052b8475ab.zip/node_modules/accoutrement/",
+        ["npm:4.0.0-beta.3", {
+          "packageLocation": "./.yarn/cache/accoutrement-npm-4.0.0-beta.3-c255d9d435-98f4813562.zip/node_modules/accoutrement/",
           "packageDependencies": [
-            ["accoutrement", "npm:4.0.0-beta.2"]
+            ["accoutrement", "npm:4.0.0-beta.3"]
           ],
           "linkType": "HARD",
         }]
@@ -12341,7 +12341,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tommoor/remove-markdown", "npm:0.3.2"],
             ["@typescript-eslint/parser", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.7.0"],
             ["@yarnpkg/sdks", "npm:2.5.1-rc.6"],
-            ["accoutrement", "npm:4.0.0-beta.2"],
+            ["accoutrement", "npm:4.0.0-beta.3"],
             ["autoprefixer", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:10.4.0"],
             ["babel-jest", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:27.4.5"],
             ["cascading-color-systems", "npm:0.1.0-beta.15"],
