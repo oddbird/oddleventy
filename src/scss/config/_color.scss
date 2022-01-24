@@ -32,8 +32,7 @@ $brand-colors: (
 @include herman.add(
   'colors',
   'brand-colors',
-  $brand-colors,
-  meta.get-function('color', $module: 'tools')
+  tools.compile-colors($brand-colors)
 );
 
 // Background Colors

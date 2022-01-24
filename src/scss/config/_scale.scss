@@ -41,12 +41,7 @@ $font-sizes: (
 );
 
 @include tools.add-sizes($font-sizes);
-@include herman.add(
-  'sizes',
-  'font-sizes',
-  $font-sizes,
-  get-function('size', $module: 'tools')
-);
+@include herman.add('sizes', 'font-sizes', tools.compile-sizes($font-sizes));
 
 // Spacing Sizes
 // -------------
@@ -70,8 +65,7 @@ $spacing-sizes: (
 @include herman.add(
   'sizes',
   'spacing-sizes',
-  $spacing-sizes,
-  get-function('size', $module: 'tools')
+  tools.compile-sizes($spacing-sizes)
 );
 
 // Theme Sizes
@@ -87,12 +81,7 @@ $theme-sizes: (
 );
 
 @include tools.add-sizes($theme-sizes);
-@include herman.add(
-  'sizes',
-  'theme-sizes',
-  $theme-sizes,
-  get-function('size', $module: 'tools')
-);
+@include herman.add('sizes', 'theme-sizes', tools.compile-sizes($theme-sizes));
 
 // Page Sizes
 // ----------
@@ -109,12 +98,7 @@ $page-sizes: (
 );
 
 @include tools.add-sizes($page-sizes);
-@include herman.add(
-  'sizes',
-  'page-sizes',
-  $page-sizes,
-  get-function('size', $module: 'tools')
-);
+@include herman.add('sizes', 'page-sizes', tools.compile-sizes($page-sizes));
 
 // Breakpoints
 // -----------
