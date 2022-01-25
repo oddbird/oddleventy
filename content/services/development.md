@@ -77,11 +77,11 @@ summary: |
 
 ## Design, Branding & Strategy
 
-**We provide the full range of design services** --
+**We provide the full range of design & branding services** --
 from user research & strategy
-to branding,
-from user experience & user interface design
-to integrated design systems
+to brand and logo design,
+user experience & interface design,
+integrated design systems,
 and consulting around marketing & SEO.
 Deliverables include:
 logos & wordmarks,
