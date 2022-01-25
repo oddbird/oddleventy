@@ -77,26 +77,26 @@ summary: |
 
 ## Design & Strategy
 
-**We provide the full range of design services**
+**We provide the full range of design services** --
 from user research & strategy
 to branding,
 from user experience & user interface design
-to integrated design systems,
+to integrated design systems
 and consulting around marketing & SEO.
-Deliverables include: 
-logos & wordmarks, 
-brand style guides, 
-color palettes, language guidelines, 
+Deliverables include:
+logos & wordmarks,
+brand style guides,
+color palettes, language guidelines,
 fonts, textures,
-animated web graphics, 
+animated web graphics,
 component libraries,
 wireframes & mockups,
 object maps,
-SWAT & competitor analyses,
+SWOT & competitor analyses,
 and visual audits.
-Our process is hands-on and iterative, 
-working with you at every step 
-to create and maintain designs 
+Our process is hands-on and iterative,
+working with you at every step
+to create and maintain designs
 that express the values of your company.
 
 {{ quotes.find(
