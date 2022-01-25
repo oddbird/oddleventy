@@ -75,7 +75,7 @@ $spacing-sizes: (
 /// @group config-scale
 $theme-sizes: (
   'page-margin': calc(var(--quarter-shim) + 4vw),
-  'border-width': medium,
+  'border-width': 3px,
   'radius': var(--half-shim),
   'grid-hero': calc(var(--gutter) * 8),
 );
