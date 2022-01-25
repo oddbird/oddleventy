@@ -75,7 +75,7 @@ summary: |
 
 {% endcall %}
 
-## Design & Strategy
+## Design, Branding & Strategy
 
 **We provide the full range of design services** --
 from user research & strategy
