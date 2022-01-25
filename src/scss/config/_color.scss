@@ -1,4 +1,5 @@
 @use 'sass:meta';
+@use 'sass:math';
 @use 'sass:color';
 @use '~accoutrement/sass/tools';
 @use '~sassdoc-theme-herman/scss/utilities' as herman;
@@ -31,8 +32,7 @@ $brand-colors: (
 @include herman.add(
   'colors',
   'brand-colors',
-  $brand-colors,
-  meta.get-function('color', $module: 'tools')
+  tools.compile-colors($brand-colors)
 );
 
 // Background Colors
@@ -104,9 +104,9 @@ $ccs-colors: (
 /// @access private
 /// @group config-color
 $_hues: (
-  'prime': color.hue(tools.color('brand-blue')) / 1deg,
-  'accent': color.hue(tools.color('brand-pink')) / 1deg,
-  'special': color.hue(tools.color('brand-orange')) / 1deg,
+  'prime': math.div(color.hue(tools.color('brand-blue')), 1deg),
+  'accent': math.div(color.hue(tools.color('brand-pink')), 1deg),
+  'special': math.div(color.hue(tools.color('brand-orange')), 1deg),
   'neutral': null,
 );
 
