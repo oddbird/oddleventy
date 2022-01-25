@@ -75,6 +75,30 @@ summary: |
 
 {% endcall %}
 
+## Design, Branding & Strategy
+
+**We provide the full range of design & branding services** --
+from user research & strategy
+to brand and logo design,
+user experience & interface design,
+integrated design systems,
+and consulting around marketing & SEO.
+Deliverables include:
+logos & wordmarks,
+brand style guides,
+color palettes, language guidelines,
+fonts, textures,
+animated web graphics,
+component libraries,
+wireframes & mockups,
+object maps,
+SWOT & competitor analyses,
+and visual audits.
+Our process is hands-on and iterative,
+working with you at every step
+to create and maintain designs
+that express the values of your company.
+
 {{ quotes.find(
   collections.all,
   slugs=['iterate', 'handoff']
