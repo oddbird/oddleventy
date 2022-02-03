@@ -64,7 +64,7 @@ and help along the way.
 ### PTO
 
 All contractors are encouraged to take
-5 days of PTO annually,
+10 days of PTO annually,
 paid at \$400/day.
 
 ### Transparency
