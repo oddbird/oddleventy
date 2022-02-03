@@ -50,12 +50,12 @@ and help along the way.
 
 - All senior-level contractors
   are paid equally for client work
-  (currently \$100/hr – open to change as the team deems necessary)
+  (currently \$110/hr – open to change as the team deems necessary)
   across all skillsets.
-  Some internal work is paid at lower rates,
+  Some internal work is paid at lower rates (currently \$85/hr),
   when agreed on by the team.
 - If we bring on a junior-level contractor
-  they may be temporarily paid $60-$80/hr,
+  they may be temporarily paid $60-$85/hr,
   with a clear path to graduate
   into a senior position.
 - Intern compensation
@@ -64,7 +64,7 @@ and help along the way.
 ### PTO
 
 All contractors are encouraged to take
-5 days of PTO annually,
+10 days of PTO annually,
 paid at \$400/day.
 
 ### Transparency
