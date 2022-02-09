@@ -3,8 +3,8 @@ title: Integrated Design Systems
 sub: Want to reduce technical debt and scale your applications?
 index: Design Systems
 image:
-  src: pages/stacy-design-systems-training.jpg
-  alt: Stacy teaching developers at an event
+  src: pages/design-system-hero.jpg
+  alt: font sizes and previews for OddBird.net
 action:
   text: Talk with us »
   url: /contact/
@@ -78,7 +78,7 @@ Most Design System projects begin with the Goals & Audit package to gain a share
     img: 'pages/interactive-prototypes.png',
     alt: 'profile image on top of quote'
   }],
-  caption='The profile image sits on top of the quote in narrow containers.'
+  caption='THIS IS A PLACEHOLDER IMAGE'
 ) }}
 
 **Range of Deliverables**
