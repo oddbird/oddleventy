@@ -13,18 +13,17 @@ tags:
   - OOUX
   - ORCA
   - Design
-  - User Experience  
+  - User Experience
 summary: |
   Sondra and Miriam chat with Sophia
   about using her ORCA methodology
-  in OddBird's work this clients.
-  ORCA stands for:
-  Objects, Relationships, CTAs, and Attributes.
+  (Objects, Relationships, CTAs, and Attributes)
+  in OddBird's work with clients.
   We dive into the ways OOUX
   facilitates a flow of conversation
-  between designers and back-end developers.
-  We get a sneak peak of Miriam's work on 
-  the new container queries features
+  between designers and back-end developers,
+  and get a sneak peak of Miriam's work on
+  the new container query features
   coming to CSS.
 media:
   - iframe: https://open.spotify.com/embed/episode/7E4g4uJ7F6Bk6lpjj3grnZ
