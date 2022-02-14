@@ -28,6 +28,9 @@ summary: |
   coming to CSS.
 media:
   - iframe: https://open.spotify.com/embed/episode/7E4g4uJ7F6Bk6lpjj3grnZ
+
+    width: 560
+    height: 100
 ---
 
 {% import "embed.macros.njk" as embed %}
