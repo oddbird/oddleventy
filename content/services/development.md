@@ -83,21 +83,45 @@ to brand and logo design,
 user experience & interface design,
 integrated design systems,
 and consulting around marketing & SEO.
-Deliverables include:
-logos & wordmarks,
-brand style guides,
-color palettes, language guidelines,
-fonts, textures,
-animated web graphics,
-component libraries,
-wireframes & mockups,
-object maps,
-SWOT & competitor analyses,
-and visual audits.
 Our process is hands-on and iterative,
 working with you at every step
 to create and maintain designs
 that express the values of your company.
+
+**Deliverables include:**
+- logos & wordmarks
+- brand style guides
+- color palettes 
+- language guidelines
+- fonts 
+- textures
+- animated web graphics
+- component libraries
+- wireframes & mockups
+- object maps
+- SWOT & competitor analyses
+- visual audits
+
+## Development, Accessibility & Refactors
+
+**Always on the cutting edge, 
+we offer full-stack frontend and backend development.**
+We focus on responsive application development
+and refactors for the web
+including 100% test coverage
+and full documentation
+with a focus on
+performance and architecture.
+
+**Deliverables include:**
+- project plans & estimates
+- custom web applications & sites
+- staging & production environments
+- documentation
+- automated pattern libraries
+- WCAG accessibility
+- training for hand-off
+- ongoing development
 
 {{ quotes.find(
   collections.all,
@@ -123,9 +147,9 @@ that express the values of your company.
 
 ### Languages & Tools
 
-- Python **with** Django (*core contributor*)
-- HTML/CSS **with** Sass (*core contributor*)
-- JavaScript **with** Vue & React
+- **Python** with **Django** (*core contributor*)
+- **HTML/CSS** with **Sass** (*core contributor*)
+- **JavaScript** with **Vue** & **React**
 - Node
 - WordPress
 

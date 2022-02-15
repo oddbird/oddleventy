@@ -20,3 +20,10 @@ summary: |
   for the latest videos & slides, 
   and upcoming conference dates.
 ---
+
+{% import 'quotes.macros.njk' as quotes %}
+
+{{ quotes.find(
+  collections.all,
+  slugs=['spot-on', 'audit']
+) }}
