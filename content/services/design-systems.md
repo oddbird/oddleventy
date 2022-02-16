@@ -9,17 +9,17 @@ action:
   text: Talk with us »
   url: /contact/
 summary: |
-  **We partner with clients 
-  to build design systems** 
-  that improve team communication, 
-  speed up development, 
-  and lay the foundation 
-  for a scalable code base. 
-  We’re experts at building systems 
-  — training your team in integrated tools 
-  & daily workflows 
-  to maintain consistent designs 
-  across digital products over the long-term. 
+  **We partner with clients
+  to build design systems**
+  that improve team communication,
+  speed up development,
+  and lay the foundation
+  for a scalable code base.
+  We’re experts at building systems
+  — training your team in integrated tools
+  & daily workflows
+  to maintain consistent designs
+  across digital products over the long-term.
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
@@ -36,42 +36,72 @@ summary: |
 
 ## Packages
 
-We provide two integrated design system development packages: 
-1. **Goals & Audit** to assess your current designs & technology, understand your needs, and propose a strategy. 
-2. **Build My Design System** to set up the tools, workflows, and components you need, and to train your team.
+We provide two integrated design system development packages:
+1. **Goals & Audit** to assess your current designs & technology,
+understand your needs, and propose a strategy.
+2. **Build My Design System** to set up the tools, workflows,
+and components you need, and to train your team.
 
-### Goals & Audit 
+### Goals & Audit
 *starting at $4K*
 
-**Goals** \
-OddBird will meet (virtually) with your team. Together with your designers and developers, we will walk through your current workflow and projects, highlighting pain points and bottlenecks so that we can gain a shared understanding of your design system goals and needs.
+#### Goals
 
-**Audit** \
-OddBird will review any existing design system components, libraries, and/or platforms/tools your company uses, how you are using them, and any related project code. 
+OddBird will meet (virtually) with your team. Together with your designers
+and developers, we will walk through your current workflow and projects,
+highlighting pain points and bottlenecks so that we can gain a shared
+understanding of your design system goals and needs.
 
-**Deliverables**
+#### Audit
+
+OddBird will review any existing design system components, libraries,
+and/or platforms/tools your company uses, how you are using them,
+and any related project code.
+
+#### Deliverables
+
 1. **Visual Inventory**:
-A compilation of existing designs. [STACY'S DESCRIPTION]
+A compilation of existing components within your project,
+visually capturing commonly used items and their variations.
+This helps to see where we can prioritize effort, find patterns that
+could be condensed, expanded, improved, and documented.
 
 {{ embed.figure(
   data=[{
-    img: 'pages/interactive-prototypes.png',
-    alt: 'profile image on top of quote'
+    img: 'pages/inventory.jpg',
+    alt: 'A collection of button screenshots from one project'
   }],
-  caption='The profile image sits on top of the quote in narrow containers.'
+  caption='Taking inventory is a great way to see patterns emerge.'
 ) }}
 
 2. **User Stories**:
-A customized, itemized list of recommended next steps that could include: integrated design system setup, documentation, tooling recommendations, a component library, component development, component design, brand/graphic design, code organization, implementing Herman automated style guide, and team training sessions.
+A customized, itemized list of recommended next steps that could include:
+integrated design system setup,
+documentation,
+tooling recommendations,
+a component library,
+component development,
+component design,
+brand/graphic design,
+code organization,
+implementing Herman automated style guide,
+and team training sessions.
 
 3. **Estimate**:
-A set of “user stories” or tasks estimated individually, and prioritized into phases as needed — giving you control of the timeline and budget to build your design system.
+A set of “user stories” or tasks estimated individually,
+and prioritized into phases as needed —
+giving you control of the timeline and budget to build your design system.
 
 
 ### Build My Design System
 *Custom Estimate*
 
-Most Design System projects begin with the Goals & Audit package to gain a shared understanding of the technology constraints, existing designs, and team goals. Based on the results of the Goals & Audit phase, OddBird will create a proposal and estimate that could include a wide ranges of services. In the “Build” phase, we will start with agreed-upon priorities and meet with you regularly while we work together. 
+Most Design System projects begin with the Goals & Audit package to gain
+a shared understanding of the technology constraints, existing designs,
+and team goals. Based on the results of the Goals & Audit phase,
+OddBird will create a proposal and estimate that could include
+a wide ranges of services. In the “Build” phase, we will start with
+agreed-upon priorities and meet with you regularly while we work together.
 
 {{ embed.figure(
   data=[{
@@ -81,29 +111,33 @@ Most Design System projects begin with the Goals & Audit package to gain a share
   caption='THIS IS A PLACEHOLDER IMAGE'
 ) }}
 
-**Range of Deliverables**
+#### Range of Deliverables
+
 - Integrated design system setup
 - Documentation
-- Component library setup 
+- Component library setup
 - Component design & development
 - Tooling & language suggestions (Fractal, Storybook, React, Vue)
-- Brand & graphic design  
+- Brand & graphic design
 - Workflow strategies
 - Code organization
 - Implementing Herman automated style guide
 - And more!
 
-### Training & Ongoing Development
+#### Training & Ongoing Development
 
-Every project concludes with training for your team to ensure successful hand-off. We are happy to (and often do) provide continued development and ongoing project updates, as needed, at our standard hourly rate.
+Every project concludes with training for your team
+to ensure successful hand-off.
+We are happy to (and often do) provide continued development
+and ongoing project updates, as needed, at our standard hourly rate.
 
 ## Design Systems help your team:
 
 - Improve communication between designers & developers
 - Speed up development & processes
 - Lay the foundation for a scalable code base
-- Weave system updates in daily workflow 
-- Maintain consistent designs across applications over the long-term 
+- Weave system updates in daily workflow
+- Maintain consistent designs across applications over the long-term
 - Discover and create meaningful patterns
 - Find bugs before committing code
 - Reduce technical debt
