@@ -16,7 +16,7 @@ summary: |
   and lay the foundation
   for a scalable code base.
   We’re experts at building systems
-  — training your team in integrated tools
+  — helping your team in integrated tools
   & daily workflows
   to maintain consistent designs
   across digital products over the long-term.
@@ -36,11 +36,11 @@ summary: |
 
 ## Packages
 
-We provide two integrated design system development packages:
+We provide two integrated design system development packages. Purchase just the Goals & Audit package and build your system in house, or hire us for both packages.
 1. **Goals & Audit** to assess your current designs & technology,
-understand your needs, and propose a strategy.
+understand your needs, and propose an improvement plan.
 2. **Build My Design System** to set up the tools, workflows,
-and components you need, and to train your team.
+and components you need, and to train your team to use and maintain the system.
 
 ### Goals & Audit
 *starting at $4K*
@@ -62,21 +62,21 @@ and any related project code.
 
 1. **Visual Inventory**:
 A compilation of existing components within your project,
-visually capturing commonly used items and their variations.
-This helps to see where we can prioritize effort, find patterns that
-could be condensed, expanded, improved, and documented.
+documenting commonly used UI elements and their variations.
+We will identify and prioritize design patterns 
+to be condensed, expanded, improved,
+and documented in a pattern library.
 
 {{ embed.figure(
   data=[{
     img: 'pages/inventory.jpg',
     alt: 'A collection of button screenshots from one project'
   }],
-  caption='Taking inventory is a great way to see patterns emerge.'
+  caption='Taking inventory is a great way to find design patterns.'
 ) }}
 
 2. **User Stories**:
-A customized, itemized list of recommended next steps that could include:
-integrated design system setup,
+A list of recommended next steps that could include:
 documentation,
 tooling recommendations,
 a component library,
@@ -84,11 +84,11 @@ component development,
 component design,
 brand/graphic design,
 code organization,
-implementing Herman automated style guide,
-and team training sessions.
+and team training sessions
+for hand-off.
 
 3. **Estimate**:
-A set of “user stories” or tasks estimated individually,
+A set of “User Stories” or tasks estimated individually,
 and prioritized into phases as needed —
 giving you control of the timeline and budget to build your design system.
 
@@ -96,7 +96,7 @@ giving you control of the timeline and budget to build your design system.
 ### Build My Design System
 *Custom Estimate*
 
-Most Design System projects begin with the Goals & Audit package to gain
+Most design system projects begin with the Goals & Audit package to gain
 a shared understanding of the technology constraints, existing designs,
 and team goals. Based on the results of the Goals & Audit phase,
 OddBird will create a proposal and estimate that could include
@@ -105,10 +105,10 @@ agreed-upon priorities and meet with you regularly while we work together.
 
 {{ embed.figure(
   data=[{
-    img: 'pages/interactive-prototypes.png',
+    img: 'pages/design-system-storybook.jpg',
     alt: 'profile image on top of quote'
   }],
-  caption='THIS IS A PLACEHOLDER IMAGE'
+  caption='Storybook component library built for Metecho project'
 ) }}
 
 #### Range of Deliverables
@@ -126,10 +126,13 @@ agreed-upon priorities and meet with you regularly while we work together.
 
 #### Training & Ongoing Development
 
-Every project concludes with training for your team
+The Build My Design System package 
+concludes with training for your team
 to ensure successful hand-off.
-We are happy to (and often do) provide continued development
-and ongoing project updates, as needed, at our standard hourly rate.
+We are happy to (and often do) 
+provide continued development
+and ongoing project updates, as needed, 
+at our standard hourly rate.
 
 ## Design Systems help your team:
 
@@ -146,8 +149,6 @@ and ongoing project updates, as needed, at our standard hourly rate.
 
 [Contact us »]: /contact/
 
-
-?? WOULD LIKE TO INSERT ODD TOOL BANNER HERE. NOT SURE HOW. ??
 
 
 ## Herman Automated Style Guide
