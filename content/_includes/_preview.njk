@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ '/css/screen.css' | path }}">
+  <title>Preview</title>
+</head>
+<body data-layout="body">
+  <main data-layout="main" aria-labelledby="title">
+    {{ yield | safe }}
+  </main>
+</body>
+</html>

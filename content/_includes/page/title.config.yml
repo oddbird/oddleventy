@@ -1,0 +1,8 @@
+title: 'This is a site title'
+status: wip
+context:
+  banner: |
+    Custom Web App
+    *[Design](/services/design-systems/),
+    [Development](/services/development/), &
+    [Training](/services/speaking/)*
