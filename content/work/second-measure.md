@@ -104,8 +104,8 @@ summary: |
 
 {{ quotes.grid(press) }}
 
-Interested in an audit of your code or looking for a partner to build your component library or design system?
+Interested in an audit of your code
+or looking for a partner
+to build your component library or design system?
 
-[Design system services »]
-
-[Design system services »]: /services/design-systems/
+[Design system services »](/services/design-systems/)

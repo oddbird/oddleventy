@@ -14,9 +14,9 @@ summary: |
   that improve team communication,
   speed up development,
   and lay the foundation
-  for a scalable code base.
-  We’re experts at building systems
-  — helping your team in integrated tools
+  for a scalable codebase.
+  We’re experts at building systems --
+  helping your team in integrated tools
   & daily workflows
   to maintain consistent designs
   across digital products over the long-term.
@@ -30,13 +30,14 @@ summary: |
   slugs=['best', 'systems']
 ) }}
 
-[See work sample »]
-
-[See work sample »]: /work/second-measure/
+[See work sample »](/work/second-measure/)
 
 ## Packages
 
-We provide two integrated design system development packages. Purchase just the Goals & Audit package and build your system in house, or hire us for both packages.
+We provide two integrated design system development packages.
+Purchase just the Goals & Audit package and build your system in house,
+or hire us for both packages.
+
 1. **Goals & Audit** to assess your current designs & technology,
 understand your needs, and propose an improvement plan.
 2. **Build My Design System** to set up the tools, workflows,
@@ -63,7 +64,7 @@ and any related project code.
 1. **Visual Inventory**:
 A compilation of existing components within your project,
 documenting commonly used UI elements and their variations.
-We will identify and prioritize design patterns 
+We will identify and prioritize design patterns
 to be condensed, expanded, improved,
 and documented in a pattern library.
 
@@ -91,7 +92,6 @@ for hand-off.
 A set of “User Stories” or tasks estimated individually,
 and prioritized into phases as needed —
 giving you control of the timeline and budget to build your design system.
-
 
 ### Build My Design System
 *Custom Estimate*
@@ -126,30 +126,26 @@ agreed-upon priorities and meet with you regularly while we work together.
 
 #### Training & Ongoing Development
 
-The Build My Design System package 
+The Build My Design System package
 concludes with training for your team
 to ensure successful hand-off.
-We are happy to (and often do) 
+We are happy to (and often do)
 provide continued development
-and ongoing project updates, as needed, 
+and ongoing project updates, as needed,
 at our standard hourly rate.
 
 ## Design Systems help your team:
 
 - Improve communication between designers & developers
 - Speed up development & processes
-- Lay the foundation for a scalable code base
-- Weave system updates in daily workflow
+- Lay the foundation for a scalable codebase
+- Weave system updates into the daily workflow
 - Maintain consistent designs across applications over the long-term
 - Discover and create meaningful patterns
 - Find bugs before committing code
 - Reduce technical debt
 
-[Contact us »]
-
-[Contact us »]: /contact/
-
-
+[Contact us »](/contact/)
 
 ## Herman Automated Style Guide
 

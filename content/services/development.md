@@ -91,9 +91,9 @@ that express the values of your company.
 **Deliverables include:**
 - logos & wordmarks
 - brand style guides
-- color palettes 
+- color palettes
 - language guidelines
-- fonts 
+- fonts
 - textures
 - animated web graphics
 - component libraries
@@ -104,7 +104,7 @@ that express the values of your company.
 
 ## Development, Accessibility & Refactors
 
-**Always on the cutting edge, 
+**Always on the cutting edge,
 we offer full-stack frontend and backend development.**
 We focus on responsive application development
 and refactors for the web

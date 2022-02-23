@@ -110,7 +110,7 @@ modules:
 press:
   - text: |
       A fantastic speaker, with wonderful teaching skills, and
-      highly praised by attendees of the conference and the 
+      highly praised by attendees of the conference and the
       workshop alike.
     slug: fantastic
     name: Vitaly Friedman
@@ -118,9 +118,9 @@ press:
     venue: Smashing Magazine & Conference
     face: vitaly-friedman.jpg
 summary: |
-  **Take full advantage of the universal web 
-  and reduce maintenance over the long term** 
-  with resilient HTML, CSS, and JS systems. 
+  **Take full advantage of the universal web
+  and reduce maintenance over the long term**
+  with resilient HTML, CSS, and JS systems.
   Workshop attendees gain a deep understanding of CSS,
   learn the best context for each layout system,
   look at workflow and tooling to improve team process,
@@ -130,18 +130,18 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-The web platform is designed 
+The web platform is designed
 to be universally accessible and resilient
-across a range of devices and interfaces. 
-That presents a unique set of challenges 
+across a range of devices and interfaces.
+That presents a unique set of challenges
 and opportunities for web applications.
 
 We offer 1-3 day workshops at conferences
-to help you take full advantage of the web, 
-improve team process, 
-and reduce maintenance over the long term. 
+to help you take full advantage of the web,
+improve team process,
+and reduce maintenance over the long term.
 Prices are negotiable,
-depending on the size and location 
+depending on the size and location
 of the conference.
 [Contact us](/contact/) to book
 or catch us at the next event listed below.
@@ -149,4 +149,3 @@ or catch us at the next event listed below.
 {{ quotes.grid(press) }}
 {{ layout.title('Choose Your Own Adventure') }}
 {{ layout.grid(content=modules) }}
-
