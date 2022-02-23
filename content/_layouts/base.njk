@@ -5,18 +5,21 @@
   data-ccs-theme="{{ ccs.themes | first }}"
   data-ccs-colors>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+      content="width=device-width, initial-scale=1.0"/>
 
     {% set banner = banner or title %}
     {% set description = (sub or summary or site.description) | removeMd %}
-    {% set perma = redirect.to if redirect else canonical or (page.url | absoluteUrl(site.url)) %}
+    {% set perma = redirect.to if redirect else 
+      canonical or(page.url | absoluteUrl(site.url)) %}
 
-    {% set title_parts = [site.title, title] if (page.url == '/') else [title, site.title] %}
+    {% set title_parts = [site.title, title] if (page.url == '/') 
+      else 
+        [title, site.title] %}
     <title>{{ title_parts | join(' | ') }}</title>
     <meta name="description"
-      content="{{ description }}" />
+      content="{{ description }}"/>
 
     {% if perma %}
       <link rel="canonical"
@@ -25,17 +28,17 @@
 
     {% if redirect %}
       <meta http-equiv="refresh"
-        content="0; URL={{ perma }}" />
+        content="0; URL={{ perma }}"/>
     {% endif %}
 
     {% for url in site.styles %}
       <link rel="stylesheet"
-        href="/assets/css/{{ url }}" />
+        href="/assets/css/{{ url }}"/>
     {% endfor %}
 
     {% for url in extra_styles %}
       <link rel="stylesheet"
-        href="/assets/css/{{ url }}" />
+        href="/assets/css/{{ url }}"/>
     {% endfor %}
 
     {% include 'site/og.njk' %}
@@ -48,14 +51,20 @@
 
     <!-- TypeKit Fonts -->
     <script src="https://use.typekit.net/slx1xnq.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>
+      try {
+        Typekit.load({async: true});
+      } catch (e) {}
+    </script>
 
     {% if site.google_analytics_id and env.ELEVENTY_ENV === 'production' -%}
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() {
+          dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', '{{ site.google_analytics_id }}');
@@ -69,6 +78,12 @@
       class="sr-only">
       Skip to main
     </a>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+    <script type="text/javascript">
+      algoliasearchNetlify({appId: 'WVUJ3O7KS6', apiKey: '717b3ecf3bd11b0381be7dd62ca95a6c', siteId: '4f75b5a7-8412-4586-bad0-b4de64bb4f17', branch: 'main', selector: 'div#search'});
+    </script>
 
     {% include "site/alert.njk" %}
     {% include "site/banner.njk" %}
