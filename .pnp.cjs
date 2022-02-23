@@ -43,6 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.16.5"],
             ["@babel/preset-env", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:7.16.5"],
             ["@frctl/fractal", "npm:1.5.13"],
+            ["@frctl/mandelbrot", "virtual:ae1bfd19dbec81dc515baa1300c2b781033d21f21635f4f70b6c6908710fc5621011e359104e82416f928b2897b0d8a4618039b70f67b2af48409aa29bab4053#npm:1.10.1"],
             ["@frctl/nunjucks", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:2.0.14"],
             ["@rollup/plugin-babel", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.3.0"],
             ["@rollup/plugin-commonjs", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:21.0.1"],
@@ -2702,6 +2703,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@frctl/mandelbrot", "virtual:ae1bfd19dbec81dc515baa1300c2b781033d21f21635f4f70b6c6908710fc5621011e359104e82416f928b2897b0d8a4618039b70f67b2af48409aa29bab4053#npm:1.10.1"],
             ["@frctl/fractal", "npm:1.5.13"],
+            ["@frctl/web", "npm:0.1.11"],
             ["@types/frctl__fractal", null],
             ["js-beautify", "npm:1.14.0"],
             ["lodash", "npm:4.17.21"]
@@ -13706,6 +13708,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.16.5"],
             ["@babel/preset-env", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:7.16.5"],
             ["@frctl/fractal", "npm:1.5.13"],
+            ["@frctl/mandelbrot", "virtual:ae1bfd19dbec81dc515baa1300c2b781033d21f21635f4f70b6c6908710fc5621011e359104e82416f928b2897b0d8a4618039b70f67b2af48409aa29bab4053#npm:1.10.1"],
             ["@frctl/nunjucks", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:2.0.14"],
             ["@rollup/plugin-babel", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.3.0"],
             ["@rollup/plugin-commonjs", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:21.0.1"],

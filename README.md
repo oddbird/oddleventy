@@ -80,28 +80,13 @@ yarn lint:js
 
 # compile sass docs
 yarn sassdoc
+
+# start the Fractal development server
+yarn fractal
 ```
 
 Sass Docs are compiled into the `_site/styleguide/` folder, which is then available
 at the URL: `/styleguide/`.
-
-## Installing the Fractal CLI tool
-
-Fractal provides a [globally-installable CLI tool](https://fractal.build/guide/installation.html#installing-the-fractal-cli-tool)
-to make running tasks such as starting the development server quick and easy.
-This tool is completely optional - there are plenty of other options
-(including direct integration with Gulp, NPM scripts or other build tool
-if you don't want to use it.
-
-```
-npm i -g @frctl/fractal
-```
-
-### Start the Fractal development server
-
-```
-fractal start --sync
-```
 
 ## Deployment
 

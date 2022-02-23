@@ -40,6 +40,7 @@
     "update-oss-docs": "./bin/update-oss-docs",
     "prod": "ELEVENTY_ENV=production run-s update-oss-docs build",
     "checklinks": "yarn dlx hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" --skip \"codepen.io\" --skip \"github.com\" --skip \"caniuse.com\" --skip \"youtu.be\" --skip \"stackoverflow.com/users/\" _site/index.html",
+    "fractal": "fractal start --sync",
     "postinstall": "husky install"
   },
   "devDependencies": {
@@ -51,6 +52,7 @@
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
     "@frctl/fractal": "^1.5.13",
+    "@frctl/mandelbrot": "^1.10.1",
     "@frctl/nunjucks": "^2.0.14",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.1",
