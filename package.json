@@ -39,8 +39,7 @@
     "build": "run-s build:assets build:site eleventy",
     "update-oss-docs": "./bin/update-oss-docs",
     "prod": "ELEVENTY_ENV=production run-s update-oss-docs build",
-    "checklinks": "yarn dlx hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" --skip \"codepen.io\" --skip \"github.com\" --skip \"caniuse.com\" --skip \"youtu.be\" --skip \"stackoverflow.com/users/\" _site/index.html",
-    "postinstall": "husky install"
+    "checklinks": "yarn dlx hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" --skip \"codepen.io\" --skip \"github.com\" --skip \"caniuse.com\" --skip \"youtu.be\" --skip \"stackoverflow.com/users/\" _site/index.html"
   },
   "devDependencies": {
     "#": "link:./src/filters",
@@ -76,10 +75,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "fs-extra": "^10.0.0",
-    "husky": "^7.0.4",
     "jest": "^27.4.5",
     "js-yaml": "^4.1.0",
-    "lint-staged": "^12.1.2",
     "lodash": "^4.17.21",
     "markdown-it": "^12.3.0",
     "markdown-it-anchor": "^8.4.1",
@@ -115,18 +112,6 @@
     "nth-check": "^2.0.1",
     "sassdoc-extras": "^3.0.0",
     "semver-regex": "^3.1.3"
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.scss": [
-      "stylelint --fix"
-    ],
-    "*.{json,yml}": [
-      "prettier --write"
-    ]
   },
   "packageManager": "yarn@3.1.1"
 }
