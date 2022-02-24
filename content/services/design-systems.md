@@ -15,15 +15,19 @@ summary: |
   speed up development,
   and lay the foundation
   for a scalable codebase.
-  We’re experts at building systems --
-  helping your team in integrated tools
-  & daily workflows
-  to maintain consistent designs
-  across digital products over the long-term.
+  An integrated design system
+  can help your team 
+  maintain consistent designs
+  across digital products 
+  over the long-term,
+  find bugs faster -- 
+  weaving system updates
+  into the daily workflow.
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
 
 {{ quotes.find(
   collections.all,
@@ -36,15 +40,25 @@ summary: |
 
 We provide two integrated design system development packages.
 Purchase just the Goals & Audit package and build your system in house,
-or hire us for both packages.
+or hire us to build your design system too.
 
-1. **Goals & Audit** to assess your current designs & technology,
-understand your needs, and propose an improvement plan.
-2. **Build My Design System** to set up the tools, workflows,
-and components you need, and to train your team to use and maintain the system.
+___
 
 ### Goals & Audit
-*starting at $4K*
+*Starting at $4K*
+
+Let's assess your current designs & technology,
+understand your needs, 
+and create a strategy together.
+
+{{ embed.figure(
+  data=[{
+    img: 'pages/inventory.jpg',
+    alt: 'A collection of button screenshots from one project'
+  }],
+  caption='Taking a visual inventory is a great way to start identifying design patterns.'
+) }}
+
 
 #### Goals
 
@@ -68,14 +82,6 @@ We will identify and prioritize design patterns
 to be condensed, expanded, improved,
 and documented in a pattern library.
 
-{{ embed.figure(
-  data=[{
-    img: 'pages/inventory.jpg',
-    alt: 'A collection of button screenshots from one project'
-  }],
-  caption='Taking inventory is a great way to find design patterns.'
-) }}
-
 2. **User Stories**:
 A list of recommended next steps that could include:
 documentation,
@@ -93,15 +99,15 @@ A set of “User Stories” or tasks estimated individually,
 and prioritized into phases as needed —
 giving you control of the timeline and budget to build your design system.
 
-### Build My Design System
-*Custom Estimate*
+___
 
-Most design system projects begin with the Goals & Audit package to gain
-a shared understanding of the technology constraints, existing designs,
-and team goals. Based on the results of the Goals & Audit phase,
-OddBird will create a proposal and estimate that could include
-a wide ranges of services. In the “Build” phase, we will start with
-agreed-upon priorities and meet with you regularly while we work together.
+### Build My Design System
+*Custom estimates*
+
+Let's set up the tools, workflows, 
+and components you need, 
+and train your team to use and maintain the system
+over the long-term.
 
 {{ embed.figure(
   data=[{
@@ -111,13 +117,22 @@ agreed-upon priorities and meet with you regularly while we work together.
   caption='Storybook component library built for Metecho project'
 ) }}
 
+
+Most design system projects begin with the Goals & Audit package to gain
+a shared understanding of the technology constraints, existing designs,
+and team goals. Based on the results of the Goals & Audit phase,
+OddBird will create a proposal and estimate that could include
+a wide ranges of services. In the “Build” phase, we will start with
+agreed-upon priorities and meet with you regularly while we work together.
+
+
 #### Range of Deliverables
 
 - Integrated design system setup
 - Documentation
 - Component library setup
 - Component design & development
-- Tooling & language suggestions (Fractal, Storybook, React, Vue)
+- Tooling & language suggestions
 - Brand & graphic design
 - Workflow strategies
 - Code organization
@@ -134,6 +149,17 @@ provide continued development
 and ongoing project updates, as needed,
 at our standard hourly rate.
 
+___
+
+{{ embed.figure(
+  data=[{
+    img: 'herman/herman-hero.jpg',
+    alt: 'color palette'
+  }],
+  caption='OddBird Theme Colors documented using Herman
+  automated style guide'
+) }}
+
 ## Design Systems help your team:
 
 - Improve communication between designers & developers
@@ -145,7 +171,14 @@ at our standard hourly rate.
 - Find bugs before committing code
 - Reduce technical debt
 
-[Contact us »](/contact/)
+[Contact us] if you're interested in talking 
+about auditing or building your design system, 
+or if you want to chat 
+about design system best practices.
+
+[Contact us]:(/contact/)
+
+{{ layout.title('OddTools') }}
 
 ## Herman Automated Style Guide
 
