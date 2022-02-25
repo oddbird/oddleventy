@@ -107,6 +107,4 @@ summary: |
 Interested in an audit of your code
 or looking for a partner
 to build your component library or design system?
-Check out our [Design system services].
-
-[Design system services]:(/services/design-systems/)
+Check out our [design system services](/services/design-systems/).
