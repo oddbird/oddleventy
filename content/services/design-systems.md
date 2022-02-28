@@ -19,9 +19,9 @@ summary: |
   can help your team
   maintain consistent designs
   across digital products
-  over the long-term,
-  find bugs faster --
-  weaving system updates
+  over the long-term --
+  finding bugs faster,
+  and weaving system updates
   into the daily workflow.
 ---
 
@@ -42,7 +42,7 @@ We provide two integrated design system development packages.
 Purchase just the Goals & Audit package and build your system in house,
 or hire us to build your design system too.
 
-___
+------
 
 ### Goals & Audit
 *Starting at $4K*
@@ -99,7 +99,7 @@ A set of “User Stories” or tasks estimated individually,
 and prioritized into phases as needed —
 giving you control of the timeline and budget to build your design system.
 
-___
+------
 
 ### Build My Design System
 *Custom estimates*
@@ -117,14 +117,12 @@ over the long-term.
   caption='Storybook component library built for Metecho project'
 ) }}
 
-
 Most design system projects begin with the Goals & Audit package to gain
 a shared understanding of the technology constraints, existing designs,
 and team goals. Based on the results of the Goals & Audit phase,
 OddBird will create a proposal and estimate that could include
 a wide ranges of services. In the “Build” phase, we will start with
 agreed-upon priorities and meet with you regularly while we work together.
-
 
 #### Range of Deliverables
 
@@ -149,15 +147,14 @@ provide continued development
 and ongoing project updates, as needed,
 at our standard hourly rate.
 
-___
+------
 
 {{ embed.figure(
   data=[{
     img: 'herman/herman-hero.jpg',
     alt: 'color palette'
   }],
-  caption='OddBird Theme Colors documented using Herman
-  automated style guide'
+  caption='OddBird Theme Colors documented using Herman automated style guide'
 ) }}
 
 ## Design Systems help your team:
@@ -176,7 +173,7 @@ about auditing or building your design system,
 or if you want to chat
 about design system best practices.
 
-[Contact us]:(/contact/)
+[Contact us]: /contact/
 
 {{ layout.title('OddTools') }}
 
