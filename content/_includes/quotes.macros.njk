@@ -12,7 +12,6 @@ note: |
   for more usage examples.
 #}
 
-
 {# @docs
 label: pullquote
 category: From markdown
@@ -30,7 +29,6 @@ note: |
     <div class="pullquote">{{ content | md | safe }}</div>
   {%- endif -%}
 {%- endmacro %}
-
 
 {# @docs
 label: blockquote
@@ -59,7 +57,7 @@ params:
   data,
   type='solo'
 ) -%}
-{%- set img -%}
+  {%- set img -%}
   {%- if data.face -%}
     {{- embed.img(
       src='quotes/' + data.face,
@@ -70,21 +68,20 @@ params:
   {%- else -%}
     {{ embed.svg(data.icon or 'icons/quote') }}
   {%- endif -%}
-{%- endset -%}
+  {%- endset -%}
 
-<blockquote
+  <blockquote
   data-quote="{{ type or '' }}"
   {{ utility.attr_if('class', 'offset-item' if (type == 'grid') else none) }}>
-  {%- call embed.media_block(
+    {%- call embed.media_block(
     media=img,
     name='quote'
   ) -%}
     {{- data.text | md | safe -}}
     {{- cite(data) | safe -}}
-  {%- endcall -%}
-</blockquote>
+    {%- endcall -%}
+  </blockquote>
 {%- endmacro %}
-
 
 {# @docs
 label: from
@@ -111,7 +108,8 @@ params:
 {% macro find(
   collection,
   slugs=none,
-  page=none
+  page=none,
+  url=none
 ) -%}
   {%- if slugs | typeCheck('string') -%}
     {%- set quote = collection | findData('data.press', {'slug': slugs}) -%}
@@ -121,10 +119,15 @@ params:
 
     {%- if slugs -%}
       {%- set content -%}
-        {%- for item in slugs -%}
-          {%- set quote = data | findData(false, {'slug': item}) -%}
-          {{- blockquote(quote, 'grid') if quote else none -}}
-        {%- endfor -%}
+      {%- for item in slugs -%}
+        {%- set quote = data | findData(false, {'slug': item}) -%}
+        {{- blockquote(quote, 'grid') if quote else none -}}
+        {{- utility.link_if(
+            content= 'See work sample »',
+            url=url,
+            attrs={'class': 'offset-more'}
+          ) if url and loop.last else none -}}
+      {%- endfor -%}
       {%- endset -%}
       {{- layout.offset(content) | safe -}}
     {%- else -%}
@@ -132,7 +135,6 @@ params:
     {%- endif -%}
   {%- endif -%}
 {%- endmacro %}
-
 
 {# @docs
 label: grid
@@ -151,16 +153,15 @@ params:
 ) -%}
   {%- if data | length -%}
     {%- set content -%}
-      {%- for item in data -%}
-        {%- if item.text -%}
-          {{- blockquote(item, 'grid') -}}
-        {%- endif -%}
-      {%- endfor -%}
+    {%- for item in data -%}
+      {%- if item.text -%}
+        {{- blockquote(item, 'grid') -}}
+      {%- endif -%}
+    {%- endfor -%}
     {%- endset -%}
     {{- layout.offset(content) | safe -}}
   {%- endif -%}
 {%- endmacro %}
-
 
 {# @docs
 label: cite
@@ -180,7 +181,8 @@ params:
 {% macro cite(
   data
 ) -%}
-  <p class="byline h-card">---{{ _cite(data) | safe }}</p>
+  <p class="byline h-card">
+    ---{{ _cite(data) | safe }}</p>
 {%- endmacro %}
 
 

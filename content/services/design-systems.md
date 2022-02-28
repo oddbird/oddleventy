@@ -16,11 +16,11 @@ summary: |
   and lay the foundation
   for a scalable codebase.
   An integrated design system
-  can help your team 
+  can help your team
   maintain consistent designs
-  across digital products 
+  across digital products
   over the long-term,
-  find bugs faster -- 
+  find bugs faster --
   weaving system updates
   into the daily workflow.
 ---
@@ -31,10 +31,10 @@ summary: |
 
 {{ quotes.find(
   collections.all,
-  slugs=['best', 'systems']
+  slugs=['best', 'systems'],
+  url='/work/second-measure/'
 ) }}
 
-[See work sample »](/work/second-measure/)
 
 ## Packages
 
@@ -48,7 +48,7 @@ ___
 *Starting at $4K*
 
 Let's assess your current designs & technology,
-understand your needs, 
+understand your needs,
 and create a strategy together.
 
 {{ embed.figure(
@@ -104,8 +104,8 @@ ___
 ### Build My Design System
 *Custom estimates*
 
-Let's set up the tools, workflows, 
-and components you need, 
+Let's set up the tools, workflows,
+and components you need,
 and train your team to use and maintain the system
 over the long-term.
 
@@ -171,9 +171,9 @@ ___
 - Find bugs before committing code
 - Reduce technical debt
 
-[Contact us] if you're interested in talking 
-about auditing or building your design system, 
-or if you want to chat 
+[Contact us] if you're interested in talking
+about auditing or building your design system,
+or if you want to chat
 about design system best practices.
 
 [Contact us]:(/contact/)
