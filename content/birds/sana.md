@@ -6,7 +6,7 @@ date: 2022-02-28
 image:
   src: birds/sana.jpg
   position: top
-  alt:
+  alt: Sana at an art exhibit surrounded by lights holding up her phone.
 social:
   twitter: sanacodes
   github: sanajaved7
