@@ -57,7 +57,7 @@ client-side application:
 
 1.  Request JSON from the API via an XHR
 2.  Embed JSON in a `<script>` tag (either `type="text/javascript"` or
-    `type="application/json"`\_)
+    [`type="application/json"`](https://stackoverflow.com/a/7956249))
 3.  Embed JSON in data-attributes on DOM elements corresponding to
     models or collections
 
