@@ -39,8 +39,11 @@ summary: |
 
 ## Packages
 
-We provide two integrated design system development packages.
-Purchase just the Goals & Audit package and build your system in house,
+We provide two integrated 
+design system development packages.
+Purchase the Goals & Audit package 
+on its own
+and build your system in house,
 or hire us to build your design system too.
 
 ------
