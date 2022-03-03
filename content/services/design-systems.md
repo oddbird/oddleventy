@@ -32,6 +32,7 @@ summary: |
 {{ quotes.find(
   collections.all,
   slugs=['best', 'systems'],
+  action='See work sample',
   url='/work/second-measure/'
 ) }}
 

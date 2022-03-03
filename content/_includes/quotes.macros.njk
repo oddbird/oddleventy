@@ -104,11 +104,20 @@ params:
     type: url | none
     default: 'none'
     note: Select quotes from a particular page
+  action:
+    type: string | none
+    default: 'none'
+    note: Add an action to accompany an optional link
+  url:
+    type: url | none
+    default: 'none'
+    note: Link to a related url
 #}
 {% macro find(
   collection,
   slugs=none,
   page=none,
+  action=none,
   url=none
 ) -%}
   {%- if slugs | typeCheck('string') -%}
@@ -123,7 +132,7 @@ params:
         {%- set quote = data | findData(false, {'slug': item}) -%}
         {{- blockquote(quote, 'grid') if quote else none -}}
         {{- utility.link_if(
-            content= 'See work sample »',
+            action + ' »',
             url=url,
             attrs={'class': 'offset-more'}
           ) if url and loop.last else none -}}
@@ -181,8 +190,7 @@ params:
 {% macro cite(
   data
 ) -%}
-  <p class="byline h-card">
-    ---{{ _cite(data) | safe }}</p>
+  <p class="byline h-card"> ---{{ _cite(data) | safe }}</p>
 {%- endmacro %}
 
 
