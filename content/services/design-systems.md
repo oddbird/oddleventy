@@ -36,13 +36,11 @@ summary: |
   url='/work/second-measure/'
 ) }}
 
-
 ## Packages
 
-We provide two integrated 
+We provide two integrated
 design system development packages.
-Purchase the Goals & Audit package 
-on its own
+Purchase the Goals & Audit package on its own
 and build your system in house,
 or hire us to build your design system too.
 
@@ -62,7 +60,6 @@ and create a strategy together.
   }],
   caption='Taking a visual inventory is a great way to start identifying design patterns.'
 ) }}
-
 
 #### Goals
 
