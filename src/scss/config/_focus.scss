@@ -13,7 +13,7 @@
 ///   </div>
 /// @group config-focus
 @mixin focus-ring() {
-  outline: medium dotted currentColor;
+  outline: medium dotted currentcolor;
   outline-color: var(--focus-ring, var(--text, currentColor));
   outline-offset: var(--quarter-shim);
 }

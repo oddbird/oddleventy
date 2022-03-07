@@ -40,7 +40,7 @@
   &:visited {
     @include tools.z-index('skip-link');
 
-    --underline-color: currentColor;
+    --underline-color: currentcolor;
 
     background: var(--active);
     color: var(--bg);
