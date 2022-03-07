@@ -149,7 +149,7 @@ performance and architecture.
 
 - **Python** with **Django** (*core contributor*)
 - **HTML/CSS** with **Sass** (*core contributor*)
-- **JavaScript** with **Vue** & **React**
+- **JavaScript** with **Vue**, **React**, or **Svelte**
 - Node
 - WordPress
 

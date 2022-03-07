@@ -168,6 +168,7 @@ at our standard hourly rate.
 - Discover and create meaningful patterns
 - Find bugs before committing code
 - Reduce technical debt
+- Meet and maintain WCAG accessibility standards
 
 [Contact us] if you're interested in talking
 about auditing or building your design system,
