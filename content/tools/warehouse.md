@@ -9,11 +9,9 @@ links:
 author: kit
 oss: contributor
 summary: |
-  A new code base that implements a Python package repository, with plans
+  A new codebase that implements a Python package repository, with plans
   to eventually replace the current code powering PyPI. The goal is to
   improve PyPI by making it more user-friendly, with a modern look,
-  additional features, and a more maintainable code-base, with full test
+  additional features, and more maintainable code, with full test
   coverage and documentation.
 ---
-
-

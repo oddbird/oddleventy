@@ -11,7 +11,7 @@ oss: owner
 index: Herman
 author: oddbird
 action:
-  text: Hire us for training & implementation
+  text: Chat about Herman »
   url: /contact/
 screenshots:
   - img: herman/screenshots/sq-colors.jpg
@@ -47,13 +47,16 @@ press:
     title: Frontend Architect
     slug: dream
 summary: |
-  **Design systems streamline development, communication, and consistency** --
+ **[Design systems] streamline development, communication, and consistency** --
   but often rely on dedicated teams and extended budgets.
   We wanted a tool that helps create and maintain living style guides &
   pattern libraries in an agile process, and on a budget. Herman helps you
   keep your development process simple --
   and your UX consistent --
   as you scale over time.
+
+ [Design systems]: /services/design-systems/
+
 ---
 
 {% import 'embed.macros.njk' as embed %}

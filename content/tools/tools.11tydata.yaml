@@ -1,3 +1,2 @@
-cta: workshop
 permalink: /{{ page.fileSlug }}/index.html
 oss: owner

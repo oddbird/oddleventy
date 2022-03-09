@@ -100,6 +100,7 @@ press:
   - text: |
       Best CSS talk I've ever seen was from @TerribleMia
       today at #dvlpdnvr. Simply amazing.
+    slug: best-css
     name: Michael Dowden
     title: Co-Author
     venue: Architecting CSS
@@ -110,6 +111,7 @@ press:
       “If you think CSS is a dumb language,
       you’re a dumb language – CSS IS AWESOME!”
       @TerribleMia thank you so much for the amazing talk!
+    slug: well-awesome
     name: Nour Saud
     title: Software Engineer
     face: nour-saud.jpg
@@ -118,6 +120,7 @@ press:
       Miriam has always been nothing but spot-on,
       professional, funny, while also being extremely knowledgeable,
       smart, polite and always on time.
+    slug: spot-on
     name: Vitaly Friedman
     title: Founder
     venue: Smashing Magazine & Conference

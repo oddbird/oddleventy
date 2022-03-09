@@ -33,6 +33,8 @@ hr {
 /// @group type
 .amp {
   @include tools.font-family('amp');
+
+  font-style: italic; // needed for Safari
 }
 
 // H-Cards
