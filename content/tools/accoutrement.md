@@ -17,40 +17,27 @@ author:
   - jonny
   - claudina
 accoutrement_modules:
-  - title: Core
-    url: /accoutrement/docs/core.html
-    icon: logos/accoutrement_core
-    text: |
-      Generic syntax for managing design tokens and arbitrary patterns
-      in a format that encourages maintenance and automation.
-  - title: Init
-    url: /accoutrement/docs/init.html
-    icon: logos/accoutrement_init
-    text: |
-      Lightweight browser normalization.
-      This is the only Accoutrement library
-      with direct CSS output when imported.
-  - title: Animate Plugin
+  - title: Animate
     url: /accoutrement/docs/animate.html
     icon: logos/accoutrement_animate
     text: |
       Manage timing, easing, transitions and animations --
       with built-in shortcuts for common patterns.
-  - title: Color Plugin
+  - title: Color
     url: /accoutrement/docs/color.html
     icon: logos/accoutrement_color
     text: |
       Manage your color palettes in one place,
       and access them from anywhere with
       optional accessibility guidance from the WCAG.
-  - title: Layout Plugin
+  - title: Layout
     url: /accoutrement/docs/layout.html
     icon: logos/accoutrement_layout
     text: |
       Layout utilities including named media-queries,
       shorthand positioning, fluid aspect-ratios,
       box-sizing, and float-clearing.
-  - title: Scale Plugin
+  - title: Scale
     url: /accoutrement/docs/scale.html
     icon: logos/accoutrement_scale
     text: |
@@ -58,7 +45,7 @@ accoutrement_modules:
       for typography, spacing, layout, and more.
       Generate sizes based on modular-scale ratios,
       and access sizes in any unit you need.
-  - title: Type Plugin
+  - title: Type
     url: /accoutrement/docs/type.html
     icon: logos/accoutrement_type
     text: |
@@ -66,6 +53,25 @@ accoutrement_modules:
       import them all with a single command,
       and access font-stacks on-the-fly,
       with utilities for generated content and accessibility.
+  - title: Ratios
+    url: /accoutrement/docs/ratios.html
+    icon: logos/accoutrement_init
+    text: |
+      Define and access ratios using the Accoutrement
+      token syntax. Several common ratios are provided.
+  - title: Tokens
+    url: /accoutrement/docs/tokens.html
+    icon: logos/accoutrement_core
+    text: |
+      Custom syntax for managing design tokens and arbitrary patterns
+      in a format that encourages maintenance and automation.
+  - title: Utilities
+    url: /accoutrement/docs/utils.html
+    icon: logos/accoutrement_core
+    text: |
+      Various Sass utilities to help manage strings, maps,
+      and lists. As more functions are added to the Sass core,
+      we hope to be able to remove some or all of these over time.
 badges:
   - name: npm
     src: https://badge.fury.io/js/accoutrement.svg
