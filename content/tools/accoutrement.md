@@ -11,11 +11,7 @@ links:
   docs: /accoutrement/docs/
 oss: owner
 index: Accoutrement
-author:
-  - miriam
-  - stacy
-  - jonny
-  - claudina
+author: oddbird
 accoutrement_modules:
   - title: Animate
     url: /accoutrement/docs/animate.html
