@@ -64,6 +64,11 @@ accoutrement_modules:
     text: |
       Custom syntax for managing design tokens and arbitrary patterns
       in a format that encourages maintenance and automation.
+  - title: Variables
+    url: /accoutrement/docs/vars.html
+    icon: logos/accoutrement_core
+    text: |
+      Integrate Sass variables with CSS custom properties.
   - title: Utilities
     url: /accoutrement/docs/utils.html
     icon: logos/accoutrement_core
