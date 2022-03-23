@@ -21,7 +21,7 @@ accoutrement_modules:
     url: /accoutrement/docs/animate.html
     icon: logos/accoutrement_animate
     text: |
-      Manage timing, easing, transitions and animations --
+      Manage timing, easing, transitions, and animations --
       with built-in shortcuts for common patterns.
   - title: Color
     url: /accoutrement/docs/color.html
@@ -34,9 +34,8 @@ accoutrement_modules:
     url: /accoutrement/docs/layout.html
     icon: logos/accoutrement_layout
     text: |
-      Layout utilities including named media-queries,
-      shorthand positioning, fluid aspect-ratios,
-      box-sizing, and float-clearing.
+      Layout utilities including named media-queries, breakpoint
+      map management, and organized named z-index layers.
   - title: Scale
     url: /accoutrement/docs/scale.html
     icon: logos/accoutrement_scale
