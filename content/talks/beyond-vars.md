@@ -16,12 +16,19 @@ events:
     end: 2021-04-21
     adr: Online
     slides: https://slides.oddbird.net/variables/aea2104/
+    video: https://vimeo.com/691514550
+    media: &aea
+      iframe: https://player.vimeo.com/video/691514550
 summary: |
   CSS Custom Properties (aka Cascading Variables)
   have gained broad browser support since 2015 --
   but what are they good for,
   and why do we need them?
+media:
+  - <<: *aea
+    span: full
 ---
+{% import 'embed.macros.njk' as embed %}
 
 Most tutorials follow the same pattern,
 defining color & size “design tokens” on a `:root` pseudo-class,
@@ -37,3 +44,10 @@ I'll start with some simple experiments
 to demonstrate how CSS variables work,
 explore a wide range of practical use-cases,
 and then push them to the limit... and beyond.
+
+------
+
+{{ embed.figure(
+  data=media,
+  caption='Conference video...'
+) }}

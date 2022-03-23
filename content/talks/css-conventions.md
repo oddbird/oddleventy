@@ -15,6 +15,7 @@ events:
     end: 2020-10-28
     adr: Online
     slides: https://slides.oddbird.net/conventions/aea1020/
+    video: https://vimeo.com/657632307
     media: &aea
       iframe: https://player.vimeo.com/video/657632307
 summary: |
