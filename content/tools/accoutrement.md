@@ -15,20 +15,20 @@ author: oddbird
 accoutrement_modules:
   - title: Utilities
     url: /accoutrement/docs/utils.html
-    icon: logos/accoutrement_core
+    icon: logos/accoutrement_utilities
     text: |
       Various Sass utilities to help manage strings, maps,
       and lists. As more functions are added to the Sass core,
       we hope to be able to remove some or all of these over time.
   - title: Tokens
     url: /accoutrement/docs/tokens.html
-    icon: logos/accoutrement_core
+    icon: logos/accoutrement_tokens
     text: |
       Custom syntax for managing design tokens and arbitrary patterns
       in a format that encourages maintenance and automation.
   - title: Ratios
     url: /accoutrement/docs/ratios.html
-    icon: logos/accoutrement_init
+    icon: logos/accoutrement_ratios
     text: |
       Define and access ratios using the Accoutrement
       token syntax. Several common ratios are provided.
