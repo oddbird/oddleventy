@@ -11,11 +11,11 @@
 
     {% set banner = banner or title %}
     {% set description = (sub or summary or site.description) | removeMd %}
-    {% set perma = redirect.to if redirect else 
+    {% set perma = redirect.to if redirect else
       canonical or(page.url | absoluteUrl(site.url)) %}
 
-    {% set title_parts = [site.title, title] if (page.url == '/') 
-      else 
+    {% set title_parts = [site.title, title] if (page.url == '/')
+      else
         [title, site.title] %}
     <title>{{ title_parts | join(' | ') }}</title>
     <meta name="description"
@@ -79,19 +79,19 @@
       Skip to main
     </a>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
-    <script type="text/javascript">
-      algoliasearchNetlify({appId: 'WVUJ3O7KS6', apiKey: '717b3ecf3bd11b0381be7dd62ca95a6c', siteId: '4f75b5a7-8412-4586-bad0-b4de64bb4f17', branch: 'main', selector: 'div#search'});
-    </script>
-
     {% include "site/alert.njk" %}
     {% include "site/banner.njk" %}
     {% include 'page/base.njk' %}
     {% include 'site/cta.njk' %}
     {% include 'site/footer.njk' %}
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic"
+    />
+
     <script type="text/javascript" src="/assets/js/scripts.js"></script>
+
 
     <!-- Current page: {{ page.url }} -->
   </body>
