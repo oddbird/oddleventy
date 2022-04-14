@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 html {
   // image, size, position, & media-queries are all related *magically*
@@ -12,11 +12,11 @@ html {
     background-size: auto 5.5em, 20em auto;
   }
 
-  @include tools.above(40em) {
+  @include config.above(40em) {
     --header-pos: right 0;
   }
 
-  @include tools.above(50em) {
+  @include config.above(50em) {
     --header-pos: left 0;
   }
 

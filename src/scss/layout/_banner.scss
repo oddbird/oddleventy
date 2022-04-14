@@ -1,7 +1,7 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 [data-layout='banner'] {
-  @include tools.font-family('alt');
+  @include config.font-family('alt');
 
   --banner-space: calc(var(--shim) + 1vw);
 
@@ -23,8 +23,8 @@
 #banner-logo {
   &:link,
   &:visited {
-    @include tools.transition('move');
-    @include tools.z-index('bump');
+    @include config.transition('move');
+    @include config.z-index('bump');
 
     align-self: start;
     display: block;

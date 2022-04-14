@@ -1,9 +1,9 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 $two-column: 45em;
 
 [data-layout='footer'] {
-  @include tools.font-family('alt');
+  @include config.font-family('alt');
 
   display: grid;
   font-size: var(--small);
@@ -11,7 +11,7 @@ $two-column: 45em;
   grid-gap: var(--gutter);
   padding: var(--gutter) var(--page-margin) var(--spacer);
 
-  @include tools.above($two-column) {
+  @include config.above($two-column) {
     grid-template-columns: minmax(10em, var(--wide-page)) minmax(
         10em,
         var(--page)
@@ -29,7 +29,7 @@ $two-column: 45em;
   grid-template-rows: 1fr auto;
   padding-top: var(--gutter);
 
-  @include tools.above($two-column) {
+  @include config.above($two-column) {
     text-align: right;
   }
 
