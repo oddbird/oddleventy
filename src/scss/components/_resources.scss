@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 // pagination
 
@@ -17,7 +17,7 @@
     [title-end];
   margin: var(--double-gutter) 0;
 
-  @include tools.above('wide-break') {
+  @include config.above('wide-break') {
     --justify-nav: initial;
 
     grid-template-columns:
