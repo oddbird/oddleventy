@@ -21,8 +21,8 @@ $two-column: 45em;
 }
 
 [role='contentinfo'] {
-  --link: currentColor;
-  --underline-color: currentColor;
+  --link: currentcolor;
+  --underline-color: currentcolor;
 
   display: grid;
   grid-gap: var(--gutter);

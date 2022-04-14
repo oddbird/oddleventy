@@ -258,7 +258,7 @@ params:
   {%- set showevents = futureevents if isfuture else events | reverse -%}
 
   {%- if showevents | length > 0 -%}
-    <h4>{{ 'Upcoming' if isfuture else 'Past' }}</h4>
+    <h4 class="item-timing">{{ 'Upcoming' if isfuture else 'Past' }}</h4>
     <ul class="next-event">
     {%- for next in showevents -%}
       {% if (loop.index <= 2) %}
