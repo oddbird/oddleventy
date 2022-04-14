@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 // Horizontal Rules
 // ----------------
@@ -24,7 +24,7 @@ hr {
 /// to avoid a flash of unstyled text.
 /// @group type
 .wf-loading {
-  @include tools.is-hidden;
+  @include config.is-hidden;
 }
 
 // Ampersands
@@ -32,7 +32,7 @@ hr {
 /// All ampersands default to the fancy baskerville italic.
 /// @group type
 .amp {
-  @include tools.font-family('amp');
+  @include config.font-family('amp');
 
   font-style: italic; // needed for Safari
 }

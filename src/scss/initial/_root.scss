@@ -1,9 +1,9 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
-@include tools.import-webfonts;
+@include config.import-webfonts;
 
 html {
-  @include tools.font-family('body');
+  @include config.font-family('body');
 
   --clip-overlap: var(--page-margin);
   --clip-angle: var(--double-gutter);
@@ -16,6 +16,6 @@ html {
     0 100%
   );
 
-  font-size: tools.size('rem');
-  line-height: tools.ratio('line-height');
+  font-size: config.size('rem');
+  line-height: config.ratio('line-height');
 }

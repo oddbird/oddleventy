@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 /// # Heading Defaults
 /// Initial global defaults for heading elements…
@@ -15,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  @include tools.font-family('alt');
+  @include config.font-family('alt');
 
   --link: currentcolor;
 
