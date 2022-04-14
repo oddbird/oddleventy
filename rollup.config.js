@@ -17,6 +17,7 @@ module.exports = {
     babel({ babelHelpers: 'bundled' }),
     terser(),
     replace({
+      preventAssignment: true,
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
   ],
