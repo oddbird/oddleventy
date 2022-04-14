@@ -60,4 +60,6 @@ autocomplete({
   },
 });
 
+// Initialize Cascading Colors
+// https://www.oddbird.net/cascading-colors/
 ccs();
