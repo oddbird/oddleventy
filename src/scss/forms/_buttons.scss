@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 /// # Button Pattern
 /// @group buttons
@@ -10,8 +10,8 @@
 /// which allows an override of inline padding on the button.
 /// @group buttons
 [data-btn] {
-  @include tools.font-family('alt');
-  @include tools.transition('colors');
+  @include config.font-family('alt');
+  @include config.transition('colors');
 
   align-items: center;
   background: var(--btn-bg, var(--highlight));
@@ -62,7 +62,7 @@
 // -----
 /// @group buttons
 [data-btn~='menu'] {
-  @include tools.font-family('body');
+  @include config.font-family('body');
 
   --btn-bg: transparent;
   --btn-border: var(--border-fade);
