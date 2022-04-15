@@ -44,7 +44,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-babel", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.3.1"],\
             ["@rollup/plugin-commonjs", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:21.0.3"],\
             ["@rollup/plugin-node-resolve", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:13.1.3"],\
-            ["@rollup/plugin-replace", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:4.0.0"],\
             ["@tommoor/remove-markdown", "npm:0.3.2"],\
             ["@typescript-eslint/parser", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.18.0"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.1"],\
@@ -3028,30 +3027,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["deepmerge", "npm:4.2.2"],\
             ["is-module", "npm:1.0.0"],\
             ["resolve", "patch:resolve@npm%3A1.22.0#~builtin<compat/resolve>::version=1.22.0&hash=07638b"],\
-            ["rollup", "npm:2.70.1"]\
-          ],\
-          "packagePeers": [\
-            "@types/rollup",\
-            "rollup"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@rollup/plugin-replace", [\
-        ["npm:4.0.0", {\
-          "packageLocation": "./.yarn/cache/@rollup-plugin-replace-npm-4.0.0-4c483d297f-b61701e612.zip/node_modules/@rollup/plugin-replace/",\
-          "packageDependencies": [\
-            ["@rollup/plugin-replace", "npm:4.0.0"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:4.0.0", {\
-          "packageLocation": "./.yarn/__virtual__/@rollup-plugin-replace-virtual-c19893dfc8/0/cache/@rollup-plugin-replace-npm-4.0.0-4c483d297f-b61701e612.zip/node_modules/@rollup/plugin-replace/",\
-          "packageDependencies": [\
-            ["@rollup/plugin-replace", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:4.0.0"],\
-            ["@rollup/pluginutils", "virtual:89978e9b02222d42b2305a02c863501686d20dd36da670016c378177d51b35b4353fb2c0e3c3e10a1a0e2aeb2fcc6f31b06e4b285c3e736a366c3ee9025ba705#npm:3.1.0"],\
-            ["@types/rollup", null],\
-            ["magic-string", "npm:0.25.9"],\
             ["rollup", "npm:2.70.1"]\
           ],\
           "packagePeers": [\
@@ -12000,7 +11975,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-babel", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.3.1"],\
             ["@rollup/plugin-commonjs", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:21.0.3"],\
             ["@rollup/plugin-node-resolve", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:13.1.3"],\
-            ["@rollup/plugin-replace", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:4.0.0"],\
             ["@tommoor/remove-markdown", "npm:0.3.2"],\
             ["@typescript-eslint/parser", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.18.0"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.1"],\
