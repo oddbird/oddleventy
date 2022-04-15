@@ -22,7 +22,7 @@
     package = "@algolia/netlify-plugin-crawler"
 
     [plugins.inputs]
+        # @@@ update this before merge
         branches = ["main", "search-interface"]
         mainBranch = "main"
-        customDomain = "oddbird.net"
         template = "hierarchical"
