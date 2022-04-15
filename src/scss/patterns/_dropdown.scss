@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 /// # Dropdowns
 /// A flexible pattern for dropdown menus.
@@ -24,10 +24,10 @@
   --marker-color: currentcolor;
 
   [open] > & {
-    @include tools.z-index('dropdown');
+    @include config.z-index('dropdown');
 
-    @include tools.before('') {
-      @include tools.z-index('bump');
+    @include config.before('') {
+      @include config.z-index('bump');
 
       cursor: default;
       display: block;
@@ -43,7 +43,7 @@
 /// with a max-width of the available space.
 /// @group dropdown
 [data-dropdown] {
-  @include tools.z-index('dropdown');
+  @include config.z-index('dropdown');
 
   background: var(--bg);
   border: thin solid var(--active);

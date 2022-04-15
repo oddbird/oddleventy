@@ -1,12 +1,11 @@
 @use '../config'; /* run config setup before calling tools */
-@use '~accoutrement/sass/tools';
 
 #unknown-support {
   --false: var(--ccs-special--bg4);
   --true: var(--ccs-prime--bg4);
 
   td {
-    @include tools.font-family('code');
+    @include config.font-family('code');
 
     font-size: var(--code);
   }

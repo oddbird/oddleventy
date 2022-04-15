@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 /// # Media Blocks & Ratios
 /// @group media
@@ -23,7 +23,7 @@
     --reverse-y: 'content' 'image';
   }
 
-  @include tools.above('wide-page') {
+  @include config.above('wide-page') {
     grid-template-areas: var(--reverse-x, 'image content');
     grid-template-columns: fit-content(25%) minmax(
         min-content,
@@ -83,7 +83,7 @@
 /// set as relative context.
 /// @group media
 [data-ratio='parent'] {
-  --ratio: #{tools.ratio('_widescreen')};
+  --ratio: #{config.ratio('_widescreen')};
 
   position: relative;
 
@@ -91,7 +91,7 @@
     content: '';
     display: inline-block;
     height: 0;
-    padding-top: calc(100% / var(--ratio, #{tools.ratio('_widescreen')}));
+    padding-top: calc(100% / var(--ratio, #{config.ratio('_widescreen')}));
     width: 1px;
   }
 }
@@ -102,7 +102,7 @@
 /// through absolute positioning.
 /// @group media
 [data-ratio='child'] {
-  @include tools.square(100%);
+  @include config.square(100%);
 
   inset: 0;
   position: absolute;

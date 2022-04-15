@@ -1,12 +1,12 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 [data-above] {
   display: none;
 }
 
-@each $break, $point in tools.$breakpoints {
+@each $break, $point in config.$breakpoints {
   [data-above='#{$break}'] {
-    @include tools.above($point) {
+    @include config.above($point) {
       display: revert;
     }
   }

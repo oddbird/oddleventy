@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 [data-table] {
   border-collapse: collapse;
@@ -6,7 +6,7 @@
   width: 100%;
 
   th {
-    @include tools.font-family('alt');
+    @include config.font-family('alt');
 
     font-weight: bold;
   }
@@ -18,7 +18,7 @@
     font-style: inherit;
     text-align: left;
 
-    @include tools.above('page') {
+    @include config.above('page') {
       --cell-padding: var(--shim);
     }
   }
@@ -27,7 +27,7 @@
 thead {
   font-size: var(--thead-size, var(--xxsmall));
 
-  @include tools.above('page') {
+  @include config.above('page') {
     --thead-size: var(--small);
   }
 }
@@ -35,7 +35,7 @@ thead {
 tbody {
   font-size: var(--tbody-size, var(--xsmall));
 
-  @include tools.above('page') {
+  @include config.above('page') {
     --tbody-size: var(--small);
   }
 }
