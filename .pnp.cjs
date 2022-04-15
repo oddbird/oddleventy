@@ -38,8 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@11ty/eleventy-img", "npm:2.0.0"],\
             ["@11ty/eleventy-plugin-rss", "npm:1.1.2"],\
             ["@11ty/eleventy-plugin-syntaxhighlight", "npm:4.0.0"],\
-            ["@algolia/autocomplete-js", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.6.2"],\
-            ["@algolia/autocomplete-theme-classic", "npm:1.6.2"],\
+            ["@algolia/algoliasearch-netlify-frontend", "npm:1.0.14"],\
             ["@babel/core", "npm:7.17.9"],\
             ["@babel/preset-env", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:7.16.11"],\
             ["@rollup/plugin-babel", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.3.1"],\
@@ -50,7 +49,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.18.0"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.1"],\
             ["accoutrement", "npm:4.0.1"],\
-            ["algoliasearch", "npm:4.13.0"],\
             ["autoprefixer", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:10.4.4"],\
             ["babel-jest", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:27.5.1"],\
             ["cascading-color-systems", "npm:0.1.0-beta.15"],\
@@ -211,234 +209,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@algolia/autocomplete-core", [\
-        ["npm:1.6.2", {\
-          "packageLocation": "./.yarn/cache/@algolia-autocomplete-core-npm-1.6.2-b116ff788f-3b3148fa76.zip/node_modules/@algolia/autocomplete-core/",\
+      ["@algolia/algoliasearch-netlify-frontend", [\
+        ["npm:1.0.14", {\
+          "packageLocation": "./.yarn/unplugged/@algolia-algoliasearch-netlify-frontend-npm-1.0.14-56b58a8df2/node_modules/@algolia/algoliasearch-netlify-frontend/",\
           "packageDependencies": [\
-            ["@algolia/autocomplete-core", "npm:1.6.2"],\
-            ["@algolia/autocomplete-shared", "npm:1.6.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/autocomplete-js", [\
-        ["npm:1.6.2", {\
-          "packageLocation": "./.yarn/cache/@algolia-autocomplete-js-npm-1.6.2-4bec38e608-37d66e5a5e.zip/node_modules/@algolia/autocomplete-js/",\
-          "packageDependencies": [\
-            ["@algolia/autocomplete-js", "npm:1.6.2"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.6.2", {\
-          "packageLocation": "./.yarn/__virtual__/@algolia-autocomplete-js-virtual-ecf062ac51/0/cache/@algolia-autocomplete-js-npm-1.6.2-4bec38e608-37d66e5a5e.zip/node_modules/@algolia/autocomplete-js/",\
-          "packageDependencies": [\
-            ["@algolia/autocomplete-js", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.6.2"],\
-            ["@algolia/autocomplete-core", "npm:1.6.2"],\
-            ["@algolia/autocomplete-preset-algolia", "virtual:ecf062ac5195ea7f4a1de7538881c02753becbfd6a2bf793fcd8c3979b631574e0052799916f8d8dafba0e512e0f4c28312366da87c30c11d8f943fee384f7bd#npm:1.6.2"],\
-            ["@algolia/autocomplete-shared", "npm:1.6.2"],\
-            ["@algolia/client-search", null],\
-            ["@types/algolia__client-search", null],\
-            ["algoliasearch", "npm:4.13.0"],\
-            ["htm", "npm:3.1.0"],\
-            ["preact", "npm:10.7.0"]\
-          ],\
-          "packagePeers": [\
-            "@algolia/client-search",\
-            "@types/algolia__client-search"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/autocomplete-preset-algolia", [\
-        ["npm:1.6.2", {\
-          "packageLocation": "./.yarn/cache/@algolia-autocomplete-preset-algolia-npm-1.6.2-5a3dfb29ed-ce9b3895c3.zip/node_modules/@algolia/autocomplete-preset-algolia/",\
-          "packageDependencies": [\
-            ["@algolia/autocomplete-preset-algolia", "npm:1.6.2"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:ecf062ac5195ea7f4a1de7538881c02753becbfd6a2bf793fcd8c3979b631574e0052799916f8d8dafba0e512e0f4c28312366da87c30c11d8f943fee384f7bd#npm:1.6.2", {\
-          "packageLocation": "./.yarn/__virtual__/@algolia-autocomplete-preset-algolia-virtual-5b669dea7d/0/cache/@algolia-autocomplete-preset-algolia-npm-1.6.2-5a3dfb29ed-ce9b3895c3.zip/node_modules/@algolia/autocomplete-preset-algolia/",\
-          "packageDependencies": [\
-            ["@algolia/autocomplete-preset-algolia", "virtual:ecf062ac5195ea7f4a1de7538881c02753becbfd6a2bf793fcd8c3979b631574e0052799916f8d8dafba0e512e0f4c28312366da87c30c11d8f943fee384f7bd#npm:1.6.2"],\
-            ["@algolia/autocomplete-shared", "npm:1.6.2"],\
-            ["@algolia/client-search", null],\
-            ["@types/algolia__client-search", null],\
-            ["@types/algoliasearch", null],\
-            ["algoliasearch", "npm:4.13.0"]\
-          ],\
-          "packagePeers": [\
-            "@algolia/client-search",\
-            "@types/algolia__client-search",\
-            "@types/algoliasearch",\
-            "algoliasearch"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/autocomplete-shared", [\
-        ["npm:1.6.2", {\
-          "packageLocation": "./.yarn/cache/@algolia-autocomplete-shared-npm-1.6.2-3309a62a99-e571eddd06.zip/node_modules/@algolia/autocomplete-shared/",\
-          "packageDependencies": [\
-            ["@algolia/autocomplete-shared", "npm:1.6.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/autocomplete-theme-classic", [\
-        ["npm:1.6.2", {\
-          "packageLocation": "./.yarn/cache/@algolia-autocomplete-theme-classic-npm-1.6.2-376ab7f9be-ed8461efdc.zip/node_modules/@algolia/autocomplete-theme-classic/",\
-          "packageDependencies": [\
-            ["@algolia/autocomplete-theme-classic", "npm:1.6.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/cache-browser-local-storage", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-cache-browser-local-storage-npm-4.13.0-9ab86e35fc-ad02bf6434.zip/node_modules/@algolia/cache-browser-local-storage/",\
-          "packageDependencies": [\
-            ["@algolia/cache-browser-local-storage", "npm:4.13.0"],\
-            ["@algolia/cache-common", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/cache-common", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-cache-common-npm-4.13.0-6884a1ea93-04520b5657.zip/node_modules/@algolia/cache-common/",\
-          "packageDependencies": [\
-            ["@algolia/cache-common", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/cache-in-memory", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-cache-in-memory-npm-4.13.0-18478a1d6f-3e1357d679.zip/node_modules/@algolia/cache-in-memory/",\
-          "packageDependencies": [\
-            ["@algolia/cache-in-memory", "npm:4.13.0"],\
-            ["@algolia/cache-common", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/client-account", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-client-account-npm-4.13.0-5914245720-ccb4e98b9e.zip/node_modules/@algolia/client-account/",\
-          "packageDependencies": [\
-            ["@algolia/client-account", "npm:4.13.0"],\
-            ["@algolia/client-common", "npm:4.13.0"],\
-            ["@algolia/client-search", "npm:4.13.0"],\
-            ["@algolia/transporter", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/client-analytics", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-client-analytics-npm-4.13.0-199648d5b0-315d4a26e2.zip/node_modules/@algolia/client-analytics/",\
-          "packageDependencies": [\
-            ["@algolia/client-analytics", "npm:4.13.0"],\
-            ["@algolia/client-common", "npm:4.13.0"],\
-            ["@algolia/client-search", "npm:4.13.0"],\
-            ["@algolia/requester-common", "npm:4.13.0"],\
-            ["@algolia/transporter", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/client-common", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-client-common-npm-4.13.0-2aed50d8e1-00b467b58f.zip/node_modules/@algolia/client-common/",\
-          "packageDependencies": [\
-            ["@algolia/client-common", "npm:4.13.0"],\
-            ["@algolia/requester-common", "npm:4.13.0"],\
-            ["@algolia/transporter", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/client-personalization", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-client-personalization-npm-4.13.0-73ff513139-e93afa1036.zip/node_modules/@algolia/client-personalization/",\
-          "packageDependencies": [\
-            ["@algolia/client-personalization", "npm:4.13.0"],\
-            ["@algolia/client-common", "npm:4.13.0"],\
-            ["@algolia/requester-common", "npm:4.13.0"],\
-            ["@algolia/transporter", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/client-search", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-client-search-npm-4.13.0-05387269cf-0a14029d2e.zip/node_modules/@algolia/client-search/",\
-          "packageDependencies": [\
-            ["@algolia/client-search", "npm:4.13.0"],\
-            ["@algolia/client-common", "npm:4.13.0"],\
-            ["@algolia/requester-common", "npm:4.13.0"],\
-            ["@algolia/transporter", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/logger-common", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-logger-common-npm-4.13.0-f4106277ab-11a6ee5d38.zip/node_modules/@algolia/logger-common/",\
-          "packageDependencies": [\
-            ["@algolia/logger-common", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/logger-console", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-logger-console-npm-4.13.0-4828b1991a-ee5bae8b51.zip/node_modules/@algolia/logger-console/",\
-          "packageDependencies": [\
-            ["@algolia/logger-console", "npm:4.13.0"],\
-            ["@algolia/logger-common", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/requester-browser-xhr", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-requester-browser-xhr-npm-4.13.0-3354de5946-cc1baf68ef.zip/node_modules/@algolia/requester-browser-xhr/",\
-          "packageDependencies": [\
-            ["@algolia/requester-browser-xhr", "npm:4.13.0"],\
-            ["@algolia/requester-common", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/requester-common", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-requester-common-npm-4.13.0-645904989c-3c12613b2b.zip/node_modules/@algolia/requester-common/",\
-          "packageDependencies": [\
-            ["@algolia/requester-common", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/requester-node-http", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-requester-node-http-npm-4.13.0-d7ee98fd9d-b708a96ba5.zip/node_modules/@algolia/requester-node-http/",\
-          "packageDependencies": [\
-            ["@algolia/requester-node-http", "npm:4.13.0"],\
-            ["@algolia/requester-common", "npm:4.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@algolia/transporter", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/@algolia-transporter-npm-4.13.0-710e259a52-a9e342872f.zip/node_modules/@algolia/transporter/",\
-          "packageDependencies": [\
-            ["@algolia/transporter", "npm:4.13.0"],\
-            ["@algolia/cache-common", "npm:4.13.0"],\
-            ["@algolia/logger-common", "npm:4.13.0"],\
-            ["@algolia/requester-common", "npm:4.13.0"]\
+            ["@algolia/algoliasearch-netlify-frontend", "npm:1.0.14"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4152,29 +3927,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["json-schema-traverse", "npm:1.0.0"],\
             ["require-from-string", "npm:2.0.2"],\
             ["uri-js", "npm:4.4.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["algoliasearch", [\
-        ["npm:4.13.0", {\
-          "packageLocation": "./.yarn/cache/algoliasearch-npm-4.13.0-b8371221f5-58b9deacb5.zip/node_modules/algoliasearch/",\
-          "packageDependencies": [\
-            ["algoliasearch", "npm:4.13.0"],\
-            ["@algolia/cache-browser-local-storage", "npm:4.13.0"],\
-            ["@algolia/cache-common", "npm:4.13.0"],\
-            ["@algolia/cache-in-memory", "npm:4.13.0"],\
-            ["@algolia/client-account", "npm:4.13.0"],\
-            ["@algolia/client-analytics", "npm:4.13.0"],\
-            ["@algolia/client-common", "npm:4.13.0"],\
-            ["@algolia/client-personalization", "npm:4.13.0"],\
-            ["@algolia/client-search", "npm:4.13.0"],\
-            ["@algolia/logger-common", "npm:4.13.0"],\
-            ["@algolia/logger-console", "npm:4.13.0"],\
-            ["@algolia/requester-browser-xhr", "npm:4.13.0"],\
-            ["@algolia/requester-common", "npm:4.13.0"],\
-            ["@algolia/requester-node-http", "npm:4.13.0"],\
-            ["@algolia/transporter", "npm:4.13.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8750,15 +8502,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["htm", [\
-        ["npm:3.1.0", {\
-          "packageLocation": "./.yarn/cache/htm-npm-3.1.0-50861265c1-d6d00146bc.zip/node_modules/htm/",\
-          "packageDependencies": [\
-            ["htm", "npm:3.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["html", [\
         ["npm:1.0.0", {\
           "packageLocation": "./.yarn/cache/html-npm-1.0.0-2c1d08bc5c-131f5a7b18.zip/node_modules/html/",\
@@ -12251,8 +11994,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@11ty/eleventy-img", "npm:2.0.0"],\
             ["@11ty/eleventy-plugin-rss", "npm:1.1.2"],\
             ["@11ty/eleventy-plugin-syntaxhighlight", "npm:4.0.0"],\
-            ["@algolia/autocomplete-js", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.6.2"],\
-            ["@algolia/autocomplete-theme-classic", "npm:1.6.2"],\
+            ["@algolia/algoliasearch-netlify-frontend", "npm:1.0.14"],\
             ["@babel/core", "npm:7.17.9"],\
             ["@babel/preset-env", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:7.16.11"],\
             ["@rollup/plugin-babel", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.3.1"],\
@@ -12263,7 +12005,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.18.0"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.1"],\
             ["accoutrement", "npm:4.0.1"],\
-            ["algoliasearch", "npm:4.13.0"],\
             ["autoprefixer", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:10.4.4"],\
             ["babel-jest", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:27.5.1"],\
             ["cascading-color-systems", "npm:0.1.0-beta.15"],\
@@ -12950,15 +12691,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["list-to-array", "npm:1.1.0"],\
             ["parse-srcset", "npm:1.0.2"],\
             ["promise-each", "npm:2.2.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["preact", [\
-        ["npm:10.7.0", {\
-          "packageLocation": "./.yarn/cache/preact-npm-10.7.0-6d31f88d66-fd0c016437.zip/node_modules/preact/",\
-          "packageDependencies": [\
-            ["preact", "npm:10.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
