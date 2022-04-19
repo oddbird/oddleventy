@@ -1,4 +1,6 @@
+@use 'sass:meta';
 @use '../config';
+@use '../config/color/content';
 @use '~cascading-color-systems' as ccs with (
   $hues: config.ccs('hues'),
   $saturation: config.ccs('saturation'),
@@ -24,7 +26,7 @@
 [data-ccs-colors] {
   @include config.tokens--(config.$ccs-colors);
   @include config.tokens--(config.$background-colors);
-  @include config.tokens--(config.$content-colors);
+  @include config.tokens--(meta.module-variables('content'));
 
   --img-bright--base: #{ccs.if-mode($light: 50%, $dark: 40%)};
   --img-bright--default: calc(var(--img-bright--base) + var(--ccs-l));

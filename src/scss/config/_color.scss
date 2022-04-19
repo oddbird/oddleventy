@@ -1,7 +1,8 @@
 @use 'sass:meta';
 @use 'sass:math';
 @use 'sass:color';
-@use '~accoutrement/sass/tools';
+@use 'tools';
+@use './color/brand';
 @use '~sassdoc-theme-herman/scss/utilities' as herman;
 
 /// # Color Config
@@ -12,28 +13,6 @@
 /// @link https://www.oddbird.net/cascading-colors/
 ///   Cascading Color Systems
 /// @group config-color
-
-// Brand Colors
-// ------------
-/// The brand is defined by our primary brand blue,
-/// along with secondary pink and orange base colors.
-/// These colors are rarely used directly,
-/// but form the basis of our CSS color variables.
-/// @colors
-/// @type map
-/// @group config-color
-$brand-colors: (
-  'brand-blue': hsl(195deg, 52%, 31%),
-  'brand-orange': hsl(24deg, 100%, 62%),
-  'brand-pink': hsl(330deg, 100%, 45%),
-);
-
-@include tools.add-colors($brand-colors);
-@include herman.add(
-  'colors',
-  'brand-colors',
-  tools.compile-colors($brand-colors)
-);
 
 // Background Colors
 // -----------------
@@ -61,29 +40,6 @@ $background-colors: (
     hsla(var(--ccs-h--neutral), var(--ccs-s--bg6), var(--ccs-l--bg6), 40%),
 );
 
-// Content Colors
-// --------------
-/// Rather than using the brand colors directly,
-/// we use them to set default values for generated variables.
-/// This provides a mapping between semantic foreground use-cases,
-/// and automatically-generated color variables.
-/// @type map
-/// @group config-color
-$content-colors: (
-  'text': var(--ccs-neutral--fg-full),
-  'text-light': var(--ccs-neutral--fg3),
-  'accent': var(--ccs-accent--fg1),
-  'highlight': var(--ccs-accent--fg3),
-  'feature': var(--ccs-prime--fg4),
-  'border': var(--ccs-neutral),
-  'border-fade': var(--ccs-neutral--fade),
-  'shadow':
-    hsla(var(--ccs-h--neutral), var(--ccs-s--fg6), var(--ccs-l--fg6), 25%),
-  'action': var(--ccs-prime--fg3),
-  'active': '#highlight',
-  'icon': var(--ccs-special--fg1),
-);
-
 // CCS Defaults
 // ------------
 /// The Cascading Color System has a few settings
@@ -104,9 +60,9 @@ $ccs-colors: (
 /// @access private
 /// @group config-color
 $_hues: (
-  'prime': math.div(color.hue(tools.color('brand-blue')), 1deg),
-  'accent': math.div(color.hue(tools.color('brand-pink')), 1deg),
-  'special': math.div(color.hue(tools.color('brand-orange')), 1deg),
+  'prime': math.div(color.hue(brand.$brand-blue), 1deg),
+  'accent': math.div(color.hue(brand.$brand-pink), 1deg),
+  'special': math.div(color.hue(brand.$brand-orange), 1deg),
   'neutral': null,
 );
 

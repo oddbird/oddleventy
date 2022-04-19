@@ -1,0 +1,20 @@
+/// # Content Colors
+/// --------------
+/// Rather than using the brand colors directly,
+/// we use them to set default values for generated variables.
+/// This provides a mapping between semantic foreground use-cases,
+/// and automatically-generated color variables.
+/// @colors content-colors
+/// @group config-color
+
+$text: var(--ccs-neutral--fg-full);
+$text-light: var(--ccs-neutral--fg3);
+$accent: var(--ccs-accent--fg1);
+$highlight: var(--ccs-accent--fg3);
+$feature: var(--ccs-prime--fg4);
+$border: var(--ccs-neutral);
+$border-fade: var(--ccs-neutral--fade);
+$shadow: hsla(var(--ccs-h--neutral), var(--ccs-s--fg6), var(--ccs-l--fg6), 25%);
+$action: var(--ccs-prime--fg3);
+$active: '#highlight';
+$icon: var(--ccs-special--fg1);
