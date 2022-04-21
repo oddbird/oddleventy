@@ -7,7 +7,8 @@
 @forward 'scale';
 @use 'tools';
 @use 'sass:meta';
+@use 'color/background';
 @use 'color/brand';
 @use 'color/content';
+
 @include tools.add-colors(meta.module-variables('brand'));
-@include tools.add-colors(meta.module-variables('content'));
