@@ -14,18 +14,6 @@
 ///   Cascading Color Systems
 /// @group config-color
 
-// CCS Defaults
-// ------------
-/// The Cascading Color System has a few settings
-/// that we can most easily override with CSS variables
-/// @type map
-/// @group config-color
-$ccs-colors: (
-  'ccs-neutral--theme': var(--ccs-h--prime),
-  'ccs-background': var(--bg),
-  'ccs-color': var(--text),
-);
-
 // Brand Hues
 // ----------
 /// Hue values taken from the brand colors,

@@ -1,6 +1,7 @@
 @use 'sass:meta';
 @use '../config';
 @use '../config/color/content';
+@use '../config/color/ccs-defaults';
 @use '../config/color/background';
 @use '~cascading-color-systems' as ccs with (
   $hues: config.ccs('hues'),
@@ -25,7 +26,7 @@
 
 /// @group init-colors
 [data-ccs-colors] {
-  @include config.tokens--(config.$ccs-colors);
+  @include config.tokens--(ccs-defaults.$ccs-colors);
   @include config.tokens--(background.$background-colors);
   @include config.tokens--(content.$content-colors);
 
