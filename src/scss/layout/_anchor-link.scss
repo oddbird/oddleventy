@@ -16,5 +16,15 @@
   position: absolute;
   right: 100%;
   width: var(--gutter);
-  top: 3px;
+  top: var(--half-shim);
+}
+
+.anchor-clicked:before {
+  content: 'Link Copied';
+  position: absolute;
+  right: 1.5em;
+  font-size: var(--xxsmall);
+  white-space: nowrap;
+  top: 0.5em;
+  color: var(--link, var(--action));
 }
