@@ -19,7 +19,7 @@
   top: var(--half-shim);
 }
 
-.anchor-clicked:before {
+.anchor-clicked::before {
   content: 'Link Copied';
   position: absolute;
   right: 1.5em;
