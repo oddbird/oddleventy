@@ -21,4 +21,5 @@ const clickToCopy = function () {
     anchorLink.addEventListener('click', () => copyAnchorLink(anchorLink)),
   );
 };
+
 module.exports = clickToCopy;

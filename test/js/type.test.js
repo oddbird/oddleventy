@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+
 import { elide, heading, md, mdInline, typogr } from '#/type';
 
 const markdown = '## Lorem ipsum dolor sit amet, consectetur';
