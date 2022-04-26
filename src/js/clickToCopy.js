@@ -18,7 +18,10 @@ const clickToCopy = function () {
   const anchorLinks = document.querySelectorAll('.header-anchor');
 
   anchorLinks.forEach((anchorLink) =>
-    anchorLink.addEventListener('click', () => copyAnchorLink(anchorLink)),
+    anchorLink.addEventListener('click', (e) => {
+      copyAnchorLink(anchorLink);
+      e.preventDefault();
+    }),
   );
 };
 
