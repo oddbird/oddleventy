@@ -23,7 +23,7 @@ const mdown = markdown({
     permalink: mdAnchor.permalink.linkAfterHeader({
       symbol: anchorLinkIconString,
       style: 'visually-hidden',
-      assistiveText: (title) => `Permalink to “${title}”`,
+      assistiveText: (title) => `Click to copy the permalink to “${title}”`,
       visuallyHiddenClass: 'sr-only',
       wrapper: ['<div class="anchor-link-wrapper">', '</div>'],
       placement: 'before',
