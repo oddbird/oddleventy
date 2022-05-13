@@ -11,14 +11,18 @@ const removeAnchorClickedClass = function () {
 };
 
 const copyAnchorLink = function (anchorLink) {
-  navigator.clipboard.writeText(anchorLink.href).then(() => {
-    removeAnchorClickedClass();
-    anchorLink.classList.add('anchor-clicked');
+  try {
+    navigator.clipboard.writeText(anchorLink.href).then(() => {
+      removeAnchorClickedClass();
+      anchorLink.classList.add('anchor-clicked');
 
-    setTimeout(() => {
-      anchorLink.classList.remove('anchor-clicked');
-    }, 3000);
-  });
+      setTimeout(() => {
+        anchorLink.classList.remove('anchor-clicked');
+      }, 3000);
+    });
+  } catch (error) {
+    throw new Error('An error occurred with copying the anchor link.');
+  }
 };
 
 const clickToCopy = function () {

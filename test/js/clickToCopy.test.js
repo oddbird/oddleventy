@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-/* eslint-disable no-undef */
+/* eslint-env browser */
 import {
   anchorLinkIconString,
   clickToCopy,
@@ -9,15 +9,20 @@ import {
 } from '../../src/js/clickToCopy';
 
 describe('clickToCopy tests', () => {
+  let clipboard;
   beforeAll(() => {
-    Object.assign(window.navigator, {
-      clipboard: {
-        writeText: jest.fn().mockImplementation(() => Promise.resolve()),
-      },
-    });
+    clipboard = window.navigator.clipboard;
+
+    window.navigator.clipboard = {
+      writeText: jest.fn().mockResolvedValue(),
+    };
     // eslint-disable-next-line max-len
     const anchorLinkHTML = `<div class="anchor-link-wrapper"><h2 id="background" tabindex="-1">Background</h2><a class="header-anchor" href="#background"><span aria-hidden="true">${anchorLinkIconString}</span> <span class="sr-only">Click to copy the permalink to “Background”</span></a></div>`;
     document.body.innerHTML = anchorLinkHTML;
+  });
+
+  afterAll(() => {
+    window.navigator.clipboard = clipboard;
   });
 
   test('clickToCopy calls clipboard with href', () => {
@@ -31,7 +36,7 @@ describe('clickToCopy tests', () => {
     );
   });
 
-  test('copyAnchorLink adds and removed clicked class', async () => {
+  test('copyAnchorLink adds and removes clicked class', async () => {
     jest.useFakeTimers();
     const anchorLink = document.querySelector('.header-anchor');
     const mockedAnchorLinkElementDOM = {
@@ -46,6 +51,20 @@ describe('clickToCopy tests', () => {
     );
     expect(mockedAnchorLinkElementDOM.classList.remove).toHaveBeenCalledWith(
       'anchor-clicked',
+    );
+  });
+
+  test('Throw an error and handle when navigator clipboard is undefined (i.e. in IE)', () => {
+    jest.resetAllMocks();
+    window.navigator = undefined;
+
+    const anchorLink = document.querySelector('.header-anchor');
+    const mockedAnchorLinkElementDOM = {
+      classList: { remove: jest.fn(), add: jest.fn() },
+      href: anchorLink.href,
+    };
+    expect(() => copyAnchorLink(mockedAnchorLinkElementDOM)).toThrow(
+      new Error('An error occurred with copying the anchor link.'),
     );
   });
 });
