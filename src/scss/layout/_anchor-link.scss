@@ -11,16 +11,16 @@
 .header-anchor {
   position: absolute;
   right: 100%;
-  width: var(--gutter);
   top: var(--half-shim);
+  width: var(--gutter);
 }
 
 .anchor-clicked::before {
+  color: var(--link, var(--action));
   content: 'Link Copied';
+  font-size: var(--xxsmall);
   position: absolute;
   right: 1.5em;
-  font-size: var(--xxsmall);
-  white-space: nowrap;
   top: 0.5em;
-  color: var(--link, var(--action));
+  white-space: nowrap;
 }
