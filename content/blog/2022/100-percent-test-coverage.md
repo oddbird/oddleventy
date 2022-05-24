@@ -84,20 +84,19 @@ the ways certain features work under the hood.
 There are also cons to 100% test coverage:
 
 One thing that 100% test coverage can lead to is an unwillingness to make big
-refactors that you know will impact your test suite. There’s also the issue of
-it affecting how you write your code in the first place, to make it less arduous
-to test in the first place.
+refactors that you know will impact your test suite. It also might impact how
+you write your code in the first place -- for example, trying to write code that
+will be less arduous to test.
 
 With unit tests, mocking leads to fragile tests that may not accurately
 represent your codebase. I personally hate the process of mocking a complicated
-piece of code, which I doubt is a unique experience, and it is often difficult
-to find documentation and examples for your exact esoteric piece of code. You’ll
-often need to mock to cover all aspects of the codebase, so it’s a big problem
-for higher test coverage.
+piece of code, and it is often difficult to find documentation and examples for
+your exact esoteric piece of code. You’ll often need to mock to cover all
+aspects of the codebase, so it’s a big problem for higher test coverage.
 
 Relatedly, having 100% test coverage can lead to misplaced confidence in your
 test suite. If you are relying on unit tests and implementation tests solely to
-check your codebase things can easily be missed. Changes to the visual
+check your codebase, things can easily be missed. Changes to the visual
 presentation that could be caught by regression tests are often missed in big
 refactors when relying solely on unit tests, for example. Implementation tests
 can give false confidence about things that they cover; end to end tests may
@@ -105,11 +104,10 @@ pick up broken UI or edge cases that wouldn’t come up in a partial test of the
 system.
 
 Getting to 100% test coverage adds extra time to development processes, as it
-takes time to implement and change tests, and chasing the last few percentage
-points - slows down creation of features when chasing the last percentage points
-of coverage. They can also be an impediment to big refactors when APIs and tests
-are too tightly coupled. More tests also make for a slower test suite, which can
-slow the development process.
+takes time to implement and change tests. This slows down creation of features
+when chasing the last percentage points of coverage. They can also be an
+impediment to big refactors when APIs and tests are too tightly coupled. More
+tests also make for a slower test suite, which can slow the development process.
 
 Another issue is overcoming inertia to start writing them, especially when the
 tests are left to the end. It’s often easier to use a test driven approach
@@ -121,7 +119,7 @@ there is less infilling to do at the end of writing code.
 
 Test coverage is one tool in our toolbox, and having a metric to measure it
 gives some reassurance that we have looked at the code from many angles. The
-other testing dimensions are covered in our testing processes, we often test
+other testing dimensions are covered in our testing processes -- we often test
 manually for edge cases, but lean towards automation where possible; using
 mainly unit tests that aren’t tightly coupled with the code, and not being shy
 of refactors that will make testing or writing code easier means that our tests
@@ -129,7 +127,7 @@ are reliable; they are all relatively easy to maintain given one knows the
 codebase or is willing to learn; and the different areas of our codebases are
 covered by manual visual regression testing, unit and integration tests, and
 unit tests on the back end. We also take steps to mitigate the impact of relying
-on 100% test coverage; we always do our best to ensure we have good
+on 100% test coverage -- we always do our best to ensure we have good
 documentation, take the code review processes we have in place very seriously,
 and do manual testing on staging before deploying to live. I think this mix
 gives us a holistic approach to testing that works, though of course there is
