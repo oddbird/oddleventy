@@ -1,5 +1,5 @@
 ---
-title: Replace Dependabot with a single Python dependency upgrade pull request
+title: Replace Dependabot With a Single Python Dependency Upgrade Pull Request
 author: ed
 date: 2022-05-27
 tags:
@@ -14,15 +14,15 @@ image:
 summary: |
   Keeping your Python dependencies up to date can become an unwieldy task when
   Dependabot opens a dozen pull requests every week. We present an alternative
-  approach that uses only one for all upgrades.
+  approach that uses only one scheduled pull request for all upgrades.
 ---
 
 [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates)
-is a useful tool provided by GitHub to all repositories. By including a simple
-`dependabot.yml` file, maintainers get an automatic pull request every time one
-of their dependencies releases a new version. Combined with a robust automated
-test suite, this greatly reduces the burden of manually keeping dependencies up
-to date.
+is a useful tool provided by GitHub to all repositories. Maintainers only need
+to specify the frequency at which they want to check for updates and Dependabot
+will open a pull request for each package that has published a new version since
+the last check. Combined with a robust automated test suite, this greatly
+reduces the burden of manually keeping dependencies up to date.
 
 However, as projects grow and more dependencies are added, the noise produced by
 individual pull requests starts becoming an issue in itself. That's why a
@@ -62,10 +62,11 @@ we also included upgrades to JavaScript dependencies, but you can see the branch
 was merged cleanly without any extra commits by maintainers. In other cases we
 have to do some cleanup to account for breaking changes in our dependencies.
 
-We've been using this approach on several projects now, and are pretty satisfied
-with the reduction in PR noise without compromising on security and features.
-So, without further ado, here's the sweet YAML file you can drop into your repo:
+We've been using this approach on several projects now, and are thrilled with
+the reduction in PR noise without compromising on security and features. So,
+without further ado, here's the sweet YAML file you can drop into your repo:
 
+{% raw %}
 ```yml
 # File: .github/workflows/upgrade-dependencies.yml
 name: Upgrade dependencies
@@ -130,3 +131,4 @@ jobs:
             echo "Pull request already exists, won't create a new one."
           fi
 ```
+{% endraw %}
