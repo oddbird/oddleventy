@@ -1,18 +1,19 @@
 ---
-title: Replace Dependabot With a Single Python Dependency Upgrade Pull Request
+title: Replace Dependabot With a Single Dependency Upgrade Pull Request
 author: ed
 date: 2022-05-27
 tags:
   - Article
   - Build Tools
   - DevOps
+  - JavaScript
   - Pip
   - Python
   - Tips
 image:
   src: blog/2022/bot.jpg
 summary: |
-  Keeping your Python dependencies up to date can become an unwieldy task when
+  Keeping your project dependencies up to date can become an unwieldy task when
   Dependabot opens a dozen pull requests every week. We present an alternative
   approach that uses only one scheduled pull request for all upgrades.
 ---
@@ -35,9 +36,9 @@ concrete release date.
 
 At OddBird we decided to leverage [GitHub
 Actions](https://github.com/features/actions) to produce a pull request with all
-Python dependencies updated at once. We have created a workflow that runs every
-Monday in the early morning. By the time we start our work day the pull request
-has been opened and we can merge it right away if all tests pass, or debug any
+dependencies updated at once. We have created a workflow that runs every Monday
+in the early morning. By the time we start our work day the pull request has
+been opened and we can merge it right away if all tests pass, or debug any
 issues introduced by upstream breaking changes. We also have the option of
 [running the workflow on
 demand](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow)
@@ -46,25 +47,94 @@ to upgrade dependencies at our convenience.
 Broadly speaking, the workflow will:
 
 1. Checkout our code
-1. Configure a Python environment that matches our project version
+1. Configure the runtimes required by our project (Python and Node)
 1. Run a custom command to upgrade all dependencies
 1. Use git to detect changed files
 1. Commit the changes to a pre-defined branch (if they exist)
 1. Open a pull request for that branch (if it doesn't exist already)
 
-This workflow should be compatible with most Python projects. You might need to
-adjust step 3 to run your own command depending on what package manager you use
-(we use and recommend [pip-tools](https://github.com/jazzband/pip-tools)).
+This workflow should be compatible with most projects, but you will need to
+adjust steps two and three to run your own commands depending on what package
+manager you use. We'll explain how to do it with
+[pip-tools](https://github.com/jazzband/pip-tools) for Python and
+[yarn](https://yarnpkg.com/) for Node.
 
-Here's what the resulting [automated pull
-request](https://github.com/oddbird/Metecho/pull/2161) looks like. In this case
-we also included upgrades to JavaScript dependencies, but you can see the branch
-was merged cleanly without any extra commits by maintainers. In other cases we
+## Upgrade Python Dependencies
+
+By using GitHub's own [setup-python](https://github.com/actions/setup-python)
+Action we can easily install our required Python version on the runner and
+configure dependency caching. Once the Python runtime has been set up we just
+need to call `pip-tools` to upgrade all dependencies:
+
+```bash
+pip install -U pip pip-tools
+pip-compile --upgrade -o requirements/prod.txt requirements/prod.in
+pip-compile --upgrade -o requirements/dev.txt requirements/dev.in
+```
+
+This results in changes to `.txt` and `.in` files in the requirements folder.
+These changes will be included in the automated pull request and CI will test
+the project against the new package versions.
+
+Note that if you use other tools to install Python packages (like Poetry,
+Pipenv, or plain pip) you will need to use those instead of pip-tools to
+generate the upgraded requirement files.
+
+## Upgrade Node (JavaScript) Dependencies
+
+GitHub also provides an official
+[setup-node](https://github.com/actions/setup-node) Action that will configure
+Node on the runner. After the Node runtime has been set up we can upgrade Node
+dependencies with:
+
+```bash
+rm -f yarn.lock
+npx --yes yarn-upgrade-all
+```
+
+In this case we are using
+[`yarn-upgrade-all`](https://yarnpkg.com/package/yarn-upgrade-all) to get
+updated versions for all dependencies. This will modify both `package.json` and
+`yarn.lock`, which will cause CI to test against the new package versions when
+the automated pull request is opened.
+
+Note that `setup-node` is also compatible with npm and pnpm, so a similar setup
+should work for you if you use those tools to manage Node dependencies.
+
+## Open a New Pull Request from GitHub Actions
+
+GitHub runners include a two useful command line utilities that will allow us to
+open pull requests without manual intervention:
+
+- `git` let's us add and commit changes to a new branch.
+- [`gh`](https://cli.github.com/) is a handy command line interface for the
+  GitHub API and allows us to fetch information about existing pull requests,
+  and open new ones.
+
+This snippet will commit and push to a new branch and open a pull request based
+on it:
+
+```bash
+BRANCH_NAME="auto-upgrades"
+git add .
+git commit -m "Automated dependency upgrades"
+git push -f origin $BRANCH_NAME
+gh pr create \
+--head $BRANCH_NAME \
+--title "Automated dependency upgrades"
+```
+
+[The resulting pull request](https://github.com/oddbird/Metecho/pull/2161)
+includes upgrades for both Python and Node dependencies. Most of the time it can
+be merged cleanly without any extra commits by maintainers. In other cases we
 have to do some cleanup to account for breaking changes in our dependencies.
+
+## Putting It All Together
 
 We've been using this approach on several projects now, and are thrilled with
 the reduction in PR noise without compromising on security and features. So,
-without further ado, here's the sweet YAML file you can drop into your repo:
+without further ado, here's the sweet YAML file you can drop into your repo that
+leverages all tools we've discussed so far:
 
 {% raw %}
 ```yml
@@ -91,16 +161,32 @@ jobs:
           # [Optional] Use a separate key to automatically execute checks on the resulting PR
           # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
           ssh-key: ${{ secrets.DEPLOY_KEY }}
+
+      # START PYTHON DEPENDENCIES
       - uses: actions/setup-python@v3
         with:
-          # Replace with the Python version you use in your project
           python-version: "3.10"
+          cache: pip
       - name: Upgrade Python dependencies
         # ADD YOUR CUSTOM DEPENDENCY UPGRADE COMMANDS BELOW
         run: |
           pip install -U pip pip-tools
           pip-compile --upgrade -o requirements/prod.txt requirements/prod.in
           pip-compile --upgrade -o requirements/dev.txt requirements/dev.in
+      # END PYTHON DEPENDENCIES
+
+      # START NODE DEPENDENCIES
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: yarn
+      - name: Upgrade JS dependencies
+        # ADD YOUR CUSTOM DEPENDENCY UPGRADE COMMANDS BELOW
+        run: |
+          rm -f yarn.lock
+          npx --yes yarn-upgrade-all
+      # END NODE DEPENDENCIES
+
       - name: Detect changes
         id: changes
         run:
