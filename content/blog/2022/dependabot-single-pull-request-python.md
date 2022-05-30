@@ -19,13 +19,13 @@ summary: |
 
 [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates)
 is a useful tool provided by GitHub to all repositories. By including a simple
-`dependabot.yml` file maintainers get an automatic pull request every time one
+`dependabot.yml` file, maintainers get an automatic pull request every time one
 of their dependencies releases a new version. Combined with a robust automated
-test suite this greatly reduces the burden of manually keeping dependencies up
+test suite, this greatly reduces the burden of manually keeping dependencies up
 to date.
 
-However, as projects grow and more dependencies are added the noise produced by
-individual pull requests starts becoming an issue on itself. That's why a
+However, as projects grow and more dependencies are added, the noise produced by
+individual pull requests starts becoming an issue in itself. That's why a
 "grouped updates" feature for Dependabot has been
 [requested](https://github.com/dependabot/dependabot-core/issues/1190) since
 [2018](https://github.com/dependabot/dependabot-core/issues/2265). As of May
@@ -38,12 +38,12 @@ Actions](https://github.com/features/actions) to produce a pull request with all
 Python dependencies updated at once. We have created a workflow that runs every
 Monday in the early morning. By the time we start our work day the pull request
 has been opened and we can merge it right away if all tests pass, or debug any
-issues introduced by upstream breaking changes. We also gave us the option of
+issues introduced by upstream breaking changes. We also have the option of
 [running the workflow on
 demand](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow)
 to upgrade dependencies at our convenience.
 
-Broadly speaking the workflow will:
+Broadly speaking, the workflow will:
 
 1. Checkout our code
 1. Configure a Python environment that matches our project version
@@ -58,11 +58,11 @@ adjust step 3 to run your own command depending on what package manager you use
 
 Here's what the resulting [automated pull
 request](https://github.com/oddbird/Metecho/pull/2161) looks like. In this case
-we also included JavaScript changes, but you can see the branch was merged
-cleanly without any extra commits by maintainers. In other cases we had to do
-some clean up to account for breaking changes in our dependencies.
+we also included upgrades to JavaScript dependencies, but you can see the branch
+was merged cleanly without any extra commits by maintainers. In other cases we
+have to do some cleanup to account for breaking changes in our dependencies.
 
-We've been using this approach on several projects now and are pretty satisfied
+We've been using this approach on several projects now, and are pretty satisfied
 with the reduction in PR noise without compromising on security and features.
 So, without further ado, here's the sweet YAML file you can drop into your repo:
 
