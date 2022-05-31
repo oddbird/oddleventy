@@ -1,7 +1,7 @@
 ---
 title: Replace Dependabot With a Single Dependency Upgrade Pull Request
 author: ed
-date: 2022-05-27
+date: 2022-06-01
 tags:
   - Article
   - Build Tools
@@ -62,7 +62,7 @@ manager you use. We'll explain how to do it with
 ## Upgrade Python Dependencies
 
 By using GitHub's own [setup-python](https://github.com/actions/setup-python)
-Action we can easily install our required Python version on the runner and
+action we can easily install our required Python version on the runner and
 configure dependency caching. Once the Python runtime has been set up we just
 need to call `pip-tools` to upgrade all dependencies:
 
@@ -83,7 +83,7 @@ generate the upgraded requirement files.
 ## Upgrade Node (JavaScript) Dependencies
 
 GitHub also provides an official
-[setup-node](https://github.com/actions/setup-node) Action that will configure
+[setup-node](https://github.com/actions/setup-node) action that will configure
 Node on the runner. After the Node runtime has been set up we can upgrade Node
 dependencies with:
 
@@ -93,20 +93,39 @@ npx --yes yarn-upgrade-all
 ```
 
 In this case we are using
-[`yarn-upgrade-all`](https://yarnpkg.com/package/yarn-upgrade-all) to get
+[`yarn-upgrade-all`](https://github.com/tylerlong/yarn-upgrade-all) to get
 updated versions for all dependencies. This will modify both `package.json` and
 `yarn.lock`, which will cause CI to test against the new package versions when
 the automated pull request is opened.
 
-Note that `setup-node` is also compatible with npm and pnpm, so a similar setup
-should work for you if you use those tools to manage Node dependencies.
+One of the main advantages of `yarn-upgrade-all` is that it allows us to specify
+individual [dependencies to
+ignore](https://github.com/tylerlong/yarn-upgrade-all#ignore-some-packages).
+This useful when old versions of a package are still receiving security fixes or
+you just want to avoid or postpone the breaking changes introduced by major
+version bumps. For example, here we are excluding three packages from the weekly
+upgrades with a bit of configuration in `package.json`:
+
+```json
+"yarn-upgrade-all": {
+  "ignore": [
+    "@testing-library/vue",
+    "node-fetch",
+    "vue-svg-loader"
+  ]
+}
+```
+
+Lastly, note that `setup-node` is also compatible with npm and pnpm, so a
+similar setup should work for you if you use those tools to manage Node
+dependencies.
 
 ## Open a New Pull Request from GitHub Actions
 
-GitHub runners include a two useful command line utilities that will allow us to
+GitHub runners include two useful command line utilities that will allow us to
 open pull requests without manual intervention:
 
-- `git` let's us add and commit changes to a new branch.
+- `git` lets us add and commit changes to a new branch.
 - [`gh`](https://cli.github.com/) is a handy command line interface for the
   GitHub API and allows us to fetch information about existing pull requests,
   and open new ones.
