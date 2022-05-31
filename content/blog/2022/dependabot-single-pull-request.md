@@ -101,10 +101,11 @@ the automated pull request is opened.
 One of the main advantages of `yarn-upgrade-all` is that it allows us to specify
 individual [dependencies to
 ignore](https://github.com/tylerlong/yarn-upgrade-all#ignore-some-packages).
-This useful when old versions of a package are still receiving security fixes or
-you just want to avoid or postpone the breaking changes introduced by major
-version bumps. For example, here we are excluding three packages from the weekly
-upgrades with a bit of configuration in `package.json`:
+This is useful when old versions of a package are still receiving security
+fixes, you're using an alpha/beta/rc version of a package, or you just want to
+avoid or postpone the breaking changes introduced by major version bumps. For
+example, here we are excluding three packages from the weekly upgrades with a
+bit of configuration in `package.json`:
 
 ```json
 "yarn-upgrade-all": {
