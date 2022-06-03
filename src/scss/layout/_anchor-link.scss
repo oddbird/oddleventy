@@ -18,11 +18,19 @@
   position: absolute;
   left: var(--anchor-position-offset-l, -0.25em);
   top: var(--anchor-position-offset-t, var(--gutter-plus));
+  transform-origin: top center;
   width: var(--gutter);
 
   @include tools.above('wide-page') {
     --anchor-position-offset-l: -1em;
     --anchor-position-offset-t: 1.25em;
+  }
+
+  &.anchor-clicked {
+    svg {
+      transform: scale(1.35);
+      transition: tools.change('move'), tools.change('fade');
+    }
   }
 
   &:visited {
