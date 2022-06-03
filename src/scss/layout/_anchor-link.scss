@@ -1,26 +1,46 @@
 @use '~accoutrement/sass/tools';
 
 .anchor-link-wrapper {
+  display: inline-block;
   position: relative;
 
   h2 {
-    display: inline;
+    display: inline-block;
+    padding-left: var(--anchor-link-padding-l, var(--gutter));
+
+    @include tools.above('wide-page') {
+      --anchor-link-padding-l: 0;
+    }
   }
 }
 
 .header-anchor {
   position: absolute;
-  right: 100%;
-  top: var(--half-shim);
+  left: var(--anchor-position-offset-l, -0.25em);
+  top: var(--anchor-position-offset-t, var(--gutter-plus));
   width: var(--gutter);
+
+  @include tools.above('wide-page') {
+    --anchor-position-offset-l: -1em;
+    --anchor-position-offset-t: 1.25em;
+  }
+
+  &:visited {
+    --fill: var(--active);
+  }
 }
 
 .anchor-clicked::before {
   color: var(--link, var(--action));
   content: 'Link Copied';
   font-size: var(--xxsmall);
+  left: var(--anchor-text-offset-l, -0.25em);
   position: absolute;
-  right: 1.5em;
-  top: 0.5em;
+  top: var(--anchor-text-offset-t, -2em);
   white-space: nowrap;
+
+  @include tools.above('wide-break') {
+    --anchor-text-offset-l: -5.75em;
+    --anchor-text-offset-t: 0.5em;
+  }
 }
