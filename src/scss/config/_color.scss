@@ -29,11 +29,9 @@ $brand-colors: (
 );
 
 @include tools.add-colors($brand-colors);
-@include herman.add(
-  'colors',
+@include herman.add('colors',
   'brand-colors',
-  tools.compile-colors($brand-colors)
-);
+  tools.compile-colors($brand-colors));
 
 // Background Colors
 // -----------------
@@ -48,17 +46,16 @@ $background-colors: (
   'bg-full': var(--ccs--bg-full),
   'callout': hsl(var(--ccs-h--prime), var(--ccs-s--bg3), var(--ccs-l--bg5)),
   'callout-neutral': var(--ccs-neutral--bg5),
-  'callout-fade':
-    hsla(
-      var(--ccs-h--prime),
-      var(--ccs-s--bg2),
-      var(--ccs-l--bg5),
-      var(--ccs-fade)
-    ),
+  'callout-fade': hsla(var(--ccs-h--prime),
+    var(--ccs-s--bg2),
+    var(--ccs-l--bg5),
+    var(--ccs-fade)),
   'callout-special': var(--ccs-special--bg5-fade),
   'overlay': var(--ccs-neutral--bg6-fade),
-  'overlay-banner':
-    hsla(var(--ccs-h--neutral), var(--ccs-s--bg6), var(--ccs-l--bg6), 40%),
+  'overlay-banner': hsla(var(--ccs-h--neutral), var(--ccs-s--bg6), var(--ccs-l--bg6), 40%),
+  'scroll-panel-bg': hsl(var(--ccs-h--prime), var(--ccs-s--bg4), var(--ccs-l--bg5)),
+  'scrollbar-track': var(--ccs-prime--bg4-fade),
+  'scrollbar-thumb': var(--ccs-prime--bg6-fade),
 );
 
 // Content Colors
@@ -77,8 +74,7 @@ $content-colors: (
   'feature': var(--ccs-prime--fg4),
   'border': var(--ccs-neutral),
   'border-fade': var(--ccs-neutral--fade),
-  'shadow':
-    hsla(var(--ccs-h--neutral), var(--ccs-s--fg6), var(--ccs-l--fg6), 25%),
+  'shadow': hsla(var(--ccs-h--neutral), var(--ccs-s--fg6), var(--ccs-l--fg6), 25%),
   'action': var(--ccs-prime--fg3),
   'active': '#highlight',
   'icon': var(--ccs-special--fg1),

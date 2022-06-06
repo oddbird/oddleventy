@@ -1,29 +1,57 @@
 @use '~@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify.css';
 @use '~accoutrement/sass/tools';
 
+.aa-Panel--scrollable {
+  scrollbar-color: var(--scrollbar-track);
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border: 2px solid var(--scrollbar-track);
+    border-color: var(--scrollbar-track);
+    border-right: 1px solid var(--scrollbar-track);
+  }
+}
+
 .aa-Autocomplete,
 .aa-Panel,
 .aa-DetachedContainer {
   --color-mark: var(--accent);
-  --color-background: var(--bg-full);
+  --color-background: var(--scroll-panel-bg);
   --color-selected: var(--bg);
   --color-text: var(--text);
   --font-size: var(--xsmall);
+  color: var(--text);
+}
+
+.aa-Panel--scrollable {
+  padding: 0;
+}
+
+.aa-ItemContent {
+  padding-inline: var(--shim);
 }
 
 .aa-Item {
-  margin-block-end: var(--shim);
+  padding: 0;
+
+  a {
+    padding-block: var(--shim);
+  }
 
   .aa-ItemTitle {
     @include tools.font-family('alt');
     color: var(--action);
-    font-size: var(--small);
-    line-height: initial;
+    font-size: var(--xsmall);
+    line-height: 1.2;
   }
 
   .aa-ItemDescription {
-    color: initial;
-    font-size: var(--xsmall);
-    line-height: initial;
+    color: var(--text);
+    font-size: var(--xxsmall);
+    line-height: tools.ratio('line-height');
   }
 }
