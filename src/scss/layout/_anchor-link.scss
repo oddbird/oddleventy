@@ -27,9 +27,10 @@
   }
 
   &.anchor-clicked {
+    @include tools.transition('move');
+
     svg {
-      transform: scale(1.35);
-      transition: tools.change('move'), tools.change('fade');
+      transform: rotate(90deg);
     }
   }
 
@@ -39,16 +40,20 @@
 }
 
 .anchor-clicked::before {
-  color: var(--link, var(--action));
+  background: var(--feature);
+  border-radius: var(--radius);
+  color: var(--bg);
   content: 'Link Copied';
+  font-weight: bold;
   font-size: var(--xxsmall);
   left: var(--anchor-text-offset-l, -0.25em);
+  padding: var(--quarter-shim) var(--half-shim);
   position: absolute;
-  top: var(--anchor-text-offset-t, -2em);
+  top: var(--anchor-text-offset-t, -2.25em);
   white-space: nowrap;
 
   @include tools.above('wide-break') {
-    --anchor-text-offset-l: -5.75em;
+    --anchor-text-offset-l: -6.5em;
     --anchor-text-offset-t: 0.5em;
   }
 }
