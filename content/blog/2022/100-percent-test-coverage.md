@@ -8,12 +8,13 @@ tags:
   - Test Coverage
 image:
   src: blog/2022/hundred-g8323bcdec_1920.jpg
-  alt: |
-    Red one hundreds litter a white backrgound.
+  alt: Red "one hundred percent" repeated on a white background.
 summary: |
   100% test coverage is a contentious metric! In this piece, Olu explores the
   impact of pursuing it.
 ---
+
+{% import 'embed.macros.njk' as embed %}
 
 Test coverage is a way of measuring how much of the codebase is covered by
 tests. It usually refers to unit tests or integration tests. There are automated
@@ -23,7 +24,10 @@ level of test coverage, and after working on a few different projects I thought
 it would be good to assess how I find it and the pros and cons of testing in
 this way.
 
-![Hundred percent test coverage on the Metecho project](blog/2022/metecho-coverage.png)
+{{ embed.img(
+  src='blog/2022/metecho-coverage.png',
+  alt='One hundred percent test coverage on the Metecho project'
+) }}
 
 ## **The dimensions of testing**
 
@@ -44,21 +48,27 @@ unwieldy when used on large codebases due to the number of screenshots that have
 to be reviewed, but cover a part of the codebase not easily tested by other
 means.
 
-![examples of web platform tests](wpt.png)
+{{ embed.img(
+  src='blog/2022/wpt.png',
+  alt='Examples of Web Platform Tests'
+) }}
 
-Recently I’ve been working on [polyfills for bleeding edge CSS features](https://www.npmjs.com/package/@csstools/postcss-cascade-layers), and they
-need a very different method of testing compared to what I am used to. [Web
-Platform Tests], which test that browsers are all implementing features in the
-same way, do not have a coverage metric and are integration tests for the most
-part. CSS is the main thing compared using JS, and there are visual regression
-and manual tests in the mix. Using [PostCSS](https://postcss.org/) also exposed me to their test runner,
-[tape](https://github.com/csstools/postcss-tape), which compares CSS files with an expectation file, and also does not have
-coverage. For this project, being able to automate the majority of the browser
-tests using WPT’s test runner is more important than coverage. I’d say that for
-the area needing to be tested -- which is mostly CSS presentation and browser
-compatibility -- there’s little that can be expressed using coverage as a
-metric. I’ll be focusing on test coverage in this article, but you need to
-decide which dimensions are important to your codebase on an individual basis.
+Recently I’ve been working on [polyfills for bleeding edge CSS
+features](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-cascade-layers),
+and they need a very different method of testing compared to what I am used to.
+[Web Platform Tests], which test that browsers are all implementing features in
+the same way, do not have a coverage metric and are integration tests for the
+most part. CSS is the main thing compared using JS, and there are visual
+regression and manual tests in the mix. Using [PostCSS](https://postcss.org/)
+also exposed me to their test runner,
+[tape](https://github.com/csstools/postcss-tape), which compares CSS files with
+an expectation file, and also does not have coverage. For this project, being
+able to automate the majority of the browser tests using WPT’s test runner is
+more important than coverage. I’d say that for the area needing to be tested --
+which is mostly CSS presentation and browser compatibility -- there’s little
+that can be expressed using coverage as a metric. I’ll be focusing on test
+coverage in this article, but you need to decide which dimensions are important
+to your codebase on an individual basis.
 
 [Web Platform Tests]: https://web-platform-tests.org/
 
@@ -71,7 +81,10 @@ the codebase and its quirks. This can cut both ways, with people who implemented
 the tests being relied on when they don’t work as intended, or to explain
 obscure areas of the code when a test fails.
 
-![tape tests, with the expectation and original file side by side](blog/2022/tape-tests.png)
+{{ embed.img(
+  src='blog/2022/tape-tests.png',
+  alt='tape tests, with the expectation and original file side by side'
+) }}
 
 You have more confidence that your code won't fall over at the slightest change,
 and that if a bug is introduced into the codebase it will be caught at
