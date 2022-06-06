@@ -6,6 +6,10 @@ tags:
   - Article
   - Testing
   - Test Coverage
+image:
+  src: blog/2022/hundred-g8323bcdec_1920.jpg
+  alt: |
+    Red one hundreds litter a white backrgound.
 summary: |
   100% test coverage is a contentious metric! In this piece, Olu explores the
   impact of pursuing it.
@@ -18,6 +22,8 @@ ways of measuring it, and these usually present your coverage as a percentage.
 level of test coverage, and after working on a few different projects I thought
 it would be good to assess how I find it and the pros and cons of testing in
 this way.
+
+![Hundred percent test coverage on the Metecho project](blog/2022/metecho-coverage.png)
 
 ## **The dimensions of testing**
 
@@ -37,6 +43,8 @@ record this. Visual regression tests don’t have a coverage metric, and can be
 unwieldy when used on large codebases due to the number of screenshots that have
 to be reviewed, but cover a part of the codebase not easily tested by other
 means.
+
+![examples of web platform tests](wpt.png)
 
 Recently I’ve been working on [polyfills for bleeding edge CSS features](https://www.npmjs.com/package/@csstools/postcss-cascade-layers), and they
 need a very different method of testing compared to what I am used to. [Web
@@ -62,6 +70,8 @@ The people who implement the unit tests will have a more intimate knowledge of
 the codebase and its quirks. This can cut both ways, with people who implemented
 the tests being relied on when they don’t work as intended, or to explain
 obscure areas of the code when a test fails.
+
+![tape tests, with the expectation and original file side by side](blog/2022/tape-tests.png)
 
 You have more confidence that your code won't fall over at the slightest change,
 and that if a bug is introduced into the codebase it will be caught at
