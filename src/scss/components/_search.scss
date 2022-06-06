@@ -1,6 +1,66 @@
 @use '~@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify.css';
 @use '~accoutrement/sass/tools';
 
+
+[data-form~='search'] {
+  margin-right: var(--shim);
+}
+
+// Default Search Variable Overrides
+.aa-Autocomplete,
+.aa-Panel,
+.aa-DetachedContainer {
+  --color-mark: var(--accent);
+  --color-background: var(--scroll-panel-bg);
+  --color-selected: var(--bg);
+  --color-text: var(--text);
+  --font-size: var(--xsmall);
+
+  color: var(--text);
+}
+
+// Search Input/Button Overrides
+
+.aa-Form {
+  border: thin solid var(--border);
+  border-radius: 0;
+  color: var(--text);
+  display: grid;
+  grid-template-columns: auto 1fr minmax(32px, auto);
+  padding: var(--half-shim);
+
+  &:focus-within {
+    border-color: var(--action);
+    box-shadow: none;
+    outline: medium solid var(--action);
+    outline-offset: 0;
+  }
+
+  .aa-Autocomplete &,
+  .aa-DetachedFormContainer & {
+    background-color: var(--bg-full);
+
+    .aa-InputWrapperSuffix {
+      height: auto;
+    }
+  }
+}
+
+.aa-LoadingIndicator,
+.aa-SubmitButton {
+  width: auto;
+}
+
+.aa-InputWrapperPrefix {
+  height: auto;
+}
+
+.aa-InputWrapperSuffix {
+  justify-content: center;
+}
+
+// Search Results Panel
+
 .aa-Panel--scrollable {
   padding: 0;
   scrollbar-color: var(--scrollbar-track);
@@ -15,18 +75,6 @@
     border-color: var(--scrollbar-track);
     border-right: 1px solid var(--scrollbar-track);
   }
-}
-
-.aa-Autocomplete,
-.aa-Panel,
-.aa-DetachedContainer {
-  --color-mark: var(--accent);
-  --color-background: var(--scroll-panel-bg);
-  --color-selected: var(--bg);
-  --color-text: var(--text);
-  --font-size: var(--xsmall);
-
-  color: var(--text);
 }
 
 .aa-ItemContent {
