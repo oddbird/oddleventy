@@ -1,1 +1,29 @@
 @use '~@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify.css';
+@use '~accoutrement/sass/tools';
+
+.aa-Autocomplete,
+.aa-Panel,
+.aa-DetachedContainer {
+  --color-mark: var(--accent);
+  --color-background: var(--bg-full);
+  --color-selected: var(--bg);
+  --color-text: var(--text);
+  --font-size: var(--xsmall);
+}
+
+.aa-Item {
+  margin-block-end: var(--shim);
+
+  .aa-ItemTitle {
+    @include tools.font-family('alt');
+    color: var(--action);
+    font-size: var(--small);
+    line-height: initial;
+  }
+
+  .aa-ItemDescription {
+    color: initial;
+    font-size: var(--xsmall);
+    line-height: initial;
+  }
+}
