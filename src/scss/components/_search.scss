@@ -2,6 +2,7 @@
 @use '~accoutrement/sass/tools';
 
 .aa-Panel--scrollable {
+  padding: 0;
   scrollbar-color: var(--scrollbar-track);
 
   &::-webkit-scrollbar-track {
@@ -24,11 +25,8 @@
   --color-selected: var(--bg);
   --color-text: var(--text);
   --font-size: var(--xsmall);
-  color: var(--text);
-}
 
-.aa-Panel--scrollable {
-  padding: 0;
+  color: var(--text);
 }
 
 .aa-ItemContent {
@@ -44,6 +42,7 @@
 
   .aa-ItemTitle {
     @include tools.font-family('alt');
+
     color: var(--action);
     font-size: var(--xsmall);
     line-height: 1.2;
