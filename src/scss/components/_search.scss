@@ -13,21 +13,26 @@
   --color-mark: var(--accent);
   --color-background: var(--scroll-panel-bg);
   --color-selected: var(--bg);
+  --color-input-icon: var(--border-fade);
   --color-text: var(--text);
   --font-size: var(--xsmall);
+  --height: auto;
 
   color: var(--text);
 }
 
 // Search Input/Button Overrides
-
+.aa-DetachedSearchButton,
 .aa-Form {
   border: thin solid var(--border);
   border-radius: 0;
-  color: var(--text);
+  color: var(--search-text, var(--text));
   display: grid;
-  grid-template-columns: auto 1fr minmax(32px, auto);
-  padding: var(--half-shim);
+  // 32px min is needed to hold space for the clear icon unless we want to
+  // override more of algolia's styles
+  grid-template-columns: auto 1fr var(--search-col3, minmax(32px, auto));
+  line-height: 1.4;
+  padding: var(--quarter-shim) var(--half-shim);
 
   &:focus-within {
     border-color: var(--action);
@@ -46,11 +51,64 @@
   }
 }
 
-.aa-LoadingIndicator,
+// Search on small screen is a toggle button
+.aa-DetachedSearchButton {
+  --search-col3: 0;
+  --search-text: var(--action);
+}
+
+.aa-DetachedContainer .aa-DetachedFormContainer .aa-DetachedCancelButton {
+  background: var(--search-btn-bg, transparent);
+  border: thin solid var(--border-fade);
+  box-shadow: none;
+  color: var(--search-btn-fg, var(--action));
+
+  &:hover,
+  &:focus {
+    --search-btn-fg: var(--bg);
+    --search-btn-bg: var(--accent);
+  }
+}
+
+.aa-SubmitIcon {
+  width: var(--height-icon); // match algolia
+}
+
+// Button Text on small screen
+.aa-DetachedSearchButtonPlaceholder {
+  padding-right: var(--shim);
+}
+
+.aa-Label {
+  display: flex;
+}
+
+.aa-Input {
+  @include tools.font-family('alt');
+  color: var(--text-light);
+  padding: var(--quarter-shim);
+
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &::placeholder {
+    color: var(--text-light);
+  }
+
+  &:focus-within {
+    color: var(--text);
+  }
+}
+
+.aa-DetachedSearchButtonIcon,
 .aa-SubmitButton {
+  margin: 0 var(--half-shim);
+  padding-left: var(--quarter-shim);
+  padding-right: var(--quarter-shim);
   width: auto;
 }
 
+.aa-DetachedSearchButton,
+.aa-DetachedSearchButtonIcon,
 .aa-InputWrapperPrefix {
   height: auto;
 }
@@ -78,7 +136,7 @@
 }
 
 .aa-ItemContent {
-  padding-inline: var(--shim);
+  padding-inline: var(--shim-plus);
 }
 
 .aa-Item {
@@ -101,4 +159,9 @@
     font-size: var(--xxsmall);
     line-height: tools.ratio('line-height');
   }
+}
+
+// Hide Unused Icon since we can't edit the markup
+.aa-ItemIcon {
+  display: none;
 }
