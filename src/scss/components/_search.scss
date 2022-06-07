@@ -1,7 +1,6 @@
 @use '~@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify.css';
 @use '~accoutrement/sass/tools';
 
-
 [data-form~='search'] {
   margin-right: var(--shim);
 }
@@ -85,11 +84,10 @@
 
 .aa-Input {
   @include tools.font-family('alt');
+
   color: var(--text-light);
   padding: var(--quarter-shim);
 
-  &::-moz-placeholder,
-  &:-ms-input-placeholder,
   &::placeholder {
     color: var(--text-light);
   }

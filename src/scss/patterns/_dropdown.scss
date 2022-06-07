@@ -22,9 +22,10 @@
 /// @group dropdown
 [data-btn~='summary'] {
   --marker-color: currentcolor;
+
   white-space: nowrap;
 
-  [open]>& {
+  [open] > & {
     @include tools.z-index('dropdown');
 
     @include tools.before('') {
