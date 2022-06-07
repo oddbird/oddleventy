@@ -26,7 +26,10 @@ this way.
 
 {{ embed.img(
   src='blog/2022/metecho-coverage.png',
-  alt='Image of the Metecho project's test coverage summary which shows 100% test coverage for statements, branches, functions and lines. Also displayed is the number of test suites, tests, snapshots and the time it took to run the test'
+  alt="Image of the Metecho project's test coverage summary which shows 100%
+    test coverage for statements, branches, functions and lines. Also displayed
+    is the number of test suites, tests, snapshots and the time it took to run
+    the test."
 ) }}
 
 ## **The dimensions of testing**
@@ -144,9 +147,14 @@ Test coverage is one tool in our toolbox, and having a metric to measure it
 gives some reassurance that we have looked at the code from many angles. The
 other testing dimensions are covered in our testing processes. We often test
 manually for edge cases, but lean towards automation where possible. We use
-mainly unit tests that aren’t tightly coupled with the code, and are not shy
-of refactors that will make testing or writing code easier, meaning that our tests
-are reliable. All the tests we write are relatively easy to maintain given one knows the codebase or is willing to learn. Finally, the different areas of our codebases are covered by manual visual regression testing, front-end unit and integration tests, and unit tests on the back end. We also take steps to mitigate the impact of relying on 100% test coverage -- we always do our best to ensure we have good documentation, take the code review processes we have in place very seriously,
-and do manual testing on staging before deploying to live. I think this mix
-gives us a holistic approach to testing that works, though of course there is
-always room for improvement!
+mainly unit tests that aren’t tightly coupled with the code, and are not shy of
+refactors that will make testing or writing code easier, meaning that our tests
+are reliable. All the tests we write are relatively easy to maintain given one
+knows the codebase or is willing to learn. Finally, the different areas of our
+codebases are covered by manual visual regression testing, front-end unit and
+integration tests, and unit tests on the back end. We also take steps to
+mitigate the impact of relying on 100% test coverage -- we always do our best to
+ensure we have good documentation, take the code review processes we have in
+place very seriously, and do manual testing on staging before deploying to
+production. I think this mix gives us a holistic approach to testing that works,
+though of course there is always room for improvement!
