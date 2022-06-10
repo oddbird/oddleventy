@@ -15,45 +15,53 @@
 }
 
 .header-anchor {
+  --left-position-offset-default: -0.25em;
+  --top-position-offset-default: var(--gutter-plus);
+  left: var(--anchor-position-offset-l, var(--left-position-offset-default));
   position: absolute;
-  left: var(--anchor-position-offset-l, -0.25em);
-  top: var(--anchor-position-offset-t, var(--gutter-plus));
+  top: var(--top-position-offset-default);
   transform-origin: top center;
   width: var(--gutter);
 
   @include tools.above('wide-page') {
     --anchor-position-offset-l: -1em;
-    --anchor-position-offset-t: 1.25em;
   }
 
-  &.anchor-clicked {
-    @include tools.transition('move');
-
-    svg {
-      transform: rotate(-45deg);
-    }
+  svg {
+    stroke: var(--fill, currentColor);
+    stroke-width: 1.25;
   }
 
   &:visited {
-    --fill: var(--active);
+    --fill: var(--ccs-accent--bg1-fade);
+    --action: var(--ccs-accent--bg1-fade);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    --fill: var(--ccs-accent--fg2);
   }
 }
 
-.anchor-clicked::before {
-  background: var(--feature);
-  border-radius: var(--radius);
-  color: var(--bg);
-  content: 'Link Copied';
-  font-weight: bold;
-  font-size: var(--xxsmall);
-  left: var(--anchor-text-offset-l, -0.25em);
-  padding: var(--quarter-shim) var(--half-shim);
-  position: absolute;
-  top: var(--anchor-text-offset-t, -2.25em);
-  white-space: nowrap;
+.anchor-clicked {
+  &::before {
+    @include tools.animate('fadein-out');
+    background: var(--feature);
+    border-radius: var(--radius);
+    color: var(--bg);
+    content: 'Link Copied';
+    font-size: var(--xxsmall);
+    left: var(--left-position-offset-default);
+    opacity: 0;
+    padding: var(--quarter-shim) var(--half-shim);
+    position: absolute;
+    top: calc(var(--top-position-offset-default) * -1);
+    white-space: nowrap;
+  }
 
-  @include tools.above('wide-break') {
-    --anchor-text-offset-l: -6.5em;
-    --anchor-text-offset-t: 0.5em;
+  svg {
+    transform: rotate(-45deg);
+    transition: tools.change('move');
   }
 }
