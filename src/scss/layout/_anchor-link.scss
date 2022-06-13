@@ -30,6 +30,7 @@
   svg {
     stroke: var(--fill, currentColor);
     stroke-width: 1.25;
+    transition: tools.change('move');
   }
 
   &:visited {
@@ -62,6 +63,5 @@
 
   svg {
     transform: rotate(-45deg);
-    transition: tools.change('move');
   }
 }
