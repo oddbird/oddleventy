@@ -92,14 +92,16 @@ params:
 {% macro social(
   data,
   name,
-  details=false
+  details=false,
+  rel=none
 ) %}
   {%- set sites = {
     'email': {
       'user': '%s@oddbird.net',
       'url': 'mailto:%s@oddbird.net',
       'icon': 'mail',
-      'hide_details': true
+      'hide_details': true,
+      'class': 'u-email'
     },
     'twitter': {
       'user': '@%s',
@@ -136,7 +138,9 @@ params:
           {{- utility.icon_link(
             icon='social/' + (info.icon or site),
             text=text | safe,
-            url=info.url | replace("%s", id)
+            url=info.url | replace("%s", id),
+            class=info.class or 'u-url',
+            attrs={'rel': rel} if rel else {}
           ) -}}
           {{- context if not hide_details -}}
         </li>

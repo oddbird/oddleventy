@@ -18,6 +18,10 @@
     <meta name="description"
       content="{{ description }}" />
 
+    {% for link in site.me %}
+      <link href="{{ link }}" rel="me">
+    {% endfor %}
+
     {% if perma %}
       <link rel="canonical"
         href="{{ perma }}">
