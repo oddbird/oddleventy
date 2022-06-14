@@ -38,13 +38,14 @@ summary: |
 
 {% call layout.grid('birds') %}
   {% for bird in collections.birds | active %}
-    <article {{ post.aria_label(bird) }}>
+    <article {{ post.aria_label(bird) }} class="h-card">
       {% call embed.media_block(
         media=embed.svg('faces/' + bird.data.bird),
-        name='bird'
+        name='bird',
+        media_attrs={'class': 'u-logo media-image'}
       ) %}
-        {{ post.banner(bird) }}
-        {{ bird.data.summary | md | safe }}
+        {{ post.banner(bird, attrs={'class': 'item-title p-name'}) }}
+        <div class="p-note">{{ bird.data.summary | md | safe }}</div>
         {{ contact.social(
           data=bird.data.social,
           name=bird.data.bird | capitalize

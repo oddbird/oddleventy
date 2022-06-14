@@ -19,7 +19,7 @@ people:
   - &greg
     name: Gregory Davis
     face: gregory-davis.jpg
-    url: https://www.linkedin.com/in/gregory-davis-7546a419/
+    url: https://www.linkedin.com/in/gregory-davis-29bb95218/
     title: Chief Architect
     venue: *client
 press:

@@ -13,6 +13,7 @@ google_analytics_id: UA-36510846-1
 social:
   email: birds
   twitter: oddbird
+  github: oddbird
 nav:
   - url: /work/
   - url: /services/
@@ -20,3 +21,8 @@ nav:
   - url: /blog/
   - url: /about/
   - url: /contact/
+me:
+  - https://www.oddbird.net/
+  - mailto:birds@oddbird.net
+  - https://twitter.com/oddbird
+  - https://github.com/oddbird
