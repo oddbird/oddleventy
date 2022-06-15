@@ -1,11 +1,11 @@
 @use 'sass:meta';
 @use 'sass:math';
 @use 'sass:color';
-@use 'tools';
-@use './color/brand';
-@use '~sassdoc-theme-herman/scss/utilities' as herman;
+@use '../tools';
+@use 'brand';
 
 /// # Color Config
+/// -----------------
 /// Accoutrement maps for storing global color tokens,
 /// and settings for generating color variables.
 /// @link https://www.oddbird.net/accoutrement/docs/color.html
@@ -14,8 +14,8 @@
 ///   Cascading Color Systems
 /// @group config-color
 
-// Brand Hues
-// ----------
+/// ## Brand Hues
+/// ----------
 /// Hue values taken from the brand colors,
 /// for easy access in the CCS settings.
 /// @type map
@@ -28,8 +28,8 @@ $_hues: (
   'neutral': null,
 );
 
-// CCS Settings
-// ------------
+/// ## CCS Settings
+/// ------------
 /// Settings for generating color variables.
 /// This map is marked private to encourage access
 /// through the `ccs()` function.
@@ -50,8 +50,8 @@ $_ccs: (
   'neutral-saturation': 10%,
 );
 
-// CCS "Get" Function
-// ------------------
+/// ## CCS "Get" Function
+/// ------------------
 /// Get settings from the `$ccs` configuration map.
 /// @param {string} $token -
 ///   Name of a token key in the `$ccs` map.
