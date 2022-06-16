@@ -164,8 +164,9 @@ params:
 
   <article
     data-post="{{ 'large' if (card == 'large') else 'link' }}"
-    aria-labelledby="{{ id(post) }}">
-    {{ hero(image, card or 'post') }}
+    aria-labelledby="{{ id(post) }}"
+    class="h-entry">
+    {{ hero(image, card or 'post', true) }}
     {% if type %}
       <div class="type-flag" data-flag="left">
         {{ type.tag }}
@@ -174,7 +175,7 @@ params:
     {% endif %}
     <div class="post-content">
       <header class="post-header">
-        {{ banner(post) }}
+        {{ banner(post, hentry=true) }}
         {{ subtitle(post.data.sub) }}
         {{ byline(
           post=post,
@@ -184,16 +185,20 @@ params:
         ) }}
       </header>
       {% if post.data.events %}
-        {{ eventpreview(post.data.events, links=false) }}
+        <div class="p-summary">
+          {{ eventpreview(post.data.events, links=false) }}
+        </div>
       {% elif post.data.summary %}
         {% set summary = post.data.summary | md %}
-        {% if (card == 'large') %}
-          {{ summary | safe }}
-        {% else %}
-          <p>
-            {{ summary | elide | safe }}
-          </p>
-        {% endif %}
+        <div class="p-summary">
+          {% if (card == 'large') %}
+            {{ summary | safe }}
+          {% else %}
+            <p>
+              {{ summary | elide | safe }}
+            </p>
+          {% endif %}
+        </div>
       {% endif %}
     </div>
   </article>
@@ -295,7 +300,8 @@ params:
 #}
 {% macro hero(
   image,
-  type='large'
+  type='large',
+  is_entry=false
 ) %}
   {%- if image -%}
     <div data-hero="{{ type or 'large' }}">
@@ -305,7 +311,10 @@ params:
           src=image.src,
           alt=image.alt,
           sizes='card' if (type == 'post') else none,
-          attrs={style: position}
+          attrs={
+            style: position,
+            class: 'u-photo' if is_entry else none
+          }
         ) }}
       {%- elif image.svg -%}
         {{ embed.svg(image.svg, image.alt) }}
@@ -416,16 +425,17 @@ params:
   level=3,
   attrs={},
   id_prefix='post',
-  called=false
+  called=false,
+  hentry=false
 ) -%}
   {%- h level, {
-    'class': 'item-title',
+    'class': 'item-title p-name' if hentry else 'item-title',
     'id': id(post, id_prefix)
   } | merge(attrs) -%}
       {{ utility.link_if(
         caller() if called else name(post),
         post.url,
-        'title-link'
+        'title-link u-url' if hentry else 'title-link'
       ) }}
   {%- endh -%}
 {%- endmacro %}
@@ -465,10 +475,11 @@ params:
     default: none
 #}
 {% macro subtitle(
-  sub
+  sub,
+  class
 ) %}
   {% if sub %}
-    <p class="subtitle">
+    <p class="subtitle{% if class %} {{ class }}{% endif %}">
       {{ sub | mdInline | safe }}
     </p>
   {% endif %}
@@ -492,7 +503,7 @@ params:
 ) %}
   {% if author %}
     {% if prefix %}<i>{{ prefix }}</i>{% endif %}
-    {{ birds.authors(author, collections, link) }}
+    {{ birds.authors(author, collections, link, class='p-author') }}
   {% endif %}
 {% endmacro %}
 
@@ -606,7 +617,7 @@ params:
       <ul inline-list="{{ 'pill-set' if pill else 'comma' }}">
         {%- for group, items in public_tags | groupby('is_type') | dictsort | reverse -%}
           {% for item in items | sort(attribute='tag') %}
-            <li {% if pill %}class="pill-item"{% endif %}>
+            <li {% if pill %}class="pill-item p-category"{% endif %}>
               {{- utility.link_if(
                 content=item.tag | typogr,
                 url=item.url,

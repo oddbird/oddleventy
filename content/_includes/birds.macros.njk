@@ -30,13 +30,15 @@ params:
 {% macro authors(
   names,
   collections=none,
-  link=true
+  link=true,
+  class=none
 ) %}
   {% if names | typeCheck('string') %}
     {{ author(
       name=names,
       collections=collections,
-      link=link
+      link=link,
+      class=class
     ) }}
   {% else %}
     {% for name in names %}
@@ -45,7 +47,8 @@ params:
         name=name,
         collections=collections,
         link=link,
-        fullname=false
+        fullname=false,
+        class=class
       ) }}
       {%- if not loop.last -%}
         {{ ' & ' if loop.length == 2 else ', ' }}
@@ -80,8 +83,12 @@ params:
   collections=none,
   page=none,
   link=true,
-  fullname=true
+  fullname=true,
+  class=none,
+  hcard=true
 ) -%}
+  {%- set hclass = 'h-card p-name' if hcard else 'p-name' -%}
+  {%- set hclass = [hclass, 'u-url'] | join(' ') if link else hclass -%}
   {%- set page = collections.birds | authorPage(name) if (collections and not page) else page -%}
   {%- if page.data -%}
     {%- set all = 'OddBird' if (name == 'oddbird') else none -%}
@@ -90,7 +97,7 @@ params:
     {{ utility.link_if(
       content=name | mdInline | safe,
       url=page.url if link else none,
-      class='h-card'
+      class=[hclass, class] | join(' ') if class else hclass
     ) }}
   {%- else -%}
     {{ name | capitalize }}

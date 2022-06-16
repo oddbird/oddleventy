@@ -44,7 +44,7 @@ summary: |
         name='bird',
         media_attrs={'class': 'u-logo media-image'}
       ) %}
-        {{ post.banner(bird, attrs={'class': 'item-title p-name'}) }}
+        {{ post.banner(bird, hentry=true) }}
         <div class="p-note">{{ bird.data.summary | md | safe }}</div>
         {{ contact.social(
           data=bird.data.social,

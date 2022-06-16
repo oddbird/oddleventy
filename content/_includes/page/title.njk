@@ -1,3 +1,6 @@
-<h1 id="title" tabindex="-1">
+{% import "utility.macros.njk" as utility %}
+{%- set hclass = 'p-name' if is_feed or is_entry else none -%}
+{%- set hclass = [hclass, 'p-author'] | join(' ') if (is_feed and bird) else hclass -%}
+<h1 id="title" tabindex="-1" {{ utility.attr_if('class', hclass) }}>
   {{ banner | mdInline | safe }}
 </h1>
