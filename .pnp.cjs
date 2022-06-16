@@ -56,6 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cssremedy", "npm:0.1.0-beta.2"],\
             ["date-fns", "npm:2.28.0"],\
             ["date-fns-tz", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.3.3"],\
+            ["dotenv", "npm:16.0.1"],\
             ["doxray", "npm:0.10.1"],\
             ["eslint", "npm:8.13.0"],\
             ["eslint-config-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:8.5.0"],\
@@ -75,6 +76,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it-mark", "npm:3.0.1"],\
             ["mockdate", "npm:3.0.5"],\
             ["netlify-plugin-11ty", "npm:1.1.0"],\
+            ["node-fetch", "npm:2.6.1"],\
             ["npm-run-all", "npm:4.1.5"],\
             ["postcss", "npm:8.4.12"],\
             ["prettier", "npm:2.6.2"],\
@@ -6641,6 +6643,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["dotenv", [\
+        ["npm:16.0.1", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.0.1-d99e72bb95-f459ffce07.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:16.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["doxray", [\
         ["npm:0.10.1", {\
           "packageLocation": "./.yarn/cache/doxray-npm-0.10.1-01ae42199e-473d17c4e7.zip/node_modules/doxray/",\
@@ -11607,6 +11618,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["node-fetch", [\
+        ["npm:2.6.1", {\
+          "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.1-46c670dbc1-91075bedd5.zip/node_modules/node-fetch/",\
+          "packageDependencies": [\
+            ["node-fetch", "npm:2.6.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:2.6.7", {\
           "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.7-777aa2a6df-8d816ffd1e.zip/node_modules/node-fetch/",\
           "packageDependencies": [\
@@ -11977,6 +11995,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cssremedy", "npm:0.1.0-beta.2"],\
             ["date-fns", "npm:2.28.0"],\
             ["date-fns-tz", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:1.3.3"],\
+            ["dotenv", "npm:16.0.1"],\
             ["doxray", "npm:0.10.1"],\
             ["eslint", "npm:8.13.0"],\
             ["eslint-config-prettier", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:8.5.0"],\
@@ -11996,6 +12015,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it-mark", "npm:3.0.1"],\
             ["mockdate", "npm:3.0.5"],\
             ["netlify-plugin-11ty", "npm:1.1.0"],\
+            ["node-fetch", "npm:2.6.1"],\
             ["npm-run-all", "npm:4.1.5"],\
             ["postcss", "npm:8.4.12"],\
             ["prettier", "npm:2.6.2"],\

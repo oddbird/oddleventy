@@ -1,38 +1,69 @@
+{%- import 'utility.macros.njk' as utility -%}
+{%- set posts = collections._post | getPublic | reverse | onlyShow(15) -%}
+
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title }}</title>
   <subtitle>{{ site.description }}</subtitle>
   <link href="{{ page.url | absoluteUrl(site.url) }}" rel="self"/>
   <link href="{{ site.url }}"/>
-  <updated>{{ (collections._post | getPublic | reverse)[0].date.toISOString() }}</updated>
+  <updated>{{ posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ site.url }}</id>
+  <rights>© {% getDate 'year' %} {{ site.title }}</rights>
+  <icon>{{ '/favicon.ico' | absoluteUrl(site.url) }}</icon>
+  <logo>{{ (site.images + open_graph.img) | imgSrc | absoluteUrl(site.url) }}</logo>
   <author>
     <name>{{ site.title }}</name>
     <email>{{ site.email }}</email>
   </author>
-  {%- for post in collections._post | getPublic %}
+  {%- for post in posts %}
   {%- if post.templateContent or post.data.summary %}
   {%- set absolutePostUrl = post.url | absoluteUrl(site.url) -%}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date.toISOString() }}</updated>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    {%- if post.templateContent %}
+    {%- set authors = [post.data.author] if post.data.author | typeCheck('string') else post.data.author -%}
+    {%- for author in authors -%}
+      {%- set author_page = collections.birds | authorPage(author) -%}
+      <author>
+        <name>{{ author_page.data.title }}</name>
+        <uri>{{ author_page.url | absoluteUrl(site.url) }}</uri>
+      </author>
+    {% endfor -%}
+
     <content type="html">
-      {% if post.data.image.src -%}
-      {%- filter escape -%}
-      <img src="{{ (site.images + post.data.image.src) | imgSrc | absoluteUrl(site.url) }}" alt="{{ post.data.image.alt }}"/>
-      {%- endfilter -%}
-      {%- endif %}
-      {% if post.data.summary -%}
+      {%- if post.data.image.src -%}
+        {%- filter escape -%}
+          <img src="{{ (site.images + post.data.image.src) | imgSrc | absoluteUrl(site.url) }}" alt="{{ post.data.image.alt }}"/>
+        {%- endfilter -%}
+      {%- endif -%}
+
+      {%- if post.data.summary -%}
       {{ post.data.summary | md | htmlToAbsoluteUrls(absolutePostUrl) }}
-      {%- endif %}
+      {%- endif -%}
+
+      {%- filter escape -%}
+        {%- if post.data.action.text -%}
+          <p>{{ utility.link_if(
+            post.data.action.text,
+            post.data.action.url | absoluteUrl(site.url)
+          ) }}</p>
+        {%- elif post.data.venue and post.data.canonical -%}
+          <p>{{ utility.link_if(
+            ['See more at', post.data.venue, '»'] | join(' '),
+            post.data.canonical | absoluteUrl(site.url)
+          ) }}</p>
+        {%- endif -%}
+      {%- endfilter -%}
+
       {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
     </content>
-    {%- elif post.data.summary %}
-    <summary type="html">{{ post.data.summary | md | htmlToAbsoluteUrls(absolutePostUrl) }}</summary>
-    {%- endif %}
+
+    {%- for tag in post.data.tags | publicTags %}
+    <category term='{{ tag }}' />
+    {%- endfor %}
   </entry>
   {% endif -%}
   {% endfor -%}

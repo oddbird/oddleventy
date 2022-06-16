@@ -18,9 +18,14 @@
     <meta name="description"
       content="{{ description }}" />
 
+    {# Indie Auth #}
     {% for link in site.me %}
       <link href="{{ link }}" rel="me">
     {% endfor %}
+
+    {# Webmention.io #}
+    <link rel="webmention" href="https://webmention.io/www.oddbird.net/webmention" />
+    <link rel="pingback" href="https://webmention.io/www.oddbird.net/xmlrpc" />
 
     {% if perma %}
       <link rel="canonical"

@@ -153,6 +153,15 @@ module.exports = (eleventyConfig) => {
     images.image(src, null, null, null, true),
   );
 
+  // Get the first `n` elements of a collection.
+  eleventyConfig.addFilter('onlyShow', (array, n) => {
+    if (n < 0) {
+      return array.slice(n);
+    }
+
+    return array.slice(0, n);
+  });
+
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.md);
   eleventyConfig.addPairedShortcode('mdInline', type.mdInline);
