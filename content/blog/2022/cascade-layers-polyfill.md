@@ -43,7 +43,7 @@ on confusing and conflicting hacks.
 If you are new to cascade layers, “A Complete Guide to CSS Cascade Layers” by
 Miriam Suzanne on
 [CSS-Tricks](https://css-tricks.com/css-cascade-layers/#introduction-what-are-cascade-layers)
-is a must read.
+is a must-read.
 
 This description from [W3](https://www.w3.org/TR/css-cascade-5/) also sums up
 the power of layers especially well:
@@ -52,7 +52,7 @@ the power of layers especially well:
 > represent element defaults,
 > third-party libraries, themes,
 > components, overrides, and other
-> styling concerns—and are able to
+> styling concerns – and are able to
 > re-order the cascade of layers in an explicit way, without altering
 > selectors or specificity within each
 > layer, or relying on source-order to
@@ -62,7 +62,7 @@ If you want to play around with layers and see how exactly they work, check out
 this [CodePen](https://codepen.io/web-dot-dev/pen/LYzqPEp) to see the at-rule in
 action.
 
-## What browsers currently support `@layer`?
+## Which browsers currently support `@layer`?
 
 If you’re excited to get started but are wondering which browsers actually
 support `@layer`, we have some good news.
@@ -81,9 +81,9 @@ complete browser support breakdown below from
   </picture>
 </p>
 
-Miriam Suzanne – the author of the CSS layers specification and the CSS Tricks
-guide shared above – also created this CodePen below to quickly check if your
-current browser supports cascade layers.
+[Miriam Suzanne](/authors/miriam/) – the author of the CSS layers specification
+and the CSS Tricks guide shared above – also created a CodePen to quickly check
+if your current browser supports cascade layers:
 
 {{ embed.codepen(
   id='poweapY',
@@ -96,10 +96,10 @@ current browser supports cascade layers.
 
 The recent retirement of IE 11 made for some great jokes and celebration, but
 even if you or your users aren’t using IE 11, you might still be hesitant to
-incorporate `@layer` into your CSS in the case your users aren’t using the
-latest versions of browsers.
+incorporate `@layer` into your CSS in case your users aren’t using the latest
+browser versions.
 
-There is some more good news here as well. We at Oddbird worked with the fine
+There is some more good news here as well. We at OddBird worked with the fine
 folks at PostCSS to build a plugin that provides a polyfill for layers. The
 [PostCSS Cascade Layers
 polyfill](https://www.npmjs.com/package/@csstools/postcss-cascade-layers) is
@@ -155,13 +155,13 @@ principle](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity#increasi
 behind the polyfill is that increasing the number of selectors is a
 browser-compatible way to increase specificity and importance in CSS.
 
-The example above is fairly simple but if your stylesheet has a number of layers
-and highly specific selectors, you can expect the transformation to leverage a
-greater number of selectors to accommodate the complexity.
+The example above is fairly simple, but if your stylesheet has a number of
+layers and highly specific selectors, you can expect the transformation to
+leverage a greater number of selectors to accommodate the complexity.
 
 The README in the
-[Github](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-cascade-layers#how-it-works)
-repository for the polyfill illustrate this with this table:
+[GitHub](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-cascade-layers#how-it-works)
+repository for the polyfill illustrates this with a table:
 
 <table data-table>
   <thead>
@@ -190,8 +190,8 @@ repository for the polyfill illustrate this with this table:
   </tbody>
 </table>
 
-The polyfill handles for both named and anonymous layers as well as layers that
-are nested within each other.
+The polyfill handles both named and anonymous layers as well as layers that are
+nested within each other.
 
 One of the highlights of cascade layers is how this at-rule can be used in
 conjunction with `@import` to create a new layer from an input source like so:
@@ -209,7 +209,7 @@ PostCSS ecosystem.
 There are some expected limitations of the plugin since it is parsing a
 stylesheet and not running in the browser.
 
-The two main things that the plugin does not currently handle for are:
+The two main things that the plugin does not currently handle are:
 
 - Layers within media queries: When `@layer` is inside `@media`, the layers are
   conditionally rendered if the media query is true. It is not possible for this
@@ -226,8 +226,9 @@ On the bright side, the plugin does look for these elements when parsing the
 stylesheet, and will inform authors that they are not currently supported or
 handled by the plugin.
 
-These elements are best handled by polyfills in the browser so keep your eyes on
-the OddBird blog for when a browser polyfill becomes available as well.
+These elements are best handled by polyfills in the browser, so keep your eyes
+on the [OddBird blog](/blog/) to find out when a browser polyfill becomes
+available as well.
 
 ## How to use the polyfill
 
@@ -244,7 +245,7 @@ instructions are available for: [Node][node], [PostCSS CLI][postcss-cli],
 
 If you’re ready to get started, here are the first steps to get going.
 
-Begin with installing the PostCSS Cascade layers plugin into your project:
+Begin by installing the PostCSS Cascade Layers plugin into your project:
 
 ```bash
 npm install postcss @csstools/postcss-cascade-layers --save-dev
@@ -263,9 +264,9 @@ postcss([
 
 ## Let the layering begin! 🥳
 
-Cascade layers are a gamechanger and we hope that with this new polyfill you're
-excited and ready to start using them in your CSS.
+Cascade layers are a game changer, and we hope that with this new polyfill
+you're excited and ready to start using them in your CSS.
 
-Have you already started using cascade layers and/or the new polyfill? Tweet at
-us at [@Oddbird](https://twitter.com/oddbird) and tell us all about it,
-especially if you have feedback, questions, or suggestions!
+Have you already started using cascade layers and/or the new polyfill? Tweet
+[@OddBird](https://twitter.com/oddbird) and tell us all about it, especially if
+you have feedback, questions, or suggestions!
