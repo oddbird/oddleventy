@@ -32,8 +32,8 @@ summary: |
 This year, a number of new additions to the CSS specification have been
 announced. Cascade layers are one of the most anticipated – and rightfully so.
 
-If you have ever struggled with conflicting CSS selectors, making sense of CSS
-from various sources, or have used `!important` one too many times, you are
+If you have ever struggled with conflicting CSS selectors, tried making sense of
+CSS from various sources, or used `!important` one too many times, you are
 either really excited about layers or you are about to be.
 
 In a nutshell, layers allow us to define explicit containers of specificity so
