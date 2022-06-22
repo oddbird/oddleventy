@@ -313,7 +313,7 @@ params:
           sizes='card' if (type == 'post') else none,
           attrs={
             style: position,
-            class: 'u-photo' if is_entry else none
+            class: 'u-photo' if is_entry else ''
           }
         ) }}
       {%- elif image.svg -%}
@@ -476,7 +476,7 @@ params:
 #}
 {% macro subtitle(
   sub,
-  class
+  class=none
 ) %}
   {% if sub %}
     <p class="subtitle{% if class %} {{ class }}{% endif %}">

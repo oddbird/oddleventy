@@ -222,10 +222,7 @@ params:
     'class': 'dt-published'
   } if is_pubdate else none %}
 
-  <time
-    datetime="{{ start | getDate('iso') }}"
-    {{ show_attrs(pubdate) }}>
-
+  <time datetime="{{ start | getDate('iso') }}" {{ show_attrs(pubdate) }}>
     {% if ongoing %}
       {{ start | getDate('year') }}
     {% elif is_range %}
