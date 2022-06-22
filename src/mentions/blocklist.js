@@ -97,7 +97,7 @@ const domainblocklist = [
   'https://infos.by',
   'https://data-science-austria.at',
   'https://www.techyrack.com',
-  // dont end any of these with  trailing slashes, as the DOM's URL.origin api doesnt give it to you so it will fail to filter
+  // don't end any of these with trailing slashes, as the DOM's URL.origin api doesn't give it to you so it will fail to filter
 ];
 
 const additions = [
