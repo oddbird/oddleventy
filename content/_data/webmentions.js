@@ -1,10 +1,10 @@
-'use strict';
+/* eslint-disable no-console, no-sync */
 
-/* eslint-disable no-sync */
+'use strict';
 
 const fs = require('fs');
 
-const unionBy = require('lodash/unionBy');
+const _ = require('lodash');
 const fetch = require('node-fetch');
 
 const { blocklist } = require('../../src/mentions/blocklist');
@@ -22,7 +22,7 @@ const TOKEN = process.env.WEBMENTION_IO_TOKEN;
 
 const fetchWebmentions = async (since, perPage = 10000) => {
   if (!domain) {
-    // If we dont have a domain name, abort
+    // If we don't have a domain name, abort
     console.warn(
       '>>> unable to fetch webmentions: no domain name specified in site.json',
     );
@@ -30,7 +30,7 @@ const fetchWebmentions = async (since, perPage = 10000) => {
   }
 
   if (!TOKEN) {
-    // If we dont have a domain access token, abort
+    // If we don't have a domain access token, abort
     console.warn(
       '>>> unable to fetch webmentions: no access token specified in env.',
     );
@@ -60,7 +60,7 @@ const getDomain = (entry) => new URL(entry['wm-source']).origin.split('://')[1];
 
 // Merge fresh webmentions with cached entries, unique per id
 const mergeWebmentions = (a, b) => {
-  const all = unionBy(a.children, b.children, 'wm-id');
+  const all = _.unionBy(a.children, b.children, 'wm-id');
   const syns = all.reduce(
     (prev, current) => [...prev, ...(current.syndication || [])],
     [],
@@ -74,7 +74,7 @@ const mergeWebmentions = (a, b) => {
 // save combined webmentions in cache file
 const writeToCache = (data) => {
   const fileContent = JSON.stringify(data, null, 2);
-  // create cache folder if it doesnt exist already
+  // create cache folder if it doesn't exist already
   if (!fs.existsSync(CACHE_DIR)) {
     fs.mkdirSync(CACHE_DIR);
   }

@@ -1,6 +1,6 @@
 'use strict';
-const sanitizeHTML = require('sanitize-html');
 const _ = require('lodash');
+const sanitizeHTML = require('sanitize-html');
 
 // sort webmentions by published timestamp chronologically.
 // swap a.published and b.published to reverse order.
