@@ -61,10 +61,7 @@ const getDomain = (entry) => new URL(entry['wm-source']).origin.split('://')[1];
 // Merge fresh webmentions with cached entries, unique per id
 const mergeWebmentions = (a, b) => {
   const all = _.unionBy(a.children, b.children, 'wm-id');
-  const syns = all.reduce(
-    (prev, current) => [...prev, ...(current.syndication || [])],
-    [],
-  );
+  const syns = _.map(all, 'syndication');
 
   return all
     .filter((entry) => !syns.includes(entry.url))
