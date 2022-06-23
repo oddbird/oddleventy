@@ -64,8 +64,7 @@ const mergeWebmentions = (a, b) => {
   const syns = _.map(all, 'syndication');
 
   return all
-    .filter((entry) => !syns.includes(entry.url))
-    .filter((entry) => !blocklist.includes(getDomain(entry)));
+    .filter((entry) => !syns.includes(entry.url) && !blocklist.includes(getDomain(entry)));
 };
 
 // save combined webmentions in cache file
