@@ -112,7 +112,7 @@ module.exports = async () => {
   if (feed) {
     const webmentions = {
       lastFetched: new Date().toISOString(),
-      children: mergeWebmentions(cache, feed),
+      children: mergeWebmentions(feed, cache),
     };
 
     writeToCache(webmentions);
