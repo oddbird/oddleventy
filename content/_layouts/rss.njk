@@ -58,7 +58,9 @@
         {%- endif -%}
       {%- endfilter -%}
 
-      {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+      {%- if post.templateContent -%}
+        {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+      {%- endif -%}
     </content>
 
     {%- for tag in post.data.tags | publicTags %}

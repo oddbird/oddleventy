@@ -76,7 +76,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it-mark", "npm:3.0.1"],\
             ["mockdate", "npm:3.0.5"],\
             ["netlify-plugin-11ty", "npm:1.1.0"],\
-            ["node-fetch", "npm:2.6.1"],\
+            ["node-fetch", "virtual:1f65b260266f5bf5e33d9fcba604c73ed2b5b73469b08a320f1ef0481b1ea279bc63b2dd085048bfd76f967e996e20801db598bf94f994dc4ddd8c2192bd2893#npm:2.6.7"],\
             ["npm-run-all", "npm:4.1.5"],\
             ["postcss", "npm:8.4.12"],\
             ["prettier", "npm:2.6.2"],\
@@ -11618,13 +11618,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["node-fetch", [\
-        ["npm:2.6.1", {\
-          "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.1-46c670dbc1-91075bedd5.zip/node_modules/node-fetch/",\
-          "packageDependencies": [\
-            ["node-fetch", "npm:2.6.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:2.6.7", {\
           "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.7-777aa2a6df-8d816ffd1e.zip/node_modules/node-fetch/",\
           "packageDependencies": [\
@@ -12015,7 +12008,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it-mark", "npm:3.0.1"],\
             ["mockdate", "npm:3.0.5"],\
             ["netlify-plugin-11ty", "npm:1.1.0"],\
-            ["node-fetch", "npm:2.6.1"],\
+            ["node-fetch", "virtual:1f65b260266f5bf5e33d9fcba604c73ed2b5b73469b08a320f1ef0481b1ea279bc63b2dd085048bfd76f967e996e20801db598bf94f994dc4ddd8c2192bd2893#npm:2.6.7"],\
             ["npm-run-all", "npm:4.1.5"],\
             ["postcss", "npm:8.4.12"],\
             ["prettier", "npm:2.6.2"],\

@@ -45,4 +45,25 @@ const styles = (dict) =>
     .map((val, prop) => (val ? `${prop}:${val};` : ''))
     .reduce((all, one) => `${all}${one}`, '');
 
-module.exports = { typeCheck, styles };
+
+/* @docs
+label: onlyShow
+category: Filter
+note: |
+  Return only the first n items in a collection.
+example: |
+  
+params:
+  dict:
+    type: object
+    note: CSS property-value pairs
+*/
+const onlyShow = (array, n) => {
+  if (n < 0) {
+    return array.slice(n);
+  }
+
+  return array.slice(0, n);
+}
+
+module.exports = { typeCheck, styles, onlyShow };

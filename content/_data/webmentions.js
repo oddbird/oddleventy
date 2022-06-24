@@ -4,11 +4,16 @@
 
 const fs = require('fs');
 
+const yaml = require('js-yaml');
 const _ = require('lodash');
 const fetch = require('node-fetch');
 
 const { blocklist } = require('../../src/mentions/blocklist');
-const domain = 'www.oddbird.net';
+
+const site = yaml.load(
+  // eslint-disable-next-line no-sync
+  fs.readFileSync('./content/_data/site.yaml', 'utf8'),
+);
 
 // Load .env variables with dotenv
 require('dotenv').config();
@@ -21,7 +26,7 @@ const API = 'https://webmention.io/api';
 const TOKEN = process.env.WEBMENTION_IO_TOKEN;
 
 const fetchWebmentions = async (since, perPage = 10000) => {
-  if (!domain) {
+  if (!site.domain) {
     // If we don't have a domain name, abort
     console.warn(
       '>>> unable to fetch webmentions: no domain name specified in site.json',
@@ -38,7 +43,7 @@ const fetchWebmentions = async (since, perPage = 10000) => {
   }
 
   const urlBase = `${API}/mentions.jf2`;
-  let url = `${urlBase}?domain=${domain}&token=${TOKEN}&per-page=${perPage}`;
+  let url = `${urlBase}?domain=${site.domain}&token=${TOKEN}&per-page=${perPage}`;
 
   if (since) {
     url = `${url}&since=${since}`;

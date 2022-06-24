@@ -1,5 +1,6 @@
 'use strict';
 
+// from https://github.com/sw-yx/domainblocklist
 const domainblocklist = [
   'http://gadgetsearcher.com',
   'https://pixallus.com',
@@ -100,6 +101,8 @@ const domainblocklist = [
   // don't end any of these with trailing slashes, as the DOM's URL.origin api doesn't give it to you so it will fail to filter
 ];
 
+// from our own experience (including miriamsuzanne.com)
+// finding spam on the webmention.io dashboard
 const additions = [
   'opta.live',
   'www.imoneyhub.com',
@@ -138,10 +141,15 @@ const additions = [
   'usae.sit',
   'helpbuildweb.com',
   'sharewarepile.com',
+  'sharewaredepo.com',
+  'www.codersjungle.com',
+  'www.monsterstudios.com.ng',
+  'technewsbeats.com',
+  'kerbco.com',
 ];
 
 const blocklist = [...domainblocklist, ...additions]
-  .map((source) => source.split('://')[1])
+  .map((source) => source.split('://').at(-1))
   .filter((domain, i, all) => all.indexOf(domain) === i);
 
 module.exports = {

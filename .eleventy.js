@@ -100,6 +100,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('styles', utils.styles);
+  eleventyConfig.addFilter('onlyShow', utils.onlyShow);
 
   eleventyConfig.addFilter('getDate', time.getDate);
 
@@ -152,15 +153,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('imgSrc', (src) =>
     images.image(src, null, null, null, true),
   );
-
-  // Get the first `n` elements of a collection.
-  eleventyConfig.addFilter('onlyShow', (array, n) => {
-    if (n < 0) {
-      return array.slice(n);
-    }
-
-    return array.slice(0, n);
-  });
 
   // shortcodes
   eleventyConfig.addPairedShortcode('md', type.md);
