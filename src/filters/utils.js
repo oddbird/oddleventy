@@ -45,14 +45,13 @@ const styles = (dict) =>
     .map((val, prop) => (val ? `${prop}:${val};` : ''))
     .reduce((all, one) => `${all}${one}`, '');
 
-
 /* @docs
 label: onlyShow
 category: Filter
 note: |
   Return only the first n items in a collection.
 example: |
-  
+
 params:
   dict:
     type: object
@@ -64,6 +63,6 @@ const onlyShow = (array, n) => {
   }
 
   return array.slice(0, n);
-}
+};
 
 module.exports = { typeCheck, styles, onlyShow };

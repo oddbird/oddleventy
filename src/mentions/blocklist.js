@@ -1,5 +1,7 @@
 'use strict';
 
+const _ = require('lodash');
+
 // from https://github.com/sw-yx/domainblocklist
 const domainblocklist = [
   'http://gadgetsearcher.com',
@@ -148,9 +150,11 @@ const additions = [
   'kerbco.com',
 ];
 
-const blocklist = [...domainblocklist, ...additions]
-  .map((source) => source.split('://').at(-1))
-  .filter((domain, i, all) => all.indexOf(domain) === i);
+const blocklist = _.uniq(
+  [...domainblocklist, ...additions].map((source) =>
+    source.split('://').at(-1),
+  ),
+);
 
 module.exports = {
   blocklist,

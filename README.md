@@ -85,7 +85,10 @@ yarn sassdoc
 Sass Docs are compiled into the `_site/styleguide/` folder, which is then available
 at the URL: `/styleguide/`.
 
-The `WEBMENTION_IO_TOKEN` environment variable is required to fetch new webmentions. That variable is set by Netlify at build-time, but can also be set locally in a (git-ignored) `.env` file at the root of the project. The token value is available to OddBird team members in a shared Keybase file.
+The `WEBMENTION_IO_TOKEN` environment variable is required to fetch new
+webmentions. That variable is set by Netlify at build-time, but can also be set
+locally in a (git-ignored) `.env` file at the root of the project. The token
+value is available to OddBird team members in a shared Keybase file.
 
 ## Deployment
 

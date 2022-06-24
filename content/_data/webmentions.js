@@ -10,10 +10,7 @@ const fetch = require('node-fetch');
 
 const { blocklist } = require('../../src/mentions/blocklist');
 
-const site = yaml.load(
-  // eslint-disable-next-line no-sync
-  fs.readFileSync('./content/_data/site.yaml', 'utf8'),
-);
+const site = yaml.load(fs.readFileSync('./content/_data/site.yaml', 'utf8'));
 
 // Load .env variables with dotenv
 require('dotenv').config();
@@ -43,6 +40,7 @@ const fetchWebmentions = async (since, perPage = 10000) => {
   }
 
   const urlBase = `${API}/mentions.jf2`;
+  // eslint-disable-next-line max-len
   let url = `${urlBase}?domain=${site.domain}&token=${TOKEN}&per-page=${perPage}`;
 
   if (since) {
@@ -68,8 +66,10 @@ const mergeWebmentions = (a, b) => {
   const all = _.unionBy(a.children, b.children, 'wm-id');
   const syns = _.map(all, 'syndication');
 
-  return all
-    .filter((entry) => !syns.includes(entry.url) && !blocklist.includes(getDomain(entry)));
+  return all.filter(
+    (entry) =>
+      !syns.includes(entry.url) && !blocklist.includes(getDomain(entry)),
+  );
 };
 
 // save combined webmentions in cache file
