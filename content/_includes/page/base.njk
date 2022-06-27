@@ -1,10 +1,26 @@
+{%- import 'utility.macros.njk' as utility -%}
 {%- import 'layout.macros.njk' as layout -%}
 
+{# is this the page for one of us? #}
+{%- set is_bird = bird and (bird != 'oddbird') -%}
 
-<main data-layout="main" aria-labelledby="title">
+{# Does this page contain a feed of multiple entries on a topic? #}
+{%- set is_feed = is_feed or index or is_bird -%}
+
+{# is this page itself an entry that can be syndicated in a feed? #}
+{%- set is_entry = tags and ('_post' in tags) -%}
+
+{# based on the above, what microformats should be applied? #}
+{# see: https://microformats.org/wiki/microformats2 #}
+{%- set hclass = 'h-feed' if is_feed else ('h-entry' if is_entry else none) -%}
+{%- set hclass = [hclass or '', 'h-card'] | join(' ') if is_bird else hclass -%}
+{%- set hcontent = 'e-content' if is_entry else ('p-note' if is_bird else none) -%}
+
+{# The actual output HTML #}
+<main data-layout="main" aria-labelledby="title" {{ utility.attr_if('class', hclass) }}>
   {% include "page/header.njk" %}
 
-  <div data-main data-typeset>
+  <div data-main data-typeset {{ utility.attr_if('class', hcontent)}}>
     {{ content | typogr | safe }}
     {% include "page/list.njk" %}
   </div>

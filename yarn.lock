@@ -4603,6 +4603,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^16.0.1":
+  version: 16.0.1
+  resolution: "dotenv@npm:16.0.1"
+  checksum: f459ffce07b977b7f15d8cc4ee69cdff77d4dd8c5dc8c85d2d485ee84655352c2415f9dd09d42b5b5985ced3be186130871b34e2f3e2569ebc72fbc2e8096792
+  languageName: node
+  linkType: hard
+
 "doxray@npm:^0.10.1":
   version: 0.10.1
   resolution: "doxray@npm:0.10.1"
@@ -9270,6 +9277,7 @@ __metadata:
     cssremedy: 0.1.0-beta.2
     date-fns: ^2.28.0
     date-fns-tz: ^1.3.3
+    dotenv: ^16.0.1
     doxray: ^0.10.1
     eslint: ^8.13.0
     eslint-config-prettier: ^8.5.0
@@ -9289,6 +9297,7 @@ __metadata:
     markdown-it-mark: ^3.0.1
     mockdate: ^3.0.5
     netlify-plugin-11ty: ^1.1.0
+    node-fetch: ^2.6.7
     npm-run-all: ^4.1.5
     postcss: ^8.4.12
     prettier: ^2.6.2
@@ -12352,7 +12361,7 @@ __metadata:
 
 "typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>":
   version: 4.6.3
-  resolution: "typescript@patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"
+  resolution: "typescript@patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=7ad353"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver

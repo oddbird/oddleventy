@@ -100,6 +100,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('styles', utils.styles);
+  eleventyConfig.addFilter('onlyShow', utils.onlyShow);
 
   eleventyConfig.addFilter('getDate', time.getDate);
 
