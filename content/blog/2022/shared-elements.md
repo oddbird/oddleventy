@@ -349,7 +349,7 @@ const btnPress = (btn) => {
 };
 ```
 
-Roughly,
+Roughly speaking,
 the browser will take a picture of each tagged element
 before any changes are applied by the callback function,
 and then take a picture of any tag-associated elements
