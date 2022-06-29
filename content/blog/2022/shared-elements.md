@@ -2,12 +2,22 @@
 title: Every Transition is a Page Transition?
 sub: Experimenting with the shared element transitions API
 author: miriam
-date: 2022-06-27
+date: 2022-06-29
 tags:
   - Article
   - CSS
   - CSSWG
   - JavaScript
+image:
+  src: blog/2022/element-transitions/starwars-wipe.jpg
+  alt: |
+    A scene wipe transition in Star Wars,
+    as Luke and C3P0 in a speeder
+    wipe across a close-up
+    of Luke and Obi-Wan talking.
+    Over top, a dotted line shows the transition edge,
+    and a red arrow shows the transition movement
+    in front of the speeder.
 layers:
   caption: |
     Layers can be written in any order,
