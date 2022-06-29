@@ -135,14 +135,23 @@ params:
   width=none,
   caption=none
 ) %}
-  {{ figure(
-    data=[{
-      'iframe': src,
+  {% if '://' in src %}
+    {{ figure(
+      data=[{
+        'iframe': src,
+        'height': height,
+        'width': width
+      }],
+      caption=caption
+    ) }}
+  {% else %}
+    {%- set src = '/assets/media/' + src -%}
+    {%- set style = {
       'height': height,
       'width': width
-    }],
-    caption=caption
-  ) }}
+    } -%}
+    <video src="{{ src }}" {{ utility.style_if(style) }} controls="controls">{{ src | mdInline }}</video>
+  {% endif %}
 {% endmacro %}
 
 

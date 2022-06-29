@@ -7,8 +7,8 @@ describe('utility filters', () => {
   });
 
   test('styles', () => {
-    const testStyles = { foo: 'bar-baz' };
-    const expected = 'foo:bar-baz;';
+    const testStyles = { foo: 'bar-baz', buz: 'bang', other: null };
+    const expected = 'foo:bar-baz;buz:bang;';
     const emptyStyles = { foo: '' };
 
     expect(styles(testStyles)).toEqual(expected);
