@@ -45,12 +45,12 @@ summary: |
 
 {% import 'embed.macros.njk' as embed %}
 
-Over the last couple years,
+Over the last couple of years,
 the [Web Incubator Community Group](https://github.com/WICG)
 has been developing a proposal for
 [Shared Element Transitions](https://github.com/WICG/shared-element-transitions).
 The stated goal
-is to smooth-out transitions
+is to smooth out transitions
 across page-loads on the web --
 helping users maintain context as they navigate.
 From [the explainer](https://github.com/WICG/shared-element-transitions/blob/main/explainer.md):
@@ -138,7 +138,7 @@ which makes that possible!
 
 {{ embed.video('https://youtube.com/embed/JCJUPJ_zDQ4') }}
 
-1. We can use `page-transition-tag` property in CSS
+1. We can use the `page-transition-tag` property in CSS
    to give each element a name.
    If the start and end pages both have
    an element with the same name,
@@ -147,7 +147,7 @@ which makes that possible!
    we still need JavaScript
    to create and start transition events
    (we'll get there).
-3. We can optionally override the default transitions in CSS,
+3. We can optionally override the default transitions in CSS
    by applying animation styles
    to several pseudo-elements
    that represent the elements-in-transition.
@@ -227,7 +227,7 @@ and so on, up through `0.998` and eventually `1`.
 But there are many properties
 that we can't animate in that way,
 like grid-item positions.
-There are no valid `grid-column-start` value between `1` and `2` --
+There are no valid `grid-column-start` values between `1` and `2` --
 grid lines only exist as whole steps,
 or what we call 'discreet' values,
 without any other values in-between.
@@ -259,7 +259,7 @@ The visualization starts
 with an explicit layer order
 followed by 9 layer blocks & imports,
 mixed together in random order.
-Then three buttons allowing them
+Three buttons allow them
 to be shown either in their original order,
 sorted so last-takes-precedence,
 or weighted with most powerful at the top:
@@ -276,7 +276,7 @@ and then CSS `order` and `flex-direction`
 (both discreet values)
 are used to re-order the list
 in different ways.
-I wanted to animate the re-ordering,
+I wanted to animate the re-ordering
 to make it clear what's happening,
 but in a hurry
 I didn't want to mess with
@@ -309,7 +309,7 @@ I used a `for` loop in Sass
 to apply unique transition-tags on each layer:
 
 ```scss
-// for each of the nine layers blocks
+// for each of the nine layer blocks
 @for $i from 1 through 9 {
   // give it a transition-tag based on its nth-position
   [data-layer]:nth-of-type(#{$i}) {
@@ -326,7 +326,7 @@ This is the function that 'triggers' our change:
 ```js
 const btnPress = (btn) => {
   list.setAttribute('data-sort', btn.dataset.set);
-}
+};
 ```
 
 All that's left is telling the browser
@@ -344,9 +344,9 @@ const btnPress = (btn) => {
   // start the transition,
   // and make our change in the callback function
   await transition.start(() =>
-    doc.setAttribute("data-sort", btn.dataset.set)
+    doc.setAttribute('data-sort', btn.dataset.set),
   );
-}
+};
 ```
 
 Roughly,
@@ -379,13 +379,13 @@ Here's the live demo on codepen:
 
 And a video of the animated results:
 
-{{ embed.video('2022/layer-page-transition.mov', 1244, 700) }}
+{{ embed.video('2022/layer-page-transition.mov', height='1244', width='700') }}
 
 You might also notice the `clip-path` animation on the list itself
 looks a bit janky.
 The prototype doesn't yet support
 'nesting' shared-elements in a transition --
-so the items are being pulled-out of the list
+so the items are being pulled out of the list
 (where they appear un-clipped)
 for the duration of the change.
 If I understand right,

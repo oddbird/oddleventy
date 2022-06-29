@@ -147,10 +147,10 @@ params:
   {% else %}
     {%- set src = '/assets/media/' + src -%}
     {%- set style = {
-        'height': height,
-        'width': width
+      'height': height,
+      'width': width
     } -%}
-    <video src="{{ src }}" {{ utility.style_if(style) }} controls="controls">{{ src | mdInline }}</audio>
+    <video src="{{ src }}" {{ utility.style_if(style) }} controls="controls">{{ src | mdInline }}</video>
   {% endif %}
 {% endmacro %}
 
