@@ -12,7 +12,7 @@ image:
   src: blog/2022/element-transitions/starwars-wipe.jpg
   alt: |
     A scene wipe transition in Star Wars,
-    as Luke and C3P0 in a speeder
+    as Luke and C-3PO in a speeder
     wipe across a close-up
     of Luke and Obi-Wan talking.
     Over top, a dotted line shows the transition edge,
