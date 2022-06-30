@@ -96,7 +96,7 @@ params:
       content=name | mdInline | safe,
       url=page.url if link else none,
       class=class
-    ) }}</span>
+    ) }}
   {%- else -%}
     <span {{ utility.attr_if('class', class) }}>{{ name | capitalize }}</span>
   {%- endif -%}
