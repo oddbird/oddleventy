@@ -2,6 +2,8 @@
 title: What's the impact of aiming for 100% test coverage?
 author: olu
 date: 2022-06-08
+syndication:
+  - https://twitter.com/oluoluoxenfree/status/1534612562796494850
 tags:
   - Article
   - Testing

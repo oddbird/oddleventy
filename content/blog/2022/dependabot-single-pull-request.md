@@ -2,6 +2,8 @@
 title: Replace Dependabot With a Single Dependency Upgrade Pull Request
 author: ed
 date: 2022-06-01
+syndication:
+  - https://twitter.com/OddBird/status/1532795655076339712
 tags:
   - Article
   - Build Tools
@@ -47,11 +49,11 @@ to upgrade dependencies at our convenience.
 Broadly speaking, the workflow will:
 
 1. Checkout our code
-1. Configure the runtimes required by our project (Python and Node)
-1. Run a custom command to upgrade all dependencies
-1. Use git to detect changed files
-1. Commit the changes to a pre-defined branch (if they exist)
-1. Open a pull request for that branch (if it doesn't exist already)
+2. Configure the runtimes required by our project (Python and Node)
+3. Run a custom command to upgrade all dependencies
+4. Use git to detect changed files
+5. Commit the changes to a pre-defined branch (if they exist)
+6. Open a pull request for that branch (if it doesn't exist already)
 
 This workflow should be compatible with most projects, but you will need to
 adjust steps two and three to run your own commands depending on what package

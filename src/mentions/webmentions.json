@@ -1,6 +1,50 @@
 {
-  "lastFetched": "2022-06-29T20:00:24.285Z",
+  "lastFetched": "2022-06-30T19:19:56.079Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mia (not her best work)",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0070719556938ae95053b104df74ca15213d4a99abb84c5e03fe27b0c52e139e.jpg",
+        "url": "https://twitter.com/TerribleMia"
+      },
+      "url": "https://twitter.com/TerribleMia/status/1542572293117071360",
+      "published": "2022-06-30T18:14:28+00:00",
+      "wm-received": "2022-06-30T18:49:14Z",
+      "wm-id": 1425458,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542572293117071360",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "html": "This was all sparked by a demo video <a href=\"https://twitter.com/jaffathecake\">@jaffathecake</a> released last month, and then an edge-case <a href=\"https://twitter.com/jh3yy\">@jh3yy</a> suggested, a visualization of Cascade Layers, and an inspiring talk on 'impossible' animations from <a href=\"https://twitter.com/cassiecodes\">@cassiecodes</a>. Put it all together, and…\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
+        "text": "This was all sparked by a demo video @jaffathecake released last month, and then an edge-case @jh3yy suggested, a visualization of Cascade Layers, and an inspiring talk on 'impossible' animations from @cassiecodes. Put it all together, and…"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Johannes Odland 🏳️‍🌈",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a9882e9b684f606ecedd1f140e7a763e553db6b6aa60ce95cc34869979926210.jpg",
+        "url": "https://twitter.com/mrodland"
+      },
+      "url": "https://twitter.com/mrodland/status/1542544240865157122",
+      "published": "2022-06-30T16:23:00+00:00",
+      "wm-received": "2022-06-30T16:48:19Z",
+      "wm-id": 1425400,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542544240865157122",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "html": "I find this approach interesting, but would it work if there are other elements like tooltips above the transitioning elements, or if there are other animations, videos or interactions running while the transition takes place?\n\nI’m dreaming of an element transition api 😀\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
+        "text": "I find this approach interesting, but would it work if there are other elements like tooltips above the transitioning elements, or if there are other animations, videos or interactions running while the transition takes place?\n\nI’m dreaming of an element transition api 😀"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
