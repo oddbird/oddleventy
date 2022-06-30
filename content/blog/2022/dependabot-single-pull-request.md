@@ -2,6 +2,8 @@
 title: Replace Dependabot With a Single Dependency Upgrade Pull Request
 author: ed
 date: 2022-06-01
+syndication:
+  - https://twitter.com/OddBird/status/1532795655076339712
 tags:
   - Article
   - Build Tools

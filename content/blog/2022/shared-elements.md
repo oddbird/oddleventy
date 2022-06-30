@@ -3,6 +3,8 @@ title: Every Transition is a Page Transition?
 sub: Experimenting with the shared element transitions API
 author: miriam
 date: 2022-06-29
+syndication:
+  - https://twitter.com/OddBird/status/1542535314366902277
 tags:
   - Article
   - CSS

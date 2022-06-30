@@ -24,4 +24,10 @@
     {{ content | typogr | safe }}
     {% include "page/list.njk" %}
   </div>
+
+  <!-- used for webmentions -->
+  <a href="{{ page.url | url }}" class="u-url" hidden>{{ (banner or title) | mdInline | safe }}</a>
+  {% for link in syndication %}
+    <a rel="syndication" class="u-syndication" href="{{ link | url }}" hidden>{{ link | url }}</a>
+  {% endfor %}
 </main>
