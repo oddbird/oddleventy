@@ -10,13 +10,25 @@ const striptags = require('striptags');
 const truncate = require('truncate-html');
 const type = require('typogr');
 
+const { anchorLinkIconString } = require('../../src/js/clickToCopy');
+
 const mdown = markdown({
   html: true,
   breaks: false,
   typographer: true,
 })
   .disable('code')
-  .use(mdAnchor)
+  .use(mdAnchor, {
+    level: [2],
+    permalink: mdAnchor.permalink.linkAfterHeader({
+      symbol: anchorLinkIconString,
+      style: 'visually-hidden',
+      assistiveText: (title) => `Copy permalink to “${title}”`,
+      visuallyHiddenClass: 'sr-only',
+      wrapper: ['<div class="anchor-link-wrapper">', '</div>'],
+      placement: 'before',
+    }),
+  })
   .use(mdMark)
   .use(mdFootnote);
 
