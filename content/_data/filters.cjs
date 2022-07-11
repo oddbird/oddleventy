@@ -21,6 +21,12 @@ const doxOptions = {
       comment: /\/\*\s*@docs[^*]*\*+(?:[^/*][^*]*\*+)*\//gm,
       ignore: /\/\*\s*ignore-@docs[\s\S]*/gm,
     },
+    cjs: {
+      opening: /\/\*\s*@docs[^\n]*\n/m,
+      closing: /\*\//,
+      comment: /\/\*\s*@docs[^*]*\*+(?:[^/*][^*]*\*+)*\//gm,
+      ignore: /\/\*\s*ignore-@docs[\s\S]*/gm,
+    },
   },
 };
 
