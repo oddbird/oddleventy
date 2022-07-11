@@ -3,7 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 
-module.exports = {
+export default {
   input: 'src/js/index.js',
   output: {
     file: '_built/js/scripts.js',

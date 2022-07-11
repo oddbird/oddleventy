@@ -17,6 +17,7 @@
 .header-anchor {
   --left-position-offset-default: -0.25em;
   --top-position-offset-default: var(--gutter-plus);
+
   left: var(--anchor-position-offset-l, var(--left-position-offset-default));
   position: absolute;
   top: var(--top-position-offset-default);
@@ -48,6 +49,7 @@
 .anchor-clicked {
   &::before {
     @include tools.animate('fadein-out');
+
     background: var(--feature);
     border-radius: var(--radius);
     color: var(--bg);
