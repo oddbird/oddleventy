@@ -1,5 +1,9 @@
+@use '~sassdoc-theme-herman/scss/utilities' as herman;
+@use '../tools';
+@use 'sass:meta';
+@use 'brand';
 @forward 'config';
-@forward 'brand';
-@forward 'content';
-@forward 'background';
-@forward 'ccs-defaults';
+
+@include herman.add('colors',
+  'brand-colors',
+  tools.compile-colors(meta.module-variables('brand')));

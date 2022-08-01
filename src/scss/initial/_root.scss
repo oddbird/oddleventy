@@ -4,17 +4,16 @@
 
 html {
   @include config.font-family('body');
+  @include config.colors--;
 
   --clip-overlap: var(--page-margin);
   --clip-angle: var(--double-gutter);
   --clip-space: calc(var(--clip-angle) + var(--gutter));
   --clip-left: polygon(var(--clip-angle) 0, 100% 0, 100% 100%, 0 100%);
-  --clip-right: polygon(
-    0 0,
-    100% 0,
-    calc(100% - var(--clip-angle)) 100%,
-    0 100%
-  );
+  --clip-right: polygon(0 0,
+      100% 0,
+      calc(100% - var(--clip-angle)) 100%,
+      0 100%);
 
   font-size: config.size('rem');
   line-height: config.ratio('line-height');

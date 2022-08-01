@@ -1,5 +1,0 @@
-@use '~sassdoc-theme-herman/scss/utilities' as herman;
-@use 'sass:meta';
-@use 'brand';
-
-@include herman.add('colors', 'brand-colors', meta.module-variables('brand'));
