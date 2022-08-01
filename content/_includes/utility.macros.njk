@@ -217,10 +217,12 @@ params:
     <i>{{ prefix }}</i>
   {% endif -%}
 
-  <time
-    datetime="{{ start | getDate('iso') }}"
-    {{ attr_if('pubdate', is_pubdate) }}>
+  {% set pubdate = {
+    'pubdate': true,
+    'class': 'dt-published'
+  } if is_pubdate else none %}
 
+  <time datetime="{{ start | getDate('iso') }}" {{ show_attrs(pubdate) }}>
     {% if ongoing %}
       {{ start | getDate('year') }}
     {% elif is_range %}

@@ -34,6 +34,10 @@ settings:
       - '.tsx'
   import/resolver:
     typescript: {}
+    node:
+      extensions:
+        - .js
+        - .cjs
 extends:
   - eslint:recommended
   - plugin:import/recommended

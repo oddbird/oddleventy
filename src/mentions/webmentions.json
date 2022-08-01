@@ -1,0 +1,1108 @@
+{
+  "lastFetched": "2022-07-11T18:09:47.478Z",
+  "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://dev.to/sebastienlorber/this-week-in-react-111-reassure-multiplayer-cursors-nextjs-meteor-storybook-tanstack-flashlist-bun-52cm",
+      "published": null,
+      "wm-received": "2022-07-06T12:35:15Z",
+      "wm-id": 1428514,
+      "wm-source": "https://dev.to/sebastienlorber/this-week-in-react-111-reassure-multiplayer-cursors-nextjs-meteor-storybook-tanstack-flashlist-bun-52cm",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/?utm_campaign=This%20Week%20In%20React&utm_medium=email&utm_source=Revue%20newsletter",
+      "mention-of": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/?utm_campaign=This%20Week%20In%20React&utm_medium=email&utm_source=Revue%20newsletter",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://dev.to/sebastienlorber/this-week-in-react-111-reassure-multiplayer-cursors-nextjs-meteor-storybook-tanstack-flashlist-bun-52cm"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Bramus",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/05867d2965ead9c19f56436d55d4f94c52262b3b51dae292b9b9f45fa2a96995.jpg",
+        "url": "https://twitter.com/bramus"
+      },
+      "url": "https://twitter.com/bramus/status/1544628222784069632",
+      "published": "2022-07-06T10:24:00+00:00",
+      "wm-received": "2022-07-06T10:56:22Z",
+      "wm-id": 1428466,
+      "wm-source": "https://brid.gy/comment/twitter/hdv/1544581755096764416/1544628222784069632",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "content": {
+        "html": "When it comes to id attribute values I’m still living in an HTML 4.01 world apparently. Ooops! 😅\n\nGlad to see the restrictions got lifted. <a href=\"https://twitter.com/search?q=%23TIL\">#TIL</a>\n\n<a class=\"u-mention\" href=\"http://hidde.blog/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/derSchepp\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/hdv\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mathias\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mmatuzo\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/sanacodes\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
+        "text": "When it comes to id attribute values I’m still living in an HTML 4.01 world apparently. Ooops! 😅\n\nGlad to see the restrictions got lifted. #TIL"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Bramus",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/05867d2965ead9c19f56436d55d4f94c52262b3b51dae292b9b9f45fa2a96995.jpg",
+        "url": "https://twitter.com/bramus"
+      },
+      "url": "https://twitter.com/bramus/status/1544629040878915587",
+      "published": "2022-07-06T10:27:15+00:00",
+      "wm-received": "2022-07-06T10:56:21Z",
+      "wm-id": 1428465,
+      "wm-source": "https://brid.gy/comment/twitter/hdv/1544581755096764416/1544629040878915587",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "content": {
+        "html": "Correction: back in the HTML 4.01 days \"#\" was not a valid [id] value. With HTML5 it is. See <a href=\"https://mathiasbynens.be/notes/html5-id-class\">mathiasbynens.be/notes/html5-id…</a> for details. <a href=\"https://twitter.com/search?q=%23TIL\">#TIL</a>\n<a class=\"u-mention\" href=\"http://hidde.blog/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/derSchepp\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/hdv\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mmatuzo\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/sanacodes\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
+        "text": "Correction: back in the HTML 4.01 days \"#\" was not a valid [id] value. With HTML5 it is. See mathiasbynens.be/notes/html5-id… for details. #TIL"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "🔴 Christian Schaefer",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78535c31d268cb5af6a059ddb36015cc3526779136df20cbcd11fdec85cc9845.jpg",
+        "url": "https://twitter.com/derSchepp"
+      },
+      "url": "https://twitter.com/derSchepp/status/1544621957106339841",
+      "published": "2022-07-06T09:59:06+00:00",
+      "wm-received": "2022-07-06T10:14:05Z",
+      "wm-id": 1428448,
+      "wm-source": "https://brid.gy/comment/twitter/hdv/1544581755096764416/1544621957106339841",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "content": {
+        "html": "Wasn't it that historically valid ids had to start with a-z, but that got changed or rather adapted to reality later on in the spec, now allowing any character?\n<a class=\"u-mention\" href=\"http://hidde.blog/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/bramus\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/hdv\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mathias\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mmatuzo\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/sanacodes\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
+        "text": "Wasn't it that historically valid ids had to start with a-z, but that got changed or rather adapted to reality later on in the spec, now allowing any character?"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mathias Bynens",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c2947b2bbde3fd5b327b748ce94d19f97e83f70bdf684d3a075827ce935ed56f.jpg",
+        "url": "https://twitter.com/mathias"
+      },
+      "url": "https://twitter.com/mathias/status/1544620433466707968",
+      "published": "2022-07-06T09:53:03+00:00",
+      "wm-received": "2022-07-06T10:14:04Z",
+      "wm-id": 1428447,
+      "wm-source": "https://brid.gy/comment/twitter/hdv/1544581755096764416/1544620433466707968",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "content": {
+        "html": "What makes you say `id=\"#\"` is invalid? (Should I go and update <a href=\"https://mathiasbynens.be/notes/html5-id-class\">mathiasbynens.be/notes/html5-id…</a> after 12 years? :P)\n<a class=\"u-mention\" href=\"http://hidde.blog/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/bramus\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/derSchepp\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/hdv\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mmatuzo\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/sanacodes\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
+        "text": "What makes you say `id=\"#\"` is invalid? (Should I go and update mathiasbynens.be/notes/html5-id… after 12 years? :P)"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "🔴 Christian Schaefer",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78535c31d268cb5af6a059ddb36015cc3526779136df20cbcd11fdec85cc9845.jpg",
+        "url": "https://twitter.com/derSchepp"
+      },
+      "url": "https://twitter.com/derSchepp/status/1544608972468092930",
+      "published": "2022-07-06T09:07:31+00:00",
+      "wm-received": "2022-07-06T09:08:37Z",
+      "wm-id": 1428427,
+      "wm-source": "https://brid.gy/comment/twitter/hdv/1544581755096764416/1544608972468092930",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "content": {
+        "html": "I think that had a backslash in its selector? 🤔 /cc <a href=\"https://twitter.com/bramus\">@bramus</a>\n<a class=\"u-mention\" href=\"http://hidde.blog/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/hdv\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mmatuzo\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/sanacodes\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
+        "text": "I think that had a backslash in its selector? 🤔 /cc @bramus"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "JamCow",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/dace09fd6486df0064057e6ee4d8b06a23728f8e50e5c68b2edff3f0a1c1ba9b.jpg",
+        "url": "https://twitter.com/jamcow"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-85053418",
+      "published": null,
+      "wm-received": "2022-07-05T08:56:58Z",
+      "wm-id": 1427550,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/85053418",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Kiran Sonley",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0e7e8a5891486829d13c5ed1fe3780209f0d460084e11f3806eac49ca94bfe6d.jpg",
+        "url": "https://twitter.com/ksonnad"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-39890524",
+      "published": null,
+      "wm-received": "2022-07-04T20:56:16Z",
+      "wm-id": 1427367,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/39890524",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Florencia Gonzalez",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ce607a9e4c8380656f2b7ec493067c18301ef08f44370fc827497a52ce2c1702.jpg",
+        "url": "https://twitter.com/rightonhana"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-1372615709717528576",
+      "published": null,
+      "wm-received": "2022-07-04T18:45:33Z",
+      "wm-id": 1427318,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/1372615709717528576",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dan Soper",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/5d0b115385afa73b222bb70def64a54b302770475c6a955172015989248184b9.jpg",
+        "url": "https://twitter.com/dansoper"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-20627036",
+      "published": null,
+      "wm-received": "2022-07-04T17:04:26Z",
+      "wm-id": 1427284,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/20627036",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Michelle Barker",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/46365cd70695ca723991011a6c5a8058ec0108b4b9b31244511b9dff925663c2.jpg",
+        "url": "https://twitter.com/MicheBarks"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-205775928",
+      "published": null,
+      "wm-received": "2022-07-04T09:17:43Z",
+      "wm-id": 1427129,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/205775928",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Nathan Nye",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/82678e4e6f09c15b625790ba91902bfbe4b7cc3c702135ba88ebc8cf3cc157c8.jpg",
+        "url": "https://twitter.com/call_nye11"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-1480542259879763969",
+      "published": null,
+      "wm-received": "2022-07-04T07:36:07Z",
+      "wm-id": 1427107,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/1480542259879763969",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "José Miguel Alemán",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/dfde06e0ccc10b38ec154e41fe5b46f7f3eac1369883cded0cc53e5365b830b8.jpg",
+        "url": "https://twitter.com/jmiguelaleman"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-212255930",
+      "published": null,
+      "wm-received": "2022-07-04T07:36:07Z",
+      "wm-id": 1427108,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/212255930",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Maarten - maarteuh@mastodon.social",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d1bd6fbe5d649de4f1c30ac28e11d2e36e67121560255db941d705b70a91c4da.png",
+        "url": "https://twitter.com/Maarteuh"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-80906512",
+      "published": null,
+      "wm-received": "2022-07-04T07:35:39Z",
+      "wm-id": 1427106,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/80906512",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Kevin M.",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0667e95a89f8d304212ccb8baa0dcfbe696bb721b5c211990e885d684436f9b2.jpg",
+        "url": "https://twitter.com/MankeChave"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-960160208",
+      "published": null,
+      "wm-received": "2022-07-04T07:35:38Z",
+      "wm-id": 1427105,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/960160208",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Rainer Martínez",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/90b0f1b7ef1516f714556f1401e462e73f05f46a7bd415f010bd4572ace23f3f.jpg",
+        "url": "https://twitter.com/rainerxmf"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-4882083334",
+      "published": null,
+      "wm-received": "2022-07-03T23:25:17Z",
+      "wm-id": 1426983,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/4882083334",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "David",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1dc56cb2623896c78a5a5d84e95df11ad817dc3accea1ece3be8ab89a902b138.jpg",
+        "url": "https://twitter.com/bautistanaveros"
+      },
+      "url": "https://twitter.com/bautistanaveros/status/1543729145577889796",
+      "published": "2022-07-03T22:51:24+00:00",
+      "wm-received": "2022-07-03T23:24:51Z",
+      "wm-id": 1426978,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1543729145577889796",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "David",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1dc56cb2623896c78a5a5d84e95df11ad817dc3accea1ece3be8ab89a902b138.jpg",
+        "url": "https://twitter.com/bautistanaveros"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-85357881",
+      "published": null,
+      "wm-received": "2022-07-03T23:24:50Z",
+      "wm-id": 1426976,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/85357881",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "tregoning",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/5f8abcdc73f2c539c9bfad2c7f26c6403d762df7fea46589d7da7cb8cbfd952e.jpg",
+        "url": "https://twitter.com/tregoning"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-14060359",
+      "published": null,
+      "wm-received": "2022-07-03T23:24:50Z",
+      "wm-id": 1426977,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/14060359",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Alberto Recio",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d8d8ea57a331c682f42da8aa2c02583ab344e23168af52ca006e20c2c101a1da.jpg",
+        "url": "https://twitter.com/albertoreciodev"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-1353093638675439616",
+      "published": null,
+      "wm-received": "2022-07-03T22:39:49Z",
+      "wm-id": 1426960,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/1353093638675439616",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Adam Argyle",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ecb57ab7c7fc113262d8bdbe1e11c6aa95146a7184ae4e596b9eefe48e5558a8.jpg",
+        "url": "https://twitter.com/argyleink"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-129940111",
+      "published": null,
+      "wm-received": "2022-07-03T22:39:49Z",
+      "wm-id": 1426961,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/129940111",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Neil Tonge",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/449218a584cf0fa4d807a3f8c41b764e17374fb85e62c2d8ff9a8e3dfeded614.png",
+        "url": "https://twitter.com/rctneil"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-17602461",
+      "published": null,
+      "wm-received": "2022-07-03T22:39:46Z",
+      "wm-id": 1426959,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/17602461",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Lucas",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/7efd029fa4a8846fd36042f8c03fd774d3b39537179e70b8b036c705481e2894.jpg",
+        "url": "https://twitter.com/kbooz"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-14210645",
+      "published": null,
+      "wm-received": "2022-07-03T22:39:45Z",
+      "wm-id": 1426958,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/14210645",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Adam Argyle",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ecb57ab7c7fc113262d8bdbe1e11c6aa95146a7184ae4e596b9eefe48e5558a8.jpg",
+        "url": "https://twitter.com/argyleink"
+      },
+      "url": "https://twitter.com/argyleink/status/1543716288593178624",
+      "published": "2022-07-03T22:00:18+00:00",
+      "wm-received": "2022-07-03T22:39:20Z",
+      "wm-id": 1426957,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1543716288593178624",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "david whittemore",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/15580437ed886058c6beef5f1ce1f7ab8e3c11cc3d00bf78ff016ff0786f854e.jpg",
+        "url": "https://twitter.com/xpollen8"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-21778063",
+      "published": null,
+      "wm-received": "2022-07-03T22:39:19Z",
+      "wm-id": 1426955,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/21778063",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Devessier",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c63bf8cbb115f62aed868628138df043d9c74858db09b197fb1ff1d2704560a1.jpg",
+        "url": "https://twitter.com/BDevessier"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-725623430700212225",
+      "published": null,
+      "wm-received": "2022-07-03T22:39:19Z",
+      "wm-id": 1426956,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/725623430700212225",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Eric Lake",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/7f79802c0b0e784c73822c51f114de8404949dbe6f5d8bc511fdeeff3c8242ab.jpg",
+        "url": "https://twitter.com/itsyohuck"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-43978770",
+      "published": null,
+      "wm-received": "2022-07-03T22:39:18Z",
+      "wm-id": 1426954,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/43978770",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Cassie",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/205831d9996a855ce68750169ed44fb77252b7575fa73682fa24e8b08158b2b7.png",
+        "url": "https://twitter.com/cselin"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-48168029",
+      "published": null,
+      "wm-received": "2022-07-03T22:39:17Z",
+      "wm-id": 1426952,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/48168029",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "alex",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/5586187eae60fc7667d2e660ce90d0a69b9f89db14c6f6e53f3c6f0bcc921709.jpg",
+        "url": "https://twitter.com/alextoudic"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-395425154",
+      "published": null,
+      "wm-received": "2022-07-03T22:39:17Z",
+      "wm-id": 1426953,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/395425154",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Addy Osmani",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c3f668174b65f48fa6257f7f2359078f4ee0e5ec7c2bcbbe6171099ca4f0eb50.jpg",
+        "url": "https://twitter.com/addyosmani"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-35432643",
+      "published": null,
+      "wm-received": "2022-07-03T21:45:59Z",
+      "wm-id": 1426930,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/35432643",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Joni Korpi",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/7c2443a2df0618bfa4c5cb73298c243b3f093a6107069aefa68784f48d449c72.jpg",
+        "url": "https://twitter.com/jonikorpi"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-15907249",
+      "published": null,
+      "wm-received": "2022-07-03T21:45:59Z",
+      "wm-id": 1426931,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/15907249",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "cruel summer's thesis",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1cf24ad44b23395cabe0b1d5a567fdf6ef7f3a9d7d701b992642676751491069.jpg",
+        "url": "https://twitter.com/jelliclematt"
+      },
+      "url": "https://twitter.com/jelliclematt/status/1543702737463959553",
+      "published": "2022-07-03T21:06:27+00:00",
+      "wm-received": "2022-07-03T21:45:32Z",
+      "wm-id": 1426929,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1543702737463959553",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Cassie Evans",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/130f64cd7b4655d5a4194a4723ae22b2b3724afba56b082297240e39cb451371.jpg",
+        "url": "https://twitter.com/cassiecodes"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-758598429115310080",
+      "published": null,
+      "wm-received": "2022-07-03T21:45:31Z",
+      "wm-id": 1426927,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/758598429115310080",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "cruel summer's thesis",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1cf24ad44b23395cabe0b1d5a567fdf6ef7f3a9d7d701b992642676751491069.jpg",
+        "url": "https://twitter.com/jelliclematt"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-14462646",
+      "published": null,
+      "wm-received": "2022-07-03T21:45:31Z",
+      "wm-id": 1426928,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/14462646",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Batbayar B.",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/5231241ed3eb5997a5fd927a67998f98119aa69c8fbb87ac5dc4378be8257d9a.jpg",
+        "url": "https://twitter.com/batbayar3113"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-39935068",
+      "published": null,
+      "wm-received": "2022-07-03T05:39:54Z",
+      "wm-id": 1426610,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/39935068",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "chrzrdx",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/bcc5565ed74f70dd39dfcd453887e9cef9409e77df54195f5ed2aab64b3a99a8.jpg",
+        "url": "https://twitter.com/chrzrdx"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-703756437722435584",
+      "published": null,
+      "wm-received": "2022-07-02T22:30:00Z",
+      "wm-id": 1426477,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/703756437722435584",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Bramus",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/05867d2965ead9c19f56436d55d4f94c52262b3b51dae292b9b9f45fa2a96995.jpg",
+        "url": "https://twitter.com/bramus"
+      },
+      "url": "https://twitter.com/bramus/status/1543342554518900736",
+      "published": "2022-07-02T21:15:13+00:00",
+      "wm-received": "2022-07-02T21:40:18Z",
+      "wm-id": 1426468,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1543342554518900736",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Adithya Krishna",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/880d3ada9e9de69610a40ed0de00da13c1079ca581c243d40d9c1e129ba82709.jpg",
+        "url": "https://twitter.com/adii_kris"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-1050296076840960000",
+      "published": null,
+      "wm-received": "2022-07-01T07:41:45Z",
+      "wm-id": 1425675,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/1050296076840960000",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "hakobpogh",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/847700a0c14f0c56a4a41c70aa521e05d7b832a356285eeec8c3363629a65534.jpg",
+        "url": "https://twitter.com/hakobpogh"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-701506044971905024",
+      "published": null,
+      "wm-received": "2022-07-01T07:41:16Z",
+      "wm-id": 1425674,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/701506044971905024",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Sana",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/053fe6695df3490e62d4109bae15115dcfc5b07da4d3e72d709bf5f4b4bbd12f.jpg",
+        "url": "https://twitter.com/sanacodes"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-2872663025",
+      "published": null,
+      "wm-received": "2022-07-01T06:57:58Z",
+      "wm-id": 1425663,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/2872663025",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Adam Kuhn",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c6e16f2e2d48ef10363d3f3d4b13b328c6331cfc1ec75bc96e043731a2af5457.jpg",
+        "url": "https://twitter.com/cobra_winfrey"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-576763427",
+      "published": null,
+      "wm-received": "2022-07-01T02:22:15Z",
+      "wm-id": 1425601,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/576763427",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Ofer Shaal",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b4e96c132f4401174c009607f5551ec855104e1e3c34c6329d4498a53649ab39.jpg",
+        "url": "https://twitter.com/shaal"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-1760991",
+      "published": null,
+      "wm-received": "2022-07-01T01:36:38Z",
+      "wm-id": 1425586,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/1760991",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Rubia Dias",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a2696094d5618e3a2b053a0b587e64bd5b4c94703141671b5df3a493377c8807.jpg",
+        "url": "https://twitter.com/rubiafer"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-93178891",
+      "published": null,
+      "wm-received": "2022-07-01T01:36:38Z",
+      "wm-id": 1425587,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/93178891",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "gmlt.A",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2c2f76e6a72d7902314cffdfe37a3700f7676e2dc786230a22e47e9dc617c695.jpg",
+        "url": "https://twitter.com/gmltA"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-178452928",
+      "published": null,
+      "wm-received": "2022-07-01T00:05:50Z",
+      "wm-id": 1425574,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/178452928",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Sondra Eby",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e8f4f3777f27a928f2e1fadc08712d38c61fcc485f20733d024d1ae63ad7bd0a.jpg",
+        "url": "https://twitter.com/SondraEby"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-720110510998466561",
+      "published": null,
+      "wm-received": "2022-06-30T23:13:24Z",
+      "wm-id": 1425568,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/720110510998466561",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "CY is here 👩🏻‍💻🚀🖖🏻",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e868478e1a5fed78f80a25b1c42ec10d1a3020fc087096a9c058b105c90fff77.jpg",
+        "url": "https://twitter.com/cyishere"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277#favorited-by-2155621",
+      "published": null,
+      "wm-received": "2022-06-30T23:13:23Z",
+      "wm-id": 1425567,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1542535314366902277/2155621",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "like-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Michaël Vanderheyden",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0ecc21a658bbea1c23a73175a4e586b2039d74165fd768aff5065603a298c853.jpg",
+        "url": "https://twitter.com/Th3S4mur41"
+      },
+      "url": "https://twitter.com/Th3S4mur41/status/1542578935644422144",
+      "published": "2022-06-30T18:40:52+00:00",
+      "wm-received": "2022-06-30T22:11:45Z",
+      "wm-id": 1425550,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1542578935644422144",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Olu (they/them)",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d92fe2e951e24ac2b489c2cbf78c8c6dc33f52a49e747897809a7e14d5f0a9b2.jpg",
+        "url": "https://twitter.com/oluoluoxenfree"
+      },
+      "url": "https://twitter.com/oluoluoxenfree/status/1542541804679077888",
+      "published": "2022-06-30T16:13:19+00:00",
+      "wm-received": "2022-06-30T22:11:45Z",
+      "wm-id": 1425551,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1542541804679077888",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "OddBird",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ea20460b71e4d74b0591db388f0dc2d58855c3b3b7414a7dc268bcfd9203f35f.jpg",
+        "url": "https://twitter.com/OddBird"
+      },
+      "url": "https://twitter.com/OddBird/status/1542535314366902277",
+      "published": "2022-06-30T15:47:32+00:00",
+      "wm-received": "2022-06-30T22:11:44Z",
+      "wm-id": 1425549,
+      "wm-source": "https://brid.gy/post/twitter/oddbird/1542535314366902277",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "html": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n<a href=\"https://twitter.com/TerribleMia\">@TerribleMia</a> explores the possibility of native FLIP animations in the browser:\n\n<a href=\"https://www.oddbird.net/2022/06/29/shared-elements/\">oddbird.net/2022/06/29/sha…</a>",
+        "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
+      },
+      "mention-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Paul Lewis",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/85bdf1b1b5ba161ee2c1db9fe35e383f64d43497b17e23b17a5e7eb999c560b4.jpg",
+        "url": "https://twitter.com/aerotwist"
+      },
+      "url": "https://twitter.com/aerotwist/status/1542613283747889154",
+      "published": "2022-06-30T20:57:21+00:00",
+      "wm-received": "2022-06-30T21:10:57Z",
+      "wm-id": 1425534,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542613283747889154",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "html": "Good to know you're over it\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/cassiecodes\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jaffathecake\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jh3yy\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
+        "text": "Good to know you're over it"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jack Franklin",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d7da0a8ee3493dfecf0bcb1c84583a11f1d67c139efb1dbe3add69f35a38c965.jpg",
+        "url": "https://twitter.com/Jack_Franklin"
+      },
+      "url": "https://twitter.com/Jack_Franklin/status/1542615809008275456",
+      "published": "2022-06-30T21:07:23+00:00",
+      "wm-received": "2022-06-30T21:10:57Z",
+      "wm-id": 1425535,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542615809008275456",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "html": "I'd have called it \"Start End Opposite\", or SEO, to avoid any confusion 👍\n<a class=\"u-mention\" href=\"https://twitter.com/aerotwist\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/cassiecodes\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jaffathecake\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
+        "text": "I'd have called it \"Start End Opposite\", or SEO, to avoid any confusion 👍"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Raphael Höser",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a6cc242b6dceb77912f932c6b0a3e3164742917eaca3f18dda4b3d6c86c60091.jpg",
+        "url": "https://twitter.com/Snapstromegon"
+      },
+      "url": "https://twitter.com/Snapstromegon/status/1542614801095999493",
+      "published": "2022-06-30T21:03:23+00:00",
+      "wm-received": "2022-06-30T21:10:56Z",
+      "wm-id": 1425533,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542614801095999493",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "html": "Hey, you could just call it SEND...\nStart\nEnd\nNegate\nDance\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/aerotwist\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/cassiecodes\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jaffathecake\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jh3yy\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
+        "text": "Hey, you could just call it SEND...\nStart\nEnd\nNegate\nDance"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jake Archibald",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/7653b6becc6c69689712673d84734c954fae00a3ea1a1fcab6036af437ca9fed.jpg",
+        "url": "https://twitter.com/jaffathecake"
+      },
+      "url": "https://twitter.com/jaffathecake/status/1542601970762059779",
+      "published": "2022-06-30T20:12:24+00:00",
+      "wm-received": "2022-06-30T20:25:37Z",
+      "wm-id": 1425510,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542601970762059779",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "html": "Final Launch Instant Plan\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/aerotwist\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/cassiecodes\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jh3yy\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
+        "text": "Final Launch Instant Plan"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mia (not her best work)",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0070719556938ae95053b104df74ca15213d4a99abb84c5e03fe27b0c52e139e.jpg",
+        "url": "https://twitter.com/TerribleMia"
+      },
+      "url": "https://twitter.com/TerribleMia/status/1542572293117071360",
+      "published": "2022-06-30T18:14:28+00:00",
+      "wm-received": "2022-06-30T18:49:14Z",
+      "wm-id": 1425458,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542572293117071360",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "html": "This was all sparked by a demo video <a href=\"https://twitter.com/jaffathecake\">@jaffathecake</a> released last month, and then an edge-case <a href=\"https://twitter.com/jh3yy\">@jh3yy</a> suggested, a visualization of Cascade Layers, and an inspiring talk on 'impossible' animations from <a href=\"https://twitter.com/cassiecodes\">@cassiecodes</a>. Put it all together, and…\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
+        "text": "This was all sparked by a demo video @jaffathecake released last month, and then an edge-case @jh3yy suggested, a visualization of Cascade Layers, and an inspiring talk on 'impossible' animations from @cassiecodes. Put it all together, and…"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Johannes Odland 🏳️‍🌈",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a9882e9b684f606ecedd1f140e7a763e553db6b6aa60ce95cc34869979926210.jpg",
+        "url": "https://twitter.com/mrodland"
+      },
+      "url": "https://twitter.com/mrodland/status/1542544240865157122",
+      "published": "2022-06-30T16:23:00+00:00",
+      "wm-received": "2022-06-30T16:48:19Z",
+      "wm-id": 1425400,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542544240865157122",
+      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "content": {
+        "html": "I find this approach interesting, but would it work if there are other elements like tooltips above the transitioning elements, or if there are other animations, videos or interactions running while the transition takes place?\n\nI’m dreaming of an element transition api 😀\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
+        "text": "I find this approach interesting, but would it work if there are other elements like tooltips above the transitioning elements, or if there are other animations, videos or interactions running while the transition takes place?\n\nI’m dreaming of an element transition api 😀"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "OddBird",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ea20460b71e4d74b0591db388f0dc2d58855c3b3b7414a7dc268bcfd9203f35f.jpg",
+        "url": "https://twitter.com/OddBird"
+      },
+      "url": "https://twitter.com/OddBird/status/1532795655076339712",
+      "published": "2022-06-03T18:45:36+00:00",
+      "wm-received": "2022-06-28T15:41:38Z",
+      "wm-id": 1423722,
+      "wm-source": "https://brid.gy/post/twitter/oddbird/1532795655076339712",
+      "wm-target": "https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/",
+      "content": {
+        "html": "Want to reduce pull request noise from project dependency updates? <a href=\"https://twitter.com/je92rivas\">@je92rivas</a> shares the workflow we use at OddBird. \n\n<a href=\"https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/\">oddbird.net/2022/06/01/dep…</a>",
+        "text": "Want to reduce pull request noise from project dependency updates? @je92rivas shares the workflow we use at OddBird. \n\noddbird.net/2022/06/01/dep…"
+      },
+      "mention-of": "https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Olu (they/them)",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d92fe2e951e24ac2b489c2cbf78c8c6dc33f52a49e747897809a7e14d5f0a9b2.jpg",
+        "url": "https://twitter.com/oluoluoxenfree"
+      },
+      "url": "https://twitter.com/oluoluoxenfree/status/1534612562796494850",
+      "published": "2022-06-08T19:05:21+00:00",
+      "wm-received": "2022-06-28T15:41:32Z",
+      "wm-id": 1423721,
+      "wm-source": "https://brid.gy/post/twitter/oddbird/1534612562796494850",
+      "wm-target": "https://www.oddbird.net/2022/06/08/100-percent-test-coverage/",
+      "content": {
+        "html": "Wrote a piece for the <a href=\"https://twitter.com/OddBird\">@OddBird</a> blog: what's the impact of aiming for 100% test coverage?\n\n<a href=\"https://www.oddbird.net/2022/06/08/100-percent-test-coverage/\">oddbird.net/2022/06/08/100…</a>",
+        "text": "Wrote a piece for the @OddBird blog: what's the impact of aiming for 100% test coverage?\n\noddbird.net/2022/06/08/100…"
+      },
+      "mention-of": "https://www.oddbird.net/2022/06/08/100-percent-test-coverage/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    }
+  ]
+}
