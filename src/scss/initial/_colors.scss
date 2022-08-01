@@ -1,9 +1,7 @@
 @use 'sass:meta';
 @use '../config';
-@use '../config/color/content';
-@use '../config/color/ccs-defaults';
-@use '../config/color/background';
-@use '~cascading-color-systems' as ccs with ($hues: config.ccs('hues'),
+@use '~cascading-color-systems' as ccs with (
+  $hues: config.ccs('hues'),
   $saturation: config.ccs('saturation'),
   $contrast: config.ccs('contrast'),
   $steps: config.ccs('steps'),
@@ -11,7 +9,8 @@
   $fade-background: config.ccs('fade-background'),
   $neutral-saturation: config.ccs('neutral-saturation'),
   $build: true,
-  $gradients: true);
+  $gradients: true
+);
 
 /// # CSS Color Variables
 /// Generate CSS variables from configuration colors,
@@ -21,12 +20,8 @@
 /// @link https://www.oddbird.net/cascading-colors/
 ///   Cascading Color Systems
 /// @group init-colors
-
-/// @group init-colors
 [data-ccs-colors] {
-  @include config.colors--(meta.module-variables('ccs-defaults'));
-  @include config.colors--(meta.module-variables('background'));
-  @include config.colors--(meta.module-variables('content'));
+  @include config.colors--;
 
   --img-bright--base: #{ccs.if-mode($light: 50%, $dark: 40%)};
   --img-bright--default: calc(var(--img-bright--base) + var(--ccs-l));
