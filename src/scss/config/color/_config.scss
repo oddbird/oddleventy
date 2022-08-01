@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use 'sass:meta';
 @use 'sass:math';
 @use 'sass:color';
@@ -64,5 +65,5 @@ $_ccs: (
 ///   $prime-hue: color.ccs('prime');
 /// @group config-color
 @function ccs($token) {
-  @return map-get($_ccs, $token);
+  @return map.get($_ccs, $token);
 }
