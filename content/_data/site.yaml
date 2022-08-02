@@ -10,7 +10,6 @@ feed: /feed.atom
 styles:
   - screen.css
 facebook_id: 1820980378150914
-google_analytics_id: UA-36510846-1
 social:
   email: birds
   twitter: oddbird

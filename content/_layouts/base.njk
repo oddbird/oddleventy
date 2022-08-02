@@ -59,16 +59,8 @@
     <script src="https://use.typekit.net/slx1xnq.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-    {% if site.google_analytics_id and env.ELEVENTY_ENV === 'production' -%}
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', '{{ site.google_analytics_id }}');
-      </script>
+    {% if env.ELEVENTY_ENV === 'production' -%}
+      <script defer data-domain="oddbird.net" src="https://plausible.io/js/plausible.js"></script>
     {%- endif %}
   </head>
 
