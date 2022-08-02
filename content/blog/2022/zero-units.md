@@ -25,16 +25,16 @@ why is it broken again?
 ## The intended behavior
 
 When setting typography in a design,
-I like to 'outdent' list --
+I like to 'outdent' lists --
 pulling the list markers
-(bullets of numbers)
+(bullets or numbers)
 out into the margin of the document,
 so that the list contents align
 with the content on either side.
 
 If you're reading this
 on the OddBird website
-with a wide-enough browser,
+with a wide enough browser,
 you'll see that we do that here:
 
 - On wide screens, the bullets of this list should be hanging in the margin.
@@ -53,9 +53,9 @@ on all typesetting containers.
 The `--outdent` variable conveys if/when and how much
 margin is available for content.
 
-- By default, for small screens, the `--outdent` is `0`
+- By default, for small screens, the `--outdent` is `0`.
 - When a container has more space,
-  I toggle the `--outdent` to something like `-1em`
+  I toggle the `--outdent` to something like `-1em`.
 
 Some elements (like figures)
 get the outdent applied directly to a margin:
@@ -142,7 +142,7 @@ CSS doesn't generally allow _coercing_ values
 from one type to another.
 There's no way to take a string and _turn it into a number_,
 or vice versa.
-But there are some work-arounds we can use.
+But there are some workarounds we can use.
 For example,
 `calc(<number> * <length>)` will return a `<length>` value.
 We can convert a `<number>` to a `em` length
@@ -157,10 +157,10 @@ through multiplying:
 ```
 
 [^design-types]: This is one reason
-  that I strongly prefer about using [Sass](https://sass-lang.com/)
+  I strongly prefer using [Sass](https://sass-lang.com/)
   to manage 'tokens' in a design system,
   rather than a language like YAML or JSON.
-  Sass is entirely organized around the CSS type system,
+  Sass is entirely organized around the CSS type system
   and 'design-relevant' types --
   lengths, colors, etc.
   Languages that are not intended for 'design' specifically
@@ -208,7 +208,7 @@ that's where I've always encountered the issue.)
 
 While the `rgb()` function
 accepts either `<number>` (0-255) or `<percentage>` (0%-100%) values,
-but _you are not allowed to mix types_:
+_you are not allowed to mix types_:
 
 ```css
 html {
