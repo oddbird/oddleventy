@@ -18,7 +18,19 @@ people:
     title: Sr. Director of Release Engineering
     face: jason-lantz.jpg
     url: https://www.linkedin.com/in/jasonlantz/
-    venue: *client
+    venue: *client 
+  - &david
+    name: David Reed
+    title: Principal Member of Technical Staff
+    face: david-reed.jpg
+    url: https://www.linkedin.com/in/davidreed-salesforce/
+    venue: *client  
+  - &brandon
+    name: Brandon Parker
+    title: Senior Member of Technical Staff
+    face: brandon-parker.jpg
+    url: https://www.linkedin.com/in/brandon-parker-53748235/
+    venue: *client 
 tasks:
   - User Experience Design
   - Project Architecture
@@ -26,11 +38,27 @@ tasks:
   - Lightning Design System React Implementation
 press:
   - text: |
+      The Oddbird team’s support of our engineers ... 
+      has been exemplary. OddBird is the polar opposite 
+      of consultancies that deliver “exact words” 
+      solutions. They **understand our objectives as well 
+      as we do, if not better,** and deeply engage to 
+      deliver those objectives.
+    <<: *david
+    slug: exemplary 
+  - text: |
       **OddBird became an extension of our team**
       bringing UX, frontend, and backend brilliance
       to take MetaDeploy from an idea into a production application.
     <<: *jason
     slug: extension
+  - text: |
+      OddBird’s ability to take feedback and iterate 
+      on features made it a pleasure to work with 
+      you all. **The code that was delivered at the 
+      end of the day was always very clean!**
+    <<: *brandon
+    slug: cadence
   - text: |
       Working with OddBird was
       **the best outsourcing experience I've ever had.**
