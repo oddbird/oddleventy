@@ -114,7 +114,7 @@ Every value falls into
 one of several
 '[data types](https://drafts.csswg.org/css-values-4/)' --
 like a 'number' or 'length' or 'color'.
-There are many different types in CSS [^design-types],
+There are many different types in CSS,[^design-types]
 many of them specific to the needs of designers --
 and every property has specific 'type' requirements:
 
@@ -150,7 +150,7 @@ There's no way to take a string and turn it into a number,
 or vice versa.
 We can convert a number into a length (or time) --
 `calc(<number> * <length>)` will return a `<length>` value --
-but we can't (yet) go the other way: [^unit-division]
+but we can't (yet) go the other way:[^unit-division]
 
 ```css
 .example {
