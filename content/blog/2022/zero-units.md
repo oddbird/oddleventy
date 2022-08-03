@@ -14,7 +14,8 @@ tags:
   - CSS
 summary: |
   There's a well-established 'best practice'
-  that CSS authors (and linters and minifiers)
+  that CSS authors
+  (as well as linters and minifiers)
   should remove units from any `0` value.
   It's a fine rule in most cases,
   but there are a few common situations
@@ -57,7 +58,17 @@ For my site,
 I decided to set up an `--outdent` custom property
 on typesetting containers.
 The `--outdent` variable conveys if/when and how much
-margin is available for content.
+margin is available for content:
+
+```css
+main {
+  --outdent: 0;
+
+  @media (min-width: 40em) {
+    --outdent: -1em;
+  }
+}
+```
 
 - By default, for small screens, the `--outdent` is `0`.
 - When a container has more space,
@@ -188,7 +199,7 @@ For _zero and only zero_,
 we can use a `<number>` when CSS expects a `<length>`.
 
 And over time,
-that has become a 'Best Practice' --
+that has become a 'best practice' --
 often enforced by CSS linters & minifiers.
 The usual reasoning is performance.
 Removing all the units from zeros
@@ -200,12 +211,12 @@ units only distract from the meaning.
 
 ## Zero is (not always) special
 
-That 'Best Practice' works great
+That 'best practice' works great
 for raw zero values,
 directly applied to properties like
 `margin` or `padding` --
 but there are other places
-where this 'Best Practice' will break your CSS.
+where this 'best practice' will break your CSS.
 
 In general:
 _when zero is inside a function, the type of zero matters_.
