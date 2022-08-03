@@ -325,11 +325,15 @@ and wipes out the units that I've supplied.
 
 Depending on the linter,
 I can likely turn off that particular 'optimization' --
-and then also file an issue for them to fix.
+Stylelint allows turning it off
+[in custom properties specifically][lint-option].
 That's fine.
 I understand
-that it is not easy to account for every edge case.
+that it is not easy to account for every edge case
+in the default settings.
 There will always be issues that come up.
+
+[lint-option]: https://stylelint.io/user-guide/rules/list/length-zero-no-unit/#ignore-custom-properties
 
 But these problems are exacerbated
 by tools like linters & minifiers
