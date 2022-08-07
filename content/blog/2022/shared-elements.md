@@ -225,7 +225,7 @@ Cassie also gave a brilliant talk at SmashingConf
 about FLIP animations in responsive design.
 I'll post that video here if it becomes available.
 
-## Animating 'discreet' changes in CSS
+## Animating 'discrete' changes in CSS
 
 CSS can currently only animate
 by smoothly updating the value of a property.
@@ -241,7 +241,7 @@ that we can't animate in that way,
 like grid-item positions.
 There are no valid `grid-column-start` values between `1` and `2` --
 grid lines only exist as whole steps,
-or what we call 'discreet' values,
+or what we call 'discrete' values,
 without any other values in-between.
 Since CSS has no way to represent
 the infinite intermediate steps along the way,
@@ -285,7 +285,7 @@ Pressing a given button
 changes a `data-sort` attribute
 on the (flexbox) list of layers,
 and then CSS `order` and `flex-direction`
-(both discreet values)
+(both discrete values)
 are used to re-order the list
 in different ways.
 I wanted to animate the re-ordering
