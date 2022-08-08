@@ -4,4 +4,5 @@
 
 module.exports = {
   ELEVENTY_ENV: process.env.ELEVENTY_ENV,
+  CONTEXT: process.env.CONTEXT,
 };

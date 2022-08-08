@@ -59,7 +59,8 @@
     <script src="https://use.typekit.net/slx1xnq.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-    {% if env.ELEVENTY_ENV === 'production' -%}
+    <!-- Context: {{ env.CONTEXT }} -->
+    {% if env.CONTEXT === 'production' -%}
       <script defer data-domain="oddbird.net" src="https://plausible.io/js/plausible.js"></script>
     {%- endif %}
   </head>
