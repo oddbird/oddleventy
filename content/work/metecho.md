@@ -16,12 +16,6 @@ people:
     face: jason-lantz.jpg
     url: https://www.linkedin.com/in/jasonlantz/
     venue: *client
-  - &david
-    name: David Reed
-    title: Principal Member of Technical Staff
-    face: david-reed.jpg
-    url: https://www.linkedin.com/in/davidreed-salesforce/
-    venue: *client
   - &brandon
     name: Brandon Parker
     title: Senior Member of Technical Staff
@@ -40,15 +34,6 @@ press:
       It didn't feel like outsourcing at all.
     <<: *jason
     slug: outsourcing
-  - text: |
-      The OddBird team’s support of our engineers…
-      has been exemplary. OddBird is the polar opposite
-      of consultancies that deliver “exact words”
-      solutions. They **understand our objectives as well
-      as we do, if not better,** and deeply engage to
-      deliver those objectives.
-    <<: *david
-    slug: exemplary
   - text: |
       OddBird’s ability to take feedback and iterate
       on features made it a pleasure to work with

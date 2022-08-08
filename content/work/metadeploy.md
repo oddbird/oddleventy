@@ -25,12 +25,6 @@ people:
     face: david-reed.jpg
     url: https://www.linkedin.com/in/davidreed-salesforce/
     venue: *client
-  - &brandon
-    name: Brandon Parker
-    title: Senior Member of Technical Staff
-    face: brandon-parker.jpg
-    url: https://www.linkedin.com/in/brandon-parker-53748235/
-    venue: *client
 tasks:
   - User Experience Design
   - Project Architecture
@@ -52,19 +46,6 @@ press:
       to take MetaDeploy from an idea into a production application.
     <<: *jason
     slug: extension
-  - text: |
-      OddBird’s ability to take feedback and iterate
-      on features made it a pleasure to work with
-      you all. **The code that was delivered at the
-      end of the day was always very clean!**
-    <<: *brandon
-    slug: cadence
-  - text: |
-      Working with OddBird was
-      **the best outsourcing experience I've ever had.**
-      It didn't feel like outsourcing at all.
-    <<: *jason
-    slug: outsourcing
 summary: |
   MetaDeploy helps nonprofit Salesforce admins and developers configure,
   install, and test packaged products -- providing a graphic web interface
