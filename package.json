@@ -39,7 +39,7 @@
     "build:assets": "npm-run-all assets:clean -p js sass",
     "build": "run-s build:assets build:site eleventy",
     "update-oss-docs": "./bin/update-oss-docs",
-    "prod": "ELEVENTY_ENV=production run-s update-oss-docs build",
+    "prod": "run-s update-oss-docs build",
     "checklinks": "yarn dlx hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" --skip \"codepen.io\" --skip \"github.com\" --skip \"caniuse.com\" --skip \"youtu.be\" --skip \"stackoverflow.com/users/\" _site/index.html"
   },
   "devDependencies": {
