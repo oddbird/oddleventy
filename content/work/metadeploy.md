@@ -19,6 +19,12 @@ people:
     face: jason-lantz.jpg
     url: https://www.linkedin.com/in/jasonlantz/
     venue: *client
+  - &david
+    name: David Reed
+    title: Principal Member of Technical Staff
+    face: david-reed.jpg
+    url: https://www.linkedin.com/in/davidreed-salesforce/
+    venue: *client
 tasks:
   - User Experience Design
   - Project Architecture
@@ -26,17 +32,20 @@ tasks:
   - Lightning Design System React Implementation
 press:
   - text: |
+      The OddBird team’s support of our engineers…
+      has been exemplary. OddBird is the polar opposite
+      of consultancies that deliver “exact words”
+      solutions. They **understand our objectives as well
+      as we do, if not better,** and deeply engage to
+      deliver those objectives.
+    <<: *david
+    slug: exemplary
+  - text: |
       **OddBird became an extension of our team**
       bringing UX, frontend, and backend brilliance
       to take MetaDeploy from an idea into a production application.
     <<: *jason
     slug: extension
-  - text: |
-      Working with OddBird was
-      **the best outsourcing experience I've ever had.**
-      It didn't feel like outsourcing at all.
-    <<: *jason
-    slug: outsourcing
 summary: |
   MetaDeploy helps nonprofit Salesforce admins and developers configure,
   install, and test packaged products -- providing a graphic web interface
