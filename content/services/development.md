@@ -17,8 +17,8 @@ summary: |
   efficiently.
 
   We provide expertise across a range of technologies, including
-  **Python/Django**, accessible **HTML**, modern **Sass/CSS**, **React**,
-  **Vue**, **Node**, and more.
+  **Python/Django**, accessible **HTML**, **CSS/Sass**,
+  **JavaScript** with **React** & **Vue**, **Node**, and more.
 ---
 
 {% import 'embed.macros.njk' as embed %}

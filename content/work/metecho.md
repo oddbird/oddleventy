@@ -16,6 +16,12 @@ people:
     face: jason-lantz.jpg
     url: https://www.linkedin.com/in/jasonlantz/
     venue: *client
+  - &brandon
+    name: Brandon Parker
+    title: Senior Member of Technical Staff
+    face: brandon-parker.jpg
+    url: https://www.linkedin.com/in/brandon-parker-53748235/
+    venue: *client
 tasks:
   - User Experience Design
   - Project Architecture
@@ -28,6 +34,13 @@ press:
       It didn't feel like outsourcing at all.
     <<: *jason
     slug: outsourcing
+  - text: |
+      OddBird’s ability to take feedback and iterate
+      on features made it a pleasure to work with
+      you all. **The code that was delivered at the
+      end of the day was always very clean!**
+    <<: *brandon
+    slug: cadence
 summary: |
   OddBird collaborated with Salesforce
   to develop a responsive web application
