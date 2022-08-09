@@ -1,6 +1,186 @@
 {
-  "lastFetched": "2022-08-03T13:45:23.167Z",
+  "lastFetched": "2022-08-09T17:33:57.333Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://thedevnews.com/net-weekly-74-stefan-judis-net-improvement/",
+      "published": null,
+      "wm-received": "2022-08-08T23:12:21Z",
+      "wm-id": 1453712,
+      "wm-source": "https://thedevnews.com/net-weekly-74-stefan-judis-net-improvement/",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "mention-of": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://thedevnews.com/net-weekly-74-stefan-judis-net-improvement/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Miriam Eric Suzanne",
+        "photo": "https://webmention.io/avatar/d33wubrfki0l68.cloudfront.net/10683266149a653b1fe45e7f5c7e0ccc65f813301b42f85b3a6f043a672adace.jpg",
+        "url": "https://www.miriamsuzanne.com/who/"
+      },
+      "url": "https://www.miriamsuzanne.com/2022/08/07/minimal/",
+      "published": "2022-08-07T20:57:46",
+      "wm-received": "2022-08-07T21:18:58Z",
+      "wm-id": 1453036,
+      "wm-source": "https://www.miriamsuzanne.com/2022/08/07/minimal/",
+      "wm-target": "https://www.oddbird.net/cascading-colors/",
+      "name": "No Demo [Website] Reno",
+      "summary": {
+        "content-type": "text/plain",
+        "value": "I want to re-think the front-end of my site, without too much change to the (Eleventy/Markdown) content that drives it. And I want to do it slowly."
+      },
+      "content": {
+        "html": "<p>Erin <span>&amp;</span> I had a lovely vacation last month,\ndriving around southwest Colorado –\nBishop Castle, the Great Sand Dunes,\nChimney Rock, the Durango-Silverton Railroad,\nthe (terrifying) Million Dollar Highway,\nthe Black Canyon of the Gunnison,\nand so on.\nIt was absolutely<span> </span>beautiful.</p>\n<p>This post isn’t about our vacation,\nor any of the amazing places we<span> </span>visited.</p>\n<p>Every night we would end up in a hotel room,\nwhere we turn on the Food Network\n(back-to-back <em>Diners, Drive-Ins, and Dives</em>)\nor whatever is showing on <span>HGTV</span>.\nNested between extensive house remodeling shows,\n<em>No Demo Reno</em> starts with the premise\nthat you can make big upgrades to a home\nwithout moving a single<span> </span>wall.</p>\n<p>This post isn’t about <span>HGTV</span> or home renovations, either.\nI’ve seen a total of two or three episodes\nwhile knitting, winding down,\nand getting ready for<span> </span>bed.</p>\n<p>But that’s my goal with this site redesign.\nHow much can I change,\n<em>without moving any of the walls</em>?</p>\n<h2>Some background, and<span> </span>goals</h2>\n<p>I’ve had a number of ‘personal’ sites over the years,\nbut landed on this <span>URL</span> in 2015.\nThe first version of this site\nused <a href=\"https://github.com/mitsuhiko/rstblog\">rstBlog</a> –\na small Python static-site generator\nwithout any<span> </span>documentation.</p>\n\n<p>In early 2019,\nI migrated from rstBlog\nonto my current <a href=\"https://www.11ty.dev/\">Eleventy</a> setup –\na complete overhaul of the site,\ninside and out.\nThe demolition was extensive,\nand I likely\n<a href=\"https://www.miriamsuzanne.com/2022/06/17/hit-publish/\">broke a few<span> </span>promises</a>.</p>\n<p>This time\nI plan to leave all the\ncontent and Eleventy infrastructure\n<em>basically</em> intact.\nHere are the<span> </span>goals:</p>\n<h3>Clarify the information<span> </span>architecture</h3>\n<p>I’ve always found it hard\nto sort my activities\ninto organized ‘categories’,\nso I’ve been treating basically everything\nas an <em>event</em>\nwith the same data, look, and feel.\nSomething happens –\na presentation, performance, album release, novel, article, spec –\non a particular date,\nwith any number of relevant<span> </span>tags.</p>\n<p>I like some things about that –\nembracing the mess of my <span>ADHD</span> life –\nbut I haven’t yet found a great solution\nfor navigating <span>&amp;</span> displaying it.\nPart of the problem is simply that\neverything looks the same.\nIt would help if site visitors\ncan more easily see the different types of content\nreflected in the design and navigation of the<span> </span>site.</p>\n<p>The previous design also relied heavily\non extra-long ‘calendars’ of content\nat the bottom of every page.\nThat solution felt very bulky to me –\nboth in terms of page-load,\nand user scrolling.\nIt may have been\ntechnically <a href=\"https://humanebydesign.com/principles/finite/\">Finite</a>,\nbut it didn’t always <em>feel</em> as finite\n(or as easy to navigate)\nas I’d<span> </span>like.</p>\n<h3>Clean up the <span>HTML</span> (&amp;<span> </span>Nunjucks)</h3>\n<p>Technical debt often builds up in <span>HTML</span> over time –\nextra wrapping divs, stray classes,\nand other complexities\nthat originate more from style than <em>content</em>.\nIt feels good to clean that out and start fresh.\nSpecifically, I want<span> </span>to:</p>\n<ul><li>Simplify complex Nunjucks<span> </span>templates</li>\n<li>Strip out any <span>HTML</span> that is not absolutely<span> </span>essential</li>\n<li>Improve my use of <a href=\"https://microformats.org/\">microformats</a>\n</li>\n<li>Rethink how <a href=\"https://www.miriamsuzanne.com/2022/06/04/indiweb/\">WebMentions</a> are<span> </span>displayed</li>\n<li>Rethink how user design customizations are<span> </span>provided</li>\n<li>Always improve accessibility where I<span> </span>can</li>\n</ul><p>I hope to end up with an <span>HTML</span> architecture\nthat feels more minimal –\na blank canvas,\nthat I can treat more like a\n<a href=\"http://www.csszengarden.com/\">Zen Garden</a>\nor\n<a href=\"https://stylestage.dev/\">Style Stage</a>\nfor my <span>CSS</span>.\nMy early websites\n(back in the 00s)\nall had multiple\n‘<a href=\"https://alistapart.com/article/alternate/\">alternate stylesheets</a>’\nto choose from,\nand I would love to do that<span> </span>again.</p>\n<h3>Make <span>RSS</span> a first-class part of the<span> </span>site</h3>\n<p>While I was working on WebMentions last month,\nI also made major updates to my <span>RSS</span> feed.\nBut I don’t love the way browsers\ndisplay a raw xml file.\nDevelopers may be my biggest audience,\nbut they aren’t my only audience,\nand I want that link to <em>make sense</em>\nand feel like part of the<span> </span>site.</p>\n<p>So I looked into it,\nand it seems like I can\n<a href=\"https://jonchristopher.us/blog/beginning-to-style-your-rss-feed/\">use <span>XSL</span> and <span>CSS</span></a>\nto better design and integrate that page\nas a part of the<span> </span>site.</p>\n<h3>Try out new <span>CSS</span> features<span> </span>(slowly)</h3>\n<p>It’s been fun\nworking on new <span>CSS</span> features\n<a href=\"https://www.miriamsuzanne.com/orgs/w3c\">with the <span>CSSWG</span></a>,\nbut now that those features\n(and more)\nare starting to roll out in browsers\nI want to use them on my<span> </span>site.</p>\n<p>Some of features\nare available already,\nor even a few years old.\nThings like\n<code>is()</code> <span>&amp;</span> <code>:where()</code>,\n<code>min()</code>/<code>max()</code> <span>&amp;</span> <code>clamp()</code>,\nvariable fonts,\n<code>color-scheme</code>/<code>accent-color</code>,\nand <a href=\"https://www.miriamsuzanne.com/2022/02/21/layers-guide/\">Cascade Layers</a>.\nSome of those were already\nbeing used in the old design,\nbut this time I get to design around them from the<span> </span>start.</p>\n<p>Over the next months and years\nI also hope to start playing with\nsize-based container queries <span>&amp;</span> query units,\nscope,\nsubgrid,\n<a href=\"https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/\">new color spaces</a>\n(<code>okLCH</code>/<code>display-P3</code>),\nand more.</p>\n<p>I want to take this slow.\nStart simple,\nand build more interesting themes\nas the various features arrive.\nThat means keeping things simple\nfor as long as possible,\nso it’s easy to integrate new ideas\nwithout major<span> </span>rewrites.</p>\n<h3>Highlight user customizations</h3>\n<p>As part of the previous design,\nI launched\n<a href=\"https://www.oddbird.net/cascading-colors/\">Cascading Color Systems</a> –\na tool for giving users\ntotal control over the colors on the site.\nThat was inspired by Håkon Lie’s\n<a href=\"https://www.w3.org/People/howcome/p/cascade.html\">original 1994 <span>CSS</span> proposal</a>,\nwhich includes the following\ntext-art<span> </span>diagram:</p>\n<pre><code>        User            Author\n Font   o-----x--------------o 64%\n Color  o-x------------------o 90%\n Margin o-------------x------o 37%\n Volume o---------x----------o 50%\n</code></pre>\n<p>I still want to explore that idea\nof making the site design interactive,\nbut I don’t want to keep relying on\n<span>HSL</span> colors to make it happen.\nFor now, I’ve removed Cascading Colors,\nwhile I rethink the<span> </span>approach.</p>\n<p>I’d also like to expose the ways\na <span>CSS</span> design is <em>layered</em> –\nfrom specified initial values,\n<a href=\"https://www.miriamsuzanne.com/2022/07/04/body-margin-8px/\">user agent defaults</a>,\nresets, global typography,\nlayouts, components, etc.\n<em>It’s a cascade!</em>\nWhat if users could turn on and off\nthe various Cascade <em>origins</em>,\nand <em>layers</em>\nto see how the site looks\nat different steps of the process?\nCheck out the <a href=\"https://www.miriamsuzanne.com/2022/08/07/minimal/#settings\">Theme Settings</a> below,\nfor a first-draft of the<span> </span>idea.</p>\nspec\n  browser\n  reset\n  default\n  theme\n  Try turning <span>CSS</span> layers on and off…\n  These settings are also saved in `localStorage`,\n  so they persist across visits.\n<p>This idea is absolutely\ninspired by the personal site of\n<a href=\"https://ichimnetz.com/\">Nils Binder</a>.\nNils provides a slider from 0 to 865 lines of <span>CSS</span>,\nwith animated transitions between the styles.\nIt’s a lot of fun,\nand I recommend checking it<span> </span>out.</p>\n<h2>The order of<span> </span>things</h2>\n<p>My instinct was to strip out all <span>CSS</span>,\nand then work on getting the <span>HTML</span> cleaned up\nwhile my site remains ‘naked’ of style.\nI didn’t quite do that,\nbut I’m aiming for something close.\nHere’s what I’ve done so<span> </span>far:</p>\n<ul><li>Remove the old <span>CSS</span><span> </span>(done)</li>\n<li>Begin re-arranging the <span>HTML</span> <span>&amp;</span> Nunjucks<span> </span>templates</li>\n<li>\n<code>@layer reset</code> »\njust the bare minimum needed\nfor <span>HTML</span> tags and attributes to work the way I expect,\nstarting from <a href=\"https://github.com/jensimmons/cssremedy\"><span>CSS</span><span> </span>Remedy</a>.</li>\n<li>\n<code>@layer default</code> »\njust enough colors <span>&amp;</span> typography\nto make the site feel usable to me,\nwithout making decisions about\nhow I’m going to theme it<span> </span>long-term.</li>\n<li>\n<code>@layer theme</code> »\nadds a few site-specific features and opinions\non top of the typographic<span> </span>defaults.</li>\n</ul><p>The distinction between layers is still fluid,\nas I try to figure out what I’m doing.\nI’ll keep adjusting the <code>reset</code> and <code>default</code> styles as I go,\nbut hope to leave the <code>theme</code> layer\nas minimal as possible,\nwhile I focus on the architectural<span> </span>issues.</p>\n<p>For now,\nthe <code>default</code> layer has colors based roughly on Firefox\n<a href=\"https://www.w3.org/TR/css-color-4/#css-system-colors\"><span>CSS</span> System Colors</a>.\nI experimented briefly with using\nthe System Colors directly,\nbut support seems a bit inconsistent,\nand there are additional accessibility considerations\nwith that approach.\nI might revisit in the<span> </span>future.</p>\n<p>The <code>theme</code> layer colors\nare based on <a href=\"https://www.w3.org/TR/css-color-4/#named-colors\">Named Colors</a>,\nwith some minor adjustments for accessible contrast.\nWhile\n<code>darkslategray</code></p>\n<p>works fine as a text <code>color</code>\nover\n<code>azure</code></p>\n<p>in <code>light</code> mode,\nI used Sass to darken it\nas a <code>background-color</code> in <code>dark</code> mode,\nproviding enough contrast for my accent colors as well.\nThe result is\n<code>hsl(180deg 25% 6%)</code>\n.</p>\n<p>There’s a lot more to do.\nWebMentions are temporarily hidden,\n<span>RSS</span> isn’t highlighted in the nav or styled,\nand all content still looks the same in a list –\nbut I have to start somewhere.\nWe’ll see where it goes<span> </span>(slowly).</p>\n<h2>Some links I’ve been keeping open while I<span> </span>work</h2>\n<p>Articles:</p>\n<ul><li>\n<a href=\"https://www.robinrendle.com/notes/the-smallest-css/\">The Smallest <span>CSS</span></a>\nby <strong>Robin<span> </span>Rendle</strong>\n</li>\n<li>\n<a href=\"https://benmyers.dev/blog/semantic-selectors/\">Style with Stateful, Semantic Selectors</a>\nby <strong>Ben Myers</strong> (with links to several<span> </span>others)</li>\n<li>\n<a href=\"https://jonchristopher.us/blog/beginning-to-style-your-rss-feed/\">Beginning to Style Your <span>RSS</span> Feed</a>\nby <strong>Jon<span> </span>Christopher</strong>\n</li>\n</ul><p>Sites:</p>\n<ul><li>\n<a href=\"https://tink.uk/\">tink</a>\n(Léonie did a lovely redesign recently, with tags for<span> </span>navigation)</li>\n<li><a href=\"https://indiewebify.me/\">IndieWebify.Me</a></li>\n<li><a href=\"https://microformats.org/wiki/microformats2\">microformats</a></li>\n<li><a href=\"https://humanebydesign.com/\">Humane by Design</a></li>\n<li><a href=\"https://enes.in/sorted-colors/\">Sorted Colors</a></li>\n<li><a href=\"https://contrast-ratio.com/\">Contrast Ratio</a></li>\n</ul>",
+        "text": "Erin & I had a lovely vacation last month,\ndriving around southwest Colorado –\nBishop Castle, the Great Sand Dunes,\nChimney Rock, the Durango-Silverton Railroad,\nthe (terrifying) Million Dollar Highway,\nthe Black Canyon of the Gunnison,\nand so on.\nIt was absolutely beautiful.\nThis post isn’t about our vacation,\nor any of the amazing places we visited.\nEvery night we would end up in a hotel room,\nwhere we turn on the Food Network\n(back-to-back Diners, Drive-Ins, and Dives)\nor whatever is showing on HGTV.\nNested between extensive house remodeling shows,\nNo Demo Reno starts with the premise\nthat you can make big upgrades to a home\nwithout moving a single wall.\nThis post isn’t about HGTV or home renovations, either.\nI’ve seen a total of two or three episodes\nwhile knitting, winding down,\nand getting ready for bed.\nBut that’s my goal with this site redesign.\nHow much can I change,\nwithout moving any of the walls?\nSome background, and goals\nI’ve had a number of ‘personal’ sites over the years,\nbut landed on this URL in 2015.\nThe first version of this site\nused rstBlog –\na small Python static-site generator\nwithout any documentation.\n\nIn early 2019,\nI migrated from rstBlog\nonto my current Eleventy setup –\na complete overhaul of the site,\ninside and out.\nThe demolition was extensive,\nand I likely\nbroke a few promises.\nThis time\nI plan to leave all the\ncontent and Eleventy infrastructure\nbasically intact.\nHere are the goals:\nClarify the information architecture\nI’ve always found it hard\nto sort my activities\ninto organized ‘categories’,\nso I’ve been treating basically everything\nas an event\nwith the same data, look, and feel.\nSomething happens –\na presentation, performance, album release, novel, article, spec –\non a particular date,\nwith any number of relevant tags.\nI like some things about that –\nembracing the mess of my ADHD life –\nbut I haven’t yet found a great solution\nfor navigating & displaying it.\nPart of the problem is simply that\neverything looks the same.\nIt would help if site visitors\ncan more easily see the different types of content\nreflected in the design and navigation of the site.\nThe previous design also relied heavily\non extra-long ‘calendars’ of content\nat the bottom of every page.\nThat solution felt very bulky to me –\nboth in terms of page-load,\nand user scrolling.\nIt may have been\ntechnically Finite,\nbut it didn’t always feel as finite\n(or as easy to navigate)\nas I’d like.\nClean up the HTML (& Nunjucks)\nTechnical debt often builds up in HTML over time –\nextra wrapping divs, stray classes,\nand other complexities\nthat originate more from style than content.\nIt feels good to clean that out and start fresh.\nSpecifically, I want to:\nSimplify complex Nunjucks templates\nStrip out any HTML that is not absolutely essential\nImprove my use of microformats\n\nRethink how WebMentions are displayed\nRethink how user design customizations are provided\nAlways improve accessibility where I can\nI hope to end up with an HTML architecture\nthat feels more minimal –\na blank canvas,\nthat I can treat more like a\nZen Garden\nor\nStyle Stage\nfor my CSS.\nMy early websites\n(back in the 00s)\nall had multiple\n‘alternate stylesheets’\nto choose from,\nand I would love to do that again.\nMake RSS a first-class part of the site\nWhile I was working on WebMentions last month,\nI also made major updates to my RSS feed.\nBut I don’t love the way browsers\ndisplay a raw xml file.\nDevelopers may be my biggest audience,\nbut they aren’t my only audience,\nand I want that link to make sense\nand feel like part of the site.\nSo I looked into it,\nand it seems like I can\nuse XSL and CSS\nto better design and integrate that page\nas a part of the site.\nTry out new CSS features (slowly)\nIt’s been fun\nworking on new CSS features\nwith the CSSWG,\nbut now that those features\n(and more)\nare starting to roll out in browsers\nI want to use them on my site.\nSome of features\nare available already,\nor even a few years old.\nThings like\nis() & :where(),\nmin()/max() & clamp(),\nvariable fonts,\ncolor-scheme/accent-color,\nand Cascade Layers.\nSome of those were already\nbeing used in the old design,\nbut this time I get to design around them from the start.\nOver the next months and years\nI also hope to start playing with\nsize-based container queries & query units,\nscope,\nsubgrid,\nnew color spaces\n(okLCH/display-P3),\nand more.\nI want to take this slow.\nStart simple,\nand build more interesting themes\nas the various features arrive.\nThat means keeping things simple\nfor as long as possible,\nso it’s easy to integrate new ideas\nwithout major rewrites.\nHighlight user customizations\nAs part of the previous design,\nI launched\nCascading Color Systems –\na tool for giving users\ntotal control over the colors on the site.\nThat was inspired by Håkon Lie’s\noriginal 1994 CSS proposal,\nwhich includes the following\ntext-art diagram:\n        User            Author\n Font   o-----x--------------o 64%\n Color  o-x------------------o 90%\n Margin o-------------x------o 37%\n Volume o---------x----------o 50%\n\nI still want to explore that idea\nof making the site design interactive,\nbut I don’t want to keep relying on\nHSL colors to make it happen.\nFor now, I’ve removed Cascading Colors,\nwhile I rethink the approach.\nI’d also like to expose the ways\na CSS design is layered –\nfrom specified initial values,\nuser agent defaults,\nresets, global typography,\nlayouts, components, etc.\nIt’s a cascade!\nWhat if users could turn on and off\nthe various Cascade origins,\nand layers\nto see how the site looks\nat different steps of the process?\nCheck out the Theme Settings below,\nfor a first-draft of the idea.\nspec\n  browser\n  reset\n  default\n  theme\n  Try turning CSS layers on and off…\n  These settings are also saved in `localStorage`,\n  so they persist across visits.\nThis idea is absolutely\ninspired by the personal site of\nNils Binder.\nNils provides a slider from 0 to 865 lines of CSS,\nwith animated transitions between the styles.\nIt’s a lot of fun,\nand I recommend checking it out.\nThe order of things\nMy instinct was to strip out all CSS,\nand then work on getting the HTML cleaned up\nwhile my site remains ‘naked’ of style.\nI didn’t quite do that,\nbut I’m aiming for something close.\nHere’s what I’ve done so far:\nRemove the old CSS (done)\nBegin re-arranging the HTML & Nunjucks templates\n\n@layer reset »\njust the bare minimum needed\nfor HTML tags and attributes to work the way I expect,\nstarting from CSS Remedy.\n\n@layer default »\njust enough colors & typography\nto make the site feel usable to me,\nwithout making decisions about\nhow I’m going to theme it long-term.\n\n@layer theme »\nadds a few site-specific features and opinions\non top of the typographic defaults.\nThe distinction between layers is still fluid,\nas I try to figure out what I’m doing.\nI’ll keep adjusting the reset and default styles as I go,\nbut hope to leave the theme layer\nas minimal as possible,\nwhile I focus on the architectural issues.\nFor now,\nthe default layer has colors based roughly on Firefox\nCSS System Colors.\nI experimented briefly with using\nthe System Colors directly,\nbut support seems a bit inconsistent,\nand there are additional accessibility considerations\nwith that approach.\nI might revisit in the future.\nThe theme layer colors\nare based on Named Colors,\nwith some minor adjustments for accessible contrast.\nWhile\ndarkslategray\nworks fine as a text color\nover\nazure\nin light mode,\nI used Sass to darken it\nas a background-color in dark mode,\nproviding enough contrast for my accent colors as well.\nThe result is\nhsl(180deg 25% 6%)\n.\nThere’s a lot more to do.\nWebMentions are temporarily hidden,\nRSS isn’t highlighted in the nav or styled,\nand all content still looks the same in a list –\nbut I have to start somewhere.\nWe’ll see where it goes (slowly).\nSome links I’ve been keeping open while I work\nArticles:\n\nThe Smallest CSS\nby Robin Rendle\n\n\nStyle with Stateful, Semantic Selectors\nby Ben Myers (with links to several others)\n\nBeginning to Style Your RSS Feed\nby Jon Christopher\n\nSites:\n\ntink\n(Léonie did a lovely redesign recently, with tags for navigation)\nIndieWebify.Me\nmicroformats\nHumane by Design\nSorted Colors\nContrast Ratio"
+      },
+      "mention-of": "https://www.oddbird.net/cascading-colors/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jakub T. Jankiewicz 🐦",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e024762468f8aea5b4a49047615f03921be43d67aed4e39d7a9c2f44463c6bcb.jpg",
+        "url": "https://twitter.com/jcubic"
+      },
+      "url": "https://twitter.com/jcubic/status/1555160949471985664",
+      "published": "2022-08-04T11:57:18+00:00",
+      "wm-received": "2022-08-04T12:09:51Z",
+      "wm-id": 1450602,
+      "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1555160949471985664",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "content": {
+        "html": "One that gave me trouble was CSS Animation.\n\n0 {  }\n\nThis is was the output of one CSS minifier, I need to add % by hand (shell script after minification).\n<a class=\"u-mention\" href=\"https://twitter.com/ChallengesCss\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
+        "text": "One that gave me trouble was CSS Animation.\n\n0 {  }\n\nThis is was the output of one CSS minifier, I need to add % by hand (shell script after minification)."
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "T. Afif @ CSS Challenges",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/52104894ba58cf8c84a281f07f7cbd3fa7b290bd6a1e5ff99d2108d28c060fea.jpg",
+        "url": "https://twitter.com/ChallengesCss"
+      },
+      "url": "https://twitter.com/ChallengesCss/status/1555162029207523328",
+      "published": "2022-08-04T12:01:35+00:00",
+      "wm-received": "2022-08-04T12:09:51Z",
+      "wm-id": 1450603,
+      "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1555162029207523328",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "content": {
+        "html": "You have to stop using that minifier or report a bug. If a minifier is automatically converting all the 0% to 0 then it's a big red flag.\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jcubic\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
+        "text": "You have to stop using that minifier or report a bug. If a minifier is automatically converting all the 0% to 0 then it's a big red flag."
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mia",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/31fcfd6282b72379bdececa7d23a188489aa4cf4f63f576928d87f6a3df9064b.jpg",
+        "url": "https://twitter.com/TerribleMia"
+      },
+      "url": "https://twitter.com/TerribleMia/status/1554965772325232641",
+      "published": "2022-08-03T23:01:44+00:00",
+      "wm-received": "2022-08-04T00:03:38Z",
+      "wm-id": 1450259,
+      "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1554965772325232641",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "content": {
+        "html": "interesting. wonder if it's specced that way intentionally, or just a quirk?\n\ni also gloss over the fact that percentages are not technically 'lengths' in css - they resolve separately - but many syntaxes accept them interchangeably.\n<a class=\"u-mention\" href=\"https://twitter.com/ChallengesCss\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
+        "text": "interesting. wonder if it's specced that way intentionally, or just a quirk?\n\ni also gloss over the fact that percentages are not technically 'lengths' in css - they resolve separately - but many syntaxes accept them interchangeably."
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "T. Afif @ CSS Challenges",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/52104894ba58cf8c84a281f07f7cbd3fa7b290bd6a1e5ff99d2108d28c060fea.jpg",
+        "url": "https://twitter.com/ChallengesCss"
+      },
+      "url": "https://twitter.com/ChallengesCss/status/1554961425914908672",
+      "published": "2022-08-03T22:44:28+00:00",
+      "wm-received": "2022-08-04T00:03:37Z",
+      "wm-id": 1450257,
+      "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1554961425914908672",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "content": {
+        "html": "I would like to add a small note that 0 is the same as 0px but not always the same as 0% (even if used outside calc()).\n\nI remember dealing with this little quirk in different places (one I just found: <a href=\"https://stackoverflow.com/a/54012225/8620333\">stackoverflow.com/a/54012225/862…</a>) \n\na demo to illustrate: <a href=\"https://codepen.io/t_afif/pen/XWEEMjv\">codepen.io/t_afif/pen/XWE…</a>\n\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
+        "text": "I would like to add a small note that 0 is the same as 0px but not always the same as 0% (even if used outside calc()).\n\nI remember dealing with this little quirk in different places (one I just found: stackoverflow.com/a/54012225/862…) \n\na demo to illustrate: codepen.io/t_afif/pen/XWE…"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "T. Afif @ CSS Challenges",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/52104894ba58cf8c84a281f07f7cbd3fa7b290bd6a1e5ff99d2108d28c060fea.jpg",
+        "url": "https://twitter.com/ChallengesCss"
+      },
+      "url": "https://twitter.com/ChallengesCss/status/1554967374566244352",
+      "published": "2022-08-03T23:08:06+00:00",
+      "wm-received": "2022-08-04T00:03:37Z",
+      "wm-id": 1450258,
+      "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1554967374566244352",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "content": {
+        "html": "Yes it's intentional and the behavior is correct based on the Spec (I am explaining it in the linked Stack Overflow question)\n\nIt's related to \"cyclic percentage\" where the container size depend on the child size and child size depend on the container size as well\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
+        "text": "Yes it's intentional and the behavior is correct based on the Spec (I am explaining it in the linked Stack Overflow question)\n\nIt's related to \"cyclic percentage\" where the container size depend on the child size and child size depend on the container size as well"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "T. Afif @ CSS Challenges",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/52104894ba58cf8c84a281f07f7cbd3fa7b290bd6a1e5ff99d2108d28c060fea.jpg",
+        "url": "https://twitter.com/ChallengesCss"
+      },
+      "url": "https://twitter.com/ChallengesCss/status/1554918933752324096",
+      "published": "2022-08-03T19:55:37+00:00",
+      "wm-received": "2022-08-03T20:22:12Z",
+      "wm-id": 1450088,
+      "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1554918933752324096",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "content": {
+        "html": "Can't agree more! and I can confirm (based on the Stack Overflow questions I see regularly) that many new developers struggle with that \"0\" inside calc()/min()/max() that make everything invalid. 😩\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
+        "text": "Can't agree more! and I can confirm (based on the Stack Overflow questions I see regularly) that many new developers struggle with that \"0\" inside calc()/min()/max() that make everything invalid. 😩"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
