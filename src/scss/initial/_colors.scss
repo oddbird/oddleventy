@@ -1,7 +1,6 @@
 @use 'sass:meta';
 @use '../config';
-@use '~cascading-color-systems' as ccs with (
-  $hues: config.ccs('hues'),
+@use '~cascading-color-systems' as ccs with ($hues: config.ccs('hues'),
   $saturation: config.ccs('saturation'),
   $contrast: config.ccs('contrast'),
   $steps: config.ccs('steps'),
@@ -9,8 +8,7 @@
   $fade-background: config.ccs('fade-background'),
   $neutral-saturation: config.ccs('neutral-saturation'),
   $build: true,
-  $gradients: true
-);
+  $gradients: true);
 
 /// # CSS Color Variables
 /// Generate CSS variables from configuration colors,
