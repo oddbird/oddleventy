@@ -1,12 +1,3 @@
-/// ## Content Colors
-/// --------------
-/// Rather than using the brand colors directly,
-/// we use them to set default values for generated variables.
-/// This provides a mapping between semantic foreground use-cases,
-/// and automatically-generated color variables.
-/// @colors content-colors
-/// @group config-color
-
 $text: var(--ccs-neutral--fg-full);
 $text-light: var(--ccs-neutral--fg3);
 $accent: var(--ccs-accent--fg1);

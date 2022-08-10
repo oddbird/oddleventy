@@ -25,6 +25,21 @@
   tools.compile-colors(meta.module-variables('ccs-defaults'))
 );
 
+/// ## Content Colors
+/// --------------
+/// Rather than using the brand colors directly,
+/// we use them to set default values for generated variables.
+/// This provides a mapping between semantic foreground use-cases,
+/// and automatically-generated color variables.
+/// @group config-color
+/// @example scss
+///   @use 'config/color/content';
+///   @use 'config/tools';
+///   @use 'sass:meta';
+///
+///   @each $name, $color in tools.compile-colors(meta.module-variables('content')) {
+///   /*! #{$name}: #{$color}; */
+///   }
 @include herman.add(
   'colors',
   'content-colors',
