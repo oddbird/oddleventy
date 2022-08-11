@@ -1,10 +1,3 @@
-/// ## CCS Defaults
-/// ------------
-/// The Cascading Color System has a few settings
-/// that we can most easily override with CSS variables
-/// @colors ccs-colors
-/// @group config-color
-
 $ccs-neutral--theme: var(--ccs-h--prime);
 $ccs-background: var(--bg);
 $ccs-color: var(--text);

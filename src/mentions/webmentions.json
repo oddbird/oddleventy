@@ -1,6 +1,63 @@
 {
-  "lastFetched": "2022-08-09T19:56:15.659Z",
+  "lastFetched": "2022-08-11T17:58:48.193Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://thedevnews.com/situation-516/",
+      "published": null,
+      "wm-received": "2022-08-11T16:28:45Z",
+      "wm-id": 1456238,
+      "wm-source": "https://thedevnews.com/situation-516/",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/?utm_source=CSS-Weekly&utm_campaign=Issue-516&utm_medium=RSS",
+      "mention-of": "https://www.oddbird.net/2022/08/04/zero-units/?utm_source=CSS-Weekly&utm_campaign=Issue-516&utm_medium=RSS",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://thedevnews.com/situation-516/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://pwsngr.com/collective-724/",
+      "published": null,
+      "wm-received": "2022-08-11T13:34:39Z",
+      "wm-id": 1456113,
+      "wm-source": "https://pwsngr.com/collective-724/",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "mention-of": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://easycreateawebsite.com/not-all-zeros-are-equal/",
+      "published": null,
+      "wm-received": "2022-08-10T13:47:25Z",
+      "wm-id": 1455333,
+      "wm-source": "https://easycreateawebsite.com/not-all-zeros-are-equal/",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "mention-of": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {

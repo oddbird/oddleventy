@@ -1,12 +1,3 @@
-/// ## Background Colors
-/// -----------------
-/// Rather than using the brand colors directly,
-/// we use them to set default values for generated variables.
-/// This provides a mapping between semantic background use-cases,
-/// and automatically-generated color variables.
-/// @colors background-colors
-/// @group config-color
-
 $bg: var(--ccs-neutral--bg-full);
 $bg-full: var(--ccs--bg-full);
 $callout: hsl(var(--ccs-h--prime), var(--ccs-s--bg3), var(--ccs-l--bg5));
