@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 [data-post] {
   --post-margin: var(--gutter);
@@ -32,7 +32,7 @@
 }
 
 [data-post='link'] {
-  @include tools.transition('pop');
+  @include config.transition('pop');
 
   --hero-height: var(--grid-hero);
   --item-title: 1rem;
@@ -58,7 +58,7 @@
     display: block;
 
     &::after {
-      @include tools.z-index('bump');
+      @include config.z-index('bump');
 
       content: '';
       display: block;
@@ -77,7 +77,7 @@
 // --------
 
 .type-flag {
-  @include tools.font-family('alt');
+  @include config.font-family('alt');
 
   background: var(--highlight);
   color: var(--bg);

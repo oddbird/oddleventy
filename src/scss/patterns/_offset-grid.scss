@@ -1,5 +1,4 @@
-@use '~accoutrement/sass/tools';
-@use '../config/layout';
+@use '../config';
 
 $break: 'wide-break';
 
@@ -11,7 +10,7 @@ $break: 'wide-break';
   margin: var(--spacer) 0;
   position: relative;
 
-  @include tools.above($break) {
+  @include config.above($break) {
     --clip-overlap: calc(var(--gutter) * -1);
     --offset: var(--spacer);
 
@@ -26,21 +25,21 @@ $break: 'wide-break';
 }
 
 .offset-item {
-  @include layout.clip-base;
+  @include config.clip-base;
 
   &:nth-child(odd) {
-    @include layout.clip('right', $break);
+    @include config.clip('right', $break);
   }
 
   &:nth-child(even) {
-    @include layout.clip('left', $break);
+    @include config.clip('left', $break);
   }
 }
 
 .offset-more {
   padding: 0 var(--page-margin);
 
-  @include tools.above($break) {
+  @include config.above($break) {
     inset: auto auto 0 50%;
     padding-left: 0;
     position: absolute;

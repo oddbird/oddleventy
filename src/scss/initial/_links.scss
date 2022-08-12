@@ -1,4 +1,3 @@
-@use '~accoutrement/sass/tools';
 @use '../config';
 
 /// # Link Defaults
@@ -45,7 +44,7 @@ a {
   .link-text,
   &:link,
   &:visited {
-    @include tools.transition('underline');
+    @include config.transition('underline');
 
     text-decoration: underline;
     text-decoration-color: var(

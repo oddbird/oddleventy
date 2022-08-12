@@ -1,7 +1,7 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 #title {
-  @include tools.z-index('bump');
+  @include config.z-index('bump');
 
   --blur: var(--quarter-shim);
   --outset: calc(var(--blur) * -1);
@@ -45,7 +45,7 @@
       font-style: normal;
       font-weight: normal;
 
-      @include tools.above('page') {
+      @include config.above('page') {
         display: inline-block;
         transform: translateY(calc(-1vw));
       }

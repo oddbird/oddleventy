@@ -1,9 +1,5 @@
-@use '~cssremedy/css/remedy';
+@use 'screen';
 @use 'config';
-@use 'initial';
-@use 'forms';
-@use 'patterns';
-@use 'components';
 
 [data-styleguide='focus'] {
   @include config.focus-ring;

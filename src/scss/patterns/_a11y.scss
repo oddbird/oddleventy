@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 /// # Accessibility
 /// Helpers and utilities formaking the site more accessible.
@@ -22,7 +22,7 @@
 /// @group a11y
 .sr-only {
   &:not(:focus):not(:active) {
-    @include tools.is-hidden;
+    @include config.is-hidden;
   }
 }
 
@@ -38,7 +38,7 @@
 #to-content {
   &:link,
   &:visited {
-    @include tools.z-index('skip-link');
+    @include config.z-index('skip-link');
 
     --underline-color: currentcolor;
 
@@ -50,7 +50,7 @@
     position: absolute;
     top: 0;
     transform: translate3d(0, -100%, 0);
-    transition: tools.change('move'), tools.change('fade');
+    transition: config.change('move'), config.change('fade');
   }
 
   &:focus,

@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 /// # Typography
 /// Basic typographic styles for the site.
@@ -18,7 +18,7 @@ ol {
     --list-padding--default: 1em;
   }
 
-  @include tools.below('wide-page') {
+  @include config.below('wide-page') {
     --list-padding--default: 1em;
   }
 }
@@ -51,7 +51,7 @@ ol {
   }
 
   strong {
-    @include tools.font-family('alt');
+    @include config.font-family('alt');
 
     font-size: var(--h3);
   }

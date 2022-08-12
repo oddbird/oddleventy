@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 figure {
   --column: wide;
@@ -18,7 +18,7 @@ figure {
   }
 
   > * {
-    @include tools.square(100%);
+    @include config.square(100%);
 
     inset: 0;
     position: absolute;

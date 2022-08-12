@@ -1,5 +1,4 @@
-@use '~accoutrement/sass/tools';
-@use '../config/scale';
+@use '../config';
 @use 'sass:map';
 
 // Main Actions
@@ -85,7 +84,7 @@
 [data-block~='rotate'] {
   transform: rotate(var(--rotate, 0));
 
-  @include tools.above('wide-page') {
+  @include config.above('wide-page') {
     --rotate: -6deg;
   }
 }
@@ -100,7 +99,7 @@
   }
 }
 
-@each $name in map.keys(scale.$page-sizes) {
+@each $name in map.keys(config.$page-sizes) {
   [data-block~='#{$name}'] {
     --block-max: var(--#{unquote($name)});
   }
@@ -129,7 +128,7 @@
   justify-content: var(--justify, center);
   justify-items: stretch;
 
-  @include tools.below('page') {
+  @include config.below('page') {
     // "private" variable to ensure grid-items fit on mobile…
     ---mobile-min: 60%;
   }
