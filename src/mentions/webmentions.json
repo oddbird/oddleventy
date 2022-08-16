@@ -1,6 +1,48 @@
 {
-  "lastFetched": "2022-08-11T18:54:21.559Z",
+  "lastFetched": "2022-08-16T17:47:30.803Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://django.how/extras/scheduling-tasks-in-django/",
+      "published": null,
+      "wm-received": "2022-08-15T17:58:41Z",
+      "wm-id": 1459689,
+      "wm-source": "https://django.how/extras/scheduling-tasks-in-django/",
+      "wm-target": "https://www.oddbird.net/2017/04/17/async-notifications/",
+      "mention-of": "https://www.oddbird.net/2017/04/17/async-notifications/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://www.europeitoutsourcing.com/extras/scheduling-tasks-in-django/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://otomasyonlar.net/index.php/2022/08/14/toplu-724/",
+      "published": null,
+      "wm-received": "2022-08-14T05:54:44Z",
+      "wm-id": 1458761,
+      "wm-source": "https://otomasyonlar.net/index.php/2022/08/14/toplu-724/",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "mention-of": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://otomasyonlar.net/index.php/2022/08/14/toplu-724/"
+      }
+    },
     {
       "type": "entry",
       "author": {
