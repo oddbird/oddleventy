@@ -2,11 +2,11 @@
 title: CSSWG, Container Queries, Scope, and Layers
 venue: Word Wrap Show
 date: 2021-05-17
-canonical: https://wordwrap.dev/episodes/011/
+canonical: https://wordwrap.dev/episodes/s1/011/
 author: miriam
 image:
   src: blog/elsewhere/wordwrap.jpg
-  alt: F-Word
+  alt: Word Wrap Show
 tags:
   - CSS
   - Sass
@@ -20,7 +20,7 @@ summary: |
   about my journey into webdev and onto the CSSWG,
   what I find frustrating about how others use CSS,
   and the three specs I'm working on.
-audio: https://wordwrap.ams3.cdn.digitaloceanspaces.com/Word%20Wrap%20-%20Episode%2011.mp3
+audio: https://cdn.transistor.fm/file/transistor/m/shows/29448/eb15a1f60f7d9d2f6c7a9f9ab47d83fc.mp3
 ---
 
 {% import "embed.macros.njk" as embed %}
