@@ -159,6 +159,26 @@ I won't go into all the reasons here,
 but it wasn't possible for browsers to implement,
 and there are fewer use-cases for it anyway.
 
+Over time,
+Media Queries have expanded
+to cover much more than viewport sizing --
+we can query user preferences,
+display quality,
+color-depth,
+interaction capabilities,
+and more.
+We expect a similar expansion
+with Container Queries.
+_Size queries_ will ship this summer,
+but _style queries_ are already well-defined,
+and ready for browsers to implement.
+We're also looking into a range of possible
+_state queries_ --
+for example,
+selecting elements inside a `position: sticky` container
+based on the stuck or unstuck 'state'
+of that container.
+
 [^style]: Chrome has started to implement
   a prototype of style queries
   (_for custom properties only_)
@@ -311,13 +331,21 @@ sometime this summer.
 Safari doesn't announce their release schedule in advance,
 but Chrome 105
 will be public on Aug 30, 2022.
-Firefox is actively
-working on support,
+Firefox is
+[actively working on support](https://bugzilla.mozilla.org/show_bug.cgi?id=1744221),
 but hasn't yet announced when it will be ready.
+
+Here's the support
+for each feature:
+
+{{ embed.caniuse('css-container-queries') }}
+{{ embed.caniuse('css-container-query-units', script=false) }}
+
+## Safari bug with 'negated' queries
 
 There's one small bug worth noting in Safari,
 but it only applies to queries using the keyword `not`.
-This is a valid container query
+The following is a valid container query
 that should apply when the inline size
 is _not greater than_ `40em`:
 
@@ -335,9 +363,3 @@ by wrapping the entire query in parentheses:
 ```css
 @container (not (inline-size > 40em)) { /* … */ }
 ```
-
-Here's the support
-for each feature:
-
-{{ embed.caniuse('css-container-queries') }}
-{{ embed.caniuse('css-container-query-units', script=false) }}
