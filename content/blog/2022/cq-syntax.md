@@ -2,7 +2,7 @@
 title: Use the Right Container Query Syntax
 sub: Size queries are stable, and shipping in browsers this summer
 author: miriam
-date: 2022-08-16
+date: 2022-08-17
 image:
   src: talks/container-query.jpg
   alt: |
@@ -31,7 +31,7 @@ summary: |
 
 Container Queries
 allow us to measure (or 'query')
-aspects of a 'container' element
+aspects of a 'container' element,
 and style any descendants
 based on the result of the query.
 This is very similar to
@@ -79,7 +79,7 @@ main, .sidebar {
 
 main {
   /* elements can have multiple names */
-  /* (use any names you want, there's no pre-defined options) */
+  /* (use any names you want, there are no pre-defined options) */
   container-name: main-content page-layout;
 }
 
@@ -134,7 +134,7 @@ Normally, the size of an element
 would be based on the size of its contents --
 but if we query that size,
 and change the contents based on the query,
-we have an infinite loops.
+we have an infinite loop.
 Size containment breaks that loop
 by ensuring the size of a container
 is not based on the size of its contents.
@@ -149,14 +149,14 @@ Here we have two options:
 - `size` establishes size containment
   on both dimensions of the container,
   and allows us to query either the inline or block size.
-  **Be careful with this**,
+  **Be careful with this** --
   elements might collapse entirely
   if they can't get either a width or height value
   from their contents.
 
 There is no `block-size` option.
 I won't go into all the reasons here,
-but it wasn't possible from browsers to implement,
+but it wasn't possible for browsers to implement,
 and there are fewer use-cases for it anyway.
 
 [^style]: Chrome has started to implement
@@ -280,7 +280,7 @@ we can query various aspects of their dimensions:[^size]
 
 There are a few things to note here:
 
-- The optional 'range syntax' e.g. `(inline-size > 40em)`
+- The optional 'range syntax' -- e.g. `(inline-size > 40em)` --
   is a [separate feature](https://www.bram.us/2021/10/26/media-queries-level-4-media-query-range-contexts/),
   which is allowed in media queries
   as well as container queries.
@@ -296,7 +296,7 @@ There are a few things to note here:
   but container-queries actually resolve units
   _based on the font-size of the container_.
 
-[^size]: Check out the spec,
+[^size]: Check out the spec
   for a full list of
   [size container features](https://drafts.csswg.org/css-contain-3/#size-container)
   that can be queried --
@@ -317,7 +317,7 @@ but hasn't yet announced when it will be ready.
 
 There's one small bug worth noting in Safari,
 but it only applies to queries using the keyword `not`.
-This is a valid container query,
+This is a valid container query
 that should apply when the inline size
 is _not greater than_ `40em`:
 
@@ -330,7 +330,7 @@ a container with the name of `not`,
 and an `inline-size` that is _greater-than_ `40em`.
 You can get the correct behavior
 in all browsers
-by wrapping the entire query in parenthesis:
+by wrapping the entire query in parentheses:
 
 ```css
 @container (not (inline-size > 40em)) { /* … */ }
@@ -340,4 +340,4 @@ Here's the support
 for each feature:
 
 {{ embed.caniuse('css-container-queries') }}
-{{ embed.caniuse('css-container-query-units') }}
+{{ embed.caniuse('css-container-query-units', script=false) }}
