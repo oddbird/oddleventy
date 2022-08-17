@@ -1,6 +1,6 @@
 ---
 title: Use the Right Container Query Syntax
-sub: Size queries are stable, and shipping in browsers this summer
+sub: Size queries are stable, and shipping in browsers
 author: miriam
 date: 2022-08-17
 image:
@@ -28,6 +28,15 @@ summary: |
 ---
 
 {% import 'embed.macros.njk' as embed %}
+
+{% callout %}
+We'll keep this article up-to-date
+if there are any further developments.
+But now that the feature
+is beginning to ship in browsers
+it is very unlikely that there will be
+any breaking changes.
+{% endcallout %}
 
 Container Queries
 allow us to measure (or 'query')
@@ -64,27 +73,39 @@ given talks,
 and released videos
 using now-out-of-date syntax.
 
+Now Safari and Chrome
+have both signaled that
+they are ready to ship
+Container size queries and units,
+likely starting in late August, 2022.
+
 So, what syntax
-is actually shipping in browsers
-this summer?
+is actually shipping in browsers?
 
 ## TL;DR, a code sample
 
 ```css
 main, .sidebar {
-  /* shorthand: `container: page-layout / inline-size;` */
+  /* establish containers for inline-size queries */
   container-type: inline-size;
-  container-name: page-layout;
 }
 
 main {
-  /* elements can have multiple names */
-  /* (use any names you want, there are no pre-defined options) */
+  /* optionally give a container one or more names */
+  /* - use any names you want, there are no pre-defined options */
   container-name: main-content page-layout;
 }
 
-/* similar to `(min-width: 40em)` */
-@container (width > 40em) {
+article {
+  /* a shorthand to set both names and types */
+  /* - names are required and come first in the shorthand */
+  container: article-layout / inline-size;
+}
+
+/* query the nearest ancestor container named page-layout */
+/* - using a container-name is optional in the query */
+/* - we can also use the old `(min-width: 40em)` syntax */
+@container page-layout (inline-size > 40em) {
   .card {
     grid-template-columns: auto 1fr;
   }
@@ -122,7 +143,7 @@ meaning we should be able to query the
 [computed value](https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value)
 of any property on any element.
 But don't worry about that yet,
-**browsers are only shipping size queries this summer**.[^style]
+**browsers are only shipping size queries in Sept 2022**.[^style]
 For now, you can use the `normal` value
 to override other values --
 similar to using the `initial` keyword.
@@ -234,7 +255,8 @@ main, .sidebar {
 }
 ```
 
-Note that _names go first_, before the slash.
+{% callout %}
+_Names go first_, before the slash.
 **This is one of the big changes
 that will break a lot of demos.**
 In an earlier draft of the feature,
@@ -243,6 +265,7 @@ If you see an old container query
 article or talk or demo
 that no longer works,
 _this is probably why_.
+{% endcallout %}
 
 ## Container Query units
 
@@ -265,6 +288,14 @@ they'll use the 'small viewport' dimensions.
 - `1cqmin` - The smaller value of `cqi` or `cqb`
 - `1cqmax` - The larger value of `cqi` or `cqb`
 
+{% callout %}
+**This also changed
+after some of the early demos came out.**
+The original prototype
+used `q*` instead of `cq*`
+as the unit prefix.
+{% endcallout %}
+
 Scott Kellum
 has a great demo on Codepen:
 
@@ -274,12 +305,6 @@ has a great demo on Codepen:
   user='scottkellum',
   height=500
 ) }}
-
-**This also changed**
-since some of the early demos came out.
-The original prototype
-used `q*` instead of `cq*`
-as the unit prefix.
 
 ## Querying containers with `@container`
 
@@ -324,13 +349,16 @@ There are a few things to note here:
 
 ## Browser support
 
-Container size queries & units
-are expected to ship
-in both Chrome & Safari
-sometime this summer.
-Safari doesn't announce their release schedule in advance,
-but Chrome 105
-will be public on Aug 30, 2022.
+Apple doesn't announce their release schedule in advance,
+but we know they are planning to ship
+size queries and units in Safari 16,
+and that the version is already _frozen_
+(no more changes before release) --
+we just don't know when it will
+actually go public.
+Chrome 105
+will also support size queries and units --
+shipping on Aug 30, 2022.
 Firefox is
 [actively working on support](https://bugzilla.mozilla.org/show_bug.cgi?id=1744221),
 but hasn't yet announced when it will be ready.
@@ -363,3 +391,6 @@ by wrapping the entire query in parentheses:
 ```css
 @container (not (inline-size > 40em)) { /* … */ }
 ```
+
+You can also expect Safari to fix this
+as soon as they're able to release a patch.
