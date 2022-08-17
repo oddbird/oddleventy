@@ -600,5 +600,5 @@ params:
     <img src="https://caniuse.bitsofco.de/image/{{ feature }}.jpg" alt="Data on support for the {{ feature }} feature across the major browsers from caniuse.com">
   </picture>
 </p>
-<script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js"></script>
+{%- if script -%}<script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js"></script>{%- endif -%}
 {%- endmacro %}
