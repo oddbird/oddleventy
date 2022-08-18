@@ -55,7 +55,7 @@ category: file
         {{ title }}
       {% endif %}
     {% endcall %}
-    {{ post.subtitle(item.data.sub, collections) }}
+    {{ post.subtitle(item.data.sub) }}
     {{ post.byline(item, collections, dateformat='range', prefix=none) }}
   </header>
   {% if item.data.feature %}

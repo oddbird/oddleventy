@@ -1,0 +1,10 @@
+[data-callout] {
+  background: var(--callout-block-bg, var(--callout));
+  border-inline-start: thick solid var(--callout-block-border, var(--border));
+  margin: var(--newline) calc(var(--gutter) * -1);
+  padding: var(--gutter);
+
+  :is(p, ol, ul):last-child {
+    margin-block-end: 0;
+  }
+}

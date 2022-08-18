@@ -1,0 +1,75 @@
+@use '~sassdoc-theme-herman/scss/utilities' as herman;
+@use '../tools';
+@use 'sass:meta';
+@use 'brand';
+@use 'background';
+@use 'ccs-defaults';
+@use 'content';
+@forward 'config';
+
+@include herman.add(
+  'colors',
+  'brand-colors',
+  tools.compile-colors(meta.module-variables('brand'))
+);
+
+/// ## Background Colors
+/// --------------------
+/// Rather than using the brand colors directly,
+/// we use them to set default values for generated variables.
+/// This provides a mapping between semantic background use-cases,
+/// and automatically-generated color variables.
+/// @group config-color
+/// @example scss
+///   @use 'config/color/background';
+///   @use 'config/tools';
+///   @use 'sass:meta';
+///
+///   @each $name, $color in tools.compile-colors(meta.module-variables('background')) {
+///   /* #{$name}: #{$color}; */
+///   }
+@include herman.add(
+  'colors',
+  'background-colors',
+  tools.compile-colors(meta.module-variables('background'))
+);
+
+/// ## CCS Defaults
+/// ---------------
+/// The Cascading Color System has a few settings
+/// that we can most easily override with CSS variables
+/// @group config-color
+/// @example scss
+///   @use 'config/color/ccs-defaults';
+///   @use 'config/tools';
+///   @use 'sass:meta';
+///
+///   @each $name, $color in tools.compile-colors(meta.module-variables('ccs-defaults')) {
+///   /* #{$name}: #{$color}; */
+///   }
+@include herman.add(
+  'colors',
+  'ccs-colors',
+  tools.compile-colors(meta.module-variables('ccs-defaults'))
+);
+
+/// ## Content Colors
+/// -----------------
+/// Rather than using the brand colors directly,
+/// we use them to set default values for generated variables.
+/// This provides a mapping between semantic foreground use-cases,
+/// and automatically-generated color variables.
+/// @group config-color
+/// @example scss
+///   @use 'config/color/content';
+///   @use 'config/tools';
+///   @use 'sass:meta';
+///
+///   @each $name, $color in tools.compile-colors(meta.module-variables('content')) {
+///   /* #{$name}: #{$color}; */
+///   }
+@include herman.add(
+  'colors',
+  'content-colors',
+  tools.compile-colors(meta.module-variables('content'))
+);

@@ -1,3 +1,4 @@
+domain: www.oddbird.net
 url: https://www.oddbird.net/
 title: OddBird
 description: |
@@ -9,10 +10,10 @@ feed: /feed.atom
 styles:
   - screen.css
 facebook_id: 1820980378150914
-google_analytics_id: UA-36510846-1
 social:
   email: birds
   twitter: oddbird
+  github: oddbird
 nav:
   - url: /work/
   - url: /services/
@@ -20,3 +21,8 @@ nav:
   - url: /blog/
   - url: /about/
   - url: /contact/
+me:
+  - https://www.oddbird.net/
+  - mailto:birds@oddbird.net
+  - https://twitter.com/oddbird
+  - https://github.com/oddbird

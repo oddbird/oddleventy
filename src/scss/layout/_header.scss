@@ -1,10 +1,10 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 [data-layout='header'] {
   display: grid;
 
   .type-flag {
-    @include tools.z-index('bump');
+    @include config.z-index('bump');
 
     margin: var(--gutter) 0 var(--shim) auto;
     padding-block: var(--quarter-shim);
@@ -18,12 +18,12 @@
   --clip-overlap: var(--gutter);
 
   grid-template:
-    'hero type' auto
-    'title hero2' var(--clip-overlap)
-    'title .' auto
-    'meta meta' auto
-    'intro intro' auto
-    / auto minmax(var(--edge), 1fr);
+    'hero type type' auto
+    'title title hero2' var(--clip-overlap)
+    'title title .' auto
+    'meta meta meta' auto
+    'intro intro intro' auto
+    / auto auto minmax(var(--edge), 1fr);
 
   #title {
     padding-left: var(--page-margin);
@@ -38,12 +38,12 @@
     --clip-overlap: var(--h1);
   }
 
-  @include tools.above(35em) {
+  @include config.above(35em) {
     --angle: var(--page-margin);
     --edge: var(--page-margin);
   }
 
-  @include tools.above(50em) {
+  @include config.above(50em) {
     --edge: 25%;
   }
 }

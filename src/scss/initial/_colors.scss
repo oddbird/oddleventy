@@ -1,5 +1,5 @@
-@use '../config/color' as config;
-@use '~accoutrement/sass/tools';
+@use 'sass:meta';
+@use '../config';
 @use '~cascading-color-systems' as ccs with (
   $hues: config.ccs('hues'),
   $saturation: config.ccs('saturation'),
@@ -23,9 +23,7 @@
 
 /// @group init-colors
 [data-ccs-colors] {
-  @include tools.tokens--(config.$ccs-colors);
-  @include tools.tokens--(config.$background-colors);
-  @include tools.tokens--(config.$content-colors);
+  @include config.colors--;
 
   --img-bright--base: #{ccs.if-mode($light: 50%, $dark: 40%)};
   --img-bright--default: calc(var(--img-bright--base) + var(--ccs-l));

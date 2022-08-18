@@ -1,11 +1,11 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 .event {
   margin-bottom: var(--newline);
 }
 
 .event-meta {
-  @include tools.font-family('alt');
+  @include config.font-family('alt');
 
   font-size: var(--small);
 }
@@ -15,7 +15,7 @@
 }
 
 .event-links {
-  @include tools.wrap-content('[' ']');
+  @include config.wrap-content('[' ']');
 
   font-size: var(--small);
   font-style: italic;

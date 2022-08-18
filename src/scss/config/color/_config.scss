@@ -1,0 +1,69 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:math';
+@use 'sass:color';
+@use '../tools';
+@use 'brand';
+
+/// ## Color Config
+/// ---------------
+/// Accoutrement maps for storing global color tokens,
+/// and settings for generating color variables.
+/// @link https://www.oddbird.net/accoutrement/docs/color.html
+///   Accoutrement Color
+/// @link https://www.oddbird.net/cascading-colors/
+///   Cascading Color Systems
+/// @group config-color
+
+/// ### Brand Hues
+/// --------------
+/// Hue values taken from the brand colors,
+/// for easy access in the CCS settings.
+/// @type map
+/// @access private
+/// @group config-color
+$_hues: (
+  'prime': math.div(color.hue(brand.$brand-blue), 1deg),
+  'accent': math.div(color.hue(brand.$brand-pink), 1deg),
+  'special': math.div(color.hue(brand.$brand-orange), 1deg),
+  'neutral': null,
+);
+
+/// ### CCS Settings
+/// ----------------
+/// Settings for generating color variables.
+/// This map is marked private to encourage access
+/// through the `ccs()` function.
+/// See Cascading Color Systems documentation
+/// for valid settings.
+/// @type map
+/// @link https://www.oddbird.net/cascading-colors/
+///   Cascading Color Systems
+/// @access private
+/// @group config-color
+$_ccs: (
+  'hues': $_hues,
+  'saturation': 75%,
+  'contrast': 45%,
+  'steps': 6,
+  'fades': 0.75,
+  'fade-background': 25%,
+  'neutral-saturation': 10%,
+);
+
+/// ### CCS "Get" Function
+/// ----------------------
+/// Get settings from the `$ccs` configuration map.
+/// @param {string} $token -
+///   Name of a token key in the `$ccs` map.
+///   See map for valid tokens.
+/// @return {*} -
+///   Value from `$ccs` map, based on given key
+/// @example scss
+///   @use 'config/color';
+///
+///   $prime-hue: color.ccs('prime');
+/// @group config-color
+@function ccs($token) {
+  @return map.get($_ccs, $token);
+}

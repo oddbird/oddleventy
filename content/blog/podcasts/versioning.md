@@ -12,7 +12,7 @@ venue: SitePoint
 image:
   src: blog/2016/versioning.png
   alt: Miriam Suzanne on the director's chair
-audio: VER008_Miriam-Suzanne.mp3
+audio: 2016/VER008_Miriam-Suzanne.mp3
 summary: |
   I joined Tim Evko and M. David Green
   for their SitePoint podcast -- The Versioning Show.

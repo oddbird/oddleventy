@@ -1,6 +1,5 @@
 @use 'sass:math';
-@use '../config/scale';
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 /// # CSS Size Variables
 /// Convert useful [Sass scale tokens](config-scale.html)
@@ -8,7 +7,7 @@
 /// @group init-scale
 
 /// Generate variables from Sass maps,
-/// using Accountrement tools.
+/// using Accoutrement tools.
 /// @name Global Sizes
 /// @see $font-sizes
 /// @see $spacing-sizes
@@ -17,18 +16,18 @@
 ///   Accoutrement CSS Variables
 /// @group init-scale
 html {
-  @include tools.tokens--(scale.$font-sizes);
-  @include tools.tokens--(scale.$spacing-sizes);
-  @include tools.tokens--(scale.$theme-sizes);
-  @include tools.tokens--(scale.$page-sizes);
+  @include config.tokens--(config.$font-sizes);
+  @include config.tokens--(config.$spacing-sizes);
+  @include config.tokens--(config.$theme-sizes);
+  @include config.tokens--(config.$page-sizes);
 
-  --extra: #{math.div(tools.size('wide-page') - tools.size('page'), 2)};
+  --extra: #{math.div(config.size('wide-page') - config.size('page'), 2)};
   --main-min: calc(100vw - var(--page-margin) * 2);
   --page-columns: [full-start] var(--page-margin) [content-start wide-start
     page-start] minmax(var(--main-min), var(--page)) [page-end wide-end
     content-end] var(--page-margin) [full-end];
 
-  @include tools.above('wide-page') {
+  @include config.above('wide-page') {
     --main-min: var(--min-page);
     --page-columns: [full-start] var(--page-margin) [content-start]
       minmax(0, 1fr) [wide-start] minmax(0, var(--extra)) [page-start]

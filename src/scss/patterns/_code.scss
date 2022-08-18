@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 /**
  * ccs theme
@@ -8,7 +8,7 @@
 
 pre,
 code {
-  @include tools.font-family('code');
+  @include config.font-family('code');
 
   font-size: var(--code);
   hyphens: none;

@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use '../config';
 
 [data-work] {
   --column: full;
@@ -6,7 +6,7 @@
   [data-work='summary'] + & {
     --pull-sample: var(--spacer);
 
-    @include tools.above('wide-break') {
+    @include config.above('wide-break') {
       --pull-sample: calc(var(--spacer) * -1);
     }
   }
@@ -45,7 +45,7 @@
   margin: var(--gutter) var(--page-margin);
   max-width: var(--wide-page);
 
-  @include tools.above('wide-page') {
+  @include config.above('wide-page') {
     grid-template-areas:
       'desktop desktop2 desktop2'
       'desktop mobile ..........'

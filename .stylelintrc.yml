@@ -36,7 +36,7 @@ rules:
     - message: 'Expected mixin to be kebab-case'
   scss/at-rule-conditional-no-parentheses: null
   scss/dollar-variable-pattern:
-    - '^([_|-]*[a-z][a-z0-9]*)(-[a-z0-9]+)*-*$'
+    - '^([_|-]*[a-z][a-z0-9]*)(-{1,2}[a-z0-9]+)*-*$'
     - message: 'Expected variable to be kebab-case'
 
   # Disable for Prettier
