@@ -2,7 +2,7 @@
 title: Use the Right Container Query Syntax
 sub: Size queries are stable, and shipping in browsers
 author: miriam
-date: 2022-08-17
+date: 2022-08-18
 image:
   src: talks/container-query.jpg
   alt: |
@@ -31,9 +31,9 @@ summary: |
 
 {% callout %}
 We'll keep this article up-to-date
-if there are any further developments.
-But now that the feature
-is beginning to ship in browsers
+if there are any further developments --
+but now that the feature
+is beginning to ship in browsers,
 it is very unlikely that there will be
 any breaking changes.
 {% endcallout %}
@@ -77,7 +77,7 @@ Now Safari and Chrome
 have both signaled that
 they are ready to ship
 Container size queries and units,
-likely starting in late August, 2022.
+likely starting in late August 2022.
 
 So, what syntax
 is actually shipping in browsers?
@@ -143,7 +143,7 @@ meaning we should be able to query the
 [computed value](https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value)
 of any property on any element.
 But don't worry about that yet,
-**browsers are only shipping size queries in Sept 2022**.[^style]
+**browsers are only shipping size queries in September 2022**.[^style]
 For now, you can use the `normal` value
 to override other values --
 similar to using the `initial` keyword.
@@ -358,7 +358,7 @@ we just don't know when it will
 actually go public.
 Chrome 105
 will also support size queries and units --
-shipping on Aug 30, 2022.
+shipping on August 30, 2022.
 Firefox is
 [actively working on support](https://bugzilla.mozilla.org/show_bug.cgi?id=1744221),
 but hasn't yet announced when it will be ready.

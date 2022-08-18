@@ -152,9 +152,9 @@ const heading = (content, level, attrs = {}) => {
   return `<h${level} ${attr_html}>${content}</h${level}>`;
 };
 
-/*
+/* @docs
 label: callout
-category: Type
+category: callouts
 note: |
   Add callout boxes for highlighted content,
   e.g. `{% callout type, label %}content{% endcallout %}`
@@ -176,8 +176,8 @@ params:
       'Warning' when the type is 'warn',
       and otherwise the type as given.
 */
-const callout = (content, type='note', label=null) => {
-  const labels =  {
+const callout = (content, type = 'note', label = null) => {
+  const labels = {
     note: 'Note',
     warn: 'Warning',
   };
@@ -186,7 +186,7 @@ const callout = (content, type='note', label=null) => {
             <strong>${label || labels[type] || type}:</strong>
             <div>${md(content.trim())}</div>
           </div>`;
-}
+};
 
 module.exports = {
   mdown,
