@@ -152,6 +152,42 @@ const heading = (content, level, attrs = {}) => {
   return `<h${level} ${attr_html}>${content}</h${level}>`;
 };
 
+/* @docs
+label: callout
+category: callouts
+note: |
+  Add callout boxes for highlighted content,
+  e.g. `{% callout type, label %}content{% endcallout %}`
+params:
+  content:
+    type: markdown string
+  type:
+    type: string
+    default: 'note'
+    note: |
+      The primary expected values are 'note' or 'warn',
+      though we currently only have styling for 'note' callouts.
+  label:
+    type: string
+    default: null
+    note: |
+      Null label will default to
+      'Note' when the type is 'note',
+      'Warning' when the type is 'warn',
+      and otherwise the type as given.
+*/
+const callout = (content, type = 'note', label = null) => {
+  const labels = {
+    note: 'Note',
+    warn: 'Warning',
+  };
+
+  return `<div data-callout="${type}">
+            <strong>${label || labels[type] || type}:</strong>
+            <div>${md(content.trim())}</div>
+          </div>`;
+};
+
 module.exports = {
   mdown,
   elide,
@@ -160,4 +196,5 @@ module.exports = {
   mdInline,
   removeMd,
   heading,
+  callout,
 };

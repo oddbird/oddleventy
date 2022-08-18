@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-import { elide, heading, md, mdInline, typogr } from '#/type';
+import { callout, elide, heading, md, mdInline, typogr } from '#/type';
 
 import { anchorLinkIconString } from '../../src/js/clickToCopy';
 const markdown = '## Lorem ipsum dolor sit amet, consectetur';
@@ -48,5 +48,12 @@ describe('typography filters', () => {
       headingWithAttr,
     );
     expect(heading(content, 2)).toEqual(headingWithOutAttr);
+  });
+
+  test('callout', () => {
+    expect(callout(content)).toContain('Note');
+    expect(callout(content, 'warn')).toContain('Warning');
+    expect(callout(content, 'Error')).toContain('Error');
+    expect(callout(content, 'warn', 'Foobar')).toContain('Foobar');
   });
 });

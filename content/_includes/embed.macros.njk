@@ -566,3 +566,39 @@ params:
     url='https://codepen.io'
   ) }}.</p><script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 {%- endmacro %}
+
+{# @docs
+label: caniuse
+category: Patterns
+note: Embed a browser-support chart from CanIUse.
+links:
+  - '[The CanIUse Embed](https://caniuse.bitsofco.de/)'
+params:
+  feature:
+    type: string
+    note: The "slug" of the desired feature
+  periods:
+    type: string
+    note: Optionally change what browser versions are shown.
+  script:
+    type: boolean
+    default: true
+    note: |
+      When using this multiple times in a single page,
+      there's no reason to import the script every time.
+#}
+{% macro caniuse(
+  feature,
+  periods=none,
+  script=true
+) -%}
+{%- set periods = periods or 'future_1,current,past_1,past_2' -%}
+<p class="ciu_embed" data-feature="{{ feature }}" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
+  <picture>
+    <source type="image/webp" srcset="https://caniuse.bitsofco.de/image/{{ feature }}.webp">
+    <source type="image/png" srcset="https://caniuse.bitsofco.de/image/{{ feature }}.png">
+    <img src="https://caniuse.bitsofco.de/image/{{ feature }}.jpg" alt="Data on support for the {{ feature }} feature across the major browsers from caniuse.com">
+  </picture>
+</p>
+{%- if script -%}<script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js"></script>{%- endif -%}
+{%- endmacro %}
