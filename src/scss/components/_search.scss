@@ -27,6 +27,7 @@
   border-radius: 0;
   color: var(--search-text, var(--text));
   display: grid;
+
   // 32px min is needed to hold space for the clear icon unless we want to
   // override more of algolia's styles
   grid-template-columns: auto 1fr var(--search-col3, minmax(32px, auto));
