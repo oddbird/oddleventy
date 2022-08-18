@@ -99,12 +99,14 @@ section {
 ```
 
 And the `container-type` and `container-name` properties can be combined by
-using the `container` shorthand property:
+using the `container` shorthand property:^[_The two values of the shorthand
+were originally reversed, with `container-type` and then `container-name`.
+Updated **August 18, 2022**._]
 
 ```scss
 article,
 section {
-  container: inline-size / demo;
+  container: demo / inline-size;
 }
 
  @container demo (min-width: 30em) {
