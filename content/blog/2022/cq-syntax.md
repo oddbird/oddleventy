@@ -143,7 +143,8 @@ meaning we should be able to query the
 [computed value](https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value)
 of any property on any element.
 But don't worry about that yet,
-**browsers are only shipping size queries in September 2022**.[^style]
+**browsers are shipping
+size queries and units first**.[^style]
 For now, you can use the `normal` value
 to override other values --
 similar to using the `initial` keyword.
