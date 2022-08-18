@@ -117,7 +117,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@algolia/algoliasearch-netlify-frontend@npm:^1.0.14":
+"@algolia/algoliasearch-netlify-frontend@npm:^1.0.15":
   version: 1.0.15
   resolution: "@algolia/algoliasearch-netlify-frontend@npm:1.0.15"
   checksum: 1663119101df2f220e46b5917a974e87df9705b987dbf143c9a351d8f6a96cdc4cdb52651aaf333f6f9cba058ac3238892ae8710d2f84bc462813fa5e71fef57
@@ -9527,7 +9527,7 @@ __metadata:
     "@11ty/eleventy-img": ^2.0.1
     "@11ty/eleventy-plugin-rss": ^1.2.0
     "@11ty/eleventy-plugin-syntaxhighlight": ^4.1.0
-    "@algolia/algoliasearch-netlify-frontend": ^1.0.14
+    "@algolia/algoliasearch-netlify-frontend": ^1.0.15
     "@babel/core": ^7.18.6
     "@babel/preset-env": ^7.18.6
     "@rollup/plugin-babel": ^5.3.1

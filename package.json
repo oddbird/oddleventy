@@ -43,7 +43,7 @@
     "checklinks": "yarn dlx hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" --skip \"codepen.io\" --skip \"github.com\" --skip \"caniuse.com\" --skip \"youtu.be\" --skip \"stackoverflow.com/users/\" _site/index.html"
   },
   "dependencies": {
-    "@algolia/algoliasearch-netlify-frontend": "^1.0.14",
+    "@algolia/algoliasearch-netlify-frontend": "^1.0.15",
     "accoutrement": "^4.0.1",
     "cascading-color-systems": "0.1.0-beta.15",
     "cssremedy": "0.1.0-beta.2"
