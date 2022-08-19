@@ -16,12 +16,12 @@
   align-items: center;
   background: var(--btn-bg, var(--highlight));
   border: thin solid var(--btn-border, var(--btn-text, transparent));
-  border-radius: var(--radius);
+  border-radius: var(--btn-radius);
   color: var(--btn-text, var(--bg));
   cursor: pointer;
   display: inline-flex;
   font-size: inherit;
-  padding: var(--quarter-shim) var(--btn-padding, var(--double-gutter));
+  padding: var(--half-shim) var(--btn-padding, var(--double-gutter));
 
   &:hover,
   &:focus {
@@ -75,7 +75,5 @@
     --btn-bg: var(--active);
     --btn-border: var(--btn-bg);
     --btn-text: var(--bg);
-
-    border-radius: var(--radius) var(--radius) 0 0;
   }
 }
