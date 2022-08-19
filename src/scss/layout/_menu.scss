@@ -1,7 +1,7 @@
 [data-layout='menu'] {
-  align-items: center;
   display: flex;
   font-size: var(--small);
+  gap: var(--shim);
   grid-area: menu;
   justify-content: flex-end;
   padding-top: var(--shim);
