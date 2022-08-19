@@ -9,3 +9,6 @@ $shadow: hsla(var(--ccs-h--neutral), var(--ccs-s--fg6), var(--ccs-l--fg6), 25%);
 $action: var(--ccs-prime--fg3);
 $active: $highlight;
 $icon: var(--ccs-special--fg1);
+$scroll-panel-bg: hsl(var(--ccs-h--prime), var(--ccs-s--bg4), var(--ccs-l--bg5));
+$scrollbar-track: var(--ccs-prime--bg4-fade);
+$scrollbar-thumb: var(--ccs-prime--bg6-fade);
