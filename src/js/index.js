@@ -1,6 +1,7 @@
-import ccs from 'cascading-color-systems';
-import { clickToCopy } from './clickToCopy.cjs';
 import algoliasearchNetlify from '@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify';
+import ccs from 'cascading-color-systems';
+
+import { clickToCopy } from './clickToCopy.cjs';
 
 // Initialize Cascading Colors
 // https://www.oddbird.net/cascading-colors/
