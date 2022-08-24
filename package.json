@@ -9,7 +9,7 @@
   },
   "private": true,
   "engines": {
-    "node": "^16.6",
+    "node": "^16",
     "yarn": "^3"
   },
   "type": "module",
@@ -54,7 +54,7 @@
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@tommoor/remove-markdown": "^0.3.2",
-    "@typescript-eslint/parser": "^5.33.1",
+    "@typescript-eslint/parser": "^5.34.0",
     "@yarnpkg/sdks": "^3.0.0-rc.14",
     "accoutrement": "^4.0.3",
     "autoprefixer": "^10.4.8",
