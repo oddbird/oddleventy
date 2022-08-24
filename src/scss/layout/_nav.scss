@@ -28,7 +28,7 @@
   display: inline-block;
   padding: var(--shim) var(--banner-space);
 
-  &:not(:hover):not(:active):not(:focus):not([aria-current]) {
+  &:not(:hover, :active, :focus, [aria-current]) {
     --underline-color: transparent;
     --underline-thickness: 0;
   }
