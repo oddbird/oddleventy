@@ -1,6 +1,968 @@
 {
+<<<<<<< HEAD
   "lastFetched": "2022-08-25T19:40:44.323Z",
+=======
+  "lastFetched": "2022-08-22T16:26:03.193Z",
+>>>>>>> main
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Gabriele Giannotti",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/537a14559c4902dfeaac1d15a8b67254b442169c833dbd8d1ae094adc8697e4c.jpg",
+        "url": "https://twitter.com/geeannotti"
+      },
+      "url": "https://twitter.com/geeannotti/status/1561392993692680198",
+      "published": "2022-08-21T16:41:13+00:00",
+      "wm-received": "2022-08-21T16:47:21Z",
+      "wm-id": 1464737,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1561392993692680198",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Gabriele Giannotti",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/537a14559c4902dfeaac1d15a8b67254b442169c833dbd8d1ae094adc8697e4c.jpg",
+        "url": "https://twitter.com/geeannotti"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-4894734034",
+      "published": null,
+      "wm-received": "2022-08-21T16:47:20Z",
+      "wm-id": 1464736,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/4894734034",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Caleb (he/him) #BlackLivesMatter",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/3a4ab8d4df4e1a11c1523c6316914bf861490e63bc84653299a5c580aebd375f.jpg",
+        "url": "https://twitter.com/calebjasik"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-978459014555201536",
+      "published": null,
+      "wm-received": "2022-08-21T10:38:00Z",
+      "wm-id": 1464698,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/978459014555201536",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Caleb (he/him) #BlackLivesMatter",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/3a4ab8d4df4e1a11c1523c6316914bf861490e63bc84653299a5c580aebd375f.jpg",
+        "url": "https://twitter.com/calebjasik"
+      },
+      "url": "https://twitter.com/calebjasik/status/1561295499273068544",
+      "published": "2022-08-21T10:13:49+00:00",
+      "wm-received": "2022-08-21T10:37:31Z",
+      "wm-id": 1464697,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1561295499273068544",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Luis Martins",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/195609d598aa1d05c4b01b0968511a81df686dbab2a34e5de1b7a3a8820da27f.jpg",
+        "url": "https://twitter.com/lmartins"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-9981652",
+      "published": null,
+      "wm-received": "2022-08-20T16:11:03Z",
+      "wm-id": 1464553,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/9981652",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mat ‘Wilto’ Marquis",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/bce7ae7825547c90ecdd5388956c8578ca58555ca44b1e34a651126fa0903c2d.png",
+        "url": "https://twitter.com/wilto"
+      },
+      "url": "https://twitter.com/wilto/status/1560649190346264576",
+      "published": "2022-08-19T15:25:37+00:00",
+      "wm-received": "2022-08-20T15:41:16Z",
+      "wm-id": 1464544,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560649190346264576",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Vince Cima",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/beee3c79900cc0911641135177f228881a9410e0fb215900cbf841cf5c79de41.png",
+        "url": "https://twitter.com/vincecima"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-16993111",
+      "published": null,
+      "wm-received": "2022-08-20T15:41:16Z",
+      "wm-id": 1464545,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/16993111",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Sven Wolfermann",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e3088286184d1bfe3eed1fed03ceaff9ba98d2f569a70ea788a8cf488ba820b1.jpeg",
+        "url": "https://twitter.com/maddesigns"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-14168924",
+      "published": null,
+      "wm-received": "2022-08-20T15:41:14Z",
+      "wm-id": 1464542,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/14168924",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Anssi Hautamäki",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1c32272af8504a49e99626811914faec0304733ec7d002f4bb91ce4f808abbe7.jpg",
+        "url": "https://twitter.com/kosminen"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-28534722",
+      "published": null,
+      "wm-received": "2022-08-20T15:41:14Z",
+      "wm-id": 1464543,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/28534722",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Wir zählen!",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0f6ea300aa6b1fd3b785419fb722280cd7547e92969b5cda6302beb4b3e0bee3.jpg",
+        "url": "https://twitter.com/wir_zaehlen"
+      },
+      "url": "https://twitter.com/wir_zaehlen/status/1560726459496513542",
+      "published": "2022-08-19T20:32:39+00:00",
+      "wm-received": "2022-08-20T15:40:46Z",
+      "wm-id": 1464541,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560726459496513542",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Cleber Sant'ana",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/cc7efcd2e397b98cdfb3100df5b6bc3cdf2130124f52e48a4563928d7a5961d8.jpg",
+        "url": "https://twitter.com/clbrsantana"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-2304897428",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:26Z",
+      "wm-id": 1463810,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/2304897428",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dean Leigh",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/4126f4e772d7743028b817b4913312aafe8d3fa98dce693a140c20ac86689282.jpg",
+        "url": "https://twitter.com/deanleigh"
+      },
+      "url": "https://twitter.com/deanleigh/status/1560327321726455817",
+      "published": "2022-08-18T18:06:37+00:00",
+      "wm-received": "2022-08-19T14:59:24Z",
+      "wm-id": 1463808,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1560320189530402816/1560327321726455817",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "You are a star, thank you. I stopped for a while because I ran into syntax changes a few times and started getting confused. Looks like it's time to open those old codepens and dive back in.\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>",
+        "text": "You are a star, thank you. I stopped for a while because I ran into syntax changes a few times and started getting confused. Looks like it's time to open those old codepens and dive back in."
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "OddBird",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ea20460b71e4d74b0591db388f0dc2d58855c3b3b7414a7dc268bcfd9203f35f.jpg",
+        "url": "https://twitter.com/OddBird"
+      },
+      "url": "https://twitter.com/OddBird/status/1560332261567778816",
+      "published": "2022-08-18T18:26:15+00:00",
+      "wm-received": "2022-08-19T14:59:24Z",
+      "wm-id": 1463809,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1560320189530402816/1560332261567778816",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "Makes sense. It's the difficult balance of a prototype – we're doing it to learn &amp; get feedback &amp; make changes,  but it can also lead to confusion. But yes - it's stable &amp; safe now! Welcome back. :)\n<a class=\"u-mention\" href=\"https://twitter.com/deanleigh\"></a>",
+        "text": "Makes sense. It's the difficult balance of a prototype – we're doing it to learn & get feedback & make changes,  but it can also lead to confusion. But yes - it's stable & safe now! Welcome back. :)"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jess Chan | Coder Coder",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/be7b0c8653ac59a7335a76b83c7c4de1c89b2315bc8ab917648791131a96a375.jpg",
+        "url": "https://twitter.com/thecodercoder"
+      },
+      "url": "https://twitter.com/thecodercoder/status/1560331578563170304",
+      "published": "2022-08-18T18:23:32+00:00",
+      "wm-received": "2022-08-19T14:59:23Z",
+      "wm-id": 1463807,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1560320189530402816/1560331578563170304",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "so excited for this! 🔥\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>",
+        "text": "so excited for this! 🔥"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Ed Rivas",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a34c452589b3a2ec16b251ba40de10568490bcca5242f05ff96ed88b8a029446.jpg",
+        "url": "https://twitter.com/je92rivas"
+      },
+      "url": "https://twitter.com/je92rivas/status/1560320780835110914",
+      "published": "2022-08-18T17:40:38+00:00",
+      "wm-received": "2022-08-19T14:59:20Z",
+      "wm-id": 1463805,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560320780835110914",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dean Leigh",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/4126f4e772d7743028b817b4913312aafe8d3fa98dce693a140c20ac86689282.jpg",
+        "url": "https://twitter.com/deanleigh"
+      },
+      "url": "https://twitter.com/deanleigh/status/1560335908615983104",
+      "published": "2022-08-18T18:40:44+00:00",
+      "wm-received": "2022-08-19T14:59:20Z",
+      "wm-id": 1463806,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1560320189530402816/1560335908615983104",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "Completely understand, whether the wait. I turned my attention to combining Sass and Custom Properties which was rabbit hole more than deep enough to keep me busy and ended up recently reading your article on Proximity so I owe you thanks again 🙏\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>",
+        "text": "Completely understand, whether the wait. I turned my attention to combining Sass and Custom Properties which was rabbit hole more than deep enough to keep me busy and ended up recently reading your article on Proximity so I owe you thanks again 🙏"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "(looking for work) jacky! at the tty",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/41b7769327c0f167d9789a4549724be1dc0852cc1aa1260978984dea85136fc8.jpg",
+        "url": "https://twitter.com/jackyalcine"
+      },
+      "url": "https://twitter.com/jackyalcine/status/1560324155584782337",
+      "published": "2022-08-18T17:54:02+00:00",
+      "wm-received": "2022-08-19T14:59:18Z",
+      "wm-id": 1463803,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560324155584782337",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Scott Kellum",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/4f1f45e4bc0fc740621c71058f1297152626ad37cbb4be9e7ac61f248b4d0953.jpg",
+        "url": "https://twitter.com/ScottKellum"
+      },
+      "url": "https://twitter.com/ScottKellum/status/1560323551290200064",
+      "published": "2022-08-18T17:51:38+00:00",
+      "wm-received": "2022-08-19T14:59:18Z",
+      "wm-id": 1463804,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560323551290200064",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "codeOfArmz",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/9f2ae122238f21dc7fc66f12201709b1706e34ff2e08506a5005837e967851a3.png",
+        "url": "https://twitter.com/codeofarmz"
+      },
+      "url": "https://twitter.com/codeofarmz/status/1560327228462084097",
+      "published": "2022-08-18T18:06:15+00:00",
+      "wm-received": "2022-08-19T14:59:17Z",
+      "wm-id": 1463802,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560327228462084097",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Nilesh Prajapati",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c57296e0add6a1cf646598e9c33ce18cc05adf91b44bf7e5b81e4257f38ee890.jpg",
+        "url": "https://twitter.com/nileshpraj"
+      },
+      "url": "https://twitter.com/nileshpraj/status/1560337871571193856",
+      "published": "2022-08-18T18:48:32+00:00",
+      "wm-received": "2022-08-19T14:59:16Z",
+      "wm-id": 1463801,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560337871571193856",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Bramus",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/05867d2965ead9c19f56436d55d4f94c52262b3b51dae292b9b9f45fa2a96995.jpg",
+        "url": "https://twitter.com/bramus"
+      },
+      "url": "https://twitter.com/bramus/status/1560389258388676608",
+      "published": "2022-08-18T22:12:44+00:00",
+      "wm-received": "2022-08-19T14:59:14Z",
+      "wm-id": 1463799,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560389258388676608",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "graste v4.3",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/bb155fa75d35594160bc27a819d1b2c6c4022a16152a5bc1ef40eee4f25b6e07.jpg",
+        "url": "https://twitter.com/mivesto"
+      },
+      "url": "https://twitter.com/mivesto/status/1560352639744966659",
+      "published": "2022-08-18T19:47:13+00:00",
+      "wm-received": "2022-08-19T14:59:14Z",
+      "wm-id": 1463800,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560352639744966659",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Gerald Monaco",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/45df924c5329d57ba9ea372d560a5b11d995dd5a35e7a905ee375fd87cad7823.jpg",
+        "url": "https://twitter.com/devknoll"
+      },
+      "url": "https://twitter.com/devknoll/status/1560395602780794880",
+      "published": "2022-08-18T22:37:57+00:00",
+      "wm-received": "2022-08-19T14:59:13Z",
+      "wm-id": 1463798,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560395602780794880",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Daniel Pence",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/792510894a345b9616e2e48d5546066cc372f673de1b6a45e5bf1c4618f30906.jpg",
+        "url": "https://twitter.com/danieldpence"
+      },
+      "url": "https://twitter.com/danieldpence/status/1560447186017599488",
+      "published": "2022-08-19T02:02:55+00:00",
+      "wm-received": "2022-08-19T14:59:11Z",
+      "wm-id": 1463796,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560447186017599488",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "大漠",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/952578b58d41c806c503f7bbbdfeb12576665305d1921f76b7df2a21178e69a7.jpg",
+        "url": "https://twitter.com/w3cplus"
+      },
+      "url": "https://twitter.com/w3cplus/status/1560442868765929472",
+      "published": "2022-08-19T01:45:46+00:00",
+      "wm-received": "2022-08-19T14:59:11Z",
+      "wm-id": 1463797,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560442868765929472",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Matt Wilcox",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/6e693cb8aec317cb2bb8cf71f200208f293140172ac8c55dc6474900b1ee639d.jpg",
+        "url": "https://twitter.com/MattWilcox"
+      },
+      "url": "https://twitter.com/MattWilcox/status/1560536596625211394",
+      "published": "2022-08-19T07:58:12+00:00",
+      "wm-received": "2022-08-19T14:59:09Z",
+      "wm-id": 1463795,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560536596625211394",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jens Grochtdreis",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/76c59a44803d2fe0e2760190e87623c4e62786dae9dc1637cc0ab25b98fde15b.png",
+        "url": "https://twitter.com/Flocke"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-7015572",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:08Z",
+      "wm-id": 1463794,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/7015572",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Brandon",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/211136bf8b756f34ed872e073e096728f64d72903e3ee4a84eb2b5fa9ca96f39.png",
+        "url": "https://twitter.com/brandon5web"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-58045539",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:07Z",
+      "wm-id": 1463793,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/58045539",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dean Leigh",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/4126f4e772d7743028b817b4913312aafe8d3fa98dce693a140c20ac86689282.jpg",
+        "url": "https://twitter.com/deanleigh"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-191021046",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:06Z",
+      "wm-id": 1463792,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/191021046",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "ChrisArchitect_id.diz",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ed37d2706809fcd81cb407b89f427b81007d27b18ec3c919d6331484ec77fd26.jpg",
+        "url": "https://twitter.com/chrisarchitect"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-121542889",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:05Z",
+      "wm-id": 1463791,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/121542889",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Matthias Ott",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a34d0a855d4336e07245950e108a3d322445dabff46cfb01e805208ca3d8abcc.jpg",
+        "url": "https://twitter.com/m_ott"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-58448784",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:04Z",
+      "wm-id": 1463789,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/58448784",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Michael",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d0b60134e32c9822d8c50298f463e64d397b0dd10be39d8c41a04a1dfae61c39.jpg",
+        "url": "https://twitter.com/egalelage"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-36682306",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:04Z",
+      "wm-id": 1463790,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/36682306",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Sid Vishnoi",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0368a5ab231ffcf390fc1107e3b4e0c84498303876d54beeabbae54470c0172c.jpg",
+        "url": "https://twitter.com/sid_vishnoi"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-1659620569",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:03Z",
+      "wm-id": 1463788,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/1659620569",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "graste v4.3",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/bb155fa75d35594160bc27a819d1b2c6c4022a16152a5bc1ef40eee4f25b6e07.jpg",
+        "url": "https://twitter.com/mivesto"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-96850673",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:02Z",
+      "wm-id": 1463786,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/96850673",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "gabriela",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/71dc2e7666f59f1f5529edbce095244f1e5d9146392c49628136c642690f038a.jpg",
+        "url": "https://twitter.com/viri_cruz14"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-3310926175",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:02Z",
+      "wm-id": 1463787,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/3310926175",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Benoît Burgener",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/07aade4c08c5a996d679724fca196d65aee89e3358452257465892a7b20afdd3.jpg",
+        "url": "https://twitter.com/LeBenLeBen"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-5506562",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:01Z",
+      "wm-id": 1463785,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/5506562",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jarret O'Shea",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/48da091ad7b44ab0bc426d12f26648f52574722209d6cf89f4222d47b8ae1bf2.jpg",
+        "url": "https://twitter.com/jmanj78"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-191953164",
+      "published": null,
+      "wm-received": "2022-08-19T14:59:00Z",
+      "wm-id": 1463784,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/191953164",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Karl, but my friends call me kow.",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d72910ad79ead29e13eed7978e579778671d209ccd3e987702604f834ee0eccb.jpg",
+        "url": "https://twitter.com/kowfm"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-322694936",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:59Z",
+      "wm-id": 1463783,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/322694936",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Sergi Meseguer",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/4205bbf6f7f91a2826aac19cf7ebb74f934f632a76df4afa542dc209b8bd722b.jpg",
+        "url": "https://twitter.com/zigotica"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-63725558",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:58Z",
+      "wm-id": 1463781,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/63725558",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Chio",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e8380ac2e114c9f587a3fccc05a516d4a7c39639664ce600d76c3be4640dbf61.jpg",
+        "url": "https://twitter.com/chio358"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-415986671",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:58Z",
+      "wm-id": 1463782,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/415986671",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Gerald Monaco",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/45df924c5329d57ba9ea372d560a5b11d995dd5a35e7a905ee375fd87cad7823.jpg",
+        "url": "https://twitter.com/devknoll"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-248350439",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:57Z",
+      "wm-id": 1463779,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/248350439",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Chris Price 🏳️‍🌈",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/313deb7ec1c3f46fef12260d842a551b7f8764c05c14547aadc49ecc50d8bf1c.jpg",
+        "url": "https://twitter.com/studiochris"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-12161542",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:57Z",
+      "wm-id": 1463780,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/12161542",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Daniel Cecilium",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ee114628809689566041ec704be42a10dbdde15c08dd0b86dada7021f8b57582.jpg",
+        "url": "https://twitter.com/Danielcecilum1"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-1540243931396456449",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:56Z",
+      "wm-id": 1463777,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/1540243931396456449",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Batbayar B.",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/5231241ed3eb5997a5fd927a67998f98119aa69c8fbb87ac5dc4378be8257d9a.jpg",
+        "url": "https://twitter.com/batbayar3113"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-39935068",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:56Z",
+      "wm-id": 1463778,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/39935068",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jess Chan | Coder Coder",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/be7b0c8653ac59a7335a76b83c7c4de1c89b2315bc8ab917648791131a96a375.jpg",
+        "url": "https://twitter.com/thecodercoder"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-881161050011430912",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:55Z",
+      "wm-id": 1463775,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/881161050011430912",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "大漠",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/952578b58d41c806c503f7bbbdfeb12576665305d1921f76b7df2a21178e69a7.jpg",
+        "url": "https://twitter.com/w3cplus"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-357404151",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:55Z",
+      "wm-id": 1463776,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/357404151",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Matt Wilcox",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/6e693cb8aec317cb2bb8cf71f200208f293140172ac8c55dc6474900b1ee639d.jpg",
+        "url": "https://twitter.com/MattWilcox"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-33843",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:54Z",
+      "wm-id": 1463773,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/33843",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stuart P. Bentley",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/64634c68efac525850a7008381df6f828ddaa4483428e08a4bda925235d5005e.png",
+        "url": "https://twitter.com/stuartpb"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-14300872",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:54Z",
+      "wm-id": 1463774,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/14300872",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Scott Kellum",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/4f1f45e4bc0fc740621c71058f1297152626ad37cbb4be9e7ac61f248b4d0953.jpg",
+        "url": "https://twitter.com/ScottKellum"
+      },
+      "url": "https://twitter.com/OddBird/status/1560320189530402816#favorited-by-14958412",
+      "published": null,
+      "wm-received": "2022-08-19T14:58:52Z",
+      "wm-id": 1463772,
+      "wm-source": "https://brid.gy/like/twitter/oddbird/1560320189530402816/14958412",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
