@@ -81,6 +81,7 @@
   @include config.font-family('alt');
 
   color: var(--text-light);
+
   // Safari Fix
   margin-block: 0;
   padding: var(--half-shim) var(--quarter-shim);
