@@ -33,7 +33,8 @@
 // Search Form Elements
 // --------------------
 .aa-Form {
-  background-color: var(--bg-full);
+  background-color: var(--bg);
+  border-color: var(--border-fade);
   display: grid;
 
   // 32px min is needed to hold space for the clear icon unless we want to
