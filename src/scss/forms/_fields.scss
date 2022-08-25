@@ -28,6 +28,7 @@
 /// text-input style.
 /// @group forms
 [data-input*='text'] {
+  --focus-ring: transparent;
   background-color: var(--bg-full);
   border: thin solid var(--input-border, var(--border));
   border-radius: 0;
