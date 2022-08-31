@@ -1,0 +1,250 @@
+@use 'sass:meta';
+@use '../config';
+
+@layer search {
+  @include meta.load-css(
+    '~@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify.css'
+  );
+}
+
+// Default Search Variable Overrides
+.aa-Autocomplete,
+.aa-Panel,
+.aa-DetachedContainer {
+  --color-background: var(--scroll-panel-bg);
+  --color-input-icon: var(--text-light);
+  --color-mark: var(--accent);
+  --color-selected: var(--bg);
+  --color-text: var(--text);
+  --height: auto;
+  --font-size: var(--xsmall);
+
+  color: var(--text);
+}
+
+// Search Input and Small Screen Search Toggle Button Shared Overrides
+.aa-DetachedSearchButton,
+.aa-Form {
+  border-radius: 0;
+  color: var(--search-text, var(--text));
+  line-height: 1.4;
+}
+
+// Search Form Elements
+// --------------------
+.aa-Form {
+  background-color: var(--bg-full);
+  border-color: var(--border-fade);
+  display: grid;
+
+  // 32px min is needed to hold space for the clear icon unless we want to
+  // override more of algolia's styles
+
+  grid-template-columns: auto 1fr var(--search-col3, minmax(32px, auto));
+
+  &:focus-within {
+    --color-input-icon: var(--accent);
+    --detached-search-border: var(--accent);
+
+    border-color: var(--accent);
+    box-shadow: none;
+  }
+
+  .aa-DetachedFormContainer & {
+    --focus-ring: transparent;
+
+    border: thin solid var(--detached-search-border, var(--border-fade));
+    border-right: none;
+    padding-block: var(--half-shim);
+
+    &:focus-within {
+      --detached-search-border: var(--accent);
+
+      + .aa-DetachedCancelButton {
+        --detached-search-border: var(--accent);
+      }
+    }
+  }
+}
+
+.aa-Label {
+  display: flex;
+}
+
+// Remove focus from search submit icon and input
+// focus on input is replaced with border color change to match rest of site
+.aa-Input,
+.aa-SubmitButton {
+  --focus-ring: transparent;
+}
+
+.aa-Input {
+  @include config.font-family('alt');
+
+  color: var(--text-light);
+
+  // Safari Fix
+  margin-block: 0;
+  padding: var(--half-shim) var(--quarter-shim);
+
+  &::placeholder {
+    @include config.font-family('body');
+
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  &:focus-within {
+    color: var(--text);
+  }
+}
+
+.aa-ClearButton {
+  &:focus,
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.aa-SubmitIcon {
+  width: var(--height-icon); // match algolia
+}
+
+// Search Toggle
+// Search on small screen is a toggle button
+// -----------------------------------------
+.aa-DetachedSearchButton {
+  --search-col3: 0;
+  --search-text: var(--action);
+
+  background: var(--btn-bg, var(--bg));
+  border: thin solid var(--btn-border, var(--border-fade));
+  padding: var(--half-shim);
+
+  &:hover,
+  &:focus {
+    --btn-border: var(--accent);
+
+    box-shadow: none;
+  }
+}
+
+// Detached (small screen) Search Form Elements
+// --------------------------------------------
+
+// Prevent body from scrolling when modal is open on small screens
+.aa-Detached {
+  position: fixed;
+}
+
+.aa-DetachedFormContainer {
+  padding: 0;
+}
+
+.aa-DetachedContainer {
+  --search-result-desc: var(--xsmall);
+  --search-result-title: var(--small);
+}
+
+.aa-DetachedCancelButton {
+  @include config.z-index('bump');
+
+  background: var(--search-btn-bg, var(--bg-full));
+  border: thin solid var(--detached-search-border, var(--border-fade));
+  border-left: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--search-btn-fg, var(--action));
+  margin-left: 0;
+
+  &:hover,
+  &:focus {
+    --detached-search-border: var(--accent);
+    --search-btn-bg: var(--accent);
+    --search-btn-fg: var(--bg);
+  }
+}
+
+// Button Text on small screen
+.aa-DetachedSearchButtonPlaceholder {
+  padding-right: var(--shim);
+}
+
+.aa-DetachedSearchButtonIcon,
+.aa-SubmitButton {
+  margin: 0 var(--half-shim);
+  padding-inline: var(--quarter-shim);
+  width: auto;
+}
+
+.aa-DetachedSearchButton,
+.aa-DetachedSearchButtonIcon,
+.aa-InputWrapperPrefix {
+  height: auto;
+}
+
+.aa-InputWrapperSuffix {
+  justify-content: center;
+
+  // clear button just closed the form, and so does cancel so hide it
+  .aa-DetachedFormContainer & {
+    display: none;
+  }
+}
+
+// Search Results Scrollable Panel
+.aa-Panel {
+  border-radius: none;
+}
+
+.aa-Panel--scrollable {
+  padding: 0;
+  scrollbar-color: var(--scrollbar-track);
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border: 2px solid var(--scrollbar-track);
+    border-right-width: 1px;
+  }
+}
+
+.aa-List {
+  --list-padding--default: 0;
+}
+
+.aa-ItemContent {
+  padding-inline: var(--shim-plus);
+}
+
+.aa-Item {
+  border-radius: 0;
+  padding: 0;
+
+  a {
+    padding-block: var(--shim);
+    text-decoration: none;
+  }
+}
+
+.aa-ItemTitle {
+  @include config.font-family('alt');
+
+  color: var(--action);
+  font-size: var(--search-result-title, var(--xsmall));
+  line-height: 1.2;
+}
+
+.aa-ItemDescription {
+  color: var(--text);
+  font-size: var(--search-result-desc, var(--xxsmall));
+  line-height: config.ratio('line-height');
+}
+
+// Hide Unused Icon since we can't edit the markup
+.aa-ItemIcon {
+  display: none;
+}

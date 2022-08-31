@@ -17,3 +17,11 @@
     [plugins.inputs]
         cache_img = "./assets/images"
         cache_assets = false
+
+[[plugins]]
+    package = "@algolia/netlify-plugin-crawler"
+
+    [plugins.inputs]
+        branches = ["main"]
+        mainBranch = "main"
+        template = "hierarchical"

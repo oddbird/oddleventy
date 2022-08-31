@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@11ty/eleventy-img", "npm:2.0.1"],\
             ["@11ty/eleventy-plugin-rss", "npm:1.2.0"],\
             ["@11ty/eleventy-plugin-syntaxhighlight", "npm:4.1.0"],\
+            ["@algolia/algoliasearch-netlify-frontend", "npm:1.0.15"],\
             ["@babel/core", "npm:7.18.13"],\
             ["@babel/preset-env", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:7.18.10"],\
             ["@rollup/plugin-babel", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.3.1"],\
@@ -218,6 +219,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@11ty/eleventy-utils", "npm:1.0.1"],\
             ["normalize-path", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@algolia/algoliasearch-netlify-frontend", [\
+        ["npm:1.0.15", {\
+          "packageLocation": "./.yarn/unplugged/@algolia-algoliasearch-netlify-frontend-npm-1.0.15-c20014699f/node_modules/@algolia/algoliasearch-netlify-frontend/",\
+          "packageDependencies": [\
+            ["@algolia/algoliasearch-netlify-frontend", "npm:1.0.15"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -12276,6 +12286,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@11ty/eleventy-img", "npm:2.0.1"],\
             ["@11ty/eleventy-plugin-rss", "npm:1.2.0"],\
             ["@11ty/eleventy-plugin-syntaxhighlight", "npm:4.1.0"],\
+            ["@algolia/algoliasearch-netlify-frontend", "npm:1.0.15"],\
             ["@babel/core", "npm:7.18.13"],\
             ["@babel/preset-env", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:7.18.10"],\
             ["@rollup/plugin-babel", "virtual:66b21d464002478bf167f355b2f74e8cc0174a95c472fd648db27297e3d6d8dfe848ea06d0aae8ccd97dcf1fda02e1a3caf9bb428025add456454823efd307b2#npm:5.3.1"],\

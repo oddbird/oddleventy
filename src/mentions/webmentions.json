@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2022-08-22T16:26:03.193Z",
+  "lastFetched": "2022-08-25T20:22:34.980Z",
   "children": [
     {
       "type": "entry",
@@ -958,6 +958,112 @@
       "like-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
       "wm-property": "like-of",
       "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.reddit.com/r/programming/comments/v8v4sw/whats_the_impact_of_aiming_for_100_test_coverage/",
+      "published": null,
+      "wm-received": "2022-08-24T14:03:01Z",
+      "wm-id": 1471897,
+      "wm-source": "https://www.reddit.com/r/programming/comments/v8v4sw/whats_the_impact_of_aiming_for_100_test_coverage/",
+      "wm-target": "https://www.oddbird.net/2022/06/08/100-percent-test-coverage/",
+      "mention-of": "https://www.oddbird.net/2022/06/08/100-percent-test-coverage/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://www.reddit.com/r/programming/comments/v8v4sw/whats_the_impact_of_aiming_for_100_test_coverage/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.reddit.com/r/css/comments/vti9qg/cascade_layers_theres_a_polyfill_for_that/",
+      "published": null,
+      "wm-received": "2022-08-24T05:56:11Z",
+      "wm-id": 1468103,
+      "wm-source": "https://www.reddit.com/r/css/comments/vti9qg/cascade_layers_theres_a_polyfill_for_that/",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "mention-of": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://www.reddit.com/r/css/comments/vti9qg/cascade_layers_theres_a_polyfill_for_that/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Guillaume Deblock",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/6c9dba79347f25de472410491bb3b31f17fa593ac86b1f44eb4747cec156568b.png",
+        "url": "https://twitter.com/blokche"
+      },
+      "url": "https://twitter.com/blokche/status/1562296212564369408",
+      "published": "2022-08-24T04:30:17+00:00",
+      "wm-received": "2022-08-24T05:53:42Z",
+      "wm-id": 1467912,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1562296212564369408",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://thedevnews.com/subject-518/",
+      "published": null,
+      "wm-received": "2022-08-24T01:34:34Z",
+      "wm-id": 1466675,
+      "wm-source": "https://thedevnews.com/subject-518/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/?utm_source=CSS-Weekly&utm_campaign=Issue-518&utm_medium=RSS",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/?utm_source=CSS-Weekly&utm_campaign=Issue-518&utm_medium=RSS",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://thedevnews.com/subject-518/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://thedevnews.com/a-helpful-use-for-cascade-layers/",
+      "published": null,
+      "wm-received": "2022-08-23T23:26:19Z",
+      "wm-id": 1466628,
+      "wm-source": "https://thedevnews.com/a-helpful-use-for-cascade-layers/",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "mention-of": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://thedevnews.com/a-helpful-use-for-cascade-layers/"
+      }
     },
     {
       "type": "entry",

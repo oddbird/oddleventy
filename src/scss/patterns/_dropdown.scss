@@ -23,6 +23,8 @@
 [data-btn~='summary'] {
   --marker-color: currentcolor;
 
+  white-space: nowrap;
+
   [open] > & {
     @include config.z-index('dropdown');
 
