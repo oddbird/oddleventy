@@ -1,6 +1,67 @@
 {
-  "lastFetched": "2022-09-01T03:11:24.994Z",
+  "lastFetched": "2022-09-01T17:54:18.173Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://101now.com/php-scripts/faq-knowledge-base/collective-727/",
+      "published": null,
+      "wm-received": "2022-09-01T17:46:09Z",
+      "wm-id": 1509075,
+      "wm-source": "https://101now.com/php-scripts/faq-knowledge-base/collective-727/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://101now.com/php-scripts/faq-knowledge-base/collective-727/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://css-irl.info/a-handy-use-for-cascade-layers/",
+      "published": null,
+      "wm-received": "2022-09-01T16:16:50Z",
+      "wm-id": 1508931,
+      "wm-source": "https://css-irl.info/a-handy-use-for-cascade-layers/",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "mention-of": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Bramus",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/05867d2965ead9c19f56436d55d4f94c52262b3b51dae292b9b9f45fa2a96995.jpg",
+        "url": "https://twitter.com/bramus"
+      },
+      "url": "https://twitter.com/bramus/status/1565327729276461057",
+      "published": "2022-09-01T13:16:27+00:00",
+      "wm-received": "2022-09-01T13:32:27Z",
+      "wm-id": 1508783,
+      "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1564650026751574016/1565327729276461057",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "RE “Safari bug with ‘negated’ queries”\n\nA fix landed in Safari Technology Preview 152 – <a href=\"https://webkit.org/blog/13137/release-notes-for-safari-technology-preview-152/\">webkit.org/blog/13137/rel…</a>\n\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/18/cq-syntax/\"></a>",
+        "text": "RE “Safari bug with ‘negated’ queries”\n\nA fix landed in Safari Technology Preview 152 – webkit.org/blog/13137/rel…"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {

@@ -2,6 +2,7 @@
 
 [data-layout='menu'] {
   display: flex;
+  flex-wrap: wrap;
   font-size: var(--small);
   gap: var(--shim);
   grid-area: menu;
