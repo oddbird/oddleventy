@@ -74,7 +74,7 @@ const mergeWebmentions = (a, b) => {
 
 // save combined webmentions in cache file
 const writeToCache = (data) => {
-  const fileContent = JSON.stringify(data, null, 2) + '\n';
+  const fileContent = `${JSON.stringify(data, null, 2)}\n`;
   // create cache folder if it doesn't exist already
   if (!fs.existsSync(CACHE_DIR)) {
     fs.mkdirSync(CACHE_DIR);
