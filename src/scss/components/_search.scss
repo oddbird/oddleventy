@@ -2,7 +2,8 @@
 @use '../config';
 
 @layer search {
-  @include meta.load-css('~@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify.css'
+  @include meta.load-css(
+    '~@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify.css'
   );
 }
 
@@ -59,7 +60,7 @@
     &:focus-within {
       --detached-search-border: var(--accent);
 
-      +.aa-DetachedCancelButton {
+      + .aa-DetachedCancelButton {
         --detached-search-border: var(--accent);
       }
     }
@@ -99,7 +100,6 @@
 }
 
 .aa-ClearButton {
-
   &:focus,
   &:hover {
     color: var(--accent);
