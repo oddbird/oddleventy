@@ -2,8 +2,7 @@
 @use '../config';
 
 @layer search {
-  @include meta.load-css(
-    '~@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify.css'
+  @include meta.load-css('~@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify.css'
   );
 }
 
@@ -60,7 +59,7 @@
     &:focus-within {
       --detached-search-border: var(--accent);
 
-      + .aa-DetachedCancelButton {
+      +.aa-DetachedCancelButton {
         --detached-search-border: var(--accent);
       }
     }
@@ -100,6 +99,7 @@
 }
 
 .aa-ClearButton {
+
   &:focus,
   &:hover {
     color: var(--accent);
@@ -173,8 +173,11 @@
 .aa-DetachedSearchButtonIcon,
 .aa-SubmitButton {
   margin: 0 var(--half-shim);
-  padding-inline: var(--quarter-shim);
   width: auto;
+
+  @include config.above('page') {
+    padding-inline: var(--quarter-shim);
+  }
 }
 
 .aa-DetachedSearchButton,
