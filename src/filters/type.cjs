@@ -8,7 +8,7 @@ const mdFootnote = require('markdown-it-footnote');
 const mdMark = require('markdown-it-mark');
 const striptags = require('striptags');
 const truncate = require('truncate-html');
-const type = require('typogr');
+const typogrify = require('typogr');
 
 const { anchorLinkIconString } = require('../../src/js/clickToCopy.cjs');
 
@@ -57,7 +57,7 @@ const typogr = (content, inline = false) => {
     // if this is inline text with less than 5 words
     // avoid the "widont" feature
     return inline && content.split(' ').length < 5
-      ? type(content)
+      ? typogrify(content)
           .chain()
           .amp()
           .smartypants()
@@ -65,7 +65,7 @@ const typogr = (content, inline = false) => {
           .caps()
           .ord()
           .value()
-      : type.typogrify(content);
+      : typogrify.typogrify(content);
   }
 
   return content;

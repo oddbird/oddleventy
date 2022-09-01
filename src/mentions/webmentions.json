@@ -1,6 +1,24 @@
 {
-  "lastFetched": "2022-09-01T17:54:18.173Z",
+  "lastFetched": "2022-09-01T20:53:48.379Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://pwsngr.com/collective-727/",
+      "published": null,
+      "wm-received": "2022-09-01T18:44:27Z",
+      "wm-id": 1509129,
+      "wm-source": "https://pwsngr.com/collective-727/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
