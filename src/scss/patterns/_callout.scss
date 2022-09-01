@@ -1,4 +1,5 @@
 [data-callout] {
+  --list-padding--default: 1em;
   background: var(--callout-block-bg, var(--callout));
   border-inline-start: thick solid var(--callout-block-border, var(--border));
   margin: var(--newline) calc(var(--gutter) * -1);

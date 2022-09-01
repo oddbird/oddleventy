@@ -217,29 +217,28 @@ params:
     <i>{{ prefix }}</i>
   {% endif -%}
 
-  {% set pubdate = {
+  {%- set pubdate = {
     'pubdate': true,
     'class': 'dt-published'
-  } if is_pubdate else none %}
+  } if is_pubdate else none -%}
 
   <time datetime="{{ start | getDate('iso') }}" {{ show_attrs(pubdate) }}>
-    {% if ongoing %}
+    {%- if ongoing -%}
       {{ start | getDate('year') }}
-    {% elif is_range %}
-      {% set start_m = start | getDate('long_month') %}
-      {% set start_y = start | getDate('year') %}
-      {% set end_m = end | getDate('long_month') %}
-      {% set end_y = end | getDate('year') %}
+    {%- elif is_range -%}
+      {%- set start_m = start | getDate('long_month') -%}
+      {%- set start_y = start | getDate('year') -%}
+      {%- set end_m = end | getDate('long_month') -%}
+      {%- set end_y = end | getDate('year') -%}
 
-      {% set same = 'same-y' if (start_y == end_y) else none %}
-      {% set same = 'same-m' if same and (start_m == end_m) else same %}
+      {%- set same = 'same-y' if (start_y == end_y) else none -%}
+      {%- set same = 'same-m' if same and (start_m == end_m) else same -%}
 
       {{ start | getDate(ranges[same].start or 'year') }}
       {{- '--' | typogr | safe -}}
       {{ end | getDate(ranges[same].end or 'year') }}
-
-    {% else %}
+    {%- else -%}
       {{ start | getDate('month_year' if format == 'range' else format) }}
-    {% endif %}
+    {%- endif -%}
   </time>
 {% endmacro %}

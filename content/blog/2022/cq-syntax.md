@@ -28,6 +28,7 @@ summary: |
 ---
 
 {% import 'embed.macros.njk' as embed %}
+{% import 'utility.macros.njk' as utility %}
 
 {% callout %}
 We'll keep this article up-to-date
@@ -36,6 +37,18 @@ but now that the feature
 is beginning to ship in browsers,
 it is very unlikely that there will be
 any breaking changes.
+{% endcallout %}
+
+{% set update = ['Update', utility.datetime('2022-09-01')] | join(' ') %}
+{% callout 'note', update %}
+- Chrome 105 shipped on August 30,
+  with support for container queries and units.
+- The Safari bug around negated queries
+  has been fixed in
+  [Safari Technology Preview 152](https://webkit.org/blog/13137/release-notes-for-safari-technology-preview-152/),
+- I expect Safari 16 to release
+  [during the Apple event](https://www.apple.com/apple-events/)
+  on September 7.
 {% endcallout %}
 
 Container Queries
@@ -350,16 +363,17 @@ There are a few things to note here:
 
 ## Browser support
 
+Chrome 105
+supports size queries and units --
+and shipped on August 30, 2022.
+
 Apple doesn't announce their release schedule in advance,
 but we know they are planning to ship
 size queries and units in Safari 16,
-and that the version is already _frozen_
-(no more changes before release) --
-we just don't know when it will
-actually go public.
-Chrome 105
-will also support size queries and units --
-shipping on August 30, 2022.
+they often release at Apple events,
+and they have one scheduled for
+[September 7, 2022](https://www.apple.com/apple-events/).
+
 Firefox is
 [actively working on support](https://bugzilla.mozilla.org/show_bug.cgi?id=1744221),
 but hasn't yet announced when it will be ready.
@@ -369,29 +383,3 @@ for each feature:
 
 {{ embed.caniuse('css-container-queries') }}
 {{ embed.caniuse('css-container-query-units', script=false) }}
-
-## Safari bug with 'negated' queries
-
-There's one small bug worth noting in Safari,
-but it only applies to queries using the keyword `not`.
-The following is a valid container query
-that should apply when the inline size
-is _not greater than_ `40em`:
-
-```css
-@container not (inline-size > 40em) { /* … */ }
-```
-
-Safari currently reads that as
-a container with the name of `not`,
-and an `inline-size` that is _greater-than_ `40em`.
-You can get the correct behavior
-in all browsers
-by wrapping the entire query in parentheses:
-
-```css
-@container (not (inline-size > 40em)) { /* … */ }
-```
-
-You can also expect Safari to fix this
-as soon as they're able to release a patch.
