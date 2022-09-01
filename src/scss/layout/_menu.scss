@@ -1,8 +1,16 @@
+@use '../config';
+
 [data-layout='menu'] {
   display: flex;
+  flex-wrap: wrap;
   font-size: var(--small);
-  gap: var(--shim) var(--gutter-plus);
+  gap: var(--shim);
   grid-area: menu;
   justify-content: flex-end;
+  margin-left: var(--shim);
   padding-top: var(--shim);
+
+  @include config.above('page') {
+    gap: var(--shim) var(--gutter-plus);
+  }
 }

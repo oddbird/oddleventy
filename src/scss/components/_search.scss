@@ -173,8 +173,11 @@
 .aa-DetachedSearchButtonIcon,
 .aa-SubmitButton {
   margin: 0 var(--half-shim);
-  padding-inline: var(--quarter-shim);
   width: auto;
+
+  @include config.above('page') {
+    padding-inline: var(--quarter-shim);
+  }
 }
 
 .aa-DetachedSearchButton,
