@@ -42,10 +42,10 @@ any breaking changes.
 {% set update = ['Update', utility.datetime('2022-09-01')] | join(' ') %}
 {% callout 'note', update %}
 - Chrome 105 shipped on August 30,
-  with support for container queries and units.
+  with support for Container Queries and units.
 - The Safari bug around negated queries
   has been fixed in
-  [Safari Technology Preview 152](https://webkit.org/blog/13137/release-notes-for-safari-technology-preview-152/),
+  [Safari Technology Preview 152](https://webkit.org/blog/13137/release-notes-for-safari-technology-preview-152/).
 - I expect Safari 16 to release
   [during the Apple event](https://www.apple.com/apple-events/)
   on September 7.
@@ -364,7 +364,7 @@ There are a few things to note here:
 ## Browser support
 
 Chrome 105
-supports size queries and units --
+supports size queries and units,
 and shipped on August 30, 2022.
 
 Apple doesn't announce their release schedule in advance,
