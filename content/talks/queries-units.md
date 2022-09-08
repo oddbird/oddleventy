@@ -21,8 +21,11 @@ events:
     date: 2022-11-07
     end: 2022-11-08
     slug: 2022-jamstack
+    discount:
+      code: FRIENDOFMIRIAM20
+      amount: 20%
   - venue: W3C Developer Meetup
-    adr: Vancouver, Canada
+    adr: Vancouver, Canada ([streaming](https://www.w3.org/2022/09/meetup/#stream))
     url: https://www.w3.org/2022/09/meetup/
     date: 2022-09-13
     slug: 2022-tpac

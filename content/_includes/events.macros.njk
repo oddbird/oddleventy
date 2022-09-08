@@ -51,7 +51,7 @@ params:
                 {{ utility.datetime(event.date) }}
               {%- endif %}
               {% if event.data.adr %}
-                {{ '--' | typogr | safe }} {{ event.data.adr }}
+                {{ ['--', event.data.adr] | join(' ') | mdInline | safe }}
               {% endif %}
             </footer>
 
@@ -61,6 +61,14 @@ params:
                 event.data.url or event.url
               ) }}
             </h3>
+
+            {% if event.data.discount and event | isFuture %}
+              <p class="event-discount">
+                Use discount code
+                <code>{{ event.data.discount.code }}</code>
+                to get <strong>{{ event.data.discount.amount }} off</strong>
+              </p>
+            {% endif %}
 
             {%- set links = [
               {
