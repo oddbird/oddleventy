@@ -39,11 +39,11 @@ it is very unlikely that there will be
 any breaking changes.
 {% endcallout %}
 
-{% set update = ['Update', utility.datetime('2022-09-09')] | join(' ') %}
-{% callout 'note', update %}
+{% set update2 = ['Update', utility.datetime('2022-09-09')] | join(' ') %}
+{% callout 'note', update2 %}
 - Older versions of Safari Technology Preview
   and Chrome both had a bug
-  requiring parenthesis around
+  requiring parentheses around
   queries with logical operators (`not`, `and`, `or`).
   Upgrade to Chrome 105 or
   [Safari TP 152](https://webkit.org/blog/13137/release-notes-for-safari-technology-preview-152/)
@@ -54,8 +54,8 @@ any breaking changes.
   Maybe sometime in October?
 {% endcallout %}
 
-{% set update = ['Update', utility.datetime('2022-09-01')] | join(' ') %}
-{% callout 'note', update %}
+{% set update1 = ['Update', utility.datetime('2022-09-01')] | join(' ') %}
+{% callout 'note', update1 %}
 - Chrome 105 shipped on August 30,
   with support for Container Queries and units.
 {% endcallout %}
