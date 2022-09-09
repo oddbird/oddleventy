@@ -1,24 +1,6 @@
 {
-  "lastFetched": "2022-09-09T16:18:38.891Z",
+  "lastFetched": "2022-09-09T16:26:09.536Z",
   "children": [
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "",
-        "photo": "",
-        "url": ""
-      },
-      "url": "https://thedevnews.com/weekly-news-for-designers-%e2%84%96-659/",
-      "published": null,
-      "wm-received": "2022-09-09T06:10:42Z",
-      "wm-id": 1514917,
-      "wm-source": "https://thedevnews.com/weekly-news-for-designers-%e2%84%96-659/",
-      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
-      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
-      "wm-property": "mention-of",
-      "wm-private": false
-    },
     {
       "type": "entry",
       "author": {
@@ -427,6 +409,24 @@
       },
       "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/",
       "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://thedevnews.com/weekly-news-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-09T06:10:42Z",
+      "wm-id": 1514917,
+      "wm-source": "https://thedevnews.com/weekly-news-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
       "wm-private": false
     },
     {
