@@ -1,6 +1,434 @@
 {
-  "lastFetched": "2022-09-01T20:53:48.379Z",
+  "lastFetched": "2022-09-09T16:18:38.891Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://thedevnews.com/weekly-news-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-09T06:10:42Z",
+      "wm-id": 1514917,
+      "wm-source": "https://thedevnews.com/weekly-news-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "dailydevlinks.",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/520761d627ebc8dac3e344323011fe0cf765981dcfd9b5ac60dbd1ecb40f26a8.jpg",
+        "url": "https://twitter.com/dailydevlinks"
+      },
+      "url": "https://twitter.com/dailydevlinks/status/1567009336110587906",
+      "published": "2022-09-06T04:38:34+00:00",
+      "wm-received": "2022-09-06T04:39:41Z",
+      "wm-id": 1511606,
+      "wm-source": "https://brid.gy/comment/twitter/mmatuzo/1567009336110587906/1567009336110587906",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/?ref=dailydevlinks.com",
+      "photo": [
+        "https://pbs.twimg.com/media/Fb8g4VoXkAM4rlS.jpg"
+      ],
+      "content": {
+        "html": "2/ 📚 Top Reads\n\nWhen Do You Use CSS Columns?\n🔗 <a href=\"https://css-tricks.com/when-do-you-use-css-columns/?utm_source=dailydevlinks.com&amp;utm_medium=newsletter&amp;utm_campaign=dailydevlinks.com&amp;ref=dailydevlinks.com\">css-tricks.com/when-do-you-us…</a> (<a href=\"https://twitter.com/geoffreygraham\">@geoffreygraham</a>)\n\nOutline is your friend\n🔗 <a href=\"https://www.matuzo.at/blog/2022/focus-outline/?utm_source=dailydevlinks.com&amp;utm_medium=newsletter&amp;utm_campaign=dailydevlinks.com&amp;ref=dailydevlinks.com\">matuzo.at/blog/2022/focu…</a> (<a href=\"https://twitter.com/mmatuzo\">@mmatuzo</a>)\n\nUse the Right Container Query Syntax\n🔗 <a href=\"https://www.oddbird.net/2022/08/18/cq-syntax/?utm_source=dailydevlinks.com&amp;utm_medium=newsletter&amp;utm_campaign=dailydevlinks.com&amp;ref=dailydevlinks.com\">oddbird.net/2022/08/18/cq-…</a> (<a href=\"https://twitter.com/TerribleMia\">@TerribleMia</a>)\n<a class=\"u-mention\" href=\"https://css-tricks.com/when-do-you-use-css-columns/?ref=dailydevlinks.com\"></a>\n<a class=\"u-mention\" href=\"https://www.matuzo.at/blog/2022/focus-outline/?ref=dailydevlinks.com\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/18/cq-syntax/?ref=dailydevlinks.com\"></a>",
+        "text": "2/ 📚 Top Reads\n\nWhen Do You Use CSS Columns?\n🔗 css-tricks.com/when-do-you-us… (@geoffreygraham)\n\nOutline is your friend\n🔗 matuzo.at/blog/2022/focu… (@mmatuzo)\n\nUse the Right Container Query Syntax\n🔗 oddbird.net/2022/08/18/cq-… (@TerribleMia)"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/?ref=dailydevlinks.com",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://jeffbridgforth.com/weeknotes-september-5-2022/",
+      "published": null,
+      "wm-received": "2022-09-06T00:54:01Z",
+      "wm-id": 1511441,
+      "wm-source": "https://jeffbridgforth.com/weeknotes-september-5-2022/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://jeffbridgforth.com/weeknotes-september-5-2022/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.essincmn.com/collective-724/",
+      "published": null,
+      "wm-received": "2022-09-04T12:37:25Z",
+      "wm-id": 1510512,
+      "wm-source": "https://www.essincmn.com/collective-724/",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "content": {
+        "html": "<p> <br /></p>\n\n<a href=\"https://www.tambien.studio/\"></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://www.tambien.studio/\">Inspirational Website of the Week: También</a></h2>\n<p>A beautiful design with smooth animations and lovely interactions. Our pick this week.</p>\n<p><a href=\"https://www.tambien.studio/\">Get inspired</a><br /></p>\n\n<a href=\"https://cart.liquidweb.com/refer-a-friend/966216894751\"><img width=\"350\" height=\"250\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/07/liquidweb.jpg\" alt=\"Collective 720 item image\" /></a><br />Our Sponsor\n<h2><a href=\"https://cart.liquidweb.com/refer-a-friend/966216894751\" style=\"padding:1rem 0 0;text-decoration:none;\">Fully Managed Cloud &amp; Web Hosting</a></h2>\n<p>Codrops’ host of choice since 2016 is Liquid Web because they provide an unrivaled hosting experience, delivering 99.999% uptime and 24/7 heroic human support.</p>\n<p>        <a href=\"https://cart.liquidweb.com/refer-a-friend/966216894751\">Check it out</a><br /></p>\n\n<br />\n\n<a href=\"https://mofu-dev.com/en/blog/stable-fluids/\"><img width=\"350\" height=\"300\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_fluid-1.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://mofu-dev.com/en/blog/stable-fluids/\">Stable Fluids with three.js</a></h2>\n<p>Misaki Nakano writes about fluid simulation and shows how to implement Navier-Stokes equations.</p>\n<p><a href=\"https://mofu-dev.com/en/blog/stable-fluids/\">Read it</a><br /></p>\n\n<a href=\"https://github.com/moyix/fauxpilot\"><img width=\"350\" height=\"140\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_copilot.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://github.com/moyix/fauxpilot\">FauxPilot</a></h2>\n<p>FauxPilot is an attempt to build a locally hosted version of GitHub Copilot.</p>\n<p><a href=\"https://github.com/moyix/fauxpilot\">Check it out</a><br /></p>\n\n<a href=\"https://offscreencanvas.com/issues/008/\"><img width=\"350\" height=\"257\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_refraction.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://offscreencanvas.com/issues/008/\">WebGL Glass and Refraction</a></h2>\n<p>Daniel Velasquez exploring how refraction techniques work in this Offsceen Canvas issue.</p>\n<p><a href=\"https://offscreencanvas.com/issues/008/\">Read it</a><br /></p>\n\n<a href=\"https://twitter.com/jh3yy/status/1555376742402969600\"><img width=\"350\" height=\"193\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_has-1.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://twitter.com/jh3yy/status/1555376742402969600\">CSS Tip with :has()</a></h2>\n<p>Jhey Thompkins shows a powerful example on how to use the CSS :has() selector.</p>\n<p><a href=\"https://twitter.com/jh3yy/status/1555376742402969600\">Check it out</a><br /></p>\n\n<a href=\"https://www.zazow.com/\"><img width=\"350\" height=\"263\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_generative.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://www.zazow.com/\">Zazow</a></h2>\n<p>An algorithmic generative art maker where you can chose an algorithm and create unique digital artworks.</p>\n<p><a href=\"https://www.zazow.com/\">Check it out</a><br /></p>\n\n<a href=\"https://astro.build/blog/astro-1/\"><img width=\"350\" height=\"231\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_one.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://astro.build/blog/astro-1/\">Astro 1.0</a></h2>\n<p>Read all about the release of Astro, a web framework for building fast, content-focused websites.</p>\n<p><a href=\"https://astro.build/blog/astro-1/\">Check it out</a><br /></p>\n\n<a href=\"https://ryanmulligan.dev/blog/css-marquee/\"><img width=\"350\" height=\"155\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_marquee-1.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://ryanmulligan.dev/blog/css-marquee/\">The Infinite Marquee</a></h2>\n<p>Ryan Mulligan shows how to code a responsive looping marquee-style animation using HTML and CSS.</p>\n<p><a href=\"https://ryanmulligan.dev/blog/css-marquee/\">Check it out</a><br /></p>\n\n<a href=\"https://playcode.io/\"><img width=\"350\" height=\"229\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_playcode.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://playcode.io/\">Playcode</a></h2>\n<p>A JavaScript playground with instant live preview and console.</p>\n<p><a href=\"https://playcode.io/\">Check it out</a><br /></p>\n\n<a href=\"https://jacobmartins.com/posts/how-i-used-dalle2-to-generate-the-logo-for-octosql/\"><img width=\"350\" height=\"258\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_logo-1.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://jacobmartins.com/posts/how-i-used-dalle2-to-generate-the-logo-for-octosql/\">How I Used DALL·E 2 to Generate The Logo for OctoSQL</a></h2>\n<p>Jacob Martin shows how he used the DALL·E 2 AI system to generate a logo for his project.</p>\n<p><a href=\"https://jacobmartins.com/posts/how-i-used-dalle2-to-generate-the-logo-for-octosql/\">Check it out</a><br /></p>\n\n<a href=\"https://www.oddbird.net/2022/08/04/zero-units/\"><img width=\"350\" height=\"199\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_zero.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\">Not All Zeros are Equal</a></h2>\n<p>Miriam Suzanne writes about situations where removing units from any 0 value will break your code.</p>\n<p><a href=\"https://www.oddbird.net/2022/08/04/zero-units/\">Read it</a><br /></p>\n\n<a href=\"https://github.com/sematic-ai/sematic\"><img width=\"350\" height=\"205\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_semantic-1.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://github.com/sematic-ai/sematic\">Sematic</a></h2>\n<p>Sematic is an open-source development toolkit to help Data Scientists and Machine Learning (ML) Engineers prototype and productionize ML pipelines in days not weeks.</p>\n<p><a href=\"https://github.com/sematic-ai/sematic\">Check it out</a><br /></p>\n\n<a href=\"https://memex.marginalia.nu/log/61-botspam-apocalypse.gmi\"><img width=\"350\" height=\"231\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_bots.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://memex.marginalia.nu/log/61-botspam-apocalypse.gmi\">Botspam Apocalypse</a></h2>\n<p>A very interesting write up on how bots are crippling the Internet ecosystem.</p>\n<p><a href=\"https://memex.marginalia.nu/log/61-botspam-apocalypse.gmi\">Read it</a><br /></p>\n\n<a href=\"https://joycon.js.org/\"><img width=\"350\" height=\"234\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_xbox.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://joycon.js.org/\">Joycon.js</a></h2>\n<p>With this lib you can add controller functionality to your JavaScript game.</p>\n<p><a href=\"https://joycon.js.org/\">Check it out</a><br /></p>\n\n<a href=\"https://adadot.com/index.html\"><img width=\"350\" height=\"284\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_ada.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://adadot.com/index.html\">adadot</a></h2>\n<p>Adadot is an analytics tool that helps techies achieve their strategic goals by analysing productivity and collaboration data.</p>\n<p><a href=\"https://adadot.com/index.html\">Check it out</a><br /></p>\n\n<a href=\"https://specbranch.com/posts/one-big-server/\"><img width=\"350\" height=\"269\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_server.jpg\" alt=\"\" /></a>\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://specbranch.com/posts/one-big-server/\">Use One Big Server</a></h2>\n<p>Nima Badizadegan argues that using one big server is comparatively cheap and keeps your overheads at a minimum.</p>\n<p><a href=\"https://specbranch.com/posts/one-big-server/\">Read it</a><br /></p>\n\n<a href=\"https://tympanus.net/codrops/2022/08/02/how-to-copy-html-and-css-code-from-websites-easily/\"><img width=\"350\" height=\"234\" src=\"https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2022/08/C724_cssscan.jpg\" alt=\"\" /></a><br />From Our Blog (Sponsored)\n<h2><a style=\"padding:1rem 0 0;text-decoration:none;\" href=\"https://tympanus.net/codrops/2022/08/02/how-to-copy-html-and-css-code-from-websites-easily/\">How to Copy HTML and CSS Code From Websites Easily</a></h2>\n<p>Learn how to use CSS Scan to easily copy styles and markup of any element on a website.</p>\n<p><a href=\"https://tympanus.net/codrops/2022/08/02/how-to-copy-html-and-css-code-from-websites-easily/\">Read it</a><br /></p>\n<p><br /><br /><br /><br /><a href=\"https://tympanus.net/codrops/collective/collective-724/\">Read More at:         Codrops</a></p>",
+        "text": "Inspirational Website of the Week: También\nA beautiful design with smooth animations and lovely interactions. Our pick this week.\nGet inspired\n\n\n\nOur Sponsor\nFully Managed Cloud & Web Hosting\nCodrops’ host of choice since 2016 is Liquid Web because they provide an unrivaled hosting experience, delivering 99.999% uptime and 24/7 heroic human support.\n        Check it out\n\n\n\n\nStable Fluids with three.js\nMisaki Nakano writes about fluid simulation and shows how to implement Navier-Stokes equations.\nRead it\n\n\n\nFauxPilot\nFauxPilot is an attempt to build a locally hosted version of GitHub Copilot.\nCheck it out\n\n\n\nWebGL Glass and Refraction\nDaniel Velasquez exploring how refraction techniques work in this Offsceen Canvas issue.\nRead it\n\n\n\nCSS Tip with :has()\nJhey Thompkins shows a powerful example on how to use the CSS :has() selector.\nCheck it out\n\n\n\nZazow\nAn algorithmic generative art maker where you can chose an algorithm and create unique digital artworks.\nCheck it out\n\n\n\nAstro 1.0\nRead all about the release of Astro, a web framework for building fast, content-focused websites.\nCheck it out\n\n\n\nThe Infinite Marquee\nRyan Mulligan shows how to code a responsive looping marquee-style animation using HTML and CSS.\nCheck it out\n\n\n\nPlaycode\nA JavaScript playground with instant live preview and console.\nCheck it out\n\n\n\nHow I Used DALL·E 2 to Generate The Logo for OctoSQL\nJacob Martin shows how he used the DALL·E 2 AI system to generate a logo for his project.\nCheck it out\n\n\n\nNot All Zeros are Equal\nMiriam Suzanne writes about situations where removing units from any 0 value will break your code.\nRead it\n\n\n\nSematic\nSematic is an open-source development toolkit to help Data Scientists and Machine Learning (ML) Engineers prototype and productionize ML pipelines in days not weeks.\nCheck it out\n\n\n\nBotspam Apocalypse\nA very interesting write up on how bots are crippling the Internet ecosystem.\nRead it\n\n\n\nJoycon.js\nWith this lib you can add controller functionality to your JavaScript game.\nCheck it out\n\n\n\nadadot\nAdadot is an analytics tool that helps techies achieve their strategic goals by analysing productivity and collaboration data.\nCheck it out\n\n\n\nUse One Big Server\nNima Badizadegan argues that using one big server is comparatively cheap and keeps your overheads at a minimum.\nRead it\n\n\n\nFrom Our Blog (Sponsored)\nHow to Copy HTML and CSS Code From Websites Easily\nLearn how to use CSS Scan to easily copy styles and markup of any element on a website.\nRead it\n\n\n\n\n\nRead More at:         Codrops"
+      },
+      "mention-of": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://technsavi.com/2022/09/04/weekly-information-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-04T03:54:47Z",
+      "wm-id": 1510397,
+      "wm-source": "https://technsavi.com/2022/09/04/weekly-information-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://technsavi.com/2022/09/04/weekly-information-for-designers-№-659/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://findcrazyproducts.com/weekly-news-for-designers-%e2%84%96-659-the-my-business-network-ltd/",
+      "published": null,
+      "wm-received": "2022-09-03T19:01:58Z",
+      "wm-id": 1510285,
+      "wm-source": "https://findcrazyproducts.com/weekly-news-for-designers-%e2%84%96-659-the-my-business-network-ltd/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Robat Williams",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0b5bc460d573545cf1ac781f695257f73007f3c35cef065a9cec7f6fab2df482.jpg",
+        "url": "https://twitter.com/_rwms"
+      },
+      "url": "https://twitter.com/_rwms/status/1566071225557860356",
+      "published": "2022-09-03T14:30:51+00:00",
+      "wm-received": "2022-09-03T14:48:34Z",
+      "wm-id": 1510227,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1566071225557860356",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
+        "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.cyberdime.io/weekly-news-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-03T14:28:22Z",
+      "wm-id": 1510219,
+      "wm-source": "https://www.cyberdime.io/weekly-news-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.gictafrica.com/2022/09/03/weekly-news-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-03T04:07:23Z",
+      "wm-id": 1510058,
+      "wm-source": "https://www.gictafrica.com/2022/09/03/weekly-news-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://www.gictafrica.com/2022/09/03/weekly-news-for-designers-%e2%84%96-659/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://saasnewshubb.com/2022/09/02/weekly-news-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-02T16:40:43Z",
+      "wm-id": 1509849,
+      "wm-source": "https://saasnewshubb.com/2022/09/02/weekly-news-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://appscompass.com/weekly-information-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-02T16:18:15Z",
+      "wm-id": 1509843,
+      "wm-source": "https://appscompass.com/weekly-information-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://mikesmediahouse.co.za/2022/09/02/weekly-news-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-02T14:55:05Z",
+      "wm-id": 1509800,
+      "wm-source": "https://mikesmediahouse.co.za/2022/09/02/weekly-news-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://mikesmediahouse.co.za/2022/09/02/weekly-news-for-designers-%e2%84%96-659/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://akhbar24news.com/weekly-news-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-02T14:54:09Z",
+      "wm-id": 1509799,
+      "wm-source": "https://akhbar24news.com/weekly-news-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://akhbar24news.com/weekly-news-for-designers-%e2%84%96-659/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://desainae.com/berita-mingguan-untuk-desainer-659/",
+      "published": null,
+      "wm-received": "2022-09-02T12:44:45Z",
+      "wm-id": 1509686,
+      "wm-source": "https://desainae.com/berita-mingguan-untuk-desainer-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://cole.africa/weekly-information-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-02T11:37:17Z",
+      "wm-id": 1509657,
+      "wm-source": "https://cole.africa/weekly-information-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://cole.africa/weekly-information-for-designers-№-659/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://thedevnews.com/weekly-information-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-02T10:50:37Z",
+      "wm-id": 1509634,
+      "wm-source": "https://thedevnews.com/weekly-information-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://thedevnews.com/weekly-information-for-designers-№-659/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://speckyboy.com/weekly-news-for-designers-659/",
+      "published": null,
+      "wm-received": "2022-09-02T10:21:29Z",
+      "wm-id": 1509589,
+      "wm-source": "https://speckyboy.com/weekly-news-for-designers-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://mbaguide.in/review-free-dating-web-sites-what-are-the-best-online-dating-web-sites/",
+      "published": null,
+      "wm-received": "2022-09-02T07:01:09Z",
+      "wm-id": 1509485,
+      "wm-source": "https://mbaguide.in/review-free-dating-web-sites-what-are-the-best-online-dating-web-sites/",
+      "wm-target": "https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/",
+      "content": {
+        "html": "<p>The law of first impression is utmost and vital in the event that you in reality need to find a date. This should be very connected to the manner in which you open yourself to the other celebration. One of the best criteria to judge your sincerity could be the manner in which you appear on other. Consequently, searching directly into the eyes of one’s prospective date are very instrumental. Individuals who have a genuine interest to find a date in others usually make contact with the eyes of this other. You ought to constantly do that while discussing with all the other. But be careful against fixing your look at her or him for too long, because this may be taken to mean gazing or panicking.</p>\n<p>Based on an industry estimate, 30 – 40 million people have used a web dating site at some time. Of those, 50per cent are aged between 18 – 35. Another 25percent are estimated to be aged between 36 – 44 meaning that internet dating seems to interest younger generation of single girls and dudes.</p>\n<p></p><img src=\"http://static01.nyt.com/images/2014/11/06/business/Adco/Adco-articleLarge.jpg?quality=75&amp;auto=webp&amp;disable=upscale\" width=\"400\" alt=\"Adco-articleLarge.jpg?quality=75&amp;auto=webp&amp;disable=upscale\" />\n<p></p>\n<p>If you reside in a major metropolitan area you have a <a href=\"https://dating-tips-for-the-fellas.com/gay-dating-nearby/\">nearby dating</a> site. Sometimes these local sites could be a lot better than the nationwide. Just before join one, you would need to look at how many people are active. If the website cannot allow you to begin to see the last time a part logged on, visit another site. If you notice a lot of individuals have logged in recently this means this will be an energetic community. The more active, the more likely you are to  generally meet people.</p>\n<p>Now that you have got heard of first one, you need to consider something about yourself. The remaining online dating 4 recommendations were created especially for you. Right here they’ve been.</p>\n<p>With technology and lifestyles changing, the newest way of  dating could be the world of <a href=\"https://www.facebookofsex.yaforia.com\">personal craiglist</a> through the internet. This is an incredible method to meet people without the need to approach them in a singles bar or club or  <a href=\"http://shtory.fedorov.net.ua/index.php/component/k2/itemlist/user/378902\">personal craiglist</a> various other awkward spot.</p>\n<p>Now you might be set, you can now get look for solitary ladies because your concerns are over. You have got a romantic date ready plus appearance and put are prepared. It is the right time to find a date.</p>\n<p>Individuals make a profile regarding the dating web sites looking <a href=\"https://www.facebookofsex.yaforia.com\">craigslist for sex</a> love. Although, you can find cons to online dating too, it offers undoubtedly shown its mettle in building relationships within the last few years. The increasing quantity of marriages due to these dating sites is proof enough for that. Everything starts whenever these sites select those profiles which have passions just like yours and offer  perfect matches. Thereafter,  <a href=\"http://soho.naverme.com/info/97115893\">personal craiglist</a> you’ll proceed <a href=\"https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/\">depending</a> on your interests and demands.</p>\n<p>Critics of online dating state its dangerous. People lie. They cheat. They disappoint. What they don’t get is people do those exact same things offline too.</p>",
+        "text": "The law of first impression is utmost and vital in the event that you in reality need to find a date. This should be very connected to the manner in which you open yourself to the other celebration. One of the best criteria to judge your sincerity could be the manner in which you appear on other. Consequently, searching directly into the eyes of one’s prospective date are very instrumental. Individuals who have a genuine interest to find a date in others usually make contact with the eyes of this other. You ought to constantly do that while discussing with all the other. But be careful against fixing your look at her or him for too long, because this may be taken to mean gazing or panicking.\nBased on an industry estimate, 30 – 40 million people have used a web dating site at some time. Of those, 50per cent are aged between 18 – 35. Another 25percent are estimated to be aged between 36 – 44 meaning that internet dating seems to interest younger generation of single girls and dudes.\n\nIf you reside in a major metropolitan area you have a nearby dating site. Sometimes these local sites could be a lot better than the nationwide. Just before join one, you would need to look at how many people are active. If the website cannot allow you to begin to see the last time a part logged on, visit another site. If you notice a lot of individuals have logged in recently this means this will be an energetic community. The more active, the more likely you are to  generally meet people.\nNow that you have got heard of first one, you need to consider something about yourself. The remaining online dating 4 recommendations were created especially for you. Right here they’ve been.\nWith technology and lifestyles changing, the newest way of  dating could be the world of personal craiglist through the internet. This is an incredible method to meet people without the need to approach them in a singles bar or club or  personal craiglist various other awkward spot.\nNow you might be set, you can now get look for solitary ladies because your concerns are over. You have got a romantic date ready plus appearance and put are prepared. It is the right time to find a date.\nIndividuals make a profile regarding the dating web sites looking craigslist for sex love. Although, you can find cons to online dating too, it offers undoubtedly shown its mettle in building relationships within the last few years. The increasing quantity of marriages due to these dating sites is proof enough for that. Everything starts whenever these sites select those profiles which have passions just like yours and offer  perfect matches. Thereafter,  personal craiglist you’ll proceed depending on your interests and demands.\nCritics of online dating state its dangerous. People lie. They cheat. They disappoint. What they don’t get is people do those exact same things offline too."
+      },
+      "mention-of": "https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://mbaguide.in/review-free-dating-web-sites-what-are-the-best-online-dating-web-sites/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://mybn.online/collective-727-web-design-news/",
+      "published": null,
+      "wm-received": "2022-09-02T03:22:55Z",
+      "wm-id": 1509413,
+      "wm-source": "https://mybn.online/collective-727-web-design-news/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://jeffbridgforth.com/weeknotes-september-1-2022/",
+      "published": null,
+      "wm-received": "2022-09-01T23:47:48Z",
+      "wm-id": 1509345,
+      "wm-source": "https://jeffbridgforth.com/weeknotes-september-1-2022/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://jeffbridgforth.com/weeknotes-september-1-2022/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mia",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/31fcfd6282b72379bdececa7d23a188489aa4cf4f63f576928d87f6a3df9064b.jpg",
+        "url": "https://twitter.com/TerribleMia"
+      },
+      "url": "https://twitter.com/TerribleMia/status/1565465803385843713",
+      "published": "2022-09-01T22:25:07+00:00",
+      "wm-received": "2022-09-01T22:40:54Z",
+      "wm-id": 1509319,
+      "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1564650026751574016/1565465803385843713",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "content": {
+        "html": "Updated, thanks.\n<a class=\"u-mention\" href=\"https://twitter.com/bramus\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/18/cq-syntax/\"></a>",
+        "text": "Updated, thanks."
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
