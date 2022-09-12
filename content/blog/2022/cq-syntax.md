@@ -1,4 +1,5 @@
 ---
+card: large
 title: Use the Right Container Query Syntax
 sub: Size queries are stable, and shipping in browsers
 author: miriam
@@ -30,13 +31,11 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 {% import 'utility.macros.njk' as utility %}
 
-{% callout %}
-We'll keep this article up-to-date
-if there are any further developments --
-but now that the feature
-is beginning to ship in browsers,
-it is very unlikely that there will be
-any breaking changes.
+{% set update3 = ['Update', utility.datetime('2022-09-12')] | join(' ') %}
+{% callout 'note', update3 %}
+- Safari 16 shipped on September 12,
+  with support for size Container Queries and units
+  ([and much more](https://webkit.org/blog/13152/webkit-features-in-safari-16-0/)).
 {% endcallout %}
 
 {% set update2 = ['Update', utility.datetime('2022-09-09')] | join(' ') %}
@@ -45,19 +44,14 @@ any breaking changes.
   and Chrome both had a bug
   requiring parentheses around
   queries with logical operators (`not`, `and`, `or`).
-  Upgrade to Chrome 105 or
-  [Safari TP 152](https://webkit.org/blog/13137/release-notes-for-safari-technology-preview-152/)
+  Upgrade to Chrome 105 or Safari 16
   to get the proper behavior.
-- Safari 16 didn't release
-  [during the Apple event](https://www.apple.com/apple-events/)
-  on September 7.
-  Maybe sometime in October?
 {% endcallout %}
 
 {% set update1 = ['Update', utility.datetime('2022-09-01')] | join(' ') %}
 {% callout 'note', update1 %}
 - Chrome 105 shipped on August 30,
-  with support for Container Queries and units.
+  with support for size Container Queries and units.
 {% endcallout %}
 
 Container Queries
@@ -372,22 +366,12 @@ There are a few things to note here:
 
 ## Browser support
 
-Chrome 105
-supports size queries and units,
-and shipped on August 30, 2022.
-
-Apple doesn't announce their release schedule in advance,
-but we know they are planning to ship
-size queries and units in Safari 16,
-they often release at Apple events,
-and they have one scheduled for
-[September 7, 2022](https://www.apple.com/apple-events/).
-
+Chrome 105 & Safari 16 both
+support size queries and units.
 Firefox is
 [actively working on support](https://bugzilla.mozilla.org/show_bug.cgi?id=1744221),
 but hasn't yet announced when it will be ready.
-
-Here's the support
+Here's the current support
 for each feature:
 
 {{ embed.caniuse('css-container-queries') }}
