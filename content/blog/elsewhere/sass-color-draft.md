@@ -1,6 +1,6 @@
 ---
 title: Sass Color Spaces (Request for Comments)
-sub: A new proposal for color-management in Sass
+sub: A new proposal for color management in Sass
 venue: Sass Blog
 url: https://sass-lang.com/blog/request-for-comments-color-spaces
 date: 2022-09-22
@@ -13,14 +13,15 @@ image:
 tags:
   - CSS
   - Sass
+  - Color
 action:
   text: Read the summary & proposal »
   url: https://sass-lang.com/blog/request-for-comments-color-spaces
 summary: |
   There’s been a lot of exciting work
   in the CSS color specifications lately,
-  and the new features are starting to land in browsers --
-  so we’ve been preparing to add support in Sass as well.
+  and since the new features are already starting to land in browsers,
+  we’ve been preparing to add support in Sass as well.
   My proposal for that
   is published and ready for public feedback!
 ---
@@ -44,7 +45,7 @@ but for now
 check out the [request for comments][request],
 or dive straight into the [full proposal][].
 If you want to learn more about color spaces in CSS,
-Bramus has a great [collection of resources][],
+Bramus Van Damme has a great [collection of resources][],
 Chris Lilley & Lea Verou released the handy [Color.js][] library,
 and all of this is based on
 [CSS Color Level 4][] and [Level 5][].
@@ -63,7 +64,7 @@ but this is all part of
 which means every browser is
 [trying to get it done this year][].
 I recommend installing the latest
-[Safari Technology Preview][],
+[Safari Technology Preview][]
 and playing around with it!
 
 [browser support]: https://caniuse.com/css-color-function,css-lch-lab,mdn-css_types_color_oklch,mdn-css_types_color_oklab,mdn-css_types_color_color-mix
