@@ -1,6 +1,114 @@
 {
-  "lastFetched": "2022-09-12T21:43:18.563Z",
+  "lastFetched": "2022-09-21T23:48:04.958Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://assuagetech.net/2022/09/03/weekly-news-for-designers-%e2%84%96-659/",
+      "published": null,
+      "wm-received": "2022-09-21T07:31:24Z",
+      "wm-id": 1523896,
+      "wm-source": "https://assuagetech.net/2022/09/03/weekly-news-for-designers-%e2%84%96-659/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Miriam Eric Suzanne",
+        "photo": "https://webmention.io/avatar/d33wubrfki0l68.cloudfront.net/10683266149a653b1fe45e7f5c7e0ccc65f813301b42f85b3a6f043a672adace.jpg",
+        "url": "https://www.miriamsuzanne.com/who/"
+      },
+      "url": "https://www.miriamsuzanne.com/2022/09/14/cq-browsers/",
+      "published": "2022-09-14T00:00:00",
+      "wm-received": "2022-09-15T19:32:00Z",
+      "wm-id": 1519613,
+      "wm-source": "https://www.miriamsuzanne.com/2022/09/14/cq-browsers/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "name": "Container Queries in Browsers!",
+      "summary": {
+        "content-type": "text/plain",
+        "value": "After nearly 15 years as a highly-requested feature in CSS – and 15 years being told it was impossible – (size) Container Queries and units have shipped in both Chrome/Edge 105, and Safari 16! Firefox is not far behind."
+      },
+      "photo": [
+        "https://d33wubrfki0l68.cloudfront.net/2739f5ea3b63ebab7f3e399eada5e22917f646c7/d368e/images/2022/zx-dtdjepn-640.jpeg"
+      ],
+      "content": {
+        "html": "<ul><li>\n<a href=\"https://developer.chrome.com/blog/new-in-chrome-105/\">Chrome 105</a>\n[<time datetime=\"2022-08-30T00:00:00.000Z\">August 30, 2022</time>]</li>\n<li>\n<a href=\"https://webkit.org/blog/13152/webkit-features-in-safari-16-0/\">Safari 16</a>\n[<time datetime=\"2022-09-12T00:00:00.000Z\">September 12, 2022</time>]</li>\n</ul><p>If you want to start using these features\n(I recommend it!)\njust\n<a href=\"https://www.oddbird.net/2022/08/18/cq-syntax/\">make sure you’re using the right syntax</a>!\nSome things have changed\nbetween the first prototype\nand the final version that’s shipping in browsers.\nBut don’t worry –\n<em>it’s stable now, and won’t be changing again</em>!</p>\n<p>Both Chrome 105\nand Safari 16\ncome with an impressive list\nof new features\nin addition to container queries.\nThe main highlights are the\n<a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/:has\"><code>:has()</code> selector</a>\n(in both) and\n<a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid\">subgrid</a>\n(in Safari).\nBut I recommend digging through\nthe release notes linked above.</p>\n<p>(For more about container size\nqueries and units,\nsee my list of\n<a href=\"https://www.miriamsuzanne.com/specs/contain-3/#resources\">Container Query Resources</a>.)</p>\n<h2>Style Queries Prototype</h2>\n<p>Meanwhile,\n<a href=\"https://www.google.com/chrome/canary/\">Chrome Canary</a>\n&amp;\n<a href=\"https://www.microsoftedgeinsider.com/en-us/download\">Edge Canary</a>\nhave both shipped a prototype\nof <em>style queries</em>.\nRather than measuring the dimensions\nof an element,\nstyle queries measure the\n<em>computed value</em> of a given property\non that element.</p>\n<p>To test the feature:</p>\n<ul><li>Download either Canary browser.</li>\n<li>Navigate to <code>about://flags/#enable-experimental-web-platform-features</code>.</li>\n<li>Set it to <code>Enabled</code>.</li>\n<li>Restart the browser.</li>\n</ul><p>For now\nstyle queries are limited to strict equality\n(we can’t query number ranges,\nor partial values) –\nand the prototype is limited to\ncustom properties.\nEven with those limitations,\nit’s a pretty powerful feature.\nHere’s my first experiment,\nestablishing two ‘button themes’ –\n<code>mia</code> and <code>mia-plus</code> –\ntoggled by a single custom property:</p>\n<p>See the Pen <a href=\"https://codepen.io/miriamsuzanne/pen/abGBNNx\">Style query button themes</a> by <a href=\"https://codepen.io/miriamsuzanne\">@miriamsuzanne</a> on <a href=\"https://codepen.io\">CodePen</a>.</p>\n<p>I’m excited to experiment with this more.\nIt should enable most of the use-cases\nin Lea Verou’s request for\n<a href=\"https://github.com/w3c/csswg-drafts/issues/5624\"><em>Higher Level Custom Properties</em></a>,\nand I’m excited to see\nwhat else people come up with.\nIf you make any demos,\nplease send them my way!</p>\n<h2>Browser Support for Size Queries &amp; Units</h2>\n<p>\n  </p>\n<p>\n  </p>",
+        "text": "Chrome 105\n[August 30, 2022]\n\nSafari 16\n[September 12, 2022]\nIf you want to start using these features\n(I recommend it!)\njust\nmake sure you’re using the right syntax!\nSome things have changed\nbetween the first prototype\nand the final version that’s shipping in browsers.\nBut don’t worry –\nit’s stable now, and won’t be changing again!\nBoth Chrome 105\nand Safari 16\ncome with an impressive list\nof new features\nin addition to container queries.\nThe main highlights are the\n:has() selector\n(in both) and\nsubgrid\n(in Safari).\nBut I recommend digging through\nthe release notes linked above.\n(For more about container size\nqueries and units,\nsee my list of\nContainer Query Resources.)\nStyle Queries Prototype\nMeanwhile,\nChrome Canary\n&\nEdge Canary\nhave both shipped a prototype\nof style queries.\nRather than measuring the dimensions\nof an element,\nstyle queries measure the\ncomputed value of a given property\non that element.\nTo test the feature:\nDownload either Canary browser.\nNavigate to about://flags/#enable-experimental-web-platform-features.\nSet it to Enabled.\nRestart the browser.\nFor now\nstyle queries are limited to strict equality\n(we can’t query number ranges,\nor partial values) –\nand the prototype is limited to\ncustom properties.\nEven with those limitations,\nit’s a pretty powerful feature.\nHere’s my first experiment,\nestablishing two ‘button themes’ –\nmia and mia-plus –\ntoggled by a single custom property:\nSee the Pen Style query button themes by @miriamsuzanne on CodePen.\nI’m excited to experiment with this more.\nIt should enable most of the use-cases\nin Lea Verou’s request for\nHigher Level Custom Properties,\nand I’m excited to see\nwhat else people come up with.\nIf you make any demos,\nplease send them my way!\nBrowser Support for Size Queries & Units"
+      },
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://kulturbanause.de/blog/css-container-queries-mit-container/",
+      "published": null,
+      "wm-received": "2022-09-15T06:21:35Z",
+      "wm-id": 1519108,
+      "wm-source": "https://kulturbanause.de/blog/css-container-queries-mit-container/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/#naming-containers-with-container-name",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/#naming-containers-with-container-name",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://thedevnews.com/challenge-516/",
+      "published": null,
+      "wm-received": "2022-09-13T05:59:46Z",
+      "wm-id": 1517333,
+      "wm-source": "https://thedevnews.com/challenge-516/",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/?utm_source=CSS-Weekly&utm_campaign=Issue-520&utm_medium=RSS",
+      "mention-of": "https://www.oddbird.net/2022/08/04/zero-units/?utm_source=CSS-Weekly&utm_campaign=Issue-520&utm_medium=RSS",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://thedevnews.com/challenge-516/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://thedevnews.com/a-useful-use-for-cascade-layers/",
+      "published": null,
+      "wm-received": "2022-09-13T02:55:35Z",
+      "wm-id": 1517238,
+      "wm-source": "https://thedevnews.com/a-useful-use-for-cascade-layers/",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "mention-of": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://thedevnews.com/a-useful-use-for-cascade-layers/"
+      }
+    },
     {
       "type": "entry",
       "author": {
