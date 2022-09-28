@@ -30,7 +30,7 @@ jobs:
     if: github.event_name == 'pull_request' && github.event.action == 'opened'
     steps:
       - name: Add link to diff
-        uses: peter-evans/create-or-update-comment@v1
+        uses: peter-evans/create-or-update-comment@v2
         with:
           issue-number: ${{ github.event.number }}
           body: |
