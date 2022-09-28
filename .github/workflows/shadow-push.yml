@@ -8,7 +8,7 @@ jobs:
     env:
       API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set env vars
         run: |
           echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
