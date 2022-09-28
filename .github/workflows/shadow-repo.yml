@@ -7,9 +7,13 @@ on:
   pull_request:
     types: [opened]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   sync-branch:
-    name: Create/delete branch
+    name: Create/delete shadow branch
     runs-on: ubuntu-latest
     if: github.event.ref_type == 'branch'
     steps:
@@ -27,7 +31,7 @@ jobs:
         run: git push origin --delete ${{ github.event.ref }}
 
   push-branch:
-    name: Push branch
+    name: Push to shadow branch
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
@@ -38,24 +42,30 @@ jobs:
           cache: yarn
       - run: yarn install
       - run: yarn build
-      - name: Push to shadow branch
-        uses: cpina/github-action-push-to-another-repository@74596b72fae72d9b7b79e1b2992863c0f595c801
-        env:
-          SSH_DEPLOY_KEY: ${{ secrets.SHADOW_REPO_PRIVATE_KEY }}
+      - name: Clone shadow repo
+        uses: actions/checkout@v3
         with:
-          source-directory: _site
-          destination-github-username: ${{ secrets.SHADOW_OWNER }}
-          destination-repository-name: ${{ secrets.SHADOW_REPO }}
-          user-email: ${{ secrets.SHADOW_AUTHOR }}
-          target-branch: ${{ env.GITHUB_REF_NAME }}
+          repository: ${{ secrets.SHADOW_OWNER }}/${{ secrets.SHADOW_REPO }}
+          ssh-key: ${{ secrets.SHADOW_REPO_PRIVATE_KEY }}
+          ref: ${{ github.ref_name }}
+          path: shadow-repo
+      - name: Push to shadow branch
+        run: |
+          cd shadow-repo
+          rm -rf ./*
+          cp -rT ../_site .
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A
+          git commit --allow-empty -m "Update from https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
+          git push origin
 
   diff-link:
     name: Create comment to diff link
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request' && github.event.action == 'opened'
     steps:
-      - name: Add link to diff
-        uses: peter-evans/create-or-update-comment@v2
+      - uses: peter-evans/create-or-update-comment@v2
         with:
           issue-number: ${{ github.event.number }}
           body: |
