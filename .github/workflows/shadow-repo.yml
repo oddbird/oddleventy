@@ -1,0 +1,62 @@
+name: Sync with shadow repo
+
+on:
+  push:
+  create:
+  delete:
+  pull_request:
+    types: [opened]
+
+jobs:
+  sync-branch:
+    name: Create/delete branch
+    runs-on: ubuntu-latest
+    if: github.event.ref_type == 'branch'
+    steps:
+      - name: Clone shadow repo
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ secrets.SHADOW_OWNER }}/${{ secrets.SHADOW_REPO }}
+          ssh-key: ${{ secrets.SHADOW_REPO_PRIVATE_KEY }}
+          ref: main
+      - name: Create branch on shadow repo
+        if: github.event_name == 'create'
+        run: git push origin main:${{ github.event.ref }}
+      - name: Delete branch on shadow repo
+        if: github.event_name == 'delete'
+        run: git push origin --delete ${{ github.event.ref }}
+
+  push-branch:
+    name: Push branch
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          cache: yarn
+      - run: yarn install
+      - run: yarn build
+      - name: Push to shadow branch
+        uses: cpina/github-action-push-to-another-repository@74596b72fae72d9b7b79e1b2992863c0f595c801
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SHADOW_REPO_PRIVATE_KEY }}
+        with:
+          source-directory: _site
+          destination-github-username: ${{ secrets.SHADOW_OWNER }}
+          destination-repository-name: ${{ secrets.SHADOW_REPO }}
+          user-email: ${{ secrets.SHADOW_AUTHOR }}
+          target-branch: ${{ env.GITHUB_REF_NAME }}
+
+  diff-link:
+    name: Create comment to diff link
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action == 'opened'
+    steps:
+      - name: Add link to diff
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          issue-number: ${{ github.event.number }}
+          body: |
+            View diff of compiled files (may take a few minutes): https://github.com/${{ secrets.SHADOW_OWNER }}/${{ secrets.SHADOW_REPO }}/compare/${{ github.event.pull_request.base.ref }}..${{ github.event.pull_request.head.ref }}
