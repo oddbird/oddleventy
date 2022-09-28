@@ -20,7 +20,7 @@ jobs:
       - run: yarn install
       - run: yarn build
       - name: Push to shadow branch
-        uses: cpina/github-action-push-to-another-repository@2ebe0cc15fc6a8e63c3658c119525bf1aead4418
+        uses: cpina/github-action-push-to-another-repository@74596b72fae72d9b7b79e1b2992863c0f595c801
         with:
           source-directory: _site
           destination-github-username: ${{ secrets.SHADOW_OWNER }}
