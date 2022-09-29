@@ -29,7 +29,7 @@ params:
 const getPages = (collection, bird, solo = false) =>
   collection.filter(
     (page) =>
-      hasData(page, 'data.author', bird) ||
+      hasData(page, 'data.author', bird, true) ||
       (solo ? false : hasData(page, 'data.author', 'oddbird')),
   );
 
@@ -48,7 +48,7 @@ params:
     note: The name of the bird (as used in `author` settings)
 */
 const authorPage = (collection, bird) =>
-  withData(collection, 'data.bird', bird)[0];
+  withData(collection, 'data.bird', bird, true)[0];
 
 /* @docs
 label: active

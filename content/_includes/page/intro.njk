@@ -21,7 +21,6 @@
 
     {# for active birds we add a sketch to the intro
         even when we have a header image #}
-    {% set is_bird = bird and (bird != 'oddbird') %}
     {% set is_active = is_bird and collections.birds | active | authorPage(bird) %}
 
     {% if is_active %}
