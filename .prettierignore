@@ -15,3 +15,4 @@ jscache/
 netlify-plugins/
 node_modules/
 src/docs/
+src/mentions/webmentions.json

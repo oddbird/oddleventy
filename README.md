@@ -1,6 +1,6 @@
 # OddSite
 
-[![CircleCI](https://circleci.com/gh/oddbird/oddleventy/tree/main.svg?style=svg)](https://circleci.com/gh/oddbird/oddleventy) [![Netlify Status](https://api.netlify.com/api/v1/badges/4f75b5a7-8412-4586-bad0-b4de64bb4f17/deploy-status)](https://app.netlify.com/sites/oddleventy/deploys)
+[![Build Status](https://github.com/oddbird/oddleventy/actions/workflows/test.yml/badge.svg)](https://github.com/oddbird/oddleventy/actions/workflows/test.yml) [![Netlify Status](https://api.netlify.com/api/v1/badges/4f75b5a7-8412-4586-bad0-b4de64bb4f17/deploy-status)](https://app.netlify.com/sites/oddleventy/deploys)
 
 This site is built using:
 
@@ -9,7 +9,6 @@ This site is built using:
 - [Eleventy](https://www.11ty.dev/) JS w/ Markdown & Nunjucks
 - Sass w/ OddBird's [Accoutrement](https://www.oddbird.net/accoutrement/) &
   [Herman](https://www.oddbird.net/herman/)
-- [CircleCI](https://circleci.com/) for continuous integration
 - [Netlify](https://www.netlify.com/) for deployment
 - A lot of ideas from a lot of cool people
 
