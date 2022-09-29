@@ -5499,7 +5499,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"exit@npm:^0.1.2":
+"exit@npm:*, exit@npm:^0.1.2":
   version: 0.1.2
   resolution: "exit@npm:0.1.2"
   checksum: abc407f07a875c3961e4781dfcb743b58d6c93de9ab263f4f8c9d23bb6da5f9b7764fc773f86b43dd88030444d5ab8abcb611cb680fba8ca075362b77114bba3
@@ -7694,7 +7694,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-util@npm:^29.1.0":
+"jest-util@npm:*, jest-util@npm:^29.1.0":
   version: 29.1.0
   resolution: "jest-util@npm:29.1.0"
   dependencies:

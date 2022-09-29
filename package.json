@@ -34,7 +34,7 @@
     "site:clean": "rimraf './_site/!(assets)' './_site/assets/!(images)'",
     "assets:clean": "rimraf './_built/'",
     "serve": "npm-run-all build:assets build:site -p eleventy:serve watch:js watch:sass",
-    "test": "jest -i",
+    "test": "jest",
     "build:site": "run-s site:clean sassdoc",
     "build:assets": "npm-run-all assets:clean -p js sass",
     "build": "run-s build:assets build:site eleventy",

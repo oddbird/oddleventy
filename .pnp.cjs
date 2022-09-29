@@ -10229,6 +10229,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.7.23"],\
             ["chalk", "npm:4.1.2"],\
             ["emittery", "npm:0.10.2"],\
+            ["exit", "npm:0.1.2"],\
             ["graceful-fs", "npm:4.2.10"],\
             ["jest-docblock", "npm:29.0.0"],\
             ["jest-environment-node", "npm:29.1.1"],\
@@ -10363,6 +10364,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["jest-worker", "npm:26.6.2"],\
             ["@types/node", "npm:18.7.23"],\
+            ["jest-util", "npm:29.1.0"],\
             ["merge-stream", "npm:2.0.0"],\
             ["supports-color", "npm:7.2.0"]\
           ],\
@@ -10373,6 +10375,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["jest-worker", "npm:29.1.0"],\
             ["@types/node", "npm:18.7.23"],\
+            ["jest-util", "npm:29.1.0"],\
             ["merge-stream", "npm:2.0.0"],\
             ["supports-color", "npm:8.1.1"]\
           ],\
