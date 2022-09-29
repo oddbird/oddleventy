@@ -79,7 +79,7 @@ label: activeAuthor
 category: Status
 note: |
   Check if any author of a page is currently active
-  (if 'oddbird' is an author, this will returrn true)
+  (if 'oddbird' is an author, this will return true)
 example: |
   {{ post | activeAuthor(collections.all) }}
 params:
@@ -101,7 +101,7 @@ const activeAuthor = (page, all) => {
 };
 
 /* @docs
-label: activeAuthor
+label: withActiveAuthor
 category: Status
 note: |
   Filter a collection to only include

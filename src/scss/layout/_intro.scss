@@ -16,3 +16,8 @@
     --newline: 0;
   }
 }
+
+[data-media='bird-intro'] {
+  --align: center;
+  --media-max: var(--logo-item);
+}
