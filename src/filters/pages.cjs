@@ -80,11 +80,19 @@ params:
     type: boolean
     note: Force an exact match, rather than inclusion
 */
-const hasData = (obj, keys, value, exact = false) => {
+const hasData = (obj, keys, value) => {
   if (value) {
-    return exact
-      ? _(obj).get(keys, '') === value
-      : _(obj).get(keys, []).includes(value);
+    const data = _(obj).get(keys);
+    if (_.isUndefined(data)) {
+      return false;
+    }
+    if (_.isString(data)) {
+      return data === value;
+    }
+    if (_.isArray(data)) {
+      return data.includes(value);
+    }
+    return false;
   }
 
   return _.hasIn(obj, keys);
@@ -108,8 +116,8 @@ params:
     type: boolean
     note: Force an exact match, rather than inclusion
 */
-const withData = (collection, keys, value, exact = false) =>
-  collection.filter((page) => hasData(page, keys, value, exact));
+const withData = (collection, keys, value) =>
+  collection.filter((page) => hasData(page, keys, value));
 
 /* @docs
 label: removePage
