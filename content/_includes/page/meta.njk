@@ -18,10 +18,16 @@
 
 {% if sub or linklist or taglist or linked or author or links or slides %}
   <div id="meta">
-    {{ post.subtitle(
-      [sub, dates] | join(', ') if dates else sub,
-      class='p-role' if is_bird else none
-    ) }}
+    {% if is_bird %}
+      {{ post.subtitle(
+        [sub, '@ OddBird', dates] | join(' ') if dates else sub,
+        class='p-role'
+      ) }}
+    {% else %}
+      {{ post.subtitle(
+        [sub, dates] | join(', ') if dates else sub
+      ) }}
+    {% endif %}
 
     {% if author or client %}
       <p class="byline">
