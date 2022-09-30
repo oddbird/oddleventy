@@ -1,0 +1,11 @@
+[data-mention]:not(:last-child) {
+  margin-block-end: var(--spacer);
+}
+
+.webmention-author {
+  margin: 0;
+}
+
+.webmention-meta {
+  font-size: var(--small);
+}

@@ -1,5 +1,4 @@
 {%- import 'utility.macros.njk' as utility -%}
-{%- import 'layout.macros.njk' as layout -%}
 
 {# is this the page for one of us? #}
 {%- set is_bird = bird and (bird != 'oddbird') -%}
@@ -14,16 +13,20 @@
 {# see: https://microformats.org/wiki/microformats2 #}
 {%- set hclass = 'h-feed' if is_feed else ('h-entry' if is_entry else none) -%}
 {%- set hclass = [hclass or '', 'h-card'] | join(' ') if is_bird else hclass -%}
-{%- set hcontent = 'e-content' if is_entry else ('p-note' if is_bird else none) -%}
 
 {# The actual output HTML #}
 <main data-layout="main" aria-labelledby="title" {{ utility.attr_if('class', hclass) }}>
   {% include "page/header.njk" %}
 
-  <div data-main data-typeset {{ utility.attr_if('class', hcontent)}}>
-    {{ content | typogr | safe }}
-    {% include "page/list.njk" %}
-  </div>
+  {% if content %}
+    {%- set hcontent = 'e-content' if is_entry else ('p-note' if is_bird else none) -%}
+    <div data-main data-typeset {{ utility.attr_if('class', hcontent)}}>
+      {{ content | typogr | safe }}
+    </div>
+  {% endif %}
+
+  {% include "page/mentions.njk" %}
+  {% include "page/list.njk" %}
 
   <!-- used for webmentions -->
   <a href="{{ page.url | url }}" class="u-url" hidden>{{ (banner or title) | removeMd }}</a>

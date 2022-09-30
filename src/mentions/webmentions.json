@@ -1,6 +1,24 @@
 {
-  "lastFetched": "2022-09-28T18:53:59.171Z",
+  "lastFetched": "2022-09-30T21:34:33.521Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://ciberninjas.com/coleccion-recursos-css/",
+      "published": null,
+      "wm-received": "2022-09-29T21:01:17Z",
+      "wm-id": 1529811,
+      "wm-source": "https://ciberninjas.com/coleccion-recursos-css/",
+      "wm-target": "https://www.oddbird.net/susy/",
+      "mention-of": "https://www.oddbird.net/susy/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
@@ -823,8 +841,8 @@
       "wm-source": "https://brid.gy/post/twitter/TerribleMia/1564729876673880065",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
       "content": {
-        "html": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap…\nhttps://t.co/nC5TzYYmOK<a href=\"https://www.oddbird.net/2022/08/18/cq-syntax/\">oddbird.net/2022/08/18/cq-…</a> gaming.",
-        "text": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap…\nhttps://t.co/nC5TzYYmOKoddbird.net/2022/08/18/cq-… gaming."
+        "html": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap… I will read it during gaming.",
+        "text": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap… I will read it during gaming."
       },
       "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
       "wm-property": "mention-of",
