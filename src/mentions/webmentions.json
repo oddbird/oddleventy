@@ -1,6 +1,24 @@
 {
-  "lastFetched": "2022-09-29T18:40:21.384Z",
+  "lastFetched": "2022-09-30T18:18:39.100Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://ciberninjas.com/coleccion-recursos-css/",
+      "published": null,
+      "wm-received": "2022-09-29T21:01:17Z",
+      "wm-id": 1529811,
+      "wm-source": "https://ciberninjas.com/coleccion-recursos-css/",
+      "wm-target": "https://www.oddbird.net/susy/",
+      "mention-of": "https://www.oddbird.net/susy/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
