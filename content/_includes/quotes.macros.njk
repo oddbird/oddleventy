@@ -212,9 +212,9 @@ note: |
   'name': 'Miriam Suzanne',
   'url': '/authors/miriam/'
 } %}
-<div class="signature h-card">
+<div class="signature">
 {{ embed.svg('icons/miriam-sig') }}
-<p class="byline">{{ _cite(data) | safe }}</p>
+{{ cite(data) | safe }}
 </div>
 {% endmacro %}
 
@@ -226,7 +226,7 @@ note: |
   {%- set venue = utility.link_if(
     content=data.venue,
     url=data.url if not data.title,
-    class='p-org h-card h-name'
+    class='p-org h-card p-name'
   ) if data.venue else none -%}
   {%- set title = utility.link_if(
     content=data.title,

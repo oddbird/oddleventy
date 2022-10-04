@@ -19,7 +19,19 @@
       </ul>
     {% endif %}
 
-    {{ summary | md | safe }}
+    {# for active birds we add a sketch to the intro
+        even when we have a header image #}
+    {% set is_active = is_bird and collections.birds | active | authorPage(bird) %}
+
+    {% if is_active %}
+      {{ embed.media_block(
+        media=embed.svg('faces/' + bird),
+        name='bird-intro',
+        content=summary | md | safe
+      ) }}
+    {% else %}
+      {{ summary | md | safe }}
+    {% endif %}
 
     {% if action %}
       {{ utility.main_action(action.text, action.url) }}

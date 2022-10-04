@@ -39,9 +39,9 @@ hr {
 
 // H-Cards
 // -------
-/// By default, non-link h-cards are bold.
+/// By default, non-link/non-org inline h-cards are bold.
 /// @group type
-.h-card:not([href]) {
+span:where(.h-card):not(.p-org) {
   font-weight: bold;
 }
 
