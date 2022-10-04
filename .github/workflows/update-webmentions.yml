@@ -23,7 +23,7 @@ jobs:
           node-version-file: .nvmrc
           cache: yarn
       - run: yarn install
-      - run: yarn eleventy
+      - run: yarn webmentions
         env:
           WEBMENTION_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
       - name: Commit & push changes
