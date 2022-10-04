@@ -1,5 +1,6 @@
 ---
 title: Una Kravets
+sub: Designer
 bird: una
 date: 2014-07-15
 end: 2014-08-15

@@ -45,14 +45,16 @@ describe('page filters', () => {
 
     expect(hasData(page, 'data.slug', 'news')).toBeTruthy();
     expect(hasData(page, 'data.index')).toBeFalsy();
+    expect(hasData(page, 'data', 'news')).toBeFalsy();
   });
 
   test('withData', () => {
     expect(withData(collection3, 'data.slug', 'news')).toHaveLength(1);
-    expect(withData(collection3, 'data.slug', 'new')).toHaveLength(1);
-    expect(withData(collection3, 'data.slug', 'new', true)).toHaveLength(0);
+    expect(withData(collection3, 'data.slug', 'new')).toHaveLength(0);
+    expect(withData(collection3, 'data.tags', 'tag 1')).toHaveLength(1);
     expect(withData(collection3, 'data.tags')).toHaveLength(4);
     expect(withData(collection3, 'data.nothing')).toHaveLength(0);
+    expect(withData(collection3, 'data', 'news')).toHaveLength(0);
   });
 
   test('removePage', () => {

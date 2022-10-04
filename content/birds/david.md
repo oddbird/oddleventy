@@ -19,7 +19,6 @@ summary: |
 ---
 
 **David is a developer emeritus**
-(now working with [Salesforce.org][salesforce])
 who co-led our server-side development --
 managing code architecture,
 database design,
@@ -33,5 +32,3 @@ most recently React, elasticsearch,
 and the Pyramid web framework.
 When he's not coding,
 David can be found experimenting in the kitchen.
-
-[salesforce]: https://www.salesforce.org/

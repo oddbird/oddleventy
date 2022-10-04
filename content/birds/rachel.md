@@ -1,5 +1,6 @@
 ---
 title: Rachel Nabors
+sub: Developer
 bird: rachel
 date: 2013-11-02
 end: 2014-03-01
