@@ -14,8 +14,13 @@
 @use 'color/content';
 @use 'color/config' as color-config;
 
+@use 'animation/changes';
+@use 'animation/times';
+
 @include tools.add-colors(meta.module-variables('brand'));
 @include tools.add-colors(meta.module-variables('background'));
 @include tools.add-colors(meta.module-variables('ccs-defaults'));
 @include tools.add-colors(meta.module-variables('content'));
-@include tools.add-colors(meta.module-variables('color-config'));
+@include tools.add-colors(meta.module-variables('content'));
+@include tools.add-changes(meta.module-variables('changes'));
+@include tools.add-changes(meta.module-variables('times'));
