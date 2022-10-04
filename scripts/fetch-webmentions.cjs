@@ -2,23 +2,35 @@
 
 'use strict';
 
-const fs = require('fs');
+const path = require('path');
 
+const chalk = require('chalk');
+const { config } = require('dotenv');
+const fs = require('fs-extra');
 const yaml = require('js-yaml');
 const _ = require('lodash');
 const fetch = require('node-fetch');
 
-const { blocklist } = require('../../src/mentions/blocklist.cjs');
+const baseDir = path.resolve(__dirname, '..');
 
-const site = yaml.load(fs.readFileSync('./content/_data/site.yaml', 'utf8'));
+const { blocklist } = require(path.join(
+  __dirname,
+  './webmention-blocklist.cjs',
+));
 
-// Load .env variables with dotenv
-require('dotenv').config();
+const site = yaml.load(
+  fs.readFileSync(path.join(baseDir, 'content/_data/site.yaml'), 'utf8'),
+);
 
 // Define Cache Location and API Endpoint
-const CACHE_DIR = 'src/mentions';
-const CACHE_FILE = `${CACHE_DIR}/webmentions.json`;
+const CACHE_FILE = path.join(baseDir, 'content/_data/webmentions.json');
 const API = 'https://webmention.io/api';
+
+// eslint-disable-next-line no-process-env
+if (!process.env.WEBMENTION_IO_TOKEN) {
+  // Load .env variables with dotenv
+  config();
+}
 // eslint-disable-next-line no-process-env
 const TOKEN = process.env.WEBMENTION_IO_TOKEN;
 
@@ -26,7 +38,9 @@ const fetchWebmentions = async (since, perPage = 10000) => {
   if (!site.domain) {
     // If we don't have a domain name, abort
     console.warn(
-      '>>> unable to fetch webmentions: no domain name specified in site.json',
+      chalk.yellow(
+        '>>> unable to fetch webmentions: no domain name specified in site.json',
+      ),
     );
     return false;
   }
@@ -34,7 +48,9 @@ const fetchWebmentions = async (since, perPage = 10000) => {
   if (!TOKEN) {
     // If we don't have a domain access token, abort
     console.warn(
-      '>>> unable to fetch webmentions: no access token specified in env.',
+      chalk.yellow(
+        '>>> unable to fetch webmentions: no access token specified in env.',
+      ),
     );
     return false;
   }
@@ -74,25 +90,19 @@ const mergeWebmentions = (a, b) => {
 
 // save combined webmentions in cache file
 const writeToCache = (data) => {
-  const fileContent = `${JSON.stringify(data, null, 2)}\n`;
-  // create cache folder if it doesn't exist already
-  if (!fs.existsSync(CACHE_DIR)) {
-    fs.mkdirSync(CACHE_DIR);
-  }
   // write data to cache json file
-  fs.writeFile(CACHE_FILE, fileContent, (err) => {
-    if (err) {
-      throw err;
+  fs.outputJson(CACHE_FILE, data, { spaces: 2 }, (writeErr) => {
+    console.log(chalk.green.bold(`>>> webmentions saved to ${CACHE_FILE}`));
+    if (writeErr) {
+      throw writeErr;
     }
-    console.log(`>>> webmentions saved to ${CACHE_FILE}`);
   });
 };
 
 // get cache contents from json file
 const readFromCache = () => {
   if (fs.existsSync(CACHE_FILE)) {
-    const cacheFile = fs.readFileSync(CACHE_FILE);
-    return JSON.parse(cacheFile);
+    return fs.readJsonSync(CACHE_FILE);
   }
 
   // no cache found.
@@ -102,7 +112,7 @@ const readFromCache = () => {
   };
 };
 
-module.exports = async () => {
+const doFetch = async () => {
   const cache = readFromCache();
 
   if (cache.children.length) {
@@ -122,3 +132,5 @@ module.exports = async () => {
 
   return cache;
 };
+
+doFetch();
