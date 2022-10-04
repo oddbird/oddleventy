@@ -1,4 +1,5 @@
 {% import 'forms.macros.njk' as forms %}
+{% import 'toggle.macros.njk' as toggle %}
 
 <details data-ccs="menu" class="has-dropdown" hidden>
   <summary data-btn="menu xsmall summary">
@@ -9,19 +10,23 @@
     {% call forms.fieldset(
       legend='Color Mode',
       name='ccs-modes',
-      attrs={'data-radio': 'group'}
+      attrs={'data-group': 'buttons'}
     ) %}
       {% for mode in ['light', 'dark', 'auto'] %}
-        {{ forms.radio(
-          label=mode,
+
+        <button {{ toggle.btn(
           id=[mode, 'mode'] | join('-'),
           group='ccs-modes',
-          attrs={'data-ccs-colors': true if (mode == 'auto') else mode},
-          input_attrs={
-            'data-ccs-input': [mode, 'mode'] | join('-'),
-            'checked': true if (mode == 'auto') else false
+          attrs={
+            'data-ccs-colors': true if (mode == 'auto') else mode,
+            'data-ccs-input': id,
+            'aria-pressed': true if (mode == 'auto') else false,
+            'data-toggle-synced': 'true' if synced else 'false'
           }
         ) }}
+        >
+          {{ mode }}
+        </button>
       {% endfor %}
     {% endcall %}
 

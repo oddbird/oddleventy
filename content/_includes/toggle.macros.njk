@@ -46,7 +46,9 @@ params:
     'aria-controls': id,
     'aria-pressed': 'true' if expanded else 'false',
     'role': none if button else 'button',
-    'data-toggle-synced': 'true' if synced else 'false'
+    'data-toggle-synced': 'true' if synced else 'false',
+    'data-ccs-colors': true if (mode == 'auto') else mode,
+    'data-ccs-input': id
   } -%}
   {{ utility.show_attrs(attrs) }}
 {%- endmacro %}
