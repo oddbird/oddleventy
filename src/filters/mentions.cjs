@@ -43,17 +43,10 @@ const clean = (entry) => {
   return entry;
 };
 
-// only allow webmentions that have an author name and a timestamp
-const checkRequiredFields = (entry) => {
-  const { author, published, content } = entry;
-  return Boolean(author && author.name && published && content);
-};
-
 const getTypes = (mentions, allow) =>
   // run all of the above for each webmention that targets the current URL
   mentions
     .filter((entry) => (allow || defaultTypes).includes(entry['wm-property']))
-    .filter(checkRequiredFields)
     .sort(orderByDate)
     .map(clean);
 
