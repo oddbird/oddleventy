@@ -1,6 +1,7 @@
 'use strict';
-const _ = require('lodash');
+
 const sanitizeHTML = require('sanitize-html');
+const truncate = require('truncate-html');
 
 // define which types of webmentions are included by default
 // possible values listed here:
@@ -11,58 +12,59 @@ const defaultTypes = ['mention-of', 'in-reply-to'];
 // swap a.published and b.published to reverse order.
 const orderByDate = (a, b) => new Date(a.published) - new Date(b.published);
 
-const forUrl = (webMentions, url) =>
-  webMentions.children
-    .filter((entry) => entry['wm-target'] === url)
-    .filter((entry) => entry['wm-private'] === false)
+const normalizeURL = (input) => {
+  const url = new URL(input);
+  url.search = url.hash = '';
+  const output = url.toString();
+  if (!output.endsWith('/')) {
+    return `${output}/`;
+  }
+  return output;
+};
+
+const forUrl = (mentions, url) =>
+  mentions.children
+    .filter(
+      (entry) =>
+        normalizeURL(entry['wm-target']) === normalizeURL(url) &&
+        !entry['wm-private'],
+    )
     .sort(orderByDate);
 
-const getTypes = (mentions, allow) => {
-  // clean webmention content for output
-  const clean = (entry) => {
-    const { html, text } = entry.content;
+// clean webmention content for output
+const clean = (entry) => {
+  const { html, text } = entry.content;
 
-    if (html) {
-      // really long html mentions, usually newsletters or compilations
-      const tooLong = html.length > 2000;
-      const cleanHtml = tooLong
-        ? sanitizeHTML(html.substring(0, 250))
-        : sanitizeHTML(html);
-
-      entry.content.value = tooLong
-        ? `
-          <div>${cleanHtml}…</div>
-          <p>
-            Read more:
-            <a href="${entry['wm-source']}">${entry['wm-source']}</a>
-          </p>
-        `
-        : html;
-    } else {
-      entry.content.value = sanitizeHTML(text);
+  if (html) {
+    let truncated = truncate(html, 50, { byWords: true, ellipsis: '…' });
+    // Strip non-alphanumeric trailing chars (e.g. commas, periods):
+    if (
+      truncated.endsWith('…') &&
+      truncated.slice(-2, -1).match(/[^A-Z|a-z|0-9]/) !== null
+    ) {
+      truncated = `${truncated.slice(0, -2)}…`;
     }
+    entry.content.value = sanitizeHTML(truncated);
+  } else {
+    entry.content.value = sanitizeHTML(text);
+  }
 
-    return entry;
-  };
+  return entry;
+};
 
-  // only allow webmentions that have an author name and a timestamp
-  const checkRequiredFields = (entry) => {
-    const { author, published, content } = entry;
-    return (
-      Boolean(author) &&
-      Boolean(author.name) &&
-      Boolean(published) &&
-      Boolean(content)
-    );
-  };
+// only allow webmentions that have an author name and a timestamp
+const checkRequiredFields = (entry) => {
+  const { author, published, content } = entry;
+  return Boolean(author && author.name && published && content);
+};
 
+const getTypes = (mentions, allow) =>
   // run all of the above for each webmention that targets the current URL
-  return mentions
+  mentions
     .filter((entry) => (allow || defaultTypes).includes(entry['wm-property']))
     .filter(checkRequiredFields)
     .sort(orderByDate)
     .map(clean);
-};
 
 module.exports = {
   forUrl,

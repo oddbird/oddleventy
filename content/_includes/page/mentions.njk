@@ -1,27 +1,26 @@
 {%- import 'utility.macros.njk' as utility -%}
 {%- import 'layout.macros.njk' as layout -%}
 
-{%- set absoluteUrl = page.url | absoluteUrl(site.url) -%}
-{%- set url_mentions = webmentions | mentionsForUrl(absoluteUrl) -%}
+{%- set abs_url = page.url | absoluteUrl(site.url) -%}
+{%- set url_mentions = webmentions | mentionsForUrl(abs_url) -%}
 {%- set mentions = url_mentions | mentionTypes -%}
 
 {#
   For now, we only show mentions on resource posts and oss pages.
 #}
-{%- set is_post = '_post' in (tags or []) -%}
-{%- if mentions | length and (is_post or oss) -%}
+{%- if mentions | length and (is_entry or oss) -%}
 <section id="webmentions" data-list="mentions" data-typeset>
-  {{ layout.title('WebMentions') }}
+  {{ layout.title('Webmentions') }}
 
-  {% for webmention in mentions %}
-    {% set attrs = {
+  {%- for webmention in mentions -%}
+    {%- set attrs = {
       'class': 'webmention h-cite p-comment',
       'id': ['webmention', webmention['wm-id']] | join('-'),
       'data-mention': webmention['wm-property']
     } %}
     <article {{ utility.show_attrs(attrs) }}>
       <header>
-        <h3 class="webmention-author{% if webmention.author %} p-author h-card{% endif %}">
+        <h3 class="webmention-author p-author h-card">
           {{ utility.link_if(
             content=webmention.author.name,
             url=webmention.url,
@@ -46,6 +45,6 @@
         {{ webmention.content.value | safe }}
       </div>
     </article>
-  {% endfor %}
+  {% endfor -%}
 </section>
 {%- endif -%}

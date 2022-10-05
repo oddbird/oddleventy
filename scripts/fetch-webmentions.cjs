@@ -75,12 +75,12 @@ const fetchWebmentions = async (since, perPage = 10000) => {
   return null;
 };
 
-const getDomain = (entry) => new URL(entry['wm-source']).origin.split('://')[1];
+const getDomain = (entry) => new URL(entry['wm-source']).hostname;
 
 // Merge fresh webmentions with cached entries, unique per id
 const mergeWebmentions = (a, b) => {
   const all = _.unionBy(a.children, b.children, 'wm-id');
-  const syns = _.map(all, 'syndication');
+  const syns = _.compact(_.map(all, 'syndication'));
 
   return all.filter(
     (entry) =>

@@ -153,10 +153,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('mentionTypes', mentions.getTypes);
 
   eleventyConfig.addFilter('max', (array) => Math.max(...array));
-  eleventyConfig.addFilter(
-    'getDomain',
-    (url) => new URL(url).origin.split('://')[1],
-  );
+  eleventyConfig.addFilter('getDomain', (url) => new URL(url).hostname);
 
   eleventyConfig.addFilter('imgSrc', (src) =>
     images.image(src, null, null, null, true),
