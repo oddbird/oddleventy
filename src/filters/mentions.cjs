@@ -22,15 +22,6 @@ const normalizeURL = (input) => {
   return output;
 };
 
-const forUrl = (mentions, url) =>
-  mentions.children
-    .filter(
-      (entry) =>
-        normalizeURL(entry['wm-target']) === normalizeURL(url) &&
-        !entry['wm-private'],
-    )
-    .sort(orderByDate);
-
 // clean webmention content for output
 const clean = (entry) => {
   const { html, text } = entry.content;
@@ -66,7 +57,16 @@ const getTypes = (mentions, allow) =>
     .sort(orderByDate)
     .map(clean);
 
+const forUrl = (mentions, url, allow) =>
+  getTypes(
+    mentions.children.filter(
+      (entry) =>
+        normalizeURL(entry['wm-target']) === normalizeURL(url) &&
+        !entry['wm-private'],
+    ),
+    allow,
+  );
+
 module.exports = {
   forUrl,
-  getTypes,
 };

@@ -150,7 +150,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('elide', type.elide);
 
   eleventyConfig.addFilter('mentionsForUrl', mentions.forUrl);
-  eleventyConfig.addFilter('mentionTypes', mentions.getTypes);
 
   eleventyConfig.addFilter('max', (array) => Math.max(...array));
   eleventyConfig.addFilter('getDomain', (url) => new URL(url).hostname);

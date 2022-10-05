@@ -2,8 +2,7 @@
 {%- import 'layout.macros.njk' as layout -%}
 
 {%- set abs_url = page.url | absoluteUrl(site.url) -%}
-{%- set url_mentions = webmentions | mentionsForUrl(abs_url) -%}
-{%- set mentions = url_mentions | mentionTypes -%}
+{%- set mentions = webmentions | mentionsForUrl(abs_url) -%}
 
 {#
   For now, we only show mentions on resource posts and oss pages.
