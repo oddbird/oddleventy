@@ -8,7 +8,7 @@
   For now, we only show mentions on resource posts and oss pages.
 #}
 {%- if mentions | length and (is_entry or oss) -%}
-<section id="webmentions" data-list="mentions" data-typeset>
+<section data-list="mentions" data-typeset>
   {{ layout.title('Webmentions') }}
 
   {%- for webmention in mentions -%}

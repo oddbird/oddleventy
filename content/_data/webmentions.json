@@ -35,31 +35,6 @@
       "type": "entry",
       "author": {
         "type": "card",
-        "name": "dailydevlinks.",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/520761d627ebc8dac3e344323011fe0cf765981dcfd9b5ac60dbd1ecb40f26a8.jpg",
-        "url": "https://twitter.com/dailydevlinks"
-      },
-      "url": "https://twitter.com/dailydevlinks/status/1567009336110587906",
-      "published": "2022-09-06T04:38:34+00:00",
-      "wm-received": "2022-09-06T04:39:41Z",
-      "wm-id": 1511606,
-      "wm-source": "https://brid.gy/comment/twitter/mmatuzo/1567009336110587906/1567009336110587906",
-      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/?ref=dailydevlinks.com",
-      "photo": [
-        "https://pbs.twimg.com/media/Fb8g4VoXkAM4rlS.jpg"
-      ],
-      "content": {
-        "html": "2/ 📚 Top Reads\n\nWhen Do You Use CSS Columns?\n🔗 <a href=\"https://css-tricks.com/when-do-you-use-css-columns/?utm_source=dailydevlinks.com&amp;utm_medium=newsletter&amp;utm_campaign=dailydevlinks.com&amp;ref=dailydevlinks.com\">css-tricks.com/when-do-you-us…</a> (<a href=\"https://twitter.com/geoffreygraham\">@geoffreygraham</a>)\n\nOutline is your friend\n🔗 <a href=\"https://www.matuzo.at/blog/2022/focus-outline/?utm_source=dailydevlinks.com&amp;utm_medium=newsletter&amp;utm_campaign=dailydevlinks.com&amp;ref=dailydevlinks.com\">matuzo.at/blog/2022/focu…</a> (<a href=\"https://twitter.com/mmatuzo\">@mmatuzo</a>)\n\nUse the Right Container Query Syntax\n🔗 <a href=\"https://www.oddbird.net/2022/08/18/cq-syntax/?utm_source=dailydevlinks.com&amp;utm_medium=newsletter&amp;utm_campaign=dailydevlinks.com&amp;ref=dailydevlinks.com\">oddbird.net/2022/08/18/cq-…</a> (<a href=\"https://twitter.com/TerribleMia\">@TerribleMia</a>)\n<a class=\"u-mention\" href=\"https://css-tricks.com/when-do-you-use-css-columns/?ref=dailydevlinks.com\"></a>\n<a class=\"u-mention\" href=\"https://www.matuzo.at/blog/2022/focus-outline/?ref=dailydevlinks.com\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/18/cq-syntax/?ref=dailydevlinks.com\"></a>",
-        "text": "2/ 📚 Top Reads\n\nWhen Do You Use CSS Columns?\n🔗 css-tricks.com/when-do-you-us… (@geoffreygraham)\n\nOutline is your friend\n🔗 matuzo.at/blog/2022/focu… (@mmatuzo)\n\nUse the Right Container Query Syntax\n🔗 oddbird.net/2022/08/18/cq-… (@TerribleMia)"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/?ref=dailydevlinks.com",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
         "name": "Robat Williams",
         "photo": "https://webmention.io/avatar/pbs.twimg.com/0b5bc460d573545cf1ac781f695257f73007f3c35cef065a9cec7f6fab2df482.jpg",
         "url": "https://twitter.com/_rwms"
@@ -76,28 +51,6 @@
       },
       "repost-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
       "wm-property": "repost-of",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "Mia",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/31fcfd6282b72379bdececa7d23a188489aa4cf4f63f576928d87f6a3df9064b.jpg",
-        "url": "https://twitter.com/TerribleMia"
-      },
-      "url": "https://twitter.com/TerribleMia/status/1565465803385843713",
-      "published": "2022-09-01T22:25:07+00:00",
-      "wm-received": "2022-09-01T22:40:54Z",
-      "wm-id": 1509319,
-      "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1564650026751574016/1565465803385843713",
-      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
-      "content": {
-        "html": "Updated, thanks.\n<a class=\"u-mention\" href=\"https://twitter.com/bramus\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/18/cq-syntax/\"></a>",
-        "text": "Updated, thanks."
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/",
-      "wm-property": "in-reply-to",
       "wm-private": false
     },
     {
@@ -813,116 +766,6 @@
       "type": "entry",
       "author": {
         "type": "card",
-        "name": "Bramus",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/05867d2965ead9c19f56436d55d4f94c52262b3b51dae292b9b9f45fa2a96995.jpg",
-        "url": "https://twitter.com/bramus"
-      },
-      "url": "https://twitter.com/bramus/status/1544628222784069632",
-      "published": "2022-07-06T10:24:00+00:00",
-      "wm-received": "2022-07-06T10:56:22Z",
-      "wm-id": 1428466,
-      "wm-source": "https://brid.gy/comment/twitter/hdv/1544581755096764416/1544628222784069632",
-      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
-      "content": {
-        "html": "When it comes to id attribute values I’m still living in an HTML 4.01 world apparently. Ooops! 😅\n\nGlad to see the restrictions got lifted. <a href=\"https://twitter.com/search?q=%23TIL\">#TIL</a>\n\n<a class=\"u-mention\" href=\"http://hidde.blog/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/derSchepp\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/hdv\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mathias\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mmatuzo\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/sanacodes\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
-        "text": "When it comes to id attribute values I’m still living in an HTML 4.01 world apparently. Ooops! 😅\n\nGlad to see the restrictions got lifted. #TIL"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "Bramus",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/05867d2965ead9c19f56436d55d4f94c52262b3b51dae292b9b9f45fa2a96995.jpg",
-        "url": "https://twitter.com/bramus"
-      },
-      "url": "https://twitter.com/bramus/status/1544629040878915587",
-      "published": "2022-07-06T10:27:15+00:00",
-      "wm-received": "2022-07-06T10:56:21Z",
-      "wm-id": 1428465,
-      "wm-source": "https://brid.gy/comment/twitter/hdv/1544581755096764416/1544629040878915587",
-      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
-      "content": {
-        "html": "Correction: back in the HTML 4.01 days \"#\" was not a valid [id] value. With HTML5 it is. See <a href=\"https://mathiasbynens.be/notes/html5-id-class\">mathiasbynens.be/notes/html5-id…</a> for details. <a href=\"https://twitter.com/search?q=%23TIL\">#TIL</a>\n<a class=\"u-mention\" href=\"http://hidde.blog/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/derSchepp\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/hdv\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mmatuzo\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/sanacodes\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
-        "text": "Correction: back in the HTML 4.01 days \"#\" was not a valid [id] value. With HTML5 it is. See mathiasbynens.be/notes/html5-id… for details. #TIL"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "🔴 Christian Schaefer",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/78535c31d268cb5af6a059ddb36015cc3526779136df20cbcd11fdec85cc9845.jpg",
-        "url": "https://twitter.com/derSchepp"
-      },
-      "url": "https://twitter.com/derSchepp/status/1544621957106339841",
-      "published": "2022-07-06T09:59:06+00:00",
-      "wm-received": "2022-07-06T10:14:05Z",
-      "wm-id": 1428448,
-      "wm-source": "https://brid.gy/comment/twitter/hdv/1544581755096764416/1544621957106339841",
-      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
-      "content": {
-        "html": "Wasn't it that historically valid ids had to start with a-z, but that got changed or rather adapted to reality later on in the spec, now allowing any character?\n<a class=\"u-mention\" href=\"http://hidde.blog/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/bramus\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/hdv\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mathias\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mmatuzo\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/sanacodes\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
-        "text": "Wasn't it that historically valid ids had to start with a-z, but that got changed or rather adapted to reality later on in the spec, now allowing any character?"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "Mathias Bynens",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/c2947b2bbde3fd5b327b748ce94d19f97e83f70bdf684d3a075827ce935ed56f.jpg",
-        "url": "https://twitter.com/mathias"
-      },
-      "url": "https://twitter.com/mathias/status/1544620433466707968",
-      "published": "2022-07-06T09:53:03+00:00",
-      "wm-received": "2022-07-06T10:14:04Z",
-      "wm-id": 1428447,
-      "wm-source": "https://brid.gy/comment/twitter/hdv/1544581755096764416/1544620433466707968",
-      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
-      "content": {
-        "html": "What makes you say `id=\"#\"` is invalid? (Should I go and update <a href=\"https://mathiasbynens.be/notes/html5-id-class\">mathiasbynens.be/notes/html5-id…</a> after 12 years? :P)\n<a class=\"u-mention\" href=\"http://hidde.blog/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/bramus\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/derSchepp\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/hdv\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mmatuzo\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/sanacodes\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
-        "text": "What makes you say `id=\"#\"` is invalid? (Should I go and update mathiasbynens.be/notes/html5-id… after 12 years? :P)"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "🔴 Christian Schaefer",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/78535c31d268cb5af6a059ddb36015cc3526779136df20cbcd11fdec85cc9845.jpg",
-        "url": "https://twitter.com/derSchepp"
-      },
-      "url": "https://twitter.com/derSchepp/status/1544608972468092930",
-      "published": "2022-07-06T09:07:31+00:00",
-      "wm-received": "2022-07-06T09:08:37Z",
-      "wm-id": 1428427,
-      "wm-source": "https://brid.gy/comment/twitter/hdv/1544581755096764416/1544608972468092930",
-      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
-      "content": {
-        "html": "I think that had a backslash in its selector? 🤔 /cc <a href=\"https://twitter.com/bramus\">@bramus</a>\n<a class=\"u-mention\" href=\"http://hidde.blog/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/hdv\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mmatuzo\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/sanacodes\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
-        "text": "I think that had a backslash in its selector? 🤔 /cc @bramus"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
         "name": "David",
         "photo": "https://webmention.io/avatar/pbs.twimg.com/1dc56cb2623896c78a5a5d84e95df11ad817dc3accea1ece3be8ab89a902b138.jpg",
         "url": "https://twitter.com/bautistanaveros"
@@ -1065,94 +908,6 @@
       },
       "mention-of": "https://www.oddbird.net/2022/06/29/shared-elements/",
       "wm-property": "mention-of",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "Paul Lewis",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/85bdf1b1b5ba161ee2c1db9fe35e383f64d43497b17e23b17a5e7eb999c560b4.jpg",
-        "url": "https://twitter.com/aerotwist"
-      },
-      "url": "https://twitter.com/aerotwist/status/1542613283747889154",
-      "published": "2022-06-30T20:57:21+00:00",
-      "wm-received": "2022-06-30T21:10:57Z",
-      "wm-id": 1425534,
-      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542613283747889154",
-      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
-      "content": {
-        "html": "Good to know you're over it\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/cassiecodes\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jaffathecake\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jh3yy\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
-        "text": "Good to know you're over it"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "Jack Franklin",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/d7da0a8ee3493dfecf0bcb1c84583a11f1d67c139efb1dbe3add69f35a38c965.jpg",
-        "url": "https://twitter.com/Jack_Franklin"
-      },
-      "url": "https://twitter.com/Jack_Franklin/status/1542615809008275456",
-      "published": "2022-06-30T21:07:23+00:00",
-      "wm-received": "2022-06-30T21:10:57Z",
-      "wm-id": 1425535,
-      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542615809008275456",
-      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
-      "content": {
-        "html": "I'd have called it \"Start End Opposite\", or SEO, to avoid any confusion 👍\n<a class=\"u-mention\" href=\"https://twitter.com/aerotwist\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/cassiecodes\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jaffathecake\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
-        "text": "I'd have called it \"Start End Opposite\", or SEO, to avoid any confusion 👍"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "Raphael Höser",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/a6cc242b6dceb77912f932c6b0a3e3164742917eaca3f18dda4b3d6c86c60091.jpg",
-        "url": "https://twitter.com/Snapstromegon"
-      },
-      "url": "https://twitter.com/Snapstromegon/status/1542614801095999493",
-      "published": "2022-06-30T21:03:23+00:00",
-      "wm-received": "2022-06-30T21:10:56Z",
-      "wm-id": 1425533,
-      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542614801095999493",
-      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
-      "content": {
-        "html": "Hey, you could just call it SEND...\nStart\nEnd\nNegate\nDance\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/aerotwist\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/cassiecodes\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jaffathecake\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jh3yy\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
-        "text": "Hey, you could just call it SEND...\nStart\nEnd\nNegate\nDance"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "Jake Archibald",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/7653b6becc6c69689712673d84734c954fae00a3ea1a1fcab6036af437ca9fed.jpg",
-        "url": "https://twitter.com/jaffathecake"
-      },
-      "url": "https://twitter.com/jaffathecake/status/1542601970762059779",
-      "published": "2022-06-30T20:12:24+00:00",
-      "wm-received": "2022-06-30T20:25:37Z",
-      "wm-id": 1425510,
-      "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542601970762059779",
-      "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
-      "content": {
-        "html": "Final Launch Instant Plan\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/aerotwist\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/cassiecodes\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jh3yy\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
-        "text": "Final Launch Instant Plan"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/06/29/shared-elements/",
-      "wm-property": "in-reply-to",
       "wm-private": false
     },
     {
