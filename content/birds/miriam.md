@@ -10,6 +10,11 @@ social:
   github: MiriSuzanne
   codepen: MiriamSuzanne
   stackoverflow: 1930386
+events:
+  - venue: State of CSS Frameworks
+    date: 2022-10-18
+    adr: Online
+    url: https://www.thisdotmedia.com/state-of-the-web/
 summary: |
   Miriam is a co-founder and front-end architect --
   overseeing the user-experience
@@ -36,3 +41,18 @@ writing, music, and visual art.
 [mozdev]: /work/mozdev/
 [jss]: https://www.sitepoint.com/premium/books/jump-start-sass
 [speaking]: /services/speaking/
+
+{% import "embed.macros.njk" as embed %}
+{% set mia_pages = collections.all | byBird('miriam') %}
+{% set weird = mia_pages | findPage('url', '/2019/10/03/css-is-weird/') %}
+{% set media_events = mia_pages | getData('data.events') | withData('media') %}
+
+{{ embed.figure(
+  data=[
+    media_events | withData('venue', 'An Event Apart Fall Summit') | findData('media'),
+    media_events | withData('venue', 'An Event Apart Spring Summit') | findData('media'),
+    media_events | withData('venue', 'Smashing Conf NY') | findData('media'),
+    weird.data.media | first
+  ],
+  caption='Featured talks by Miriam'
+) }}

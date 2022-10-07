@@ -9,6 +9,7 @@ tags:
   - Cascade
   - CSS
   - Custom Properties
+slides: https://slides.oddbird.net/variables/
 events:
   - venue: An Event Apart Spring Summit
     url: https://aneventapart.com/event/spring-summit-2021

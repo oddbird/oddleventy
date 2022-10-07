@@ -29,7 +29,7 @@ sorts of lovely people.
 
 My talk was called **Sass Map Magic** – a major update to a talk I had
 given several years back at BlendConf (may it rest in peace). The
-[slides] and [video] are both available online.
+[video] is available online.
 
 I took extensive notes on day one, but lost my focus on day two, when I
 was part of the lineup. All the talks were great, and worth your time if
@@ -38,7 +38,6 @@ you have a chance to watch the videos.
 [Nicole Sullivan]: https://twitter.com/stubbornella
 [Bocoup]: https://twitter.com/bocoup
 [Claudina Sarahe]: https://twitter.com/itsmisscs
-[slides]: https://oddbooksapp.com/book/sass-map-magic
 [video]: https://youtu.be/MdwtoFt2LOI
 
 ## Creativity in Programming for Fun and Profit
@@ -416,12 +415,9 @@ display.
 
 I showed a wide range of uses for the underused Sass "map" data type –
 from simple site theme configurations, to data storage, and complex
-functional programming. All the [slides] are online.
+functional programming.
 
-- [Miriam Suzanne Slides](https://oddbooksapp.com/book/sass-map-magic)
 - [Miriam Suzanne Video](https://youtu.be/MdwtoFt2LOI)
-
-[slides]: https://oddbooksapp.com/book/sass-map-magic
 
 ## Webpack and CSS
 

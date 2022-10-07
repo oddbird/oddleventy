@@ -5,7 +5,7 @@ image:
   alt: Sketched design concept
 author: miriam
 date: 2017-12-12
-slides: https://oddbooksapp.com/book/web-projects
+# slides: https://oddbooksapp.com/book/web-projects
 tags:
   - Design
   - Process

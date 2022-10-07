@@ -27,7 +27,7 @@ events:
     url: https://beyondtellerrand.com/events/dusseldorf-2018
     adr: Düsseldorf, Germany
     date: 2018-05-07
-    slides: https://oddbooksapp.com/release/ce37ef91-8bd8-43e2-932a-66931b4b25ce
+    # slides: https://oddbooksapp.com/release/ce37ef91-8bd8-43e2-932a-66931b4b25ce
     video: https://vimeo.com/268576559
     media: &bt
       iframe: https://player.vimeo.com/video/268576559
@@ -37,7 +37,7 @@ events:
     url: https://www.clarityconf.com/event/2017
     adr: San Francisco, CA
     date: 2017-11-28
-    slides: https://oddbooksapp.com/release/ae641b90-8efa-4b1e-8da8-16940edf420d
+    # slides: https://oddbooksapp.com/release/ae641b90-8efa-4b1e-8da8-16940edf420d
     video: https://youtu.be/Prc_V-j6yS4
     media: &clarity
       iframe: https://www.youtube.com/embed/Prc_V-j6yS4
@@ -45,12 +45,12 @@ events:
     url: https://2017.cssdevconf.com/
     adr: New Orleans, LA
     date: 2017-10-09
-    slides: https://oddbooksapp.com/release/0434d9c1-4e89-4827-abfc-4d3942fa305d
+    # slides: https://oddbooksapp.com/release/0434d9c1-4e89-4827-abfc-4d3942fa305d
   - venue: DjangoCon US
     url: https://2017.djangocon.us/
     adr: Spokane, WA
     date: 2017-08-14
-    slides: https://oddbooksapp.com/book/djangocon-layout
+    # slides: https://oddbooksapp.com/book/djangocon-layout
     video: https://youtu.be/mDRfFEcj3-Q
     media: &django
       iframe: https://www.youtube.com/embed/mDRfFEcj3-Q
@@ -58,19 +58,19 @@ events:
     url: https://www.meetup.com/Women-Who-Code-Fort-Collins/events/242033627/
     adr: Fort Collins, CO
     date: 2017-08-30
-    slides: https://oddbooksapp.com/book/wwc-layout
+    # slides: https://oddbooksapp.com/book/wwc-layout
     title: Practical Layouts, Past & Future
   - venue: Develop Denver
     url: https://developdenver.org/
     adr: Denver, CO
     date: 2017-08-10
-    slides: https://oddbooksapp.com/release/76673f1e-63dc-4271-b326-76047288a10d
+    # slides: https://oddbooksapp.com/release/76673f1e-63dc-4271-b326-76047288a10d
     title: Practical Layouts, Past & Future
   - venue: Refresh Denver
     url: https://www.meetup.com/refreshdenver/events/239219853/
     adr: Denver, CO
     date: 2017-06-14
-    slides: https://oddbooksapp.com/release/543aea12-2264-4794-867d-d01fbf3a79c9
+    # slides: https://oddbooksapp.com/release/543aea12-2264-4794-867d-d01fbf3a79c9
     title: Practical Layouts, Past & Future
 press:
   - text: |

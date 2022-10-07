@@ -21,6 +21,7 @@ events:
     url: https://themixin.eventbrite.com/
     adr: San Francisco, CA
     date: 2014-04-16
+    video: https://vimeo.com/93045089
     media: &mixin
       iframe: https://player.vimeo.com/video/93045089
       width: 853

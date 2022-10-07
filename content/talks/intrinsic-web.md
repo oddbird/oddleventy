@@ -13,24 +13,29 @@ tags:
   - Container Queries
   - Cascade Layers
   - CSSWG
+slides: https://slides.oddbird.net/css-next/
 events:
   - venue: SmashingConf SF
     url: https://smashingconf.com/sf-2022/
     date: 2022-06-21
     end: 2022-06-22
     adr: San Francisco, CA
+    slides: https://slides.oddbird.net/css-next/smashingsf/
   - venue: An Event Apart Fall Summit
     url: https://aneventapart.com/event/fall-summit-2021
     date: 2021-10-11
     end: 2021-10-13
     adr: Online
     slides: https://slides.oddbird.net/css-next/aea/
+    video: https://vimeo.com/758121060
+    media: &aea
+      iframe: https://player.vimeo.com/video/758121060
   - venue: TPAC 6-Minute Summary
     url: https://www.w3.org/2021/10/TPAC/group-updates.html#css-wg
     date: 2021-10-01
     adr: Online
     slides: https://slides.oddbird.net/csswg/tpac2021/
-    video_link: https://watch.videodelivery.net/e886b064fc34148ad6bad80fbf1c34b1
+    video: https://watch.videodelivery.net/e886b064fc34148ad6bad80fbf1c34b1
     media: &tpac
       iframe: https://watch.videodelivery.net/e886b064fc34148ad6bad80fbf1c34b1
 summary: |

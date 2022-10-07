@@ -15,7 +15,7 @@ events:
     url: https://us.pycon.org/2011/
     date: 2011-03-12
     adr: Atlanta, GA
-    video_link: https://pyvideo.org/pycon-us-2011/pycon-2011--reverse-engineering-ian-bicking--39-s.html
+    video: https://pyvideo.org/pycon-us-2011/pycon-2011--reverse-engineering-ian-bicking--39-s.html
 summary: |
   **Pip and virtualenv: many use them; not so many understand just how
   they work their magic.** -If you're a pip/virtualenv user but haven't
