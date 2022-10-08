@@ -31,4 +31,4 @@ especially in our front-end Sass, HTML (Jinja?), and JavaScript code.
 [Jina]: https://github.com/jina/
 [Chris Coyier]: https://codepen.io/chriscoyier/post/clarity-2016-wrapup
 [Brad Frost]: https://bradfrost.com/blog/post/clarity-conf-code-patterns-for-pattern-making/
-[code patterns]: http://localhost:8080/talks/code-patterns/
+[code patterns]: /talks/code-patterns/
