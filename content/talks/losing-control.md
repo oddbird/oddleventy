@@ -1,7 +1,7 @@
 ---
 title: Losing Control
 banner: A Practical Guide to Losing Control
-slides: https://oddbooksapp.com/book/losing-control
+# slides: https://oddbooksapp.com/book/losing-control
 author: miriam
 date: 2017-01-23
 image:

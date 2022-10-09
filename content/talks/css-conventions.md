@@ -8,6 +8,7 @@ image:
 tags:
   - Cascade
   - CSS
+slides: https://slides.oddbird.net/conventions/
 events:
   - venue: An Event Apart Fall Summit
     url: https://aneventapart.com/event/online-1020

@@ -3,7 +3,7 @@ title: User Unfriendly
 sub: designing software for humans, with other humans
 author: miriam
 date: 2015-11-11
-slides: https://oddbooksapp.com/book/software-for-humans
+slides: https://slides.oddbird.net/unfriendly/
 image:
   src: talks/user-unfriendly.png
   alt: Rethinking user experience design across media
@@ -23,6 +23,7 @@ events:
     url: https://calendar.agnesscott.edu/event/user_unfriendlynotes_toward_a_queer_web
     adr: Atlanta, GA
     date: 2019-09-17
+    slides: https://talks.oddbird.net/user-unfriendly/agnesscott19
   - venue: Design 4 Drupal [keynote]
     url: https://design4drupal.org/
     adr: Boston, MA
@@ -44,12 +45,12 @@ events:
   - venue: AIGA Colorado
     adr: Denver, CO
     date: 2018-04-26
-    slides: https://oddbooksapp.com/release/e5bd52de-a9db-4e59-a2af-ffa8a68f9100
+    # slides: https://oddbooksapp.com/release/e5bd52de-a9db-4e59-a2af-ffa8a68f9100
   - venue: Creative Connections
     url: https://www.meetup.com/Creative-Connections/events/dcwhhpyxgbjb/
     adr: Denver, CO
     date: 2018-04-16
-    slides: https://oddbooksapp.com/release/650ad542-a9c9-4036-8f91-af34ae449d3c
+    # slides: https://oddbooksapp.com/release/650ad542-a9c9-4036-8f91-af34ae449d3c
   - venue: Metro State Mobile Prototyping
     adr: Denver, CO
     date: 2018-04-05
@@ -57,7 +58,7 @@ events:
     url: https://twitter.com/sassconf
     adr: Austin, TX
     date: 2015-11-11
-    slides: https://oddbooksapp.com/book/user-unfriendly
+    # slides: https://oddbooksapp.com/book/user-unfriendly
 press:
   - text: |
       Thought provoking talk on rethinking who the user is

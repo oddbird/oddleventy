@@ -41,11 +41,12 @@ params:
     {%- endif -%}
     <ol {{ 'reversed' if reverse else '' }} class="event-list">
       {%- for event in events -%}
+        {% set is_future = event | isFuture %}
         {% set event_slug = [event.data.venue, event.date | getDate('iso'), loop.index] | join('-') | slug %}
         <li class="event-item">
           <article class="event" aria-labelledby="{{ event_slug }}">
             <footer class="event-meta">
-              {%- if event | isFuture -%}
+              {%- if is_future -%}
                 <strong>{{ utility.datetime(event.date) }}</strong>
               {%- else -%}
                 {{ utility.datetime(event.date) }}
@@ -62,7 +63,7 @@ params:
               ) }}
             </h3>
 
-            {% if event.data.discount and event | isFuture %}
+            {% if event.data.discount and is_future %}
               <p class="event-discount">
                 Use discount code
                 <code>{{ event.data.discount.code }}</code>
@@ -70,26 +71,29 @@ params:
               </p>
             {% endif %}
 
-            {%- set links = [
-              {
-                'title': 'slides',
-                'url': none if event | isFuture else (event.data.slides or event.page.slides)
-              },
-              {
-                'title': 'video',
-                'url': event.data.video
-              }
-            ] | selectattr('url') -%}
+            {% if not is_future %}
+              {%- set links = [
+                {
+                  'title': 'slides',
+                  'url': (event.data.slides or event.page.slides)
+                },
+                {
+                  'title': 'video',
+                  'url': event.data.video
+                }
+              ] | selectattr('url') -%}
 
-            {% if links | length > 0 %}
-              <ul class="event-links" inline-list="comma">
-                {%- for link in links -%}
-                  <li class="event-link">
-                    {{- utility.link_if(link.title, link.url) -}}
-                  </li>
-                {%- endfor -%}
-              </ul>
+              {% if links | length > 0 %}
+                <ul class="event-links" inline-list="comma">
+                  {%- for link in links -%}
+                    <li class="event-link">
+                      {{- utility.link_if(link.title, link.url) -}}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {% endif %}
             {% endif %}
+
           </article>
         </li>
       {%- endfor -%}

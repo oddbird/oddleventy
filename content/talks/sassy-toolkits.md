@@ -6,7 +6,7 @@ date: 2013-10-12
 image:
   src: talks/sassy-toolkits.jpg
   alt: Tools should fit you. Sorry, this hammer only builds patio chairs...
-slides: https://oddbooksapp.com/book/sassy-toolkits
+# slides: https://oddbooksapp.com/book/sassy-toolkits
 tags:
   - Sass
 events:

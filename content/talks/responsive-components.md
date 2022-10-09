@@ -23,6 +23,7 @@ press:
     venue: Front-end Development South Africa
     url: https://twitter.com/schalkventerdev/status/1390205495110246400
     slug: shaping-css
+slides: https://slides.oddbird.net/css-next/
 events:
   - venue: Smashing Meets CSSummer
     url: https://smashingconf.com/meets-css/
