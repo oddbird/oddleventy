@@ -1,6 +1,27 @@
 {
-  "lastFetched": "2022-10-04T21:22:20.822Z",
+  "lastFetched": "2022-10-10T08:09:07.776Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://vkdcode.in/difficulty-518/",
+      "published": null,
+      "wm-received": "2022-10-10T05:54:24Z",
+      "wm-id": 1535412,
+      "wm-source": "https://vkdcode.in/difficulty-518/",
+      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/?utm_source=CSS-Weekly&utm_campaign=Issue-524&utm_medium=RSS",
+      "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/?utm_source=CSS-Weekly&utm_campaign=Issue-524&utm_medium=RSS",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://vkdcode.in/difficulty-518/"
+      }
+    },
     {
       "type": "entry",
       "author": {
