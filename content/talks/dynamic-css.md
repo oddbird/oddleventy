@@ -3,7 +3,6 @@ title: Dynamic CSS
 sub: with grids & custom properties
 author: miriam
 date: 2018-08-18
-slides: https://talks.oddbird.net/dynamic-css/
 image:
   src: talks/mia-dvlpdnvr19-dynamic.jpg
   alt: Miriam speaking at Develop Denver, 2019
@@ -12,12 +11,8 @@ tags:
   - JavaScript
   - Vue
   - Layout
+slides: https://slides.oddbird.net/dynamic-css/
 events:
-  # - venue: Webconf.asia
-  #   url: https://webconf.asia/
-  #   date: 2021-06-04
-  #   end: 2021-06-05
-  #   adr: Hong Kong
   - venue: Shift Remote
     url: https://remote.shiftconf.co/
     date: 2020-08-06
@@ -30,6 +25,7 @@ events:
     end: 2019-08-16
     adr: Denver, CO
     video: https://www.youtube.com/watch?v=JnvkjhwcMcM
+    slides: https://talks.oddbird.net/dynamic-css/dvlpdnvr19
     media: &dvlp
       iframe: https://www.youtube.com/embed/JnvkjhwcMcM
   - venue: Generate New York

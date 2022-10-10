@@ -8,6 +8,7 @@ image:
 tags:
   - Cascade
   - CSS
+slides: https://slides.oddbird.net/cascade-aligned/
 events:
   - venue: Front Range Front End
     url: https://frontrangefrontend.com/

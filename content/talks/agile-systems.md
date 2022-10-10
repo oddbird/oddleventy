@@ -21,6 +21,7 @@ events:
     url: https://agile2019.sched.com/event/OD2f
     adr: Washington, DC
     date: 2019-08-06
+    slides: https://talks.oddbird.net/agile-systems/agile19
   - venue: Agile Denver
     url: https://www.meetup.com/Agile-Denver2/events/251897187/
     adr: Denver, CO
@@ -29,12 +30,12 @@ events:
   - venue: Front-End Front Range
     url: https://www.meetup.com/front-range-front-end/events/zwjmwlyxgbhb/
     adr: Denver, CO
-    slides: https://oddbooksapp.com/book/agile-design-vue
+    # slides: https://oddbooksapp.com/book/agile-design-vue
     date: 2018-04-05
   - venue: VueConf US
     url: https://vueconf.us/
     adr: New Orleans, LA
-    slides: https://oddbooksapp.com/release/9edb34c9-8789-4201-9f14-64bf5ab11b0a
+    # slides: https://oddbooksapp.com/release/9edb34c9-8789-4201-9f14-64bf5ab11b0a
     date: 2018-03-26
     video: https://www.vuemastery.com/conferences/vueconf-us-2018/agile-design-systems-in-vue-miriam-suzanne/
     media: &vue
@@ -44,7 +45,7 @@ events:
   - venue: Tech Confluence
     url: https://www.meetup.com/TechConfluence/events/nxcfhlyxfbcc/
     adr: Denver, CO
-    slides: https://oddbooksapp.com/book/design-systems-10m
+    # slides: https://oddbooksapp.com/book/design-systems-10m
     date: 2018-03-21
 press:
   - text: |
