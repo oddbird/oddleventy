@@ -3,30 +3,36 @@
 {% import 'events.macros.njk' as confs %}
 
 {% if index %}
-  {% set list = collections[index] %}
-  {{ post.by_year(
-    list | removePage(page.url) if list else none,
-    collections
-  ) }}
+  <section data-list="tag" data-typeset>
+    {% set list = collections[index] %}
+    {{ post.by_year(
+      list | removePage(page.url) if list else none,
+      collections
+    ) }}
+  </section>
 {% elif bird and (bird != 'oddbird') %}
   {% set this_page = collections.all | getCollectionItem(page) %}
   {% set bird_pages = collections.all | byBird(bird) %}
-  {{ confs.list(
-    title='Upcoming Events',
-    events=bird_pages | concat([this_page]) | getEvents,
-    all=false
-  ) }}
-  {{ oss.list(
-    collections.oss | byBird(bird),
-    collections
-  ) }}
-  {{ post.by_year(
-    collections._post | byBird(bird),
-    collections
-  ) }}
+  <section data-list="bird" data-typeset>
+    {{ confs.list(
+      title='Upcoming Events',
+      events=bird_pages | concat([this_page]) | getEvents,
+      all=false
+    ) }}
+    {{ oss.list(
+      collections.oss | byBird(bird),
+      collections
+    ) }}
+    {{ post.by_year(
+      collections._post | byBird(bird),
+      collections
+    ) }}
+  </section>
 {% elif events %}
-  {{ confs.list(
-    'Events',
-    collections.all | getCollectionItem(page) | pageEvents
-  ) }}
+  <section data-list="events" data-typeset>
+    {{ confs.list(
+      'Events',
+      collections.all | getCollectionItem(page) | pageEvents
+    ) }}
+  </section>
 {% endif %}

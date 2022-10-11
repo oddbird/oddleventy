@@ -8,6 +8,7 @@ const _ = require('lodash');
 const birds = require('#/birds.cjs');
 const events = require('#/events.cjs');
 const images = require('#/images.cjs');
+const mentions = require('#/mentions.cjs');
 const pages = require('#/pages.cjs');
 const tags = require('#/tags.cjs');
 const taxonomy = require('#/taxonomy.cjs');
@@ -148,7 +149,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('removeMd', type.removeMd);
   eleventyConfig.addFilter('elide', type.elide);
 
+  eleventyConfig.addFilter('mentionsForUrl', mentions.forUrl);
+
   eleventyConfig.addFilter('max', (array) => Math.max(...array));
+  eleventyConfig.addFilter('getDomain', (url) => new URL(url).hostname);
 
   eleventyConfig.addFilter('imgSrc', (src) =>
     images.image(src, null, null, null, true),

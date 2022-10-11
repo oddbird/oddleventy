@@ -75,12 +75,29 @@ const fetchWebmentions = async (since, perPage = 10000) => {
   return null;
 };
 
-const getDomain = (entry) => new URL(entry['wm-source']).origin.split('://')[1];
+const getDomain = (entry) => new URL(entry['wm-source']).hostname;
+
+// only allow webmentions that have contents, an author name, and a timestamp
+const checkRequiredFields = (entry) => {
+  const { author, published, content, url } = entry;
+  return Boolean(
+    url &&
+      entry['wm-id'] &&
+      entry['wm-source'] &&
+      entry['wm-property'] &&
+      entry['wm-target'] &&
+      author?.name &&
+      published &&
+      (content?.text || content?.html),
+  );
+};
 
 // Merge fresh webmentions with cached entries, unique per id
 const mergeWebmentions = (a, b) => {
-  const all = _.unionBy(a.children, b.children, 'wm-id');
-  const syns = _.map(all, 'syndication');
+  const all = _.unionBy(a.children, b.children, 'wm-id').filter(
+    checkRequiredFields,
+  );
+  const syns = _.compact(_.map(all, 'syndication'));
 
   return all.filter(
     (entry) =>
