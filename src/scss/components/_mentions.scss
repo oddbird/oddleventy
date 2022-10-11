@@ -1,11 +1,16 @@
 [data-mention]:not(:last-child) {
-  margin-block-end: var(--spacer);
+  margin-block-end: var(--double-gutter);
 }
 
 .webmention-author {
+  font-size: var(--h4);
   margin: 0;
 }
 
 .webmention-meta {
+  font-size: var(--xsmall);
+}
+
+.webmention-content {
   font-size: var(--small);
 }
