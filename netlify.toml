@@ -26,4 +26,5 @@
       mainBranch = "main"
       template = "hierarchical"
 
+[[plugins]]
     package = "@netlify/plugin-a11y"
