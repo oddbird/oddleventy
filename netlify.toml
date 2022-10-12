@@ -27,4 +27,4 @@
       template = "hierarchical"
 
 [[plugins]]
-    package = "@netlify/plugin-a11y"
+    package = "/netlify-plugins/netlify-plugin-a11y"

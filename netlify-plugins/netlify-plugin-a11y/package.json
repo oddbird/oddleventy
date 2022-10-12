@@ -1,0 +1,69 @@
+{
+  "name": "@netlify/plugin-a11y",
+  "version": "1.0.0-beta.1",
+  "description": "Check for accessibility errors on critical pages of your Netlify website.",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*",
+    "manifest.yml"
+  ],
+  "dependencies": {
+    "pa11y": "^6.2.3",
+    "path-type": "^4.0.0",
+    "picocolors": "^1.0.0",
+    "puppeteer": "~9.1.1",
+    "readdirp": "^3.6.0",
+    "tslib": "^2.4.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "jest",
+    "test:staged": "CI=true jest --findRelatedTests",
+    "clean": "rimraf lib",
+    "prepare": "husky install && npm run build",
+    "prepublishOnly": "npm ci && npm test && npm run clean && npm run build"
+  },
+  "keywords": [
+    "netlify",
+    "netlify-plugin",
+    "accessibility",
+    "a11y"
+  ],
+  "author": "swyx <swyx@dontemail.me>",
+  "contributors": [
+    "EJ Mason <ej.mason@dontemail.me>"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 16.0.0",
+    "npm": ">= 7.10.0"
+  },
+  "devDependencies": {
+    "@netlify/build": "^27.1.4",
+    "@netlify/eslint-config-node": "^6.0.0",
+    "@types/jest": "^28.1.1",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.1",
+    "lint-staged": "^13.0.1",
+    "prettier": "^2.7.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.3"
+  },
+  "repository": "https://github.com/netlify-labs/netlify-plugin-a11y",
+  "bugs": {
+    "url": "https://github.com/netlify-labs/netlify-plugin-a11y/issues"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "npm run test:staged"
+    ],
+    "*.js": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
+  }
+}
