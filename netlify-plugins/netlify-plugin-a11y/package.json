@@ -1,10 +1,10 @@
 {
-  "name": "netlify-plugin-a11y",
+  "name": "@netlify/plugin-a11y",
   "version": "1.0.0-beta.1",
   "description": "Check for accessibility errors on critical pages of your Netlify website.",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
   "files": [
-    "src/**/*",
+    "lib/**/*",
     "manifest.yml"
   ],
   "dependencies": {
