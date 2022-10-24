@@ -319,6 +319,18 @@ const byYear = (collection) => {
     }));
 };
 
+const addCallToAction = (pageURL) => {
+  let addCTA = false;
+  const ctaPages = ['work', 'services'];
+  ctaPages.forEach((page) => {
+    if (pageURL.toString().includes(page)) {
+      addCTA = true;
+      return addCTA;
+    }
+  });
+  return addCTA;
+};
+
 module.exports = {
   isPublic,
   isCurrent,
@@ -334,4 +346,5 @@ module.exports = {
   eventSort,
   byYear,
   removePage,
+  addCallToAction,
 };

@@ -52,6 +52,47 @@ params:
   {%- endif -%}
 {% endmacro %}
 
+
+{# @docs
+label: recent_posts
+category: lists
+note: |
+  Returns a given number of recent
+  posts from a collection
+params:
+  posts:
+    type: array
+    note: containing 11ty page objects
+  collections:
+    type: 11ty collections object
+    default: none
+  limit:
+    type: number
+    default: 3
+#}
+{% macro recent_posts(
+  posts,
+  collections,
+  limit
+) %}
+  {%- if posts | length > 0 -%}
+    {% for group in posts | byYear %}
+      {% if loop.first %}
+        {% set post_limit = limit if limit else 3  %}
+        {% set recents = group.posts | reverse | onlyShow(post_limit) %}
+        {% set year_title = [group.year, ' Articles'] | join%}
+            {{ list(
+              recents,
+              collections=collections,
+              title=year_title) }}
+        {% endif %}
+    {%- endfor -%}
+  {%- endif -%}
+{% endmacro %}
+
+
+
+
 {# @docs
 label: list
 category: lists

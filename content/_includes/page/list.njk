@@ -2,6 +2,8 @@
 {% import 'oss.macros.njk' as oss %}
 {% import 'events.macros.njk' as confs %}
 
+{%- set is_article = tags and ('_post' in tags) and ('Article' in tags) -%}
+
 {% if index %}
   <section data-list="tag" data-typeset>
     {% set list = collections[index] %}
@@ -35,4 +37,9 @@
       collections.all | getCollectionItem(page) | pageEvents
     ) }}
   </section>
+{% elif is_article %}
+  <section data-list="tag" data-typeset>
+   {{ post.recent_posts(collections['Article'], collections)}}
+  </section>
+
 {% endif %}
