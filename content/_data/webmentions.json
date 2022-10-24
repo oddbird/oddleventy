@@ -1,6 +1,31 @@
 {
-  "lastFetched": "2022-10-17T08:14:01.480Z",
+  "lastFetched": "2022-10-24T08:12:01.170Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Chris Coyier",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/fe17827fe542a95c9bfbe5d1bcd9a1dd2890b5efc270bf77b5776b244bb0e0f9.jpg",
+        "url": "https://twitter.com/chriscoyier"
+      },
+      "url": "https://twitter.com/chriscoyier/status/1584246528054816768",
+      "published": "2022-10-23T18:13:00+00:00",
+      "wm-received": "2022-10-23T18:29:52Z",
+      "wm-id": 1543761,
+      "wm-source": "https://brid.gy/post/twitter/mmatuzo/1584246528054816768",
+      "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "photo": [
+        "https://pbs.twimg.com/media/FfxfhICXwAEkTi6.jpg"
+      ],
+      "content": {
+        "html": "Ran across one of those times where \"Not All Zeros are Equal\" <a href=\"https://www.oddbird.net/2022/08/04/zero-units/\">oddbird.net/2022/08/04/zer…</a>\n\nUnit required for values in the max() CSS function, like in this great trick. <a href=\"https://www.matuzo.at/blog/2022/100daysof-day12/\">matuzo.at/blog/2022/100d…</a>",
+        "text": "Ran across one of those times where \"Not All Zeros are Equal\" oddbird.net/2022/08/04/zer…\n\nUnit required for values in the max() CSS function, like in this great trick. matuzo.at/blog/2022/100d…"
+      },
+      "mention-of": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
