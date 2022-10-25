@@ -9,7 +9,7 @@
   },
   "private": true,
   "engines": {
-    "node": "^18",
+    "node": "^16",
     "yarn": "^3"
   },
   "type": "module",
@@ -57,6 +57,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
+    "@netlify/plugin-a11y": "^1.0.0-beta.1",
     "@rollup/plugin-babel": "^6.0.2",
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",

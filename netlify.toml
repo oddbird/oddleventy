@@ -1,5 +1,5 @@
 [build.environment]
-   NODE_VERSION = "18"
+   NODE_VERSION = "16"
    YARN_VERSION = "3.2.4"
 
 [[plugins]]
