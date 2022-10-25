@@ -1,6 +1,6 @@
 [build.environment]
-   NODE_VERSION = "16"
-   YARN_VERSION = "3.2.4"
+    NODE_VERSION = "16"
+    YARN_VERSION = "3.2.4"
 
 [[plugins]]
     package = "netlify-plugin-11ty"
@@ -13,6 +13,15 @@
     package = "@netlify/plugin-a11y"
 
     [plugins.inputs]
+        checkPaths = [
+          "/index.html",
+          "/work/index.html",
+          "/services/index.html",
+          "/tools/index.html",
+          "/blog/index.html",
+          "/about/index.html",
+          "/contact/index.html",
+        ]
         failWithIssues = false
 
 [[plugins]]
