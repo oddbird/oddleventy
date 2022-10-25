@@ -20,7 +20,7 @@ jobs:
           node-version-file: .nvmrc
           cache: yarn
       - name: Install dependencies
-        run: yarn install --immutable --immutable-cache
+        run: yarn install --immutable
 
   test:
     name: Test
@@ -34,7 +34,7 @@ jobs:
           cache: yarn
       - name: Test
         run: |
-          yarn install --immutable --immutable-cache
+          yarn install --immutable
           yarn test --ci --runInBand
 
   lint:
@@ -49,5 +49,5 @@ jobs:
           cache: yarn
       - name: Lint
         run: |
-          yarn install --immutable --immutable-cache
+          yarn install --immutable
           yarn lint
