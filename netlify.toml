@@ -10,10 +10,11 @@
         cache_assets = false
 
 [[plugins]]
-    package = "@netlify/plugin-a11y"
+    package = "netlify-plugin-a11y"
 
     [plugins.inputs]
-        failWithIssues = false
+        checkPaths = ["/"]
+        resultMode = "warn"
 
 [[plugins]]
     package = "@algolia/netlify-plugin-crawler"
