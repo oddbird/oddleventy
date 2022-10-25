@@ -4,7 +4,7 @@
   <summary data-btn="menu xsmall summary">
     Light/Dark
   </summary>
-  <div data-dropdown="pad rtl">
+  <form data-dropdown="pad rtl">
     {% call forms.fieldset(
       legend='Color Mode',
       name='ccs-modes',
@@ -79,5 +79,5 @@
         'value': ccs.contrast
       }
     ) }}
-  </div>
+  </form>
 </details>
