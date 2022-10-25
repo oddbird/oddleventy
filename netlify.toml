@@ -12,6 +12,9 @@
 [[plugins]]
     package = "@netlify/plugin-a11y"
 
+    [plugins.inputs]
+        failWithIssues = false
+
 [[plugins]]
     package = "@algolia/netlify-plugin-crawler"
 
