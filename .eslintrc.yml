@@ -25,9 +25,7 @@ plugins:
   - prettier
   - import
 settings:
-  import/external-module-folders:
-    - 'node_modules'
-    - '.yarn'
+  import/internal-regex: ^#/
   import/parsers:
     '@typescript-eslint/parser':
       - '.ts'
