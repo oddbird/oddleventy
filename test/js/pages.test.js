@@ -1,4 +1,5 @@
 import {
+  addCallToAction,
   byYear,
   eventSort,
   findData,
@@ -120,6 +121,38 @@ describe('page filters', () => {
 
       expect(actual.map((item) => item.year)).toEqual(expected);
       expect(actual.map((item) => item.posts.length)).toEqual([2, 2]);
+    });
+  });
+
+  describe('addCallToAction', () => {
+    test('returns true for work list URL', () => {
+      const exampleURL = '/work/';
+      expect(addCallToAction(exampleURL)).toBe(true);
+    });
+
+    test('returns true for work detail URLs', () => {
+      const exampleURL = '/work/metecho/';
+      expect(addCallToAction(exampleURL)).toBe(true);
+    });
+
+    test('returns true for services list URL', () => {
+      const exampleURL = '/services/';
+      expect(addCallToAction(exampleURL)).toBe(true);
+    });
+
+    test('returns true for services detail URL', () => {
+      const exampleURL = '/services/development/';
+      expect(addCallToAction(exampleURL)).toBe(true);
+    });
+
+    test('returns false for blog URL', () => {
+      const exampleURL = '/blog/';
+      expect(addCallToAction(exampleURL)).toBe(false);
+    });
+
+    test('returns false for blog detail URL', () => {
+      const exampleURL = '/talks/queries-units/';
+      expect(addCallToAction(exampleURL)).toBe(false);
     });
   });
 });

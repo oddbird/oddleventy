@@ -320,15 +320,8 @@ const byYear = (collection) => {
 };
 
 const addCallToAction = (pageURL) => {
-  let addCTA = false;
   const ctaPages = ['work', 'services'];
-  ctaPages.forEach((page) => {
-    if (pageURL.toString().includes(page)) {
-      addCTA = true;
-      return addCTA;
-    }
-  });
-  return addCTA;
+  return ctaPages.some((page) => pageURL.toString().includes(page));
 };
 
 module.exports = {
