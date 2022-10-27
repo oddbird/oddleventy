@@ -98,7 +98,7 @@
     "rimraf": "^3.0.2",
     "rollup": "^3.2.3",
     "rollup-plugin-minification": "^0.2.0",
-    "sanitize-html": "^2.7.2",
+    "sanitize-html": "^2.7.3",
     "sass": "^1.55.0",
     "sassdoc": "^2.7.4",
     "sassdoc-theme-herman": "^5.0.0-beta.2",
