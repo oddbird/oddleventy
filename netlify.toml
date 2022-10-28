@@ -33,6 +33,31 @@
         template = "hierarchical"
 
 [[redirects]]
+    from = "/accoutrement/docs/*"
+    to = "https://accoutrement-docs.netlify.app/accoutrement/docs/:splat"
+    status = 200
+
+[[redirects]]
+    from = "/blend/docs/*"
+    to = "https://blend-docs.netlify.app/blend/docs/:splat"
+    status = 200
+
+[[redirects]]
+    from = "/cascading-colors/docs/*"
+    to = "https://cascading-colors-docs.netlify.app/cascading-colors/docs/:splat"
+    status = 200
+
+[[redirects]]
     from = "/herman/docs/*"
     to = "https://herman-docs.netlify.app/herman/docs/:splat"
+    status = 200
+
+[[redirects]]
+    from = "/susy/docs/*"
+    to = "https://susy-docs.netlify.app/susy/docs/:splat"
+    status = 200
+
+[[redirects]]
+    from = "/true/docs/*"
+    to = "https://true-docs.netlify.app/true/docs/:splat"
     status = 200
