@@ -31,3 +31,8 @@
         branches = ["main"]
         mainBranch = "main"
         template = "hierarchical"
+
+[[redirects]]
+    from = "/herman/docs/*"
+    to = "https://herman-docs.netlify.app/herman/docs/:splat"
+    status = 200
