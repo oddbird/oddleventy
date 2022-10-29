@@ -1,8 +1,12 @@
+/* eslint-disable no-sync */
+
 'use strict';
 
+const { createHash } = require('crypto');
 const path = require('path');
 
 const eleventyImg = require('@11ty/eleventy-img');
+const fs = require('fs-extra');
 const _ = require('lodash');
 
 const { fromTaxonomy } = require('#/taxonomy.cjs');
@@ -32,6 +36,16 @@ const imgOptions = {
   },
 };
 const IMG_SRC = './src/images/';
+const CACHE_FILE = path.join(__dirname, 'image_cache.json');
+// eslint-disable-next-line no-process-env
+const useCache = process.env.CONTEXT !== 'production';
+// eslint-disable-next-line no-process-env
+const rebuildCache = Boolean(process.env.IMAGE_CACHE_REBUILD);
+let cache = { html: {}, src: {} };
+if (useCache && !rebuildCache && fs.existsSync(CACHE_FILE)) {
+  cache = fs.readJsonSync(CACHE_FILE);
+}
+let cacheChanged = false;
 
 /* @docs
 label: image
@@ -77,18 +91,6 @@ const image = (src, alt, attrs, sizes, getUrl) => {
     outputDir,
     urlPath,
   };
-
-  // generate images; this is async but we don’t wait
-  eleventyImg(src, opts);
-
-  // eslint-disable-next-line no-sync
-  const metadata = eleventyImg.statsSync(src, opts);
-
-  if (getUrl) {
-    const data = metadata.jpeg[metadata.jpeg.length - 1];
-    return data.url;
-  }
-
   const imgSizes =
     sizes && imgConfig.sizes[sizes]
       ? imgConfig.sizes[sizes]
@@ -102,12 +104,52 @@ const image = (src, alt, attrs, sizes, getUrl) => {
     },
     attrs || {},
   );
+  let cacheKey = src;
 
-  return eleventyImg.generateHTML(metadata, imageAttributes, {
+  if (useCache) {
+    if (getUrl && cache.src[cacheKey]) {
+      return cache.src[cacheKey];
+    } else if (!getUrl) {
+      const hash = createHash('sha256');
+      hash.update(src);
+      hash.update(JSON.stringify(imageAttributes));
+      cacheKey = hash.digest('base64');
+      if (cache.html[cacheKey]) {
+        return cache.html[cacheKey];
+      }
+    }
+    if (!cacheChanged) {
+      cacheChanged = true;
+      // eslint-disable-next-line no-process-env
+      process.env.IMAGE_CACHE_CHANGED = true;
+    }
+  }
+
+  // generate images; this is async but we don’t wait
+  eleventyImg(src, opts);
+
+  // eslint-disable-next-line no-sync
+  const metadata = eleventyImg.statsSync(src, opts);
+
+  if (getUrl) {
+    const data = metadata.jpeg[metadata.jpeg.length - 1];
+    if (useCache) {
+      cache.src[cacheKey] = data.url;
+    }
+    return data.url;
+  }
+
+  const html = eleventyImg.generateHTML(metadata, imageAttributes, {
     whitespaceMode: 'inline',
   });
+  if (useCache) {
+    cache.html[cacheKey] = html;
+  }
+  return html;
 };
 
 module.exports = {
   image,
+  imageCache: cache,
+  CACHE_FILE,
 };

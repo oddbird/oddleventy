@@ -2,6 +2,7 @@
 
 const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const fs = require('fs-extra');
 const yaml = require('js-yaml');
 const _ = require('lodash');
 
@@ -91,7 +92,7 @@ module.exports = (eleventyConfig) => {
       }),
   );
   eleventyConfig.addCollection('sample', (collection) =>
-    collection.getAll().filter((item) => item.data.sample),
+    collection.getAll().filter((item) => item.data.sample_content),
   );
 
   // filters
@@ -172,6 +173,19 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setLibrary('md', type.mdown);
   eleventyConfig.addDataExtension('yaml', yaml.load);
   eleventyConfig.setQuietMode(true);
+
+  // eslint-disable-next-line no-process-env
+  if (process.env.CONTEXT !== 'production') {
+    eleventyConfig.on('eleventy.after', () => {
+      // eslint-disable-next-line no-process-env
+      if (process.env.IMAGE_CACHE_CHANGED) {
+        // eslint-disable-next-line no-sync
+        fs.outputJsonSync(images.CACHE_FILE, images.imageCache, { spaces: 2 });
+        // eslint-disable-next-line no-process-env
+        delete process.env.IMAGE_CACHE_CHANGED;
+      }
+    });
+  }
 
   // settings
   return {
