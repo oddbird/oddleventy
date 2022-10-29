@@ -41,7 +41,7 @@ jobs:
           node-version-file: .nvmrc
           cache: yarn
       - run: yarn install
-      - run: yarn build
+      - run: NETLIFY=true CONTEXT=PRODUCTION yarn build
       - name: Clone shadow repo
         uses: actions/checkout@v3
         with:
