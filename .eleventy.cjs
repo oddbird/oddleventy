@@ -175,14 +175,17 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setQuietMode(true);
 
   // eslint-disable-next-line no-process-env
-  if (process.env.CONTEXT !== 'production') {
+  if (!process.env.NETLIFY) {
+    eleventyConfig.on('eleventy.before', () => {
+      // eslint-disable-next-line no-process-env
+      delete process.env.IMAGE_CACHE_CHANGED;
+    });
+
     eleventyConfig.on('eleventy.after', () => {
       // eslint-disable-next-line no-process-env
       if (process.env.IMAGE_CACHE_CHANGED) {
         // eslint-disable-next-line no-sync
         fs.outputJsonSync(images.CACHE_FILE, images.imageCache, { spaces: 2 });
-        // eslint-disable-next-line no-process-env
-        delete process.env.IMAGE_CACHE_CHANGED;
       }
     });
   }

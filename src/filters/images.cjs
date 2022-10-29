@@ -38,7 +38,7 @@ const imgOptions = {
 const IMG_SRC = './src/images/';
 const CACHE_FILE = path.join(__dirname, 'image_cache.json');
 // eslint-disable-next-line no-process-env
-const useCache = process.env.CONTEXT !== 'production';
+const useCache = !process.env.NETLIFY;
 // eslint-disable-next-line no-process-env
 const rebuildCache = Boolean(process.env.IMAGE_CACHE_REBUILD);
 let cache = { html: {}, src: {} };
