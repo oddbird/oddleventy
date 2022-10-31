@@ -13,6 +13,4 @@ content/_data/webmentions.json
 coverage/
 htmlcov/
 jscache/
-netlify-plugins/
 node_modules/
-src/docs/
