@@ -69,22 +69,26 @@ params:
   limit:
     type: number
     default: 3
+  banner_title:
+    type: string
 #}
 {% macro recent_posts(
   posts,
   collections,
-  limit
+  limit,
+  banner_title
 ) %}
   {%- if posts | length > 0 -%}
     {% for group in posts | byYear %}
       {% if loop.first %}
         {% set post_limit = limit if limit else 3  %}
         {% set recents = group.posts | reverse | onlyShow(post_limit) %}
-        {% set year_title = [group.year, ' Articles'] | join%}
+        {% set year_title = [group.year, banner_title] | join(" ")%}
             {{ list(
               recents,
               collections=collections,
-              title=year_title) }}
+              title=year_title,
+              override_feature=true) }}
         {% endif %}
     {%- endfor -%}
   {%- endif -%}
@@ -110,12 +114,16 @@ params:
   pagination:
     type: 11ty pagination object
     default: none
+  override_feature:
+    type: boolean
+    default: false
 #}
 {% macro list(
   posts,
   collections=none,
   title='Resources',
-  pagination=none
+  pagination=none,
+  override_feature=false
 ) %}
 {%- if posts -%}
   {%- set posts = posts if (posts[0].sort) else posts | pageYears -%}
@@ -132,7 +140,7 @@ params:
 
   <ol data-grid="resources" reversed>
     {%- for post in posts | sort(reverse=true, attribute=sort) -%}
-      {{ item(post, collections, loop) }}
+      {{ item(post, collections, loop, override_feature=override_feature) }}
     {%- endfor -%}
   </ol>
 {% endif %}
@@ -151,16 +159,21 @@ params:
   feature:
     type: boolean | 'large'
     default: none
+  override_feature:
+    type: boolean
+    default: false
 #}
 {% macro item(
   post,
   collections=none,
-  loop=none
+  loop=none,
+  override_feature=false
 ) %}
   {%- set type = post.data.tags | pageType -%}
   {%- set card = post.data.card or none -%}
   {%- set card = 'feature' if (card == 'feature') else card -%}
   {%- set card = card or 'feature' if type.feature else card -%}
+  {% set card = none if override_feature else card %}
 
   {# Adjust card settings based on the number of posts in a list #}
   {% if loop %}
