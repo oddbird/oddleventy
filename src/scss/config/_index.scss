@@ -17,10 +17,17 @@
 @use 'animation/changes';
 @use 'animation/times';
 
+/* @use 'scale/text-ratios';
+@use 'scale/font-sizes'; */
+
 @include tools.add-colors(meta.module-variables('brand'));
 @include tools.add-colors(meta.module-variables('background'));
 @include tools.add-colors(meta.module-variables('ccs-defaults'));
 @include tools.add-colors(meta.module-variables('content'));
 @include tools.add-colors(meta.module-variables('content'));
+
 @include tools.add-changes(meta.module-variables('changes'));
-@include tools.add-changes(meta.module-variables('times'));
+@include tools.add-times(meta.module-variables('times'));
+
+/* @include tools.add-ratios(meta.module-variables('text-ratios'));
+@include tools.add-sizes(meta.module-variables('font-sizes')); */

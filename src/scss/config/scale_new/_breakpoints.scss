@@ -1,0 +1,16 @@
+@use '../tools';
+@use 'page-sizes';
+@use 'sass:map';
+
+// Breakpoints
+// -----------
+
+@each $name, $size in page-sizes.$page-sizes {
+  $size: tools.convert-units($size, 'em');
+  tools.$breakpoints: map.merge(
+    tools.$breakpoints,
+    (
+      $name: $size,
+    )
+  );
+}
