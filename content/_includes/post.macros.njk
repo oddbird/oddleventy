@@ -71,18 +71,21 @@ params:
     default: 3
   banner_title:
     type: string
+  page_url:
+    type: string
 #}
 {% macro recent_posts(
   posts,
   collections,
   limit,
-  banner_title
+  banner_title,
+  page_url
 ) %}
   {%- if posts | length > 0 -%}
     {% for group in posts | byYear %}
       {% if loop.first %}
         {% set post_limit = limit if limit else 3  %}
-        {% set recents = group.posts | reverse | onlyShow(post_limit) %}
+        {% set recents = group.posts | reverse | filterPage(page_url) | onlyShow(post_limit) %}
         {% set year_title = [group.year, banner_title] | join(" ")%}
             {{ list(
               recents,

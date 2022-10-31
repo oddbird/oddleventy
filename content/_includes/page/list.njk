@@ -39,18 +39,18 @@
 
     {% if is_post %}
       <section data-list="tag" data-typeset>
-      {{ post.recent_posts(collections['Talk'], collections, banner_title="Talks")}}
+      {{ post.recent_posts(collections['Talk'], collections, banner_title="Talks", page_url=page_url)}}
     </section>
     {% endif %}
   </section>
 {% elif is_post %}
   {% if 'Article' in tags%}
     <section data-list="tag" data-typeset>
-    {{ post.recent_posts(collections['Article'], collections, banner_title="Articles")}}
+    {{ post.recent_posts(collections['Article'], collections, banner_title="Articles", page_url=page_url)}}
     </section>
   {% elif 'Podcast' in tags %}
     <section data-list="tag" data-typeset>
-      {{ post.recent_posts(collections['Podcast'], collections, banner_title="Podcasts")}}
+      {{ post.recent_posts(collections['Podcast'], collections, banner_title="Podcasts", page_url=page_url)}}
     </section>
   {% endif %}
 

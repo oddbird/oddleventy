@@ -127,6 +127,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('byYear', pages.byYear);
   eleventyConfig.addFilter('removePage', pages.removePage);
   eleventyConfig.addFilter('addCallToAction', pages.addCallToAction);
+  eleventyConfig.addFilter('filterPage', pages.filterPage);
 
   eleventyConfig.addFilter('fromTaxonomy', taxonomy.fromTaxonomy);
   eleventyConfig.addFilter('ossGroups', taxonomy.ossGroups);
