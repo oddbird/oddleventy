@@ -146,5 +146,5 @@ Conduct], and [FreeBSD Code of Conduct].
 
 [Geek Feminism wiki]: https://geekfeminism.wikia.org/wiki/Community_anti-harassment
 [Sass Community Guidelines]: https://sass-lang.com/community-guidelines
-[Slack Developer Community Code of Conduct]: https://api.slack.com/community/code-of-conduct
+[Slack Developer Community Code of Conduct]: https://api.slack.com/docs/community-code-of-conduct
 [FreeBSD Code of Conduct]: https://www.freebsd.org/internal/code-of-conduct/
