@@ -1,4 +1,4 @@
-/* eslint-disable no-sync */
+/* eslint-disable no-process-env, no-sync */
 
 'use strict';
 
@@ -37,15 +37,14 @@ const imgOptions = {
 };
 const IMG_SRC = './src/images/';
 const CACHE_FILE = path.join(__dirname, 'image_cache.json');
-// eslint-disable-next-line no-process-env
 const useCache = !process.env.NETLIFY;
-// eslint-disable-next-line no-process-env
 const rebuildCache = Boolean(process.env.IMAGE_CACHE_REBUILD);
+let cacheChanged = false;
+
 let cache = { html: {}, src: {} };
 if (useCache && !rebuildCache && fs.existsSync(CACHE_FILE)) {
   cache = fs.readJsonSync(CACHE_FILE);
 }
-let cacheChanged = false;
 
 /* @docs
 label: image
@@ -106,21 +105,26 @@ const image = (src, alt, attrs, sizes, getUrl) => {
   );
   let cacheKey = src;
 
+  // When running locally, try to skip processing images (which is slow)
+  // if we already have the requested markup for the given file.
   if (useCache) {
     if (getUrl && cache.src[cacheKey]) {
       return cache.src[cacheKey];
     } else if (!getUrl) {
+      // Create unique hash based on image source, attributes, sizes, etc.
       const hash = createHash('sha256');
       hash.update(src);
       hash.update(JSON.stringify(imageAttributes));
       cacheKey = hash.digest('base64');
+
       if (cache.html[cacheKey]) {
         return cache.html[cacheKey];
       }
     }
+    // If the image cache has been updated, set env var
+    // so we know to output the new JSON file after the build is complete.
     if (!cacheChanged) {
       cacheChanged = true;
-      // eslint-disable-next-line no-process-env
       process.env.IMAGE_CACHE_CHANGED = true;
     }
   }

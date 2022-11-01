@@ -59,7 +59,13 @@ You can also run individual commands:
 # build the static site for development
 yarn build
 
-# build the static site for production
+# build the static site for development, re-processing all images
+yarn build:images
+
+# build the static site for production (in local development)
+yarn build:prod
+
+# build the static site for production (on Netlify)
 yarn prod
 
 # format and lint all files

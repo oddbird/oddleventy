@@ -1,3 +1,5 @@
+/* eslint-disable no-process-env, no-sync */
+
 'use strict';
 
 const rss = require('@11ty/eleventy-plugin-rss');
@@ -174,17 +176,14 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addDataExtension('yaml', yaml.load);
   eleventyConfig.setQuietMode(true);
 
-  // eslint-disable-next-line no-process-env
   if (!process.env.NETLIFY) {
     eleventyConfig.on('eleventy.before', () => {
-      // eslint-disable-next-line no-process-env
       delete process.env.IMAGE_CACHE_CHANGED;
     });
 
     eleventyConfig.on('eleventy.after', () => {
-      // eslint-disable-next-line no-process-env
       if (process.env.IMAGE_CACHE_CHANGED) {
-        // eslint-disable-next-line no-sync
+        // If the image cache has been updated, emit the new JSON file
         fs.outputJsonSync(images.CACHE_FILE, images.imageCache, { spaces: 2 });
       }
     });
