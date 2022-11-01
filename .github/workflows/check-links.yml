@@ -13,5 +13,9 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: yarn
+      - name: Install dependencies
+        run: yarn install
+      - name: Build site
+        run: NETLIFY=true CONTEXT=production yarn build
       - name: Check for broken links
         run: yarn checklinks
