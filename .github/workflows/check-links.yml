@@ -13,5 +13,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: yarn
+      - name: Install dependencies
+        run: yarn install
       - name: Check for broken links
         run: yarn checklinks
