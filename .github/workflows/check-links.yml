@@ -16,6 +16,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build site
-        run: NETLIFY=true CONTEXT=production yarn build
+        run: yarn build:prod
       - name: Check for broken links
         run: yarn checklinks
