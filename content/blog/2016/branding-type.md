@@ -208,7 +208,7 @@ single element to focus on: typography.
 
 [mood board]: https://www.creativebloq.com/graphic-design/mood-boards-812470
 [Style Tiles and How They Work]: https://alistapart.com/article/style-tiles-and-how-they-work/
-[Element Collages]: http://v3.danielmall.com/articles/rif-element-collages/
+[Element Collages]: https://v3.danmall.com/articles/rif-element-collages/
 [Vox Product]: https://product.voxmedia.com/2013/1/24/5426808/an-inside-peek-into-the-polygon-design-process
 
 ## Typography - With a Little Help From Our Friends

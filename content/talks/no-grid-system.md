@@ -61,7 +61,7 @@ events:
     # slides: https://oddbooksapp.com/book/wwc-layout
     title: Practical Layouts, Past & Future
   - venue: Develop Denver
-    url: https://developdenver.org/
+    url: https://www.developdenver.org/
     adr: Denver, CO
     date: 2017-08-10
     # slides: https://oddbooksapp.com/release/76673f1e-63dc-4271-b326-76047288a10d
