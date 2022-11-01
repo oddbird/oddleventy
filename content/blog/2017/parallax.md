@@ -51,4 +51,4 @@ message via [Twitter].
 
   [Twitter]: https://twitter.com/oddbird
 
-### [Performant Parallaxing &gt;]
+### [Performant Parallaxing &gt;][Performant Parallaxing]
