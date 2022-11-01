@@ -122,5 +122,5 @@ compileSass({ name: 'screen', usePostCSS: true });
 compileSass({ name: 'styleguide', usePostCSS: true });
 compileSass({ name: 'json' });
 
-// @@@ page-specific CSS; this should maybe not be hardcoded?
+// page-specific CSS; this should maybe not be hardcoded?
 compileSass({ name: 'page/support-unknown', usePostCSS: true });

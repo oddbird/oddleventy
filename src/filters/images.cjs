@@ -37,11 +37,12 @@ const imgOptions = {
 };
 const IMG_SRC = './src/images/';
 const CACHE_FILE = path.join(__dirname, 'image_cache.json');
-const useCache = !process.env.NETLIFY;
+const useCache = !(process.env.NETLIFY || process.env.NODE_ENV === 'test');
 const rebuildCache = Boolean(process.env.IMAGE_CACHE_REBUILD);
 let cacheChanged = false;
 
 let cache = { html: {}, src: {} };
+/* istanbul ignore next */
 if (useCache && !rebuildCache && fs.existsSync(CACHE_FILE)) {
   cache = fs.readJsonSync(CACHE_FILE);
 }
@@ -107,6 +108,7 @@ const image = (src, alt, attrs, sizes, getUrl) => {
 
   // When running locally, try to skip processing images (which is slow)
   // if we already have the requested markup for the given file.
+  /* istanbul ignore next */
   if (useCache) {
     if (getUrl && cache.src[cacheKey]) {
       return cache.src[cacheKey];
@@ -137,6 +139,7 @@ const image = (src, alt, attrs, sizes, getUrl) => {
 
   if (getUrl) {
     const data = metadata.jpeg[metadata.jpeg.length - 1];
+    /* istanbul ignore if */
     if (useCache) {
       cache.src[cacheKey] = data.url;
     }
@@ -146,6 +149,7 @@ const image = (src, alt, attrs, sizes, getUrl) => {
   const html = eleventyImg.generateHTML(metadata, imageAttributes, {
     whitespaceMode: 'inline',
   });
+  /* istanbul ignore if */
   if (useCache) {
     cache.html[cacheKey] = html;
   }
