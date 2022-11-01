@@ -129,7 +129,7 @@ Carl
 [first pycon talk]: https://pyvideo.org/pycon-us-2011/pycon-2011--reverse-engineering-ian-bicking--39-s.html
 [pyladies]: https://pyladies.com/
 [zoe quinn]: https://www.cracked.com/blog/5-things-i-learned-as-internets-most-hated-person
-[any number of other women]: https://geekfeminism.wikia.org/wiki/Timeline_of_incidents
+[any number of other women]: https://geekfeminism.fandom.com/wiki/Timeline_of_incidents
 [pervasive sexual harassment]: https://anontechlady.wordpress.com/2014/08/04/my-first-oscon/
 [playing on the easy setting]: https://whatever.scalzi.com/2012/05/15/straight-white-male-the-lowest-difficulty-setting-there-is/
 [other attributes that i did nothing to earn]: https://pyvideo.org/djangocon-us-2014/all-you-need-is-l.html

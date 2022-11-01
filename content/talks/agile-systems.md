@@ -21,14 +21,13 @@ events:
     url: https://agile2019.sched.com/event/OD2f
     adr: Washington, DC
     date: 2019-08-06
-    slides: https://talks.oddbird.net/agile-systems/agile19
+    slides: https://talks.oddbird.net/agile-systems/agile19/
   - venue: Agile Denver
     url: https://www.meetup.com/Agile-Denver2/events/251897187/
     adr: Denver, CO
     slides: https://talks.oddbird.net/agile-systems/agiledenver18/
     date: 2018-10-22
   - venue: Front-End Front Range
-    url: https://www.meetup.com/front-range-front-end/events/zwjmwlyxgbhb/
     adr: Denver, CO
     # slides: https://oddbooksapp.com/book/agile-design-vue
     date: 2018-04-05

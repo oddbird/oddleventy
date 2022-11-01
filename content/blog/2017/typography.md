@@ -143,7 +143,7 @@ final round of element collages, but it was an excellent place to start.
   src='blog/2017/typography/typekit.jpg'
 ) }}
 
-[Adobe TypeKit]: https://fonts.adobe.com/typekit
+[Adobe TypeKit]: https://fonts.adobe.com/fonts
 [licensing details]: https://helpx.adobe.com/fonts/using/font-licensing.html
 
 ## [Google Fonts]

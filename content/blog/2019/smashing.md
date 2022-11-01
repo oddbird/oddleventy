@@ -156,14 +156,14 @@ set.
 With a quick search, I found several examples and articles:
 
 - [Live Theming with CSS Variables]
-- [Advanced CSS Theming with Custom Properties and JavaScript]
+- [How to use variables in CSS]
 
 [CSS-Tricks also provides a rundown] with links to more articles.
 There's a lot of room left to explore here, so play with it, and share
 what you find!
 
 [Live Theming with CSS Variables]: https://www.jonathan-harrell.com/blog/live-theming-with-css-variables/
-[Advanced CSS Theming with Custom Properties and JavaScript]: https://www.sitepoint.com/css-theming-custom-properties-javascript/
+[How to use variables in CSS]: https://www.sitepoint.com/how-to-use-variables-in-css/
 [CSS-Tricks also provides a rundown]: https://css-tricks.com/css-custom-properties-theming/
 
 ### Unit Tests

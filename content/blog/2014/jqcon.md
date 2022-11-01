@@ -60,8 +60,7 @@ Workers, but continues smoothly when Workers are used. (I'm also using
 the [Blob() constructor] to allow for inline Worker scripts, instead of
 importing from another file.)
 
-So when might I actually use Workers? From this helpful [HTML5 Rocks
-article][]:
+So when might I actually use Workers? From this helpful [web.dev article][]:
 
 > - Prefetching and/or caching data for later use
 > - Code syntax highlighting or other real-time text formatting
@@ -84,7 +83,7 @@ HT: [@potch] for the [talk] that got me started.
 [support]: https://caniuse.com/sharedworkers
 [another (contrived) example]: https://codepen.io/jgerigmeyer/pen/vKixI
 [blob() constructor]: https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob
-[html5 rocks article]: https://www.html5rocks.com/en/tutorials/workers/basics/
+[web.dev article]: https://web.dev/workers-basics/
 [@potch]: https://twitter.com/potch
 [talk]: https://potch.github.io/workers-talk/
 

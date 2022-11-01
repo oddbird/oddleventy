@@ -53,8 +53,8 @@ being included in our analytics data.
 ## Blocking Spam Referrals
 
 One common approach is to disallow any site visits where
-`document.referrer` matches a known spam domain. There are [free
-services] that create the necessary Google Analytics "filters" for you,
+`document.referrer` matches a known spam domain. There are free
+services that create the necessary Google Analytics "filters" for you,
 but they must be re-configured frequently as new spammers are added to
 the list.
 
@@ -105,7 +105,6 @@ And in our HTML, after the JS file has been executed:
 </script>
 ```
 
-[free services]: https://referrerspamblocker.com/
 [spam-referrals-blocker]: https://github.com/MohamedBassem/spam-referrals-blocker/
 [community-contributed list of referrer spammers]: https://github.com/matomo-org/referrer-spam-list
 [gulp]: https://gulpjs.com/
@@ -166,5 +165,5 @@ infecting your data? Let us know via [Twitter]!
 
 [this guide]: https://carloseo.com/removing-google-analytics-spam/
 [using an allowed-list filter to exclude any hostnames we haven't explicitly authorized]:
-  https://carloseo.com/removing-google-analytics-spam/#b-valid-hostname-filter-to-stop-ghost-spam-and-development-environments
+  https://carloseo.com/removing-google-analytics-spam/#b-filter---valid-hostname-for-ghost-spam-and-development-environments
 [Twitter]: https://twitter.com/oddbird

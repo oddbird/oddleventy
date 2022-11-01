@@ -24,7 +24,6 @@ events:
     date: 2017-09-13
     # slides: https://oddbooksapp.com/release/7564d481-b132-4636-be3b-0907452955c7
   - venue: Front Range Front End
-    url: https://www.meetup.com/Sass-Hack-Denver/events/239687418/
     adr: Denver, CO
     date: 2017-06-01
     # slides: https://oddbooksapp.com/release/06f61771-0205-4cbc-a478-050ac52cfe92
