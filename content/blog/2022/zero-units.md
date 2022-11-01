@@ -333,7 +333,7 @@ that it is not easy to account for every edge case
 in the default settings.
 There will always be issues that come up.
 
-[lint-option]: https://stylelint.io/user-guide/rules/list/length-zero-no-unit/#ignore-custom-properties
+[lint-option]: https://stylelint.io/user-guide/rules/length-zero-no-unit/#ignore-custom-properties
 
 But these problems are exacerbated
 by tools like linters & minifiers

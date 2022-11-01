@@ -32,7 +32,6 @@ events:
     adr: Online
     slides: https://slides.oddbird.net/rad/shopify/
   - venue: Front Range Front End
-    url: https://www.meetup.com/front-range-front-end/events/bxrfwqyzpbkb/
     date: 2019-11-07
     adr: Denver, CO
     video: https://youtu.be/bSITeqDKkb8

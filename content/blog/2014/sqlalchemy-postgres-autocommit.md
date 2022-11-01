@@ -72,7 +72,7 @@ conn = psycopg2.connect('dbname=test')
 conn.autocommit = True
 ```
 
-[pep 249]: https://legacy.python.org/dev/peps/pep-0249/
+[pep 249]: https://peps.python.org/pep-0249/
 [psycopg2]: https://www.psycopg.org/docs/
 [autocommit property]: https://www.psycopg.org/docs/connection.html#connection.autocommit
 

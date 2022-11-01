@@ -117,7 +117,7 @@ if necessary.
 {{ quotes.grid(press) }}
 
 [CodeKit]: https://codekitapp.com/index.html?referrer=susy
-[Black Girls Code]: https://www.blackgirlscode.com/
+[Black Girls Code]: https://wearebgc.org/
 
 {% call embed.media_block(
   media=embed.img(

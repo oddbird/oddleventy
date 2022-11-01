@@ -23,7 +23,7 @@ press:
     title: Technical Editor
     venue: SitePoint
     face: kaelig-dp.png
-    url: https://www.sitepoint.com/premium/books/jump-start-sass#reviews
+    url: https://www.sitepoint.com/premium/books/jump-start-sass/#reviews
     datetime: 2016-03-23
   - text: |
       Miriam and Kitty have become some of the most notable

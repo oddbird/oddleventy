@@ -26,7 +26,7 @@ people:
   - &furman
     name: Furman Brown
     face: furman-brown.jpg
-    url: https://www.tegy.tools/profile/furman/profile
+    url: https://www.tegy.tools/people
     title: Founder
     venue: *client
 tags:
