@@ -55,4 +55,4 @@ Thanks for a great year, everyone. See you around in 2014!
 [code]: https://github.com/mirisuzanne/
 [pyladies]: https://pyladies.com/
 [ada initiative]: https://adainitiative.org/
-[black girls code]: https://www.blackgirlscode.com/
+[black girls code]: https://wearebgc.org/

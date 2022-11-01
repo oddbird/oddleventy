@@ -26,7 +26,7 @@ events:
       code: FRIENDOFMIRIAM20
       amount: 20%
   - venue: W3C Developer Meetup
-    adr: Vancouver, Canada ([streaming](https://www.w3.org/2022/09/meetup/#stream))
+    adr: Vancouver, Canada
     url: https://www.w3.org/2022/09/meetup/
     date: 2022-09-13
     slug: 2022-tpac

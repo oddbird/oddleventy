@@ -39,7 +39,7 @@ press:
       with others while out on a ride.
     name: BikeRumor
     face: bike-rumor.jpg
-    url: https://bikerumor.com/2016/09/28/share-ride-real-time-quarq-qollector/
+    url: https://bikerumor.com/share-ride-real-time-quarq-qollector/
     slug: mobile
   - text: |
       **QuarqNet** captures the data

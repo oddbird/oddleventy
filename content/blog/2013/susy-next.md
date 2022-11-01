@@ -51,8 +51,8 @@ name.
 
 Please welcome the Susy Next team:
 
-- [Jina Bolton][] \[[@jina]\] is a Product Designer at Do, a regular
-  speaker at web conferences, co-creator of the [320 and Up]
+- [Jina][] \[[@jina]\] is a Product Designer at Do, a regular
+  speaker at web conferences, co-creator of the 320 and Up
   responsive design boilerplate, curator of [Art in My Coffee], and an
   active part of [Team Sass Design].
 - [Scott Kellum][] \[[@scottkellum]\] is a designer at [VOX Media]. He
@@ -86,17 +86,16 @@ help make it a community project. Stay tuned!
 
 [singularity]: https://singularity.gs/
 [salsa]: https://tsi.github.io/Salsa/
-[breakpoint]: http://breakpoint-sass.com
+[breakpoint]: http://breakpoint-sass.com/
 [susy]: /susy/
-[jina bolton]: https://github.com/jina/
+[jina]: https://github.com/jina/
 [@jina]: https://twitter.com/jina
-[320 and up]: https://responsivedesign.is/resources/boilerplates/320-and-up/
-[art in my coffee]: https://artinmycoffee.com/
+[art in my coffee]: https://twitter.com/artinmycoffee
 [team sass design]: https://www.sass.hk/en/styleguide/team.htm
 [scott kellum]: https://github.com/scottkellum/
 [@scottkellum]: https://twitter.com/scottkellum
 [vox media]: https://corp.voxmedia.com/
-[sassy math]: https://github.com/scottkellum/sassy-math
+[sassy math]: https://github.com/at-import/Sassy-math
 [modular scale]: https://github.com/modularscale/modularscale-sass
 [rachel nabors]: https://github.com/rachelnabors
 [@rachelnabors]: https://twitter.com/rachelnabors

@@ -79,7 +79,7 @@ sessions. [Tracy Lee] of [This Dot Labs] was on brand delivering the
 first keynote on how D&I makes good business sense, all while donning a
 prom dress. Day Two’s keynote took a more personal tone with [Dr.
 Kortney Ziegler] explaining how embracing his story has helped him find
-purpose in his endeavors at [ZaMLabs].
+purpose in his endeavors at ZaMLabs.
 
 Track sessions included Front-End Engineering, Software Engineering,
 Product & UX, Cool Sh!t, Career & Leadership, and Social Impact. I tried
@@ -139,8 +139,7 @@ present my ideas and experiences to my peers.
 [Vue Skulk]: https://www.vuevixens.org/
 [Tracy Lee]: https://twitter.com/ladyleet
 [This Dot Labs]: https://labs.thisdot.co/
-[Dr. Kortney Ziegler]: https://twitter.com/fakerapper?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
-[ZaMLabs]: https://sites.google.com/zamlabs.info/medialab/about
+[Dr. Kortney Ziegler]: http://kortneyrziegler.net/
 [Mike Harington]: https://twitter.com/mhartington
 [Ionic]: https://ionicframework.com/
 [Tae’lur Alexis]: https://twitter.com/TaelurAlexis
