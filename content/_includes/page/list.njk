@@ -2,8 +2,6 @@
 {% import 'oss.macros.njk' as oss %}
 {% import 'events.macros.njk' as confs %}
 
-{%- set is_post = tags and ('_post' in tags) -%}
-
 {% if index %}
   <section data-list="tag" data-typeset>
     {% set list = collections[index] %}
@@ -37,20 +35,20 @@
       collections.all | getCollectionItem(page) | pageEvents
     ) }}
 
-    {% if is_post %}
+    {% if is_entry %}
       <section data-list="tag" data-typeset>
-      {{ post.recent_posts(collections['Talk'], collections, banner_title="Talks", page_url=page_url)}}
+      {{ post.recent_posts(collections['Talk'], collections, banner_title="Talks", page_url=page.url)}}
     </section>
     {% endif %}
   </section>
-{% elif is_post %}
+{% elif is_entry %}
   {% if 'Article' in tags %}
     <section data-list="tag" data-typeset>
-    {{ post.recent_posts(collections['Article'], collections, banner_title="Articles", page_url=page_url)}}
+    {{ post.recent_posts(collections['Article'], collections, banner_title="Articles", page_url=page.url)}}
     </section>
   {% elif 'Podcast' in tags %}
     <section data-list="tag" data-typeset>
-      {{ post.recent_posts(collections['Podcast'], collections, banner_title="Podcasts", page_url=page_url)}}
+      {{ post.recent_posts(collections['Podcast'], collections, banner_title="Podcasts", page_url=page.url)}}
     </section>
   {% endif %}
 

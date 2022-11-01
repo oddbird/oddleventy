@@ -8,7 +8,6 @@
 
 {# is this page itself an entry that can be syndicated in a feed? #}
 {%- set is_entry = tags and ('_post' in tags) -%}
-{% set page_url = page.url %}
 
 {# based on the above, what microformats should be applied? #}
 {# see: https://microformats.org/wiki/microformats2 #}
