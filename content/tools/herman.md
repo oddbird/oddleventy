@@ -35,7 +35,7 @@ badges:
     url: https://www.npmjs.com/package/sassdoc-theme-herman
   - name: CircleCI
     src: https://dl.circleci.com/status-badge/img/gh/oddbird/sassdoc-theme-herman/tree/main.svg?style=svg
-    url: https://app.circleci.com/pipelines/github/oddbird/sassdoc-theme-herman?branch=main
+    url: https://dl.circleci.com/status-badge/redirect/gh/oddbird/sassdoc-theme-herman/tree/main
   - name: AppVeyor
     src: https://ci.appveyor.com/api/projects/status/w02fa9k998fywntl/branch/main?svg=true
     url: https://ci.appveyor.com/project/jgerigmeyer/sassdoc-theme-herman/branch/main

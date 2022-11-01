@@ -51,7 +51,7 @@ name.
 
 Please welcome the Susy Next team:
 
-- [Jina Bolton][] \[[@jina]\] is a Product Designer at Do, a regular
+- [Jina][] \[[@jina]\] is a Product Designer at Do, a regular
   speaker at web conferences, co-creator of the 320 and Up
   responsive design boilerplate, curator of [Art in My Coffee], and an
   active part of [Team Sass Design].
@@ -88,7 +88,7 @@ help make it a community project. Stay tuned!
 [salsa]: https://tsi.github.io/Salsa/
 [breakpoint]: http://breakpoint-sass.com/
 [susy]: /susy/
-[jina bolton]: https://github.com/jina/
+[jina]: https://github.com/jina/
 [@jina]: https://twitter.com/jina
 [art in my coffee]: https://twitter.com/artinmycoffee
 [team sass design]: https://www.sass.hk/en/styleguide/team.htm
