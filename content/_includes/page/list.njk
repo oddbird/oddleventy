@@ -44,7 +44,7 @@
     {% endif %}
   </section>
 {% elif is_post %}
-  {% if 'Article' in tags%}
+  {% if 'Article' in tags %}
     <section data-list="tag" data-typeset>
     {{ post.recent_posts(collections['Article'], collections, banner_title="Articles", page_url=page_url)}}
     </section>
