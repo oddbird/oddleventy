@@ -225,13 +225,13 @@ and we’ll work with you to make it possible.
   Questions may be asked at any time of day or night or weekend
   (so turn off notifications if you don’t want to be disturbed),
   but we only expect participation during our normal working hours
-  (see [Scheduling](#scheduling) below).
+  (see "Scheduling" below).
 - Follow the [Code of Conduct][coc] at all times,
   to ensure the safety of all our contributors.
 - If you aren’t sure, ask!
   Always err on the side of communicating more.
 
-[slack]: http://oddbird.slack.com/
+[slack]: https://oddbird.slack.com/
 [trello]: https://trello.com/
 
 ### Scheduling

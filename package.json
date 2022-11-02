@@ -43,7 +43,7 @@
     "webmentions": "node scripts/fetch-webmentions.cjs",
     "update-oss-docs": "./bin/update-oss-docs",
     "prod": "run-s update-oss-docs build",
-    "checklinks": "npx --yes hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" --skip \"codepen.io\" --skip \"github.com\" --skip \"caniuse.com\" --skip \"youtu.be\" --skip \"stackoverflow.com/users/\" _site/index.html"
+    "checklinks": "npx --yes hyperlink --canonicalroot https://www.oddbird.net/ --root _site/ -r -p --skip \".css.map\" --skip \".js.map\" --skip \"feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" --skip \"codepen.io\" --skip \"github.com\" --skip \"caniuse.com\" --skip \"youtu.be\" --skip \"stackoverflow.com/users/\" _site/index.html"
   },
   "dependencies": {
     "@algolia/algoliasearch-netlify-frontend": "^1.0.15",
