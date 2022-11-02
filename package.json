@@ -37,7 +37,9 @@
     "test": "jest",
     "build:site": "run-s site:clean sassdoc",
     "build:assets": "npm-run-all assets:clean -p js sass",
+    "build:images": "IMAGE_CACHE_REBUILD=true yarn build",
     "build": "run-s build:assets build:site eleventy",
+    "build:prod": "NETLIFY=true CONTEXT=production yarn build",
     "webmentions": "node scripts/fetch-webmentions.cjs",
     "prod": "yarn build",
     "checklinks": "npx --yes hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" --skip \"codepen.io\" --skip \"github.com\" --skip \"caniuse.com\" --skip \"youtu.be\" --skip \"stackoverflow.com/users/\" _site/index.html"

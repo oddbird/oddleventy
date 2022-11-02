@@ -9,7 +9,7 @@ summary: |
 
 ## Patterns & Usage
 
-{% for item in collections.sample -%}
+{% for item in collections.sample | sort(attribute='data.title') -%}
 {%- if item.url != page.url -%}
 {%- set name = (item.data.title or item.url) %}
 - [{{ name | mdInline | safe }}]({{ item.url }})
@@ -22,7 +22,7 @@ summary: |
 Filters are written in JS,
 and can be used to manage and manipulate data.
 
-{% for other in filters %}
+{% for other in filters | sort(attribute='name') %}
 - [{{ other.title | mdInline | safe }}](/sample/filters/{{ other.slug | slug }})
 {%- endfor %}
 

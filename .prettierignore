@@ -14,3 +14,5 @@ coverage/
 htmlcov/
 jscache/
 node_modules/
+src/docs/
+src/filters/image_cache.json

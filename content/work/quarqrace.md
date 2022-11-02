@@ -9,7 +9,7 @@ image:
   alt: Athlete list tied to their location and elevation
 client: SRAM/Quarq
 date: 2015-09-01
-end: 2017-01-31
+end: 2017-01-30
 tags:
   - Sports Sector
   - Wellness Sector
