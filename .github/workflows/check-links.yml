@@ -1,0 +1,21 @@
+name: Check Links
+
+on:
+  workflow_dispatch: # Allow running on-demand
+
+jobs:
+  check:
+    name: Check Links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install
+      - name: Build site
+        run: NETLIFY=true CONTEXT=production yarn build
+      - name: Check for broken links
+        run: yarn checklinks

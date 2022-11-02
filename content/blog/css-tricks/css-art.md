@@ -50,7 +50,7 @@ In October, I took the time to watch
 ([Twitter](https://twitter.com/lynnandtonic),
 [CodePen](https://codepen.io/lynnandtonic)),
 one of my favorite CSS artists,
-[live-stream her single-div process](https://t.co/PdLH6v4brk).
+live-stream her single-div process.
 Somewhere in the back of my mind,
 I assumed single-div artwork
 relied on highly complicated `box-shadow`s --

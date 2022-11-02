@@ -14,8 +14,8 @@
   description: |
     strives to build a collective of Native technologists
     crafting free and open source technology for Native communities.
-- name: TransTech Social
-  url: https://www.transtechsocial.org/
+- name: TransTech
+  url: https://transtechsocial.org/
   type: donations
   years: 2021
   description: |
@@ -35,7 +35,7 @@
     as software engineers -- and connecting them with
     jobs -- in Boston, Philadelphia, and Pittsburgh.
 - name: Black Girls CODE
-  url: https://www.blackgirlscode.com/
+  url: https://wearebgc.org/
   type: donations
   years: 2013--2016, 2018--2020
   description: |
@@ -177,7 +177,7 @@
     As active users and contributors to the Django community,
     we're proud to support the continued development of the project.
 - name: Django Under the Hood
-  url: https://www.djangounderthehood.com/
+  url: https://djangounderthehood.com/
   type: sponsorships
   years: 2015
   description: |
@@ -196,7 +196,7 @@
     we love the thoughtfulness and dedication to diversity
     that the SassConf organizers bring to the community.
 - name: Thunder Valley Community Development Corporation
-  url: https://thundervalley.org/
+  url: https://www.thundervalley.org/
   type: donations
   years: 2014, 2015
   description: |

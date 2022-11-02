@@ -23,7 +23,7 @@ events:
     url: https://calendar.agnesscott.edu/event/user_unfriendlynotes_toward_a_queer_web
     adr: Atlanta, GA
     date: 2019-09-17
-    slides: https://talks.oddbird.net/user-unfriendly/agnesscott19
+    slides: https://talks.oddbird.net/user-unfriendly/agnesscott19/
   - venue: Design 4 Drupal [keynote]
     url: https://design4drupal.org/
     adr: Boston, MA

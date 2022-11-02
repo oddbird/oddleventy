@@ -499,4 +499,4 @@ should find my local [Black Girls Code] (or similar) to volunteer.
 
 [Alisha Ramos]: https://twitter.com/alishalisha
 [watch the video]: https://www.youtube.com/watch?v=PtKOzKNJF-s
-[Black Girls Code]: https://www.blackgirlscode.com/
+[Black Girls Code]: https://wearebgc.org/
