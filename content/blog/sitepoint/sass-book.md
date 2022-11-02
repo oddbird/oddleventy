@@ -17,7 +17,7 @@ summary: |
   print editions sold by [O'Reilly]. Here's an excerpt from Chapter 11,
   [Sass Architecture].
 
-  [Jump Start Sass]: https://www.sitepoint.com/premium/books/jump-start-sass
+  [Jump Start Sass]: https://www.sitepoint.com/premium/books/jump-start-sass/
   [Kitty Giraudel]: https://kittygiraudel.com/
   [SitePoint]: https://www.sitepoint.com/
   [O'Reilly]: https://www.oreilly.com/library/view/jump-start-sass/9781457199851/
