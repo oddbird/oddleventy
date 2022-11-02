@@ -36,9 +36,13 @@ const imgOptions = {
   },
 };
 const IMG_SRC = './src/images/';
+const IMG_OUTPUT = path.join(__dirname, '../../_site/assets/images/');
 const CACHE_FILE = path.join(__dirname, 'image_cache.json');
 const useCache = !(process.env.NETLIFY || process.env.NODE_ENV === 'test');
-const rebuildCache = Boolean(process.env.IMAGE_CACHE_REBUILD);
+// Rebuild the cache (and re-process images) if the image dir is deleted
+const rebuildCache = Boolean(
+  process.env.IMAGE_CACHE_REBUILD || !fs.existsSync(IMG_OUTPUT),
+);
 let cacheChanged = false;
 
 let cache = { html: {}, src: {} };
