@@ -17,5 +17,7 @@ jobs:
         run: yarn install
       - name: Build site
         run: yarn build:prod
-      - name: Check for broken links
-        run: yarn checklinks
+      - name: Check for broken internal links
+        run: yarn checklinks:internal
+      - name: Check for broken external links
+        run: yarn checklinks:external
