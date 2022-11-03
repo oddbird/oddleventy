@@ -33,12 +33,9 @@ badges:
   - name: npm
     src: https://badge.fury.io/js/sassdoc-theme-herman.svg
     url: https://www.npmjs.com/package/sassdoc-theme-herman
-  - name: CircleCI
-    src: https://dl.circleci.com/status-badge/img/gh/oddbird/sassdoc-theme-herman/tree/main.svg?style=svg
-    url: https://dl.circleci.com/status-badge/redirect/gh/oddbird/sassdoc-theme-herman/tree/main
-  - name: AppVeyor
-    src: https://ci.appveyor.com/api/projects/status/w02fa9k998fywntl/branch/main?svg=true
-    url: https://ci.appveyor.com/project/jgerigmeyer/sassdoc-theme-herman/branch/main
+  - name: Build Status
+    src: https://github.com/oddbird/sassdoc-theme-herman/actions/workflows/test.yml/badge.svg
+    url: https://github.com/oddbird/sassdoc-theme-herman/actions/workflows/test.yml
 press:
   - text: |
       Herman is my documentation dream come true,
