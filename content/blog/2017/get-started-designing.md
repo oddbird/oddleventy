@@ -120,5 +120,5 @@ excellent tool for working out how users will flow through the content.
 What design tools and tutorials have you found most useful? I’d love to
 hear your recommendations. Join the conversation on [Twitter].
 
-[1]: https://helpx.adobe.com/xd/how-to/web-mobile-app-ui-ux-design-basics.html
+[1]: https://www.adobe.com/products/xd.html
 [Twitter]: https://twitter.com/oddbird

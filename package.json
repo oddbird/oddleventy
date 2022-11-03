@@ -42,7 +42,9 @@
     "build:prod": "NETLIFY=true CONTEXT=production yarn build",
     "webmentions": "node scripts/fetch-webmentions.cjs",
     "prod": "yarn build",
-    "checklinks": "npx --yes hyperlink --canonicalroot https://www.oddbird.net/ -r -p --skip \"_site/feed.atom\" --skip \"docs.djangoproject.com\" --skip \"/docs/\" --skip \"codepen.io\" --skip \"github.com\" --skip \"caniuse.com\" --skip \"youtu.be\" --skip \"stackoverflow.com/users/\" _site/index.html"
+    "checklinks:internal": "npx --yes --package=hyperlink --package=tap-spot -- 'hyperlink --canonicalroot https://www.oddbird.net/ --root _site/ -r -p -i --skip \".css.map\" --skip \".js.map\" --skip \"feed.atom\" --skip \"/docs/\" _site/index.html | tap-spot'",
+    "checklinks:external": "npx --yes --package=broken-link-checker -- 'blc -ro --exclude=localhost:8080 --exclude=codepen.io --exclude=linkedin.com --exclude=projects.invisionapp.com --exclude=docs.github.com --exclude=www.sass.hk --exclude=www.drupal.org --exclude=www.canva.com --exclude=www.fastcompany.com --exclude=duabuset-tandem.com --exclude=puta-elementa.com https://www.oddbird.net'",
+    "checklinks": "run-s checklinks:internal checklinks:external"
   },
   "dependencies": {
     "@algolia/algoliasearch-netlify-frontend": "^1.0.15",

@@ -39,7 +39,7 @@ writing, music, and visual art.
 [tricks]: /tags/css-tricks/
 [smashing]: /tags/smashing-magazine/
 [mozdev]: /work/mozdev/
-[jss]: https://www.sitepoint.com/premium/books/jump-start-sass
+[jss]: https://www.sitepoint.com/premium/books/jump-start-sass/
 [speaking]: /services/speaking/
 
 {% import "embed.macros.njk" as embed %}

@@ -7,8 +7,6 @@ image:
 client: &client Trop Magazine
 date: 2016-05-01
 end: 2017-01-31
-links:
-  site: https://tropmag.com/
 press:
   - text: |
       Having worked with a handful of web developers,

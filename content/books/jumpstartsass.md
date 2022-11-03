@@ -7,7 +7,7 @@ image:
   src: writing/jssass.jpg
   alt: Jump Start Sass, by Miriam Suzanne and Kitty Giraudel
 venue: SitePoint
-url: https://www.sitepoint.com/premium/books/jump-start-sass
+url: https://www.sitepoint.com/premium/books/jump-start-sass/
 date: 2016-03-22
 index: Jump Start Sass
 tags:
@@ -44,7 +44,7 @@ summary: |
 {{ quotes.grid(press) }}
 
 [buy the book](https://www.oreilly.com/library/view/jump-start-sass/9781457199851/)
-or [download the e-book »](https://www.sitepoint.com/premium/books/jump-start-sass)
+or [download the e-book »](https://www.sitepoint.com/premium/books/jump-start-sass/)
 
 ------
 
