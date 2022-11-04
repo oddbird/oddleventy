@@ -12,7 +12,7 @@ tags:
   - Business Development
 events:
   - venue: Boost Biz Ed
-    url: https://boostbized.com/events/how-to-plan-a-web-project/
+    url: https://boostbized.com/
     adr: Westminster, CO
     date: 2018-07-11
   - venue: EdTech Colorado

@@ -1,7 +1,10 @@
+/* eslint-disable no-process-env, no-sync */
+
 'use strict';
 
 const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const fs = require('fs-extra');
 const yaml = require('js-yaml');
 const _ = require('lodash');
 
@@ -91,7 +94,7 @@ module.exports = (eleventyConfig) => {
       }),
   );
   eleventyConfig.addCollection('sample', (collection) =>
-    collection.getAll().filter((item) => item.data.sample),
+    collection.getAll().filter((item) => item.data.sample_content),
   );
 
   // filters
@@ -174,6 +177,19 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setLibrary('md', type.mdown);
   eleventyConfig.addDataExtension('yaml', yaml.load);
   eleventyConfig.setQuietMode(true);
+
+  if (!process.env.NETLIFY) {
+    eleventyConfig.on('eleventy.before', () => {
+      delete process.env.IMAGE_CACHE_CHANGED;
+    });
+
+    eleventyConfig.on('eleventy.after', () => {
+      if (process.env.IMAGE_CACHE_CHANGED) {
+        // If the image cache has been updated, emit the new JSON file
+        fs.outputJsonSync(images.CACHE_FILE, images.imageCache, { spaces: 2 });
+      }
+    });
+  }
 
   // settings
   return {

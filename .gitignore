@@ -96,3 +96,6 @@ env/
 # Python
 /venv
 .python-version
+
+# Cache file for 11ty processed images
+/src/filters/image_cache.json

@@ -2,6 +2,9 @@ name: Check Links
 
 on:
   workflow_dispatch: # Allow running on-demand
+  schedule:
+    # 1st of every month at 8:00 UTC (4:00 Eastern)
+    - cron: '0 8 1 * *'
 
 jobs:
   check:
@@ -16,6 +19,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build site
-        run: NETLIFY=true CONTEXT=production yarn build
-      - name: Check for broken links
-        run: yarn checklinks
+        run: yarn build:prod
+      - name: Check for broken internal links
+        run: yarn checklinks:internal
+      - name: Check for broken external links
+        run: yarn checklinks:external
