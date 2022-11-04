@@ -2,7 +2,6 @@ import {
   addCallToAction,
   byYear,
   eventSort,
-  filterPage,
   findData,
   findPage,
   getCurrent,
@@ -152,19 +151,8 @@ describe('page filters', () => {
     });
 
     test('returns false for blog detail URL', () => {
-      const exampleURL = '/talks/queries-units/';
+      const exampleURL = '/talks/work-units/';
       expect(addCallToAction(exampleURL)).toBe(false);
-    });
-  });
-
-  describe('filterPage', () => {
-    test('returns filtered list of pages', () => {
-      const exampleURL = '/test1/';
-      const results = filterPage(collection3, exampleURL);
-      expect(results).toHaveLength(collection3.length - 1);
-      results.forEach((result) => {
-        expect(result.url).not.toBe(exampleURL);
-      });
     });
   });
 });

@@ -34,22 +34,35 @@
       'Events',
       collections.all | getCollectionItem(page) | pageEvents
     ) }}
-
     {% if is_entry %}
       <section data-list="tag" data-typeset>
-      {{ post.recent_posts(collections['Talk'], collections, banner_title="Talks", page_url=page.url)}}
-    </section>
+        {{ post.recent_posts(
+          collections.Talk,
+          collections,
+          banner_title='Talks',
+          page_url=page.url
+        )}}
+      </section>
     {% endif %}
   </section>
 {% elif is_entry %}
   {% if 'Article' in tags %}
     <section data-list="tag" data-typeset>
-    {{ post.recent_posts(collections['Article'], collections, banner_title="Articles", page_url=page.url)}}
+      {{ post.recent_posts(
+        collections.Article,
+        collections,
+        banner_title='Articles',
+        page_url=page.url
+      )}}
     </section>
   {% elif 'Podcast' in tags %}
     <section data-list="tag" data-typeset>
-      {{ post.recent_posts(collections['Podcast'], collections, banner_title="Podcasts", page_url=page.url)}}
+      {{ post.recent_posts(
+        collections.Podcast,
+        collections,
+        banner_title='Podcasts',
+        page_url=page.url
+      )}}
     </section>
   {% endif %}
-
 {% endif %}

@@ -8,6 +8,7 @@ label: Post Macros
 category: file
 #}
 
+
 {# @docs
 label: by_year
 category: lists
@@ -71,33 +72,33 @@ params:
     default: 3
   banner_title:
     type: string
+    default: 'Resources'
   page_url:
     type: string
+    default: ''
 #}
 {% macro recent_posts(
   posts,
-  collections,
-  limit,
-  banner_title,
-  page_url
+  collections=none,
+  limit=3,
+  banner_title='Resources',
+  page_url=''
 ) %}
   {%- if posts | length > 0 -%}
     {% for group in posts | byYear %}
       {% if loop.first %}
-        {% set post_limit = limit if limit else 3  %}
-        {% set recents = group.posts | reverse | filterPage(page_url) | onlyShow(post_limit) %}
-        {% set year_title = [group.year, banner_title] | join(" ")%}
-            {{ list(
-              recents,
-              collections=collections,
-              title=year_title,
-              override_feature=true) }}
-        {% endif %}
+        {% set recents = group.posts | reverse | removePage(page_url) | onlyShow(limit) %}
+        {% set year_title = [group.year, banner_title] | join(' ') %}
+        {{ list(
+          recents,
+          collections=collections,
+          title=year_title,
+          override_feature=true
+        ) }}
+      {% endif %}
     {%- endfor -%}
   {%- endif -%}
 {% endmacro %}
-
-
 
 
 {# @docs
@@ -149,6 +150,7 @@ params:
 {% endif %}
 {% endmacro %}
 
+
 {# @docs
 label: item
 category: posts
@@ -176,7 +178,7 @@ params:
   {%- set card = post.data.card or none -%}
   {%- set card = 'feature' if (card == 'feature') else card -%}
   {%- set card = card or 'feature' if type.feature else card -%}
-  {% set card = none if override_feature else card %}
+  {%- set card = none if override_feature else card -%}
 
   {# Adjust card settings based on the number of posts in a list #}
   {% if loop %}
@@ -194,6 +196,7 @@ params:
     {%- endif -%}
   </li>
 {% endmacro %}
+
 
 {# @docs
 label: detail
@@ -261,6 +264,7 @@ params:
   </article>
 {% endmacro %}
 
+
 {# @docs
 label: grid
 category: posts
@@ -294,6 +298,7 @@ params:
     {% endfor %}
   {% endcall %}
 {% endmacro %}
+
 
 {# @docs
 label: eventpreview
@@ -344,6 +349,7 @@ params:
   {%- endif -%}
 {% endmacro %}
 
+
 {# @docs
 label: hero
 category: metadata
@@ -379,6 +385,7 @@ params:
     </div>
   {%- endif -%}
 {% endmacro %}
+
 
 {# @docs
 label: byline
@@ -438,6 +445,7 @@ params:
   </p>
 {% endmacro %}
 
+
 {# @docs
 label: type_link
 category: metadata
@@ -468,6 +476,7 @@ params:
     class='type-link'
   ) }}
 {% endmacro %}
+
 
 {# @docs
 label: title
@@ -542,6 +551,7 @@ params:
   {% endif %}
 {% endmacro %}
 
+
 {# @docs
 label: by
 category: metadata
@@ -563,6 +573,7 @@ params:
     {{ birds.authors(author, collections, link, class='p-author') }}
   {% endif %}
 {% endmacro %}
+
 
 {# @docs
 label: pubdate
@@ -591,6 +602,7 @@ params:
   ) }}
 {% endmacro %}
 
+
 {# @docs
 label: client
 category: metadata
@@ -605,6 +617,7 @@ params:
     <b>{{ name | mdInline | safe }}</b>
   {% endif -%}
 {%- endmacro %}
+
 
 {# @docs
 label: where
@@ -624,6 +637,7 @@ params:
     </span>
   {% endif %}
 {% endmacro %}
+
 
 {# @docs
 label: linked
@@ -649,6 +663,7 @@ params:
   ) }}
 {% endif -%}
 {%- endmacro %}
+
 
 {# @docs
 label: taglist
@@ -688,6 +703,7 @@ params:
   {%- endif -%}
 {%- endmacro %}
 
+
 {# @docs
 label: linklist
 category: metadata
@@ -716,6 +732,7 @@ params:
     </ul>
   {% endif %}
 {% endmacro %}
+
 
 {# @docs
 label: page_nav
@@ -766,6 +783,7 @@ params:
 </nav>
 {% endif %}
 {% endmacro %}
+
 
 {# @docs
 label: page_current

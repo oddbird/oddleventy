@@ -324,9 +324,6 @@ const addCallToAction = (pageURL) => {
   return ctaPages.some((page) => pageURL.toString().includes(page));
 };
 
-const filterPage = (listOfPages, pageURL) =>
-  listOfPages.filter((page) => page.url !== pageURL);
-
 module.exports = {
   isPublic,
   isCurrent,
@@ -343,5 +340,4 @@ module.exports = {
   byYear,
   removePage,
   addCallToAction,
-  filterPage,
 };

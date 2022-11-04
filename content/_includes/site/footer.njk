@@ -1,23 +1,26 @@
 {% import 'contact.macros.njk' as contact %}
 {% import 'utility.macros.njk' as utility %}
 
-{% set add_cta = page.url | addCallToAction %}
-{% if add_cta %}
-    {% include './cta.njk' %}
-{% endif %}
+{%- set add_cta = page.url | addCallToAction -%}
+{%- if add_cta %}
+  {% include 'site/cta.njk' %}
+{% endif -%}
 
-<div
-  data-layout="footer">
+<div data-layout="footer">
   {% if page.url != '/contact/' %}
     <aside aria-label="contact">
-      {% if not add_cta %}
+      {%- if not add_cta %}
         <div class="contact-form-intro">
           <h3>Let's chat about your web project</h3>
           <p>
-            Fill out the form, <a href="https://calendly.com/oddbird/discovery"> schedule a call</a>, send us an <a href="mailto:birds@oddbird.net"> email</a>, or find us on <a href="https://twitter.com/oddbird"> Twitter</a> or <a href="https://github.com/oddbird">GitHub</a>.
+            Fill out the form,
+            <a href="https://calendly.com/oddbird/discovery">schedule a call</a>,
+            send us an <a href="mailto:birds@oddbird.net">email</a>,
+            or find us on <a href="https://twitter.com/oddbird">Twitter</a>
+            or <a href="https://github.com/oddbird">GitHub</a>.
           </p>
         </div>
-      {% endif %}
+      {% endif -%}
       {{ contact.form(name='contact-footer') }}
     </aside>
   {% endif %}
