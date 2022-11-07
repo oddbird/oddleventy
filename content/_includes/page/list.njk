@@ -34,7 +34,7 @@
       'Events',
       collections.all | getCollectionItem(page) | pageEvents
     ) }}
-    {% if is_entry %}
+    {% if is_entry and 'Talk' in tags %}
       <section data-list="tag" data-typeset>
         {{ post.recent_posts(
           collections.Talk,

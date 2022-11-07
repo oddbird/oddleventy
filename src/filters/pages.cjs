@@ -319,10 +319,8 @@ const byYear = (collection) => {
     }));
 };
 
-const addCallToAction = (pageURL) => {
-  const ctaPages = ['work', 'services'];
-  return ctaPages.some((page) => pageURL.toString().includes(page));
-};
+const addCallToAction = (pageURL) =>
+  pageURL.toString().match('^(/work/|/services/)') !== null;
 
 module.exports = {
   isPublic,

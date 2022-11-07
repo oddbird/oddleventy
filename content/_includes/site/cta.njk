@@ -1,30 +1,18 @@
 {% import 'embed.macros.njk' as embed %}
+{% import 'contact.macros.njk' as contact %}
 
-{% set cta = collections.all | findPage('data.cta_slug', cta or 'default') %}
-
-{% if cta %}
   <aside data-layout="cta" class="has-angles" aria-labelledby="cta-title">
-    {% set image = cta.data.image %}
-    {{ embed.img(
-      src=image.src,
-      alt=image.alt,
-      width=image.width,
-      height=image.height
-    ) }}
-
     {% set cta_content %}
-      <h2 id="cta-title">{{ cta.data.title | mdInline | safe }}</h2>
-      {{ cta.templateContent | safe }}
+        <h2 id="cta-title">Want to chat about developing your web app or design system?</h2>
+        Contact us for custom web application design & development with our team of Python, UX, and front-end experts,
+        or for an audit to improve your design system.
+        <strong>Fill out the form below
+        or <a href="https://calendly.com/oddbird/discovery">pick a time</a> for a call.</strong>
+
+        {{ contact.social(site.social, 'OddBird', false, rel='me') | safe }}
     {% endset %}
 
-    {% if cta.data.face %}
-      {% set face = 'faces/' + (cta.data.embed.face or 'miriam') %}
-      {{ embed.media_block(
-        media=embed.svg(face),
-        content=cta_content
-      ) }}
-    {% else %}
-      {{ cta_content | safe }}
-    {% endif %}
+    {{ embed.media_block(
+      media=embed.svg('faces/miriam'),
+      content=cta_content) }}
   </aside>
-{% endif %}
