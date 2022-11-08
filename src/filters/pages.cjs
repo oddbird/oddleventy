@@ -320,7 +320,8 @@ const byYear = (collection) => {
 };
 
 const addCallToAction = (pageURL) =>
-  _.isString(pageURL) && pageURL.match(/^(\/work\/|\/services\/)/) !== null;
+  _.isString(pageURL) &&
+  (pageURL.startsWith('/work/') || pageURL.startsWith('/services/'));
 
 module.exports = {
   isPublic,
