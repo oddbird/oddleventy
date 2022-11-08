@@ -34,12 +34,12 @@
       'Events',
       collections.all | getCollectionItem(page) | pageEvents
     ) }}
-    {% if is_entry and 'Talk' in tags %}
+    {% if is_entry and ('Talk' in tags or 'Workshop' in tags) %}
       <section data-list="tag" data-typeset>
         {{ post.recent_posts(
           collections.Talk,
           collections,
-          banner_title='Talks',
+          banner_title='Talks and Workshops',
           page_url=page.url
         )}}
       </section>
@@ -61,6 +61,33 @@
         collections.Podcast,
         collections,
         banner_title='Podcasts',
+        page_url=page.url
+      )}}
+    </section>
+  {% elif 'Video' in tags %}
+    <section data-list="tag" data-typeset>
+      {{ post.recent_posts(
+        collections.Video,
+        collections,
+        banner_title='Videos',
+        page_url=page.url
+      )}}
+    </section>
+  {% elif 'Link' in tags %}
+    <section data-list="tag" data-typeset>
+      {{ post.recent_posts(
+        collections.Link,
+        collections,
+        banner_title='Links',
+        page_url=page.url
+      )}}
+    </section>
+  {% elif 'Case Study' in tags %}
+    <section data-list="tag" data-typeset>
+      {{ post.recent_posts(
+        collections.work,
+        collections,
+        banner_title='Case Studies',
         page_url=page.url
       )}}
     </section>
