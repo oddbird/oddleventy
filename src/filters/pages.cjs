@@ -220,7 +220,7 @@ label: findPage
 category: Data
 note: Find the first page with any particular data
 example: |
-  {{ collections.all | findPage('data.cta_slug', 'workshop') }}
+  {{ collections.all | findPage('data.info_slug', 'alert') }}
 params:
   collection:
     type: array
@@ -320,7 +320,7 @@ const byYear = (collection) => {
 };
 
 const addCallToAction = (pageURL) =>
-  pageURL.toString().match('^(/work/|/services/)') !== null;
+  _.isString(pageURL) && pageURL.match(/^(\/work\/|\/services\/)/) !== null;
 
 module.exports = {
   isPublic,

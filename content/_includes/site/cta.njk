@@ -1,18 +1,25 @@
 {% import 'embed.macros.njk' as embed %}
 {% import 'contact.macros.njk' as contact %}
 
-  <aside data-layout="cta" class="has-angles" aria-labelledby="cta-title">
-    {% set cta_content %}
-        <h2 id="cta-title">Want to chat about developing your web app or design system?</h2>
-        Contact us for custom web application design & development with our team of Python, UX, and front-end experts,
-        or for an audit to improve your design system.
-        <strong>Fill out the form below
-        or <a href="https://calendly.com/oddbird/discovery">pick a time</a> for a call.</strong>
+{%- set title = 'Want to chat about developing your web app or design system?' -%}
+{%- set contents -%}
+  Contact us for custom web application design & development
+  with our team of Python, UX, and front-end experts,
+  or for an audit to improve your design system.
+  **Fill out the form below
+  or [pick a time](https://calendly.com/oddbird/discovery) for a call.**
+{%- endset -%}
 
-        {{ contact.social(site.social, 'OddBird', false, rel='me') | safe }}
-    {% endset %}
+<aside data-layout="cta" class="has-angles" aria-labelledby="cta-title">
+  {% set cta_content %}
+    <h2 id="cta-title">{{ title | mdInline | safe }}</h2>
+    {{ contents | md | safe }}
 
-    {{ embed.media_block(
-      media=embed.svg('faces/miriam'),
-      content=cta_content) }}
-  </aside>
+    {{ contact.social(site.social, 'OddBird', false, rel='me') | safe }}
+  {% endset %}
+
+  {{ embed.media_block(
+    media=embed.svg('faces/miriam'),
+    content=cta_content
+  ) }}
+</aside>
