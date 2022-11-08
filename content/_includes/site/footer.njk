@@ -2,6 +2,17 @@
 {% import 'utility.macros.njk' as utility %}
 
 {%- set add_cta = page.url | addCallToAction -%}
+{%- set footer_title -%}
+  ### Let's chat about your web project
+{%- endset -%}
+{%- set footer_content -%}
+    Fill out the form,
+    [schedule a call](https://calendly.com/oddbird/discovery),
+    send us an [email](mailto:birds@oddbird.net),
+    or find us on [Twitter](https://twitter.com/oddbird) or [GitHub](https://github.com/oddbird)
+{%- endset -%}
+
+
 {%- if add_cta %}
   {% include 'site/cta.njk' %}
 {% endif -%}
@@ -11,14 +22,8 @@
     <aside aria-label="contact">
       {%- if not add_cta %}
         <div class="contact-form-intro">
-          <h3>Let's chat about your web project</h3>
-          <p>
-            Fill out the form,
-            <a href="https://calendly.com/oddbird/discovery">schedule a call</a>,
-            send us an <a href="mailto:birds@oddbird.net">email</a>,
-            or find us on <a href="https://twitter.com/oddbird">Twitter</a>
-            or <a href="https://github.com/oddbird">GitHub</a>.
-          </p>
+          {{ footer_title | md | safe }}
+          {{ footer_content | md | safe }}
         </div>
       {% endif -%}
       {{ contact.form(name='contact-footer') }}
