@@ -3,12 +3,12 @@
 {% import 'events.macros.njk' as confs %}
 
 {% if index %}
-  {% set list = collections[index] %}
-  {% set posts_by_year = post.by_year(
-      list | removePage(page.url) if list else none,
+  {% set list = collections[index] | removePage(page.url) if collections[index] else [] %}
+  {% if list | length > 0 %}
+    {% set posts_by_year = post.by_year(
+      list,
       collections
     ) %}
-  {% if posts_by_year and list %}
     <section data-list="tag" data-typeset>
       {{ posts_by_year }}
     </section>
@@ -39,5 +39,5 @@
     ) }}
   </section>
 {% elif is_entry %}
-  {% include "page/recents.njk" %}
+  {% include 'page/recents.njk' %}
 {% endif %}
