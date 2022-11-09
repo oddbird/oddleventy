@@ -1,0 +1,25 @@
+{% set recents_type_tags = ['Article', 'Podcast', 'Video', 'Link', 'Case Study'] %}
+
+{% set tag_ribbon_mapping = {
+  'Article': 'Articles',
+  'Podcast': 'Podcasts',
+  'Video': 'Videos',
+  'Link': 'Links',
+  'Case Study': 'Case Studies'}%}
+
+
+{% for recent_tag in recents_type_tags %}
+  {% if recent_tag in tags %}
+    {%- set recent_posts = post.recent_posts(
+      collections[recent_tag],
+      collections, banner_title=tag_ribbon_mapping[recent_tag],
+      page_url=page.url) -%}
+
+    {% if recent_posts %}
+      <section data-list="tag" data-typeset>
+        {{ recent_posts }}
+      </section>
+    {% endif %}
+
+  {% endif %}
+{% endfor %}
