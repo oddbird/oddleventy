@@ -85,18 +85,14 @@ params:
   page_url=''
 ) %}
   {%- if posts | length > 0 -%}
-    {% for group in posts | byYear %}
-      {% if loop.first %}
-        {% set recents = group.posts | reverse | removePage(page_url) | onlyShow(limit) %}
-        {% set year_title = [group.year, banner_title] | join(' ') %}
-        {{ list(
-          recents,
-          collections=collections,
-          title=year_title,
-          override_feature=true
-        ) }}
-      {% endif %}
-    {%- endfor -%}
+    {% set recents = posts | pageYears | reverse | removePage(page_url) | onlyShow(limit) %}
+    {% set year_title = ['Recent', banner_title] | join(' ') %}
+    {{ list(
+      recents,
+      collections=collections,
+      title=year_title,
+      override_feature=true
+    ) }}
   {%- endif -%}
 {% endmacro %}
 

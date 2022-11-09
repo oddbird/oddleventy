@@ -34,16 +34,6 @@
       'Events',
       collections.all | getCollectionItem(page) | pageEvents
     ) }}
-    {% if is_entry and ('Talk' in tags or 'Workshop' in tags) %}
-      <section data-list="tag" data-typeset>
-        {{ post.recent_posts(
-          collections.Talk,
-          collections,
-          banner_title='Talks and Workshops',
-          page_url=page.url
-        )}}
-      </section>
-    {% endif %}
   </section>
 {% elif is_entry %}
   {% if 'Article' in tags %}
@@ -85,7 +75,7 @@
   {% elif 'Case Study' in tags %}
     <section data-list="tag" data-typeset>
       {{ post.recent_posts(
-        collections.work,
+        collections['Case Study'],
         collections,
         banner_title='Case Studies',
         page_url=page.url
