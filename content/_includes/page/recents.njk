@@ -13,12 +13,14 @@
   'Case Study': 'Case Studies'
 } -%}
 
+{%- set post_type = tags | pageType ('tag') -%}
+
 {% for recent_tag in recents_type_tags %}
-  {%- if recent_tag in tags -%}
-    {%- if collections[recent_tag] | length > 0 -%}
+  {%- if recent_tag === post_type -%}
+    {%- if collections[post_type] | length > 0 -%}
       <section data-list="tag" data-typeset>
         {{ post.recent_posts(
-          collections[recent_tag],
+          collections[post_type],
           collections,
           banner_title=tag_ribbon_mapping[recent_tag],
           page_url=page.url
