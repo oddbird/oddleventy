@@ -12,7 +12,7 @@ category: File
 /* @docs
 label: isPublic
 category: Status
-note: Check that a page is
+note: Check that a page is public
 params:
   page:
     type: 11ty page object

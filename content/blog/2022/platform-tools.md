@@ -116,7 +116,7 @@ the actual color syntax underneath.
 I don't ever interact directly
 with the HEX code {{ colors.swatch('#E60073') }} --
 I can just reference
-{{ colors.swatch('var(--brand-pink)') }}.
+{{ colors.swatch('var(&#45;&#45;brand-pink)') }}.
 So we focus our attention on the naming conventions
 rather than the underlying color syntax,
 which is hidden from view.
@@ -249,7 +249,7 @@ a request for HSL output.
 
 But this is a distinction
 with very little at stake.
-So long as authors can use their favorite format,
+So long as authors can use their favorite format --
 and the output really does
 provide the same _meaning_ as the input --
 it's not a barrier for authors
@@ -291,8 +291,8 @@ Last month,
 I spoke about `@layer` for
 [An Event Apart Denver](https://aneventapart.com/event/denver-2022).
 During the Q&A session after my talk,
-someone asked
-_how can I use this with CSS-in-JS tools_?
+someone asked,
+"How can I use this with CSS-in-JS tools?"
 And the truth is…
 _I don't know_.
 It depends entirely on the tool.
@@ -301,8 +301,8 @@ Single-file components in tools like Svelte & Vue
 are _technically_ CSS-in-JS,
 but allow writing arbitrary/plain CSS.
 I would expect (hope?) that
-(similar to using Sass)
-`@layer` should _just work_ in that context.
+`@layer` should _just work_ in that context
+(similar to using Sass).
 
 But many CSS-in-JS tools
 and utility frameworks
@@ -338,9 +338,9 @@ This is similar to the issue with
 [removing units from zero](/2022/08/04/zero-units/),
 or Harry Roberts' recent warnings around
 [Critical CSS](https://csswizardry.com/2022/09/critical-css-not-so-fast/).
-In a language like CSS,
+In a language like CSS --
 where order is meaningful,
-and duplicate properties are a useful feature,
+and duplicate properties are a useful feature --
 it's risky for automated build tools
 to try and be _clever_ about minification.
 I don't know that a CSS minifier
@@ -361,7 +361,7 @@ that doesn't surprise me much.
 Most variable fonts are either experimental display fonts
 without a lot of practical use,
 or they only provide a single weight axis.
-While I love having all my weights in a single file,
+While I love having all my weights in a single file
 and smoothly transitioning from one weight to another,
 _specialty weights_ are not a high priority for me.
 I'll start using more powerful font variables
@@ -483,7 +483,7 @@ not a tool.)
 It's not my job to judge
 what tools are useful for other web developers.
 But it is my job to
-help people think about the CSS choice they make.
+help people think about the CSS choices they make.
 So in that spirit, please consider:
 
 ⚠️🚨⚠️
