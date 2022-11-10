@@ -61,12 +61,12 @@ note: |
   Returns a given number of recent
   posts from a collection
 params:
-  posts:
-    type: array
-    note: containing 11ty page objects
+  type:
+    type: string
+    note: one of several resource "types" to display (types are defined in the `taxonomy.yaml` data file)
   collections:
     type: 11ty collections object
-    default: none
+    default: []
   limit:
     type: number
     default: 3
@@ -78,15 +78,16 @@ params:
     default: ''
 #}
 {% macro recent_posts(
-  posts,
-  collections=none,
+  type,
+  collections=[],
   limit=3,
   banner_title='Resources',
   page_url=''
 ) %}
+  {%- set posts = collections[type] -%}
   {%- if posts | length > 0 -%}
-    {% set recents = posts | pageYears | reverse | removePage(page_url) | onlyShow(limit) %}
-    {% set year_title = ['Recent', banner_title] | join(' ') %}
+    {%- set recents = posts | isType(type) | pageYears | reverse | removePage(page_url) | onlyShow(limit) -%}
+    {%- set year_title = ['Recent', banner_title] | join(' ') -%}
     {{ list(
       recents,
       collections=collections,

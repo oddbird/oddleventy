@@ -11,6 +11,7 @@ import {
   hasData,
   isCurrent,
   isPublic,
+  isType,
   pageYears,
   removePage,
   withData,
@@ -154,5 +155,12 @@ describe('page filters', () => {
       const exampleURL = '/talks/work-units/';
       expect(addCallToAction(exampleURL)).toBe(false);
     });
+  });
+
+  test('isType', () => {
+    const filtered = isType(collection4, 'Article');
+
+    expect(collection4).toHaveLength(3);
+    expect(filtered).toHaveLength(1);
   });
 });

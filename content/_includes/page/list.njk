@@ -5,12 +5,11 @@
 {% if index %}
   {% set list = collections[index] | removePage(page.url) if collections[index] else [] %}
   {% if list | length > 0 %}
-    {% set posts_by_year = post.by_year(
-      list,
-      collections
-    ) %}
     <section data-list="tag" data-typeset>
-      {{ posts_by_year }}
+      {{ post.by_year(
+        list,
+        collections
+      ) }}
     </section>
   {% endif %}
 {% elif bird and (bird != 'oddbird') %}

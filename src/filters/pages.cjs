@@ -2,6 +2,7 @@
 
 const _ = require('lodash');
 
+const { pageType } = require('#/taxonomy.cjs');
 const { now, getDate } = require('#/time.cjs');
 
 /* @docs
@@ -323,6 +324,24 @@ const addCallToAction = (pageURL) =>
   _.isString(pageURL) &&
   (pageURL.startsWith('/work/') || pageURL.startsWith('/services/'));
 
+/* @docs
+label: isType
+category: Filter
+note: |
+  Filters collection by a given tag,
+  expected to be one of several resource "types"
+  (types are defined in the `taxonomy.yaml` data file)
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+  type:
+    type: type
+    note: resource type to filter by
+*/
+const isType = (collection, type) =>
+  collection.filter((page) => pageType(page.data.tags, 'tag') === type);
+
 module.exports = {
   isPublic,
   isCurrent,
@@ -339,4 +358,5 @@ module.exports = {
   byYear,
   removePage,
   addCallToAction,
+  isType,
 };
