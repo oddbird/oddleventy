@@ -12,21 +12,15 @@
   'Link': 'Links',
   'Case Study': 'Case Studies'
 } -%}
+{%- set post_type = tags | pageType('tag') -%}
 
-{%- set post_type = tags | pageType ('tag') -%}
-
-{% for recent_tag in recents_type_tags %}
-  {%- if recent_tag === post_type -%}
-    {%- if collections[post_type] | length > 0 -%}
-      <section data-list="tag" data-typeset>
-        {{ post.recent_posts(
-          collections[post_type],
-          collections,
-          banner_title=tag_ribbon_mapping[recent_tag],
-          page_url=page.url
-        ) }}
-      </section>
-    {%- endif -%}
-
-  {%- endif -%}
-{% endfor %}
+{% if post_type and post_type in recents_type_tags and collections[post_type] | length > 0 %}
+  <section data-list="tag" data-typeset>
+    {{ post.recent_posts(
+      collections[post_type],
+      collections,
+      banner_title=tag_ribbon_mapping[post_type],
+      page_url=page.url
+    ) }}
+  </section>
+{% endif %}
