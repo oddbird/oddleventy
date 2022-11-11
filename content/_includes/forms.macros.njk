@@ -21,7 +21,7 @@ params:
     default: 'false'
   name:
     type: string | none
-    default: 'none'
+    default: none
     note: The `id` is used when no name is given
   attrs:
     type: object
@@ -66,7 +66,7 @@ params:
     type: array
   required:
     type: boolean
-    default: false
+    default: 'false'
   name:
     type: string | none
     default: none
@@ -117,7 +117,7 @@ params:
     note: All related radio inputs must have the same group name
   required:
     type: boolean
-    default: false
+    default: 'false'
   attrs:
     type: object
     default: '{}'
@@ -159,7 +159,7 @@ params:
     type: string | none
   name:
     type: string | none
-    default: 'none'
+    default: none
     note: |
       Used in the `data-fieldset` attribute,
       as a unique hook for the fieldset.
@@ -201,7 +201,7 @@ params:
     note: Must be unique on the page, and match input `id`
   required:
     type: boolean
-    default: false
+    default: 'false'
   attrs:
     type: object
     default: '{}'

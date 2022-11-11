@@ -11,6 +11,7 @@ image:
     from a mirror and skull, to abacus, clock, viewfinder, plants,
     snow globe, hot air balloon, and lightsaber.
 tags:
+  - Link
   - CSS
   - Art
 art:
