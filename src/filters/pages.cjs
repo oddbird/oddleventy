@@ -13,7 +13,7 @@ category: File
 /* @docs
 label: isPublic
 category: Status
-note: Check that a page is
+note: Check that a page is public
 params:
   page:
     type: 11ty page object
@@ -200,7 +200,7 @@ params:
     type: array
     note: often an array of 11ty pages, but can be an array of any objects
   url:
-    type: string
+    type: url
     note: The url of the desired page
   keys:
     type: string
@@ -320,6 +320,17 @@ const byYear = (collection) => {
     }));
 };
 
+/* @docs
+label: addCallToAction
+category: Status
+note: |
+  Check if a page is a Work or Services index or detail page
+  (under `/work/` or `/services/` URL).
+params:
+  pageURL:
+    type: url
+    note: URL of page to test
+*/
 const addCallToAction = (pageURL) =>
   _.isString(pageURL) &&
   (pageURL.startsWith('/work/') || pageURL.startsWith('/services/'));

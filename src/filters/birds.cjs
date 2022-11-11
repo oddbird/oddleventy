@@ -23,7 +23,7 @@ params:
     note: The name of the bird (as used in `author` settings)
   solo:
     type: boolean
-    default: false
+    default: 'false'
     note: Optionally remove `oddbird`-authored pages from the collection
 */
 const getPages = (collection, bird, solo = false) =>
@@ -64,7 +64,7 @@ params:
     note: containing 11ty page objects
   current:
     type: boolean
-    default: 'true'
+    default: true
     note: Flip result to show inactive birds
 */
 const active = (collection, current = true) =>

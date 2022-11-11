@@ -66,7 +66,7 @@ params:
     note: one of several resource "types" to display (types are defined in the `taxonomy.yaml` data file)
   collections:
     type: 11ty collections object
-    default: []
+    default: '[]'
   limit:
     type: number
     default: 3
@@ -74,7 +74,7 @@ params:
     type: string
     default: 'Resources'
   page_url:
-    type: string
+    type: url
     default: ''
 #}
 {% macro recent_posts(
@@ -117,7 +117,7 @@ params:
     default: none
   override_feature:
     type: boolean
-    default: false
+    default: 'false'
 #}
 {% macro list(
   posts,
@@ -163,7 +163,7 @@ params:
     default: none
   override_feature:
     type: boolean
-    default: false
+    default: 'false'
 #}
 {% macro item(
   post,
@@ -402,7 +402,7 @@ params:
     note: Optionally remove links for content in linked cards
   dateformat:
     type: false | string
-    default: false
+    default: 'false'
     note: Optionally show the date in a given format
 #}
 {% macro byline(
@@ -711,7 +711,7 @@ params:
     note: the key will be used as text, with the value for url
   slides:
     type: url
-    default: 'none'
+    default: none
 #}
 {% macro linklist(
   links,
@@ -744,7 +744,7 @@ params:
     default: none
   current:
     type: boolean
-    default: false
+    default: 'false'
     note: Show the current location in pagination?
   id:
     type: string

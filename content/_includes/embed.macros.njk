@@ -240,7 +240,7 @@ params:
     note: Name of an icon in `_includes/devices/`
   fill:
     type: color
-    default: 'none'
+    default: none
     note: Color to use in any extra space around the image
   content:
     type: html
@@ -315,7 +315,7 @@ params:
       with optional `title` and `url`.
   title:
     type: string
-    default: 'none'
+    default: none
     note: The overall title for the icon-blocks section.
 #}
 {% macro icon_block(
@@ -408,13 +408,13 @@ params:
     type: url
   width:
     type: number
-    default: 'none'
+    default: none
   height:
     type: number
-    default: 'none'
+    default: none
   span:
     type: number | 'full'
-    default: 'none'
+    default: none
     note: Span multiple columns of a gallery
 #}
 {% macro iframe(
@@ -469,17 +469,17 @@ note: Maintain aspect ratio for embedded media
 params:
   width:
     type: number
-    default: 'none'
+    default: none
   height:
     type: number
-    default: 'none'
+    default: none
   span:
     type: number | 'full'
-    default: 'none'
+    default: none
     note: Span multiple columns of a gallery
   content:
     type: html
-    default: 'none'
+    default: none
     note: The content to embed (can also be a `caller()` block)
 #}
 {% macro ratio(
