@@ -5,7 +5,7 @@ sub: Miriam will be in touch with you soon
 summary: |
   Want to keep browsing?
   Check out all our
-  [resources](/blog/),
+  [posts](/blog/),
   or previous
   [client work](/work/).
 ---
