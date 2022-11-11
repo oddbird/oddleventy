@@ -131,7 +131,7 @@ params:
   {%- set sort = 'sort' if (posts[0].sort) else 'date' -%}
 
   {% if pagination %}
-    <header class="resource-header">
+    <header class="post-header">
       {{ layout.title(title) }}
       {{ page_nav(pagination, current=false) }}
     </header>
@@ -139,7 +139,7 @@ params:
     {{ layout.title(title) }}
   {% endif %}
 
-  <ol data-grid="resources" reversed>
+  <ol data-grid="posts" reversed>
     {%- for post in posts | sort(reverse=true, attribute=sort) -%}
       {{ item(post, collections, loop, override_feature=override_feature) }}
     {%- endfor -%}
@@ -183,7 +183,7 @@ params:
     {%- set card = 'feature' if (card == 'large' and loop.length == 2) else card -%}
   {% endif %}
 
-  <li data-resource="{{ card }}">
+  <li data-post="{{ card }}">
     {%- if card == 'large' -%}
       {{ type_link(type, collections) }}
       {{ detail(post, card, type, collections) }}
@@ -467,7 +467,7 @@ params:
   {{ utility.link_if(
     content=embed.svg(
       path='icons/' + (type.icon or 'tags'),
-      alt=['see all', type.tag, 'resources'] | join(' ') if type else 'all tags'
+      alt=['see all', type.tag, 'posts'] | join(' ') if type else 'all tags'
     ),
     url=url,
     class='type-link'

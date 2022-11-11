@@ -2,7 +2,7 @@
 
 // pagination
 
-.resource-header {
+.post-header {
   --column: full;
   --title-margin: 0;
 
@@ -38,7 +38,7 @@
 
   color: var(--text-light);
 
-  [data-grid='resources'] + & {
+  [data-grid='posts'] + & {
     margin-top: var(--double-gutter);
   }
 }
@@ -49,7 +49,7 @@
 
 // list
 
-[data-grid='resources'] {
+[data-grid='posts'] {
   --align: stretch;
   --justify: stretch;
 
@@ -59,14 +59,14 @@
   padding: 0;
 }
 
-[data-resource] {
+[data-post] {
   display: grid;
   grid-template:
     [post-start type-start] auto [type-end] 1fr [post-end]
     / [post-start] 1fr [type-start] auto [type-end post-end];
 }
 
-[data-resource='feature'] {
+[data-post='feature'] {
   --type-flag: var(--bg);
   --type-flag-active: var(--callout);
   --shadow: transparent;
@@ -83,7 +83,7 @@
   }
 }
 
-[data-resource='large'] {
+[data-post='large'] {
   grid-column: 1 / -1;
   margin: var(--gutter) 0;
 
