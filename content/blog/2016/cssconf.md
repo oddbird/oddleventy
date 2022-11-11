@@ -288,7 +288,7 @@ provide terrible results on their own.
 
 [Keith J. Grant]: https://twitter.com/keithjgrant
 
-## CSS Variables: var(--subtitle)
+## CSS Variables: `var(--subtitle)`
 
 {{ embed.img('blog/2016/cssconf/lv.jpg', 'Lea Verou speaking') }}
 
