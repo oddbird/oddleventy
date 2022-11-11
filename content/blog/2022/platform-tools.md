@@ -196,7 +196,7 @@ between formats (until now).
 Once we used a graphic interface
 to pick the color we want,
 it maybe didn't matter
-what format we copied/pasted into
+what format we copy-pasted into
 a variable somewhere.
 
 But what's the designer path
