@@ -39,7 +39,7 @@ params:
   {%- if posts | length > 0 -%}
     {%- if posts | length > above -%}
       {%- for group in posts | byYear -%}
-        {% set title = [group.year, 'Resources'] | join(' ') if loop.first else group.year %}
+        {% set title = [group.year, 'Posts'] | join(' ') if loop.first else group.year %}
         {{ list(
           posts=group.posts,
           collections=collections,
@@ -63,7 +63,7 @@ note: |
 params:
   type:
     type: string
-    note: one of several resource "types" to display (types are defined in the `taxonomy.yaml` data file)
+    note: one of several post "types" to display (types are defined in the `taxonomy.yaml` data file)
   collections:
     type: 11ty collections object
     default: '[]'
@@ -72,7 +72,7 @@ params:
     default: 3
   banner_title:
     type: string
-    default: 'Resources'
+    default: 'Posts'
   page_url:
     type: url
     default: "''"
@@ -81,7 +81,7 @@ params:
   type,
   collections=[],
   limit=3,
-  banner_title='Resources',
+  banner_title='Posts',
   page_url=''
 ) %}
   {%- set posts = collections[type] -%}
@@ -111,7 +111,7 @@ params:
     default: none
   title:
     type: string
-    default: 'Resources'
+    default: 'Posts'
   pagination:
     type: 11ty pagination object
     default: none
@@ -122,7 +122,7 @@ params:
 {% macro list(
   posts,
   collections=none,
-  title='Resources',
+  title='Posts',
   pagination=none,
   override_feature=false
 ) %}
@@ -227,7 +227,7 @@ params:
     {% if type %}
       <div class="type-flag" data-flag="left">
         {{ type.tag }}
-        <span class="sr-only">resource type</span>
+        <span class="sr-only">post type</span>
       </div>
     {% endif %}
     <div class="post-content">
@@ -265,7 +265,7 @@ params:
 {# @docs
 label: grid
 category: posts
-note: A simple grid of pages, without full "card" resource styling
+note: A simple grid of pages, without full "card" post styling
 params:
   pages:
     type: 11ty collection

@@ -1,5 +1,5 @@
 ---
-title: Resources by Tag
+title: Posts by Tag
 sub: Read, watch, & listen
 action:
   text: Browse by date »
@@ -36,7 +36,7 @@ summary: |
       {% endif %}
       <span class="tag-count">
         {{- item.pageCount -}}
-        <span class="sr-only">resources</span>
+        <span class="sr-only">posts</span>
       </span>
     </h3>
 
@@ -55,7 +55,7 @@ summary: |
   </article>
 {% endmacro %}
 
-{{ layout.title('Resource Types') }}
+{{ layout.title('Post Types') }}
 {% call layout.grid('tags') %}
   {% for item in sections['true'] | sort(attribute='tag') %}
     {{ show(item, collections) }}
