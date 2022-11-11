@@ -1,7 +1,7 @@
 ---
 title: When Our Tools Hold Us Back
 sub: What happens if the 'pace layers' get out of sync?
-date: 2022-11-10
+date: 2022-11-11
 author: miriam
 image:
   src: blog/2022/pace-layers.jpg
