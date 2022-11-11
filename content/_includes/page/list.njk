@@ -3,13 +3,15 @@
 {% import 'events.macros.njk' as confs %}
 
 {% if index %}
-  <section data-list="tag" data-typeset>
-    {% set list = collections[index] %}
-    {{ post.by_year(
-      list | removePage(page.url) if list else none,
-      collections
-    ) }}
-  </section>
+  {% set list = collections[index] | removePage(page.url) if collections[index] else [] %}
+  {% if list | length > 0 %}
+    <section data-list="tag" data-typeset>
+      {{ post.by_year(
+        list,
+        collections
+      ) }}
+    </section>
+  {% endif %}
 {% elif bird and (bird != 'oddbird') %}
   {% set this_page = collections.all | getCollectionItem(page) %}
   {% set bird_pages = collections.all | byBird(bird) %}
@@ -35,4 +37,6 @@
       collections.all | getCollectionItem(page) | pageEvents
     ) }}
   </section>
+{% elif is_entry %}
+  {% include 'page/recents.njk' %}
 {% endif %}

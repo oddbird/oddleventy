@@ -3,6 +3,11 @@
 const sanitizeHTML = require('sanitize-html');
 const truncate = require('truncate-html');
 
+/* @docs
+label: Webmention Filters
+category: File
+*/
+
 // define which types of webmentions are included by default
 // possible values listed here:
 // https://github.com/aaronpk/webmention.io#find-links-of-a-specific-type-to-a-specific-page
@@ -50,6 +55,29 @@ const getTypes = (mentions, allow) =>
     .sort(orderByDate)
     .map(clean);
 
+/* @docs
+label: forUrl
+category: Filter
+note: |
+  Filter list of Webmentions by a given URL and webmention type (`wm-property`)
+example: |
+  {% set mentions = webmentions | forUrl(abs_url, ['mention-of']) %}
+params:
+  mentions:
+    type: object
+    note: |
+      Webmentions object, with list of `children` webmentions
+      (see `/content/_data/webmentions.json`)
+  url:
+    type: url
+    note: Absolute URL to filter webmentions by
+  allow:
+    type: array
+    default: "['mention-of', 'in-reply-to']"
+    note: |
+      Containing string webmention types to filter by
+      (see [https://github.com/aaronpk/webmention.io#find-links-of-a-specific-type-to-a-specific-page]())
+*/
 const forUrl = (mentions, url, allow) =>
   getTypes(
     mentions.children.filter(

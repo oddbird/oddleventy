@@ -8,6 +8,7 @@ label: Post Macros
 category: file
 #}
 
+
 {# @docs
 label: by_year
 category: lists
@@ -52,6 +53,51 @@ params:
   {%- endif -%}
 {% endmacro %}
 
+
+{# @docs
+label: recent_posts
+category: lists
+note: |
+  Returns a given number of recent
+  posts from a collection
+params:
+  type:
+    type: string
+    note: one of several resource "types" to display (types are defined in the `taxonomy.yaml` data file)
+  collections:
+    type: 11ty collections object
+    default: '[]'
+  limit:
+    type: number
+    default: 3
+  banner_title:
+    type: string
+    default: 'Resources'
+  page_url:
+    type: url
+    default: "''"
+#}
+{% macro recent_posts(
+  type,
+  collections=[],
+  limit=3,
+  banner_title='Resources',
+  page_url=''
+) %}
+  {%- set posts = collections[type] -%}
+  {%- if posts | length > 0 -%}
+    {%- set recents = posts | isType(type) | pageYears | reverse | removePage(page_url) | onlyShow(limit) -%}
+    {%- set year_title = ['Recent', banner_title] | join(' ') -%}
+    {{ list(
+      recents,
+      collections=collections,
+      title=year_title,
+      override_feature=true
+    ) }}
+  {%- endif -%}
+{% endmacro %}
+
+
 {# @docs
 label: list
 category: lists
@@ -69,12 +115,16 @@ params:
   pagination:
     type: 11ty pagination object
     default: none
+  override_feature:
+    type: boolean
+    default: 'false'
 #}
 {% macro list(
   posts,
   collections=none,
   title='Resources',
-  pagination=none
+  pagination=none,
+  override_feature=false
 ) %}
 {%- if posts -%}
   {%- set posts = posts if (posts[0].sort) else posts | pageYears -%}
@@ -91,11 +141,12 @@ params:
 
   <ol data-grid="resources" reversed>
     {%- for post in posts | sort(reverse=true, attribute=sort) -%}
-      {{ item(post, collections, loop) }}
+      {{ item(post, collections, loop, override_feature=override_feature) }}
     {%- endfor -%}
   </ol>
 {% endif %}
 {% endmacro %}
+
 
 {# @docs
 label: item
@@ -110,16 +161,21 @@ params:
   feature:
     type: boolean | 'large'
     default: none
+  override_feature:
+    type: boolean
+    default: 'false'
 #}
 {% macro item(
   post,
   collections=none,
-  loop=none
+  loop=none,
+  override_feature=false
 ) %}
   {%- set type = post.data.tags | pageType -%}
   {%- set card = post.data.card or none -%}
   {%- set card = 'feature' if (card == 'feature') else card -%}
   {%- set card = card or 'feature' if type.feature else card -%}
+  {%- set card = none if override_feature else card -%}
 
   {# Adjust card settings based on the number of posts in a list #}
   {% if loop %}
@@ -137,6 +193,7 @@ params:
     {%- endif -%}
   </li>
 {% endmacro %}
+
 
 {# @docs
 label: detail
@@ -204,6 +261,7 @@ params:
   </article>
 {% endmacro %}
 
+
 {# @docs
 label: grid
 category: posts
@@ -237,6 +295,7 @@ params:
     {% endfor %}
   {% endcall %}
 {% endmacro %}
+
 
 {# @docs
 label: eventpreview
@@ -287,6 +346,7 @@ params:
   {%- endif -%}
 {% endmacro %}
 
+
 {# @docs
 label: hero
 category: metadata
@@ -323,6 +383,7 @@ params:
   {%- endif -%}
 {% endmacro %}
 
+
 {# @docs
 label: byline
 category: metadata
@@ -341,7 +402,7 @@ params:
     note: Optionally remove links for content in linked cards
   dateformat:
     type: false | string
-    default: false
+    default: 'false'
     note: Optionally show the date in a given format
 #}
 {% macro byline(
@@ -381,6 +442,7 @@ params:
   </p>
 {% endmacro %}
 
+
 {# @docs
 label: type_link
 category: metadata
@@ -411,6 +473,7 @@ params:
     class='type-link'
   ) }}
 {% endmacro %}
+
 
 {# @docs
 label: title
@@ -485,6 +548,7 @@ params:
   {% endif %}
 {% endmacro %}
 
+
 {# @docs
 label: by
 category: metadata
@@ -506,6 +570,7 @@ params:
     {{ birds.authors(author, collections, link, class='p-author') }}
   {% endif %}
 {% endmacro %}
+
 
 {# @docs
 label: pubdate
@@ -534,6 +599,7 @@ params:
   ) }}
 {% endmacro %}
 
+
 {# @docs
 label: client
 category: metadata
@@ -548,6 +614,7 @@ params:
     <b>{{ name | mdInline | safe }}</b>
   {% endif -%}
 {%- endmacro %}
+
 
 {# @docs
 label: where
@@ -567,6 +634,7 @@ params:
     </span>
   {% endif %}
 {% endmacro %}
+
 
 {# @docs
 label: linked
@@ -592,6 +660,7 @@ params:
   ) }}
 {% endif -%}
 {%- endmacro %}
+
 
 {# @docs
 label: taglist
@@ -631,6 +700,7 @@ params:
   {%- endif -%}
 {%- endmacro %}
 
+
 {# @docs
 label: linklist
 category: metadata
@@ -641,7 +711,7 @@ params:
     note: the key will be used as text, with the value for url
   slides:
     type: url
-    default: 'none'
+    default: none
 #}
 {% macro linklist(
   links,
@@ -660,6 +730,7 @@ params:
   {% endif %}
 {% endmacro %}
 
+
 {# @docs
 label: page_nav
 category: pagination
@@ -673,11 +744,11 @@ params:
     default: none
   current:
     type: boolean
-    default: false
+    default: 'false'
     note: Show the current location in pagination?
   id:
     type: string
-    default: ''
+    default: "''"
     note: |
       When repeating the pagination on a page,
       each instance should get a unique ID
@@ -709,6 +780,7 @@ params:
 </nav>
 {% endif %}
 {% endmacro %}
+
 
 {# @docs
 label: page_current
