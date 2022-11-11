@@ -15,7 +15,7 @@ image:
     commerce, fashion
 adactio:
   caption: |
-    Described by [Jeremy Kieth](https://adactio.com/)
+    Described by [Jeremy Keith](https://adactio.com/)
     in his [Building talk](https://speaking.adactio.com/87IIn1)
     a few years back.
   data:
@@ -43,11 +43,11 @@ tags:
   - Fonts
   - Design
 summary: |
-  Ask not-just: _How well does it work_?
+  Ask not just: _How well does it work_?
   But also: _How well does it fail_?
   What happens when something goes wrong?
 
-  ---Jeremy Kieth
+  ---Jeremy Keith
 ---
 
 {% import "embed.macros.njk" as embed %}
@@ -131,7 +131,7 @@ only a few consider that
 the core goal of the tool.
 Even then, there's been a long-term disconnect
 between a web that's responsive,
-and our almost completely-static design tools.
+and our almost completely static design tools.
 
 A few tools have started to provide
 _flexbox-like_ 'responsive' layouts,
@@ -196,7 +196,7 @@ between formats (until now).
 Once we used a graphic interface
 to pick the color we want,
 it maybe didn't matter
-what format we copy/paste into
+what format we copied/pasted into
 a variable somewhere.
 
 But what's the designer path
@@ -224,7 +224,7 @@ It doesn't matter to Sass
 what syntax authors use
 for their _input value_,
 the _output value_ is always
-either HEX or a color-name when opaque,
+either HEX or a color name when opaque,
 with `rgba()` for handling transparency.
 Very few people need that level
 of legacy browser support,
@@ -325,7 +325,7 @@ which provides minification
 for deployed assets like CSS.
 That seems like a great feature!
 But the specific CSS minifier that they use
-is somewhat over-eager,
+is somewhat overeager,
 and began stripping out all my new
 [`@layer`](https://css-tricks.com/css-cascade-layers/) rules.
 I had to turn off the minification step
@@ -407,7 +407,6 @@ but it's unfortunate.
 I think people are missing out
 on one of the coolest features
 added to CSS _ever_.
-Oh well.
 
 ## Tools update faster? Right?
 
@@ -490,8 +489,8 @@ So in that spirit, please consider:
 When tools intervene
 between you and your access to the web platform,
 **proceed with caution**.
-Ask not-only: _How well does it work?_
+Ask not only: _How well does it work?_
 But also: _How well does it fail?_
-Not-only: _What features do they provide?_
+Not only: _What features do they provide?_
 But also: _What features do they prevent?_
 ⚠️🚨⚠️
