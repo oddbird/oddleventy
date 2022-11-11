@@ -1,5 +1,4 @@
 ---
-draft: true
 title: When Our Tools Hold Us Back
 sub: What happens if the 'pace layers' get out of sync?
 date: 2022-11-10
@@ -43,11 +42,11 @@ tags:
   - Fonts
   - Design
 summary: |
-  Ask not just: _How well does it work_?
-  But also: _How well does it fail_?
-  What happens when something goes wrong?
-
-  ---Jeremy Keith
+  > Ask not just: _How well does it work_?
+  > But also: _How well does it fail_?
+  > What happens when something goes wrong?
+  >
+  > ---Jeremy Keith
 ---
 
 {% import "embed.macros.njk" as embed %}
