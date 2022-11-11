@@ -127,3 +127,9 @@
     content: ' | ';
   }
 }
+
+[data-list='tag'] {
+  &:last-of-type {
+    margin-block-end: var(--double-gutter);
+  }
+}

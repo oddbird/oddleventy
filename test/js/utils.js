@@ -238,6 +238,7 @@ export const collection4 = [
     date: '2020-01-09T04:10:17.000Z',
     data: {
       title: 'Draft Title',
+      tags: ['Video', 'Article'],
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },
@@ -249,6 +250,7 @@ export const collection4 = [
     date: '2018-01-09T04:10:17.000Z',
     data: {
       title: 'Draft Title',
+      tags: ['Article'],
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },
@@ -260,6 +262,7 @@ export const collection4 = [
     date: '2011-01-09T04:10:17.000Z',
     data: {
       title: 'Draft Title',
+      tags: ['Link', 'Article'],
       events: [
         {
           foo: 'bar',

@@ -53,7 +53,7 @@ params:
       - (`citation data`): See `cite` macro
   type:
     type: 'solo | grid'
-    default: solo
+    default: 'solo'
 #}
 {% macro blockquote(
   data,
@@ -101,19 +101,19 @@ params:
     note: containing 11ty page objects
   slugs:
     type: string | array | none
-    default: 'none'
+    default: none
     note: Select quotes based on their `slug` value
   page:
     type: url | none
-    default: 'none'
+    default: none
     note: Select quotes from a particular page
   action:
     type: string | none
-    default: 'none'
+    default: none
     note: Add an action to accompany an optional link
   url:
     type: url | none
-    default: 'none'
+    default: none
     note: Link to a related url
 #}
 {% macro find(
