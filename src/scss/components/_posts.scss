@@ -2,7 +2,7 @@
 
 // pagination
 
-.post-header {
+.cards-header {
   --column: full;
   --title-margin: 0;
 
@@ -38,7 +38,7 @@
 
   color: var(--text-light);
 
-  [data-grid='posts'] + & {
+  [data-grid='cards'] + & {
     margin-top: var(--double-gutter);
   }
 }
@@ -49,7 +49,7 @@
 
 // list
 
-[data-grid='posts'] {
+[data-grid='cards'] {
   --align: stretch;
   --justify: stretch;
 
@@ -59,14 +59,14 @@
   padding: 0;
 }
 
-[data-post] {
+[data-card] {
   display: grid;
   grid-template:
     [post-start type-start] auto [type-end] 1fr [post-end]
     / [post-start] 1fr [type-start] auto [type-end post-end];
 }
 
-[data-post='feature'] {
+[data-card='feature'] {
   --type-flag: var(--bg);
   --type-flag-active: var(--callout);
   --shadow: transparent;
@@ -83,7 +83,7 @@
   }
 }
 
-[data-post='large'] {
+[data-card='large'] {
   grid-column: 1 / -1;
   margin: var(--gutter) 0;
 
