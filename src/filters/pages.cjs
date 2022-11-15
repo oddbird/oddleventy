@@ -125,7 +125,7 @@ label: removePage
 category: Filter
 note: |
   Remove any one page from a collection
-  (especially for removing tag index pages from their own resource list)
+  (especially for removing tag index pages from their own post list)
 params:
   collection:
     type: array
@@ -340,7 +340,7 @@ label: isType
 category: Filter
 note: |
   Filters collection by a given tag,
-  expected to be one of several resource "types"
+  expected to be one of several post "types"
   (types are defined in the `taxonomy.yaml` data file)
 params:
   collection:
@@ -348,7 +348,7 @@ params:
     note: containing 11ty page objects
   type:
     type: type
-    note: resource type to filter by
+    note: post type to filter by
 */
 const isType = (collection, type) =>
   collection.filter((page) => pageType(page.data.tags, 'tag') === type);

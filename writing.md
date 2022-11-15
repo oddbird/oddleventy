@@ -45,9 +45,9 @@ guidelines to help:
 - Tags are Title Case: `User Experience`
 - Tags with multiple words should have spaces instead of dashes unless the
   phrase is hyphenated (e.g. `Server-Side Rendering`).
-- We have 7 Resource Types which use the same tag structure but we have promoted on the
-  Resources by Tag (high placement and icon in heading)
-  and Resources by Date (icon displayed) pages. These include:
+- We have 7 Post Types which use the same tag structure but we have promoted on the
+  Posts by Tag (high placement and icon in heading)
+  and Posts by Date (icon displayed) pages. These include:
   - Article
   - Case Study
   - Link

@@ -5,7 +5,7 @@
 {%- set mentions = webmentions | mentionsForUrl(abs_url) -%}
 
 {#
-  For now, we only show mentions on resource posts and oss pages.
+  For now, we only show mentions on posts and oss pages.
 #}
 {%- if mentions | length and (is_entry or oss) -%}
 <section data-list="mentions" data-typeset>

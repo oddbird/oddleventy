@@ -1,5 +1,5 @@
 ---
-banner: Resources by Date
+banner: Posts by Date
 is_feed: true
 override:tags: []
 action:
@@ -13,7 +13,7 @@ pagination:
 permalink: /blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 eleventyComputed:
   title: |
-    Resources
+    Posts
     {% if pagination.pageNumber > 0 %}(page {{ pagination.pageNumber + 1 }}){% endif %}
   sub: |
     {% if pagination.pageNumber == 0 %}
