@@ -32,7 +32,7 @@ describe('ossGroups', () => {
 });
 
 describe('pageType', () => {
-  test('Return one of several resource "types" from page tags', () => {
+  test('Return one of several post "types" from page tags', () => {
     const workshop = taxonomy.post.find((type) => type.tag === 'Workshop');
 
     expect(pageType(['foo', 'Workshop'])).toEqual(workshop);

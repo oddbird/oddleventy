@@ -39,7 +39,7 @@ params:
   {%- if posts | length > 0 -%}
     {%- if posts | length > above -%}
       {%- for group in posts | byYear -%}
-        {% set title = [group.year, 'Resources'] | join(' ') if loop.first else group.year %}
+        {% set title = [group.year, 'Posts'] | join(' ') if loop.first else group.year %}
         {{ list(
           posts=group.posts,
           collections=collections,
@@ -63,7 +63,7 @@ note: |
 params:
   type:
     type: string
-    note: one of several resource "types" to display (types are defined in the `taxonomy.yaml` data file)
+    note: one of several post "types" to display (types are defined in the `taxonomy.yaml` data file)
   collections:
     type: 11ty collections object
     default: '[]'
@@ -72,7 +72,7 @@ params:
     default: 3
   banner_title:
     type: string
-    default: 'Resources'
+    default: 'Posts'
   page_url:
     type: url
     default: "''"
@@ -81,7 +81,7 @@ params:
   type,
   collections=[],
   limit=3,
-  banner_title='Resources',
+  banner_title='Posts',
   page_url=''
 ) %}
   {%- set posts = collections[type] -%}
@@ -111,7 +111,7 @@ params:
     default: none
   title:
     type: string
-    default: 'Resources'
+    default: 'Posts'
   pagination:
     type: 11ty pagination object
     default: none
@@ -122,7 +122,7 @@ params:
 {% macro list(
   posts,
   collections=none,
-  title='Resources',
+  title='Posts',
   pagination=none,
   override_feature=false
 ) %}
@@ -131,7 +131,7 @@ params:
   {%- set sort = 'sort' if (posts[0].sort) else 'date' -%}
 
   {% if pagination %}
-    <header class="resource-header">
+    <header class="cards-header">
       {{ layout.title(title) }}
       {{ page_nav(pagination, current=false) }}
     </header>
@@ -139,7 +139,7 @@ params:
     {{ layout.title(title) }}
   {% endif %}
 
-  <ol data-grid="resources" reversed>
+  <ol data-grid="cards" reversed>
     {%- for post in posts | sort(reverse=true, attribute=sort) -%}
       {{ item(post, collections, loop, override_feature=override_feature) }}
     {%- endfor -%}
@@ -183,7 +183,7 @@ params:
     {%- set card = 'feature' if (card == 'large' and loop.length == 2) else card -%}
   {% endif %}
 
-  <li data-resource="{{ card }}">
+  <li data-card="{{ card }}">
     {%- if card == 'large' -%}
       {{ type_link(type, collections) }}
       {{ detail(post, card, type, collections) }}
@@ -227,7 +227,7 @@ params:
     {% if type %}
       <div class="type-flag" data-flag="left">
         {{ type.tag }}
-        <span class="sr-only">resource type</span>
+        <span class="sr-only">post type</span>
       </div>
     {% endif %}
     <div class="post-content">
@@ -259,41 +259,6 @@ params:
       {% endif %}
     </div>
   </article>
-{% endmacro %}
-
-
-{# @docs
-label: grid
-category: posts
-note: A simple grid of pages, without full "card" resource styling
-params:
-  pages:
-    type: 11ty collection
-  level:
-    type: number (1-6)
-    default: 3
-    note: Heading level for page titles
-  collections:
-    type: 11ty collections object
-    default: none
-#}
-{% macro grid(
-  pages,
-  level=3,
-  collections=none
-) %}
-  {% call layout.grid('posts') %}
-    {% for page in pages %}
-      {% set page = collections.all | getPage(page) %}
-      <article {{ aria_label(page) }} class='page-summary'>
-        {{ hero(page.data.image, 'card') }}
-        <div>
-          {{ banner(page, level=level) }}
-          {{ page.data.summary | md | safe }}
-        </div>
-      </article>
-    {% endfor %}
-  {% endcall %}
 {% endmacro %}
 
 
@@ -467,7 +432,7 @@ params:
   {{ utility.link_if(
     content=embed.svg(
       path='icons/' + (type.icon or 'tags'),
-      alt=['see all', type.tag, 'resources'] | join(' ') if type else 'all tags'
+      alt=['see all', type.tag, 'posts'] | join(' ') if type else 'all tags'
     ),
     url=url,
     class='type-link'

@@ -86,9 +86,9 @@ const ossGroups = (collection, only) => {
 
 /* @docs
 label: pageType
-category: resources
+category: posts
 note: |
-  Return one of several resource "types"
+  Return one of several post "types"
   which we can use to provide different list styling
   or filtering.
   Types are defined in the `taxonomy.yaml` data file.

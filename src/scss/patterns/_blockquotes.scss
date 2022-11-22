@@ -30,6 +30,10 @@ blockquote {
     font-style: italic;
   }
 
+  #intro > & {
+    margin-inline-start: calc(50% - 50vw);
+  }
+
   &:not([data-quote]) {
     &::before {
       color: var(--icon);

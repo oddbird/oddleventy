@@ -1,6 +1,160 @@
 {
-  "lastFetched": "2022-11-07T08:06:16.264Z",
+  "lastFetched": "2022-11-21T08:06:04.940Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mia",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/31fcfd6282b72379bdececa7d23a188489aa4cf4f63f576928d87f6a3df9064b.jpg",
+        "url": "https://twitter.com/TerribleMia"
+      },
+      "url": "https://twitter.com/TerribleMia/status/1594198459694751744",
+      "published": "2022-11-20T05:18:26+00:00",
+      "wm-received": "2022-11-20T07:08:07Z",
+      "wm-id": 1563892,
+      "wm-source": "https://brid.gy/comment/twitter/terriblemia/1592569011644280833/1594198459694751744",
+      "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "content": {
+        "html": "Yeah, the first draft ended with \"In summary: everything is Jon's fault. Blame Jon.\" – but the editors thought that was a bit much (and not really supported by the data). 😅\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/dutchcelt\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jon_neal\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/meduzen\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
+        "text": "Yeah, the first draft ended with \"In summary: everything is Jon's fault. Blame Jon.\" – but the editors thought that was a bit much (and not really supported by the data). 😅"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jonathan Neal",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/f43b93d8bae4bb8eb00b5260bb32a0ff0e182ccd3ccb179a2e75987d26ed0143.jpg",
+        "url": "https://twitter.com/jon_neal"
+      },
+      "url": "https://twitter.com/jon_neal/status/1594191601777397760",
+      "published": "2022-11-20T04:51:11+00:00",
+      "wm-received": "2022-11-20T05:05:55Z",
+      "wm-id": 1563858,
+      "wm-source": "https://brid.gy/comment/twitter/terriblemia/1592569011644280833/1594191601777397760",
+      "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "content": {
+        "html": "That’s when I broke a sweat, waiting for Mia to start naming names.\n\nThe part about design tools being a step removed from the web also rang true with a heavy heart. Even popular tools designed explicitly for export on the web are priming to hold it back.\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/dutchcelt\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/meduzen\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
+        "text": "That’s when I broke a sweat, waiting for Mia to start naming names.\n\nThe part about design tools being a step removed from the web also rang true with a heavy heart. Even popular tools designed explicitly for export on the web are priming to hold it back."
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "🦑 meduz'",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/6f96bc6cff13fa1f965613cb4860bf575fd6b7ffe173fde1b798fde1d9a5fe68.jpg",
+        "url": "https://twitter.com/meduzen"
+      },
+      "url": "https://twitter.com/meduzen/status/1593979074539577345",
+      "published": "2022-11-19T14:46:40+00:00",
+      "wm-received": "2022-11-19T22:20:13Z",
+      "wm-id": 1563658,
+      "wm-source": "https://brid.gy/comment/twitter/terriblemia/1592569011644280833/1593979074539577345",
+      "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "content": {
+        "html": "“Suddenly CSS is able to move faster than the ecosystem, and we’re stuck waiting on our tools to catch up with well-supported platform features.\n\nThat’s not how a healthy ecosystem should behave.”\n\nFully agree!\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/dutchcelt\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
+        "text": "“Suddenly CSS is able to move faster than the ecosystem, and we’re stuck waiting on our tools to catch up with well-supported platform features.\n\nThat’s not how a healthy ecosystem should behave.”\n\nFully agree!"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Egor Kloos",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/caafe03edd4cf8977c18499e837327e293fdeda3629367174d59a6b82118beb5.jpg",
+        "url": "https://twitter.com/dutchcelt"
+      },
+      "url": "https://twitter.com/dutchcelt/status/1593983336694788102",
+      "published": "2022-11-19T15:03:36+00:00",
+      "wm-received": "2022-11-19T22:20:13Z",
+      "wm-id": 1563659,
+      "wm-source": "https://brid.gy/comment/twitter/terriblemia/1592569011644280833/1593983336694788102",
+      "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "content": {
+        "html": "Back in the day, I'd sometimes use a hack when I had to make IE6 work. I've always insisted that any hack has to be valid CSS. It shouldn't be our fault when a site breaks because we ignored non-conforming code. Apparently, it's okay for tools to mess it up for us. 🤷\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/meduzen\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
+        "text": "Back in the day, I'd sometimes use a hack when I had to make IE6 work. I've always insisted that any hack has to be valid CSS. It shouldn't be our fault when a site breaks because we ignored non-conforming code. Apparently, it's okay for tools to mess it up for us. 🤷"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Carter Baxter",
+        "photo": "https://webmention.io/avatar/files.mastodon.social/a445f24cc007fe02599323f01dac6a2ad424ed457a6d91f524a70c3909e8f0f1.png",
+        "url": "https://mastodon.social/@tbaxter"
+      },
+      "url": "https://mastodon.social/@tbaxter/109349109105885552",
+      "published": "2022-11-15T17:56:30",
+      "wm-received": "2022-11-15T18:19:01Z",
+      "wm-id": 1560314,
+      "wm-source": "https://brid.gy/comment/mastodon/@matthiasott@mastodon.social/109349089077760951/109349109105885552",
+      "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@matthiasott\" class=\"u-url\">@<span>matthiasott</span></a></span> <span class=\"h-card\"><a href=\"https://front-end.social/@mia\" class=\"u-url\">@<span>mia</span></a></span> I wonder if the tooling has followed the front-end community, which has largely undervalued CSS for a long time now. And now that's come home to roost.</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
+        "text": "@matthiasott @mia I wonder if the tooling has followed the front-end community, which has largely undervalued CSS for a long time now. And now that's come home to roost."
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Matthias Ott",
+        "photo": "https://webmention.io/avatar/files.mastodon.social/9bee83bf16eecaf863057032a0bd8758fe713de414127682accdace80323415e.jpg",
+        "url": "https://mastodon.social/@matthiasott"
+      },
+      "url": "https://mastodon.social/@matthiasott/109349121334639611",
+      "published": "2022-11-15T17:59:36",
+      "wm-received": "2022-11-15T18:18:58Z",
+      "wm-id": 1560313,
+      "wm-source": "https://brid.gy/comment/mastodon/@matthiasott@mastodon.social/109349089077760951/109349121334639611",
+      "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@mia\" class=\"u-url\">@<span>mia</span></a></span> This is so down my alley. There are growing gaps anywhere atm, and one of the greatest “great divides” is the one between what is possible today with the material(s) of the Web and what designers know about it and are able to create in design tools.</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
+        "text": "@mia This is so down my alley. There are growing gaps anywhere atm, and one of the greatest “great divides” is the one between what is possible today with the material(s) of the Web and what designers know about it and are able to create in design tools."
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Miriam Suzanne",
+        "photo": "https://webmention.io/avatar/files.mastodon.social/28109e840cb957b8aee92cbc11fe79e4f3be77cd77ac098c6f050ba76061f70b.jpg",
+        "url": "https://front-end.social/@mia"
+      },
+      "url": "https://front-end.social/@mia/109349136857886122",
+      "published": "2022-11-15T18:03:33",
+      "wm-received": "2022-11-15T18:18:54Z",
+      "wm-id": 1560312,
+      "wm-source": "https://brid.gy/comment/mastodon/@matthiasott@mastodon.social/109349089077760951/109349137085875908",
+      "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@matthiasott\" class=\"u-url\">@<span>matthiasott</span></a></span> I also get the problem there, it's not easy to solve. How do you provide the full power of CSS in a graphic interface? Reproducing the language as a series of form fields is not exactly elegant.</p><p>On the code tooling side, I think people also leaned into an idea that the way to manage CSS is to _limit it's power_. I sure hope we can find our collective way out of that one…</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
+        "text": "@matthiasott I also get the problem there, it's not easy to solve. How do you provide the full power of CSS in a graphic interface? Reproducing the language as a series of form fields is not exactly elegant.On the code tooling side, I think people also leaned into an idea that the way to manage CSS is to _limit it's power_. I sure hope we can find our collective way out of that one…"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
