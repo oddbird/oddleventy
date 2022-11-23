@@ -9407,7 +9407,7 @@ __metadata:
     sanitize-html: ^2.7.3
     sass: ^1.56.1
     sassdoc: ^2.7.4
-    sassdoc-theme-herman: 5.0.0-beta.5
+    sassdoc-theme-herman: 5.0.0-beta.6
     slugify: ^1.6.5
     striptags: ^3.2.0
     stylelint: ^14.15.0
@@ -11044,9 +11044,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sassdoc-theme-herman@npm:5.0.0-beta.5":
-  version: 5.0.0-beta.5
-  resolution: "sassdoc-theme-herman@npm:5.0.0-beta.5"
+"sassdoc-theme-herman@npm:5.0.0-beta.6":
+  version: 5.0.0-beta.6
+  resolution: "sassdoc-theme-herman@npm:5.0.0-beta.6"
   dependencies:
     cheerio: 1.0.0-rc.12
     colorjs.io: ^0.4.2
@@ -11066,7 +11066,7 @@ __metadata:
     vinyl-fs: ^3.0.3
   peerDependencies:
     sassdoc: ^2.5.0
-  checksum: 688e7acf79af9bbf7c2eecb190f3388517b494e37271937350091cbd5253f2cbd02d356b6224d5288f16ef8f7c3c78631dbaecb383ba0b42cceb42cdef7578ad
+  checksum: 79d971d78d446be3efe584ad07fb403421234a55e47cfbd575922a05b3b40130038de9131d1cb2b9922bca02fce68dfeeae487161cf766b691489ed2cc96d629
   languageName: node
   linkType: hard
 
