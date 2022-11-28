@@ -105,9 +105,27 @@ If all goes well, that should open two windows: a browser window with Google
 loaded, and a Playwright inspector window. Closing both will also stop the
 container.
 
-To avoid having to specify the flags every time, you can use `docker-compose` to
-[set the environment
+To avoid having to specify the flags every time, you can use a
+`docker-compose.yml` file to [set the environment
 variable](https://docs.docker.com/compose/environment-variables/#set-environment-variables-in-containers)
 and [mount the
 socket](https://docs.docker.com/storage/bind-mounts/#use-a-bind-mount-with-compose).
+
+```yaml
+# docker-compose.yml
+version: '3'
+
+services:
+  web:
+    image: mcr.microsoft.com/playwright:v1.28.0
+    environment:
+      - DISPLAY=:0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+```
+
+```bash
+docker-compose run web npx -y playwright open google.com
+```
+
 Enjoy using and inspecting the browser from inside containers!
