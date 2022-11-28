@@ -71,7 +71,7 @@ Desktop](https://www.docker.com/products/docker-desktop/) in recent builds of
 Windows 10 and 11.
 
 Let's start by verifying that WSL and WSLg are installed and running. First,
-launch "WSL" from you Start Menu. A Linux terminal window should open (most
+launch "WSL" from your Start Menu. A Linux terminal window should open (most
 likely a recent version of Ubuntu). Then verify that the directory `/mnt/wslg/`
 exists and contains these files inside the Linux filesystem:
 
@@ -98,7 +98,7 @@ wlog.log
 If you don't see "WSL" in your Start menu, or the `ls` command above fails with
 `No such file or directory`, then your system is missing WSL entirely or is
 running an old version. Visit the [Microsoft Store](https://aka.ms/wslstorepage)
-to download an up to date version.
+to download an up-to-date version.
 
 Once you are all set up, we only need to follow the [official
 guide](https://github.com/microsoft/wslg/blob/main/samples/container/Containers.md):
