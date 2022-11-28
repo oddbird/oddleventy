@@ -11,6 +11,8 @@ summary: |
   from outside WSL Docker containers.
 ---
 
+*This post applies to Docker running on Windows 10 and 11.*
+
 [Playwright](https://playwright.dev/) is a test runner that uses real browsers
 to test web applications (an alternative to tools like
 [Selenium](https://www.selenium.dev/)). By default, Playwright runs these
@@ -65,8 +67,9 @@ Instead we want the container to use the *host XServer* to launch Playwright
 You might find it surprising (I certainly did) to find out that Microsoft
 Windows has a native XServer even though it's not a GNU/Linux system. It's
 called [WSLg](https://github.com/microsoft/wslg#readme) and it's included as
-part of the [Windows Subsystem for Linux](https://aka.ms/wslstorepage) (WSL).
-You most likely already have WSL and WSLg installed if you are running [Docker
+part of the [Windows Subsystem for
+Linux](https://www.microsoft.com/store/productId/9P9TQF7MRM4R) (WSL). You most
+likely already have WSL and WSLg installed if you are running [Docker
 Desktop](https://www.docker.com/products/docker-desktop/) in recent builds of
 Windows 10 and 11.
 
@@ -95,10 +98,11 @@ weston.log
 wlog.log
 ```
 
-If you don't see "WSL" in your Start menu, or the `ls` command above fails with
+If you don't see "WSL" in your Start Menu, or the `ls` command above fails with
 `No such file or directory`, then your system is missing WSL entirely or is
-running an old version. Visit the [Microsoft Store](https://aka.ms/wslstorepage)
-to download an up-to-date version.
+running an old version. Visit the [Microsoft
+Store](https://www.microsoft.com/store/productId/9P9TQF7MRM4R) to download an
+up-to-date version.
 
 Once you are all set up, we only need to follow the [official
 guide](https://github.com/microsoft/wslg/blob/main/samples/container/Containers.md):
