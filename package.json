@@ -105,7 +105,7 @@
     "sanitize-html": "^2.7.3",
     "sass": "^1.56.1",
     "sassdoc": "^2.7.4",
-    "sassdoc-theme-herman": "^5.0.0-beta.2",
+    "sassdoc-theme-herman": "5.0.0-beta.2",
     "slugify": "^1.6.5",
     "striptags": "^3.2.0",
     "stylelint": "^14.15.0",
