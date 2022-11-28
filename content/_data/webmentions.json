@@ -1,6 +1,28 @@
 {
-  "lastFetched": "2022-11-21T08:06:04.940Z",
+  "lastFetched": "2022-11-28T08:05:58.545Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "CSS Café",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/44cfe5a4795071a93f63041a9f351d599c2db67783cf0599283fa2e78ad3fb8d.png",
+        "url": "https://twitter.com/CSS__Cafe"
+      },
+      "url": "https://twitter.com/CSS__Cafe/status/1595835735441297408",
+      "published": "2022-11-24T17:44:23+00:00",
+      "wm-received": "2022-11-24T18:42:46Z",
+      "wm-id": 1567527,
+      "wm-source": "https://brid.gy/comment/twitter/heydonworks/1595835735441297408/1595835735441297408",
+      "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "content": {
+        "html": "* <a href=\"https://www.modularscale.com/\">modularscale.com</a>\n* <a href=\"https://abookapart.com/products/flexible-typesetting\">abookapart.com/products/flexi…</a>\n* <a href=\"https://utopia.fyi/\">utopia.fyi</a>\n* <a href=\"https://www.oddbird.net/2022/11/11/platform-tools/\">oddbird.net/2022/11/11/pla…</a>\n* <a href=\"https://vasilis.nl/nerd/our-web-design-tools-are-holding-us-back/\">vasilis.nl/nerd/our-web-d…</a>\n* <a href=\"https://labs.jensimmons.com/\">labs.jensimmons.com</a>\n* <a href=\"https://beyondtellerrand.com/events/dusseldorf-2022/speakers/stephanie-eckles\">beyondtellerrand.com/events/dusseld…</a>\n* <a href=\"https://www.youtube.com/watch?v=tueTFd2TQUA\">youtube.com/watch?v=tueTFd…</a>\n* <a href=\"https://every-layout.dev/\">every-layout.dev</a>\n* <a href=\"https://www.youtube.com/watch?v=Wno1IhEBTxc\">youtube.com/watch?v=Wno1Ih…</a>",
+        "text": "* modularscale.com\n* abookapart.com/products/flexi…\n* utopia.fyi\n* oddbird.net/2022/11/11/pla…\n* vasilis.nl/nerd/our-web-d…\n* labs.jensimmons.com\n* beyondtellerrand.com/events/dusseld…\n* youtube.com/watch?v=tueTFd…\n* every-layout.dev\n* youtube.com/watch?v=Wno1Ih…"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
