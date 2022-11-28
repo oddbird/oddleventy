@@ -16,8 +16,8 @@ to test web applications (an alternative to tools like
 [Selenium](https://www.selenium.dev/)). By default, Playwright runs these
 browsers in headless mode, which means the pages are loaded and tested without
 opening the browser window. This is great when running entire test suites
-locally and in CI where having a bunch of rapidly opening windows would be
-pretty disconcerting. However, when it comes to writing or debugging individual
+locally, and in CI where having a bunch of rapidly opening windows would be
+disconcerting. However, when it comes to writing or debugging individual
 tests, it is convenient to open the browser in *headed* mode to actually see the
 page being tested.
 
@@ -25,17 +25,17 @@ Playwright includes the [Playwright
 Inspector](https://playwright.dev/docs/debug#playwright-inspector) to
 conveniently launch the browser in headed mode *and* a separate window to
 control test execution. The inspector is launched by setting `PWDEBUG=1` before
-calling `playwright`. The inspector is compatible with all browsers supported by
+calling `playwright`, and is compatible with all browsers supported by
 Playwright (Safari, Chrome, and Firefox) in all major operating systems.
 Playwright also includes a `playwright open <url>` subcommand to quickly launch
-the inspector on any URL. We will use that for the rest of the article but keep
-in mind everything applies to `PWDEBUG=1` as well.
+the inspector on any URL. Examples in this post use `playwright open <url>`, but
+`PWDEBUG=1` is equivalent.
 
-A convenient [Docker image](https://playwright.dev/docs/docker) is also provided
-by Playwright and it includes all three browsers pre-installed and configured so
-you can skip the dependency installation steps. But, what happens if you try to
-run the Playwright Inspector inside a container, which normally doesn't have a
-graphical user interface?
+Playwright also provides a convenient [Docker
+image](https://playwright.dev/docs/docker), which includes all three browsers
+pre-installed and configured so you can skip the dependency installation steps.
+But what happens if you try to run the Playwright Inspector inside a Docker
+container -- which normally doesn't have a graphical user interface?
 
 ```bash
 # We expect a browser window to open and load google.com
@@ -51,11 +51,10 @@ docker run --rm mcr.microsoft.com/playwright:v1.28.0 npx -y playwright open goog
 ```
 
 No browser window is launched! Instead we get an error message about not "having
-a XServer running". The definition and functionality of XServer are beyond the
-scope of this article, but let's say that without it we can't interact with
-applications that require a user interface (like the browser). Feel free to dive
-into [a more detailed explanation](https://askubuntu.com/a/7885/27669) if you
-prefer.
+a XServer running." The definition and functionality of XServer are beyond the
+scope of this article, but without it we can't interact with applications that
+require a user interface (like the browser). Here's [a more detailed
+explanation](https://askubuntu.com/a/7885/27669) if you want to learn more.
 
 Searching for this error on the web will return results explaining how to
 install and start XServer. That advice applies to non-containerized, Linux-based
@@ -64,10 +63,10 @@ Instead we want the container to use the *host XServer* to launch Playwright
 *inside the container*.
 
 You might find it surprising (I certainly did) to find out that Microsoft
-Windows has a native XServer even though its not a GNU/Linux system. It's called
-[WSLg](https://github.com/microsoft/wslg#readme) and it's included as part of
-the [Windows Subsystem for Linux](https://aka.ms/wslstorepage) (WSL). You most
-likely already have WSL and WSLg installed if you are running [Docker
+Windows has a native XServer even though it's not a GNU/Linux system. It's
+called [WSLg](https://github.com/microsoft/wslg#readme) and it's included as
+part of the [Windows Subsystem for Linux](https://aka.ms/wslstorepage) (WSL).
+You most likely already have WSL and WSLg installed if you are running [Docker
 Desktop](https://www.docker.com/products/docker-desktop/) in recent builds of
 Windows 10 and 11.
 
@@ -93,7 +92,7 @@ we only need to do two things:
 1. Set the `DISPLAY` environment variable inside the container.
 2. Mount the XServer Unix socket inside the container.
 
-Docker allows us to do both with a couple command line flags:
+Docker allows us to do both with a few command line flags:
 
 ```bash
 docker run --rm \
