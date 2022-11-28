@@ -70,39 +70,52 @@ You most likely already have WSL and WSLg installed if you are running [Docker
 Desktop](https://www.docker.com/products/docker-desktop/) in recent builds of
 Windows 10 and 11.
 
-Let's start by verifying that WSL and WSLg are installed and running:
+Let's start by verifying that WSL and WSLg are installed and running. First,
+launch "WSL" from you Start Menu. A Linux terminal window should open (most
+likely a recent version of Ubuntu). Then verify that the directory `/mnt/wslg/`
+exists and contains these files inside the Linux filesystem:
 
-```powershell
-wsl.exe --version
+```bash
+ls -a -w 1 /mnt/wslg
 
-WSL version: 1.0.0.0
-Kernel version: 5.15.74.2
-WSLg version: 1.0.47
-MSRDC version: 1.2.3575
-Direct3D version: 1.606.4
-DXCore version: 10.0.25131.1002-220531-1700.rs-onecore-base2-hyp
-Windows version: 10.0.22621.819
+.
+..
+.X11-unix
+PulseAudioRDPSink
+PulseAudioRDPSource
+PulseServer
+distro
+doc
+dumps
+pulseaudio.log
+runtime-dir
+stderr.log
+versions.txt
+weston.log
+wlog.log
 ```
 
-If the command returns without errors and you see a line with `WSLg version:
-X.X.X`, then you're good to go! According to [this
-guide](https://github.com/microsoft/wslg/blob/main/samples/container/Containers.md),
-we only need to do two things:
+If you don't see "WSL" in your Start menu, or the `ls` command above fails with
+`No such file or directory`, then your system is missing WSL entirely or is
+running an old version. Visit the [Microsoft Store](https://aka.ms/wslstorepage)
+to download an up to date version.
 
-1. Set the `DISPLAY` environment variable inside the container.
-2. Mount the XServer Unix socket inside the container.
+Once you are all set up, we only need to follow the [official
+guide](https://github.com/microsoft/wslg/blob/main/samples/container/Containers.md):
 
-Docker allows us to do both with a few command line flags:
+1. Set the `DISPLAY` environment variable inside the container using the `-e`
+   option
+2. Mount the XServer Unix socket inside the container using the `-v` option
 
 ```bash
 docker run --rm \
--e DISPLAY=:0 \ # Set the env var
--v /tmp/.X11-unix:/tmp/.X11-unix \ # Mount the socket
+-e DISPLAY=:0 \
+-v /tmp/.X11-unix:/tmp/.X11-unix \
 mcr.microsoft.com/playwright:v1.28.0 npx -y playwright open google.com
 ```
 
 If all goes well, that should open two windows: a browser window with Google
-loaded, and a Playwright inspector window. Closing both will also stop the
+loaded, and a Playwright Inspector window. Closing both will also stop the
 container.
 
 To avoid having to specify the flags every time, you can use a
