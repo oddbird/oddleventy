@@ -76,14 +76,14 @@ mcr.microsoft.com/playwright:v1.28.0 npx -y playwright open google.com
 
 The value of `<host display>` will depend on your host operating system, and you
 will need to ensure `/tmp/.X11-unix` is available for mounting. The following
-sections explain how to do it for Windows and macOS.
+sections explain how to do this for Windows and macOS.
 
 ## Microsoft Windows
 
-You might find it surprising (I certainly did) to find out that Microsoft
-Windows has a native XServer even though it's not a GNU/Linux system. It's
-called [WSLg](https://github.com/microsoft/wslg#readme) and it's included as
-part of the [Windows Subsystem for
+You might find it surprising (I certainly did) that Microsoft Windows has a
+native XServer even though it's not a GNU/Linux system. It's called
+[WSLg](https://github.com/microsoft/wslg#readme), and it's included as part of
+the [Windows Subsystem for
 Linux](https://www.microsoft.com/store/productId/9P9TQF7MRM4R) (WSL). You most
 likely already have WSL and WSLg installed if you are running [Docker
 Desktop](https://www.docker.com/products/docker-desktop/) in recent builds of
@@ -139,16 +139,16 @@ container.
 Apple's operating system doesn't include a built-in XServer, but we can use
 [XQuartz](https://www.xquartz.org/) to provide one:
 
-
 1. Install XQuartz: `brew install --cask xquartz`
-1. Open XQuartz, Preferences -> Security, check "Allow connections from network
-   clients"
+1. Open XQuartz, go to Preferences -> Security, and check "Allow connections
+   from network clients"
 1. Restart your computer (restarting XQuartz might not be enough)
-2. Start XQuartz: `xhost +localhost`
-3. Open Docker Desktop and edit settings to give access to `/tmp/.X11-unix`:
+1. Start XQuartz with `xhost +localhost`
+1. Open Docker Desktop and edit settings to give access to `/tmp/.X11-unix` in
    Preferences -> Resources -> File sharing
 
-Once XQuartz is running with the right permissions, you can populate the environment variable and socket:
+Once XQuartz is running with the right permissions, you can populate the
+environment variable and socket:
 
 ```bash
 docker run --rm \
