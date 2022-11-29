@@ -8,6 +8,9 @@ tags:
   - Docker
 image:
   src: blog/2022/containers.jpg
+  alt: |
+    Overhead view of a cargo ship in water
+    loaded with multi-colored shipping containers.
 summary: |
   Learn how to run Playwright in headed mode to interact with the browser's user
   interface from outside Docker containers.
