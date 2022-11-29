@@ -6,6 +6,8 @@ tags:
   - Article
   - Testing
   - Docker
+image:
+  src: blog/2022/containers.jpg
 summary: |
   Learn how to run Playwright in headed mode to interact with the browser's user
   interface from outside Docker containers.
