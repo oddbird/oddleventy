@@ -1,5 +1,5 @@
 ---
-title: Effective end-to-end testing for Django
+title: Effective End-to-End Testing for Django
 date: 2022-10-16
 author: ed
 image:
@@ -20,7 +20,6 @@ events:
     url: https://2022.djangocon.us/tutorials/effective-end-to-end-testing-for-django/
     date: 2022-10-16
     end: 2022-10-21
-    slug: 2022-djangocon
     slides: https://drive.google.com/file/d/1K3Fyn4uj2uZoJSO5H5mFCMXr6206kiNa/view
 summary: |
   This tutorial provides hands-on experience with end-to-end testing for Django
@@ -46,13 +45,13 @@ their own computer:
 - Testing interactive elements
 - Integrating your test suite with Continuous Integration (CI)
 
-## Comments from attendees
+## Comments From Attendees
 
 > I liked that it was hands-on, started with basics, and had failing tests as
 > part of the tutorial. Seeing progression from failure to passing is really
 > helpful for understanding what is happening in the code.
 
-> Though I am not new to testing these techniques are new and super helpful. I’m
+> Though I am not new to testing, these techniques are new and super helpful. I’m
 > hoping to bring this all to my team.
 
 > I liked how interactive it was. The whole tutorial was easy enough to follow,
