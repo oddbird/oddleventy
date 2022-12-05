@@ -45,3 +45,16 @@ their own computer:
 - Asserting DOM state
 - Testing interactive elements
 - Integrating your test suite with Continuous Integration (CI)
+
+## Comments from attendees
+
+> I liked that it was hands-on, started with basics, and had failing tests as
+> part of the tutorial. Seeing progression from failure to passing is really
+> helpful for understanding what is happening in the code.
+
+> Though I am not new to testing these techniques are new and super helpful. I’m
+> hoping to bring this all to my team.
+
+> I liked how interactive it was. The whole tutorial was easy enough to follow,
+> but explained some advanced concepts along the way. Being able to write,
+> update, and run tests multiple times during the workshop was very helpful.
