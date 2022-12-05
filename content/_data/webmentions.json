@@ -1,6 +1,97 @@
 {
-  "lastFetched": "2022-11-28T08:05:58.545Z",
+  "lastFetched": "2022-12-05T08:05:37.501Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Grzegorz Bokota",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/05fe8491651e048a3de27d8933368d04dc52427d0b9de46671dab4346b09ec0a.jpg",
+        "url": "https://twitter.com/Czaki_PL"
+      },
+      "url": "https://twitter.com/Czaki_PL/status/1598650833180114944",
+      "published": "2022-12-02T12:10:34+00:00",
+      "wm-received": "2022-12-03T01:44:41Z",
+      "wm-id": 1573842,
+      "wm-source": "https://brid.gy/comment/twitter/oddbird/1532795655076339712/1598650833180114944",
+      "wm-target": "https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/",
+      "content": {
+        "html": "Hi. I tried to set up this but with running test (as github-action created workflow does not trigger other workflows). \nAs I read, I need to use the personal access token to do this. But maybe you have a working example and know which permissions are required?\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/je92rivas\"></a>",
+        "text": "Hi. I tried to set up this but with running test (as github-action created workflow does not trigger other workflows). \nAs I read, I need to use the personal access token to do this. But maybe you have a working example and know which permissions are required?"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jonny Gerig Meyer",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/66065ea4a3fde86d4f5977db4eb5bfbb8f1e6828478420de4aff79f71d33e522.png",
+        "url": "https://twitter.com/jgerigmeyer"
+      },
+      "url": "https://twitter.com/jgerigmeyer/status/1598353923332460545",
+      "published": "2022-12-01T16:30:45+00:00",
+      "wm-received": "2022-12-01T23:54:45Z",
+      "wm-id": 1572957,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1598353733695545345/1598353923332460545",
+      "wm-target": "https://www.oddbird.net/2022/11/30/headed-playwright-in-docker/",
+      "content": {
+        "text": "Are you writing end-to-end tests with Playwright inside Docker containers?\n\nLearn how to run Playwright in headed mode to interact with the browser inside the containers. oddbird.net/2022/11/30/hea…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/11/30/headed-playwright-in-docker/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Cloud Smart Bot",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2ed14601080d76a3ebd26718c1aeb9a8d8d829cd476c35c41c604b431b977dc6.jpg",
+        "url": "https://twitter.com/cloud_smart_bot"
+      },
+      "url": "https://twitter.com/cloud_smart_bot/status/1598353899689320451",
+      "published": "2022-12-01T16:30:40+00:00",
+      "wm-received": "2022-12-01T23:54:41Z",
+      "wm-id": 1572955,
+      "wm-source": "https://brid.gy/repost/twitter/oddbird/1598353733695545345/1598353899689320451",
+      "wm-target": "https://www.oddbird.net/2022/11/30/headed-playwright-in-docker/",
+      "content": {
+        "text": "Are you writing end-to-end tests with Playwright inside Docker containers?\n\nLearn how to run Playwright in headed mode to interact with the browser inside the containers. oddbird.net/2022/11/30/hea…"
+      },
+      "repost-of": "https://www.oddbird.net/2022/11/30/headed-playwright-in-docker/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Miriam Eric Suzanne",
+        "photo": "",
+        "url": "https://www.miriamsuzanne.com/who/"
+      },
+      "url": "https://www.miriamsuzanne.com/2022/11/14/pace-layers/",
+      "published": "2022-11-14T00:00:00",
+      "wm-received": "2022-12-01T00:26:39Z",
+      "wm-id": 1572191,
+      "wm-source": "https://www.miriamsuzanne.com/2022/11/14/pace-layers/",
+      "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "name": "When Our Tools Hold Us Back",
+      "summary": {
+        "content-type": "text/plain",
+        "value": "The tools we choose can have a major impact on how we access web platform features – and, if we’re not careful, can block us out of new features all-together."
+      },
+      "content": {
+        "html": "<p>An article on OddBird,\nwhere I spend some time exploring\nthe different ways our\ndesign and code tools intervene\nbetween us and the web platform.</p>\n<blockquote>\n<p>Ask not just: <em>How well does it work</em>?\nBut also: <em>How well does it fail</em>?\nWhat happens when something goes wrong?</p>\n<p>—Jeremy Keith</p>\n</blockquote>",
+        "text": "An article on OddBird,\nwhere I spend some time exploring\nthe different ways our\ndesign and code tools intervene\nbetween us and the web platform.\n\nAsk not just: How well does it work?\nBut also: How well does it fail?\nWhat happens when something goes wrong?\n—Jeremy Keith"
+      },
+      "repost-of": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
