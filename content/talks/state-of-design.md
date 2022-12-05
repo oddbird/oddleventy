@@ -13,7 +13,6 @@ tags:
   - Design
 events:
   - venue: Front-End Camp
-    url: https://chicagocamps.org/events/2017/front-end-camp/
     date: 2017-06-03
     adr: Chicago, IL
   - venue: CSSDay.io
