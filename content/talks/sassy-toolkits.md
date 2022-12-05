@@ -21,7 +21,6 @@ events:
     date: 2015-06-13
   - title: Show Your Work & Share Your Toys
     venue: Camp Sass
-    url: http://campsass.com/2014/
     adr: San Francisco, CA
     date: 2014-04-19
     slides: https://mirisuzanne.github.io/pres/show-yr-work/
