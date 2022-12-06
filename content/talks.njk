@@ -1,0 +1,57 @@
+---
+title: Talks & Workshops
+sub: Bring us to your conference or browse past talks
+image:
+  src: talks/miriam.jpg
+  alt: Miriam Suzanne speaking at a conference
+  position: left center
+action:
+  text: Hire us for conference talks »
+  url: /contact/
+summary: |
+  **We provide award-winning conference talks & workshops**
+  to help you create resilient web applications
+  and design systems --
+  improving team process, communication,
+  site performance, and accessibility.
+  Missed a conference?
+  Dive into the posts below
+  for the latest videos & slides,
+  and upcoming conference dates.
+---
+
+{% import 'quotes.macros.njk' as quotes %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'events.macros.njk' as events %}
+{% import 'post.macros.njk' as post %}
+
+{{ quotes.find(
+  collections.all,
+  slugs=['spot-on', 'audit']
+) }}
+
+{{ events.section(
+  title='Upcoming Events',
+  events=collections.all | getEvents | getFuture,
+  all=false,
+  by_bird=collections
+) }}
+
+{{ layout.title('Talks & Workshops') }}
+{% call layout.grid('training') %}
+  {% for item in collections._training | eventSort | reverse %}
+    <article {{ post.aria_label(item) }} class="training-item">
+      {{ post.hero(item.data.image, 'post') }}
+      <header class="training-header">
+        {{ post.banner(item) }}
+        {{ post.subtitle(item.data.sub) }}
+        {{ post.byline(item, collections, dateformat='range') }}
+      </header>
+      {% if item.data.events %}
+        <div class="training-detail">
+          {{ post.eventpreview(item.data.events) }}
+        </div>
+      {% endif %}
+    </article>
+  {% endfor %}
+{% endcall %}
