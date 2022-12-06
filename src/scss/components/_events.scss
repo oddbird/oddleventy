@@ -1,7 +1,32 @@
 @use '../config';
 
+[data-grid='training'] {
+  --gap: var(--spacer);
+}
+
+.training-item [data-hero] {
+  aspect-ratio: 16/9;
+}
+
+.training-header {
+  --newline: 0;
+}
+
+.training-detail {
+  margin-block: var(--gutter);
+}
+
+[data-media='bird-events'] {
+  --media-max: var(--logo-item);
+}
+
+.event-group-title {
+  font-size: var(--small);
+  padding: var(--gutter) 0;
+}
+
 .event {
-  margin-bottom: var(--newline);
+  margin-bottom: var(--double-gutter);
 }
 
 .event-meta {
@@ -11,6 +36,7 @@
 }
 
 .event-title {
+  font-size: var(--h3);
   margin: 0;
 }
 

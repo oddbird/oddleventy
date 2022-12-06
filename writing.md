@@ -52,8 +52,8 @@ guidelines to help:
   - Case Study
   - Link
   - Podcast
-  - Talk
-  - Workshop
+  - _talk
+  - _workshop
   - Video
 
 *Case Study* posts include tags for their industry, for example `Technology Sector`

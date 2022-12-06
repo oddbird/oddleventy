@@ -15,12 +15,13 @@
 {% elif bird and (bird != 'oddbird') %}
   {% set this_page = collections.all | getCollectionItem(page) %}
   {% set bird_pages = collections.all | byBird(bird) %}
+  {{ confs.section(
+    title='Upcoming Events',
+    events=bird_pages | concat([this_page]) | getEvents | getFuture,
+    all=false
+  ) }}
+
   <section data-list="bird" data-typeset>
-    {{ confs.list(
-      title='Upcoming Events',
-      events=bird_pages | concat([this_page]) | getEvents,
-      all=false
-    ) }}
     {{ oss.list(
       collections.oss | byBird(bird),
       collections
@@ -31,12 +32,10 @@
     ) }}
   </section>
 {% elif events %}
-  <section data-list="events" data-typeset>
-    {{ confs.list(
-      'Events',
-      collections.all | getCollectionItem(page) | pageEvents
-    ) }}
-  </section>
+  {{ confs.section(
+    'Events',
+    collections.all | getCollectionItem(page) | pageEvents
+  ) }}
 {% elif is_entry %}
   {% include 'page/recents.njk' %}
 {% endif %}

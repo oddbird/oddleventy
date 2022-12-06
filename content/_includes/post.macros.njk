@@ -34,12 +34,13 @@ params:
   posts,
   collections=none,
   above=6,
-  pagination=none
+  pagination=none,
+  label='Posts'
 ) %}
   {%- if posts | length > 0 -%}
     {%- if posts | length > above -%}
-      {%- for group in posts | byYear -%}
-        {% set title = [group.year, 'Posts'] | join(' ') if loop.first else group.year %}
+      {%- for group in posts | eventSort | byYear -%}
+        {% set title = [group.year, label] | join(' ') if loop.first else group.year %}
         {{ list(
           posts=group.posts,
           collections=collections,

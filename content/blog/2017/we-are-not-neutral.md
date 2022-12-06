@@ -69,7 +69,7 @@ a start. We're here, we're listening, and we're not neutral.
   [Stacy]: /authors/stacy/
   [Kit]: /authors/kit/
   [writing more]: /blog/
-  [speaking more]: /services/speaking/
+  [speaking more]: /talks/
   [taking on more clients]: /work/
   [re-designing our website and brand in the open]: /tags/open-design/
   [open source projects]: /tools/

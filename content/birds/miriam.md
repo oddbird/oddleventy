@@ -11,6 +11,11 @@ social:
   codepen: MiriamSuzanne
   stackoverflow: 1930386
 events:
+  - venue: Front Conference
+    date: 2023-08-31
+    end: 2023-09-01
+    adr: Zurich, Switzerland
+    url: https://frontconference.com/
   - venue: State of CSS Frameworks
     date: 2022-10-18
     adr: Online
@@ -40,7 +45,7 @@ writing, music, and visual art.
 [smashing]: /tags/smashing-magazine/
 [mozdev]: /work/mozdev/
 [jss]: https://www.sitepoint.com/premium/books/jump-start-sass/
-[speaking]: /services/speaking/
+[speaking]: /talks/
 
 {% import "embed.macros.njk" as embed %}
 {% set mia_pages = collections.all | byBird('miriam') %}

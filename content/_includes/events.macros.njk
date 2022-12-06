@@ -1,5 +1,7 @@
 {% import 'layout.macros.njk' as layout %}
 {% import 'utility.macros.njk' as utility %}
+{% import 'embed.macros.njk' as embed %}
+{% import 'birds.macros.njk' as birds %}
 
 {# @docs
 label: Event Macros
@@ -7,13 +9,45 @@ category: File
 note: Showing stand-alone event lists
 #}
 
+{% macro section(
+  title,
+  events,
+  all=true,
+  by_bird=none
+) %}
+  {% if events and (events.length > 0) %}
+    <section data-list="events" data-typeset>
+      {%- if title -%}
+        {{- layout.title(title) -}}
+      {%- endif -%}
+
+      {% if by_bird %}
+        {% for bird in events | birdEvents %}
+          {% call embed.media_block(
+            media=embed.svg('faces/' + bird.name),
+            name='bird-events'
+          ) %}
+            <h3 class='event-group-title'>
+              {{ birds.authors(bird.name, by_bird, link=false) }}
+            </h3>
+            {{ list(
+              events=bird.events,
+              all=all,
+              heading_level=4
+            ) }}
+          {% endcall %}
+        {% endfor %}
+      {% else %}
+        {{ list(events, all) }}
+      {% endif %}
+    </section>
+  {% endif %}
+{% endmacro %}
+
 {# @docs
 label: list
-note: Display an array of events as a simple list with section-title
+note: Display an array of events as a simple list
 params:
-  title:
-    type: markdown
-    note: Section title
   events:
     type: array
     note: |
@@ -28,25 +62,19 @@ params:
       and order them with soonest first.
 #}
 {% macro list(
-  title,
   events,
-  all=true
+  all=true,
+  heading_level=3
 ) %}
-  {%- set reverse = all -%}
-  {%- set events = events if all else events | getFuture -%}
-  {%- set events = events | sort(reverse, false, 'date') -%}
   {%- if events and (events | length > 0) -%}
-    {%- if title -%}
-      {{- layout.title(title) -}}
-    {%- endif -%}
-    <ol {{ 'reversed' if reverse else '' }} class="event-list">
+    {%- set events = events | sort(all, false, 'date') -%}
+    <ol {{ 'reversed' if all else '' }} class="event-list">
       {%- for event in events -%}
-        {% set is_future = event | isFuture %}
         {% set event_slug = [event.data.venue, event.date | getDate('iso'), loop.index] | join('-') | slug %}
         <li class="event-item">
           <article class="event" aria-labelledby="{{ event_slug }}">
             <footer class="event-meta">
-              {%- if is_future -%}
+              {%- if event.is_future -%}
                 <strong>{{ utility.datetime(event.date) }}</strong>
               {%- else -%}
                 {{ utility.datetime(event.date) }}
@@ -56,14 +84,17 @@ params:
               {% endif %}
             </footer>
 
-            <h3 class="event-title" id="{{ event_slug }}">
+            {% h heading_level, {
+              'class': 'event-title',
+              'id': event_slug
+            } %}
               {{ utility.link_if(
                 event.data.venue,
                 event.data.url or event.url
               ) }}
-            </h3>
+            {% endh %}
 
-            {% if event.data.discount and is_future %}
+            {% if event.data.discount and event.is_future %}
               <p class="event-discount">
                 Use discount code
                 <code>{{ event.data.discount.code }}</code>
@@ -71,7 +102,7 @@ params:
               </p>
             {% endif %}
 
-            {% if not is_future %}
+            {% if not event.is_future %}
               {%- set links = [
                 {
                   'title': 'slides',

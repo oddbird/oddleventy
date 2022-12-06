@@ -18,6 +18,8 @@ nav:
   - url: /work/
   - url: /services/
   - url: /tools/
+  - url: /talks/
+    title: Talks
   - url: /blog/
   - url: /about/
   - url: /contact/
