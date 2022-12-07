@@ -16,6 +16,6 @@ html {
     0 100%
   );
 
-  font-size: config.size('rem');
+  font-size: calc(1.25em + 0.5vw);
   line-height: config.ratio('line-height');
 }
