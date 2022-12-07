@@ -22,7 +22,7 @@ summary: |
 
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'layout.macros.njk' as layout %}
-{% import 'events.macros.njk' as events %}
+{% import 'talks.macros.njk' as talks %}
 {% import 'post.macros.njk' as post %}
 
 {{ quotes.find(
@@ -30,7 +30,7 @@ summary: |
   slugs=['spot-on', 'audit']
 ) }}
 
-{{ events.section(
+{{ talks.section(
   title='Upcoming Events',
   events=collections.all | getEvents | getFuture,
   all=false,
@@ -49,7 +49,7 @@ summary: |
       </header>
       {% if item.data.events %}
         <div class="training-detail">
-          {{ post.eventpreview(item.data.events) }}
+          {{ talks.list(item | pageEvents, compact=true) }}
         </div>
       {% endif %}
     </article>

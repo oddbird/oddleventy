@@ -32,13 +32,16 @@ note: Showing stand-alone event lists
             </h3>
             {{ list(
               events=bird.events,
-              all=all,
-              heading_level=4
+              all=all
             ) }}
           {% endcall %}
         {% endfor %}
       {% else %}
-        {{ list(events, all) }}
+        {{ list(
+          events,
+          all,
+          heading_level=3
+        ) }}
       {% endif %}
     </section>
   {% endif %}
@@ -60,17 +63,28 @@ params:
       When set to false,
       this will filter to upcoming events,
       and order them with soonest first.
+  links:
+    type: boolean
+    default: true
+    note: Optionally remove event links for content in linked-cards
 #}
 {% macro list(
   events,
   all=true,
-  heading_level=3
+  heading_level=4,
+  compact=false
 ) %}
   {%- if events and (events | length > 0) -%}
     {%- set events = events | sort(all, false, 'date') -%}
-    <ol {{ 'reversed' if all else '' }} class="event-list">
+    {%- set events = events | onlyShow(2) if compact else events -%}
+
+    <ol {{ utility.show_attrs({
+      'reversed': all,
+      'class': ['event-list', 'compact-events'] | join(' ') if compact else 'event-list'
+    }) }}>
       {%- for event in events -%}
-        {% set event_slug = [event.data.venue, event.date | getDate('iso'), loop.index] | join('-') | slug %}
+        {%- set event_slug = [event.data.venue, event.date | getDate('iso'), loop.index] | join('-') | slug -%}
+
         <li class="event-item">
           <article class="event" aria-labelledby="{{ event_slug }}">
             <footer class="event-meta">
@@ -89,45 +103,46 @@ params:
               'id': event_slug
             } %}
               {{ utility.link_if(
-                event.data.venue,
-                event.data.url or event.url
+                event.venue,
+                none if compact else (event.data.url or event.url)
               ) }}
             {% endh %}
 
-            {% if event.data.discount and event.is_future %}
+            {% if not event.is_future %}
+              {{ links(event) }}
+            {% elif event.data.discount and not compact %}
               <p class="event-discount">
                 Use discount code
                 <code>{{ event.data.discount.code }}</code>
                 to get <strong>{{ event.data.discount.amount }} off</strong>
               </p>
             {% endif %}
-
-            {% if not event.is_future %}
-              {%- set links = [
-                {
-                  'title': 'slides',
-                  'url': (event.data.slides or event.page.slides)
-                },
-                {
-                  'title': 'video',
-                  'url': event.data.video
-                }
-              ] | selectattr('url') -%}
-
-              {% if links | length > 0 %}
-                <ul class="event-links" inline-list="comma">
-                  {%- for link in links -%}
-                    <li class="event-link">
-                      {{- utility.link_if(link.title, link.url) -}}
-                    </li>
-                  {%- endfor -%}
-                </ul>
-              {% endif %}
-            {% endif %}
-
           </article>
         </li>
       {%- endfor -%}
     </ol>
   {%- endif -%}
+{% endmacro %}
+
+{% macro links(event) %}
+  {%- set links = [
+    {
+      'title': 'Slides',
+      'url': (event.data.slides or event.page.slides)
+    },
+    {
+      'title': 'Video',
+      'url': event.data.video
+    }
+  ] | selectattr('url') -%}
+
+  {% if links | length > 0 %}
+    <ul class="event-links" inline-list="comma">
+      {%- for link in links -%}
+        <li class="event-link">
+          {{- utility.link_if(link.title, link.url) -}}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {% endif %}
 {% endmacro %}

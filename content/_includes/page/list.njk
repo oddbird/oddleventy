@@ -1,6 +1,6 @@
 {% import 'post.macros.njk' as post %}
 {% import 'oss.macros.njk' as oss %}
-{% import 'events.macros.njk' as confs %}
+{% import 'talks.macros.njk' as talks %}
 
 {% if index %}
   {% set list = collections[index] | removePage(page.url) if collections[index] else [] %}
@@ -15,7 +15,7 @@
 {% elif bird and (bird != 'oddbird') %}
   {% set this_page = collections.all | getCollectionItem(page) %}
   {% set bird_pages = collections.all | byBird(bird) %}
-  {{ confs.section(
+  {{ talks.section(
     title='Upcoming Events',
     events=bird_pages | concat([this_page]) | getEvents | getFuture,
     all=false
@@ -32,7 +32,7 @@
     ) }}
   </section>
 {% elif events %}
-  {{ confs.section(
+  {{ talks.section(
     'Events',
     collections.all | getCollectionItem(page) | pageEvents
   ) }}

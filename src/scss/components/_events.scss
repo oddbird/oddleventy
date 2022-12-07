@@ -25,8 +25,18 @@
   padding: var(--gutter) 0;
 }
 
+.event-item {
+  .compact-events & {
+    list-style: none;
+  }
+}
+
 .event {
   margin-bottom: var(--double-gutter);
+
+  .compact-events & {
+    margin-bottom: var(--gutter);
+  }
 }
 
 .event-meta {
@@ -38,13 +48,27 @@
 .event-title {
   font-size: var(--h3);
   margin: 0;
+
+  .compact-events & {
+    font: inherit;
+    font-weight: bold;
+    display: inline-block;
+  }
 }
 
 .event-discount,
 .event-links {
-  @include config.wrap-content('[' ']');
-
   font-size: var(--small);
+}
+
+.event-links {
+  .compact-events & {
+    @include config.before('| ');
+  }
+}
+
+.event-discount {
+  @include config.wrap-content('[' ']');
   font-style: italic;
 }
 

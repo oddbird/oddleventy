@@ -54,6 +54,7 @@ const buildEvent = (page, event) => {
   const built = {
     date: event.date ? getDate(event.date) : page.date,
     end: event.end ? getDate(event.end) : null,
+    venue: event.venue || page.data.venue,
     url: page.url,
     birds: page.data.author || page.data.bird,
     inputPath: page.inputPath,

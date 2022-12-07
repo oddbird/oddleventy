@@ -2,6 +2,7 @@
 {% import 'layout.macros.njk' as layout %}
 {% import 'embed.macros.njk' as embed %}
 {% import 'utility.macros.njk' as utility %}
+{% import 'talks.macros.njk' as talks %}
 
 {# @docs
 label: Post Macros
@@ -244,7 +245,7 @@ params:
       </header>
       {% if post.data.events %}
         <div class="p-summary">
-          {{ eventpreview(post.data.events, links=false) }}
+          {{ talks.list(post | pageEvents, compact=true) }}
         </div>
       {% elif post.data.summary %}
         {% set summary = post.data.summary | md %}
@@ -261,57 +262,6 @@ params:
     </div>
   </article>
 {% endmacro %}
-
-
-{# @docs
-label: eventpreview
-category: events
-note: |
-  List of up to 2 upcoming events from a talk post,
-  shows up to 2 past events if no upcoming events are available
-params:
-  events:
-    type: array
-  links:
-    type: boolean
-    default: true
-    note: Optionally remove event links for content in linked-cards
-#}
-{% macro eventpreview(
-  events,
-  links=true
-) %}
-  {%- set events = events -%}
-  {%- set events = events | sort(attribute='date') -%}
-  {%- set futureevents = events | getFuture -%}
-  {%- set isfuture = futureevents | length > 0 -%}
-  {%- set showevents = futureevents if isfuture else events | reverse -%}
-
-  {%- if showevents | length > 0 -%}
-    <h4 class="item-timing">{{ 'Upcoming' if isfuture else 'Past' }}</h4>
-    <ul class="next-event">
-    {%- for next in showevents -%}
-      {% if (loop.index <= 2) %}
-        <li>
-          {{ linked(
-            next.venue,
-            next.url if links else none
-          ) }}
-          <span class="next-on">
-            <i>on</i>
-            {{ utility.datetime(
-              next.date,
-              next.end,
-              format='long'
-            ) }}
-          </span>
-        </li>
-       {%- endif -%}
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
-{% endmacro %}
-
 
 {# @docs
 label: hero
@@ -400,10 +350,8 @@ params:
 
     {{ client(post.data.client) }}
 
-    {% if not post.data.events %}
-      {% if dateformat %}
-        {{ pubdate(post.date, post.data.end, dateformat) }}
-      {% endif %}
+    {% if dateformat %}
+      {{ pubdate(post.date, post.data.end, dateformat) }}
     {% endif %}
   </p>
 {% endmacro %}
@@ -457,12 +405,13 @@ params:
   called=false,
   hentry=false
 ) -%}
+  {% set name = caller() if called != false else name(post) %}
   {%- h level, {
     'class': 'item-title p-name' if hentry else 'item-title',
     'id': id(post, id_prefix)
   } | merge(attrs) -%}
       {{ utility.link_if(
-        caller() if called else name(post),
+        name,
         post.url,
         'title-link u-url' if hentry else 'title-link'
       ) }}

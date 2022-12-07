@@ -28,9 +28,7 @@ summary: |
         ) }}
         <div class="offset-item project-details">
           <header class="post-header">
-            {% call post.banner(item, called=true) -%}
-              {{ item.data.title | mdInline | safe }}
-            {%- endcall %}
+            {{ post.banner(item) }}
             {% set years = utility.datetime(
               start=item.date,
               end=item.data.end,
