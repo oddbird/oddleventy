@@ -23,6 +23,19 @@ $text-ratios: (
 
 // Font Sizes
 // ----------
+
+/// @sizes root-font-size {text}
+/// @group config-scale
+$root: calc(1.25em + 0.5vw);
+
+@include herman.add(
+  'sizes',
+  'root-font-size',
+  (
+    'root': 1rem,
+  )
+);
+
 /// @sizes {text}
 /// @group config-scale
 $font-sizes: (
