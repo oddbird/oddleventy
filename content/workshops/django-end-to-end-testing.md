@@ -51,8 +51,8 @@ their own computer:
 > part of the tutorial. Seeing progression from failure to passing is really
 > helpful for understanding what is happening in the code.
 
-> Though I am not new to testing, these techniques are new and super helpful. I’m
-> hoping to bring this all to my team.
+> Though I am not new to testing, these techniques are new and super helpful.
+> I’m hoping to bring this all to my team.
 
 > I liked how interactive it was. The whole tutorial was easy enough to follow,
 > but explained some advanced concepts along the way. Being able to write,
