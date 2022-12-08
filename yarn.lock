@@ -3071,7 +3071,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bluebird@npm:^3.1.1, bluebird@npm:^3.5.5, bluebird@npm:^3.7.2":
+"bluebird@npm:^3.1.1, bluebird@npm:^3.5.5":
   version: 3.7.2
   resolution: "bluebird@npm:3.7.2"
   checksum: 869417503c722e7dc54ca46715f70e15f4d9c602a423a02c825570862d12935be59ed9c7ba34a9b31f186c017c23cac6b54e35446f8353059c101da73eac22ef
@@ -3801,6 +3801,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"colorjs.io@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "colorjs.io@npm:0.4.2"
+  checksum: b825dcfe9d098dc7960bb484c67946d5ca2bfe8161c70bce02ac1635774cca0a3acb933359739bc768a94cb3cdfc561282ea8131e0c1024be5a3d92210d3da78
+  languageName: node
+  linkType: hard
+
 "combined-stream@npm:^1.0.8":
   version: 1.0.8
   resolution: "combined-stream@npm:1.0.8"
@@ -4106,6 +4113,16 @@ __metadata:
     domutils: 1.5.1
     nth-check: ~1.0.1
   checksum: 607cca60d2f5c56701fe5f800bbe668b114395c503d4e4808edbbbe70b8be3c96a6407428dc0227fcbdf335b20468e6a9e7fd689185edfb57d402e1e4837c9b7
+  languageName: node
+  linkType: hard
+
+"css-tree@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "css-tree@npm:2.3.0"
+  dependencies:
+    mdn-data: 2.0.30
+    source-map-js: ^1.0.1
+  checksum: 94f225ca2ee00bf12c2a32043e93dbdd1395c7d2172694bf556bf70429059fa4e7bcacd8771f6cbccf797d81476c374d3449ce7ff72beca0c257d5646b2b7feb
   languageName: node
   linkType: hard
 
@@ -8550,7 +8567,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it-anchor@npm:^8.6.4, markdown-it-anchor@npm:^8.6.5":
+"markdown-it-anchor@npm:^8.6.5":
   version: 8.6.5
   resolution: "markdown-it-anchor@npm:8.6.5"
   peerDependencies:
@@ -8638,6 +8655,13 @@ __metadata:
     arrify: ^1.0.0
     minimatch: ^3.0.0
   checksum: 93db51c3cd3a465fd2d231e5c5c0ca9b4d7aaff6a45b741619fbe62f016593a3ddce7f2758601d2ca0a8e77597a10f00353ac2531006f46211c9e04020c870bc
+  languageName: node
+  linkType: hard
+
+"mdn-data@npm:2.0.30":
+  version: 2.0.30
+  resolution: "mdn-data@npm:2.0.30"
+  checksum: d6ac5ac7439a1607df44b22738ecf83f48e66a0874e4482d6424a61c52da5cde5750f1d1229b6f5fa1b80a492be89465390da685b11f97d62b8adcc6e88189aa
   languageName: node
   linkType: hard
 
@@ -9385,7 +9409,7 @@ __metadata:
     sanitize-html: ^2.7.3
     sass: ^1.56.1
     sassdoc: ^2.7.4
-    sassdoc-theme-herman: 5.0.0-beta.2
+    sassdoc-theme-herman: 5.0.0-beta.7
     slugify: ^1.6.5
     striptags: ^3.2.0
     stylelint: ^14.16.0
@@ -10507,7 +10531,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:^4.1.0":
+"readable-stream@npm:^4.2.0":
   version: 4.2.0
   resolution: "readable-stream@npm:4.2.0"
   dependencies:
@@ -11022,30 +11046,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sassdoc-theme-herman@npm:5.0.0-beta.2":
-  version: 5.0.0-beta.2
-  resolution: "sassdoc-theme-herman@npm:5.0.0-beta.2"
+"sassdoc-theme-herman@npm:5.0.0-beta.7":
+  version: 5.0.0-beta.7
+  resolution: "sassdoc-theme-herman@npm:5.0.0-beta.7"
   dependencies:
-    bluebird: ^3.7.2
     cheerio: 1.0.0-rc.12
-    extend: ^3.0.2
+    colorjs.io: ^0.4.2
+    css-tree: ^2.3.0
     gulp-rename: ^2.0.0
     gulp-svg-symbols: ^3.2.3
     html: ^1.0.0
     lunr: ^2.3.9
     markdown-it: ^13.0.1
-    markdown-it-anchor: ^8.6.4
+    markdown-it-anchor: ^8.6.5
     nunjucks: ^3.2.3
-    readable-stream: ^4.1.0
+    readable-stream: ^4.2.0
     sassdoc-extras: ^3.0.0
     strip-indent: ^3.0.0
-    tinycolor2: ^1.4.2
     typogr: ^0.6.8
     unixify: ^1.0.0
     vinyl-fs: ^3.0.3
   peerDependencies:
     sassdoc: ^2.5.0
-  checksum: bbe524e3bc6e2f0bf4c3d5c3f1a8f682f7b86ec009063fe3bda01fc87e8177a61f4c2cc79ab577ec0b5cc5e634a91ec0c3f20147f5076b7dc4782fbaf7f7b43f
+  checksum: 7a0fb79bec09dbe9522225fd2e8550fc3db4390a001f12f3926d2719b138b978ec6185422b9f5ef1273f0405aeb35e407578f8d757e6080f9082ec0db901794d
   languageName: node
   linkType: hard
 
@@ -11464,7 +11487,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.2":
+"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.1, source-map-js@npm:^1.0.2":
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
   checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
@@ -12202,13 +12225,6 @@ __metadata:
     globalyzer: 0.1.0
     globrex: ^0.1.2
   checksum: aea5801eb6663ddf77ebb74900b8f8bd9dfcfc9b6a1cc8018cb7421590c00bf446109ff45e4b64a98e6c95ddb1255a337a5d488fb6311930e2a95334151ec9c6
-  languageName: node
-  linkType: hard
-
-"tinycolor2@npm:^1.4.2":
-  version: 1.4.2
-  resolution: "tinycolor2@npm:1.4.2"
-  checksum: 57ed262e08815a4ab0ed933edafdbc6555a17081781766149813b44a080ecbe58b3ee281e81c0e75b42e4d41679f138cfa98eabf043f829e0683c04adb12c031
   languageName: node
   linkType: hard
 
