@@ -5,8 +5,12 @@ author: miriam
 date: 2019-11-26
 canonical: https://css-tricks.com/embracing-the-universal-web/
 image:
-  src: birds/miriam.jpg
-  alt: Miriam Suzanne
+  src: birds/mia.jpg
+  alt: |
+    Miriam on stage talking and gesturing
+    in front of a projection screen
+    wearing a yellow leather jacket
+    and white-blue-pink lightning-bolt earrings
 tags:
   - Link
   - CSS

@@ -219,7 +219,7 @@ params:
 ) %}
   {%- set image = post.data.image -%}
   {%- set image = image if image and not (image.type == 'media') else none -%}
-  {%- set image = image if (type.img or card == 'large') else none -%}
+  {%- set image = image if (type or card == 'large') else none -%}
 
   <article
     data-post="{{ 'large' if (card == 'large') else 'link' }}"
@@ -390,7 +390,7 @@ params:
 
 
 {# @docs
-label: title
+label: banner
 category: metadata
 note: Generate a linked heading with the post title
 params:

@@ -1,19 +1,15 @@
 post:
   - tag: Podcast
     icon: audio
-    img: true
   - tag: Video
     icon: video
-    img: true
   - tag: Link
     icon: link
-    img: true
   - tag: Case Study
     icon: tools
-    img: true
   - tag: Article
     icon: news
-    img: true
+
 oss:
   - title: OddTools
     all:

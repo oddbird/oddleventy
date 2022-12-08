@@ -37,7 +37,7 @@
         {{ post.pubdate(
           start=page.date,
           end=end,
-          format='range' if oss or client else 'long'
+          format='range' if oss or client or event else 'long'
         ) }}
         {{ post.where(adr) }}
       </p>
