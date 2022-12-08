@@ -13,7 +13,7 @@ tags:
   - Tutorial
   - Django
   - Python
-slides: https://drive.google.com/file/d/1K3Fyn4uj2uZoJSO5H5mFCMXr6206kiNa/views
+slides: https://drive.google.com/file/d/1K3Fyn4uj2uZoJSO5H5mFCMXr6206kiNa/view
 events:
   - venue: DjangoCon US 2022
     adr: San Diego, CA (hybrid)
@@ -31,7 +31,7 @@ summary: |
 A comprehensive test suite gives you the confidence to fix bugs, refactor, and
 add new features to your application without fear of unknowingly breaking
 unrelated parts of the codebase. End-to-end tests are a useful and important
-member of your testing toolbox and tools like [pytest](https://pytest.org) and
+member of your testing toolbox, and tools like [pytest](https://pytest.org) and
 [Playwright](https://playwright.dev/) provide a robust implementation for Python
 developers.
 
