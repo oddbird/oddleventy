@@ -9,6 +9,34 @@ category: File
 note: Showing stand-alone event lists
 #}
 
+{# @docs
+label: section
+note: Display a top-level section of talk & workshop events
+params:
+  title:
+    type: string
+  events:
+    type: collection
+    note: |
+      Array of event objects.
+      These should be pre-compiled event objects,
+      using either the `getEvents` (from a collection)
+      or `pageEvents` fitler.
+  all:
+    type: boolean
+    default: true
+    note: |
+      If we're only showing upcoming events,
+      we'll reverse the order so that
+      the soonest event is first.
+  by_bird:
+    type: none | collections
+    default: none
+    note: |
+      Optionally pass in the `collections` object
+      in order to sort events into groups
+      by Bird.
+#}
 {% macro section(
   title,
   events,
@@ -17,9 +45,7 @@ note: Showing stand-alone event lists
 ) %}
   {% if events and (events.length > 0) %}
     <section data-list="events" data-typeset>
-      {%- if title -%}
-        {{- layout.title(title) -}}
-      {%- endif -%}
+      {{- layout.title(title) -}}
 
       {% if by_bird %}
         {% for bird in events | birdEvents %}
@@ -60,13 +86,24 @@ params:
     type: boolean
     default: true
     note: |
-      When set to false,
-      this will filter to upcoming events,
-      and order them with soonest first.
-  links:
+      If we're only showing upcoming events,
+      we'll reverse the order so that
+      the soonest event is first.
+  heading_level:
+    type: integer (1-6)
+    default: 4
+    note: |
+      Adjust the heading level
+      for individual event titles,
+      depending on the context where this list is shown.
+  compact:
     type: boolean
-    default: true
-    note: Optionally remove event links for content in linked-cards
+    default: false
+    note: |
+      When showing an event list
+      inside a grid of talks or posts,
+      we only show the most recent 2 events,
+      and simplify the styling/output.
 #}
 {% macro list(
   events,
@@ -83,47 +120,64 @@ params:
       'class': ['event-list', 'compact-events'] | join(' ') if compact else 'event-list'
     }) }}>
       {%- for event in events -%}
-        {%- set event_slug = [event.data.venue, event.date | getDate('iso'), loop.index] | join('-') | slug -%}
-
         <li class="event-item">
-          <article class="event" aria-labelledby="{{ event_slug }}">
-            <footer class="event-meta">
-              {%- if event.is_future -%}
-                <strong>{{ utility.datetime(event.date) }}</strong>
-              {%- else -%}
-                {{ utility.datetime(event.date) }}
-              {%- endif %}
-              {% if event.data.adr %}
-                {{ ['--', event.data.adr] | join(' ') | mdInline | safe }}
-              {% endif %}
-            </footer>
+          {{ meta(event) }}
 
-            {% h heading_level, {
-              'class': 'event-title',
-              'id': event_slug
-            } %}
-              {{ utility.link_if(
-                event.venue,
-                none if compact else (event.data.url or event.url)
-              ) }}
-            {% endh %}
+          {% h heading_level, {'class': 'event-title'} %}
+            {{ utility.link_if(
+              event.venue,
+              none if compact else (event.data.url or event.url)
+            ) }}
+          {% endh %}
 
-            {% if not event.is_future %}
-              {{ links(event) }}
-            {% elif event.data.discount and not compact %}
-              <p class="event-discount">
-                Use discount code
-                <code>{{ event.data.discount.code }}</code>
-                to get <strong>{{ event.data.discount.amount }} off</strong>
-              </p>
-            {% endif %}
-          </article>
+          {% if not event.is_future %}
+            {{ links(event) }}
+          {% elif event.data.discount and not compact %}
+            <p class="event-discount">
+              Use discount code
+              <code>{{ event.data.discount.code }}</code>
+              to get <strong>{{ event.data.discount.amount }} off</strong>
+            </p>
+          {% endif %}
         </li>
       {%- endfor -%}
     </ol>
   {%- endif -%}
 {% endmacro %}
 
+{# @docs
+label: meta
+note: Display date and location for an event
+params:
+  event:
+    type: object
+    note: |
+      A single event,
+      built by either `getEvents` or `pageEvents`.
+#}
+{% macro meta(event) %}
+  <p class="event-meta">
+    {%- if event.is_future -%}
+      <strong>{{ utility.datetime(event.date) }}</strong>
+    {%- else -%}
+      {{ utility.datetime(event.date) }}
+    {%- endif %}
+    {% if event.data.adr %}
+      {{ ['--', event.data.adr] | join(' ') | mdInline | safe }}
+    {% endif %}
+  </p>
+{% endmacro %}
+
+{# @docs
+label: meta
+note: Display event links to slides or video
+params:
+  event:
+    type: object
+    note: |
+      A single event,
+      built by either `getEvents` or `pageEvents`.
+#}
 {% macro links(event) %}
   {%- set links = [
     {

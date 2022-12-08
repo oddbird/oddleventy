@@ -4,7 +4,13 @@ sub: Co-founder & product lead
 bird: miriam
 date: 2008-04-01
 image:
-  src: birds/miriam.jpg
+  src: birds/mia.jpg
+  alt: |
+    Miriam on stage talking and gesturing
+    in front of a projection screen
+    wearing a yellow leather jacket
+    and white-blue-pink lightning-bolt earrings
+  position: top
 social:
   twitter: TerribleMia
   github: MiriSuzanne

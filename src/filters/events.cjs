@@ -118,6 +118,15 @@ const getEvents = (collection) => {
   return results.sort((a, b) => b.date - a.date);
 };
 
+/* @docs
+label: birdEvents
+category: List
+note: |
+  Group events by Bird
+params:
+  events:
+    type: collection of events
+*/
 const birdEvents = (events) => {
   const groups = [];
   const birds = events

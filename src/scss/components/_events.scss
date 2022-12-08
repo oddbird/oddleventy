@@ -26,15 +26,10 @@
 }
 
 .event-item {
-  .compact-events & {
-    list-style: none;
-  }
-}
-
-.event {
   margin-bottom: var(--double-gutter);
 
   .compact-events & {
+    list-style: none;
     margin-bottom: var(--gutter);
   }
 }
@@ -43,6 +38,7 @@
   @include config.font-family('alt');
 
   font-size: var(--small);
+  margin: 0;
 }
 
 .event-title {
