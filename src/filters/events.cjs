@@ -1,5 +1,7 @@
 'use strict';
 
+const _ = require('lodash');
+
 const { now, getDate } = require('#/time.cjs');
 
 /* @docs
@@ -129,9 +131,7 @@ params:
 */
 const birdEvents = (events) => {
   const groups = [];
-  const birds = events
-    .flatMap((event) => event.birds)
-    .filter((bird, i, all) => all.indexOf(bird) === i);
+  const birds = _.uniq(events.flatMap((event) => event.birds));
 
   birds.forEach((name) => {
     groups.push({

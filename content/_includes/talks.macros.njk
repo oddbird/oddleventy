@@ -54,7 +54,7 @@ params:
             name='bird-events'
           ) %}
             <h3 class='event-group-title'>
-              {{ birds.authors(bird.name, by_bird, link=false) }}
+              {{ birds.authors(bird.name, by_bird) }}
             </h3>
             {{ list(
               events=bird.events,
