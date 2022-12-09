@@ -239,7 +239,7 @@ params:
           post=post,
           collections=collections,
           links=false,
-          dateformat='range' if post.data.client else 'month_day'
+          dateformat='range' if post.data.client or ('_talk' in post.data.tags) else 'month_day'
         ) }}
       </header>
       {% if post.data.events %}
