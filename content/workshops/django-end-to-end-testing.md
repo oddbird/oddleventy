@@ -22,8 +22,7 @@ events:
     end: 2022-10-21
     slides: https://drive.google.com/file/d/1K3Fyn4uj2uZoJSO5H5mFCMXr6206kiNa/view
 press:
-  - text: |
-      Ed's tutorial has been the most popular this year!
+  - text: Ed's tutorial has been the most popular this year!
     name: Catherine Holmes
     title: Sponsors Co-Chair
     venue: DjangoCon

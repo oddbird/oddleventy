@@ -380,7 +380,7 @@ params:
   {{ utility.link_if(
     content=embed.svg(
       path='icons/' + (type.icon or 'tags'),
-      alt=['see all', type.tag, 'posts'] | join(' ') if type else 'all tags'
+      alt=['see all', type.tag | displayName, 'posts'] | join(' ') if type else 'all tags'
     ),
     url=type.url or url,
     class='type-link'
