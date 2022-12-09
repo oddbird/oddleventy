@@ -39,7 +39,7 @@ summary: |
 
 {{ layout.title('Talks & Workshops') }}
 {% call layout.grid('training') %}
-  {% for item in collections._training | eventSort | reverse %}
+  {% for item in collections._talk | eventSort | reverse %}
     <article {{ post.aria_label(item) }} class="training-item">
       {{ post.hero(item.data.image, 'post') }}
       <header class="training-header">

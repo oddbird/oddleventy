@@ -101,7 +101,7 @@ note: |
 example: |
   {{ events.section(
     title='Upcoming Events',
-    events=collections.Talks | getEvents | getFuture,
+    events=collections.all | getEvents | getFuture,
     all=false
   ) }}
 params:

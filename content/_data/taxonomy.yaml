@@ -1,4 +1,7 @@
 post:
+  - tag: _talk
+    icon: talk
+    url: /talks/
   - tag: Podcast
     icon: audio
   - tag: Video

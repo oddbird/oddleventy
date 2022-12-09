@@ -219,7 +219,6 @@ params:
 ) %}
   {%- set image = post.data.image -%}
   {%- set image = image if image and not (image.type == 'media') else none -%}
-  {%- set image = image if (type or card == 'large') else none -%}
 
   <article
     data-post="{{ 'large' if (card == 'large') else 'link' }}"
@@ -228,7 +227,7 @@ params:
     {{ hero(image, card or 'post', true) }}
     {% if type %}
       <div class="type-flag" data-flag="left">
-        {{ type.tag }}
+        {{ type.tag | displayName }}
         <span class="sr-only">post type</span>
       </div>
     {% endif %}
@@ -375,7 +374,7 @@ params:
   collections=none
 ) %}
   {%- set url = '/tags/' -%}
-  {%- if type.icon -%}
+  {%- if type.icon and not type.url -%}
     {% set url = collections.all | tagLink(type.tag) if collections else none %}
   {%- endif -%}
   {{ utility.link_if(
@@ -383,7 +382,7 @@ params:
       path='icons/' + (type.icon or 'tags'),
       alt=['see all', type.tag, 'posts'] | join(' ') if type else 'all tags'
     ),
-    url=url,
+    url=type.url or url,
     class='type-link'
   ) }}
 {% endmacro %}
