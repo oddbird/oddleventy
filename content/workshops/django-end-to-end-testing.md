@@ -21,6 +21,13 @@ events:
     date: 2022-10-16
     end: 2022-10-21
     slides: https://drive.google.com/file/d/1K3Fyn4uj2uZoJSO5H5mFCMXr6206kiNa/view
+press:
+  - text: |
+      Ed's tutorial has been the most popular this year!
+    name: Catherine Holmes
+    title: Sponsors Co-Chair
+    venue: DjangoCon
+    slug: popular-tutorial
 summary: |
   This tutorial provides hands-on experience with end-to-end testing for Django
   using pytest and Playwright. Participants acquire solid strategies to test

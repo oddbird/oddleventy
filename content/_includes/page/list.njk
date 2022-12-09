@@ -26,8 +26,10 @@
       collections.oss | byBird(bird),
       collections
     ) }}
+
+    {% set resources = collections._post | concat(collections._talk) %}
     {{ post.by_year(
-      collections._post | byBird(bird),
+      resources | byBird(bird),
       collections
     ) }}
   </section>
