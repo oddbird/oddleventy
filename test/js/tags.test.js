@@ -10,15 +10,16 @@ const {
 import { collection } from './utils';
 
 describe('tag filters', () => {
-  const tags = ['Link', '_foo bar', 'Video'];
+  const tags = ['Link', '_foo bar', '_talk', 'Video'];
 
   test('isPublic', () => {
     expect(isPublic(tags[0])).toBe(true);
     expect(isPublic(tags[1])).toBe(false);
+    expect(isPublic(tags[2])).toBe(false);
   });
 
   test('publicTags', () => {
-    const expected = [tags[0], tags[2]];
+    const expected = [tags[0], tags[3]];
 
     expect(publicTags(tags)).toEqual(expected);
     expect(publicTags()).toEqual([]);
@@ -27,6 +28,7 @@ describe('tag filters', () => {
   test('displayName', () => {
     expect(displayName(tags[0])).toBe('Link');
     expect(displayName(tags[1])).toBe('Foo bar');
+    expect(displayName(tags[2])).toBe('Talk');
     expect(displayName('_')).toBe('');
     expect(displayName()).toBe('');
   });

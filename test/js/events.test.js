@@ -1,6 +1,7 @@
 import MockDate from 'mockdate';
 
 import {
+  birdEvents,
   buildEvent,
   getEvents,
   getFuture,
@@ -83,5 +84,34 @@ describe('event filters', () => {
 
   test('getFuture', () => {
     expect(getFuture(collection)).toHaveLength(2);
+  });
+
+  test('birdEvents', () => {
+    const events = [
+      {
+        id: 1,
+        birds: ['jonny', 'ed'],
+      },
+      {
+        id: 2,
+        birds: ['ed', 'miriam'],
+      },
+      {
+        id: 3,
+        birds: ['ed'],
+      },
+      {
+        id: 4,
+        birds: ['oddbird'],
+      },
+    ];
+    const expected = [
+      { name: 'jonny', events: [events[0]] },
+      { name: 'ed', events: [events[0], events[1], events[2]] },
+      { name: 'miriam', events: [events[1]] },
+      { name: 'oddbird', events: [events[3]] },
+    ];
+
+    expect(birdEvents(events)).toEqual(expected);
   });
 });
