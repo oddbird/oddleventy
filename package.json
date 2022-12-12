@@ -119,6 +119,7 @@
   "yarn-upgrade-all": {
     "ignore": [
       "#",
+      "@rollup/plugin-terser",
       "chalk",
       "node-fetch",
       "sassdoc-theme-herman"
