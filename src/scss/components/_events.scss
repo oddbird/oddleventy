@@ -25,6 +25,10 @@
   padding: var(--gutter) 0;
 }
 
+.compact-events {
+  --list-padding: 0;
+}
+
 .event-item {
   margin-bottom: var(--double-gutter);
 
