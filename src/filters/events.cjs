@@ -134,10 +134,12 @@ const birdEvents = (events) => {
   const birds = _.uniq(events.flatMap((event) => event.birds));
 
   birds.forEach((name) => {
-    groups.push({
-      name,
-      events: events.filter((event) => event.birds.includes(name)),
-    });
+    if (name !== 'oddbird') {
+      groups.push({
+        name,
+        events: events.filter((event) => event.birds.includes(name)),
+      });
+    }
   });
 
   return groups;

@@ -109,7 +109,6 @@ describe('event filters', () => {
       { name: 'jonny', events: [events[0]] },
       { name: 'ed', events: [events[0], events[1], events[2]] },
       { name: 'miriam', events: [events[1]] },
-      { name: 'oddbird', events: [events[3]] },
     ];
 
     expect(birdEvents(events)).toEqual(expected);
