@@ -34,11 +34,13 @@
         {{ post.by(author, collections) }}
         {{ linked | safe }}
         {{ post.client(client) }}
-        {{ post.pubdate(
-          start=page.date,
-          end=end,
-          format='range' if oss or client or ('_talk' in tags) else 'long'
-        ) }}
+        {% if tags and not ('_talk' in tags) %}
+          {{ post.pubdate(
+            start=page.date,
+            end=end,
+            format='range' if oss or client else 'long'
+          ) }}
+        {% endif %}
         {{ post.where(adr) }}
       </p>
     {% elif social %}
