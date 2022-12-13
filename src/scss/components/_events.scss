@@ -50,9 +50,9 @@
   margin: 0;
 
   .compact-events & {
+    display: inline-block;
     font: inherit;
     font-weight: bold;
-    display: inline-block;
   }
 }
 
