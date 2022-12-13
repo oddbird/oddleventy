@@ -45,7 +45,7 @@ summary: |
       <header class="training-header">
         {{ post.banner(item) }}
         {{ post.subtitle(item.data.sub) }}
-        {{ post.byline(item, collections, dateformat='range') }}
+        {{ post.byline(item, collections) }}
       </header>
       {% if item.data.events %}
         <div class="training-detail">

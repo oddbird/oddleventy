@@ -8,7 +8,7 @@
     justify-self: center;
     max-width: var(--wide-page);
     margin: var(--spacer) var(--page-margin);
-    width: 100%;
+    width: calc(100% - var(--page-margin) * 2);
   }
 }
 

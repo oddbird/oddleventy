@@ -2,6 +2,7 @@
 
 [data-grid='training'] {
   --gap: var(--spacer);
+  --list-padding: 1em;
 }
 
 .training-item [data-hero] {
@@ -25,15 +26,14 @@
   padding: var(--gutter) 0;
 }
 
-.compact-events {
-  --list-padding: 0;
+.event-timing {
+  @include config.font-family('alt');
 }
 
 .event-item {
   margin-bottom: var(--double-gutter);
 
   .compact-events & {
-    list-style: none;
     margin-bottom: var(--gutter);
   }
 }
@@ -50,7 +50,6 @@
   margin: 0;
 
   .compact-events & {
-    display: inline-block;
     font: inherit;
     font-weight: bold;
   }
@@ -59,12 +58,6 @@
 .event-discount,
 .event-links {
   font-size: var(--small);
-}
-
-.event-links {
-  .compact-events & {
-    @include config.before('| ');
-  }
 }
 
 .event-discount {

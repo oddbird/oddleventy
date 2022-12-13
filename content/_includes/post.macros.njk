@@ -350,7 +350,10 @@ params:
     {{ client(post.data.client) }}
 
     {% if dateformat %}
-      {{ pubdate(post.date, post.data.end, dateformat) }}
+      {% set events = post | pageEvents if ('_talk' in (post.data.tags or [])) else none %}
+      {% if not (events and events.length > 0) %}
+        {{ pubdate(post.date, post.data.end, dateformat) }}
+      {% endif %}
     {% endif %}
   </p>
 {% endmacro %}

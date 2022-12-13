@@ -113,8 +113,16 @@ params:
 ) %}
   {%- if events and (events | length > 0) -%}
     {%- set events = events | sort(all, false, 'date') -%}
+    {%- set future = events | getFuture if (all and compact) else none -%}
+    {%- set has_future = future and (future.length > 0) -%}
     {%- set events = events | onlyShow(2) if compact else events -%}
+    {%- set events = future if has_future else events -%}
 
+    {% if (all and compact) %}
+      <strong class="event-timing">
+        {{ 'Upcoming' if has_future else 'Past' }}
+      </strong>
+    {% endif %}
     <ol {{ utility.show_attrs({
       'reversed': all,
       'class': ['event-list', 'compact-events'] | join(' ') if compact else 'event-list'
@@ -130,14 +138,16 @@ params:
             ) }}
           {% endh %}
 
-          {% if not event.is_future %}
-            {{ links(event) }}
-          {% elif event.data.discount and not compact %}
-            <p class="event-discount">
-              Use discount code
-              <code>{{ event.data.discount.code }}</code>
-              to get <strong>{{ event.data.discount.amount }} off</strong>
-            </p>
+          {% if not compact %}
+            {% if not event.is_future %}
+              {{ links(event) }}
+            {% elif event.data.discount %}
+              <p class="event-discount">
+                Use discount code
+                <code>{{ event.data.discount.code }}</code>
+                to get <strong>{{ event.data.discount.amount }} off</strong>
+              </p>
+            {% endif %}
           {% endif %}
         </li>
       {%- endfor -%}
@@ -157,11 +167,7 @@ params:
 #}
 {% macro meta(event) %}
   <p class="event-meta">
-    {%- if event.is_future -%}
-      <strong>{{ utility.datetime(event.date) }}</strong>
-    {%- else -%}
-      {{ utility.datetime(event.date) }}
-    {%- endif %}
+    {{ utility.datetime(event.date) }}
     {% if event.data.adr %}
       {{ ['--', event.data.adr] | join(' ') | mdInline | safe }}
     {% endif %}
