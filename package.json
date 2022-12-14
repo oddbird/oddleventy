@@ -120,8 +120,7 @@
       "#",
       "@rollup/plugin-terser",
       "chalk",
-      "node-fetch",
-      "sassdoc-theme-herman"
+      "node-fetch"
     ]
   },
   "packageManager": "yarn@3.2.4"
