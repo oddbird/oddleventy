@@ -43,10 +43,6 @@ export const collection = [
     outputPath: './_site/test3/index.html',
     url: '/test3/',
     date: '2018-03-09T04:10:17.000Z',
-    event: {
-      date: '2018-05-10T04:10:17.000Z',
-      end: '2018-04-10T04:10:17.000Z',
-    },
     data: {
       title: 'Test Title',
       tags: ['tag 1', 'tag2'],
@@ -60,10 +56,6 @@ export const collection = [
     outputPath: './_site/test4/index.html',
     url: '/test4/',
     date: '2020-04-10T04:10:17.000Z',
-    event: {
-      date: '2018-04-09T04:10:17.000Z',
-      end: '2021-04-10T04:10:17.000Z',
-    },
     data: {
       title: 'Test Title',
       tags: ['tag 1', 'tag2'],

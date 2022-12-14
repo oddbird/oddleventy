@@ -1,10 +1,8 @@
 post:
-  - tag: Talk
+  - tag: _talk
     icon: talk
-    img: true
-  - tag: Workshop
-    icon: workshop
-    img: true
+    url: /talks/
+    display: Talks & Workshops
   - tag: Podcast
     icon: audio
   - tag: Video
@@ -13,9 +11,9 @@ post:
     icon: link
   - tag: Case Study
     icon: tools
-    img: true
   - tag: Article
     icon: news
+
 oss:
   - title: OddTools
     all:

@@ -106,7 +106,7 @@ category: Status
 note: |
   Filter a collection to only include
   pages with a currently active author.
-  (if 'oddbird' is an author, this will returrn true)
+  (if 'oddbird' is an author, this will return true)
 example: |
   {{ collections.oss | withActiveAuthor(collections.all) }}
 params:

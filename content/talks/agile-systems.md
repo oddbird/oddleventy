@@ -48,7 +48,7 @@ events:
     date: 2018-03-21
 press:
   - text: |
-      Every time I hear @TerribleMia
+      Every time I hear Miriam
       talk I learn a ton and laugh a ton.
       She’s an amazing speaker...
       Watch this talk when it’s published!
@@ -56,8 +56,7 @@ press:
     title: VP of Developer Experience
     venue: Netlify
     face: sarah-drasner.jpg
-    url: https://twitter.com/sarah_edo/status/979023728611905536
-    slug: audit
+    slug: learn-laugh
 summary: |
   **Style Guides & Pattern Libraries are great tools**
   for documenting the relationships between code and design,

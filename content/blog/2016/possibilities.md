@@ -102,7 +102,7 @@ about our process and make it easy to find case studies and quotes from
 past clients so new clients know what to expect.
 
 [donations]: /about/#sponsorships-and-donations
-[speaking]: /services/speaking/
+[speaking]: /talks/
 [Twitter]: https://twitter.com/OddBird
 [contact form]: /contact/
 

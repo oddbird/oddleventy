@@ -22,9 +22,10 @@ events:
     date: 2022-11-07
     end: 2022-11-08
     slug: 2022-jamstack
-    discount:
-      code: FRIENDOFMIRIAM20
-      amount: 20%
+    slides: https://noti.st/mirisuzanne/Xj6q9g/intrinsic-css-with-container-queries-units
+    video: https://youtu.be/uumZV98zHt8
+    media: &jam
+      iframe: https://www.youtube.com/embed/uumZV98zHt8
   - venue: W3C Developer Meetup
     adr: Vancouver, Canada
     url: https://www.w3.org/2022/09/meetup/
@@ -35,8 +36,8 @@ events:
     media: &tpac
       iframe: https://www.youtube.com/embed/1VhCXu-gNAc
 media:
-  - span: full
-    <<: *tpac
+  - <<: *jam
+  - <<: *tpac
 summary: |
   Container queries & units have a lot to offer
   as we enter a more content-out era of Intrinsic Web Design,
