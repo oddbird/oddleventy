@@ -5,7 +5,12 @@ import { collection3 } from './utils';
 describe('fromTaxonomy', () => {
   test('Return data from taxonomy', () => {
     const allPosts = [
-      { tag: '_talk', icon: 'talk', url: '/talks/' },
+      {
+        tag: '_talk',
+        icon: 'talk',
+        url: '/talks/',
+        display: 'Talks & Workshops',
+      },
       { tag: 'Podcast', icon: 'audio' },
       { tag: 'Video', icon: 'video' },
       { tag: 'Link', icon: 'link' },
