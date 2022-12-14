@@ -43,7 +43,7 @@ params:
   all=true,
   by_bird=none
 ) %}
-  {% if events and (events.length > 0) %}
+  {% if events and events.length > 0 %}
     <section data-list="events" data-typeset>
       {{- layout.title(title) -}}
 
@@ -114,7 +114,7 @@ params:
   {%- if events and (events | length > 0) -%}
     {%- set events = events | sort(all, false, 'date') -%}
     {%- set future = events | getFuture if (all and compact) else none -%}
-    {%- set has_future = future and (future.length > 0) -%}
+    {%- set has_future = future and future.length > 0 -%}
     {%- set events = events | onlyShow(2) if compact else events -%}
     {%- set events = future if has_future else events -%}
 

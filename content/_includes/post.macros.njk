@@ -239,7 +239,7 @@ params:
           post=post,
           collections=collections,
           links=false,
-          dateformat='range' if post.data.client or ('_talk' in post.data.tags) else 'month_day'
+          dateformat='range' if post.data.client else 'month_day'
         ) }}
       </header>
       {% if post.data.events %}
@@ -349,11 +349,9 @@ params:
 
     {{ client(post.data.client) }}
 
-    {% if dateformat %}
-      {% set events = post | pageEvents if ('_talk' in (post.data.tags or [])) else none %}
-      {% if not (events and events.length > 0) %}
-        {{ pubdate(post.date, post.data.end, dateformat) }}
-      {% endif %}
+    {%- set is_talk = post.data.tags and ('_talk' in post.data.tags) -%}
+    {% if dateformat and not is_talk %}
+      {{ pubdate(post.date, post.data.end, dateformat) }}
     {% endif %}
   </p>
 {% endmacro %}
