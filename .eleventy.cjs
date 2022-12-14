@@ -29,18 +29,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
   eleventyConfig.addPassthroughCopy({ 'src/media': 'assets/media' });
 
-  // Open Source project documentation
-  eleventyConfig.addPassthroughCopy({
-    'src/docs/cascading-colors': 'cascading-colors/docs',
-  });
-  eleventyConfig.addPassthroughCopy({ 'src/docs/blend': 'blend/docs' });
-  eleventyConfig.addPassthroughCopy({ 'src/docs/susy': 'susy/docs' });
-  eleventyConfig.addPassthroughCopy({ 'src/docs/herman': 'herman/docs' });
-  eleventyConfig.addPassthroughCopy({ 'src/docs/true': 'true/docs' });
-  eleventyConfig.addPassthroughCopy({
-    'src/docs/accoutrement': 'accoutrement/docs',
-  });
-
   eleventyConfig.addPassthroughCopy('content/robots.txt');
   eleventyConfig.addPassthroughCopy('content/favicon.ico');
 

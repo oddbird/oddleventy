@@ -78,9 +78,6 @@ badges:
   - name: npm
     src: https://badge.fury.io/js/susy.svg
     url: https://www.npmjs.com/package/susy
-  - name: build
-    src: https://travis-ci.org/oddbird/susy.svg
-    url: https://travis-ci.org/oddbird/susy
 summary: |
   **Susy was a responsive layout engine for Sass**,
   before `flexbox` and CSS `grid` were available.
