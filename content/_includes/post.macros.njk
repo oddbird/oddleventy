@@ -244,7 +244,7 @@ params:
       </header>
       {% if post.data.events %}
         <div class="p-summary">
-          {{ talks.list(post | pageEvents, compact=true) }}
+          {{ talks.list(post | pageEvents, compact=true, show_links=false) }}
         </div>
       {% elif post.data.summary %}
         {% set summary = post.data.summary | md %}

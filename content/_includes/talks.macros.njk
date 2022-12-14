@@ -109,7 +109,8 @@ params:
   events,
   all=true,
   heading_level=4,
-  compact=false
+  compact=false,
+  show_links=true
 ) %}
   {%- if events and (events | length > 0) -%}
     {%- set events = events | sort(all, false, 'date') -%}
@@ -131,7 +132,7 @@ params:
           {% h heading_level, {'class': 'event-title'} %}
             {{ utility.link_if(
               event.venue,
-              none if compact else (event.data.url or event.url)
+              (event.data.url or event.url) if show_links else none
             ) }}
           {% endh %}
 
