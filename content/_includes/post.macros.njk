@@ -378,10 +378,11 @@ params:
   {%- if type.icon and not type.url -%}
     {% set url = collections.all | tagLink(type.tag) if collections else none %}
   {%- endif -%}
+  {%- set display_tag = type.display or type.tag | displayName + ' posts' -%}
   {{ utility.link_if(
     content=embed.svg(
       path='icons/' + (type.icon or 'tags'),
-      alt=['see all', type.tag | displayName, 'posts'] | join(' ') if type else 'all tags'
+      alt=['see all', display_tag] | join(' ') if type else 'all tags'
     ),
     url=type.url or url,
     class='type-link'
