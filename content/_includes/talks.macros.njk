@@ -123,10 +123,7 @@ params:
         {{ 'Upcoming' if has_future else 'Past' }}
       </strong>
     {% endif %}
-    <ol {{ utility.show_attrs({
-      'reversed': all,
-      'class': ['event-list', 'compact-events'] | join(' ') if compact else 'event-list'
-    }) }}>
+    <ul class="event-list{{ ' compact-events' if compact else '' }}">
       {%- for event in events -%}
         <li class="event-item">
           {{ meta(event) }}
@@ -151,7 +148,7 @@ params:
           {% endif %}
         </li>
       {%- endfor -%}
-    </ol>
+    </ul>
   {%- endif -%}
 {% endmacro %}
 
