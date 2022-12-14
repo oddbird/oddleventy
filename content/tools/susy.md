@@ -84,7 +84,7 @@ summary: |
   Susy is now deprecated, and will not receive updates.
   If you need help moving off Susy,
   or learning the latest in web layout,
-  **we offer [training](/services/speaking/)
+  **we offer [training](/talks/)
   and [consulting](/services/development/)
   to help bring you up-to-date**.
 ---

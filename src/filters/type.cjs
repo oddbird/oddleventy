@@ -47,7 +47,7 @@ params:
     type: string
   inline:
     type: boolean
-    default: false
+    default: 'false'
     note: |
       Inline typesetting removes the "widont" filter
       if the text has fewer than 5 words
@@ -169,7 +169,7 @@ params:
       though we currently only have styling for 'note' callouts.
   label:
     type: string
-    default: null
+    default: 'null'
     note: |
       Null label will default to
       'Note' when the type is 'note',

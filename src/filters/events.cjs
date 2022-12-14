@@ -1,11 +1,42 @@
 'use strict';
 
+const _ = require('lodash');
+
 const { now, getDate } = require('#/time.cjs');
 
 /* @docs
 label: Event Filters
 category: File
 */
+
+/* @docs
+label: isFuture
+category: Upcoming
+note: Check that the page/event has a start date in the future (or today)
+example: |
+  {%- if event | isFuture -%}
+    <strong>{{ utility.datetime(event.date) }}</strong>
+  {%- else -%}
+    {{ utility.datetime(event.date) }}
+  {%- endif %}
+params:
+  page:
+    type: event object
+*/
+const isFuture = (event) =>
+  event.end ? getDate(event.end) >= now() : getDate(event.date) >= now();
+
+/* @docs
+label: getFuture
+category: Upcoming
+note: Return only the pages/events in the future
+example: |
+  {% set events = events | getFuture if events else none %}
+params:
+  events:
+    type: array of events
+*/
+const getFuture = (events) => events.filter(isFuture);
 
 /* @docs
 label: buildEvent
@@ -21,16 +52,24 @@ params:
   event:
     type: object
 */
-const buildEvent = (page, event) => ({
-  date: event.date ? getDate(event.date) : page.date,
-  end: event.end ? getDate(event.end) : null,
-  url: page.url,
-  inputPath: page.inputPath,
-  fileSlug: page.fileSlug,
-  outputPath: page.outputPath,
-  page: page.data,
-  data: event,
-});
+const buildEvent = (page, event) => {
+  const built = {
+    date: event.date ? getDate(event.date) : page.date,
+    end: event.end ? getDate(event.end) : null,
+    venue: event.venue || page.data.venue,
+    url: page.url,
+    birds: page.data.author || page.data.bird,
+    inputPath: page.inputPath,
+    fileSlug: page.fileSlug,
+    outputPath: page.outputPath,
+    page: page.data,
+    data: event,
+  };
+
+  built.is_future = isFuture(built);
+
+  return built;
+};
 
 /* @docs
 label: pageEvents
@@ -62,9 +101,9 @@ note: |
   Turn events from multiple pages
   into a structured event collection
 example: |
-  {{ events.list(
+  {{ events.section(
     title='Upcoming Events',
-    events=collections.Talks | getEvents,
+    events=collections.all | getEvents | getFuture,
     all=false
   ) }}
 params:
@@ -82,33 +121,29 @@ const getEvents = (collection) => {
 };
 
 /* @docs
-label: isFuture
-category: Upcoming
-note: Check that the page/event has a start date in the future (or today)
-example: |
-  {%- if event | isFuture -%}
-    <strong>{{ utility.datetime(event.date) }}</strong>
-  {%- else -%}
-    {{ utility.datetime(event.date) }}
-  {%- endif %}
-params:
-  page:
-    type: event object
-*/
-const isFuture = (event) =>
-  event.end ? getDate(event.end) >= now() : getDate(event.date) >= now();
-
-/* @docs
-label: getFuture
-category: Upcoming
-note: Return only the pages/events in the future
-example: |
-  {% set events = events | getFuture if events else none %}
+label: birdEvents
+category: List
+note: |
+  Group events by Bird
 params:
   events:
-    type: array of events
+    type: collection of events
 */
-const getFuture = (events) => events.filter(isFuture);
+const birdEvents = (events) => {
+  const groups = [];
+  const birds = _.uniq(events.flatMap((event) => event.birds));
+
+  birds.forEach((name) => {
+    if (name !== 'oddbird') {
+      groups.push({
+        name,
+        events: events.filter((event) => event.birds.includes(name)),
+      });
+    }
+  });
+
+  return groups;
+};
 
 module.exports = {
   buildEvent,
@@ -116,4 +151,5 @@ module.exports = {
   pageEvents,
   isFuture,
   getFuture,
+  birdEvents,
 };

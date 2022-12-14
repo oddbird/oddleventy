@@ -5,12 +5,16 @@ import { collection3 } from './utils';
 describe('fromTaxonomy', () => {
   test('Return data from taxonomy', () => {
     const allPosts = [
-      { tag: 'Talk', icon: 'talk', img: true },
-      { tag: 'Workshop', icon: 'workshop', img: true },
+      {
+        tag: '_talk',
+        icon: 'talk',
+        url: '/talks/',
+        display: 'Talks & Workshops',
+      },
       { tag: 'Podcast', icon: 'audio' },
       { tag: 'Video', icon: 'video' },
       { tag: 'Link', icon: 'link' },
-      { tag: 'Case Study', icon: 'tools', img: true },
+      { tag: 'Case Study', icon: 'tools' },
       { tag: 'Article', icon: 'news' },
     ];
 
@@ -32,13 +36,13 @@ describe('ossGroups', () => {
 });
 
 describe('pageType', () => {
-  test('Return one of several resource "types" from page tags', () => {
-    const workshop = taxonomy.post.find((type) => type.tag === 'Workshop');
+  test('Return one of several post "types" from page tags', () => {
+    const podcast = taxonomy.post.find((type) => type.tag === 'Podcast');
 
-    expect(pageType(['foo', 'Workshop'])).toEqual(workshop);
-    expect(pageType(['foo', 'Workshop'], 'tag')).toEqual(workshop.tag);
-    expect(pageType('Workshop', 'icon')).toEqual(workshop.icon);
-    expect(pageType('Workshop')).toBe(workshop);
+    expect(pageType(['foo', 'Podcast'])).toEqual(podcast);
+    expect(pageType(['foo', 'Podcast'], 'tag')).toEqual(podcast.tag);
+    expect(pageType('Podcast', 'icon')).toEqual(podcast.icon);
+    expect(pageType('Podcast')).toBe(podcast);
     expect(pageType('foo')).toBe(false);
     expect(pageType('foo', 'bar')).toBe(false);
     expect(pageType()).toBe(false);

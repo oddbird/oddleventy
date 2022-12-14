@@ -18,9 +18,9 @@
 
   {%- set type = tags | pageType if tags else none -%}
   {% if type.tag %}
-    {% set type_url = collections.all | tagLink(type.tag) %}
+    {% set type_url = type.url or (collections.all | tagLink(type.tag)) %}
     <a href="{{ type_url }}" class="type-flag" data-flag="left">
-      {{ type.tag }}
+      {{ type.tag | displayName }}
       {{ embed.svg('icons/' + type.icon) }}
     </a>
   {% endif %}

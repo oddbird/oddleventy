@@ -42,7 +42,7 @@ summary: |
 {{ quotes.find(
   collections.all,
   page=talk,
-  slugs='audit'
+  slugs='learn-laugh'
 ) }}
 
 ------

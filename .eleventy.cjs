@@ -39,9 +39,6 @@ module.exports = (eleventyConfig) => {
       .filter((item) => item.data.bird)
       .sort((a, b) => a.date - b.date),
   );
-  eleventyConfig.addCollection('_sorted-posts', (collection) =>
-    pages.eventSort(collection.getFilteredByTag('_post')),
-  );
   eleventyConfig.addCollection('oss', (collection) =>
     collection
       .getAll()
@@ -117,6 +114,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('eventSort', pages.eventSort);
   eleventyConfig.addFilter('byYear', pages.byYear);
   eleventyConfig.addFilter('removePage', pages.removePage);
+  eleventyConfig.addFilter('addCallToAction', pages.addCallToAction);
+  eleventyConfig.addFilter('isType', pages.isType);
 
   eleventyConfig.addFilter('fromTaxonomy', taxonomy.fromTaxonomy);
   eleventyConfig.addFilter('ossGroups', taxonomy.ossGroups);
@@ -127,6 +126,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('pageEvents', events.pageEvents);
   eleventyConfig.addFilter('isFuture', events.isFuture);
   eleventyConfig.addFilter('getFuture', events.getFuture);
+  eleventyConfig.addFilter('birdEvents', events.birdEvents);
 
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('active', birds.active);

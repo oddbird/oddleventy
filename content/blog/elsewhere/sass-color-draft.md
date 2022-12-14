@@ -11,6 +11,7 @@ image:
     Sass logo in black
     on top of bright oklch color gradient
 tags:
+  - Link
   - CSS
   - Sass
   - Color

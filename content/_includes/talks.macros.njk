@@ -1,0 +1,206 @@
+{% import 'layout.macros.njk' as layout %}
+{% import 'utility.macros.njk' as utility %}
+{% import 'embed.macros.njk' as embed %}
+{% import 'birds.macros.njk' as birds %}
+
+{# @docs
+label: Event Macros
+category: File
+note: Showing stand-alone event lists
+#}
+
+{# @docs
+label: section
+note: Display a top-level section of talk & workshop events
+params:
+  title:
+    type: string
+  events:
+    type: collection
+    note: |
+      Array of event objects.
+      These should be pre-compiled event objects,
+      using either the `getEvents` (from a collection)
+      or `pageEvents` filter.
+  all:
+    type: boolean
+    default: true
+    note: |
+      If we're only showing upcoming events,
+      we'll reverse the order so that
+      the soonest event is first.
+  by_bird:
+    type: none | collections
+    default: none
+    note: |
+      Optionally pass in the `collections` object
+      in order to sort events into groups
+      by Bird.
+#}
+{% macro section(
+  title,
+  events,
+  all=true,
+  by_bird=none
+) %}
+  {% if events and events.length > 0 %}
+    <section data-list="events" data-typeset>
+      {{- layout.title(title) -}}
+
+      {% if by_bird %}
+        {% for bird in events | birdEvents %}
+          {% call embed.media_block(
+            media=embed.svg('faces/' + bird.name),
+            name='bird-events'
+          ) %}
+            <h3 class='event-group-title'>
+              {{ birds.authors(bird.name, by_bird) }}
+            </h3>
+            {{ list(
+              events=bird.events,
+              all=all
+            ) }}
+          {% endcall %}
+        {% endfor %}
+      {% else %}
+        {{ list(
+          events,
+          all,
+          heading_level=3
+        ) }}
+      {% endif %}
+    </section>
+  {% endif %}
+{% endmacro %}
+
+{# @docs
+label: list
+note: Display an array of events as a simple list
+params:
+  events:
+    type: array
+    note: |
+      Array of event objects.
+      See the event filters for data structure.
+  all:
+    type: boolean
+    default: true
+    note: |
+      If we're only showing upcoming events,
+      we'll reverse the order so that
+      the soonest event is first.
+  heading_level:
+    type: integer (1-6)
+    default: 4
+    note: |
+      Adjust the heading level
+      for individual event titles,
+      depending on the context where this list is shown.
+  compact:
+    type: boolean
+    default: false
+    note: |
+      When showing an event list
+      inside a grid of talks or posts,
+      we only show the most recent 2 events,
+      and simplify the styling/output.
+#}
+{% macro list(
+  events,
+  all=true,
+  heading_level=4,
+  compact=false,
+  show_links=true
+) %}
+  {%- if events and (events | length > 0) -%}
+    {%- set events = events | sort(all, false, 'date') -%}
+    {%- set future = events | getFuture if (all and compact) else none -%}
+    {%- set has_future = future and future.length > 0 -%}
+    {%- set events = events | onlyShow(2) if compact else events -%}
+    {%- set events = future if has_future else events -%}
+
+    {% if (all and compact) %}
+      <strong class="event-timing">
+        {{ 'Upcoming' if has_future else 'Past' }}
+      </strong>
+    {% endif %}
+    <ul class="event-list{{ ' compact-events' if compact else '' }}">
+      {%- for event in events -%}
+        <li class="event-item">
+          {{ meta(event) }}
+
+          {% h heading_level, {'class': 'event-title'} %}
+            {{ utility.link_if(
+              event.venue,
+              (event.data.url or event.url) if show_links else none
+            ) }}
+          {% endh %}
+
+          {% if not compact %}
+            {% if not event.is_future %}
+              {{ links(event) }}
+            {% elif event.data.discount %}
+              <p class="event-discount">
+                Use discount code
+                <code>{{ event.data.discount.code }}</code>
+                to get <strong>{{ event.data.discount.amount }} off</strong>
+              </p>
+            {% endif %}
+          {% endif %}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+{% endmacro %}
+
+{# @docs
+label: meta
+note: Display date and location for an event
+params:
+  event:
+    type: object
+    note: |
+      A single event,
+      built by either `getEvents` or `pageEvents`.
+#}
+{% macro meta(event) %}
+  <p class="event-meta">
+    {{ utility.datetime(event.date) }}
+    {% if event.data.adr %}
+      {{ ['--', event.data.adr] | join(' ') | mdInline | safe }}
+    {% endif %}
+  </p>
+{% endmacro %}
+
+{# @docs
+label: links
+note: Display event links to slides or video
+params:
+  event:
+    type: object
+    note: |
+      A single event,
+      built by either `getEvents` or `pageEvents`.
+#}
+{% macro links(event) %}
+  {%- set links = [
+    {
+      'title': 'Slides',
+      'url': (event.data.slides or event.page.slides)
+    },
+    {
+      'title': 'Video',
+      'url': event.data.video
+    }
+  ] | selectattr('url') -%}
+
+  {% if links | length > 0 %}
+    <ul class="event-links" inline-list="comma">
+      {%- for link in links -%}
+        <li class="event-link">
+          {{- utility.link_if(link.title, link.url) -}}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {% endif %}
+{% endmacro %}

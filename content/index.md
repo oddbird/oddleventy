@@ -4,7 +4,7 @@ banner: |
   Custom Web App
   *[Design](/services/design-systems/),
   [Development](/services/development/), &
-  [Training](/services/speaking/)*
+  [Training](/talks/)*
 image:
   src: work/coachhub/coachhub-home-iphone.jpg
   alt: CoachHub App on iPhone
@@ -97,7 +97,7 @@ Our specialties include:
   attrs={'data-block': 'rotate'}
 ) %}
 
-## Hi, I'm Miriam
+<h2>Hi, I'm Miriam</h2>
 
 I co-founded OddBird with my brothers in 2008
 to provide **custom web application design and development**,

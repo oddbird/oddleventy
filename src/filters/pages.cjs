@@ -2,6 +2,7 @@
 
 const _ = require('lodash');
 
+const { pageType } = require('#/taxonomy.cjs');
 const { now, getDate } = require('#/time.cjs');
 
 /* @docs
@@ -12,7 +13,7 @@ category: File
 /* @docs
 label: isPublic
 category: Status
-note: Check that a page is
+note: Check that a page is public
 params:
   page:
     type: 11ty page object
@@ -124,7 +125,7 @@ label: removePage
 category: Filter
 note: |
   Remove any one page from a collection
-  (especially for removing tag index pages from their own resource list)
+  (especially for removing tag index pages from their own post list)
 params:
   collection:
     type: array
@@ -199,7 +200,7 @@ params:
     type: array
     note: often an array of 11ty pages, but can be an array of any objects
   url:
-    type: string
+    type: url
     note: The url of the desired page
   keys:
     type: string
@@ -220,7 +221,7 @@ label: findPage
 category: Data
 note: Find the first page with any particular data
 example: |
-  {{ collections.all | findPage('data.cta_slug', 'workshop') }}
+  {{ collections.all | findPage('data.info_slug', 'alert') }}
 params:
   collection:
     type: array
@@ -319,6 +320,39 @@ const byYear = (collection) => {
     }));
 };
 
+/* @docs
+label: addCallToAction
+category: Status
+note: |
+  Check if a page is a Work or Services index or detail page
+  (under `/work/` or `/services/` URL).
+params:
+  pageURL:
+    type: url
+    note: URL of page to test
+*/
+const addCallToAction = (pageURL) =>
+  _.isString(pageURL) &&
+  (pageURL.startsWith('/work/') || pageURL.startsWith('/services/'));
+
+/* @docs
+label: isType
+category: Filter
+note: |
+  Filters collection by a given tag,
+  expected to be one of several post "types"
+  (types are defined in the `taxonomy.yaml` data file)
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+  type:
+    type: type
+    note: post type to filter by
+*/
+const isType = (collection, type) =>
+  collection.filter((page) => pageType(page.data.tags, 'tag') === type);
+
 module.exports = {
   isPublic,
   isCurrent,
@@ -334,4 +368,6 @@ module.exports = {
   eventSort,
   byYear,
   removePage,
+  addCallToAction,
+  isType,
 };

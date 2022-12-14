@@ -50,5 +50,6 @@ herman:
       url: https://www.oddbird.net/herman/
   sass:
     jsonFile: _built/css/json.css
-    includePaths:
-      - src/scss/
+    sassOptions:
+      loadPaths:
+        - src/scss/
