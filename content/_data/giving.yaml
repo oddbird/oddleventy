@@ -1,3 +1,11 @@
+- name: DjangoCon
+  url: https://djangocon.us/
+  type: sponsorships
+  years: 2022
+  description: |
+    is a six-day international conference
+    for the community by the community
+    about the Django web framework.
 - name: Django Girls
   url: https://djangogirls.org/
   type: donations
@@ -131,7 +139,7 @@
 - name: Goshen Ultimate Summer League
   url: https://goshenultimate.com/
   type: sponsorships
-  years: 2014--2020
+  years: 2014--2022
   description: |
     provides opportunities to learn, play,
     and teach spirited Ultimate in Goshen, IN and surrounding areas.
