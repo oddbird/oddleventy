@@ -16,8 +16,6 @@ people:
     venue: *client
 date: 2020-06-29
 end: 2020-10-20
-links:
-  play game: https://game.fonts.adobe.com/
 tags:
   - _post
   - Case Study
