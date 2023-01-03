@@ -1,7 +1,15 @@
+- name: DjangoCon
+  url: https://djangocon.us/
+  type: sponsorships
+  years: 2022
+  description: |
+    is a six-day international conference
+    for the community by the community
+    about the Django web framework.
 - name: Django Girls
   url: https://djangogirls.org/
   type: donations
-  years: 2015--2021
+  years: 2015--2022
   description: |
     is a non-profit organization
     and a community that empowers and helps women
@@ -10,22 +18,22 @@
 - name: Natives in Tech
   url: https://nativesintech.org/
   type: donations
-  years: 2020--2021
+  years: 2020--2022
   description: |
-    strives to build a collective of Native technologists
+    cultivates a tech ecosystem of Native technologists
     crafting free and open source technology for Native communities.
 - name: TransTech
   url: https://transtechsocial.org/
   type: donations
-  years: 2021
+  years: 2021--2022
   description: |
     is an incubator for LGBTQ Talent
     with a focus on economically empowering
-    the T in our community, by creating an
-    affirming education and employment space
-    for transgender and gender nonconforming
-    people, as well as anyone facing
-    discrimination in the workplace or education.
+    the T, transgender people, in our community.
+    TransTech is a co-working, co-learning community
+    dedicated to empowering
+    trans, lesbian, gay, bisexual, queer people and allies
+    with practical, career-ready skills.
 - name: Resilient Coders
   url: https://www.resilientcoders.org/
   type: donations
@@ -131,7 +139,7 @@
 - name: Goshen Ultimate Summer League
   url: https://goshenultimate.com/
   type: sponsorships
-  years: 2014--2020
+  years: 2014--2022
   description: |
     provides opportunities to learn, play,
     and teach spirited Ultimate in Goshen, IN and surrounding areas.
