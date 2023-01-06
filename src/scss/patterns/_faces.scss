@@ -17,46 +17,45 @@
 [data-nest] {
   transform: translate(var(--x, 0), var(--y, var(--row, 0)));
 
-  &:nth-child(odd) {
+  &:nth-child(even) {
     --row: 80px;
   }
 }
 
+[data-nest='jonny'] {
+  --x: -30px;
+}
+
 [data-nest='olu'] {
-  --x: -10px;
+  --x: 365px;
 }
 
 [data-nest='stacy'] {
-  --x: 330px;
+  --x: 695px;
 }
 
 [data-nest='davidh'] {
-  --x: 645px;
+  --x: 1010px;
 }
 
 [data-nest='sondra'] {
-  --x: 950px;
+  --x: 1305px;
 }
 
 [data-nest='miriam'] {
-  --x: 1310px;
-}
-
-[data-nest='sana'] {
   --x: 1660px;
 }
 
+[data-nest='sana'] {
+  --x: 1980px;
+}
+
 [data-nest='ed'] {
-  --x: 2030px;
+  --x: 2340px;
   --y: 100px;
 }
 
 [data-nest='patricia'] {
-  --x: 2385px;
+  --x: 2695px;
   --y: -10px;
-}
-
-[data-nest='jonny'] {
-  --x: 2760px;
-  --y: 100px;
 }
