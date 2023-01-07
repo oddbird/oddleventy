@@ -144,7 +144,7 @@ params:
           ) -}}
           {{- context if not hide_details -}}
         </li>
-      {% elif site == 'mastodon' %}
+      {%- elif site == 'mastodon' -%}
         {%- set text = ['@', id.user, '@', id.server] | join -%}
         {%- set context %}<span class="sr-only"><i>on</i> Mastodon</span>{% endset -%}
         {%- set text = text + context if not details -%}
