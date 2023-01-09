@@ -28,7 +28,7 @@ summary: |
   everything you thought you knew about CSS.
   Join Miriam for a deep dive
   into what makes the language work,
-  and how we can harness it’s power
+  and how we can harness its power
   to develop resilient and delightful experiences
   that hold up across browsers, languages, and device interfaces.
 ---
