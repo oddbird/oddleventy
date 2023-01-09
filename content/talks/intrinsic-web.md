@@ -46,7 +46,6 @@ summary: |
   But our medium is not done evolving.
 media:
   - <<: *aea
-  - <<: *tpac
 ---
 
 In 2018,
