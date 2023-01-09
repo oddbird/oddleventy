@@ -13,6 +13,7 @@ tags:
   - CSSWG
   - Word Wrap Show
   - Container Queries
+  - Podcast
 summary: |
   I talk with Claire and Steph
   about changes to the Container Query syntax,

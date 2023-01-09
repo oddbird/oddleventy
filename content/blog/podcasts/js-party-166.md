@@ -11,6 +11,7 @@ tags:
   - CSS
   - JavaScript
   - CSS-Tricks
+  - Podcast
 summary: |
   I joined some other folks behind CSS-Tricks
   (maybe you’ve heard of it?)
