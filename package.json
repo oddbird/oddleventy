@@ -64,7 +64,7 @@
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "@rollup/plugin-terser": "0.1.0",
+    "@rollup/plugin-terser": "^0.3.0",
     "@tommoor/remove-markdown": "^0.3.2",
     "@typescript-eslint/parser": "^5.48.0",
     "autoprefixer": "^10.4.13",
@@ -118,7 +118,6 @@
   "yarn-upgrade-all": {
     "ignore": [
       "#",
-      "@rollup/plugin-terser",
       "chalk",
       "node-fetch"
     ]
