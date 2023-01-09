@@ -45,8 +45,8 @@ summary: |
   into the foundations of modern, component-driven web design.
   But our medium is not done evolving.
 media:
-  - span: full
-    <<: *tpac
+  - <<: *aea
+  - <<: *tpac
 ---
 
 In 2018,
