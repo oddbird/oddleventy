@@ -12,10 +12,11 @@ image:
     and white-blue-pink lightning-bolt earrings
   position: top
 social:
-  twitter: TerribleMia
+  mastodon:
+    user: mia
+    server: front-end.social
   github: MiriSuzanne
   codepen: MiriamSuzanne
-  stackoverflow: 1930386
 events:
   - venue: Front Conference
     date: 2023-08-31

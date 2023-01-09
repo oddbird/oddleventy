@@ -9,7 +9,9 @@ image:
 social:
   twitter: sondraeby
   github: sondrae
-  dribbble: sondraeby
+  mastodon:
+    user: sondrae
+    server: mastodon.social
 summary: |
   Sondra
   is a brand and user experience/interface designer --

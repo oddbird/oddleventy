@@ -6,7 +6,6 @@ date: 2008-04-02
 image:
   src: birds/jonny.jpg
 social:
-  twitter: jgerigmeyer
   github: jgerigmeyer
 summary: |
   Jonny is a co-founder and technical lead --

@@ -2,7 +2,7 @@
 {%- set og_image = og_image if ('://' in (og_image or '') | string) else (site.images + og_image) | imgSrc | absoluteUrl(site.url) -%}
 {%- set creatorPage = collections.birds | authorPage(author) if author else none -%}
 {%- set creatorHandle = creatorPage.data.social.twitter if creatorPage else none -%}
-{%- set creator = ['@', creatorPage.data.social.twitter] | join() if creatorHandle else open_graph.site -%}
+{%- set creator = ['@', creatorHandle] | join() if creatorHandle else open_graph.site -%}
 
 <meta property="fb:app_id" content="{{ site.facebook_id }}" />
 <meta property="og:locale" content="{{ open_graph.locale }}" />
