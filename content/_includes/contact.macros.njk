@@ -170,6 +170,6 @@ params:
     type: string
     note: The site/service being used
 #}
-{% macro social_context(user, site) %}
+{% macro social_context(user, site) -%}
   {{ user }}<span class="sr-only"> <i>on</i> {{ site }}</span>
-{% endmacro %}
+{%- endmacro %}
