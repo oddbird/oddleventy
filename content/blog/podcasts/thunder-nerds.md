@@ -10,6 +10,8 @@ image:
   alt: Miriam Suzanne speaking at a conference
 tags:
   - Vue
+  - Podcast
+  - Video
 summary: |
   Thunder Nerds interview me
   before her talk at VueConf US 2019.

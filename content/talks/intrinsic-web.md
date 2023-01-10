@@ -21,6 +21,9 @@ events:
     end: 2022-06-22
     adr: San Francisco, CA
     slides: https://slides.oddbird.net/css-next/smashingsf/
+    video: https://vimeo.com/showcase/9653752
+    media: &smash
+      iframe: https://player.vimeo.com/video/725352687
   - venue: An Event Apart Fall Summit
     url: https://aneventapart.com/event/fall-summit-2021
     date: 2021-10-11
@@ -45,8 +48,8 @@ summary: |
   into the foundations of modern, component-driven web design.
   But our medium is not done evolving.
 media:
-  - span: full
-    <<: *tpac
+  - <<: *aea
+  - <<: *smash
 ---
 
 In 2018,

@@ -12,6 +12,7 @@ tags:
   - Cascade Layers
   - Container Queries
   - CSS Scope
+  - Video
 summary: |
   CSS is evolving rapidly
   and new features come online all the time.
