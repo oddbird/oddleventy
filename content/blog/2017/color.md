@@ -360,4 +360,4 @@ via [Twitter].
   alt='Check Contrast Ratio Photoshop Add-on'
 ) }}
 
-[Adobe Plugin Check Contrast Ratio]: https://exchange.adobe.com/creativecloud.details.12170.html
+[Adobe Plugin Check Contrast Ratio]: https://exchange.adobe.com/apps/cc/12170

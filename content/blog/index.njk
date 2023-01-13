@@ -1,19 +1,19 @@
 ---
-banner: Resources by Date
+banner: Posts by Date
 is_feed: true
 override:tags: []
 action:
   text: Browse by tag »
   url: /tags/
 pagination:
-  data: collections._sorted-posts
+  data: collections._post
   size: 15
   alias: posts
   reverse: true
 permalink: /blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 eleventyComputed:
   title: |
-    Resources
+    Posts
     {% if pagination.pageNumber > 0 %}(page {{ pagination.pageNumber + 1 }}){% endif %}
   sub: |
     {% if pagination.pageNumber == 0 %}
@@ -27,7 +27,7 @@ eleventyComputed:
     Learn how to write resilient CSS,
     add WebSocket push notifications to a RESTful API,
     and more with these articles, videos,
-    podcasts, and conference talks.
+    podcasts, and case studies.
     {% endif %}
 ---
 

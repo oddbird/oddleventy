@@ -42,7 +42,7 @@ summary: |
 {{ quotes.find(
   collections.all,
   page=talk,
-  slugs='audit'
+  slugs='learn-laugh'
 ) }}
 
 ------
@@ -73,5 +73,5 @@ All the [VueConf talks] are available online, and I recommend checking
 them out!
 
 [Herman]: /herman/
-[built-in functionality]: https://vuejs.org/v2/guide/transitions.html
+[built-in functionality]: https://vuejs.org/guide/built-ins/transition.html
 [VueConf talks]: https://www.vuemastery.com/conferences/vueconf-us-2018/

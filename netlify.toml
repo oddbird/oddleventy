@@ -1,22 +1,29 @@
 [build.environment]
-   NODE_VERSION = "16"
-   YARN_VERSION = "3.2.2"
+    NODE_VERSION = "16"
+    YARN_VERSION = "3.3.1"
+    YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
 
 [[plugins]]
-    # Netlify does not support build plugins installed with Yarn v2/3 PnP,
-    # so we need to use a local version for now.
-    # The unused package is still included in package.json
-    # to better surface updated releases.
-    #
-    # See:
-    # - https://answers.netlify.com/t/build-plugin-error-netlify-plugin-x-plugin-not-installed-or-found/7625/4?u=jgerigmeyer
-    # - https://github.com/netlify/build-image/issues/612
-    # - https://github.com/netlify/build/issues/1535
-    package = "/netlify-plugins/netlify-plugin-11ty"
+    package = "netlify-plugin-11ty"
 
     [plugins.inputs]
         cache_img = "./assets/images"
         cache_assets = false
+
+[[plugins]]
+    package = "@netlify/plugin-a11y"
+
+    [plugins.inputs]
+        checkPaths = [
+          "/index.html",
+          "/work/index.html",
+          "/services/index.html",
+          "/tools/index.html",
+          "/blog/index.html",
+          "/about/index.html",
+          "/contact/index.html",
+        ]
+        failWithIssues = false
 
 [[plugins]]
     package = "@algolia/netlify-plugin-crawler"
@@ -25,3 +32,33 @@
         branches = ["main"]
         mainBranch = "main"
         template = "hierarchical"
+
+[[redirects]]
+    from = "/accoutrement/docs/*"
+    to = "https://accoutrement-docs.netlify.app/accoutrement/docs/:splat"
+    status = 200
+
+[[redirects]]
+    from = "/blend/docs/*"
+    to = "https://blend-docs.netlify.app/blend/docs/:splat"
+    status = 200
+
+[[redirects]]
+    from = "/cascading-colors/docs/*"
+    to = "https://cascading-colors-docs.netlify.app/cascading-colors/docs/:splat"
+    status = 200
+
+[[redirects]]
+    from = "/herman/docs/*"
+    to = "https://herman-docs.netlify.app/herman/docs/:splat"
+    status = 200
+
+[[redirects]]
+    from = "/susy/docs/*"
+    to = "https://susy-docs.netlify.app/susy/docs/:splat"
+    status = 200
+
+[[redirects]]
+    from = "/true/docs/*"
+    to = "https://true-docs.netlify.app/true/docs/:splat"
+    status = 200

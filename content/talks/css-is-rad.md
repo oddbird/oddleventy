@@ -7,10 +7,10 @@ image:
   src: talks/mia-smashing19-rad.jpg
   alt: Miriam speaking at Smashing Conf NY
   position: top
-slides: https://slides.oddbird.net/rad/
 tags:
   - Design
   - CSS
+slides: https://slides.oddbird.net/rad/
 events:
   - venue: Design 4 Drupal Webinar Series
     url: https://design4drupal.org/webinar-series
@@ -32,7 +32,6 @@ events:
     adr: Online
     slides: https://slides.oddbird.net/rad/shopify/
   - venue: Front Range Front End
-    url: https://www.meetup.com/front-range-front-end/events/bxrfwqyzpbkb/
     date: 2019-11-07
     adr: Denver, CO
     video: https://youtu.be/bSITeqDKkb8

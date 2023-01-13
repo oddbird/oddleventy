@@ -23,6 +23,7 @@ press:
     venue: Front-end Development South Africa
     url: https://twitter.com/schalkventerdev/status/1390205495110246400
     slug: shaping-css
+slides: https://slides.oddbird.net/css-next/
 events:
   - venue: Smashing Meets CSSummer
     url: https://smashingconf.com/meets-css/
@@ -39,7 +40,6 @@ events:
     media: &csscafe
       iframe: https://www.youtube.com/embed/ilR9KlsHMGk
   - venue: Front Range Front-End
-    url: https://www.meetup.com/front-range-front-end/events/kvckcsyccjbfb/
     date: 2021-06-03
     adr: Online
     slides: https://slides.oddbird.net/css-next/front-range/

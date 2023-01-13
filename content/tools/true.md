@@ -21,12 +21,9 @@ badges:
   - name: npm
     src: https://badge.fury.io/js/sass-true.svg
     url: https://www.npmjs.com/package/sass-true
-  - name: build
-    src: https://travis-ci.org/oddbird/true.svg?branch=master
-    url: https://travis-ci.org/oddbird/true
-  - name: coverage
-    src: https://coveralls.io/repos/github/oddbird/true/badge.svg?branch=master
-    url: https://coveralls.io/github/oddbird/true?branch=master
+  - name: Build Status
+    src: https://github.com/oddbird/true/actions/workflows/test.yml/badge.svg
+    url: https://github.com/oddbird/true/actions/workflows/test.yml
 summary: |
   **True is the only full-featured unit-testing framework
   designed specifically for the [Sass] language**.

@@ -200,7 +200,7 @@ perhaps different from what we've always done in the past.
 [CSS-Tricks Guide to Flexbox]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 [Flexbox Froggy]: https://flexboxfroggy.com/
 [Flexbox Defense]: http://www.flexboxdefense.com/
-[Flexbox Patterns]: https://www.flexboxpatterns.com/
+[Flexbox Patterns]: https://flexboxpatterns.com/
 
 ### CSS Grid Layout
 
@@ -210,16 +210,14 @@ perhaps different from what we've always done in the past.
 - [Should I Use Grid or Flexbox]
 - [Get Ready for CSS Grid Layout]
 - [CSS Grid Layout]
-- [Where Things Are at in the CSS Grid Layout Working Draft]
 - [CSS Grid Layout CodePen Collection]
 
 [Stacy’s CSS Grid Layout Bookmark Collection]: https://raindrop.io/collection/1295293
 [Grid by Example]: https://gridbyexample.com/
 [Jen Simmons Labs]: https://labs.jensimmons.com/
-[Should I Use Grid or Flexbox]: https://www.rachelandrew.co.uk/archives/2016/03/30/should-i-use-grid-or-flexbox/
+[Should I Use Grid or Flexbox]: https://rachelandrew.co.uk/archives/2016/03/30/should-i-use-grid-or-flexbox/
 [Get Ready for CSS Grid Layout]: https://abookapart.com/products/get-ready-for-css-grid-layout
 [CSS Grid Layout]: https://blogs.igalia.com/mrego/tag/css-grid-layout/
-[Where Things Are at in the CSS Grid Layout Working Draft]: https://www.sitepoint.com/where-things-are-at-in-the-css-grid-layout-working-draft/
 [CSS Grid Layout CodePen Collection]: https://codepen.io/collection/XRRJGq/
 
 ### Related Conference Talks

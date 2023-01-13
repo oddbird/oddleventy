@@ -1,0 +1,13 @@
+code[style*='--swatch']::before {
+  background: linear-gradient(
+      var(--swatch, transparent),
+      var(--swatch, transparent)
+    ),
+    linear-gradient(45deg, black 50%, white 50%);
+  border: thin solid var(--border, currentColor);
+  content: '';
+  display: inline-block;
+  height: var(--icon-size, 1em);
+  width: var(--icon-size, 1em);
+  margin-inline: 0.2em;
+}

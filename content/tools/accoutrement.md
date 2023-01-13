@@ -71,9 +71,9 @@ badges:
   - name: npm
     src: https://badge.fury.io/js/accoutrement.svg
     url: https://www.npmjs.com/package/accoutrement
-  - name: build
-    src: https://travis-ci.org/oddbird/accoutrement.svg?branch=master
-    url: https://travis-ci.org/oddbird/accoutrement
+  - name: Build Status
+    src: https://github.com/oddbird/accoutrement/actions/workflows/test.yml/badge.svg
+    url: https://github.com/oddbird/accoutrement/actions/workflows/test.yml
 summary: |
   OddBird's Accoutrement tools
   help keep design tokens meaningful to both humans and machines --

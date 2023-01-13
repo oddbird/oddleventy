@@ -9,7 +9,9 @@ image:
 social:
   twitter: sondraeby
   github: sondrae
-  dribbble: sondraeby
+  mastodon:
+    user: sondrae
+    server: mastodon.social
 summary: |
   Sondra
   is a brand and user experience/interface designer --
@@ -47,5 +49,5 @@ checkout our [Research & Concepting] service.
 
 {% endcall %}
 
-[certified object-oriented UX strategist]: https://www.ooux.com/strategists/sondraeby
+[certified object-oriented UX strategist]: https://www.ooux.com/people/sondraeby
 [Research & Concepting]: /services/planning/

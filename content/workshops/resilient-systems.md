@@ -12,7 +12,7 @@ tags:
   - Style Guides
 events:
   - venue: Smashing Workshops
-    url: https://smashingconf.com/online-workshops/workshops/miriam-suzanne
+    url: https://smashingconf.com/online-workshops/workshops/css-miriam-suzanne
     date: 2020-05-07
     end: 2020-05-22
     adr: Online

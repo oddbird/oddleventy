@@ -2,7 +2,7 @@
 title: Developing the Future of the Internet
 venue: Wix, Now What?
 date: 2021-10-12
-canonical: https://www.wix.com/nowwhat/podcast/miriamsuzanne
+canonical: https://www.wix.com/nowwhat/episodes/miriamsuzanne
 author: miriam
 image:
   src: blog/elsewhere/now-what.jpg
@@ -11,6 +11,7 @@ tags:
   - CSS
   - CSSWG
   - Diversity
+  - Podcast
 summary: |
   Miriam talks to _Now What?_
   about why the internet looks the way it does,

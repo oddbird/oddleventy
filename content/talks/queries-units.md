@@ -14,6 +14,7 @@ tags:
   - CSS
   - Container Queries
   - CSSWG
+slides: https://slides.oddbird.net/queries-units/
 events:
   - venue: Jamstack Conf
     adr: San Francisco, CA (hybrid)
@@ -21,14 +22,22 @@ events:
     date: 2022-11-07
     end: 2022-11-08
     slug: 2022-jamstack
-    discount:
-      code: FRIENDOFMIRIAM20
-      amount: 20%
+    slides: https://noti.st/mirisuzanne/Xj6q9g/intrinsic-css-with-container-queries-units
+    video: https://youtu.be/uumZV98zHt8
+    media: &jam
+      iframe: https://www.youtube.com/embed/uumZV98zHt8
   - venue: W3C Developer Meetup
-    adr: Vancouver, Canada ([streaming](https://www.w3.org/2022/09/meetup/#stream))
+    adr: Vancouver, Canada
     url: https://www.w3.org/2022/09/meetup/
     date: 2022-09-13
     slug: 2022-tpac
+    video: https://www.youtube.com/watch?v=1VhCXu-gNAc
+    slides: https://slides.oddbird.net/queries-units/tpac22/
+    media: &tpac
+      iframe: https://www.youtube.com/embed/1VhCXu-gNAc
+media:
+  - <<: *jam
+  - <<: *tpac
 summary: |
   Container queries & units have a lot to offer
   as we enter a more content-out era of Intrinsic Web Design,
@@ -37,6 +46,8 @@ summary: |
   how to start using it in production,
   and what to look forward to as Container Queries continue to evolve.
 ---
+
+{% import "embed.macros.njk" as embed %}
 
 CSS has always been contextual,
 with a Cascade & Normal Flow
@@ -58,3 +69,8 @@ Beyond just the highly anticipated size queries,
 we also get new container-relative units,
 and a road-map for querying
 container styles, states, and more.
+
+{{ embed.figure(
+  data=media,
+  caption='Conference videos...'
+) }}

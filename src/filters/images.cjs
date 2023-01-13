@@ -1,8 +1,12 @@
+/* eslint-disable no-process-env, no-sync */
+
 'use strict';
 
+const { createHash } = require('crypto');
 const path = require('path');
 
 const eleventyImg = require('@11ty/eleventy-img');
+const fs = require('fs-extra');
 const _ = require('lodash');
 
 const { fromTaxonomy } = require('#/taxonomy.cjs');
@@ -32,6 +36,20 @@ const imgOptions = {
   },
 };
 const IMG_SRC = './src/images/';
+const IMG_OUTPUT = path.join(__dirname, '../../_site/assets/images/');
+const CACHE_FILE = path.join(__dirname, 'image_cache.json');
+const useCache = !(process.env.NETLIFY || process.env.NODE_ENV === 'test');
+// Rebuild the cache (and re-process images) if the image dir is deleted
+const rebuildCache = Boolean(
+  process.env.IMAGE_CACHE_REBUILD || !fs.existsSync(IMG_OUTPUT),
+);
+let cacheChanged = false;
+
+let cache = { html: {}, src: {} };
+/* istanbul ignore next */
+if (useCache && !rebuildCache && fs.existsSync(CACHE_FILE)) {
+  cache = fs.readJsonSync(CACHE_FILE);
+}
 
 /* @docs
 label: image
@@ -77,18 +95,6 @@ const image = (src, alt, attrs, sizes, getUrl) => {
     outputDir,
     urlPath,
   };
-
-  // generate images; this is async but we don’t wait
-  eleventyImg(src, opts);
-
-  // eslint-disable-next-line no-sync
-  const metadata = eleventyImg.statsSync(src, opts);
-
-  if (getUrl) {
-    const data = metadata.jpeg[metadata.jpeg.length - 1];
-    return data.url;
-  }
-
   const imgSizes =
     sizes && imgConfig.sizes[sizes]
       ? imgConfig.sizes[sizes]
@@ -102,12 +108,60 @@ const image = (src, alt, attrs, sizes, getUrl) => {
     },
     attrs || {},
   );
+  let cacheKey = src;
 
-  return eleventyImg.generateHTML(metadata, imageAttributes, {
+  // When running locally, try to skip processing images (which is slow)
+  // if we already have the requested markup for the given file.
+  /* istanbul ignore next */
+  if (useCache) {
+    if (getUrl && cache.src[cacheKey]) {
+      return cache.src[cacheKey];
+    } else if (!getUrl) {
+      // Create unique hash based on image source, attributes, sizes, etc.
+      const hash = createHash('sha256');
+      hash.update(src);
+      hash.update(JSON.stringify(imageAttributes));
+      cacheKey = hash.digest('base64');
+
+      if (cache.html[cacheKey]) {
+        return cache.html[cacheKey];
+      }
+    }
+    // If the image cache has been updated, set env var
+    // so we know to output the new JSON file after the build is complete.
+    if (!cacheChanged) {
+      cacheChanged = true;
+      process.env.IMAGE_CACHE_CHANGED = true;
+    }
+  }
+
+  // generate images; this is async but we don’t wait
+  eleventyImg(src, opts);
+
+  // eslint-disable-next-line no-sync
+  const metadata = eleventyImg.statsSync(src, opts);
+
+  if (getUrl) {
+    const data = metadata.jpeg[metadata.jpeg.length - 1];
+    /* istanbul ignore if */
+    if (useCache) {
+      cache.src[cacheKey] = data.url;
+    }
+    return data.url;
+  }
+
+  const html = eleventyImg.generateHTML(metadata, imageAttributes, {
     whitespaceMode: 'inline',
   });
+  /* istanbul ignore if */
+  if (useCache) {
+    cache.html[cacheKey] = html;
+  }
+  return html;
 };
 
 module.exports = {
   image,
+  imageCache: cache,
+  CACHE_FILE,
 };

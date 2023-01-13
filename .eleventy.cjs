@@ -1,13 +1,17 @@
+/* eslint-disable no-process-env, no-sync */
+
 'use strict';
 
 const rss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const fs = require('fs-extra');
 const yaml = require('js-yaml');
 const _ = require('lodash');
 
 const birds = require('#/birds.cjs');
 const events = require('#/events.cjs');
 const images = require('#/images.cjs');
+const mentions = require('#/mentions.cjs');
 const pages = require('#/pages.cjs');
 const tags = require('#/tags.cjs');
 const taxonomy = require('#/taxonomy.cjs');
@@ -25,18 +29,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
   eleventyConfig.addPassthroughCopy({ 'src/media': 'assets/media' });
 
-  // Open Source project documentation
-  eleventyConfig.addPassthroughCopy({
-    'src/docs/cascading-colors': 'cascading-colors/docs',
-  });
-  eleventyConfig.addPassthroughCopy({ 'src/docs/blend': 'blend/docs' });
-  eleventyConfig.addPassthroughCopy({ 'src/docs/susy': 'susy/docs' });
-  eleventyConfig.addPassthroughCopy({ 'src/docs/herman': 'herman/docs' });
-  eleventyConfig.addPassthroughCopy({ 'src/docs/true': 'true/docs' });
-  eleventyConfig.addPassthroughCopy({
-    'src/docs/accoutrement': 'accoutrement/docs',
-  });
-
   eleventyConfig.addPassthroughCopy('content/robots.txt');
   eleventyConfig.addPassthroughCopy('content/favicon.ico');
 
@@ -46,9 +38,6 @@ module.exports = (eleventyConfig) => {
       .getAll()
       .filter((item) => item.data.bird)
       .sort((a, b) => a.date - b.date),
-  );
-  eleventyConfig.addCollection('_sorted-posts', (collection) =>
-    pages.eventSort(collection.getFilteredByTag('_post')),
   );
   eleventyConfig.addCollection('oss', (collection) =>
     collection
@@ -90,7 +79,7 @@ module.exports = (eleventyConfig) => {
       }),
   );
   eleventyConfig.addCollection('sample', (collection) =>
-    collection.getAll().filter((item) => item.data.sample),
+    collection.getAll().filter((item) => item.data.sample_content),
   );
 
   // filters
@@ -125,6 +114,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('eventSort', pages.eventSort);
   eleventyConfig.addFilter('byYear', pages.byYear);
   eleventyConfig.addFilter('removePage', pages.removePage);
+  eleventyConfig.addFilter('addCallToAction', pages.addCallToAction);
+  eleventyConfig.addFilter('isType', pages.isType);
 
   eleventyConfig.addFilter('fromTaxonomy', taxonomy.fromTaxonomy);
   eleventyConfig.addFilter('ossGroups', taxonomy.ossGroups);
@@ -135,6 +126,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('pageEvents', events.pageEvents);
   eleventyConfig.addFilter('isFuture', events.isFuture);
   eleventyConfig.addFilter('getFuture', events.getFuture);
+  eleventyConfig.addFilter('birdEvents', events.birdEvents);
 
   eleventyConfig.addFilter('byBird', birds.getPages);
   eleventyConfig.addFilter('active', birds.active);
@@ -148,7 +140,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('removeMd', type.removeMd);
   eleventyConfig.addFilter('elide', type.elide);
 
+  eleventyConfig.addFilter('mentionsForUrl', mentions.forUrl);
+
   eleventyConfig.addFilter('max', (array) => Math.max(...array));
+  eleventyConfig.addFilter('getDomain', (url) => new URL(url).hostname);
 
   eleventyConfig.addFilter('imgSrc', (src) =>
     images.image(src, null, null, null, true),
@@ -168,6 +163,19 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setLibrary('md', type.mdown);
   eleventyConfig.addDataExtension('yaml', yaml.load);
   eleventyConfig.setQuietMode(true);
+
+  if (!process.env.NETLIFY) {
+    eleventyConfig.on('eleventy.before', () => {
+      delete process.env.IMAGE_CACHE_CHANGED;
+    });
+
+    eleventyConfig.on('eleventy.after', () => {
+      if (process.env.IMAGE_CACHE_CHANGED) {
+        // If the image cache has been updated, emit the new JSON file
+        fs.outputJsonSync(images.CACHE_FILE, images.imageCache, { spaces: 2 });
+      }
+    });
+  }
 
   // settings
   return {

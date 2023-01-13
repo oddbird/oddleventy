@@ -24,7 +24,8 @@ events:
     date: 2019-04-18
 press:
   - text: |
-      A fantastic speaker, with wonderful teaching skills,
+      Miriam is a
+      fantastic speaker, with wonderful teaching skills,
       and highly praised by attendees of the conference
       and the workshop alike.
     name: Vitaly Friedman

@@ -1,4 +1,5 @@
 import {
+  addCallToAction,
   byYear,
   eventSort,
   findData,
@@ -10,6 +11,7 @@ import {
   hasData,
   isCurrent,
   isPublic,
+  isType,
   pageYears,
   removePage,
   withData,
@@ -45,14 +47,16 @@ describe('page filters', () => {
 
     expect(hasData(page, 'data.slug', 'news')).toBeTruthy();
     expect(hasData(page, 'data.index')).toBeFalsy();
+    expect(hasData(page, 'data', 'news')).toBeFalsy();
   });
 
   test('withData', () => {
     expect(withData(collection3, 'data.slug', 'news')).toHaveLength(1);
-    expect(withData(collection3, 'data.slug', 'new')).toHaveLength(1);
-    expect(withData(collection3, 'data.slug', 'new', true)).toHaveLength(0);
+    expect(withData(collection3, 'data.slug', 'new')).toHaveLength(0);
+    expect(withData(collection3, 'data.tags', 'tag 1')).toHaveLength(1);
     expect(withData(collection3, 'data.tags')).toHaveLength(4);
     expect(withData(collection3, 'data.nothing')).toHaveLength(0);
+    expect(withData(collection3, 'data', 'news')).toHaveLength(0);
   });
 
   test('removePage', () => {
@@ -119,5 +123,44 @@ describe('page filters', () => {
       expect(actual.map((item) => item.year)).toEqual(expected);
       expect(actual.map((item) => item.posts.length)).toEqual([2, 2]);
     });
+  });
+
+  describe('addCallToAction', () => {
+    test('returns true for work list URL', () => {
+      const exampleURL = '/work/';
+      expect(addCallToAction(exampleURL)).toBe(true);
+    });
+
+    test('returns true for work detail URLs', () => {
+      const exampleURL = '/work/metecho/';
+      expect(addCallToAction(exampleURL)).toBe(true);
+    });
+
+    test('returns true for services list URL', () => {
+      const exampleURL = '/services/';
+      expect(addCallToAction(exampleURL)).toBe(true);
+    });
+
+    test('returns true for services detail URL', () => {
+      const exampleURL = '/services/development/';
+      expect(addCallToAction(exampleURL)).toBe(true);
+    });
+
+    test('returns false for blog URL', () => {
+      const exampleURL = '/blog/';
+      expect(addCallToAction(exampleURL)).toBe(false);
+    });
+
+    test('returns false for blog detail URL', () => {
+      const exampleURL = '/talks/work-units/';
+      expect(addCallToAction(exampleURL)).toBe(false);
+    });
+  });
+
+  test('isType', () => {
+    const filtered = isType(collection4, 'Article');
+
+    expect(collection4).toHaveLength(3);
+    expect(filtered).toHaveLength(1);
   });
 });

@@ -23,7 +23,7 @@ params:
     note: The name of the bird (as used in `author` settings)
   solo:
     type: boolean
-    default: false
+    default: 'false'
     note: Optionally remove `oddbird`-authored pages from the collection
 */
 const getPages = (collection, bird, solo = false) =>
@@ -64,7 +64,7 @@ params:
     note: containing 11ty page objects
   current:
     type: boolean
-    default: 'true'
+    default: true
     note: Flip result to show inactive birds
 */
 const active = (collection, current = true) =>
@@ -79,7 +79,7 @@ label: activeAuthor
 category: Status
 note: |
   Check if any author of a page is currently active
-  (if 'oddbird' is an author, this will returrn true)
+  (if 'oddbird' is an author, this will return true)
 example: |
   {{ post | activeAuthor(collections.all) }}
 params:
@@ -101,12 +101,12 @@ const activeAuthor = (page, all) => {
 };
 
 /* @docs
-label: activeAuthor
+label: withActiveAuthor
 category: Status
 note: |
   Filter a collection to only include
   pages with a currently active author.
-  (if 'oddbird' is an author, this will returrn true)
+  (if 'oddbird' is an author, this will return true)
 example: |
   {{ collections.oss | withActiveAuthor(collections.all) }}
 params:

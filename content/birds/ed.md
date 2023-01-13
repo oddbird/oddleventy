@@ -2,7 +2,7 @@
 title: Ed Rivas
 sub: Web developer
 bird: ed
-date: 2020-11-02
+date: 2020-11-01
 image:
   src: birds/ed.jpg
 social:

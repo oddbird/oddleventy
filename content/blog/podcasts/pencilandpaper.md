@@ -1,7 +1,7 @@
 ---
 title: What's the job of a "design engineer"?
 sub: A fireside chat
-canonical: https://labs.pencilandpaper.io/blog/what-s-the-job-of-a-design-engineer
+canonical: https://pencilandpaper.io/articles/whats-the-job-of-a-design-engineer/
 venue: Pencil & Paper
 date: 2021-10-04
 author: miriam
@@ -15,6 +15,7 @@ tags:
   - Design
   - CSS
   - Process
+  - Video
 summary: |
   There are often tall walls
   between designers and developers,

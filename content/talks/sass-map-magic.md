@@ -5,7 +5,7 @@ date: 2014-09-12
 image:
   src: talks/sass-map.jpg
   alt: Miriam being interviewed at a conference
-slides: https://oddbooksapp.com/book/sass-map-magic
+# slides: https://oddbooksapp.com/book/sass-map-magic
 tags:
   - Sass
 events:
@@ -13,7 +13,7 @@ events:
     url: https://2016.cssconf.com/
     adr: Boston, MA
     date: 2016-09-26
-    slides: https://oddbooksapp.com/release/b71e6e5d-e956-42ff-a4dd-b70bf3b13a2a
+    # slides: https://oddbooksapp.com/release/b71e6e5d-e956-42ff-a4dd-b70bf3b13a2a
     media: &cssconf
       iframe: https://www.youtube.com/embed/MdwtoFt2LOI
   - venue: CSS Summit

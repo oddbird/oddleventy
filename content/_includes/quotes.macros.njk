@@ -53,7 +53,7 @@ params:
       - (`citation data`): See `cite` macro
   type:
     type: 'solo | grid'
-    default: solo
+    default: 'solo'
 #}
 {% macro blockquote(
   data,
@@ -101,19 +101,19 @@ params:
     note: containing 11ty page objects
   slugs:
     type: string | array | none
-    default: 'none'
+    default: none
     note: Select quotes based on their `slug` value
   page:
     type: url | none
-    default: 'none'
+    default: none
     note: Select quotes from a particular page
   action:
     type: string | none
-    default: 'none'
+    default: none
     note: Add an action to accompany an optional link
   url:
     type: url | none
-    default: 'none'
+    default: none
     note: Link to a related url
 #}
 {% macro find(
@@ -212,9 +212,9 @@ note: |
   'name': 'Miriam Suzanne',
   'url': '/authors/miriam/'
 } %}
-<div class="signature h-card">
+<div class="signature">
 {{ embed.svg('icons/miriam-sig') }}
-<p class="byline">{{ _cite(data) | safe }}</p>
+{{ cite(data) | safe }}
 </div>
 {% endmacro %}
 
@@ -226,7 +226,7 @@ note: |
   {%- set venue = utility.link_if(
     content=data.venue,
     url=data.url if not data.title,
-    class='p-org h-card h-name'
+    class='p-org h-card p-name'
   ) if data.venue else none -%}
   {%- set title = utility.link_if(
     content=data.title,

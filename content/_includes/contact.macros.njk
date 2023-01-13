@@ -18,11 +18,11 @@ params:
     note: The landing page after form-submit
   submit:
     type: string
-    default: Send
+    default: 'Send'
     note: text for the submit button
   name:
     type: string
-    default: contact
+    default: 'contact'
     note: |
       Name the form for special cases
       where a CSS hook is required
@@ -92,7 +92,6 @@ params:
 {% macro social(
   data,
   name,
-  details=false,
   rel=none
 ) %}
   {%- set sites = {
@@ -100,7 +99,6 @@ params:
       'user': '%s@oddbird.net',
       'url': 'mailto:%s@oddbird.net',
       'icon': 'mail',
-      'hide_details': true,
       'class': 'u-email'
     },
     'twitter': {
@@ -129,23 +127,49 @@ params:
     {%- for site, id in data -%}
       {%- set info = sites[site] -%}
       {%- if info -%}
-        {%- set hide_details = info.hide_details or (not details) -%}
-        {%- set text = info.user | replace("%s", id) if info.user else info.text or id -%}
-        {%- set context %} <i>on</i> {{ info.title or site | capitalize }}{% endset -%}
-        {%- set context = '<span class="sr-only">' + context + '</span>' if hide_details else context %}
-        {%- set text = text + context if hide_details else text -%}
         <li>
           {{- utility.icon_link(
             icon='social/' + (info.icon or site),
-            text=text | safe,
+            text=social_context(
+              user=info.user | replace("%s", id) if info.user else info.text or id,
+              site=info.title or site | capitalize
+            ) | safe,
             url=info.url | replace("%s", id),
             class=info.class or 'u-url',
             attrs={'rel': rel} if rel else {}
           ) -}}
-          {{- context if not hide_details -}}
+        </li>
+      {%- elif site == 'mastodon' -%}
+        <li>
+          {{- utility.icon_link(
+            icon='social/mastodon',
+            text=social_context(
+              user=['@', id.user, '@', id.server] | join,
+              site='Mastodon'
+            ) | safe,
+            url=['https://', id.server, '/@', id.user] | join,
+            class='u-url',
+            attrs={'rel': rel} if rel else {}
+          ) -}}
         </li>
       {%- endif -%}
     {%- endfor -%}
     </ul>
   {%- endif -%}
 {% endmacro %}
+
+
+{# @docs
+label: social context
+note: Add the visually hidden name of a site to the user name
+params:
+  user:
+    type: string
+    note: The username, as it should be rendered (potentially with an `@`)
+  name:
+    type: string
+    note: The site/service being used
+#}
+{% macro social_context(user, site) -%}
+  {{ user }}<span class="sr-only"> <i>on</i> {{ site }}</span>
+{%- endmacro %}

@@ -6,14 +6,22 @@
 - from: /community/
   to: /about/#sponsorships-and-donations
 - from: /speaking/
-  to: /services/speaking/
+  to: /talks/
 - from: /work/services/
   to: /services/
 - from: /services/design-systems-training/
   to: /workshops/resilient-systems/
+- from: /services/speaking/
+  to: /talks/
+- from: /tags/training/
+  to: /talks/
+- from: /tags/talk/
+  to: /talks/
+- from: /tags/workshop/
+  to: /talks/
 
 - from: /talks/keynote/
-  to: /services/speaking/
+  to: /talks/
 - from: /talks/resilient-systems/
   to: /workshops/resilient-systems/
 - from: /talks/advanced-css-workshop/

@@ -5,7 +5,6 @@ services:
   - /services/development/
   - /services/planning/
   - /services/design-systems/
-  - /services/speaking/
 summary: |
   **Let’s solve real problems for your business and users** --
   pairing your industry-expertise
@@ -29,9 +28,7 @@ summary: |
         </div>
         <div class="offset-item project-details">
         <header class="post-header">
-          {% call post.banner(page, level=2, called=true) -%}
-           {{ page.data.title | mdInline | safe }}
-          {%- endcall %}
+          {{ post.banner(page, level=2) }}
         </header>
           <p>{{ page.data.summary | md | elide | safe }}</p>
         </div>

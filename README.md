@@ -1,6 +1,6 @@
 # OddSite
 
-[![CircleCI](https://circleci.com/gh/oddbird/oddleventy/tree/main.svg?style=svg)](https://circleci.com/gh/oddbird/oddleventy) [![Netlify Status](https://api.netlify.com/api/v1/badges/4f75b5a7-8412-4586-bad0-b4de64bb4f17/deploy-status)](https://app.netlify.com/sites/oddleventy/deploys)
+[![Build Status](https://github.com/oddbird/oddleventy/actions/workflows/test.yml/badge.svg)](https://github.com/oddbird/oddleventy/actions/workflows/test.yml) [![Netlify Status](https://api.netlify.com/api/v1/badges/4f75b5a7-8412-4586-bad0-b4de64bb4f17/deploy-status)](https://app.netlify.com/sites/oddleventy/deploys)
 
 This site is built using:
 
@@ -9,7 +9,6 @@ This site is built using:
 - [Eleventy](https://www.11ty.dev/) JS w/ Markdown & Nunjucks
 - Sass w/ OddBird's [Accoutrement](https://www.oddbird.net/accoutrement/) &
   [Herman](https://www.oddbird.net/herman/)
-- [CircleCI](https://circleci.com/) for continuous integration
 - [Netlify](https://www.netlify.com/) for deployment
 - A lot of ideas from a lot of cool people
 
@@ -60,7 +59,13 @@ You can also run individual commands:
 # build the static site for development
 yarn build
 
-# build the static site for production
+# build the static site for development, re-processing all images
+yarn build:images
+
+# build the static site for production (in local development)
+yarn build:prod
+
+# build the static site for production (on Netlify)
 yarn prod
 
 # format and lint all files
@@ -84,11 +89,6 @@ yarn sassdoc
 
 Sass Docs are compiled into the `_site/styleguide/` folder, which is then available
 at the URL: `/styleguide/`.
-
-The `WEBMENTION_IO_TOKEN` environment variable is required to fetch new
-webmentions. That variable is set by Netlify at build-time, but can also be set
-locally in a (git-ignored) `.env` file at the root of the project. The token
-value is available to OddBird team members in a shared Keybase file.
 
 ## Deployment
 

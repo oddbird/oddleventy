@@ -1,5 +1,5 @@
 // For a detailed explanation regarding each configuration property, visit:
-// https://jestjs.io/docs/en/configuration.html
+// https://jestjs.io/docs/configuration
 
 'use strict';
 
@@ -23,11 +23,7 @@ module.exports = {
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: [
-    'src/filters/**/*.cjs',
-    '!src/filters/mentions.cjs',
-    'src/js/clickToCopy.cjs',
-  ],
+  collectCoverageFrom: ['src/filters/**/*.cjs', 'src/js/clickToCopy.cjs'],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',

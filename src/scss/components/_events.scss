@@ -1,28 +1,72 @@
 @use '../config';
 
-.event {
-  margin-bottom: var(--newline);
+[data-grid='training'] {
+  --gap: var(--spacer);
+  --list-padding: 1em;
+}
+
+.training-item [data-hero] {
+  aspect-ratio: 16/9;
+}
+
+.training-header {
+  --newline: 0;
+}
+
+.training-detail {
+  margin-block: var(--gutter);
+}
+
+[data-media='bird-events'] {
+  --media-max: var(--logo-item);
+}
+
+.event-group-title {
+  font-size: var(--small);
+  padding: var(--gutter) 0;
+}
+
+.event-timing {
+  @include config.font-family('alt');
+}
+
+.event-item {
+  margin-bottom: var(--double-gutter);
+
+  .compact-events & {
+    margin-bottom: var(--gutter);
+  }
 }
 
 .event-meta {
   @include config.font-family('alt');
 
   font-size: var(--small);
+  margin: 0;
 }
 
 .event-title {
+  font-size: var(--h3);
   margin: 0;
+
+  .compact-events & {
+    font: inherit;
+    font-weight: bold;
+  }
 }
 
 .event-discount,
 .event-links {
+  font-size: var(--small);
+}
+
+.event-discount {
   @include config.wrap-content('[' ']');
 
-  font-size: var(--small);
   font-style: italic;
 }
 
-// events listed on resource cards
+// events listed on post cards
 .next-on {
   display: inline-block;
 }

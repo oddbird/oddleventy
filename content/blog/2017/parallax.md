@@ -23,11 +23,9 @@ couldn't pass up the opportunity to recommend it. Continue reading for a
 quick summary or **head over to Paul's article right away!**
 
   [Rachel Nabors]: http://rachelnabors.com/
-  [Performant Parallaxing]: https://developers.google.com/web/updates/2016/12/performant-parallaxing
+  [Performant Parallaxing]: https://developer.chrome.com/blog/performant-parallaxing/
 
-### [Performant Parallaxing &gt;]
-
-  [Performant Parallaxing &gt;]: https://developers.google.com/web/updates/2016/12/performant-parallaxing
+### [Performant Parallaxing &gt;][Performant Parallaxing]
 
 ## Don'ts
 
@@ -37,12 +35,10 @@ events to create a parallax effect.
 > JavaScript doesn’t guarantee that parallaxing will keep in step with
 > the page’s scroll position.
 >
-> ---[Paul Lewis]
+> ---[Paul Lewis][Performant Parallaxing]
 
 Trying to achieve a parallax look by changing background position
 doesn't work well either, negatively effecting the animation.
-
-  [Paul Lewis]: https://developers.google.com/web/updates/2016/12/performant-parallaxing
 
 ## CSS 3D
 
@@ -55,4 +51,4 @@ message via [Twitter].
 
   [Twitter]: https://twitter.com/oddbird
 
-### [Performant Parallaxing &gt;]
+### [Performant Parallaxing &gt;][Performant Parallaxing]

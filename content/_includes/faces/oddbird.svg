@@ -8,6 +8,7 @@
   width="3170"
   height="600"
 >
+<g data-nest="jonny">{% include 'faces/jonny.svg' %}</g>
 <g data-nest="olu">{% include 'faces/olu.svg' %}</g>
 <g data-nest="stacy">{% include 'faces/stacy.svg' %}</g>
 <g data-nest="davidh">{% include 'faces/davidh.svg' %}</g>
@@ -16,5 +17,4 @@
 <g data-nest="sana">{% include 'faces/sana.svg' %}</g>
 <g data-nest="ed">{% include 'faces/ed.svg' %}</g>
 <g data-nest="patricia">{% include 'faces/patricia.svg' %}</g>
-<g data-nest="jonny">{% include 'faces/jonny.svg' %}</g>
 </svg>

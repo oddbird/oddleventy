@@ -5,14 +5,14 @@ image:
   alt: Sketched design concept
 author: miriam
 date: 2017-12-12
-slides: https://oddbooksapp.com/book/web-projects
+# slides: https://oddbooksapp.com/book/web-projects
 tags:
   - Design
   - Process
   - Business Development
 events:
   - venue: Boost Biz Ed
-    url: https://boostbized.com/events/how-to-plan-a-web-project/
+    url: https://boostbized.com/
     adr: Westminster, CO
     date: 2018-07-11
   - venue: EdTech Colorado

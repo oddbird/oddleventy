@@ -1,6 +1,6 @@
 ---
 title: Sana Javed
-sub: Software Developer
+sub: Software developer
 bird: sana
 date: 2022-02-28
 image:

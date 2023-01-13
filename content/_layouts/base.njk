@@ -1,6 +1,7 @@
 {%- import 'utility.macros.njk' as utility -%}
 <!doctype html>
 <html lang="en"
+  data-layout="root"
   data-ccs="root"
   data-ccs-theme="{{ ccs.themes | first }}"
   data-ccs-colors>
@@ -75,7 +76,6 @@
     {% include "site/alert.njk" %}
     {% include "site/banner.njk" %}
     {% include 'page/base.njk' %}
-    {% include 'site/cta.njk' %}
     {% include 'site/footer.njk' %}
 
     <script type="text/javascript" src="/assets/js/scripts.js"></script>

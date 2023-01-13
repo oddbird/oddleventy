@@ -91,6 +91,6 @@ summary: |
   ],
   "
     Two of the most popular videos from Miriam.
-    Check out the resources below for links to the rest...
+    Check out the posts below for links to the rest...
   "
 ) }}

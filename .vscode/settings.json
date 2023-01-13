@@ -16,9 +16,7 @@
   ],
   "css.validate": false,
   "scss.validate": false,
-  "eslint.nodePath": ".yarn/sdks",
   "eslint.packageManager": "yarn",
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "stylelint.packageManager": "yarn",
   "stylelint.validate": [
     "css",
@@ -41,6 +39,5 @@
       "source.fixAll.stylelint": true
     }
   },
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true
 }

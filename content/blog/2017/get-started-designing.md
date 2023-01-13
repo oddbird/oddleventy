@@ -37,7 +37,7 @@ useful tutorials that will get you started designing right away.
 {{ embed.img('blog/2017/get-started-designing/paper.jpg', 'Paper sketching tool') }}
 
 When tackling a complex UX design challenge, I start with sketches. My
-go-to tool is aptly named [Paper]. Paper, by 53, is free for iPad and
+go-to tool is aptly named [Paper]. Paper, by WeTransfer, is free for iPad and
 iPhone. Paper is much more basic than tools like Adobe Photoshop and
 Illustrator. In my experience, a collapsable toolkit with several brush
 styles, seven colors, and an eraser is all I need to sketch rough drafts
@@ -51,7 +51,7 @@ work. When drafting logos, I often trace images. Paper lets me upload an
 image, draw on top of it, and easily delete the image from the
 background when I’m finished.
 
-[Paper]: https://www.fiftythree.com/
+[Paper]: https://wetransfer.com/paper
 [QuarqNet]: https://www.quarqnet.com/
 
 ## Typography: A Practical Guide
@@ -120,5 +120,5 @@ excellent tool for working out how users will flow through the content.
 What design tools and tutorials have you found most useful? I’d love to
 hear your recommendations. Join the conversation on [Twitter].
 
-[1]: https://helpx.adobe.com/xd/how-to/web-mobile-app-ui-ux-design-basics.html
+[1]: https://www.adobe.com/products/xd.html
 [Twitter]: https://twitter.com/oddbird

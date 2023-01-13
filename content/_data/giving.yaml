@@ -1,7 +1,15 @@
+- name: DjangoCon
+  url: https://djangocon.us/
+  type: sponsorships
+  years: 2022
+  description: |
+    is a six-day international conference
+    for the community by the community
+    about the Django web framework.
 - name: Django Girls
   url: https://djangogirls.org/
   type: donations
-  years: 2015--2021
+  years: 2015--2022
   description: |
     is a non-profit organization
     and a community that empowers and helps women
@@ -10,22 +18,22 @@
 - name: Natives in Tech
   url: https://nativesintech.org/
   type: donations
-  years: 2020--2021
+  years: 2020--2022
   description: |
-    strives to build a collective of Native technologists
+    cultivates a tech ecosystem of Native technologists
     crafting free and open source technology for Native communities.
-- name: TransTech Social
-  url: https://www.transtechsocial.org/
+- name: TransTech
+  url: https://transtechsocial.org/
   type: donations
-  years: 2021
+  years: 2021--2022
   description: |
     is an incubator for LGBTQ Talent
     with a focus on economically empowering
-    the T in our community, by creating an
-    affirming education and employment space
-    for transgender and gender nonconforming
-    people, as well as anyone facing
-    discrimination in the workplace or education.
+    the T, transgender people, in our community.
+    TransTech is a co-working, co-learning community
+    dedicated to empowering
+    trans, lesbian, gay, bisexual, queer people and allies
+    with practical, career-ready skills.
 - name: Resilient Coders
   url: https://www.resilientcoders.org/
   type: donations
@@ -35,7 +43,7 @@
     as software engineers -- and connecting them with
     jobs -- in Boston, Philadelphia, and Pittsburgh.
 - name: Black Girls CODE
-  url: https://www.blackgirlscode.com/
+  url: https://wearebgc.org/
   type: donations
   years: 2013--2016, 2018--2020
   description: |
@@ -131,7 +139,7 @@
 - name: Goshen Ultimate Summer League
   url: https://goshenultimate.com/
   type: sponsorships
-  years: 2014--2020
+  years: 2014--2022
   description: |
     provides opportunities to learn, play,
     and teach spirited Ultimate in Goshen, IN and surrounding areas.
@@ -177,7 +185,7 @@
     As active users and contributors to the Django community,
     we're proud to support the continued development of the project.
 - name: Django Under the Hood
-  url: https://www.djangounderthehood.com/
+  url: https://djangounderthehood.com/
   type: sponsorships
   years: 2015
   description: |
@@ -196,7 +204,7 @@
     we love the thoughtfulness and dedication to diversity
     that the SassConf organizers bring to the community.
 - name: Thunder Valley Community Development Corporation
-  url: https://thundervalley.org/
+  url: https://www.thundervalley.org/
   type: donations
   years: 2014, 2015
   description: |

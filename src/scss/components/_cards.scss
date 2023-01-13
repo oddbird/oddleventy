@@ -1,0 +1,135 @@
+@use '../config';
+
+// pagination
+
+.cards-header {
+  --column: full;
+  --title-margin: 0;
+
+  align-items: center;
+  grid-gap: var(--gutter);
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns:
+    var(--page-margin)
+    [nav-start title-start] 1fr
+    [nav-end] var(--page-margin)
+    [title-end];
+  margin: var(--double-gutter) 0;
+
+  @include config.above('wide-break') {
+    --justify-nav: initial;
+
+    grid-template-columns:
+      var(--page-margin)
+      [nav-start] auto
+      [nav-end title-start] 1fr
+      [title-end];
+  }
+
+  * {
+    grid-column: var(--nav-column, title);
+  }
+}
+
+.pagination {
+  --column: content;
+  --nav-column: nav;
+
+  color: var(--text-light);
+
+  [data-grid='cards'] + & {
+    margin-top: var(--double-gutter);
+  }
+}
+
+.pagination-link {
+  padding: 0 var(--shim);
+}
+
+// list
+
+[data-grid='cards'] {
+  --align: stretch;
+  --justify: stretch;
+
+  list-style: none;
+  grid-auto-flow: dense;
+  margin: 0;
+  padding: 0;
+}
+
+[data-card] {
+  display: grid;
+  grid-template:
+    [post-start type-start] auto [type-end] 1fr [post-end]
+    / [post-start] 1fr [type-start] auto [type-end post-end];
+}
+
+[data-card='feature'] {
+  --type-flag: var(--bg);
+  --type-flag-active: var(--callout);
+  --shadow: transparent;
+
+  background-color: var(--feature-accent, var(--accent));
+  background-image: linear-gradient(to bottom, transparent, var(--feature));
+  margin: calc(var(--half-shim) * -1);
+
+  [data-post] {
+    --card: var(--bg);
+
+    margin: var(--quarter-shim);
+    transform: rotate(-3deg);
+  }
+}
+
+[data-card='large'] {
+  grid-column: 1 / -1;
+  margin: var(--gutter) 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  [data-post] {
+    font-size: 1rem;
+  }
+}
+
+.type-link {
+  &:link,
+  &:visited {
+    --fill: var(--type-flag, var(--feature));
+
+    display: block;
+    grid-area: type;
+    line-height: 1;
+    padding: var(--half-shim);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    --fill: var(--type-flag-active, var(--active));
+  }
+}
+
+// Browse by Tag
+[data-grid='tags'] {
+  --item-title: 1rem;
+}
+
+.tag-count {
+  font-size: var(--small);
+  font-weight: normal;
+
+  &::before {
+    content: ' | ';
+  }
+}
+
+[data-list='tag'] {
+  &:last-of-type {
+    margin-block-end: var(--double-gutter);
+  }
+}

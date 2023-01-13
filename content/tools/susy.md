@@ -78,16 +78,13 @@ badges:
   - name: npm
     src: https://badge.fury.io/js/susy.svg
     url: https://www.npmjs.com/package/susy
-  - name: build
-    src: https://travis-ci.org/oddbird/susy.svg
-    url: https://travis-ci.org/oddbird/susy
 summary: |
   **Susy was a responsive layout engine for Sass**,
   before `flexbox` and CSS `grid` were available.
   Susy is now deprecated, and will not receive updates.
   If you need help moving off Susy,
   or learning the latest in web layout,
-  **we offer [training](/services/speaking/)
+  **we offer [training](/talks/)
   and [consulting](/services/development/)
   to help bring you up-to-date**.
 ---
@@ -117,7 +114,7 @@ if necessary.
 {{ quotes.grid(press) }}
 
 [CodeKit]: https://codekitapp.com/index.html?referrer=susy
-[Black Girls Code]: https://www.blackgirlscode.com/
+[Black Girls Code]: https://wearebgc.org/
 
 {% call embed.media_block(
   media=embed.img(
