@@ -18,6 +18,11 @@ social:
   github: MiriSuzanne
   codepen: MiriamSuzanne
 events:
+  - venue: CSS Day
+    url: https://cssday.nl/2023
+    adr: Amsterdam, Netherlands
+    date: 2023-06-08
+    end: 2023-06-09
   - venue: Front Conference
     date: 2023-08-31
     end: 2023-09-01
