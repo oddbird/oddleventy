@@ -4,12 +4,11 @@ sub: A deep-dive introduction to CSS Container Queries
 author: miriam
 date: 2023-01-17
 image:
-  src: talks/mia-back.jpg
+  src: talks/mudturtles.jpg
   alt: |
-    Mia from behind,
-    standing at a laptop -
-    speaking to a conference audience
-    and gesturing to one side
+    Three mud turtles
+    end-to-end on a small branch
+    floating in the water
 tags:
   - CSS
   - Container Queries

@@ -4,11 +4,12 @@ sub: A CSS Deep Dive
 author: miriam
 date: 2023-01-09
 image:
-  src: talks/mudturtles.jpg
+  src: talks/mia-back.jpg
   alt: |
-    Three mud turtles
-    end-to-end on a small branch
-    floating in the water
+    Mia from behind,
+    standing at a laptop -
+    speaking to a conference audience
+    and gesturing to one side
 tags:
   - CSS
   - Cascade
