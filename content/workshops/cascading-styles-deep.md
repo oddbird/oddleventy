@@ -2,7 +2,7 @@
 title: Cascading Styles
 sub: A CSS Deep Dive
 author: miriam
-date: 2023-01-09
+date: 2023-01-24
 image:
   src: talks/mia-back.jpg
   alt: |
