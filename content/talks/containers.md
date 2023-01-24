@@ -28,7 +28,7 @@ summary: |
   Let’s find out!
 ---
 
-While the basics look a lot like media queries,
+While the basics look a lot like media queries --
 and can work as a drop-in replacement
 for many existing `@media` rules --
 there are some key differences to understand,
