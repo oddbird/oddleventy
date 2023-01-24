@@ -1,8 +1,8 @@
 ---
 title: CSS Containers, What Do They Know?
-sub: A deep-dive introduction to CSS Container Queries
+sub: A deep-dive introduction to CSS container queries
 author: miriam
-date: 2023-01-17
+date: 2023-01-24
 image:
   src: talks/mudturtles.jpg
   alt: |
@@ -20,7 +20,7 @@ events:
     date: 2023-06-08
     end: 2023-06-09
 summary: |
-  How did Container Queries go
+  How did container queries go
   from ‘impossible’ to ‘shipping’ after so many years?
   How do we use them, and what hidden powers do they have?
   What are CSS containers,
