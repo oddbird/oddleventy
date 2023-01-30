@@ -12,20 +12,22 @@ image:
     and white-blue-pink lightning-bolt earrings
   position: top
 social:
-  twitter: TerribleMia
+  mastodon:
+    user: mia
+    server: front-end.social
   github: MiriSuzanne
   codepen: MiriamSuzanne
-  stackoverflow: 1930386
 events:
   - venue: Front Conference
     date: 2023-08-31
     end: 2023-09-01
     adr: Zurich, Switzerland
     url: https://frontconference.com/
-  - venue: State of CSS Frameworks
-    date: 2022-10-18
-    adr: Online
-    url: https://www.thisdotmedia.com/state-of-the-web/
+  - venue: Smashing Conf
+    date: 2023-09-04
+    end: 2023-09-06
+    adr: Freiburg, Germany
+    url: https://smashingconf.com/freiburg-2023
 summary: |
   Miriam is a co-founder and front-end architect --
   overseeing the user-experience

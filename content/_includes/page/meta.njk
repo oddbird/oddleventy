@@ -43,10 +43,11 @@
         {% endif -%}
         {{ post.where(adr) }}
       </p>
-    {% elif social %}
+    {% elif bird and social %}
       {{ contact.social(
         data=social,
-        name=bird | capitalize
+        name=bird | capitalize,
+        rel='me'
       ) }}
     {% endif %}
 

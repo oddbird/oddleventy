@@ -18,6 +18,7 @@ tags:
   - Cascade Layers
   - CSSWG
   - Smashing Magazine
+  - Podcast
 summary: |
   Starting a new season of the Smashing Podcast
   with a look at the future of CSS.
