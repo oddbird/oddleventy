@@ -7,6 +7,7 @@ tags:
   - SitePoint
   - Sass
   - CSS
+  - Podcast
 canonical: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
 venue: SitePoint
 image:

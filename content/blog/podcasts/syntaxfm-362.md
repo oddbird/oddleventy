@@ -15,6 +15,7 @@ tags:
   - Cascade Layers
   - CSSWG
   - Syntax.fm
+  - Podcast
 summary: |
   In this episode of Syntax,
   Scott and Wes talk with Miriam

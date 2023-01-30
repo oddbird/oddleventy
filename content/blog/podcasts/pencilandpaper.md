@@ -15,6 +15,7 @@ tags:
   - Design
   - CSS
   - Process
+  - Video
 summary: |
   There are often tall walls
   between designers and developers,

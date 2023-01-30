@@ -32,14 +32,14 @@ summary: |
 
 {{ talks.section(
   title='Upcoming Events',
-  events=collections.all | getEvents | getFuture,
+  events=collections.all | getPublic | getEvents | getFuture,
   all=false,
   by_bird=collections
 ) }}
 
 {{ layout.title('Talks & Workshops') }}
 {% call layout.grid('training') %}
-  {% for item in collections._talk | eventSort | reverse %}
+  {% for item in collections._talk | getPublic | eventSort | reverse %}
     <article {{ post.aria_label(item) }} class="training-item">
       {{ post.hero(item.data.image, 'post') }}
       <header class="training-header">
