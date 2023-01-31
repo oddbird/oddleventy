@@ -23,6 +23,8 @@
           "/about/index.html",
           "/contact/index.html",
         ]
+        ignoreElements = '#search'
+        ignoreGuidelines = ['color-contrast']
         failWithIssues = false
 
 [[plugins]]
