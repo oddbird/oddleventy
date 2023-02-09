@@ -53,11 +53,3 @@
 .form-actions {
   margin-top: var(--newline);
 }
-
-// Honey
-// -----
-/// Apply to honey-pot SPAM-protection fields…
-/// @group forms
-[data-honey] {
-  @include config.is-hidden;
-}
