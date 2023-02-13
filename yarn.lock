@@ -9067,9 +9067,7 @@ __metadata:
     slugify: ^1.6.5
     striptags: ^3.2.0
     stylelint: ^15.1.0
-    stylelint-config-prettier: ^9.0.5
     stylelint-config-standard-scss: ^7.0.0
-    stylelint-prettier: ^2.0.0
     truncate-html: ^1.0.4
     typescript: ^4.9.5
     typogr: ^0.6.8
@@ -11244,18 +11242,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-prettier@npm:^9.0.5":
-  version: 9.0.5
-  resolution: "stylelint-config-prettier@npm:9.0.5"
-  peerDependencies:
-    stylelint: ">= 11.x < 15"
-  bin:
-    stylelint-config-prettier: bin/check.js
-    stylelint-config-prettier-check: bin/check.js
-  checksum: 3d04e463e0bb7e42a5ddec49eea6ef4ea07705d887e8a3ff1fcb82278a5e2bec1a36b8498ea7ed2d24878de29d7c94ac75b1d3ac4f8b19c3a84970595b29261f
-  languageName: node
-  linkType: hard
-
 "stylelint-config-recommended-scss@npm:^9.0.0":
   version: 9.0.0
   resolution: "stylelint-config-recommended-scss@npm:9.0.0"
@@ -11306,18 +11292,6 @@ __metadata:
   peerDependencies:
     stylelint: ^15.0.0
   checksum: db0cce181b654df4960d0c03129f3904c775628cb29a7aadfcb995034c234797b10db50640c85085bf0f2e5fbffc654b20a8c2be38c26ef670691fe7e8c86e86
-  languageName: node
-  linkType: hard
-
-"stylelint-prettier@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "stylelint-prettier@npm:2.0.0"
-  dependencies:
-    prettier-linter-helpers: ^1.0.0
-  peerDependencies:
-    prettier: ">=2.0.0"
-    stylelint: ">=14.0.0"
-  checksum: 6ce7628517a492e0c2e6104f654c9bc710f1aaf035c8b5274e187b68e8d510e70bae5ded2cb65df76aa01096460b9dfe02f844fea13bfba7e3dcca13baec2ff4
   languageName: node
   linkType: hard
 

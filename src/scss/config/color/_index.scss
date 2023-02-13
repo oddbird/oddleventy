@@ -6,7 +6,6 @@
 @use 'ccs-defaults';
 @use 'content';
 @forward 'config';
-
 @include herman.add(
   'colors',
   'brand-colors',
