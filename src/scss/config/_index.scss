@@ -5,7 +5,6 @@
 @forward 'fonts';
 @forward 'layout';
 @forward 'scale';
-
 @use 'tools';
 @use 'sass:meta';
 @use 'color/brand';
@@ -13,7 +12,6 @@
 @use 'color/ccs-defaults';
 @use 'color/content';
 @use 'color/config' as color-config;
-
 @include tools.add-colors(meta.module-variables('brand'));
 @include tools.add-colors(meta.module-variables('background'));
 @include tools.add-colors(meta.module-variables('ccs-defaults'));

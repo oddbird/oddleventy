@@ -39,8 +39,7 @@
     'desktop desktop2 desktop2' var(--spacer)
     'desktop mobile ..........' min-content
     '....... mobile ..........' var(--spacer)
-    'caption caption caption' 1fr
-    / minmax(min-content, var(--page)) 8em minmax(var(--gutter), 1fr);
+    'caption caption caption' 1fr / minmax(min-content, var(--page)) 8em minmax(var(--gutter), 1fr);
   grid-gap: var(--gutter);
   margin: var(--gutter) var(--page-margin);
   max-width: var(--wide-page);

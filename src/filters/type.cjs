@@ -14,10 +14,8 @@ const { anchorLinkIconString } = require('../../src/js/clickToCopy.cjs');
 
 const mdown = markdown({
   html: true,
-  breaks: false,
   typographer: true,
 })
-  .disable('code')
   .use(mdAnchor, {
     level: [2],
     permalink: mdAnchor.permalink.linkAfterHeader({
