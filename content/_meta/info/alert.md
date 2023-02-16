@@ -2,7 +2,7 @@
 live: true
 info_slug: alert
 title: alert
-aria: BLM
+aria: 'Black Lives Matter'
 ---
 
 **OddBird stands with the Black community in
