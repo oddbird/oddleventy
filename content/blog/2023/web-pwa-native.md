@@ -1,7 +1,7 @@
 ---
 title: Responsive Web App vs PWA vs Native App and How to Choose
 author: sondra
-date: 2023-02-20
+date: 2023-03-01
 tags:
   - Article
   - Business Development
@@ -10,195 +10,156 @@ tags:
   - Startups
   - User Experience
 image:
-  src: blog/2023/[].jpg
+  src: blog/2022/hundred-g8323bcdec_1920.jpg
   alt: |
     ???
 summary: |
-  If you have an idea for a digit project,
+  If you have an idea for a digital product,
   you may be wondering if you should build a
   responsive web app, PWA, or native app.
   Is one option inherently better?
   What are the pros and cons?
 ---
 
-[Playwright](https://playwright.dev/) is a test runner that uses real browsers
-to test web applications (an alternative to tools like
-[Selenium](https://www.selenium.dev/)). By default, Playwright runs these
-browsers in headless mode, which means the pages are loaded and tested without
-opening the browser window. This is great when running entire test suites
-locally, and in CI where having a bunch of rapidly opening windows would be
-disconcerting. However, when it comes to writing or debugging individual
-tests, it is convenient to open the browser in *headed* mode to actually see the
-page being tested.
+## Responsive Web App, PWA, and Native Mobile App Defined
+Here are three quick definitions
+highlighting the biggest differences
+between responsive web apps,
+progressive web apps,
+and native mobile apps.
 
-Playwright includes the [Playwright
-Inspector](https://playwright.dev/docs/debug#playwright-inspector) to
-conveniently launch the browser in headed mode *and* a separate window to
-control test execution. The inspector is launched by setting `PWDEBUG=1` before
-calling `playwright`, and is compatible with all browsers supported by
-Playwright (Safari, Chrome, and Firefox) in all major operating systems.
-Playwright also includes a `playwright open <url>` subcommand to quickly launch
-the inspector on any URL. Examples in this post use `playwright open <url>`, but
-`PWDEBUG=1` is equivalent.
+- **Responsive Web App** -
+An application that runs in a browser,
+such as Chrome, Firefox, or Safari,
+and responds to fit any screen size on any device.
 
-Playwright also provides a convenient [Docker
-image](https://playwright.dev/docs/docker), which includes all three browsers
-pre-installed and configured so you can skip the dependency installation steps.
-But what happens if you try to run the Playwright Inspector inside a Docker
-container -- which normally doesn't have a graphical user interface?
+- **Progressive Web App (PWA)** -
+A responsive web app
+with additional capabilities
+that are similar to a native mobile app.
 
-```bash
-# We expect a browser window to open and load google.com
-# Update the image tag to match your desired version of Playwright
-docker run --rm mcr.microsoft.com/playwright:v1.28.0 npx -y playwright open google.com
+- **Native Mobile App** -
+An app built specifically
+for one particular mobile operating system,
+either iOS, Android, or Windows.
 
-╔════════════════════════════════════════════════════════════════════════════════════════════════╗
-║ Looks like you launched a headed browser without having a XServer running.                     ║
-║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
-║                                                                                                ║
-║ <3 Playwright Team                                                                             ║
-╚════════════════════════════════════════════════════════════════════════════════════════════════╝
-```
+To decide which type of app
+would suit your project best,
+a good place to start
+is with your major goals.
+How do you want to serve people
+with this digital project?
 
-No browser window is launched! Instead we get an error message about not "having
-a XServer running." The definition and functionality of XServer are beyond the
-scope of this article, but without it we can't interact with applications that
-require a user interface (like the browser). Here's [a more detailed
-explanation](https://askubuntu.com/a/7885/27669) if you want to learn more.
+## Best Option for Wide Reach
 
-Searching for this error on the web will return results explaining how to
-install and start XServer. That advice applies to non-containerized, Linux-based
-systems. If your host system is macOS or Windows you actually don't want to do
-that. Instead we want the container to use the *host XServer* to launch
-Playwright *inside the container*, which requires two modifications to our
-`docker` command:
+If your top priority is
+to reach as many people as possible,
+as quickly as possible,
+while keeping costs down,
+a responsive web app
+is likely the best option
+for your digital product.
 
-1. Set the `DISPLAY` environment variable inside the container using the `-e`
-   option
-2. Mount the XServer Unix socket inside the container using the `-v` option
+A responsive web app is built
+to resize and rearrange its content
+in a way that best suits
+whatever screen size and browser
+each person chooses --
+instantly providing a consistent experience
+no matter the device.
+A person can open a responsive web app,
+on any device from a small mobile phone or tablet,
+to a laptop or giant desktop screen.
+They can also decide which browser to use:
+Chrome, Firefox, Microsoft Edge, Safari,
+or perhaps a mobile browser.
+So whether a person has the latest iPhone
+or an old laptop,
+whether they are at the office,
+on a bus,
+or in their home,
+if they have access to wifi or data,
+they have access to a responsive web app.
 
-```bash
-docker run --rm \
--e DISPLAY=<host display> \
--v /tmp/.X11-unix:/tmp/.X11-unix \
-mcr.microsoft.com/playwright:v1.28.0 npx -y playwright open google.com
-```
+Another neat thing about responsive web apps
+is that they do all this responding
+to screen sizes and browsers
+from a single "codebase."
+The term "codebase" is developer speak for
+a collection of code
+used to build a particular software system,
+application, or software component.
 
-The value of `<host display>` will depend on your host operating system, and you
-will need to ensure `/tmp/.X11-unix` is available for mounting. The following
-sections explain how to do this for Windows and macOS.
+In contrast,
+if you wanted to reach the same range of people
+on their device of choice
+with native mobile app technology,
+you would need to develop
+as many different codebases
+as platforms you wanted to support.
 
-## Microsoft Windows
+For example, a native mobile app
+that is available on Google mobile devices
+requires a codebase for the Android operating system (OS)
+written using Kotlin, Java, and C++ languages.
+To provide that same app
+to people using Apple mobile devices,
+developers would need to build another codebase for iOS
+with Swift or Objective-C.
+If you wanted to provide the same content
+to people on non-mobile devices
+a third codebase would need to be developed,
+maybe a native desktop app or even a web app.
+Because of these propietary technology requirements,
+you may also want to hire
+separate teams of specialists
+to build the separate cobebases.
 
-You might find it surprising (I certainly did) that Microsoft Windows has a
-native XServer even though it's not a GNU/Linux system. It's called
-[WSLg](https://github.com/microsoft/wslg#readme), and it's included as part of
-the [Windows Subsystem for
-Linux](https://www.microsoft.com/store/productId/9P9TQF7MRM4R) (WSL). You most
-likely already have WSL and WSLg installed if you are running [Docker
-Desktop](https://www.docker.com/products/docker-desktop/) in recent builds of
-Windows 10 and 11.
+(https://chriscoyier.net/2023/01/04/what-does-it-look-like-for-the-web-to-lose/)
+(Android Developer Documentation https://developer.android.com/guide/components/fundamentals)
 
-Let's start by verifying that WSL and WSLg are installed and running. First,
-launch "WSL" from your Start Menu. A Linux terminal window should open (most
-likely a recent version of Ubuntu). In that window, verify that the directory
-`/mnt/wslg/` exists and contains these files inside the Linux filesystem:
+The ability of a responsive web app
+to reach a wide range of people
+with fewer developers
+building and maintaining one codebase
+means you could pay less
+for the initial development
+as well as for the long-term maintenance.
 
-```bash
-ls -a -w 1 /mnt/wslg
+To be clear,
+building any kind of app is not a low cost endeavor.
+Even a very simple responsive web app
+that creates, edits, and deletes data
+could easily have a price tag of $10K,
+and very complex web apps
+such as a social media platform
+or project management software
+cost many millions of dollars
+to design, develop, and maintain.
 
-.
-..
-.X11-unix
-PulseAudioRDPSink
-PulseAudioRDPSource
-PulseServer
-distro
-doc
-dumps
-pulseaudio.log
-runtime-dir
-stderr.log
-versions.txt
-weston.log
-wlog.log
-```
+But when comparing
+responsive web apps, PWAs, and native mobile apps,
+the type of app most likely
+to help you reach a broad range of people
+for the least development time
+and the lowest cost
+is a responsive web app.
 
-If you don't see "WSL" in your Start Menu, or the `ls` command above fails with
-`No such file or directory`, then your system is missing WSL entirely or is
-running an old version. Visit the [Microsoft
-Store](https://www.microsoft.com/store/productId/9P9TQF7MRM4R) to download an
-up-to-date version.
+## Best Option for Advanced Capabilities
 
-Once you are all set up, we can set `DISPLAY=:0` as explained in the [official
-guide](https://github.com/microsoft/wslg/blob/main/samples/container/Containers.md):
+If your goal is to provide
+a high level of specialized capability,
+especially for a specific device,
+you probably need to build
+a native mobile app.
 
-```bash
-docker run --rm \
--e DISPLAY=:0 \
--v /tmp/.X11-unix:/tmp/.X11-unix \
-mcr.microsoft.com/playwright:v1.28.0 npx -y playwright open google.com
-```
 
-If all goes well, that should open two windows: a browser window with Google
-loaded, and a Playwright Inspector window. Closing both will also stop the
-container.
+## Best of Both Worlds
 
-## macOS
-
-Apple's operating system doesn't include a built-in XServer, but we can use
-[XQuartz](https://www.xquartz.org/) to provide one:
-
-1. Install XQuartz: `brew install --cask xquartz`
-1. Open XQuartz, go to Preferences -> Security, and check "Allow connections
-   from network clients"
-1. Restart your computer (restarting XQuartz might not be enough)
-1. Start XQuartz with `xhost +localhost`
-1. Open Docker Desktop and edit settings to give access to `/tmp/.X11-unix` in
-   Preferences -> Resources -> File sharing
-
-Once XQuartz is running with the right permissions, you can populate the
-environment variable and socket:
-
-```bash
-docker run --rm \
--e DISPLAY=host.docker.internal:0 \
--v /tmp/.X11-unix:/tmp/.X11-unix \
-mcr.microsoft.com/playwright:v1.28.0 npx -y playwright open google.com
-```
-
-If all goes well, that should open two windows: a browser window with Google
-loaded, and a Playwright Inspector window. Closing both will also stop the
-container.
-
-## Persisting the configuration
-
-To avoid having to specify the flags every time, you can use a
-`docker-compose.yml` file to [set the environment
-variable](https://docs.docker.com/compose/environment-variables/#set-environment-variables-in-containers)
-and [mount the
-socket](https://docs.docker.com/storage/bind-mounts/#use-a-bind-mount-with-compose).
-
-```yaml
-# docker-compose.yml
-version: '3'
-
-services:
-  web:
-    image: mcr.microsoft.com/playwright:v1.28.0
-    environment:
-      - DISPLAY=... # Replace this line with the appropriate value
-    volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix
-```
-
-Remember: `environment` needs `DISPLAY=:0` in Windows and
-`DISPLAY=host.docker.internal:0` in macOS. After editing and saving the file,
-run `docker-compose` to open the browser (or run any Playwright command) along
-with the Playwright Inspector:
-
-```bash
-docker-compose run web npx -y playwright open google.com
-```
-
-Enjoy using and inspecting the browser from inside containers!
+You may have seen this coming,
+but if your goal is a hybrid
+of wide reach
+and advanced capabilities,
+you will want to investigate
+the progressive web app option
+for your app project.
