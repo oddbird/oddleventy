@@ -1,10 +1,10 @@
 ---
 title: Custom Web App Design & Development For Humans
+prebanner: We create
 banner: |
-  Custom Web App
-  *[Design](/services/design-systems/),
-  [Development](/services/development/), &
-  [Training](/talks/)*
+  <span class="first">We Create</span>
+  Custom Web Apps & Design Systems
+  *<span class="second">in</span> Thoughtful Collaboration*
 image:
   src: work/coachhub/coachhub-home-iphone.jpg
   alt: CoachHub App on iPhone
@@ -13,14 +13,13 @@ image:
 og:
   img: default
 summary: |
-  **As experts in digital product creation,**
-  we’ll help to clarify your goals & priorities
-  as we work towards them together.
-  Our focus on accessibility, performance, and architecture --
-  resilient design systems & well-tested code --
-  will keep your maintenance costs low for years.
+  **We enjoy working with teams** pursuing large-scale projects
+  to plan, design, and develop tailor-made web applications and
+  design systems. As **thoughtful experts**, we'd love to help you
+  **improve team workflow, lower maintainance costs,** and **solve
+  problems** with technology that **help people**.
 action:
-  text: Start a conversation »
+  text: Talk with us »
   url: /contact/
 work:
   - /work/adobe/
@@ -45,10 +44,15 @@ tools:
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
+{% import 'post.macros.njk' as post %}
 
 {{ layout.title('Featured Clients') }}
 
 {{ embed.logos(work, collections.all) }}
+
+{{ layout.title('Featured Posts') }}
+
+{{ post.recent_posts('Article', collections.all, 4)}}
 
 {{ quotes.find(
   collections.all,
@@ -67,23 +71,24 @@ tools:
   )
 ) %}
 
-**As core contributors to Sass & Django**,
+**As core contributors to CSS, Sass and Django**,
 we write the books,
-contribute to the languages,
-and build the tools millions of other developers rely on.
-Then **we bring that expertise to your custom web projects**.
-Our clients have gained traction,
-been acquired,
-and reported easy maintenance for years.
-Our specialties include:
+help create the languages,
+and build the OSS projects millions of other developers rely on.
+Bringing that **expertise to your custom web projects,** we focus on **accessibility, performance,** resilient design systems, and **well-tested code**.
 
-- Branding & Design
-- Object-Oriented UX & Strategy
-- Python & Django (*core contributors*)
-- CSS & Sass (*core contributors*)
-- JavaScript with Vue, React, Node, etc...
-- WordPress
-- Accessible HTML & Nunjucks
+Full Range of Services:
+
+- Branding & Logo Design
+- User Research & Concepting
+- UI/UX Design (OOUX)
+- Python & Django on the backend
+- CSS & Sass on the frontend
+- JavaScript (Svelte, Vue, React, Node, etc.)
+- Design Systems & Component Libraries
+- Accessible HTML
+
+[View services & deliverables »](/services)
 
 {% endcall %}
 
@@ -100,20 +105,16 @@ Our specialties include:
 <h2>Hi, I'm Miriam</h2>
 
 I co-founded OddBird with my brothers in 2008
-to provide **custom web application design and development**,
-along with refactors for **integrated design systems,
-accessibility, performance,
-and long-term sustainability**.
+as a **full-stack, boutique agency** to provide **custom web application design & development,**
+along with **refactors** for integrated **design systems, accessibility, performance, and long-term sustainability**.
 
 Since then OddBird has become an industry leader --
 from our work on Django, Sass, and Susy,
-to the Mozilla Developer Channel,
-**CSS Working Group**,
-and in-depth **conference talks on front-end architecture, workflow,
-component libraries, testing, and documentation**.
+to the **CSS Working Group, Mozilla Developer Channel, Object Oriented UX,**
+and in-depth conference talks on **front-end architecture,** workflow,
+**component libraries,** testing, and **documentation**.
 
-We'd love to help you
-take your app to the next level.
+We'd love to help you thoughtfully **serve people with technology**.
 
 {{ quotes.signature() }}
 {% endcall %}
