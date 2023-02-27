@@ -116,6 +116,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('removePage', pages.removePage);
   eleventyConfig.addFilter('addCallToAction', pages.addCallToAction);
   eleventyConfig.addFilter('isType', pages.isType);
+  eleventyConfig.addFilter('isHome', pages.isHome);
 
   eleventyConfig.addFilter('fromTaxonomy', taxonomy.fromTaxonomy);
   eleventyConfig.addFilter('ossGroups', taxonomy.ossGroups);

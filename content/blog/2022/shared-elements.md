@@ -53,6 +53,7 @@ summary: |
   but what if we apply it to
   individual elements
   with changing styles on a single page?
+home: true
 ---
 
 {% import 'embed.macros.njk' as embed %}

@@ -47,6 +47,7 @@ summary: |
   > What happens when something goes wrong?
   >
   > ---Jeremy Keith
+home: feature
 ---
 
 {% import "embed.macros.njk" as embed %}

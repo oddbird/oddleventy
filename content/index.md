@@ -52,7 +52,7 @@ tools:
 
 {{ layout.title('Featured Posts') }}
 
-{{ post.recent_posts('Article', collections.all, 4)}}
+{{ post.featured_posts('Article', collections, 3)}}
 
 {{ quotes.find(
   collections.all,

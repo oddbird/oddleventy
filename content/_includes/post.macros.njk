@@ -723,3 +723,37 @@ params:
   </span>
 {% endif %}
 {% endmacro %}
+
+{# @docs
+label: featured_posts
+category: lists
+note: |
+  Returns a given number of featured
+  posts from a collection
+params:
+  type:
+    type: string
+    note: one of several post "types" to display (types are defined in the `taxonomy.yaml` data file)
+  collections:
+    type: 11ty collections object
+    default: '[]'
+  limit:
+    type: number
+    default: 3
+  banner_title:
+    type: string
+    default: 'Posts'
+#}
+{% macro featured_posts(
+  type,
+  collections=[],
+  limit=3
+) %}
+  {%- set posts = collections[type] -%}
+  {%- set featured = posts | isType(type) | isHome | onlyShow(limit) -%}
+  {{ list(
+    featured,
+    collections=collections,
+    override_feature=true
+  ) }}
+{% endmacro %}

@@ -353,6 +353,24 @@ params:
 const isType = (collection, type) =>
   collection.filter((page) => pageType(page.data.tags, 'tag') === type);
 
+/* @docs
+label: isHome
+category: Filter
+note: |
+  Filters collection by a given tag,
+  expected to be one of several post "types"
+  (types are defined in the `taxonomy.yaml` data file)
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+  type:
+    type: type
+    note: post type to filter by
+*/
+const isHome = (collection) =>
+  collection.filter((post) => post.home === true || post.home === 'feature');
+
 module.exports = {
   isPublic,
   isCurrent,
@@ -370,4 +388,5 @@ module.exports = {
   removePage,
   addCallToAction,
   isType,
+  isHome,
 };
