@@ -13,8 +13,7 @@
 <header
   data-layout="header"
   class="post-header"
-  data-header="{{ image.type or hero_type }}"
-  aria-label="page">
+  data-header="{{ image.type or hero_type }}">
 
   {%- set type = tags | pageType if tags else none -%}
   {% if type.tag %}

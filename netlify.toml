@@ -23,7 +23,9 @@
           "/about/index.html",
           "/contact/index.html",
         ]
-        failWithIssues = false
+        ignoreElements = '#search'
+        ignoreGuidelines = ['color-contrast']
+        failWithIssues = true
 
 [[plugins]]
     package = "@algolia/netlify-plugin-crawler"
