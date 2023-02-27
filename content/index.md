@@ -50,9 +50,7 @@ tools:
 
 {{ embed.logos(work, collections.all) }}
 
-{{ layout.title('Featured Posts') }}
-
-{{ post.featured_posts('Article', collections, 3)}}
+{{ post.featured_posts('Article', collections) }}
 
 {{ quotes.find(
   collections.all,
@@ -74,8 +72,11 @@ tools:
 **As core contributors to CSS, Sass and Django**,
 we write the books,
 help create the languages,
-and build the OSS projects millions of other developers rely on.
-Bringing that **expertise to your custom web projects,** we focus on **accessibility, performance,** resilient design systems, and **well-tested code**.
+and build the OSS projects
+millions of other developers rely on.
+Bringing that **expertise to your custom web projects,**
+we focus on **accessibility, performance,**
+resilient design systems, and **well-tested code**.
 
 Full Range of Services:
 
@@ -105,8 +106,10 @@ Full Range of Services:
 <h2>Hi, I'm Miriam</h2>
 
 I co-founded OddBird with my brothers in 2008
-as a **full-stack, boutique agency** to provide **custom web application design & development,**
-along with **refactors** for integrated **design systems, accessibility, performance, and long-term sustainability**.
+as a **full-stack, boutique agency**
+to provide **custom web application design & development,**
+along with **refactors** for integrated
+**design systems, accessibility, performance, and long-term sustainability**.
 
 Since then OddBird has become an industry leader --
 from our work on Django, Sass, and Susy,

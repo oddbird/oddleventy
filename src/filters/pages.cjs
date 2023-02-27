@@ -369,7 +369,9 @@ params:
     note: post type to filter by
 */
 const isHome = (collection) =>
-  collection.filter((post) => post.home === true || post.home === 'feature');
+  collection.filter(
+    (page) => page.data.home === true || page.data.home === 'feature',
+  );
 
 module.exports = {
   isPublic,

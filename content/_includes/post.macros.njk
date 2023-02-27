@@ -724,6 +724,7 @@ params:
 {% endif %}
 {% endmacro %}
 
+
 {# @docs
 label: featured_posts
 category: lists
@@ -742,18 +743,20 @@ params:
     default: 3
   banner_title:
     type: string
-    default: 'Posts'
+    default: 'Featured Posts'
 #}
 {% macro featured_posts(
   type,
   collections=[],
-  limit=3
+  limit=3,
+  banner_title='Featured Posts'
 ) %}
   {%- set posts = collections[type] -%}
   {%- set featured = posts | isType(type) | isHome | onlyShow(limit) -%}
   {{ list(
     featured,
     collections=collections,
+    title=banner_title,
     override_feature=true
   ) }}
 {% endmacro %}
