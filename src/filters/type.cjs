@@ -43,31 +43,8 @@ links:
 params:
   content:
     type: string
-  inline:
-    type: boolean
-    default: 'false'
-    note: |
-      Inline typesetting removes the "widont" filter
-      if the text has fewer than 5 words
 */
-const typogr = (content, inline = false) => {
-  if (content) {
-    // if this is inline text with less than 5 words
-    // avoid the "widont" feature
-    return inline && content.split(' ').length < 5
-      ? typogrify(content)
-          .chain()
-          .amp()
-          .smartypants()
-          .initQuotes()
-          .caps()
-          .ord()
-          .value()
-      : typogrify.typogrify(content);
-  }
-
-  return content;
-};
+const typogr = (content) => (content ? typogrify.typogrify(content) : content);
 
 /* @docs
 label: md
