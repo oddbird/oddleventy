@@ -151,6 +151,7 @@ module.exports = (eleventyConfig) => {
   );
 
   // shortcodes
+  eleventyConfig.addPairedShortcode('typogr', type.typogr);
   eleventyConfig.addPairedShortcode('md', type.md);
   eleventyConfig.addPairedShortcode('mdInline', type.mdInline);
   eleventyConfig.addPairedShortcode('h', type.heading);

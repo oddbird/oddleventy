@@ -61,6 +61,8 @@ tools:
 
 {{ embed.logos(tools, collections.all) }}
 
+{% md %}
+
 {% call embed.media_block(
   media=embed.img(
     src='writing/jssass.png',
@@ -103,6 +105,7 @@ Full Range of Services:
   attrs={'data-block': 'rotate'}
 ) %}
 
+{# Use <h2> instead of Markdown to avoid click-to-copy link #}
 <h2>Hi, I'm Miriam</h2>
 
 I co-founded OddBird with my brothers in 2008
@@ -121,3 +124,5 @@ We'd love to help you thoughtfully **serve people with technology**.
 
 {{ quotes.signature() }}
 {% endcall %}
+
+{% endmd %}

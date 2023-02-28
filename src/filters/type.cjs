@@ -77,7 +77,7 @@ params:
   content:
     type: string
 */
-const md = (content) => (content ? typogr(mdown.render(content)) : content);
+const md = (content) => (content ? mdown.render(content) : content);
 
 /* @docs
 label: mdInline
@@ -87,8 +87,7 @@ params:
   content:
     type: string
 */
-const mdInline = (content) =>
-  content ? typogr(mdown.renderInline(content), true) : content;
+const mdInline = (content) => (content ? mdown.renderInline(content) : content);
 
 /* @docs
 label: elide
