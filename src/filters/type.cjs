@@ -44,7 +44,17 @@ params:
   content:
     type: string
 */
-const typogr = (content) => (content ? typogrify.typogrify(content) : content);
+const typogr = (content) =>
+  content
+    ? typogrify(content)
+        .chain()
+        .amp()
+        .smartypants()
+        .caps()
+        .initQuotes()
+        .ord()
+        .value()
+    : content;
 
 /* @docs
 label: md
@@ -59,7 +69,7 @@ const md = (content) => (content ? mdown.render(content) : content);
 /* @docs
 label: mdInline
 category: typesetting
-note: Inline markdown with inline typesetting
+note: Inline markdown with typesetting
 params:
   content:
     type: string

@@ -5,8 +5,7 @@ import { callout, elide, heading, md, mdInline, typogr } from '#/type';
 import { anchorLinkIconString } from '../../src/js/clickToCopy';
 const markdown = '## Lorem ipsum dolor sit amet, consectetur';
 const content = 'Lorem ipsum dolor sit amet, consectetur';
-const typogrd =
-  'Lorem ipsum dolor sit amet,<span class="widont">&nbsp;</span>consectetur';
+const typogrd = 'Lorem ipsum dolor sit amet, consectetur';
 const slugifyd = 'lorem-ipsum-dolor-sit-amet%2C-consectetur';
 
 describe('typography filters', () => {
