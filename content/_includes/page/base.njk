@@ -24,7 +24,7 @@
   {% if content -%}
     {%- set hcontent = 'e-content' if is_entry else ('p-note' if is_bird else none) -%}
     <div data-main data-typeset {{ utility.attr_if('class', hcontent)}}>
-      {{ content | typogr | safe }}
+      {{ content | safe }}
     </div>
   {%- endif %}
 

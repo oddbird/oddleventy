@@ -546,7 +546,7 @@ params:
   {% if adr %}
     <i>in</i>
     <span class="adr">
-      {{ adr | typogr | safe }}
+      {{ adr }}
     </span>
   {% endif %}
 {% endmacro %}
@@ -604,7 +604,7 @@ params:
           {% for item in items | sort(attribute='tag') %}
             <li {% if pill %}class="pill-item p-category"{% endif %}>
               {{- utility.link_if(
-                content=item.tag | typogr,
+                content=item.tag,
                 url=item.url,
                 class='pill' if pill else none
               ) -}}
