@@ -1,4 +1,0 @@
----
-card: large
-logo: google
----
