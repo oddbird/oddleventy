@@ -726,11 +726,12 @@ params:
 
 
 {# @docs
-label: featured_posts
+label: homepage_posts
 category: lists
 note: |
   Returns a given number of featured
-  posts from a collection
+  posts from a collection for the
+  homepage "featured posts" section
 params:
   type:
     type: string
@@ -745,7 +746,7 @@ params:
     type: string
     default: 'Featured Posts'
 #}
-{% macro featured_posts(
+{% macro homepage_posts(
   type,
   collections=[],
   limit=3,
