@@ -62,17 +62,16 @@ tools:
 
 {{ embed.logos(tools, collections.all) }}
 
-{% md %}
-
 {% call embed.media_block(
   media=embed.img(
     src='writing/jssass.png',
     alt='Jump Start Sass, by Miriam Suzanne and Kitty Giraudel',
     sizes='media'
-  )
+  ),
+  use_md=true
 ) %}
 
-**As core contributors to CSS, Sass and Django**,
+**As core contributors to CSS, Sass, and Django**,
 we write the books,
 help create the languages,
 and build the OSS projects
@@ -103,7 +102,8 @@ resilient design systems, and **well-tested code**.
 
 {% call embed.media_block(
   media=embed.svg('faces/miriam'),
-  attrs={'data-block': 'rotate'}
+  attrs={'data-block': 'rotate'},
+  use_md=true
 ) %}
 
 {# Use <h2> instead of Markdown to avoid click-to-copy link #}
@@ -124,6 +124,5 @@ and in-depth conference talks on **front-end architecture,** workflow,
 We'd love to help you thoughtfully **serve people with technology**.
 
 {{ quotes.signature() }}
-{% endcall %}
 
-{% endmd %}
+{% endcall %}

@@ -9,8 +9,7 @@
   align-self: center;
   grid-area: title;
   position: relative;
-
-  margin: -50px 0 0 0; // needs a breakpoint for smaller screens
+  margin: -50px 0 0; // needs a breakpoint for smaller screens
 
   #hero + & {
     // clip the horizontal and bottom shadows only
@@ -53,11 +52,11 @@
   }
 
   span:first-of-type {
-      @include config.font-family('alt');
+    @include config.font-family('alt');
 
-      display: block;
-      font-size: var(--h3);
-      font-weight: normal;
+    display: block;
+    font-size: var(--h3);
+    font-weight: normal;
   }
 
   span:nth-of-type(3) {
@@ -67,8 +66,8 @@
 
   &em {
     @include config.font-family('amp');
-    font-size: var(--h1);
 
+    font-size: var(--h1);
     font-style: italic; // needed for Safari
   }
 }
