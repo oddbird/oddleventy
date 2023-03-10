@@ -243,6 +243,7 @@ export const collection4 = [
     data: {
       title: 'Draft Title',
       tags: ['Article'],
+      home: true,
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },
@@ -255,6 +256,7 @@ export const collection4 = [
     data: {
       title: 'Draft Title',
       tags: ['Link', 'Article'],
+      home: 'feature',
       events: [
         {
           foo: 'bar',

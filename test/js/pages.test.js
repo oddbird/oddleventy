@@ -10,6 +10,7 @@ import {
   getPublic,
   hasData,
   isCurrent,
+  isHome,
   isPublic,
   isType,
   pageYears,
@@ -162,5 +163,12 @@ describe('page filters', () => {
 
     expect(collection4).toHaveLength(3);
     expect(filtered).toHaveLength(1);
+  });
+
+  test('isHome', () => {
+    const filtered = isHome(collection4);
+
+    expect(collection4).toHaveLength(3);
+    expect(filtered).toHaveLength(2);
   });
 });
