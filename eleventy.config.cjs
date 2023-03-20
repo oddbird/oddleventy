@@ -32,6 +32,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('content/robots.txt');
   eleventyConfig.addPassthroughCopy('content/favicon.ico');
 
+  // https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
+  // Used because: https://github.com/11ty/eleventy/issues/2297
+  eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
+
   // collections
   eleventyConfig.addCollection('birds', (collection) =>
     collection
