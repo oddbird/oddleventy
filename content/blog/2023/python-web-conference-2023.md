@@ -10,8 +10,10 @@ image:
   src: blog/2023/pwc23.png
 summary: |
   OddBird sponsored Python Web Conference 2023 and sent me to attend. In this
-  article I showcase my favorite talks and activities of this excellent online
-  event.
+  article I showcase my favorite talks and activities from this excellent online
+  event, including a list of useful resources for web application security,
+  introductions to new PaaS providers, and a comparison of the most popular Python
+  web frameworks.
 ---
 
 [Python Web Conference](https://2023.pythonwebconf.com/) is an online conference
@@ -20,7 +22,7 @@ March 13–17 and featured five tracks: App Dev, Cloud, Culture, PyData, and
 Tutorials. I was especially interested in the App Dev and Cloud tracks, and I
 was not disappointed. Here's a recap of my most memorable moments.
 
-## App Security Does Not Need To Be Fun: Ignoring OWASP To Have A Terrible Time
+## App Security Does Not Need to Be Fun: Ignoring Owasp to Have a Terrible Time
 
 By [Dwayne
 McDaniel](https://2023.pythonwebconf.com/presentations/app-security-does-not-need-to-be-fun-ignoring-owasp-to-have-a-terrible-time).
@@ -58,7 +60,7 @@ Project](https://owasp.org/), aka OWASP:
   "capture-the-flag" style game that teaches you how to secure a web application
   by finding and fixing vulnerabilities.
 
-## 1-click deploys of Python web apps to Azure
+## 1-Click Deploys of Python Web Apps to Azure
 
 By [Pamela
 Fox](https://2023.pythonwebconf.com/presentations/1-click-deploys-of-python-web-apps-to-azure).
@@ -82,7 +84,7 @@ the highlights:
   templates for your project. Automate your infrastructure using GitOps best
   practices with GitHub Actions.
 
-## Optimizing Django deployments with a Continuous Observability Strategy
+## Optimizing Django Deployments with a Continuous Observability Strategy
 
 By [Chad
 Carlson](https://2023.pythonwebconf.com/presentations/optimizing-django-deployments-with-a-continuous-observability-strategy).
@@ -99,7 +101,7 @@ tools (think logging and metrics). I was particularly impressed by their
 By [Daniel Roy
 Greenfeld](https://2023.pythonwebconf.com/presentations/no-holds-barred-web-framework-battle).
 
-The legendary *pydanny* took us on a journey through the history of Python web
+The legendary _pydanny_ took us on a journey through the history of Python web
 frameworks and presented a very comprehensive comparison of the most popular
 contenders: Django, Flask, and FastAPI. We learned about the pros and cons of
 each, with particular attention to speed, developer experience (DX), async
@@ -109,7 +111,7 @@ but Django is still a strong contender due to its "batteries included" approach
 (the admin, for example, is plain magic) and wide ecosystem of third-party
 packages.
 
-## Taking a step back and leveraging GitOps to wrangle your clusters and projects
+## Taking a Step Back and Leveraging GitOps to Wrangle Your Clusters and Projects
 
 By [JJ
 Asghar](https://2023.pythonwebconf.com/presentations/taking-a-step-back-and-leveraging-gitops-to-wrangle-your-clusters-and-projects).
@@ -119,13 +121,13 @@ for an application. Not only the application code lives in the repo, but also
 configuration files for infrastructure. Additionally, deployments are automated
 and depend on pushing to git branches instead of a manual process. It turns out
 this is called "GitOps" and this talk was a great introduction to the topic.
-What was new to me was the idea of deploy targets *polling* the repo to detect
-if they have new changes to deploy, instead of the repo *pushing* changes to the
+What was new to me was the idea of deploy targets _polling_ the repo to detect
+if they have new changes to deploy, instead of the repo _pushing_ changes to the
 deploy targets. Apparently this allows applications to be deployed to multiple
 environments without having to mix different types of configuration files in the
 repository.
 
-## Joyful Pyodide with...tests?
+## Joyful Pyodide with... Tests?
 
 By [Paul
 Everitt](https://2023.pythonwebconf.com/presentations/joyful-pyodide-with-tests).
@@ -150,7 +152,7 @@ then the other team caught up and took the win in the last round which involved
 recalling as much of the [Zen of
 Python](https://www.python.org/dev/peps/pep-0020/) as possible. So close!
 
-## Closing thoughts
+## Closing Thoughts
 
 This was my first remote-only conference, and I was pleasantly surprised by how
 [Six Feet Up](https://sixfeetup.com/) organized it. There were no technical
