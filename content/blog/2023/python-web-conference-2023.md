@@ -49,13 +49,13 @@ Project](https://owasp.org/), aka OWASP:
   available.
 - [Juice Shop](https://owasp.org/www-project-juice-shop/) -- "Probably the most
   modern and sophisticated insecure web application! It can be used in security
-  trainings, awareness demos, capture the flag challenges, and as a guinea pig
-  for security tools!"
+  trainings, awareness demos, CTFs [capture-the-flag challenges] and as a guinea
+  pig for security tools!"
 - [Zed Attach Proxy (ZAP)](https://www.zaproxy.org/) -- An actual vulnerability
   scanner tool intended to find security breaches in your application. Use it
   carefully and only under authorization of the system being tested.
 - [SecureFlag](https://owasp.org/www-project-secureflag-open-platform/) -- A
-  "capture the flag" style game that teaches you how to secure a web application
+  "capture-the-flag" style game that teaches you how to secure a web application
   by finding and fixing vulnerabilities.
 
 ## 1-click deploys of Python web apps to Azure
