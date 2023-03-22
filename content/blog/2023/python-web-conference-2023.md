@@ -1,7 +1,7 @@
 ---
 title: Python Web Conference 2023 Recap
 author: ed
-date: 2023-03-21
+date: 2023-03-22
 tags:
   - Article
   - Python
