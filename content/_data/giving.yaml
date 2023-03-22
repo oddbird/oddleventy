@@ -1,3 +1,10 @@
+- name: Python Web Conference
+  url: https://2023.pythonwebconf.com/
+  type: sponsorships
+  years: 2023
+  description: |
+    is an online in-depth conference
+    for rising Python experts.
 - name: DjangoCon
   url: https://djangocon.us/
   type: sponsorships
@@ -136,15 +143,6 @@
     building a community-based movement
     to support our folks and end systems of pretrial detention
     and ultimately mass incarceration.
-- name: Goshen Ultimate Summer League
-  url: https://goshenultimate.com/
-  type: sponsorships
-  years: 2014--2022
-  description: |
-    provides opportunities to learn, play,
-    and teach spirited Ultimate in Goshen, IN and surrounding areas.
-    We're just glad they keep Jonny out of trouble
-    when he's not busy writing JavaScript.
 - name: CallbackWomen
   url: https://www.callbackwomen.com/
   type: donations
