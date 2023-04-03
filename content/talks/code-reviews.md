@@ -16,7 +16,6 @@ events:
     date: 2015-11-11
     slides: https://www.slideshare.net/Funstacy/sass-code-reviews-how-one-code-review-changed-my-life-sassconf2015
   - venue: CSS Dev Conf
-    url: http://2015.cssdevconf.com/
     date: 2015-10-27
     slides: https://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw
 summary: |

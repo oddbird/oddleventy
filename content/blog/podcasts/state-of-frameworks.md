@@ -3,7 +3,6 @@ title: State of CSS Frameworks
 sub: How can we write our styles in style?
 venue: This Dot Media
 date: 2022-10-18
-canonical: https://www.thisdotmedia.com/state-of-the-web/archive/state-of-css-frameworks-october-2022/
 author: miriam
 image:
   src: blog/elsewhere/dotmedia-frameworks.jpg

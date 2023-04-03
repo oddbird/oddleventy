@@ -7,7 +7,7 @@ client: &client Carleton College
 date: 2016-08-01
 end: 2018-06-30
 links:
-  site: https://turing.mathcs.carleton.edu/production/AlgebraSolving.html
+  site: https://emmysworkshop.com/
 tasks:
   - Branding
   - Responsive front-end architecture

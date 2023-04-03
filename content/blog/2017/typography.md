@@ -292,7 +292,7 @@ goals.
 > Freight Text series was designed for extended reading in periodicals
 > and data-intensive documents.
 >
-> ---[Typedia]
+> ---Typedia
 
 Freight Text was originally developed for print, and we love the classic
 feel this evokes, but it’s also very easy to read online, especially for
@@ -319,7 +319,6 @@ TypeKit, we were golden.
   src='blog/2017/typography/darden.jpg'
 ) }}
 
-[Typedia]: http://typedia.com/explore/typeface/freight-text/
 [create a custom font stack]: https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/
 [Darden Studio]: https://www.dardenstudio.com/
 

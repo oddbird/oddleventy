@@ -42,7 +42,6 @@ events:
     media: &clarity
       iframe: https://www.youtube.com/embed/Prc_V-j6yS4
   - venue: CSS Dev Conf
-    url: https://2017.cssdevconf.com/
     adr: New Orleans, LA
     date: 2017-10-09
     # slides: https://oddbooksapp.com/release/0434d9c1-4e89-4827-abfc-4d3942fa305d
