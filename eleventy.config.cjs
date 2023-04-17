@@ -23,7 +23,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setWatchThrottleWaitTime(100);
   eleventyConfig.addPlugin(rss);
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    errorOnInvalidLanguage: true,
+  });
 
   // pass-through
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
