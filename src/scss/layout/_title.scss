@@ -21,7 +21,7 @@
     // create a clipped background shape
     &::before {
       background-color: var(--bg);
-      bottom: var(--outset);
+      inset: 0 var(--outset) var(--outset) var(--outset);
       clip-path: polygon(
         0 0,
         calc(100% - var(--angle)) 0,
@@ -31,10 +31,7 @@
         0 100%
       );
       content: '';
-      left: var(--outset);
       position: absolute;
-      right: var(--outset);
-      top: 0;
       z-index: -1;
     }
   }
