@@ -12,10 +12,12 @@ tags:
 image:
   src: blog/2023/graphs-and-charts.png
 summary: |
-  Learn how to leverage Web Platform Tests to ensure your polyfills are implementing upcoming browser features correctly,
-  including how to generate a
+  Learn how to leverage Web Platform Tests to ensure your polyfills are
+  implementing upcoming browser features correctly, including how to generate a
   comprehensive report of failing/passing tests on each change.
 ---
+
+{% import 'embed.macros.njk' as embed %}
 
 ## Web Platform Tests (WPT): What Are They?
 
@@ -33,7 +35,15 @@ documentation, tools, and resources for test writing and reviewing.
 You can run all tests in your current browser by visiting
 [wpt.live](https://wpt.live) or by cloning the repository and running the `./wpt
 serve` command. The tests are organized in folders, and visiting any of the HTML
-files will run all subtests and display the results.
+files will run all subtests and display the results. For example, visiting the
+test
+[`anchor-name-0002.html`](https://wpt.live/css/css-anchor-position/anchor-name-002.html)
+with Chrome 112 results in two passing and two failing tests:
+
+{{ embed.img(
+  src='blog/2023/wpt-test-fail.png',
+  alt='Test results for anchor-name-0002.html, showing two of four passing tests'
+) }}
 
 To get a bird's eye view of the test results for upcoming versions of major
 browsers, visit [wpt.fyi](https://wpt.fyi).
@@ -60,13 +70,22 @@ At this point you should hopefully notice test scores have improved with the
 help of the injected polyfill. If something goes wrong, the WPT should also
 report tests that are not completing or are failing for some other reason.
 
+When we inject our [CSS anchor positioning
+polyfill](https://github.com/oddbird/css-anchor-positioning/) and visit the
+`anchor-name-0002.html` test again, we see that all tests are now passing:
+
+{{ embed.img(
+  src='blog/2023/wpt-test-pass.png',
+  alt='Test results for anchor-name-0002.html, showing four of four passing tests'
+) }}
+
 ## Monitoring WPT "Coverage"
 
 An important part of polyfill development is ensuring the polyfill covers all or
-most of the WPT for a given feature to maintain compliance with the spec.
+most tests for a given feature to maintain compliance with the spec.
 Furthermore, polyfill authors want to monitor how coverage changes as features
-are added to the polyfill. Lastly, it's important to detect changes in WPT
-results as the specs evolve and WPT are added or modified.
+are added to the polyfill. Lastly, it's important to detect changes in test
+results as the specs evolve and tests are added or modified.
 
 You can do these things manually if you thoroughly visit all tests that apply to
 your polyfill, but we wanted an automated way to inject the polyfill when
@@ -85,6 +104,11 @@ running). The HTML report can be viewed and shared as a standalone file, or
 hosted on any service that supports static sites. We use Netlify to host the
 [report page for the anchor position
 polyfill](https://anchor-position-wpt.netlify.app/).
+
+{{ embed.img(
+  src='blog/2023/wpt-report.png',
+  alt='Table showing multiple passing and failing tests for the main branch of the anchor position polyfill'
+) }}
 
 Another important feature is the automatic generation of reports for pull
 requests. This allows the team to quickly compare the report of a branch that
