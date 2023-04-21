@@ -63,12 +63,12 @@ but it boils down to these steps:
 
 1. Package your polyfill as a single-file, immediately-invoked script
 2. Start WPT with `./wpt serve --inject-script=/path/to/polyfill.js`
-3. Visit any WPT and ensure the script is inlined as the first element of the
+3. Visit any test and ensure the script is inlined as the first element of the
    `<head>`. This should be obvious when inspecting the page source.
 
 At this point you should hopefully notice test scores have improved with the
-help of the injected polyfill. If something goes wrong, the WPT should also
-report tests that are not completing or are failing for some other reason.
+help of the injected polyfill. If something goes wrong, WPT should also report
+tests that are not completing or are failing for some other reason.
 
 When we inject our [CSS anchor positioning
 polyfill](https://github.com/oddbird/css-anchor-positioning/) and visit the
@@ -152,11 +152,11 @@ running against new browser versions as they are released.
 
 By using [BrowserStack](https://www.browserstack.com/) and
 [Selenium](https://selenium.dev), we can spawn instances of all browsers and
-point them to the relevant WPT. We recommend using an asynchronous approach to
+point them to the relevant test. We recommend using an asynchronous approach to
 run the browsers because the total number of test runs is the product of all
-relevant WPT and browser versions (rows times columns). For our test suite of 71
-WPT and 12 browser versions, that results in 852 runs, so the speed boost from
-running multiple browsers at once is a welcome addition.
+relevant tests and browser versions (rows times columns). For our test suite of
+71 tests and 12 browser versions, that results in 852 runs, so the speed boost
+from running multiple browsers at once is a welcome addition.
 
 ### Step 5: Gather Test Results
 
@@ -172,13 +172,13 @@ ever want to go back to a previous test run and analyze it further.
 
 Finally, with the test results available we use a
 [LiquidJS](https://liquidjs.com/) template to generate an HTML file with a table
-cell for each WPT and browser version combination. For ease of use we also
+cell for each test and browser version combination. For ease of use we also
 include links to the specific commit that generated the report, for both the
 polyfill and WPT repositories (in case we are using a forked WPT repo).
 
 We also save timestamped versions of the report to create an [historic
 archive](https://anchor-position-wpt.netlify.app/history.html), which is very
-useful to detect regressions or changes in WPT for a given feature or spec.
+useful to detect regressions or changes in tests for a given feature or spec.
 
 ## Putting It All Together
 
@@ -194,7 +194,7 @@ uses these files to automate the workflow:
   The main file called by the GH Actions workflow. Takes care of most things
   from gathering the WPT list to generating the report.
 - [`tests/runner.html`](https://github.com/oddbird/css-anchor-positioning/blob/63486097aeb4d2cda5bff03a4f7bef26bef8d1ba/tests/runner.html):
-  Acts as the entrypoint for browsers to load WPT and packages the results for
+  Acts as the entrypoint for browsers to load tests and packages the results for
   storage and reporting.
 - [`tests/report.liquid`](https://github.com/oddbird/css-anchor-positioning/blob/63486097aeb4d2cda5bff03a4f7bef26bef8d1ba/tests/report.liquid):
   HTML template for the report. The LiquidJS template language makes it easy to
