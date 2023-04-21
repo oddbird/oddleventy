@@ -12,8 +12,8 @@ tags:
 image:
   src: blog/2023/graphs-and-charts.png
 summary: |
-  Learn how to leverage Web Platform Tests to give your polyfills the confidence
-  that they are implementing upcoming browser features correctly, including a
+  Learn how to leverage Web Platform Tests to ensure your polyfills are implementing upcoming browser features correctly,
+  including how to generate a
   comprehensive report of failing/passing tests on each change.
 ---
 
