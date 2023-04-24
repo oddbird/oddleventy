@@ -205,7 +205,7 @@ And then you can easily serialize an instance:
 import attr
 inst = SomeClass(foo={'hi': 'there'}, bar=SomeClass(foo=1, bar=False))
 attr.asdict(inst)
-# {'foo': {'bar': False, 'foo': 1}, 'foo': {'hi': 'there'}}
+# {'bar': {'bar': False, 'foo': 1}, 'foo': {'hi': 'there'}}
 ```
 
 And just as importantly, you can pass that serialized data to the task,
