@@ -186,8 +186,10 @@ useful to detect regressions or changes in tests for a given feature or spec.
 ## Putting It All Together
 
 You can complete all the previous steps manually, but to get the most use out of
-WPT we recommend including it as part of your CI. The anchor position polyfill
-uses these files to automate the workflow:
+WPT we recommend including it as part of your CI. Based on the work of the
+[Container Query
+Polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) team,
+the anchor position polyfill uses these files to automate the workflow:
 
 - [`.github/workflows/test-wpt.yml`](https://github.com/oddbird/css-anchor-positioning/blob/63486097aeb4d2cda5bff03a4f7bef26bef8d1ba/.github/workflows/test-wpt.yml):
   GitHub Actions workflow definition that holds environment variables and glues
