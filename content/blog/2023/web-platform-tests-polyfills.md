@@ -10,7 +10,7 @@ tags:
   - JavaScript
   - Testing
 image:
-  src: blog/2023/graphs-and-charts.png
+  src: blog/2023/graph.jpg
 summary: |
   Learn how to leverage Web Platform Tests to ensure your polyfills are
   implementing upcoming browser features correctly, including how to generate a
@@ -41,7 +41,7 @@ test
 with Chrome 112 results in two passing and two failing tests:
 
 {{ embed.img(
-  src='blog/2023/wpt-test-fail.png',
+  src='blog/2023/wpt-fail-large.png',
   alt='Test results for anchor-name-0002.html, showing two of four passing tests'
 ) }}
 
@@ -75,7 +75,7 @@ polyfill](https://github.com/oddbird/css-anchor-positioning/) and visit the
 `anchor-name-0002.html` test again, we see that all tests are now passing:
 
 {{ embed.img(
-  src='blog/2023/wpt-test-pass.png',
+  src='blog/2023/wpt-pass-large.png',
   alt='Test results for anchor-name-0002.html, showing four of four passing tests'
 ) }}
 
@@ -109,6 +109,9 @@ polyfill](https://anchor-position-wpt.netlify.app/).
   src='blog/2023/wpt-report.png',
   alt='Table showing multiple passing and failing tests for the main branch of the anchor position polyfill'
 ) }}
+
+*Note: the report includes many failing tests because the polyfill is a work in
+progress and is actively being worked on.*
 
 Another important feature is the automatic generation of reports for pull
 requests. This allows the team to quickly compare the report of a branch that
