@@ -5,28 +5,6 @@
       "type": "entry",
       "author": {
         "type": "card",
-        "name": "Ana Rodrigues",
-        "photo": "https://webmention.io/avatar/files.mastodon.social/ecf9b50ba4c4460d358846b6c016e420ad56e1abdb2cfb6b8c1e4ae82cded723.png",
-        "url": "https://mastodon.social/@ohhelloana"
-      },
-      "url": "https://mastodon.social/@ohhelloana/110281440017986097",
-      "published": "2023-04-29T09:40:30",
-      "wm-received": "2023-04-29T09:51:05Z",
-      "wm-id": 1667971,
-      "wm-source": "https://brid.gy/comment/mastodon/@matthiasott@mastodon.social/110277352371004975/110281440017986097",
-      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
-      "content": {
-        "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@matthiasott\" class=\"u-url\">@<span>matthiasott</span></a></span> what a fantastic collection! Thank you so much! 🥰</p>\n<a class=\"u-mention\" href=\"https://css-tricks.com/css-cascade-layers/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/18/cq-syntax/\"></a>",
-        "text": "@matthiasott what a fantastic collection! Thank you so much! 🥰"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
         "name": "Grzegorz Bokota",
         "photo": "https://webmention.io/avatar/pbs.twimg.com/05fe8491651e048a3de27d8933368d04dc52427d0b9de46671dab4346b09ec0a.jpg",
         "url": "https://twitter.com/Czaki_PL"
