@@ -30,6 +30,7 @@ summary: |
   one platform over another.
   Let's start with the responsive web app (RWA).
 ---
+{% import 'embed.macros.njk' as embed %}
 
 You have an idea for a custom digital product you’d like to build, and it’s time to decide how to build it. One of your friends swears you won’t succeed unless you build a native mobile app for iPhone. A colleague argues that a responsive web app is the only way to go. Who’s right? Are there alternative options? The decision of how to build your app is quite important – affecting project scope, timeline, and budget – but understanding when to choose one option over another can seem insurmountably difficult.
 
@@ -42,6 +43,15 @@ Here are the biggest differences in a nutshell.
 - **Progressive Web App (PWA)** - A responsive web app with additional capabilities that mimic a native mobile app.
 - **Native Mobile App** - An app built specifically for one particular mobile operating system, like iOS or Android.
 
+
+{{ embed.img(
+  src='blog/2023/web-pwa-native-comparison-chart.png',
+  alt='A comparison chart showing the differences between
+  responsive web apps, progressive web apps, and native
+  mobile apps'
+) }}
+
+
 ## Responsive Web Apps - Best for Wide Reach
 
 > **TL;DR**
@@ -53,6 +63,16 @@ Here are the biggest differences in a nutshell.
 
 An RWA is essentially a website that resizes and rearranges its content – responding to fit whatever screen size a person chooses to use. RWAs are built using standard web technologies like HTML, CSS, and JavaScript. They are accessible from any device with a web browser such as Chrome, Firefox, Microsoft Edge, Safari, or a mobile browser.
 
+<div class="contain">
+
+{{ embed.img(
+  src='blog/2023/yes.png',
+  alt='The word yes with a smiley and sparkles',
+  attrs={
+    'class': 'align-left'
+  }
+) }}
+
 ## Choose an RWA when…
 ### Lower Cost
 *…when it’s important to keep initial development costs low.*
@@ -60,6 +80,8 @@ An RWA is essentially a website that resizes and rearranges its content – resp
 Responsive web apps use a single “codebase.” The term “codebase” is developer speak for the collection of code used to build an application. Compared to native mobile apps, RWAs are relatively inexpensive to develop, requiring just one codebase to be available on any device with a web browser.
 
 To be clear, building any kind of app is not a low cost endeavor. Even a very simple responsive web app can have a price tag of $10K, and very complex web apps, such as social media platforms or project management software, cost many millions of dollars to design, develop, and maintain.
+
+</div>
 
 ### Faster Development
 *…when it’s a priority to make your app available to users quickly.*
@@ -81,6 +103,13 @@ Search engines, like Google, “crawl” the web looking for keywords and other 
 
 People can access the same RWA on any device from a small iPhone to an Android tablet, from a MacBook laptop to a giant Windows desktop, unlike Native Mobile Apps which are limited to supported mobile devices. Additionally, the web provides a high level of “backward compatibility,” meaning RWAs can be available in some form even on old devices. On the other hand, one platform update can totally block a device from accessing a native mobile app.
 
+{{ embed.img(
+  src='blog/2023/no.png',
+  alt='The word no with a frowning face',
+  attrs={
+    'class': 'align-left'
+  }
+) }}
 
 ## Don’t choose an RWA when…
 ### Limited Capabilities
@@ -102,3 +131,6 @@ If your project needs advanced security beyond typical HTTPS encryption, such as
 *…when the people you want to reach will look for your app in an app store.*
 
 RWAs are not listed in app stores. If the people you want to reach exclusively use app stores to search for apps, they will not be able to find a responsive web app.
+____
+Is a **Native Mobile App** right for your digital project?
+[Read Part 2 - Responsive Web App vs PWA vs Native Mobile App](/2023/06/07/web-pwa-native-Native2/)

@@ -1,8 +1,8 @@
 ---
-title: Part 3 - Responsive Web App vs PWA vs Native Mobile App
-sub: When to choose a progressive web app (PWA) for you digital product
+title: Part 2 - Responsive Web App vs PWA vs Native Mobile App
+sub: When to choose a native mobile app for you digital product
 author: sondra
-date: 2023-07-05
+date: 2023-06-07
 tags:
   - Article
   - Business Development
@@ -11,26 +11,24 @@ tags:
   - Startups
   - User Experience
 image:
-  src: blog/2023/part3-progressive.jpg
+  src: blog/2023/part2-native.jpg
   alt: |
     ???
 summary: |
-  This is part 3 of a three-part series
+  If you have an idea for a digital product,
+  you may be wondering if you should build a
+  responsive web app, PWA, or native app.
+  Is one option inherently better?
+  What are the pros and cons?
+  This is part 2 of a three-part series
   unpacking the reasons to choose
   one platform over another.
-  Let's explore the progressive web app.
+  Let's dive into the native mobile app.
 ---
+{% import 'embed.macros.njk' as embed %}
 
-You have an idea for a custom digital product you’d like to build, and it’s time to decide how to build it. One of your friends swears you won’t succeed unless you build a native mobile app for iPhone. A colleague argues that a responsive web app is the only way to go. Who’s right? Are there alternative options? The decision of how to build your app is quite important – affecting project scope, timeline, and budget – but understanding when to choose one option over another can seem insurmountably difficult.
-
-The great news is that you don’t need to spend years becoming a web developer yourself in order to make a wise choice. In the following article, we’ll dig into the three main options for building mobile apps: Responsive Web Apps (RWAs), Progressive Web Apps (PWAs), and Native Mobile Apps, and how to determine the best option for your project. As you read, think about who your app will serve, what their most pressing needs are, and how your app will meet those needs.
-
-## What are RWAs, PWAs, and Native Mobile Apps?
-Here are the biggest differences in a nutshell.
-
-- **Responsive Web App (RWA)** - An application that runs in a browser, such as Chrome, Firefox, or Safari, and responds to fit any screen size on any device.
-- **Progressive Web App (PWA)** - A responsive web app with additional capabilities that mimic a native mobile app.
-- **Native Mobile App** - An app built specifically for one particular mobile operating system, like iOS or Android.
+If you haven't read part 1 yet, it has a great introduction to each option along with a fun comparison chart.
+[Read Intro to Responsive Web Apps, PWAs, and Native Mobile App](/2023/05/05/web-pwa-native-RWA1)
 
 
 ## Native Mobile App - Best for Advanced Capabilities
@@ -43,6 +41,14 @@ Here are the biggest differences in a nutshell.
 > building your digital product.
 
 A native mobile app is an app created specifically for one particular mobile platform such as iOS, Android, or Windows. Native mobile apps are built using programming languages and tools unique to each platform. Swift or Objective-C for iOS. Kotlin, Java, and C++ languages along with SDK and APK tools for Android.
+
+{{ embed.img(
+  src='blog/2023/yes.png',
+  alt='The word yes with a smiley and sparkles',
+  attrs={
+    'class': 'align-left'
+  }
+) }}
 
 ### Choose a Native Mobile App when…
 ### Advanced Capabilities
@@ -65,6 +71,14 @@ A native mobile app offers advanced security beyond the typical HTTPS encryption
 
 Native mobile apps live in app stores like the Google Play Store and Apple’s App Store. If your research shows that the people you want to reach typically look for the type of content you will provide in app stores, or if they all use the same app store, or if you want to build your marketing plan around app stores, then a native mobile app is a better choice than the RWA which is not listed in app stores.
 
+{{ embed.img(
+  src='blog/2023/no.png',
+  alt='The word no with a frowning face',
+  attrs={
+    'class': 'align-left'
+  }
+) }}
+
 ### Don’t choose a Native Mobile App when…
 ### Higher Development & Maintenance Costs
 …when you want to keep short and long-term costs down.
@@ -85,3 +99,7 @@ Unlike for RWAs, search engines don’t index native mobile apps. If your user r
 …when you want to reach a broad audience across devices.
 
 Because it takes longer and costs more to reach the same range of people with a native mobile app than with an RWA and because native mobile apps are offer less backward compatibility, the number of people who can access a native mobile app will likely always be more limited than the number of people who can access an RWA.
+
+____
+Is a **Progressive Web App** right for your digital project?
+[Read Part 3 - Responsive Web App vs PWA vs Native Mobile App](/2023/07/05/web-pwa-native-PWA3/)
