@@ -12,8 +12,9 @@ image:
 summary: |
   The off-canvas layout pattern for responsive web design has been getting all
   the attention lately, and I've had several people ask how
-  [Susy One](https://susyone.oddbird.net/) might play along. I'll show you how
-  easy it is, and how much flexibility Susy can add along the way.
+  [Susy One](https://susy.readthedocs.io/susyone/) might play along.
+  I'll show you how easy it is, and how much flexibility
+  Susy can add along the way.
 date: 2012-11-27
 ---
 

@@ -33,7 +33,6 @@ events:
     media: &drupal
       iframe: https://www.youtube.com/embed/2MkQBQb43gE
   - venue: Open Source Conference
-    url: https://www.comcastlabsconnect.com/open-source-2019
     adr: Denver, CO
     date: 2019-06-20
     slides: https://talks.oddbird.net/user-unfriendly/opensource19/
