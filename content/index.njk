@@ -5,7 +5,6 @@ banner: |
   <span>We Create</span>
   Custom Web Apps</br>
   & Design Systems
-  <span><em>in</em> Thoughtful Collaboration</span>
 image:
   src: work/coachhub/coachhub-home-iphone.jpg
   alt: CoachHub App on iPhone
@@ -16,9 +15,9 @@ og:
 summary: |
   **We enjoy working with teams** pursuing large-scale projects
   to plan, design, and develop tailor-made web applications and
-  design systems. As **thoughtful experts**, we'd love to help you
-  **improve team workflow, lower maintainance costs,** and **solve
-  problems** with technology that **help people**.
+  design systems. As industry experts, we'd love to help you
+  improve team workflow, lower maintainance costs, and solve
+  problems with technology that help people.
 action:
   text: Talk with us »
   url: /contact/
@@ -50,17 +49,16 @@ tools:
 {{ layout.title('Featured Clients') }}
 
 {{ embed.logos(work, collections.all) }}
+{{ layout.section_link('View work samples', 'https://www.oddbird.net/work/') }}
 
 {{ post.homepage_posts('Article', collections) }}
+{{ layout.section_link('Browse more posts', 'https://www.oddbird.net/blog/') }}
 
 {{ quotes.find(
   collections.all,
   slugs=['extension', 'goals']
 ) }}
 
-{{ layout.title('Developer Tools') }}
-
-{{ embed.logos(tools, collections.all) }}
 
 {% call embed.media_block(
   media=embed.img(
@@ -91,9 +89,14 @@ resilient design systems, and **well-tested code**.
 - Design Systems & Component Libraries
 - Accessible HTML
 
-[View services & deliverables »](/services)
+{{ layout.section_link('View services & deliverables', 'https://www.oddbird.net/services/') }}
 
 {% endcall %}
+
+
+{{ layout.title('Open Source Contributions') }}
+{{ embed.logos(tools, collections.all) }}
+{{ layout.section_link('See open source tools', 'https://www.oddbird.net/tools/') }}
 
 {{ quotes.find(
   collections.all,

@@ -26,6 +26,7 @@ summary: |
   browsers are getting ready to ship,
   and it's time to make sure
   you're using the same syntax they are!
+home: feature
 ---
 
 {% import 'embed.macros.njk' as embed %}
