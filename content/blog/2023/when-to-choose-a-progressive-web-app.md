@@ -1,6 +1,6 @@
 ---
-title: Part 3 - Responsive Web App vs PWA vs Native Mobile App
-sub: When to choose a progressive web app (PWA) for you digital product
+title: When to Choose a Progressive Web App
+sub: Part 3 - Responsive Web App vs PWA vs Native Mobile App
 author: sondra
 date: 2023-07-05
 tags:
@@ -15,7 +15,7 @@ image:
   alt: |
     Pen and notebook with a sketch of a website interface
 summary: |
-  If you're weighing the performance optimazation
+  If you're weighing the performance optimization
   and device integration opportunities
   of a native mobile app
   against the broad reach and lower cost
@@ -23,7 +23,7 @@ summary: |
   and can't decide which is a higher priority
   for your digital product,
   don't despair.
-  The progressive web app may be
+  A progressive web app may be
   just the solution you need.
   This is part 3 of a three-part series
   unpacking the reasons to choose
@@ -33,7 +33,13 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 
 If you haven't read parts 1 and 2 yet, you may want to start with the introduction to RWAs, PWAs, and Native Mobile Apps in part 1. There's also a comparison chart for quick reference.
-[Read Intro to Responsive Web Apps, PWAs, and Native Mobile App](/2023/05/05/web-pwa-native-RWA1)
+
+**Read all three parts to compare app types:**
+
+1. [When to Choose a Responsive Web App](/2023/05/05/when-to-choose-a-responsive-web-app/)
+2. [When to Choose a Native Mobile App](/2023/06/07/when-to-choose-a-native-mobile-app/)
+3. [When to Choose a Progressive Web App](/2023/07/05/when-to-choose-a-progressive-web-app/)
+
 
 ## Progressive Web App - Best of Both Worlds
 
@@ -41,25 +47,29 @@ If you haven't read parts 1 and 2 yet, you may want to start with the introducti
 >
 > If your top priority is some combination of wide reach and
 > advanced capabilities, you will want to investigate the
-> progressive web app (PWA) option for your app project.
+> progressive web app (PWA) option for your project.
 
 A progressive web app (PWA) is a responsive web app
 with additional capabilities similar to a native mobile app. Like responsive web apps, PWAs are built using standard web technologies -- HTML, CSS, and JavaScript. They are accessible from any device with a web browser such as Chrome, Firefox, Microsoft Edge, Safari, or a mobile browser. Like native mobile apps, PWAs can be included in app stores. They can provide push notifications, offline mode, and a homescreen icon.
 
-{{ embed.img(
-  src='blog/2023/yes.png',
-  alt='The word yes with a smiley and sparkles',
+If you decide to build a PWA, you will be in the company of many big the biggest companies. Google, AirBnB, Twitter, and Microsoft use PWAs for their products alongside or in place of native apps. Checkout this [directory of PWAs](https://www.findpwa.com/list/top-apps). You may discover you are already using one!
+
+{{ embed.figure(
+  data=[{
+    img: 'blog/2023/yes.png',
+    alt: 'The word yes with a smiley and sparkles'
+  }],
   attrs={
-    'class': 'align-left'
+    'style': '--column: content-start'
   }
 ) }}
 
-### Choose a PWA when…
+## Choose a PWA when…
 
 ### Lower Development & Maintenance Costs
 *…when it’s important to keep initial development costs low.*
 
-Just like responsive web apps, progressive web apps require just one [codebase](/2023/05/05/web-pwa-native-RWA1/#choose-an-rwa-when%E2%80%A6) to be available on any device with a web browser. From a single codebase, a PWA can reach people on any device with a browser, making it less expensive to develop and maintain than a native mobile app which requires unique codebases for each device. Depending on the amount of special capabilities you need to add, a PWA can cost a bit more than an RWA.
+Just like responsive web apps, progressive web apps require just one [codebase](/2023/05/05/web-pwa-native-RWA1/#choose-an-rwa-when%E2%80%A6) to be available on any device with a web browser, while providing users with a native-like experience. From a single codebase, a PWA can reach people on any device with a browser, making it less expensive to develop and maintain than a native mobile app which requires unique codebases for each device. Depending on the amount of special capabilities you need to add, a PWA can cost more than an RWA.
 
 ### Faster Development & Updates
 *…when it’s a priority to make your app available to users quickly.*
@@ -81,29 +91,33 @@ If budget allows, PWAs can reach a broader audience than either responsive web a
 ### Specialize Capabilities
 *…when you want to reach a broad range of people while keeping costs down as much as possible, but need some specialized capabilties.*
 
-PWAs are better than native mobile apps and RWAs at providing a balance between reach, cost, and specialization. If you need to be able to send alerts or "push notifications" to people even when they do not have the app open on their phone, PWAs can offer that just like native mobile apps, whereas RWAs cannot.
+PWAs are better than native mobile apps or RWAs at providing a balance between reach, cost, and specialization. If you need to be able to send alerts or "push notifications" to people even when they do not have the app open on their phone, PWAs can do that just like native mobile apps, whereas RWAs cannot.
 
 If you cannot afford to build and maintain more than one codebase, but people using your app may have limited or sometimes no access to the internet, a PWA is likely the best option. While it may not perform as seamlessly as a native app without internet access, people can download a PWA onto their phone and access the content without a wifi or data connection.
 
-To access and RWA, people need to open a browsers, but people can access a PWA via an icon on their phone's homescreen just like they do with a native mobile app.
+Accessing an RWA requires opening a browser, but people can access a PWA via an icon on their phone's homescreen just like they do with a native mobile app. This is not just a shortcut to a website, but rather a standalone application completely independent from the browser interface.
 
-{{ embed.img(
-  src='blog/2023/no.png',
-  alt='The word no with a frowning face',
+Check out and test all the PWA capabilities on [What PWA Can Do Today](https://whatpwacando.today/).
+
+{{ embed.figure(
+  data=[{
+    img: 'blog/2023/no.png',
+    alt: 'The word no with a frowning face'
+  }],
   attrs={
-    'class': 'align-left'
+    'style': '--column: content-start'
   }
 ) }}
 
-### Don’t choose a PWA when…
+## Don’t choose a PWA when…
 
 In a nutshell, if your budget and timeline is quite constrained and you don't need any special capabilities, then the best option would be to build a responsive web app instead of a PWA. After you have more information about what the people using your app want and you have additional budget, you can always turn the RWA into a PWA. On the otherhand, if you do have plenty of budget and highly specialized needs that require full integration with a specific mobile device, a native mobile is going to be a better option than a PWA.
 
 ## You Made It!
 Thanks for joining this epic journey to dig deep into the responsive web app, progressive web app, and native mobile app platforms. If you have questions about anything you read here, please feel free to ask us. We have a [handy dandy contact form](/contact/) you can use or you can chat with us on [Mastodon](https://front-end.social/@OddBird).
 
-If you've decided that an RWA or a PWA are the right platform to build your digital product, we specialize in designing and developing those two types of apps at OddBird. Check out our [past work](/work/) and [let's chat](/contact/). If you've determined that a native mobile app is what you need, please let us know, and we can help refer you to experts in your mobile platform of choice.
+If you've decided that a responsive web app or a PWA are the right platform to build your digital product, we specialize in designing and developing those two types of apps at OddBird. Check out our [past work](/work/) and [let's chat](/contact/). If you've determined that a native mobile app is what you need, please let us know, and we can help refer you to experts in your mobile platform of choice.
 
 ____
 Still not sure which platform is right for your digital product? Go back and review the **comparison chart** while you muse.
-[Responsive Web App vs PWA vs Native Mobile App Comparison Chart](/2023/05/05/web-pwa-native-RWA1/#what-are-rwas%2C-pwas%2C-and-native-mobile-apps%3F)
+[Responsive Web App vs PWA vs Native Mobile App Comparison Chart](/2023/05/05/when-to-choose-a-responsive-web-app/#what-are-responsive-web-apps%2C-pwas%2C-and-native-mobile-apps%3F)
