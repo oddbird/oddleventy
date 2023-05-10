@@ -53,7 +53,7 @@ Here are the biggest differences in a nutshell.
 
 
 {{ embed.img(
-  src='blog/2023/web-pwa-native-comparison-chart.png',
+  src='blog/2023/comparison-chart.jpg',
   alt='A comparison chart showing the differences between
   responsive web apps, progressive web apps, and native
   mobile apps'
