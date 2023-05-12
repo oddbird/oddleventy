@@ -8,7 +8,7 @@ $two-column: 45em;
   display: grid;
   font-size: var(--small);
   grid-area: footer;
-  grid-gap: var(--gutter);
+  grid-gap: var(--page-margin);
   padding: var(--gutter) var(--page-margin) var(--spacer);
 
   @include config.above($two-column) {
@@ -27,7 +27,6 @@ $two-column: 45em;
   display: grid;
   grid-gap: var(--gutter);
   grid-template-rows: 1fr auto;
-  padding-top: var(--gutter);
 
   @include config.above($two-column) {
     text-align: right;
@@ -47,4 +46,14 @@ $two-column: 45em;
   --newline: 0;
 
   font-size: var(--xsmall);
+}
+
+.oddnews-signup {
+  text-align: left;
+  background-color: var(--clip-bg, var(--callout));
+  padding: var(--gutter);
+
+  h3 {
+    margin-top: 0;
+  }
 }
