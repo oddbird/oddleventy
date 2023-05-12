@@ -41,7 +41,7 @@ with a quick comparison chart: [When to Choose a Responsive Web App](/2023/05/05
 
 ## Native Mobile App -- Best for Advanced Capabilities
 
-> **TL;DR**
+> **tl;dr**
 >
 > If your top priority is to provide a high level of specialized
 > capability, especially for a specific mobile device like Android
@@ -63,7 +63,7 @@ for iOS, or Kotlin, Java, and C++ languages for Android.
   }
 ) }}
 
-## Choose a Native Mobile App When…
+## Choose a Native Mobile App…
 
 ### Advanced Capabilities
 *…when your project requires a high level of hardware or software integration.*
@@ -110,7 +110,7 @@ choice than an RWA (which is not listed in app stores).
   }
 ) }}
 
-## Don't Choose a Native Mobile App When…
+## Don't Choose a Native Mobile App…
 
 ### Higher Development & Maintenance Costs
 *…when you want to keep short and long-term costs down.*

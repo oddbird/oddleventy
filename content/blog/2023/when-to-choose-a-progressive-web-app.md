@@ -47,7 +47,7 @@ comparison chart for quick reference).
 
 ## Progressive Web App -- Best of Both Worlds
 
-> **TL;DR**
+> **tl;dr**
 >
 > If your top priority is some combination of wide reach and
 > advanced capabilities, you will want to investigate the
@@ -76,18 +76,13 @@ you're already using one!
   }
 ) }}
 
-## Choose a Progressive Web App When…
+## Choose a Progressive Web App…
 
 ### Lower Development & Maintenance Costs
 *…when it's important to keep initial development costs low.*
 
 Just like responsive web apps, progressive web apps require just one
-[codebase](/2023/05/05/when-to-choose-a-responsive-web-app/#choose-a-responsive-web-app-when%E2%80%A6)
-to be available on any device with a web browser, while providing users with a
-native-like experience. This makes PWAs less expensive to develop and maintain
-than a native mobile app, which requires unique codebases for each device.
-Depending on the amount of special capabilities you need to add, however, a PWA
-can cost more than a responsive web app.
+codebase to be available on any device with a web browser, while providing users with a native-like experience. This makes PWAs less expensive to develop and maintain than a native mobile app, which requires unique codebases for each device. Depending on the amount of special capabilities you need to add, however, a PWA can cost more than a responsive web app.
 
 ### Faster Development & Updates
 *…when it's a priority to make your app available to users quickly.*
@@ -157,7 +152,7 @@ Today](https://whatpwacando.today/).
   }
 ) }}
 
-## Don't Choose a Progressive Web App When…
+## Don't Choose a Progressive Web App…
 
 In a nutshell, if your budget and timeline is quite constrained and you don't
 need any special capabilities, then the best option is to build a responsive web

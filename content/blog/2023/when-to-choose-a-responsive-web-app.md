@@ -16,7 +16,7 @@ image:
   alt: spider web with dew drops
 summary: |
   The decision of what platform
-  to build your app with
+  to use to build your app
   is quite important --
   affecting project scope, timeline, and budget.
   But understanding the differences between
@@ -35,15 +35,12 @@ summary: |
 You have an idea for a custom digital product you'd like to build, and it's time
 to decide how to build it. One of your friends swears you won't succeed unless
 you build a native mobile app for iPhone. A colleague argues that a responsive
-web app is the only way to go. Who's right? Are there alternative options? The
-decision of how to build your app is quite important -- affecting project scope,
-timeline, and budget -- but understanding when to choose one option over another
-can be overwhelming.
+web app is the only way to go. Who's right? Are there alternative options?
 
 The great news is that you don't need to spend years becoming a web developer
 yourself in order to make a wise choice. In the following three-part series,
-we'll dig into the three main options for building mobile apps -- Responsive Web
-Apps, Native Mobile Apps, and Progressive Web Apps -- and how to determine the
+we'll dig into the three main options for building mobile apps -- responsive web
+apps, native mobile apps, and progressive web apps -- and how to determine the
 best option for your project. As you read, think about who your app will serve,
 what their most pressing needs are, and how your app will meet those needs.
 
@@ -63,10 +60,10 @@ Here are the biggest differences in a nutshell.
 - **Native Mobile App** -- An app built specifically for one particular mobile
   operating system, like iOS or Android, and downloaded from an app store
 - **Progressive Web App (PWA)** -- A responsive web app with additional
-  capabilities that mimic a native mobile app
+  capabilities that mimic a native mobile app such as push notifications and offline mode
 
 {{ embed.img(
-  src='blog/2023/comparison-chart.jpg',
+  src='blog/2023/app-comparison-chart.jpg',
   alt='A comparison chart showing the differences between
     responsive web apps, progressive web apps, and native
     mobile apps'
@@ -74,7 +71,7 @@ Here are the biggest differences in a nutshell.
 
 ## Responsive Web Apps -- Best for Wide Reach
 
-> **TL;DR**
+> **tl;dr**
 >
 > If your top priority is to reach as wide a range of
 > people as possible, as quickly as possible, while keeping
@@ -97,7 +94,7 @@ Edge, Safari, or a mobile browser.
   }
 ) }}
 
-## Choose a Responsive Web App When…
+## Choose a Responsive Web App…
 
 ### Lower Cost
 *…when it's important to keep initial development costs low.*
@@ -111,6 +108,8 @@ To be clear, building any kind of app is not a low cost endeavor. Even a very
 simple responsive web app can have a starting price of $10K, and very complex
 web apps, such as social media platforms or project management software, cost
 many millions of dollars to design, develop, and maintain.
+
+Here's the icing. A responsive web app can be turned into a progressive web app. A responsive web app can be a good first step, when you plan to add more capabilities later.
 
 ### Faster Development
 *…when it's a priority to make your app available to users quickly.*
@@ -164,7 +163,7 @@ device from accessing a native mobile app.
   }
 ) }}
 
-## Don't Choose a Responsive Web App When…
+## Don't Choose a Responsive Web App…
 
 ### Limited Capabilities
 *…when your project requires a high level of specialized capability.*
