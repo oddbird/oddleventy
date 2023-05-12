@@ -63,7 +63,7 @@ for iOS, or Kotlin, Java, and C++ languages for Android.
   }
 ) }}
 
-## Choose a Native Mobile App when…
+## Choose a Native Mobile App When…
 
 ### Advanced Capabilities
 *…when your project requires a high level of hardware or software integration.*
@@ -110,7 +110,7 @@ choice than an RWA (which is not listed in app stores).
   }
 ) }}
 
-## Don't choose a Native Mobile App when…
+## Don't Choose a Native Mobile App When…
 
 ### Higher Development & Maintenance Costs
 *…when you want to keep short and long-term costs down.*
@@ -160,9 +160,9 @@ advanced level of integration with specific devices. On the other hand, it tends
 to be the most expensive to build and maintain compared to the other types of
 apps -- especially responsive web apps -- and the range of people it can reach
 is more limited. If you need a balance of expense, reach, and special
-capabilities, the progressive web app might be the right answer for your
-project. We'll look at the pros and cons of progressive web apps in the next
-part of this series.
+capabilities, a progressive web app might be the right answer for your project.
+We'll look at the pros and cons of progressive web apps in the next part of this
+series.
 
 ---
 

@@ -28,7 +28,7 @@ summary: |
   Welcome to part 1 of a three-part series
   unpacking the reasons to choose
   one platform over another.
-  Let's start with the responsive web app.
+  Let's start with responsive web apps.
 ---
 {% import 'embed.macros.njk' as embed %}
 
@@ -97,7 +97,7 @@ Edge, Safari, or a mobile browser.
   }
 ) }}
 
-## Choose an RWA when…
+## Choose a Responsive Web App When…
 
 ### Lower Cost
 *…when it's important to keep initial development costs low.*
@@ -164,7 +164,7 @@ device from accessing a native mobile app.
   }
 ) }}
 
-## Don't choose an RWA when…
+## Don't Choose a Responsive Web App When…
 
 ### Limited Capabilities
 *…when your project requires a high level of specialized capability.*
