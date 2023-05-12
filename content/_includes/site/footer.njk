@@ -27,35 +27,36 @@
     </aside>
   {% endif %}
 
-  <footer role="contentinfo">
+  <div class="oddnews-signup">
     <!-- Begin Mailchimp Signup Form -->
-    <div class="oddnews-signup">
-      <form action="https://oddbird.us19.list-manage.com/subscribe/post?u=80219aa68d7bad77b9fd2eb93&amp;id=7c27f7fb9a&amp;f_id=000a9de4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
-          <div id="mc_embed_signup_scroll">
-          <h3>OddNews Sign Up</h3>
-          <p>Get the latest news in your field — UX, CSS, JavaScript, and Python. <a href="https://us19.campaign-archive.com/home/?u=80219aa68d7bad77b9fd2eb93&id=7c27f7fb9a" title="See Archive">See Archive</a></p>
-        <div class="mc-field-group">
-          <label for="mce-EMAIL">Email
-            <span aria-hidden="true">*</span>
-            <span class="sr-only">required</span>
-        </label>
-          <input data-input="text email" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required >
-          <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-        </div>
-          <div id="mce-responses" class="clear foot">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80219aa68d7bad77b9fd2eb93_7c27f7fb9a" tabindex="-1" value=""></div>
-                <div class="optionalParent">
-                    <div class="clear foot form-actions">
-                        <button data-btn="submit" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-      </form>
-    </div>
-    <!--End mc_embed_signup-->
+    <form action="https://oddbird.us19.list-manage.com/subscribe/post?u=80219aa68d7bad77b9fd2eb93&amp;id=7c27f7fb9a&amp;f_id=000a9de4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
+        <div id="mc_embed_signup_scroll">
+        <h3>OddNews Sign Up</h3>
+        <p>Get the latest news in your field — UX, CSS, JavaScript, and Python. <a href="https://us19.campaign-archive.com/home/?u=80219aa68d7bad77b9fd2eb93&id=7c27f7fb9a" title="See Archive">See Archive</a></p>
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">Email
+          <span aria-hidden="true">*</span>
+          <span class="sr-only">required</span>
+      </label>
+        <input data-input="text email" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required >
+        <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+      </div>
+        <div id="mce-responses" class="clear foot">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80219aa68d7bad77b9fd2eb93_7c27f7fb9a" tabindex="-1" value=""></div>
+              <div class="optionalParent">
+                  <div class="clear foot form-actions">
+                      <button data-btn="submit" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button>
+                  </div>
+              </div>
+          </div>
+    </form>
+  </div>
+  <!--End mc_embed_signup-->
+
+  <footer role="contentinfo">
     <div class="colophon">
       {% set colophon = collections.all | findPage('data.info_slug', 'colophon') %}
       {{ colophon.templateContent | safe }}
