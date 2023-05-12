@@ -1,11 +1,14 @@
 ---
+# eleventyExcludeFromCollections: true
+# permalink: false
 title: When to Choose a Progressive Web App
-sub: Part 3 -- Responsive Web App vs PWA vs Native Mobile App
+sub: Part 3 -- Responsive Web App vs Native Mobile App vs Progressive Web App
 author: sondra
 date: 2023-07-05
 tags:
   - Article
   - Business Development
+  - Progressive Web Apps
   - Push Notifications
   - Recommendations
   - Startups
