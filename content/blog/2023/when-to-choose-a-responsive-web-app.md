@@ -60,7 +60,8 @@ Here are the biggest differences in a nutshell.
 - **Native Mobile App** -- An app built specifically for one particular mobile
   operating system, like iOS or Android, and downloaded from an app store
 - **Progressive Web App (PWA)** -- A responsive web app with additional
-  capabilities that mimic a native mobile app such as push notifications and offline mode
+  capabilities that mimic a native mobile app, such as push notifications and
+  offline mode
 
 {{ embed.img(
   src='blog/2023/app-comparison-chart.jpg',
@@ -99,17 +100,21 @@ Edge, Safari, or a mobile browser.
 ### Lower Cost
 *…when it's important to keep initial development costs low.*
 
-Responsive web apps use a single codebase. The term *codebase* is
-developer-speak for the collection of code used to build an application.
-Compared to native mobile apps, RWAs are relatively inexpensive to develop,
-requiring just one codebase to be available on any device with a web browser.
+Responsive web apps use a single codebase.[^codebase] Compared to native mobile
+apps, RWAs are relatively inexpensive to develop, requiring just one codebase to
+be available on any device with a web browser.
 
 To be clear, building any kind of app is not a low cost endeavor. Even a very
 simple responsive web app can have a starting price of $10K, and very complex
 web apps, such as social media platforms or project management software, cost
 many millions of dollars to design, develop, and maintain.
 
-Here's the icing. A responsive web app can be turned into a progressive web app. A responsive web app can be a good first step, when you plan to add more capabilities later.
+Here's the icing: a responsive web app can later be turned into a progressive
+web app. So a responsive web app can be a good first step even if you plan to
+add more capabilities later.
+
+[^codebase]: The term *codebase* is developer-speak for the collection of code
+  used to build an application.
 
 ### Faster Development
 *…when it's a priority to make your app available to users quickly.*

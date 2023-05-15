@@ -81,8 +81,12 @@ you're already using one!
 ### Lower Development & Maintenance Costs
 *…when it's important to keep initial development costs low.*
 
-Just like responsive web apps, progressive web apps require just one
-codebase to be available on any device with a web browser, while providing users with a native-like experience. This makes PWAs less expensive to develop and maintain than a native mobile app, which requires unique codebases for each device. Depending on the amount of special capabilities you need to add, however, a PWA can cost more than a responsive web app.
+Just like responsive web apps, progressive web apps require just one codebase to
+be available on any device with a web browser, while providing users with a
+native-like experience. This makes PWAs less expensive to develop and maintain
+than a native mobile app, which requires unique codebases for each device.
+Depending on the amount of special capabilities you need to add, however, a PWA
+can cost more than a responsive web app.
 
 ### Faster Development & Updates
 *…when it's a priority to make your app available to users quickly.*
