@@ -79,11 +79,12 @@ Here are the biggest differences in a nutshell.
 > development and maintenance costs down, a responsive web app is
 > likely the best option for building your digital product.
 
-An RWA is essentially a website that resizes and rearranges its content --
-responding to fit whatever screen size a person chooses to use. RWAs are built
-using standard web technologies like HTML, CSS, and JavaScript. They are
-accessible from any device with a web browser such as Chrome, Firefox, Microsoft
-Edge, Safari, or a mobile browser.
+An responsive web app is essentially a website that resizes and rearranges its content -- responding to fit whatever screen size a person chooses to use. RWAs are built using standard web technologies like HTML, CSS, and JavaScript. They are accessible from any device with a web browser such as Chrome, Firefox, Microsoft Edge, Safari, or a mobile browser.
+
+{{ embed.figure(
+  data=[{'img': 'blog/2023/variousdeviceframes.jpg'}],
+  caption='OddContrast app -- a responsive web app sample -- shown in different sized devices'
+) }}
 
 {{ embed.figure(
   data=[{
@@ -95,10 +96,10 @@ Edge, Safari, or a mobile browser.
   }
 ) }}
 
-## Choose a Responsive Web App…
+## Choose a Responsive Web App When…
 
 ### Lower Cost
-*…when it's important to keep initial development costs low.*
+*Choose a responsive web app when it's important to keep initial development costs low.*
 
 Responsive web apps use a single codebase.[^codebase] Compared to native mobile
 apps, RWAs are relatively inexpensive to develop, requiring just one codebase to
@@ -116,8 +117,13 @@ add more capabilities later.
 [^codebase]: The term *codebase* is developer-speak for the collection of code
   used to build an application.
 
+{{ embed.img(
+  src='blog/2023/htmlcssjs.jpg',
+  alt=''
+) }}
+
 ### Faster Development
-*…when it's a priority to make your app available to users quickly.*
+*Choose a responsive web app when it's a priority to make your app available to users quickly.*
 
 RWAs take less time to build, relative to native mobile apps; it only takes one
 codebase to reach any device with a browser. It can also take less time to make
@@ -131,7 +137,7 @@ your app, you will want to allow time to collect their feedback along the way
 and make improvements.
 
 ### Less Maintenance
-*…when you need to keep ongoing maintenance costs low.*
+*Choose a responsive web app when you need to keep ongoing maintenance costs low.*
 
 RWAs require less time and expense to maintain compared to native mobile apps.
 An RWA's single codebase is built with standard web technologies, and doesn't
@@ -140,7 +146,7 @@ takes less time and fewer developers to update a single codebase than to update
 separate codebases that use specialized technology for multiple platforms.
 
 ### Discoverable Via Search Engines
-*…when the people you want to reach will look for your content with a search engine.*
+*Choose a responsive web app when the people you want to reach will look for your content with a search engine.*
 
 Search engines, like Google, crawl the web looking for keywords and other
 information to sort and rank the results. Then they collect, process, and store
@@ -148,8 +154,13 @@ a database of all that content. This is called *indexing*. RWAs live on the web,
 so unless special code is added to prevent it, they will automatically be
 indexed and appear in organic search results.
 
+{{ embed.img(
+  src='blog/2023/seo.jpg',
+  alt='letters SEO with arrows pointing out in all directions'
+) }}
+
 ### Broad Reach
-*…when you want to reach a broad audience across various devices.*
+*Choose a responsive web app when you want to reach a broad audience across various devices.*
 
 People can access the same RWA on any device -- from a small phone to a tablet,
 from a laptop to a giant desktop -- unlike native mobile apps, which are limited
@@ -157,6 +168,11 @@ to specific supported mobile devices. Additionally, the web provides a high
 level of backward compatibility, meaning RWAs can be available in some form even
 on old devices. On the other hand, one platform update can totally block a
 device from accessing a native mobile app.
+
+{{ embed.img(
+  src='blog/2023/paperchain.jpg',
+  alt='paper chain of people'
+) }}
 
 {{ embed.figure(
   data=[{
@@ -168,10 +184,10 @@ device from accessing a native mobile app.
   }
 ) }}
 
-## Don't Choose a Responsive Web App…
+## Don't Choose a Responsive Web App When…
 
 ### Limited Capabilities
-*…when your project requires a high level of specialized capability.*
+*Don't choose a responsive web app when your project requires a high level of specialized capability.*
 
 RWAs cannot access all of a device's hardware and software features. For
 example, if your digital product requires direct integration with a specific
@@ -183,7 +199,7 @@ RWA, but then you would be moving into the [progressive web
 app](/2023/07/05/when-to-choose-a-progressive-web-app/) space.
 
 ### Performance Limitations
-*…when you need advanced performance.*
+*Don't choose a responsive web app when you need advanced performance.*
 
 If a person has a slow internet connection, they will have trouble accessing RWA
 content that requires a lot of processing power -- like videos or animated
@@ -191,14 +207,14 @@ games. If they have no internet connection, they will not be able to access an
 RWA at all.
 
 ### Security Limitations
-*…when you require advanced security.*
+*Don't choose a responsive web app when you require advanced security.*
 
 If your project needs advanced security beyond typical HTTPS encryption, such as
 with banking applications, an RWA is less likely to be able to meet those
 requirements.
 
 ### Not Discoverable Via App Store
-*…when the people you want to reach will look for your app in an app store.*
+*Don't choose a responsive web app when the people you want to reach will look for your app in an app store.*
 
 RWAs are not listed in app stores. If the people you want to reach exclusively
 use app stores to search for apps, they will not be able to find a responsive

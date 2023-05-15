@@ -63,10 +63,10 @@ for iOS, or Kotlin, Java, and C++ languages for Android.
   }
 ) }}
 
-## Choose a Native Mobile App…
+## Choose a Native Mobile App When…
 
 ### Advanced Capabilities
-*…when your project requires a high level of hardware or software integration.*
+*Choose a native mobile app when your project requires a high level of hardware or software integration.*
 
 Native apps can access all of a device's hardware and software features. For
 example, unlike responsive web apps (RWAs), native mobile apps can integrate
@@ -74,7 +74,7 @@ directly with a specific mobile device's GPS for geofencing, access light and
 proximity sensors, or use a device's camera.
 
 ### High Performance
-*…when you need advanced performance.*
+*Choose a native mobile app when you need advanced performance.*
 
 Native mobile apps are optimized for a specific platform. Because of this
 specialization, they can provide a higher level of processing power for things
@@ -84,7 +84,7 @@ mobile apps are downloaded onto a specific device and can usually function even
 when there is no internet access.
 
 ### Advanced Security
-*…when you require custom security measures.*
+*Choose a native mobile app when you require custom security measures.*
 
 A native mobile app offers security beyond the typical HTTPS encryption
 available with an RWA. If you are developing a banking product that requires
@@ -92,7 +92,7 @@ secure authentication and verification of your users, or need to meet strict
 HIPAA requirements, a native mobile app is likely a better option than an RWA.
 
 ### Discoverable Via App Store
-*…when the people you want to reach will look for your app in an app store.*
+*Choose a native mobile app when the people you want to reach will look for your app in an app store.*
 
 Native mobile apps live in app stores like the Google Play Store and Apple's App
 Store. If your research shows that the people you want to reach typically look
@@ -110,10 +110,10 @@ choice than an RWA (which is not listed in app stores).
   }
 ) }}
 
-## Don't Choose a Native Mobile App…
+## Don't Choose a Native Mobile App When…
 
 ### Higher Development & Maintenance Costs
-*…when you want to keep short and long-term costs down.*
+*Don't choose a native mobile app when you want to keep short and long-term costs down.*
 
 Native mobile apps require a unique codebase for each platform. For example, if
 you want to make the same native mobile app available on both Android and iOS
@@ -124,7 +124,7 @@ It is frequently more expensive to reach the same range of people with a native
 mobile app compared to an RWA.
 
 ### Lengthy Development
-*…when it's a priority to make your app available to users quickly.*
+*Don't choose a native mobile app when it's a priority to make your app available to users quickly.*
 
 Because native mobile apps require a separate codebase for each platform you
 want to support, development generally takes longer than it does to develop a
@@ -133,7 +133,7 @@ requirements in order to publish an app, and these can be complex. Wait times
 for app store approval to publish or update the app can be lengthy as well.
 
 ### Not Discoverable Via Search Engines
-*…when the people you want to reach will look for your content with a search engine.*
+*Don't choose a native mobile app when the people you want to reach will look for your content with a search engine.*
 
 Unlike for RWAs, search engines don't index native mobile apps. If your research
 indicates that people frequently use search engines to search for the type of
@@ -143,7 +143,7 @@ and links people to the appropriate app store for download. (A separate
 marketing website will further increase the costs and development costs.)
 
 ### Limited Reach
-*…when you want to reach a broad audience across devices.*
+*Don't choose a native mobile app when you want to reach a broad audience across devices.*
 
 Because it takes longer and costs more to reach the same range of people with a
 native mobile app than with an RWA, and because native mobile apps offer less
