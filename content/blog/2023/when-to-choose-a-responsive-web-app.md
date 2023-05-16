@@ -91,9 +91,8 @@ An responsive web app is essentially a website that resizes and rearranges its c
     img: 'blog/2023/yes.png',
     alt: 'The word "yes" with a smiley and sparkles'
   }],
-  attrs={
-    'style': '--column: content-start'
-  }
+  class='media-pull',
+  attrs={'style': '--rowspan: span 3'}
 ) }}
 
 ## Choose a Responsive Web App When…
@@ -179,9 +178,8 @@ device from accessing a native mobile app.
     img: 'blog/2023/no.png',
     alt: 'The word "no" with a frowning face'
   }],
-  attrs={
-    'style': '--column: content-start'
-  }
+  class='media-pull',
+  attrs={'style': '--rowspan: span 3'}
 ) }}
 
 ## Don't Choose a Responsive Web App When…
