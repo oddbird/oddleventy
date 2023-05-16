@@ -9,17 +9,17 @@ $two-column: 45em;
   font-size: var(--small);
   grid-area: footer;
   grid-gap: var(--page-margin);
-  grid-template:
-    'contact' min-content
-    'oddnews' min-content
-    'contentinfo' auto / 100%;
+  grid-template: var(--footer-template-sm,
+      'contact' min-content
+      'oddnews' min-content
+      'contentinfo' auto / 100%);
   padding: var(--gutter) var(--page-margin) var(--spacer);
 
   @include config.above($two-column) {
-    grid-template:
-      'contact oddnews' min-content
-      'contact contentinfo' auto / minmax(10em, var(--wide-page)) minmax(10em,
-        var(--page));
+    grid-template: var(--footer-template-lg,
+        'contact oddnews' min-content
+        'contact contentinfo' 1fr / minmax(10em, var(--wide-page)) minmax(10em,
+          var(--page)));
     justify-content: space-between;
   }
 }
@@ -38,7 +38,7 @@ $two-column: 45em;
   grid-template-rows: 1fr auto;
 
   @include config.above($two-column) {
-    text-align: right;
+    text-align: var(--footer-text-align, right);
   }
 
   &:only-child {
@@ -61,4 +61,10 @@ $two-column: 45em;
   background-color: var(--clip-bg, var(--callout));
   grid-area: oddnews;
   padding: 0 var(--gutter) var(--gutter);
+}
+
+// Layout variation for contact page
+[data-footer~='contact'] {
+  --footer-template-lg: 'contentinfo oddnews' auto / 1fr 1fr;
+  --footer-text-align: left;
 }
