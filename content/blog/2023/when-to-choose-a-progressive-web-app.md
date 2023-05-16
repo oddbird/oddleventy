@@ -71,15 +71,15 @@ you're already using one!
     img: 'blog/2023/yes.png',
     alt: 'The word "yes" with a smiley and sparkles'
   }],
-  attrs={
-    'style': '--column: content-start'
-  }
+  class='media-pull',
+  attrs={'style': '--rowspan: span 3'}
 ) }}
 
 ## Choose a Progressive Web App When…
 
 ### Lower Development & Maintenance Costs
-*Choose a progressive web app when it's important to keep initial development costs low.*
+*Choose a progressive web app when it's important to keep initial development
+costs low.*
 
 Just like responsive web apps, progressive web apps require just one codebase to
 be available on any device with a web browser, while providing users with a
@@ -89,7 +89,8 @@ Depending on the amount of special capabilities you need to add, however, a PWA
 can cost more than a responsive web app.
 
 ### Faster Development & Updates
-*Choose a progressive web app when it's a priority to make your app available to users quickly.*
+*Choose a progressive web app when it's a priority to make your app available to
+users quickly.*
 
 PWAs have all the same advantages of responsive web apps when it comes to speed
 of development and updates. Developing only one codebase takes less time than
@@ -99,8 +100,8 @@ packaging your PWA for inclusion in app stores takes additional time, and
 requires going through the app store approval process.
 
 ### Discoverable Via Search Engines & App Stores
-*Choose a progressive web app when the people you want to reach will look for your app with a search engine
-and in an app store.*
+*Choose a progressive web app when the people you want to reach will look for
+your app with a search engine and in an app store.*
 
 If your user research shows that people search for the type of content you offer
 in app stores *and* via web searches, a PWA can help you reach all those people
@@ -113,7 +114,8 @@ index them and include them in search results. Various tools such as
 native app for inclusion in Google, Apple, and Microsoft app stores.
 
 ### Broad Reach
-*Choose a progressive web app when you want to reach a broad audience across various devices.*
+*Choose a progressive web app when you want to reach a broad audience across
+various devices.*
 
 If your budget allows, PWAs can reach a broader audience than either responsive
 web apps or native mobile apps. With a single codebase, people can access the
@@ -124,7 +126,9 @@ offline. Like RWAs, PWAs take advantage of the web's high level of backward
 compatibility, meaning people on older devices will retain some level of access.
 
 ### Specialized Capabilities
-*Choose a progressive web app when you want to reach a broad range of people while keeping costs down as much as possible, but need some specialized device capabilities.*
+*Choose a progressive web app when you want to reach a broad range of people
+while keeping costs down as much as possible, but need some specialized device
+capabilities.*
 
 PWAs are better than native mobile apps or RWAs at providing a balance between
 reach, cost, and specialization. If you need to be able to send alerts or push
@@ -150,9 +154,8 @@ Today](https://whatpwacando.today/).
     img: 'blog/2023/no.png',
     alt: 'The word "no" with a frowning face'
   }],
-  attrs={
-    'style': '--column: content-start'
-  }
+  class='media-pull',
+  attrs={'style': '--rowspan: span 3'}
 ) }}
 
 ## Don't Choose a Progressive Web App…
