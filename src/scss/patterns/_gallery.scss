@@ -47,6 +47,10 @@ figcaption,
   font-size: var(--small);
   font-style: italic;
   margin-top: var(--shim);
+
+  .extend-full & {
+    padding-inline: var(--gutter-plus);
+  }
 }
 
 // codepen embeds
