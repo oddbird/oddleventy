@@ -50,10 +50,12 @@ Jared Tarbell and the [Levitated Toy Factory], I picked [one of his art
 pieces] to recreate with CSS variables (aka custom properties) and CSS
 grid layouts.
 
-{{ embed.img(
-  src="blog/2018/levitated.jpg",
-  alt="Miriam showing a slide of the CSS Grid generated art inspired by Jared Tarbell",
-  attrs={'class': 'extend-small img-border img-spacing'}
+{{ embed.figure(
+  data=[{
+    img: 'blog/2018/levitated.jpg',
+    alt: 'Miriam showing a slide of the CSS Grid generated art inspired by Jared Tarbell'
+  }],
+  class='img-shadow'
 ) }}
 
 I spent that evening studying his image, and translating it into HTML

@@ -192,8 +192,10 @@ best tools for your company.
 
 [Herman]: /herman/
 
-{{ embed.img(
-  src='herman/herman-color-palette.jpg',
-  alt='Herman color palettes',
-  attrs={'class': 'extend-large img-border img-shadow img-spacing'}
+{{ embed.figure(
+  data=[{
+    img: 'herman/herman-color-palette.jpg',
+    alt: 'Herman color palettes'
+  }],
+  class='extend-large img-shadow'
 ) }}

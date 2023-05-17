@@ -116,3 +116,10 @@
     justify-self: auto;
   }
 }
+
+// Image Utilities
+// ---------------
+
+.img-shadow {
+  box-shadow: 0 0 var(--quarter-shim) var(--shadow);
+}

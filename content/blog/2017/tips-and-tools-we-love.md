@@ -41,7 +41,7 @@ default json view to the enhanced view after enabling this extension.
 {{ embed.img(
   src="blog/2017/tips-tools/before-after-json-viewer.jpg",
   alt="clean and messy json screenshots",
-  attrs={"class":"img-border img-border"}
+  attrs={'class':'img-shadow'}
 ) }}
 
 [David Glick]: /authors/david/
