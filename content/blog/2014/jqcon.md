@@ -120,7 +120,7 @@ To use the more substantive features (e.g. template strings, default
 parameters, modules), compile ES6 code into ES5 using Google's [Traceur]
 (probably with [gulp-traceur] or [grunt-traceur]).
 
-HT: [John K. Paul] for his [talk][1] encouraging devs to use ES6 now.
+HT: [John K. Paul] for his [talk][talk] encouraging devs to use ES6 now.
 
 [ecmascript 6]: https://262.ecma-international.org/6.0/
 [helpful summary]: https://github.com/lukehoban/es6features#readme
@@ -130,7 +130,7 @@ HT: [John K. Paul] for his [talk][1] encouraging devs to use ES6 now.
 [gulp-traceur]: https://github.com/sindresorhus/gulp-traceur
 [grunt-traceur]: https://github.com/aaronfrost/grunt-traceur
 [john k. paul]: https://twitter.com/johnkpaul
-[1]: https://twitter.com/johnkpaul
+[talk]: https://twitter.com/johnkpaul
 
 ## Throw More Errors
 
