@@ -1,21 +1,29 @@
+@use '../config';
+
 .contain {
   display: flow-root;
 }
 
 [class*='align-'] {
-  margin: var(--shim) var(--inline-margin, 0);
+  margin: var(--shim) var(--inline-margin-right, var(--inline-margin, 0)) var(--shim) var(--inline-margin-left, var(--inline-margin, 0));
 }
 
 .align-left {
-  float: left;
-  margin-right: var(--gutter);
-  max-width: 45%;
+  @include config.above('page') {
+    --inline-margin-right: var(--gutter);
+
+    float: left;
+    max-width: 45%;
+  }
 }
 
 .align-right {
-  float: right;
-  margin-right: var(--left);
-  max-width: 45%;
+  @include config.above('page') {
+    --inline-margin-left: var(--gutter);
+
+    float: right;
+    max-width: 45%;
+  }
 }
 
 .align-center {
