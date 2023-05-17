@@ -38,10 +38,11 @@ available gutters. Most grids only put gutters between the columns. That
 means there will be one less gutter than there are columns. We call that
 a `narrow` container-spread, and make it the default.
 
-{{ embed.img(
-  src="blog/2017/spread/context-narrow.jpg",
-  alt="container-spread: narrow",
-  attrs={"class":"extend-small"}
+{{ embed.figure(
+  data=[{
+    img: 'blog/2017/spread/context-narrow.jpg',
+    alt: 'container-spread: narrow'
+  }]
 ) }}
 
 Some grids use "split" gutters, with half of a gutter on either side of
@@ -49,19 +50,21 @@ a column – forming full-gutters between columns, and an extra half at
 the edges. Mathematically, that means we have an equal number of gutters
 and columns. We call that a `wide` spread.
 
-{{ embed.img(
-  src="blog/2017/spread/context-wide.jpg",
-  alt="container-spread: wide",
-  attrs={"class":"extend-small"}
+{{ embed.figure(
+  data=[{
+    img: 'blog/2017/spread/context-wide.jpg',
+    alt: 'container-spread: wide'
+  }]
 ) }}
 
 Occasionally, a grid will have full gutters on both sides, meaning there
 is one more gutter than columns. We call that a `wider` spread.
 
-{{ embed.img(
-  src="blog/2017/spread/context-wider.jpg",
-  alt="container-spread: wider",
-  attrs={"class":"extend-small"}
+{{ embed.figure(
+  data=[{
+    img: 'blog/2017/spread/context-wider.jpg',
+    alt: 'container-spread: wider'
+  }]
 ) }}
 
 ## Spread on Spans
@@ -71,10 +74,11 @@ grid-spanning elements. In most systems, including the new [CSS Grid
 module], all spans are `narrow` – meaning they only span intermediate
 gutters.
 
-{{ embed.img(
-  src="blog/2017/spread/span-narrow.jpg",
-  alt="spread: narrow",
-  attrs={"class":"extend-small"}
+{{ embed.figure(
+  data=[{
+    img: 'blog/2017/spread/span-narrow.jpg',
+    alt: 'spread: narrow'
+  }]
 ) }}
 
 Occasionally it's useful to span as many gutters as columns – a `wide`
@@ -82,19 +86,21 @@ spread – if you have split-padding gutters, for example, or if you want
 elements to touch at certain places, or if you are pushing and pulling
 elements in the grid.
 
-{{ embed.img(
-  src="blog/2017/spread/span-wide.jpg",
-  alt="spread: wide",
-  attrs={"class":"extend-small"}
+{{ embed.figure(
+  data=[{
+    img: 'blog/2017/spread/span-wide.jpg',
+    alt: 'spread: wide'
+  }]
 ) }}
 
 It's rare that you need to span a `wider` spread, but we'll let you
 decide if it's useful.
 
-{{ embed.img(
-  src="blog/2017/spread/span-wider.jpg",
-  alt="spread: wider",
-  attrs={"class":"extend-small"}
+{{ embed.figure(
+  data=[{
+    img: 'blog/2017/spread/span-wider.jpg',
+    alt: 'spread: wider'
+  }]
 ) }}
 
 [CSS Grid module]: /2016/09/19/css-grid-layout/
