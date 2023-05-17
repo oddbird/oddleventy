@@ -117,6 +117,23 @@
   }
 }
 
+// Media Pull
+// ----------
+// Move an image to the left of the content for wide enough screens
+
+.media-pull {
+  --column: page-start;
+
+  @include config.above('xlarge-page') {
+    --column: full-start / page-start;
+
+    grid-row: var(--rowspan);
+    justify-self: end;
+    max-width: 25vw;
+    padding-inline: calc(var(--gutter) + 2vw);
+  }
+}
+
 // Image Utilities
 // ---------------
 

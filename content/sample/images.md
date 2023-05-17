@@ -24,3 +24,21 @@ sub: Using nunjucks
   alt='Miriam presenting',
   sizes='card'
 ) }}
+
+{{ embed.figure(
+  data=[{
+    img: 'blog/2023/graph.jpg',
+    alt: 'sketched graph on paper'
+  }],
+  class='media-pull',
+  attrs={'style': '--rowspan: span 2'}
+) }}
+
+## `media-pull` will position an image next to the text on wide enough screens
+
+The `embed.figure` macro is the only one that has access to the outer element in
+order to add attributes or classes. The `media-pull` class can be added to pull
+the image to the left of the content at the `xlarge` screen size. Using a style
+attribute, you can define how many rows to span using the css custom property
+`--rowspan`.
+
