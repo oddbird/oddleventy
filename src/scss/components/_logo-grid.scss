@@ -6,15 +6,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: var(--spacer) 0;
+  margin: var(--spacer) 0 var(--gutter);
 
-  > * {
+  >* {
     flex: var(--logo-flex);
     margin: var(--double-gutter);
     width: var(--logo-item);
   }
 
-  > a {
+  >a {
     --fill: currentcolor;
   }
 }

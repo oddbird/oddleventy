@@ -11,20 +11,14 @@
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns:
-    var(--page-margin)
-    [nav-start title-start] 1fr
-    [nav-end] var(--page-margin)
-    [title-end];
+    var(--page-margin) [nav-start title-start] 1fr [nav-end] var(--page-margin) [title-end];
   margin: var(--double-gutter) 0;
 
   @include config.above('wide-break') {
     --justify-nav: initial;
 
     grid-template-columns:
-      var(--page-margin)
-      [nav-start] auto
-      [nav-end title-start] 1fr
-      [title-end];
+      var(--page-margin) [nav-start] auto [nav-end title-start] 1fr [title-end];
   }
 
   * {
@@ -38,7 +32,7 @@
 
   color: var(--text-light);
 
-  [data-grid='cards'] + & {
+  [data-grid='cards']+& {
     margin-top: var(--double-gutter);
   }
 }
@@ -51,19 +45,29 @@
 
 [data-grid='cards'] {
   --align: stretch;
+  --fit-max: 1fr;
+  --fit-min: var(--grid-item);
   --justify: stretch;
 
   list-style: none;
   grid-auto-flow: dense;
   margin: 0;
   padding: 0;
+
+  @include config.above('wide-page') {
+    --fit-min: calc(var(--grid-item) * 0.5);
+    --fit-max: calc(50% - var(--gutter));
+  }
+
+  @include config.above('grid-full-columns') {
+    --fit-max: calc(25% - var(--gutter-plus));
+  }
 }
 
 [data-card] {
   display: grid;
   grid-template:
-    [post-start type-start] auto [type-end] 1fr [post-end]
-    / [post-start] 1fr [type-start] auto [type-end post-end];
+    [post-start type-start] auto [type-end] 1fr [post-end] / [post-start] 1fr [type-start] auto [type-end post-end];
 }
 
 [data-card='feature'] {
@@ -97,6 +101,7 @@
 }
 
 .type-link {
+
   &:link,
   &:visited {
     --fill: var(--type-flag, var(--feature));
