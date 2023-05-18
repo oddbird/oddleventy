@@ -14,10 +14,6 @@
   margin-top: var(--double-gutter);
 }
 
-.section-link {
-  // TODO
-}
-
 [data-section-title],
 [data-flag] {
   clip-path: var(--flag);
@@ -70,6 +66,13 @@
 [data-section-title='right'] {
   margin-right: 0;
   padding-right: var(--page-margin);
+}
+
+// Link
+// ----
+.section-link {
+  --column: content;
+  justify-self: end;
 }
 
 // Blocks
