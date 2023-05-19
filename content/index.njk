@@ -51,7 +51,11 @@ tools:
 {{ embed.logos(work, collections.all) }}
 {{ layout.section_link('View work samples', 'https://www.oddbird.net/work/') }}
 
-{{ post.homepage_posts('Article', collections) }}
+{{ post.homepage_posts(
+   'Article',
+   collections,
+   class='preview'
+) }}
 {{ layout.section_link('Browse more posts', 'https://www.oddbird.net/blog/') }}
 
 {{ quotes.find(

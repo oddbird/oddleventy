@@ -126,7 +126,8 @@ params:
   collections=none,
   title='Posts',
   pagination=none,
-  override_feature=false
+  override_feature=false,
+  class=none
 ) %}
 {%- if posts -%}
   {%- set posts = posts if (posts[0].sort) else posts | pageYears -%}
@@ -141,7 +142,7 @@ params:
     {{ layout.title(title) }}
   {% endif %}
 
-  <ol data-grid="cards" reversed>
+  <ol data-grid="cards" {% if class %}class='{{ class }}'{% endif %} reversed>
     {%- for post in posts | sort(reverse=true, attribute=sort) -%}
       {{ item(post, collections, loop, override_feature=override_feature) }}
     {%- endfor -%}
@@ -750,7 +751,8 @@ params:
   type,
   collections=[],
   limit=4,
-  banner_title='Featured Posts'
+  banner_title='Featured Posts',
+  class=none
 ) %}
   {%- set posts = collections[type] -%}
   {%- set featured = posts | isType(type) | isHome | onlyShow(limit) -%}
@@ -758,6 +760,7 @@ params:
     featured,
     collections=collections,
     title=banner_title,
-    override_feature=true
+    override_feature=true,
+    class=class
   ) }}
 {% endmacro %}
