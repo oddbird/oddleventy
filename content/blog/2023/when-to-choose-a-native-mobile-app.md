@@ -100,7 +100,7 @@ Native mobile apps live in app stores like the Google Play Store and Apple's App
 Store. If your research shows that the people you want to reach typically look
 for the type of content you will provide in app stores, or if you want to build
 your marketing plan around app stores, then a native mobile app is a better
-choice than an responsive web app (which is not listed in app stores).
+choice than a responsive web app (which is not listed in app stores).
 
 {{ embed.figure(
   data=[{

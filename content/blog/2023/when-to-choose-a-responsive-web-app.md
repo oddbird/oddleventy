@@ -133,7 +133,7 @@ users quickly.*
 
 RWAs take less time to build, relative to native mobile apps; it only takes one
 codebase to reach any device with a browser. It can also take less time to make
-the minimum viable product (MVP) [^MVP] available to an initial set of users, get
+the minimum viable product[^MVP] (MVP) available to an initial set of users, get
 feedback, and release frequent, incremental updates.
 
 No matter the type, even a very simple MVP of your app will take at least a few
@@ -147,13 +147,20 @@ and make improvements.
   alt='sticky notes and sketches for web app'
 ) }}
 
-[^MVP]: An *MVP* or minimum viable product is a version of a product with just enough features to be usable by initial users who can provide feedback for future product development.
+[^MVP]: An MVP or *minimum viable product* is a version of a product with just
+  enough features to be usable by initial users who can provide feedback for
+  future product development.
 
 ### Less Maintenance
 *Choose a responsive web app when you need to keep ongoing maintenance costs
 low.*
 
-Responsive web apps require less time and expense to maintain compared to native mobile apps. An RWA's single codebase is built with standard web technologies, and doesn't require an update of the entire app to make incremental improvements. It also takes less time and fewer developers to update a single codebase than to update separate codebases that use specialized technology for multiple platforms.
+Responsive web apps require less time and expense to maintain compared to native
+mobile apps. An RWA's single codebase is built with standard web technologies,
+and doesn't require an update of the entire app to make incremental
+improvements. It also takes less time and fewer developers to update a single
+codebase than to update separate codebases that use specialized technology for
+multiple platforms.
 
 {{ embed.img(
   src='blog/2023/tools.jpg',
@@ -182,10 +189,12 @@ various devices.*
 People can access the same RWA on any device -- from a small phone to a tablet,
 from a laptop to a giant desktop -- unlike native mobile apps, which are limited
 to specific supported mobile devices. Additionally, the web provides a high
-level of backward compatibility[^compatibility], meaning RWAs can be available in some form even on old devices. On the other hand, one platform update can totally block a
-device from accessing a native mobile app.
+level of backward compatibility,[^compatibility] meaning RWAs can be available
+in some form even on old devices. On the other hand, one platform update can
+totally block a device from accessing a native mobile app.
 
-[^compatibility]: A technology has *backward compatibility* when it can operate with or take input from an older system.
+[^compatibility]: A technology has *backward compatibility* when it can operate
+  with or take input from an older system.
 
 {{ embed.img(
   src='blog/2023/paperchain.jpg',
@@ -236,22 +245,26 @@ requirements.
 for your app in an app store.*
 
 RWAs are not listed in app stores. If the people you want to reach exclusively
-use app stores, such as Google Play or the Apple App Store, to search for apps, they will not be able to find a responsive web app.
+use app stores -- such as Google Play or the Apple App Store -- to search for
+apps, they will not be able to find a responsive web app.
 
 ## In Summary
 
 A responsive web app tends to be less expensive to build than other types of
 apps -- especially native mobile apps -- and offers the broadest reach. But if
-you have specialized needs around performance [^performance], security, or availability in app stores, one of the other two types of apps -- a native mobile app or a
-progressive web app -- are probably going to be a better fit. In the next part
-of this series, we'll take a look at the pros and cons of native mobile apps.
+you have specialized needs around performance,[^performance] security, or
+availability in app stores, one of the other two types of apps -- a native
+mobile app or a progressive web app -- are probably going to be a better fit. In
+the next part of this series, we'll take a look at the pros and cons of native
+mobile apps.
 
 {{ embed.img(
   src='blog/2023/various-devices.jpg',
   alt='various sized devices'
 ) }}
 
-[^performance]: In the context of the web, *performance* refers to the speed at which web pages are downloaded and displayed on a web browser.
+[^performance]: In the context of the web, *performance* refers to the speed at
+  which web pages are downloaded and displayed on a web browser.
 
 ---
 
