@@ -12,19 +12,19 @@
 
 .align-left {
   @include config.above('page') {
-    --inline-margin-right: var(--gutter);
+    --inline-margin-end: var(--gutter);
 
     float: left;
-    max-width: calc(50% - var(--inline-margin-right) / 2);
+    max-width: calc(50% - var(--inline-margin-end) / 2);
   }
 }
 
 .align-right {
   @include config.above('page') {
-    --inline-margin-left: var(--gutter);
+    --inline-margin-start: var(--gutter);
 
     float: right;
-    max-width: calc(50% - var(--inline-margin-right) / 2);
+    max-width: calc(50% - var(--inline-margin-start) / 2);
   }
 }
 
