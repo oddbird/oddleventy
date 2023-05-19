@@ -129,8 +129,7 @@
 
     grid-row: var(--rowspan);
     justify-self: end;
-    max-width: 25vw;
-    padding-inline: calc(var(--gutter) + 2vw);
+    padding-inline: var(--page-margin);
   }
 }
 

@@ -5,7 +5,9 @@
 }
 
 [class*='align-'] {
-  margin: var(--shim) var(--inline-margin-right, var(--inline-margin, 0)) var(--shim) var(--inline-margin-left, var(--inline-margin, 0));
+  margin-block: var(--shim);
+  margin-inline-start: var(--inline-margin-start, var(--inline-margin, 0));
+  margin-inline-end: var(--inline-margin-end, var(--inline-margin, 0));
 }
 
 .align-left {
@@ -13,7 +15,7 @@
     --inline-margin-right: var(--gutter);
 
     float: left;
-    max-width: 45%;
+    max-width: calc(50% - var(--inline-margin-right) / 2);
   }
 }
 
@@ -22,7 +24,7 @@
     --inline-margin-left: var(--gutter);
 
     float: right;
-    max-width: 45%;
+    max-width: calc(50% - var(--inline-margin-right) / 2);
   }
 }
 

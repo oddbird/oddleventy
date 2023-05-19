@@ -92,12 +92,12 @@ if your image is smaller than the column width.
 ## Extending images outside the content column
 
 To extend an image further outside of the content column's width, add one of
-the following classes: `extend-large`, or `extend-full`. This is only available
-with the `embed.figure` macro as the `embed.img` macro's class doesn't have
-access to the outer container. Also, the embed.figure macro is wider than the
+the following classes: `extend-large`, or `extend-full`. This is not available
+with the `embed.img` macro because the markdown wraps these images in a `<p>`
+element. Note that the `embed.figure` macro extends wider than the
 content column by default, as opposed to the `embed.img` macro.
 
-### `embed.figure` without any entend class for comparison
+### `embed.figure` without an extend class for comparison
 
 {{ embed.figure(
   data=[{
@@ -131,9 +131,10 @@ content column by default, as opposed to the `embed.img` macro.
 
 You can add the class `img-shadow` to the `embed.figure` and `embed.img` to
 display a shadow around the image. This doesn't work on figure if you have a
-caption as the shadow will be around that entire container.
+caption as the shadow will be around the entire container.
 
 ### `embed.figure` with `class='img-shadow'`
+
 {{ embed.figure(
   data=[{
     img: 'pages/inventory.jpg',
@@ -143,8 +144,19 @@ caption as the shadow will be around that entire container.
 ) }}
 
 ### `embed.img` with `attrs={'class': 'img-shadow'}`
+
+An image with a light background:
+
 {{ embed.img(
   src='pages/inventory.jpg',
   alt='A collection of button screenshots from one project',
+  attrs={'class': 'img-shadow'}
+) }}
+
+An image with a dark background:
+
+{{ embed.img(
+  src='talks/mia-btconf.jpg',
+  alt='Miriam presenting',
   attrs={'class': 'img-shadow'}
 ) }}
