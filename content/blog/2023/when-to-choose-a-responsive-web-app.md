@@ -67,7 +67,7 @@ Here are the biggest differences in a nutshell.
   src='blog/2023/app-comparison-chart.jpg',
   alt='A comparison chart showing the differences between
     responsive web apps, progressive web apps, and native
-    mobile apps'
+    mobile apps [summary](/rwa-pwa-native-comparison-chart-summary/)'
 ) }}
 
 ## Responsive Web Apps -- Best for Wide Reach
