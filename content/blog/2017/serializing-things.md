@@ -172,7 +172,7 @@ cost. But in any case, it's worth keeping in mind.
 ## What If I Need Something That's Not a Model?
 
 Perhaps you have business-logic class instances which are never stored
-in the database[1]. If you can't, won't, or don't want to use the DB as
+in the database[^1]. If you can't, won't, or don't want to use the DB as
 a persistent store for your data – which you then inflate into a full
 object – there are other ways to pass objects through the task-broker
 bottleneck.
@@ -246,10 +246,9 @@ deserialized_objects = deserialize('json', json_version)
 # deserialized_objects[i].object
 ```
 
-[1] You are keeping in mind that your *data model* and your Django
-*Models* aren't the same, right? Django models are persistence-layer
-mappings that you can bolt some additional logic to. Your data model may
-be much more!
+[^1]: You are keeping in mind that your *data model* and your Django *Models*
+  aren't the same, right? Django models are persistence-layer mappings that you
+  can bolt some additional logic to. Your data model may be much more!
 
 [attrs]: https://attrs.readthedocs.io/en/stable/
 [Twitter]: https://twitter.com/oddbird
