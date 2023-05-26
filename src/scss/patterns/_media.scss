@@ -122,6 +122,7 @@
 
   @include config.above('xlarge-page') {
     --column: full-start / page-start;
+
     grid-row: var(--rowspan);
     justify-self: end;
     max-width: 25vw;

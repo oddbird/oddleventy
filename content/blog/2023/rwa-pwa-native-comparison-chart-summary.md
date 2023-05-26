@@ -1,14 +1,16 @@
 ---
-# eleventyExcludeFromCollections: true
-# permalink: false
+eleventyExcludeFromCollections: true
 title: App Comparison Chart Summary
 author: sondra
 ---
 
 ## Responsive Web App
-A responsive web app runs in a browser such as Chrome, Firefox, or Safari — automatically resizing to fit any screen size on any device.
+
+A responsive web app runs in a browser such as Chrome, Firefox, or Safari —
+automatically resizing to fit any screen size on any device.
 
 ### Best for Wide Reach
+
 - Cross-Device
 - Lower Cost
 - Single Codebase
@@ -25,9 +27,12 @@ A responsive web app runs in a browser such as Chrome, Firefox, or Safari — au
 - No Access to Device-Specific Hardware Features
 
 ## PWA
-A progressive web app (PWA) is a responsive web app with additional capabilities that make it similar to a native mobile app.
+
+A progressive web app (PWA) is a responsive web app with additional capabilities
+that make it similar to a native mobile app.
 
 ### Best of Both
+
 - Cross-Device
 - Lower Cost
 - Single Codebase
@@ -44,9 +49,12 @@ A progressive web app (PWA) is a responsive web app with additional capabilities
 - Limited Access to Device-Specific Hardware Features
 
 ## Native Mobile App
-A native mobile app is a mobile device app specifically designed for a particular operating system like iOS or Android.
+
+A native mobile app is a mobile device app specifically designed for a
+particular operating system like iOS or Android.
 
 ### Best Advanced Capabilities
+
 - Device-Specific
 - Higher Cost
 - Codebase per Platform
