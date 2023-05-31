@@ -29,7 +29,9 @@
   {% endif %}
 
   {% if page.url != '/oddnews/' %}
-    {{ oddnews.oddnews_signup() }}
+    {{ oddnews.oddnews_signup(
+      class='oddnews-form-footer'
+    ) }}
   {% endif %}
 
   <footer role="contentinfo">

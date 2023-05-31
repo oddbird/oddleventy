@@ -12,10 +12,10 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
 
-<div data-layout="oddnews-info">
 {{ oddnews.oddnews_signup(
   heading=false,
-  tag='oddnews') }}
+  tag='oddnews',
+  class='oddnews-form-main') }}
 
 {%- set title = 'What to Expect' -%}
 {%- set contents -%}
@@ -28,7 +28,7 @@ summary: |
   - **UX Design** - How to conenct designers and developers with Object Oriented UX
 {%- endset -%}
 
-<aside data-layout="cta" class="has-angles" aria-labelledby="cta-title">
+<aside data-layout="cta" class="oddnews-intro has-angles" aria-labelledby="cta-title">
   {% set callout_content %}
     <h2 id="cta-title">{{ title | mdInline | safe }}</h2>
     {{ contents | md | safe }}
@@ -48,7 +48,7 @@ summary: |
 </aside>
 
 {{ layout.title('Latest News') }}
+
 <div class="oddnews-archive">
   <script language="javascript" src="//oddbird.us19.list-manage.com/generate-js/?u=80219aa68d7bad77b9fd2eb93&fid=27537&show=10" type="text/javascript"></script>
-</div>
 </div>

@@ -57,12 +57,6 @@ $two-column: 45em;
   font-size: var(--xsmall);
 }
 
-.oddnews-signup {
-  background-color: var(--clip-bg, var(--callout));
-  grid-area: oddnews;
-  padding: 0 var(--gutter) var(--gutter);
-}
-
 // Layout variation for contact page
 [data-footer~='contact'] {
   --footer-template-lg: 'contentinfo oddnews' auto / 1fr 1fr;
