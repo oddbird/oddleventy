@@ -1,4 +1,4 @@
-const { onlyShow, typeCheck, styles } = require('#/utils');
+const { onlyShow, typeCheck, styles, oddNewsTags } = require('#/utils');
 
 describe('utility filters', () => {
   test('typeCheck', () => {
@@ -21,5 +21,12 @@ describe('utility filters', () => {
     expect(onlyShow(arr, 2)).toEqual([1, 2]);
     expect(onlyShow(arr, -2)).toEqual([2, 3]);
     expect(onlyShow(arr, 4)).toEqual(arr);
+  });
+
+  test('oddNewsTags', () => {
+    expect(oddNewsTags('')).toBe('');
+    expect(oddNewsTags('footer')).toBe('6264369');
+    expect(oddNewsTags('oddblog')).toBe('6265233');
+    expect(oddNewsTags('oddnews')).toBe('6265089');
   });
 });
