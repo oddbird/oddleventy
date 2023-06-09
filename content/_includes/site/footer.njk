@@ -39,6 +39,7 @@
       {% set colophon = collections.all | findPage('data.info_slug', 'colophon') %}
       {{ colophon.templateContent | safe }}
     </div>
+
     <div class="legal">
       {% set info = collections.all | findPage('data.info_slug', 'legal') %}
       {{ info.templateContent | safe }}

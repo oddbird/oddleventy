@@ -15,7 +15,8 @@ summary: |
 {{ oddnews.oddnews_signup(
   heading=false,
   tag='oddnews',
-  class='oddnews-form-main') }}
+  class='oddnews-form-main'
+) }}
 
 {%- set title = 'What to Expect' -%}
 {%- set contents -%}
@@ -35,16 +36,16 @@ summary: |
   {% endset %}
 
   {{ embed.media_block(
-  media=embed.screen(
-  notch='5%',
-  content=embed.img(
-    src='writing/pexels-frank-cone.jpg',
-    alt='An orange hummingbird flying in the air',
-    sizes='media'
-  )
-),
-  content=callout_content
-) }}
+    media=embed.screen(
+      notch='5%',
+      content=embed.img(
+        src='writing/pexels-frank-cone.jpg',
+        alt='An orange hummingbird flying in the air',
+        sizes='media'
+      )
+    ),
+    content=callout_content
+  ) }}
 </aside>
 
 {{ layout.title('Latest News') }}

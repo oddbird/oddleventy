@@ -1,39 +1,62 @@
-{%
-  macro oddnews_signup(
-    heading=true,
-    tag='footer',
-    class=none
-  )
-%}
-<div class="oddnews-signup{% if class %} {{ class }}{% endif %}">
-  {% if heading %}
-    <h3>OddNews Sign Up</h3>
-    <p>Get the latest news in your field — UX, CSS, JavaScript, and Python. <a href="/oddnews">See Archive</a></p>
-  {% endif %}
+{# @docs
+label: OddNews Macros
+category: File
+note: Macros related to OddNews newsletter.
+#}
 
-  <form action="https://oddbird.us19.list-manage.com/subscribe/post?u=80219aa68d7bad77b9fd2eb93&amp;id=7c27f7fb9a&amp;f_id=000a9de4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
-    <div id="mc_embed_signup_scroll">
-      <div class="mc-field-group">
-        <label for="mce-EMAIL">Email
-          <span aria-hidden="true">*</span>
-          <span class="sr-only">required</span>
-        </label>
-        <input data-input="text email" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required >
-        <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-      </div>
-      <div hidden="true"><input type="hidden" name="tags" value={{ tag | oddNewsTags }}></div>
-      <div id="mce-responses" class="clear foot">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>
-      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80219aa68d7bad77b9fd2eb93_7c27f7fb9a" tabindex="-1" value=""></div>
-      <div class="optionalParent">
-        <div class="clear foot form-actions">
-          <button data-btn="submit" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button>
+{# @docs
+label: oddnews_signup
+note: Generate an OddNews signup form
+params:
+  heading:
+    type: boolean
+    default: true
+    note: Whether to include the "OddNews Sign Up" heading
+  tag:
+    type: string
+    default: 'footer'
+    note: |
+      tag for page where signup form is located:
+      'footer' or 'oddblog' or 'oddnews'
+  class:
+    type: string
+    default: none
+    note: optional class to add to wrapping `<div>`
+#}
+{% macro oddnews_signup(
+  heading=true,
+  tag='footer',
+  class=none
+) %}
+  <div class="oddnews-signup{% if class %} {{ class }}{% endif %}">
+    {% if heading %}
+      <h3>OddNews Sign Up</h3>
+      <p>Get the latest news in your field — UX, CSS, JavaScript, and Python. <a href="/oddnews">See Archive</a></p>
+    {% endif %}
+
+    <form action="https://oddbird.us19.list-manage.com/subscribe/post?u=80219aa68d7bad77b9fd2eb93&amp;id=7c27f7fb9a&amp;f_id=000a9de4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
+      <div id="mc_embed_signup_scroll">
+        <div class="mc-field-group">
+          <label for="mce-EMAIL">Email
+            <span aria-hidden="true">*</span>
+            <span class="sr-only">required</span>
+          </label>
+          <input data-input="text email" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required >
+          <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+        </div>
+        <div hidden="true"><input type="hidden" name="tags" value={{ tag | oddNewsTags }}></div>
+        <div id="mce-responses" class="clear foot">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80219aa68d7bad77b9fd2eb93_7c27f7fb9a" tabindex="-1" value=""></div>
+        <div class="optionalParent">
+          <div class="clear foot form-actions">
+            <button data-btn="submit" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
-</div>
+    </form>
+  </div>
 {% endmacro %}
