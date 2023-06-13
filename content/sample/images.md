@@ -1,29 +1,10 @@
 ---
-title: Placing Images
+title: Image Layout Helpers
 sub: Using nunjucks and the image utility classes
 ---
 
 {% import 'embed.macros.njk' as embed %}
 
-## srcSet
-
-### embed (no width):
-{{ embed.img(
-  src='blog/2016/trick-loops.jpg'
-) }}
-
-### embed (width: 4410):
-{{ embed.img(
-  src='talks/mia-btconf.jpg',
-  alt='Miriam presenting'
-) }}
-
-### sizes
-{{ embed.img(
-  src='talks/mia-smashing19-rad.jpg',
-  alt='Miriam presenting',
-  sizes='card'
-) }}
 
 {{ embed.figure(
   data=[{
@@ -34,13 +15,29 @@ sub: Using nunjucks and the image utility classes
   attrs={'style': '--rowspan: span 2'}
 ) }}
 
-## `media-pull` will position an image next to the text on wide enough screens
+### `media-pull` will position an image next to the text on wide enough screens
 
-The `media-pull` class can be added to the `embed.figure` macro to pull an image
-to the left of the content at the `xlarge` screen size. This is not available
-with the `embed.img` macro because the markdown wraps these images in a `<p>`
-element. Using a style attribute, you can define how many rows to span using
-the css custom property `--rowspan`.
+The `media-pull` class can be used to pull an image to the left of the content
+at the `xlarge` screen size. Using a style attribute, you can define how many
+rows to span using the css custom property `--rowspan`. The first image example
+uses the `embed.figure` macro.
+
+{{ embed.img(
+  src='blog/2023/graph.jpg',
+  alt='A collection of button screenshots from one project',
+  attrs={
+    'class': 'media-pull',
+    'style': '--rowspan: span 2'
+  }
+) }}
+
+### `media-pull` with the `embed.img` macro
+
+When using the `embed.img` macro in a markdown file, the image is placed
+within a `<p>` tag. We have a CSS helper that targets this nested image with
+`display: contents` in order to add layout classes which will work in [most
+modern browsers](https://caniuse.com/css-has). When unsupported, the image will
+appear centered within the content column.
 
 
 ## Aligning images within the content areas
@@ -58,7 +55,7 @@ image and text in a div with a class of `contain`.
 ) }}
 
 To align an image to the left of the text, add the class `align-left`.
-Images will only float left or right if the screen is wide enough.
+Images will only float if the screen is wide enough.
 </div>
 
 <div class="contain">
@@ -71,7 +68,7 @@ Images will only float left or right if the screen is wide enough.
 ) }}
 
 To align an image to the right of the text, add the class `align-right`.
-Images will only float left or right if the screen is wide enough.
+Images will only float if the screen is wide enough.
 </div>
 
 
@@ -84,7 +81,7 @@ Images will only float left or right if the screen is wide enough.
   }
 ) }}
 
-To center align an image add the class `align-center`. This is only necessary
+To center align an image add the class `align-center`. This is only applicable
 if your image is smaller than the column width.
 
 </div>
@@ -92,10 +89,24 @@ if your image is smaller than the column width.
 ## Extending images outside the content column
 
 To extend an image further outside of the content column's width, add one of
-the following classes: `extend-large`, or `extend-full`. This is not available
-with the `embed.img` macro because the markdown wraps these images in a `<p>`
-element. Note that the `embed.figure` macro extends wider than the
-content column by default, as opposed to the `embed.img` macro.
+the following classes: `extend-small`, `extend-large`, or `extend-full`.
+
+When using the `embed.img` macro in a markdown file, the image is placed
+within a `<p>` tag. We have a CSS helper that targets this nested image with
+`display: contents` in order to add these layout classes in [most modern
+browsers](https://caniuse.com/css-has).
+
+
+### `embed.img` using the `extend-small` class
+
+The `embed.figure` macro uses the same grid-columns as the `extend-small`
+class.
+
+{{ embed.img(
+  src='herman/herman-color-palette.jpg',
+  alt='',
+  attrs={'class': 'extend-small'}
+) }}
 
 ### `embed.figure` without an extend class for comparison
 
