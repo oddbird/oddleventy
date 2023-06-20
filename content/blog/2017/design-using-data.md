@@ -43,8 +43,7 @@ use both research and experience to create the best results.
 
 [{{ embed.img(
   src='blog/2017/video-series/sarah-2.jpg',
-  alt='Watch Designing Using Data Video',
-  attrs={'class': 'align-center'}
+  alt='Watch Designing Using Data Video'
 ) }}][video]
 
 How do you use research to help you make design decisions? Let us know by
