@@ -31,6 +31,7 @@ summary: |
   Let's start with responsive web apps.
 ---
 {% import 'embed.macros.njk' as embed %}
+{% import 'oddnews.macros.njk' as oddnews %}
 
 You have an idea for a custom digital product you'd like to build, and it's time
 to decide how to build it. One of your friends swears you won't succeed unless
@@ -271,7 +272,11 @@ mobile apps.
 Curious about native mobile apps? Sign up for OddNews to be notified when **Part
 2 -- When to Choose a Native Mobile App** hits the OddBlog.
 
-^^ADD SIGN UP FORM HERE^^
+{{ oddnews.oddnews_signup(
+  heading=false,
+  tag='oddblog',
+  class='oddnews-form-main'
+) }}
 
 <!-- Is a **native mobile app** right for your digital project? Read more about
 [When to Choose a Native Mobile App](/2023/06/07/when-to-choose-a-native-mobile-app/). -->

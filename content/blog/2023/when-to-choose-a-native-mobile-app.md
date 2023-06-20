@@ -29,6 +29,7 @@ summary: |
   Let's dive into native mobile apps.
 ---
 {% import 'embed.macros.njk' as embed %}
+{% import 'oddnews.macros.njk' as oddnews %}
 
 If you haven't read part 1 yet, it has a great introduction to each option along
 with a quick comparison chart: [When to Choose a Responsive Web
@@ -174,7 +175,11 @@ series.
 Curious about progressive web apps? Sign up for OddNews to be notified when
 **Part 3 -- When to Choose a Progressive Web App** hits the OddBlog.
 
-^^ADD SIGN UP FORM HERE^^
+{{ oddnews.oddnews_signup(
+  heading=false,
+  tag='oddblog',
+  class='oddnews-form-main'
+) }}
 
 <!-- Is a **progressive web app** right for your digital project? Read more about
 [When to Choose a Progressive Web App](/2023/07/05/when-to-choose-a-progressive-web-app/). -->
