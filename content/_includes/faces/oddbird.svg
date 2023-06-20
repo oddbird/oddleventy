@@ -4,8 +4,8 @@
   role="img"
   aria-label="all the birds"
   focusable="false"
-  viewBox="0 0 2560 600"
-  width="2560"
+  viewBox="0 0 2575 600"
+  width="2575"
   height="600"
 >
 <g data-nest="jonny">{% include 'faces/jonny.svg' %}</g>
