@@ -241,15 +241,13 @@ to final designs in order to meet the project deadline.
 {{ embed.figure(
   data=vintage,
   caption='The vintage Ferris wheel went through a sketch phase and a couple
-    of drafts before the design was finalized.',
-  class='extend-small'
+  of drafts before the design was finalized.'
 ) }}
 
 {{ embed.figure(
   data=edgy,
   caption='Near the end of the edgy superpower design, the team realized the
-    word “edgy” was hard to read in the lowercase Totally Gothic typeface.',
-  class='extend-small'
+  word “edgy” was hard to read in the lowercase Totally Gothic typeface.'
 ) }}
 
 ### Audio & Nuxt.js
@@ -353,9 +351,8 @@ fontStyles() {
 {{ embed.figure(
   data=compare,
   caption='The example on the left shows the type extending outside it’s
-    container and the right example is what this illustration looked like
-    after we adjusted the font-size',
-  class='extend-small size-quarter'
+  container and the right example is what this illustration looked like
+  after we adjusted the font-size'
 ) }}
 
 This method was easily replicated across the entire project and allowed us to
@@ -364,7 +361,7 @@ have more control over the design, while writing less code.
 {{ embed.figure(
   data=after,
   caption='After applying adjustments to only the fonts that needed it,
-    the result shows visually similar type size.'
+  the result shows visually similar type size.'
 ) }}
 
 ### SVG Animation
@@ -406,7 +403,7 @@ empowered, and ready to explore typography!
 {{ embed.figure(
   data=herolink,
   caption='Two testers helped us discover that the “link to heroes” was
-    distracting them from playing the game.'
+  distracting them from playing the game.'
 ) }}
 
 ### Launch
@@ -435,6 +432,5 @@ and shared their typographic superpowers on social media.
 
 {{ embed.figure(
   data=funky,
-  caption='Each typographic superpower has a badge to share on social media.',
-  class='extend-small'
+  caption='Each typographic superpower has a badge to share on social media.'
 ) }}
