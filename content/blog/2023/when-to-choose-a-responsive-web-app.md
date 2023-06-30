@@ -2,7 +2,7 @@
 title: When to Choose a Responsive Web App
 sub: Part 1 -- Responsive Web App vs Native Mobile App vs Progressive Web App
 author: sondra
-date: 2023-05-05
+date: 2023-07-03
 tags:
   - Article
   - Business Development
@@ -30,6 +30,7 @@ summary: |
   one platform over another.
   Let's start with responsive web apps.
 ---
+
 {% import 'embed.macros.njk' as embed %}
 {% import 'oddnews.macros.njk' as oddnews %}
 
@@ -67,7 +68,7 @@ Here are the biggest differences in a nutshell.
 {{ embed.img(
   src='blog/2023/app-comparison-chart.jpg',
   alt='A comparison chart showing the differences between responsive web apps,
-  progressive web apps, and native mobile apps'
+    progressive web apps, and native mobile apps'
 ) }}
 
 <details>
@@ -75,7 +76,7 @@ Here are the biggest differences in a nutshell.
 
 ## Responsive Web App
 
-A responsive web app runs in a browser such as Chrome, Firefox, or Safari —
+A responsive web app runs in a browser such as Chrome, Firefox, or Safari --
 automatically resizing to fit any screen size on any device.
 
 ### Best for Wide Reach
@@ -140,7 +141,6 @@ particular operating system like iOS or Android.
 - Full Access to Device-Specific Hardware Features
 
 </details>
-
 
 ## Responsive Web Apps -- Best for Wide Reach
 

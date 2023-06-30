@@ -1,10 +1,10 @@
 ---
-# eleventyExcludeFromCollections: true
-# permalink: false
+eleventyExcludeFromCollections: true
+permalink: false
 title: When to Choose a Progressive Web App
 sub: Part 3 -- Responsive Web App vs Native Mobile App vs Progressive Web App
 author: sondra
-date: 2023-07-05
+date: 2023-09-01
 tags:
   - Article
   - Business Development
@@ -32,6 +32,7 @@ summary: |
   one platform over another.
   Let's explore progressive web apps.
 ---
+
 {% import 'embed.macros.njk' as embed %}
 
 If you haven't read parts 1 and 2 yet, you may want to start with the
