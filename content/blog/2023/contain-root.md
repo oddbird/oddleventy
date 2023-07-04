@@ -2,7 +2,7 @@
 title: Can We Query the Root Container?
 sub: The complexities of containment, overflow, and 'propagation'
 author: miriam
-date: 2023-07-03
+date: 2023-07-04
 tags:
   - Article
   - CSS
@@ -15,7 +15,8 @@ summary: |
   and CSS Day (Amsterdam) --
   where I recommended setting up a root container
   to replace most media queries.
-  Since then, Temani Afif
+  Since then,
+  [Temani Afif](https://front-end.social/@css/110513977760791600)
   pointed out a few issues with that approach,
   and sent me down a rabbit hole of
   overlapping specs and browser bugs.
@@ -210,9 +211,6 @@ scroll off the page:
 
 Neither behavior
 will work as a default for most sites.
-Thanks to [Temani Afif](https://front-end.social/@css/110513977760791600)
-for initially pointing out the issue
-on Mastodon.
 
 Various people in that thread
 pointed to 'root/body propagation'
@@ -259,12 +257,12 @@ and the 'blocks' that defines
 our initial positioning and layout context.
 For simplicity,
 I'm going to refer to all of this
-collectively as The Viewport™️.
+collectively as The Viewport.
 
 We don't have direct access
-to The Viewport™️.
+to The Viewport.
 There's no CSS syntax we can use
-to select and style any aspect of The Viewport™️.
+to select and style any aspect of The Viewport.
 And yet, we style them all the time
 using the somewhat quirky and esoteric magic
 of 'propagation' --
@@ -304,11 +302,11 @@ surrounding a fraction of that space.
 Background isn't the only element
 that propagates out
 from the `html` or `body` element
-to The Viewport™️.
+to the viewport.
 I haven't found a full list anywhere --
 this is defined spec-by-spec
 for individual properties --
-but the one that matters to us is `overflow`.
+but the one causing issues for us is `overflow`.
 
 [Overflow Viewport Propagation](https://drafts.csswg.org/css-overflow-3/#overflow-propagation)
 is defined in
@@ -421,7 +419,7 @@ _goeth thusly_:
 I think that logic makes good sense,
 and my expectations match
 the text of the spec as I read it.
-But clearly all the browsers implemented something else.
+But all the browsers implemented something else.
 
 ## What browsers implemented
 
@@ -429,26 +427,24 @@ I am not a browser engineer,
 but I've been trying to parse out
 how browsers got a different answer than I did.
 
-It's not clear to me
-that browsers are 'wrong'
-in the default case,
+I'm not sure
+if browsers are 'wrong'
 when the root element has default `visible` overflow.
-In that case,
-I think the spec should be clarified.
-It says to propagate from the body,
+The spec says to propagate from the body,
 but it doesn't say what to do
 if containment breaks that propagation.
-I would _expect_ that the viewport
-should also default to `visible` overflow,
-which it should then treat as `auto`.
-But that's not clearly stated.
+I would _expect_ the viewport
+to still default to `visible` overflow,
+which is then treated as `auto`.
+But that's not stated explicitly,
+and the spec may need some improvements.
 
-In any case,
-we should very clearly be able to set our own
-non-default overflow on root,
-and have that value propagate to the viewport
+However,
+it does seem clear that a
+_non-default_ overflow on root
+should propagate to the viewport
 with or without containment.
-It works fine without:
+It works fine without containment:
 
 {{ embed.codepen(
   id='jOQmzzG',
@@ -457,8 +453,7 @@ It works fine without:
 ) }}
 
 But when we add containment,
-our non-default overflow no longer propagates.
-This is very clearly a browser bug:
+our non-default overflow no longer propagates:
 
 {{ embed.codepen(
   id='xxQdWWB',
@@ -466,14 +461,16 @@ This is very clearly a browser bug:
   user='miriamsuzanne'
 ) }}
 
+This must be a browser bug.
+
 ## TL;DR, Can we have a root container?
 
 **Yes**,
 there's a solution that works right now,
-but isn't as pretty.
-We can get around these browser bugs
-by using `<body>` as our top-level scroll-container
-instead of the viewport or root.
+despite these browser bugs.
+Instead of setting
+height and overflow on the `html` element,
+we use the `body` as our top-level scroll-container.
 Here's the code:
 
 ```css
@@ -500,8 +497,7 @@ various combinations here,
 and see how each one behaves.
 With the combination above,
 the body is able to scroll,
-and fixed elements inside it
-stay fixed to that scroll-port:
+with fixed elements remaining in place:
 
 {{ embed.codepen(
   id='zYMqBJP',
@@ -515,3 +511,30 @@ and will also file issues
 with each browser.
 
 **I still recommend root containers when possible**.
+But I would make one more change to the code above.
+By adding names to containers,
+we can better control what is being queried.
+I like to give containers both
+ID-style (unique) names,
+along with class-like (shared) names:
+
+```css
+html {
+  container: root layout / size;
+}
+```
+
+Then we can explicitly query the root
+any time we want:
+
+```css
+@container root (inline-size > 30em) { /* … */ }
+```
+
+Or we can query the nearest layout container:
+
+```css
+@container layout (inline-size > 30em) { /* … */ }
+```
+
+Happy querying!
