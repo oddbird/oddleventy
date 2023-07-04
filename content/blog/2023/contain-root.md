@@ -138,7 +138,7 @@ a few additional features
 that are not possible with `@media`,
 and might be useful
 even when we're measuring the outermost container.
-Most importantly;
+Most importantly:
 
 - With `em`-based media queries,
   we don't have access to the user settings
@@ -369,7 +369,7 @@ that:
 
 > RESOLVED: No future properties should propagate from `<body>` to the ICB
 
-('ICB' is the Initial Containing Block)
+('ICB' is the Initial Containing Block.)
 
 > RESOLVED: deprecate any existing use of body propagation
 
@@ -379,7 +379,7 @@ but we don't have to protect it moving forward.
 
 ## Containment and propagation (according to spec)
 
-[CSS Containment Module Level 2](https://drafts.csswg.org/css-contain-1/#contain-property):
+[CSS Containment Module Level 2](https://drafts.csswg.org/css-contain-1/#contain-property)
 does provide some caveats
 around root/body propagation and containment:
 
@@ -435,7 +435,7 @@ in the default case,
 when the root element has default `visible` overflow.
 In that case,
 I think the spec should be clarified.
-It says to propagate from body,
+It says to propagate from the body,
 but it doesn't say what to do
 if containment breaks that propagation.
 I would _expect_ that the viewport
