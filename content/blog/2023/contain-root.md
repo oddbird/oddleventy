@@ -2,13 +2,17 @@
 title: Can We Query the Root Container?
 sub: The complexities of containment, overflow, and 'propagation'
 author: miriam
-date: 2023-07-04
+date: 2023-07-05
 tags:
   - Article
   - CSS
   - Container Queries
 image:
-  src: blog/2023/pwc23.png
+  src: blog/2023/container.jpg
+  alt: >
+    The top front of a bright yellow shipping container
+    with the door open
+    and a blue sky behind it
 summary: |
   I spoke about Container Queries
   at both Smashing Conference (San Francisco)
