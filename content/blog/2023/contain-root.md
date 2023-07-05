@@ -37,6 +37,9 @@ summary: |
 - [The case for a root container](#the-case-for-a-root-container)
 - [Is it safe to contain the root element?](#is-it-safe-to-contain-the-root-element)
 - [What is root/body propagation, and how does it work?](#what-is-rootbody-propagation-and-how-does-it-work)
+- [Containment and propagation (according to spec)](#containment-and-propagation-according-to-spec)
+- [What browsers implemented](#what-browsers-implemented)
+- [TL;DR, Can we have a root container?](#tldr-can-we-have-a-root-container)
 
 </nav>
 </details>
