@@ -14,11 +14,26 @@ tags:
   - Container Queries
   - CSSWG
 events:
+  - venue: Front Conference
+    date: 2023-08-31
+    end: 2023-09-01
+    adr: Zurich, Switzerland
+    url: https://frontconference.com/
+  - venue: Smashing Conf
+    date: 2023-09-04
+    end: 2023-09-06
+    adr: Freiburg, Germany
+    url: https://smashingconf.com/freiburg-2023
   - venue: CSS Day
     url: https://cssday.nl/2023
     adr: Amsterdam, Netherlands
     date: 2023-06-08
     end: 2023-06-09
+  - venue: Smashing Conf
+    url: https://smashingconf.com/sf-2023/
+    adr: San Francisco
+    date: 2023-05-24
+    end: 2023-05-25
 summary: |
   How did container queries go
   from ‘impossible’ to ‘shipping’ after so many years?
