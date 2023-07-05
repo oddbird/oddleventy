@@ -192,13 +192,13 @@ I think we should!
 (Hopefully browsers will get this fixed.)
 
 Currently,
-adding a `container-type` of `inline-size`
+adding a `container-type` of `size`
 to the root (`html`) element
 will make scrolling impossible:
 
 {{ embed.codepen(
-  id='dyQWdag',
-  title='HTML containment & overflow (1d)',
+  id='QWJbLLe',
+  title='HTML containment & overflow (2d)',
   user='miriamsuzanne'
 ) }}
 
@@ -208,8 +208,8 @@ but now fixed elements
 scroll off the page:
 
 {{ embed.codepen(
-  id='QWJbLLe',
-  title='HTML containment & overflow (2d)',
+  id='dyQWdag',
+  title='HTML containment & overflow (1d)',
   user='miriamsuzanne'
 ) }}
 
@@ -398,7 +398,10 @@ around root/body propagation and containment:
 > - `background` and its longhands
 >   (see CSS Backgrounds 3 § 2.11.2 The Canvas Background and the HTML `<body>` Element)
 
-(Maybe this is the complete list?!)
+(Maybe this is the complete list?!
+If you know of a better list,
+or want to put one together,
+please [tell us about it](/contact/).)
 
 And then we get a clarification:
 
