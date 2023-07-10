@@ -13,6 +13,8 @@ post:
     icon: tools
   - tag: Article
     icon: news
+  - tag: Winging It
+    icon: winging-it-lines
 
 oss:
   - title: OddTools
