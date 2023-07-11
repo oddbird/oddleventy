@@ -8,10 +8,9 @@ tags:
 image:
   src: winging-it/winging-it-1.jpg
 summary: |
-  ...
+  Episode Summary about CSS Layers
 ---
 
-{% import 'embed.macros.njk' as embed %}
 
 ## Headline
 

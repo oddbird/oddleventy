@@ -1,9 +1,12 @@
 ---
 title: Winging It
-sub: Chats between UX, CSS, JS, and Python Experts
+date: 2023-07-09
 index: Winging It
+tags: []
 image:
-  src: winging-it/winging-it-hero.jpg
+  type: angle
+  svg: logos/winging-it-mark
+sub: Chats between UX, CSS, JS, and Python Experts
 summary: |
   Hi, OddFriends! At OddBird, we enjoy connecting and having conversations
   across disciplines. Join us as we wing it in this channel and discuss the
