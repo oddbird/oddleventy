@@ -7,6 +7,9 @@ image:
   type: angle
   svg: logos/winging-it-mark
 sub: Chats between UX, CSS, JS, and Python Experts
+action:
+  text: Watch on YouTube »
+  url: https://www.youtube.com/@wingingitoddbird
 summary: |
   Hi, OddFriends! At OddBird, we enjoy connecting and having conversations
   across disciplines. Join us as we wing it in this channel and discuss the

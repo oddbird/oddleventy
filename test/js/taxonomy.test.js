@@ -16,6 +16,7 @@ describe('fromTaxonomy', () => {
       { tag: 'Link', icon: 'link' },
       { tag: 'Case Study', icon: 'tools' },
       { tag: 'Article', icon: 'news' },
+      { tag: 'Winging It', icon: 'winging-it-lines' },
     ];
 
     expect(fromTaxonomy('post', { icon: 'news' })).toEqual({
