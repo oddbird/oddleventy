@@ -57,20 +57,27 @@ guidelines to help:
 
 *Case Study* posts include tags for their industry, for example `Technology Sector`
 
+## Images
+
+### Image Sizing
+
+The recommended size for hero images is 1600px x 600px. If the aspect ratio for
+the image is about 3:1 or more, the image will appear shorter on list pages.
+
 ### Image Organization
 
 Type of Content | Source Image Folder
 ----------------|--------------------
  OddBird Heros | `birds`
  Blog | `blog`
- Static Pages | `pages`
  Open Source | `projects`
+ Static Pages | `pages`
  Testimonials | `quotes`
  Susy | `susy`
  Talks | `talks`
+ Winging It | `winging-it`
  Work | `work/projectname`
  Books | `writing`
- Winging It | `winging-it`
 
 
 There are a few additional image folders for specific use cases.
