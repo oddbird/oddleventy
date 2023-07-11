@@ -70,8 +70,8 @@ Type of Content | Source Image Folder
 ----------------|--------------------
  OddBird Heros | `birds`
  Blog | `blog`
- Open Source | `projects`
  Static Pages | `pages`
+ Open Source | `projects`
  Testimonials | `quotes`
  Susy | `susy`
  Talks | `talks`
