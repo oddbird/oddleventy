@@ -37,14 +37,14 @@ summary: |
 
 If you haven't read parts 1 and 2 yet, you may want to start with the
 introduction to responsive web apps, native mobile apps, and progressive web
-apps in [part 1](/2023/05/05/when-to-choose-a-responsive-web-app/) (along with a
+apps in [part 1](/2023/07/11/when-to-choose-a-responsive-web-app/) (along with a
 comparison chart for quick reference).
 
 **Read all three parts to compare app types:**
 
-1. [When to Choose a Responsive Web App](/2023/05/05/when-to-choose-a-responsive-web-app/)
-2. [When to Choose a Native Mobile App](/2023/06/07/when-to-choose-a-native-mobile-app/)
-3. [When to Choose a Progressive Web App](/2023/07/05/when-to-choose-a-progressive-web-app/)
+1. [When to Choose a Responsive Web App](/2023/07/11/when-to-choose-a-responsive-web-app/)
+2. [When to Choose a Native Mobile App](/2023/08/01/when-to-choose-a-native-mobile-app/)
+3. [When to Choose a Progressive Web App](/2023/09/01/when-to-choose-a-progressive-web-app/)
 
 ## Progressive Web App -- Best of Both Worlds
 
@@ -191,5 +191,5 @@ platform of your choice.
 
 Still not sure which platform is right for your digital product? Go back and
 [review the **comparison
-chart**](/2023/05/05/when-to-choose-a-responsive-web-app/#what-are-responsive-web-apps%2C-native-mobile-apps%2C-and-progressive-web-apps%3F)
+chart**](/2023/07/11/when-to-choose-a-responsive-web-app/#what-are-responsive-web-apps%2C-native-mobile-apps%2C-and-progressive-web-apps%3F)
 while you muse.
