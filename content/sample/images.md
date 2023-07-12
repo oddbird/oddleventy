@@ -171,3 +171,26 @@ An image with a dark background:
   alt='Miriam presenting',
   attrs={'class': 'img-shadow'}
 ) }}
+
+{{ embed.img(
+  src='talks/mia-smashing19-rad.jpg',
+  alt='Miriam presenting',
+  sizes='media'
+) }}
+
+{{ embed.figure(
+  data=[{
+    img: 'blog/2023/graph.jpg',
+    alt: 'The word "yes" with a smiley and sparkles'
+  }],
+  class='media-pull',
+  attrs={'style': '--rowspan: span 2'}
+) }}
+
+## Position an image next to the text on wide enough screens
+
+The `embed.figure` macro is the only one that has access to the outer element in
+order to add attributes or classes. The `media-pull` class can be added to pull
+the image to the left of the content at the `xlarge` screen size. Using a style
+attribute, you can define how many rows to span using the css custom property
+`--rowspan`.
