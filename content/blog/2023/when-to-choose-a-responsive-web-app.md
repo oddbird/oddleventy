@@ -48,9 +48,9 @@ what their most pressing needs are, and how your app will meet those needs.
 
 <!-- **Read all three parts to compare app types:**
 
-1. [When to Choose a Responsive Web App](/2023/05/05/when-to-choose-a-responsive-web-app/)
-2. [When to Choose a Native Mobile App](/2023/06/07/when-to-choose-a-native-mobile-app/)
-3. [When to Choose a Progressive Web App](/2023/07/05/when-to-choose-a-progressive-web-app/) -->
+1. [When to Choose a Responsive Web App](/2023/07/11/when-to-choose-a-responsive-web-app/)
+2. [When to Choose a Native Mobile App](/2023/08/01/when-to-choose-a-native-mobile-app/)
+3. [When to Choose a Progressive Web App](/2023/09/01/when-to-choose-a-progressive-web-app/) -->
 
 ## What are Responsive Web Apps, Native Mobile Apps, and Progressive Web Apps?
 
@@ -223,8 +223,10 @@ mobile device's GPS for geofencing or access to light and proximity sensors,
 then an RWA won't work.
 
 It is *possible* to access some advanced device features in the context of an
-RWA, but then you would be moving into the [progressive web
-app](/2023/07/05/when-to-choose-a-progressive-web-app/) space.
+RWA, but then you would be moving into the [progressive web app][pwa] space.
+
+<!-- [pwa]: /2023/09/01/when-to-choose-a-progressive-web-app/ -->
+[pwa]: https://web.dev/progressive-web-apps/
 
 ### Performance Limitations
 *Don't choose a responsive web app when you need advanced performance.*
@@ -279,4 +281,4 @@ Curious about native mobile apps? Sign up for OddNews to be notified when **Part
 ) }}
 
 <!-- Is a **native mobile app** right for your digital project? Read more about
-[When to Choose a Native Mobile App](/2023/06/07/when-to-choose-a-native-mobile-app/). -->
+[When to Choose a Native Mobile App](/2023/08/01/when-to-choose-a-native-mobile-app/). -->
