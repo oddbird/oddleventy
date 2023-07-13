@@ -325,8 +325,7 @@ params:
   collections=none,
   links=true,
   dateformat=false,
-  prefix='by',
-  length=none
+  prefix='by'
 ) %}
   <p class="byline">
     {{ by(
@@ -355,9 +354,9 @@ params:
     {% if dateformat and not is_talk %}
       {{ pubdate(post.date, post.data.end, dateformat) }}
     {% endif %}
-    {% if is_wingingit %}
+    {%- if is_wingingit and post.data.length %}
       | {{ post.data.length }}
-    {% endif %}
+    {%- endif %}
   </p>
 {% endmacro %}
 
