@@ -1,6 +1,5 @@
 ---
 title: Winging It
-date: 2023-07-09
 index: Winging It
 image:
   type: angle
