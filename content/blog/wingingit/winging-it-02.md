@@ -1,5 +1,5 @@
 ---
-title: htmx - Winging It 2
+title: 2. htmx
 author:
   - ed
   - miriam

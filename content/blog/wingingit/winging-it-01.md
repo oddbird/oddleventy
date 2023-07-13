@@ -1,5 +1,5 @@
 ---
-title: CSS Cascade Layers - Winging It 1
+title: 1. CSS Cascade Layers
 author:
   - miriam
   - ed
