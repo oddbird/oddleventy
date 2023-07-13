@@ -8,6 +8,7 @@ date: 2023-07-09
 tags:
   - CSS
   - Cascade Layers
+length: 40 mins
 action:
   text: Watch on YouTube »
   url: https://youtu.be/FwICaSE8iuY

@@ -42,6 +42,9 @@
           ) }}
         {% endif -%}
         {{ post.where(adr) }}
+        {% if is_wingingit %}
+        | {{ length }}
+        {% endif %}
       </p>
     {% elif bird and social %}
       {{ contact.social(

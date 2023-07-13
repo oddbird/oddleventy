@@ -10,6 +10,7 @@ action:
   url: https://www.youtube.com/@wingingitoddbird
 tags:
   - htmx
+length: 60 mins
 image:
   src: winging-it/winging-it-2.jpg
 summary: |

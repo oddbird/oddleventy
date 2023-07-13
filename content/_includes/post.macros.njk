@@ -304,7 +304,7 @@ label: byline
 category: metadata
 note: |
   Generate the post byline with
-  type, authors, venue/client, date, and location
+  type, authors, venue/client, date, location, and length if Winging It
 params:
   post:
     type: 11ty page object
@@ -325,7 +325,8 @@ params:
   collections=none,
   links=true,
   dateformat=false,
-  prefix='by'
+  prefix='by',
+  length=none
 ) %}
   <p class="byline">
     {{ by(
@@ -350,8 +351,12 @@ params:
     {{ client(post.data.client) }}
 
     {%- set is_talk = post.data.tags and ('_talk' in post.data.tags) -%}
+    {%- set is_wingingit = post.data.tags and ('Winging It' in post.data.tags) -%}
     {% if dateformat and not is_talk %}
       {{ pubdate(post.date, post.data.end, dateformat) }}
+    {% endif %}
+    {% if is_wingingit %}
+      | {{ post.data.length }}
     {% endif %}
   </p>
 {% endmacro %}
@@ -426,6 +431,23 @@ params:
   {% set title = post.data.banner or post.data.title %}
   {{ title | mdInline | safe }}
 {%- endmacro %}
+
+
+{# @docs
+label: length
+category: metadata
+note: Show the length of a Winging It episode when available
+#}
+{% macro length(
+  post
+) %}
+  {% set length = post.data.length %}
+    <span class="length">
+      {{ length | typogr | safe }}
+    </span>
+{% endmacro %}
+
+
 
 
 {% macro id(
