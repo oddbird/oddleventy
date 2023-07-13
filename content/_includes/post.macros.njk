@@ -50,7 +50,7 @@ params:
         ) }}
       {%- endfor -%}
     {%- else -%}
-      {{ list(posts, collections, pagination=pagination) }}
+      {{ list(posts, collections, title=label, pagination=pagination) }}
     {%- endif -%}
   {%- endif -%}
 {% endmacro %}

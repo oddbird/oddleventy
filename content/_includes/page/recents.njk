@@ -1,27 +1,11 @@
-{%- set recents_type_tags = [
-  'Article',
-  'Podcast',
-  'Video',
-  'Link',
-  'Case Study',
-  'Winging It'
-] -%}
-{%- set tag_ribbon_mapping = {
-  'Article': 'Articles',
-  'Podcast': 'Podcasts',
-  'Video': 'Videos',
-  'Link': 'Links',
-  'Case Study': 'Case Studies',
-  'Winging It': 'Episodes'
-} -%}
 {%- set post_type = tags | pageType('tag') -%}
 
-{% if post_type and post_type in recents_type_tags and collections[post_type] | length > 0 %}
+{% if post_type and collections[post_type] | length > 0 %}
   <section data-list="tag" data-typeset>
     {{ post.recent_posts(
       post_type,
       collections,
-      banner_title=tag_ribbon_mapping[post_type],
+      banner_title=post_type | pageType('plural') or 'Posts',
       page_url=page.url
     ) }}
   </section>

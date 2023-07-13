@@ -5,16 +5,22 @@ post:
     display: Talks & Workshops
   - tag: Podcast
     icon: audio
+    plural: Podcasts
   - tag: Video
     icon: video
+    plural: Videos
   - tag: Link
     icon: link
+    plural: Links
   - tag: Case Study
     icon: tools
+    plural: Case Studies
   - tag: Article
     icon: news
+    plural: Articles
   - tag: Winging It
     icon: winging-it-lines
+    plural: Episodes
 
 oss:
   - title: OddTools

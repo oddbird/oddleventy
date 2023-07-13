@@ -96,7 +96,7 @@ params:
   tags:
     type: array
   get:
-    type: false | 'tag' | 'byline' | 'icon'
+    type: false | 'tag' | 'icon' | 'url' | 'display' | 'plural'
     default: undefined
     note: False will return the entire taxonomy of the type
 */

@@ -25,4 +25,6 @@ permalink: /tags/{{ tag | lower | slug }}/
 
 {% import 'post.macros.njk' as post %}
 
-{{ post.by_year(collections[tag], collections) }}
+{%- set label = tag | pageType('plural') or 'Posts' -%}
+
+{{ post.by_year(collections[tag], collections, label=label) }}

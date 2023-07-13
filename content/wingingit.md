@@ -2,7 +2,6 @@
 title: Winging It
 date: 2023-07-09
 index: Winging It
-tags: []
 image:
   type: angle
   svg: logos/winging-it-mark
