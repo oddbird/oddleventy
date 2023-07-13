@@ -433,21 +433,6 @@ params:
 {%- endmacro %}
 
 
-{# @docs
-label: length
-category: metadata
-note: Show the length of a Winging It episode when available
-#}
-{% macro length(
-  post
-) %}
-  {% set length = post.data.length %}
-    <span class="length">
-      {{ length | typogr | safe }}
-    </span>
-{% endmacro %}
-
-
 {% macro id(
   post,
   id_prefix='post'
