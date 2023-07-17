@@ -30,9 +30,7 @@
     height: 1.5em;
     width: 1em;
     border-radius: 0.25em;
-    box-shadow:
-      0 0 0 1px var(--bg),
-      0 0 0 1px var(--bg) inset;
+    box-shadow: 0 0 0 1px var(--bg), 0 0 0 1px var(--bg) inset;
     background: transparent;
     cursor: pointer;
   }

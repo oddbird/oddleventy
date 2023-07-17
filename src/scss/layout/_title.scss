@@ -11,7 +11,7 @@
   position: relative;
   margin: 0;
 
-  #hero + & {
+  #hero+& {
     // clip the horizontal and bottom shadows only
     clip-path: inset(var(--outset) calc(var(--outset) / 1.5) 0 0);
     filter: drop-shadow(0 0 var(--blur) var(--shadow));
@@ -21,14 +21,12 @@
     &::before {
       background-color: var(--bg);
       inset: 0 var(--outset) var(--outset) var(--outset);
-      clip-path: polygon(
-        0 0,
-        calc(100% - var(--angle)) 0,
-        calc(100% + var(--outset)) var(--clip-overlap),
-        100% var(--clip-overlap),
-        100% 100%,
-        0 100%
-      );
+      clip-path: polygon(0 0,
+          calc(100% - var(--angle)) 0,
+          calc(100% + var(--outset)) var(--clip-overlap),
+          100% var(--clip-overlap),
+          100% 100%,
+          0 100%);
       content: '';
       position: absolute;
       z-index: -1;
