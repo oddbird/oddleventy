@@ -17,17 +17,6 @@ social:
     server: front-end.social
   github: MiriSuzanne
   codepen: MiriamSuzanne
-events:
-  - venue: Front Conference
-    date: 2023-08-31
-    end: 2023-09-01
-    adr: Zurich, Switzerland
-    url: https://frontconference.com/
-  - venue: Smashing Conf
-    date: 2023-09-04
-    end: 2023-09-06
-    adr: Freiburg, Germany
-    url: https://smashingconf.com/freiburg-2023
 summary: |
   Miriam is a co-founder and front-end architect --
   overseeing the user-experience

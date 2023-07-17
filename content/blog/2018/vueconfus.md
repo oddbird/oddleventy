@@ -61,13 +61,13 @@ was already using the Vue `<transition>` and `<transition-group>`
 Revisiting an internal OddBird project, still in early development, I
 was finally able to create the page transitions that I wanted all along.
 
-<figure>
-{{ embed.img(
-  src="blog/2018/oddbooks.gif",
-  attrs={"class":"size-full img-border"}
+{{ embed.figure(
+  data=[{
+    img: 'blog/2018/oddbooks.gif',
+    alt: 'example of Vue transitions'
+  }],
+  caption='The image is low-resolution in order to show more animations, without a massive file size...'
 ) }}
-<figcaption>The image is low-resolution in order to show more animations, without a massive file size...</figcaption>
-</figure>
 
 All the [VueConf talks] are available online, and I recommend checking
 them out!

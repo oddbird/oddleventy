@@ -4,8 +4,8 @@
   role="img"
   aria-label="all the birds"
   focusable="false"
-  viewBox="0 0 2925 600"
-  width="2925"
+  viewBox="0 0 2575 600"
+  width="2575"
   height="600"
 >
 <g data-nest="jonny">{% include 'faces/jonny.svg' %}</g>
@@ -15,5 +15,4 @@
 <g data-nest="miriam">{% include 'faces/miriam.svg' %}</g>
 <g data-nest="sana">{% include 'faces/sana.svg' %}</g>
 <g data-nest="ed">{% include 'faces/ed.svg' %}</g>
-<g data-nest="patricia">{% include 'faces/patricia.svg' %}</g>
 </svg>

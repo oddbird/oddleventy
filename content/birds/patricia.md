@@ -3,6 +3,8 @@ title: Patricia Realini
 sub: Technical project manager
 bird: patricia
 date: 2020-11-02
+end: 2023-06-09
+show_detail: true
 image:
   src: birds/patricia.jpg
   position: top
@@ -17,7 +19,8 @@ summary: |
   and artist.
 ---
 
-**Patricia navigates projects through development**, to ensure smooth sailing
+**Patricia is an OddBird Emeritus**
+who navigated projects through development, to ensure smooth sailing
 for our clients and an enchanting experience for their users. With experience in
 software engineering and a background in art & marketing, they harness their
 passions to act as a conduit for empathetic user experience, high impact

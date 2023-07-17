@@ -132,11 +132,13 @@ add a pattern in the stylesheet, they can document their work right at
 the source. When a pattern changes, all the edits can be made in a
 single location, so documentation is more likely to stay up-to-date.
 
-[{{ embed.img(
-  src="blog/2017/herman-intro/sassdoc.jpg",
-  alt="SassDoc screenshot",
-  attrs={"class":"extend-small img-border img-shadow" }
-) }}][SassDoc]
+{{ embed.figure(
+  data=[{
+    img: 'blog/2017/herman-intro/sassdoc.jpg',
+    alt: 'SassDoc screenshot'
+  }],
+  class='img-shadow'
+) }}
 
 Those tools are great, but neither one is built to handle more complex
 design systems, integrated with markup templates and other languages. On
@@ -198,17 +200,21 @@ Herman provides display annotations for [colors] (`@colors`), [fonts]
 /// @ratios my-modular-scale
 ```
 
-[{{ embed.img(
-  src="blog/2017/herman-intro/colors.jpg",
-  alt="Herman color palettes",
-  attrs={"class":"extend-large img-border img-shadow img-spacing"}
-) }}][colors]
+{{ embed.figure(
+  data=[{
+    img: 'blog/2017/herman-intro/colors.jpg',
+    alt: 'Herman color palettes'
+  }],
+  class='extend-large img-shadow'
+) }}
 
-[{{ embed.img(
-  src="blog/2017/herman-intro/sizes.jpg",
-  alt="Herman size palettes",
-  attrs={"class":"extend-small img-border img-shadow"}
-) }}][sizes]
+{{ embed.figure(
+  data=[{
+    img: 'blog/2017/herman-intro/sizes.jpg',
+    alt: 'Herman size palettes'
+  }],
+  class='img-shadow'
+) }}
 
 In order to display that data, you will need to export all your Sass
 tokens to json, using our provided [Sass export utilities]. We're
@@ -221,11 +227,13 @@ given folder:
 /// @icons path-to/my-assets/svg/
 ```
 
-[{{ embed.img(
-  src="blog/2017/herman-intro/icons.jpg",
-  alt="Herman icon palettes",
-  attrs={"class":"extend-small img-border img-shadow"}
-) }}][img]
+{{ embed.figure(
+  data=[{
+    img: 'blog/2017/herman-intro/icons.jpg',
+    alt: 'Herman icon palettes'
+  }],
+  class='img-shadow'
+) }}
 
 [colors]: /herman/docs/demo_colors.html
 [fonts]: /herman/docs/demo_fonts.html
@@ -260,13 +268,15 @@ output when necessary:
 }
 ```
 
-[{{ embed.img(
-  src="blog/2017/herman-intro/examples.jpg",
-  alt="Herman rendered example",
-  attrs={"class":"extend-small img-border img-shadow"}
-) }}][documentation of CSS selectors and markup patterns]
+{{ embed.figure(
+  data=[{
+    img: 'blog/2017/herman-intro/examples.jpg',
+    alt: 'Herman rendered example'
+  }],
+  class='img-shadow'
+) }}[View the documentation of CSS selectors and markup patterns]
 
-[documentation of CSS selectors and markup patterns]: /herman/docs/demo_examples.html
+[View the documentation of CSS selectors and markup patterns]: /herman/docs/demo_examples.html
 [Sass]: https://sass-lang.com/
 [Nunjucks]: https://mozilla.github.io/nunjucks/
 

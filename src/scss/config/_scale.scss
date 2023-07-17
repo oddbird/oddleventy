@@ -28,10 +28,13 @@ $text-ratios: (
 /// @group config-scale
 $root: calc(1.25em + 0.5vw);
 
-@include herman.add('sizes',
+@include herman.add(
+  'sizes',
   'root-font-size',
-  ('root': 1rem,
-  ));
+  (
+    'root': 1rem,
+  )
+);
 
 /// @sizes {text}
 /// @group config-scale
@@ -71,9 +74,11 @@ $spacing-sizes: (
 );
 
 @include tools.add-sizes($spacing-sizes);
-@include herman.add('sizes',
+@include herman.add(
+  'sizes',
   'spacing-sizes',
-  tools.compile-sizes($spacing-sizes));
+  tools.compile-sizes($spacing-sizes)
+);
 
 // Theme Sizes
 // -----------
@@ -112,10 +117,12 @@ $page-sizes: (
 // Breakpoints
 // -----------
 
-@each $name,
-$size in $page-sizes {
+@each $name, $size in $page-sizes {
   $size: tools.convert-units($size, 'em');
-  tools.$breakpoints: map.merge(tools.$breakpoints,
-    ($name: $size,
-    ));
+  tools.$breakpoints: map.merge(
+    tools.$breakpoints,
+    (
+      $name: $size,
+    )
+  );
 }

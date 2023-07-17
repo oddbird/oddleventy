@@ -155,6 +155,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('imgSrc', (src) =>
     images.image(src, null, null, null, true),
   );
+  eleventyConfig.addFilter('oddNewsTags', (name) => utils.oddNewsTags(name));
 
   // shortcodes
   eleventyConfig.addPairedShortcode('typogr', type.typogr);
