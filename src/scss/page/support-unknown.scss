@@ -38,31 +38,31 @@
 
   @supports not (value) {
     .value-wrap .live {
-      --is-true: /* space toggle */ ;
+      --is-true:  /* space toggle *;
     }
   }
 
   @supports not fn() {
     .empty-fn .live {
-      --is-true: /* space toggle */ ;
+      --is-true:  /* space toggle *;
     }
   }
 
   @supports not fn(value) {
     .fn .live {
-      --is-true: /* space toggle */ ;
+      --is-true:  /* space toggle *;
     }
   }
 
   @supports not (fn()) {
     .empty-wrap .live {
-      --is-true: /* space toggle */ ;
+      --is-true:  /* space toggle *;
     }
   }
 
   @supports not (fn(value)) {
     .wrap-fn .live {
-      --is-true: /* space toggle */ ;
+      --is-true:  /* space toggle *;
     }
   }
 }

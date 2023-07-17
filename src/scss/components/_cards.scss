@@ -11,14 +11,14 @@
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns:
-    var(--page-margin) [nav-start title-start] 1fr [nav-end] var(--page-margin) [title-end];
+    var(--page-margin) [nav-start title-start] 1fr [nav-end] var(--page-margin)
+    [title-end];
   margin: var(--double-gutter) 0;
 
   @include config.above('wide-break') {
     --justify-nav: initial;
 
-    grid-template-columns:
-      var(--page-margin) [nav-start] auto [nav-end title-start] 1fr [title-end];
+    grid-template-columns: var(--page-margin) [nav-start] auto [nav-end title-start] 1fr [title-end];
   }
 
   * {
@@ -32,7 +32,7 @@
 
   color: var(--text-light);
 
-  [data-grid='cards']+& {
+  [data-grid='cards'] + & {
     margin-top: var(--double-gutter);
   }
 }
@@ -68,8 +68,7 @@
 
 [data-card] {
   display: grid;
-  grid-template:
-    [post-start type-start] auto [type-end] 1fr [post-end] / [post-start] 1fr [type-start] auto [type-end post-end];
+  grid-template: [post-start type-start] auto [type-end] 1fr [post-end] / [post-start] 1fr [type-start] auto [type-end post-end];
 }
 
 [data-card='feature'] {

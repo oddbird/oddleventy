@@ -21,22 +21,26 @@
 
 [data-section-title='left'],
 [data-flag='right'] {
-  --flag: polygon(0 0,
-      100% 0,
-      calc(100% - var(--flag-indent, var(--shim))) 50%,
-      100% 100%,
-      0 100%);
+  --flag: polygon(
+    0 0,
+    100% 0,
+    calc(100% - var(--flag-indent, var(--shim))) 50%,
+    100% 100%,
+    0 100%
+  );
 
   padding-right: calc(var(--flag-indent, var(--shim)) + var(--shim));
 }
 
 [data-section-title='right'],
 [data-flag='left'] {
-  --flag: polygon(0 0,
-      100% 0,
-      100% 100%,
-      0 100%,
-      var(--flag-indent, var(--shim)) 50%);
+  --flag: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    var(--flag-indent, var(--shim)) 50%
+  );
 
   padding-left: calc(var(--flag-indent, var(--shim)) + var(--shim));
 }
@@ -114,8 +118,10 @@
 // -----
 
 [data-grid] {
-  --fit--default: minmax(var(---mobile-min, var(--fit-min, var(--grid-item))),
-      var(--fit-max, 1fr));
+  --fit--default: minmax(
+    var(---mobile-min, var(--fit-min, var(--grid-item))),
+    var(--fit-max, 1fr)
+  );
   --column: content;
   --item-title: var(--h3);
   --newline: var(--shim);
@@ -123,9 +129,12 @@
   align-items: var(--align, start);
   display: grid;
   font-size: var(--small);
-  grid: var(--row-template, auto-flow) / var(--col-template,
-      repeat(auto-fit, var(--fit, var(--fit--default))));
-  grid-gap: var(--row-gap, var(--gap, var(--double-gutter))) var(--col-gap, var(--gap, var(--double-gutter)));
+  grid: var(--row-template, auto-flow) / var(
+      --col-template,
+      repeat(auto-fit, var(--fit, var(--fit--default)))
+    );
+  grid-gap: var(--row-gap, var(--gap, var(--double-gutter)))
+    var(--col-gap, var(--gap, var(--double-gutter)));
   justify-content: var(--justify, center);
   justify-items: stretch;
 
@@ -134,7 +143,7 @@
     ---mobile-min: 60%;
   }
 
-  >* {
+  > * {
     max-width: calc(100vw - var(--page-margin));
   }
 }
@@ -160,16 +169,18 @@
 // Container with centered top/bottom triangles
 .has-angles {
   background: var(--callout-fade);
-  clip-path: polygon(0 0,
-      calc(50% - var(--double-gutter)) 0,
-      50% var(--double-gutter),
-      calc(50% + var(--double-gutter)) 0,
-      100% 0,
-      100% calc(100% - var(--double-gutter)),
-      calc(50% + var(--double-gutter)) calc(100% - var(--double-gutter)),
-      50% 100%,
-      calc(50% - var(--double-gutter)) calc(100% - var(--double-gutter)),
-      0 calc(100% - var(--double-gutter)));
+  clip-path: polygon(
+    0 0,
+    calc(50% - var(--double-gutter)) 0,
+    50% var(--double-gutter),
+    calc(50% + var(--double-gutter)) 0,
+    100% 0,
+    100% calc(100% - var(--double-gutter)),
+    calc(50% + var(--double-gutter)) calc(100% - var(--double-gutter)),
+    50% 100%,
+    calc(50% - var(--double-gutter)) calc(100% - var(--double-gutter)),
+    0 calc(100% - var(--double-gutter))
+  );
   margin-bottom: var(--double-gutter);
   margin-top: var(--double-gutter);
   padding: var(--spacer) var(--page-margin) calc(var(--spacer) + var(--gutter));
