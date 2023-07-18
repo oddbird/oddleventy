@@ -1,5 +1,6 @@
 ---
-title: 1. CSS Cascade Layers
+title: CSS Cascade Layers
+episode: 1
 author:
   - miriam
   - ed

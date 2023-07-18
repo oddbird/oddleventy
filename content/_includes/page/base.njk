@@ -12,8 +12,8 @@
 {# is this page a talk/workshop? #}
 {%- set is_talk = tags and ('_talk' in tags) -%}
 
-{# is this page a Winging It page? #}
-{%- set is_wingingit = tags and ('Winging It' in tags) -%}
+{# is this page a Podcast, Video, or Winging It episode page? #}
+{%- set is_episode = tags | pageType('tag') in ['Podcast', 'Video', 'Winging It'] -%}
 
 {# based on the above, what microformats should be applied? #}
 {# see: https://microformats.org/wiki/microformats2 #}

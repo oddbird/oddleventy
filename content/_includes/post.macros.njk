@@ -328,33 +328,42 @@ params:
   prefix='by'
 ) %}
   <p class="byline">
-    {{ by(
-      post.data.author,
-      collections,
-      prefix=none if post.data.venue else prefix,
-      link=links
-    ) }}
-
-    {% if post.data.oss %}
-      {% set plural = not post.data.author | typeCheck('string') %}
-      {% set plural = (post.data.author == 'oddbird') or plural %}
-      {% set plural = false if (post.data.oss == 'core team') else plural %}
-      ({{ post.data.oss }}{{ 's' if plural else '' }})
-    {% endif %}
-
-    {{ linked(
-      venue=post.data.venue,
-      url=(post.data.canonical or post.data.url) if links else none
-    ) }}
-
-    {{ client(post.data.client) }}
-
+    {%- set is_episode = post.data.tags and post.data.tags | pageType('tag') in ['Podcast', 'Video', 'Winging It'] -%}
     {%- set is_talk = post.data.tags and ('_talk' in post.data.tags) -%}
-    {%- set is_wingingit = post.data.tags and ('Winging It' in post.data.tags) -%}
+    {% if is_episode -%}
+      {{ linked(
+        venue=post.data.venue,
+        url=(post.data.canonical or post.data.url) if links else none,
+        prefix='on'
+      )}}
+      {%- if post.data.episode %} episode {{ post.data.episode }}{% endif -%}
+      {{ by(post.data.author, collections, prefix='with', link=links) }}
+    {%- else -%}
+      {{ by(
+        post.data.author,
+        collections,
+        prefix=none if post.data.venue else prefix,
+        link=links
+      ) }}
+
+      {% if post.data.oss %}
+        {% set plural = not post.data.author | typeCheck('string') %}
+        {% set plural = (post.data.author == 'oddbird') or plural %}
+        {% set plural = false if (post.data.oss == 'core team') else plural %}
+        ({{ post.data.oss }}{{ 's' if plural else '' }})
+      {% endif %}
+
+      {{ linked(
+        venue=post.data.venue,
+        url=(post.data.canonical or post.data.url) if links else none
+      ) }}
+
+      {{ client(post.data.client) }}
+    {%- endif %}
     {% if dateformat and not is_talk %}
       {{ pubdate(post.date, post.data.end, dateformat) }}
     {% endif %}
-    {%- if is_wingingit and post.data.length %}
+    {%- if is_episode and post.data.length %}
       | {{ post.data.length }}
     {%- endif %}
   </p>
@@ -568,10 +577,11 @@ params:
 #}
 {% macro linked(
   venue,
-  url
+  url,
+  prefix='at'
 ) -%}
 {%- if venue %}
-  <i>at</i>
+  <i>{{ prefix }}</i>
   {{ utility.link_if(
     content=venue | mdInline | safe,
     url=url,

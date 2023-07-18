@@ -31,19 +31,28 @@
 
     {% if author or client %}
       <p class="byline">
-        {{ post.by(author, collections) }}
-        {{ linked | safe }}
-        {{ post.client(client) }}
-        {%- if not is_talk %}
-          {{ post.pubdate(
-            start=page.date,
-            end=end,
-            format='range' if oss or client else 'long'
-          ) }}
-        {% endif -%}
-        {{ post.where(adr) }}
-        {%- if is_wingingit and length %}
-        | {{ length }}
+        {% if is_episode -%}
+          {{ post.linked(
+            venue=venue,
+            url=canonical or url,
+            prefix='on'
+          )}}
+          {%- if episode %} episode {{ episode }}{% endif -%}
+          {{ post.by(author, collections, prefix='with') }}
+          {{ post.pubdate(page.date, end) }}
+          {%- if length %} | {{ length }}{% endif -%}
+        {%- else -%}
+          {{ post.by(author, collections) }}
+          {{ linked | safe }}
+          {{ post.client(client) }}
+          {%- if not is_talk %}
+            {{ post.pubdate(
+              start=page.date,
+              end=end,
+              format='range' if oss or client else 'long'
+            ) }}
+          {% endif -%}
+          {{ post.where(adr) }}
         {%- endif %}
       </p>
     {% elif bird and social %}

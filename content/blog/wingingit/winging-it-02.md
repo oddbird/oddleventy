@@ -1,5 +1,6 @@
 ---
-title: 2. htmx
+title: htmx
+episode: 2
 author:
   - ed
   - miriam
