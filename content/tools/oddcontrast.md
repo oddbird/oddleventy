@@ -34,7 +34,7 @@ is back in gamut.
 {{ embed.img(
   src='projects/out-of-gamut.jpg',
   alt='display-p3 light yellow color showing hexidecimal color
-    outside the sRGB gamut and the hsl color outside the hsl gamut'
+    outside the sRGB and HSL gamut'
 ) }}
 
 ## Contrast Checker for Accessibility
