@@ -26,7 +26,7 @@ summary: |
 
 ## Support for Newer Color Formats and Spaces
 
-In additional to Oklch, Oklab, and P3, OddContrast also includes hex, HSL, lab,
+In additional to Oklch, Oklab, and P3, OddContrast also includes hex, HSL, Lab,
 LCH, and sRGB. Enter a color from any color space and convert the color to any
 other space. OddContrast provides an alert if the color you entered is out of
 gamut for a given color space. Adjust the sliders until your desired color space
