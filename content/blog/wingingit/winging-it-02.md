@@ -1,11 +1,13 @@
 ---
+eleventyExcludeFromCollections: true
+permalink: false
 title: htmx
 episode: 2
 author:
   - ed
   - miriam
   - sondra
-date: 2023-07-10
+date: 2023-08-31
 action:
   text: Watch on YouTube »
   url: https://www.youtube.com/@wingingitoddbird
