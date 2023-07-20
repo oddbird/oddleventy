@@ -8,17 +8,22 @@ author:
   - miriam
   - sondra
 date: 2023-08-31
-action:
-  text: Watch on YouTube »
-  url: https://www.youtube.com/@wingingitoddbird
 tags:
   - htmx
 length: 60 mins
 image:
   src: winging-it/winging-it-2.jpg
+media:
+  - iframe: https://www.youtube.com/embed/FwICaSE8iuY
 summary: |
   htmx summary
 ---
+
+{% import "embed.macros.njk" as embed %}
+
+{{ embed.figure(
+  data=media
+) }}
 
 ## What we cover:
 

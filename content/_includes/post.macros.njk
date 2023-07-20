@@ -89,13 +89,15 @@ params:
   {%- set posts = collections[type] -%}
   {%- if posts | length > 0 -%}
     {%- set recents = posts | isType(type) | pageYears | reverse | removePage(page_url) | onlyShow(limit) -%}
-    {%- set year_title = ['Recent', banner_title] | join(' ') -%}
-    {{ list(
-      recents,
-      collections=collections,
-      title=year_title,
-      override_feature=true
-    ) }}
+    {%- if recents | length -%}
+      {%- set year_title = ['Recent', banner_title] | join(' ') -%}
+      {{ list(
+        recents,
+        collections=collections,
+        title=year_title,
+        override_feature=true
+      ) }}
+    {%- endif -%}
   {%- endif -%}
 {% endmacro %}
 
