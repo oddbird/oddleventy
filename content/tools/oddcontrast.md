@@ -30,23 +30,24 @@ summary: |
 ## Support for Newer Color Formats and Spaces
 
 In additional to Oklch, Oklab, and P3, OddContrast also includes hex, HSL, Lab,
-LCH, and sRGB. Enter a color from the available color formats and convert it to any other supported format. OddContrast provides an alert if the color you entered is out of
-gamut for a given color space. Adjust the sliders until your desired color
-is back in gamut.
+LCH, and sRGB. Enter a color from the available color formats and convert it to
+any other supported format. OddContrast provides an alert if the color you
+entered is out of gamut for a given color space. Adjust the sliders until your
+desired color is back in gamut.
 
 {{ embed.img(
   src='projects/out-of-gamut.jpg',
   alt='display-p3 light yellow color showing hexidecimal color
-    outside the sRGB and HSL gamut'
+    outside the sRGB and HSL gamuts'
 ) }}
 
 ## Contrast Checker for Accessibility
 
 OddContrast checks the contrast ratio between two colors and displays pass or
 fail information based on the WCAG 2 accessibility standards for AA and AAA in
-normal and large font sizes. If you need a reminder of the contrast ratio requirements
-or what font size qualifies as large, OddContrast provides helpful tips and a
-link to learn more.
+normal and large font sizes. If you need a reminder of the contrast ratio
+requirements or what font size qualifies as large, OddContrast provides helpful
+tips and a link to learn more.
 
 {{ embed.img(
   src='projects/color-ratio.jpg',
