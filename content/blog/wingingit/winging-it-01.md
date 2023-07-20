@@ -5,21 +5,26 @@ author:
   - miriam
   - ed
   - stacy
-date: 2023-07-09
+date: 2023-07-20
 tags:
   - CSS
   - Cascade Layers
 length: 40 mins
-action:
-  text: Watch on YouTube »
-  url: https://youtu.be/FwICaSE8iuY
 image:
   src: winging-it/winging-it-1.jpg
+media:
+  - iframe: https://www.youtube.com/embed/FwICaSE8iuY
 summary: |
   If you've ever found yourself in a specificity war, you'll understand how
   important having control over style priority can be. During our conversation,
   we discussed what CSS Layers are and how you can use them in your project.
 ---
+
+{% import "embed.macros.njk" as embed %}
+
+{{ embed.figure(
+  data=media
+) }}
 
 ## What we cover:
 
