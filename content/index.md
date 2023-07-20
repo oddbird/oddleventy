@@ -39,6 +39,7 @@ tools:
   - /susy/
   - /accoutrement/
   - /herman/
+  - /oddcontrast/
   - /true/
 ---
 
