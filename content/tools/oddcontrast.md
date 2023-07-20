@@ -14,7 +14,7 @@ links:
   site: https://www.oddcontrast.com/
   source: https://github.com/oddbird/oddcontrast
 summary: |
-  OddContrast is a color space converter,
+  OddContrast is a color format converter,
   featuring newer color formats like
   Oklch, Oklab, and the Display P3 color space.
   It's also a color contrast checker
