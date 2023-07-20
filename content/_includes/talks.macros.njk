@@ -112,7 +112,7 @@ params:
   compact=false,
   show_links=true
 ) %}
-  {%- if events and (events | length > 0) -%}
+  {%- if events and (events | length) -%}
     {%- set events = events | sort(all, false, 'date') -%}
     {%- set future = events | getFuture if (all and compact) else none -%}
     {%- set has_future = future and future.length > 0 -%}
@@ -194,7 +194,7 @@ params:
     }
   ] | selectattr('url') -%}
 
-  {% if links | length > 0 %}
+  {% if links | length %}
     <ul class="event-links" inline-list="comma">
       {%- for link in links -%}
         <li class="event-link">

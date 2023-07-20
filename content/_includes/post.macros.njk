@@ -38,7 +38,7 @@ params:
   pagination=none,
   label='Posts'
 ) %}
-  {%- if posts | length > 0 -%}
+  {%- if posts | length -%}
     {%- if posts | length > above -%}
       {%- for group in posts | eventSort | byYear -%}
         {% set title = [group.year, label] | join(' ') if loop.first else group.year %}
@@ -87,7 +87,7 @@ params:
   page_url=''
 ) %}
   {%- set posts = collections[type] -%}
-  {%- if posts | length > 0 -%}
+  {%- if posts | length -%}
     {%- set recents = posts | isType(type) | pageYears | reverse | removePage(page_url) | onlyShow(limit) -%}
     {%- if recents | length -%}
       {%- set year_title = ['Recent', banner_title] | join(' ') -%}
