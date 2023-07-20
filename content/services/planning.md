@@ -207,25 +207,25 @@ take the leap into creating your web project!
 
 {{ embed.icon_block(planning1) }}
 
-{% call embed.figure(
+{{ embed.figure(
+  data=[{
+    img: 'pages/interactive-prototypes.png',
+    alt: 'wireframe showing multiple screen sizes on list and map views'
+  }],
+  class='extend-large',
   caption='Sample Interactive Wireframe showing one laptop sized screen and the mobile view of the same content with clickable links.'
-) %}
-  {{ embed.img(
-    src='pages/interactive-prototypes.png',
-    attrs={'class': 'extend-large'}
-  ) }}
-{% endcall %}
+) }}
 
 {{ embed.icon_block(planning2) }}
 
-{% call embed.figure(
+{{ embed.figure(
+  data=[{
+    img: 'pages/object-map.jpg',
+    alt: 'Organizing content with Trello cards and columns'
+  }],
+  class='extend-large',
   caption='Sample Object Map of Mighty Networks web application showing objects, content & metadata attributes, and the relationships between objects.'
-) %}
-  {{ embed.img(
-    src='pages/object-map.jpg',
-    attrs={'class': 'size-full align-center'}
-  ) }}
-{% endcall %}
+) }}
 
 {{ embed.icon_block(planning3) }}
 
@@ -240,11 +240,10 @@ lives easier.
 
 {{ embed.icon_block(industry) }}
 
-{% call embed.figure(
+{{ embed.figure(
+  data=[{
+    img: 'pages/web-app-survey.jpg',
+    alt: 'Survey asking people about their website preferences.'
+  }],
   caption='Sample User Survey using Google Forms.'
-) %}
-  {{ embed.img(
-    src='pages/web-app-survey.jpg',
-    attrs={'class': 'size-full align-center'}
-  ) }}
-{% endcall %}
+) }}

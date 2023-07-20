@@ -201,12 +201,12 @@ These colors were communicated via Pivotal Tracker and coded as Sass
 Maps to establish front-end development patterns as well as an automated
 "living" [style guide].
 
-{{ embed.img(
-  src='work/quarqnet/communication.png',
-  alt='user story in Pivotal Tracker and Sass color maps',
-  attrs={
-    'class': 'extend-large'
-  }
+{{ embed.figure(
+  data=[{
+    img: 'work/quarqnet/communication.png',
+    alt: 'user story in Pivotal Tracker and Sass color maps'
+  }],
+  class='extend-large'
 ) }}
 
 [style guide]: https://quarqnet.com/styleguide/config-colors.html
@@ -251,12 +251,12 @@ scannable layout for the activity data. We don't linger too long on this
 step or attempt pixel perfection, as new UX problems nearly always
 present themselves during implementation.
 
-{{ embed.img(
-  src='work/quarqnet/mockup1.png',
-  alt='initial mockups of activity map and data',
-  attrs={
-    'class': 'extend-large'
-  }
+{{ embed.figure(
+  data=[{
+    img: 'work/quarqnet/mockup1.png',
+    alt: 'initial mockups of activity map and data'
+  }],
+  class='extend-large'
 ) }}
 
 [Adobe XD]: https://www.adobe.com/products/xd.html
@@ -272,12 +272,12 @@ calls to demo, discuss, pair, and re-design features. For this user
 story we improved the dotted line, font size, and spacing of the
 activity data within the browser.
 
-{{ embed.img(
-  src='work/quarqnet/implementation.png',
-  alt='initial implementation of activity map and data',
-  attrs={
-    'class': 'extend-large'
-  }
+{{ embed.figure(
+  data=[{
+    img: 'work/quarqnet/implementation.png',
+    alt: 'initial implementation of activity map and data'
+  }],
+  class='extend-large'
 ) }}
 
 ## Iteration Process
@@ -307,12 +307,12 @@ Back to the sketch pad. The new proposal? Clarify wording, add a
 collapsed view, make the tabs more compact, and move navigation to the
 bottom of the activity box.
 
-{{ embed.img(
-  src='work/quarqnet/compact.png',
-  alt='sketch of new, compact navigation',
-  attrs={
-    'class': 'extend-full'
-  }
+{{ embed.figure(
+  data=[{
+    img: 'work/quarqnet/compact.png',
+    alt: 'sketch of new, compact navigation'
+  }],
+  class='extend-full'
 ) }}
 
 ### Interactive Sketch
@@ -323,12 +323,12 @@ mockup. The blue boxes below represent click targets and demonstrate the
 user flow between activity list, data, and collapsed views. Play with
 the interactive [InVision sketch].
 
-{{ embed.img(
-  src='work/quarqnet/interactive.png',
-  alt='interactive sketch of new, compact navigation',
-  attrs={
-    'class': 'extend-large'
-  }
+{{ embed.figure(
+  data=[{
+    img: 'work/quarqnet/interactive.png',
+    alt: 'interactive sketch of new, compact navigation'
+  }],
+  class='extend-large'
 ) }}
 
 [InVision sketch]: https://projects.invisionapp.com/share/YC8PAW1K3
@@ -338,12 +338,12 @@ the interactive [InVision sketch].
 A hi-fi mockup added further detail, defining colors, shadows, icons,
 and other visual clues to improve user comprehension of the new flow.
 
-{{ embed.img(
-  src='work/quarqnet/mockup3.jpg',
-  alt='mockup of new, compact navigation',
-  attrs={
-    'class': 'extend-large'
-  }
+{{ embed.figure(
+  data=[{
+    img: 'work/quarqnet/mockup3.jpg',
+    alt: 'mockup of new, compact navigation'
+  }],
+  class='extend-large'
 ) }}
 
 ### Implementation
@@ -351,12 +351,12 @@ and other visual clues to improve user comprehension of the new flow.
 After minor design tweaks in the browser, we had our solution! View the
 current, live application at [QuarqNet.com].
 
-{{ embed.img(
-  src='work/quarqnet/implementation3.png',
-  alt='current, live application tab navigation',
-  attrs={
-    'class': 'extend-large'
-  }
+{{ embed.figure(
+  data=[{
+    img: 'work/quarqnet/implementation3.png',
+    alt: 'current, live application tab navigation'
+  }],
+  class='extend-large'
 ) }}
 
 [QuarqNet.com]: https://www.quarqnet.com/

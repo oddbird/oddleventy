@@ -39,9 +39,9 @@ read, searchable, and collapsible. Below is a screenshot comparing the
 default json view to the enhanced view after enabling this extension.
 
 {{ embed.img(
-  src="blog/2017/tips-tools/before-after-json-viewer.jpg",
-  alt="clean and messy json screenshots",
-  attrs={"class":"img-border img-border"}
+  src='blog/2017/tips-tools/before-after-json-viewer.jpg',
+  alt='clean and messy json screenshots',
+  attrs={'class':'img-shadow'}
 ) }}
 
 [David Glick]: /authors/david/
@@ -59,9 +59,8 @@ details of a modification, or revert a change. Jonny uses the plugin
 with [Sublime Text], but there are versions for [most text editors].
 
 {{ embed.img(
-  src="blog/2017/tips-tools/gitgutter.jpg",
-  alt="screenshot of the Git Gutter plugin in use",
-  attrs={"class":"align-center"}
+  src='blog/2017/tips-tools/gitgutter.jpg',
+  alt='screenshot of the Git Gutter plugin in use'
 ) }}
 
 [Jonny Gerig Meyer]: /authors/jonny/
@@ -94,8 +93,9 @@ realizing how vital it is until you use someone else’s computer. Two of
 [searchable clipboard].
 
 {{ embed.img(
-  src="blog/2017/tips-tools/alfred-launcher.jpg",
-  alt="screenshot of the Alfred application launcher in use"
+  src='blog/2017/tips-tools/alfred-launcher.jpg',
+  alt='screenshot of the Alfred application launcher in use',
+  attrs={'class':'img-shadow'}
 ) }}
 
 The launcher allows you to find and open files or applications on your
@@ -191,8 +191,8 @@ I used six single-line fill-in fields for the breakpoint names and
 values. Breakpoints can be added or removed later if necessary.
 
 {{ embed.img(
-  src="blog/2017/tips-tools/fill-ins.jpg",
-  alt="Fill-in text dialog box"
+  src='blog/2017/tips-tools/fill-ins.jpg',
+  alt='Fill-in text dialog box'
 ) }}
 
 This snippet is very useful when you need a fast way to easily see which

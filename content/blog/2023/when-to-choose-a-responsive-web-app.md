@@ -2,7 +2,7 @@
 title: When to Choose a Responsive Web App
 sub: Part 1 -- Responsive Web App vs Native Mobile App vs Progressive Web App
 author: sondra
-date: 2023-05-05
+date: 2023-07-11
 tags:
   - Article
   - Business Development
@@ -30,7 +30,9 @@ summary: |
   one platform over another.
   Let's start with responsive web apps.
 ---
+
 {% import 'embed.macros.njk' as embed %}
+{% import 'oddnews.macros.njk' as oddnews %}
 
 You have an idea for a custom digital product you'd like to build, and it's time
 to decide how to build it. One of your friends swears you won't succeed unless
@@ -46,9 +48,9 @@ what their most pressing needs are, and how your app will meet those needs.
 
 <!-- **Read all three parts to compare app types:**
 
-1. [When to Choose a Responsive Web App](/2023/05/05/when-to-choose-a-responsive-web-app/)
-2. [When to Choose a Native Mobile App](/2023/06/07/when-to-choose-a-native-mobile-app/)
-3. [When to Choose a Progressive Web App](/2023/07/05/when-to-choose-a-progressive-web-app/) -->
+1. [When to Choose a Responsive Web App](/2023/07/11/when-to-choose-a-responsive-web-app/)
+2. [When to Choose a Native Mobile App](/2023/08/01/when-to-choose-a-native-mobile-app/)
+3. [When to Choose a Progressive Web App](/2023/09/01/when-to-choose-a-progressive-web-app/) -->
 
 ## What are Responsive Web Apps, Native Mobile Apps, and Progressive Web Apps?
 
@@ -65,14 +67,13 @@ Here are the biggest differences in a nutshell.
 
 {{ embed.img(
   src='blog/2023/app-comparison-chart.jpg',
-  alt='A comparison chart showing the differences between
-    responsive web apps, progressive web apps, and native
-    mobile apps [summary](/rwa-pwa-native-comparison-chart-summary/)'
+  alt='A chart that summarizes this article series comparing responsive web
+    apps, progressive web apps, and native mobile apps.'
 ) }}
 
 ## Responsive Web Apps -- Best for Wide Reach
 
-> **tl;dr**
+> **TL;DR** --
 > If your top priority is to reach as wide a range of
 > people as possible, as quickly as possible, while keeping
 > development and maintenance costs down, a responsive web app is
@@ -221,8 +222,10 @@ mobile device's GPS for geofencing or access to light and proximity sensors,
 then an RWA won't work.
 
 It is *possible* to access some advanced device features in the context of an
-RWA, but then you would be moving into the [progressive web
-app](/2023/07/05/when-to-choose-a-progressive-web-app/) space.
+RWA, but then you would be moving into the [progressive web app][pwa] space.
+
+<!-- [pwa]: /2023/09/01/when-to-choose-a-progressive-web-app/ -->
+[pwa]: https://web.dev/progressive-web-apps/
 
 ### Performance Limitations
 *Don't choose a responsive web app when you need advanced performance.*
@@ -270,7 +273,11 @@ mobile apps.
 Curious about native mobile apps? Sign up for OddNews to be notified when **Part
 2 -- When to Choose a Native Mobile App** hits the OddBlog.
 
-^^ADD SIGN UP FORM HERE^^
+{{ oddnews.oddnews_signup(
+  heading=false,
+  tag='oddblog',
+  class='oddnews-form-main'
+) }}
 
 <!-- Is a **native mobile app** right for your digital project? Read more about
-[When to Choose a Native Mobile App](/2023/06/07/when-to-choose-a-native-mobile-app/). -->
+[When to Choose a Native Mobile App](/2023/08/01/when-to-choose-a-native-mobile-app/). -->

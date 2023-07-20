@@ -65,4 +65,29 @@ const onlyShow = (array, n) => {
   return array.slice(0, n);
 };
 
-module.exports = { typeCheck, styles, onlyShow };
+/* @docs
+label: oddNewsTags
+category: Filter
+note: |
+  Returns the matching mailchimp form tag
+  for the page where the signup form lives |
+
+params:
+  name:
+    type: string
+    note: name of page such as 'footer'
+*/
+const oddNewsTags = (name) => {
+  switch (name) {
+    case 'footer':
+      return '6264369';
+    case 'oddblog':
+      return '6265233';
+    case 'oddnews':
+      return '6265089';
+    default:
+      return '';
+  }
+};
+
+module.exports = { typeCheck, styles, onlyShow, oddNewsTags };
