@@ -73,7 +73,6 @@ Here are the biggest differences in a nutshell.
 ## Responsive Web Apps -- Best for Wide Reach
 
 > **tl;dr**
->
 > If your top priority is to reach as wide a range of
 > people as possible, as quickly as possible, while keeping
 > development and maintenance costs down, a responsive web app is

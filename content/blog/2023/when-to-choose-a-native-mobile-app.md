@@ -43,7 +43,6 @@ App](/2023/05/05/when-to-choose-a-responsive-web-app/)
 ## Native Mobile App -- Best for Advanced Capabilities
 
 > **tl;dr**
->
 > If your top priority is to provide a high level of specialized
 > capability, especially for a specific mobile device like Android
 > or iPhone, a native mobile app is likely the best option for
