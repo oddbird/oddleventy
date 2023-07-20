@@ -45,16 +45,24 @@ guidelines to help:
 - Tags are Title Case: `User Experience`
 - Tags with multiple words should have spaces instead of dashes unless the
   phrase is hyphenated (e.g. `Server-Side Rendering`).
-- We have 5 Post Types which use the same tag structure but we have promoted on
-  the Posts by Tag (high placement and icon in heading) and Posts by Date (icon
-  displayed) pages. These include:
+- We have several Post Types which use the same tag structure but we have
+  promoted on the Posts by Tag (high placement and icon in heading) and Posts
+  by Date (icon displayed) pages. These include:
   - Article
   - Case Study
   - Link
   - Podcast
   - Video
+  - Winging It
 
 *Case Study* posts include tags for their industry, for example `Technology Sector`
+
+## Images
+
+### Image Sizing
+
+The recommended size for hero images is 1600px x 600px. If the aspect ratio for
+the image is about 3:1 or more, the image will appear shorter on list pages.
 
 ### Image Organization
 
@@ -67,6 +75,7 @@ Type of Content | Source Image Folder
  Testimonials | `quotes`
  Susy | `susy`
  Talks | `talks`
+ Winging It | `winging-it`
  Work | `work/projectname`
  Books | `writing`
 

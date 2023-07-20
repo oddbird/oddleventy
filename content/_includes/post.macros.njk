@@ -38,7 +38,7 @@ params:
   pagination=none,
   label='Posts'
 ) %}
-  {%- if posts | length > 0 -%}
+  {%- if posts | length -%}
     {%- if posts | length > above -%}
       {%- for group in posts | eventSort | byYear -%}
         {% set title = [group.year, label] | join(' ') if loop.first else group.year %}
@@ -50,7 +50,7 @@ params:
         ) }}
       {%- endfor -%}
     {%- else -%}
-      {{ list(posts, collections, pagination=pagination) }}
+      {{ list(posts, collections, title=label, pagination=pagination) }}
     {%- endif -%}
   {%- endif -%}
 {% endmacro %}
@@ -87,15 +87,17 @@ params:
   page_url=''
 ) %}
   {%- set posts = collections[type] -%}
-  {%- if posts | length > 0 -%}
+  {%- if posts | length -%}
     {%- set recents = posts | isType(type) | pageYears | reverse | removePage(page_url) | onlyShow(limit) -%}
-    {%- set year_title = ['Recent', banner_title] | join(' ') -%}
-    {{ list(
-      recents,
-      collections=collections,
-      title=year_title,
-      override_feature=true
-    ) }}
+    {%- if recents | length -%}
+      {%- set year_title = ['Recent', banner_title] | join(' ') -%}
+      {{ list(
+        recents,
+        collections=collections,
+        title=year_title,
+        override_feature=true
+      ) }}
+    {%- endif -%}
   {%- endif -%}
 {% endmacro %}
 
@@ -304,7 +306,7 @@ label: byline
 category: metadata
 note: |
   Generate the post byline with
-  type, authors, venue/client, date, and location
+  type, authors, venue/client, date, location, and length if Winging It
 params:
   post:
     type: 11ty page object
@@ -328,31 +330,44 @@ params:
   prefix='by'
 ) %}
   <p class="byline">
-    {{ by(
-      post.data.author,
-      collections,
-      prefix=none if post.data.venue else prefix,
-      link=links
-    ) }}
-
-    {% if post.data.oss %}
-      {% set plural = not post.data.author | typeCheck('string') %}
-      {% set plural = (post.data.author == 'oddbird') or plural %}
-      {% set plural = false if (post.data.oss == 'core team') else plural %}
-      ({{ post.data.oss }}{{ 's' if plural else '' }})
-    {% endif %}
-
-    {{ linked(
-      venue=post.data.venue,
-      url=(post.data.canonical or post.data.url) if links else none
-    ) }}
-
-    {{ client(post.data.client) }}
-
+    {%- set is_episode = post.data.tags and post.data.tags | pageType('tag') in ['Podcast', 'Video', 'Winging It'] -%}
     {%- set is_talk = post.data.tags and ('_talk' in post.data.tags) -%}
+    {% if is_episode -%}
+      {{ linked(
+        venue=post.data.venue,
+        url=(post.data.canonical or post.data.url) if links else none,
+        prefix='on'
+      )}}
+      {%- if post.data.episode %} episode {{ post.data.episode }}{% endif -%}
+      {{ by(post.data.author, collections, prefix='with', link=links) }}
+    {%- else -%}
+      {{ by(
+        post.data.author,
+        collections,
+        prefix=none if post.data.venue else prefix,
+        link=links
+      ) }}
+
+      {% if post.data.oss %}
+        {% set plural = not post.data.author | typeCheck('string') %}
+        {% set plural = (post.data.author == 'oddbird') or plural %}
+        {% set plural = false if (post.data.oss == 'core team') else plural %}
+        ({{ post.data.oss }}{{ 's' if plural else '' }})
+      {% endif %}
+
+      {{ linked(
+        venue=post.data.venue,
+        url=(post.data.canonical or post.data.url) if links else none
+      ) }}
+
+      {{ client(post.data.client) }}
+    {%- endif %}
     {% if dateformat and not is_talk %}
       {{ pubdate(post.date, post.data.end, dateformat) }}
     {% endif %}
+    {%- if is_episode and post.data.length %}
+      | {{ post.data.length }}
+    {%- endif %}
   </p>
 {% endmacro %}
 
@@ -564,10 +579,11 @@ params:
 #}
 {% macro linked(
   venue,
-  url
+  url,
+  prefix='at'
 ) -%}
 {%- if venue %}
-  <i>at</i>
+  <i>{{ prefix }}</i>
   {{ utility.link_if(
     content=venue | mdInline | safe,
     url=url,
