@@ -10,6 +10,6 @@ action:
   url: https://www.youtube.com/@wingingitoddbird
 summary: |
   Hi, OddFriends! At OddBird, we enjoy connecting and having conversations
-  across disciplines. Join us as we *wing it* and discuss the latest on UX
+  across disciplines. Join us as we *wing it* and discuss the latest in UX
   Design, CSS, JavaScript, Python, and everything in between.
 ---
