@@ -16,7 +16,7 @@ links:
 summary: |
   OddContrast is a color space converter,
   featuring newer color spaces like
-  Oklch, Oklab, and P3.
+  Oklch, Oklab, and the Display P3 color space.
   It's also a color contrast checker
   to help designers meet
   WCAG 2 accessibility standards.
