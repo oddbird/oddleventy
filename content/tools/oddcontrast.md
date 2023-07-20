@@ -41,7 +41,7 @@ is back in gamut.
 
 OddContrast checks the contrast ratio between two colors and displays pass or
 fail information based on the WCAG 2 accessibility standards for AA and AAA in
-normal and large font sizes. If you need a reminder of contrast ratio standard
+normal and large font sizes. If you need a reminder of the contrast ratio requirements
 or what font size qualifies as large, OddContrast provides helpful tips and a
 link to learn more about ratio requirements.
 
