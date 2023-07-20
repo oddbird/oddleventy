@@ -18,7 +18,7 @@ summary: |
   featuring newer color spaces like
   Oklch, Oklab, and P3.
   It's also a color contrast checker
-  to help web designers meet
+  to help designers meet
   WCAG 2 accessibility standards.
 ---
 
