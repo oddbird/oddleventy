@@ -48,8 +48,7 @@ comparison chart for quick reference).
 
 ## Progressive Web App -- Best of Both Worlds
 
-> **tl;dr**
->
+> **TL;DR** --
 > If your top priority is some combination of wide reach and
 > advanced capabilities, you will want to investigate the
 > progressive web app option for your project.

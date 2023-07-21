@@ -103,8 +103,8 @@ params:
   attrs={}
 ) -%}
   {%- set content = _fig_content(data) if (data != none) else caller() -%}
-  {% if content %}
-    {% set class = ['embed', class] | join(' ') | trim %}
+  {%- if content -%}
+    {%- set class = ['embed', class] | join(' ') | trim -%}
     <figure class="{{ class }}" {{ utility.show_attrs(attrs) }}>
       <div class="gallery">
         {{- content | safe -}}
@@ -116,7 +116,7 @@ params:
         </figcaption>
       {%- endif -%}
     </figure>
-  {% endif %}
+  {%- endif -%}
 {%- endmacro %}
 
 
@@ -144,7 +144,7 @@ params:
   width=none,
   caption=none
 ) %}
-  {% if '://' in src %}
+  {%- if '://' in src -%}
     {{ figure(
       data=[{
         'iframe': src,
@@ -153,14 +153,14 @@ params:
       }],
       caption=caption
     ) }}
-  {% else %}
+  {%- else -%}
     {%- set src = '/assets/media/' + src -%}
     {%- set style = {
       'height': height,
       'width': width
     } -%}
     <video src="{{ src }}" {{ utility.style_if(style) }} controls="controls">{{ src | mdInline }}</video>
-  {% endif %}
+  {%- endif -%}
 {% endmacro %}
 
 
@@ -174,7 +174,7 @@ params:
         '--width': item.width,
         '--span': item.span
       } | styles -%}
-      {% set full_width = (loop.length == 1) or (item.span == 'full') or (item.span > 1) %}
+      {%- set full_width = (loop.length == 1) or (item.span == 'full') or (item.span > 1) -%}
       {{- img(
         src=item.img,
         alt=item.alt,
