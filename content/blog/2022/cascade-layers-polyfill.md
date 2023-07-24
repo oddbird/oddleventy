@@ -207,10 +207,6 @@ The plugin also supports this feature since there is an existing PostCSS plugin
 for `@import` that you can leverage. That was an advantage of working within the
 PostCSS ecosystem.
 
-To learn more, we
-[created this demo](https://github.com/oddbird/cascade-layers-polyfill-demo)
-to show how the polyfill is used.
-
 ### So…what does the polyfill not do?
 
 There are some expected limitations of the plugin since it is parsing a
@@ -268,6 +264,10 @@ postcss([
   postcssCascadeLayers(/* pluginOptions */)
 ]).process(YOUR_CSS /*, processOptions */);
 ```
+
+To learn more, we
+[created this demo](https://github.com/oddbird/cascade-layers-polyfill-demo)
+to show how the polyfill is used.
 
 ## Let the layering begin! 🥳
 
