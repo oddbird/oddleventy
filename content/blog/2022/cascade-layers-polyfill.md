@@ -13,6 +13,9 @@ image:
     An image of the PostCSS Cascade Layers Plugin NPM package README
     including the version number, installation command, and a description of the
     package.
+links:
+  package: https://www.npmjs.com/package/@csstools/postcss-cascade-layers
+  demo: https://layers-polyfill-example.netlify.app/
 summary: |
   Cascade layers are an exciting new addition to the CSS specification. A newly
   released polyfill now provides even greater browser support for the feature.
@@ -261,6 +264,10 @@ postcss([
   postcssCascadeLayers(/* pluginOptions */)
 ]).process(YOUR_CSS /*, processOptions */);
 ```
+
+To learn more, check out
+[this demo](https://layers-polyfill-example.netlify.app/)
+to see how the polyfill is used.
 
 ## Let the layering begin! 🥳
 
