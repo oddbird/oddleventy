@@ -13,6 +13,9 @@ image:
     An image of the PostCSS Cascade Layers Plugin NPM package README
     including the version number, installation command, and a description of the
     package.
+links:
+  package: https://www.npmjs.com/package/@csstools/postcss-cascade-layers
+  demo: https://github.com/oddbird/cascade-layers-polyfill-demo
 summary: |
   Cascade layers are an exciting new addition to the CSS specification. A newly
   released polyfill now provides even greater browser support for the feature.
@@ -203,6 +206,10 @@ conjunction with `@import` to create a new layer from an input source like so:
 The plugin also supports this feature since there is an existing PostCSS plugin
 for `@import` that you can leverage. That was an advantage of working within the
 PostCSS ecosystem.
+
+To learn more, we
+[created this demo](https://github.com/oddbird/cascade-layers-polyfill-demo)
+to show how the polyfill is used.
 
 ### So…what does the polyfill not do?
 
