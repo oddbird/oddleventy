@@ -29,6 +29,7 @@ summary: |
   unpacking the reasons to choose
   one platform over another.
   Let's start with responsive web apps.
+home: true
 ---
 
 {% import 'embed.macros.njk' as embed %}

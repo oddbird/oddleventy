@@ -18,7 +18,7 @@
     "sass": "node scripts/compile-sass.cjs",
     "sassdoc": "sassdoc src/scss/**/*.scss",
     "prettier:js": "prettier --write \"**/*.{js,cjs}\"",
-    "lint:other": "prettier --write \"**/*.{json,yml}\"",
+    "lint:other": "prettier --write \"**/*.{json,yml,scss}\"",
     "eslint": "eslint \"*.{js,cjs}\" \"**/*.{js,cjs}\" --fix",
     "lint": "run-p lint:js lint:sass lint:other",
     "lint:js": "run-s prettier:js eslint",

@@ -93,18 +93,16 @@ params:
 
 {# @docs
 label: section_link
-note: Section links are call to action links at the end of sections, they end with the double arrows to direct users
+note: Section links are call-to-action links at the end of sections
 params:
   content:
     type: markdown
-    default: none
-  url:
+  link:
     type: url
-    default: none
 #}
 {% macro section_link(
   content,
   link
 ) %}
-  <a class='section-link' href={{ link }}>{{content | safe}} »</a>
+  <a class="section-link" href={{ link }}>{{ content | safe }} »</a>
 {% endmacro %}

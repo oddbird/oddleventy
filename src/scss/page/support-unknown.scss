@@ -36,30 +36,35 @@
     display: var(--is-true, none);
   }
 
+  /* prettier-ignore */
   @supports not (value) {
     .value-wrap .live {
       --is-true: /* space toggle */ ;
     }
   }
 
+  /* prettier-ignore */
   @supports not fn() {
     .empty-fn .live {
       --is-true: /* space toggle */ ;
     }
   }
 
+  /* prettier-ignore */
   @supports not fn(value) {
     .fn .live {
       --is-true: /* space toggle */ ;
     }
   }
 
+  /* prettier-ignore */
   @supports not (fn()) {
     .empty-wrap .live {
       --is-true: /* space toggle */ ;
     }
   }
 
+  /* prettier-ignore */
   @supports not (fn(value)) {
     .wrap-fn .live {
       --is-true: /* space toggle */ ;

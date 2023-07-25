@@ -256,7 +256,7 @@ export const collection4 = [
     data: {
       title: 'Draft Title',
       tags: ['Link', 'Article'],
-      home: 'feature',
+      home: true,
       events: [
         {
           foo: 'bar',

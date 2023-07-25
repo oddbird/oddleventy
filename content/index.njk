@@ -1,6 +1,5 @@
 ---
 title: Custom Web App Design & Development For Humans
-prebanner: We create
 banner: |
   <span>We Create</span> Custom Web Apps & Design Systems
 image:
@@ -13,9 +12,9 @@ og:
 summary: |
   **We enjoy working with teams** pursuing large-scale projects
   to plan, design, and develop tailor-made web applications and
-  design systems. As industry experts, we'd love to help you
-  improve team workflow, lower maintainance costs, and solve
-  problems with technology that help people.
+  design systems. As **industry experts,** we'd love to help you
+  **improve team workflow, lower maintenance costs,** and **solve
+  problems** that **help people.**
 action:
   text: Talk with us »
   url: /contact/
@@ -46,22 +45,20 @@ tools:
 {% import 'post.macros.njk' as post %}
 
 {{ layout.title('Featured Clients') }}
-
 {{ embed.logos(work, collections.all) }}
-{{ layout.section_link('View work samples', 'https://www.oddbird.net/work/') }}
+{{ layout.section_link('View work samples', '/work/') }}
 
 {{ post.homepage_posts(
    'Article',
    collections,
    class='preview'
 ) }}
-{{ layout.section_link('Browse more posts', 'https://www.oddbird.net/blog/') }}
+{{ layout.section_link('Browse more posts', '/blog/') }}
 
 {{ quotes.find(
   collections.all,
   slugs=['extension', 'goals']
 ) }}
-
 
 {% call embed.media_block(
   media=embed.img(
@@ -71,7 +68,6 @@ tools:
   ),
   use_md=true
 ) %}
-
 **As core contributors to CSS, Sass, and Django**,
 we write the books,
 help create the languages,
@@ -79,26 +75,24 @@ and build the OSS projects
 millions of other developers rely on.
 Bringing that **expertise to your custom web projects,**
 we focus on **accessibility, performance,**
-resilient design systems, and **well-tested code**.
+resilient design systems, and **well-tested code.**
 
 ### Full Range of Services:
 
-<ul>
-  <li>Branding & Logo Design</li>
-  <li>User Research & Concepting</li>
-  <li>UI/UX Design (<em>OOUX</em>)</li>
-  <li>Python & Django on the backend</li>
-  <li>CSS & Sass on the frontend</li>
-  <li>JavaScript (<em>Svelte, Vue, React, Node, etc.</em>)</li>
-  <li>Design Systems & Component Libraries</li>
-  <li>Accessible HTML</li>
-</ul>
+- Branding & Logo Design
+- User Research & Concepting
+- UI/UX Design (*OOUX*)
+- Python & Django on the backend
+- CSS & Sass on the frontend
+- JavaScript (*Svelte, Vue, React, Node, etc.*)
+- Design Systems & Component Libraries
+- Accessible HTML
 {% endcall %}
-{{ layout.section_link('View services & deliverables', 'https://www.oddbird.net/services/') }}
+{{ layout.section_link('View services & deliverables', '/services/') }}
 
 {{ layout.title('Open Source Contributions') }}
 {{ embed.logos(tools, collections.all) }}
-{{ layout.section_link('See open source tools', 'https://www.oddbird.net/tools/') }}
+{{ layout.section_link('See open source tools', '/tools/') }}
 
 {{ quotes.find(
   collections.all,
@@ -110,7 +104,6 @@ resilient design systems, and **well-tested code**.
   attrs={'data-block': 'rotate'},
   use_md=true
 ) %}
-
 {# Use <h2> instead of Markdown to avoid click-to-copy link #}
 <h2>Hi, I'm Miriam</h2>
 
@@ -118,16 +111,16 @@ I co-founded OddBird with my brothers in 2008
 as a **full-stack, boutique agency**
 to provide **custom web application design & development,**
 along with **refactors** for integrated
-**design systems, accessibility, performance, and long-term sustainability**.
+**design systems, accessibility, performance,**
+and **long-term sustainability.**
 
 Since then OddBird has become an industry leader --
 from our work on Django, Sass, and Susy,
 to the **CSS Working Group, Mozilla Developer Channel, Object Oriented UX,**
 and in-depth conference talks on **front-end architecture,** workflow,
-**component libraries,** testing, and **documentation**.
+**component libraries,** testing, and **documentation.**
 
-We'd love to help you thoughtfully **serve people with technology**.
+We'd love to help you thoughtfully **serve people with technology.**
 
 {{ quotes.signature() }}
-
 {% endcall %}

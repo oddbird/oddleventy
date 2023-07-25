@@ -357,21 +357,14 @@ const isType = (collection, type) =>
 label: isHome
 category: Filter
 note: |
-  Filters collection by a given tag,
-  expected to be one of several post "types"
-  (types are defined in the `taxonomy.yaml` data file)
+  Filters collection by `home` data
 params:
   collection:
     type: array
     note: containing 11ty page objects
-  type:
-    type: type
-    note: post type to filter by
 */
 const isHome = (collection) =>
-  collection.filter(
-    (page) => page.data.home === true || page.data.home === 'feature',
-  );
+  collection.filter((page) => Boolean(page.data.home));
 
 module.exports = {
   isPublic,
