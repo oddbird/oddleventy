@@ -95,7 +95,8 @@ params:
         recents,
         collections=collections,
         title=title,
-        override_feature=true
+        override_feature=true,
+        override_large=true
       ) }}
     {%- endif -%}
   {%- endif -%}
@@ -122,6 +123,13 @@ params:
   override_feature:
     type: boolean
     default: 'false'
+  override_large:
+    type: boolean
+    default: 'false'
+  class:
+    type: string
+    note: optional class added to wrapping `<ol>` element
+    default: none
 #}
 {% macro list(
   posts,
@@ -129,6 +137,7 @@ params:
   title='Posts',
   pagination=none,
   override_feature=false,
+  override_large=false,
   class=none
 ) %}
 {%- if posts -%}
@@ -146,7 +155,13 @@ params:
 
   <ol data-grid="cards" {{ utility.attr_if('class', class) }} reversed>
     {%- for post in posts | sort(reverse=true, attribute=sort) -%}
-      {{ item(post, collections, loop, override_feature=override_feature) }}
+      {{ item(
+        post,
+        collections,
+        loop,
+        override_feature=override_feature,
+        override_large=override_large
+      ) }}
     {%- endfor -%}
   </ol>
 {% endif %}
@@ -163,10 +178,13 @@ params:
   collections:
     type: 11ty collections object
     default: none
-  feature:
-    type: boolean | 'large'
+  loop:
+    type: Nunjucks `loop` object -- https://mozilla.github.io/nunjucks/templating.html#for
     default: none
   override_feature:
+    type: boolean
+    default: 'false'
+  override_large:
     type: boolean
     default: 'false'
 #}
@@ -174,13 +192,13 @@ params:
   post,
   collections=none,
   loop=none,
-  override_feature=false
+  override_feature=false,
+  override_large=false
 ) %}
   {%- set type = post.data.tags | pageType -%}
   {%- set card = post.data.card or none -%}
-  {%- set card = 'feature' if (card == 'feature') else card -%}
-  {%- set card = card or 'feature' if type.feature else card -%}
-  {%- set card = none if override_feature else card -%}
+  {%- set card = 'feature' if (override_large and card === 'large') else card -%}
+  {%- set card = none if (override_feature and card === 'feature') else card -%}
 
   {# Adjust card settings based on the number of posts in a list #}
   {% if loop %}
@@ -463,10 +481,10 @@ label: subtitle
 category: metadata
 note: Generate each post in a list
 params:
-  post:
-    type: 11ty page object
-  collections:
-    type: 11ty collections object
+  sub:
+    type: markdown
+  class:
+    type: string
     default: none
 #}
 {% macro subtitle(
@@ -782,7 +800,7 @@ params:
         featured,
         collections=collections,
         title=banner_title,
-        override_feature=true,
+        override_large=true,
         class=class
       ) }}
     {%- endif -%}
