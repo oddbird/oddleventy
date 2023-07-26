@@ -29,7 +29,7 @@ But a number of months ago we started seeing lots of this:
 {{ embed.img(
   src='blog/2017/ga-spam/ga-spam.jpg',
   alt='Google Analytics spam',
-  attrs={'class': 'img-border'}
+  attrs={'class': 'img-shadow'}
 ) }}
 
 It's not a new problem, but it's particularly problematic for smaller
@@ -39,7 +39,7 @@ accounting for anywhere from ten to ninety (!) percent of our sessions.
 {{ embed.img(
   src='blog/2017/ga-spam/sessions.jpg',
   alt='Google Analytics total sessions and filtered (non-spam) sessions',
-  attrs={'class': 'img-border'}
+  attrs={'class': 'img-shadow'}
 ) }}
 
 
@@ -120,7 +120,6 @@ analytics data:
 ```js
 const devHosts = [
   // List your local development servers
-  'oddsite.hexxie.com:3000',
   'localhost:3000',
   '127.0.0.1:3000'
 ];

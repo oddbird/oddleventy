@@ -116,3 +116,52 @@
     justify-self: auto;
   }
 }
+
+// Media Pull
+// ----------
+// Move an image to the left of the content for wide enough screens
+
+.media-pull {
+  --column: page-start;
+
+  @include config.above('xlarge-page') {
+    --column: full-start / page-start;
+
+    grid-row: var(--rowspan);
+    justify-self: end;
+
+    // don't include an inline margin as fallback
+    padding-inline: var(--media-pull-margin, 0);
+
+    // include the margin when used with embed.figure macro
+    &.embed {
+      --media-pull-margin: var(--page-margin);
+    }
+
+    // include the margin when used with embed.img macro on supported browser
+    // fallback will show an image that takes up the full content column
+    @supports (selector(:has(*))) {
+      --media-pull-margin: var(--page-margin);
+    }
+  }
+}
+
+// Image Utilities
+// ---------------
+
+.img-shadow {
+  box-shadow: 0 0 var(--quarter-shim) var(--shadow);
+}
+
+// The img.embed macro currently wraps the <picture> element in a `p` tag when
+// used in markdown files.
+// The following CSS will allow application of image utilities,
+// like extend-large to the img.embed macro
+p:has(> picture:only-child) {
+  display: contents;
+
+  img {
+    grid-column: var(--column, page);
+    margin-block: var(--newline);
+  }
+}

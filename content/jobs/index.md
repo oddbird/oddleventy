@@ -16,7 +16,7 @@ in our full
 {% import 'utility.macros.njk' as utility %}
 {% set jobs = collections.all | withData('data.position', 'open') %}
 
-{% if jobs | length > 0 %}
+{% if jobs | length %}
 
 ## Open Positions:
 

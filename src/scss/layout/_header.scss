@@ -34,7 +34,7 @@
     padding: 0 var(--page-margin);
   }
 
-  @media (min-width: 35em) and (min-height: 35em) {
+  @media (width >= 35em) and (height >= 35em) {
     --clip-overlap: var(--h1);
   }
 

@@ -11,16 +11,18 @@ describe('fromTaxonomy', () => {
         url: '/talks/',
         display: 'Talks & Workshops',
       },
-      { tag: 'Podcast', icon: 'audio' },
-      { tag: 'Video', icon: 'video' },
-      { tag: 'Link', icon: 'link' },
-      { tag: 'Case Study', icon: 'tools' },
-      { tag: 'Article', icon: 'news' },
+      { tag: 'Podcast', icon: 'audio', plural: 'Podcasts' },
+      { tag: 'Video', icon: 'video', plural: 'Videos' },
+      { tag: 'Link', icon: 'link', plural: 'Links' },
+      { tag: 'Case Study', icon: 'tools', plural: 'Case Studies' },
+      { tag: 'Article', icon: 'news', plural: 'Articles' },
+      { tag: 'Winging It', icon: 'winging-it-lines', plural: 'Episodes' },
     ];
 
     expect(fromTaxonomy('post', { icon: 'news' })).toEqual({
       tag: 'Article',
       icon: 'news',
+      plural: 'Articles',
     });
     expect(fromTaxonomy('post', { icon: 'news' }, 'tag')).toBe('Article');
     expect(fromTaxonomy('post')).toEqual(allPosts);
@@ -41,6 +43,7 @@ describe('pageType', () => {
 
     expect(pageType(['foo', 'Podcast'])).toEqual(podcast);
     expect(pageType(['foo', 'Podcast'], 'tag')).toEqual(podcast.tag);
+    expect(pageType('Podcast', 'plural')).toEqual(podcast.plural);
     expect(pageType('Podcast', 'icon')).toEqual(podcast.icon);
     expect(pageType('Podcast')).toBe(podcast);
     expect(pageType('foo')).toBe(false);

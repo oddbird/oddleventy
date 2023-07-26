@@ -1,5 +1,6 @@
 {% import 'contact.macros.njk' as contact %}
 {% import 'utility.macros.njk' as utility %}
+{% import 'oddnews.macros.njk' as oddnews %}
 
 {%- set add_cta = page.url | addCallToAction -%}
 {%- set footer_title = "Let's chat about your web project" -%}
@@ -14,7 +15,7 @@
   {% include 'site/cta.njk' %}
 {% endif -%}
 
-<div data-layout="footer">
+<div data-layout="footer" data-footer="{{ 'contact' if (page.url == '/contact/') }}">
   {% if page.url != '/contact/' %}
     <aside aria-label="contact">
       {%- if not add_cta %}
@@ -25,6 +26,12 @@
       {% endif -%}
       {{ contact.form(name='contact-footer') }}
     </aside>
+  {% endif %}
+
+  {% if page.url != '/oddnews/' %}
+    {{ oddnews.oddnews_signup(
+      class='oddnews-form-footer'
+    ) }}
   {% endif %}
 
   <footer role="contentinfo">

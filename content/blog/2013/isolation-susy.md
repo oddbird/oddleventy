@@ -70,7 +70,7 @@ are positioned absolutely.
 [sub-pixel rounding]: https://johnresig.com/blog/sub-pixel-problems-in-css/
 [demo]: https://johnalbin.github.io/fluid-grid-rounding-errors/
 [solution]: https://www.palantir.net/blog/responsive-design-s-dirty-little-secret
-[isolate any grid element in susy]: https://susyone.oddbird.net/guides/reference/#ref-helper-isolation
+[isolate any grid element in susy]: https://susy.readthedocs.io/susyone/#isolation
 
 ## Isolation Grid
 
@@ -123,4 +123,4 @@ This can be especially useful to bleed across `$grid-padding`. Simply
 
 Happy coding!
 
-[bleed]: https://susyone.oddbird.net/guides/reference/#ref-bleed
+[bleed]: https://susy.readthedocs.io/susyone/#bleed

@@ -14,10 +14,8 @@ const { anchorLinkIconString } = require('../../src/js/clickToCopy.cjs');
 
 const mdown = markdown({
   html: true,
-  breaks: false,
   typographer: true,
 })
-  .disable('code')
   .use(mdAnchor, {
     level: [2],
     permalink: mdAnchor.permalink.linkAfterHeader({
@@ -45,31 +43,18 @@ links:
 params:
   content:
     type: string
-  inline:
-    type: boolean
-    default: 'false'
-    note: |
-      Inline typesetting removes the "widont" filter
-      if the text has fewer than 5 words
 */
-const typogr = (content, inline = false) => {
-  if (content) {
-    // if this is inline text with less than 5 words
-    // avoid the "widont" feature
-    return inline && content.split(' ').length < 5
-      ? typogrify(content)
-          .chain()
-          .amp()
-          .smartypants()
-          .initQuotes()
-          .caps()
-          .ord()
-          .value()
-      : typogrify.typogrify(content);
-  }
-
-  return content;
-};
+const typogr = (content) =>
+  content
+    ? typogrify(content)
+        .chain()
+        .amp()
+        .smartypants()
+        .caps()
+        .initQuotes()
+        .ord()
+        .value()
+    : content;
 
 /* @docs
 label: md
@@ -79,18 +64,17 @@ params:
   content:
     type: string
 */
-const md = (content) => (content ? typogr(mdown.render(content)) : content);
+const md = (content) => (content ? mdown.render(content) : content);
 
 /* @docs
 label: mdInline
 category: typesetting
-note: Inline markdown with inline typesetting
+note: Inline markdown with typesetting
 params:
   content:
     type: string
 */
-const mdInline = (content) =>
-  content ? typogr(mdown.renderInline(content), true) : content;
+const mdInline = (content) => (content ? mdown.renderInline(content) : content);
 
 /* @docs
 label: elide

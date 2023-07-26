@@ -24,8 +24,7 @@
 @include tools.add-colors(meta.module-variables('background'));
 @include tools.add-colors(meta.module-variables('ccs-defaults'));
 @include tools.add-colors(meta.module-variables('content'));
-@include tools.add-colors(meta.module-variables('content'));
-
+@include tools.add-colors(meta.module-variables('color-config'));
 @include tools.add-changes(meta.module-variables('changes'));
 @include tools.add-times(meta.module-variables('times'));
 

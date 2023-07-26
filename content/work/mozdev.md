@@ -27,7 +27,7 @@ press:
       many implementation details will be less baffling to you.
     name: Eric Eggert
     title: Accessibility Advocate
-    url: https://mobile.twitter.com/yatil/status/1179359053572640770
+    url: https://twitter.com/yatil/status/1179359053572640770
     icon: social/twitter-circle
     slug: basic-principles
 summary: |

@@ -9,6 +9,7 @@
 }
 
 $rainbow: ();
+
 @for $hue from 1 through 36 {
   $rainbow: list.append($rainbow, hsl($hue * 10, 80%, 40%), comma);
 }
@@ -33,6 +34,10 @@ $rainbow: ();
 [data-ccs-input='contrast'] {
   background-image: linear-gradient(to right, gray, white),
     linear-gradient(to right, gray, black);
-  background-size: 100% 50%, 100% 100%;
-  background-position: top left, bottom left;
+  background-size:
+    100% 50%,
+    100% 100%;
+  background-position:
+    top left,
+    bottom left;
 }

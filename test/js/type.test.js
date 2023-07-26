@@ -5,8 +5,7 @@ import { callout, elide, heading, md, mdInline, typogr } from '#/type';
 import { anchorLinkIconString } from '../../src/js/clickToCopy';
 const markdown = '## Lorem ipsum dolor sit amet, consectetur';
 const content = 'Lorem ipsum dolor sit amet, consectetur';
-const typogrd =
-  'Lorem ipsum dolor sit amet,<span class="widont">&nbsp;</span>consectetur';
+const typogrd = 'Lorem ipsum dolor sit amet, consectetur';
 const slugifyd = 'lorem-ipsum-dolor-sit-amet%2C-consectetur';
 
 describe('typography filters', () => {
@@ -17,7 +16,7 @@ describe('typography filters', () => {
   });
 
   test('md', () => {
-    const expected = `<div class="anchor-link-wrapper">\n<h2 id="${slugifyd}" tabindex="-1">${typogrd}</h2>\n<a class="header-anchor" href="#lorem-ipsum-dolor-sit-amet%2C-consectetur"><span aria-hidden="true">${anchorLinkIconString}</span> <span class="sr-only">Copy permalink to “Lorem ipsum dolor sit amet, consectetur”</span></a></div>\n`;
+    const expected = `<div class="anchor-link-wrapper">\n<h2 id="${slugifyd}" tabindex="-1">${content}</h2>\n<a class="header-anchor" href="#lorem-ipsum-dolor-sit-amet%2C-consectetur"><span aria-hidden="true">${anchorLinkIconString}</span> <span class="sr-only">Copy permalink to “Lorem ipsum dolor sit amet, consectetur”</span></a></div>\n`;
 
     expect(md()).toBeUndefined();
     expect(md(markdown)).toEqual(expected);

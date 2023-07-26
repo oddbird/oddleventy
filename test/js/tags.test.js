@@ -43,14 +43,14 @@ describe('tag filters', () => {
       {
         is_type: true,
         tag: 'Link',
-        type: { tag: 'Link', icon: 'link' },
+        type: { tag: 'Link', icon: 'link', plural: 'Links' },
         url: '/tags/link/',
         pageCount: 0,
       },
       {
         is_type: true,
         tag: 'Video',
-        type: { tag: 'Video', icon: 'video' },
+        type: { tag: 'Video', icon: 'video', plural: 'Videos' },
         url: '/tags/video/',
         pageCount: 5,
       },

@@ -23,7 +23,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setWatchThrottleWaitTime(100);
   eleventyConfig.addPlugin(rss);
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    errorOnInvalidLanguage: true,
+  });
 
   // pass-through
   eleventyConfig.addPassthroughCopy({ _built: 'assets' });
@@ -31,6 +33,10 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPassthroughCopy('content/robots.txt');
   eleventyConfig.addPassthroughCopy('content/favicon.ico');
+
+  // https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
+  // Used because: https://github.com/11ty/eleventy/issues/2297
+  eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
 
   // collections
   eleventyConfig.addCollection('birds', (collection) =>
@@ -116,6 +122,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('removePage', pages.removePage);
   eleventyConfig.addFilter('addCallToAction', pages.addCallToAction);
   eleventyConfig.addFilter('isType', pages.isType);
+  eleventyConfig.addFilter('isHome', pages.isHome);
 
   eleventyConfig.addFilter('fromTaxonomy', taxonomy.fromTaxonomy);
   eleventyConfig.addFilter('ossGroups', taxonomy.ossGroups);
@@ -148,8 +155,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('imgSrc', (src) =>
     images.image(src, null, null, null, true),
   );
+  eleventyConfig.addFilter('oddNewsTags', (name) => utils.oddNewsTags(name));
 
   // shortcodes
+  eleventyConfig.addPairedShortcode('typogr', type.typogr);
   eleventyConfig.addPairedShortcode('md', type.md);
   eleventyConfig.addPairedShortcode('mdInline', type.mdInline);
   eleventyConfig.addPairedShortcode('h', type.heading);

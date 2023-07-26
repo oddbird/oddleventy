@@ -59,7 +59,7 @@ background when I’m finished.
 {{ embed.img(
   src='blog/2017/get-started-designing/santamaria.jpg',
   alt='Website by Jason Santa Maria',
-  attrs={'class': 'img-border'}
+  attrs={'class': 'img-shadow'}
 ) }}
 
 According to typography expert [Jason Santa Maria], “If your type is
@@ -111,7 +111,7 @@ testing contrast.
 
 {{ embed.img('blog/2017/get-started-designing/xd.jpg', 'Adobe Experience Design') }}
 
-My new favorite UX design tool, [Adobe Experience Design][1], is still
+My new favorite UX design tool, [Adobe Experience Design], is still
 in beta. XD has a built-in tutorial that’s fun, beautiful, and takes
 less than an hour to complete. I use XD prototypes to flesh out my
 sketches, and to play with colors, typography, and layout. XD is also an
@@ -120,5 +120,5 @@ excellent tool for working out how users will flow through the content.
 What design tools and tutorials have you found most useful? I’d love to
 hear your recommendations. Join the conversation on [Twitter].
 
-[1]: https://www.adobe.com/products/xd.html
+[Adobe Experience Design]: https://www.adobe.com/products/xd.html
 [Twitter]: https://twitter.com/oddbird

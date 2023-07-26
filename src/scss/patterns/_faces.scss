@@ -17,7 +17,7 @@
 [data-nest] {
   transform: translate(var(--x, 0), var(--y, var(--row, 0)));
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     --row: 80px;
   }
 }
@@ -26,37 +26,27 @@
   --x: -30px;
 }
 
-[data-nest='olu'] {
-  --x: 365px;
-  --y: 55px;
-}
-
 [data-nest='stacy'] {
-  --x: 695px;
+  --x: 375px;
 }
 
 [data-nest='davidh'] {
-  --x: 1010px;
+  --x: 705px;
 }
 
 [data-nest='sondra'] {
-  --x: 1305px;
+  --x: 1025px;
 }
 
 [data-nest='miriam'] {
-  --x: 1660px;
+  --x: 1390px;
 }
 
 [data-nest='sana'] {
-  --x: 1980px;
+  --x: 1720px;
 }
 
 [data-nest='ed'] {
-  --x: 2340px;
+  --x: 2090px;
   --y: 100px;
-}
-
-[data-nest='patricia'] {
-  --x: 2695px;
-  --y: -10px;
 }

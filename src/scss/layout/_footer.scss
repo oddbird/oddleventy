@@ -1,3 +1,5 @@
+/* stylelint-disable scss/operator-no-newline-after */
+
 @use '../config';
 
 $two-column: 45em;
@@ -8,16 +10,25 @@ $two-column: 45em;
   display: grid;
   font-size: var(--small);
   grid-area: footer;
-  grid-gap: var(--gutter);
+  grid-gap: var(--page-margin);
+  grid-template: var(
+    --footer-template-sm,
+    'contact' min-content 'oddnews' min-content 'contentinfo' auto / 100%
+  );
   padding: var(--gutter) var(--page-margin) var(--spacer);
 
   @include config.above($two-column) {
-    grid-template-columns: minmax(10em, var(--wide-page)) minmax(
-        10em,
-        var(--page)
-      );
+    grid-template: var(
+      --footer-template-lg,
+      'contact oddnews' min-content 'contact contentinfo' 1fr /
+        minmax(10em, var(--wide-page)) minmax(10em, var(--page))
+    );
     justify-content: space-between;
   }
+}
+
+[aria-label='contact'] {
+  grid-area: contact;
 }
 
 [role='contentinfo'] {
@@ -25,12 +36,12 @@ $two-column: 45em;
   --underline-color: currentcolor;
 
   display: grid;
+  grid-area: contentinfo;
   grid-gap: var(--gutter);
   grid-template-rows: 1fr auto;
-  padding-top: var(--gutter);
 
   @include config.above($two-column) {
-    text-align: right;
+    text-align: var(--footer-text-align, right);
   }
 
   &:only-child {
@@ -47,4 +58,10 @@ $two-column: 45em;
   --newline: 0;
 
   font-size: var(--xsmall);
+}
+
+// Layout variation for contact page
+[data-footer~='contact'] {
+  --footer-template-lg: 'contentinfo oddnews' auto / 1fr 1fr;
+  --footer-text-align: left;
 }

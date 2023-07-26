@@ -353,6 +353,19 @@ params:
 const isType = (collection, type) =>
   collection.filter((page) => pageType(page.data.tags, 'tag') === type);
 
+/* @docs
+label: isHome
+category: Filter
+note: |
+  Filters collection by `home` data
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+*/
+const isHome = (collection) =>
+  collection.filter((page) => Boolean(page.data.home));
+
 module.exports = {
   isPublic,
   isCurrent,
@@ -370,4 +383,5 @@ module.exports = {
   removePage,
   addCallToAction,
   isType,
+  isHome,
 };

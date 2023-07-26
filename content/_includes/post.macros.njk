@@ -38,7 +38,7 @@ params:
   pagination=none,
   label='Posts'
 ) %}
-  {%- if posts | length > 0 -%}
+  {%- if posts | length -%}
     {%- if posts | length > above -%}
       {%- for group in posts | eventSort | byYear -%}
         {% set title = [group.year, label] | join(' ') if loop.first else group.year %}
@@ -50,7 +50,7 @@ params:
         ) }}
       {%- endfor -%}
     {%- else -%}
-      {{ list(posts, collections, pagination=pagination) }}
+      {{ list(posts, collections, title=label, pagination=pagination) }}
     {%- endif -%}
   {%- endif -%}
 {% endmacro %}
@@ -87,15 +87,18 @@ params:
   page_url=''
 ) %}
   {%- set posts = collections[type] -%}
-  {%- if posts | length > 0 -%}
+  {%- if posts | length -%}
     {%- set recents = posts | isType(type) | pageYears | reverse | removePage(page_url) | onlyShow(limit) -%}
-    {%- set year_title = ['Recent', banner_title] | join(' ') -%}
-    {{ list(
-      recents,
-      collections=collections,
-      title=year_title,
-      override_feature=true
-    ) }}
+    {%- if recents | length -%}
+      {%- set title = ['Recent', banner_title] | join(' ') -%}
+      {{ list(
+        recents,
+        collections=collections,
+        title=title,
+        override_feature=true,
+        override_large=true
+      ) }}
+    {%- endif -%}
   {%- endif -%}
 {% endmacro %}
 
@@ -120,13 +123,22 @@ params:
   override_feature:
     type: boolean
     default: 'false'
+  override_large:
+    type: boolean
+    default: 'false'
+  class:
+    type: string
+    note: optional class added to wrapping `<ol>` element
+    default: none
 #}
 {% macro list(
   posts,
   collections=none,
   title='Posts',
   pagination=none,
-  override_feature=false
+  override_feature=false,
+  override_large=false,
+  class=none
 ) %}
 {%- if posts -%}
   {%- set posts = posts if (posts[0].sort) else posts | pageYears -%}
@@ -141,9 +153,15 @@ params:
     {{ layout.title(title) }}
   {% endif %}
 
-  <ol data-grid="cards" reversed>
+  <ol data-grid="cards" {{ utility.attr_if('class', class) }} reversed>
     {%- for post in posts | sort(reverse=true, attribute=sort) -%}
-      {{ item(post, collections, loop, override_feature=override_feature) }}
+      {{ item(
+        post,
+        collections,
+        loop,
+        override_feature=override_feature,
+        override_large=override_large
+      ) }}
     {%- endfor -%}
   </ol>
 {% endif %}
@@ -160,10 +178,13 @@ params:
   collections:
     type: 11ty collections object
     default: none
-  feature:
-    type: boolean | 'large'
+  loop:
+    type: Nunjucks `loop` object -- https://mozilla.github.io/nunjucks/templating.html#for
     default: none
   override_feature:
+    type: boolean
+    default: 'false'
+  override_large:
     type: boolean
     default: 'false'
 #}
@@ -171,13 +192,13 @@ params:
   post,
   collections=none,
   loop=none,
-  override_feature=false
+  override_feature=false,
+  override_large=false
 ) %}
   {%- set type = post.data.tags | pageType -%}
   {%- set card = post.data.card or none -%}
-  {%- set card = 'feature' if (card == 'feature') else card -%}
-  {%- set card = card or 'feature' if type.feature else card -%}
-  {%- set card = none if override_feature else card -%}
+  {%- set card = 'feature' if (override_large and card === 'large') else card -%}
+  {%- set card = none if (override_feature and card === 'feature') else card -%}
 
   {# Adjust card settings based on the number of posts in a list #}
   {% if loop %}
@@ -304,7 +325,7 @@ label: byline
 category: metadata
 note: |
   Generate the post byline with
-  type, authors, venue/client, date, and location
+  type, authors, venue/client, date, location, and length if Winging It
 params:
   post:
     type: 11ty page object
@@ -328,31 +349,44 @@ params:
   prefix='by'
 ) %}
   <p class="byline">
-    {{ by(
-      post.data.author,
-      collections,
-      prefix=none if post.data.venue else prefix,
-      link=links
-    ) }}
-
-    {% if post.data.oss %}
-      {% set plural = not post.data.author | typeCheck('string') %}
-      {% set plural = (post.data.author == 'oddbird') or plural %}
-      {% set plural = false if (post.data.oss == 'core team') else plural %}
-      ({{ post.data.oss }}{{ 's' if plural else '' }})
-    {% endif %}
-
-    {{ linked(
-      venue=post.data.venue,
-      url=(post.data.canonical or post.data.url) if links else none
-    ) }}
-
-    {{ client(post.data.client) }}
-
+    {%- set is_episode = post.data.tags and post.data.tags | pageType('tag') in ['Podcast', 'Video', 'Winging It'] -%}
     {%- set is_talk = post.data.tags and ('_talk' in post.data.tags) -%}
+    {% if is_episode -%}
+      {{ linked(
+        venue=post.data.venue,
+        url=(post.data.canonical or post.data.url) if links else none,
+        prefix='on'
+      )}}
+      {%- if post.data.episode %} episode {{ post.data.episode }}{% endif -%}
+      {{ by(post.data.author, collections, prefix='with', link=links) }}
+    {%- else -%}
+      {{ by(
+        post.data.author,
+        collections,
+        prefix=none if post.data.venue else prefix,
+        link=links
+      ) }}
+
+      {% if post.data.oss %}
+        {% set plural = not post.data.author | typeCheck('string') %}
+        {% set plural = (post.data.author == 'oddbird') or plural %}
+        {% set plural = false if (post.data.oss == 'core team') else plural %}
+        ({{ post.data.oss }}{{ 's' if plural else '' }})
+      {% endif %}
+
+      {{ linked(
+        venue=post.data.venue,
+        url=(post.data.canonical or post.data.url) if links else none
+      ) }}
+
+      {{ client(post.data.client) }}
+    {%- endif %}
     {% if dateformat and not is_talk %}
       {{ pubdate(post.date, post.data.end, dateformat) }}
     {% endif %}
+    {%- if is_episode and post.data.length %}
+      | {{ post.data.length }}
+    {%- endif %}
   </p>
 {% endmacro %}
 
@@ -447,10 +481,10 @@ label: subtitle
 category: metadata
 note: Generate each post in a list
 params:
-  post:
-    type: 11ty page object
-  collections:
-    type: 11ty collections object
+  sub:
+    type: markdown
+  class:
+    type: string
     default: none
 #}
 {% macro subtitle(
@@ -546,7 +580,7 @@ params:
   {% if adr %}
     <i>in</i>
     <span class="adr">
-      {{ adr | typogr | safe }}
+      {{ adr }}
     </span>
   {% endif %}
 {% endmacro %}
@@ -564,10 +598,11 @@ params:
 #}
 {% macro linked(
   venue,
-  url
+  url,
+  prefix='at'
 ) -%}
 {%- if venue %}
-  <i>at</i>
+  <i>{{ prefix }}</i>
   {{ utility.link_if(
     content=venue | mdInline | safe,
     url=url,
@@ -604,7 +639,7 @@ params:
           {% for item in items | sort(attribute='tag') %}
             <li {% if pill %}class="pill-item p-category"{% endif %}>
               {{- utility.link_if(
-                content=item.tag | typogr,
+                content=item.tag,
                 url=item.url,
                 class='pill' if pill else none
               ) -}}
@@ -722,4 +757,52 @@ params:
     <strong>{{ pagination.pages | length }}</strong>
   </span>
 {% endif %}
+{% endmacro %}
+
+
+{# @docs
+label: homepage_posts
+category: lists
+note: |
+  Returns a given number of featured
+  posts from a collection for the
+  homepage "featured posts" section
+params:
+  type:
+    type: string
+    note: one of several post "types" to display (types are defined in the `taxonomy.yaml` data file)
+  collections:
+    type: 11ty collections object
+    default: '[]'
+  limit:
+    type: number
+    default: 4
+  banner_title:
+    type: string
+    default: 'Featured Posts'
+  class:
+    type: string
+    note: optional class added to wrapping `<ol>` element
+    default: none
+#}
+{% macro homepage_posts(
+  type,
+  collections=[],
+  limit=4,
+  banner_title='Featured Posts',
+  class=none
+) %}
+  {%- set posts = collections[type] -%}
+  {%- if posts | length -%}
+    {%- set featured = posts | isType(type) | isHome | pageYears | reverse | onlyShow(limit) -%}
+    {%- if featured | length -%}
+      {{ list(
+        featured,
+        collections=collections,
+        title=banner_title,
+        override_large=true,
+        class=class
+      ) }}
+    {%- endif -%}
+  {%- endif -%}
 {% endmacro %}
