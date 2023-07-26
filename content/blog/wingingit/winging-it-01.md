@@ -42,4 +42,5 @@ nesting, and more.
 
 - [A Complete Guide to CSS Cascade Layers](https://css-tricks.com/css-cascade-layers/)
 - [Cascade Layers – There's a Polyfill for That!](/2022/06/21/cascade-layers-polyfill/)
+- [CSS Cascade Layers Polyfill Demo](https://layers-polyfill-example.netlify.app/)
 - [PostCSS Cascade Layers](https://www.npmjs.com/package/@csstools/postcss-cascade-layers)
