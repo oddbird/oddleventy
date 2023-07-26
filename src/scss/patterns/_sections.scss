@@ -68,6 +68,15 @@
   padding-right: var(--page-margin);
 }
 
+// Link
+// ----
+.section-link {
+  --column: content;
+
+  justify-self: end;
+  margin-block: var(--gutter) var(--double-gutter);
+}
+
 // Blocks
 // ------
 

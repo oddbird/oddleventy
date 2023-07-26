@@ -17,6 +17,7 @@ summary: |
   and proposing for years, has finally made its debut in a browser. Well, sort
   of. Here we'll explain what container queries are, how they work, and what
   other features they might come with once fully supported in browsers.
+home: true
 ---
 
 {% import 'embed.macros.njk' as embed %}

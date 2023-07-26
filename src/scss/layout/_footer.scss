@@ -1,3 +1,5 @@
+/* stylelint-disable scss/operator-no-newline-after */
+
 @use '../config';
 
 $two-column: 45em;
@@ -9,17 +11,18 @@ $two-column: 45em;
   font-size: var(--small);
   grid-area: footer;
   grid-gap: var(--page-margin);
-  grid-template: var(--footer-template-sm,
-      'contact' min-content
-      'oddnews' min-content
-      'contentinfo' auto / 100%);
+  grid-template: var(
+    --footer-template-sm,
+    'contact' min-content 'oddnews' min-content 'contentinfo' auto / 100%
+  );
   padding: var(--gutter) var(--page-margin) var(--spacer);
 
   @include config.above($two-column) {
-    grid-template: var(--footer-template-lg,
-        'contact oddnews' min-content
-        'contact contentinfo' 1fr / minmax(10em, var(--wide-page)) minmax(10em,
-          var(--page)));
+    grid-template: var(
+      --footer-template-lg,
+      'contact oddnews' min-content 'contact contentinfo' 1fr /
+        minmax(10em, var(--wide-page)) minmax(10em, var(--page))
+    );
     justify-content: space-between;
   }
 }

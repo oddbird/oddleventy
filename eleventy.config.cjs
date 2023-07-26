@@ -122,6 +122,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('removePage', pages.removePage);
   eleventyConfig.addFilter('addCallToAction', pages.addCallToAction);
   eleventyConfig.addFilter('isType', pages.isType);
+  eleventyConfig.addFilter('isHome', pages.isHome);
 
   eleventyConfig.addFilter('fromTaxonomy', taxonomy.fromTaxonomy);
   eleventyConfig.addFilter('ossGroups', taxonomy.ossGroups);
@@ -157,6 +158,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('oddNewsTags', (name) => utils.oddNewsTags(name));
 
   // shortcodes
+  eleventyConfig.addPairedShortcode('typogr', type.typogr);
   eleventyConfig.addPairedShortcode('md', type.md);
   eleventyConfig.addPairedShortcode('mdInline', type.mdInline);
   eleventyConfig.addPairedShortcode('h', type.heading);

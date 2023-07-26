@@ -90,12 +90,13 @@ params:
   {%- if posts | length -%}
     {%- set recents = posts | isType(type) | pageYears | reverse | removePage(page_url) | onlyShow(limit) -%}
     {%- if recents | length -%}
-      {%- set year_title = ['Recent', banner_title] | join(' ') -%}
+      {%- set title = ['Recent', banner_title] | join(' ') -%}
       {{ list(
         recents,
         collections=collections,
-        title=year_title,
-        override_feature=true
+        title=title,
+        override_feature=true,
+        override_large=true
       ) }}
     {%- endif -%}
   {%- endif -%}
@@ -122,13 +123,22 @@ params:
   override_feature:
     type: boolean
     default: 'false'
+  override_large:
+    type: boolean
+    default: 'false'
+  class:
+    type: string
+    note: optional class added to wrapping `<ol>` element
+    default: none
 #}
 {% macro list(
   posts,
   collections=none,
   title='Posts',
   pagination=none,
-  override_feature=false
+  override_feature=false,
+  override_large=false,
+  class=none
 ) %}
 {%- if posts -%}
   {%- set posts = posts if (posts[0].sort) else posts | pageYears -%}
@@ -143,9 +153,15 @@ params:
     {{ layout.title(title) }}
   {% endif %}
 
-  <ol data-grid="cards" reversed>
+  <ol data-grid="cards" {{ utility.attr_if('class', class) }} reversed>
     {%- for post in posts | sort(reverse=true, attribute=sort) -%}
-      {{ item(post, collections, loop, override_feature=override_feature) }}
+      {{ item(
+        post,
+        collections,
+        loop,
+        override_feature=override_feature,
+        override_large=override_large
+      ) }}
     {%- endfor -%}
   </ol>
 {% endif %}
@@ -162,10 +178,13 @@ params:
   collections:
     type: 11ty collections object
     default: none
-  feature:
-    type: boolean | 'large'
+  loop:
+    type: Nunjucks `loop` object -- https://mozilla.github.io/nunjucks/templating.html#for
     default: none
   override_feature:
+    type: boolean
+    default: 'false'
+  override_large:
     type: boolean
     default: 'false'
 #}
@@ -173,13 +192,13 @@ params:
   post,
   collections=none,
   loop=none,
-  override_feature=false
+  override_feature=false,
+  override_large=false
 ) %}
   {%- set type = post.data.tags | pageType -%}
   {%- set card = post.data.card or none -%}
-  {%- set card = 'feature' if (card == 'feature') else card -%}
-  {%- set card = card or 'feature' if type.feature else card -%}
-  {%- set card = none if override_feature else card -%}
+  {%- set card = 'feature' if (override_large and card === 'large') else card -%}
+  {%- set card = none if (override_feature and card === 'feature') else card -%}
 
   {# Adjust card settings based on the number of posts in a list #}
   {% if loop %}
@@ -462,10 +481,10 @@ label: subtitle
 category: metadata
 note: Generate each post in a list
 params:
-  post:
-    type: 11ty page object
-  collections:
-    type: 11ty collections object
+  sub:
+    type: markdown
+  class:
+    type: string
     default: none
 #}
 {% macro subtitle(
@@ -561,7 +580,7 @@ params:
   {% if adr %}
     <i>in</i>
     <span class="adr">
-      {{ adr | typogr | safe }}
+      {{ adr }}
     </span>
   {% endif %}
 {% endmacro %}
@@ -620,7 +639,7 @@ params:
           {% for item in items | sort(attribute='tag') %}
             <li {% if pill %}class="pill-item p-category"{% endif %}>
               {{- utility.link_if(
-                content=item.tag | typogr,
+                content=item.tag,
                 url=item.url,
                 class='pill' if pill else none
               ) -}}
@@ -738,4 +757,52 @@ params:
     <strong>{{ pagination.pages | length }}</strong>
   </span>
 {% endif %}
+{% endmacro %}
+
+
+{# @docs
+label: homepage_posts
+category: lists
+note: |
+  Returns a given number of featured
+  posts from a collection for the
+  homepage "featured posts" section
+params:
+  type:
+    type: string
+    note: one of several post "types" to display (types are defined in the `taxonomy.yaml` data file)
+  collections:
+    type: 11ty collections object
+    default: '[]'
+  limit:
+    type: number
+    default: 4
+  banner_title:
+    type: string
+    default: 'Featured Posts'
+  class:
+    type: string
+    note: optional class added to wrapping `<ol>` element
+    default: none
+#}
+{% macro homepage_posts(
+  type,
+  collections=[],
+  limit=4,
+  banner_title='Featured Posts',
+  class=none
+) %}
+  {%- set posts = collections[type] -%}
+  {%- if posts | length -%}
+    {%- set featured = posts | isType(type) | isHome | pageYears | reverse | onlyShow(limit) -%}
+    {%- if featured | length -%}
+      {{ list(
+        featured,
+        collections=collections,
+        title=banner_title,
+        override_large=true,
+        class=class
+      ) }}
+    {%- endif -%}
+  {%- endif -%}
 {% endmacro %}

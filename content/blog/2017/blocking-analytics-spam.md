@@ -120,7 +120,6 @@ analytics data:
 ```js
 const devHosts = [
   // List your local development servers
-  'oddsite.hexxie.com:3000',
   'localhost:3000',
   '127.0.0.1:3000'
 ];
