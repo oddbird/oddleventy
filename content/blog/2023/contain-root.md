@@ -433,6 +433,39 @@ But all the browsers implemented something else.
 
 ## What browsers implemented
 
+{% import 'utility.macros.njk' as utility %}
+{% set update1 = ['Update', utility.datetime('2023-08-01')] | join(' ') %}
+{% callout 'note', update1 %}
+According to
+[browser engineers in the CSSWG](https://github.com/w3c/csswg-drafts/issues/9003#issuecomment-1646246626),
+my explanation here wasn't quite right.
+
+The actual issue is that
+overflow propagates as defined in the spec,
+but containment remains on the root element.
+Since the overflowing content is contained,
+it is not visible to the viewport
+(where overflow is now set).
+Meanwhile, the root element
+(which can see the overflowing content)
+no longer has a specified value of `overflow`.
+
+That is all proper
+according to the current specification.
+Any solution has to ensure
+that overflow and containment
+are applied to the same element --
+either the root or the viewport.
+Root is simpler,
+but doesn't provide a number of scroll optimizations.
+On the other hand,
+it's not clear what it would even mean
+for containment to propagate as well.
+
+In the meantime,
+the solution below still works.
+{% endcallout %}
+
 I am not a browser engineer,
 but I've been trying to parse out
 how browsers got a different answer than I did.
