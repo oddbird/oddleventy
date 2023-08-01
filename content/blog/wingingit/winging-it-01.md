@@ -18,6 +18,7 @@ summary: |
   If you've ever found yourself in a specificity war, you'll understand how
   important having control over style priority can be. During our conversation,
   we discussed what CSS Layers are and how you can use them in your project.
+home: true
 ---
 
 {% import "embed.macros.njk" as embed %}
