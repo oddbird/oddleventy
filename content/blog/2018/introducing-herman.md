@@ -175,7 +175,7 @@ syntax. Here are just a few of their options:
 Herman supports [all SassDoc annotations], and we've added style guide
 features of our own...
 
-[KSS]: https://warpspire.com/kss/
+[KSS]: https://github.com/kneath/kss
 [SassDoc]: http://sassdoc.com/
 [all SassDoc annotations]: http://sassdoc.com/annotations/
 

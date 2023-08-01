@@ -10,7 +10,6 @@ tags:
   - Sass
 events:
   - venue: CSSConf 2016
-    url: https://2016.cssconf.com/
     adr: Boston, MA
     date: 2016-09-26
     # slides: https://oddbooksapp.com/release/b71e6e5d-e956-42ff-a4dd-b70bf3b13a2a

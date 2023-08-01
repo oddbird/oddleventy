@@ -60,7 +60,7 @@ above industry medians; but I love how the organizers of this conference
 took the conversation further than just its economic benefits.
 
 [Refactr.tech]: https://www.refactr.tech/
-[Vue Vixens]: https://www.vuevixens.org/
+[Vue Vixens]: https://vuevixens.netlify.app/
 [We RISE]: https://www.womenwhocode.com/blog/women-who-code-announces-we-rise-tech-conference-in-atlanta
 
 ## Here's a recap.
@@ -136,7 +136,7 @@ present my ideas and experiences to my peers.
 [GraphQL]: https://graphql.org/
 [Flutter]: https://flutter.dev/
 [Gatsby]: https://www.gatsbyjs.com/
-[Vue Skulk]: https://www.vuevixens.org/
+[Vue Skulk]: https://vuevixens.netlify.app/
 [Tracy Lee]: https://twitter.com/ladyleet
 [This Dot Labs]: https://labs.thisdot.co/
 [Dr. Kortney Ziegler]: http://kortneyrziegler.net/

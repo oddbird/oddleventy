@@ -152,8 +152,8 @@ processor:
 - [Pete Hunt Video](https://youtu.be/_70Yp8KPXH8)
 
 [Pete Hunt]: https://twitter.com/floydophone
-[React]: https://reactjs.org/
-[JSX]: https://reactjs.org/docs/jsx-in-depth.html
+[React]: https://react.dev/
+[JSX]: https://react.dev/learn/writing-markup-with-jsx
 [JSX Style]: https://github.com/jsxstyle/jsxstyle
 
 ## CSS4 Grid: True Layout Finally Arrives
