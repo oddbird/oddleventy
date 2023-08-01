@@ -27,6 +27,7 @@ summary: |
 ---
 
 {% import 'embed.macros.njk' as embed %}
+{% import 'utility.macros.njk' as utility %}
 
 <details>
 <summary id="toc">Article contents</summary>
@@ -433,7 +434,6 @@ But all the browsers implemented something else.
 
 ## What browsers implemented
 
-{% import 'utility.macros.njk' as utility %}
 {% set update1 = ['Update', utility.datetime('2023-08-01')] | join(' ') %}
 {% callout 'note', update1 %}
 According to
