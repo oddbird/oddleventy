@@ -375,16 +375,14 @@ const isHome = (collection, limit) => {
   if (!limit) {
     return posts;
   }
-  const pinned = posts.filter((page) =>
-    ['pin', 'pinned'].includes(page.data.home),
-  );
+  const isPinned = (page) => ['pin', 'pinned'].includes(page.data.home);
+  const pinned = posts.filter(isPinned);
   if (pinned.length >= limit) {
     return pinned.slice(0, limit);
   }
   const nonPinnedLimit = limit - pinned.length;
   return posts.filter(
-    (page, index) =>
-      ['pin', 'pinned'].includes(page.data.home) || index < nonPinnedLimit,
+    (page, index) => isPinned(page) || index < nonPinnedLimit,
   );
 };
 
