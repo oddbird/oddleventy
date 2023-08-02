@@ -380,10 +380,19 @@ const isHome = (collection, limit) => {
   if (pinned.length >= limit) {
     return pinned.slice(0, limit);
   }
+  const featured = [];
+  const nonPinnedFeatured = [];
   const nonPinnedLimit = limit - pinned.length;
-  return posts.filter(
-    (page, index) => isPinned(page) || index < nonPinnedLimit,
-  );
+  for (let i = 0; i < posts.length; i = i + 1) {
+    const page = posts[i];
+    if (isPinned(page)) {
+      featured.push(page);
+    } else if (nonPinnedFeatured.length < nonPinnedLimit) {
+      featured.push(page);
+      nonPinnedFeatured.push(page);
+    }
+  }
+  return featured;
 };
 
 module.exports = {
