@@ -768,12 +768,8 @@ note: |
   posts from a collection for the
   homepage "featured posts" section
 params:
-  type:
-    type: string
-    note: one of several post "types" to display (types are defined in the `taxonomy.yaml` data file)
   collections:
     type: 11ty collections object
-    default: '[]'
   limit:
     type: number
     default: 4
@@ -786,23 +782,19 @@ params:
     default: none
 #}
 {% macro homepage_posts(
-  type,
-  collections=[],
+  collections,
   limit=4,
   banner_title='Featured Posts',
   class=none
 ) %}
-  {%- set posts = collections[type] -%}
-  {%- if posts | length -%}
-    {%- set featured = posts | isType(type) | isHome | pageYears | reverse | onlyShow(limit) -%}
-    {%- if featured | length -%}
-      {{ list(
-        featured,
-        collections=collections,
-        title=banner_title,
-        override_large=true,
-        class=class
-      ) }}
-    {%- endif -%}
+  {%- set featured = collections._post | isHome(limit) -%}
+  {%- if featured | length -%}
+    {{ list(
+      featured,
+      collections=collections,
+      title=banner_title,
+      override_large=true,
+      class=class
+    ) }}
   {%- endif -%}
 {% endmacro %}

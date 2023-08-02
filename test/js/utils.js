@@ -227,7 +227,7 @@ export const collection4 = [
     fileSlug: 'test1',
     outputPath: './_site/test1/index.html',
     url: '/test1/',
-    date: '2020-01-09T04:10:17.000Z',
+    date: '2040-01-09T04:10:17.000Z',
     data: {
       title: 'Draft Title',
       tags: ['Video', 'Article'],
@@ -243,7 +243,7 @@ export const collection4 = [
     data: {
       title: 'Draft Title',
       tags: ['Article'],
-      home: true,
+      home: false,
     },
     templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
   },
@@ -256,7 +256,7 @@ export const collection4 = [
     data: {
       title: 'Draft Title',
       tags: ['Link', 'Article'],
-      home: true,
+      home: 'pinned',
       events: [
         {
           foo: 'bar',
