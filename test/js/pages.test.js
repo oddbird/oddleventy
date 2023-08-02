@@ -166,9 +166,9 @@ describe('page filters', () => {
   });
 
   test('isHome', () => {
-    const filtered = isHome(collection4);
+    const filtered = isHome(collection4, 1);
 
     expect(collection4).toHaveLength(3);
-    expect(filtered).toHaveLength(2);
+    expect(filtered).toHaveLength(1);
   });
 });

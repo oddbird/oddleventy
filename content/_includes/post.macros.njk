@@ -787,7 +787,7 @@ params:
   banner_title='Featured Posts',
   class=none
 ) %}
-  {%- set featured = collections.all | isHome | pageYears | reverse | onlyShow(limit) -%}
+  {%- set featured = collections._post | isHome(limit) -%}
   {%- if featured | length -%}
     {{ list(
       featured,

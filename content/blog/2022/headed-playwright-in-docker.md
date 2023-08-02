@@ -14,7 +14,6 @@ image:
 summary: |
   Learn how to run Playwright in headed mode to interact with the browser's user
   interface from outside Docker containers.
-home: true
 ---
 
 [Playwright](https://playwright.dev/) is a test runner that uses real browsers

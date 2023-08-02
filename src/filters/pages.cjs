@@ -357,14 +357,36 @@ const isType = (collection, type) =>
 label: isHome
 category: Filter
 note: |
-  Filters collection by `home` data
+  Filters collection by `home` data.
+  Posts are included if `home` is not `false`.
+  If `limit` is set, only the first `limit` posts are included,
+  plus any posts with `home` set to `pin` or `pinned`.
 params:
   collection:
     type: array
     note: containing 11ty page objects
+  limit:
+    type: number
 */
-const isHome = (collection) =>
-  collection.filter((page) => Boolean(page.data.home));
+const isHome = (collection, limit) => {
+  const posts = pageYears(
+    collection.filter((page) => page.data.home !== false),
+  ).reverse();
+  if (!limit) {
+    return posts;
+  }
+  const pinned = posts.filter((page) =>
+    ['pin', 'pinned'].includes(page.data.home),
+  );
+  if (pinned.length >= limit) {
+    return pinned.slice(0, limit);
+  }
+  const nonPinnedLimit = limit - pinned.length;
+  return posts.filter(
+    (page, index) =>
+      ['pin', 'pinned'].includes(page.data.home) || index < nonPinnedLimit,
+  );
+};
 
 module.exports = {
   isPublic,
