@@ -105,7 +105,7 @@ describe('page filters', () => {
 
   test('eventSort', () => {
     const slugs = ['test3', 'events', 'test1'];
-    const years = ['2018', '2019', '2020'];
+    const years = ['2018', '2019', '2040'];
     const actual = eventSort(collection4);
 
     expect(actual.map((item) => item.fileSlug)).toEqual(slugs);
@@ -165,10 +165,26 @@ describe('page filters', () => {
     expect(filtered).toHaveLength(1);
   });
 
-  test('isHome', () => {
-    const filtered = isHome(collection4);
+  describe('isHome', () => {
+    const collection = [...collection3, ...collection4];
 
-    expect(collection4).toHaveLength(3);
-    expect(filtered).toHaveLength(2);
+    test('filters down to limit', () => {
+      const filtered = isHome(collection, 3);
+
+      expect(filtered).toHaveLength(3);
+    });
+
+    test('prioritizes pinned posts', () => {
+      const filtered = isHome(collection, 1);
+
+      expect(filtered).toHaveLength(1);
+      expect(filtered[0].data.home).toBe('pinned');
+    });
+
+    test('returns all posts if no limit', () => {
+      const filtered = isHome(collection);
+
+      expect(filtered).toHaveLength(collection.length - 1);
+    });
   });
 });

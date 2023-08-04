@@ -30,7 +30,6 @@ summary: |
   one platform over another.
   Let's start with responsive web apps.
 card: large
-home: true
 ---
 
 {% import 'embed.macros.njk' as embed %}

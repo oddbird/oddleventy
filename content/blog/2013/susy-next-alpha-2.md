@@ -163,4 +163,4 @@ change your grids:
 }
 ```
 
-[breakpoint]: http://breakpoint-sass.com/
+[breakpoint]: https://github.com/at-import/breakpoint
