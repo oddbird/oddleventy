@@ -3,12 +3,10 @@
 @use 'sass:meta';
 @use 'scale/page-sizes';
 
-
 /// List of named z-index layers.
 /// The order they are defined will be the integer they are assigned.
 /// @group config-layout
 $z-index: ('bump', 'dropdown', 'skip-link');
-
 
 @mixin clip-base {
   align-content: center;
