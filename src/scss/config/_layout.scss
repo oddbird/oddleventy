@@ -1,4 +1,7 @@
 @use 'tools' as *;
+@use 'sass:map';
+@use 'sass:meta';
+@use 'scale/page-sizes';
 
 // Times
 // -----
@@ -27,4 +30,15 @@ $z-index: ('bump', 'dropdown', 'skip-link');
   @if ($side == 'left') {
     transform: translateY(calc(var(--offset) * -1));
   }
+}
+
+// Breakpoints
+@each $name, $size in meta.module-variables('page-sizes') {
+  $size: convert-units($size, 'em');
+  $breakpoints: map.merge(
+    $breakpoints,
+    (
+      $name: $size,
+    )
+  );
 }
