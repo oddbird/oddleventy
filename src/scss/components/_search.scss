@@ -244,7 +244,7 @@
 .aa-ItemDescription {
   color: var(--text);
   font-size: var(--search-result-desc, var(--xxsmall));
-  line-height: config.ratio('line-height');
+  line-height: var(--line-height);
 }
 
 // Hide Unused Icon since we can't edit the markup

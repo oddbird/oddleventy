@@ -3,6 +3,9 @@
 
 html {
   @include config.font-family('body');
+  @include config.ratios--;
+  @include config.times--;
+  @include config.changes--;
 
   --clip-overlap: var(--page-margin);
   --clip-angle: var(--double-gutter);
@@ -15,6 +18,6 @@ html {
     0 100%
   );
 
-  font-size: config.$root;
-  line-height: config.ratio('line-height');
+  font-size: var(--root);
+  line-height: var(--line-height);
 }

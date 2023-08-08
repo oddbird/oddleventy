@@ -13,13 +13,13 @@
 @use 'color/ccs-defaults';
 @use 'color/content';
 @use 'color/config' as color-config;
-
 @use 'animation/changes';
 @use 'animation/times';
-
-/* @use 'scale/text-ratios';
-@use 'scale/font-sizes'; */
-
+@use 'scale/ratios';
+@use 'scale/font-sizes';
+@use 'scale/page-sizes';
+@use 'scale/spacing-sizes';
+@use 'scale/theme-sizes';
 @include tools.add-colors(meta.module-variables('brand'));
 @include tools.add-colors(meta.module-variables('background'));
 @include tools.add-colors(meta.module-variables('ccs-defaults'));
@@ -27,6 +27,8 @@
 @include tools.add-colors(meta.module-variables('color-config'));
 @include tools.add-changes(meta.module-variables('changes'));
 @include tools.add-times(meta.module-variables('times'));
-
-/* @include tools.add-ratios(meta.module-variables('text-ratios'));
-@include tools.add-sizes(meta.module-variables('font-sizes')); */
+@include tools.add-ratios(meta.module-variables('ratios'));
+@include tools.add-sizes(meta.module-variables('font-sizes'));
+@include tools.add-sizes(meta.module-variables('page-sizes'));
+@include tools.add-sizes(meta.module-variables('spacing-sizes'));
+@include tools.add-sizes(meta.module-variables('theme-sizes'));
