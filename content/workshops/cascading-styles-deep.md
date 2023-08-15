@@ -19,10 +19,6 @@ tags:
   - CSS Scope
   - Color
 events:
-  - venue: Front Conf Workshops
-    date: 2023-08-30
-    adr: Zurich, Switzerland
-    url: https://frontconference.com/workshops
   - venue: Smashing Workshops
     date: 2023-09-06
     adr: Freiburg, Germany
