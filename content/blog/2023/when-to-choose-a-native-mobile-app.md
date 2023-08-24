@@ -93,7 +93,8 @@ when there is no internet access.
 A native mobile app offers security beyond the typical HTTPS encryption
 available with an RWA. If you are developing a banking product that requires
 secure authentication and verification of your users, or need to meet strict
-HIPAA requirements, a native mobile app is likely a better option than an responsive web app.
+HIPAA requirements, a native mobile app is likely a better option than a
+responsive web app.
 
 {{ embed.img(
   src='blog/2023/security.jpg',
@@ -110,7 +111,9 @@ for the type of content you will provide in app stores, or if you want to build
 your marketing plan around app stores, then a native mobile app is a better
 choice than a responsive web app which is not listed in app stores.
 
-On the other hand, a responsive web app with PWA enhancements can be listed in the app store. Additionally, building a marketing campaign around an app store can be expensive, and the tools to search for apps in the stores are limited.
+On the other hand, a responsive web app with PWA enhancements can be listed in
+the app store. Additionally, building a marketing campaign around an app store
+can be expensive, and the tools to search for apps in the stores are limited.
 
 {{ embed.img(
   src='blog/2023/app-store.jpg',
@@ -136,9 +139,9 @@ Native mobile apps require a unique codebase for each platform. For example, if
 you want to make the same native mobile app available on both Android and iOS
 devices, you need to build one codebase for Android and a separate codebase for
 iOS. Each codebase requires different proprietary technologies, and likely
-requires separate teams of developers to build and maintain each platform.
-It is frequently more expensive to reach the same range of people with a native
-mobile app compared to an responsive web app.
+requires separate teams of developers to build and maintain each platform. It is
+frequently more expensive to reach the same range of people with a native mobile
+app compared to a responsive web app.
 
 ### Lengthy Development
 *Don't choose a native mobile app when it's a priority to make your app
@@ -146,32 +149,34 @@ available to users quickly.*
 
 Because native mobile apps require a separate codebase for each platform you
 want to support, development generally takes longer than it does to develop a
-single codebase for an responsive web app. Additionally, each app store has its own set of
-requirements in order to publish an app, and these can be complex. Wait times
-for app store approval to publish or update the app can be lengthy as well.
+single codebase for a responsive web app. Additionally, each app store has its
+own set of requirements in order to publish an app, and these can be complex.
+Wait times for app store approval to publish or update the app can be lengthy as
+well.
 
 ### Not Discoverable Via Search Engines
 *Don't choose a native mobile app when the people you want to reach will look
 for your content with a search engine.*
 
-Unlike for responsive web apps, search engines don't index native mobile apps. If your research
-indicates that people frequently use search engines to search for the type of
-content you offer, an RWA may be a better choice. Alternatively, you could build
-a marketing website for search engines to find, which simply introduces your app
-and links people to the appropriate app store for download. (A separate
-marketing website will further increase the design and development costs.)
+Unlike for responsive web apps, search engines don't index native mobile apps.
+If your research indicates that people frequently use search engines to search
+for the type of content you offer, an RWA may be a better choice. Alternatively,
+you could build a marketing website for search engines to find, which simply
+introduces your app and links people to the appropriate app store for download.
+(A separate marketing website will further increase the design and development
+costs.)
 
 ### Limited Reach
 *Don't choose a native mobile app when you want to reach a broad audience across
 devices.*
 
 Because it takes longer and costs more to reach the same range of people with a
-native mobile app than with an responsive web app, and because native mobile apps offer less
-backward compatibility, the number of people who can access a native mobile app
-will likely always be more limited than the number of people who can access an
-responsive web app. Additionally, a native mobile app is limited to mobile devices. To provide
-access to your content on a laptop or desktop, you would need to develop
-separate native desktop software.
+native mobile app than with a responsive web app, and because native mobile apps
+offer less backward compatibility, the number of people who can access a native
+mobile app will likely always be more limited than the number of people who can
+access a responsive web app. Additionally, a native mobile app is limited to
+mobile devices. To provide access to your content on a laptop or desktop, you
+would need to develop separate native desktop software.
 
 ## In Summary
 
