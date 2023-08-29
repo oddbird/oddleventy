@@ -271,4 +271,4 @@ mobile apps.
 ---
 
 Is a **native mobile app** right for your digital project? Read more about
-[When to Choose a Native Mobile App](/2023/08/23/when-to-choose-a-native-mobile-app/).
+[When to Choose a Native Mobile App](/2023/08/29/when-to-choose-a-native-mobile-app/).

@@ -2,7 +2,7 @@
 title: When to Choose a Native Mobile App
 sub: Part 2 -- Responsive Web App vs Native Mobile App vs Progressive Web App
 author: sondra
-date: 2023-08-23
+date: 2023-08-29
 tags:
   - Article
   - Business Development
@@ -70,7 +70,7 @@ or software integration.*
 Native apps can access all of a device's hardware and software features. For
 example, unlike responsive web apps (RWAs), native mobile apps can integrate
 directly with a specific mobile device's GPS for geofencing, access light and
-proximity sensors, or use a device's camera.
+proximity sensors, or access advanced camera APIs, for instance, scanning QR codes.
 
 {{ embed.img(
   src='blog/2023/iphone.jpg',
@@ -139,9 +139,11 @@ Native mobile apps require a unique codebase for each platform. For example, if
 you want to make the same native mobile app available on both Android and iOS
 devices, you need to build one codebase for Android and a separate codebase for
 iOS. Each codebase requires different proprietary technologies, and likely
-requires separate teams of developers to build and maintain each platform. It is
-frequently more expensive to reach the same range of people with a native mobile
-app compared to a responsive web app.
+requires separate teams of developers to build and maintain each platform.
+
+Frameworks like React Native and Flutter allow you to share a significant amount of your codebase, but come with constraints, and an experience that may not feel as native. To take advantage of the more advanced features or platform-specific expectations, you may still need to write code for each platform.
+
+Due to the separate code bases and proprietary technologies, it is frequently more expensive to reach the same range of people with a native mobile app compared to a responsive web app.
 
 ### Lengthy Development
 *Don't choose a native mobile app when it's a priority to make your app
@@ -158,7 +160,7 @@ well.
 *Don't choose a native mobile app when the people you want to reach will look
 for your content with a search engine.*
 
-Unlike for responsive web apps, search engines don't index native mobile apps.
+Unlike responsive web apps, search engines don't index native mobile apps.
 If your research indicates that people frequently use search engines to search
 for the type of content you offer, an RWA may be a better choice. Alternatively,
 you could build a marketing website for search engines to find, which simply
@@ -174,9 +176,9 @@ Because it takes longer and costs more to reach the same range of people with a
 native mobile app than with a responsive web app, and because native mobile apps
 offer less backward compatibility, the number of people who can access a native
 mobile app will likely always be more limited than the number of people who can
-access a responsive web app. Additionally, a native mobile app is limited to
-mobile devices. To provide access to your content on a laptop or desktop, you
-would need to develop separate native desktop software.
+access a responsive web app. Additionally, a native mobile app is limited [^limited] to mobile devices. To provide access to your content on a laptop or desktop, you would need to develop separate native desktop software or a responsive web app.
+
+[^limited]: Native mobile apps are limited to mobile devices with the exception that native iOS apps can now run on newer Macs.
 
 ## In Summary
 
