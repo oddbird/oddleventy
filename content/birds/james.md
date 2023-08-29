@@ -13,7 +13,7 @@ social:
     user: jamess
     server: mastodon.cloud
 summary: |
-  James is a front-end developer, focused on
+  James (he/him) is a front-end developer focused on
   user-friendly solutions for complex problems.
 ---
 
