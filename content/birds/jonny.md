@@ -8,7 +8,7 @@ image:
 social:
   github: jgerigmeyer
 summary: |
-  Jonny is a co-founder and technical lead --
+  Jonny (he/him) is a co-founder and technical lead --
   helping architect robust, maintainable web applications.
 ---
 

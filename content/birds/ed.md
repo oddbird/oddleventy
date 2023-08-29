@@ -9,7 +9,7 @@ social:
   twitter: je92rivas
   github: jerivas
 summary: |
-  Ed is a web developer building fast,
+  Ed (he/him) is a web developer building fast,
   accessible sites with Python & PHP.
 ---
 
