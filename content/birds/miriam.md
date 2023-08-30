@@ -18,7 +18,7 @@ social:
   github: MiriSuzanne
   codepen: MiriamSuzanne
 summary: |
-  Miriam is a co-founder and front-end architect --
+  Miriam (she/her) is a co-founder and front-end architect --
   overseeing the user-experience
   & overall cohesion of a project.
 ---

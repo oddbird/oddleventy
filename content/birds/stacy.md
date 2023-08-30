@@ -12,7 +12,7 @@ social:
   codepen: stacy
   stackoverflow: 7033764
 summary: |
-  Stacy
+  Stacy (she/her)
   is a user experience designer,
   front-end developer,
   speaker,
