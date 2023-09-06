@@ -1,6 +1,6 @@
 $gutter: 0.75rem;
-$newline--default: $gutter;
-$newline: $newline--default;
+$newline--default: var(--gutter);
+$newline: var(--newline--default);
 $gutter-plus: calc(var(--gutter) * 1.5);
 $double-gutter: calc(var(--gutter) * 2);
 $triple-gutter: calc(var(--gutter) * 3);
