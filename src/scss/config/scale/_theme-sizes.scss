@@ -1,6 +1,11 @@
+@use 'sass:math';
+@use 'page-sizes';
+
 $page-margin: calc(var(--quarter-shim) + 4vw);
 $border-width: medium;
 $radius: var(--half-shim);
 $grid-hero: calc(var(--gutter) * 8);
 $logo-item: 10rem;
 $grid-item: 16rem;
+$main-min: calc(100vw - var(--page-margin) * 2);
+$extra: math.div(page-sizes.$wide-page - page-sizes.$page, 2);

@@ -15,8 +15,6 @@
 html {
   @include config.sizes--;
 
-  --extra: #{math.div(config.size('wide-page') - config.size('page'), 2)};
-  --main-min: calc(100vw - var(--page-margin) * 2);
   --page-columns: [full-start] var(--page-margin) [content-start wide-start
     page-start] minmax(var(--main-min), var(--page)) [page-end wide-end
     content-end] var(--page-margin) [full-end];
