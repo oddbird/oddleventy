@@ -11,7 +11,8 @@ social:
   twitter: sanacodes
   github: sanajaved7
 summary: |
-  Sana is a full-stack software developer, artist, drummer, and photographer.
+  Sana (she/her) is a full-stack software developer,
+  artist, drummer, and photographer.
 ---
 
 **Sana has over 7 years of software engineering experience with multiple

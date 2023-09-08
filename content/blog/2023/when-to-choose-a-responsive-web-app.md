@@ -7,7 +7,6 @@ tags:
   - Article
   - Business Development
   - Push Notifications
-  - Recommendations
   - Responsive Web Apps
   - Startups
   - User Experience
@@ -53,9 +52,9 @@ what their most pressing needs are, and how your app will meet those needs.
 2. [When to Choose a Native Mobile App](/2023/08/01/when-to-choose-a-native-mobile-app/)
 3. [When to Choose a Progressive Web App](/2023/09/01/when-to-choose-a-progressive-web-app/) -->
 
-## What are Responsive Web Apps, Native Mobile Apps, and Progressive Web Apps?
+## What Are Responsive Web Apps, Native Mobile Apps, and Progressive Web Apps?
 
-Here are the biggest differences in a nutshell.
+Here are the biggest differences in a nutshell:
 
 - **Responsive Web App (RWA)** -- An application that runs in web browsers, such
   as Chrome, Firefox, or Safari, and responds to fit any screen size on any
@@ -121,9 +120,9 @@ simple responsive web app can have a starting price of $10K, and very complex
 web apps, such as social media platforms or project management software, cost
 many millions of dollars to design, develop, and maintain.
 
-Here's the icing: a responsive web app can later be turned into a progressive
-web app. So a responsive web app can be a good first step even if you plan to
-add more capabilities later.
+Here's the good news: a responsive web app can later be turned into a
+progressive web app. So a responsive web app can be a good first step even if
+you plan to add more capabilities later.
 
 [^codebase]: The term *codebase* is developer-speak for the collection of code
   used to build an application.
@@ -137,11 +136,11 @@ codebase to reach any device with a browser. It can also take less time to make
 the minimum viable product[^MVP] (MVP) available to an initial set of users, get
 feedback, and release frequent, incremental updates.
 
-No matter the type, even a very simple MVP of your app will take at least a few
-months to build. Very complex apps often take multiple years to design and
+It's important to remember, even a very simple responsive web app can still take
+a few months to build. Very complex apps often take multiple years to design and
 develop. If you want to make sure you're meeting the needs of the people who use
 your app, you will want to allow time to collect their feedback along the way
-and make improvements.
+and make improvements, no matter what type of app you choose.
 
 {{ embed.img(
   src='blog/2023/faster-dev.jpg',
@@ -271,14 +270,5 @@ mobile apps.
 
 ---
 
-Curious about native mobile apps? Sign up for OddNews to be notified when **Part
-2 -- When to Choose a Native Mobile App** hits the OddBlog.
-
-{{ oddnews.oddnews_signup(
-  heading=false,
-  tag='oddblog',
-  class='oddnews-form-main'
-) }}
-
-<!-- Is a **native mobile app** right for your digital project? Read more about
-[When to Choose a Native Mobile App](/2023/08/01/when-to-choose-a-native-mobile-app/). -->
+Is a **native mobile app** right for your digital project? Read more about
+[When to Choose a Native Mobile App](/2023/08/29/when-to-choose-a-native-mobile-app/).

@@ -13,7 +13,7 @@ social:
     user: sondrae
     server: mastodon.social
 summary: |
-  Sondra
+  Sondra (she/her)
   is a brand and user experience/interface designer --
   as well as a marketing expert, usability tester,
   and object-oriented UX strategist.

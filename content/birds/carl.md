@@ -10,7 +10,7 @@ social:
   github: carljm
   stackoverflow: 3207
 summary: |
-  Carl is a co-founder
+  Carl (he/him) is a co-founder
   and active developer-emeritus,
   providing counsel to the team.
   He's a core developer of the
