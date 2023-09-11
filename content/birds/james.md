@@ -10,7 +10,7 @@ image:
 social:
   github: jamesnw
   mastodon:
-    user: jamess
+    user: jamessw
     server: mastodon.cloud
 summary: |
   James (he/him) is a front-end developer focused on
