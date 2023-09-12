@@ -17,7 +17,7 @@ summary: |
   and advocate for users.
 ---
 
-**Erica is a developer emeritus**
+**Erica is an OddBird Emeritus**
 who co-led the front end development process --
 bringing design and application data alive.
 She's a military veteran who fell in love with coding,
