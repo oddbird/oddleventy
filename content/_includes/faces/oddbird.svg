@@ -13,6 +13,6 @@
 <g data-nest="davidh">{% include 'faces/davidh.svg' %}</g>
 <g data-nest="sondra">{% include 'faces/sondra.svg' %}</g>
 <g data-nest="miriam">{% include 'faces/miriam.svg' %}</g>
-<g data-nest="sana">{% include 'faces/sana.svg' %}</g>
+<g data-nest="james">{% include 'faces/james.svg' %}</g>
 <g data-nest="ed">{% include 'faces/ed.svg' %}</g>
 </svg>

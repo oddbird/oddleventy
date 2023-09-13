@@ -17,7 +17,7 @@ summary: |
   and game designer.
 ---
 
-**Kit is a developer emeritus**
+**Kit is an OddBird Emeritus**
 who led our server-side development --
 managing code architecture,
 database design,

@@ -18,7 +18,7 @@ jobs:
     if: github.event.ref_type == 'branch'
     steps:
       - name: Clone shadow repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{ secrets.SHADOW_OWNER }}/${{ secrets.SHADOW_REPO }}
           ssh-key: ${{ secrets.SHADOW_REPO_PRIVATE_KEY }}
@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
@@ -43,7 +43,7 @@ jobs:
       - run: yarn install
       - run: yarn build:prod
       - name: Clone shadow repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{ secrets.SHADOW_OWNER }}/${{ secrets.SHADOW_REPO }}
           ssh-key: ${{ secrets.SHADOW_REPO_PRIVATE_KEY }}
