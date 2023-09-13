@@ -1,0 +1,70 @@
+@use '~sassdoc-theme-herman/scss/utilities' as herman;
+@use '../tools';
+@use 'sass:meta';
+@use 'ratios';
+@use 'font-sizes';
+@use 'spacing-sizes';
+@use 'page-sizes';
+@use 'theme-sizes';
+
+/// # Spacing & Size Config
+/// Accoutrement maps for storing global spacing and size tokens.
+/// @link https://www.oddbird.net/accoutrement/docs/scale.html
+///   Accoutrement Scale
+/// @group config-scale
+
+/// ## Line Height
+/// --------------
+/// Going for a readable line-height
+/// that adapts to context
+/// @group config-scale
+/// @ratios modular-scale
+@include herman.add(
+  'ratios',
+  'modular-scale',
+  tools.compile-ratios(meta.module-variables('ratios'))
+);
+
+/// ## Font Sizes
+/// -------------
+/// @group config-scale
+/// @sizes font-sizes {text}
+@include herman.add(
+  'sizes',
+  'font-sizes',
+  tools.compile-sizes(meta.module-variables('font-sizes'))
+);
+
+/// ## Spacing Sizes
+/// ----------------
+/// @name spacing-sizes
+/// @group config-scale
+/// @sizes spacing-sizes {ruler-large}
+@include herman.add(
+  'sizes',
+  'spacing-sizes',
+  tools.compile-sizes(meta.module-variables('spacing-sizes'))
+);
+
+/// ## Theme Sizes
+/// --------------
+/// @name theme-sizes
+/// @group config-scale
+/// @sizes theme-sizes {ruler-large}
+@include herman.add(
+  'sizes',
+  'theme-sizes',
+  tools.compile-sizes(meta.module-variables('theme-sizes'))
+);
+
+/// ## Page Sizes
+/// -------------
+/// Mostly used as breakpoints when content is asking for css edits
+/// @name page-sizes
+/// @group config-scale
+/// @sizes page-sizes {ruler-large}
+@include herman.add(
+  'sizes',
+  'page-sizes',
+  tools.compile-sizes(meta.module-variables('page-sizes'))
+);
