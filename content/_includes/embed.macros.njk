@@ -95,6 +95,13 @@ params:
   class:
     type: string
     default: "''"
+  attrs:
+    type: object
+    default: '{}'
+  subscribe:
+    type: default | full
+    default: none
+    note: If provided, a subscribe button will be added to the figure.
 #}
 {% macro figure(
   data=none,
@@ -117,12 +124,11 @@ params:
         </figcaption>
       {%- endif -%}
     </figure>
-      {%- if subscribe -%}
-        <h2> Subscribe to Channel: </h2>
-          {{ channel_subscribe(subscribe) }}
-      {%- endif -%}
+    {%- if subscribe -%}
+      <h2>Subscribe to Channel:</h2>
+      {{ channel_subscribe(subscribe) }}
+    {%- endif -%}
   {%- endif -%}
-
 {%- endmacro %}
 
 
@@ -623,10 +629,11 @@ label: channel_subscribe
 category: metadata
 note: Embed a subscribe button for Winging It YouTube channel.
 params:
+  layout:
+    type: default | full
+    default: default
+    note: The layout of the button
 #}
-{% macro channel_subscribe() %}
-
-  <script src="https://apis.google.com/js/platform.js"></script>
-
-  <div data-subscribe="yt-button" class="g-ytsubscribe test" data-channelid="UCUkHxN78y9On9YH1zd-aTGw" data-layout="default" data-count="hidden"></div>
-{% endmacro %}
+{% macro channel_subscribe(layout='default') -%}
+  <div class="g-ytsubscribe" data-channelid="UCUkHxN78y9On9YH1zd-aTGw" data-layout="{{ layout }}" data-count="hidden"></div>
+{%- endmacro %}

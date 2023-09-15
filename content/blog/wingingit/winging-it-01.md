@@ -24,7 +24,7 @@ summary: |
 
 {{ embed.figure(
   data=media,
-  subscribe=true
+  subscribe='full'
 ) }}
 
 ## What we cover:

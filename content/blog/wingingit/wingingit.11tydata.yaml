@@ -1,5 +1,7 @@
 venue: Winging It
 url: https://www.youtube.com/@wingingitoddbird
+extra_scripts:
+  - https://apis.google.com/js/platform.js
 tags:
   - Winging It
   - Show Notes
