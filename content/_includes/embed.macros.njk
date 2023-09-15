@@ -100,7 +100,8 @@ params:
   data=none,
   caption=none,
   class='',
-  attrs={}
+  attrs={},
+  subscribe=none
 ) -%}
   {%- set content = _fig_content(data) if (data != none) else caller() -%}
   {%- if content -%}
@@ -116,7 +117,12 @@ params:
         </figcaption>
       {%- endif -%}
     </figure>
+      {%- if subscribe -%}
+        <h2> Subscribe to Channel: </h2>
+          {{ channel_subscribe(subscribe) }}
+      {%- endif -%}
   {%- endif -%}
+
 {%- endmacro %}
 
 
@@ -611,3 +617,16 @@ params:
 </p>
 {%- if script -%}<script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js"></script>{%- endif -%}
 {%- endmacro %}
+
+{# @docs
+label: channel_subscribe
+category: metadata
+note: Embed a subscribe button for Winging It YouTube channel.
+params:
+#}
+{% macro channel_subscribe() %}
+
+  <script src="https://apis.google.com/js/platform.js"></script>
+
+  <div data-subscribe="yt-button" class="g-ytsubscribe test" data-channelid="UCUkHxN78y9On9YH1zd-aTGw" data-layout="default" data-count="hidden"></div>
+{% endmacro %}

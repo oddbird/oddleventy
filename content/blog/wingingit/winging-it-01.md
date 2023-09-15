@@ -23,7 +23,8 @@ summary: |
 {% import "embed.macros.njk" as embed %}
 
 {{ embed.figure(
-  data=media
+  data=media,
+  subscribe=true
 ) }}
 
 ## What we cover:
