@@ -9,20 +9,12 @@
 /// Generate variables from Sass maps,
 /// using Accoutrement tools.
 /// @name Global Sizes
-/// @see $font-sizes
-/// @see $spacing-sizes
-/// @see $theme-sizes
 /// @link https://www.oddbird.net/accoutrement/docs/token-vars
 ///   Accoutrement CSS Variables
 /// @group init-scale
 html {
-  @include config.tokens--(config.$font-sizes);
-  @include config.tokens--(config.$spacing-sizes);
-  @include config.tokens--(config.$theme-sizes);
-  @include config.tokens--(config.$page-sizes);
+  @include config.sizes--;
 
-  --extra: #{math.div(config.size('wide-page') - config.size('page'), 2)};
-  --main-min: calc(100vw - var(--page-margin) * 2);
   --page-columns: [full-start] var(--page-margin) [content-start wide-start
     page-start] minmax(var(--main-min), var(--page)) [page-end wide-end
     content-end] var(--page-margin) [full-end];

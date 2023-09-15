@@ -1,9 +1,10 @@
 @use 'tools' as *;
+@use 'sass:map';
+@use 'sass:meta';
+@use 'scale/page-sizes';
 
-// Times
-// -----
-/// Named z-index stack (allows nested stacks as needed)
-/// @type list
+/// List of named z-index layers.
+/// The order they are defined will be the integer they are assigned.
 /// @group config-layout
 $z-index: ('bump', 'dropdown', 'skip-link');
 
@@ -27,4 +28,15 @@ $z-index: ('bump', 'dropdown', 'skip-link');
   @if ($side == 'left') {
     transform: translateY(calc(var(--offset) * -1));
   }
+}
+
+// Breakpoints
+@each $name, $size in meta.module-variables('page-sizes') {
+  $size: convert-units($size, 'em');
+  $breakpoints: map.merge(
+    $breakpoints,
+    (
+      $name: $size,
+    )
+  );
 }

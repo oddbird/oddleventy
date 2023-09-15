@@ -18,7 +18,7 @@ summary: |
   and prolific core-contributor to the Plone CMS.
 ---
 
-**David is a developer emeritus**
+**David is an OddBird Emeritus**
 who co-led our server-side development --
 managing code architecture,
 database design,

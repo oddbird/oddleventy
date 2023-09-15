@@ -14,7 +14,7 @@ summary: |
   accessibility advocate, lifelong learner and ethical techie.
 ---
 
-**Olu is a developer emeritus**
+**Olu is an OddBird Emeritus**
 who is excited about making the web a fair, useful and/or fun and accessible
 place for all users. They mostly code in JavaScript, and have a passion for
 ethics in technology borne from pre-tech days studying Philosophy. They love
