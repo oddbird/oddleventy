@@ -14,7 +14,8 @@ image:
 media:
   - iframe: https://www.youtube.com/embed/q44bvgbpgrY
 summary: |
-  During our conversation, we discuss what htmx is, how it improves user experience, and walk through some examples of common UI patterns using htmx.
+  During our conversation, we discuss what htmx is, how it improves user
+  experience, and walk through some examples of common UI patterns using htmx.
 ---
 
 {% import "embed.macros.njk" as embed %}
