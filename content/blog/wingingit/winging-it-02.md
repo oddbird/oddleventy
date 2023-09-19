@@ -1,22 +1,20 @@
 ---
-eleventyExcludeFromCollections: true
-permalink: false
 title: htmx
 episode: 2
 author:
   - ed
   - miriam
   - sondra
-date: 2023-08-31
+date: 2023-09-19
 tags:
   - htmx
-length: 60 mins
+length: 28 mins
 image:
   src: winging-it/winging-it-2.jpg
 media:
-  - iframe: https://www.youtube.com/embed/FwICaSE8iuY
+  - iframe: https://www.youtube.com/embed/q44bvgbpgrY
 summary: |
-  htmx summary
+  During our conversation, we discuss what htmx is, how it improves user experience, and walk through some examples of common UI patterns using htmx.
 ---
 
 {% import "embed.macros.njk" as embed %}
@@ -29,12 +27,12 @@ summary: |
 
 - What is htmx
 - Common UI patterns implemented with htmx
-- The benefits of using HTMX
+- The benefits of using htmx
 - The kinds of projects that are best suited for htmx
 
 ## Links:
 
-- [htmx Examples](https://htmx.org/examples/)
+- [htmx examples](https://htmx.org/examples/)
 - [htmx intro](https://htmx.org/docs/)
 - [Infinite scroll](https://htmx.org/examples/infinite-scroll/)
 - [Active search](https://htmx.org/examples/active-search/)
