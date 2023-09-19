@@ -32,7 +32,7 @@ summary: |
 
 ## Links:
 
-- [htmx Examples](https://htmx.org/examples/)
+- [htmx examples](https://htmx.org/examples/)
 - [htmx intro](https://htmx.org/docs/)
 - [Infinite scroll](https://htmx.org/examples/infinite-scroll/)
 - [Active search](https://htmx.org/examples/active-search/)
