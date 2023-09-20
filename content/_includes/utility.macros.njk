@@ -27,10 +27,6 @@ params:
       "True" or "true" (string or boolean)
       will output the attribute without any value,
       while falsey values will not output any attribute.
-  subscribe:
-    type: default | full
-    default: none
-    note: If provided, a subscribe button will be added to the figure.
 #}
 {% macro attr_if(
   attr,
@@ -168,6 +164,10 @@ params:
   url:
     type: url
     default: none
+  subscribe:
+    type: default | full
+    default: none
+    note: If provided, a subscribe button will be added to the figure.
 #}
 {% macro main_action(
   content=none,
@@ -177,8 +177,8 @@ params:
   {%- set content = content if (content != none) else caller() -%}
   <p class="main-action">{{ link_if(content, url) }}</p>
   {%- if subscribe -%}
-      {{ channel_subscribe(subscribe) }}
-    {%- endif -%}
+    {{ channel_subscribe(subscribe) }}
+  {%- endif -%}
 {% endmacro %}
 
 
