@@ -27,6 +27,10 @@ params:
       "True" or "true" (string or boolean)
       will output the attribute without any value,
       while falsey values will not output any attribute.
+  subscribe:
+    type: default | full
+    default: none
+    note: If provided, a subscribe button will be added to the figure.
 #}
 {% macro attr_if(
   attr,
@@ -167,10 +171,14 @@ params:
 #}
 {% macro main_action(
   content=none,
-  url=none
+  url=none,
+  subscribe=none
 ) %}
   {%- set content = content if (content != none) else caller() -%}
   <p class="main-action">{{ link_if(content, url) }}</p>
+  {%- if subscribe -%}
+      {{ channel_subscribe(subscribe) }}
+    {%- endif -%}
 {% endmacro %}
 
 
@@ -242,3 +250,17 @@ params:
     {%- endif -%}
   </time>
 {% endmacro %}
+
+{# @docs
+label: channel_subscribe
+category: metadata
+note: Embed a subscribe button for Winging It YouTube channel.
+params:
+  layout:
+    type: default | full
+    default: default
+    note: The layout of the button
+#}
+{% macro channel_subscribe(layout='default') -%}
+  <div class="g-ytsubscribe" data-channelid="UCUkHxN78y9On9YH1zd-aTGw" data-layout="{{ layout }}" data-count="hidden"></div>
+{%- endmacro %}
