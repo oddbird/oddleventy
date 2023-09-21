@@ -35,12 +35,14 @@ events:
     adr: Chandler, AZ
     date: 2016-12-03
     # slides: https://oddbooksapp.com/release/1f08a0cb-198f-4c5f-ac85-93e55daa471d
+    video: https://www.youtube.com/video/lK_akjzOUY0
     media: &cssday
       iframe: https://www.youtube.com/embed/lK_akjzOUY0
   - venue: CascadiaFest
     url: https://2016.cascadiajs.com/
     date: 2016-08-03
     # slides: https://oddbooksapp.com/release/3964dd55-982a-4171-a46b-6dd0354eac27
+    video: https://www.youtube.com/video/cVZreFHgLFw
     media: &cascadia
       iframe: https://www.youtube.com/embed/cVZreFHgLFw
   - venue: CSS Summit
@@ -55,8 +57,9 @@ events:
     adr: San Francisco, CA
     date: 2016-03-31
     # slides: https://oddbooksapp.com/release/ab1987b6-7d5f-42e4-b0ff-e7312cb345f6
+    video: https://www.youtube.com/video/yM6wfkbZkAY
     media: &clarity
-      iframe: https://www.youtube.com/embed/b4vSy1e1ai8
+      iframe: https://www.youtube.com/embed/yM6wfkbZkAY
 summary: |
   **Style Guides & Pattern Libraries are great tools**
   for documenting the relationships between code and design,

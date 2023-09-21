@@ -16,6 +16,7 @@ events:
   - venue: Jamstack Toronto, 11ties
     url: https://www.meetup.com/jamstack-toronto/events/281278073/
     date: 2021-11-11
+    video: https://www.youtube.com/video/JKdF8iqEFbg
     media: &jstack
       iframe: https://www.youtube.com/embed/JKdF8iqEFbg
 summary: |
