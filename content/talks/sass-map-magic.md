@@ -13,6 +13,7 @@ events:
     adr: Boston, MA
     date: 2016-09-26
     # slides: https://oddbooksapp.com/release/b71e6e5d-e956-42ff-a4dd-b70bf3b13a2a
+    video: https://www.youtube.com/video/MdwtoFt2LOI
     media: &cssconf
       iframe: https://www.youtube.com/embed/MdwtoFt2LOI
   - venue: CSS Summit

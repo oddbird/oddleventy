@@ -38,9 +38,9 @@ events:
     adr: San Francisco, CA
     date: 2017-11-28
     # slides: https://oddbooksapp.com/release/ae641b90-8efa-4b1e-8da8-16940edf420d
-    video: https://youtu.be/Prc_V-j6yS4
+    video: https://youtu.be/DZrDSdTekI4
     media: &clarity
-      iframe: https://www.youtube.com/embed/Prc_V-j6yS4
+      iframe: https://www.youtube.com/embed/DZrDSdTekI4
   - venue: CSS Dev Conf
     adr: New Orleans, LA
     date: 2017-10-09
