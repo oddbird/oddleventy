@@ -26,6 +26,9 @@ events:
     adr: Freiburg, Germany
     url: https://smashingconf.com/freiburg-2023
     slides: https://slides.oddbird.net/cq/smashingde/
+    video: https://www.youtube.com/video/TxtTXDXcRp8
+    media: &smashde
+      iframe: https://www.youtube.com/embed/TxtTXDXcRp8
   - venue: CSS Day
     url: https://cssday.nl/2023
     adr: Amsterdam, Netherlands
@@ -48,7 +51,16 @@ summary: |
   What are CSS containers,
   and what queries can they respond to?
   Let’s find out!
+media:
+  - <<: *smashde
+  - <<: *cssday
 ---
+
+{% import 'embed.macros.njk' as embed %}
+
+{{ embed.figure(
+  data=media
+) }}
 
 While the basics look a lot like media queries --
 and can work as a drop-in replacement
