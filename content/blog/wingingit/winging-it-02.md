@@ -27,8 +27,8 @@ summary: |
 
 {{ utility.main_action(
   'Subscribe to Channel »',
-  subscribe_url)
-}}
+  subscribe_url
+) }}
 
 ## What we cover:
 
