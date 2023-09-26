@@ -98,17 +98,12 @@ params:
   attrs:
     type: object
     default: '{}'
-  subscribe:
-    type: default | full
-    default: none
-    note: If provided, a subscribe button will be added to the figure.
 #}
 {% macro figure(
   data=none,
   caption=none,
   class='',
-  attrs={},
-  subscribe=none
+  attrs={}
 ) -%}
   {%- set content = _fig_content(data) if (data != none) else caller() -%}
   {%- if content -%}
@@ -124,10 +119,6 @@ params:
         </figcaption>
       {%- endif -%}
     </figure>
-    {%- if subscribe -%}
-      <h2>Subscribe to Channel:</h2>
-      {{ utility.channel_subscribe(subscribe) }}
-    {%- endif -%}
   {%- endif -%}
 {%- endmacro %}
 
