@@ -21,9 +21,15 @@ summary: |
 ---
 
 {% import "embed.macros.njk" as embed %}
+{% import "utility.macros.njk" as utility %}
 
 {{ embed.figure(
   data=media
+) }}
+
+{{ utility.main_action(
+  'Subscribe to Channel »',
+  subscribe_url
 ) }}
 
 ## What we cover:

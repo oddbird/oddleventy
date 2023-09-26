@@ -34,7 +34,7 @@
     {% endif %}
 
     {% if action %}
-      {{ utility.main_action(action.text, action.url) }}
+      {{ utility.main_action(action.text, url=action.url) }}
     {% elif venue and canonical %}
       {{ utility.main_action(['See more at', venue, '»'] | join(' '), canonical) }}
     {% endif %}

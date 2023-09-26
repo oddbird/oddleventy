@@ -15,15 +15,14 @@
 /// ## Times
 /// --------
 /// Named times to be re-used in animations.
-/// @type map
 /// @group config-animation
 /// @example scss
 ///   @use 'config/animation/times';
 ///   @use 'config/tools';
 ///   @use 'sass:meta';
 ///
-///   @each  $name, $time in tools.compile-times(meta.module-variables('times')) {
-///   /* #{$name}: #{$time}; */
+///   @each $name, $time in tools.compile-times(meta.module-variables('times')) {
+///     /* #{$name}: #{$time}; */
 ///   }
 
 /// ## Changes
@@ -37,6 +36,6 @@
 ///   @use 'config/tools';
 ///   @use 'sass:meta';
 ///
-///   @each  $name, $change in tools.compile-changes(meta.module-variables('changes')) {
-///   /* #{$name}: #{$change}; */
+///   @each $name, $change in tools.compile-changes(meta.module-variables('changes')) {
+///     /* #{$name}: #{$change}; */
 ///   }
