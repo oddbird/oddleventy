@@ -31,7 +31,7 @@ events:
     url: https://www.w3.org/2022/09/meetup/
     date: 2022-09-13
     slug: 2022-tpac
-    video: https://www.youtube.com/watch?v=1VhCXu-gNAc
+    video: https://youtu.be/1VhCXu-gNAc
     slides: https://slides.oddbird.net/queries-units/tpac22/
     media: &tpac
       iframe: https://www.youtube.com/embed/1VhCXu-gNAc

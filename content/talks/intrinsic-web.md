@@ -15,15 +15,20 @@ tags:
   - CSSWG
 slides: https://slides.oddbird.net/css-next/
 events:
+  - venue: Camosun College
+    url: https://smashingconf.com/sf-2022/
+    date: 2023-03-14
+    adr: Victoria, BC
+    slides: https://slides.oddbird.net/css-next/camosun/
   - venue: SmashingConf SF
     url: https://smashingconf.com/sf-2022/
     date: 2022-06-21
     end: 2022-06-22
     adr: San Francisco, CA
     slides: https://slides.oddbird.net/css-next/smashingsf/
-    video: https://vimeo.com/showcase/9653752
+    video: https://youtu.be/QL3tFZLgVxU
     media: &smash
-      iframe: https://player.vimeo.com/video/725352687
+      iframe: https://www.youtube.com/embed/QL3tFZLgVxU
   - venue: An Event Apart Fall Summit
     url: https://aneventapart.com/event/fall-summit-2021
     date: 2021-10-11

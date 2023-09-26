@@ -17,6 +17,7 @@ events:
     url: https://www.meetup.com/WordPress-Naperville/events/vzstwrybcpbwb/
     date: 2020-11-17
     adr: Online
+    video: https://www.youtube.com/video/sFAegaqfJF4
     media: &wpdemo
       iframe: https://www.youtube.com/embed/sFAegaqfJF4
 summary: |
