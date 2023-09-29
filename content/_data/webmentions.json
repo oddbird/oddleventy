@@ -1,29 +1,6 @@
 {
-  "lastFetched": "2023-09-29T17:41:17.943Z",
+  "lastFetched": "2023-09-29T18:45:52.335Z",
   "children": [
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "Ana Rodrigues",
-        "photo": "https://webmention.io/avatar/files.mastodon.social/ecf9b50ba4c4460d358846b6c016e420ad56e1abdb2cfb6b8c1e4ae82cded723.png",
-        "url": "https://mastodon.social/@ohhelloana"
-      },
-      "url": "https://mastodon.social/@ohhelloana/110281440017986097",
-      "published": "2023-04-29T09:40:30",
-      "wm-received": "2023-04-29T09:51:05Z",
-      "wm-id": 1667971,
-      "wm-source": "https://brid.gy/comment/mastodon/@matthiasott@mastodon.social/110277352371004975/110281440017986097",
-      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
-      "wm-protocol": "webmention",
-      "content": {
-        "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@matthiasott\" class=\"u-url\">@<span>matthiasott</span></a></span> what a fantastic collection! Thank you so much! 🥰</p>\n<a class=\"u-mention\" href=\"https://css-tricks.com/css-cascade-layers/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/18/cq-syntax/\"></a>",
-        "text": "@matthiasott what a fantastic collection! Thank you so much! 🥰"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
     {
       "type": "entry",
       "author": {
@@ -117,29 +94,6 @@
       },
       "repost-of": "https://www.oddbird.net/2022/11/11/platform-tools/",
       "wm-property": "repost-of",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "CSS Café",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/44cfe5a4795071a93f63041a9f351d599c2db67783cf0599283fa2e78ad3fb8d.png",
-        "url": "https://twitter.com/CSS__Cafe"
-      },
-      "url": "https://twitter.com/CSS__Cafe/status/1595835735441297408",
-      "published": "2022-11-24T17:44:23+00:00",
-      "wm-received": "2022-11-24T18:42:46Z",
-      "wm-id": 1567527,
-      "wm-source": "https://brid.gy/comment/twitter/heydonworks/1595835735441297408/1595835735441297408",
-      "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
-      "wm-protocol": "webmention",
-      "content": {
-        "html": "* <a href=\"https://www.modularscale.com/\">modularscale.com</a>\n* <a href=\"https://abookapart.com/products/flexible-typesetting\">abookapart.com/products/flexi…</a>\n* <a href=\"https://utopia.fyi/\">utopia.fyi</a>\n* <a href=\"https://www.oddbird.net/2022/11/11/platform-tools/\">oddbird.net/2022/11/11/pla…</a>\n* <a href=\"https://vasilis.nl/nerd/our-web-design-tools-are-holding-us-back/\">vasilis.nl/nerd/our-web-d…</a>\n* <a href=\"https://labs.jensimmons.com/\">labs.jensimmons.com</a>\n* <a href=\"https://beyondtellerrand.com/events/dusseldorf-2022/speakers/stephanie-eckles\">beyondtellerrand.com/events/dusseld…</a>\n* <a href=\"https://www.youtube.com/watch?v=tueTFd2TQUA\">youtube.com/watch?v=tueTFd…</a>\n* <a href=\"https://every-layout.dev/\">every-layout.dev</a>\n* <a href=\"https://www.youtube.com/watch?v=Wno1IhEBTxc\">youtube.com/watch?v=Wno1Ih…</a>",
-        "text": "* modularscale.com\n* abookapart.com/products/flexi…\n* utopia.fyi\n* oddbird.net/2022/11/11/pla…\n* vasilis.nl/nerd/our-web-d…\n* labs.jensimmons.com\n* beyondtellerrand.com/events/dusseld…\n* youtube.com/watch?v=tueTFd…\n* every-layout.dev\n* youtube.com/watch?v=Wno1Ih…"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/11/11/platform-tools/",
-      "wm-property": "in-reply-to",
       "wm-private": false
     },
     {
@@ -364,32 +318,6 @@
       "type": "entry",
       "author": {
         "type": "card",
-        "name": "dailydevlinks.",
-        "photo": "https://webmention.io/avatar/pbs.twimg.com/520761d627ebc8dac3e344323011fe0cf765981dcfd9b5ac60dbd1ecb40f26a8.jpg",
-        "url": "https://twitter.com/dailydevlinks"
-      },
-      "url": "https://twitter.com/dailydevlinks/status/1567009336110587906",
-      "published": "2022-09-06T04:38:34+00:00",
-      "wm-received": "2022-09-06T04:39:41Z",
-      "wm-id": 1511606,
-      "wm-source": "https://brid.gy/comment/twitter/mmatuzo/1567009336110587906/1567009336110587906",
-      "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/?ref=dailydevlinks.com",
-      "wm-protocol": "webmention",
-      "photo": [
-        "https://pbs.twimg.com/media/Fb8g4VoXkAM4rlS.jpg"
-      ],
-      "content": {
-        "html": "2/ 📚 Top Reads\n\nWhen Do You Use CSS Columns?\n🔗 <a href=\"https://css-tricks.com/when-do-you-use-css-columns/?utm_source=dailydevlinks.com&amp;utm_medium=newsletter&amp;utm_campaign=dailydevlinks.com&amp;ref=dailydevlinks.com\">css-tricks.com/when-do-you-us…</a> (<a href=\"https://twitter.com/geoffreygraham\">@geoffreygraham</a>)\n\nOutline is your friend\n🔗 <a href=\"https://www.matuzo.at/blog/2022/focus-outline/?utm_source=dailydevlinks.com&amp;utm_medium=newsletter&amp;utm_campaign=dailydevlinks.com&amp;ref=dailydevlinks.com\">matuzo.at/blog/2022/focu…</a> (<a href=\"https://twitter.com/mmatuzo\">@mmatuzo</a>)\n\nUse the Right Container Query Syntax\n🔗 <a href=\"https://www.oddbird.net/2022/08/18/cq-syntax/?utm_source=dailydevlinks.com&amp;utm_medium=newsletter&amp;utm_campaign=dailydevlinks.com&amp;ref=dailydevlinks.com\">oddbird.net/2022/08/18/cq-…</a> (<a href=\"https://twitter.com/TerribleMia\">@TerribleMia</a>)\n<a class=\"u-mention\" href=\"https://css-tricks.com/when-do-you-use-css-columns/?ref=dailydevlinks.com\"></a>\n<a class=\"u-mention\" href=\"https://www.matuzo.at/blog/2022/focus-outline/?ref=dailydevlinks.com\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/18/cq-syntax/?ref=dailydevlinks.com\"></a>",
-        "text": "2/ 📚 Top Reads\n\nWhen Do You Use CSS Columns?\n🔗 css-tricks.com/when-do-you-us… (@geoffreygraham)\n\nOutline is your friend\n🔗 matuzo.at/blog/2022/focu… (@mmatuzo)\n\nUse the Right Container Query Syntax\n🔗 oddbird.net/2022/08/18/cq-… (@TerribleMia)"
-      },
-      "in-reply-to": "https://www.oddbird.net/2022/08/18/cq-syntax/?ref=dailydevlinks.com",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
         "name": "Robat Williams",
         "photo": "https://webmention.io/avatar/pbs.twimg.com/0b5bc460d573545cf1ac781f695257f73007f3c35cef065a9cec7f6fab2df482.jpg",
         "url": "https://twitter.com/_rwms"
@@ -471,8 +399,8 @@
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
       "wm-protocol": "webmention",
       "content": {
-        "html": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap…\nhttps://t.co/nC5TzYYmOK<a href=\"https://www.oddbird.net/2022/08/18/cq-syntax/\">oddbird.net/2022/08/18/cq-…</a> gaming.",
-        "text": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap…\nhttps://t.co/nC5TzYYmOKoddbird.net/2022/08/18/cq-… gaming."
+        "html": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap…I will read it during gaming.",
+        "text": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap…I will read it during gaming."
       },
       "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
       "wm-property": "mention-of",
