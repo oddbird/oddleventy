@@ -12,7 +12,6 @@ tags:
   - Cascade Layers
   - Container Queries
   - CSS Scope
-  - Video
 summary: |
   CSS is evolving rapidly
   and new features come online all the time.
@@ -26,7 +25,4 @@ media:
 
 {% import "embed.macros.njk" as embed %}
 
-{{ embed.figure(
-  data=media,
-  caption='Recorded live event…'
-) }}
+{{ embed.figure(data=media) }}

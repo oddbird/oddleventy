@@ -12,7 +12,6 @@ image:
     October 2022
 tags:
   - CSS
-  - Video
 summary: |
   A panel conversation with
   library and methodology authors

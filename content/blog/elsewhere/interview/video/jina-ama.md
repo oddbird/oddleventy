@@ -10,7 +10,6 @@ tags:
   - CSS
   - Sass
   - Design Systems
-  - Video
 summary: |
   Jina and I answer questions about CSS, Sass, Design Systems, and more!
 media:
