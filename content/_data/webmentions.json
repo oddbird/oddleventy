@@ -399,8 +399,8 @@
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
       "wm-protocol": "webmention",
       "content": {
-        "html": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap…I will read it during gaming.",
-        "text": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap…I will read it during gaming."
+        "html": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap… I will read it during gaming.",
+        "text": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap… I will read it during gaming."
       },
       "mention-of": "https://www.oddbird.net/2022/08/18/cq-syntax/",
       "wm-property": "mention-of",
