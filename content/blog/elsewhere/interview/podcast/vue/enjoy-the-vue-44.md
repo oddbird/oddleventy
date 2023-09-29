@@ -10,9 +10,7 @@ image:
 tags:
   - CSS
   - Sass
-  - Vue
   - Enjoy The Vue
-  - Podcast
 summary: |
   I join Ari, Ben, and Tessa to talk about
   getting into CSS from other languages,

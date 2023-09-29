@@ -16,7 +16,6 @@ tags:
   - Cascade Layers
   - CSS Scope
   - Container Queries
-  - Podcast
   - Video
 summary: |
   A podcast focusing on front end development
