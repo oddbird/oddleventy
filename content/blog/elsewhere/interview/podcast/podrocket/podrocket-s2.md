@@ -1,21 +1,14 @@
 ---
 title: Styling the intrinsic web
-sub: A web development podcast from LogRocket
-venue: PodRocket
 date: 2022-08-16
 canonical: https://podrocket.logrocket.com/intrinsic-web-styling
 author: miriam
-image:
-  src: blog/elsewhere/podrocket.jpg
-  alt: Grainy art-deco illustration of a rocket launch
 tags:
   - CSS
   - CSSWG
-  - PodRocket
   - Container Queries
   - Cascade Layers
   - CSS Scope
-  - Podcast
 summary: |
   I talk with Noel Minchow
   about how to style the intrinsic web,

@@ -1,7 +1,6 @@
 ---
 title: Teleportation, PapayaWhip, and Cookies
 sub: This episode went a little off the rails…
-venue: Word Wrap Show
 date: 2022-05-30
 canonical: https://wordwrap.dev/episodes/s2/017/
 author: miriam
@@ -9,11 +8,8 @@ image:
   src: blog/elsewhere/wordwrap.jpg
   alt: Word Wrap Show
 tags:
-  - CSS
   - CSSWG
-  - Word Wrap Show
   - Container Queries
-  - Podcast
 summary: |
   I talk with Claire and Steph
   about changes to the Container Query syntax,

@@ -11,7 +11,6 @@ tags:
   - CSS
   - CSSWG
   - Igalia Chats
-  - Podcast
 summary: |
   Igalia's Brian Kardell
   sits down to chat with Miriam and Rachel Andrew

@@ -14,7 +14,6 @@ tags:
   - ORCA
   - Design
   - User Experience
-  - Podcast
 summary: |
   Sondra and Miriam chat with Sophia
   about using her ORCA methodology

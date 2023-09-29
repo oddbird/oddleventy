@@ -9,8 +9,6 @@ image:
   src: talks/miriam.jpg
   alt: Miriam Suzanne speaking at a conference
 tags:
-  - Vue
-  - Podcast
   - Video
 summary: |
   Thunder Nerds interview me

@@ -10,7 +10,6 @@ image:
 tags:
   - CSS
   - Sass
-  - Podcast
 summary: |
   A spinoff of the Party Corgi Network discord.
   I chat with Chris Biscardi about
