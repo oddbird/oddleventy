@@ -92,7 +92,6 @@ summary: |
   [susy]: /susy/
 media:
   - span: full
-    <<: *bt
   - <<: *clarity
   - <<: *django
 ---
