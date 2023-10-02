@@ -28,11 +28,9 @@ events:
     adr: Düsseldorf, Germany
     date: 2018-05-07
     # slides: https://oddbooksapp.com/release/ce37ef91-8bd8-43e2-932a-66931b4b25ce
-    video: https://vimeo.com/268576559
+    video: https://youtu.be/iODambgMZhk
     media: &bt
-      iframe: https://player.vimeo.com/video/268576559
-      width: 640
-      height: 360
+      iframe: https://www.youtube.com/embed/iODambgMZhk
   - venue: Clarity
     url: https://www.clarityconf.com/event/2017
     adr: San Francisco, CA
