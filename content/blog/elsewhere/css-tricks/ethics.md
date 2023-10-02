@@ -96,7 +96,8 @@ some resources that I recommend:
 
 - Cennydd Bowles -Future Ethics ([Book] & [Talk])
 - Mule Design -[Code of Ethics]
-- Mike Monteiro -[How Designers Destroyed the World]
+- Mike Monteiro -[How Designers Destroyed the World] and [How to Build
+    an Atomic Bomb]
 - Brainstorm Design 2019 -[The Ethics of Design I Fortune]
 - Cathy O'Neil -[Weapons of Math Destruction]
 
@@ -104,5 +105,6 @@ some resources that I recommend:
 [Talk]: https://www.youtube.com/watch?v=DfxMv9mIjFU&t=381s
 [Code of Ethics]: https://deardesignstudent.com/a-designers-code-of-ethics-f4a88aca9e95
 [How Designers Destroyed the World]: https://vimeo.com/122022963
+[How to Build an Atomic Bomb]: https://youtu.be/ZGsYHws-hbc
 [The Ethics of Design I Fortune]: https://www.youtube.com/watch?v=X24twMoJYt4&
 [Weapons of Math Destruction]: https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction
