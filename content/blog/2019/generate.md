@@ -116,10 +116,7 @@ Miriam and I had the privilege of watching Jen Simmons live-code a
 fiendishly difficult layout (that we selected for her) using CSS Grid.
 Wow! Such exciting new possibilities with [CSS Grid].
 
-Watch Jen's talk: [Everything You Know About Web Design Just Changed]
-
   [CSS Grid]: https://gridbyexample.com/examples/
-  [Everything You Know About Web Design Just Changed]: https://vimeo.com/316326187
 
 ## Irene Pereyra
 
