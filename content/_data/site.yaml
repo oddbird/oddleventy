@@ -12,7 +12,7 @@ styles:
 facebook_id: 1820980378150914
 social:
   email: birds
-  twitter: oddbird
+  mastodon: oddbird
   github: oddbird
 nav:
   - url: /work/
@@ -26,5 +26,5 @@ nav:
 me:
   - https://www.oddbird.net/
   - mailto:birds@oddbird.net
-  - https://twitter.com/oddbird
+  - https://front-end.social/@OddBird
   - https://github.com/oddbird
