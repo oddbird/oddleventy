@@ -12,7 +12,9 @@ styles:
 facebook_id: 1820980378150914
 social:
   email: birds
-  mastodon: oddbird
+  mastodon:
+    user: oddbird
+    server: front-end.social
   github: oddbird
 nav:
   - url: /work/

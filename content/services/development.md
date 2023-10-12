@@ -17,7 +17,8 @@ summary: |
   efficiently.
 
   We provide expertise across a range of technologies, including
-  **Python** with **Django** & **FastAPI**, accessible **HTML**, **CSS/Sass**,
+  **Python** with **Django** & **FastAPI**,
+  accessible **HTML**, **CSS/Sass**,
   **JavaScript** with **React** & **Vue**, **Node**, and more.
 ---
 
