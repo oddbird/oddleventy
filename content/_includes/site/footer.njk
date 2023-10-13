@@ -6,9 +6,9 @@
 {%- set footer_title = "Let's chat about your web project" -%}
 {%- set footer_content -%}
   Fill out the form,
-  [schedule a call](https://calendly.com/oddbird/discovery),
-  send us an [email](mailto:birds@oddbird.net),
-  or find us on [Twitter](https://twitter.com/oddbird) or [GitHub](https://github.com/oddbird)
+  [schedule a call](https://calendly.com/oddbird/discovery), or
+  send us an [email](mailto:birds@oddbird.net).
+  {{ contact.social(site.social, 'OddBird', false, rel='me') | safe }}
 {%- endset -%}
 
 {%- if add_cta %}

@@ -17,7 +17,8 @@ summary: |
   efficiently.
 
   We provide expertise across a range of technologies, including
-  **Python/Django**, accessible **HTML**, **CSS/Sass**,
+  **Python** with **Django** & **FastAPI**,
+  accessible **HTML**, **CSS/Sass**,
   **JavaScript** with **React** & **Vue**, **Node**, and more.
 ---
 
@@ -147,7 +148,7 @@ performance and architecture.
 
 ### Languages & Tools
 
-- **Python** with **Django** (*core contributor*)
+- **Python** with **FastAPI** or **Django** (*core contributor*)
 - **HTML/CSS** with **Sass** (*core contributor*)
 - **JavaScript** with **Vue**, **React**, or **Svelte**
 - Node
