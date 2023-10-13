@@ -345,3 +345,97 @@ and sends invoices to clients on the same schedule.
 
 [harvest]: https://www.getharvest.com/
 [accounts]: mailto:accounts@oddbird.net
+
+## Success Criteria:
+
+This guide will help you understand the expectations for your role at OddBird.
+The criteria are divided into three groups: Work Quality, Communication, and
+Learning and Growth. Each group has three levels of performance: Under performs,
+Meets, and Exceeds. You can use this guide to assess your own performance,
+identify your strengths and areas for improvement, and set your goals and action
+plans.
+
+### Work Quality
+
+#### Under performs
+
+- Lacks initiative and waits for directions or assignments on high priority work
+- Produces low-quality or incomplete work that requires excessive rework or
+  refactoring from others
+- Uses outdated or inappropriate tools, technologies, or methodologies
+- Avoids or gives up on challenges
+- Does not plan or dissect big assignments into smaller tasks
+
+#### Meets
+
+- Takes initiative on high priority work by chipping away at it
+- Delivers complete and high-quality work and acts on feedback from others
+- Approaches challenges by spending time planning and dissecting out assignments
+
+#### Exceeds
+
+- Takes initiative planning and breaking down upcoming work
+- Takes ownership of features and infrastructure
+- Leads internal review processes and delivers high-quality, actionable feedback
+  to others
+- Makes requests for input early in process to tackle challenging work
+
+### Communication
+
+#### Under performs
+
+- Rarely communicates or does it in an untimely manner
+- Misses a large part or entire meetings without notice
+- Does not document their break down of upcoming work or status of in-progress
+  work, and does not reflect on their contributions, accomplishments, or lessons
+  from challenges (self-retro)
+- Does not ask for help or guidance when blocked, and does not participate or
+  learn from review and discussions
+- Shows disinterest or indifference when planning new work
+
+#### Meets
+
+- Communicates frequently and in time
+- Attends most meetings and notifies in advance when they cannot attend
+- Posts a breakdown of their daily assignments documenting completed work, the
+  status of in-progress work, and upcoming tasks
+- Documents their contributions, accomplishments, and lessons from challenges
+  (self-retro)
+- Reaches out with questions when blocked and engages with review and
+  planning by asking more questions
+
+#### Exceeds
+
+- Communicates with trust in advance and requests engagement from others
+- Leads meetings and discussions on internal and external projects
+- Follows up during and after reviews and discussions with questions that help
+  confirm understanding
+- Generates internal documents, blog posts, and other valuable content based on
+  their contributions (especially accomplishments and challenges)
+
+### Learning and Growth
+
+#### Under performs
+
+- Does not participate or learn from review and discussions, and asks few or
+  no questions
+- Resists or rejects change and feedback, and does not adjust to the changing
+  needs and expectations of projects
+- Lacks initiative and collaboration skills, and does not support the team's
+  goals and objectives
+
+#### Meets
+
+- Engages with review and discussions by asking more questions
+- Reaches out with questions when blocked
+- Acts on feedback as an opportunity to learn and improve, remains flexible and
+  adaptable to change
+
+#### Exceeds
+
+- Demonstrates curiosity and pursues challenges that help them and the team grow
+- Learns new skills, technologies, or methodologies that can improve their
+  performance and the quality of their work
+- Helps others adapt to the changing needs and expectations of the project
+- Demonstrates leadership, initiative, and collaboration skills, and contributes
+  to the team's goals and objectives
