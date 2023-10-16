@@ -424,6 +424,7 @@ plans.
   needs and expectations of projects
 - Lack initiative and collaboration skills, and don't support the team's
   goals and objectives
+- Refuse to follow established team processes
 
 #### Meet Expectations
 
@@ -431,6 +432,7 @@ plans.
 - Reach out with questions when blocked
 - Act on feedback as an opportunity to learn and improve, and remain flexible and
   adaptable to change
+- Challenge the team processes and look for ways to improve them
 
 #### Exceed Expectations
 
@@ -440,3 +442,4 @@ plans.
 - Help others adapt to the changing needs and expectations of the project
 - Demonstrate leadership, initiative, and collaboration skills, and contribute
   to the team's goals and objectives
+- Adjust the team processes, listening to feedback and guiding the team through the changes
