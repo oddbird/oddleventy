@@ -350,72 +350,72 @@ and sends invoices to clients on the same schedule.
 
 This guide will help you understand the expectations for your role at OddBird.
 The criteria are divided into three groups: Work Quality, Communication, and
-Learning and Growth. Each group has three levels of performance: Under performs,
-Meets, and Exceeds. You can use this guide to assess your own performance,
+Learning & Growth. Each group has three levels of performance: Underperforms,
+Meets Expectations, and Exceeds Expectations. You can use this guide to assess your own performance,
 identify your strengths and areas for improvement, and set your goals and action
 plans.
 
 ### Work Quality
 
-#### Under performs
+#### Underperforms
 
-- Lacks initiative and waits for directions or assignments on high priority work
+- Lacks initiative and waits for direction or assignments on high priority work
 - Produces low-quality or incomplete work that requires excessive rework or
   refactoring from others
 - Uses outdated or inappropriate tools, technologies, or methodologies
 - Avoids or gives up on challenges
 - Does not plan or dissect big assignments into smaller tasks
 
-#### Meets
+#### Meets Expectations
 
 - Takes initiative on high priority work by chipping away at it
-- Delivers complete and high-quality work and acts on feedback from others
+- Delivers complete and high-quality work, and acts on feedback from others
 - Approaches challenges by spending time planning and dissecting out assignments
 
-#### Exceeds
+#### Exceeds Expectations
 
-- Takes initiative planning and breaking down upcoming work
 - Takes ownership of features and infrastructure
 - Leads internal review processes and delivers high-quality, actionable feedback
   to others
 - Makes requests for input early in process to tackle challenging work
+- Takes initiative and leads others in planning and breaking down upcoming work
 
 ### Communication
 
-#### Under performs
+#### Underperforms
 
-- Rarely communicates or does it in an untimely manner
-- Misses a large part or entire meetings without notice
-- Does not document their break down of upcoming work or status of in-progress
+- Rarely communicates or does so in an untimely manner
+- Misses large parts of or entire meetings without notice
+- Does not document the breakdown of upcoming work or the status of in-progress
   work, and does not reflect on their contributions, accomplishments, or lessons
   from challenges (self-retro)
 - Does not ask for help or guidance when blocked, and does not participate or
   learn from review and discussions
 - Shows disinterest or indifference when planning new work
 
-#### Meets
+#### Meets Expectations
 
-- Communicates frequently and in time
-- Attends most meetings and notifies in advance when they cannot attend
+- Communicates frequently and in a timely manner
+- Attends most meetings and notifies others in advance when they will be late or cannot attend
 - Posts a breakdown of their daily assignments documenting completed work, the
   status of in-progress work, and upcoming tasks
 - Documents their contributions, accomplishments, and lessons from challenges
   (self-retro)
 - Reaches out with questions when blocked and engages with review and
-  planning by asking more questions
+  planning by asking follow-up questions
 
-#### Exceeds
+#### Exceeds Expectations
 
 - Communicates with trust in advance and requests engagement from others
-- Leads meetings and discussions on internal and external projects
+- Leads meetings and discussions about internal and external projects
 - Follows up during and after reviews and discussions with questions that help
   confirm understanding
 - Generates internal documents, blog posts, and other valuable content based on
   their contributions (especially accomplishments and challenges)
 
-### Learning and Growth
+### Learning & Growth
 
-#### Under performs
+#### Underperforms
 
 - Does not participate or learn from review and discussions, and asks few or
   no questions
@@ -424,14 +424,14 @@ plans.
 - Lacks initiative and collaboration skills, and does not support the team's
   goals and objectives
 
-#### Meets
+#### Meets Expectations
 
 - Engages with review and discussions by asking more questions
 - Reaches out with questions when blocked
-- Acts on feedback as an opportunity to learn and improve, remains flexible and
+- Acts on feedback as an opportunity to learn and improve, and remains flexible and
   adaptable to change
 
-#### Exceeds
+#### Exceeds Expectations
 
 - Demonstrates curiosity and pursues challenges that help them and the team grow
 - Learns new skills, technologies, or methodologies that can improve their
