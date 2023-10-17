@@ -345,3 +345,138 @@ and sends invoices to clients on the same schedule.
 
 [harvest]: https://www.getharvest.com/
 [accounts]: mailto:accounts@oddbird.net
+
+## Success Criteria:
+
+This guide will help you understand
+the expectations for your role at OddBird.
+The criteria are divided into three groups:
+Work Quality, Communication, and Learning & Growth.
+Each group has three levels of performance:
+Underperform, Meet Expectations, and Exceed Expectations.
+You can use this guide to assess your own performance,
+identify your strengths and areas for improvement,
+and set your goals and action plans.
+
+### Work Quality
+
+#### Underperform
+
+- Lack initiative and wait for direction or assignments
+  on high priority work
+- Produce low-quality or incomplete work
+  that requires excessive rework
+  or refactoring from others
+- Use outdated or inappropriate tools, technologies, or methodologies
+- Avoid or give up on challenges
+- Do not create plans for big assignments,
+  or dissect them into smaller tasks
+
+#### Meet Expectations
+
+- Take initiative on high priority work
+  by chipping away at it
+- Deliver complete and high-quality work,
+  and act on feedback from others
+- Approach challenges
+  by creating plans for big assignments,
+  and dissecting them into smaller tasks
+
+#### Exceed Expectations
+
+- Take ownership of features and infrastructure
+- Lead internal review processes
+  and deliver high-quality, actionable feedback to others
+- Make requests for input early in process
+  to tackle challenging work
+- Take initiative and lead others
+  in creating plans for big assignments,
+  and dissecting them into smaller tasks
+
+### Communication
+
+#### Underperform
+
+- Rarely communicate
+  or do so in an untimely manner
+- Miss large parts of or entire meetings without notice
+- Do not document the breakdown of upcoming work
+  or the status of in-progress work,
+  and do not reflect on your contributions, accomplishments,
+  or lessons from challenges (self-retro)
+- Do not ask for help or guidance when blocked,
+  and avoid participating and learning
+  from review and discussions
+- Show disinterest or indifference when planning new work
+
+#### Meet Expectations
+
+- Communicate frequently
+  and in a timely manner
+- Attend most meetings
+  and notify others in advance
+  when you will be late or cannot attend
+- Post a breakdown of your daily assignments
+  documenting completed work,
+  the status of in-progress work,
+  and upcoming tasks
+- Document your contributions,
+  accomplishments,
+  and lessons from challenges (self-retro)
+- Reach out with questions when blocked
+  and engage with review and planning
+  by asking follow-up questions
+
+#### Exceed Expectations
+
+- Communicate with trust in advance
+  and request engagement from others
+- Lead meetings and discussions
+  about internal and external projects
+- Follow up during and after reviews and discussions
+  with questions that help confirm understanding
+- Generate internal documents,
+  blog posts,
+  and other valuable content
+  based on your contributions
+  (especially accomplishments and challenges)
+
+### Learning & Growth
+
+#### Underperform
+
+- Do not participate or learn from review and discussions,
+  and asks few or no questions
+- Resist and reject change and feedback,
+  and do not adjust to the changing needs
+  and expectations of projects
+- Lack initiative and collaboration skills,
+  and don't support the team's goals and objectives
+- Refuse to follow established team processes
+
+#### Meet Expectations
+
+- Engage with review and discussions
+  by asking more questions
+- Reach out with questions when blocked
+- Act on feedback as an opportunity to learn and improve,
+  and remain flexible and adaptable to change
+- Challenge the team processes
+  and look for ways to improve them
+
+#### Exceed Expectations
+
+- Demonstrate curiosity and pursue challenges
+  that help you and the team grow
+- Learn new skills, technologies, or methodologies
+  that can improve your performance
+  and the quality of your work
+- Help others adapt
+  to the changing needs and expectations of the project
+- Demonstrate leadership,
+  initiative,
+  and collaboration skills,
+  and contribute to the team's goals and objectives
+- Adjust the team processes,
+  listening to feedback
+  and guiding the team through the changes
