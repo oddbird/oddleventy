@@ -369,8 +369,8 @@ and set your goals and action plans.
   or refactoring from others
 - Use outdated or inappropriate tools, technologies, or methodologies
 - Avoid or give up on challenges
-- Do not plan or dissect big assignments
-  into smaller tasks
+- Do not create plans for big assignments,
+  or dissect them into smaller tasks
 
 #### Meet Expectations
 
@@ -379,7 +379,8 @@ and set your goals and action plans.
 - Deliver complete and high-quality work,
   and act on feedback from others
 - Approach challenges
-  by spending time planning and dissecting out assignments
+  by creating plans for big assignments,
+  and dissecting them into smaller tasks
 
 #### Exceed Expectations
 
@@ -389,7 +390,8 @@ and set your goals and action plans.
 - Make requests for input early in process
   to tackle challenging work
 - Take initiative and lead others
-  in planning and breaking down upcoming work
+  in creating plans for big assignments,
+  and dissecting them into smaller tasks
 
 ### Communication
 
