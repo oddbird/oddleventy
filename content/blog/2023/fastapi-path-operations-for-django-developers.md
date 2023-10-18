@@ -23,7 +23,7 @@ features after we successfully converted an internal project from Django to
 FastAPI.
 
 1. FastAPI path operations for Django Developers (this article)
-2. SQL Alchemy for Django Developers (coming soon)
+2. SQLAlchemy for Django Developers (coming soon)
 3. Testing a FastAPI application (coming soon)
 4. How to use FastAPI dependency injection everywhere (coming soon)
 
