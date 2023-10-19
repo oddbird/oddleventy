@@ -235,8 +235,7 @@ can do this with a `ForeignKey`:
 
 class Address(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    street = models.CharField(max_length=100)
-    city = models.CharField(max_length=100)
+    email_address = models.TextField()
 ```
 
 In SQLAlchemy, you need to define the relationship explicitly:
@@ -286,8 +285,8 @@ that allow you to get related objects from a given model instance. Instead we
 need to use a `join` to bring in the `User` model and then filter on the `name`
 attribute.
 
-One clear advantage of SQLAlchemy is that you can instantiate model instances
-and relate them before they are saved, and then save them all at once:
+One clear advantage of SQLAlchemy is that you can instantiate models and relate
+them before they are saved, and then commit them all at once:
 
 ```python
 spongebob = User(
