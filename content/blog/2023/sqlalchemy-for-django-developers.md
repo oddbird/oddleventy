@@ -14,7 +14,7 @@ summary: |
   SQLAlchemy is a Python library for interacting with relational databases. It
   is a popular alternative to Django's ORM used by frameworks such as FastAPI.
   In this article we will help curious Django developers write their first
-  queries with SQLAlchemy and highlight key differences.
+  queries with SQLAlchemy, and highlight key differences.
 ---
 
 If you've heard about [FastAPI], a modern and fast web framework for building
