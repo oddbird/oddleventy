@@ -10,7 +10,7 @@ tags:
 image:
   src: blog/2023/fast.jpg
 summary: |
-  FastAPI path operations are the equivalent to Django views. In this article we
+  FastAPI path operations are the equivalent of Django views. In this article we
   explore the differences, advantages, and gotchas of using them from the
   perspective of a Django developer.
 ---
@@ -141,7 +141,7 @@ Notice a few things:
 ## FastAPI Path Operations
 
 Here's an equivalent version written as FastAPI path operations (the equivalent
-to Django views):
+of Django views):
 
 ```python
 from pydantic import BaseModel
