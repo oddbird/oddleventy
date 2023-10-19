@@ -1,7 +1,7 @@
 ---
 title: FastAPI Path Operations for Django Developers
 author: ed
-date: 2023-10-24
+date: 2023-10-19
 tags:
   - Article
   - Python
@@ -10,27 +10,25 @@ tags:
 image:
   src: blog/2023/fast.jpg
 summary: |
-  FastAPI path operations are the equivalent to Django views. In this article we
+  FastAPI path operations are the equivalent of Django views. In this article we
   explore the differences, advantages, and gotchas of using them from the
   perspective of a Django developer.
 ---
 
-You might have heard about FastAPI, a modern and fast web framework for building
-APIs with Python. You might be wondering how it compares to Django, the most
-popular and mature web framework for Python. In this series, I will try to
-answer this question by comparing Django and FastAPI on various aspects and
-features after we successfully converted an internal project from Django to
-FastAPI.
+If you've heard about [FastAPI], a modern and fast web framework for building
+APIs with Python, you might be wondering how it compares to Django, the most
+popular and mature web framework for Python. In this series, I will answer this
+question by comparing various aspects and features of Django and FastAPI, based
+on our recent experience converting an internal project from Django to FastAPI.
 
-1. FastAPI path operations for Django Developers (this article)
+[FastAPI]: https://fastapi.tiangolo.com/
+
+1. FastAPI Path Operations for Django Developers (this article)
 2. SQLAlchemy for Django Developers (coming soon)
-3. Testing a FastAPI application (coming soon)
-4. How to use FastAPI dependency injection everywhere (coming soon)
+3. Testing a FastAPI Application (coming soon)
+4. How To Use FastAPI Dependency Injection Everywhere (coming soon)
 
-## Why is FastAPI worth considering?
-
-*This section contains opinions. Skip to [Django Views](#django-views) for the
-actual comparison.*
+## Why is FastAPI Worth Considering?
 
 I discovered Django when I wanted to explore web frameworks outside the ASP.NET
 and Windows ecosystem. I was impressed by its "batteries included" approach that
@@ -50,13 +48,12 @@ automatic code formatting, and dependency injection are some of the features
 that I have a hard time living without.
 
 Because Django pre-dates Python's type checking system and it (rightly) wants to
-remain as backwards incompatible as possible, all efforts to leverage static
-type checking and deeper text editor integration have been bolted-on,
-experimental, and incomplete. The main player in this space seems to be
-[django-stubs], which provides type hints for Django as a separate package.
-After using it for a while, my conclusion is that Django was not designed with
-types in mind, and efforts to add them are mostly futile. We won't go into
-details here, but let's just say that the time and effort of adding and
+remain as backwards compatible as possible, all efforts to leverage static type
+checking and deeper text editor integration have been bolted-on, experimental,
+and incomplete. The main player in this space seems to be [django-stubs], which
+provides type hints for Django as a separate package. After using it for a
+while, my conclusion is that Django was not designed with types in mind, and
+efforts to add them are mostly futile. The time and effort of adding and
 maintaining type hints for a Django app is not worth the limited benefits.
 
 [django-stubs]: https://github.com/typeddjango/django-stubs
@@ -71,14 +68,14 @@ errors, validations, and documentation.
 Developing APIs with Django means you're probably using the excellent [Django
 REST Framework] (DRF for short). This package is a shining example of how Django
 gives you complete and robust functionality with very little code (shout out to
-you, `ViewSet`). However, we can't deny that it suffers from the same problems
-as Django itself: it was not designed with types in mind or to share information
-about endpoints and serializers with consumers of its APIs. We tried to bridge
-this gap with [drf-spectacular], which produces [OpenAPI] schemas from DRF views
-and serializers. However, its main limitation is that it relies on developers to
-manually annotate their application with additional information, and there's no
-guarantee that your schema will be up-to-date with your code. For this reason I
-wouldn't consider it a definitive solution.
+you, `ViewSet`). However, it suffers from the same problems as Django itself: it
+was not designed with types in mind or to share information about endpoints and
+serializers with consumers of its APIs. We tried to bridge this gap with
+[drf-spectacular], which produces [OpenAPI] schemas from DRF views and
+serializers. Its main limitation is that it relies on developers to manually
+annotate their application with additional information, and there's no guarantee
+that your schema will be up-to-date with your code. For this reason I wouldn't
+consider it a definitive solution.
 
 [Django REST Framework]: https://www.django-rest-framework.org/
 [drf-spectacular]: https://github.com/tfranzel/drf-spectacular
@@ -88,11 +85,12 @@ In the middle of all this, I kept hearing about FastAPI and how it was not only
 fast, but also leveraged Python's type system to provide a better developer
 experience *and* automatic documentation and schemas for API consumers. After
 following its excellent [tutorial], I asked the team to consider it for
-OddBooks, our collaborative writing tool. An exploratory branch was created and
-after reviewing the resulting code, we decided to go ahead and officially switch
-to FastAPI for this project.
+[OddBooks], our collaborative writing tool. An exploratory branch was created
+and after reviewing the resulting code, we decided to go ahead and officially
+switch to FastAPI for this project.
 
 [tutorial]: https://fastapi.tiangolo.com/tutorial/
+[OddBooks]: https://oddbooks.app
 
 ## Django Views
 
@@ -143,7 +141,7 @@ Notice a few things:
 ## FastAPI Path Operations
 
 Here's an equivalent version written as FastAPI path operations (the equivalent
-to Django views):
+of Django views):
 
 ```python
 from pydantic import BaseModel
@@ -190,8 +188,9 @@ def delete_version(version_id: int):
 ```
 
 *Note: I'm hiding the actual database read and write operations behind
-`get_versions_from_db` and similar functions. The ORM you use is a separate
-topic and I want to focus on writing and consuming API endpoints here.*
+`get_versions_from_db` and similar functions. How you connect to your database
+is a separate topic and I want to focus on writing and consuming API endpoints
+here.*
 
 In contrast with the Django version, we get:
 
@@ -226,7 +225,8 @@ Django version. This is where Django's "batteries included" approach really
 shines. However, I would argue that the verbosity is worth it for the benefits
 listed above, and by also nudging developers to be explicit in the input and
 output types of each individual endpoint, instead of relying on the hooks
-provided by DRF to serialize and deserialize data in different ways.
+provided by DRF to serialize and deserialize data in different ways. You might
+even say we have traded one set of "batteries" for another.
 
 FastAPI itself doesn't have concepts of models or serializers. Instead, it
 relies on [Pydantic] models to validate data. These models are not meant to be
@@ -251,8 +251,10 @@ benefits of static type checking, automatic documentation, and automatic schema
 generation are too good to pass up. If you're developing a traditional,
 multi-page application then the benefits are less clear and you might be better
 off sticking with Django because while FastAPI offers Jinja2 support for
-[templating] and easily serves [static files] as well, it lacks a built-in ORM
-and admin interface.
+[templating] and easily serves [static files] as well, it lacks a [built-in ORM]
+and [admin interface].
 
 [templating]: https://fastapi.tiangolo.com/advanced/templates/
 [static files]: https://fastapi.tiangolo.com/tutorial/static-files/
+[built-in ORM]: https://docs.djangoproject.com/en/4.2/topics/db/queries/
+[admin interface]: https://docs.djangoproject.com/en/4.2/ref/contrib/admin/
