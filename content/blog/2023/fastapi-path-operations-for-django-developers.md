@@ -225,7 +225,8 @@ Django version. This is where Django's "batteries included" approach really
 shines. However, I would argue that the verbosity is worth it for the benefits
 listed above, and by also nudging developers to be explicit in the input and
 output types of each individual endpoint, instead of relying on the hooks
-provided by DRF to serialize and deserialize data in different ways.
+provided by DRF to serialize and deserialize data in different ways. You might
+even say we have traded one set of "batteries" for another.
 
 FastAPI itself doesn't have concepts of models or serializers. Instead, it
 relies on [Pydantic] models to validate data. These models are not meant to be
@@ -250,8 +251,10 @@ benefits of static type checking, automatic documentation, and automatic schema
 generation are too good to pass up. If you're developing a traditional,
 multi-page application then the benefits are less clear and you might be better
 off sticking with Django because while FastAPI offers Jinja2 support for
-[templating] and easily serves [static files] as well, it lacks a built-in ORM
-and admin interface.
+[templating] and easily serves [static files] as well, it lacks a [built-in ORM]
+and [admin interface].
 
 [templating]: https://fastapi.tiangolo.com/advanced/templates/
 [static files]: https://fastapi.tiangolo.com/tutorial/static-files/
+[built-in ORM]: https://docs.djangoproject.com/en/4.2/topics/db/queries/
+[admin interface]: https://docs.djangoproject.com/en/4.2/ref/contrib/admin/
