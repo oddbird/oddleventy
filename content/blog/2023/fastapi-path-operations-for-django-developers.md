@@ -1,7 +1,7 @@
 ---
 title: FastAPI Path Operations for Django Developers
 author: ed
-date: 2023-10-24
+date: 2023-10-19
 tags:
   - Article
   - Python
