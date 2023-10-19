@@ -1,7 +1,7 @@
 ---
 title: SQLAlchemy for Django Developers
 author: ed
-date: 2023-10-20
+date: 2023-10-23
 tags:
   - Article
   - Python
