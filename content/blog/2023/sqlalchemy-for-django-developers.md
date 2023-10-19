@@ -90,11 +90,21 @@ database record when the object is "saved" (which is done differently in
 SQLAlchemy as we will see later).
 
 In contrast, these models differ in that SQLAlchemy relies more heavily on type
-hints to define the model. In my opinion this results in a more robust developer
-experience, and the `Mapped` annotation enables some nice tricks we will see
-later. SQLAlchemy also supports defining models with the [imperative syntax],
-which is less similar to Django's ORM. I personally prefer the declarative
-syntax and find it more readable and intuitive.
+hints to define the model. In my opinion this results in a more natural and
+robust developer experience. For example, the `fullname` field only requires the
+`Mapped[Optional[str]]` annotation to be mapped to a nullable text column.
+Fields that require further customization that can't be expressed in a type
+hint, like setting a character limit or marking a column as primary key, can use
+the [`mapped_column`] function as seen in the `id` and `name` fields. In all
+cases, by using the [`Mapped`] annotation type checkers have everything they
+need to correctly type the model attributes.
+
+[`mapped_column`]: https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.mapped_column
+[`Mapped`]: https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.Mapped
+
+SQLAlchemy also supports defining models with the
+[imperative syntax], which is less similar to Django's ORM. I personally prefer
+the declarative syntax and find it more readable and intuitive.
 
 [imperative syntax]: https://docs.sqlalchemy.org/en/20/orm/mapping_styles.html#orm-imperative-mapping
 
