@@ -1,7 +1,7 @@
 ---
 title: SQLAlchemy for Django Developers
 author: ed
-date: 2023-10-24
+date: 2023-10-20
 tags:
   - Article
   - Python
@@ -12,37 +12,40 @@ image:
   src: blog/2023/library.jpg
 summary: |
   SQLAlchemy is a Python library for interacting with relational databases. It
-  is a popular alternative to Django's ORM used by alternative frameworks like
-  FastAPI. In this article we will help curious Django developers write
-  their first queries with SQLAlchemy and highlight key differences.
+  is a popular alternative to Django's ORM used by frameworks such as FastAPI.
+  In this article we will help curious Django developers write their first
+  queries with SQLAlchemy and highlight key differences.
 ---
 
-You might have heard about FastAPI, a modern and fast web framework for building
-APIs with Python. You might be wondering how it compares to Django, the most
-popular and mature web framework for Python. In this series, I will try to
-answer this question by comparing Django and FastAPI on various aspects and
-features after we successfully converted an internal project from Django to
-FastAPI.
+If you've heard about [FastAPI], a modern and fast web framework for building
+APIs with Python, you might be wondering how it compares to Django, the most
+popular and mature web framework for Python. In this series, I will answer this
+question by comparing various aspects and features of Django and FastAPI, based
+on our recent experience converting an internal project from Django to FastAPI.
+
+[FastAPI]: https://fastapi.tiangolo.com/
 
 1. [FastAPI Path Operations for Django Developers]
 2. SQLAlchemy for Django Developers (this article)
 3. Testing a FastAPI Application (coming soon)
-4. How to Use FastAPI Dependency Injection Everywhere (coming soon)
+4. How To Use FastAPI Dependency Injection Everywhere (coming soon)
 
-[FastAPI Path Operations for Django Developers]: ./fastapi-path-operations-for-django-developers
+[FastAPI Path Operations for Django Developers]: /blog/2023/10/19/fastapi-path-operations-for-django-developers/
 
 ## About SQLAlchemy
 
-Both Django's ORM (Object Relational Mapper) and SQLAlchemy are libraries for
-interacting with relational databases. Django's ORM is tightly coupled with the
-Django framework, while SQLAlchemy is a standalone library that can be used with
-any Python application. I had heard about it for many years but never had the
+Both Django's [ORM] (Object Relational Mapper) and [SQLAlchemy] are libraries
+for interacting with relational databases. Django's ORM is tightly coupled with
+the Django framework, while SQLAlchemy is a standalone library that can be used
+with any Python application. I heard about it many years ago, but never had the
 need to use it because Django's ORM was good enough for me (to the point that I
 know surprisingly little SQL). But when I started using FastAPI, SQLAlchemy was
 the recommended library for interacting with the database. Let's follow
 SQLAlchemy's [Quick Start] guide to create a simple database while learning
 about the differences between SQLAlchemy and Django's ORM.
 
+[ORM]: https://docs.djangoproject.com/en/4.2/topics/db/queries/
+[SQLAlchemy]: https://www.sqlalchemy.org/
 [Quick Start]: https://docs.sqlalchemy.org/en/20/orm/quickstart.html
 
 ## Model Definition: Surprisingly Similar
@@ -80,21 +83,20 @@ still encounter the old style in some codebases.*
 [declarative style]: https://docs.sqlalchemy.org/en/20/orm/mapping_styles.html#orm-declarative-mapping
 
 These two models are similar in that once they get information out of the
-database, table columns are accessible as attributes of the model instances.
-However, they differ in that SQLAlchemy relies more heavily on type hints to
-define the model. In my opinion this results in a more robust developer
+database, table columns are accessible as attributes of the model instances such
+as `user.name` and `user.fullname`. In the same way, modifying the attributes of
+a model instance like `user.name = "Jane"` will modify the corresponding
+database record when the object is "saved" (which is done differently in
+SQLAlchemy as we will see later).
+
+In contrast, these models differ in that SQLAlchemy relies more heavily on type
+hints to define the model. In my opinion this results in a more robust developer
 experience, and the `Mapped` annotation enables some nice tricks we will see
-later.
+later. SQLAlchemy also supports defining models with the [imperative syntax],
+which is less similar to Django's ORM. I personally prefer the declarative
+syntax and find it more readable and intuitive.
 
-Another similarity is that modifying the attributes of a model instance will
-modify the corresponding database record when the object is "saved" (which is
-done differently in SQLAlchemy as we will see later).
-
-SQLAlchemy also supports defining models with the [imperative syntax], which is
-less similar to Django's ORM. I personally prefer the declarative syntax and
-find it more readable and intuitive.
-
-[imperative syntax]: https://docs.sqlalchemy.org/en/20/orm/mapping_styles.html#imperative-mapping
+[imperative syntax]: https://docs.sqlalchemy.org/en/20/orm/mapping_styles.html#orm-imperative-mapping
 
 ## Engines and Sessions Instead of Managers
 
@@ -104,8 +106,9 @@ access the manager and perform queries. For example, for the `User` model, you
 can get all users with `User.objects.all()`.
 
 In SQLAlchemy, you need to create an [engine] and [session] first before you can
-perform any queries. You can think of the engine as a factory that gets us
-database connections, and sessions map roughly to these individual connections.
+perform any queries. You can think of the engine as a factory that provides us
+with database connections, and sessions map roughly to these individual
+connections.
 
 [engine]: https://docs.sqlalchemy.org/en/20/core/connections.html#sqlalchemy.engine.Engine
 [session]: https://docs.sqlalchemy.org/en/20/tutorial/dbapi_transactions.html#tutorial-executing-orm-session
@@ -119,13 +122,13 @@ with Session(engine) as session:
     users = session.execute("SELECT * FROM users").all()
 ```
 
-Notice we are using raw SQL here instead of the ORM. We will get to the ORM in
-the next section.
+*Notice we are using raw SQL here instead of the ORM. We will get to the ORM in
+the next section.*
 
 You don't need to use a context manager to create a session, but it is
 recommended so that the session is automatically closed when you are done with
 it. This can get annoying when you are writing FastAPI path operations because
-the code for each opertion will be inside a context manager. Luckily, you can
+the code for each operation will be inside a context manager. Luckily, you can
 create a FastAPI dependency that `yield`s the session from the context manager
 and use it by declaring it as an argument in your path operation.
 
@@ -151,9 +154,9 @@ def get_users(session: Session = Depends(get_session)):
 ## Query with Class Attributes Instead of Keyword Arguments
 
 In Django, you can query a model with keyword arguments. For example, if you
-want to get all users with the name "John", you can do
-`User.objects.filter(name="John")`. In SQLAlchemy, you need to use class
-attributes instead:
+want to get a single user with the name "John", you can do
+`User.objects.get(name="John")`. In SQLAlchemy, you need to use class attributes
+instead:
 
 ```python
 from sqlalchemy import select
@@ -162,18 +165,23 @@ john = session.scalars(select(User).where(User.name == "John")).one()
 ```
 
 The `where` method is chained to the `select` function and achieves the same as
-the `filter` method in Django. However, instead of keyword arguments, we use an
-actual comparison of the `name` attribute with the string "John". This caught me
-off guard at first but I've come to appreciate it because I get help from my
-text editor when building queries instead of trying to guess the names of
-keyword arguments.
+the `filter` and `get` methods in Django. However, instead of keyword arguments,
+we use an actual comparison of the `name` attribute with the string `"John"`.
+This caught me off guard at first but I've come to appreciate it because I get
+help from my text editor when building queries instead of trying to guess the
+names of keyword arguments.
 
-The class attributes have other tricks up their sleeves. For example, you can
-perform `in` queries with the `in_` method:
+More complex queries are also different. Django encourages you to use a double
+underscore syntax for more specific lookups. For example, to get all users with
+IDs 1, 2, or 3, you use `User.objects.filter(id__in=[1, 2, 3])`. SQLAlchemy
+achieves this by exposing custom methods as part of the class attributes:
 
 ```python
 users = session.scalars(select(User).where(User.id.in_([1, 2, 3]))).all()
 ```
+
+*The trailing underscore in `in_()` is needed because `in` is a reserved word in
+Python, not because of anything specific to SQLAlchemy.*
 
 There's a whole host of interesting methods you can use with model attributes as
 explained in the [`ColumnElement` documentation].
@@ -284,7 +292,7 @@ and relate them before they are saved, and then save them all at once:
 ```python
 spongebob = User(
     name="spongebob",
-    fullname="Spongebob Squarepants",
+    fullname="SpongeBob SquarePants",
     addresses=[Address(email_address="spongebob@sqlalchemy.org")],
 )
 sandy = User(
@@ -304,14 +312,16 @@ In Django you would need to save all the users first, then save the addresses
 with the `user` attribute set to the corresponding user. Here we can nest them
 naturally and SQLAlchemy will take care of the rest.
 
-## Migrations are not Built-in
+## Migrations Are Not Built-In
 
-Django comes with a built-in migration system that allows you to create and
+Django comes with a built-in [migration system] that allows you to create and
 apply migrations with a single command. This is definitely one of the most
 important features of Django and I was surprised to find out that SQLAlchemy
-does not have a built-in migration system. Instead, they maintain a separate
-package called [Alembic] to manage migrations.
+does not have a built-in alternative. Instead, they maintain a separate package
+called [Alembic] to manage migrations (which have their name changed to
+"revisions").
 
+[migration system]: https://docs.djangoproject.com/en/4.2/topics/migrations/
 [Alembic]: https://alembic.sqlalchemy.org/en/latest/
 
 We won't go into details here, but the basic substitutions are:
@@ -319,11 +329,18 @@ We won't go into details here, but the basic substitutions are:
 - `./manage.py makemigrations` becomes `alembic revision --autogenerate`
 - `./manage.py migrate` becomes `alembic upgrade head`
 - `./manage.py migrate app <migration number>` becomes `alembic upgrade
-  <migration hash>` if going forward, or `alembic downgrade <migration
-  hash>` if going back
+  <revision hash>` if going forward, or `alembic downgrade <revision hash>` if
+  going back
+
+SQLAlchemy and Alembic don't have the concept of "apps" as standalone elements
+with their own models and migrations. Instead, they use a single
+`alembic/versions` directory that contains all the revisions for all tables, and
+autogenerating revisions will scan the entire database for changes.
 
 To date I don't know how to manage migrations in databases that have models
-defined by third party packages.
+defined by third-party packages. This is in contrast with Django where
+third-parties usually ship their own migration history to manage their tables
+independently from user-defined models.
 
 ## Conclusion
 
@@ -332,4 +349,4 @@ can do. I think it's as powerful as Django's ORM, but it's definitely not as
 streamlined and putting the pieces together requires time. There also seems to
 be a lot of old, pre-2.0 information out there that can be confusing. All in
 all, I think it's a library worth learning and keeping in your tool belt,
-specially if you are using FastAPI.
+especially if you are using FastAPI.
