@@ -136,16 +136,12 @@ params:
             ) }}
           {% endh %}
 
-          {% if not compact %}
-            {% if not event.is_future %}
-              {{ links(event) }}
-            {% elif event.data.discount %}
-              <p class="event-discount">
-                Use discount code
-                <code>{{ event.data.discount.code }}</code>
-                to get <strong>{{ event.data.discount.amount }} off</strong>
-              </p>
-            {% endif %}
+          {% if not event.is_future %}
+            {{ '' if compact else links(event) }}
+          {% elif event.data.note %}
+            <p class="event-note">
+              {{ event.data.note | mdInline | safe }}
+            </p>
           {% endif %}
         </li>
       {%- endfor -%}

@@ -1,5 +1,6 @@
 ---
 title: Effective End-to-End Testing for Django
+sub: A Workshop
 date: 2022-10-16
 author: ed
 image:
