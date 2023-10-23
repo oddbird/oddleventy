@@ -190,9 +190,11 @@ def delete_version(version_id: int):
 ```
 
 *Note: I'm hiding the actual database read and write operations behind
-`get_versions_from_db` and similar functions. How you connect to your database
+`get_versions_from_db` and similar functions. How you [connect to your database]
 is a separate topic and I want to focus on writing and consuming API endpoints
 here.*
+
+[connect to your database]: /2023/10/23/sqlalchemy-for-django-developers/
 
 In contrast with the Django version, we get:
 
