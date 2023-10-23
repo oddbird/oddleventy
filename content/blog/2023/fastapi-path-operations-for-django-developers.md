@@ -24,9 +24,11 @@ on our recent experience converting an internal project from Django to FastAPI.
 [FastAPI]: https://fastapi.tiangolo.com/
 
 1. FastAPI Path Operations for Django Developers (this article)
-2. SQLAlchemy for Django Developers (coming soon)
+2. [SQLAlchemy for Django Developers]
 3. Testing a FastAPI Application (coming soon)
 4. How To Use FastAPI Dependency Injection Everywhere (coming soon)
+
+[SQLAlchemy for Django Developers]: /2023/10/23/sqlalchemy-for-django-developers/
 
 ## Why is FastAPI Worth Considering?
 
@@ -188,9 +190,11 @@ def delete_version(version_id: int):
 ```
 
 *Note: I'm hiding the actual database read and write operations behind
-`get_versions_from_db` and similar functions. How you connect to your database
+`get_versions_from_db` and similar functions. How you [connect to your database]
 is a separate topic and I want to focus on writing and consuming API endpoints
 here.*
+
+[connect to your database]: /2023/10/23/sqlalchemy-for-django-developers/
 
 In contrast with the Django version, we get:
 
