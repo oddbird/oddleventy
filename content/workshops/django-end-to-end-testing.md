@@ -1,6 +1,6 @@
 ---
 title: Effective End-to-End Testing for Django
-sub: A Workshop
+sub: A hands-on workshop using pytest and Playwright
 date: 2022-10-16
 author: ed
 image:

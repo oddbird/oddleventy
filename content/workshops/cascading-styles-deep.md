@@ -1,14 +1,15 @@
 ---
 title: Cascading Style Systems
-sub: A workshop on Resilient & Maintainable CSS
+sub: A workshop on resilient & maintainable CSS
 feature: workshop
 author: miriam
 date: 2023-01-09
 action:
-  text: Schedule a workshop »
+  text: Hire us to give a workshop »
   url: /contact/
 image:
-  src: talks/mia-back.jpg
+  src: talks/mia-smashing-de.jpg
+  position: top
   alt: |
     Mia from behind,
     standing at a laptop -
@@ -35,11 +36,14 @@ events:
     url: https://smashingconf.com/freiburg-2023/workshops/miriam-suzanne/
 summary: |
   New CSS features are shipping at an unprecedented rate --
-  cascade layers, container queries, the ':has()' selector,
+  cascade layers, container queries, the `:has()` selector,
   subgrid, nesting, and so much more.
   **It’s a good time to step back and understand
   how these tools fit together in a declarative system --
   a resilient cascade of styles**.
+
+  This workshop is available
+  to companies as well as conferences.
 ---
 
 It’s an exciting time, but the list can also feel overwhelming.
@@ -49,7 +53,7 @@ Should I rewrite my styles with each feature release,
 or stick with the tools that I know?
 
 If you ever feel lost in the CSS weeds,
-wrestling with  the cascade,
+wrestling with the cascade,
 or you just want to improve your workflow
 with modern, efficient, and maintainable stylesheets,
 then this workshop is for you!
@@ -66,18 +70,18 @@ that hold up across browsers, languages, and device interfaces.
 
 ## What Will Attendees Learn In This Workshop?
 
-- Building maintainable CSS systems with progressive enhancement.
+- Building maintainable CSS systems with progressive enhancement
 - The entire cascade, why it exists,
   and what all is involved (much more than specificity!)
-- Managing style conflicts with cascade layers, scope, and nesting.
-- Modern selectors like :is(), :where(), and :has().
-- Value resolution and validation, beyond cascading and inheritance.
-- Using custom properties to build adaptive systems.
-- The advantages of logical vs physical dimensions.
-- The layout flow with intrinsic and extrinsic sizing.
-- Size comparison functions like min(), max(), and clamp().
-- When to use flexbox vs grid for layout and alignment.
-- Fast and dynamic layouts using subgrid and container queries.
+- Managing style conflicts with cascade layers, scope, and nesting
+- Modern selectors like `:is()`, `:where()`, and `:has()`
+- Value resolution and validation, beyond cascading and inheritance
+- Using custom properties to build adaptive systems
+- The advantages of logical vs physical dimensions
+- The layout flow with intrinsic and extrinsic sizing
+- Size comparison functions like min(), max(), and clamp()
+- When to use flexbox vs grid for layout and alignment
+- Fast and dynamic layouts using subgrid and container queries
 
 ## Who Is This For?
 
@@ -94,47 +98,90 @@ The workshop is taught in five sessions, each with two parts:
 
 #### First, Do No Harm
 
-CSS is fundamentally different from other languages or design tools, built around a radical vision for contextual style and user-control. We’ll dig into the practical implications of that vision, and how the ‘grain’ of the language can guide us to more performant and resilient styles.
+CSS is fundamentally different
+from other languages or design tools,
+built around a radical vision
+for contextual style and user-control.
+We’ll dig into the practical implications of that vision,
+and how the ‘grain’ of the language
+can guide us to more performant and resilient styles.
 
 #### Cascading & Inheritance
 
-A deep-dive into the algorithms that take us from simple property/value declarations to a fully-styled web application. Along the way, we’ll explore new features like nesting, cascade layers, scope, and the :has() selector.
+A deep-dive into the algorithms
+that take us from simple property/value declarations
+to a fully-styled web application.
+Along the way, we’ll explore new features like nesting,
+cascade layers, scope, and the `:has()` selector.
 
 ### 2. Dynamic Systems: Custom Properties & Value Resolution
 
 #### Custom Properties Reveal the Matrix
 
-CSS custom properties (aka “variables”) expose the internals of CSS value resolution and error recovery. What does it even mean for properties to become ‘invalid at computed value time’? And how can we use these CSS internals to our advantage, developing more robust and dynamic style systems?
+CSS custom properties (aka “variables”)
+expose the internals of CSS value resolution and error recovery.
+What does it even mean for properties
+to become ‘invalid at computed value time’?
+And how can we use these CSS internals to our advantage,
+developing more robust and dynamic style systems?
 
 #### CSS Variables in Practice
-Practical use-cases, and interactive exercises related to CSS variables and functions…
+
+Practical use-cases,
+and interactive exercises related to CSS variables and functions.
 
 ### 3. Intrinsic Layouts: Distributing Space
 
 #### Flowing & Flexing
 
-Unlike the printed page, web content and context can be unpredictable. CSS provides tools to manage that uncertainty, aligning & distributing objects on the page. We’ll talk about normal flow, intrinsic and extrinsic sizing, logical properties, box sizing & alignment, and the flexible box model.
+Unlike the printed page,
+web content and context can be unpredictable.
+CSS provides tools to manage that uncertainty,
+aligning & distributing objects on the page.
+We’ll talk about normal flow,
+intrinsic and extrinsic sizing,
+logical properties,
+box sizing & alignment,
+and the flexible box model.
 
 #### Flex & Alignment in Practice
 
-Practical use-cases, and interactive exercises related to distributing space…
+Practical use-cases,
+and interactive exercises related to distributing space.
 
 ### 4. Intrinsic Layouts: Defining Structure
 
 #### Defining Structure
 
-Sometimes we also need to impose external structure to create consistent and reliable layouts, even with unpredictable content. This is a full session dedicated to Grids & Sub-grids, the multiple ‘stages of squishiness’, and container queries.
+Sometimes we also need to impose external structure
+to create consistent and reliable layouts,
+even with unpredictable content.
+This is a full session dedicated to grid & subgrid,
+the multiple ‘stages of squishiness’,
+and container queries.
 
 #### Grids & Containers in Practice
 
-Practical use-cases, and interactive exercises related to defining layouts…
+Practical use-cases,
+and interactive exercises related to defining layouts.
 
 ### 5. Resilient Styles: Organizing Conventions
 
 #### Cascade Aligned Programming
 
-There are many conventions for organizing CSS, but the best systems all share underlying principles based on CSS itself. What would it mean to use The Cascade as our guide for writing maintainable CSS?
+There are many conventions for organizing CSS,
+but the best systems all share underlying principles
+based on CSS itself.
+What would it mean to use _the cascade_ itself
+as our guide for writing maintainable CSS?
 
-#### Modern AND Resilient
+#### Modern and Resilient
 
-CSS is designed to adapt to context – failing silently, and enhancing progressively. We have tools to manage that context and support everyone, without giving up on the latest features. The details may vary from project to project, but we’ll look at practical strategies for building an expressive and robust CSS system that works for you.
+CSS is designed to adapt to context --
+failing silently, and enhancing progressively.
+We have tools to manage that context and support everyone,
+without giving up on the latest features.
+The details may vary from project to project,
+but we’ll look at practical strategies
+for building an expressive and robust CSS system
+that works for you.
