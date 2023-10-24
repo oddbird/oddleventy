@@ -1,6 +1,9 @@
 ---
 title: Intuitive Web Design with OOUX
 episode: 3
+tags:
+  - OOUX
+  - Design
 author:
   - sondra
   - james
