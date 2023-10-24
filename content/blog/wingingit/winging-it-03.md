@@ -43,5 +43,5 @@ summary: |
 ## Links:
 
 - [Denver Zoo](https://denverzoo.org/)
-- [OOUX Certification](http://partners.ooux.com/348125/17189)
+- [OOUX Certification (affiliate link)](http://partners.ooux.com/348125/17189)
 - [Slides](https://xd.adobe.com/view/59a38984-ff)
