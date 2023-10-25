@@ -55,14 +55,12 @@
   }
 }
 
-.event-discount,
+.event-note,
 .event-links {
   font-size: var(--small);
 }
 
-.event-discount {
-  @include config.wrap-content('[' ']');
-
+.event-note {
   font-style: italic;
 }
 
