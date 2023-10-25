@@ -27,9 +27,9 @@ events:
   - venue: Smashing Workshops
     date: 2024-02-26
     adr: Online
-    url: https://smashingconf.com/TBD
+    url: https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/
     note: >
-      Tickets [on sale now](https://smashingconf.com/TBD)!
+      Tickets [on sale now](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/)!
   - venue: Smashing Workshops
     date: 2023-09-06
     adr: Freiburg, Germany
