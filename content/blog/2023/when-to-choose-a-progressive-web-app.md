@@ -2,7 +2,7 @@
 title: When to Choose a Progressive Web App
 sub: Part 3 -- Responsive Web App vs Native Mobile App vs Progressive Web App
 author: sondra
-date: 2023-10-26
+date: 2023-10-31
 tags:
   - Article
   - Business Development
@@ -103,7 +103,7 @@ requires going through the app store approval process.
 
 {{ embed.img(
   src='blog/2023/fast-bike.jpg',
-  alt=''
+  alt='Blurry photo of a cyclist on a road bike'
 ) }}
 
 ### Discoverable Via Search Engines & App Stores
@@ -139,7 +139,7 @@ compatibility, meaning people on older devices will retain some level of access.
 
 {{ embed.img(
   src='blog/2023/heart-chain.jpg',
-  alt=''
+  alt='Paper cutouts of attached pink and red hearts'
 ) }}
 
 ### Specialized Capabilities
