@@ -12,6 +12,7 @@ rules:
   #   - https://github.com/stylelint/stylelint-config-recommended/blob/main/index.js
 
   # possible errors (these are all on by default)
+  declaration-block-no-redundant-longhand-properties: null
   no-descending-specificity: null
 
   # limit language features
