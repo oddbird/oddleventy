@@ -36,7 +36,7 @@ App](/2023/07/11/when-to-choose-a-responsive-web-app/)
 
 1. [When to Choose a Responsive Web App](/2023/07/11/when-to-choose-a-responsive-web-app/)
 2. When to Choose a Native Mobile App (this article)
-3. [When to Choose a Progressive Web App](/2023/10/31/when-to-choose-a-progressive-web-app/)
+3. [When to Choose a Progressive Web App](/2023/10/30/when-to-choose-a-progressive-web-app/)
 
 ## Native Mobile App -- Best for Advanced Capabilities
 
@@ -205,4 +205,4 @@ series.
 ---
 
 Is a **progressive web app** right for your digital project? Read more about
-[When to Choose a Progressive Web App](/2023/10/31/when-to-choose-a-progressive-web-app/).
+[When to Choose a Progressive Web App](/2023/10/30/when-to-choose-a-progressive-web-app/).

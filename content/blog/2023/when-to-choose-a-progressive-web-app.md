@@ -2,7 +2,7 @@
 title: When to Choose a Progressive Web App
 sub: Part 3 -- Responsive Web App vs Native Mobile App vs Progressive Web App
 author: sondra
-date: 2023-10-31
+date: 2023-10-30
 tags:
   - Article
   - Business Development
