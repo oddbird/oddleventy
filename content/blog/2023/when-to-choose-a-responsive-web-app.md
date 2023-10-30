@@ -32,7 +32,6 @@ card: large
 ---
 
 {% import 'embed.macros.njk' as embed %}
-{% import 'oddnews.macros.njk' as oddnews %}
 
 You have an idea for a custom digital product you'd like to build, and it's time
 to decide how to build it. One of your friends swears you won't succeed unless
@@ -46,11 +45,11 @@ apps, native mobile apps, and progressive web apps -- and how to determine the
 best option for your project. As you read, think about who your app will serve,
 what their most pressing needs are, and how your app will meet those needs.
 
-<!-- **Read all three parts to compare app types:**
+**Read all three parts to compare app types:**
 
-1. [When to Choose a Responsive Web App](/2023/07/11/when-to-choose-a-responsive-web-app/)
-2. [When to Choose a Native Mobile App](/2023/08/01/when-to-choose-a-native-mobile-app/)
-3. [When to Choose a Progressive Web App](/2023/09/01/when-to-choose-a-progressive-web-app/) -->
+1. When to Choose a Responsive Web App (this article)
+2. [When to Choose a Native Mobile App](/2023/08/29/when-to-choose-a-native-mobile-app/)
+3. [When to Choose a Progressive Web App](/2023/10/30/when-to-choose-a-progressive-web-app/)
 
 ## What Are Responsive Web Apps, Native Mobile Apps, and Progressive Web Apps?
 
@@ -224,8 +223,7 @@ then an RWA won't work.
 It is *possible* to access some advanced device features in the context of an
 RWA, but then you would be moving into the [progressive web app][pwa] space.
 
-<!-- [pwa]: /2023/09/01/when-to-choose-a-progressive-web-app/ -->
-[pwa]: https://web.dev/progressive-web-apps/
+[pwa]: /2023/10/30/when-to-choose-a-progressive-web-app/
 
 ### Performance Limitations
 *Don't choose a responsive web app when you need advanced performance.*
