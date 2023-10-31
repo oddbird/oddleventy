@@ -15,13 +15,13 @@ index: Polyfill
 links:
   source: https://github.com/orgs/oddbird/repositories?q=polyfill&type=all&language=&sort=
 summary: |
-  OddBird has created several polyfills
-  to use as a "shim for a browser API."
-  Use these polyfills for
-  Cascade Layers, CSS Anchor Positioning,
-  CSS Toggles, and Popover Attribute
-  while browsers work to catch up
-  to these new features.
+  Along with our work for the W3C
+  developing specifications
+  for the CSS language,
+  OddBird has started and maintains
+  a number of powerful CSS polyfills
+  including Cascade Layers, CSS Anchor Positioning,
+  CSS Toggles, and Popover Attribute.
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -59,7 +59,8 @@ the proposed new functions allow absolutely positioned elements
 to be placed relative to one or more
 author-defined anchor elements.
 
-## CSS Toggles Polyfill
+## CSS Toggles
+*(depricated for now)*
 
 [Demo](https://toggles.oddbird.net/) |
 [Source](https://github.com/oddbird/css-toggles)
@@ -81,7 +82,7 @@ as currently written, where possible --
 in addition to some of the extensions proposed
 in our explainer.
 
-## Popover Attribute Polyfill
+## Popover Polyfill
 
 [Demo](https://popover-polyfill.netlify.app/) |
 [Source](https://github.com/oddbird/popover-polyfill)
