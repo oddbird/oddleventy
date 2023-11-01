@@ -60,7 +60,7 @@ to be placed relative to one or more
 author-defined anchor elements.
 
 ## CSS Toggles
-*(depricated for now)*
+*(deprecated for now)*
 
 [Demo](https://toggles.oddbird.net/) |
 [Source](https://github.com/oddbird/css-toggles)
@@ -68,7 +68,7 @@ author-defined anchor elements.
 The goal of this (work in progress) feature
 is to make it possible for CSS
 to manage presentational state
-for patterns such as tabs/accordians,
+for patterns such as tabs/accordions,
 carousels, color modes, etc.
 There are still many questions
 to be answered around the scope,
