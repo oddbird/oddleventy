@@ -34,7 +34,7 @@ summary: |
 PostCSS Cascade Layers lets you use @layer
 following the Cascade Layers Specification.
 For more information on layers,
-checkout A Complete Guide to CSS Cascade Layers
+checkout [A Complete Guide to CSS Cascade Layers](https://www.oddbird.net/2022/02/21/layers-guide/)
 by Miriam Suzanne.
 
 ## CSS Anchor Positioning Polyfill
@@ -42,7 +42,7 @@ by Miriam Suzanne.
 [Demo](https://anchor-polyfill.netlify.app/) |
 [Source](https://github.com/oddbird/css-anchor-positioning)
 
-The CSS anchor positioning specification
+The [CSS anchor positioning specification](https://www.w3.org/TR/css-anchor-position-1/)
 defines anchor positioning,
 "where a positioned element can size and position itself
 relative to one or more 'anchor elements'
@@ -84,7 +84,6 @@ in our explainer.
 
 ## Popover Polyfill
 
-[Demo](https://popover-polyfill.netlify.app/) |
 [Source](https://github.com/oddbird/popover-polyfill)
 
 OddBird’s Popover Attribute Polyfill
