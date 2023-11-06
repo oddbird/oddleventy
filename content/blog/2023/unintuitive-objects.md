@@ -6,7 +6,7 @@ tags:
   - Article
   - User Experience
 image:
-  src: blog/2023/graph.jpg
+  src: blog/2023/masks.jpg
 summary: |
    Do you want to make your website
    or web app
@@ -25,7 +25,7 @@ summary: |
 ---
 {% import 'embed.macros.njk' as embed %}
 
-As a certified OOUX Strategist, I've been noticing unintuitive objects and working to avoid them in my own designs since 2020. That was the year when (among many other things) I first took Sophia Prater's [Object-Oriented UX Course](http://partners.ooux.com/348125/17189).
+As a [certified OOUX Strategist](https://www.ooux.com/people/sondraeby), I've been noticing unintuitive objects and working to avoid them in my own designs since 2020. That was the year when (among many other things) I first took Sophia Prater's [Object-Oriented UX Course](http://partners.ooux.com/348125/17189).
 To understand unintuitive objects,
 let's first define
 what *objects* are
@@ -34,7 +34,7 @@ in a digital system.
 ## Objects on the Web
 An *object* in a web project
 is something that has
-"structure, instances, and purpose." [OOUX Glossary](https://rewiredux.notion.site/d0827ee1695a4fa9b26f1f41b4a48ce2?v=96d4a2f843ac46a0b762e3efb4345209_)
+structure, instances, and purpose.
 
 Just as the structure of an object
 in the physical world
@@ -50,11 +50,11 @@ includes the person who wrote the article,
 the title, the images and text,
 the published date and time,
 the updated date and time,
-the category like arts, and more.
+the category or topic, and more.
 
 Instances are all the specific occurences
 of an object.
-To go back to a physical objects,
+To go back to a physical object,
 instances of the chair object in my house
 would include the pink roller chair I sit in at my desk,
 the small chair my daughter uses in her room,
@@ -63,7 +63,8 @@ each chair at the kitchen table.
 
 {{ embed.img(
   src='blog/2023/chair-object-shop.jpg',
-  alt='five instances of a chair in a bookshop'
+  alt='',
+  caption='Five instances of a CHAIR object in a bookshop'
 ) }}
 
 Instances of a digital article object
@@ -74,7 +75,8 @@ on a blog could include articles like:
 
 {{ embed.img(
   src='blog/2023/article-object-web.jpg',
-  alt='six instances of an article on oddbird blog'
+  alt='',
+  caption='Six instances of an ARTICLE object on OddBlog'
 ) }}
 
 The purpose of the chair object
@@ -89,7 +91,8 @@ about specific topics of interest.
 > "All humans think in objects—designers, end-users, and those who
 > painted the caves of Chauvet. So, as we make our user experiences
 > more object-oriented, we also make them more *intuitive*."
-> [ooux.com](https://www.ooux.com/what-is-ooux)
+>
+>--*Sophia Prater*, [ooux.com](https://www.ooux.com/what-is-ooux)
 
 With that definition of objects in mind,
 let's look at what makes a digital object *unintuitive*
@@ -146,7 +149,7 @@ like a description or maybe a map
 showing the way to the location,
 but I can’t.
 Also there are two different times
-when the Penguin DEMO happens.
+when the penguin DEMO happens.
 There are also a variety of locations
 where DEMOS happen.
 As a person planning my visit to the zoo,
@@ -164,7 +167,7 @@ to the zoo site,
 I would describe this experience
 as unintuitive.
 
-If I were designing this DEMO list
+If I were redesigning this DEMO list
 using the object-oriented method,
 I would identify the DEMO object
 at the very beginning of the project
@@ -176,7 +179,8 @@ when it came time to design this landing page,
 I could focus on laying out and styling the interactions
 I had already identified
 instead of trying to figure out
-what the interactions should be.
+what the interactions should be
+while designing them.
 Splitting up these concerns
 means you're less likely to forget
 or leave out important interactions.
@@ -212,7 +216,7 @@ Hooray!
   alt='three overlapping sections of three web pages showing animal, habitat, and demonstration titles'
 ) }}
 
-But these three objects
+These three objects
 are necessarily related
 in the physical world,
 and should be related
@@ -303,7 +307,8 @@ I have accidentally created my share
 of masked objects before I learned
 to design in objects.
 
-Let's go straight to an example.
+To understand masked objects,
+let's go straight to an example.
 When creating a landing page,
 it can seem like a big time saver
 and provide a unified look
@@ -371,11 +376,11 @@ Now, it is arguable that MOVIES and SERIES
 aren't actually different objects in this system.
 They do have a large amount of the same attributes.
 Perhaps they are two different types
-of a VIDEO object. (There's probably a better word.)
-That descision is up to the UX designer,
+of a VIDEO (There's probably a better word.) object.
+That decision is up to the UX designer,
 but even in that case,
-it would be a more intuitive experience
-for me, anyway,
+it would be a more intuitive experience,
+for me anyway,
 to see a MOVIE or a SERIES tag
 on these cards.
 
@@ -392,7 +397,7 @@ as huge win for the user,
 it can also save UX designers a lot of time
 creating mockups.
 
-Let's look again at the DEMO object
+Let's look again at the DEMO object again
 on the zoo website.
 This object actually appears
 in at least two different list views
@@ -401,16 +406,20 @@ These lists both display DEMOS,
 but for reasons that are unclear to me
 the DEMO object looks different
 in each list.
-All DEMO times are grouped together
-under the name of the event in one list,
-while the other lists only a single time
-with item list item.
-In one list the times are in bold.
-In the other list they are italicized.
-In one list the am and pm have punctuation
-and in the other they don't.
-One list includes the DEMO location.
-The other doesn't.
+One list
+shows each DEMO title once
+with all the times the DEMO happens
+right under the title.
+The other list
+shows each DEMO title multiple times
+with only one of the times the DEMO happens.
+In the first list the times are in bold.
+In the other list the times are italicized.
+In the first list the am and pm do not have punctuation
+and in the other they do.
+The first list does not include
+the DEMO location.
+The other does.
 
 {{ embed.img(
   src='blog/2023/masked-demo.jpg',
@@ -422,16 +431,16 @@ If you start to look for shapeshifters yourself,
 you will find much more dramatic redesigns
 of the same object
 for no discernable reason.
-Still, even with these small difference,
+Still, even with these small differences,
 as a visitor to the website,
-it is not instancely obvious
+it is not immediately obvious
 that these two lists contain instances
 of exactly the same DEMO object.
 Thinking back to the physical world of objects,
 how disconcerting and unintuitive would it be
 if you encountered a chair object
-at a desk and a chair object at a table.
-But in the context of the desk
+at a desk and a chair object at a table,
+but in the context of the desk
 the chair had four legs,
 and in the context of a the table
 the chair had three legs.
@@ -450,7 +459,7 @@ Plus, the designer of these two list views
 spent time redesigning the DEMO object
 in each context.
 With OOUX,
-it much quicker
+it is more efficient
 to identify objects upfront,
 design the list view,
 card view, and detail view
@@ -460,8 +469,8 @@ everywhere the object appears on the site.
 
 If you're interested in learning more
 about object-orient UX,
-checkout ooux.com.
-If you'd like an analysis and redesign
+checkout [ooux.com](https://www.ooux.com/).
+If you'd like an OOUX analysis or redesign
 of your website or app,
-please contact us for a quote.
-Happy designing!
+please [contact us](/contact/) for a quote.
+Happy object-oriented UX designing!
