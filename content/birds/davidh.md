@@ -7,7 +7,6 @@ date: 2020-09-28
 image:
   src: birds/davidh.jpg
 social:
-  twitter: shipslinky
   github: dvdherron
 summary: |
   David (he/him) is a web designer,
