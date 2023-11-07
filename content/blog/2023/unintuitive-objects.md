@@ -9,40 +9,65 @@ image:
   src: blog/2023/masks.jpg
 chair:
   - img: blog/2023/chair-object-shop.jpg
-    alt: two people sit in chairs in a bookshop reading and drinking coffee. five red arrows point to the five chairs arranged around  tables beside the front window of the shop
+    alt: two people sit in chairs in a bookshop reading and drinking coffee.
+      five red arrows point to the five chairs arranged around tables beside the
+      front window of the shop
 article:
   - img: blog/2023/article-object-web.jpg
-    alt: two rows of three rectangular posts each with an image, text blurb, and and article label. six red arrows point to the article label on each post
+    alt: two rows of three rectangular posts each with an image, text blurb, and
+      article label. six red arrows point to the article label on each post
 object:
   - img: blog/2023/animal-habitat-demo.jpg
-    alt: three overlapping sections of three web pages showing animal, habitat, and demonstration titles
+    alt: three overlapping sections of three web pages showing animal, habitat,
+      and demonstration titles
 penguin:
   - img: blog/2023/penguin-detail-list.jpg
-    alt: two web pages, one showing a penguin in a list of animals and another showing the African (Black-Footed) Penguin detail page with a picture of two penguins, a description, adaptations, and classification. Habitat and range section is a paragraph with no link the penguin's habitat.
+    alt: two web pages, one showing a penguin in a list of animals and another
+      showing the African (Black-Footed) Penguin detail page with a picture of
+      two penguins, a description, adaptations, and classification. Habitat and
+      range section is a paragraph with no link to the penguin's habitat.
 habitat:
   - img: blog/2023/penguin-habitat.jpg
-    alt: The penguin habitat detail page with a picture of penguins swimming, the name of the habitat Pinnacol African Penguin Point, a description, and a link to the African Penguin animal that links back to the habitat page, not the animal detail page
+    alt: The penguin habitat detail page with a picture of penguins swimming,
+      the name of the habitat Pinnacol African Penguin Point, a description, and
+      a link to the African Penguin animal that links back to the habitat page,
+      not the animal detail page
 map:
   - img: blog/2023/penguin-habitat-map.jpg
-    alt: A map of the zoo with Pinnacol African Penguin Point circled in red, but not links from the map to the penguin habitat page
+    alt: A map of the zoo with Pinnacol African Penguin Point circled in red,
+      but no links from the map to the penguin habitat page
 isolated:
   - img: blog/2023/isolated-demo-list.jpg
-    alt: Demonstrations in a list. Each list items shows the name of the demonstration which includes the animal's name, the location, and a single time when that demo happens. Red arrows point to the name of the animal, the habitat, and the name of the demo
+    alt: Demonstrations in a list. Each list item shows the name of the
+      demonstration which includes the animal's name, the location, and a single
+      time when that demo happens. Red arrows point to the name of the animal,
+      the habitat, and the name of the demo
 broken:
   - img: blog/2023/broken-event.jpg
-    alt: Demonstrations in a list. The two Demonstration - African Penguin demos happen at two different times and are listed separately in this live view. They are both highlighted with a red circle.
+    alt: Demonstrations in a list. Demonstration - African Penguin demos happen
+      at two different times and are listed separately in this live view. They
+      are both highlighted with a red circle.
 disney:
   - img: blog/2023/disney-rectangles.jpg
-    alt: A screenshot of a small section of the DisneyPlus website with rows of shows designed as identical rectangles. Each rectangle has an image and a title.
+    alt: A screenshot of a small section of the DisneyPlus website with rows of
+      shows designed as identical rectangles. Each rectangle has an image and a
+      title.
 series:
   - img: blog/2023/tv-series.jpg
-    alt: The same screenshot of a small section of the DisneyPlus website with the Behind the Attraction rectangle highlighted and an overlayed screenshot of the tv series detail view with the words 2 seasons circled in red and a red arrow pointing to more episodes.
+    alt: A screenshot of a small section of the DisneyPlus website with the
+      Behind the Attraction rectangle highlighted and an overlayed screenshot of
+      the tv series detail view with the words 2 seasons circled in red and a
+      red arrow pointing to more episodes.
 movie:
   - img: blog/2023/movie.jpg
-    alt: The same screenshot of a small section of the DisneyPlus website with The Beatles Now and Then rectangle highlighted and an overlayed screenshot of the movie detail view with 12m circled in red and a red arrow pointing to suggested movies.
+    alt: A screenshot of a small section of the DisneyPlus website with
+      The Beatles Now and Then rectangle highlighted and an overlayed screenshot
+      of the movie detail view with 12m circled in red and a red arrow pointing
+      to suggested movies.
 masked:
   - img: blog/2023/masked-demo.jpg
-    alt: Two versions of the demo list with the Demonstration - African Penguin event times circled in red on both lists.
+    alt: Two versions of the demo list with the Demonstration - African Penguin
+      event times circled in red on both lists.
 summary: |
   Do you want to make your website
   or web app
@@ -200,7 +225,8 @@ and not even any mention of the penguin DEMO.
 
 {{ embed.figure(
   data=penguin,
-  caption='Penguin ANIMAL detail and list views with no link to the penguin HABITAT'
+  caption='Penguin ANIMAL detail and list views
+    with no link to the penguin HABITAT'
 ) }}
 
 Likewise, if we visit
@@ -273,7 +299,7 @@ and nest those cards within the ANIMAL detail page.
 *Objects that are not directly manipulatable.*
 
 A *broken object* is an object
-that isn’t directly manipulatable
+that isn't directly manipulatable
 within a digital space.
 
 One of my favorite things to do at the zoo
@@ -298,7 +324,7 @@ I want to click on an individual DEMO
 to see more details,
 like a description or a map
 showing the way to the location,
-but I can’t.
+but I can't.
 There are also two different times
 when the penguin DEMO happens,
 and a variety of locations
@@ -308,9 +334,9 @@ it would be useful to see all the time options
 for one DEMO grouped together,
 or see only the DEMOS happening at a specific time,
 or all the DEMOS happening at one location.
-But I can’t sort or filter the DEMOS
+But I can't sort or filter the DEMOS
 by time or location --
-I can’t take the actions I want to take
+I can't take the actions I want to take
 when I encounter this DEMO object in this system.
 As a regular visitor
 to the zoo site,
@@ -361,7 +387,8 @@ except for the specific image and title.
 
 {{ embed.figure(
   data=disney,
-  caption='DisneyPlus website with rows of shows designed as identical rectangles'
+  caption='DisneyPlus website with rows of shows
+    designed as identical rectangles'
 ) }}
 
 It is quite easy to skim.
