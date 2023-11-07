@@ -2,7 +2,7 @@
 title: HTML & CSS Polyfills
 sub: Cascade Layers, CSS Anchor Positioning, Popover
 feature: true
-date: 2023-11-07
+date: 2022-02-11
 image:
   position: center
   src: projects/polyfill.jpg
@@ -29,13 +29,13 @@ summary: |
 
 ## Cascade Layers Polyfill
 
-[Demo](https://www.npmjs.com/package/@csstools/postcss-cascade-layers) |
-[Source](https://github.com/oddbird/cascade-layers-polyfill-demo)
+[Demo](https://layers-polyfill-example.netlify.app/)
+[Source](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-cascade-layers#readme)
 
-PostCSS Cascade Layers lets you use @layer
+PostCSS Cascade Layers lets you use `@layer`
 following the Cascade Layers Specification.
 For more information on layers,
-checkout [A Complete Guide to CSS Cascade Layers](https://www.oddbird.net/2022/02/21/layers-guide/)
+checkout [A Complete Guide to CSS Cascade Layers](https://css-tricks.com/css-cascade-layers/)
 by Miriam Suzanne.
 
 ## CSS Anchor Positioning Polyfill
@@ -51,7 +51,7 @@ elsewhere on the page."
 This CSS Anchor Positioning Polyfill
 supports and is based on this specification.
 
-The proposed anchor() and anchor-size() functions
+The proposed `anchor()` and `anchor-size()` functions
 add flexibility to how absolutely positioned elements
 can be placed within a layout.
 Instead of being sized and positioned
@@ -64,15 +64,17 @@ author-defined anchor elements.
 
 [Source](https://github.com/oddbird/popover-polyfill)
 
-OddBird’s Popover Attribute Polyfill
+OddBird's Popover Attribute Polyfill --
+built in collaboration with [Keith Cirkel](https://github.com/keithamus)
+and used in production by GitHub --
 lets developers preview the upcoming mechanism
-for displaying popover content 
+for [displaying popover content](https://open-ui.org/components/popover.research.explainer/)
 on top of other page content,
-drawing the user’s attention
+drawing the user's attention
 to specific important information
 or actions that need to be taken.
 
 This polyfills the HTML `popover` attribute
 and `showPopover`/`hidePopover`/`togglePopover` methods
-onto HTMLElement, as well as the `popovertarget`
-and `popovertargetaction` attributes on Button elements.
+onto `HTMLElement`, as well as the `popovertarget`
+and `popovertargetaction` attributes on `<button>` elements.
