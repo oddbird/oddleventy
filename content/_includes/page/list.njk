@@ -4,11 +4,13 @@
 
 {% if index %}
   {% set list = collections[index] | removePage(page.url) if collections[index] else [] %}
-  {% if list | length > 0 %}
+  {% if list | length %}
+    {%- set label = index | pageType('plural') or 'Posts' -%}
     <section data-list="tag" data-typeset>
       {{ post.by_year(
         list,
-        collections
+        collections,
+        label=label
       ) }}
     </section>
   {% endif %}

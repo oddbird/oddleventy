@@ -1,0 +1,125 @@
+---
+title: Custom Web App Design & Development For Humans
+banner: |
+  <span>We Create</span> Custom Web Apps & Design Systems
+image:
+  src: work/coachhub/coachhub-home-iphone.jpg
+  alt: CoachHub App on iPhone
+  device: iphone
+  fill: white
+og:
+  img: default
+summary: |
+  **We enjoy working with teams** pursuing large-scale projects
+  to plan, design, and develop tailor-made web applications and
+  design systems. As **industry experts,** we'd love to help you
+  **improve team workflow, lower maintenance costs,** and **solve
+  problems** that **help people.**
+action:
+  text: Talk with us »
+  url: /contact/
+work:
+  - /work/adobe/
+  - /work/mozdev/
+  - /work/shopify/
+  - /work/workflow-builder/
+  - /work/metadeploy/
+  - /work/quarqnet/
+  - /work/timedesigner/
+  - /work/phamaly/
+tools:
+  - /django/
+  - /csswg/
+  - /sass/
+  - /css-remedy/
+  - /susy/
+  - /accoutrement/
+  - /herman/
+  - /oddcontrast/
+  - /true/
+---
+
+{% import 'quotes.macros.njk' as quotes %}
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'post.macros.njk' as post %}
+
+{{ layout.title('Featured Clients') }}
+{{ embed.logos(work, collections.all) }}
+{{ layout.section_link('View work samples', '/work/') }}
+
+{{ post.homepage_posts(
+   collections,
+   class='preview'
+) }}
+{{ layout.section_link('Browse more posts', '/blog/') }}
+
+{{ quotes.find(
+  collections.all,
+  slugs=['extension', 'goals']
+) }}
+
+{% call embed.media_block(
+  media=embed.img(
+    src='writing/jssass.png',
+    alt='Jump Start Sass, by Miriam Suzanne and Kitty Giraudel',
+    sizes='media'
+  ),
+  use_md=true
+) %}
+**As core contributors to CSS, Sass, and Django**,
+we write the books,
+help create the languages,
+and build the OSS projects
+millions of other developers rely on.
+Bringing that **expertise to your custom web projects,**
+we focus on **accessibility, performance,**
+resilient design systems, and **well-tested code.**
+
+### Full Range of Services:
+
+- Branding & Logo Design
+- User Research & Concepting
+- UI/UX Design (*OOUX*)
+- Python on the backend (*Django, FastAPI*)
+- CSS & Sass on the frontend
+- JavaScript (*Svelte, Vue, React, Node, etc.*)
+- Design Systems & Component Libraries
+- Accessible HTML
+{% endcall %}
+{{ layout.section_link('View services & deliverables', '/services/') }}
+
+{{ layout.title('Open Source Contributions') }}
+{{ embed.logos(tools, collections.all) }}
+{{ layout.section_link('See open source tools', '/tools/') }}
+
+{{ quotes.find(
+  collections.all,
+  slugs=['investment', 'handoff']
+) }}
+
+{% call embed.media_block(
+  media=embed.svg('faces/miriam'),
+  attrs={'data-block': 'rotate'},
+  use_md=true
+) %}
+{# Use <h2> instead of Markdown to avoid click-to-copy link #}
+<h2>Hi, I'm Miriam</h2>
+
+I co-founded OddBird with my brothers in 2008
+as a **full-stack, boutique agency**
+to provide **custom web application design & development,**
+along with **refactors** for integrated
+**design systems, accessibility, performance,**
+and **long-term sustainability.**
+
+Since then OddBird has become an industry leader --
+from our work on Django, Sass, and Susy,
+to the **CSS Working Group, Mozilla Developer Channel, Object Oriented UX,**
+and in-depth conference talks on **front-end architecture,** workflow,
+**component libraries,** testing, and **documentation.**
+
+We'd love to help you thoughtfully **serve people with technology.**
+
+{{ quotes.signature() }}
+{% endcall %}

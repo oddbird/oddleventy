@@ -108,7 +108,7 @@ And in our HTML, after the JS file has been executed:
 [spam-referrals-blocker]: https://github.com/MohamedBassem/spam-referrals-blocker/
 [community-contributed list of referrer spammers]: https://github.com/matomo-org/referrer-spam-list
 [gulp]: https://gulpjs.com/
-[gulp-download]: https://github.com/Metrime/gulp-download
+[gulp-download]: https://www.npmjs.com/package/gulp-download
 [webpack]: https://webpack.js.org/
 [raw-loader]: https://github.com/webpack-contrib/raw-loader
 
@@ -120,7 +120,6 @@ analytics data:
 ```js
 const devHosts = [
   // List your local development servers
-  'oddsite.hexxie.com:3000',
   'localhost:3000',
   '127.0.0.1:3000'
 ];
@@ -151,10 +150,10 @@ less-than-ideal about fetching a raw `.txt` file directly from someone
 else's GitHub repo, making assumptions about the format of the file
 contents, and then relying on it as part of our build/deploy process.
 
-So we've recently also implemented many of the methods outlined in [this
-guide], most notably [using an allowed-list filter to exclude any hostnames
-we haven't explicitly authorized]. This takes care of most of the spam,
-and is arguably cleaner and easier to maintain.
+So we've recently also implemented some improvements, most notably using an
+allowed-list filter to exclude any hostnames we haven't explicitly authorized.
+This takes care of most of the spam, and is arguably cleaner and easier to
+maintain.
 
 We haven't been using this technique for long, but so far the results
 have been positive. If it continues to work well, we'll likely remove
@@ -163,7 +162,4 @@ the referral-blocking code entirely.
 If you use Google Analytics, how have you tackled the problem of spam
 infecting your data? Let us know via [Twitter]!
 
-[this guide]: https://carloseo.com/removing-google-analytics-spam/
-[using an allowed-list filter to exclude any hostnames we haven't explicitly authorized]:
-  https://carloseo.com/removing-google-analytics-spam/#b-filter---valid-hostname-for-ghost-spam-and-development-environments
 [Twitter]: https://twitter.com/oddbird

@@ -1,5 +1,7 @@
 @use '../config';
+@use '../config/scale/page-sizes';
 @use 'sass:map';
+@use 'sass:meta';
 
 // Main Actions
 // ------------
@@ -68,6 +70,15 @@
   padding-right: var(--page-margin);
 }
 
+// Link
+// ----
+.section-link {
+  --column: content;
+
+  justify-self: end;
+  margin-block: var(--gutter) var(--double-gutter);
+}
+
 // Blocks
 // ------
 
@@ -99,9 +110,9 @@
   }
 }
 
-@each $name in map.keys(config.$page-sizes) {
+@each $name, $size in meta.module-variables('page-sizes') {
   [data-block~='#{$name}'] {
-    --block-max: var(--#{unquote($name)});
+    --block-max: var(--#{$name});
   }
 }
 

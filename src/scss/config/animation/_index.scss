@@ -1,0 +1,41 @@
+@use '~sassdoc-theme-herman/scss/utilities' as herman;
+@use '../tools';
+@use 'changes';
+@use 'times';
+@use 'sass:meta';
+@forward 'changes';
+@forward 'times';
+
+/// # Animation Config
+/// Accoutrement maps for storing global animation tokens.
+/// @link https://www.oddbird.net/accoutrement/docs/animate.html
+///   Accoutrement Scale
+/// @group config-animation
+
+/// ## Times
+/// --------
+/// Named times to be re-used in animations.
+/// @group config-animation
+/// @example scss
+///   @use 'config/animation/times';
+///   @use 'config/tools';
+///   @use 'sass:meta';
+///
+///   @each $name, $time in tools.compile-times(meta.module-variables('times')) {
+///     /* #{$name}: #{$time}; */
+///   }
+
+/// ## Changes
+/// ----------
+/// Named transition and animation definitions
+/// that can be re-used to create consistent movement
+/// across the site.
+/// @group config-animation
+/// @example scss
+///   @use 'config/animation/changes';
+///   @use 'config/tools';
+///   @use 'sass:meta';
+///
+///   @each $name, $change in tools.compile-changes(meta.module-variables('changes')) {
+///     /* #{$name}: #{$change}; */
+///   }

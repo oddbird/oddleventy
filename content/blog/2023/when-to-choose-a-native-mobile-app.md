@@ -1,16 +1,13 @@
 ---
-eleventyExcludeFromCollections: true
-permalink: false
 title: When to Choose a Native Mobile App
 sub: Part 2 -- Responsive Web App vs Native Mobile App vs Progressive Web App
 author: sondra
-date: 2023-08-01
+date: 2023-08-29
 tags:
   - Article
   - Business Development
   - Native Mobile Apps
   - Push Notifications
-  - Recommendations
   - Startups
   - User Experience
 image:
@@ -30,17 +27,16 @@ summary: |
 ---
 
 {% import 'embed.macros.njk' as embed %}
-{% import 'oddnews.macros.njk' as oddnews %}
 
 If you haven't read part 1 yet, it has a great introduction to each option along
 with a quick comparison chart: [When to Choose a Responsive Web
 App](/2023/07/11/when-to-choose-a-responsive-web-app/)
 
-<!-- **Read all three parts to compare app types:**
+**Read all three parts to compare app types:**
 
 1. [When to Choose a Responsive Web App](/2023/07/11/when-to-choose-a-responsive-web-app/)
-2. [When to Choose a Native Mobile App](/2023/08/01/when-to-choose-a-native-mobile-app/)
-3. [When to Choose a Progressive Web App](/2023/09/01/when-to-choose-a-progressive-web-app/) -->
+2. When to Choose a Native Mobile App (this article)
+3. [When to Choose a Progressive Web App](/2023/10/30/when-to-choose-a-progressive-web-app/)
 
 ## Native Mobile App -- Best for Advanced Capabilities
 
@@ -73,7 +69,12 @@ or software integration.*
 Native apps can access all of a device's hardware and software features. For
 example, unlike responsive web apps (RWAs), native mobile apps can integrate
 directly with a specific mobile device's GPS for geofencing, access light and
-proximity sensors, or use a device's camera.
+proximity sensors, or access advanced camera APIs (e.g. for scanning QR codes).
+
+{{ embed.img(
+  src='blog/2023/iphone.jpg',
+  alt='iphone phone lens'
+) }}
 
 ### High Performance
 *Choose a native mobile app when you need advanced performance.*
@@ -91,7 +92,13 @@ when there is no internet access.
 A native mobile app offers security beyond the typical HTTPS encryption
 available with an RWA. If you are developing a banking product that requires
 secure authentication and verification of your users, or need to meet strict
-HIPAA requirements, a native mobile app is likely a better option than an RWA.
+HIPAA requirements, a native mobile app is likely a better option than a
+responsive web app.
+
+{{ embed.img(
+  src='blog/2023/security.jpg',
+  alt='phone with lock on the screen'
+) }}
 
 ### Discoverable Via App Store
 *Choose a native mobile app when the people you want to reach will look for your
@@ -101,7 +108,16 @@ Native mobile apps live in app stores like the Google Play Store and Apple's App
 Store. If your research shows that the people you want to reach typically look
 for the type of content you will provide in app stores, or if you want to build
 your marketing plan around app stores, then a native mobile app is a better
-choice than a responsive web app (which is not listed in app stores).
+choice than a responsive web app which is not listed in app stores.
+
+On the other hand, a responsive web app with PWA enhancements can be listed in
+the app store. Additionally, building a marketing campaign around an app store
+can be expensive, and the tools to search for apps in the stores are limited.
+
+{{ embed.img(
+  src='blog/2023/app-store.jpg',
+  alt='phone showing app store with the text new to the app store in one section'
+) }}
 
 {{ embed.figure(
   data=[{
@@ -122,9 +138,17 @@ Native mobile apps require a unique codebase for each platform. For example, if
 you want to make the same native mobile app available on both Android and iOS
 devices, you need to build one codebase for Android and a separate codebase for
 iOS. Each codebase requires different proprietary technologies, and likely
-requires separate teams of developers to build and maintain for each platform.
-It is frequently more expensive to reach the same range of people with a native
-mobile app compared to an RWA.
+requires separate teams of developers to build and maintain each platform.
+
+Frameworks like React Native and Flutter allow you to share a significant amount
+of your codebase, but come with constraints, and result in an experience that
+may not feel as native for users. To take advantage of the more advanced
+features or platform-specific expectations, you may still need to write separate
+code for each platform.
+
+Due to separate codebases and proprietary technologies, it is frequently more
+expensive to reach the same range of people with a native mobile app compared to
+a responsive web app.
 
 ### Lengthy Development
 *Don't choose a native mobile app when it's a priority to make your app
@@ -132,32 +156,40 @@ available to users quickly.*
 
 Because native mobile apps require a separate codebase for each platform you
 want to support, development generally takes longer than it does to develop a
-single codebase for an RWA. Additionally, each app store has its own set of
-requirements in order to publish an app, and these can be complex. Wait times
-for app store approval to publish or update the app can be lengthy as well.
+single codebase for a responsive web app. Additionally, each app store has its
+own set of requirements in order to publish an app, and these can be complex.
+Wait times for app store approval to publish or update the app can be lengthy as
+well.
 
 ### Not Discoverable Via Search Engines
 *Don't choose a native mobile app when the people you want to reach will look
 for your content with a search engine.*
 
-Unlike for RWAs, search engines don't index native mobile apps. If your research
-indicates that people frequently use search engines to search for the type of
-content you offer, an RWA may be a better choice. Alternatively, you could build
-a marketing website for search engines to find, which simply introduces your app
-and links people to the appropriate app store for download. (A separate
-marketing website will further increase the costs and development costs.)
+Unlike responsive web apps, search engines don't index native mobile apps. If
+your research indicates that people frequently use search engines to search for
+the type of content you offer, an RWA may be a better choice. Alternatively, you
+could build a marketing website for search engines to find, which simply
+introduces your app and links people to the appropriate app store for download.
+(A separate marketing website will further increase the design and development
+costs.)
 
 ### Limited Reach
 *Don't choose a native mobile app when you want to reach a broad audience across
 devices.*
 
 Because it takes longer and costs more to reach the same range of people with a
-native mobile app than with an RWA, and because native mobile apps offer less
-backward compatibility, the number of people who can access a native mobile app
-will likely always be more limited than the number of people who can access an
-RWA. Additionally, a native mobile app is limited to mobile devices. To provide
-access to your content on a laptop or desktop, you would need to develop
-separate native desktop software.
+native mobile app than with a responsive web app, and because native mobile apps
+offer less backward compatibility, the number of people who can access a native
+mobile app will likely always be more limited than the number of people who can
+access a responsive web app. Additionally, a native mobile app is
+limited[^limited] to mobile devices. To provide access to your content on a
+laptop or desktop, you would need to develop separate native desktop software or
+a responsive web app.
+
+[^limited]: Native mobile apps are limited to mobile devices, with the exception
+  that [native iOS apps can now run on newer Macs][native apps].
+
+[native apps]: https://support.apple.com/guide/app-store/iphone-ipad-apps-mac-apple-silicon-fird2c7092da/mac
 
 ## In Summary
 
@@ -172,14 +204,5 @@ series.
 
 ---
 
-Curious about progressive web apps? Sign up for OddNews to be notified when
-**Part 3 -- When to Choose a Progressive Web App** hits the OddBlog.
-
-{{ oddnews.oddnews_signup(
-  heading=false,
-  tag='oddblog',
-  class='oddnews-form-main'
-) }}
-
-<!-- Is a **progressive web app** right for your digital project? Read more about
-[When to Choose a Progressive Web App](/2023/09/01/when-to-choose-a-progressive-web-app/). -->
+Is a **progressive web app** right for your digital project? Read more about
+[When to Choose a Progressive Web App](/2023/10/30/when-to-choose-a-progressive-web-app/).

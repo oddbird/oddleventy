@@ -1,25 +1,22 @@
 ---
 title: Talks & Workshops
-sub: Bring us to your conference or browse past talks
-image:
-  src: talks/miriam.jpg
-  alt: Miriam Suzanne speaking at a conference
-  position: left center
+sub: Bring us to your event or browse past talks
 action:
-  text: Hire us for conference talks »
+  text: Hire us to give a talk or workshop »
   url: /contact/
 summary: |
-  **We provide award-winning conference talks & workshops**
+  **We provide award-winning talks & workshops**
+  for companies or conferences,
   to help you create resilient web applications
   and design systems --
   improving team process, communication,
   site performance, and accessibility.
-  Missed a conference?
   Dive into the posts below
   for the latest videos & slides,
-  and upcoming conference dates.
+  and upcoming conference or workshop dates.
 ---
 
+{% import 'utility.macros.njk' as utility %}
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'layout.macros.njk' as layout %}
 {% import 'talks.macros.njk' as talks %}
@@ -30,6 +27,30 @@ summary: |
   slugs=['spot-on', 'popular-tutorial']
 ) }}
 
+{% set fw = collections._talk | findPage('data.feature', 'workshop') %}
+{% if fw %}
+  {{ layout.title('Featured Workshop') }}
+  <article {{ post.aria_label(item) }} class="feature-workshop">
+    {{ post.hero(fw.data.image, 'post') }}
+    <header class="training-header">
+      {{ post.banner(fw) }}
+      {{ post.subtitle(fw.data.sub) }}
+      {{ post.byline(fw, collections) }}
+    </header>
+
+    <div class="training-detail">
+      {{ fw.data.summary | md | safe }}
+
+      {% if fw.data.action %}
+        {{ utility.main_action(
+          fw.data.action.text,
+          url=fw.data.action.url
+        ) }}
+      {% endif %}
+    </div>
+  </article>
+{% endif %}
+
 {{ talks.section(
   title='Upcoming Events',
   events=collections.all | getPublic | getEvents | getFuture,
@@ -37,7 +58,7 @@ summary: |
   by_bird=collections
 ) }}
 
-{{ layout.title('Talks & Workshops') }}
+{{ layout.title('All Talks & Workshops') }}
 {% call layout.grid('training') %}
   {% for item in collections._talk | getPublic | eventSort | reverse %}
     <article {{ post.aria_label(item) }} class="training-item">

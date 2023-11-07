@@ -115,7 +115,7 @@ last-minute features to my slide deck, while [Maria Lamardo] and
 
 You can find all the available [speaker slides linked from gist].
 
-[Vue Vixens]: https://www.vuevixens.org/
+[Vue Vixens]: https://vuevixens.netlify.app/
 [Chris Fritz]: https://twitter.com/chrisvfritz
 [Maria Lamardo]: https://twitter.com/marialamardo
 [Krystal Campioni]: https://twitter.com/krystalcampioni

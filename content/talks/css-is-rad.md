@@ -26,6 +26,9 @@ events:
     end: 2020-08-21
     adr: Online
     slides: https://slides.oddbird.net/rad/smashing20/
+    video: https://youtu.be/oV5ddsmqvk0
+    media: &smashlive
+      iframe: https://www.youtube.com/embed/oV5ddsmqvk0
   - venue: Shopify UX Summer Series
     url: /work/shopify/
     date: 2020-08-15
@@ -62,7 +65,7 @@ summary: |
   with unique rules and constraints.
 media:
   - <<: *d4d
-    span: full
+  - <<: *smashlive
   - <<: *smashNY
   - <<: *frfe
 ---

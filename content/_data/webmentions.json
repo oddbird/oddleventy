@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2023-07-17T08:06:01.078Z",
+  "lastFetched": "2023-11-06T08:05:56.023Z",
   "children": [
     {
       "type": "entry",
@@ -15,6 +15,7 @@
       "wm-id": 1573842,
       "wm-source": "https://brid.gy/comment/twitter/oddbird/1532795655076339712/1598650833180114944",
       "wm-target": "https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "Hi. I tried to set up this but with running test (as github-action created workflow does not trigger other workflows). \nAs I read, I need to use the personal access token to do this. But maybe you have a working example and know which permissions are required?\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/je92rivas\"></a>",
         "text": "Hi. I tried to set up this but with running test (as github-action created workflow does not trigger other workflows). \nAs I read, I need to use the personal access token to do this. But maybe you have a working example and know which permissions are required?"
@@ -37,6 +38,7 @@
       "wm-id": 1572957,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1598353733695545345/1598353923332460545",
       "wm-target": "https://www.oddbird.net/2022/11/30/headed-playwright-in-docker/",
+      "wm-protocol": "webmention",
       "content": {
         "text": "Are you writing end-to-end tests with Playwright inside Docker containers?\n\nLearn how to run Playwright in headed mode to interact with the browser inside the containers. oddbird.net/2022/11/30/hea…"
       },
@@ -58,6 +60,7 @@
       "wm-id": 1572955,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1598353733695545345/1598353899689320451",
       "wm-target": "https://www.oddbird.net/2022/11/30/headed-playwright-in-docker/",
+      "wm-protocol": "webmention",
       "content": {
         "text": "Are you writing end-to-end tests with Playwright inside Docker containers?\n\nLearn how to run Playwright in headed mode to interact with the browser inside the containers. oddbird.net/2022/11/30/hea…"
       },
@@ -79,6 +82,7 @@
       "wm-id": 1572191,
       "wm-source": "https://www.miriamsuzanne.com/2022/11/14/pace-layers/",
       "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-protocol": "webmention",
       "name": "When Our Tools Hold Us Back",
       "summary": {
         "content-type": "text/plain",
@@ -106,6 +110,7 @@
       "wm-id": 1563892,
       "wm-source": "https://brid.gy/comment/twitter/terriblemia/1592569011644280833/1594198459694751744",
       "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "Yeah, the first draft ended with \"In summary: everything is Jon's fault. Blame Jon.\" – but the editors thought that was a bit much (and not really supported by the data). 😅\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/dutchcelt\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jon_neal\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/meduzen\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
         "text": "Yeah, the first draft ended with \"In summary: everything is Jon's fault. Blame Jon.\" – but the editors thought that was a bit much (and not really supported by the data). 😅"
@@ -128,6 +133,7 @@
       "wm-id": 1563858,
       "wm-source": "https://brid.gy/comment/twitter/terriblemia/1592569011644280833/1594191601777397760",
       "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "That’s when I broke a sweat, waiting for Mia to start naming names.\n\nThe part about design tools being a step removed from the web also rang true with a heavy heart. Even popular tools designed explicitly for export on the web are priming to hold it back.\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/dutchcelt\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/meduzen\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
         "text": "That’s when I broke a sweat, waiting for Mia to start naming names.\n\nThe part about design tools being a step removed from the web also rang true with a heavy heart. Even popular tools designed explicitly for export on the web are priming to hold it back."
@@ -150,6 +156,7 @@
       "wm-id": 1563658,
       "wm-source": "https://brid.gy/comment/twitter/terriblemia/1592569011644280833/1593979074539577345",
       "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "“Suddenly CSS is able to move faster than the ecosystem, and we’re stuck waiting on our tools to catch up with well-supported platform features.\n\nThat’s not how a healthy ecosystem should behave.”\n\nFully agree!\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/dutchcelt\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
         "text": "“Suddenly CSS is able to move faster than the ecosystem, and we’re stuck waiting on our tools to catch up with well-supported platform features.\n\nThat’s not how a healthy ecosystem should behave.”\n\nFully agree!"
@@ -172,6 +179,7 @@
       "wm-id": 1563659,
       "wm-source": "https://brid.gy/comment/twitter/terriblemia/1592569011644280833/1593983336694788102",
       "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "Back in the day, I'd sometimes use a hack when I had to make IE6 work. I've always insisted that any hack has to be valid CSS. It shouldn't be our fault when a site breaks because we ignored non-conforming code. Apparently, it's okay for tools to mess it up for us. 🤷\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/meduzen\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
         "text": "Back in the day, I'd sometimes use a hack when I had to make IE6 work. I've always insisted that any hack has to be valid CSS. It shouldn't be our fault when a site breaks because we ignored non-conforming code. Apparently, it's okay for tools to mess it up for us. 🤷"
@@ -194,6 +202,7 @@
       "wm-id": 1560314,
       "wm-source": "https://brid.gy/comment/mastodon/@matthiasott@mastodon.social/109349089077760951/109349109105885552",
       "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@matthiasott\" class=\"u-url\">@<span>matthiasott</span></a></span> <span class=\"h-card\"><a href=\"https://front-end.social/@mia\" class=\"u-url\">@<span>mia</span></a></span> I wonder if the tooling has followed the front-end community, which has largely undervalued CSS for a long time now. And now that's come home to roost.</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
         "text": "@matthiasott @mia I wonder if the tooling has followed the front-end community, which has largely undervalued CSS for a long time now. And now that's come home to roost."
@@ -216,6 +225,7 @@
       "wm-id": 1560313,
       "wm-source": "https://brid.gy/comment/mastodon/@matthiasott@mastodon.social/109349089077760951/109349121334639611",
       "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@mia\" class=\"u-url\">@<span>mia</span></a></span> This is so down my alley. There are growing gaps anywhere atm, and one of the greatest “great divides” is the one between what is possible today with the material(s) of the Web and what designers know about it and are able to create in design tools.</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
         "text": "@mia This is so down my alley. There are growing gaps anywhere atm, and one of the greatest “great divides” is the one between what is possible today with the material(s) of the Web and what designers know about it and are able to create in design tools."
@@ -238,6 +248,7 @@
       "wm-id": 1560312,
       "wm-source": "https://brid.gy/comment/mastodon/@matthiasott@mastodon.social/109349089077760951/109349137085875908",
       "wm-target": "https://www.oddbird.net/2022/11/11/platform-tools/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@matthiasott\" class=\"u-url\">@<span>matthiasott</span></a></span> I also get the problem there, it's not easy to solve. How do you provide the full power of CSS in a graphic interface? Reproducing the language as a series of form fields is not exactly elegant.</p><p>On the code tooling side, I think people also leaned into an idea that the way to manage CSS is to _limit it's power_. I sure hope we can find our collective way out of that one…</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/11/11/platform-tools/\"></a>",
         "text": "@matthiasott I also get the problem there, it's not easy to solve. How do you provide the full power of CSS in a graphic interface? Reproducing the language as a series of form fields is not exactly elegant.On the code tooling side, I think people also leaned into an idea that the way to manage CSS is to _limit it's power_. I sure hope we can find our collective way out of that one…"
@@ -260,6 +271,7 @@
       "wm-id": 1543761,
       "wm-source": "https://brid.gy/post/twitter/mmatuzo/1584246528054816768",
       "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-protocol": "webmention",
       "photo": [
         "https://pbs.twimg.com/media/FfxfhICXwAEkTi6.jpg"
       ],
@@ -285,6 +297,7 @@
       "wm-id": 1519613,
       "wm-source": "https://www.miriamsuzanne.com/2022/09/14/cq-browsers/",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "name": "Container Queries in Browsers!",
       "summary": {
         "content-type": "text/plain",
@@ -315,6 +328,7 @@
       "wm-id": 1510227,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1566071225557860356",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -337,6 +351,7 @@
       "wm-id": 1508783,
       "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1564650026751574016/1565327729276461057",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "RE “Safari bug with ‘negated’ queries”\n\nA fix landed in Safari Technology Preview 152 – <a href=\"https://webkit.org/blog/13137/release-notes-for-safari-technology-preview-152/\">webkit.org/blog/13137/rel…</a>\n\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/18/cq-syntax/\"></a>",
         "text": "RE “Safari bug with ‘negated’ queries”\n\nA fix landed in Safari Technology Preview 152 – webkit.org/blog/13137/rel…"
@@ -359,6 +374,7 @@
       "wm-id": 1508033,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1564977595724218372",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -381,6 +397,7 @@
       "wm-id": 1507408,
       "wm-source": "https://brid.gy/post/twitter/TerribleMia/1564729876673880065",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap… I will read it during gaming.",
         "text": "Welp, guess I had better learn container queries.\n\n\nHere I was thinking I could code things to XHTML 1.0 Strict and CSS 1.0 until I died. And since I would rather go gaming than to a dirt nap… I will read it during gaming."
@@ -403,6 +420,7 @@
       "wm-id": 1498227,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1564147238439354369",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -425,6 +443,7 @@
       "wm-id": 1484665,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1563091851938111490",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -447,6 +466,7 @@
       "wm-id": 1467912,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1562296212564369408",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -469,6 +489,7 @@
       "wm-id": 1464737,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1561392993692680198",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -491,6 +512,7 @@
       "wm-id": 1464697,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1561295499273068544",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -513,6 +535,7 @@
       "wm-id": 1464544,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560649190346264576",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -535,6 +558,7 @@
       "wm-id": 1464541,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560726459496513542",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -557,6 +581,7 @@
       "wm-id": 1463808,
       "wm-source": "https://brid.gy/comment/twitter/oddbird/1560320189530402816/1560327321726455817",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "You are a star, thank you. I stopped for a while because I ran into syntax changes a few times and started getting confused. Looks like it's time to open those old codepens and dive back in.\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>",
         "text": "You are a star, thank you. I stopped for a while because I ran into syntax changes a few times and started getting confused. Looks like it's time to open those old codepens and dive back in."
@@ -579,6 +604,7 @@
       "wm-id": 1463809,
       "wm-source": "https://brid.gy/comment/twitter/oddbird/1560320189530402816/1560332261567778816",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "Makes sense. It's the difficult balance of a prototype – we're doing it to learn &amp; get feedback &amp; make changes,  but it can also lead to confusion. But yes - it's stable &amp; safe now! Welcome back. :)\n<a class=\"u-mention\" href=\"https://twitter.com/deanleigh\"></a>",
         "text": "Makes sense. It's the difficult balance of a prototype – we're doing it to learn & get feedback & make changes,  but it can also lead to confusion. But yes - it's stable & safe now! Welcome back. :)"
@@ -601,6 +627,7 @@
       "wm-id": 1463807,
       "wm-source": "https://brid.gy/comment/twitter/oddbird/1560320189530402816/1560331578563170304",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "so excited for this! 🔥\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>",
         "text": "so excited for this! 🔥"
@@ -623,6 +650,7 @@
       "wm-id": 1463805,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560320780835110914",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -645,6 +673,7 @@
       "wm-id": 1463806,
       "wm-source": "https://brid.gy/comment/twitter/oddbird/1560320189530402816/1560335908615983104",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "Completely understand, whether the wait. I turned my attention to combining Sass and Custom Properties which was rabbit hole more than deep enough to keep me busy and ended up recently reading your article on Proximity so I owe you thanks again 🙏\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>",
         "text": "Completely understand, whether the wait. I turned my attention to combining Sass and Custom Properties which was rabbit hole more than deep enough to keep me busy and ended up recently reading your article on Proximity so I owe you thanks again 🙏"
@@ -667,6 +696,7 @@
       "wm-id": 1463803,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560324155584782337",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -689,6 +719,7 @@
       "wm-id": 1463804,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560323551290200064",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -711,6 +742,7 @@
       "wm-id": 1463802,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560327228462084097",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -733,6 +765,7 @@
       "wm-id": 1463801,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560337871571193856",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -755,6 +788,7 @@
       "wm-id": 1463799,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560389258388676608",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -777,6 +811,7 @@
       "wm-id": 1463800,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560352639744966659",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -799,6 +834,7 @@
       "wm-id": 1463798,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560395602780794880",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -821,6 +857,7 @@
       "wm-id": 1463796,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560447186017599488",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -843,6 +880,7 @@
       "wm-id": 1463797,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560442868765929472",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -865,6 +903,7 @@
       "wm-id": 1463795,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1560320189530402816/1560536596625211394",
       "wm-target": "https://www.oddbird.net/2022/08/18/cq-syntax/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "🥳 Size Container Queries &amp; units will start shipping in browsers at the end of the month. But there are many articles &amp; demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…",
         "text": "🥳 Size Container Queries & units will start shipping in browsers at the end of the month. But there are many articles & demos out there (including ours!) that use out-of-date syntax. 🙈\n\nMake sure you learn the syntax that's shipping in browsers!\n\noddbird.net/2022/08/18/cq-…"
@@ -887,6 +926,7 @@
       "wm-id": 1453036,
       "wm-source": "https://www.miriamsuzanne.com/2022/08/07/minimal/",
       "wm-target": "https://www.oddbird.net/cascading-colors/",
+      "wm-protocol": "webmention",
       "name": "No Demo [Website] Reno",
       "summary": {
         "content-type": "text/plain",
@@ -914,6 +954,7 @@
       "wm-id": 1450602,
       "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1555160949471985664",
       "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "One that gave me trouble was CSS Animation.\n\n0 {  }\n\nThis is was the output of one CSS minifier, I need to add % by hand (shell script after minification).\n<a class=\"u-mention\" href=\"https://twitter.com/ChallengesCss\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
         "text": "One that gave me trouble was CSS Animation.\n\n0 {  }\n\nThis is was the output of one CSS minifier, I need to add % by hand (shell script after minification)."
@@ -936,6 +977,7 @@
       "wm-id": 1450603,
       "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1555162029207523328",
       "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "You have to stop using that minifier or report a bug. If a minifier is automatically converting all the 0% to 0 then it's a big red flag.\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/jcubic\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
         "text": "You have to stop using that minifier or report a bug. If a minifier is automatically converting all the 0% to 0 then it's a big red flag."
@@ -958,6 +1000,7 @@
       "wm-id": 1450259,
       "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1554965772325232641",
       "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "interesting. wonder if it's specced that way intentionally, or just a quirk?\n\ni also gloss over the fact that percentages are not technically 'lengths' in css - they resolve separately - but many syntaxes accept them interchangeably.\n<a class=\"u-mention\" href=\"https://twitter.com/ChallengesCss\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
         "text": "interesting. wonder if it's specced that way intentionally, or just a quirk?\n\ni also gloss over the fact that percentages are not technically 'lengths' in css - they resolve separately - but many syntaxes accept them interchangeably."
@@ -980,6 +1023,7 @@
       "wm-id": 1450257,
       "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1554961425914908672",
       "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "I would like to add a small note that 0 is the same as 0px but not always the same as 0% (even if used outside calc()).\n\nI remember dealing with this little quirk in different places (one I just found: <a href=\"https://stackoverflow.com/a/54012225/8620333\">stackoverflow.com/a/54012225/862…</a>) \n\na demo to illustrate: <a href=\"https://codepen.io/t_afif/pen/XWEEMjv\">codepen.io/t_afif/pen/XWE…</a>\n\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
         "text": "I would like to add a small note that 0 is the same as 0px but not always the same as 0% (even if used outside calc()).\n\nI remember dealing with this little quirk in different places (one I just found: stackoverflow.com/a/54012225/862…) \n\na demo to illustrate: codepen.io/t_afif/pen/XWE…"
@@ -1002,6 +1046,7 @@
       "wm-id": 1450258,
       "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1554967374566244352",
       "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "Yes it's intentional and the behavior is correct based on the Spec (I am explaining it in the linked Stack Overflow question)\n\nIt's related to \"cyclic percentage\" where the container size depend on the child size and child size depend on the container size as well\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
         "text": "Yes it's intentional and the behavior is correct based on the Spec (I am explaining it in the linked Stack Overflow question)\n\nIt's related to \"cyclic percentage\" where the container size depend on the child size and child size depend on the container size as well"
@@ -1024,6 +1069,7 @@
       "wm-id": 1450088,
       "wm-source": "https://brid.gy/comment/twitter/TerribleMia/1554897256611995653/1554918933752324096",
       "wm-target": "https://www.oddbird.net/2022/08/04/zero-units/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "Can't agree more! and I can confirm (based on the Stack Overflow questions I see regularly) that many new developers struggle with that \"0\" inside calc()/min()/max() that make everything invalid. 😩\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.miriamsuzanne.com/\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/08/04/zero-units/\"></a>",
         "text": "Can't agree more! and I can confirm (based on the Stack Overflow questions I see regularly) that many new developers struggle with that \"0\" inside calc()/min()/max() that make everything invalid. 😩"
@@ -1046,6 +1092,7 @@
       "wm-id": 1426978,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1543729145577889796",
       "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-protocol": "webmention",
       "content": {
         "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
       },
@@ -1067,6 +1114,7 @@
       "wm-id": 1426957,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1543716288593178624",
       "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-protocol": "webmention",
       "content": {
         "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
       },
@@ -1088,6 +1136,7 @@
       "wm-id": 1426929,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1543702737463959553",
       "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-protocol": "webmention",
       "content": {
         "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
       },
@@ -1109,6 +1158,7 @@
       "wm-id": 1426468,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1543342554518900736",
       "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-protocol": "webmention",
       "content": {
         "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
       },
@@ -1130,6 +1180,7 @@
       "wm-id": 1425550,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1542578935644422144",
       "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-protocol": "webmention",
       "content": {
         "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
       },
@@ -1151,6 +1202,7 @@
       "wm-id": 1425551,
       "wm-source": "https://brid.gy/repost/twitter/oddbird/1542535314366902277/1542541804679077888",
       "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-protocol": "webmention",
       "content": {
         "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
       },
@@ -1172,6 +1224,7 @@
       "wm-id": 1425549,
       "wm-source": "https://brid.gy/post/twitter/oddbird/1542535314366902277",
       "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n<a href=\"https://twitter.com/TerribleMia\">@TerribleMia</a> explores the possibility of native FLIP animations in the browser:\n\n<a href=\"https://www.oddbird.net/2022/06/29/shared-elements/\">oddbird.net/2022/06/29/sha…</a>",
         "text": "There’s a new proposal for animating shared-elements across web pages. But what happens if we apply it to individual elements within a page?\n\n@TerribleMia explores the possibility of native FLIP animations in the browser:\n\noddbird.net/2022/06/29/sha…"
@@ -1194,6 +1247,7 @@
       "wm-id": 1425458,
       "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542572293117071360",
       "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "This was all sparked by a demo video <a href=\"https://twitter.com/jaffathecake\">@jaffathecake</a> released last month, and then an edge-case <a href=\"https://twitter.com/jh3yy\">@jh3yy</a> suggested, a visualization of Cascade Layers, and an inspiring talk on 'impossible' animations from <a href=\"https://twitter.com/cassiecodes\">@cassiecodes</a>. Put it all together, and…\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
         "text": "This was all sparked by a demo video @jaffathecake released last month, and then an edge-case @jh3yy suggested, a visualization of Cascade Layers, and an inspiring talk on 'impossible' animations from @cassiecodes. Put it all together, and…"
@@ -1216,6 +1270,7 @@
       "wm-id": 1425400,
       "wm-source": "https://brid.gy/comment/twitter/oddbird/1542535314366902277/1542544240865157122",
       "wm-target": "https://www.oddbird.net/2022/06/29/shared-elements/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "I find this approach interesting, but would it work if there are other elements like tooltips above the transitioning elements, or if there are other animations, videos or interactions running while the transition takes place?\n\nI’m dreaming of an element transition api 😀\n<a class=\"u-mention\" href=\"https://twitter.com/OddBird\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/TerribleMia\"></a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/29/shared-elements/\"></a>",
         "text": "I find this approach interesting, but would it work if there are other elements like tooltips above the transitioning elements, or if there are other animations, videos or interactions running while the transition takes place?\n\nI’m dreaming of an element transition api 😀"
@@ -1238,6 +1293,7 @@
       "wm-id": 1423722,
       "wm-source": "https://brid.gy/post/twitter/oddbird/1532795655076339712",
       "wm-target": "https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "Want to reduce pull request noise from project dependency updates? <a href=\"https://twitter.com/je92rivas\">@je92rivas</a> shares the workflow we use at OddBird. \n\n<a href=\"https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/\">oddbird.net/2022/06/01/dep…</a>",
         "text": "Want to reduce pull request noise from project dependency updates? @je92rivas shares the workflow we use at OddBird. \n\noddbird.net/2022/06/01/dep…"
@@ -1260,6 +1316,7 @@
       "wm-id": 1423721,
       "wm-source": "https://brid.gy/post/twitter/oddbird/1534612562796494850",
       "wm-target": "https://www.oddbird.net/2022/06/08/100-percent-test-coverage/",
+      "wm-protocol": "webmention",
       "content": {
         "html": "Wrote a piece for the <a href=\"https://twitter.com/OddBird\">@OddBird</a> blog: what's the impact of aiming for 100% test coverage?\n\n<a href=\"https://www.oddbird.net/2022/06/08/100-percent-test-coverage/\">oddbird.net/2022/06/08/100…</a>",
         "text": "Wrote a piece for the @OddBird blog: what's the impact of aiming for 100% test coverage?\n\noddbird.net/2022/06/08/100…"

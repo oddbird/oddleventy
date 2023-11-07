@@ -353,6 +353,48 @@ params:
 const isType = (collection, type) =>
   collection.filter((page) => pageType(page.data.tags, 'tag') === type);
 
+/* @docs
+label: isHome
+category: Filter
+note: |
+  Filters collection by `home` data.
+  Posts are included if `home` is not `false`.
+  If `limit` is set, only the first `limit` posts are included,
+  plus any posts with `home` set to `pin` or `pinned`.
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+  limit:
+    type: number
+*/
+const isHome = (collection, limit) => {
+  const posts = pageYears(
+    collection.filter((page) => page.data.home !== false),
+  ).reverse();
+  if (!limit) {
+    return posts;
+  }
+  const isPinned = (page) => ['pin', 'pinned'].includes(page.data.home);
+  const pinned = posts.filter(isPinned);
+  if (pinned.length >= limit) {
+    return pinned.slice(0, limit);
+  }
+  const featured = [];
+  const nonPinnedFeatured = [];
+  const nonPinnedLimit = limit - pinned.length;
+  for (let i = 0; i < posts.length; i = i + 1) {
+    const page = posts[i];
+    if (isPinned(page)) {
+      featured.push(page);
+    } else if (nonPinnedFeatured.length < nonPinnedLimit) {
+      featured.push(page);
+      nonPinnedFeatured.push(page);
+    }
+  }
+  return featured;
+};
+
 module.exports = {
   isPublic,
   isCurrent,
@@ -370,4 +412,5 @@ module.exports = {
   removePage,
   addCallToAction,
   isType,
+  isHome,
 };

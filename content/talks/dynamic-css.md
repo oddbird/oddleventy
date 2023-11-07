@@ -68,7 +68,6 @@ events:
     media: &fsfest
       iframe: https://www.youtube.com/embed/9fTUeLsR2Hc
   - venue: JSConf US
-    url: https://2018.jsconf.us/
     adr: Carlsbad, CA
     date: 2018-08-21
     slides: https://talks.oddbird.net/dynamic-css/jsconfus18/

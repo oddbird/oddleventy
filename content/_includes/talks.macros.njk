@@ -112,7 +112,7 @@ params:
   compact=false,
   show_links=true
 ) %}
-  {%- if events and (events | length > 0) -%}
+  {%- if events and (events | length) -%}
     {%- set events = events | sort(all, false, 'date') -%}
     {%- set future = events | getFuture if (all and compact) else none -%}
     {%- set has_future = future and future.length > 0 -%}
@@ -136,16 +136,12 @@ params:
             ) }}
           {% endh %}
 
-          {% if not compact %}
-            {% if not event.is_future %}
-              {{ links(event) }}
-            {% elif event.data.discount %}
-              <p class="event-discount">
-                Use discount code
-                <code>{{ event.data.discount.code }}</code>
-                to get <strong>{{ event.data.discount.amount }} off</strong>
-              </p>
-            {% endif %}
+          {% if not event.is_future %}
+            {{ '' if compact else links(event) }}
+          {% elif event.data.note %}
+            <p class="event-note">
+              {{ event.data.note | mdInline | safe }}
+            </p>
           {% endif %}
         </li>
       {%- endfor -%}
@@ -194,7 +190,7 @@ params:
     }
   ] | selectattr('url') -%}
 
-  {% if links | length > 0 %}
+  {% if links | length %}
     <ul class="event-links" inline-list="comma">
       {%- for link in links -%}
         <li class="event-link">

@@ -51,12 +51,27 @@
 
 [data-grid='cards'] {
   --align: stretch;
+  --fit-max: 1fr;
+  --fit-min: var(--grid-item);
   --justify: stretch;
 
   list-style: none;
   grid-auto-flow: dense;
-  margin: 0;
+  margin: var(--card-grid-margin-top, 0) 0 0;
   padding: 0;
+
+  &.preview {
+    --card-grid-margin-top: var(--spacer);
+
+    @include config.above('wide-page') {
+      --fit-min: calc(var(--grid-item) * 0.5);
+      --fit-max: calc(50% - var(--gutter));
+    }
+
+    @include config.above('grid-full-columns') {
+      --fit-max: calc(25% - var(--gutter-plus));
+    }
+  }
 }
 
 [data-card] {

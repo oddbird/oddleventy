@@ -56,9 +56,9 @@ Project](https://owasp.org/), aka OWASP:
 - [Zed Attach Proxy (ZAP)](https://www.zaproxy.org/) -- An actual vulnerability
   scanner tool intended to find security breaches in your application. Use it
   carefully and only under authorization of the system being tested.
-- [SecureFlag](https://owasp.org/www-project-secureflag-open-platform/) -- A
-  "capture-the-flag" style game that teaches you how to secure a web application
-  by finding and fixing vulnerabilities.
+- [SecureFlag](https://www.secureflag.com/owasp) -- A "capture-the-flag" style
+  game that teaches you how to secure a web application by finding and fixing
+  vulnerabilities.
 
 ## 1-Click Deploys of Python Web Apps to Azure
 

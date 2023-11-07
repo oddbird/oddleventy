@@ -28,19 +28,17 @@ events:
     adr: Düsseldorf, Germany
     date: 2018-05-07
     # slides: https://oddbooksapp.com/release/ce37ef91-8bd8-43e2-932a-66931b4b25ce
-    video: https://vimeo.com/268576559
+    video: https://youtu.be/iODambgMZhk
     media: &bt
-      iframe: https://player.vimeo.com/video/268576559
-      width: 640
-      height: 360
+      iframe: https://www.youtube.com/embed/iODambgMZhk
   - venue: Clarity
     url: https://www.clarityconf.com/event/2017
     adr: San Francisco, CA
     date: 2017-11-28
     # slides: https://oddbooksapp.com/release/ae641b90-8efa-4b1e-8da8-16940edf420d
-    video: https://youtu.be/Prc_V-j6yS4
+    video: https://youtu.be/DZrDSdTekI4
     media: &clarity
-      iframe: https://www.youtube.com/embed/Prc_V-j6yS4
+      iframe: https://www.youtube.com/embed/DZrDSdTekI4
   - venue: CSS Dev Conf
     adr: New Orleans, LA
     date: 2017-10-09

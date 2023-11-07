@@ -75,9 +75,7 @@ Please welcome the Susy Next team:
   layout system.
 - [Mason Wendell][] \[[@codingdesigner]\] is a Creative Director at
   [Zivtech], the creator of [Breakpoint] (simple sass media queries),
-  and a contributor to various other great projects. He also built
-  "one of the dumbest Sass experiments" –
-  [sassymothereffingtextshadow].
+  and a contributor to various other great projects.
 
 All of us are passionate designer/developers, with a love for Sass &
 CSS. We're excited to build a layout syntax that spans existing
@@ -86,7 +84,7 @@ help make it a community project. Stay tuned!
 
 [singularity]: https://singularity.gs/
 [salsa]: https://tsi.github.io/Salsa/
-[breakpoint]: http://breakpoint-sass.com/
+[breakpoint]: https://github.com/at-import/breakpoint
 [susy]: /susy/
 [jina]: https://github.com/jina/
 [@jina]: https://twitter.com/jina
@@ -112,4 +110,3 @@ help make it a community project. Stay tuned!
 [mason wendell]: https://github.com/codingdesigner
 [@codingdesigner]: https://twitter.com/codingdesigner
 [zivtech]: https://www.zivtech.com/
-[sassymothereffingtextshadow]: https://sassymothereffingtextshadow.com/

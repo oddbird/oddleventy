@@ -13,10 +13,9 @@ const fetch = require('node-fetch');
 
 const baseDir = path.resolve(__dirname, '..');
 
-const { blocklist } = require(path.join(
-  __dirname,
-  './webmention-blocklist.cjs',
-));
+const { blocklist } = require(
+  path.join(__dirname, './webmention-blocklist.cjs'),
+);
 
 const site = yaml.load(
   fs.readFileSync(path.join(baseDir, 'content/_data/site.yaml'), 'utf8'),

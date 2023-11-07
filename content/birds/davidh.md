@@ -7,10 +7,9 @@ date: 2020-09-28
 image:
   src: birds/davidh.jpg
 social:
-  twitter: shipslinky
   github: dvdherron
 summary: |
-  David is a web designer,
+  David (he/him) is a web designer,
   bird watcher, and photographer
   focused on performance, layouts, and accessibility.
 ---

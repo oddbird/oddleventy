@@ -1,10 +1,8 @@
 ---
-eleventyExcludeFromCollections: true
-permalink: false
 title: When to Choose a Progressive Web App
 sub: Part 3 -- Responsive Web App vs Native Mobile App vs Progressive Web App
 author: sondra
-date: 2023-09-01
+date: 2023-10-30
 tags:
   - Article
   - Business Development
@@ -43,8 +41,8 @@ comparison chart for quick reference).
 **Read all three parts to compare app types:**
 
 1. [When to Choose a Responsive Web App](/2023/07/11/when-to-choose-a-responsive-web-app/)
-2. [When to Choose a Native Mobile App](/2023/08/01/when-to-choose-a-native-mobile-app/)
-3. [When to Choose a Progressive Web App](/2023/09/01/when-to-choose-a-progressive-web-app/)
+2. [When to Choose a Native Mobile App](/2023/08/29/when-to-choose-a-native-mobile-app/)
+3. When to Choose a Progressive Web App (this article)
 
 ## Progressive Web App -- Best of Both Worlds
 
@@ -103,6 +101,11 @@ fewer specialized technologies and can be done incrementally. On the other hand,
 packaging your PWA for inclusion in app stores takes additional time, and
 requires going through the app store approval process.
 
+{{ embed.img(
+  src='blog/2023/fast-bike.jpg',
+  alt='Blurry photo of a cyclist on a road bike'
+) }}
+
 ### Discoverable Via Search Engines & App Stores
 *Choose a progressive web app when the people you want to reach will look for
 your app with a search engine and in an app store.*
@@ -117,6 +120,11 @@ index them and include them in search results. Various tools such as
 [PWABuilder](https://www.pwabuilder.com/) essentially wrap up a PWA like a
 native app for inclusion in Google, Apple, and Microsoft app stores.
 
+{{ embed.img(
+  src='blog/2023/pwabuilder_logo.jpg',
+  alt='pwa builder logo'
+) }}
+
 ### Broad Reach
 *Choose a progressive web app when you want to reach a broad audience across
 various devices.*
@@ -128,6 +136,11 @@ with some extra packaging, in any app store. They can access a PWA via the
 internet or download it onto their phone like a native mobile app and use it
 offline. Like RWAs, PWAs take advantage of the web's high level of backward
 compatibility, meaning people on older devices will retain some level of access.
+
+{{ embed.img(
+  src='blog/2023/heart-chain.jpg',
+  alt='Paper cutouts of attached pink and red hearts'
+) }}
 
 ### Specialized Capabilities
 *Choose a progressive web app when you want to reach a broad range of people
@@ -152,6 +165,11 @@ completely independent from the browser interface.
 
 Check out and test all the PWA capabilities on [What PWA Can Do
 Today](https://whatpwacando.today/).
+
+{{ embed.img(
+  src='blog/2023/smartphone-app-homescreen.jpg',
+  alt='phone with lock on the screen'
+) }}
 
 {{ embed.figure(
   data=[{
