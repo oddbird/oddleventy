@@ -271,7 +271,7 @@ but it doesn't link to either.
 
 As a visitor at the zoo,
 I have opted to wander around
-and look at the physical signage at the zoo
+and look at the physical signage
 hoping I won't miss a fun event,
 rather than to try to piece together
 these unintuitive,
