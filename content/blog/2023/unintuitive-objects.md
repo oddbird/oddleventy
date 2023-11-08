@@ -514,7 +514,7 @@ and then use those same designs
 everywhere the object appears on the site.
 
 If you're interested in learning more
-about object-orient UX,
+about object-oriented UX,
 check out [ooux.com](https://www.ooux.com/).
 If you'd like an OOUX analysis or redesign
 of your website or app,
