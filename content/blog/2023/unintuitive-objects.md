@@ -269,7 +269,7 @@ but it doesn't link to either.
     but no link to either related object'
 ) }}
 
-As a visitor at the zoo myself,
+As a visitor at the zoo,
 I have opted to wander around
 and look at the physical signage at the zoo
 hoping I won't miss a fun event,
