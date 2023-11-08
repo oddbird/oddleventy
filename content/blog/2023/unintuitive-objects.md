@@ -111,7 +111,7 @@ that makes up that object.
 For example, on a blog,
 an article is an object.
 The structure of an article
-includes the person who wrote the article,
+includes the author,
 the title, the images and text,
 the published date and time,
 the updated date and time,
