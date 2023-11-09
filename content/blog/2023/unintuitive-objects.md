@@ -1,7 +1,7 @@
 ---
 title: How to Design More Intuitive Websites & Apps
 author: sondra
-date: 2023-11-08
+date: 2023-11-09
 tags:
   - Article
   - User Experience
@@ -288,10 +288,13 @@ and prioritize the important relationships.
 
 {{ embed.img(
   src='blog/2023/relationships.jpg',
-  alt='1 column with ANIMAL at the top followed by 2 cards that say has 1 HABITAT that it lives in, has 0 to many DEMOS that it is featured in, another column with HABITAT at the top followed by 2 cards that say has 1 to many ANIMALS that live in it, has 0 to many DEMOS that take place at it, and a third column with DEMO at the top followed by 2 cards that say has 0 to many ANIMALS that are featured in it, has 0 to many HABITATS where it takes place',
-  attrs={
-    'class': ''
-  }
+  alt='1 column with ANIMAL at the top followed by 2 cards that say has 1
+    HABITAT that it lives in, has 0 to many DEMOS that it is featured in,
+    another column with HABITAT at the top followed by 2 cards that say has 1 to
+    many ANIMALS that live in it, has 0 to many DEMOS that take place at it, and
+    a third column with DEMO at the top followed by 2 cards that say has 0 to
+    many ANIMALS that are featured in it, has 0 to many HABITATS where it takes
+    place'
 ) }}
 
 When designing the detail view
@@ -362,7 +365,9 @@ or making any mockups at all.
 
 {{ embed.img(
   src='blog/2023/cta.jpg',
-  alt='column with DEMO at the top and six calls to action, sort and filter by time, filter by ANIMAL, filter by LOCATION, filter by type (animal talking, demonstration), share, save to My Favs or My Schedule list',
+  alt='column with DEMO at the top and six calls to action, sort and filter by
+    time, filter by ANIMAL, filter by LOCATION, filter by type (animal talking,
+    demonstration), share, save to My Favs or My Schedule list',
   attrs={
     'class': 'align-left'
   }
