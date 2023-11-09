@@ -43,6 +43,11 @@ by Miriam Suzanne.
 [Demo](https://anchor-polyfill.netlify.app/) |
 [Source](https://github.com/oddbird/css-anchor-positioning)
 
+{{ embed.img(
+  src='blog/2023/css-anchor-positioning.jpg',
+  alt='With polyfill applied Target and Anchors right edges line up'
+) }}
+
 The [CSS anchor positioning specification](https://www.w3.org/TR/css-anchor-position-1/)
 defines anchor positioning,
 "where a positioned element can size and position itself
