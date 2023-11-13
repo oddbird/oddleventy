@@ -46,3 +46,9 @@ summary: |
 - [OOUX Certification (affiliate link)](http://partners.ooux.com/348125/17189)
 - [Slides](https://xd.adobe.com/view/59a38984-ff8c-4ae6-b09f-2cbf31f235fc-0cf0/)
 - [OddBird on Mastodon](https://front-end.social/@OddBird)
+
+## Related Article:
+
+For examples of all four unintuitive objects, check out our article on creating more intuitive websites and web applications.
+
+[How to Design More Intuitive Websites & Apps](/2023/11/09/unintuitive-objects/)

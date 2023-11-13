@@ -85,6 +85,12 @@ summary: |
 
 {% import 'embed.macros.njk' as embed %}
 
+Also check out our Winging It channel for a conversation between designers and developers on intuitive web design.
+
+**Winging It Ep 3**: [Intuitive Web Design with OOUX](https://www.oddbird.net/2023/10/24/winging-it-03/)
+
+## Objects on the Web
+
 I've been noticing unintuitive objects
 and working to avoid them
 since I first took Sophia Prater's
@@ -94,8 +100,6 @@ To understand unintuitive objects,
 let's first define
 what *objects* are
 in a digital system.
-
-## Objects on the Web
 
 An *object* in a web project
 is something that has
