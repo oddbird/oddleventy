@@ -1,13 +1,9 @@
 ---
 title: On Sass & CSS
-venue: Shop Talk Show
 date: 2019-10-28
 canonical: https://shoptalkshow.com/384/
 author: miriam
 card: feature
-image:
-  src: blog/elsewhere/shop-talk.png
-  alt: Shop Talk Show Podcast
 tags:
   - CSS
   - Sass

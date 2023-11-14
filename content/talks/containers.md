@@ -44,6 +44,9 @@ events:
     date: 2023-05-24
     end: 2023-05-25
     slides: https://slides.oddbird.net/cq/smashingsf/
+    video: https://www.youtube.com/video/IPyBr289pHY
+    media: &smashsf
+      iframe: https://www.youtube.com/embed/IPyBr289pHY
 summary: |
   How did container queries go
   from ‘impossible’ to ‘shipping’ after so many years?
@@ -53,7 +56,9 @@ summary: |
   Let’s find out!
 media:
   - <<: *smashde
+    span: full
   - <<: *cssday
+  - <<: *smashsf
 ---
 
 {% import 'embed.macros.njk' as embed %}

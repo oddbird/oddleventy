@@ -1,4 +1,5 @@
 ---
+card: large
 title: htmx
 episode: 2
 author:
