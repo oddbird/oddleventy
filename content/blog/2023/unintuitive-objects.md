@@ -85,10 +85,12 @@ summary: |
 
 {% import 'embed.macros.njk' as embed %}
 
-> Check out our [Winging It](/wingingit/) channel for a conversation between
-> designers and developers on intuitive web design.
->
-> **Winging It** episode 3: [Intuitive Web Design with OOUX](/2023/10/24/winging-it-03/)
+{% callout 'note', false %}
+Check out our [Winging It](/wingingit/) channel for a conversation between
+designers and developers on intuitive web design.
+
+**Winging It** episode 3: [Intuitive Web Design with OOUX](/2023/10/24/winging-it-03/)
+{% endcallout %}
 
 ## Objects on the Web
 

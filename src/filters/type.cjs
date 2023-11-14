@@ -152,24 +152,26 @@ params:
       The primary expected values are 'note' or 'warn',
       though we currently only have styling for 'note' callouts.
   label:
-    type: string
-    default: 'null'
+    type: string | boolean
+    default: true
     note: |
-      Null label will default to
+      `true` label will default to
       'Note' when the type is 'note',
       'Warning' when the type is 'warn',
       and otherwise the type as given.
 */
-const callout = (content, type = 'note', label = null) => {
+const callout = (content, type = 'note', label = true) => {
   const labels = {
     note: 'Note',
     warn: 'Warning',
   };
+  const displayLabel = label
+    ? (typeof label === 'string' && label) || labels[type] || type
+    : null;
 
-  return `<div data-callout="${type}">
-            <strong>${label || labels[type] || type}:</strong>
-            <div>${md(content.trim())}</div>
-          </div>`;
+  return `<div data-callout="${type}">${
+    displayLabel ? `<strong>${displayLabel}:</strong>` : ''
+  }<div>${md(content.trim())}</div></div>`;
 };
 
 module.exports = {
