@@ -85,9 +85,10 @@ summary: |
 
 {% import 'embed.macros.njk' as embed %}
 
-Also check out our Winging It channel for a conversation between designers and developers on intuitive web design.
-
-**Winging It Ep 3**: [Intuitive Web Design with OOUX](https://www.oddbird.net/2023/10/24/winging-it-03/)
+> Check out our [Winging It](/wingingit/) channel for a conversation between
+> designers and developers on intuitive web design.
+>
+> **Winging It** episode 3: [Intuitive Web Design with OOUX](/2023/10/24/winging-it-03/)
 
 ## Objects on the Web
 

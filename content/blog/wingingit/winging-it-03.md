@@ -49,6 +49,5 @@ summary: |
 
 ## Related Article:
 
-For examples of all four unintuitive objects, check out our article on creating more intuitive websites and web applications.
-
-[How to Design More Intuitive Websites & Apps](/2023/11/09/unintuitive-objects/)
+For examples of all four unintuitive objects, check out our article on [How to
+Design More Intuitive Websites & Apps](/2023/11/09/unintuitive-objects/).
