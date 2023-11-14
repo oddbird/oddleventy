@@ -1,4 +1,5 @@
 ---
+card: large
 title: How to Design More Intuitive Websites & Apps
 author: sondra
 date: 2023-11-09
