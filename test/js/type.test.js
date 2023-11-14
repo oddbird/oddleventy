@@ -51,8 +51,10 @@ describe('typography filters', () => {
 
   test('callout', () => {
     expect(callout(content)).toContain('Note');
+    expect(callout(content, 'note')).toContain('Note');
     expect(callout(content, 'warn')).toContain('Warning');
     expect(callout(content, 'Error')).toContain('Error');
     expect(callout(content, 'warn', 'Foobar')).toContain('Foobar');
+    expect(callout(content, 'note', false)).not.toContain('Note');
   });
 });
