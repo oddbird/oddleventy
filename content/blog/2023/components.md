@@ -65,23 +65,6 @@ But I get very cautious about
 instructing the browser
 to _do things my way_.
 
-It's not that I can't write JS,
-or even that I don't like to.
-I enjoy procedural code!
-And I've learned enough JS
-to do what I need --
-especially here in our Eleventy setup.
-Recently, I've been experimenting with WebC.
-Sometimes,
-I'll even write JS
-that runs in the browser.
-It's fun,
-it's useful,
-but it's not my default.
-And I'm always skeptical
-when JavaScript is inserted _between_
-me and a more declarative language.
-
 From a distance,
 watching through well-organized venetian blinds,
 that's what I see.
