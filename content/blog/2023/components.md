@@ -2,7 +2,7 @@
 title: HTML Web Components are Just JavaScript?
 sub: I'm still getting used to this
 author: miriam
-date: 2023-11-16
+date: 2023-11-17
 image:
   src: blog/2023/oroboros.jpg
   alt: >
@@ -16,6 +16,19 @@ tags:
   - Article
   - JavaScript
   - Web Components
+summary:
+  There's been a recent
+  flurry of articles
+  about web components,
+  with advice on how to shape them
+  as extensions of HTML.
+  I decided to dig in,
+  and see how these
+  'HTML web components'
+  could become a part of my own workflow.
+  Despite a few rough edges,
+  I'm excited to see
+  where this feature is heading!
 ---
 
 {% import "embed.macros.njk" as embed %}
@@ -26,7 +39,21 @@ for some time,
 [from a safe distance](https://mastodon.social/@davatron5000/111389814542279855).
 I like things that are part of the web platform,
 but mostly when that means
-_I don't have to write any JavaScript_.
+_I don't have to write much JavaScript_.
+
+It's not that I can't write JS,
+or even that I don't like to.
+I enjoy procedural code!
+And I've learned enough JS
+to do what I need --
+especially here in our
+[Eleventy](https://www.11ty.dev/) setup.
+Sometimes,
+I'll even write JS
+that runs in the browser.
+It's fun,
+and it's useful,
+but it's not my default.
 
 I'm a declarative programmer at heart.
 I was raised by semantic HTML,
@@ -43,7 +70,7 @@ or even that I don't like to.
 I enjoy procedural code!
 And I've learned enough JS
 to do what I need --
-especially here in an Eleventy setup.
+especially here in our Eleventy setup.
 Recently, I've been experimenting with WebC.
 Sometimes,
 I'll even write JS
@@ -67,7 +94,7 @@ constructed in a long series of functions.
 You might even call them
 _HTML-and-CSS in JS_.
 
-I've been burned before.
+Is that the way it has to be?
 
 ## A turning point?
 
@@ -224,17 +251,18 @@ since the early 2000s --
 from Django templates to Handlebars,
 Twig, Jinja & Nunjucks,
 Vue, Svelte, Liquid, etc.
-It seems to me like these quick templates
+It seems to me like these quick
+web component templates
 with shadow DOM
 can generate a rough equivalent
-of the most basic use-cases.
+of the most basic template language use-cases.
 You get some amount of progressive enhancement
 if you set it up right,
 and you get CSS encapsulation for free,
 even if you don't love how that works.
 But I also find it challenging
-to get the slots and parts set up
-with necessary styling.
+to get the slots and parts
+set up correctly for styling.
 That may just be inexperience.
 
 And then I wonder,
@@ -245,7 +273,8 @@ all the content is accessible from first load,
 without the custom element registration.
 That's better than some SPA frameworks,
 but server-side templates
-would get us even farther.
+would get us even farther --
+no run-time JS required.
 
 And what if we want to pass in data,
 then use flow control
@@ -532,10 +561,13 @@ single-purpose and broadly reusable custom elements
 that augment HTML with extra behavior
 without adding a lot of overhead.
 
-I also expect I'll keep playing
-with template-driven elements
-that I can define
-entirely in HTML,
+I think those same
+API design principles of 'HTML components'
+can be applied
+to a template-driven approach.
+Let the light DOM handle content wherever possible.
+So I expect I'll keep exploring
+elements defined entirely in HTML,
 with auto-registration.
 Zach Leatherman suggested
 I turn my looping snippet into
@@ -547,18 +579,19 @@ custom elements:
   title='Custom Element Registration Element'
 ) }}
 
-I do like recursion.
+The next step might be allowing
+a nested script tag to contain
+a class definition,
+for more customization?
+
+I do enjoy recursion,
+so this is a fun experiment
+even if it doesn't end up in production.
 Maybe I should also aim
 my `ground-control` elements
 at each other
 (or at the `register-element` naming attribute)
 and see what happens.
-
-I'll also keep playing with WebC.
-I think some of the same API design principles can apply.
-Let the light DOM handle content wherever possible,
-and add progressive enhancements
-from either JS or shadow DOM or both.
 
 It seems like the downside
 of writing HTML in HTML
@@ -581,6 +614,9 @@ While it will provide some
 other benefits,
 it requires even more duplication --
 which makes the templating use-case less attractive.
+At this point,
+tools like WebC
+seem to be the best path forward.
 
 All of that leaves me
 simultaneously excited
