@@ -13,6 +13,8 @@ image:
     and seeming to give us side-eye
   position: top
 tags:
+  - Article
+  - JavaScript
   - Web Components
 ---
 
@@ -41,7 +43,7 @@ or even that I don't like to.
 I enjoy procedural code!
 And I've learned enough JS
 to do what I need --
-especially here in my Eleventy setup.
+especially here in an Eleventy setup.
 Recently, I've been experimenting with WebC.
 Sometimes,
 I'll even write JS
@@ -61,7 +63,7 @@ that generate HTML & CSS along the way._
 Often the HTML and CSS are written
 as template literals,
 or worse --
-constructed in a long series functions.
+constructed in a long series of functions.
 You might even call them
 _HTML-and-CSS in JS_.
 
@@ -117,8 +119,8 @@ Several of these articles
 refer back to an earlier issue of
 Robin Rendle's excellent newsletter,
 [The Cascade](https://buttondown.email/cascade/archive/) --
-and specifically the subject line --
-_[What Would HTML Do?](https://buttondown.email/cascade/archive/003-what-would-html-do/)_.
+and specifically the subject line:
+_[What Would HTML Do?](https://buttondown.email/cascade/archive/003-what-would-html-do/)_
 
 That question,
 and the flurry of posts expanding on it,
@@ -130,7 +132,7 @@ _into HTML_.
 
 Every web component I've written
 up until this point
-started with a Shadow DOM-defining `template`.
+started with a shadow DOM-defining `template`.
 To me, that made sense as
 the most declarative
 place to start:
@@ -268,9 +270,9 @@ with additional control-flow features:
   </slot>
   <time @html="formatDate(now)"></time>
   <p webc:if="showSummary">
-    This is still declarative
-    I say to myself,
-    injecting JS
+    This is still declarative,
+    I say to myself
+    while injecting JS
     directly into its attributes.
   </p>
 </article>
@@ -281,7 +283,7 @@ It will pre-render whatever it can,
 and only require browser JS
 for things that need dynamic rendering.
 
-But the farther I go down this path
+But the further I go down this path
 of data-to-html templating,
 the heavier my components feel --
 and the less declarative.
@@ -312,11 +314,11 @@ we're not on the web platform any more."
 
 ## What's a 'component', anyway?
 
-The problem there isn't WebC,
+The problem with this isn't WebC,
 or any of the other web component libraries.
 You can easily get to that same place
 without any build steps at all,
-just by using Shadow-DOM
+just by using shadow DOM
 with more attributes than slots.
 It must be a common issue,
 because every article above
@@ -329,10 +331,10 @@ but I think that's too simple.
 I've been passing arguments
 to component templates
 since my first time using PHP
-in the early 2000's.
+in the early 2000s.
 Before we called them _components_
 we had _includes_.
-For me at least
+For me
 they served a similar purpose:
 _reusable snippets of HTML,
 generating markup from data_.
@@ -349,7 +351,7 @@ one-liner with parameters:
 ```jinja2
 <!-- Nunjucks macro -->
 {% import "content.macros.njk" as content %}
-{ content.blockquote(
+{{ content.blockquote(
   text: quoteText,
   …
 ) }}
@@ -376,11 +378,11 @@ around normal HTML,
 and then enhance those elements
 with JavaScript [superpowers](https://htmlwithsuperpowers.netlify.app/).
 No shadow DOM required,
-though it may be sprinkled over top
+though it may be sprinkled over the top
 in some cases.
-The point is to provide an HTML-like use
+The point is to provide an 'HTML-like' use
 of the components,
-which doesn't rely on Shadow DOM as the baseline.
+which doesn't rely on shadow DOM as the baseline.
 We pass in markup rather than raw values.
 
 Eric Meyer provides a great side-by-side comparison
@@ -415,17 +417,21 @@ only provide additional semantics and behavior.
 This leads me to agree with
 Keith Grant
 when he says
-that [Web Components Aren’t Components](https://keithjgrant.com/posts/2023/07/web-components-arent-components/).
+that [Web Components Aren’t Components].
 
 > At least,
 > it’s not the same definition for component
 > that modern frameworks use.
+>
+> ---[Keith Grant][Web Components Aren’t Components]
 
-Keith also points to the fact
+[Web Components Aren’t Components]: https://keithjgrant.com/posts/2023/07/web-components-arent-components/
+
+Keith also points out
 that the CSS cascade
 handles web component styles
 _exactly opposite_
-from the way frameworks do:
+from the way frameworks do.
 
 In a framework,
 'scoped' styles get priority
@@ -442,11 +448,11 @@ but when there's a conflict
 the page always wins.
 
 That's similar to user agent defaults
-provided by the browser.
-Which makes a lot of sense
+provided by the browser --
+which makes a lot of sense
 if you plan to distribute a new element
 for other authors to use
-in unpredictable context.
+in an unpredictable context.
 But it makes less sense
 when you just want to wrap up
 the 'card' styles on your site
@@ -462,14 +468,14 @@ put more focus
 on combining all the elements
 into reusable _templates_.
 
-I don't think one of those goals is right,
+I don't think one of those goals is right
 and the other one wrong
 (setting aside SPA implementation issues) --
 but it seems clear
 that these tools were designed
 to solve different use-cases.
 
-I imagine there's a counter-point in here somewhere,
+I imagine there's a counterpoint in here somewhere,
 and I just haven't landed on it.
 Maybe we should all be thinking of
 component libraries
@@ -478,7 +484,7 @@ even when they come from inside the house?
 Maybe there's an architectural benefit
 to treating template-components
 the same way we treat markup-components?
-For sure there are use-cases
+Certainly there are use-cases
 that don't fall neatly into one category or the other.
 
 ## JS in HTML in JS
@@ -490,11 +496,11 @@ I think it's a good idea
 to use the light DOM
 for content,
 even when you're providing
-more Shadow-DOM structure
+more shadow DOM structure
 behind the scenes.
 
 I was even inspired
-by Eric's `<super-slider>`,
+by Eric's `<super-slider>`
 to build something similar of my own.
 It's still experimental,
 and I still have a lot to learn
@@ -511,18 +517,18 @@ But I was surprised to find
 this approach is even more JS-forward
 than my previous experiments:
 
-1. Start without any template or slots or Shadow DOM
-2. Don't write any HTML or CSS
-3. It's all just JavaScript
-4. Even inside the JavaScript, there's no HTML
-5. Maybe inject inline CSS, or maybe not
-6. More JavaScripting
-7. Only JavaScripts
-8. Title the article "_HTML Web Components_"
+1. Start without any template or slots or shadow DOM
+1. Don't write any HTML or CSS
+1. It's all just JavaScript
+1. Even inside the JavaScript, there's no HTML
+1. Maybe inject inline CSS, or maybe not
+1. More JavaScripting
+1. Only JavaScripts
+1. Title the article "_HTML Web Components_"
 
 It's a strange argument,
-but the results are compelling.
-Single-purpose and broadly reusable custom elements
+but the results are compelling --
+single-purpose and broadly reusable custom elements
 that augment HTML with extra behavior
 without adding a lot of overhead.
 
@@ -560,7 +566,7 @@ with the `<template>` tag is
 getting it into a website.
 Even within my own projects,
 I would have to render the template instructions
-on every page where they are needed.
+on every page where they're needed.
 HTML imports never happened.
 I imagine that's why
 every example I've seen
@@ -603,7 +609,7 @@ Sass can _write CSS_.
 Maybe the same is true with HTML components,
 and I shouldn't expect HTML to write itself.
 
-I don't think I'm saying anything new here,
+I don't think I'm saying anything new here --
 these same points seem to come up often.
 I'm just stubbing my toe
 on a well-documented and well-marked stone.
