@@ -36,7 +36,7 @@ summary: |
 - How an object map works
 - Demonstration of an object map
 - The benefits including communication, designing the database schema,
-  estimataion and prioritization
+  estimation and prioritization
 - How object maps relate to a design system
 
 ## Links:
