@@ -48,7 +48,7 @@ summary: |
 - [Object Map Demo](https://xd.adobe.com/view/0941ed26-762a-48b7-88e2-0e89f5b1307f-5c12/?fullscreen)
 - [Wireframe](https://xd.adobe.com/view/930b3686-1ec4-4043-a6e1-6b6caedb9cd3-c658/?fullscreen)
 
-## Related information about identifying objects using OOUX:
+## Identifying Objects using OOUX:
 
 - [How to Design More Intuitive Websites & Apps Article](https://www.oddbird.net/2023/11/09/unintuitive-objects/)
 - [Intuitive Web Design with OOUX Video](https://www.oddbird.net/2023/10/24/winging-it-03/)
