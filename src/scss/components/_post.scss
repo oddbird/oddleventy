@@ -19,7 +19,10 @@
   grid-area: post;
   grid-row-gap: var(--shim);
   grid-template:
-    [hero-start] 'left type type' auto
+    [hero-start] 'left type type' var(
+      --post-thumb-height,
+      var(--post-thumb-small)
+    )
     [hero-end] 'left main right' 1fr
     / [hero-start] var(--post-margin) minmax(min-content, var(--page)) var(
       --post-margin
@@ -69,8 +72,9 @@
 }
 
 [data-post='large'] {
-  --post-margin: minmax(0, 1fr);
   --item-title: var(--h2);
+  --post-margin: minmax(0, 1fr);
+  --post-thumb-height: auto;
 }
 
 // Elements
