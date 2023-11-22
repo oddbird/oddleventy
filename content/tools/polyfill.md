@@ -29,7 +29,7 @@ summary: |
 
 ## Cascade Layers Polyfill
 
-[Demo](https://layers-polyfill-example.netlify.app/)
+[Demo](https://layers-polyfill-example.netlify.app/) |
 [Source](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-cascade-layers#readme)
 
 PostCSS Cascade Layers lets you use `@layer`
