@@ -1,5 +1,5 @@
 ---
-title: OOUX Object Maps
+title: Align Designers and Developers with OOUX
 episode: 4
 tags:
   - OOUX
@@ -9,7 +9,7 @@ author:
   - sondra
   - james
   - ed
-date: 2023-11-21
+date: 2023-11-22
 length: 30 mins
 image:
   src: winging-it/winging-it-4.jpg
