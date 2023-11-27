@@ -21,11 +21,11 @@ summary: |
 {% macro show(item, collections) %}
   <article {{ post.aria_label(item, 'tag') }}>
     {%- set item_title -%}
-     {% if item.type and not (item.tag == 'Winging It') %}
+     {%- if item.type and not (item.tag == 'Winging It') -%}
       {{- item.type.plural -}}
      {%- else -%}
       {{- item.tag -}}
-     {% endif %}
+     {%- endif -%}
       <span class="sr-only">tag</span>
     {%- endset -%}
 
