@@ -66,7 +66,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@tommoor/remove-markdown": "^0.3.2",
-    "@typescript-eslint/parser": "^6.11.0",
+    "@typescript-eslint/parser": "^6.12.0",
     "autoprefixer": "^10.4.16",
     "babel-jest": "^29.7.0",
     "chalk": "^4.1.2",
@@ -99,7 +99,7 @@
     "postcss": "^8.4.31",
     "prettier": "^3.1.0",
     "rimraf": "^3.0.2",
-    "rollup": "^4.5.0",
+    "rollup": "^4.6.0",
     "sanitize-html": "^2.11.0",
     "sass": "^1.69.5",
     "sassdoc": "^2.7.4",
@@ -109,7 +109,7 @@
     "stylelint": "^15.11.0",
     "stylelint-config-standard-scss": "^11.1.0",
     "truncate-html": "^1.0.4",
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.2",
     "typogr": "^0.6.8"
   },
   "yarn-upgrade-all": {
