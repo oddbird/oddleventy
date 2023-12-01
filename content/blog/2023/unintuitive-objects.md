@@ -143,7 +143,7 @@ Instances of a digital article object
 on a blog could include articles like:
 "[When to Choose a Progressive Web App](/2023/10/30/when-to-choose-a-progressive-web-app/),"
 "[SQLAlchemy for Django Developers](/2023/10/23/sqlalchemy-for-django-developers/)," or
-"[FastAPI Path Operations for Django Developers](/fastapi-path-operations-for-django-developers/)."
+"[FastAPI Path Operations for Django Developers](/2023/10/19/fastapi-path-operations-for-django-developers/)."
 
 {{ embed.figure(
   data=article,
