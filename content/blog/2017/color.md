@@ -323,7 +323,7 @@ via [Twitter].
   src='blog/2017/colors/culrs.jpg'
 ) }}
 
-[Culrs]: https://www.culrs.com/
+[Culrs]: https://culrs.com/
 
 ## [Open Color]
 
