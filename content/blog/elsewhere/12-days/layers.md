@@ -7,6 +7,7 @@ canonical: https://12daysofweb.dev/2022/cascade-layers/
 tags:
   - CSS
   - Cascade Layers
+  - Link
 summary: >
   Don't let specificity force you into strict selector conventions.
   Cascade Layers allow us to manage specificity

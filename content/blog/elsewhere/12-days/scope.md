@@ -7,6 +7,7 @@ canonical: https://12daysofweb.dev/2023/css-scope/
 tags:
   - CSS
   - CSS Scope
+  - Link
 summary: >
   The new `@scope` rule is here!
   It's a better way to keep our component styles contained --
