@@ -19,9 +19,9 @@ action:
   text: Read the summary & proposal »
   url: https://sass-lang.com/blog/rfc-package-importer/
 summary: |
-  UI Libraries like Vuetify and Bootstrap
+  UI libraries like Vuetify and Bootstrap
   make it easy to extend their themes by providing
-  Sass source files with their NPM Packages.
+  Sass source files with their NPM packages.
   Now, Sass is requesting feedback on
   a simpler way to import those libraries
   into your Sass styles with `@use "pkg:bootstrap"`.
@@ -29,7 +29,7 @@ summary: |
 ---
 
 Many UI libraries provide Sass source code
-alongside the Javascript in a Node.js Package,
+alongside the Javascript in a Node.js package,
 so that authors can easily customize the theme.
 There hasn't been an easy way to specify that
 a file is in an installed package,
@@ -53,7 +53,7 @@ When a Node Package Importer is added to the importers for a compilation,
 this directs Sass to find a Node.js Module called `vuetify`,
 and import the default Sass file defined by the `vuetify` package.
 
-I'm excited by what this provides library authors-
+I'm excited by what this provides library authors –
 this makes it much more straightforward to expose
 Sass source files, and to expect that users can
 import those files, regardless of their setup.
@@ -68,11 +68,11 @@ For instance, an author could expose the file at
 `./src/sass/themes/_dark.scss` in a way that would allow
 someone using the package to simply write `@use "pkg:package/dark"`.
 
-This also uses [Conditional exports][], so package authors
+This also uses [conditional exports][], so package authors
 can specify a Sass default entry point that is different
 than their JavaScript entry point.
 
-[Conditional exports]: https://nodejs.org/api/packages.html#conditional-exports
+[conditional exports]: https://nodejs.org/api/packages.html#conditional-exports
 
 I look forward to this feature shipping, and making integration easier for both
 package authors and users.
