@@ -6,10 +6,10 @@ url: https://sass-lang.com/blog/rfc-package-importer/
 date: 2023-09-26
 author: james
 image:
-  src: blog/2022/sass-color.jpg
+  src: blog/elsewhere/package-importer.jpeg
   alt: |
-    Sass logo in black
-    on top of bright oklch color gradient
+    A close up of the hands of a person handing a package
+    to another person.
 tags:
   - Link
   - CSS
