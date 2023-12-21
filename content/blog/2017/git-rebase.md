@@ -249,7 +249,7 @@ your git history often to understand past choices, then let this be your
 excuse.
 
 [reflog]: https://git-scm.com/docs/git-reflog
-[Owen]: https://grimoire.ca/git/config
+[Owen]: https://grimoire.ca/git/config/
 [good commit messages]: https://alistapart.com/article/the-art-of-the-commit/
 
 ## What Do the OddBirds Do?

@@ -124,7 +124,7 @@ HT: [John K. Paul] for his [talk][talk] encouraging devs to use ES6 now.
 
 [ecmascript 6]: https://262.ecma-international.org/6.0/
 [helpful summary]: https://github.com/lukehoban/es6features#readme
-[browser support chart]: https://kangax.github.io/compat-table/es6/
+[browser support chart]: https://compat-table.github.io/compat-table/es6/
 [es6 shim]: https://github.com/paulmillr/es6-shim/
 [traceur]: https://github.com/google/traceur-compiler
 [gulp-traceur]: https://github.com/sindresorhus/gulp-traceur

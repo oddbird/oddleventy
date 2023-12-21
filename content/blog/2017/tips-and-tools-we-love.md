@@ -45,7 +45,7 @@ default json view to the enhanced view after enabling this extension.
 ) }}
 
 [David Glick]: /authors/david/
-[JSON Viewer]: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+[JSON Viewer]: https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
 
 ## Git Gutter
 

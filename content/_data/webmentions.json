@@ -1,6 +1,75 @@
 {
-  "lastFetched": "2023-10-23T08:05:56.397Z",
+  "lastFetched": "2023-12-18T08:06:11.992Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Baldur Bjarnason",
+        "photo": "https://webmention.io/avatar/cdn.fosstodon.org/cc8554ba583793b416ccbb17bc1d574b8c60c5e53c11aabef6c9a8f806a5d4e2.jpg",
+        "url": "https://toot.cafe/@baldur"
+      },
+      "url": "https://toot.cafe/@baldur/111516396573256488",
+      "published": "2023-12-03T12:06:12+00:00",
+      "wm-received": "2023-12-03T12:17:54Z",
+      "wm-id": 1748186,
+      "wm-source": "https://brid.gy/comment/mastodon/@hexagoncircle@fosstodon.org/111511861617834686/111516396756270443",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://fosstodon.org/@hexagoncircle\" class=\"u-url\">@<span>hexagoncircle</span></a></span> I've been using cascade layers with graceful degradation on a recent project. Website not app which simplifies things.</p><p>Basic approach: core CSS setting properties I know will be used so it doesn't matter that they override the layered CSS, combined with a small piece of JS that loads simplified fallback CSS if layers aren't supported.</p><p>Hardest part was actually finding browser versions old enough to test the no layers scenario.</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
+        "text": "@hexagoncircle I've been using cascade layers with graceful degradation on a recent project. Website not app which simplifies things.Basic approach: core CSS setting properties I know will be used so it doesn't matter that they override the layered CSS, combined with a small piece of JS that loads simplified fallback CSS if layers aren't supported.Hardest part was actually finding browser versions old enough to test the no layers scenario."
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Vadim Makeev",
+        "photo": "https://webmention.io/avatar/cdn.fosstodon.org/97af8b31e253fcb460cfe2c717222d86bf07d04366f03d42a2e3035742295fbb.png",
+        "url": "https://mastodon.social/@pepelsbey"
+      },
+      "url": "https://mastodon.social/@pepelsbey/111512853864149687",
+      "published": "2023-12-02T21:05:14+00:00",
+      "wm-received": "2023-12-02T21:05:51Z",
+      "wm-id": 1748015,
+      "wm-source": "https://brid.gy/comment/mastodon/@hexagoncircle@fosstodon.org/111511861617834686/111512854143176981",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://fosstodon.org/@hexagoncircle\" class=\"u-url\">@<span>hexagoncircle</span></a></span> I’m convinced it’s a paradigm shift bigger than the CSS grid layout was. Yes, it was possible to limit grids to support old IE or write a fallback flexbox layout, but most people chose to wait for full support. It was more practical in many ways. That’s my choice for cascade layers, too. I don’t like messy transpiled code or complicated polyfills: they don’t add user value, only change developer experience. It’s just not worth it, from my perspective.</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>",
+        "text": "@hexagoncircle I’m convinced it’s a paradigm shift bigger than the CSS grid layout was. Yes, it was possible to limit grids to support old IE or write a fallback flexbox layout, but most people chose to wait for full support. It was more practical in many ways. That’s my choice for cascade layers, too. I don’t like messy transpiled code or complicated polyfills: they don’t add user value, only change developer experience. It’s just not worth it, from my perspective."
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Tamas",
+        "photo": "https://webmention.io/avatar/cdn.fosstodon.org/c0d6f1da3da5d4febc8ba587bc68ad60ef979116804da7316b355fb801580aec.jpg",
+        "url": "https://mas.to/@iamdtms"
+      },
+      "url": "https://mas.to/@iamdtms/111512001857691661",
+      "published": "2023-12-02T17:28:34+00:00",
+      "wm-received": "2023-12-02T17:34:48Z",
+      "wm-id": 1747954,
+      "wm-source": "https://brid.gy/comment/mastodon/@hexagoncircle@fosstodon.org/111511861617834686/111512001872153910",
+      "wm-target": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://fosstodon.org/@hexagoncircle\" class=\"u-url\">@<span>hexagoncircle</span></a></span> Never used but looking forward to it with polyfill. Support require backwards compatibility IMHO: <br /><a href=\"https://caniuse.com/css-cascade-layers\"><span>https://</span><span>caniuse.com/css-cascade-layers</span><span></span></a></p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/\"></a>\n<a href=\"https://caniuse.com/css-cascade-layers\">CSS Cascade Layers | Can I use... Support tables for HTML5, CSS3, etc</a>",
+        "text": "@hexagoncircle Never used but looking forward to it with polyfill. Support require backwards compatibility IMHO: \nhttps://caniuse.com/css-cascade-layers\n\nCSS Cascade Layers | Can I use... Support tables for HTML5, CSS3, etc"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/06/21/cascade-layers-polyfill/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {

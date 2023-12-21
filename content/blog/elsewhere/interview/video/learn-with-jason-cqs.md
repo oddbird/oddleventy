@@ -4,6 +4,7 @@ venue: Learn With Jason
 url: https://www.learnwithjason.dev/demystifying-css-container-queries
 date: 2023-10-16
 author: miriam
+card: feature
 image:
   src: blog/2023/learn-with-jason.jpg
 tags:

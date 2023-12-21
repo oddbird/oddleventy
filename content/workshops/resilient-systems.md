@@ -1,6 +1,6 @@
 ---
 title: Resilient Web Systems
-sub: Inspiration & practical steps to take full advantage of the web
+sub: A workshop with practical steps to take full advantage of the web
 author: miriam
 card: feature
 date: 2020-01-01
@@ -12,7 +12,6 @@ tags:
   - Style Guides
 events:
   - venue: Smashing Workshops
-    url: https://smashingconf.com/online-workshops/workshops/css-miriam-suzanne
     date: 2020-05-07
     end: 2020-05-22
     adr: Online
