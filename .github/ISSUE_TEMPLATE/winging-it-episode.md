@@ -7,19 +7,19 @@ assignees: ''
 
 ---
 
-## Before Recording
+*Include the episode number and topic in the issue title*
 
-**Episode Topic:**
-**Episode Number:**
-**Expert:** 
-**Co-Host:** 
-**Co-Host:** 
-**Show Notes Link:**
-**Recording date:**
+- **Expert:** 
+- **Co-Host:** 
+- **Co-Host:** 
+- **Show Notes Link:**
+- **Recording date:**
 
 ## After Recording
 
-**Video File Link (Streamyard):**
+- **Video File Link (Streamyard):**
+- **YouTube Episode Link:**
+- **OddSite Post Link:**
 
 
 **Title Suggestions for YouTube (and OddSite) Post:**
@@ -34,10 +34,6 @@ Each line includes a 4 digit time stamp and short chapter title.
 00:01 Chapter Name
 
 
-**YouTube Episode Link:**
-
-
-**OddSite Post Link:**
 
 ---
 
