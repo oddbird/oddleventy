@@ -4,6 +4,7 @@ about: Issue template for tracking Winging It Episodes
 title: 'Winging It - '
 labels: ''
 assignees: ''
+projects: "oddbird/13"
 
 ---
 
