@@ -7,19 +7,19 @@ assignees: ''
 
 ---
 
-## Before Recording
+*Include the episode number and topic in the issue title*
 
-**Episode Topic:**
-**Episode Number:**
 **Expert:** 
 **Co-Host:** 
 **Co-Host:** 
-**Show Notes Link:**
+**Show Notes Link [template found here](https://docs.google.com/document/d/1Sp_-JSzoFoqq8IdTqaQl6oNSEbWlxNfuqZ6fKE14ELQ/edit?usp=sharing):**
 **Recording date:**
 
 ## After Recording
 
-**Video File Link (Streamyard):**
+- **Video File Link (Streamyard):**
+- **YouTube Episode Link:**
+- **OddSite Post Link:**
 
 
 **Title Suggestions for YouTube (and OddSite) Post:**
@@ -34,17 +34,13 @@ Each line includes a 4 digit time stamp and short chapter title.
 00:01 Chapter Name
 
 
-**YouTube Episode Link:**
-
-
-**OddSite Post Link:**
 
 ---
 
 ##  Production Checklist
 
-- [ ] Create Video thumbnail
-- [ ] Create OddSite Hero image
+- [ ] [Create Video thumbnail](https://www.dropbox.com/scl/fi/46qduwbgrq1z294yaoad3/winging-it-thumbnail-template.psd?rlkey=7i5yf7uw4o3960nk0kt4c80bq&dl=0) for YouTube
+- [ ] [Create OddSite Hero image](https://www.dropbox.com/home/OddBird/oddbird%20%3A%20oss%20projects/winging%20it/thumbnails)
 - [ ] Create OddSite Post
 - [ ] Edit video
 - [ ] Upload Video to YT; add unlisted video link to this issue
