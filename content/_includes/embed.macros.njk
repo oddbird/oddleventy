@@ -122,7 +122,6 @@ params:
   {%- endif -%}
 {%- endmacro %}
 
-
 {# @docs
 label: video
 category: Patterns
@@ -147,7 +146,12 @@ params:
   width=none,
   caption=none
 ) %}
-  {%- if '://' in src -%}
+  {%- if 'youtube' in src -%}
+    {%- set id = src.replace('https://www.youtube.com/embed/', '') -%}
+    <is-land on:visible>
+      <lite-youtube videoid="{{id}}" />
+    </is-land>
+  {%- elseif '://' in src -%}
     {{ figure(
       data=[{
         'iframe': src,
