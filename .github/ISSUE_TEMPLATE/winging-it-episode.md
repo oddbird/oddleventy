@@ -10,9 +10,9 @@ projects: "oddbird/13"
 
 *Include the episode number and topic in the issue title*
 
-**Expert:** 
-**Co-Host:** 
-**Co-Host:** 
+**Expert:**
+**Co-Host:**
+**Co-Host:**
 **Show Notes Link [template found here](https://docs.google.com/document/d/1Sp_-JSzoFoqq8IdTqaQl6oNSEbWlxNfuqZ6fKE14ELQ/edit?usp=sharing):**
 **Recording date:**
 
@@ -38,7 +38,7 @@ Each line includes a 4 digit time stamp and short chapter title.
 
 ---
 
-##  Production Checklist
+## Production Checklist
 
 - [ ] [Create Video thumbnail](https://www.dropbox.com/scl/fi/46qduwbgrq1z294yaoad3/winging-it-thumbnail-template.psd?rlkey=7i5yf7uw4o3960nk0kt4c80bq&dl=0) for YouTube
 - [ ] [Create OddSite Hero image](https://www.dropbox.com/home/OddBird/oddbird%20%3A%20oss%20projects/winging%20it/thumbnails)
@@ -50,4 +50,5 @@ Each line includes a 4 digit time stamp and short chapter title.
 - [ ] Review OddSite PR
 - [ ] Publish video
 - [ ] Promote video (on all the socials)
-- [ ] Review analytics; how did the topic/desciption/etc do? What can we can learn from these things?
+- [ ] Review analytics; how did the topic/description/etc do? What can we can
+  learn from these things?

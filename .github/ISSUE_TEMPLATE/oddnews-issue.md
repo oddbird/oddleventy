@@ -7,9 +7,9 @@ assignees: ''
 
 ---
 
-**Issue Number**: 
-**Publish Date**: 
-**Link to Archive**: 
+**Issue Number**:
+**Publish Date**:
+**Link to Archive**:
 
 ## Create the Issue
 - [ ] Review last issue's analytics for most clicked content

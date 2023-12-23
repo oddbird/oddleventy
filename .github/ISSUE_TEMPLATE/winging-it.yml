@@ -1,11 +1,11 @@
 name: Winging It 2.0
 description: Issue template for tracking Winging It Episodes
-title: "Winging It 2 - "
-projects: ["oddbird/7", "oddbird/13"]
+title: 'Winging It 2 - '
+projects: ['oddbird/7', 'oddbird/13']
 body:
   - type: markdown
     attributes:
-      value: "*Include the episode number and topic in the issue title*"
+      value: '*Include the episode number and topic in the issue title*'
   - type: dropdown
     id: expert
     attributes:
@@ -49,7 +49,7 @@ body:
       required: false
   - type: markdown
     attributes:
-      value: "## After Recording"
+      value: '## After Recording'
   - type: input
     id: streamyardlink
     attributes:
@@ -72,21 +72,21 @@ body:
     id: episodetitle
     attributes:
       label: Title Suggestions for Episode
-      description: "Will be used on YouTube and OddSite"
+      description: 'Will be used on YouTube and OddSite'
     validations:
       required: false
   - type: textarea
     id: episodedesc
     attributes:
       label: Episode Description for YouTube (and OddSite) Post
-      description: "Will be used on YouTube and OddSite"
+      description: 'Will be used on YouTube and OddSite'
     validations:
       required: false
   - type: textarea
     id: chapters
     attributes:
       label: Chapters
-      description: "Include a 4 digit timestamp & short chapter title per line"
+      description: 'Include a 4 digit timestamp & short chapter title per line'
       value: |
         00:01 Chapter Name
     validations:
