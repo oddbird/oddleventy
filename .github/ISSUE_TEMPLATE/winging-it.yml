@@ -1,44 +1,43 @@
 name: Winging It 2.0
-description: Issue template for tracking Winging It Episodes
-title: 'Winging It 2 - '
+description: Issue form template for Winging It Episodes
+title: 'Winging It - '
 projects: ['oddbird/7', 'oddbird/13']
 body:
   - type: markdown
     attributes:
       value: '*Include the episode number and topic in the issue title*'
-  - type: dropdown
+  - type: checkboxes
     id: expert
     attributes:
       label: Who is the expert?
       options:
-        - David
-        - Ed
-        - James
-        - Jonny
-        - Miriam
-        - Sondra
-        - Stacy
-    validations:
-      required: false
-  - type: dropdown
+        - label: David
+        - label: Ed
+        - label: James
+        - label: Jonny
+        - label: Miriam
+        - label: Sondra
+        - label: Stacy
+        - label: Other (for Guests, add name to Episode Description)
+  - type: checkboxes
     id: cohosts
     attributes:
-      label: Who are the co-hosts (select all that apply)
-      multiple: true
+      label: Who are the co-hosts?
+      description: Select all that apply
       options:
-        - David
-        - Ed
-        - James
-        - Jonny
-        - Miriam
-        - Sondra
-        - Stacy
-    validations:
-      required: false
+        - label: David
+        - label: Ed
+        - label: James
+        - label: Jonny
+        - label: Miriam
+        - label: Sondra
+        - label: Stacy
+        - label: Other (for Guests, add name to Episode Description)
   - type: input
     id: notes
     attributes:
       label: Show Notes Link
+      description: [Show Notes Template](https://docs.google.com/document/d/1Sp_-JSzoFoqq8IdTqaQl6oNSEbWlxNfuqZ6fKE14ELQ/edit?usp=sharing)
     validations:
       required: false
   - type: input
@@ -96,14 +95,14 @@ body:
     attributes:
       label: Production Checklist
       value: |
-        - [ ] Create Video thumbnail for YouTube
-        - [ ] Create OddSite Hero image
+        - [ ] [Create Video thumbnail](https://www.dropbox.com/scl/fi/46qduwbgrq1z294yaoad3/winging-it-thumbnail-template.psd?rlkey=7i5yf7uw4o3960nk0kt4c80bq&dl=0) for YouTube
+        - [ ] [Create OddSite Hero image](https://www.dropbox.com/home/OddBird/oddbird%20%3A%20oss%20projects/winging%20it/thumbnails)
         - [ ] Create OddSite Post
         - [ ] Edit Video
         - [ ] Upload Video to YT and add unlisted video link to this issue
         - [ ] Review Video
         - [ ] Make OddSite Post
-        - [ ] Review OddSite PR
-        - [ ] Publish video
+        - [ ] Review OddSite Post PR
+        - [ ] Publish video/ Publish PR (at the same time)
         - [ ] Promote video (on all the socials)
-        - [ ] Review analytics
+        - [ ] Add to Playlist (if applicable)
