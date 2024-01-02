@@ -147,10 +147,14 @@ params:
   caption=none
 ) %}
   {%- if 'youtube' in src -%}
-    {%- set id = src.replace('https://www.youtube.com/embed/', '') -%}
-    <is-land on:visible>
-      <lite-youtube videoid="{{id}}" />
-    </is-land>
+    {% call figure(caption=caption) %}
+      <is-land on:visible>
+        {%- set id = src.replace('https://www.youtube.com/embed/', '') -%}
+        <lite-youtube videoid="{{id}}" style="
+          background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{id}}/auto/jpeg/');
+        "/>
+      </is-land>
+    {% endcall %}
   {%- elseif '://' in src -%}
     {{ figure(
       data=[{
