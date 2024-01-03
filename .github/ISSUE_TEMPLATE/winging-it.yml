@@ -1,50 +1,50 @@
 name: Winging It 2.0
 description: Issue form template for Winging It Episodes
-title: "Winging It - "
-projects: ["oddbird/7", "oddbird/13"]
+title: 'Winging It - '
+projects: ['oddbird/7', 'oddbird/13']
 body:
   - type: markdown
     attributes:
-      value: "*Include the episode number and topic in the issue title*"
+      value: '*Include the episode number and topic in the issue title*'
   - type: checkboxes
     id: expert
     attributes:
       label: Who is the expert?
       options:
-      - label: David
-      - label: Ed
-      - label: James
-      - label: Jonny
-      - label: Miriam
-      - label: Sondra
-      - label: Stacy
-      - label: Other (for Guests, add name to Episode Description)
+        - label: David
+        - label: Ed
+        - label: James
+        - label: Jonny
+        - label: Miriam
+        - label: Sondra
+        - label: Stacy
+        - label: Other (for Guests, add name to Episode Description)
   - type: checkboxes
     id: cohosts
     attributes:
       label: Who are the co-hosts?
-      description: "Select all that apply"
+      description: 'Select all that apply'
       options:
-      - label: David.
-      - label: Ed.
-      - label: James.
-      - label: Jonny.
-      - label: Miriam.
-      - label: Sondra.
-      - label: Stacy.
-      - label: Other.
+        - label: David.
+        - label: Ed.
+        - label: James.
+        - label: Jonny.
+        - label: Miriam.
+        - label: Sondra.
+        - label: Stacy.
+        - label: Other.
   - type: input
     id: notes
     attributes:
       label: Show Notes Link
-      description: "[Show Notes Template](https://docs.google.com/document/d/1Sp_-JSzoFoqq8IdTqaQl6oNSEbWlxNfuqZ6fKE14ELQ/edit?usp=sharing)"
+      description: '[Show Notes Template](https://docs.google.com/document/d/1Sp_-JSzoFoqq8IdTqaQl6oNSEbWlxNfuqZ6fKE14ELQ/edit?usp=sharing)'
   - type: input
     id: date
     attributes:
       label: Recording Date
   - type: markdown
     attributes:
-      value: "## After Recording"
+      value: '## After Recording'
   - type: input
     id: streamyardlink
     attributes:
@@ -61,17 +61,17 @@ body:
     id: episodetitle
     attributes:
       label: Title Suggestions for Episode
-      description: "Will be used on YouTube and OddSite"
+      description: 'Will be used on YouTube and OddSite'
   - type: textarea
     id: episodedesc
     attributes:
       label: Episode Description for YouTube (and OddSite) Post
-      description: "Will be used on YouTube and OddSite"
+      description: 'Will be used on YouTube and OddSite'
   - type: textarea
     id: chapters
     attributes:
       label: Chapters
-      description: "Include a 4 digit timestamp & short chapter title per line"
+      description: 'Include a 4 digit timestamp & short chapter title per line'
       value: |
         00:01 Chapter Name
   - type: textarea
