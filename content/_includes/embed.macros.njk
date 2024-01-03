@@ -147,7 +147,7 @@ params:
   width=none,
   caption=none
 ) %}
-  {%- if 'youtube' in src -%}
+  {%- if 'https://www.youtube.com/embed/' in src -%}
     {% call figure(caption=caption) %}
       <is-land on:visible>
         {%- set id = src.replace('https://www.youtube.com/embed/', '') -%}
