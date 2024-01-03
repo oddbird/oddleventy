@@ -122,6 +122,7 @@ params:
   {%- endif -%}
 {%- endmacro %}
 
+
 {# @docs
 label: video
 category: Patterns
@@ -150,12 +151,12 @@ params:
     {% call figure(caption=caption) %}
       <is-land on:visible>
         {%- set id = src.replace('https://www.youtube.com/embed/', '') -%}
-        <lite-youtube videoid="{{id}}" style="
-          background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{id}}/auto/jpeg/');
+        <lite-youtube videoid="{{ id }}" style="
+          background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ id }}/auto/jpeg/');
         "/>
       </is-land>
     {% endcall %}
-  {%- elseif '://' in src -%}
+  {%- elif '://' in src -%}
     {{ figure(
       data=[{
         'iframe': src,
@@ -458,6 +459,7 @@ params:
   {{- ratio(width, height, span, content) | safe -}}
 {% endmacro %}
 
+
 {# @docs
 label: audio
 category: Embed
@@ -519,6 +521,7 @@ params:
     {{- content | safe -}}
   {%- endif -%}
 {%- endmacro %}
+
 
 {# @docs
 label: codepen
@@ -586,6 +589,7 @@ params:
     url='https://codepen.io'
   ) }}.</p><script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 {%- endmacro %}
+
 
 {# @docs
 label: caniuse
