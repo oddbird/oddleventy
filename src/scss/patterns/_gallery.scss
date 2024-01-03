@@ -40,6 +40,7 @@ figure {
     grid-column: var(--span, initial);
     width: var(--width, 100%);
   }
+
   // Override vendor max width
   lite-youtube {
     max-width: 100%;
