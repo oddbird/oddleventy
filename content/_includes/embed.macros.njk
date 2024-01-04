@@ -147,16 +147,7 @@ params:
   width=none,
   caption=none
 ) %}
-  {%- if 'https://www.youtube.com/embed/' in src -%}
-    {% call figure(caption=caption) %}
-      <is-land on:visible>
-        {%- set id = src.replace('https://www.youtube.com/embed/', '') -%}
-        <lite-youtube videoid="{{ id }}" style="
-          background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ id }}/auto/jpeg/');
-        "/>
-      </is-land>
-    {% endcall %}
-  {%- elif '://' in src -%}
+  {%- if '://' in src -%}
     {{ figure(
       data=[{
         'iframe': src,
@@ -199,6 +190,8 @@ params:
       {{- iframe(item.iframe, item.width, item.height, item.span) -}}
     {%- elif item.audio -%}
       {{- audio(item.audio, item.span) -}}
+    {%- elif item.youtube -%}
+      {{- youtube(item.youtube, item.span) -}}
     {%- endif -%}
   {%- endfor -%}
 {%- endmacro %}
@@ -481,6 +474,25 @@ params:
   } -%}
   {%- set src = src if ('://' in src) else ('/assets/media/' + src) -%}
   <audio src="{{ src }}" {{ utility.style_if(style) }} controls="controls">{{ src | mdInline }}</audio>
+{%- endmacro %}
+
+
+{# @docs
+label: youtube
+category: Embed
+note: Embed a video from Youtube
+params:
+  id:
+    type: string
+#}
+{% macro youtube(
+  id
+) -%}
+    <is-land on:visible>
+      <lite-youtube videoid="{{ id }}" style="
+        background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ id }}/auto/jpeg/');
+      "/>
+    </is-land>
 {%- endmacro %}
 
 
