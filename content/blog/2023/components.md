@@ -638,7 +638,7 @@ walking us through the steps:
 
 {{ embed.figure(
   data=[{
-    iframe: 'https://www.youtube.com/embed/R4Ri4ft7bXY',
+    youtube: 'R4Ri4ft7bXY',
     title: 'The Good, The Bad, and The Web Components',
     span: 'full'
   }],

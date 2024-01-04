@@ -20,7 +20,7 @@ summary: |
   and how they will change how we work with
   and think about the cascade in the future.
 media:
-  - iframe: https://www.youtube.com/embed/UmmePVi0TUk
+  - youtube: UmmePVi0TUk
 ---
 
 {% import "embed.macros.njk" as embed %}

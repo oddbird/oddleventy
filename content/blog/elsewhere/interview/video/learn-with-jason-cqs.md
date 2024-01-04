@@ -19,8 +19,8 @@ summary: |
   to teach and explore Container Queries
   in live code.
 media:
-  - iframe: https://www.youtube.com/embed/KVFU0pOIJLI
-  - iframe: https://www.youtube.com/embed/eTTdl5CZDlo
+  - youtube: KVFU0pOIJLI
+  - youtube: eTTdl5CZDlo
 ---
 
 {% import "embed.macros.njk" as embed %}
