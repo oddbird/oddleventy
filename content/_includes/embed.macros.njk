@@ -124,10 +124,11 @@ params:
 
 
 {# @docs
-label: video
+label: _video
 category: Patterns
 note: |
-  Generate a figure for a one-off video
+  Embed a video file. For external videos, use `youtube` for Youtube-hosted
+  videos and `iframe` for everything else.
 params:
   src:
     type: url
@@ -137,33 +138,18 @@ params:
   width:
     type: number
     default: none
-  caption:
-    type: string
-    default: none
 #}
-{% macro video(
+{% macro _video(
   src,
   height=none,
-  width=none,
-  caption=none
+  width=none
 ) %}
-  {%- if '://' in src -%}
-    {{ figure(
-      data=[{
-        'iframe': src,
-        'height': height,
-        'width': width
-      }],
-      caption=caption
-    ) }}
-  {%- else -%}
     {%- set src = '/assets/media/' + src -%}
     {%- set style = {
       'height': height,
       'width': width
     } -%}
     <video src="{{ src }}" {{ utility.style_if(style) }} controls="controls">{{ src | mdInline }}</video>
-  {%- endif -%}
 {% endmacro %}
 
 
@@ -191,7 +177,9 @@ params:
     {%- elif item.audio -%}
       {{- audio(item.audio, item.span) -}}
     {%- elif item.youtube -%}
-      {{- youtube(item.youtube, item.span) -}}
+      {{- _youtube(item.youtube, item.span) -}}
+    {%- elif item.video -%}
+      {{- _video(item.video, item.height, item.width) -}}
     {%- endif -%}
   {%- endfor -%}
 {%- endmacro %}
@@ -478,14 +466,14 @@ params:
 
 
 {# @docs
-label: youtube
+label: _youtube
 category: Embed
 note: Embed a video from Youtube
 params:
   id:
     type: string
 #}
-{% macro youtube(
+{% macro _youtube(
   id,
   span=none
 ) -%}

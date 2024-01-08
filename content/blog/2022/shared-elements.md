@@ -391,7 +391,11 @@ Here's the live demo on codepen:
 
 And a video of the animated results:
 
-{{ embed.video('2022/layer-page-transition.mov', height='1244', width='700') }}
+{{ embed.figure(
+  data=[{
+    video:'2022/layer-page-transition.mov'
+  }])
+}}
 
 You might also notice the `clip-path` animation on the list itself
 looks a bit janky.
