@@ -177,7 +177,7 @@ params:
     {%- elif item.audio -%}
       {{- audio(item.audio, item.span) -}}
     {%- elif item.youtube -%}
-      {{- _youtube(item.youtube, item.span) -}}
+      {{- _youtube(item.youtube, item.width, item.height, item.span) -}}
     {%- elif item.video -%}
       {{- _video(item.video, item.height, item.width) -}}
     {%- endif -%}
@@ -475,17 +475,23 @@ params:
 #}
 {% macro _youtube(
   id,
+  width,
+  height,
   span=none
 ) -%}
+  {%- set width = width or 560 -%}
+  {%- set height = height or 315 -%}
+  {% set has_ratio = width | typeCheck('number') and height | typeCheck('number') %}
   {%- set style = {
+    '--ratio': (width / height) if has_ratio else null,
     '--width': '100%',
     '--span': span
   } -%}
-    <is-land on:visible {{ utility.style_if(style) }} >
-      <lite-youtube videoid="{{ id }}" style="
-        background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ id }}/auto/jpeg/');
-      "/>
-    </is-land>
+  <is-land on:visible {% if has_ratio %}class="ratio"{% endif %} {{ utility.style_if(style) }} >
+    <lite-youtube videoid="{{ id }}" style="
+      background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ id }}/auto/jpeg/');
+    "/>
+  </is-land>
 {%- endmacro %}
 
 
