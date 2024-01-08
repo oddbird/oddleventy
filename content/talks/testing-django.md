@@ -13,7 +13,7 @@ events:
     date: 2012-03-10
     adr: Santa Clara, CA
     media:
-      iframe: https://www.youtube.com/embed/ickNQcNXiS4
+      youtube: ickNQcNXiS4
 summary: |
   Django has a fair bit of custom test code: a custom TestSuiteRunner,
   custom TestCase subclasses, some test-only monkeypatches to core Django

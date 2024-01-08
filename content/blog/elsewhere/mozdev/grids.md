@@ -17,7 +17,7 @@ summary: |
   and you can start using it now,
   with only a few properties and basic concepts.
 media:
-  - iframe: https://www.youtube.com/embed/KOvGeFUHAC0
+  - youtube: KOvGeFUHAC0
     slug: fast-grids
 ---
 

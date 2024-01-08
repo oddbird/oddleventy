@@ -18,7 +18,7 @@ events:
     date: 2021-11-11
     video: https://www.youtube.com/video/JKdF8iqEFbg
     media: &jstack
-      iframe: https://www.youtube.com/embed/JKdF8iqEFbg
+      - youtube: JKdF8iqEFbg
 summary: |
   An event featuring works based around the Eleventy framework is back.
   I show how I used Eleventy

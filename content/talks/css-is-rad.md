@@ -19,7 +19,7 @@ events:
     slides: https://slides.oddbird.net/rad/design4drupal/
     video: https://youtu.be/JTzYGWYjQdg
     media: &d4d
-      iframe: https://www.youtube.com/embed/JTzYGWYjQdg
+      youtube: JTzYGWYjQdg
   - venue: SmashingConf Live
     url: https://smashingconf.com/live/
     date: 2020-08-20
@@ -28,7 +28,7 @@ events:
     slides: https://slides.oddbird.net/rad/smashing20/
     video: https://youtu.be/oV5ddsmqvk0
     media: &smashlive
-      iframe: https://www.youtube.com/embed/oV5ddsmqvk0
+      youtube: oV5ddsmqvk0
   - venue: Shopify UX Summer Series
     url: /work/shopify/
     date: 2020-08-15
@@ -40,7 +40,7 @@ events:
     video: https://youtu.be/bSITeqDKkb8
     slides: https://slides.oddbird.net/css-is-rad/
     media: &frfe
-      iframe: https://www.youtube.com/embed/bSITeqDKkb8
+      youtube: bSITeqDKkb8
       width: 560
       height: 315
   - venue: Smashing Conf NY

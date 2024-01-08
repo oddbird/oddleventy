@@ -30,7 +30,7 @@ events:
     # slides: https://oddbooksapp.com/release/ce37ef91-8bd8-43e2-932a-66931b4b25ce
     video: https://youtu.be/iODambgMZhk
     media: &bt
-      iframe: https://www.youtube.com/embed/iODambgMZhk
+      youtube: iODambgMZhk
   - venue: Clarity
     url: https://www.clarityconf.com/event/2017
     adr: San Francisco, CA
@@ -38,7 +38,7 @@ events:
     # slides: https://oddbooksapp.com/release/ae641b90-8efa-4b1e-8da8-16940edf420d
     video: https://youtu.be/DZrDSdTekI4
     media: &clarity
-      iframe: https://www.youtube.com/embed/DZrDSdTekI4
+      youtube: DZrDSdTekI4
   - venue: CSS Dev Conf
     adr: New Orleans, LA
     date: 2017-10-09
@@ -50,7 +50,7 @@ events:
     # slides: https://oddbooksapp.com/book/djangocon-layout
     video: https://youtu.be/mDRfFEcj3-Q
     media: &django
-      iframe: https://www.youtube.com/embed/mDRfFEcj3-Q
+      youtube: mDRfFEcj3-Q
   - venue: Women Who Code Fort Collins
     url: https://www.meetup.com/Women-Who-Code-Fort-Collins/events/242033627/
     adr: Fort Collins, CO

@@ -14,7 +14,7 @@ summary: |
   code without a visual reference, but Firefox provides a shape editor to
   make it quick and clear.
 media:
-  - iframe: https://www.youtube.com/embed/u9bDe3Bw0sA
+  - youtube: u9bDe3Bw0sA
 ---
 
 {% import "embed.macros.njk" as embed %}

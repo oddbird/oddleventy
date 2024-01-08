@@ -25,7 +25,7 @@ events:
     slides: https://noti.st/mirisuzanne/Xj6q9g/intrinsic-css-with-container-queries-units
     video: https://youtu.be/uumZV98zHt8
     media: &jam
-      iframe: https://www.youtube.com/embed/uumZV98zHt8
+      youtube: uumZV98zHt8
   - venue: W3C Developer Meetup
     adr: Vancouver, Canada
     url: https://www.w3.org/2022/09/meetup/
@@ -34,7 +34,7 @@ events:
     video: https://youtu.be/1VhCXu-gNAc
     slides: https://slides.oddbird.net/queries-units/tpac22/
     media: &tpac
-      iframe: https://www.youtube.com/embed/1VhCXu-gNAc
+      youtube: 1VhCXu-gNAc
 media:
   - <<: *jam
   - <<: *tpac

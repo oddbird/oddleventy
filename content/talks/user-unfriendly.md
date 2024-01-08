@@ -31,7 +31,7 @@ events:
     slides: https://talks.oddbird.net/user-unfriendly/design4drupal19/
     video: https://www.youtube.com/video/2MkQBQb43gE
     media: &drupal
-      iframe: https://www.youtube.com/embed/2MkQBQb43gE
+      youtube: 2MkQBQb43gE
   - venue: Open Source Conference
     adr: Denver, CO
     date: 2019-06-20

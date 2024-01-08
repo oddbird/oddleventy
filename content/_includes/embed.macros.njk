@@ -486,9 +486,14 @@ params:
     type: string
 #}
 {% macro youtube(
-  id
+  id,
+  span=none
 ) -%}
-    <is-land on:visible>
+  {%- set style = {
+    '--width': '100%',
+    '--span': span
+  } -%}
+    <is-land on:visible {{ utility.style_if(style) }} >
       <lite-youtube videoid="{{ id }}" style="
         background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ id }}/auto/jpeg/');
       "/>

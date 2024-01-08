@@ -15,7 +15,7 @@ summary: |
   but it's still be hard to line-up content inside the cards --
   headers and footers that might need more or less room.
 media:
-  - iframe: https://www.youtube.com/embed/lLnFtK1LNu4
+  - youtube: lLnFtK1LNu4
 ---
 
 {% import "embed.macros.njk" as embed %}

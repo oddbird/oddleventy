@@ -27,7 +27,7 @@ events:
     video: https://www.youtube.com/watch?v=JnvkjhwcMcM
     slides: https://talks.oddbird.net/dynamic-css/dvlpdnvr19/
     media: &dvlp
-      iframe: https://www.youtube.com/embed/JnvkjhwcMcM
+      youtube: JnvkjhwcMcM
   - venue: Generate New York
     url: https://www.generateconf.com/
     adr: San Francisco, CA
@@ -36,7 +36,7 @@ events:
     slides: https://talks.oddbird.net/dynamic-css/generate19/
     video: https://www.youtube.com/watch?v=oXEsYwtTT6I
     media: &generate
-      iframe: https://www.youtube.com/embed/oXEsYwtTT6I
+      youtube: oXEsYwtTT6I
   - venue: Smashing Conf
     url: https://smashingconf.com/sf-2019/
     adr: San Francisco, CA
@@ -66,14 +66,14 @@ events:
     slides: https://talks.oddbird.net/dynamic-css/fullstack18/
     video: https://youtu.be/9fTUeLsR2Hc
     media: &fsfest
-      iframe: https://www.youtube.com/embed/9fTUeLsR2Hc
+      youtube: 9fTUeLsR2Hc
   - venue: JSConf US
     adr: Carlsbad, CA
     date: 2018-08-21
     slides: https://talks.oddbird.net/dynamic-css/jsconfus18/
     video: https://www.youtube.com/watch?v=uwgBz748t-g
     media: &jsconf
-      iframe: https://www.youtube.com/embed/uwgBz748t-g
+      youtube: uwgBz748t-g
   - venue: CSSConf Argentina
     url: https://cssconfar.com/
     adr: Buenos Aires, Argentina

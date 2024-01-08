@@ -28,7 +28,7 @@ events:
     slides: https://slides.oddbird.net/css-next/smashingsf/
     video: https://youtu.be/QL3tFZLgVxU
     media: &smash
-      iframe: https://www.youtube.com/embed/QL3tFZLgVxU
+      youtube: QL3tFZLgVxU
   - venue: An Event Apart Fall Summit
     url: https://aneventapart.com/event/fall-summit-2021
     date: 2021-10-11
