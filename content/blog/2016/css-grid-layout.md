@@ -24,7 +24,7 @@ media:
   iframe: 'https://player.vimeo.com/video/160593669'
   height: 360
   width: 640
-  caption: Taking Layout to the Next Level, by Chrisopher Wright
+  caption: Taking Layout to the Next Level, by Christopher Wright
 ---
 
 {% import 'embed.macros.njk' as embed %}
