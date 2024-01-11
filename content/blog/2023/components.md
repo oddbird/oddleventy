@@ -639,7 +639,6 @@ walking us through the steps:
 {{ embed.figure(
   data=[{
     youtube: 'R4Ri4ft7bXY',
-    title: 'The Good, The Bad, and The Web Components',
     span: 'full'
   }],
   caption='Hmmm, yeah. He already said it. I bet others have to. Why did I write this?'

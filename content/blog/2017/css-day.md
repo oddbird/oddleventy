@@ -39,7 +39,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Color Theory for people who code SVG and CSS by [Natalya Shelburne]
 
-{{ embed.figure(data=[{youtube:'aq3u001QMcM'}]) }}
+{{ embed.figure(data=[{ youtube: 'aq3u001QMcM' }]) }}
 
 - [Slides](https://docs.google.com/presentation/d/1ytSMRNpNrD9CWms351X4xelQuJT24tIqKnIzSbe2OQ0/edit?usp=sharing)
 
@@ -47,7 +47,7 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Applying the principles of functional programming to CSS by [Ben Adam]
 
-{{ embed.figure(data=[{youtube:'7g0BHu0kWXo'}]) }}
+{{ embed.figure(data=[{ youtube: '7g0BHu0kWXo' }]) }}
 
 - [Slides](https://css-day.surge.sh/)
 
@@ -55,13 +55,13 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Code Patterns for Pattern Making by [Miriam Suzanne]
 
-{{ embed.figure(data=[{youtube:'lK_akjzOUY0'}]) }}
+{{ embed.figure(data=[{ youtube: 'lK_akjzOUY0' }]) }}
 
 [Miriam Suzanne]: https://twitter.com/TerribleMia/
 
 ## The In-Betweeners of Responsive Web Design by [Pralie Dutzel]
 
-{{ embed.figure(data=[{youtube:'WLAVc18Ugoc'}]) }}
+{{ embed.figure(data=[{ youtube: 'WLAVc18Ugoc' }]) }}
 
 - [Slides](http://praliedutzel.com/talks/betweeners-responsive-web-design/)
 
@@ -69,13 +69,13 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 ## Style Guide-Driven Development: Documentation that Does Work by [Jan Jorgensen]
 
-{{ embed.figure(data=[{youtube:'9Fknadsepd4'}]) }}
+{{ embed.figure(data=[{ youtube: '9Fknadsepd4' }]) }}
 
 [Jan Jorgensen]: https://twitter.com/ramblinjan
 
 ## The Great State of Design by [Stacy Kvernmo]
 
-{{ embed.figure(data=[{youtube:'pnbT4HdcSwM'}]) }}
+{{ embed.figure(data=[{ youtube: 'pnbT4HdcSwM' }]) }}
 
 - [Slides](https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends)
 
@@ -94,7 +94,7 @@ jQuery to CSS for web and mobile applications.
 
 ## Solving CSS at scale with your own UI framework by [CJ Cenizal]
 
-{{ embed.figure(data=[{youtube:'CbPYf9FslXw'}]) }}
+{{ embed.figure(data=[{ youtube: 'CbPYf9FslXw' }]) }}
 
 [CJ Cenizal]: https://twitter.com/TheCJCenizal
 

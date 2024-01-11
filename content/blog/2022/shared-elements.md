@@ -148,7 +148,7 @@ And earlier this year,
 presented a new proposal & prototype,
 which makes that possible!
 
-{{ embed.figure(data=[{youtube:'JCJUPJ_zDQ4'}]) }}
+{{ embed.figure(data=[{ youtube: 'JCJUPJ_zDQ4' }]) }}
 
 1. We can use the `page-transition-tag` property in CSS
    to give each element a name.
@@ -219,7 +219,7 @@ If you haven't encountered FLIP before,
 [Cassie Evans](https://www.cassie.codes/)
 is a great resource on the topic:
 
-{{ embed.figure(data=[{youtube: 'kUDMwy2OaK4'}]) }}
+{{ embed.figure(data=[{ youtube: 'kUDMwy2OaK4' }]) }}
 
 Cassie also gave a brilliant talk at SmashingConf
 about FLIP animations in responsive design.

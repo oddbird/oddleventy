@@ -41,8 +41,6 @@ events:
     slides: https://slides.oddbird.net/css-is-rad/
     media: &frfe
       youtube: bSITeqDKkb8
-      width: 560
-      height: 315
   - venue: Smashing Conf NY
     url: https://smashingconf.com/ny-2019/
     date: 2019-10-15
