@@ -71,8 +71,8 @@ come with a lot of code duplication.
 
 A third solution is using a
 [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy).
-We can store our data in a proxied object, and then intercept -- or trap -- the
-setters to trigger the reactivity.
+We can store our data in a proxied object, and then intercept -- or "trap" --
+the setters to trigger the reactivity.
 
 ## A simple Proxy state
 
