@@ -107,9 +107,9 @@ const initialState = {
 };
 
 const playgroundState = new Proxy(initialState, {
-  set(state, prop, ...rest) {
+  set(state, prop, value) {
     // Set state first so called functions have access
-    const set = Reflect.set(state, prop, ...rest);
+    const set = Reflect.set(...arguments);
     if (['inputFormat', 'outputFormat', 'inputValue'].includes(prop)) {
       updateCSS();
       updateURL();
