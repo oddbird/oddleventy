@@ -2,7 +2,7 @@
 title: Proxy is what's in store
 sub: You may not need anything more
 author: james
-date: 2024-01-09
+date: 2024-01-12
 image:
   src: blog/2024/proxy-store.jpg
   alt: >
