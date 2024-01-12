@@ -169,6 +169,9 @@ state, you are starting down the road to developing your own framework, and it
 might be a good time to pause and see if your application has grown complex
 enough to bring in something more robust.
 
-This also works best when your logic is contained within a single file. If
-you're wanting to share state values across files, you'll likely be happier
-reaching for another solution.
+This pattern does work well if other files want to update or access the state in
+the store. However, you'll likely want to contain side effect logic to the file
+where the state is defined. If you're wanting to define side effects across
+files, you'd need to do that with callbacks, and likely start looking for ways
+to abstract that out. At that point you'll likely be happier reaching for
+another solution.
