@@ -172,6 +172,6 @@ enough to bring in something more robust.
 This pattern does work well if other files want to update or access the state in
 the store. However, you'll likely want to contain side effect logic to the file
 where the state is defined. If you're wanting to define side effects across
-files, you'd need to do that with callbacks, and likely start looking for ways
-to abstract that out. At that point you'll likely be happier reaching for
+files, you'd need to do that with callbacks, and ideally start looking for ways
+to abstract that out. At that point you'll probably be happier reaching for
 another solution.
