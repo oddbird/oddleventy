@@ -35,10 +35,22 @@ figure {
     width: 100%;
   }
 
+  iframe,
+  canvas,
+  video,
+  audio {
+    margin-bottom: 0;
+  }
+
   [style] {
     align-self: var(--align);
     grid-column: var(--span, initial);
     width: var(--width, 100%);
+  }
+
+  // Override vendor max width
+  lite-youtube {
+    max-width: 100%;
   }
 }
 

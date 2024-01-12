@@ -13,7 +13,7 @@ events:
     date: 2014-04-13
     slides: https://oddbird.github.io/set-your-code-free-preso/
     media:
-      iframe: https://www.youtube.com/embed/nHWRN5gCPSI
+      youtube: nHWRN5gCPSI
 summary: |
   **Got some code that you've written that would be useful to others**,
   but actually releasing it feels like too much new stuff to figure out?

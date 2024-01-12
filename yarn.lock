@@ -143,6 +143,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@11ty/is-land@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@11ty/is-land@npm:4.0.0"
+  checksum: f5775359cb20bcb8e2afa11496cbc829691f3eb52619754701ec74f50e2cfab48fba00afd28b32ea21136aaeb911612cd9e1a89b147ff6f06fcf81c214bf590d
+  languageName: node
+  linkType: hard
+
 "@11ty/lodash-custom@npm:^4.17.21":
   version: 4.17.21
   resolution: "@11ty/lodash-custom@npm:4.17.21"
@@ -7972,6 +7979,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lite-youtube-embed@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "lite-youtube-embed@npm:0.3.0"
+  checksum: bbfbdee2c1c0515f107f1ef019be2f2ed67e122eaa88ec1141ef43b1923b6ecf4fc84dc95ab943fec23311b9248144cbae4bd1c67d152cac90744a3abd88ca20
+  languageName: node
+  linkType: hard
+
 "load-json-file@npm:^4.0.0":
   version: 4.0.0
   resolution: "load-json-file@npm:4.0.0"
@@ -9228,6 +9242,7 @@ __metadata:
     "@11ty/eleventy-img": ^3.1.8
     "@11ty/eleventy-plugin-rss": ^1.2.0
     "@11ty/eleventy-plugin-syntaxhighlight": ^5.0.0
+    "@11ty/is-land": ^4.0.0
     "@algolia/algoliasearch-netlify-frontend": ^1.0.15
     "@babel/core": ^7.23.7
     "@babel/preset-env": ^7.23.7
@@ -9261,6 +9276,7 @@ __metadata:
     jest: ^29.7.0
     jest-environment-jsdom: ^29.7.0
     js-yaml: ^4.1.0
+    lite-youtube-embed: ^0.3.0
     lodash: ^4.17.21
     markdown-it: ^14.0.0
     markdown-it-anchor: ^8.6.7

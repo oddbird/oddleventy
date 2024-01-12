@@ -28,7 +28,7 @@ events:
     slides: https://slides.oddbird.net/cq/smashingde/
     video: https://www.youtube.com/video/TxtTXDXcRp8
     media: &smashde
-      iframe: https://www.youtube.com/embed/TxtTXDXcRp8
+      - youtube: TxtTXDXcRp8
   - venue: CSS Day
     url: https://cssday.nl/2023
     adr: Amsterdam, Netherlands
@@ -37,7 +37,7 @@ events:
     slides: https://slides.oddbird.net/cq/cssday/
     video: https://www.youtube.com/live/-Fw8GSksUIo
     media: &cssday
-      iframe: https://www.youtube.com/embed/-Fw8GSksUIo
+      - youtube: -Fw8GSksUIo
   - venue: Smashing Conf
     url: https://smashingconf.com/sf-2023/
     adr: San Francisco
@@ -46,7 +46,7 @@ events:
     slides: https://slides.oddbird.net/cq/smashingsf/
     video: https://www.youtube.com/video/IPyBr289pHY
     media: &smashsf
-      iframe: https://www.youtube.com/embed/IPyBr289pHY
+      - youtube: IPyBr289pHY
 summary: |
   How did container queries go
   from ‘impossible’ to ‘shipping’ after so many years?

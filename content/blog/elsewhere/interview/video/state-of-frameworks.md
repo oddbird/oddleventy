@@ -21,7 +21,7 @@ summary: |
   maintainable CSS in small teams and at scale,
   and what libraries and trends to investigate.
 media:
-  - iframe: https://www.youtube.com/embed/twc-iF40TJY
+  - youtube: twc-iF40TJY
 ---
 
 {% import "embed.macros.njk" as embed %}

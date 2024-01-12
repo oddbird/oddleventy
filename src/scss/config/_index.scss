@@ -19,6 +19,7 @@
 @use 'scale/page-sizes';
 @use 'scale/spacing-sizes';
 @use 'scale/theme-sizes';
+@use '~lite-youtube-embed/src/lite-yt-embed.css';
 @include tools.add-colors(meta.module-variables('brand'));
 @include tools.add-colors(meta.module-variables('background'));
 @include tools.add-colors(meta.module-variables('ccs-defaults'));

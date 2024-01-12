@@ -20,7 +20,7 @@ summary: |
   Play along while you listen (or watch).
   It’s JS Danger time, y’all!
 media:
-  - iframe: https://youtu.be/qDox5IVw74E
+  - youtube: qDox5IVw74E
 audio: https://cdn.changelog.com/uploads/jsparty/166/js-party-166.mp3
 ---
 

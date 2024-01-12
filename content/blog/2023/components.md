@@ -638,8 +638,7 @@ walking us through the steps:
 
 {{ embed.figure(
   data=[{
-    iframe: 'https://www.youtube.com/embed/R4Ri4ft7bXY',
-    title: 'The Good, The Bad, and The Web Components',
+    youtube: 'R4Ri4ft7bXY',
     span: 'full'
   }],
   caption='Hmmm, yeah. He already said it. I bet others have to. Why did I write this?'

@@ -13,7 +13,7 @@ length: 32 mins
 image:
   src: winging-it/winging-it-3.jpg
 media:
-  - iframe: https://www.youtube.com/embed/wk5tFSqYVzs
+  - youtube: wk5tFSqYVzs
 summary: |
   During our conversation we look at 3 examples of unintuitive web design, and
   learn how to create websites and apps that are more intuitive using

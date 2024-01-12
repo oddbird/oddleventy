@@ -20,8 +20,8 @@ action:
 image:
   src: blog/2020/inVision.png
 media:
-  - iframe: https://www.youtube.com/embed/B9yph7WJuXE
-  - iframe: https://www.youtube.com/embed/Er1qSLtu3v4
+  - youtube: B9yph7WJuXE
+  - youtube: Er1qSLtu3v4
 summary: |
   Learn how design engineering
   brings together form and function

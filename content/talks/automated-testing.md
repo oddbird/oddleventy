@@ -15,7 +15,7 @@ events:
     adr: Santa Clara, CA
     slides: https://oddbird.github.io/start-testing-preso/
     media: &pycon
-      iframe: https://www.youtube.com/embed/ukm64IUANwE
+      - youtube: ukm64IUANwE
 summary: |
   **The hardest part of testing is getting the ball rolling.** Once you've
   picked your tools and started writing tests, the added confidence you

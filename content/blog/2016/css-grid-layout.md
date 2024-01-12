@@ -20,6 +20,11 @@ after:
     title: Posts about CSS Grid Layout
     tag: CSS Grid
     id: css-grid-layout
+media:
+  iframe: 'https://player.vimeo.com/video/160593669'
+  height: 360
+  width: 640
+  caption: Taking Layout to the Next Level, by Christopher Wright
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -226,9 +231,7 @@ demonstrating the *how*, *why* and *what* is possible when it comes to
 CSS Grid Layout. If you have any resources to share with us, we'd love
 to hear from you, too!
 
-{{ embed.video(
-  src='https://player.vimeo.com/video/160593669',
-  height=360,
-  width=640,
-  caption='Taking Layout to the Next Level, by Christopher Wright'
+{{ embed.figure(
+  data=[media],
+  caption=media.caption
 ) }}

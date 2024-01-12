@@ -12,7 +12,7 @@ length: 30 mins
 image:
   src: winging-it/winging-it-5.jpg
 media:
-  - iframe: https://www.youtube.com/embed/wk5tFSqYVzs
+  - youtube: wk5tFSqYVzs
 summary: |
   An object map is a place to document information about objects in your digital
   system, keeping everyone involved on the same page. During our conversation,
