@@ -73,7 +73,7 @@
     "chalk": "^4.1.2",
     "chokidar-cli": "^3.0.0",
     "core-js": "^3.35.0",
-    "date-fns": "^3.2.0",
+    "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",
     "dotenv": "^16.3.1",
     "doxray": "^0.10.1",
