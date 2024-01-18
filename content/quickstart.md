@@ -304,6 +304,14 @@ to keep everyone up-to-speed.
   so that others can see the status of a story,
   and any relevant conversations and decisions
   that have been made about its implementation.
+- We use [Dropbox][dropbox] to store
+  client project and internal documentation,
+  and [Google Drive][google drive] to store
+  meeting notes and documents that require
+  team collaboration or comments.
+
+  [dropbox]: https://www.dropbox.com/
+  [google drive]: https://www.google.com/drive/
 
 ### Finding Clients
 
