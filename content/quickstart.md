@@ -5,7 +5,7 @@ image:
   svg: faces/oddbird
   alt: |
     Illustrated faces:
-    Carl, Kit, Stacy, Miriam, Sondra, Erica, and Jonny
+    Jonny, Stacy, David, Sondra, Miriam, James, and Ed
 summary: |
   OddBird was founded in 2008 by three siblings --
   [Miriam](/authors/miriam/),
@@ -131,10 +131,12 @@ and everyone has a say in the direction we want to go.
 While owners will have final say in major company decisions,
 we want the entire team involved in the conversation.
 
-- We have bi-weekly video check-ins
+- We have daily video check-ins
   with the full team
-  to discuss what’s working,
-  and what might need to change.
+  using [Google Meet][google meet]
+  to discuss questions,
+  client projects, what’s working,
+  or what might need to change.
 - We have “all hands” work retreats
   twice a year,
   for more intensive in-person planning and playing.
@@ -143,15 +145,14 @@ we want the entire team involved in the conversation.
   and pays a daily rate
   (currently \$400/day)
   during the retreat.
-  (For the safety of our Birds and our communities,
-  due to the COVID pandemic
-  our retreats are currently being conducted remotely.)
 - We pay for internal OddBird work required to grow the company,
   or improve our processes.
   If you have ideas you’d like to help implement,
   bring a proposal to the team,
   with an estimated budget for the project.
   We’ll try to make it happen!
+
+  [google meet]: https://meet.google.com/
 
 ### Giving Back
 
@@ -220,7 +221,7 @@ and we’ll work with you to make it possible.
   We encourage you to take time away from work,
   and turn off notifications while you are out —
   but we also need to plan around your absence.
-- Respond to questions in [Slack][slack] and [Trello][trello]
+- Respond to questions in [Slack][slack] and [GitHub Projects][github probjects]
   in a timely fashion.
   Questions may be asked at any time of day or night or weekend
   (so turn off notifications if you don’t want to be disturbed),
@@ -232,7 +233,7 @@ and we’ll work with you to make it possible.
   Always err on the side of communicating more.
 
 [slack]: https://oddbird.slack.com/
-[trello]: https://trello.com/
+[github probjects]: https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects
 
 ### Scheduling
 
@@ -293,13 +294,13 @@ to keep everyone up-to-speed.
   and provide context for your decisions.
   There is never only one valid solution,
   but a conversation often helps strengthen the final product.
-- We rely heavily on [Trello][trello]
+- We rely heavily on [GitHub Projects][github projects]
   for managing our process across a remote team.
-  You can look in Trello
+  You can look in GitHub Projects
   to find what user stories are available or assigned to you,
   what the priorities are,
   and what others are working on.
-  Keep Trello up-to-date as you work,
+  Keep GitHub Projects up-to-date as you work,
   so that others can see the status of a story,
   and any relevant conversations and decisions
   that have been made about its implementation.
