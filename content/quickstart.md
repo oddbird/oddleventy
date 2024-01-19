@@ -152,7 +152,7 @@ we want the entire team involved in the conversation.
   with an estimated budget for the project.
   We’ll try to make it happen!
 
-  [google meet]: https://meet.google.com/
+[google meet]: https://meet.google.com/
 
 ### Giving Back
 
@@ -221,8 +221,8 @@ and we’ll work with you to make it possible.
   We encourage you to take time away from work,
   and turn off notifications while you are out —
   but we also need to plan around your absence.
-- Respond to questions in [Slack][slack] and [GitHub Projects][github probjects]
-  in a timely fashion.
+- Respond to questions in [Slack][slack]
+  and [GitHub Projects][github projects] in a timely fashion.
   Questions may be asked at any time of day or night or weekend
   (so turn off notifications if you don’t want to be disturbed),
   but we only expect participation during our normal working hours
@@ -233,7 +233,7 @@ and we’ll work with you to make it possible.
   Always err on the side of communicating more.
 
 [slack]: https://oddbird.slack.com/
-[github probjects]: https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects
+[github projects]: https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects
 
 ### Scheduling
 
@@ -310,8 +310,8 @@ to keep everyone up-to-speed.
   meeting notes and documents that require
   team collaboration or comments.
 
-  [dropbox]: https://www.dropbox.com/
-  [google drive]: https://www.google.com/drive/
+[dropbox]: https://www.dropbox.com/
+[google drive]: https://www.google.com/drive/
 
 ### Finding Clients
 
