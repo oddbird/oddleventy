@@ -1484,7 +1484,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.8.4":
   version: 7.23.8
   resolution: "@babel/runtime@npm:7.23.8"
   dependencies:
@@ -4336,10 +4336,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "date-fns@npm:3.3.0"
-  checksum: ceaf3d93f1d95cb3d946da946e84a303ec9729f62a88b3eb280e7ec9a955b236540fffd6ab707cca9128e6fb6f30c13d974992333266b77a6f59a512e70c57ea
+"date-fns@npm:^2.30.0":
+  version: 2.30.0
+  resolution: "date-fns@npm:2.30.0"
+  dependencies:
+    "@babel/runtime": ^7.21.0
+  checksum: f7be01523282e9bb06c0cd2693d34f245247a29098527d4420628966a2d9aad154bd0e90a6b1cf66d37adcb769cd108cf8a7bd49d76db0fb119af5cdd13644f4
   languageName: node
   linkType: hard
 
@@ -9273,7 +9275,7 @@ __metadata:
     chokidar-cli: ^3.0.0
     core-js: ^3.35.1
     cssremedy: ^0.1.0-beta.2
-    date-fns: ^3.3.0
+    date-fns: ^2.30.0
     date-fns-tz: ^2.0.0
     dotenv: ^16.3.2
     doxray: ^0.10.1
@@ -9299,7 +9301,7 @@ __metadata:
     node-fetch: ^2.6.7
     npm-run-all: ^4.1.5
     postcss: ^8.4.33
-    prettier: ^3.2.4
+    prettier: 3.2.2
     rimraf: ^3.0.2
     rollup: ^4.9.6
     sanitize-html: ^2.11.0
@@ -9879,12 +9881,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.2.4":
-  version: 3.2.4
-  resolution: "prettier@npm:3.2.4"
+"prettier@npm:3.2.2":
+  version: 3.2.2
+  resolution: "prettier@npm:3.2.2"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 6ec9385a836e0b9bac549e585101c086d1521c31d7b882d5c8bb7d7646da0693da5f31f4fff6dc080710e5e2d34c85e6fb2f8766876b3645c8be2f33b9c3d1a3
+  checksum: b416e1e4b26c351403343ebe461feda631c0eee5c3cf316c711204a08f3c639f38a8f9177c75e98a690998ff82e8ddc80c6bc027fb4ef6cedb6a4db035b4fe9a
   languageName: node
   linkType: hard
 
