@@ -89,7 +89,7 @@ favorites:
 
 {{ embed.from_event(
   collections.all,
-  venue='Beyond Tellerand',
+  venue='Beyond Tellerand 2018',
   caption='Video from Beyond Tellerand'
 ) }}
 

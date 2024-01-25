@@ -23,7 +23,7 @@ events:
     url: https://twitter.com/covalenceconf
     adr: San Francisco, CA
     date: 2019-01-16
-  - venue: Beyond Tellerand
+  - venue: Beyond Tellerand 2018
     url: https://beyondtellerrand.com/events/dusseldorf-2018
     adr: Düsseldorf, Germany
     date: 2018-05-07
