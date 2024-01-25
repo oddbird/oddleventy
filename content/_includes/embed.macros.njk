@@ -256,7 +256,7 @@ params:
       page,
       'data.events',
       {'venue': venue} if venue else none
-    ) if page else
+    ) | first if page else
     collection | findData(
       'data.events',
       {'venue': venue}
