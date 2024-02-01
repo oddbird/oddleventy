@@ -32,7 +32,7 @@ later.
 Now that you have enough links to take you away from this post for a day
 at least, let's get started.
 
-[many]: https://grimoire.ca/git/pull-request-workflow/
+[many]: https://web.archive.org/web/20220628061111/https://grimoire.ca/git/pull-request-workflow/
 [ways]: https://nvie.com/posts/a-successful-git-branching-model/
 [to]: https://www.atlassian.com/git/tutorials/comparing-workflows
 [use]: https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
@@ -249,7 +249,7 @@ your git history often to understand past choices, then let this be your
 excuse.
 
 [reflog]: https://git-scm.com/docs/git-reflog
-[Owen]: https://grimoire.ca/git/config/
+[Owen]: https://web.archive.org/web/20231004103417/https://grimoire.ca/git/config/
 [good commit messages]: https://alistapart.com/article/the-art-of-the-commit/
 
 ## What Do the OddBirds Do?
