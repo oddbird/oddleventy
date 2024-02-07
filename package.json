@@ -9,7 +9,7 @@
   },
   "private": true,
   "engines": {
-    "node": "^16",
+    "node": "^18",
     "yarn": "^3"
   },
   "type": "module",

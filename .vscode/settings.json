@@ -16,7 +16,6 @@
   ],
   "css.validate": false,
   "scss.validate": false,
-  "eslint.packageManager": "yarn",
   "stylelint.packageManager": "yarn",
   "stylelint.validate": [
     "css",
