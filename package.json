@@ -9,8 +9,8 @@
   },
   "private": true,
   "engines": {
-    "node": "^16",
-    "yarn": "^3"
+    "node": "^18",
+    "yarn": "^4"
   },
   "type": "module",
   "scripts": {
@@ -123,5 +123,5 @@
       "rimraf"
     ]
   },
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@4.1.0"
 }
