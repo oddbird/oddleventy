@@ -1,6 +1,6 @@
 [build.environment]
     NODE_VERSION = "18"
-    YARN_VERSION = "3.3.1"
+    YARN_VERSION = "4.1.0"
     YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
 
 [[plugins]]
