@@ -7,8 +7,8 @@ tags:
   - Python
   - Testing
   - FastAPI
-# image:
-#   src:
+image:
+  src: blog/2024/light-fixture.jpg
 summary: |
   We explore the useful testing capabilities provided by FastAPI and pytest, and
   how to leverage them to produce a complete and reliable test suite for your
