@@ -28,10 +28,12 @@ on our recent experience converting an internal project from Django to FastAPI.
 
 1. [FastAPI Path Operations for Django Developers]
 2. SQLAlchemy for Django Developers (this article)
-3. Testing a FastAPI Application (coming soon)
+3. [Testing FastAPI Applications]
 4. How To Use FastAPI Dependency Injection Everywhere (coming soon)
 
-[FastAPI Path Operations for Django Developers]: /2023/10/19/fastapi-path-operations-for-django-developers/
+[FastAPI Path Operations for Django Developers]:
+    /2023/10/19/fastapi-path-operations-for-django-developers/
+[Testing FastAPI Applications]: /2024/02/08/testing-fastapi/
 
 ## About SQLAlchemy
 

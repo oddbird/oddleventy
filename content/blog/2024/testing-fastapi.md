@@ -119,7 +119,7 @@ def engine():
 This [pytest fixture] is scoped to the test `"session"`, which means it will be
 automatically created once and shared across all tests. We start by obtaining a
 `db_url` from our application settings. This contains the credentials to connect
-to the database engine. We then create a new SQLAlchemy engine with a the same
+to the database engine. We then create a new SQLAlchemy engine with the same
 credentials, but with a different database name defined in `test_db_name`.
 
 [pytest fixture]: https://docs.pytest.org/en/stable/explanation/fixtures.html
