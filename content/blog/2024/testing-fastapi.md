@@ -21,7 +21,7 @@ _This article is part of our ongoing series on [FastAPI]:_
 
 1. [FastAPI Path Operations for Django Developers]
 2. [SQLAlchemy for Django Developers]
-3. Testing a FastAPI Application (this article)
+3. Testing FastAPI Applications (this article)
 4. How To Use FastAPI Dependency Injection Everywhere (coming soon)
 
 [FastAPI Path Operations for Django Developers]: /2023/10/19/fastapi-path-operations-for-django-developers/
@@ -73,13 +73,72 @@ Pytest will collect all files that match the `test_*.py` or `*_test.py` pattern,
 and execute all methods and functions that match the `test_*` pattern. Then it
 will report the status of each test (pass, fail, or error).
 
+## Pytest fixtures
+
+Pytest [fixtures] are one of its most powerful features. I encourage you to read
+the official documentation to get acquainted with this excellent tool, but for
+the purposes of this article we can define them as so:
+
+[fixtures]: https://docs.pytest.org/en/stable/explanation/fixtures.html
+
+- Fixture are functions defined in `conftest.py` and decorated with
+  `@pytest.fixture`
+- In our test files we can *request* a fixture by including its name as an
+  argument of our test function.
+- The test will receive the return value of our fixture.
+
+Why are fixtures so useful? Because they let us abstract out complex setup and
+teardown logic for our tests. We can use the results of these processes by
+simply adding an argument to our test function. For example, we can define a
+fixture that creates test data for us, instead of having to manually create it
+in each test.
+
+```python
+# File: conftest.py
+
+import pytest
+from app.models import Fruit
+
+@pytest.fixture
+def fruit_collection():
+    return [
+        Fruit("apple"),
+        Fruit("banana"),
+        Fruit("cherry"),
+    ]
+```
+
+All our tests can use the `fruit_collection` fixture to get a list of fruits to
+test against:
+
+```python
+# File: test_api.py
+
+from app import make_pie, make_smoothie
+
+def test_pies(fruit_collection):
+    pies = make_pie(fruit_collection)
+    assert pies == ...  # Some assertion about the `make_pie` function
+
+def test_smoothies(fruit_collection):
+    smoothies = make_smoothie(fruit_collection)
+    assert smoothies == ...  # Some assertion about the `make_smoothie` function
+```
+
+Notice we don't need to import or call the fixture, we get the return value (a
+list of `Fruit` instances) by adding a parameter to our tests. This is a simple
+example, but in the next sections we will see how to use fixtures to factor out
+complex setup logic for our FastAPI tests.
+
 ## Testing with a database
 
 I consider it a best practice to use a real database when testing, instead of
 using mocks or "light" databases. My goal is to test the application as close to
 production as possible, and if the test suite doesn't catch a bug related to the
 database implementation, it doesn't give me much confidence to add new features
-or refactor.
+or refactor. At the same time, I want to make sure that tests execute in
+isolation from each other and without worrying about the state of the database
+before and after the test runs. Fixtures are the perfect tool to achieve this.
 
 First, let's make sure we have a database to test against:
 
@@ -116,17 +175,16 @@ def engine():
     return test_engine
 ```
 
-This [pytest fixture] is scoped to the test `"session"`, which means it will be
+This fixture is scoped to the test `"session"`, which means it will be
 automatically created once and shared across all tests. We start by obtaining a
 `db_url` from our application settings, which contains the credentials to
 connect to the database engine. We then create a new SQLAlchemy engine with the
 same credentials, but with a different database name defined in `test_db_name`.
 
-[pytest fixture]: https://docs.pytest.org/en/stable/explanation/fixtures.html
-
-We then `try` to drop the tables from the test database. If the database doesn't
-exist, we create it. Finally, we create all the tables in the test database. We
-now have an isolated database for our tests!
+Because the database will not be deleted after each test run, we `try` to drop
+all tables now. In CI environments the database will not exist at all, so we
+make sure to execute a `CREATE DATABASE` in those cases. Finally, we create all
+the tables in the test database. We now have an isolated database for our tests!
 
 Let's review our application code to figure out how to insert this new engine:
 
@@ -169,8 +227,7 @@ by SQLAlchemy, but FastAPI actually provides a better way to do this:
 [dependency overrides]. Basically, we can replace any function or class that
 uses `Depends` with a different implementation.
 
-[dependency overrides]:
-    https://fastapi.tiangolo.com/advanced/testing-dependencies/
+[dependency overrides]: https://fastapi.tiangolo.com/advanced/testing-dependencies/
 
 Let's create a new fixture that will automatically inject itself in place of the
 `get_db` function:
@@ -212,9 +269,11 @@ def db(engine: sa.engine.Engine):
 ```
 
 This fixture has the `autouse` flag, which means it will be automatically used
-by all tests. It creates a new connection to the database using the `engine`
-from the previous fixture and ensures all changes are rolled back after the test
-is complete. The actual override of our application happens in this line:
+by all tests. Because the `scope` is not set, the fixture will run for each
+individual test function. The fixture creates a new connection to the database
+using the `engine` from the previous fixture and ensures all changes are rolled
+back after the test is complete. The actual override of our application happens
+in this line:
 
 ```python
 app.dependency_overrides[get_db] = lambda: session
@@ -225,7 +284,15 @@ function when resolving the `db` parameter in our endpoint. Now all endpoints
 that use `get_db` will use our automatically rolled-back session instead of the
 real database, giving us predictable and isolated tests.
 
-Additionally, we can use the `db` fixture to assert the application state after
+You will notice that this fixture uses `yield session` instead of `return
+session`. This is because we want to run some code after the test is complete,
+and `yield` allows us to do that. The `yield` statement is where the test
+function will receive the `session` object, and the code after the `yield`
+statement will run after the test is complete. In this case we make sure to
+remove the override and close the connection to the database.
+
+Because the `db` fixture is auto-used, we don't need to add it to our test
+functions. However, we can add explicitly to assert the application state after
 making requests to our endpoints:
 
 ```python
@@ -241,7 +308,32 @@ def test_add_item(db):
 ```
 
 The `db` fixture allows us to make queries in the context of the test
-transaction, and is automatically rolled back after the test is complete.
+transaction, and is automatically rolled back after the test is complete. You
+can also use it in other fixtures to create test data.
+
+```python
+# File: conftest.py
+
+@pytest.fixture
+def item(db):
+    item = Item()
+    db.add(item)
+    db.commit()
+    return item
+```
+
+Now we can use the `item` fixture in our tests to get an instance of `Item` that
+is automatically rolled back after the test is complete:
+
+```python
+# File: test_api.py
+
+def test_update_item(db, item):
+    response = client.post(f"/items/{item.id}", json={"name": "Item 2"})
+    assert response.status_code == 200
+    db.refresh(item)
+    assert item.name == "Item 2"
+```
 
 ## Testing endpoints that require authentication
 
@@ -292,9 +384,18 @@ def client(db):
     return client
 ```
 
-{% callout %}
-`client.user = user` is a convenience to access the user instance in tests.
-{% endcallout %}
+`client.user = user` is a convenience to access the user instance in tests. It's
+useful to make assertions about the user's state after making requests to the
+application.
+
+```python
+# File: test_api.py
+
+def test_user_name(client):
+    response = client.get("/user")
+    assert response.status_code == 200
+    assert response.json()["name"] == client.user.name
+```
 
 Now we can use the `client` fixture in our tests to make requests to our
 application with a user that is authenticated. Assuming our application checks
@@ -350,5 +451,7 @@ your test suite is not fragile and behaves in a predictable manner, leveraging
 the powerful testing capabilities provided by FastAPI and pytest.
 
 To further explore testing in FastAPI applications, we recommend referring to
-the [FastAPI] and [`pytest`] documentation for in-depth explanations and
-additional examples.
+the [FastAPI testing tutorial] and the [`pytest`] documentation for in-depth
+explanations and additional examples.
+
+[FastAPI testing tutorial]:  https://fastapi.tiangolo.com/tutorial/testing/
