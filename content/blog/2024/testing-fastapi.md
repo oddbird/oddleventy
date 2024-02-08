@@ -128,7 +128,8 @@ We then `try` to drop the tables from the test database. If the database doesn't
 exist, we create it. Finally, we create all the tables in the test database. We
 now have an isolated database for our tests.
 
-Now let's review our application code to figure out how to insert this new engine:
+Now let's review our application code to figure out how to insert this new
+engine:
 
 ```python
 # File: app/main.py
@@ -169,7 +170,8 @@ by SQLAlchemy, but FastAPI actually provides a better way to do this:
 [dependency overrides]. Basically, we can replace any function or class that
 uses `Depends` with a different implementation.
 
-[dependency overrides]: https://fastapi.tiangolo.com/advanced/testing-dependencies/
+[dependency overrides]:
+    https://fastapi.tiangolo.com/advanced/testing-dependencies/
 
 Let's create a new fixture that will automatically inject itself in place of the
 `get_db` function:
@@ -297,7 +299,8 @@ nothing else._
 
 Now we can use the `client` fixture in our tests to make requests to our
 application with a user that is authenticated. Assuming our application checks
-for tokens in the `Authorization` header, we can now test our authenticated endpoints:
+for tokens in the `Authorization` header, we can now test our authenticated
+endpoints:
 
 ```python
 # File: test_api.py
@@ -306,6 +309,38 @@ def test_protected_endpoint(client):
     response = client.get("/protected")
     assert response.status_code == 200
 ```
+
+Alternatively, if we were to use a different transport for authentication, we
+can update the fixture to use the appropriate headers or cookies. Here's an
+example that uses [fastapi-users] with cookies:
+
+[fastapi-users]: https://fastapi-users.github.io/fastapi-users/latest/
+
+```python
+# File: conftest.py
+
+from fastapi.testclient import TestClient
+from app.main import app
+
+# These functions are defined somewhere in the application code
+from app.auth import create_access_token, create_user
+
+@pytest.fixture
+def client(db):
+    user = create_user(db)
+    token = create_access_token(user)
+    client = TestClient(app)
+    client.user = user
+    client.cookies.set(
+        "fastapiusersauth", token, domain="testserver.local", path="/"
+    )
+    return client
+```
+
+In this case we are setting `client.cookies` instead of `client.headers`. The
+point is that our `client` fixture can modify the built-in client in whatever
+way is necessary to make authenticated requests to our application, or comply
+with any other requirements we have for our tests.
 
 ## Closing thoughts
 
