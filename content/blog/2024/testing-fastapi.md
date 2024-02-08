@@ -10,7 +10,7 @@ tags:
 # image:
 #   src:
 summary: |
-  We explore the useful testing capabilities provided by FastAPI and pytest and
+  We explore the useful testing capabilities provided by FastAPI and pytest, and
   how to leverage them to produce a complete and reliable test suite for your
   application.
 ---
@@ -27,16 +27,16 @@ _This article is part of our ongoing series on [FastAPI]:_
 [FastAPI Path Operations for Django Developers]: /2023/10/19/fastapi-path-operations-for-django-developers/
 [SQLAlchemy for Django Developers]: /2023/10/23/sqlalchemy-for-django-developers/
 
-Testing is an integral part of the development process as it ensures the
+Testing is an integral part of the development process, as it ensures the
 functionality, stability, and overall quality of the codebase. In this article,
-we will explore several topics related to testing a FastAPI application. By the
+we will explore several topics related to testing FastAPI applications. By the
 end, you will have a solid understanding of how to effectively test your FastAPI
 applications, giving you the confidence to add new features, refactor code, and
 squash bugs.
 
 ## Testing basics
 
-When testing API endpoints we want to follow this basic structure:
+When testing API endpoints, we want to follow this basic structure:
 
 1. Make requests to our endpoint.
 2. Assert/verify something about the response.
@@ -69,14 +69,14 @@ After installing it with `pip install pytest`, you can run your tests with the
 $ pytest
 ```
 
-Pytest will collect all files that match the `test_*.py` or `*_test.py` pattern
+Pytest will collect all files that match the `test_*.py` or `*_test.py` pattern,
 and execute all methods and functions that match the `test_*` pattern. Then it
 will report the status of each test (pass, fail, or error).
 
 ## Testing with a database
 
-I consider it a best practice to use a real database when testing instead of
-mocks or "light" databases. My goal is to test the application as close to
+I consider it a best practice to use a real database when testing, instead of
+using mocks or "light" databases. My goal is to test the application as close to
 production as possible, and if the test suite doesn't catch a bug related to the
 database implementation, it doesn't give me much confidence to add new features
 or refactor.
@@ -118,18 +118,17 @@ def engine():
 
 This [pytest fixture] is scoped to the test `"session"`, which means it will be
 automatically created once and shared across all tests. We start by obtaining a
-`db_url` from our application settings. This contains the credentials to connect
-to the database engine. We then create a new SQLAlchemy engine with the same
-credentials, but with a different database name defined in `test_db_name`.
+`db_url` from our application settings, which contains the credentials to
+connect to the database engine. We then create a new SQLAlchemy engine with the
+same credentials, but with a different database name defined in `test_db_name`.
 
 [pytest fixture]: https://docs.pytest.org/en/stable/explanation/fixtures.html
 
 We then `try` to drop the tables from the test database. If the database doesn't
 exist, we create it. Finally, we create all the tables in the test database. We
-now have an isolated database for our tests.
+now have an isolated database for our tests!
 
-Now let's review our application code to figure out how to insert this new
-engine:
+Let's review our application code to figure out how to insert this new engine:
 
 ```python
 # File: app/main.py
@@ -194,8 +193,8 @@ def db(engine: sa.engine.Engine):
     # Begin a nested transaction (using SAVEPOINT)
     nested = connection.begin_nested()
 
-    # If the application code calls session.commit, it will end the nested
-    # transaction. Need to start a new one when that happens
+    # If the application code calls `session.commit`, it will end the nested
+    # transaction. We need to start a new one when that happens.
     @sa.event.listens_for(session, "after_transaction_end")
     def end_savepoint(session, transaction):
         nonlocal nested
@@ -226,8 +225,8 @@ function when resolving the `db` parameter in our endpoint. Now all endpoints
 that use `get_db` will use our automatically rolled-back session instead of the
 real database, giving us predictable and isolated tests.
 
-Additionally, we can also use the `db` fixture to assert the application state
-after making requests to our endpoints:
+Additionally, we can use the `db` fixture to assert the application state after
+making requests to our endpoints:
 
 ```python
 # File: test_api.py
@@ -241,13 +240,12 @@ def test_add_item(db):
     assert item.name == "Item 1"
 ```
 
-The `db` fixture allows to make queries in the context of the test transaction
-and is automatically rolled back after the test is complete.
+The `db` fixture allows us to make queries in the context of the test
+transaction, and is automatically rolled back after the test is complete.
 
 ## Testing endpoints that require authentication
 
-We can easily create a fixture to get instances of the test client for our
-tests:
+We can create a fixture to get instances of the test client for our tests:
 
 ```python
 # File: conftest.py
@@ -294,8 +292,9 @@ def client(db):
     return client
 ```
 
-_`client.user = user` is a convenience to access the user instance in tests,
-nothing else._
+{% callout %}
+`client.user = user` is a convenience to access the user instance in tests.
+{% endcallout %}
 
 Now we can use the `client` fixture in our tests to make requests to our
 application with a user that is authenticated. Assuming our application checks
@@ -344,11 +343,11 @@ with any other requirements we have for our tests.
 
 ## Closing thoughts
 
-In conclusion, by following the techniques outlined in this article you can
-ensure the robustness and correctness of your FastAPI application by testing it
-in a way that closely resembles its behavior in production. These techniques
-also ensure your test suite is not fragile and behaves in a predictable manner,
-leveraging the powerful testing capabilities provided by FastAPI and pytest.
+By following the techniques outlined in this article, you can ensure the
+robustness and correctness of your FastAPI application by testing it in a way
+that closely resembles its behavior in production. These techniques also ensure
+your test suite is not fragile and behaves in a predictable manner, leveraging
+the powerful testing capabilities provided by FastAPI and pytest.
 
 To further explore testing in FastAPI applications, we recommend referring to
 the [FastAPI] and [`pytest`] documentation for in-depth explanations and
