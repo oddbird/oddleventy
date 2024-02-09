@@ -29,7 +29,7 @@ on our recent experience converting an internal project from Django to FastAPI.
 4. How To Use FastAPI Dependency Injection Everywhere (coming soon)
 
 [SQLAlchemy for Django Developers]: /2023/10/23/sqlalchemy-for-django-developers/
-[Testing FastAPI Applications]: /2024/02/08/testing-fastapi/
+[Testing FastAPI Applications]: /2024/02/09/testing-fastapi/
 
 ## Why is FastAPI Worth Considering?
 

@@ -1,7 +1,7 @@
 ---
 title: Testing FastAPI Applications
 author: ed
-date: 2024-02-08
+date: 2024-02-09
 tags:
   - Article
   - Python
@@ -108,8 +108,8 @@ def fruit_collection():
     ]
 ```
 
-All our tests can use the `fruit_collection` fixture to get a list of fruits to
-test against:
+All of our tests can use the `fruit_collection` fixture to get a list of fruits
+to test against:
 
 ```python
 # File: test_api.py
@@ -125,7 +125,7 @@ def test_smoothies(fruit_collection):
     assert smoothies == ...  # Some assertion about the `make_smoothie` function
 ```
 
-Notice we don't need to import or call the fixture, we get the return value (a
+Notice we don't need to import or call the fixture; we get the return value (a
 list of `Fruit` instances) by adding a parameter to our tests. This is a simple
 example, but in the next sections we will see how to use fixtures to factor out
 complex setup logic for our FastAPI tests.
@@ -217,7 +217,8 @@ def my_endpoint(db: Session = Depends(get_db)):
 
 Notice the chain of dependencies starting from the `my_endpoint` function:
 
-1. `my_endpoint` uses a `db` parameter provided by `get_db` (wrapped in `Depends`).
+1. `my_endpoint` uses a `db` parameter provided by `get_db` (wrapped in
+   `Depends`).
 2. `get_db` yields from `SessionLocal`.
 3. `SessionLocal` is bound to the `engine` we created.
 4. `engine` is created from the `DATABASE_URL` in our settings.
@@ -292,8 +293,8 @@ statement will run after the test is complete. In this case we make sure to
 remove the override and close the connection to the database.
 
 Because the `db` fixture is auto-used, we don't need to add it to our test
-functions. However, we can add explicitly to assert the application state after
-making requests to our endpoints:
+functions. However, we can add it explicitly to assert the application state
+after making requests to our endpoints:
 
 ```python
 # File: test_api.py
@@ -309,7 +310,7 @@ def test_add_item(db):
 
 The `db` fixture allows us to make queries in the context of the test
 transaction, and is automatically rolled back after the test is complete. You
-can also use it in other fixtures to create test data.
+can also use it in other fixtures to create test data:
 
 ```python
 # File: conftest.py
@@ -386,7 +387,7 @@ def client(db):
 
 `client.user = user` is a convenience to access the user instance in tests. It's
 useful to make assertions about the user's state after making requests to the
-application.
+application:
 
 ```python
 # File: test_api.py
@@ -454,4 +455,4 @@ To further explore testing in FastAPI applications, we recommend referring to
 the [FastAPI testing tutorial] and the [`pytest`] documentation for in-depth
 explanations and additional examples.
 
-[FastAPI testing tutorial]:  https://fastapi.tiangolo.com/tutorial/testing/
+[FastAPI testing tutorial]: https://fastapi.tiangolo.com/tutorial/testing/
