@@ -1,7 +1,5 @@
-'use strict';
-
-const sanitizeHTML = require('sanitize-html');
-const truncate = require('truncate-html');
+import sanitizeHTML from 'sanitize-html';
+import truncate from 'truncate-html';
 
 /* @docs
 label: Webmention Filters
@@ -78,7 +76,7 @@ params:
       Containing string webmention types to filter by
       (see [https://github.com/aaronpk/webmention.io#find-links-of-a-specific-type-to-a-specific-page]())
 */
-const forUrl = (mentions, url, allow) =>
+export const forUrl = (mentions, url, allow) =>
   getTypes(
     mentions.children.filter(
       (entry) =>
@@ -87,7 +85,3 @@ const forUrl = (mentions, url, allow) =>
     ),
     allow,
   );
-
-module.exports = {
-  forUrl,
-};

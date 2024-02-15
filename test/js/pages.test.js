@@ -16,9 +16,9 @@ import {
   pageYears,
   removePage,
   withData,
-} from '#/pages';
+} from '#filters/pages.js';
 
-import { collection3, collection4 } from './utils';
+import { collection3, collection4 } from './utils.js';
 
 describe('page filters', () => {
   test('isPublic', () => {

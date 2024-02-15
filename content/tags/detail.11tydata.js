@@ -1,8 +1,6 @@
-'use strict';
+import { publicTags } from '#filters/tags.js';
 
-const { publicTags } = require('#/tags.cjs');
-
-module.exports = {
+export default {
   pagination: {
     data: 'collections',
     before: (data) => publicTags(data),

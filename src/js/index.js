@@ -4,7 +4,7 @@ import 'lite-youtube-embed';
 import algoliasearchNetlify from '@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify';
 import ccs from 'cascading-color-systems';
 
-import { clickToCopy } from './clickToCopy.cjs';
+import { clickToCopy } from './clickToCopy.js';
 
 // Initialize Cascading Colors
 // https://www.oddbird.net/cascading-colors/

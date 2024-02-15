@@ -1,8 +1,6 @@
-'use strict';
+import { uniq } from 'lodash-es';
 
-const _ = require('lodash');
-
-const { now, getDate } = require('#/time.cjs');
+import { getDate, now } from '#filters/time.js';
 
 /* @docs
 label: Event Filters
@@ -23,7 +21,7 @@ params:
   page:
     type: event object
 */
-const isFuture = (event) =>
+export const isFuture = (event) =>
   event.end ? getDate(event.end) >= now() : getDate(event.date) >= now();
 
 /* @docs
@@ -36,7 +34,7 @@ params:
   events:
     type: array of events
 */
-const getFuture = (events) => events.filter(isFuture);
+export const getFuture = (events) => events.filter(isFuture);
 
 /* @docs
 label: buildEvent
@@ -52,7 +50,7 @@ params:
   event:
     type: object
 */
-const buildEvent = (page, event) => {
+export const buildEvent = (page, event) => {
   const built = {
     date: event.date ? getDate(event.date) : page.date,
     end: event.end ? getDate(event.end) : null,
@@ -86,7 +84,7 @@ params:
   page:
     type: 11ty page
 */
-const pageEvents = (page) => {
+export const pageEvents = (page) => {
   const events = page.data.events || [];
 
   return events
@@ -110,7 +108,7 @@ params:
   collection:
     type: 11ty collection
 */
-const getEvents = (collection) => {
+export const getEvents = (collection) => {
   const results = [];
 
   collection.forEach((page) => {
@@ -129,9 +127,9 @@ params:
   events:
     type: collection of events
 */
-const birdEvents = (events) => {
+export const birdEvents = (events) => {
   const groups = [];
-  const birds = _.uniq(events.flatMap((event) => event.birds));
+  const birds = uniq(events.flatMap((event) => event.birds));
 
   birds.forEach((name) => {
     if (name !== 'oddbird') {
@@ -143,13 +141,4 @@ const birdEvents = (events) => {
   });
 
   return groups;
-};
-
-module.exports = {
-  buildEvent,
-  getEvents,
-  pageEvents,
-  isFuture,
-  getFuture,
-  birdEvents,
 };

@@ -1,7 +1,5 @@
-'use strict';
-
 // from https://github.com/sw-yx/domainblocklist
-const blocklist = [
+export const blocklist = [
   'gadgetsearcher.com',
   'pixallus.com',
   'programming.yourworldin90seconds.com',
@@ -155,7 +153,3 @@ const blocklist = [
   'digitaldamian273090457.wordpress.com',
   'codezero844163712.wordpress.com',
 ];
-
-module.exports = {
-  blocklist,
-};

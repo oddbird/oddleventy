@@ -1,28 +1,26 @@
-/* eslint-disable no-console, no-sync */
+/* eslint-disable no-console */
 
-'use strict';
+import { join, resolve } from 'node:path';
 
-const path = require('path');
+import chalk from 'chalk';
+import { config } from 'dotenv';
+import fs from 'fs-extra';
+import { load } from 'js-yaml';
+import { compact, map, unionBy } from 'lodash-es';
+import fetch from 'node-fetch';
 
-const chalk = require('chalk');
-const { config } = require('dotenv');
-const fs = require('fs-extra');
-const yaml = require('js-yaml');
-const _ = require('lodash');
-const fetch = require('node-fetch');
+import { blocklist } from './webmention-blocklist.js';
 
-const baseDir = path.resolve(__dirname, '..');
+const __dirname = import.meta.dirname;
+const baseDir = resolve(__dirname, '..');
 
-const { blocklist } = require(
-  path.join(__dirname, './webmention-blocklist.cjs'),
-);
-
-const site = yaml.load(
-  fs.readFileSync(path.join(baseDir, 'content/_data/site.yaml'), 'utf8'),
+const site = load(
+  // eslint-disable-next-line no-sync
+  fs.readFileSync(join(baseDir, 'content/_data/site.yaml'), 'utf8'),
 );
 
 // Define Cache Location and API Endpoint
-const CACHE_FILE = path.join(baseDir, 'content/_data/webmentions.json');
+const CACHE_FILE = join(baseDir, 'content/_data/webmentions.json');
 const API = 'https://webmention.io/api';
 
 // eslint-disable-next-line no-process-env
@@ -93,10 +91,10 @@ const checkRequiredFields = (entry) => {
 
 // Merge fresh webmentions with cached entries, unique per id
 const mergeWebmentions = (a, b) => {
-  const all = _.unionBy(a.children, b.children, 'wm-id').filter(
+  const all = unionBy(a.children, b.children, 'wm-id').filter(
     checkRequiredFields,
   );
-  const syns = _.compact(_.map(all, 'syndication'));
+  const syns = compact(map(all, 'syndication'));
 
   return all.filter(
     (entry) =>
@@ -117,7 +115,9 @@ const writeToCache = (data) => {
 
 // get cache contents from json file
 const readFromCache = () => {
+  // eslint-disable-next-line no-sync
   if (fs.existsSync(CACHE_FILE)) {
+    // eslint-disable-next-line no-sync
     return fs.readJsonSync(CACHE_FILE);
   }
 

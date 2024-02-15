@@ -1,6 +1,6 @@
-import { forUrl } from '#/mentions';
+import { forUrl } from '#filters/mentions.js';
 
-import { webmentions } from './utils';
+import { webmentions } from './utils.js';
 
 describe('event filters', () => {
   describe('forUrl', () => {

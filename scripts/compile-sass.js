@@ -1,20 +1,19 @@
 /* eslint-disable no-console */
 
-'use strict';
+import { join, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 
-const path = require('path');
-const { pathToFileURL } = require('url');
+import autoprefixer from 'autoprefixer';
+import chalk from 'chalk';
+import fs from 'fs-extra';
+import postcss from 'postcss';
+import { compile } from 'sass';
 
-const autoprefixer = require('autoprefixer');
-const chalk = require('chalk');
-const fs = require('fs-extra');
-const postcss = require('postcss');
-const sass = require('sass');
-
-const baseDir = path.resolve(__dirname, '..');
-const inDir = path.join(baseDir, 'src', 'scss');
-const outDir = path.join(baseDir, '_built', 'css');
-const destCssDir = path.join(baseDir, 'assets', 'css');
+const __dirname = import.meta.dirname;
+const baseDir = resolve(__dirname, '..');
+const inDir = join(baseDir, 'src', 'scss');
+const outDir = join(baseDir, '_built', 'css');
+const destCssDir = join(baseDir, 'assets', 'css');
 
 let pnp;
 
@@ -58,7 +57,7 @@ const nodeImporter = {
       }
       // Try loading file from "node_modules" dir
       return new URL(
-        pathToFileURL(path.join(baseDir, 'node_modules', url.substring(1))),
+        pathToFileURL(join(baseDir, 'node_modules', url.substring(1))),
       );
     }
     // Fall back to default Sass importer
@@ -76,13 +75,13 @@ const outputFile = (file, inputName, contents) =>
 
 const compileSass = ({ name, usePostCSS }) => {
   const inFilename = `${name}.scss`;
-  const inFile = path.join(inDir, inFilename);
+  const inFile = join(inDir, inFilename);
   const outFilename = `${name}.css`;
-  const outFile = path.join(outDir, outFilename);
-  const outMap = path.join(outDir, `${outFilename}.map`);
-  const destCssFile = path.join(destCssDir, outFilename);
+  const outFile = join(outDir, outFilename);
+  const outMap = join(outDir, `${outFilename}.map`);
+  const destCssFile = join(destCssDir, outFilename);
   try {
-    const result = sass.compile(inFile, {
+    const result = compile(inFile, {
       style: 'compressed',
       sourceMap: usePostCSS,
       sourceMapIncludeSources: true,

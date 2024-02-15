@@ -1,11 +1,10 @@
 {
   "name": "Oddleventy",
-  "image": "node:18",
+  "image": "node:20",
   "containerEnv": {
     "SHELL": "/bin/bash"
   },
   "forwardPorts": [8080],
-
   "customizations": {
     "vscode": {
       "extensions": [

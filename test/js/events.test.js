@@ -7,9 +7,9 @@ import {
   getFuture,
   isFuture,
   pageEvents,
-} from '#/events';
+} from '#filters/events.js';
 
-import { collection } from './utils';
+import { collection } from './utils.js';
 
 const event = {
   date: new Date('2011-04-11T10:20:30Z'),
