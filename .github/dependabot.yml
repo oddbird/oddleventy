@@ -8,7 +8,7 @@ updates:
       time: '04:00'
       timezone: America/New_York
     commit-message:
-      prefix: '[skip preview] '
+      prefix: '[skip netlify] '
 
   - package-ecosystem: npm
     directory: '/'
@@ -18,7 +18,7 @@ updates:
       time: '04:00'
       timezone: America/New_York
     commit-message:
-      prefix: '[skip preview] '
+      prefix: '[skip netlify] '
     groups:
       npm-major-upgrades:
         update-types:
