@@ -13,5 +13,5 @@ permalink: /{{ redirect.from }}
 
 {% set to = collections.all | getPage(redirect.to) %}
 
-Redirecting you to [{{ post.name(to) }}]({{ to.url }}).
+Redirecting you to [{{ post.name(to) }}]({{ redirect.to }}).
 If you are not redirected shortly, please click the link.

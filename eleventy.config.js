@@ -168,7 +168,7 @@ export default (eleventyConfig) => {
 
   // config
   eleventyConfig.setLibrary('md', type.mdown);
-  eleventyConfig.addDataExtension('yaml', yaml.load);
+  eleventyConfig.addDataExtension('yml, yaml', yaml.load);
   eleventyConfig.setQuietMode(true);
 
   if (!process.env.NETLIFY) {
