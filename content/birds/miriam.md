@@ -12,11 +12,11 @@ image:
     and white-blue-pink lightning-bolt earrings
   position: top
 social:
-  mastodon:
-    user: mia
-    server: front-end.social
-  github: MiriSuzanne
-  codepen: MiriamSuzanne
+  - mastodon:
+      user: mia
+      server: front-end.social
+  - github: MiriSuzanne
+  - codepen: MiriamSuzanne
 events:
   - venue: CSS Day
     adr: Amsterdam, NL

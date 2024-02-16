@@ -7,11 +7,11 @@ image:
   src: birds/sondra.jpg
   position: top
 social:
-  twitter: sondraeby
-  github: sondrae
-  mastodon:
-    user: sondrae
-    server: mastodon.social
+  - twitter: sondraeby
+  - github: sondrae
+  - mastodon:
+      user: sondrae
+      server: mastodon.social
 summary: |
   Sondra (she/her)
   is a brand and user experience/interface designer --

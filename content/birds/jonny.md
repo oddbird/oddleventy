@@ -6,7 +6,10 @@ date: 2008-04-02
 image:
   src: birds/jonny.jpg
 social:
-  github: jgerigmeyer
+  - mastodon:
+      user: jgerigmeyer
+      server: front-end.social
+  - github: jgerigmeyer
 summary: |
   Jonny (he/him) is a co-founder and technical lead --
   helping architect robust, maintainable web applications.

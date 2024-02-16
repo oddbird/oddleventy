@@ -7,10 +7,10 @@ image:
   src: pages/stacy-design-systems-training.jpg
   alt: Stacy teaching developers at an event
 social:
-  twitter: stacykvernmo
-  github: stacyk
-  codepen: stacy
-  stackoverflow: 7033764
+  - twitter: stacykvernmo
+  - github: stacyk
+  - codepen: stacy
+  - stackoverflow: 7033764
 summary: |
   Stacy (she/her)
   is a user experience designer,

@@ -7,7 +7,7 @@ date: 2020-09-28
 image:
   src: birds/davidh.jpg
 social:
-  github: dvdherron
+  - github: dvdherron
 summary: |
   David (he/him) is a web designer,
   bird watcher, and photographer

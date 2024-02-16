@@ -210,7 +210,7 @@ params:
     note: filter the resulting collection
 */
 export const getPage = (collection, url, keys, test) => {
-  const page = _.find(collection, { url: url.split('#')[0] });
+  const page = _.find(collection, (p) => p.page.url === url.split('#')[0]);
   const data = keys ? _.get(page, keys) : page;
   return test ? _.filter(data, test) : data;
 };

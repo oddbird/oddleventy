@@ -6,9 +6,9 @@ date: 2008-04-03
 image:
   src: birds/carl.jpg
 social:
-  twitter: carljm
-  github: carljm
-  stackoverflow: 3207
+  - twitter: carljm
+  - github: carljm
+  - stackoverflow: 3207
 summary: |
   Carl (he/him) is a co-founder
   and active developer-emeritus,

@@ -11,11 +11,11 @@ styles:
   - screen.css
 facebook_id: 1820980378150914
 social:
-  email: birds
-  mastodon:
-    user: oddbird
-    server: front-end.social
-  github: oddbird
+  - email: birds
+  - mastodon:
+      user: oddbird
+      server: front-end.social
+  - github: oddbird
 nav:
   - url: /work/
   - url: /services/

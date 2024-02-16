@@ -7,8 +7,8 @@ end: 2023-03-17
 image:
   svg: faces/olu
 social:
-  twitter: oluoluoxenfree
-  github: oluoluoxenfree
+  - twitter: oluoluoxenfree
+  - github: oluoluoxenfree
 summary: |
   Olu is an extremely online JavaScript developer,
   accessibility advocate, lifelong learner and ethical techie.
