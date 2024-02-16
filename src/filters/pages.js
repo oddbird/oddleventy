@@ -133,7 +133,7 @@ params:
     note: URL of the page to remove
 */
 export const removePage = (collection, url) =>
-  collection.filter((page) => page.url !== url);
+  collection.filter((page) => page.page.url !== url);
 
 /* @docs
 label: getData
@@ -249,7 +249,7 @@ params:
 */
 export const pageYears = (collection) =>
   collection.map((page) => {
-    const dates = [page.date];
+    const dates = [page.page.date];
 
     if (page.data.end) {
       dates.push(page.data.end);

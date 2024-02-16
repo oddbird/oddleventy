@@ -2,6 +2,6 @@
 
 {% if alert and (alert.data.live) %}
   <aside data-layout="alert" data-ccs-colors="dark" aria-label="{{ alert.data.aria }}">
-    {{ alert.templateContent | safe }}
+    {{ alert.content | safe }}
   </aside>
 {% endif %}

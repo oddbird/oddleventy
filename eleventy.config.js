@@ -37,14 +37,14 @@ export default (eleventyConfig) => {
   eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
 
   // collections
-  eleventyConfig.addCollection('birds', (collection) =>
-    collection
+  eleventyConfig.addCollection('birds', (collectionApi) =>
+    collectionApi
       .getAll()
       .filter((item) => item.data.bird)
-      .sort((a, b) => a.date - b.date),
+      .sort((a, b) => a.page.date - b.page.date),
   );
-  eleventyConfig.addCollection('oss', (collection) =>
-    collection
+  eleventyConfig.addCollection('oss', (collectionApi) =>
+    collectionApi
       .getAll()
       .filter((item) => item.data.oss)
       .sort((a, b) => {
@@ -65,16 +65,16 @@ export default (eleventyConfig) => {
           return b.data.end - a.data.end;
         }
 
-        return b.date - a.date;
+        return b.page.date - a.page.date;
       }),
   );
-  eleventyConfig.addCollection('work', (collection) =>
-    collection
+  eleventyConfig.addCollection('work', (collectionApi) =>
+    collectionApi
       .getAll()
       .filter((item) => item.data.client)
       .sort((a, b) => {
         if (!a.data.end) {
-          return b.data.end ? -1 : b.date - a.date;
+          return b.data.end ? -1 : b.page.date - a.page.date;
         }
         if (!b.data.end) {
           return 1;
@@ -82,8 +82,8 @@ export default (eleventyConfig) => {
         return b.data.end - a.data.end;
       }),
   );
-  eleventyConfig.addCollection('sample', (collection) =>
-    collection.getAll().filter((item) => item.data.sample_content),
+  eleventyConfig.addCollection('sample', (collectionApi) =>
+    collectionApi.getAll().filter((item) => item.data.sample_content),
   );
 
   // filters

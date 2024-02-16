@@ -382,7 +382,7 @@ params:
       {{ client(post.data.client) }}
     {%- endif %}
     {% if dateformat and not is_talk %}
-      {{ pubdate(post.date, post.data.end, dateformat) }}
+      {{ pubdate(post.page.date, post.data.end, dateformat) }}
     {% endif %}
     {%- if is_episode and post.data.length %}
       | {{ post.data.length }}
@@ -447,7 +447,7 @@ params:
   } | merge(attrs) -%}
       {{ utility.link_if(
         name,
-        post.url,
+        post.page.url,
         'title-link u-url' if hentry else 'title-link'
       ) }}
   {%- endh -%}
@@ -466,7 +466,7 @@ params:
   post,
   id_prefix='post'
 ) -%}
-  {{ [id_prefix, post.url] | join('-') | slug }}
+  {{ [id_prefix, post.page.url or post.url] | join('-') | slug }}
 {%- endmacro %}
 
 

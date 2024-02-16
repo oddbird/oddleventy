@@ -52,14 +52,14 @@ params:
 */
 export const buildEvent = (page, event) => {
   const built = {
-    date: event.date ? getDate(event.date) : page.date,
+    date: event.date ? getDate(event.date) : page.page.date,
     end: event.end ? getDate(event.end) : null,
     venue: event.venue || page.data.venue,
-    url: page.url,
+    url: page.page.url,
     birds: page.data.author || page.data.bird,
-    inputPath: page.inputPath,
-    fileSlug: page.fileSlug,
-    outputPath: page.outputPath,
+    inputPath: page.page.inputPath,
+    fileSlug: page.page.fileSlug,
+    outputPath: page.page.outputPath,
     page: page.data,
     data: event,
   };
