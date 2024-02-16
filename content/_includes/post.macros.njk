@@ -457,8 +457,8 @@ params:
 {% macro name(
   post
 ) -%}
-  {%- set title = post.data.banner or post.data.title -%}
-  {%- if title -%}{{ title | mdInline | safe }}{%- endif -%}
+  {% set title = post.data.banner or post.data.title %}
+  {{ title | mdInline | safe }}
 {%- endmacro %}
 
 
