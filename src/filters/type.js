@@ -1,18 +1,18 @@
-'use strict';
+import rmMd from '@tommoor/remove-markdown';
+import _ from 'lodash-es';
+import markdown from 'markdown-it';
+import mdAnchor from 'markdown-it-anchor';
+import mdFootnote from 'markdown-it-footnote';
+import mdMark from 'markdown-it-mark';
+import striptags from 'striptags';
+import truncate from 'truncate-html';
+import typogrify from 'typogr';
 
-const removeMd = require('@tommoor/remove-markdown');
-const _ = require('lodash');
-const markdown = require('markdown-it');
-const mdAnchor = require('markdown-it-anchor');
-const mdFootnote = require('markdown-it-footnote');
-const mdMark = require('markdown-it-mark');
-const striptags = require('striptags');
-const truncate = require('truncate-html');
-const typogrify = require('typogr');
+import { anchorLinkIconString } from '../js/clickToCopy.js';
 
-const { anchorLinkIconString } = require('../../src/js/clickToCopy.cjs');
+export const removeMd = rmMd;
 
-const mdown = markdown({
+export const mdown = markdown({
   html: true,
   typographer: true,
 })
@@ -44,7 +44,7 @@ params:
   content:
     type: string
 */
-const typogr = (content) =>
+export const typogr = (content) =>
   content
     ? typogrify(content)
         .chain()
@@ -64,7 +64,7 @@ params:
   content:
     type: string
 */
-const md = (content) => (content ? mdown.render(content) : content);
+export const md = (content) => (content ? mdown.render(content) : content);
 
 /* @docs
 label: mdInline
@@ -74,7 +74,8 @@ params:
   content:
     type: string
 */
-const mdInline = (content) => (content ? mdown.renderInline(content) : content);
+export const mdInline = (content) =>
+  content ? mdown.renderInline(content) : content;
 
 /* @docs
 label: elide
@@ -89,7 +90,7 @@ params:
     type: Number
     default: 50
 */
-const elide = (html, count = 50) => {
+export const elide = (html, count = 50) => {
   // Strip links, paragraph breaks, etc:
   const stripped = striptags(html.trim(), ['code', 'strong', 'em']);
   // Truncate stripped html:
@@ -119,7 +120,7 @@ params:
   attrs:
     type: object
 */
-const heading = (content, level, attrs = {}) => {
+export const heading = (content, level, attrs = {}) => {
   const attr_html = _(attrs)
     .map((val, attr) => {
       if (!val) {
@@ -160,7 +161,7 @@ params:
       'Warning' when the type is 'warn',
       and otherwise the type as given.
 */
-const callout = (content, type = 'note', label = true) => {
+export const callout = (content, type = 'note', label = true) => {
   const labels = {
     note: 'Note',
     warn: 'Warning',
@@ -172,15 +173,4 @@ const callout = (content, type = 'note', label = true) => {
   return `<div data-callout="${type}">${
     displayLabel ? `<strong>${displayLabel}:</strong>` : ''
   }<div>${md(content.trim())}</div></div>`;
-};
-
-module.exports = {
-  mdown,
-  elide,
-  typogr,
-  md,
-  mdInline,
-  removeMd,
-  heading,
-  callout,
 };

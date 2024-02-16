@@ -30,7 +30,7 @@ summary: |
           <header class="post-header">
             {{ post.banner(item) }}
             {% set years = utility.datetime(
-              start=item.date,
+              start=item.page.date,
               end=item.data.end,
               format='year' if item.data.end else 'range',
               prefix=none if item.data.end else true

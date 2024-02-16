@@ -1,12 +1,16 @@
 /**
  * @jest-environment jsdom
  */
+
 /* eslint-env browser */
+
+import { jest } from '@jest/globals';
+
 import {
   anchorLinkIconString,
   clickToCopy,
   copyAnchorLink,
-} from '../../src/js/clickToCopy';
+} from '../../src/js/clickToCopy.js';
 
 describe('clickToCopy tests', () => {
   let clipboard;

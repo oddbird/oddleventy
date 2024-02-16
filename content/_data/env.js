@@ -1,7 +1,5 @@
 /* eslint-disable no-process-env */
 
-'use strict';
-
-module.exports = {
+export default {
   CONTEXT: process.env.CONTEXT,
 };

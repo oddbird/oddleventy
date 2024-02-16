@@ -1,13 +1,10 @@
-'use strict';
+import { readFileSync } from 'node:fs';
 
-const fs = require('fs');
+import yaml from 'js-yaml';
+import { find as _find } from 'lodash-es';
 
-const yaml = require('js-yaml');
-const _ = require('lodash');
-
-const taxonomy = yaml.load(
-  // eslint-disable-next-line no-sync
-  fs.readFileSync('./content/_data/taxonomy.yaml', 'utf8'),
+export const taxonomy = yaml.load(
+  readFileSync('./content/_data/taxonomy.yaml', 'utf8'),
 );
 
 /* @docs
@@ -38,9 +35,9 @@ params:
     default: undefined
     note: Optionally return a single attribute of the found object
 */
-const fromTaxonomy = (type, find, get) => {
+export const fromTaxonomy = (type, find, get) => {
   const source = taxonomy[type];
-  const found = find ? _.find(source, find) : source;
+  const found = find ? _find(source, find) : source;
   return found && get ? found[get] : found;
 };
 
@@ -60,7 +57,7 @@ params:
     default: undefined
     note: Optionally return a single group, based on the group title
 */
-const ossGroups = (collection, only) => {
+export const ossGroups = (collection, only) => {
   const grouped = {};
 
   taxonomy.oss.forEach((type) => {
@@ -100,18 +97,11 @@ params:
     default: undefined
     note: False will return the entire taxonomy of the type
 */
-const pageType = (tags, get) => {
+export const pageType = (tags, get) => {
   const taglist = typeof tags === 'string' ? [tags] : tags || [];
   const type = taglist.reduce(
     (found, item) => found || fromTaxonomy('post', { tag: item }, get),
     null,
   );
   return type || false;
-};
-
-module.exports = {
-  taxonomy,
-  fromTaxonomy,
-  ossGroups,
-  pageType,
 };

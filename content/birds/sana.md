@@ -9,8 +9,8 @@ image:
   position: top
   alt: Sana at an art exhibit surrounded by lights holding up her phone.
 social:
-  twitter: sanacodes
-  github: sanajaved7
+  - twitter: sanacodes
+  - github: sanajaved7
 summary: |
   Sana (she/her) is a full-stack software developer,
   artist, drummer, and photographer.

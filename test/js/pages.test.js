@@ -16,9 +16,9 @@ import {
   pageYears,
   removePage,
   withData,
-} from '#/pages';
+} from '#filters/pages.js';
 
-import { collection3, collection4 } from './utils';
+import { collection3, collection4 } from './utils.js';
 
 describe('page filters', () => {
   test('isPublic', () => {
@@ -63,7 +63,7 @@ describe('page filters', () => {
   test('removePage', () => {
     const testUrl = '/test2/';
     const filtered = removePage(collection3, testUrl);
-    const testPage = collection3.find((page) => page.url === testUrl);
+    const testPage = collection3.find((page) => page.page.url === testUrl);
 
     expect(collection3).toContain(testPage);
     expect(filtered).not.toContain(testPage);
@@ -108,7 +108,7 @@ describe('page filters', () => {
     const years = ['2018', '2019', '2040'];
     const actual = eventSort(collection4);
 
-    expect(actual.map((item) => item.fileSlug)).toEqual(slugs);
+    expect(actual.map((item) => item.page.fileSlug)).toEqual(slugs);
     expect(actual.map((item) => item.year)).toEqual(years);
   });
 

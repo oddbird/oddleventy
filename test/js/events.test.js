@@ -7,27 +7,29 @@ import {
   getFuture,
   isFuture,
   pageEvents,
-} from '#/events';
+} from '#filters/events.js';
 
-import { collection } from './utils';
+import { collection, collection4 } from './utils.js';
 
 const event = {
   date: new Date('2011-04-11T10:20:30Z'),
   venue: 'SmashingConf',
 };
 const page = {
-  inputPath: './test1.md',
-  fileSlug: 'test1',
-  outputPath: './_site/test1/index.html',
-  url: '/test1/',
-  date: '2019-01-09T04:10:17.000Z',
+  page: {
+    inputPath: './test1.md',
+    fileSlug: 'test1',
+    outputPath: './_site/test1/index.html',
+    url: '/test1/',
+    date: '2019-01-09T04:10:17.000Z',
+  },
   data: {
     title: 'Test Title',
     tags: ['tag1', 'tag2'],
     author: 'miriam',
     events: [event],
   },
-  templateContent: '<h1>This is my title</h1>\n\n<p>This is content…',
+  content: '<h1>This is my title</h1>\n\n<p>This is content…',
 };
 
 describe('event filters', () => {
@@ -47,7 +49,7 @@ describe('event filters', () => {
     });
 
     test('sets page date from page if no event date', () => {
-      const expected = page.date;
+      const expected = page.page.date;
 
       expect(buildEvent(page, { ...event, date: null }).date).toEqual(expected);
     });
@@ -83,7 +85,8 @@ describe('event filters', () => {
   });
 
   test('getFuture', () => {
-    expect(getFuture(collection)).toHaveLength(2);
+    expect(getFuture(getEvents(collection))).toHaveLength(0);
+    expect(getFuture(getEvents(collection4))).toHaveLength(1);
   });
 
   test('birdEvents', () => {

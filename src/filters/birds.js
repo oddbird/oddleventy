@@ -1,6 +1,4 @@
-'use strict';
-
-const { hasData, withData, isCurrent } = require('#/pages.cjs');
+import { hasData, isCurrent, withData } from '#filters/pages.js';
 
 /* @docs
 label: Bird Filters
@@ -26,7 +24,7 @@ params:
     default: 'false'
     note: Optionally remove `oddbird`-authored pages from the collection
 */
-const getPages = (collection, bird, solo = false) =>
+export const getPages = (collection, bird, solo = false) =>
   collection.filter(
     (page) =>
       hasData(page, 'data.author', bird) ||
@@ -47,7 +45,7 @@ params:
     type: string
     note: The name of the bird (as used in `author` settings)
 */
-const authorPage = (collection, bird) =>
+export const authorPage = (collection, bird) =>
   withData(collection, 'data.bird', bird)[0];
 
 /* @docs
@@ -67,7 +65,7 @@ params:
     default: true
     note: Flip result to show inactive birds
 */
-const active = (collection, current = true) =>
+export const active = (collection, current = true) =>
   collection.filter(
     (page) =>
       page.data.bird !== 'oddbird' &&
@@ -91,7 +89,7 @@ params:
       Any collection that includes the author pages,
       such as `collections.all`
 */
-const activeAuthor = (page, all) => {
+export const activeAuthor = (page, all) => {
   const author = page.data.author || [];
   const list = typeof author === 'string' ? [author] : author;
   return (
@@ -120,13 +118,5 @@ params:
       Any collection that includes the author pages,
       such as `collections.all`
 */
-const withActiveAuthor = (collection, all) =>
+export const withActiveAuthor = (collection, all) =>
   collection.filter((page) => activeAuthor(page, all));
-
-module.exports = {
-  getPages,
-  active,
-  authorPage,
-  activeAuthor,
-  withActiveAuthor,
-};

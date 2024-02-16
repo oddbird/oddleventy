@@ -1,25 +1,23 @@
-/* eslint-disable no-process-env, no-sync */
+/* eslint-disable no-process-env */
 
-'use strict';
+import rss from '@11ty/eleventy-plugin-rss';
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import fs from 'fs-extra';
+import yaml from 'js-yaml';
+import { concat, groupBy, merge } from 'lodash-es';
 
-const rss = require('@11ty/eleventy-plugin-rss');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const fs = require('fs-extra');
-const yaml = require('js-yaml');
-const _ = require('lodash');
+import * as birds from '#filters/birds.js';
+import * as events from '#filters/events.js';
+import * as images from '#filters/images.js';
+import * as mentions from '#filters/mentions.js';
+import * as pages from '#filters/pages.js';
+import * as tags from '#filters/tags.js';
+import * as taxonomy from '#filters/taxonomy.js';
+import * as time from '#filters/time.js';
+import * as type from '#filters/type.js';
+import * as utils from '#filters/utils.js';
 
-const birds = require('#/birds.cjs');
-const events = require('#/events.cjs');
-const images = require('#/images.cjs');
-const mentions = require('#/mentions.cjs');
-const pages = require('#/pages.cjs');
-const tags = require('#/tags.cjs');
-const taxonomy = require('#/taxonomy.cjs');
-const time = require('#/time.cjs');
-const type = require('#/type.cjs');
-const utils = require('#/utils.cjs');
-
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig) => {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setWatchThrottleWaitTime(100);
   eleventyConfig.addPlugin(rss);
@@ -39,14 +37,14 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
 
   // collections
-  eleventyConfig.addCollection('birds', (collection) =>
-    collection
+  eleventyConfig.addCollection('birds', (collectionApi) =>
+    collectionApi
       .getAll()
       .filter((item) => item.data.bird)
-      .sort((a, b) => a.date - b.date),
+      .sort((a, b) => a.page.date - b.page.date),
   );
-  eleventyConfig.addCollection('oss', (collection) =>
-    collection
+  eleventyConfig.addCollection('oss', (collectionApi) =>
+    collectionApi
       .getAll()
       .filter((item) => item.data.oss)
       .sort((a, b) => {
@@ -67,16 +65,16 @@ module.exports = (eleventyConfig) => {
           return b.data.end - a.data.end;
         }
 
-        return b.date - a.date;
+        return b.page.date - a.page.date;
       }),
   );
-  eleventyConfig.addCollection('work', (collection) =>
-    collection
+  eleventyConfig.addCollection('work', (collectionApi) =>
+    collectionApi
       .getAll()
       .filter((item) => item.data.client)
       .sort((a, b) => {
         if (!a.data.end) {
-          return b.data.end ? -1 : b.date - a.date;
+          return b.data.end ? -1 : b.page.date - a.page.date;
         }
         if (!b.data.end) {
           return 1;
@@ -84,14 +82,14 @@ module.exports = (eleventyConfig) => {
         return b.data.end - a.data.end;
       }),
   );
-  eleventyConfig.addCollection('sample', (collection) =>
-    collection.getAll().filter((item) => item.data.sample_content),
+  eleventyConfig.addCollection('sample', (collectionApi) =>
+    collectionApi.getAll().filter((item) => item.data.sample_content),
   );
 
   // filters
-  eleventyConfig.addFilter('concat', _.concat);
-  eleventyConfig.addFilter('merge', _.merge);
-  eleventyConfig.addFilter('group', _.groupBy);
+  eleventyConfig.addFilter('concat', concat);
+  eleventyConfig.addFilter('merge', merge);
+  eleventyConfig.addFilter('group', groupBy);
 
   eleventyConfig.addFilter('typeCheck', utils.typeCheck);
   eleventyConfig.addFilter('styles', utils.styles);
@@ -170,7 +168,7 @@ module.exports = (eleventyConfig) => {
 
   // config
   eleventyConfig.setLibrary('md', type.mdown);
-  eleventyConfig.addDataExtension('yaml', yaml.load);
+  eleventyConfig.addDataExtension('yml, yaml', yaml.load);
   eleventyConfig.setQuietMode(true);
 
   if (!process.env.NETLIFY) {
@@ -181,6 +179,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.on('eleventy.after', () => {
       if (process.env.IMAGE_CACHE_CHANGED) {
         // If the image cache has been updated, emit the new JSON file
+        // eslint-disable-next-line no-sync
         fs.outputJsonSync(images.CACHE_FILE, images.imageCache, { spaces: 2 });
       }
     });

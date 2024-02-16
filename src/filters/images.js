@@ -1,15 +1,16 @@
-/* eslint-disable no-process-env, no-sync */
+/* eslint-disable no-sync, no-process-env */
 
-'use strict';
+import { basename, dirname, extname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const { createHash } = require('crypto');
-const path = require('path');
+import eleventyImg from '@11ty/eleventy-img';
+import { createHash } from 'crypto';
+import fs from 'fs-extra';
+import { merge } from 'lodash-es';
 
-const eleventyImg = require('@11ty/eleventy-img');
-const fs = require('fs-extra');
-const _ = require('lodash');
+import { fromTaxonomy } from '#filters/taxonomy.js';
 
-const { fromTaxonomy } = require('#/taxonomy.cjs');
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 /* @docs
 label: Responsive Images
@@ -30,14 +31,13 @@ const imgOptions = {
     reductionEffort: 3,
   },
   filenameFormat: (id, imgSrc, width, format) => {
-    const extension = path.extname(imgSrc);
-    const name = path.basename(imgSrc, extension);
+    const extension = extname(imgSrc);
+    const name = basename(imgSrc, extension);
     return `${name}-${width}w.${format}`;
   },
 };
 const IMG_SRC = './src/images/';
-const IMG_OUTPUT = path.join(__dirname, '../../_site/assets/images/');
-const CACHE_FILE = path.join(__dirname, 'image_cache.json');
+const IMG_OUTPUT = join(__dirname, '../../_site/assets/images/');
 const useCache = !(process.env.NETLIFY || process.env.NODE_ENV === 'test');
 // Rebuild the cache (and re-process images) if the image dir is deleted
 const rebuildCache = Boolean(
@@ -45,10 +45,11 @@ const rebuildCache = Boolean(
 );
 let cacheChanged = false;
 
-let cache = { html: {}, src: {} };
+export const CACHE_FILE = join(__dirname, 'image_cache.json');
+export let imageCache = { html: {}, src: {} };
 /* istanbul ignore next */
 if (useCache && !rebuildCache && fs.existsSync(CACHE_FILE)) {
-  cache = fs.readJsonSync(CACHE_FILE);
+  imageCache = fs.readJsonSync(CACHE_FILE);
 }
 
 /* @docs
@@ -79,11 +80,11 @@ params:
     note: |
       Returns url to largest jpeg image instead of full HTML
 */
-const image = (src, alt, attrs, sizes, getUrl) => {
+export const image = (src, alt, attrs, sizes, getUrl) => {
   let outputDir = './_site/assets/images/';
   let urlPath = '/assets/images/';
   if (src.startsWith(IMG_SRC)) {
-    const dir = path.dirname(src.slice(IMG_SRC.length));
+    const dir = dirname(src.slice(IMG_SRC.length));
     outputDir = `${outputDir}${dir}`;
     urlPath = `${urlPath}${dir}`;
   } else {
@@ -99,7 +100,7 @@ const image = (src, alt, attrs, sizes, getUrl) => {
     sizes && imgConfig.sizes[sizes]
       ? imgConfig.sizes[sizes]
       : sizes || imgConfig.sizes.default;
-  const imageAttributes = _.merge(
+  const imageAttributes = merge(
     {
       alt: alt || '',
       sizes: imgSizes,
@@ -114,8 +115,8 @@ const image = (src, alt, attrs, sizes, getUrl) => {
   // if we already have the requested markup for the given file.
   /* istanbul ignore next */
   if (useCache) {
-    if (getUrl && cache.src[cacheKey]) {
-      return cache.src[cacheKey];
+    if (getUrl && imageCache.src[cacheKey]) {
+      return imageCache.src[cacheKey];
     } else if (!getUrl) {
       // Create unique hash based on image source, attributes, sizes, etc.
       const hash = createHash('sha256');
@@ -123,8 +124,8 @@ const image = (src, alt, attrs, sizes, getUrl) => {
       hash.update(JSON.stringify(imageAttributes));
       cacheKey = hash.digest('base64');
 
-      if (cache.html[cacheKey]) {
-        return cache.html[cacheKey];
+      if (imageCache.html[cacheKey]) {
+        return imageCache.html[cacheKey];
       }
     }
     // If the image cache has been updated, set env var
@@ -138,14 +139,13 @@ const image = (src, alt, attrs, sizes, getUrl) => {
   // generate images; this is async but we don’t wait
   eleventyImg(src, opts);
 
-  // eslint-disable-next-line no-sync
   const metadata = eleventyImg.statsSync(src, opts);
 
   if (getUrl) {
     const data = metadata.jpeg[metadata.jpeg.length - 1];
     /* istanbul ignore if */
     if (useCache) {
-      cache.src[cacheKey] = data.url;
+      imageCache.src[cacheKey] = data.url;
     }
     return data.url;
   }
@@ -155,13 +155,7 @@ const image = (src, alt, attrs, sizes, getUrl) => {
   });
   /* istanbul ignore if */
   if (useCache) {
-    cache.html[cacheKey] = html;
+    imageCache.html[cacheKey] = html;
   }
   return html;
-};
-
-module.exports = {
-  image,
-  imageCache: cache,
-  CACHE_FILE,
 };

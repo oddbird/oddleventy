@@ -1,47 +1,39 @@
-'use strict';
+import { readdir } from 'node:fs';
+import { join } from 'node:path';
 
-const fs = require('fs');
-const path = require('path');
-
-const doxray = require('doxray');
+import doxray from 'doxray';
 
 // relative path from the root directory of remedocs
 // to the root directory of any package to be documented
 const remeDir = './';
 
-// relative path from remeDir to filters inside the project
-const filterDir = path.join(remeDir, 'src/filters/');
+// relative path from remeDir to njk documents inside the project
+const includeDir = join(remeDir, 'content/_includes/');
 
 // define the documentation regex…
 const doxOptions = {
   regex: {
-    js: {
-      opening: /\/\*\s*@docs[^\n]*\n/m,
-      closing: /\*\//,
-      comment: /\/\*\s*@docs[^*]*\*+(?:[^/*][^*]*\*+)*\//gm,
-      ignore: /\/\*\s*ignore-@docs[\s\S]*/gm,
-    },
-    cjs: {
-      opening: /\/\*\s*@docs[^\n]*\n/m,
-      closing: /\*\//,
-      comment: /\/\*\s*@docs[^*]*\*+(?:[^/*][^*]*\*+)*\//gm,
-      ignore: /\/\*\s*ignore-@docs[\s\S]*/gm,
+    njk: {
+      opening: /\{#*\s*@docs[^\n]*\n/m,
+      closing: /#}/,
+      comment: /\{#\s*@docs\s*([^#]|#[^}])*\s*#}/gm,
+      ignore: /\{#\s*@no-docs[\s\S]*/gm,
     },
   },
 };
 
-module.exports = () =>
+export default () =>
   new Promise((resolve, reject) => {
     // get the docs
-    fs.readdir(filterDir, (err, files) => {
+    readdir(includeDir, (err, files) => {
       if (err) {
         reject(err);
       }
 
-      const js = files
-        .filter((file) => file.endsWith('.js') || file.endsWith('.cjs'))
+      const njk = files
+        .filter((file) => file.endsWith('.macros.njk'))
         .map((file) => {
-          const filePath = path.join(filterDir, file);
+          const filePath = join(includeDir, file);
           const docs = doxray([filePath], doxOptions);
           const info = docs.patterns.find(
             (pattern) => String(pattern.category).toLowerCase() === 'file',
@@ -59,6 +51,7 @@ module.exports = () =>
             ),
           };
         });
-      resolve(js);
+
+      resolve(njk);
     });
   });

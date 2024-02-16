@@ -1,4 +1,6 @@
-const { getDate } = require('#/time');
+import { jest } from '@jest/globals';
+
+import { getDate } from '#filters/time.js';
 
 describe('time filters', () => {
   let warn;

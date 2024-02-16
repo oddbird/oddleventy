@@ -4,11 +4,11 @@ sub: Let's get to know each other
 banner: Contact OddBird
 bird: oddbird
 social:
-  mastodon:
-    user: oddbird
-    server: front-end.social
-  github: oddbird
-  email: birds
+  - email: birds
+  - mastodon:
+      user: oddbird
+      server: front-end.social
+  - github: oddbird
 summary: |
   **We're always happy to talk** –
   whether you have a project in mind,
@@ -22,4 +22,5 @@ summary: |
 ---
 
 {% import "contact.macros.njk" as contact %}
+
 {{ contact.form(attrs={'class': 'extend-small'}) }}

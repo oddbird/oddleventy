@@ -1,9 +1,7 @@
-'use strict';
+import _ from 'lodash-es';
 
-const _ = require('lodash');
-
-const { pageType } = require('#/taxonomy.cjs');
-const { now, getDate } = require('#/time.cjs');
+import { pageType } from '#filters/taxonomy.js';
+import { getDate, now } from '#filters/time.js';
 
 /* @docs
 label: Page Filters
@@ -18,7 +16,7 @@ params:
   page:
     type: 11ty page object
 */
-const isPublic = (page) => {
+export const isPublic = (page) => {
   const live = !page.data.draft;
   const title = Boolean(page.data.title);
   return live && title;
@@ -32,7 +30,7 @@ params:
   page:
     type: 11ty page object
 */
-const isCurrent = (page) => {
+export const isCurrent = (page) => {
   /* istanbul ignore if */
   if (!page || !page.data) {
     return false;
@@ -50,7 +48,7 @@ params:
     type: array
     note: containing 11ty page objects
 */
-const getCurrent = (collection) => collection.filter(isCurrent);
+export const getCurrent = (collection) => collection.filter(isCurrent);
 
 /* @docs
 label: getPublic
@@ -61,7 +59,7 @@ params:
     type: array
     note: containing 11ty page objects
 */
-const getPublic = (collection) => collection.filter(isPublic);
+export const getPublic = (collection) => collection.filter(isPublic);
 
 /* @docs
 label: hasData
@@ -81,7 +79,7 @@ params:
     type: boolean
     note: Force an exact match, rather than inclusion
 */
-const hasData = (obj, keys, value) => {
+export const hasData = (obj, keys, value) => {
   if (value) {
     const data = _(obj).get(keys);
     if (_.isUndefined(data)) {
@@ -117,7 +115,7 @@ params:
     type: boolean
     note: Force an exact match, rather than inclusion
 */
-const withData = (collection, keys, value) =>
+export const withData = (collection, keys, value) =>
   collection.filter((page) => hasData(page, keys, value));
 
 /* @docs
@@ -134,8 +132,8 @@ params:
     type: url
     note: URL of the page to remove
 */
-const removePage = (collection, url) =>
-  collection.filter((page) => page.url !== url);
+export const removePage = (collection, url) =>
+  collection.filter((page) => page.page.url !== url);
 
 /* @docs
 label: getData
@@ -162,7 +160,7 @@ params:
     default: undefined
     note: filter the resulting collection
 */
-const getData = (collection, keys, test) => {
+export const getData = (collection, keys, test) => {
   const data = keys
     ? _.flatMap(_.filter(collection, keys), (page) => _.get(page, keys))
     : collection;
@@ -187,7 +185,8 @@ params:
     default: undefined
     note: filter the resulting collection
 */
-const findData = (collection, keys, test) => getData(collection, keys, test)[0];
+export const findData = (collection, keys, test) =>
+  getData(collection, keys, test)[0];
 
 /* @docs
 label: getPage
@@ -210,8 +209,8 @@ params:
     default: undefined
     note: filter the resulting collection
 */
-const getPage = (collection, url, keys, test) => {
-  const page = _.find(collection, { url });
+export const getPage = (collection, url, keys, test) => {
+  const page = _.find(collection, (p) => p.page.url === url.split('#')[0]);
   const data = keys ? _.get(page, keys) : page;
   return test ? _.filter(data, test) : data;
 };
@@ -233,7 +232,7 @@ params:
     type: any
     note: Only find pages where the desired keys have a given value
 */
-const findPage = (collection, keys, value) =>
+export const findPage = (collection, keys, value) =>
   collection.find((page) => hasData(page, keys, value));
 
 /* @docs
@@ -248,9 +247,9 @@ params:
     type: array
     note: containing 11ty page objects
 */
-const pageYears = (collection) =>
+export const pageYears = (collection) =>
   collection.map((page) => {
-    const dates = [page.date];
+    const dates = [page.page.date];
 
     if (page.data.end) {
       dates.push(page.data.end);
@@ -281,7 +280,7 @@ params:
     type: array
     note: containing 11ty page objects
 */
-const eventSort = (collection) =>
+export const eventSort = (collection) =>
   pageYears(collection).sort((a, b) => {
     if (a.sort < b.sort) {
       return -1;
@@ -305,7 +304,7 @@ params:
     type: array
     note: containing 11ty page objects
 */
-const byYear = (collection) => {
+export const byYear = (collection) => {
   if (!collection || collection.length === 0) {
     return [];
   }
@@ -331,7 +330,7 @@ params:
     type: url
     note: URL of page to test
 */
-const addCallToAction = (pageURL) =>
+export const addCallToAction = (pageURL) =>
   _.isString(pageURL) &&
   (pageURL.startsWith('/work/') || pageURL.startsWith('/services/'));
 
@@ -350,7 +349,7 @@ params:
     type: type
     note: post type to filter by
 */
-const isType = (collection, type) =>
+export const isType = (collection, type) =>
   collection.filter((page) => pageType(page.data.tags, 'tag') === type);
 
 /* @docs
@@ -368,7 +367,7 @@ params:
   limit:
     type: number
 */
-const isHome = (collection, limit) => {
+export const isHome = (collection, limit) => {
   const posts = pageYears(
     collection.filter((page) => page.data.home !== false),
   ).reverse();
@@ -393,24 +392,4 @@ const isHome = (collection, limit) => {
     }
   }
   return featured;
-};
-
-module.exports = {
-  isPublic,
-  isCurrent,
-  getCurrent,
-  getPublic,
-  getPage,
-  findPage,
-  hasData,
-  getData,
-  findData,
-  withData,
-  pageYears,
-  eventSort,
-  byYear,
-  removePage,
-  addCallToAction,
-  isType,
-  isHome,
 };

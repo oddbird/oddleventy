@@ -1,8 +1,15 @@
 /* eslint-disable max-len */
 
-import { callout, elide, heading, md, mdInline, typogr } from '#/type';
+import {
+  callout,
+  elide,
+  heading,
+  md,
+  mdInline,
+  typogr,
+} from '#filters/type.js';
 
-import { anchorLinkIconString } from '../../src/js/clickToCopy';
+import { anchorLinkIconString } from '../../src/js/clickToCopy.js';
 const markdown = '## Lorem ipsum dolor sit amet, consectetur';
 const content = 'Lorem ipsum dolor sit amet, consectetur';
 const typogrd = 'Lorem ipsum dolor sit amet, consectetur';

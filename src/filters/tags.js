@@ -1,10 +1,8 @@
-'use strict';
+import { uniq } from 'lodash-es';
+import slugify from 'slugify';
 
-const _ = require('lodash');
-const slugify = require('slugify');
-
-const { withData, getData } = require('#/pages.cjs');
-const { pageType } = require('#/taxonomy.cjs');
+import { getData, withData } from '#filters/pages.js';
+import { pageType } from '#filters/taxonomy.js';
 
 /* @docs
 label: Tag Filters
@@ -19,7 +17,7 @@ params:
   tag:
     type: string
 */
-const isPublic = (tag) => !tag.startsWith('_');
+export const isPublic = (tag) => !tag.startsWith('_');
 
 /* @docs
 label: publicTags
@@ -29,7 +27,7 @@ params:
   tags:
     type: array
 */
-const publicTags = (tags) => (tags || []).filter((tag) => isPublic(tag));
+export const publicTags = (tags) => (tags || []).filter((tag) => isPublic(tag));
 
 /* @docs
 label: displayName
@@ -41,7 +39,7 @@ params:
   tag:
     type: string
 */
-const displayName = (tag) => {
+export const displayName = (tag) => {
   const capitalize = ([first, ...rest]) =>
     first ? first.toUpperCase() + rest.join('') : '';
 
@@ -65,11 +63,11 @@ params:
   tag:
     type: string
 */
-const tagLink = (all, tag) => {
+export const tagLink = (all, tag) => {
   const index =
     withData(all, 'data.index', tag)[0] ||
     withData(all, 'data.index.slug', tag)[0];
-  return index ? index.url : `/tags/${slugify(tag, { lower: true })}/`;
+  return index ? index.page.url : `/tags/${slugify(tag, { lower: true })}/`;
 };
 
 /* @docs
@@ -81,7 +79,7 @@ params:
     type: array
     note: containing 11ty page objects
 */
-const getTags = (collection) => getData(collection, 'data.tags');
+export const getTags = (collection) => getData(collection, 'data.tags');
 
 /* @docs
 label: tagData
@@ -97,9 +95,9 @@ params:
     default: undefined
     note: Will return data for all tags when set to `all`
 */
-const tagData = (collections, tags) => {
+export const tagData = (collections, tags) => {
   const tagList = tags === 'all' ? getTags(collections.all) : tags;
-  return _.uniq(publicTags(tagList)).map((tag) => {
+  return uniq(publicTags(tagList)).map((tag) => {
     const type = pageType(tag);
     return {
       tag,
@@ -109,13 +107,4 @@ const tagData = (collections, tags) => {
       pageCount: (collections[tag] || []).length,
     };
   });
-};
-
-module.exports = {
-  isPublic,
-  publicTags,
-  getTags,
-  tagData,
-  displayName,
-  tagLink,
 };

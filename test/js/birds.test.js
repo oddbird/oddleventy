@@ -4,9 +4,9 @@ import {
   authorPage,
   getPages,
   withActiveAuthor,
-} from '#/birds';
+} from '#filters/birds.js';
 
-import { collection2, collections } from './utils';
+import { collection2, collections } from './utils.js';
 
 describe('getPages', () => {
   test('returns pages that the "bird" has authored', () => {

@@ -94,7 +94,7 @@ params:
     {%- set name = all or bird -%}
     {{ utility.link_if(
       content=name | mdInline | safe,
-      url=page.url if link else none,
+      url=page.page.url if link else none,
       class=class
     ) }}
   {%- else -%}

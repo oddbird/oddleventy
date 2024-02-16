@@ -9,13 +9,13 @@
   },
   "private": true,
   "engines": {
-    "node": "^18",
+    "node": "^20",
     "yarn": "^4"
   },
   "type": "module",
   "scripts": {
     "js": "rollup -c",
-    "sass": "node scripts/compile-sass.cjs",
+    "sass": "node scripts/compile-sass.js",
     "sassdoc": "sassdoc src/scss/**/*.scss",
     "prettier:js": "prettier --write \"**/*.{js,cjs}\"",
     "lint:other": "prettier --write \"**/*.{json,yml,scss}\"",
@@ -34,17 +34,20 @@
     "site:clean": "rimraf './_site/!(assets)' './_site/assets/!(images)'",
     "assets:clean": "rimraf './_built/'",
     "serve": "npm-run-all build:assets build:site -p eleventy:serve watch:js watch:sass",
-    "test": "jest",
+    "test": "node --experimental-vm-modules $(yarn bin jest)",
     "build:site": "run-s site:clean sassdoc",
     "build:assets": "npm-run-all assets:clean -p js sass",
     "build:images": "IMAGE_CACHE_REBUILD=true yarn build",
     "build": "run-s build:assets build:site eleventy",
     "build:prod": "NETLIFY=true CONTEXT=production yarn build",
-    "webmentions": "node scripts/fetch-webmentions.cjs",
+    "webmentions": "node scripts/fetch-webmentions.js",
     "prod": "yarn build",
     "checklinks:internal": "npx --yes --package=hyperlink --package=tap-spot -- 'hyperlink --canonicalroot https://www.oddbird.net/ --root _site/ -r -p -i --skip \".css.map\" --skip \".js.map\" --skip \"feed.atom\" --skip \"/docs/\" _site/index.html | tap-spot'",
     "checklinks:external": "npx --yes --package=broken-link-checker -- 'blc -ro --exclude=localhost:8080 --exclude=codepen.io --exclude=linkedin.com --exclude=projects.invisionapp.com --exclude=docs.github.com --exclude=www.sass.hk --exclude=www.drupal.org --exclude=www.canva.com --exclude=www.fastcompany.com --exclude=duabuset-tandem.com --exclude=puta-elementa.com --exclude=campaignzero.org --exclude=twitter.com https://www.oddbird.net'",
     "checklinks": "run-s checklinks:internal checklinks:external"
+  },
+  "imports": {
+    "#filters/*": "./src/filters/*"
   },
   "dependencies": {
     "@algolia/algoliasearch-netlify-frontend": "^1.0.15",
@@ -53,8 +56,7 @@
     "cssremedy": "^0.1.0-beta.2"
   },
   "devDependencies": {
-    "#": "link:./src/filters",
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "3.0.0-alpha.5",
     "@11ty/eleventy-img": "^4.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
@@ -67,10 +69,8 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@tommoor/remove-markdown": "^0.3.2",
-    "@typescript-eslint/parser": "^6.21.0",
     "autoprefixer": "^10.4.17",
-    "babel-jest": "^29.7.0",
-    "chalk": "^4.1.2",
+    "chalk": "^5.3.0",
     "chokidar-cli": "^3.0.0",
     "core-js": "^3.35.1",
     "date-fns": "^2.30.0",
@@ -79,9 +79,6 @@
     "doxray": "^0.10.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-node": "^0.3.9",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^27.6.3",
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "fs-extra": "^11.2.0",
@@ -89,18 +86,18 @@
     "jest-environment-jsdom": "^29.7.0",
     "js-yaml": "^4.1.0",
     "lite-youtube-embed": "^0.3.0",
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "markdown-it": "^14.0.0",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mark": "^4.0.0",
     "mockdate": "^3.0.5",
     "netlify-plugin-11ty": "^1.4.0",
-    "node-fetch": "^2.6.7",
+    "node-fetch": "^3.3.2",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
-    "rimraf": "^3.0.2",
+    "rimraf": "^5.0.5",
     "rollup": "^4.10.0",
     "sanitize-html": "^2.11.0",
     "sass": "^1.70.0",
@@ -117,10 +114,7 @@
   "yarn-upgrade-all": {
     "ignore": [
       "#",
-      "chalk",
-      "date-fns",
-      "node-fetch",
-      "rimraf"
+      "date-fns"
     ]
   },
   "packageManager": "yarn@4.1.0"

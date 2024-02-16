@@ -7,8 +7,8 @@ end: 2020-10-13
 image:
   src: birds/kit.jpg
 social:
-  twitter: wlonk
-  github: wlonk
+  - twitter: wlonk
+  - github: wlonk
 summary: |
   Kit
   is a back-end developer,

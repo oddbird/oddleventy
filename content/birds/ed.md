@@ -6,8 +6,8 @@ date: 2020-11-01
 image:
   src: birds/ed.jpg
 social:
-  twitter: je92rivas
-  github: jerivas
+  - twitter: je92rivas
+  - github: jerivas
 summary: |
   Ed (he/him) is a web developer building fast,
   accessible sites with Python & PHP.

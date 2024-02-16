@@ -5,7 +5,7 @@ bird: sam
 date: 2016-04-28
 end: 2016-09-24
 social:
-  github: samwisemr
+  - github: samwisemr
 summary: |
   Sam
   interned with OddBird

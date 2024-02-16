@@ -9,8 +9,8 @@ image:
   src: birds/patricia.jpg
   position: top
 social:
-  twitter: patriciarealini
-  github: patriciarealini
+  - twitter: patriciarealini
+  - github: patriciarealini
 summary: |
   Patricia is a technical product manager,
   lead project manager,

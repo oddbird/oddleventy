@@ -17,12 +17,12 @@
     <email>{{ site.email }}</email>
   </author>
   {%- for post in posts %}
-  {%- if post.templateContent or post.data.summary %}
+  {%- if post.content or post.data.summary %}
   {%- set absolutePostUrl = post.url | absoluteUrl(site.url) -%}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <updated>{{ post.page.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     {%- set authors = [post.data.author] if post.data.author | typeCheck('string') else post.data.author -%}
     {%- for author in authors -%}
@@ -58,8 +58,8 @@
         {%- endif -%}
       {%- endfilter -%}
 
-      {%- if post.templateContent -%}
-        {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+      {%- if post.content -%}
+        {{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}
       {%- endif -%}
     </content>
 

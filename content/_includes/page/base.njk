@@ -22,7 +22,7 @@
 
 {# The actual output HTML #}
 <main data-layout="main" aria-labelledby="title" {{ utility.attr_if('class', hclass) }}>
-  {% include "page/header.njk" %}
+  {% include 'page/header.njk' %}
 
   {% if content -%}
     {%- set hcontent = 'e-content' if is_entry else ('p-note' if is_bird else none) -%}
@@ -31,8 +31,8 @@
     </div>
   {%- endif %}
 
-  {% include "page/mentions.njk" %}
-  {% include "page/list.njk" %}
+  {% include 'page/mentions.njk' %}
+  {% include 'page/list.njk' %}
 
   <!-- used for webmentions -->
   <a href="{{ page.url | url }}" class="u-url" hidden>{{ (banner or title) | removeMd }}</a>

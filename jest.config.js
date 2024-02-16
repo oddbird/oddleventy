@@ -1,9 +1,7 @@
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/configuration
 
-'use strict';
-
-module.exports = {
+export default {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -23,7 +21,7 @@ module.exports = {
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: ['src/filters/**/*.cjs', 'src/js/clickToCopy.cjs'],
+  collectCoverageFrom: ['src/filters/**/*.js', 'src/js/clickToCopy.js'],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
@@ -168,7 +166,7 @@ module.exports = {
   // timers: "real",
 
   // A map from regular expressions to paths to transformers
-  // transform: undefined,
+  transform: {},
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [

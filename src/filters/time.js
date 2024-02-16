@@ -1,7 +1,5 @@
-'use strict';
-
-const dateFormat = require('date-fns/format');
-const { utcToZonedTime } = require('date-fns-tz');
+import { format as dateFormat } from 'date-fns';
+import { utcToZonedTime } from 'date-fns-tz';
 
 /* @docs
 label: Date & Time Filters
@@ -14,7 +12,7 @@ example: |
   Copyright &copy; {% getDate 'year' %}
 */
 
-const now = () => new Date();
+export const now = () => new Date();
 
 const formatDate = (date, format) => {
   // https://date-fns.org/v2.21.2/docs/format
@@ -54,9 +52,7 @@ params:
     type: string
     note: See js file for a list of available date formats
 */
-const getDate = (date, format) => {
+export const getDate = (date, format) => {
   const dateObj = typeof date === 'string' ? new Date(date) : date;
   return format ? formatDate(dateObj, format) : dateObj;
 };
-
-module.exports = { now, getDate };

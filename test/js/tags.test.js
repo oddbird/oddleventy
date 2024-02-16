@@ -1,13 +1,13 @@
-const {
+import {
   displayName,
+  getTags,
   isPublic,
   publicTags,
   tagData,
-  getTags,
   tagLink,
-} = require('#/tags');
+} from '#filters/tags.js';
 
-import { collection } from './utils';
+import { collection } from './utils.js';
 
 describe('tag filters', () => {
   const tags = ['Link', '_foo bar', '_talk', 'Video'];

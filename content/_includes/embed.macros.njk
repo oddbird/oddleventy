@@ -337,7 +337,7 @@ params:
           path='logos/' + logo,
           alt=[client, title] | join(': ') if (client and title) else title
         ),
-        url=page.url if page else none
+        url=page.page.url if page else none
       ) }}
     {%- endfor -%}
   </div>

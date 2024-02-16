@@ -1,6 +1,4 @@
-'use strict';
-
-const _ = require('lodash');
+import _ from 'lodash-es';
 
 /* @docs
 label: Utility Filters
@@ -22,7 +20,7 @@ params:
     default: undefined
     note: Optionally check for a particular type
 */
-const typeCheck = (val, is) => {
+export const typeCheck = (val, is) => {
   const type = typeof val;
   return is ? type === is : type;
 };
@@ -40,7 +38,7 @@ params:
     type: object
     note: CSS property-value pairs
 */
-const styles = (dict) =>
+export const styles = (dict) =>
   _(dict)
     .map((val, prop) => (val ? `${prop}:${val};` : ''))
     .join('');
@@ -57,7 +55,7 @@ params:
     type: object
     note: CSS property-value pairs
 */
-const onlyShow = (array, n) => {
+export const onlyShow = (array, n) => {
   if (n < 0) {
     return array.slice(n);
   }
@@ -77,7 +75,7 @@ params:
     type: string
     note: name of page such as 'footer'
 */
-const oddNewsTags = (name) => {
+export const oddNewsTags = (name) => {
   switch (name) {
     case 'footer':
       return '6264369';
@@ -89,5 +87,3 @@ const oddNewsTags = (name) => {
       return '';
   }
 };
-
-module.exports = { typeCheck, styles, onlyShow, oddNewsTags };
