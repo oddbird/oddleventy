@@ -114,6 +114,7 @@
   "yarn-upgrade-all": {
     "ignore": [
       "#",
+      "@11ty/eleventy",
       "date-fns"
     ]
   },
