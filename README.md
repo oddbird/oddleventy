@@ -23,8 +23,7 @@ version of Node for OddSite development.
 
 The correct [Yarn](https://yarnpkg.com/) version is included with Node, and will
 be used automatically for any `yarn` command. To activate it, run
-`corepack enable`
-(once per local Node installation).
+`corepack enable` (once per local Node installation).
 
 To upgrade the Node version used by OddSite, update the version number in these
 places and then run `nvm install` to upgrade:

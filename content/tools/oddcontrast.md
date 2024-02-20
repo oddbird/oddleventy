@@ -37,7 +37,9 @@ desired color is back in gamut.
 
 {{ embed.img(
   src='projects/out-of-gamut.jpg',
-  alt='Oklab purple color showing a message next to sRGB Formats that says Selected color is outside the sRGB gamut with a link to more detailed information'
+  alt='Oklab purple color showing a message next to sRGB Formats that says
+    Selected color is outside the sRGB gamut
+    with a link to more detailed information'
 ) }}
 
 ## Contrast Checker for Accessibility
@@ -50,7 +52,9 @@ tips and a link to learn more.
 
 {{ embed.img(
   src='projects/color-ratio.jpg',
-  alt='showing a purple background color and a peach foreground color with a 3.95:1 contrast ratio failing for AA Normal, AAA Normal, and AAA Large font sizes, but passing for AA Large font size'
+  alt='showing a purple background color and a peach foreground color
+    with a 3.95:1 contrast ratio failing for AA Normal, AAA Normal,
+    and AAA Large font sizes, but passing for AA Large font size'
 ) }}
 
 ## What New Features Should OddContrast Have?
