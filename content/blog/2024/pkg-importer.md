@@ -2,7 +2,7 @@
 title: Setting up Sass pkg URLs in Webpack
 sub: A quick guide to using the new Node package importer
 author: james
-date: 2024-02-23
+date: 2024-02-21
 image:
   src: blog/2024/sass-package.jpg
   alt: >
@@ -23,7 +23,7 @@ libraries in Sass. I've used `includePaths`, a preceding `~`, or even
 `../../../../node_modules` (and hoping I get the levels correct, and never have
 to move the files).
 
-Sass 1.71.0 introduces a new standard way, with `pkg:` URLs. More can be found
+Sass 1.71 introduces a new standard way, with `pkg:` URLs. More can be found
 on the [official blog post](https://sass-lang.com/blog/announcing-pkg-importers/),
 and this article shows how quick it is to set it up.
 
@@ -157,6 +157,39 @@ moves that logic into Sass. This doesn't have an immediate impact in this case,
 but it does make the code more portable. My styles could be shared with someone
 building with Webpack or ported to a future build tool. When more Package
 importers become available, this code even be used outside a Node module.
+
+## Things to watch out for
+
+While this change, in most cases, will be straightforward, you do want to make
+sure that you are still importing the same file. While porting over the
+Bootstrap project in the Webpack example, I also wanted to update the import for
+`bootstrap-icons`.
+
+Before:
+
+```css
+/* File: ./src/styles/index.scss */
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+```
+
+However, when I updated that import to `pkg:bootstrap-icons`, I realized I was
+now loading `bootstrap-icons.scss`, and not the precompiled CSS file. This is
+because `bootstrap-icons` has a `sass` key in the `package.json` with the value
+`"sass": "font/bootstrap-icons.scss"`, so the Sass Node package importer
+identifies that as the desired import.
+
+Functionally, this worked, but meant that I was needing to compile
+`bootstrap-icons` along with my dev styles, slowing things down. The Node
+package importer allows for relative paths within a module, so I tried
+`pkg:bootstrap-icons/font/bootstrap-icons.css`. However, Webpack was resolving
+files ending with `.css` with `css-loader`, which doesn't understand `pkg:`
+URLs.
+
+At this point, I have a few options. I could import the `.scss` file, tweak the
+Webpack config settings for `css-loader` to not try to resolve `pkg:` URLs, or
+leave it as is. Because I knew I had a story in my backlog to address some other
+issues with `bootstrap-icons`, I decided to leave it as is, and address this as
+part of the upcoming story.
 
 ## Taking advantage of simplified imports
 
