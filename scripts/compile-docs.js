@@ -1,11 +1,12 @@
 import { join, resolve } from 'node:path';
 
+import chalk from 'chalk';
 import { NodePackageImporter } from 'sass';
 import sassdoc from 'sassdoc';
 
 const __dirname = import.meta.dirname;
 const baseDir = resolve(__dirname, '..');
-const inDir = join(baseDir, 'src', 'scss');
+const inDir = join(baseDir, 'src', 'scss', '**', '*.scss');
 
 const config = {
   theme: 'herman',
@@ -87,4 +88,7 @@ const config = {
   },
 };
 
-sassdoc(inDir, config);
+sassdoc(inDir, config).then(() =>
+  // eslint-disable-next-line no-console
+  console.log(chalk.green.bold('Compiled styleguide documentation.')),
+);

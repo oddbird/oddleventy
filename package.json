@@ -25,7 +25,7 @@
     "lint:sass": "stylelint \"**/*.scss\" --fix",
     "eleventy": "eleventy",
     "eleventy:serve": "eleventy --serve --incremental",
-    "watch:sass:compile": "chokidar \"src/scss/**/*.scss\" \"./.sassdocrc\" -c \"yarn run-p sass sassdoc\"",
+    "watch:sass:compile": "chokidar \"src/scss/**/*.scss\" \"./scripts/compile-docs.js\" -c \"yarn run-p sass sassdoc\"",
     "watch:sass:lint": "chokidar \"**/.stylelintrc.yml\" -c \"yarn lint:sass\"",
     "watch:sass": "run-p watch:sass:compile watch:sass:lint",
     "watch:js:compile": "rollup -c --watch",
