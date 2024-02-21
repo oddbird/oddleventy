@@ -1,0 +1,90 @@
+import { join, resolve } from 'node:path';
+
+import { NodePackageImporter } from 'sass';
+import sassdoc from 'sassdoc';
+
+const __dirname = import.meta.dirname;
+const baseDir = resolve(__dirname, '..');
+const inDir = join(baseDir, 'src', 'scss');
+
+const config = {
+  theme: 'herman',
+  displayTheme: 'herman',
+  dest: './_site/styleguide/',
+
+  package: './package.json',
+  shortcutIcon: './content/favicon.ico',
+  verbose: true,
+
+  groups: {
+    'Sass Tokens': {
+      'config-animation': 'Animations',
+      'config-color': 'Colors',
+      'config-fonts': 'Fonts',
+      'config-scale': 'Spacing & Sizes',
+      'config-layout': 'Layout Tokens',
+      'config-focus': 'Focus Styling',
+    },
+    'CSS Variables': {
+      'init-colors': 'Global Colors',
+      'init-themes': 'Preset Themes',
+      'init-scale': 'Spacing & Sizes',
+    },
+    'Global Defaults': {
+      links: 'Links',
+      headings: 'Headings',
+      'init-media': 'Media',
+    },
+    Forms: {
+      forms: 'Form Fields & Inputs',
+      'tools-range': 'Range Input Tools',
+      'input-range': 'Range Inputs',
+      'input-radio': 'Radio Buttons',
+      buttons: 'Buttons',
+    },
+    Patterns: {
+      a11y: 'Accessibility',
+      type: 'Typography',
+      icons: 'SVG Icons',
+      dropdown: 'Dropdowns',
+      media: 'Media Blocks & Ratios',
+    },
+  },
+
+  herman: {
+    customCSS: '_built/css/styleguide.css',
+    extraDocs: [
+      {
+        name: 'Content and Writing',
+        path: './writing.md',
+      },
+    ],
+    extraLinks: [
+      {
+        name: 'Eleventy',
+        url: 'https://www.11ty.dev/',
+      },
+      {
+        name: 'Accoutrement',
+        url: 'https://www.oddbird.net/accoutrement/',
+      },
+      {
+        name: 'Cascading Color Systems',
+        url: 'https://www.oddbird.net/cascading-colors/',
+      },
+      {
+        name: 'Herman',
+        url: 'https://www.oddbird.net/herman/',
+      },
+    ],
+    sass: {
+      jsonFile: './_built/css/json.css',
+      sassOptions: {
+        loadPaths: ['src/scss/'],
+        importers: [new NodePackageImporter()],
+      },
+    },
+  },
+};
+
+sassdoc(inDir, config);
