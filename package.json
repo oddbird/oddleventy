@@ -101,6 +101,7 @@
     "rollup": "^4.12.0",
     "sanitize-html": "^2.11.0",
     "sass": "^1.71.1",
+    "sass-embedded": "^1.71.1",
     "sassdoc": "^2.7.4",
     "sassdoc-theme-herman": "^5.0.1",
     "slugify": "^1.6.6",
