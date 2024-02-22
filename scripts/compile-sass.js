@@ -61,15 +61,16 @@ const compileSass = async ({ name, usePostCSS }) => {
     }
     return outputFile(outFile, inFilename, result.css);
   } catch (error) {
-    throw error.message;
+    console.error(chalk.red(error));
+    return null;
   }
 };
 
-Promise.allSettled([
+Promise.all([
   compileSass({ name: 'screen', usePostCSS: true }),
   compileSass({ name: 'styleguide', usePostCSS: true }),
   compileSass({ name: 'json' }),
 
   // page-specific CSS; this should maybe not be hardcoded?
   compileSass({ name: 'page/support-unknown', usePostCSS: true }),
-]).then(() => compiler.dispose());
+]).finally(() => compiler.dispose());
