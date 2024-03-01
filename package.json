@@ -16,7 +16,7 @@
   "scripts": {
     "js": "rollup -c",
     "sass": "node scripts/compile-sass.js",
-    "sassdoc": "node scripts/compile-docs.js",
+    "sassdoc": "sassdoc src/scss/**/*.scss",
     "prettier:js": "prettier --write \"**/*.{js,cjs}\"",
     "lint:other": "prettier --write \"**/*.{json,yml,scss}\"",
     "eslint": "eslint \"*.{js,cjs}\" \"**/*.{js,cjs}\" --fix",
@@ -25,7 +25,7 @@
     "lint:sass": "stylelint \"**/*.scss\" --fix",
     "eleventy": "eleventy",
     "eleventy:serve": "eleventy --serve --incremental",
-    "watch:sass:compile": "chokidar \"src/scss/**/*.scss\" \"./scripts/compile-docs.js\" -c \"yarn run-p sass sassdoc\"",
+    "watch:sass:compile": "chokidar \"src/scss/**/*.scss\" \".sassdocrc\" -c \"yarn run-p sass sassdoc\"",
     "watch:sass:lint": "chokidar \"**/.stylelintrc.yml\" -c \"yarn lint:sass\"",
     "watch:sass": "run-p watch:sass:compile watch:sass:lint",
     "watch:js:compile": "rollup -c --watch",
@@ -61,15 +61,15 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/is-land": "^4.0.0",
-    "@babel/core": "^7.23.9",
-    "@babel/preset-env": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
     "@netlify/plugin-a11y": "^1.0.0-beta.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@tommoor/remove-markdown": "^0.3.2",
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "^10.4.18",
     "chalk": "^5.3.0",
     "chokidar-cli": "^3.0.0",
     "core-js": "^3.36.0",
@@ -100,10 +100,9 @@
     "rimraf": "^5.0.5",
     "rollup": "^4.12.0",
     "sanitize-html": "^2.12.1",
-    "sass": "^1.71.1",
     "sass-embedded": "^1.71.1",
     "sassdoc": "^2.7.4",
-    "sassdoc-theme-herman": "^5.0.1",
+    "sassdoc-theme-herman": "^6.0.0",
     "slugify": "^1.6.6",
     "striptags": "^3.2.0",
     "stylelint": "^16.2.1",
@@ -111,13 +110,6 @@
     "truncate-html": "^1.0.4",
     "typescript": "^5.3.3",
     "typogr": "^0.6.8"
-  },
-  "yarn-upgrade-all": {
-    "ignore": [
-      "#",
-      "@11ty/eleventy",
-      "date-fns"
-    ]
   },
   "packageManager": "yarn@4.1.0"
 }
