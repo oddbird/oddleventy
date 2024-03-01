@@ -1,4 +1,5 @@
 theme: herman
+displayTheme: herman
 dest: _site/styleguide/
 
 package: ./package.json
@@ -49,6 +50,7 @@ herman:
     - name: Herman
       url: https://www.oddbird.net/herman/
   sass:
+    implementation: sass-embedded
     jsonFile: _built/css/json.css
     sassOptions:
       loadPaths:
