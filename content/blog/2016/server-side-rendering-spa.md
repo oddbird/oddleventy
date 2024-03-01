@@ -172,7 +172,7 @@ page.
 [Django]: https://www.djangoproject.com/
 [RESTful]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [SPA]: https://en.wikipedia.org/wiki/Single-page_application
-[Ember fastboot]: https://www.ember-fastboot.com/
+[Ember fastboot]: https://github.com/ember-fastboot/ember-cli-fastboot
 [Nunjucks]: https://mozilla.github.io/nunjucks/
 [Jinja2]: https://jinja.palletsprojects.com/en/master/
 [Django REST Framework]: https://www.django-rest-framework.org/
