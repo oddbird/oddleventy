@@ -40,7 +40,7 @@ summary: |
             ) }}
           </header>
           <p>
-            {{ item.data.summary | md | elide | safe }}
+            {{ item.data.summary | md | safe }}
           </p>
         </div>
         {% if (show == 'details') %}

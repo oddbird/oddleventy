@@ -4,22 +4,24 @@ blockquote {
   --edge: minmax(var(--page-margin), 1fr);
   --quote: minmax(min-content, var(--page));
 
-  background-color: var(--callout);
-  display: grid;
   margin: var(--newline) 0;
-  object-fit: cover;
-  padding: var(--spacer) 0;
 
-  &:nth-of-type(odd) {
-    @include layout.clip('right');
+  &:not([data-card] *) {
+    background-color: var(--callout);
+    display: grid;
+    padding: var(--spacer) 0;
 
-    grid: 'edge icon quote' auto / var(--edge) auto var(--quote);
-  }
+    &:nth-of-type(odd) {
+      @include layout.clip('right');
 
-  &:nth-of-type(even) {
-    @include layout.clip('left');
+      grid: 'edge icon quote' auto / var(--edge) auto var(--quote);
+    }
 
-    grid: 'icon quote edge' auto / auto var(--quote) var(--edge);
+    &:nth-of-type(even) {
+      @include layout.clip('left');
+
+      grid: 'icon quote edge' auto / auto var(--quote) var(--edge);
+    }
   }
 
   .u-photo {
@@ -34,7 +36,7 @@ blockquote {
     margin-inline-start: calc(50% - 50vw);
   }
 
-  &:not([data-quote]) {
+  &:not([data-quote]):not([data-card] *) {
     &::before {
       color: var(--icon);
       content: '“';
@@ -59,7 +61,7 @@ blockquote {
 // -------------
 
 [data-quote='solo'],
-blockquote:not([data-quote]) {
+blockquote:not([data-quote]):not([data-card] *) {
   &:nth-of-type(odd) {
     --column: full / wide;
 

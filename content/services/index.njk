@@ -30,7 +30,7 @@ summary: |
         <header class="post-header">
           {{ post.banner(page, level=2) }}
         </header>
-          <p>{{ page.data.summary | md | elide | safe }}</p>
+          <p>{{ page.data.summary | md | safe }}</p>
         </div>
       </div>
     </article>

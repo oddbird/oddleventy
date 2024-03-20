@@ -163,31 +163,30 @@ action:
   text: Schedule a call to begin
   url: /contact/
 summary: |
-  **Most projects start with Research & Concepting**
+  Most projects start with Research & Concepting
   to make sure we thoroughly understand your project.
-  We'll help you pinpoint the right digital product --
+  Using an object-oriented user experience (OOUX) strategy,
+  we'll help you pinpoint the right digital product --
   with interactive wireframes,
   prioritized estimates,
   and a robust plan for development and launch.
-
-  Using an object-oriented user experience strategy (OOUX) --
-  popularized by [Sophia Prater] --
-  we'll guide you through a
-  process to define the concepts or
-  "objects" that make up your web app,
-  the relationships between those objects,
-  and the ways users want to interact with those objects.
-  We will deliver an Object Map
-  to streamline communication
-  between designers, developers, and stakeholders
-  throughout the project.
-
-  [Sophia Prater]: https://www.ooux.com/
-
 ---
 
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
+
+We'll guide you through the
+Object Oriented User Experience (OOUX) process --
+popularized by [Sophia Prater] --
+to define the "objects" that make up your web app,
+the relationships between those objects,
+and the ways users want to interact with those objects.
+We will deliver an Object Map
+to streamline communication
+between designers, developers, and stakeholders
+throughout the project.
+
+[Sophia Prater]: https://www.ooux.com/
 
 {{ quotes.find(
   collections.all,

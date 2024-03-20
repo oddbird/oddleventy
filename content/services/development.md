@@ -10,16 +10,20 @@ action:
   text: See work samples »
   url: /work/
 summary: |
-  **We integrate design and development in an agile process**, so you only need
-  to hire one team – completely focused on achieving your goals with smooth and
-  efficient progress from concept to launch and beyond. Starting from user
-  needs, we collaborate with you to deliver usable features quickly and
-  efficiently.
+  We integrate design and development in an agile process,
+  so you only need to hire one team
+  focused on achieving your goals
+  from concept to launch and beyond.
+  Starting from user needs,
+  we collaborate with you to deliver usable features
+  quickly and efficiently.
 
-  We provide expertise across a range of technologies, including
+  We provide expertise in UX & UI design,
+  and a range of technologies including
+  accessible **HTML** and **CSS/Sass**,
   **Python** with **Django** & **FastAPI**,
-  accessible **HTML**, **CSS/Sass**,
-  **JavaScript** with **React** & **Vue**, **Node**, and more.
+  **JavaScript** with **React**/**Vue**/**Svelte**,
+  **Node**, and more.
 ---
 
 {% import 'embed.macros.njk' as embed %}

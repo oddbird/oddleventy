@@ -9,8 +9,8 @@ action:
   text: Talk with us »
   url: /contact/
 summary: |
-  **We partner with clients
-  to build design systems**
+  We partner with clients
+  to build design systems
   that improve team communication,
   speed up development,
   and lay the foundation
