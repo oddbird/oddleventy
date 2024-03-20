@@ -1,11 +1,9 @@
 ---
-eleventyExcludeFromCollections: true
-permalink: false
-title: FastAPI - Streamline Your API Development
+title: Streamline Your API Development with FastAPI
 episode: 5
 tags:
   - FastAPI
-  - python
+  - Python
   - SQLAlchemy
 author:
   - ed
@@ -16,17 +14,10 @@ length: 23 mins
 image:
   src: winging-it/winging-it-5.jpg
 media:
-  - youtube: wk5tFSqYVzs
+  - youtube: 1fSRG8_C2ms
 summary: |
   Join us for a dynamic exploration of FastAPI,
   a modern Python framework for API development.
-  We kick off with a clear explanation of FastAPI
-  and its standout features,
-  then move into error handling
-  and data validation.
-  We also delve into OpenAPI’s role
-  in managing endpoints
-  and the perks of automated documentation.
 ---
 
 {% import "embed.macros.njk" as embed %}
