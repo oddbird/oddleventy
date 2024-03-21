@@ -39,9 +39,7 @@ summary: |
               [years, item.data.sub] | join(' -- ')
             ) }}
           </header>
-          <p>
-            {{ item.data.summary | md | safe }}
-          </p>
+          {{ item.data.summary | md | safe }}
         </div>
         {% if (show == 'details') %}
           {%- set context -%}
