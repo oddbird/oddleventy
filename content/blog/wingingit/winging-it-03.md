@@ -2,8 +2,10 @@
 title: Intuitive Web Design with OOUX
 episode: 3
 tags:
+  - User Experience
   - OOUX
   - Design
+  - Object Maps
 author:
   - sondra
   - james
