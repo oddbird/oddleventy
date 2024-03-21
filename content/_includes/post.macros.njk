@@ -268,8 +268,15 @@ params:
           {{ talks.list(post | pageEvents, compact=true, show_links=false) }}
         </div>
       {% elif post.data.summary %}
+        {% set summary = post.data.summary | md %}
         <div class="p-summary">
-          {{ post.data.summary | md | safe }}
+          {% if (card == 'large') %}
+            {{ summary | safe }}
+          {% else %}
+            <p>
+              {{ summary | elide | safe }}
+            </p>
+          {% endif %}
         </div>
       {% endif %}
     </div>
