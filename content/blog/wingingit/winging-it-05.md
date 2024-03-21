@@ -9,7 +9,7 @@ author:
   - ed
   - davidh
   - james
-date: 2024-03-19
+date: 2024-03-21
 length: 23 mins
 image:
   src: winging-it/winging-it-5.jpg
@@ -35,12 +35,12 @@ summary: |
 ## What we cover:
 
 - What is FastAPI and when to use it?
-- What Makes FastAPI Unique?
-- FastAPI Demo
-- Data Validation and Parsing Errors
-- Viewing Endpoints with the OpenAPI Schema
-- Automatic Docs and OpenAPI Client Generators
-- Using OpenAPI Documentation on the Frontend
+- What makes FastAPI unique?
+- FastAPI demo
+- Data validation and parsing errors
+- Viewing endpoints with the OpenAPI schema
+- Automatic docs and OpenAPI client generators
+- Using OpenAPI documentation on the frontend
 
 ## Links:
 
