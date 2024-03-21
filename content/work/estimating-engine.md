@@ -1,8 +1,6 @@
 ---
-eleventyExcludeFromCollections: true
 title: Estimating Engine
 sub: Create & manage custom manufacturing quotes
-logo:
 image:
   src: work/estimating-engine/estimating-engine.jpg
   alt: manufacturing quote details
@@ -20,7 +18,7 @@ people:
     venue: *client
 press:
   - text: |
-      @@@
+      NEED QUOTE AND PIC FROM RYAN
     <<: *ryan
     slug: configurations
 summary: |
