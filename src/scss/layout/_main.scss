@@ -21,4 +21,8 @@
   & > & {
     grid-column: full;
   }
+
+  @media (min-width: 45ch) {
+    --inline-bleed: calc(var(--gutter) * -1);
+  }
 }
