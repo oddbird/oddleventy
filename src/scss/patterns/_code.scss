@@ -15,9 +15,7 @@ code {
   line-height: 1.5;
   tab-size: 2;
   text-align: left;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
+  overflow-wrap: break-word;
 }
 
 pre {
@@ -36,7 +34,6 @@ code:not([class^='language']) {
   color: var(--highlight);
   padding-left: var(--quarter-shim);
   padding-right: var(--quarter-shim);
-  overflow-wrap: anywhere;
 }
 
 .token.comment,
