@@ -6,7 +6,8 @@ image:
   src: work/metecho/metecho.jpg
   alt: A task with assigned developer and tester
 client: &client Sass
-date: 2023-01-01
+date: 2022-11-09
+end: 2023-07-06
 tags:
   - Technology Sector
 people:
