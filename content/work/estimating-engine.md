@@ -7,6 +7,7 @@ image:
   position: top
 client: &client General Stamping & Metalworks
 date: 2020-01-31
+end: 2023-04-30
 tags:
   - Manufacturing Sector
 people:
