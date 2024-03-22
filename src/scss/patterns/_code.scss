@@ -24,10 +24,15 @@ pre {
   background: var(--bg-full);
   border: thin solid var(--border);
   color: var(--text);
+  contain: inline-size;
   padding: var(--gutter);
-  margin: var(--newline) calc(var(--gutter) * -1);
+  margin: var(--newline) var(--pre-inline-pull, 0);
   overflow: auto;
   white-space: pre;
+
+  @media (min-width: 45ch) {
+    --pre-inline-pull: calc(var(--gutter) * -1);
+  }
 }
 
 code:not([class^='language']) {
@@ -36,6 +41,7 @@ code:not([class^='language']) {
   color: var(--highlight);
   padding-left: var(--quarter-shim);
   padding-right: var(--quarter-shim);
+  overflow-wrap: anywhere;
 }
 
 .token.comment,
