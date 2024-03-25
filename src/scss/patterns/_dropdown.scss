@@ -50,7 +50,7 @@
   background: var(--bg);
   border: thin solid var(--active);
   box-shadow: 0 0 var(--quarter-shim) var(--shadow);
-  max-width: calc(100vw - var(--page-margin) * 2);
+  max-width: calc(100% - var(--page-margin) * 2);
   min-width: 14em;
   position: absolute;
 
