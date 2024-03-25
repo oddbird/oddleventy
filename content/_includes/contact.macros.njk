@@ -31,6 +31,7 @@ params:
   next='/contact/thanks/',
   submit='Send',
   name='contact',
+  messageLabel = 'Message',
   attrs={}
 ) %}
 <form
@@ -57,7 +58,7 @@ params:
   </div>
 
   {{ forms.field(
-    label='Message',
+    label=messageLabel or 'Message',
     type='textarea',
     required=true
   ) }}

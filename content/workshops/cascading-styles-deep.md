@@ -5,7 +5,7 @@ feature: workshop
 author: miriam
 date: 2023-01-09
 action:
-  text: Hire us to give a workshop »
+  text: Contact us to book a workshop »
   url: /contact/
 image:
   src: talks/mia-smashing-de.jpg
@@ -34,6 +34,46 @@ events:
     date: 2023-09-06
     adr: Freiburg, Germany
     url: https://smashingconf.com/freiburg-2023/workshops/miriam-suzanne/
+# placeholder media
+intro:
+  media:
+    - iframe: https://player.vimeo.com/video/691514550
+      span: full
+  caption: |
+    Join Miriam for a deep dive
+    on developing **resilient and delightful experiences**
+    that hold up across browsers, languages, and device interfaces.
+included:
+  - title: 5 Interactive Sessions
+    text: Virtual or in-person
+    icon: icons/talk
+  - title: Life-time Access
+    text: 12.5 hours of recorded video, with slides & resources
+    icon: icons/video
+  - title: Dedicated Q&A
+    text: To gain a thorough understanding
+    icon: icons/messaging
+  - title: Cutting Edge Techniques
+    text: To gain a thorough understanding
+    icon: icons/talk
+press:
+  - text: |
+      We were super happy with how it went.
+      And you sold quite a lot of tickets too.
+    name: Charis Rooda
+    title: Event Organizer
+    face: charis-rooda.png
+    venue: Smashing Conference
+    url: https://smashingconf.com/
+  - text: |
+      Loving the content and the interactivity.
+      My favorite part is seeing how [Miriam] arranged the topics
+      so that concepts smoothly flow into each other.
+      Looking forward to two more days!
+    name: Seth A. Roby
+    title: Workshop attendee
+    face: seth-roby.jpg
+    url: https://mastodon.social/@TALlama/112039472807241153
 summary: |
   New CSS features are shipping at an unprecedented rate --
   cascade layers, container queries, the `:has()` selector,
@@ -46,27 +86,33 @@ summary: |
   to companies as well as conferences.
 ---
 
-It’s an exciting time, but the list can also feel overwhelming.
-Do I really need grids if I already know flexbox?
-What problem do layers actually solve?
-Should I rewrite my styles with each feature release,
-or stick with the tools that I know?
+{% import 'contact.macros.njk' as contact %}
+{% import 'embed.macros.njk' as embed %}
+{% import 'quotes.macros.njk' as quotes %}
 
-If you ever feel lost in the CSS weeds,
-wrestling with the cascade,
-or you just want to improve your workflow
-with modern, efficient, and maintainable stylesheets,
-then this workshop is for you!
-We'll approach the language as a cohesive system,
-learn new features along the way,
-and then put it all in practice
-with a resilient approach to CSS architecture.
+{{ embed.figure(
+  data=intro.media,
+  caption=intro.caption
+) }}
 
-Join Miriam for a deep dive
-into what makes the language work,
-and how we can harness its power
-to **develop resilient and delightful experiences**
-that hold up across browsers, languages, and device interfaces.
+## What Will Attendees Get?
+
+{{ embed.icon_block(
+  data=included,
+  grid='fit'
+) }}
+
+## Contact Us to Book a Workshop
+
+Investment is $450/person.
+
+{{ contact.form(
+  submit='Book Now',
+  name='workshop',
+  messageLabel='What timeline & location?'
+) }}
+
+{{ quotes.grid(press) }}
 
 ## What Will Attendees Learn In This Workshop?
 
@@ -90,11 +136,16 @@ with at least a basic understanding in HTML and CSS.
 You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
-## Schedule
+## Workshop Outline
 
 The workshop is taught in five sessions, each with two parts:
 
 ### 1. Resilient Styles: a Declarative Cascade
+
+{{ embed.figure([{
+  img: 'pages/css-workshop/cascade.jpg',
+  alt: 'Yoda reaching out to control the force, surrounded by jungle swamp'
+}]) }}
 
 #### First, Do No Harm
 
@@ -116,6 +167,11 @@ cascade layers, scope, and the `:has()` selector.
 
 ### 2. Dynamic Systems: Custom Properties & Value Resolution
 
+{{ embed.figure([{
+  img: 'pages/css-workshop/vars.jpg',
+  alt: 'Someone out-of-frame plugging a cable into an orange guitar amp'
+}]) }}
+
 #### Custom Properties Reveal the Matrix
 
 CSS custom properties (aka “variables”)
@@ -131,6 +187,11 @@ Practical use-cases,
 and interactive exercises related to CSS variables and functions.
 
 ### 3. Intrinsic Layouts: Distributing Space
+
+{{ embed.figure([{
+  img: 'pages/css-workshop/flow.jpg',
+  alt: 'Earth seen through a window on the international space station'
+}]) }}
 
 #### Flowing & Flexing
 
@@ -151,6 +212,11 @@ and interactive exercises related to distributing space.
 
 ### 4. Intrinsic Layouts: Defining Structure
 
+{{ embed.figure([{
+  img: 'pages/css-workshop/grids.jpg',
+  alt: 'Cat in a box, thinking OMG I have so many questions for this damn box'
+}]) }}
+
 #### Defining Structure
 
 Sometimes we also need to impose external structure
@@ -166,6 +232,11 @@ Practical use-cases,
 and interactive exercises related to defining layouts.
 
 ### 5. Resilient Styles: Organizing Conventions
+
+{{ embed.figure([{
+  img: 'pages/css-workshop/conventions.jpg',
+  alt: 'A woman in a suit kneels to pet cute ducklings while the mother duck removes a bill from her purse'
+}]) }}
 
 #### Cascade Aligned Programming
 

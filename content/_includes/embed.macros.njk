@@ -361,10 +361,11 @@ params:
 #}
 {% macro icon_block(
   data,
-  title=none
+  title=none,
+  grid='full'
 ) -%}
   {%- if data -%}
-    <section class="icon-blocks" data-typeset>
+    <section icon-grid="{{ grid }}" {{ utility.attr_if('data-typeset', grid === 'full') }}>
       {%- if title %}{{ layout.title(title) }}{% endif -%}
       {%- for item in data -%}
         {%- call media_block(
@@ -372,7 +373,12 @@ params:
           name='icon-block'
         ) -%}
           {%- if item.title -%}
-            <h3>{{ utility.link_if(item.title, item.url) }}</h3>
+            {%- set titleLink = utility.link_if(item.title, item.url) -%}
+            {%- if grid === 'full' -%}
+              <h3>{{ titleLink }}</h3>
+            {%- else -%}
+              <strong>{{ titleLink }}</strong>
+            {%- endif -%}
           {%- endif -%}
           {{ item.text | md | safe }}
         {%- endcall -%}
