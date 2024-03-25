@@ -10,6 +10,7 @@ image:
   alt: App UI of product installation flow
 client: &client Salesforce.org
 date: 2018-05-31
+end: 2022-07-27
 tags:
   - Technology Sector
 people:
