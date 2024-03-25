@@ -13,7 +13,7 @@ length: 40 mins
 image:
   src: winging-it/winging-it-1.jpg
 media:
-  - iframe: https://www.youtube.com/embed/FwICaSE8iuY
+  - youtube: FwICaSE8iuY
 summary: |
   If you've ever found yourself in a specificity war, you'll understand how
   important having control over style priority can be. During our conversation,

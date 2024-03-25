@@ -25,7 +25,7 @@ summary: |
   collab with their product team,
   and the end-user experience.
 media:
-  - iframe: https://www.youtube.com/embed/d9pa9fYhcjI
+  - youtube: d9pa9fYhcjI
 ---
 
 {% import "embed.macros.njk" as embed %}

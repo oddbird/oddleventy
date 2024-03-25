@@ -15,7 +15,7 @@ events:
     # slides: https://oddbooksapp.com/release/b71e6e5d-e956-42ff-a4dd-b70bf3b13a2a
     video: https://www.youtube.com/video/MdwtoFt2LOI
     media: &cssconf
-      iframe: https://www.youtube.com/embed/MdwtoFt2LOI
+      youtube: MdwtoFt2LOI
   - venue: CSS Summit
     adr: Online
     date: 2015-07-07

@@ -16,7 +16,7 @@ summary: |
   no matter the size of a containing box,
   but it's not our only option.
 media:
-  - iframe: https://www.youtube.com/embed/UOKQ6gw21NA
+  - youtube: UOKQ6gw21NA
 ---
 
 {% import "embed.macros.njk" as embed %}

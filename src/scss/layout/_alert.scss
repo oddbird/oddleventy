@@ -1,4 +1,4 @@
-@use '~cascading-color-systems' as ccs;
+@use 'pkg:cascading-color-systems' as ccs;
 
 // change how much we fade the background color based on overall page mode
 html {

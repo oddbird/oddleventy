@@ -17,7 +17,7 @@ events:
     slides: https://slides.oddbird.net/cascade-aligned/front-range20/
     video: https://www.youtube.com/watch?v=-wlokRJRepY
     media: &frfe
-      iframe: https://www.youtube.com/embed/-wlokRJRepY
+      - youtube: -wlokRJRepY
 media:
   - span: full
     <<: *frfe

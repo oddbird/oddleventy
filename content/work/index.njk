@@ -30,7 +30,7 @@ summary: |
           <header class="post-header">
             {{ post.banner(item) }}
             {% set years = utility.datetime(
-              start=item.date,
+              start=item.page.date,
               end=item.data.end,
               format='year' if item.data.end else 'range',
               prefix=none if item.data.end else true
@@ -39,9 +39,7 @@ summary: |
               [years, item.data.sub] | join(' -- ')
             ) }}
           </header>
-          <p>
-            {{ item.data.summary | md | elide | safe }}
-          </p>
+          {{ item.data.summary | md | safe }}
         </div>
         {% if (show == 'details') %}
           {%- set context -%}

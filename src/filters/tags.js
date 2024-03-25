@@ -1,0 +1,110 @@
+import { uniq } from 'lodash-es';
+import slugify from 'slugify';
+
+import { getData, withData } from '#filters/pages.js';
+import { pageType } from '#filters/taxonomy.js';
+
+/* @docs
+label: Tag Filters
+category: File
+*/
+
+/* @docs
+label: isPublic
+category: Visibility
+note: Return false if a tag name starts with `_`
+params:
+  tag:
+    type: string
+*/
+export const isPublic = (tag) => !tag.startsWith('_');
+
+/* @docs
+label: publicTags
+category: Visibility
+note: Remove private `_<name>` tags from a list
+params:
+  tags:
+    type: array
+*/
+export const publicTags = (tags) => (tags || []).filter((tag) => isPublic(tag));
+
+/* @docs
+label: displayName
+category: Visibility
+note: |
+  Returns a tag name with private `_` removed,
+  for those rare cases where we want to display private tags.
+params:
+  tag:
+    type: string
+*/
+export const displayName = (tag) => {
+  const capitalize = ([first, ...rest]) =>
+    first ? first.toUpperCase() + rest.join('') : '';
+
+  if (!tag) {
+    return '';
+  }
+  return tag.startsWith('_') ? capitalize(tag.slice(1)) : capitalize(tag);
+};
+
+/* @docs
+label: tagLink
+category: Links
+note: |
+  Returns the link for a given tag --
+  either the auto-generated tag page,
+  or page marked as `index` for that tag
+params:
+  all:
+    type: array
+    note: containing all 11ty page objects (`collections.all`)
+  tag:
+    type: string
+*/
+export const tagLink = (all, tag) => {
+  const index =
+    withData(all, 'data.index', tag)[0] ||
+    withData(all, 'data.index.slug', tag)[0];
+  return index ? index.page.url : `/tags/${slugify(tag, { lower: true })}/`;
+};
+
+/* @docs
+label: getTags
+category: List
+note: Returns all tags in a collection
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+*/
+export const getTags = (collection) => getData(collection, 'data.tags');
+
+/* @docs
+label: tagData
+category: List
+note: |
+  Returns an array tag-data objects for each tag,
+  including name, url, and page count
+params:
+  collections:
+    type: 11ty collections object
+  tags:
+    type: array | 'all'
+    default: undefined
+    note: Will return data for all tags when set to `all`
+*/
+export const tagData = (collections, tags) => {
+  const tagList = tags === 'all' ? getTags(collections.all) : tags;
+  return uniq(publicTags(tagList)).map((tag) => {
+    const type = pageType(tag);
+    return {
+      tag,
+      type,
+      is_type: Boolean(type),
+      url: tagLink(collections.all, tag),
+      pageCount: (collections[tag] || []).length,
+    };
+  });
+};

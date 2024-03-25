@@ -14,7 +14,7 @@ summary: |
   Now CSS gives us the tools to style those list markers,
   and even create our own!
 media:
-  - iframe: https://www.youtube.com/embed/2awepiNoaZI
+  - youtube: 2awepiNoaZI
 ---
 
 {% import "embed.macros.njk" as embed %}

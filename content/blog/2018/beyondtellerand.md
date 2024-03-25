@@ -89,6 +89,7 @@ favorites:
 
 {{ embed.from_event(
   collections.all,
+  page=talk,
   venue='Beyond Tellerand',
   caption='Video from Beyond Tellerand'
 ) }}

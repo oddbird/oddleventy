@@ -42,11 +42,10 @@ tags:
   - Fonts
   - Design
 summary: |
-  > Ask not just: _How well does it work_?
-  > But also: _How well does it fail_?
-  > What happens when something goes wrong?
-  >
-  > ---Jeremy Keith
+  "Ask not just: _How well does it work_?
+  But also: _How well does it fail_?
+  What happens when something goes wrong?"
+  ---Jeremy Keith
 ---
 
 {% import "embed.macros.njk" as embed %}

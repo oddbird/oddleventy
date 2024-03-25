@@ -8,9 +8,9 @@ end: 2018-07-06
 image:
   src: birds/david.jpg
 social:
-  twitter: davisagli
-  github: davisagli
-  stackoverflow: 212493
+  - twitter: davisagli
+  - github: davisagli
+  - stackoverflow: 212493
 summary: |
   David
   is a Python and JavaScript developer,

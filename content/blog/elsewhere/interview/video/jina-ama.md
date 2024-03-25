@@ -13,7 +13,7 @@ tags:
 summary: |
   Jina and I answer questions about CSS, Sass, Design Systems, and more!
 media:
-  - iframe: https://www.youtube.com/embed/sCJbiOMl2qA
+  - youtube: sCJbiOMl2qA
 ---
 
 {% import "embed.macros.njk" as embed %}

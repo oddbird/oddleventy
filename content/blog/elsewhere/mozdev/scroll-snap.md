@@ -18,7 +18,7 @@ summary: |
   but now we can manage scroll alignment directly in CSS
   with only a few lines of code.
 media:
-  - iframe: https://www.youtube.com/embed/pohyK8iz-SQ
+  - youtube: pohyK8iz-SQ
 ---
 
 {% import "embed.macros.njk" as embed %}

@@ -16,7 +16,7 @@ summary: |
   Open the developer tools,
   and look for the greyed-out property with an info-box on hover.
 media:
-  - iframe: https://www.youtube.com/embed/O3DAm82vIvU
+  - youtube: O3DAm82vIvU
 ---
 
 {% import "embed.macros.njk" as embed %}

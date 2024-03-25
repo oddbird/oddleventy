@@ -1,4 +1,4 @@
-@use '~accoutrement/sass/tools';
+@use 'pkg:accoutrement' as tools;
 
 .anchor-link-wrapper {
   display: inline-block;

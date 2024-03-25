@@ -1,11 +1,10 @@
 {
   "name": "Oddleventy",
-  "image": "node:16",
+  "image": "node:20",
   "containerEnv": {
     "SHELL": "/bin/bash"
   },
   "forwardPorts": [8080],
-
   "customizations": {
     "vscode": {
       "extensions": [
@@ -29,7 +28,7 @@
         "terminal.integrated.defaultProfile.linux": "bash",
         "editor.bracketPairColorization.enabled": true,
         "editor.codeActionsOnSave": {
-          "source.fixAll.eslint": true
+          "source.fixAll.eslint": "explicit"
         },
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
@@ -59,7 +58,7 @@
         "[scss]": {
           "editor.rulers": [80],
           "editor.codeActionsOnSave": {
-            "source.fixAll.stylelint": true
+            "source.fixAll.stylelint": "explicit"
           }
         },
         "files.exclude": {

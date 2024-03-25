@@ -7,7 +7,6 @@ blockquote {
   background-color: var(--callout);
   display: grid;
   margin: var(--newline) 0;
-  object-fit: cover;
   padding: var(--spacer) 0;
 
   &:nth-of-type(odd) {

@@ -54,7 +54,7 @@ later, it had become the inspiration for an entire genre of Sass grid
 systems – with several creative adaptations like [Singularity] to keep
 us on our toes.
 
-  [Blueprint]: http://www.blueprintcss.org/
+  [Blueprint]: https://github.com/joshuaclayton/blueprint-css
   [Eric Meyer’s Reset]: https://meyerweb.com/eric/tools/css/reset/
   [Carl]: /authors/carl/
   [Jonny]: /authors/jonny/

@@ -14,7 +14,7 @@ summary: |
   other browsers are following suit. I'll show you how it works, and how
   to start using this new feature query right away.
 media:
-  - iframe: https://www.youtube.com/embed/WjvJheGhHIQ
+  - youtube: WjvJheGhHIQ
 ---
 
 {% import "embed.macros.njk" as embed %}

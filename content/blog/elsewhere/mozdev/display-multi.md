@@ -16,7 +16,7 @@ summary: |
   Now the `display` syntax is getting an upgrade
   to match it's multiple uses.
 media:
-  - iframe: https://www.youtube.com/embed/4Clyc38U-MA
+  - youtube: 4Clyc38U-MA
 ---
 
 {% import "embed.macros.njk" as embed %}

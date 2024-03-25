@@ -38,14 +38,14 @@ events:
     slides: https://slides.oddbird.net/css-next/css-cafe/
     video: https://youtu.be/ilR9KlsHMGk
     media: &csscafe
-      iframe: https://www.youtube.com/embed/ilR9KlsHMGk
+      youtube: ilR9KlsHMGk
   - venue: Front Range Front-End
     date: 2021-06-03
     adr: Online
     slides: https://slides.oddbird.net/css-next/front-range/
     video: https://youtu.be/GuMvZuUrJaY
     media: &frfe
-      iframe: https://www.youtube.com/embed/GuMvZuUrJaY
+      youtube: GuMvZuUrJaY
   - venue: Front-end Development South Africa
     url: https://www.meetup.com/fedsa-community/events/276328093/
     date: 2021-05-05
@@ -53,7 +53,7 @@ events:
     slides: https://slides.oddbird.net/css-next/fedsa/
     video: https://youtu.be/lh1_zKk1qAk
     media: &fedsa
-      iframe: https://www.youtube.com/embed/lh1_zKk1qAk
+      youtube: lh1_zKk1qAk
   - venue: Web Directions, Hover
     url: https://webdirections.org/hover/
     date: 2021-04-23

@@ -19,7 +19,7 @@ events:
     adr: Online
     video: https://www.youtube.com/video/sFAegaqfJF4
     media: &wpdemo
-      iframe: https://www.youtube.com/embed/sFAegaqfJF4
+      youtube: sFAegaqfJF4
 summary: |
   Adding a few customizations to the WordPress Block Editor can help
   maintain a consistent look and make it easier to re-use custom block

@@ -16,20 +16,20 @@ darkmode:
     Dark mode is all the rage, with iOS, macOS, Android and others
     all shipping a system-wide dark mode for people's devices.
   media:
-    - iframe: https://www.youtube.com/embed/jmepqJ5UbuM
+  - youtube: jmepqJ5UbuM
 inspector:
   caption: |
     Use that third pane to quickly access
     the Grid or Flexbox Inspectors, the Font Editor,
     the Animations Tools, Tracked Changes, and more.
   media:
-    - iframe: https://www.youtube.com/embed/N6aMLUZ
+  - youtube: N6aMLUZ-v3w
 markers:
   caption: |
     Style list markers,
     and add your own counters!
   media:
-    - iframe: https://www.youtube.com/embed/2awepiNoaZI
+  - youtube: 2awepiNoaZI
 summary: |
   Over the summer, we've been working with Mozilla
   to help create a new resource for web professionals like us --

@@ -14,7 +14,7 @@ video:
   caption: |
     Exploring CSS Grids with Geoff Graham
   src:
-    - iframe: https://www.youtube.com/embed/5fkC6AG3XWU
+    - youtube: 5fkC6AG3XWU
 summary: |
   It feels like CSS Grid has been coming for a long time now,
   but it just now seems to be reaching a point

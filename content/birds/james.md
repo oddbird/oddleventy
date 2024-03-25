@@ -8,10 +8,10 @@ image:
   position: top
   alt: James jumping in front of large rocks in the ocean.
 social:
-  github: jamesnw
-  mastodon:
-    user: jamessw
-    server: mastodon.cloud
+  - github: jamesnw
+  - mastodon:
+      user: jamessw
+      server: mastodon.cloud
 summary: |
   James (he/him) is a front-end developer focused on
   user-friendly solutions for complex problems.

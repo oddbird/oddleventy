@@ -22,7 +22,7 @@ summary: |
   and nothing like the design programs we use for print.
   How did we get here?
 media:
-  - iframe: https://www.youtube.com/embed/aHUtMbJw8iA
+  - youtube: aHUtMbJw8iA
     slug: css-is-weird
 ---
 

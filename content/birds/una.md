@@ -5,7 +5,7 @@ bird: una
 date: 2014-07-15
 end: 2014-08-15
 social:
-  twitter: una
+  - twitter: una
 summary: |
   Una
   is a designer,

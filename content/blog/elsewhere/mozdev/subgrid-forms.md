@@ -14,7 +14,7 @@ summary: |
   I'll show you how to do it quickly using CSS subgrid,
   with several quick fallbacks.
 media:
-  - iframe: https://www.youtube.com/embed/gmQlK3kRft4
+  - youtube: gmQlK3kRft4
 ---
 
 {% import "embed.macros.njk" as embed %}

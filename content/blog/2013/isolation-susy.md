@@ -17,7 +17,7 @@ summary: |
   help you manage the worst effects of [sub-pixel rounding], while
   `bleed()` helps you break items out of the box.
 
-  [sub-pixel rounding]: https://www.palantir.net/blog/responsive-design-s-dirty-little-secret
+  [sub-pixel rounding]: https://web.archive.org/web/20230330021053/https://www.palantir.net/blog/responsive-design-s-dirty-little-secret
 date: 2013-03-20
 ---
 
@@ -69,7 +69,7 @@ are positioned absolutely.
 
 [sub-pixel rounding]: https://johnresig.com/blog/sub-pixel-problems-in-css/
 [demo]: https://johnalbin.github.io/fluid-grid-rounding-errors/
-[solution]: https://www.palantir.net/blog/responsive-design-s-dirty-little-secret
+[solution]: https://web.archive.org/web/20230330021053/https://www.palantir.net/blog/responsive-design-s-dirty-little-secret
 [isolate any grid element in susy]: https://susy.readthedocs.io/susyone/#isolation
 
 ## Isolation Grid

@@ -124,47 +124,72 @@ params:
 
 
 {# @docs
-label: video
+label: _video
 category: Patterns
 note: |
-  Generate a figure for a one-off video
+  Embed a video file. For external videos, use `youtube` for Youtube-hosted
+  videos and `iframe` for everything else.
 params:
   src:
     type: url
-  height:
-    type: number
-    default: none
   width:
     type: number
     default: none
-  caption:
-    type: string
+  height:
+    type: number
     default: none
 #}
-{% macro video(
+{% macro _video(
   src,
-  height=none,
   width=none,
-  caption=none
+  height=none
 ) %}
-  {%- if '://' in src -%}
-    {{ figure(
-      data=[{
-        'iframe': src,
-        'height': height,
-        'width': width
-      }],
-      caption=caption
-    ) }}
-  {%- else -%}
-    {%- set src = '/assets/media/' + src -%}
-    {%- set style = {
-      'height': height,
-      'width': width
-    } -%}
-    <video src="{{ src }}" {{ utility.style_if(style) }} controls="controls">{{ src | mdInline }}</video>
-  {%- endif -%}
+  {%- set src = '/assets/media/' + src -%}
+  {%- set style = {
+    'height': height,
+    'width': width
+  } -%}
+  <video src="{{ src }}" {{ utility.style_if(style) }} controls="controls">{{ src | mdInline }}</video>
 {% endmacro %}
+
+
+{# @docs
+label: _youtube
+category: Embed
+note: Embed a video from Youtube
+params:
+  id:
+    type: string
+  width:
+    type: number
+    default: none
+  height:
+    type: number
+    default: none
+  span:
+    type: number | 'full'
+    default: none
+    note: Span multiple columns of a gallery
+#}
+{% macro _youtube(
+  id,
+  width=none,
+  height=none,
+  span=none
+) -%}
+  {%- set width = width or 560 -%}
+  {%- set height = height or 315 -%}
+  {%- set style = {
+    '--ratio': (width / height),
+    '--width': '100%',
+    '--span': span
+  } -%}
+  <is-land on:visible class="ratio" {{ utility.style_if(style) }} >
+    <lite-youtube videoid="{{ id }}" style="
+      background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ id }}/auto/jpeg/');
+    "/>
+  </is-land>
+{%- endmacro %}
 
 
 {# Private macro used to generate figure content from data #}
@@ -187,9 +212,13 @@ params:
     {%- elif item.svg -%}
       {{- svg(item.svg, item.alt) | safe -}}
     {%- elif item.iframe -%}
-      {{- iframe(item.iframe, item.width, item.height, item.span) -}}
+      {{- _iframe(item.iframe, item.width, item.height, item.span) -}}
     {%- elif item.audio -%}
       {{- audio(item.audio, item.span) -}}
+    {%- elif item.youtube -%}
+      {{- _youtube(item.youtube, item.width, item.height, item.span) -}}
+    {%- elif item.video -%}
+      {{- _video(item.video, item.width, item.height) -}}
     {%- endif -%}
   {%- endfor -%}
 {%- endmacro %}
@@ -227,7 +256,7 @@ params:
       page,
       'data.events',
       {'venue': venue} if venue else none
-    ) if page else
+    ) | first if page else
     collection | findData(
       'data.events',
       {'venue': venue}
@@ -308,7 +337,7 @@ params:
           path='logos/' + logo,
           alt=[client, title] | join(': ') if (client and title) else title
         ),
-        url=page.url if page else none
+        url=page.page.url if page else none
       ) }}
     {%- endfor -%}
   </div>
@@ -409,7 +438,7 @@ params:
 
 
 {# @docs
-label: iframe
+label: _iframe
 category: Embed
 note: |
   Embed an iframe (most often used for videos).
@@ -429,7 +458,7 @@ params:
     default: none
     note: Span multiple columns of a gallery
 #}
-{% macro iframe(
+{% macro _iframe(
   src,
   width=none,
   height=none,
@@ -449,6 +478,7 @@ params:
   {%- set content %}<iframe {{ utility.show_attrs(attrs) }}></iframe>{% endset -%}
   {{- ratio(width, height, span, content) | safe -}}
 {% endmacro %}
+
 
 {# @docs
 label: audio
@@ -511,6 +541,7 @@ params:
     {{- content | safe -}}
   {%- endif -%}
 {%- endmacro %}
+
 
 {# @docs
 label: codepen
@@ -578,6 +609,7 @@ params:
     url='https://codepen.io'
   ) }}.</p><script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 {%- endmacro %}
+
 
 {# @docs
 label: caniuse

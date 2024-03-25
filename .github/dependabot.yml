@@ -1,8 +1,29 @@
 version: 2
+
 updates:
   - package-ecosystem: github-actions
     directory: '/'
     schedule:
       interval: weekly
-      time: '05:00'
+      time: '04:00'
       timezone: America/New_York
+
+  - package-ecosystem: npm
+    directory: '/'
+    versioning-strategy: increase
+    schedule:
+      interval: weekly
+      time: '04:00'
+      timezone: America/New_York
+    groups:
+      npm-major-upgrades:
+        update-types:
+          - 'major'
+      npm-minor-upgrades:
+        update-types:
+          - 'minor'
+          - 'patch'
+    ignore:
+      - dependency-name: 'date-fns'
+        versions:
+          - 3.x

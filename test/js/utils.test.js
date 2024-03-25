@@ -1,4 +1,4 @@
-const { onlyShow, typeCheck, styles, oddNewsTags } = require('#/utils');
+import { oddNewsTags, onlyShow, styles, typeCheck } from '#filters/utils.js';
 
 describe('utility filters', () => {
   test('typeCheck', () => {

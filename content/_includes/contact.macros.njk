@@ -83,7 +83,7 @@ label: social
 note: Generate a list of social-media icon-links
 params:
   data:
-    type: object
+    type: array
     note: site-slug/user-id pairs
   name:
     type: string
@@ -124,35 +124,37 @@ params:
 
   {%- if data -%}
     <ul class="social-list">
-    {%- for site, id in data -%}
-      {%- set info = sites[site] -%}
-      {%- if info -%}
-        <li>
-          {{- utility.icon_link(
-            icon='social/' + (info.icon or site),
-            text=social_context(
-              user=info.user | replace("%s", id) if info.user else info.text or id,
-              site=info.title or site | capitalize
-            ) | safe,
-            url=info.url | replace("%s", id),
-            class=info.class or 'u-url',
-            attrs={'rel': rel} if rel else {}
-          ) -}}
-        </li>
-      {%- elif site == 'mastodon' -%}
-        <li>
-          {{- utility.icon_link(
-            icon='social/mastodon',
-            text=social_context(
-              user=['@', id.user, '@', id.server] | join,
-              site='Mastodon'
-            ) | safe,
-            url=['https://', id.server, '/@', id.user] | join,
-            class='u-url',
-            attrs={'rel': rel} if rel else {}
-          ) -}}
-        </li>
-      {%- endif -%}
+    {%- for social in data -%}
+      {%- for site, id in social -%}
+        {%- set info = sites[site] -%}
+        {%- if info -%}
+          <li>
+            {{- utility.icon_link(
+              icon='social/' + (info.icon or site),
+              text=social_context(
+                user=info.user | replace("%s", id) if info.user else info.text or id,
+                site=info.title or site | capitalize
+              ) | safe,
+              url=info.url | replace("%s", id),
+              class=info.class or 'u-url',
+              attrs={'rel': rel} if rel else {}
+            ) -}}
+          </li>
+        {%- elif site == 'mastodon' -%}
+          <li>
+            {{- utility.icon_link(
+              icon='social/mastodon',
+              text=social_context(
+                user=['@', id.user, '@', id.server] | join,
+                site='Mastodon'
+              ) | safe,
+              url=['https://', id.server, '/@', id.user] | join,
+              class='u-url',
+              attrs={'rel': rel} if rel else {}
+            ) -}}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
     {%- endfor -%}
     </ul>
   {%- endif -%}

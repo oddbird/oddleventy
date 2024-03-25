@@ -21,7 +21,7 @@ first-ever year-end retrospective. Here's 2013, OddBird style:
   collaborating on a new ed-tech project with Junyo. We like solving
   problems that matter.
 - We're slowly developing Miriam's [novel] (which has gotten some
-  [rave previews]), and working on a (still pre-alpha) collaborative
+  rave previews), and working on a (still pre-alpha) collaborative
   authoring tool.
 - Miriam spoke at [SassConf], the New York Sass & Compass Meetup,
   and the [Brakhage Center for the Media Arts]. She'll appear again in
@@ -43,7 +43,6 @@ Thanks for a great year, everyone. See you around in 2014!
 [rachel nabors]: http://rachelnabors.com/
 [claudina sarahe]: https://twitter.com/itsmisscs
 [novel]: https://www.greengreenmud.com/
-[rave previews]: https://iloveepoetry.org/?p=2571
 [sassconf]: https://twitter.com/sassconf
 [brakhage center for the media arts]: https://www.colorado.edu/brakhagecenter/
 [the mixin]: https://twitter.com/theMixinSF

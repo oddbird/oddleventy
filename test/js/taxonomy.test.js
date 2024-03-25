@@ -1,6 +1,11 @@
-import { fromTaxonomy, ossGroups, pageType, taxonomy } from '#/taxonomy';
+import {
+  fromTaxonomy,
+  ossGroups,
+  pageType,
+  taxonomy,
+} from '#filters/taxonomy.js';
 
-import { collection3 } from './utils';
+import { collection3 } from './utils.js';
 
 describe('fromTaxonomy', () => {
   test('Return data from taxonomy', () => {

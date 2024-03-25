@@ -3,7 +3,7 @@
 
 @layer search {
   @include meta.load-css(
-    '~@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify.css'
+    'pkg:@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify.css'
   );
 }
 

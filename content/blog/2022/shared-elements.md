@@ -148,7 +148,7 @@ And earlier this year,
 presented a new proposal & prototype,
 which makes that possible!
 
-{{ embed.video('https://www.youtube.com/embed/JCJUPJ_zDQ4') }}
+{{ embed.figure(data=[{ youtube: 'JCJUPJ_zDQ4' }]) }}
 
 1. We can use the `page-transition-tag` property in CSS
    to give each element a name.
@@ -219,7 +219,7 @@ If you haven't encountered FLIP before,
 [Cassie Evans](https://www.cassie.codes/)
 is a great resource on the topic:
 
-{{ embed.video('https://www.youtube.com/embed/kUDMwy2OaK4') }}
+{{ embed.figure(data=[{ youtube: 'kUDMwy2OaK4' }]) }}
 
 Cassie also gave a brilliant talk at SmashingConf
 about FLIP animations in responsive design.
@@ -391,7 +391,11 @@ Here's the live demo on codepen:
 
 And a video of the animated results:
 
-{{ embed.video('2022/layer-page-transition.mov', height='1244', width='700') }}
+{{ embed.figure(
+  data=[{
+    video:'2022/layer-page-transition.mov'
+  }])
+}}
 
 You might also notice the `clip-path` animation on the list itself
 looks a bit janky.
