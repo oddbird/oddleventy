@@ -5,7 +5,7 @@ logo: salesforce
 image:
   src: work/metecho/metecho.jpg
   alt: A task with assigned developer and tester
-client: &client Sass
+client: &client Google
 date: 2022-11-09
 end: 2023-07-06
 tags:
@@ -14,18 +14,23 @@ people:
   - &natalie
     name: Natalie Weizenbaum
     title: Lead designer and developer of Sass
-    face: jason-lantz.jpg
+    face: natalie-weizenbaum.webp
     url: https://github.com/nex3
     venue: *client
 tasks:
   - User Experience Design
   - Project Architecture
   - Front Development
+  - Technology Sector
 press:
   - text: |
-      NEED A QUOTE AND PICTURE FROM NATALIE
+      OddBird rewrote [sass-lang.com](http://sass-lang.com)
+      from the ground up
+      to make it easier to work on, update, and deploy.
+      Not only that, they added a new online playground
+      and got Sass running in the browser to power it.
+      They're a fantastic team that we were lucky to work with.
     <<: *natalie
-    slug: outsourcing
 summary: |
   OddBird did SOMETHING
 ---

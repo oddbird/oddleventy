@@ -7,8 +7,9 @@ client: &client Google
 people:
   - &natalie
     name: Natalie Weizenbaum
+    title: Lead designer and developer of Sass
     face: natalie-weizenbaum.webp
-    title: Sass lead
+    url: https://github.com/nex3
     venue: *client
 press:
   - text: |
