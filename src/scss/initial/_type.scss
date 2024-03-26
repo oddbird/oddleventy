@@ -52,6 +52,7 @@ span:where(.h-card):not(.p-org) {
 p {
   margin-bottom: var(--newline);
   margin-top: 0;
+  text-wrap: pretty;
 
   &:empty {
     display: none;

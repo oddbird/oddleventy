@@ -20,12 +20,28 @@ h6 {
   --link: currentcolor;
 
   margin-bottom: 0;
+  text-wrap: balance;
 }
 
 h1,
 h2 {
   line-height: 1.2;
   margin: var(--gutter-plus) 0 var(--newline);
+}
+
+h2,
+h3 {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background: linear-gradient(
+      to bottom right,
+      var(--heading-start),
+      var(--heading-end)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    max-width: max-content;
+  }
 }
 
 h3,

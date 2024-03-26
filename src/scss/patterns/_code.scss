@@ -15,9 +15,7 @@ code {
   line-height: 1.5;
   tab-size: 2;
   text-align: left;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
+  overflow-wrap: break-word;
 }
 
 pre {
@@ -25,7 +23,7 @@ pre {
   border: thin solid var(--border);
   color: var(--text);
   padding: var(--gutter);
-  margin: var(--newline) calc(var(--gutter) * -1);
+  margin: var(--newline) var(--inline-bleed, 0);
   overflow: auto;
   white-space: pre;
 }
