@@ -1,22 +1,23 @@
 ---
-eleventyExcludeFromCollections: true
-permalink: false
-title: FastAPI
+title: Streamline Your API Development with FastAPI
 episode: 5
 tags:
   - FastAPI
+  - Python
+  - SQLAlchemy
 author:
   - ed
-date: 2023-12-21
-length: 30 mins
+  - davidh
+  - james
+date: 2024-03-21
+length: 23 mins
 image:
   src: winging-it/winging-it-5.jpg
 media:
-  - youtube: wk5tFSqYVzs
+  - youtube: 1fSRG8_C2ms
 summary: |
-  An object map is a place to document information about objects in your digital
-  system, keeping everyone involved on the same page. During our conversation,
-  we walk through examples and discuss the benefits of using object maps.
+  Join us for a dynamic exploration of FastAPI,
+  a modern Python framework for API development.
 ---
 
 {% import "embed.macros.njk" as embed %}
@@ -33,14 +34,17 @@ summary: |
 
 ## What we cover:
 
-- How an object map works
-- Demonstration of an object map
-- The benefits including communication, designing the database schema,
-  estimation and prioritization
-- How object maps relate to a design system
+- What is FastAPI and when to use it?
+- What makes FastAPI unique?
+- FastAPI demo
+- Data validation and parsing errors
+- Viewing endpoints with the OpenAPI schema
+- Automatic docs and OpenAPI client generators
+- Using OpenAPI documentation on the frontend
 
 ## Links:
 
-- [OOUX](https://www.ooux.com/)
-- [Object Map Demo](https://xd.adobe.com/view/0941ed26-762a-48b7-88e2-0e89f5b1307f-5c12/)
-- [Wireframe](https://xd.adobe.com/view/930b3686-1ec4-4043-a6e1-6b6caedb9cd3-c658/)
+- [FastAPI Official Site](https://fastapi.tiangolo.com)
+- [Tutorial](https://fastapi.tiangolo.com/tutorial/)
+- [Blog post comparison with Django](https://www.oddbird.net/2023/10/19/fastapi-path-operations-for-django-developers/)
+- [SQLAlchemy](https://www.sqlalchemy.org/)
