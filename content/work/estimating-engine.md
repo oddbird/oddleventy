@@ -15,7 +15,7 @@ people:
     name: Ryan Hochstetler
     face: james-weber.jpg
     url: https://www.linkedin.com/in/ryanhochstetler/
-    title: Information Systems Administrator
+    title: Analytics Manager
     venue: *client
 press:
   - text: |
@@ -53,13 +53,13 @@ summary: |
 
 ### Services
 
-  - Research & Concepting
-  - Project Management
-  - UX & UI Design
-  - Front-end Development
-  - Back-end Development
-  - Ongoing Maintenance
-  - Design System
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Back-end Development
+- Ongoing Maintenance
+- Design System
 
 {% endcall %}
 
@@ -67,11 +67,11 @@ summary: |
 
 ### Languages & Tools
 
-  - Adobe XD
-  - Django & Python
-  - Herman
-  - JavaScript with Vue
-  - Sass & CSS
+- Adobe XD
+- Django & Python
+- Herman
+- JavaScript with Vue
+- Sass & CSS
 
 {% endcall %}
 

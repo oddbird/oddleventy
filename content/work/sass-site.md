@@ -24,10 +24,11 @@ tasks:
   - Technology Sector
 press:
   - text: |
-      OddBird rewrote [sass-lang.com](http://sass-lang.com)
+      OddBird rewrote [sass-lang.com](https://sass-lang.com/)
       from the ground up
       to make it easier to work on, update, and deploy.
-      Not only that, they added a new online playground
+      Not only that, they added a new
+      [online playground](https://sass-lang.com/playground/)
       and got Sass running in the browser to power it.
       They're a fantastic team that we were lucky to work with.
     <<: *natalie
@@ -56,9 +57,9 @@ summary: |
 
 ### Services
 
-  - UX & UI Design
-  - Front-end Development
-  - Ongoing Maintenance
+- UX & UI Design
+- Front-end Development
+- Ongoing Maintenance
 
 {% endcall %}
 
@@ -66,9 +67,9 @@ summary: |
 
 ### Languages & Tools
 
-  - Figma
-  - JavaScript with React & Redux
-  - Sass & CSS
+- Figma
+- JavaScript with React & Redux
+- Sass & CSS
 
 {% endcall %}
 
