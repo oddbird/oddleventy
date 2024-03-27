@@ -112,7 +112,7 @@ export const elide = (html, count = 50) => {
 
 /* @docs
 label: stripPermalinks
-category: typesetting
+category: RSS
 note: |
   Remove permalinks from headings
 params:
