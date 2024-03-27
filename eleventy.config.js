@@ -144,6 +144,7 @@ export default (eleventyConfig) => {
   eleventyConfig.addFilter('mdInline', type.mdInline);
   eleventyConfig.addFilter('removeMd', type.removeMd);
   eleventyConfig.addFilter('elide', type.elide);
+  eleventyConfig.addAsyncFilter('stripPermalinks', type.stripPermalinks);
 
   eleventyConfig.addFilter('mentionsForUrl', mentions.forUrl);
 

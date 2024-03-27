@@ -59,7 +59,7 @@
       {%- endfilter -%}
 
       {%- if post.content -%}
-        {{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}
+        {{ post.content | stripPermalinks | htmlToAbsoluteUrls(absolutePostUrl) }}
       {%- endif -%}
     </content>
 

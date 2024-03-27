@@ -4,6 +4,7 @@ import markdown from 'markdown-it';
 import mdAnchor from 'markdown-it-anchor';
 import mdFootnote from 'markdown-it-footnote';
 import mdMark from 'markdown-it-mark';
+import posthtml from 'posthtml';
 import striptags from 'striptags';
 import truncate from 'truncate-html';
 import typogrify from 'typogr';
@@ -19,6 +20,7 @@ export const mdown = markdown({
   .use(mdAnchor, {
     level: [2],
     permalink: mdAnchor.permalink.linkAfterHeader({
+      class: 'header-anchor',
       symbol: anchorLinkIconString,
       style: 'visually-hidden',
       assistiveText: (title) => `Copy permalink to “${title}”`,
@@ -106,6 +108,35 @@ export const elide = (html, count = 50) => {
     truncated = `${truncated.slice(0, -2)}…`;
   }
   return truncated;
+};
+
+/* @docs
+label: stripPermalinks
+category: typesetting
+note: |
+  Remove permalinks from headings
+params:
+  html:
+    type: string
+*/
+export const stripPermalinks = async (html) => {
+  const modifier = posthtml().use((tree) => {
+    if (!Array.isArray(tree) || !tree.length) {
+      return tree;
+    }
+    tree.walk((node) => {
+      const classes =
+        node.attrs?.class?.split(' ')?.map((c) => c.trim().toLowerCase()) || [];
+      if (node.tag === 'a' && classes.includes('header-anchor')) {
+        node.tag = false;
+        node.content = [];
+      }
+      return node;
+    });
+    return tree;
+  });
+  const result = await modifier.process(html);
+  return result.html;
 };
 
 /* @docs
