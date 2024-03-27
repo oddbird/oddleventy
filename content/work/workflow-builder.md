@@ -9,12 +9,6 @@ image:
   src: work/workflow-builder/workflow.jpg
   alt: Connected workflow processes shown within the canvas
 people:
-  - &james
-    name: James Stuckey Weber
-    face: james-weber.jpg
-    url: https://www.linkedin.com/in/jamessw/
-    title: UI/UX Design & Development Director
-    venue: *client
   - &greg
     name: Gregory Davis
     face: gregory-davis.jpg
@@ -28,14 +22,6 @@ press:
       and we were super excited to get the outcome we did.
     <<: *greg
     slug: excited
-  - text: |
-      We appreciate that there’s not one package deal at OddBird.
-      Depending on the project,
-      different configurations of the OddBird team
-      were able to integrate with our internal developers.
-      That worked really well.
-    <<: *james
-    slug: configurations
 tags:
   - Analytics Sector
   - Management Technology Sector

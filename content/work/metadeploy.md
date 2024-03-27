@@ -1,6 +1,5 @@
 ---
 title: MetaDeploy
-banner: MetaDeploy Case Study
 sub: Salesforce product installer
 logo: salesforce-metadeploy
 links:
@@ -10,6 +9,7 @@ image:
   alt: App UI of product installation flow
 client: &client Salesforce.org
 date: 2018-05-31
+end: 2022-07-30
 tags:
   - Technology Sector
 people:

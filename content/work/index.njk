@@ -14,7 +14,7 @@ summary: |
 {% import 'quotes.macros.njk' as quotes %}
 {% import 'utility.macros.njk' as utility %}
 
-{% for client, list in collections.work | getPublic | withData('data.press') | group('data.client') %}
+{% for client, list in collections.work | getPublic | group('data.client') %}
   {{ layout.title(client) }}
 
   {% for item in list %}
@@ -22,10 +22,21 @@ summary: |
     {% set show = 'details' if (type == 'Case Study') else 'summary' %}
     <article {{ post.aria_label(item) }} data-work="{{ show }}">
       <div class="offset-grid">
-        {{ quotes.blockquote(
-          data=item.data.press | findData('feature') or item.data.press[0],
-          type='grid'
-        ) }}
+        {% if item.data.press %}
+          {{ quotes.blockquote(
+            data=item.data.press | findData('feature') or item.data.press[0],
+            type='grid'
+          ) }}
+        {% else %}
+          <div class="offset-item offset-media">
+            {% set image = item.data.image %}
+            {{ embed.img(
+              src=image.src,
+              alt=image.alt,
+              attrs={ 'style': { 'object-position': image.position } | styles }
+            ) }}
+          </div>
+        {% endif %}
         <div class="offset-item project-details">
           <header class="post-header">
             {{ post.banner(item) }}

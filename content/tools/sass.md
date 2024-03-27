@@ -5,7 +5,6 @@ feature: true
 author: miriam
 oss: core team
 image:
-  type: angle
   svg: logos/sass
 date: 2016-05-20
 index: Sass

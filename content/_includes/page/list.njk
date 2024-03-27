@@ -2,6 +2,8 @@
 {% import 'oss.macros.njk' as oss %}
 {% import 'talks.macros.njk' as talks %}
 
+{%- set index = index or list_tag %}
+
 {% if index %}
   {% set list = collections[index] | removePage(page.url) if collections[index] else [] %}
   {% if list | length %}
