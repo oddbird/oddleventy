@@ -3,8 +3,8 @@
   xmlns="http://www.w3.org/2000/svg"
   aria-hidden="true"
   focusable="false"
-  width="520"
-  height="135"
+  width="520px"
+  height="135px"
   viewBox="0 0 520 135.2"
 >
   <path d="M0 .1C.5 0 .9 0 1.4 0H56.6c-.2.7-.4 1.1-.5 1.5C37.5 45.6 19 89.7.6 133.8c-.2.4-.4.7-.6 1.1V.1z"/>

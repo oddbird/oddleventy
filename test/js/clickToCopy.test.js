@@ -6,11 +6,9 @@
 
 import { jest } from '@jest/globals';
 
-import {
-  anchorLinkIconString,
-  clickToCopy,
-  copyAnchorLink,
-} from '../../src/js/clickToCopy.js';
+import { anchorLinkIconString } from '#filters/type.js';
+
+import { clickToCopy, copyAnchorLink } from '../../src/js/clickToCopy.js';
 
 describe('clickToCopy tests', () => {
   let clipboard;

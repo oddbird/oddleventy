@@ -1,14 +1,20 @@
+import { readFileSync } from 'node:fs';
+
 import rmMd from '@tommoor/remove-markdown';
 import _ from 'lodash-es';
 import markdown from 'markdown-it';
 import mdAnchor from 'markdown-it-anchor';
 import mdFootnote from 'markdown-it-footnote';
 import mdMark from 'markdown-it-mark';
+import posthtml from 'posthtml';
 import striptags from 'striptags';
 import truncate from 'truncate-html';
 import typogrify from 'typogr';
 
-import { anchorLinkIconString } from '../js/clickToCopy.js';
+export const anchorLinkIconString = readFileSync(
+  './content/_includes/icons/link.svg',
+  'utf8',
+);
 
 export const removeMd = rmMd;
 
@@ -19,6 +25,7 @@ export const mdown = markdown({
   .use(mdAnchor, {
     level: [2],
     permalink: mdAnchor.permalink.linkAfterHeader({
+      class: 'header-anchor',
       symbol: anchorLinkIconString,
       style: 'visually-hidden',
       assistiveText: (title) => `Copy permalink to “${title}”`,
@@ -106,6 +113,49 @@ export const elide = (html, count = 50) => {
     truncated = `${truncated.slice(0, -2)}…`;
   }
   return truncated;
+};
+
+/* @docs
+label: stripTagsForRSS
+category: RSS
+note: |
+  Remove permalinks from headings
+params:
+  html:
+    type: string
+*/
+export const stripTagsForRSS = async (html) => {
+  const modifier = posthtml().use((tree) => {
+    if (!Array.isArray(tree) || !tree.length) {
+      return tree;
+    }
+    tree.walk((node) => {
+      const classes =
+        node.attrs?.class?.split(' ')?.map((c) => c.trim().toLowerCase()) || [];
+      const isPermalink = node.tag === 'a' && classes.includes('header-anchor');
+      const isUnsafe = [
+        'comment',
+        'embed',
+        'link',
+        'listing',
+        'meta',
+        'noscript',
+        'object',
+        'plaintext',
+        'script',
+        'xmp',
+      ].includes(node.tag);
+      const isCustom = ['is-land', 'lite-youtube'].includes(node.tag);
+      if (isPermalink || isUnsafe || isCustom) {
+        node.tag = false;
+        node.content = [];
+      }
+      return node;
+    });
+    return tree;
+  });
+  const result = await modifier.process(html);
+  return result.html;
 };
 
 /* @docs
