@@ -22,7 +22,8 @@
     grid-column: full;
   }
 
-  @media (width >= 45ch) {
+  /* stylelint-disable-next-line media-feature-range-notation */
+  @media (min-width: 45ch) {
     --inline-bleed: calc(var(--gutter) * -1);
   }
 }

@@ -37,7 +37,8 @@ h3 {
       var(--heading-start),
       var(--heading-end)
     );
-    background-clip: text;
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     max-width: max-content;
