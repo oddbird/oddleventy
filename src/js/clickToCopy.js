@@ -1,10 +1,3 @@
-import { readFileSync } from 'node:fs';
-
-export const anchorLinkIconString = readFileSync(
-  './content/_includes/icons/link.svg',
-  'utf8',
-);
-
 const removeAnchorClickedClass = function () {
   const anchorLinks = document.querySelectorAll(
     '.header-anchor.anchor-clicked',

@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+
 import rmMd from '@tommoor/remove-markdown';
 import _ from 'lodash-es';
 import markdown from 'markdown-it';
@@ -9,7 +11,10 @@ import striptags from 'striptags';
 import truncate from 'truncate-html';
 import typogrify from 'typogr';
 
-import { anchorLinkIconString } from '../js/clickToCopy.js';
+export const anchorLinkIconString = readFileSync(
+  './content/_includes/icons/link.svg',
+  'utf8',
+);
 
 export const removeMd = rmMd;
 
@@ -111,7 +116,7 @@ export const elide = (html, count = 50) => {
 };
 
 /* @docs
-label: stripPermalinks
+label: stripTagsForRSS
 category: RSS
 note: |
   Remove permalinks from headings
@@ -119,7 +124,7 @@ params:
   html:
     type: string
 */
-export const stripPermalinks = async (html) => {
+export const stripTagsForRSS = async (html) => {
   const modifier = posthtml().use((tree) => {
     if (!Array.isArray(tree) || !tree.length) {
       return tree;
@@ -127,7 +132,21 @@ export const stripPermalinks = async (html) => {
     tree.walk((node) => {
       const classes =
         node.attrs?.class?.split(' ')?.map((c) => c.trim().toLowerCase()) || [];
-      if (node.tag === 'a' && classes.includes('header-anchor')) {
+      const isPermalink = node.tag === 'a' && classes.includes('header-anchor');
+      const isUnsafe = [
+        'comment',
+        'embed',
+        'link',
+        'listing',
+        'meta',
+        'noscript',
+        'object',
+        'plaintext',
+        'script',
+        'xmp',
+      ].includes(node.tag);
+      const isCustom = ['is-land', 'lite-youtube'].includes(node.tag);
+      if (isPermalink || isUnsafe || isCustom) {
         node.tag = false;
         node.content = [];
       }

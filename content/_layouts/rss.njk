@@ -59,7 +59,7 @@
       {%- endfilter -%}
 
       {%- if post.content -%}
-        {{ post.content | stripPermalinks | htmlToAbsoluteUrls(absolutePostUrl) }}
+        {{ post.content | stripTagsForRSS | htmlToAbsoluteUrls(absolutePostUrl) }}
       {%- endif -%}
     </content>
 
