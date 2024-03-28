@@ -1,13 +1,13 @@
 ---
 title: Generating Frontend API Clients from OpenAPI
 author: james
-date: 2023-11-01
+date: 2024-11-01
 tags:
   - Article
   - Front End Nerdery
   - OpenAPI
 image:
-  src: blog/2023/fast.jpg
+  src: blog/2024/generator.jpg
 summary: |
    API changes can be a headache in the frontend, but some initial setup can
    help you develop and adapt to API changes as they come. In this article, we
