@@ -37,7 +37,7 @@ h3 {
       var(--heading-start),
       var(--heading-end)
     );
-    -webkit-background-clip: text;
+    background-clip: text;
     background-clip: text;
     color: transparent;
     max-width: max-content;

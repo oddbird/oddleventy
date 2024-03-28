@@ -6,6 +6,7 @@ import {
   heading,
   md,
   mdInline,
+  stripPermalinks,
   typogr,
 } from '#filters/type.js';
 
@@ -44,6 +45,18 @@ describe('typography filters', () => {
     expect(elide(hello, 2)).toEqual(expected);
     expect(elide(hello2, 2)).toEqual(expected);
     expect(elide(hello)).toEqual(hello);
+  });
+
+  test('stripPermalinks', async () => {
+    const input1 = '<em class="header-anchor">hello</em> world';
+    const input2 = '<a class="header-anchor" href="#">hello</a> world';
+    const input3 =
+      '<a class="header-anchor other-class" href="#">hello</a> world';
+
+    expect(await stripPermalinks(input1)).toEqual(input1);
+    expect(await stripPermalinks(input2)).toBe(' world');
+    expect(await stripPermalinks(input3)).toBe(' world');
+    expect(await stripPermalinks('')).toBe('');
   });
 
   test('heading', () => {
