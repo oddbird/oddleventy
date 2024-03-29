@@ -1,15 +1,16 @@
 /* eslint-disable max-len */
 
 import {
+  anchorLinkIconString,
   callout,
   elide,
   heading,
   md,
   mdInline,
+  stripTagsForRSS,
   typogr,
 } from '#filters/type.js';
 
-import { anchorLinkIconString } from '../../src/js/clickToCopy.js';
 const markdown = '## Lorem ipsum dolor sit amet, consectetur';
 const content = 'Lorem ipsum dolor sit amet, consectetur';
 const typogrd = 'Lorem ipsum dolor sit amet, consectetur';
@@ -44,6 +45,18 @@ describe('typography filters', () => {
     expect(elide(hello, 2)).toEqual(expected);
     expect(elide(hello2, 2)).toEqual(expected);
     expect(elide(hello)).toEqual(hello);
+  });
+
+  test('stripTagsForRSS', async () => {
+    const input1 = '<em class="header-anchor">hello</em> world';
+    const input2 = '<a class="header-anchor" href="#">hello</a> world';
+    const input3 =
+      '<a class="header-anchor other-class" href="#">hello</a> world';
+
+    expect(await stripTagsForRSS(input1)).toEqual(input1);
+    expect(await stripTagsForRSS(input2)).toBe(' world');
+    expect(await stripTagsForRSS(input3)).toBe(' world');
+    expect(await stripTagsForRSS('')).toBe('');
   });
 
   test('heading', () => {

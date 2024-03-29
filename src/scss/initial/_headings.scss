@@ -37,6 +37,7 @@ h3 {
       var(--heading-start),
       var(--heading-end)
     );
+    /* stylelint-disable-next-line property-no-vendor-prefix */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
