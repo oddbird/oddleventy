@@ -3,7 +3,7 @@ title: Sass Language Playground & Website
 sub: Discover and learn the Sass language
 logo: salesforce
 image:
-  src: work/metecho/metecho.jpg
+  src: work/sass/doc-site.jpg
   alt: A task with assigned developer and tester
 client: &client Google
 date: 2022-11-09
@@ -33,7 +33,10 @@ press:
       They're a fantastic team that we were lucky to work with.
     <<: *natalie
 summary: |
-  OddBird did SOMETHING
+  OddBird helped modernize the tech stack
+  powering Sass's documentation and marketing site.
+  We ported content and functionality to maintain parity,
+  and added some high value new features.
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -42,11 +45,22 @@ summary: |
 
 {{ layout.title('What We Did') }}
 
+Sass's documentation and marketing site was in need of a technology refresh.
+OddBird helped port over a decade's worth of blog posts, and a feature-rich set
+of documentation.
+
+One key client goal was to simplify the deployment process. OddBird worked to
+integrate CI/CD best practices, while incorporating content from a variety of
+sources.
+
+OddBird also made updates to Sass to enable it to run in the browser. This made
+possible a long-standing user request to have a Sass playground, which can be
+used to quickly learn and prototype Sass, or to report bugs in Sass.
+
 {% call embed.media_block(
   media=embed.img(
-    src='work/metecho/metecho-example.jpg',
-    alt='an epic with one task in progress
-      and one collaborator'
+    src='work/sass/sass-playground.jpg',
+    alt='a Sass editor showing code input, compilation and error reporting'
   ),
   name='desktop-work'
 ) %}
@@ -68,7 +82,7 @@ summary: |
 ### Languages & Tools
 
 - Figma
-- JavaScript with React & Redux
+- JavaScript
 - Sass & CSS
 
 {% endcall %}

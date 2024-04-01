@@ -57,6 +57,9 @@ Because of Sass's widespread use and integration into web developer tooling,
 these changes required extensive investigation to ensure that they would not
 break existing functionality, and provide the intended benefits.
 
+OddBird also contributed supporting blog posts, specifications, and
+documentation for the new features.
+
 {% call layout.grid('narrow-columns') %}
 
 {% call layout.block('column') %}
