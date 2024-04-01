@@ -6,6 +6,9 @@ date: 2023-11-09
 tags:
   - Article
   - User Experience
+  - OOUX
+  - Design
+  - Object Maps
 image:
   src: blog/2023/masks.jpg
 chair:
