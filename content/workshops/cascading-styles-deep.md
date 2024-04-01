@@ -5,8 +5,8 @@ feature: workshop
 author: miriam
 date: 2023-01-09
 action:
-  text: Contact us to book a workshop »
-  url: /contact/
+  text: Bring this workshop to your company »
+  url: '#contact-us-to-book-a-workshop'
 image:
   src: talks/mia-smashing-de.jpg
   position: top
@@ -44,17 +44,17 @@ intro:
     on developing **resilient and delightful experiences**
     that hold up across browsers, languages, and device interfaces.
 included:
-  - title: 5 Interactive Sessions
+  - title: Interactive Sessions
     text: Virtual or in-person
     icon: icons/talk
-  - title: Life-time Access
-    text: 12.5 hours of recorded video, with slides & resources
-    icon: icons/video
   - title: Dedicated Q&A
     text: To gain a thorough understanding
     icon: icons/messaging
   - title: Cutting Edge Techniques
-    text: To gain a thorough understanding
+    text: From a W3C Invited Expert
+    icon: icons/talk
+  - title: Certificate of Completion
+    text: Documenting your education
     icon: icons/talk
 press:
   - text: |
@@ -81,9 +81,6 @@ summary: |
   **It’s a good time to step back and understand
   how these tools fit together in a declarative system --
   a resilient cascade of styles**.
-
-  This workshop is available
-  to companies as well as conferences.
 ---
 
 {% import 'contact.macros.njk' as contact %}
@@ -103,8 +100,6 @@ summary: |
 ) }}
 
 ## Contact Us to Book a Workshop
-
-Investment is $450/person.
 
 {{ contact.form(
   submit='Book Now',
@@ -136,9 +131,11 @@ with at least a basic understanding in HTML and CSS.
 You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
+[Schedule a call »](#contact-us-to-book-a-workshop)
+
 ## Workshop Outline
 
-The workshop is taught in five sessions, each with two parts:
+The workshop is taught in five sessions:
 
 ### 1. Resilient Styles: a Declarative Cascade
 
