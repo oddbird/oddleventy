@@ -33,7 +33,7 @@ summary: |
 We've been helping to
 [design and implement](https://github.com/sass/sass/blob/main/proposal/color-4-new-spaces.md)
 wide-gamut color support
-directly in the [Sass language](/sass/).
+directly in the [Sass language](/work/sass-core/).
 {% endcallout %}
 
 

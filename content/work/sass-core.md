@@ -1,8 +1,10 @@
 ---
-title: Sass Core
+title: Sass Core Language
 sub: Implementing new language features
 date: 2023-05-22
 end: 2024-02-20
+image:
+  svg: logos/sass
 client: &client Google
 list_tag: Sass
 people:
@@ -37,21 +39,24 @@ summary: |
 
 {{ layout.title('What We Did') }}
 
-Sass has a small core team supporting a widely-used language.
-OddBird came in to help the core team define and implement new language features.
+Sass has a small core team ([including Miriam](/sass/))
+supporting a widely-used language.
+OddBird came in to help the core team
+define and implement several new language features:
 
-OddBird relied on our deep understanding of CSS
-as we implemented new color spaces and functionality
-into Sass's JavaScript API.
-We also added support for Sass Functions to the JavaScript API.
+- **Color Spaces**: OddBird relied on our deep understanding of CSS
+  as we implemented new color spaces and functionality
+  into Sass's JavaScript API.
+  We also added support for Sass Functions to the JavaScript API.
 
-We were also able to solve a long-time user pain point
-by introducing a Node.js importer for `pkg:` urls in Sass files.
-This enables authors to easily refer to third party Sass files.
+- **Package Importer**: We were also able to solve a long-time user pain point
+  by introducing a Node.js importer for `pkg:` urls in Sass files.
+  This enables authors to easily refer to third party Sass files.
 
-Another win for Sass users is the ability to compile multiple times using the
-same compiler instance. We ran benchmarks and found our Compiler API had
-signficant improvements for users who are running multiple compilations.
+- **Improved Complier**: Another win for Sass users
+  is the ability to compile multiple times using the
+  same compiler instance. We ran benchmarks and found our Compiler API had
+  significant improvements for users who are running multiple compilations.
 
 Because of Sass's widespread use and integration into web developer tooling,
 these changes required extensive investigation to ensure that they would not

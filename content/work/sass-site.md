@@ -1,5 +1,5 @@
 ---
-title: Sass Language Playground & Website
+title: Sass Playground & Website
 sub: Discover and learn the Sass language
 logo: salesforce
 image:
@@ -83,7 +83,8 @@ used to quickly learn and prototype Sass, or to report bugs in Sass.
 
 - Figma
 - JavaScript
-- Sass & CSS
+- HTML with Eleventy
+- CSS & Sass
 
 {% endcall %}
 

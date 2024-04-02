@@ -16,6 +16,16 @@ links:
 summary: |
   **Sass is the most mature, stable, and powerful
   professional grade CSS extension language in the world**.
-  After creating several of the most popular sass toolkits,
+  After creating several of the most popular sass plugins,
   Miriam became a core contributor to the language.
 ---
+
+More recently, the entire OddBird team
+contracted with Google
+to design and implement [high-priority Sass features][core],
+and [re-build the website][site]
+with a new [Sass playground][playground].
+
+[site]: /work/sass-site/
+[core]: /work/sass-core/
+[playground]: https://sass-lang.com/playground/
