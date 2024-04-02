@@ -5,8 +5,8 @@
   aria-label="all the birds"
   focusable="false"
   viewBox="0 0 2575 600"
-  width="2575"
-  height="600"
+  width="2575px"
+  height="600px"
 >
 <g data-nest="jonny">{% include 'faces/jonny.svg' %}</g>
 <g data-nest="stacy">{% include 'faces/stacy.svg' %}</g>
