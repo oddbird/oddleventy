@@ -1,7 +1,7 @@
 ---
 title: Generating Frontend API Clients from OpenAPI
 author: james
-date: 2024-04-11
+date: 2024-04-03
 tags:
   - Article
   - JavaScript
