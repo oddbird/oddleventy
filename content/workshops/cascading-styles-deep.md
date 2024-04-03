@@ -87,11 +87,6 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 {% import 'quotes.macros.njk' as quotes %}
 
-{{ embed.figure(
-  data=intro.media,
-  caption=intro.caption
-) }}
-
 ## What Will Attendees Get?
 
 {{ embed.icon_block(
