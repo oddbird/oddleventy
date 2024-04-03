@@ -52,10 +52,10 @@ included:
     icon: icons/messaging
   - title: Cutting Edge Techniques
     text: From a W3C Invited Expert
-    icon: icons/talk
+    icon: icons/rocket
   - title: Certificate of Completion
     text: Documenting your education
-    icon: icons/talk
+    icon: icons/ribbon
 press:
   - text: |
       We were super happy with how it went.
@@ -104,7 +104,7 @@ summary: |
 {{ contact.form(
   submit='Book Now',
   name='workshop',
-  messageLabel='What timeline & location?'
+  extraActions='or [pick a time to meet »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
 ) }}
 
 {{ quotes.grid(press) }}

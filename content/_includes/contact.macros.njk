@@ -26,12 +26,23 @@ params:
     note: |
       Name the form for special cases
       where a CSS hook is required
+  extraActions:
+    type: string | none
+    default: none
+    note: |
+      Extra content for the action area,
+      like a (markdown) link.
+  attr:
+    type: object
+    default: {}
+    note: |
+      Attributes anvd values to apply in the form
 #}
 {% macro form(
   next='/contact/thanks/',
   submit='Send',
   name='contact',
-  messageLabel = 'Message',
+  extraActions = none,
   attrs={}
 ) %}
 <form
@@ -74,6 +85,9 @@ params:
       type="submit">
       {{ submit }}
     </button>
+    {% if extraActions %}
+      {{ extraActions | md | safe }}
+    {% endif %}
   </div>
 </form>
 {% endmacro %}
