@@ -4,9 +4,10 @@ sub: A workshop on resilient & maintainable CSS
 feature: workshop
 author: miriam
 date: 2023-01-09
-action:
-  text: Bring this workshop to your company »
-  url: '#contact-us-to-book-a-workshop'
+eleventyComputed:
+  action:
+    text: Bring this workshop to your company »
+    url: '{{ page.url }}#contact-us-to-book-a-workshop'
 image:
   src: talks/mia-smashing-de.jpg
   position: top
@@ -74,6 +75,7 @@ press:
     title: Workshop attendee
     face: seth-roby.jpg
     url: https://mastodon.social/@TALlama/112039472807241153
+    slug: workshop-flow
 summary: |
   New CSS features are shipping at an unprecedented rate --
   cascade layers, container queries, the `:has()` selector,
@@ -83,6 +85,7 @@ summary: |
   a resilient cascade of styles**.
 ---
 
+{% import 'utility.macros.njk' as utility %}
 {% import 'contact.macros.njk' as contact %}
 {% import 'embed.macros.njk' as embed %}
 {% import 'quotes.macros.njk' as quotes %}
@@ -106,18 +109,13 @@ summary: |
 
 ## What Will Attendees Learn In This Workshop?
 
-- Building maintainable CSS systems with progressive enhancement
-- The entire cascade, why it exists,
-  and what all is involved (much more than specificity!)
-- Managing style conflicts with cascade layers, scope, and nesting
-- Modern selectors like `:is()`, `:where()`, and `:has()`
-- Value resolution and validation, beyond cascading and inheritance
-- Using custom properties to build adaptive systems
-- The advantages of logical vs physical dimensions
-- The layout flow with intrinsic and extrinsic sizing
-- Size comparison functions like min(), max(), and clamp()
-- When to use flexbox vs grid for layout and alignment
-- Fast and dynamic layouts using subgrid and container queries
+- Building **maintainable CSS systems** with **progressive enhancement**
+- **The Cascade**, why it's there, and how to use it
+- **Managing conflicts** with cascade layers, scope, and nesting
+- **Modern selectors** like `:is()`, `:where()`, and `:has()`
+- Using **custom properties** to build adaptive systems
+- **CSS Layout** with grid and flexbox
+- Dynamic layouts using **subgrid** and **container queries**
 
 ## Who Is This For?
 
@@ -126,7 +124,10 @@ with at least a basic understanding in HTML and CSS.
 You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
-[Schedule a call »](#contact-us-to-book-a-workshop)
+{{ utility.main_action(
+  content='Bring this workshop to your company »',
+  url='#contact-us-to-book-a-workshop'
+) }}
 
 ## Workshop Outline
 
@@ -227,7 +228,7 @@ and interactive exercises related to defining layouts.
 
 {{ embed.figure([{
   img: 'pages/css-workshop/conventions.jpg',
-  alt: 'A woman in a suit kneels to pet cute ducklings while the mother duck removes a bill from her purse'
+  alt: 'A woman in a suit kneels to pet cute ducklings while the mother duck removes money from her purse'
 }]) }}
 
 #### Cascade Aligned Programming
@@ -248,3 +249,8 @@ The details may vary from project to project,
 but we’ll look at practical strategies
 for building an expressive and robust CSS system
 that works for you.
+
+{{ utility.main_action(
+  content='Bring this workshop to your company »',
+  url='#contact-us-to-book-a-workshop'
+) }}

@@ -22,11 +22,6 @@ summary: |
 {% import 'talks.macros.njk' as talks %}
 {% import 'post.macros.njk' as post %}
 
-{{ quotes.find(
-  collections.all,
-  slugs=['spot-on', 'popular-tutorial']
-) }}
-
 {% set fw = collections._talk | findPage('data.feature', 'workshop') %}
 {% if fw %}
   {{ layout.title('Featured Workshop') }}
@@ -50,6 +45,11 @@ summary: |
     </div>
   </article>
 {% endif %}
+
+{{ quotes.find(
+  collections.all,
+  slugs=['spot-on', 'popular-tutorial']
+) }}
 
 {{ talks.section(
   title='Upcoming Events',
