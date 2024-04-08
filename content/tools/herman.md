@@ -58,6 +58,7 @@ summary: |
 
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
+{% import 'sponsor.macros.njk' as sponsor %}
 
 ## Give Your Design System a Home
 
@@ -88,7 +89,6 @@ and keep everything in one place.
 [Nunjucks]: https://mozilla.github.io/nunjucks/
 [Sass Accoutrement]: /accoutrement/
 
-
 {{ embed.figure(
   screenshots,
   'Document colors, icons, ratios, sizes, fonts, and components'
@@ -99,22 +99,4 @@ and keep everything in one place.
   title='Integrate with Accoutrement'
 ) }}
 
-{{ layout.title('OSS Sponsors') }}
-[comment]: <> (## Great Horned Owl)
-
-[comment]: <> (## Blue-Footed Booby)
-
-## Common Loons
-A huge thank you to the individuals and organizations
-sponsoring OddBird's open source work!
-
-<script src="https://opencollective.com/oddbird-open-source/banner.js"></script>
-
-<object type="image/svg+xml" data="https://opencollective.com/oddbird-open-source/tiers/donation.svg?avatarHeight=36&width=600"></object>
-
-## Sponsor OddBird's OSS Work
-We love contributing back to the languages & tools that developers rely on, from CSS & Sass to browser polyfills and Python. Help us keep that work sustainable and focused on developer needs!
-
-<a href="https://opencollective.com/oddbird-open-source" target="_blank">
-  <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" width=300 />
-</a>
+{{ sponsor.block(opencollective.supporters) }}
