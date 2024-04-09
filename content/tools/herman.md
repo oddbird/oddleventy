@@ -98,5 +98,3 @@ and keep everything in one place.
   collections.all | getData('data.accoutrement_modules'),
   title='Integrate with Accoutrement'
 ) }}
-
-{{ sponsor.block(opencollective.supporters) }}
