@@ -102,7 +102,7 @@ summary: |
 {{ contact.form(
   submit='Book Now',
   name='workshop',
-  extraActions='or [pick a time to meet »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
 ) }}
 
 {{ quotes.grid(press) }}
@@ -128,6 +128,11 @@ but even the experts are likely to learn something new.
   content='Bring this workshop to your company »',
   url='#contact-us-to-book-a-workshop'
 ) }}
+
+## About Miriam
+
+{% set miriam = collections.birds | authorPage('miriam') %}
+{{ miriam.data.bio | md | safe }}
 
 ## Workshop Outline
 

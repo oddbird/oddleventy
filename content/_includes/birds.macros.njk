@@ -1,4 +1,6 @@
 {% import 'utility.macros.njk' as utility %}
+{% import 'embed.macros.njk' as embed %}
+{% import 'contact.macros.njk' as contact %}
 
 {# @docs
 label: Bird Macros
@@ -101,3 +103,47 @@ params:
     <span {{ utility.attr_if('class', class) }}>{{ name | capitalize }}</span>
   {%- endif -%}
 {%- endmacro %}
+
+{% macro card(
+  bird,
+  birds=none,
+  level=3,
+  link=true,
+  bio=false,
+  class=''
+) %}
+  {% set bird = birds | authorPage(bird) if (birds and bird | typeCheck('string')) else bird %}
+  {% set id = ['bird', bird.data.bird] | join('-') | slug %}
+
+  <article aria-labelledby="{{ id }}" class="{{ ['h-card', class] | join(' ') }}">
+    {%- call embed.media_block(
+      media=embed.svg('faces/' + bird.data.bird),
+      name='bird',
+      media_attrs={'class': 'u-logo media-image'}
+    ) -%}
+      {%- set attrs = {
+        'class': 'item-title p-name',
+        'id': id
+      } -%}
+
+      {# This should be using the `h` shortcode #}
+      <h3 {{ utility.show_attrs(attrs) }}>
+        {{ utility.link_if(
+          content=bird.data.title | mdInline | safe,
+          url=bird.page.url if link else none,
+          class='title-link u-url'
+        ) -}}
+      </h3>
+
+      <div class="p-note">
+        {%- set note = bird.data.bio if (bio and bird.data.bio) else bird.data.summary -%}
+        {{- note | md | safe -}}
+      </div>
+
+      {{- contact.social(
+        data=bird.data.social,
+        name=bird.data.bird | capitalize
+      ) -}}
+    {%- endcall -%}
+  </article>
+{% endmacro %}
