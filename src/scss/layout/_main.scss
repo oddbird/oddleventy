@@ -19,10 +19,6 @@
     grid-column: var(--column, page);
   }
 
-  > a:any-link {
-    justify-self: start;
-  }
-
   & > & {
     grid-column: full;
   }
