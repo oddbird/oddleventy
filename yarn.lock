@@ -103,9 +103,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy@npm:3.0.0-alpha.5":
-  version: 3.0.0-alpha.5
-  resolution: "@11ty/eleventy@npm:3.0.0-alpha.5"
+"@11ty/eleventy@npm:3.0.0-alpha.6":
+  version: 3.0.0-alpha.6
+  resolution: "@11ty/eleventy@npm:3.0.0-alpha.6"
   dependencies:
     "@11ty/dependency-tree": "npm:^3.0.0"
     "@11ty/dependency-tree-esm": "npm:^1.0.0"
@@ -118,16 +118,16 @@ __metadata:
     chokidar: "npm:^3.6.0"
     cross-spawn: "npm:^7.0.3"
     debug: "npm:^4.3.4"
-    dependency-graph: "npm:^0.11.0"
+    dependency-graph: "npm:^1.0.0"
     fast-glob: "npm:^3.3.2"
     graceful-fs: "npm:^4.2.11"
     gray-matter: "npm:^4.0.3"
     is-glob: "npm:^4.0.3"
-    iso-639-1: "npm:^3.1.0"
+    iso-639-1: "npm:^3.1.2"
     kleur: "npm:^4.1.5"
-    liquidjs: "npm:^10.10.0"
+    liquidjs: "npm:^10.10.2"
     luxon: "npm:^3.4.4"
-    markdown-it: "npm:^14.0.0"
+    markdown-it: "npm:^14.1.0"
     micromatch: "npm:^4.0.5"
     minimist: "npm:^1.2.8"
     moo: "npm:^0.5.2"
@@ -142,7 +142,7 @@ __metadata:
     slugify: "npm:^1.6.6"
   bin:
     eleventy: cmd.cjs
-  checksum: 10/7f3b80bb9577b1bfd8b6de5d7bd1f2f582d4eb49c78e820fd011ada6871eacb02d601e226b3f82d5fd3f3842065d9272c1d243b143fe27c55205eabc09d0dc5d
+  checksum: 10/72f1386c6688deb3afdfb3272997b506973f1b8c98bc869857dba6e422ce02a64091158f5b26ac296e68845d01e19ab987980f701b6c2f5ddd8496a50d7b842e
   languageName: node
   linkType: hard
 
@@ -4531,6 +4531,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dependency-graph@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "dependency-graph@npm:1.0.0"
+  checksum: 10/bb078703c1214e2bafeaab7bf5dd979e9a5be04439332e2e9ce60eebde9fb6d1c99a349fb4edeeb1506220c31a6b743dccfd2ca6608b962e9da4d54565bf95e6
+  languageName: node
+  linkType: hard
+
 "detect-libc@npm:^2.0.3":
   version: 2.0.3
   resolution: "detect-libc@npm:2.0.3"
@@ -6937,7 +6944,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iso-639-1@npm:^3.1.0":
+"iso-639-1@npm:^3.1.2":
   version: 3.1.2
   resolution: "iso-639-1@npm:3.1.2"
   checksum: 10/8e305c787ed914dcc45a077c85e03903184f0d38bf473259a09c12f62f33febd8139dd6a98e5acac3799ee729bbec57ab220bfe464cbb6ba9987465a933f82c8
@@ -7812,7 +7819,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"liquidjs@npm:^10.10.0":
+"liquidjs@npm:^10.10.2":
   version: 10.10.2
   resolution: "liquidjs@npm:10.10.2"
   dependencies:
@@ -8964,7 +8971,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oddsite@workspace:."
   dependencies:
-    "@11ty/eleventy": "npm:3.0.0-alpha.5"
+    "@11ty/eleventy": "npm:3.0.0-alpha.6"
     "@11ty/eleventy-img": "npm:^4.0.2"
     "@11ty/eleventy-plugin-rss": "npm:^1.2.0"
     "@11ty/eleventy-plugin-syntaxhighlight": "npm:^5.0.0"
