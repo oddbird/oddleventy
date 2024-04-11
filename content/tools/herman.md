@@ -57,8 +57,6 @@ summary: |
 ---
 
 {% import 'embed.macros.njk' as embed %}
-{% import 'layout.macros.njk' as layout %}
-{% import 'sponsor.macros.njk' as sponsor %}
 
 ## Give Your Design System a Home
 

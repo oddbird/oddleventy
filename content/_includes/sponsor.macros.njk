@@ -28,16 +28,25 @@
 
 {% macro faces(supporters) %}
 <div face-pile="donors">
-  {% for supporter in supporters %}
-    {%- set nameToSlug = supporter.name | slugify | lower -%}
-    <a href="{{ supporter.website or supporter.profile }}" data-supporters-tier="{{ supporter.tier.slug | slugify }}" data-supporters-slug="{{ nameToSlug }}" rel="sponsored">{% ocAvatar supporter.image, supporter.name %}</a>
-  {% endfor %}
+  {% for supporter in supporters -%}
+    <a
+      href="{{ supporter.website or supporter.profile }}"
+      data-supporters-tier="{{ supporter.tier.slug | slugify }}"
+      data-supporters-slug="{{ supporter.name | slugify | lower }}"
+      rel="sponsored noopener noreferrer"
+      target="_blank"
+      >{% ocAvatar supporter.image, supporter.name %}</a>
+  {%- endfor %}
 </div>
 {% endmacro %}
 
-{% macro donate() %}
-<a href="https://opencollective.com/oddbird-open-source" class='donate-link'>
-  <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue"
-  alt="Donate to our collective" width="596" height="96" />
+{% macro donate() -%}
+<a href="https://opencollective.com/oddbird-open-source" class="donate-link" rel="noopener noreferrer" target="_blank">
+  <img
+    src="https://opencollective.com/oddbird-open-source/donate/button@2x.png?color=blue"
+    alt="Donate to our collective"
+    width="596"
+    height="96"
+  />
 </a>
-{% endmacro %}
+{%- endmacro %}
