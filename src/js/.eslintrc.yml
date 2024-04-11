@@ -1,5 +1,0 @@
-# https://eslint.org/docs/rules/
-
-env:
-  browser: true
-  node: false
