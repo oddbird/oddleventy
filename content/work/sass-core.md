@@ -53,7 +53,7 @@ define and implement several new language features:
   by introducing a Node.js importer for `pkg:` urls in Sass files.
   This enables authors to easily refer to third party Sass files.
 
-- **Improved Complier**: Another win for Sass users
+- **Improved Compiler**: Another win for Sass users
   is the ability to compile multiple times using the
   same compiler instance. We ran benchmarks and found our Compiler API had
   significant improvements for users who are running multiple compilations.
