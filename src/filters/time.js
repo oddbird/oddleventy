@@ -1,5 +1,5 @@
 import { format as dateFormat } from 'date-fns';
-import { utcToZonedTime } from 'date-fns-tz';
+import { toZonedTime } from 'date-fns-tz';
 
 /* @docs
 label: Date & Time Filters
@@ -34,7 +34,7 @@ const formatDate = (date, format) => {
     // eslint-disable-next-line no-console
     console.warn(`Unknown date format used: "${format}"`);
   }
-  return dateFormat(utcToZonedTime(date, '+00:00'), formats[format] || format);
+  return dateFormat(toZonedTime(date, '+00:00'), formats[format] || format);
 };
 
 /* @docs

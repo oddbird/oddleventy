@@ -1,9 +1,0 @@
-# https://eslint.org/docs/rules/
-
-globals:
-  jest: 'off'
-plugins:
-  - jest
-extends:
-  - plugin:jest/recommended
-  - plugin:jest/style
