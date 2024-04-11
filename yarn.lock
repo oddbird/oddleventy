@@ -4449,14 +4449,14 @@ __metadata:
   linkType: hard
 
 "dedent@npm:^1.0.0":
-  version: 1.5.2
-  resolution: "dedent@npm:1.5.2"
+  version: 1.5.3
+  resolution: "dedent@npm:1.5.3"
   peerDependencies:
     babel-plugin-macros: ^3.1.0
   peerDependenciesMeta:
     babel-plugin-macros:
       optional: true
-  checksum: 10/c8bf87ad9e80e359ad29c0c771c2954cce4bc4cf2e4db1df1a55035610ce106742d8e1cb13ca8fadd39a8a6f76de2f054b0fd80efa9b9a296634090a4eb49c64
+  checksum: 10/e5277f6268f288649503125b781a7b7a2c9b22d011139688c0b3619fe40121e600eb1f077c891938d4b2428bdb6326cc3c77a763e4b1cc681bd9666ab1bad2a1
   languageName: node
   linkType: hard
 
@@ -4739,9 +4739,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.668":
-  version: 1.4.732
-  resolution: "electron-to-chromium@npm:1.4.732"
-  checksum: 10/24a99d1973ae9ad7c770af6047791da5c5a11b3f08fe00a838691d66f6adfd0117c536d5d0a600245738d77cf380e57b3364c2bdf45f1d4e7bab7a803e5aa53f
+  version: 1.4.733
+  resolution: "electron-to-chromium@npm:1.4.733"
+  checksum: 10/5482f20ffc76172356d2cfb1a56ea0fd69d2d5b89c0536d3ea6746951b0d61cbdd41bd3029cfbf99d9739774faf16a86c3b046cc7715ecaf5c2be7e6d9e58d52
   languageName: node
   linkType: hard
 
