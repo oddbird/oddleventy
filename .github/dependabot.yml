@@ -23,7 +23,3 @@ updates:
         update-types:
           - 'minor'
           - 'patch'
-    ignore:
-      - dependency-name: 'date-fns'
-        versions:
-          - 3.x

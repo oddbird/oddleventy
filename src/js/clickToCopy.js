@@ -17,6 +17,7 @@ export const copyAnchorLink = function (anchorLink) {
         anchorLink.classList.remove('anchor-clicked');
       }, 3000);
     });
+    // eslint-disable-next-line no-unused-vars
   } catch (error) {
     throw new Error('An error occurred with copying the anchor link.');
   }
