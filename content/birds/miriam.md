@@ -36,7 +36,7 @@ bio: |
   **Miriam is a developer, teacher,
   and pioneer of modern CSS** --
   an Invited Expert on the
-  [W3C CSS Working Group](/csswg/),
+  [W3C CSS Working Group](/csswg/)
   and core contributor to the
   [Sass](/sass/) language.
   She created [Susy](/susy/) for responsive layouts back in 2009,

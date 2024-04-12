@@ -32,17 +32,17 @@ params:
     note: |
       Extra content for the action area,
       like a (markdown) link.
-  attr:
+  attrs:
     type: object
     default: {}
     note: |
-      Attributes anvd values to apply in the form
+      Attributes and values to apply in the form
 #}
 {% macro form(
   next='/contact/thanks/',
   submit='Send',
   name='contact',
-  extraActions = none,
+  extraActions=none,
   attrs={}
 ) %}
 <form
@@ -69,7 +69,7 @@ params:
   </div>
 
   {{ forms.field(
-    label=messageLabel or 'Message',
+    label='Message',
     type='textarea',
     required=true
   ) }}

@@ -120,7 +120,7 @@ summary: |
 ## Who Is This For?
 
 This workshop is intended for designers & developers
-with at least a basic understanding in HTML and CSS.
+with at least a basic understanding of HTML and CSS.
 You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
