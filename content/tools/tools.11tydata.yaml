@@ -1,2 +1,3 @@
 permalink: /{{ page.fileSlug }}/index.html
 oss: owner
+sponsors: true

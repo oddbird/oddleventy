@@ -1,0 +1,19 @@
+[face-pile] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--shim);
+
+  > * {
+    border: thin solid;
+    border-radius: 100%;
+    flex: none;
+    overflow: clip;
+  }
+
+  img {
+    aspect-ratio: 1;
+    block-size: 2lh;
+    inline-size: auto;
+    max-width: unset;
+  }
+}

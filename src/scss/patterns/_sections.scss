@@ -183,7 +183,5 @@
     calc(50% - var(--double-gutter)) calc(100% - var(--double-gutter)),
     0 calc(100% - var(--double-gutter))
   );
-  margin-bottom: var(--double-gutter);
-  margin-top: var(--double-gutter);
   padding: var(--spacer) var(--page-margin) calc(var(--spacer) + var(--gutter));
 }

@@ -1,5 +1,6 @@
 [data-layout='main'] {
   grid-area: main;
+  margin-block-end: var(--spacer);
 }
 
 [data-main] {
