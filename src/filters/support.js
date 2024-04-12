@@ -1,11 +1,22 @@
-// if we want to filter the list… (not currently used)
-export const donorFacePile = (supporters) =>
-  supporters.filter(
-    (supporter) => supporter.status === 'ACTIVE' && !supporter.hasDefaultAvatar,
-  );
+/* @docs
+label: OSS Support Filters
+category: File
+*/
 
+/* @docs
+label: openCollectiveAvatar
+category: Image
+note: Generate Open Collective avatar
+params:
+  url:
+    type: url
+    note: image url
+  username:
+    type: string
+    default: ''
+*/
 export const openCollectiveAvatar = (url, username = '') => {
-  const alt = `Open Collective Avatar for ${username}`;
+  const alt = `Open Collective Avatar${username ? ` for ${username}` : ''}`;
   const size = 'width="66" height="66"';
 
   return `<img src="https://v1.image.11ty.dev/${encodeURIComponent(

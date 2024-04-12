@@ -5,29 +5,15 @@ const FilteredProfiles = [
   // if there are backers we need to exclude…
 ];
 
-const isMonthlyOrYearlyOrder = (order) =>
-  (order.frequency === 'MONTHLY' || order.frequency === 'YEARLY') &&
-  order.status === 'ACTIVE';
-
-const getUniqueContributors = (orders) => {
-  const uniqueContributors = {};
-  for (const order of orders) {
-    if (uniqueContributors[order.slug]) {
-      // if order already exists, overwrite only if existing is not an active monthly contribution
-      if (!isMonthlyOrYearlyOrder(uniqueContributors[order.slug])) {
-        uniqueContributors[order.slug] = order;
-      }
-    } else {
-      uniqueContributors[order.slug] = order;
-    }
-  }
-  return Object.values(uniqueContributors);
+const getDefaultAvatarUrl = (url) => {
+  const slug = url.split('/').at(-1);
+  return slug ? `https://images.opencollective.com/${slug}/avatar.png` : null;
 };
 
 export default async () => {
   try {
-    // eslint-disable-next-line max-len
-    const url = `https://rest.opencollective.com/v2/oddbird-open-source/orders/incoming?limit=1000&status=paid,active`;
+    const url =
+      'https://opencollective.com/oddbird-open-source/members/all.json?limit=1000';
     const json = await eleventyFetch(url, {
       type: 'json',
       duration: '0s',
@@ -35,49 +21,34 @@ export default async () => {
       dryRun: false,
     });
 
-    let orders = json.nodes
-      .map((order) => {
-        order.name = order.fromAccount.name;
-        order.slug = order.fromAccount.slug;
-        order.twitter = order.fromAccount.twitterHandle;
-        order.image = order.fromAccount.imageUrl;
-        order.website = order.fromAccount.website;
-        order.profile = `https://opencollective.com/${order.slug}`;
-        order.totalAmountDonated = order.totalDonations.value;
-        order.isMonthly = isMonthlyOrYearlyOrder(order);
-        order.hasDefaultAvatar =
-          order.image ===
-          `https://images.opencollective.com/${order.slug}/avatar.png`;
-        return order;
-      })
-      .filter((order) => FilteredProfiles.indexOf(order.slug) === -1);
-
-    orders = getUniqueContributors(orders);
-
-    orders.sort(
-      (a, b) =>
-        // Sort by total amount donated (desc)
-        b.totalAmountDonated - a.totalAmountDonated,
-    );
-
-    const backers = orders.length;
-
-    const monthlyBackers = orders.filter((order) =>
-      isMonthlyOrYearlyOrder(order),
-    ).length;
+    const supporters = json
+      .filter(
+        (c) =>
+          c.role === 'BACKER' &&
+          c.totalAmountDonated &&
+          !FilteredProfiles.includes(c.name),
+      )
+      .map((c) => ({
+        name: c.name,
+        tier: c.tier,
+        website: c.website || c.profile,
+        image: c.image || getDefaultAvatarUrl(c.profile),
+        total: c.totalAmountDonated,
+      }))
+      .sort(
+        (a, b) =>
+          // Sort by total amount donated (desc)
+          b.total - a.total,
+      );
 
     return {
-      supporters: orders,
-      backers,
-      monthlyBackers,
+      supporters,
     };
   } catch (e) {
     // eslint-disable-next-line no-console
-    console.error('Failed, returning 0 opencollective backers.', e);
+    console.error('Failed fetching Open Collective backers.', e);
     return {
       supporters: [],
-      backers: 0,
-      monthlyBackers: 0,
     };
   }
 };

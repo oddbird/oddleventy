@@ -11,9 +11,6 @@
     "source.fixAll.eslint": "explicit"
   },
   "editor.formatOnSave": true,
-  "eslint.validate": [
-    "javascript"
-  ],
   "css.validate": false,
   "scss.validate": false,
   "stylelint.packageManager": "yarn",
