@@ -4,10 +4,9 @@ sub: A workshop on resilient & maintainable CSS
 feature: workshop
 author: miriam
 date: 2023-01-09
-eleventyComputed:
-  action:
-    text: Bring this workshop to your company »
-    url: '{{ page.url }}#contact-us-to-book-a-workshop'
+action:
+  text: Bring this workshop to your company »
+  url: '#contact-us-to-book-a-workshop'
 image:
   src: talks/mia-smashing-de.jpg
   position: top
