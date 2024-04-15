@@ -21,6 +21,7 @@ tags:
   - Custom Properties
   - Cascade Layers
   - Container Queries
+  - CSSWG
   - CSS Scope
   - CSS Nesting
 events:

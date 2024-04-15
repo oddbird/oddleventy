@@ -1,13 +1,13 @@
 ---
 title: Sass Playground & Website
 sub: Discover and learn the Sass language
-logo: salesforce
-image:
-  src: work/sass/doc-site.jpg
-  alt: A task with assigned developer and tester
-client: &client Google
 date: 2022-11-09
 end: 2023-07-06
+client: &client Google
+logo: google
+image:
+  src: work/google/sass-site.jpg
+  alt: Homepage for the Sass project at sass-lang.com
 tags:
   - Technology Sector
 people:
@@ -59,7 +59,7 @@ used to quickly learn and prototype Sass, or to report bugs in Sass.
 
 {% call embed.media_block(
   media=embed.img(
-    src='work/sass/sass-playground.jpg',
+    src='work/google/sass-playground.jpg',
     alt='a Sass editor showing code input, compilation and error reporting'
   ),
   name='desktop-work'

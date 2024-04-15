@@ -9,6 +9,7 @@ image:
   src: blog/2023/learn-with-jason.jpg
 tags:
   - CSS
+  - CSSWG
   - Container Queries
 summary: |
   CSS Container Queries
