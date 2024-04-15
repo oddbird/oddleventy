@@ -109,7 +109,6 @@ params:
   birds=none,
   level=3,
   link=true,
-  bio=false,
   class=''
 ) %}
   {%- set bird = birds | authorPage(bird) if (birds and bird | typeCheck('string')) else bird -%}
@@ -137,7 +136,7 @@ params:
       {{ heading | safe }}
 
       <div class="p-note">
-        {%- set note = bird.data.bio if (bio and bird.data.bio) else bird.data.summary -%}
+        {%- set note = bird.data.summary -%}
         {{- note | md | safe -}}
       </div>
 

@@ -34,15 +34,6 @@ events:
     date: 2023-09-06
     adr: Freiburg, Germany
     url: https://smashingconf.com/freiburg-2023/workshops/miriam-suzanne/
-# placeholder media
-intro:
-  media:
-    - iframe: https://player.vimeo.com/video/691514550
-      span: full
-  caption: |
-    Join Miriam for a deep dive
-    on developing **resilient and delightful experiences**
-    that hold up across browsers, languages, and device interfaces.
 included:
   - title: Interactive Sessions
     text: Virtual or in-person
