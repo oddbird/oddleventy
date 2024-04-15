@@ -1,0 +1,54 @@
+{% import 'layout.macros.njk' as layout %}
+
+{% macro block(
+  supporters,
+  title='Open Source Sponsors'
+) %}
+  {{ layout.title(title) }}
+
+  <h3>Current Sponsors</h3>
+  <p>
+    A huge thank you to the individuals and organizations
+    sponsoring OddBird's open source work!
+  </p>
+
+  {{ faces(supporters) }}
+
+  <h3>Sponsor OddBird's OSS Work</h3>
+  <p>
+    We love contributing back to the languages & tools
+    that developers rely on,
+    from CSS & Sass to browser polyfills and Python.
+    Help us keep that work sustainable
+    and focused on developer needs!
+  </p>
+
+  {{ donate() }}
+{% endmacro %}
+
+{% macro faces(supporters) %}
+<div face-pile="donors">
+  {% for supporter in supporters -%}
+    {%- if supporter.image != none -%}
+      <a
+        href="{{ supporter.website }}"
+        data-supporters-tier="{{ supporter.tier | slugify }}"
+        data-supporters-slug="{{ supporter.name | slugify }}"
+        rel="sponsored noopener noreferrer"
+        target="_blank"
+        >{% ocAvatar supporter.image, supporter.name %}</a>
+    {%- endif -%}
+  {%- endfor %}
+</div>
+{% endmacro %}
+
+{% macro donate() -%}
+<a href="https://opencollective.com/oddbird-open-source" class="donate-link">
+  <img
+    src="https://opencollective.com/oddbird-open-source/donate/button@2x.png?color=blue"
+    alt="Donate to our collective"
+    width="596"
+    height="96"
+  />
+</a>
+{%- endmacro %}

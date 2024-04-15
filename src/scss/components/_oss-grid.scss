@@ -17,3 +17,12 @@
     max-width: 75%;
   }
 }
+
+.donate-link {
+  justify-self: start;
+
+  img {
+    inline-size: auto;
+    max-block-size: calc(1lh + var(--gutter));
+  }
+}

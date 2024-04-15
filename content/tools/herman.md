@@ -87,7 +87,6 @@ and keep everything in one place.
 [Nunjucks]: https://mozilla.github.io/nunjucks/
 [Sass Accoutrement]: /accoutrement/
 
-
 {{ embed.figure(
   screenshots,
   'Document colors, icons, ratios, sizes, fonts, and components'

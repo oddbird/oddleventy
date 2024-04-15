@@ -11,6 +11,7 @@ import * as events from '#filters/events.js';
 import * as images from '#filters/images.js';
 import * as mentions from '#filters/mentions.js';
 import * as pages from '#filters/pages.js';
+import * as support from '#filters/support.js';
 import * as tags from '#filters/tags.js';
 import * as taxonomy from '#filters/taxonomy.js';
 import * as time from '#filters/time.js';
@@ -142,6 +143,9 @@ export default (eleventyConfig) => {
   eleventyConfig.addFilter('authorPage', birds.authorPage);
   eleventyConfig.addFilter('activeAuthor', birds.activeAuthor);
   eleventyConfig.addFilter('withActiveAuthor', birds.withActiveAuthor);
+
+  eleventyConfig.addFilter('donorFacePile', support.donorFacePile);
+  eleventyConfig.addShortcode('ocAvatar', support.openCollectiveAvatar);
 
   eleventyConfig.addFilter('typogr', type.typogr);
   eleventyConfig.addFilter('md', type.md);
