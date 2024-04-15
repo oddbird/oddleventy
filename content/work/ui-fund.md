@@ -4,7 +4,6 @@ sub: Cascade Layers, Container Queries, Scope, and more
 date: 2020-07-01
 logo: google
 client: &client Google
-logo: google
 image:
   src: work/google/contain-3.jpg
   alt: |
