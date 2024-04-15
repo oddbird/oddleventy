@@ -2,6 +2,7 @@
 title: Web Platform Features
 sub: What we did in brief @@@
 date: 2020-07-01
+logo: google
 client: &client Google
 list_tag: CSSWG
 people:
