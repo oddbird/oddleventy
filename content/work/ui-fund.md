@@ -25,20 +25,20 @@ people:
 press:
   - text: |
       Working with Miriam and her team
-      is a force multiplier for my engineering team.
+      is **a force multiplier for my engineering team**.
       We ship higher quality APIs
       much faster than we had before.
     <<: *nicole
     slug: force-multiplier
   - text: |
       Developers who use our APIs are so happy with the results,
-      even calling it a renaissance of CSS.
+      even calling it **a renaissance of CSS**.
     <<: *nicole
     slug: renaissance
   - text: |
       OddBird communication is excellent.
       They come prepared, they are deeply technical,
-      and they can express complex concepts to a variety of audiences.
+      and **they can express complex concepts to a variety of audiences**.
       I have invited them to meetings with execs,
       designers, engineers, and our own customers.
       They always do a great job representing the project.
@@ -47,7 +47,7 @@ press:
   - text: |
       [CSS Scope] looks amazing tbh.
       Simple and very easy to leverage in existing models.
-      I can already see Vue SFCs using this under the hood.
+      **I can already see Vue SFCs using this under the hood**.
     name: Evan You
     face: evan-you.jpg
     title: Creator and project lead
@@ -56,7 +56,7 @@ press:
     slug: vue-scope
   - text: |
       So happy that this work is happening.
-      Declarative style scoping will be a game changer.
+      **Declarative style scoping will be a game changer**.
     name: Rich Harris
     face: rich-harris.jpg
     title: Creator and project lead
@@ -86,10 +86,7 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-{{ quotes.find(
-  collections.all,
-  slugs=['force-multiplier', 'renaissance']
-) }}
+{{ quotes.find(collections.all, 'force-multiplier') }}
 
 {{ layout.title('What We Did') }}
 
@@ -141,9 +138,7 @@ to a range of other CSS and HTML specifications:
 - Anchor positioning syntax & polyfill
 - Popover polyfill
 
-{% call layout.grid('narrow-columns') %}
-
-{% call layout.block('column') %}
+{{ quotes.find(collections.all, 'renaissance') }}
 
 ### Services
 
@@ -153,17 +148,9 @@ to a range of other CSS and HTML specifications:
 - Documentation & Developer Outreach
 - Polyfills
 
-{% endcall %}
-
-{% call layout.block('column') %}
-
 ### Languages & Tools
 
 - CSS
 - BikeShed
 - Eleventy
 - JavaScript
-
-{% endcall %}
-
-{% endcall %}

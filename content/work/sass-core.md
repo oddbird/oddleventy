@@ -17,15 +17,18 @@ people:
     venue: *client
 press:
   - text: |
-      OddBird's team helped power out
-      several new Sass features
-      that would have taken the core team alone
-      years longer.
-      **They dropped in like a task force**,
+      **OddBird dropped in like a task force**,
       learned the ropes of programming language
       design and development,
       and made substantial improvements to the product.
       We'd love to work with them again!
+    slug: task-force
+    <<: *natalie
+  - text: |
+      OddBird's team helped power out
+      several new Sass features
+      that would have taken the core team alone years longer.
+    slug: power-out
     <<: *natalie
 tags:
   - Technology Sector
@@ -38,6 +41,8 @@ summary: |
 
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
+
+{{ quotes.find(collections.all, 'task-force') }}
 
 {{ layout.title('What We Did') }}
 
@@ -67,9 +72,7 @@ break existing functionality, and provide the intended benefits.
 OddBird also contributed supporting blog posts, specifications, and
 documentation for the new features.
 
-{% call layout.grid('narrow-columns') %}
-
-{% call layout.block('column') %}
+{{ quotes.find(collections.all, 'power-out') }}
 
 ### Services
 
@@ -80,10 +83,6 @@ documentation for the new features.
 - Documentation
 - Testing
 
-{% endcall %}
-
-{% call layout.block('column') %}
-
 ### Languages & Tools
 
 - Dart
@@ -91,9 +90,3 @@ documentation for the new features.
 - Node.js
 - Jasmine
 - Embedded Protocol
-
-{% endcall %}
-
-{% endcall %}
-
-{{ quotes.grid(press) }}
