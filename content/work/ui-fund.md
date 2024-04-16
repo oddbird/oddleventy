@@ -22,14 +22,14 @@ press:
       Simple and very easy to leverage in existing models.
       I can already see Vue SFCs using this under the hood.
     name: Evan You
-    face:  evan-you.jpg
+    face: evan-you.jpg
     title: Creator and project lead
     venue: Vue JS
   - text: |
       So happy that this work is happening.
       Declarative style scoping will be a game changer.
     name: Rich Harris
-    face:  rich-harris.jpg
+    face: rich-harris.jpg
     title: Creator and project lead
     venue: Svelte JS
 tags:
@@ -41,7 +41,7 @@ summary: |
   We were [sponsored](/tools/#open-source-sponsors)
   by the Google Chrome UI Fund
   in our work developing
-  new web platform functionality,
+  new web platform functionality
   and tooling for developers.
   Over the course of the grant,
   we helped standardized
@@ -60,7 +60,7 @@ Working [in the open](https://css.oddbird.net/),
 we researched the major pain-points
 and most highly-requested features in CSS --
 along with the existing tools and proposed solutions.
-That research lead to a number of
+That research led to a number of
 new proposals and explainers
 for new CSS features
 like [Cascade Layers](/tags/cascade-layers/),
@@ -117,6 +117,7 @@ to a range of other CSS and HTML specifications:
 
 ### Languages & Tools
 
+- CSS
 - BikeShed
 - Eleventy
 - JavaScript

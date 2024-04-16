@@ -17,11 +17,11 @@ people:
     url: https://www.linkedin.com/in/ryanhochstetler/
     title: Analytics Manager
     venue: *client
-press:
-  - text: |
-      NEED QUOTE AND PIC FROM RYAN
-    <<: *ryan
-    slug: configurations
+# press:
+#   - text: |
+#       NEED QUOTE AND PIC FROM RYAN
+#     <<: *ryan
+#     slug: configurations
 summary: |
   OddBird helped General Stamping & Metalworks
   plan, design, and develop Estimating Engine,
