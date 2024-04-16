@@ -40,10 +40,30 @@ summary: |
 - [What is root/body propagation, and how does it work?](#what-is-root%2Fbody-propagation%2C-and-how-does-it-work%3F)
 - [Containment and propagation (according to spec)](#containment-and-propagation-(according-to-spec))
 - [What browsers implemented](#what-browsers-implemented)
-- [TL;DR, Can we have a root container?](#tl%3Bdr%2C-can-we-have-a-root-container%3F)
+- [So… Can we have a root container?](#so%E2%80%A6-can-we-have-a-root-container%3F)
 
 </nav>
 </details>
+
+{% set tldr = ['Update', utility.datetime('2024-04-16')] | join(' ') %}
+{% callout 'note', tldr %}
+While there's a workaround (below)
+that will allow you to query the root element,
+it's not a perfect solution.
+We have found it simpler to apply containment
+on all the major layout blocks
+directly inside the `body` --
+things like `nav`, `header`, `main`, and `footer`.
+
+That ensures every nested component
+will have a container to query,
+without creating problems on root.
+It also allows you to put some things
+_intentionally outside_ a container,
+if you need them to use the viewport
+as a positioning context
+(with `position: fixed`, for example).
+{% endcallout %}
 
 ## Why we need containment for queries
 
@@ -161,9 +181,12 @@ Most importantly:
   of the container element.
   If we set font-size to grow responsively,
   our queries will respond to that growth.
+- Eventually,
+  we will also be able to use custom properties
+  in container queries.
 
 The side-effects of containment
-also seem minimal on the root element.
+also seem like they should be minimal on the root element.
 The root (`html`) element
 seems like a great candidate for `size` containment:
 
@@ -185,15 +208,13 @@ With `container-type: size` on the root,
 we could replace most or all
 `@media` size queries with `@container`
 across our sites.
-I think we should!
+That feels right to me!
 
 ## Is it safe to contain the root element?
 
 👍🏼 It should be. \
 👎🏼 But it isn't. \
-👍🏼 Unless you're careful.
-
-(Hopefully browsers will get this fixed.)
+🤷🏻‍♀️ Unless you're careful?
 
 Currently,
 adding a `container-type` of `size`
@@ -434,8 +455,8 @@ But all the browsers implemented something else.
 
 ## What browsers implemented
 
-{% set update1 = ['Update', utility.datetime('2023-08-01')] | join(' ') %}
-{% callout 'note', update1 %}
+{% set notABug = ['Update', utility.datetime('2023-08-01')] | join(' ') %}
+{% callout 'note', notABug %}
 According to
 [browser engineers in the CSSWG](https://github.com/w3c/csswg-drafts/issues/9003#issuecomment-1646246626),
 my explanation here wasn't quite right.
@@ -504,13 +525,13 @@ our non-default overflow no longer propagates:
   user='miriamsuzanne'
 ) }}
 
-This must be a browser bug.
+I filed an
+[issue with the CSSWG](https://github.com/w3c/csswg-drafts/issues/9003).
 
-## TL;DR, Can we have a root container?
+## So… Can we have a root container?
 
-**Yes**,
-there's a solution that works right now,
-despite these browser bugs.
+**Yes, with caveats**.
+There's a solution that works right now.
 Instead of setting
 height and overflow on the `html` element,
 we use the `body` as our top-level scroll-container.
@@ -548,12 +569,16 @@ with fixed elements remaining in place:
   user='miriamsuzanne'
 ) }}
 
-I filed an
-[issue with the CSSWG](https://github.com/w3c/csswg-drafts/issues/9003),
-and will also file issues
-with each browser.
+{% set tradeoffs = ['Update', utility.datetime('2024-04-16')] | join(' ') %}
+{% callout 'note', tradeoffs %}
+This is an acceptable solution in many cases,
+but it comes with a trade-off.
+Browsers provide a range of optimizations
+for the 'root scroller',
+which won't be applied to the `body` element here.
+Your milage may vary.
+{% endcallout %}
 
-**I still recommend root containers when possible**.
 But I would make one more change to the code above.
 By adding names to containers,
 we can better control what is being queried.
