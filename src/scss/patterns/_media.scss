@@ -47,7 +47,7 @@
 /// @group media
 .media-image {
   grid-area: image;
-  justify-self: center;
+  justify-self: var(--media-justify, center);
   max-width: var(--media-max);
   min-width: var(--media-min);
   width: var(--media-size);

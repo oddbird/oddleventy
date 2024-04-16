@@ -51,7 +51,15 @@
 /// of the actions at the end of a form.
 /// @group forms
 .form-actions {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--newline);
   margin-top: var(--newline);
+
+  p {
+    margin: unset;
+  }
 }
 
 // Honey

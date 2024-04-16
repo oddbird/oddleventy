@@ -47,11 +47,11 @@ params:
     'name': name or id,
     'id': id
   } | merge(attrs) -%}
-  {% if type == 'textarea' %}
+  {%- if type == 'textarea' -%}
     <textarea {{ utility.show_attrs(attrs) }}></textarea>
-  {% else %}
+  {%- else -%}
     <input {{ utility.show_attrs(attrs) }}>
-  {% endif %}
+  {%- endif -%}
 {%- endmacro %}
 
 {# @docs
@@ -211,7 +211,7 @@ params:
   id,
   required=false,
   attrs={}
-) %}
+) -%}
 <label for="{{ id }}" data-label {{ utility.show_attrs(attrs) }}>
   {{- label | mdInline | safe -}}
   {%- if required -%}
@@ -219,7 +219,7 @@ params:
     <span class="sr-only">required</span>
   {%- endif -%}
 </label>
-{% endmacro %}
+{%- endmacro %}
 
 {# @docs
 label: wrapper
