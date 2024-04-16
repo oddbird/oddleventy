@@ -82,7 +82,7 @@ used to quickly learn and prototype Sass, or to report bugs in Sass.
 ### Languages & Tools
 
 - Figma
-- JavaScript
+- JavaScript with TypeScript
 - HTML with Eleventy
 - CSS & Sass
 

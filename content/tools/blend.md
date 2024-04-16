@@ -31,11 +31,10 @@ summary: |
 {% set update = ['Update', utility.datetime('2022-04-04')] | join(' ') %}
 {% callout 'note', update %}
 We've been helping to
-[design and implement](https://github.com/sass/sass/blob/main/proposal/color-4-new-spaces.md)
+[design and implement](https://github.com/sass/sass/blob/main/accepted/color-4-new-spaces.md)
 wide-gamut color support
 directly in the [Sass language](/work/sass-core/).
 {% endcallout %}
-
 
 ```bash
 npm install @oddbird/blend

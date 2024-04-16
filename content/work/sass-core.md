@@ -37,6 +37,7 @@ summary: |
 ---
 
 {% import 'layout.macros.njk' as layout %}
+{% import 'quotes.macros.njk' as quotes %}
 
 {{ layout.title('What We Did') }}
 
@@ -86,6 +87,7 @@ documentation for the new features.
 ### Languages & Tools
 
 - Dart
+- JavaScript with TypeScript
 - Node.js
 - Jasmine
 - Embedded Protocol
@@ -93,3 +95,5 @@ documentation for the new features.
 {% endcall %}
 
 {% endcall %}
+
+{{ quotes.grid(press) }}
