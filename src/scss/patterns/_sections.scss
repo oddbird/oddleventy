@@ -10,8 +10,6 @@
 /// to represent the main call to action of that section.
 /// @group links
 .main-action {
-  --link: var(--accent);
-
   font-size: var(--medium);
   margin-top: var(--double-gutter);
 }
