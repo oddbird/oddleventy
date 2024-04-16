@@ -94,7 +94,7 @@ press:
   - text: |
       Best CSS talk I've ever seen was from @TerribleMia
       today at #dvlpdnvr. Simply amazing.
-    slug: best-css
+    slug: best-css-talk
     name: Michael Dowden
     title: Co-Author
     venue: Architecting CSS

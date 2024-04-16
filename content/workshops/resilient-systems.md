@@ -108,13 +108,15 @@ modules:
       everything Sass has to offer.
 press:
   - text: |
-      A fantastic speaker, with wonderful teaching skills, and
-      highly praised by attendees of the conference and the
-      workshop alike.
+      Miriam is a fantastic speaker,
+      with wonderful teaching skills,
+      and highly praised by attendees
+      of the conference and the workshop alike.
     slug: fantastic
     name: Vitaly Friedman
     title: Founder
     venue: Smashing Magazine & Conference
+    url: https://smashingconf.com/
     face: vitaly-friedman.jpg
 summary: |
   **Take full advantage of the universal web

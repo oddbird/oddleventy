@@ -11,12 +11,39 @@ image:
     screenshot with W3C logo
   position: top left
 list_tag: CSSWG
-# people:
-#   - &nicole
-#     name: Nicole Sullivan
-#     title: Technical Project Manager
-#     venue: *client
+sponsors: true
+action:
+  text: Sponsor our open source work »
+  url: https://opencollective.com/oddbird-open-source
+people:
+  - &nicole
+    name: Nicole Sullivan
+    title: Product Manager for Web UI
+    venue: Google Chrome
+    face: nicole-sullivan.jpg
+    url: https://www.stubbornella.org/
 press:
+  - text: |
+      Working with Miriam and her team
+      is a force multiplier for my engineering team.
+      We ship higher quality APIs
+      much faster than we had before.
+    <<: *nicole
+    slug: force-multiplier
+  - text: |
+      Developers who use our APIs are so happy with the results,
+      even calling it a renaissance of CSS.
+    <<: *nicole
+    slug: renaissance
+  - text: |
+      OddBird communication is excellent.
+      They come prepared, they are deeply technical,
+      and they can express complex concepts to a variety of audiences.
+      I have invited them to meetings with execs,
+      designers, engineers, and our own customers.
+      They always do a great job representing the project.
+    <<: *nicole
+    slug: complex-concepts
   - text: |
       [CSS Scope] looks amazing tbh.
       Simple and very easy to leverage in existing models.
@@ -25,6 +52,8 @@ press:
     face: evan-you.jpg
     title: Creator and project lead
     venue: Vue JS
+    url: https://vuejs.org/
+    slug: vue-scope
   - text: |
       So happy that this work is happening.
       Declarative style scoping will be a game changer.
@@ -32,11 +61,13 @@ press:
     face: rich-harris.jpg
     title: Creator and project lead
     venue: Svelte JS
+    url: https://svelte.dev
+    slug: svelte-scope
 tags:
   - Technology Sector
   - Cascade Layers
   - Container Queries
-  - Scope
+  - CSS Scope
 summary: |
   We were [sponsored](/tools/#open-source-sponsors)
   by the Google Chrome UI Fund
@@ -53,6 +84,12 @@ summary: |
 ---
 
 {% import 'layout.macros.njk' as layout %}
+{% import 'quotes.macros.njk' as quotes %}
+
+{{ quotes.find(
+  collections.all,
+  slugs=['force-multiplier', 'renaissance']
+) }}
 
 {{ layout.title('What We Did') }}
 
@@ -80,6 +117,11 @@ are both available in all major browsers,
 and the Cascade Layers specification
 has moved on to become a 'Candidate Recommendation' --
 the final stage for a spec to be considered _complete_.
+
+{{ quotes.find(
+  collections.all,
+  slugs=['vue-scope', 'svelte-scope']
+) }}
 
 In addition to leading those three features
 through the standards process,
