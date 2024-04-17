@@ -48,14 +48,16 @@
 .media-image {
   grid-area: image;
   justify-self: var(--media-justify, center);
-  max-width: var(--media-max, initial);
-  min-width: var(--media-min, initial);
-  width: var(--media-size, initial);
+  max-width: var(--media-max);
+  min-width: var(--media-min);
+  width: var(--media-size);
 
   img,
   svg {
-    height: auto;
-    width: 100%;
+    aspect-ratio: var(--media-ratio);
+    object-fit: cover;
+    block-size: auto;
+    inline-size: 100%;
   }
 }
 

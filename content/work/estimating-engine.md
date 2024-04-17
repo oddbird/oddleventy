@@ -1,14 +1,13 @@
 ---
-eleventyExcludeFromCollections: true
 title: Estimating Engine
 sub: Create & manage custom manufacturing quotes
-logo:
 image:
   src: work/estimating-engine/estimating-engine.jpg
   alt: manufacturing quote details
   position: top
 client: &client General Stamping & Metalworks
 date: 2020-01-31
+end: 2023-04-30
 tags:
   - Manufacturing Sector
 people:
@@ -16,13 +15,13 @@ people:
     name: Ryan Hochstetler
     face: james-weber.jpg
     url: https://www.linkedin.com/in/ryanhochstetler/
-    title: Information Systems Administrator
+    title: Analytics Manager
     venue: *client
-press:
-  - text: |
-      @@@
-    <<: *ryan
-    slug: configurations
+# press:
+#   - text: |
+#       NEED QUOTE AND PIC FROM RYAN
+#     <<: *ryan
+#     slug: configurations
 summary: |
   OddBird helped General Stamping & Metalworks
   plan, design, and develop Estimating Engine,
@@ -54,13 +53,13 @@ summary: |
 
 ### Services
 
-  - Research & Concepting
-  - Project Management
-  - UX & UI Design
-  - Front-end Development
-  - Back-end Development
-  - Ongoing Maintenance
-  - Design System
+- Research & Concepting
+- Project Management
+- UX & UI Design
+- Front-end Development
+- Back-end Development
+- Ongoing Maintenance
+- Design System
 
 {% endcall %}
 
@@ -68,11 +67,11 @@ summary: |
 
 ### Languages & Tools
 
-  - Adobe XD
-  - Django & Python
-  - Herman
-  - JavaScript with Vue
-  - Sass & CSS
+- Adobe XD
+- Django & Python
+- Herman
+- JavaScript with Vue
+- Sass & CSS
 
 {% endcall %}
 

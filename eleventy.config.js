@@ -86,6 +86,10 @@ export default (eleventyConfig) => {
   eleventyConfig.addCollection('sample', (collectionApi) =>
     collectionApi.getAll().filter((item) => item.data.sample_content),
   );
+  eleventyConfig.addCollection('posts', (collectionApi) => {
+    const posts = collectionApi.getFilteredByTag('_post');
+    return pages.eventSort(posts);
+  });
 
   // filters
   eleventyConfig.addFilter('concat', concat);

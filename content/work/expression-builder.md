@@ -10,12 +10,6 @@ image:
   alt: Tools for data analytics
   position: top
 people:
-  - &james
-    name: James Stuckey Weber
-    face: james-weber.jpg
-    url: https://www.linkedin.com/in/jamessw/
-    title: UI/UX Design & Development Director
-    venue: *client
   - &greg
     name: Gregory Davis
     face: gregory-davis.jpg
@@ -23,13 +17,6 @@ people:
     title: Chief Architect
     venue: *client
 press:
-  - text: |
-      Some of our developers are junior,
-      and we appreciated the opportunity to work
-      with senior developers at OddBird.
-      We all learned from that experience.
-    <<: *james
-    slug: learned
   - text: |
       We feel grateful for having found our relationship with OddBird
       and excited to continue with future projects.

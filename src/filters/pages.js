@@ -249,6 +249,10 @@ params:
 */
 export const pageYears = (collection) =>
   collection.map((page) => {
+    if (page.sort && page.year) {
+      return page;
+    }
+
     const dates = [page.page.date];
 
     if (page.data.end) {
