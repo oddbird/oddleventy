@@ -3,7 +3,8 @@ title: Proxy State
 episode: 6
 tags:
   - JavaScript
-  - Proxies
+  - Proxy
+  - State Management
 author:
   - james
   - sondra
