@@ -38,7 +38,7 @@ summary: |
 - State management solutions
 - What are Proxies?
 - When and how to use Proxies to manage state
-- When to avoid using Proxiess for state management
+- When to avoid using Proxies for state management
 - Proxies in the real world
 
 ## Links:
