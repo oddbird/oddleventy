@@ -5,6 +5,9 @@ date: 2022-11-09
 end: 2023-07-06
 client: &client Google
 logo: google
+links:
+  site: https://sass-lang.com/
+  playground: https://sass-lang.com/playground/#eJxdj9FqwjAUhu/zFD9OVgULyhAhvfFV0ubYhiY5JYk4J333xdluZTch5zv5v58cDus6kOoHNj5FiY1AEZ2ythxUS4XExz6Q22XqSJurm/HxOGGrQkszPb3othJCnEk1HRb2HdaxCUS+jOaLYPxyGfEQwPlZovB6BuU1Ns748mZ06iSKt8fSMBbbnxBQs75PV+BdypouHOiXAA37RD5JrLLir3TEwv5Pvqqm9CjmcxRj/tezbFlRq6ZvA1+9Lhu2HCQSO5U456f51plEedQmDlbdJWrLTZ/BwNEkw17iYj5JZ5J4kNhXYvwGtNZ+7g==
 image:
   src: work/google/sass-site.jpg
   alt: Homepage for the Sass project at sass-lang.com
@@ -28,7 +31,7 @@ press:
       from the ground up
       to make it easier to work on, update, and deploy.
       Not only that, they added a new
-      [online playground](https://sass-lang.com/playground/)
+      [online playground](https://sass-lang.com/playground/#eJxdj9FqwjAUhu/zFD9OVgULyhAhvfFV0ubYhiY5JYk4J333xdluZTch5zv5v58cDus6kOoHNj5FiY1AEZ2ythxUS4XExz6Q22XqSJurm/HxOGGrQkszPb3othJCnEk1HRb2HdaxCUS+jOaLYPxyGfEQwPlZovB6BuU1Ns748mZ06iSKt8fSMBbbnxBQs75PV+BdypouHOiXAA37RD5JrLLir3TEwv5Pvqqm9CjmcxRj/tezbFlRq6ZvA1+9Lhu2HCQSO5U456f51plEedQmDlbdJWrLTZ/BwNEkw17iYj5JZ5J4kNhXYvwGtNZ+7g==)
       and got Sass running in the browser to power it.
       They're a fantastic team that we were lucky to work with.
     <<: *natalie
