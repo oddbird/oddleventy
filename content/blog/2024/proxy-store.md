@@ -1,5 +1,5 @@
 ---
-title: Proxy is what's in store
+title: Proxy Is What's in Store
 sub: You may not need anything more
 author: james
 date: 2024-01-12
