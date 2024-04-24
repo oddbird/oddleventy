@@ -46,12 +46,12 @@ summary: |
 </nav>
 </details>
 
-{% set tldr = ['Update', utility.datetime('2024-04-16')] | join(' ') %}
+{% set tldr = ['TL;DR Update', utility.datetime('2024-04-24')] | join(' ') %}
 {% callout 'note', tldr %}
 While there's a workaround (below)
 that will allow you to query the root element,
 it's not a perfect solution.
-We have found it simpler to apply containment
+We've found it simpler to apply containment
 on all the major layout blocks
 directly inside the `body` --
 things like `nav`, `header`, `main`, and `footer`.
@@ -570,7 +570,7 @@ with fixed elements remaining in place:
   user='miriamsuzanne'
 ) }}
 
-{% set tradeoffs = ['Update', utility.datetime('2024-04-16')] | join(' ') %}
+{% set tradeoffs = ['Update', utility.datetime('2024-04-24')] | join(' ') %}
 {% callout 'note', tradeoffs %}
 This is an acceptable solution in many cases,
 but it comes with a trade-off.
