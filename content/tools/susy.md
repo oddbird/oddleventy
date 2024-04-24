@@ -6,7 +6,6 @@ end: 2020-07-13
 card: large
 logo: susy
 image:
-  type: angle
   svg: logos/susy-mark
 author:
   - miriam

@@ -8,6 +8,17 @@ image:
 action:
   text: Talk with us »
   url: /contact/
+press:
+  - text: |
+      OddBird is a company I recommend without reservation.
+      They are among the best in the world at front end,
+      design systems, and w3c standards.
+    name: Nicole Sullivan
+    title: Product Manager for Web UI
+    venue: Google Chrome
+    face: nicole-sullivan.jpg
+    slug: best-in-the-world
+    url: https://www.stubbornella.org/
 summary: |
   We partner with clients
   to build design systems
@@ -31,7 +42,7 @@ summary: |
 
 {{ quotes.find(
   collections.all,
-  slugs=['best', 'systems'],
+  slugs=['number-one', 'best-in-the-world'],
   action='See work sample',
   url='/work/second-measure/'
 ) }}

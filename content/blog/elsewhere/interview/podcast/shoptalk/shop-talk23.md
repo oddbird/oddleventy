@@ -5,6 +5,7 @@ canonical: https://shoptalkshow.com/591/
 author: miriam
 tags:
   - CSS
+  - CSSWG
   - Cascade Layers
   - CSS Scope
   - Container Queries

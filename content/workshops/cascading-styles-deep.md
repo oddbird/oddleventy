@@ -5,8 +5,8 @@ feature: workshop
 author: miriam
 date: 2023-01-09
 action:
-  text: Hire us to give a workshop »
-  url: /contact/
+  text: Bring this workshop to your company »
+  url: '#contact-us-to-book-a-workshop'
 image:
   src: talks/mia-smashing-de.jpg
   position: top
@@ -21,6 +21,7 @@ tags:
   - Custom Properties
   - Cascade Layers
   - Container Queries
+  - CSSWG
   - CSS Scope
   - CSS Nesting
 events:
@@ -34,6 +35,38 @@ events:
     date: 2023-09-06
     adr: Freiburg, Germany
     url: https://smashingconf.com/freiburg-2023/workshops/miriam-suzanne/
+included:
+  - title: Interactive Sessions
+    text: Virtual or in-person
+    icon: icons/talk
+  - title: Dedicated Q&A
+    text: To gain a thorough understanding
+    icon: icons/messaging
+  - title: Cutting Edge Techniques
+    text: From a W3C Invited Expert
+    icon: icons/rocket
+  - title: Certificate of Completion
+    text: Documenting your education
+    icon: icons/ribbon
+press:
+  - text: |
+      We were super happy with how it went.
+      And you sold quite a lot of tickets too.
+    name: Charis Rooda
+    title: Event Organizer
+    face: charis-rooda.png
+    venue: Smashing Conference
+    url: https://smashingconf.com/
+  - text: |
+      Loving the content and the interactivity.
+      My favorite part is seeing how [Miriam] arranged the topics
+      so that concepts smoothly flow into each other.
+      Looking forward to two more days!
+    name: Seth A. Roby
+    title: Workshop attendee
+    face: seth-roby.jpg
+    url: https://mastodon.social/@TALlama/112039472807241153
+    slug: workshop-flow
 summary: |
   New CSS features are shipping at an unprecedented rate --
   cascade layers, container queries, the `:has()` selector,
@@ -41,60 +74,67 @@ summary: |
   **It’s a good time to step back and understand
   how these tools fit together in a declarative system --
   a resilient cascade of styles**.
-
-  This workshop is available
-  to companies as well as conferences.
 ---
 
-It’s an exciting time, but the list can also feel overwhelming.
-Do I really need grids if I already know flexbox?
-What problem do layers actually solve?
-Should I rewrite my styles with each feature release,
-or stick with the tools that I know?
+{% import 'utility.macros.njk' as utility %}
+{% import 'contact.macros.njk' as contact %}
+{% import 'embed.macros.njk' as embed %}
+{% import 'quotes.macros.njk' as quotes %}
 
-If you ever feel lost in the CSS weeds,
-wrestling with the cascade,
-or you just want to improve your workflow
-with modern, efficient, and maintainable stylesheets,
-then this workshop is for you!
-We'll approach the language as a cohesive system,
-learn new features along the way,
-and then put it all in practice
-with a resilient approach to CSS architecture.
+## What Will Attendees Get?
 
-Join Miriam for a deep dive
-into what makes the language work,
-and how we can harness its power
-to **develop resilient and delightful experiences**
-that hold up across browsers, languages, and device interfaces.
+{{ embed.icon_block(
+  data=included,
+  grid='fit'
+) }}
+
+## Contact Us to Book a Workshop
+
+{{ contact.form(
+  submit='Book Now',
+  name='workshop',
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
+) }}
+
+{{ quotes.grid(press) }}
 
 ## What Will Attendees Learn In This Workshop?
 
-- Building maintainable CSS systems with progressive enhancement
-- The entire cascade, why it exists,
-  and what all is involved (much more than specificity!)
-- Managing style conflicts with cascade layers, scope, and nesting
-- Modern selectors like `:is()`, `:where()`, and `:has()`
-- Value resolution and validation, beyond cascading and inheritance
-- Using custom properties to build adaptive systems
-- The advantages of logical vs physical dimensions
-- The layout flow with intrinsic and extrinsic sizing
-- Size comparison functions like min(), max(), and clamp()
-- When to use flexbox vs grid for layout and alignment
-- Fast and dynamic layouts using subgrid and container queries
+- Building **maintainable CSS systems** with **progressive enhancement**
+- **The Cascade**, why it's there, and how to use it
+- **Managing conflicts** with cascade layers, scope, and nesting
+- **Modern selectors** like `:is()`, `:where()`, and `:has()`
+- Using **custom properties** to build adaptive systems
+- **CSS Layout** with grid and flexbox
+- Dynamic layouts using **subgrid** and **container queries**
 
 ## Who Is This For?
 
 This workshop is intended for designers & developers
-with at least a basic understanding in HTML and CSS.
+with at least a basic understanding of HTML and CSS.
 You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
-## Schedule
+{{ utility.main_action(
+  content='Bring this workshop to your company »',
+  url='#contact-us-to-book-a-workshop'
+) }}
 
-The workshop is taught in five sessions, each with two parts:
+## About Miriam
+
+{% set miriam = collections.birds | authorPage('miriam') %}
+{{ miriam.data.bio | md | safe }}
+
+## Workshop Outline
+
+The workshop is taught in five sessions:
 
 ### 1. Resilient Styles: a Declarative Cascade
+
+{{ embed.figure([{
+  img: 'pages/css-workshop/cascade.jpg',
+  alt: 'Yoda reaching out to control the force, surrounded by jungle swamp'
+}]) }}
 
 #### First, Do No Harm
 
@@ -116,6 +156,11 @@ cascade layers, scope, and the `:has()` selector.
 
 ### 2. Dynamic Systems: Custom Properties & Value Resolution
 
+{{ embed.figure([{
+  img: 'pages/css-workshop/vars.jpg',
+  alt: 'Someone out-of-frame plugging a cable into an orange guitar amp'
+}]) }}
+
 #### Custom Properties Reveal the Matrix
 
 CSS custom properties (aka “variables”)
@@ -131,6 +176,11 @@ Practical use-cases,
 and interactive exercises related to CSS variables and functions.
 
 ### 3. Intrinsic Layouts: Distributing Space
+
+{{ embed.figure([{
+  img: 'pages/css-workshop/flow.jpg',
+  alt: 'Earth seen through a window on the international space station'
+}]) }}
 
 #### Flowing & Flexing
 
@@ -151,6 +201,11 @@ and interactive exercises related to distributing space.
 
 ### 4. Intrinsic Layouts: Defining Structure
 
+{{ embed.figure([{
+  img: 'pages/css-workshop/grids.jpg',
+  alt: 'Cat in a box, thinking OMG I have so many questions for this damn box'
+}]) }}
+
 #### Defining Structure
 
 Sometimes we also need to impose external structure
@@ -166,6 +221,11 @@ Practical use-cases,
 and interactive exercises related to defining layouts.
 
 ### 5. Resilient Styles: Organizing Conventions
+
+{{ embed.figure([{
+  img: 'pages/css-workshop/conventions.jpg',
+  alt: 'A woman in a suit kneels to pet cute ducklings while the mother duck removes money from her purse'
+}]) }}
 
 #### Cascade Aligned Programming
 
@@ -185,3 +245,8 @@ The details may vary from project to project,
 but we’ll look at practical strategies
 for building an expressive and robust CSS system
 that works for you.
+
+{{ utility.main_action(
+  content='Bring this workshop to your company »',
+  url='#contact-us-to-book-a-workshop'
+) }}

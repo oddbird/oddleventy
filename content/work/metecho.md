@@ -2,11 +2,14 @@
 title: Metecho
 sub: Collaboration for Salesforce projects
 logo: salesforce
+links:
+  site: https://metecho.herokuapp.com/
 image:
   src: work/metecho/metecho.jpg
   alt: A task with assigned developer and tester
 client: &client Salesforce.org
 date: 2019-03-21
+end: 2022-07-31
 tags:
   - Technology Sector
 people:

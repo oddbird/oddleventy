@@ -190,7 +190,7 @@ throughout the project.
 
 {{ quotes.find(
   collections.all,
-  slugs='easy'
+  slugs=['easy', 'complex-concepts']
 ) }}
 
 

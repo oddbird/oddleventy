@@ -41,7 +41,7 @@ press:
       to build a design system**, well then I jump!
       I'm grateful she put us in contact.
     <<: *tara
-    slug: best
+    slug: number-one
   - text: |
       **It was easy to talk about technology options.**
       OddBird was both flexible

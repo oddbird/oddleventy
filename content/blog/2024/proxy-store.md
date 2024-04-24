@@ -1,5 +1,5 @@
 ---
-title: Proxy is what's in store
+title: Proxy Is What's in Store
 sub: You may not need anything more
 author: james
 date: 2024-01-12
@@ -25,9 +25,9 @@ summary:
 {% import 'embed.macros.njk' as embed %}
 
 Recently, I was building the Playground feature on the [Sass
-website](https://sass-lang.com/playground/). It's an interactive feature built
-into a static Eleventy site, so we didn't have a UI Framework already
-integrated.
+website](https://sass-lang.com/playground/#eJxdj9FqwjAUhu/zFD9OVgULyhAhvfFV0ubYhiY5JYk4J333xdluZTch5zv5v58cDus6kOoHNj5FiY1AEZ2ythxUS4XExz6Q22XqSJurm/HxOGGrQkszPb3othJCnEk1HRb2HdaxCUS+jOaLYPxyGfEQwPlZovB6BuU1Ns748mZ06iSKt8fSMBbbnxBQs75PV+BdypouHOiXAA37RD5JrLLir3TEwv5Pvqqm9CjmcxRj/tezbFlRq6ZvA1+9Lhu2HCQSO5U456f51plEedQmDlbdJWrLTZ/BwNEkw17iYj5JZ5J4kNhXYvwGtNZ+7g==).
+It's an interactive feature built into a static Eleventy site, so we didn't have
+a UI Framework already integrated.
 
 {{ embed.img(
   src='blog/2024/sass-playground.png',

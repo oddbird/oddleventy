@@ -1,9 +1,19 @@
-.icon-blocks {
-  --media-size: calc(var(--extra) - var(--gutter));
+[icon-grid] {
   --fill: var(--icon);
+  --media-justify: start;
+}
+
+[icon-grid='full'] {
+  --media-size: calc(var(--extra) - var(--gutter));
   --column: full;
 }
 
-.icon-block {
-  --column: wide / page;
+[icon-grid='fit'] {
+  --column: page;
+  --media-size: 1.5lh;
+
+  display: grid;
+  gap: var(--gutter);
+  grid-template-columns: repeat(auto-fit, minmax(min(25ch, 100%), 1fr));
+  margin-block-end: var(--spacer);
 }

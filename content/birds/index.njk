@@ -23,9 +23,7 @@ summary: |
 {% import 'utility.macros.njk' as utility %}
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
-{% import 'contact.macros.njk' as contact %}
 {% import 'birds.macros.njk' as birds %}
-{% import 'post.macros.njk' as post %}
 
 {{ embed.figure(
   data=[{
@@ -40,20 +38,7 @@ summary: |
 
 {% call layout.grid('birds') %}
   {% for bird in collections.birds | active %}
-    <article {{ post.aria_label(bird) }} class="h-card">
-      {% call embed.media_block(
-        media=embed.svg('faces/' + bird.data.bird),
-        name='bird',
-        media_attrs={'class': 'u-logo media-image'}
-      ) %}
-        {{ post.banner(bird, hentry=true) }}
-        <div class="p-note">{{ bird.data.summary | md | safe }}</div>
-        {{ contact.social(
-          data=bird.data.social,
-          name=bird.data.bird | capitalize
-        ) }}
-      {% endcall %}
-    </article>
+    {{ birds.card(bird) }}
   {% endfor %}
 {% endcall %}
 
@@ -68,7 +53,7 @@ and proud of the careers they've built since.
 
 <ul>
 {% for bird in collections.birds | active(false) | sort(reverse=true, attribute='data.end') %}
-  {% set is_author = collections._post | byBird(bird.data.bird, 'solo') | length > 0 %}
+  {% set is_author = collections.posts | byBird(bird.data.bird, 'solo') | length > 0 %}
   {% set name = birds.author(
     name=bird.data.bird,
     page=bird,

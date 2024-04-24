@@ -78,6 +78,7 @@ blockquote:not([data-quote]) {
   --fill: var(--icon);
   --media-size: var(--double-gutter);
   --media-min: 3em;
+  --media-ratio: 1;
 
   grid-area: quote;
 }

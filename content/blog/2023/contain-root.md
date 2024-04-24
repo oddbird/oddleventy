@@ -7,6 +7,7 @@ tags:
   - Article
   - CSS
   - Container Queries
+  - CSSWG
 image:
   src: blog/2023/container.jpg
   alt: >

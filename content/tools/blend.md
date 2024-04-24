@@ -2,6 +2,7 @@
 title: Blend
 sub: Sass support for LCH, Lab, and more CSS color spaces
 date: 2020-04-28
+end: 2022-04-04
 image:
   src: projects/blend.jpg
 oss: owner
@@ -24,6 +25,16 @@ summary: |
   **Blend** provides early access to many of these features,
   while working with Sass colors.
 ---
+
+{% import 'utility.macros.njk' as utility %}
+
+{% set update = ['Update', utility.datetime('2022-04-04')] | join(' ') %}
+{% callout 'note', update %}
+We've been helping to
+[design and implement](https://github.com/sass/sass/blob/main/accepted/color-4-new-spaces.md)
+wide-gamut color support
+directly in the [Sass language](/work/sass-core/).
+{% endcallout %}
 
 ```bash
 npm install @oddbird/blend
