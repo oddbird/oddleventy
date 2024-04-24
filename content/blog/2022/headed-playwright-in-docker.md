@@ -1,5 +1,5 @@
 ---
-title: Running Playwright inside Docker containers
+title: Running Playwright Inside Docker Containers
 author: ed
 date: 2022-11-30
 tags:
