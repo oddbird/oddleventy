@@ -575,9 +575,9 @@ with fixed elements remaining in place:
 This is an acceptable solution in many cases,
 but it comes with a trade-off.
 Browsers provide a range of optimizations
-for the 'root scroller',
+for the 'root scroller'
 which won't be applied to the `body` element here.
-Your milage may vary.
+Your mileage may vary.
 {% endcallout %}
 
 But I would make one more change to the code above.
