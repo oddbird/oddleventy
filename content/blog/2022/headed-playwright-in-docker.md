@@ -16,6 +16,21 @@ summary: |
   interface from outside Docker containers.
 ---
 
+{% import 'utility.macros.njk' as utility %}
+
+{% set tldr = ['Update', utility.datetime('2024-04-25')] | join(' ') %}
+{% callout 'note', tldr %}
+This article was updated to reflect changes to Playwright and Docker:
+
+- Add section about [debugging an existing test suite].
+- Encourage usage of Playwright UI mode where available.
+- Use version-less Playwright Docker image to stay current.
+- Replace deprecated `docker-compose` commands with `docker compose`.
+
+[debugging an existing test suite]: #debugging-an-existing-test-suite
+
+{% endcallout %}
+
 [Playwright] is a test runner that uses real browsers to test web applications
 (an alternative to tools like [Selenium]). By default, Playwright runs these
 browsers in headless mode, which means the pages are loaded and tested without
