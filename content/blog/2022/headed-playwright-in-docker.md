@@ -18,17 +18,17 @@ summary: |
 
 {% import 'utility.macros.njk' as utility %}
 
-{% set tldr = ['Update', utility.datetime('2024-04-25')] | join(' ') %}
-{% callout 'note', tldr %}
+{% set update = ['Update', utility.datetime('2024-04-25')] | join(' ') %}
+{% callout 'note', update %}
 This article was updated to reflect changes to Playwright and Docker:
 
 - Add section about [debugging an existing test suite].
-- Encourage usage of Playwright UI mode where available.
+- Encourage usage of Playwright [UI mode] where available.
 - Use version-less Playwright Docker image to stay current.
 - Replace deprecated `docker-compose` commands with `docker compose`.
 
 [debugging an existing test suite]: #debugging-an-existing-test-suite
-
+[UI mode]: https://playwright.dev/docs/test-ui-mode
 {% endcallout %}
 
 [Playwright] is a test runner that uses real browsers to test web applications
