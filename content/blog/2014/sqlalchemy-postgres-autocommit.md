@@ -26,13 +26,13 @@ date: 2014-06-14
 {% callout 'note', update %}
 This article was written before the release of SQLAlchemy 2.0. The library has
 changed significantly since then, and we have added relevant notes to the
-[autocommit mode] and [real autocommit] sections. TL;DR -- autocommit mode was
-deprecated and the isolation level approach is now recommended and thoroughly
-explained by the official docs.
+sections about [autocommit mode], [real autocommit], and [starting
+transactions]. TL;DR -- autocommit mode was deprecated and the isolation level
+approach is now recommended and thoroughly explained by the official docs.
 
 [autocommit mode]: #sqlalchemy-s-autocommit-mode-not-what-you-think
 [real autocommit]: #turning-on-real-autocommit
-
+[starting transactions]: #starting-a-transaction
 {% endcallout %}
 
 [SQLAlchemy] defaults to implicitly opening a new transaction on your
@@ -244,7 +244,7 @@ mode.
 [postgres documentation]: https://www.postgresql.org/docs/9.2/transaction-iso.html
 [and psycopg2]: https://www.psycopg.org/docs/extensions.html#psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT
 
-### Starting a Transaction
+<h3 id="starting-a-transaction">Starting a Transaction</h3>
 
 If we didn't want to use transactions at all, this would be all we need.
 SQLAlchemy would happily hum along thinking it has a transaction but
@@ -262,6 +262,8 @@ connection, and then `psycopg2` will issue the `BEGIN` for us.
 {% callout 'note', update %}
 SQLAlchemy 2.0 now [recommends] starting an "autocommit" connection when needed,
 and using the regular connections otherwise:
+
+[recommends]: https://docs.sqlalchemy.org/en/20/core/connections.html#changing-between-isolation-levels
 
 ```python
 # autocommit block, no need to begin() or commit()
@@ -315,8 +317,6 @@ The rest of this article explains how to hook into the `begin()` call to turn an
 autocommit session into a transactional one in older versions of SQLAlchemy. As
 SQLAlchemy 2.0 explicitly [recommends] against this approach, we haven't updated
 it to work with newer versions.
-
-[recommends]: https://docs.sqlalchemy.org/en/20/core/connections.html#changing-between-isolation-levels
 {% endcallout %}
 
 SQLAlchemy gives us a way to hook into the `begin()` call: the
