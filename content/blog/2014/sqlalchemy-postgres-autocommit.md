@@ -20,6 +20,21 @@ summary: |
 date: 2014-06-14
 ---
 
+{% import 'utility.macros.njk' as utility %}
+
+{% set update = ['Update', utility.datetime('2024-04-26')] | join(' ') %}
+{% callout 'note', update %}
+This article was written before the release of SQLAlchemy 2.0. The library has
+changed significantly since then and we have added relevant notes to the
+[autocommit mode] and [real autocommit] sections. TLDR: autocommit mode was
+deprecated and the isolation level approach is now recommended and thoroughly
+explained by the official docs.
+
+[autocommit mode]: #sqlalchemy-s-autocommit-mode-not-what-you-think
+[real autocommit]: #turning-on-real-autocommit
+
+{% endcallout %}
+
 [SQLAlchemy] defaults to implicitly opening a new transaction on your
 first database query. If you prefer to start your transactions
 explicitly instead, I've documented here my explorations in getting that
@@ -167,7 +182,9 @@ that's the behavior I want with SQLAlchemy. Can I make that work?
 
 [sqlalchemy]: https://www.sqlalchemy.org/
 
-### SQLAlchemy's Autocommit Mode -- Not What You Think
+<h3 id="sqlalchemy-s-autocommit-mode-not-what-you-think">
+  SQLAlchemy's Autocommit Mode -- Not What You Think
+</h3>
 
 I soon found [autocommit mode] in SQLAlchemy's documentation, and
 thought I had my answer -- but no such luck. SQLAlchemy's autocommit
@@ -180,7 +197,16 @@ unnecessary transactions.
 
 [autocommit mode]: https://docs.sqlalchemy.org/en/13/orm/session_transaction.html#autocommit-mode
 
-### Turning on Real Autocommit
+{% callout 'note', update %}
+Autocommit mode was deprecated in SQLAlchemy 1.4 and [removed in 2.0]. The
+approach explained in the next section is now the recommended way to achieve
+autocommit functionality, albeit with some changes.
+
+[removed in 2.0]: https://docs.sqlalchemy.org/en/20/changelog/migration_20.html#library-level-but-not-driver-level-autocommit-removed-from-both-core-and-orm
+
+{% endcallout %}
+
+<h3 id="turning-on-real-autocommit">Turning on Real Autocommit</h3>
 
 Happily, setting all of SQLAlchemy's psycopg2 connections into real
 autocommit became quite easy in SQLAlchemy 0.8.2: SQLAlchemy's psycopg2
@@ -191,6 +217,15 @@ selecting it sets `autocommit=True` on all the psycopg2 connections.
 from sqlalchemy import create_engine
 engine = create_engine('postgresql://test', isolation_level="AUTOCOMMIT")
 ```
+
+{% callout 'note', update %}
+SQLAlchemy 2.0 supports this isolation level in both [engines] and individual
+[connections].
+
+[engines]: https://docs.sqlalchemy.org/en/20/core/connections.html#setting-isolation-level-or-dbapi-autocommit-for-an-engine
+[connections]: https://docs.sqlalchemy.org/en/20/core/connections.html#setting-isolation-level-or-dbapi-autocommit-for-a-connection
+
+{% endcallout %}
 
 We haven't discussed transaction isolation levels yet (and I won't in
 detail here). They control the visibility of changes between multiple
@@ -225,6 +260,68 @@ start transactions, `session.begin()` never actually issues a `BEGIN` to
 the database. But we don't actually need to issue `BEGIN` ourselves
 either - we just need to turn off the `autocommit` property on our
 connection, and then `psycopg2` will issue the `BEGIN` for us.
+
+{% callout 'note', update %}
+SQLAlchemy 2.0 now [recommends] starting an "autocommit" connection when needed,
+and using the regular connections otherwise:
+
+```python
+# autocommit block, no need to begin() or commit()
+with engine.connect().execution_options(isolation_level="AUTOCOMMIT") as connection:
+    connection.execute(text("<statement>"))
+
+# regular block, needs begin() and calls commit() at exit
+with engine.begin() as connection:
+    connection.execute(text("<statement>"))
+
+```
+
+If you prefer to autocommit by default, you can spin off an "autocommit" engine
+and use it for all your sessions and connections, and call the regular engine
+when you need transactions:
+
+```python
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+transaction_engine = create_engine("postgresql//test")
+autocommit_engine = engine.execution_options(isolation_level="AUTOCOMMIT")
+
+TransactionSession = sessionmaker(bind=engine)
+AutocommitSession = sessionmaker(bind=autocommit_engine)
+
+# This session autocommits
+with AutocommitSession() as session:
+    session.add(some_object)
+    session.add(some_other_object)
+
+# This session needs begin()/commit()/rollback()
+with TransactionSession() as session:
+    session.begin()
+    try:
+        session.add(some_object)
+        session.add(some_other_object)
+    except:
+        session.rollback()
+        raise
+    else:
+        session.commit()
+
+# Or the equivalent shorthand version
+with TransactionSession.begin() as session:
+    session.add(some_object)
+    session.add(some_other_object)
+# Commits the transaction, closes the session
+```
+
+The rest of the article explains how to hook into the `begin()` call to turn an
+autocommit session into a transactional one in older versions of SQLAlchemy. As
+SQLAlchemy 2.0 explicitly [recommends] against this approach, we haven't updated
+it to work with newer versions.
+
+[recommends]: https://docs.sqlalchemy.org/en/20/core/connections.html#changing-between-isolation-levels
+
+{% endcallout %}
 
 SQLAlchemy gives us a way to hook into the `begin()` call: the
 `after_begin` event, which sends along the relevant database connection.
