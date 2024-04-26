@@ -18,6 +18,19 @@ summary: |
   queries with SQLAlchemy, and highlight key differences.
 ---
 
+{% import 'utility.macros.njk' as utility %}
+
+{% set update = ['Update', utility.datetime('2024-04-26')] | join(' ') %}
+{% callout 'note', update %}
+
+- Added a new section on [transactions].
+- Expanded information on [migrations].
+
+[transactions]: #transactions-are-on-by-default
+[migrations]: #migrations-are-not-built-in
+
+{% endcallout %}
+
 If you've heard about [FastAPI], a modern and fast web framework for building
 APIs with Python, you might be wondering how it compares to Django, the most
 popular and mature web framework for Python. In this series, I will answer this
@@ -78,9 +91,9 @@ class User(DeclarativeBase):
      fullname: Mapped[Optional[str]]
 ```
 
-*Note: this [declarative style] for model definition is relatively new,
+_Note: this [declarative style] for model definition is relatively new,
 superseding the old `declarative_base` function in SQLAlchemy 2.0. You might
-still encounter the old style in some codebases.*
+still encounter the old style in some codebases._
 
 [declarative style]: https://docs.sqlalchemy.org/en/20/orm/mapping_styles.html#orm-declarative-mapping
 
@@ -134,8 +147,8 @@ with Session(engine) as session:
     users = session.execute("SELECT * FROM users").all()
 ```
 
-*Notice we are using raw SQL here instead of the ORM. We will get to the ORM in
-the next section.*
+_Notice we are using raw SQL here instead of the ORM. We will get to the ORM in
+the next section._
 
 You don't need to use a context manager to create a session, but it is
 recommended so that the session is automatically closed when you are done with
@@ -192,14 +205,14 @@ achieves this by exposing custom methods as part of the class attributes:
 users = session.scalars(select(User).where(User.id.in_([1, 2, 3]))).all()
 ```
 
-*The trailing underscore in `in_()` is needed because `in` is a reserved word in
-Python, not because of anything specific to SQLAlchemy.*
+<!-- prettier-ignore -->
+_The trailing underscore in `in_()` is needed because `in` is a reserved word in
+Python, not because of anything specific to SQLAlchemy._
 
 There's a whole host of interesting methods you can use with model attributes as
 explained in the [`ColumnElement` documentation].
 
-[`ColumnElement` documentation]:
-    https://docs.sqlalchemy.org/en/20/core/sqlelement.html#sqlalchemy.sql.expression.ColumnElement
+[`ColumnElement` documentation]: https://docs.sqlalchemy.org/en/20/core/sqlelement.html#sqlalchemy.sql.expression.ColumnElement
 
 The `select` function accepts entire model classes or individual columns as
 arguments. For example, to get only the `name` column, you can do
@@ -233,9 +246,43 @@ session.add_all([user1, user2, address1])
 session.commit()
 ```
 
-In Django terms, the session is like a transaction that you can commit to when
-you're ready, and the notion of saving individual model instances by calling one
-of their methods is not present.
+The notion of saving individual model instances by calling one of their methods
+is not present because transactions are always enabled, as we'll see in the next
+section.
+
+## Transactions are On by Default
+
+In Django, you need to wrap your database operations in a transaction to ensure
+that they are atomic. This means that if an exception is raised during the
+operation, the changes are rolled back. This is done by using the `atomic`
+decorator or the `transaction.atomic` context manager:
+
+```python
+from django.db import transaction
+
+with transaction.atomic():
+    User.objects.create(name="John")
+```
+
+In SQLAlchemy, transactions are on by default. This means that every operation
+you perform is wrapped in a transaction. You can commit the transaction
+explicitly with `session.commit()` or rollback with `session.rollback()`. If you
+don't commit the transaction, the changes will be rolled back when the session
+is closed.
+
+```python
+from sqlalchemy.orm import Session
+
+with Session(engine) as session:
+    session.execute("INSERT INTO users (name) VALUES ('John')")
+    session.commit()
+```
+
+If you prefer the Django way of doing things, it's actually possible to create
+an "autocommit" engine in SQLAlchemy. Refer to our article on [SQLAlchemy
+Autocommit] for more information.
+
+[SQLAlchemy Autocommit]: /2014/06/14/sqlalchemy-postgres-autocommit
 
 ## Relations Require More Work
 
@@ -340,7 +387,7 @@ We won't go into details here, but the basic substitutions are:
 - `./manage.py makemigrations` becomes `alembic revision --autogenerate`
 - `./manage.py migrate` becomes `alembic upgrade head`
 - `./manage.py migrate app <migration number>` becomes `alembic upgrade
-  <revision hash>` if going forward, or `alembic downgrade <revision hash>` if
+<revision hash>` if going forward, or `alembic downgrade <revision hash>` if
   going back
 
 SQLAlchemy and Alembic don't have the concept of "apps" as standalone elements
@@ -352,6 +399,13 @@ To date I don't know how to manage migrations in databases that have models
 defined by third-party packages. This is in contrast with Django where
 third-parties usually ship their own migration history to manage their tables
 independently from user-defined models.
+
+Alembic is also less helpful when it comes to automatically generating
+revisions. Some column attributes, like `server_default`, seem to be completely
+ignored when it comes to detecting changes in the model. When adding new columns
+to existing tables, Alembic will not warn you if the new column is not nullable.
+This can lead to data integrity issues if you are not careful, and the decision
+of adding a default or somehow populating your old rows is left to you.
 
 ## Conclusion
 
