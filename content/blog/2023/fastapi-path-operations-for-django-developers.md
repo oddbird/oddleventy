@@ -15,6 +15,12 @@ summary: |
   perspective of a Django developer.
 ---
 
+{% callout 'note', false %}
+Check out our [Winging It](/wingingit/) channel for a conversation on FastAPI.
+
+**Winging It** episode 5: [Streamline Your API Development with FastAPI](/2024/03/21/winging-it-05/)
+{% endcallout %}
+
 If you've heard about [FastAPI], a modern and fast web framework for building
 APIs with Python, you might be wondering how it compares to Django, the most
 popular and mature web framework for Python. In this series, I will answer this
@@ -86,7 +92,7 @@ consider it a definitive solution.
 
 In the middle of all this, I kept hearing about FastAPI and how it was not only
 fast, but also leveraged Python's type system to provide a better developer
-experience *and* automatic documentation and schemas for API consumers. After
+experience _and_ automatic documentation and schemas for API consumers. After
 following its excellent [tutorial], I asked the team to consider it for
 [OddBooks], our collaborative writing tool. An exploratory branch was created
 and after reviewing the resulting code, we decided to go ahead and officially
@@ -190,10 +196,10 @@ def delete_version(version_id: int):
     delete_version_from_db(id=version_id)
 ```
 
-*Note: I'm hiding the actual database read and write operations behind
+_Note: I'm hiding the actual database read and write operations behind
 `get_versions_from_db` and similar functions. How you [connect to your database]
 is a separate topic and I want to focus on writing and consuming API endpoints
-here.*
+here._
 
 [connect to your database]: /2023/10/23/sqlalchemy-for-django-developers/
 
@@ -210,7 +216,7 @@ In contrast with the Django version, we get:
   warns the frontend team when the API has changed.
 - Runtime validation of the request body and URL parameters by using type hints.
   FastAPI will ensure that something like `def update_version(id: int, version:
-  VersionUpdate):` will only accept a JSON body with a `title` field and an
+VersionUpdate):` will only accept a JSON body with a `title` field and an
   integer URL parameter.
 - Automatic serialization of the response body by using the `response_model`
   parameter. FastAPI will ensure that the response body is a JSON object with
