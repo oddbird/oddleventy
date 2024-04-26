@@ -25,8 +25,8 @@ date: 2014-06-14
 {% set update = ['Update', utility.datetime('2024-04-26')] | join(' ') %}
 {% callout 'note', update %}
 This article was written before the release of SQLAlchemy 2.0. The library has
-changed significantly since then and we have added relevant notes to the
-[autocommit mode] and [real autocommit] sections. TLDR: autocommit mode was
+changed significantly since then, and we have added relevant notes to the
+[autocommit mode] and [real autocommit] sections. TL;DR -- autocommit mode was
 deprecated and the isolation level approach is now recommended and thoroughly
 explained by the official docs.
 
@@ -203,7 +203,6 @@ approach explained in the next section is now the recommended way to achieve
 autocommit functionality, albeit with some changes.
 
 [removed in 2.0]: https://docs.sqlalchemy.org/en/20/changelog/migration_20.html#library-level-but-not-driver-level-autocommit-removed-from-both-core-and-orm
-
 {% endcallout %}
 
 <h3 id="turning-on-real-autocommit">Turning on Real Autocommit</h3>
@@ -224,7 +223,6 @@ SQLAlchemy 2.0 supports this isolation level in both [engines] and individual
 
 [engines]: https://docs.sqlalchemy.org/en/20/core/connections.html#setting-isolation-level-or-dbapi-autocommit-for-an-engine
 [connections]: https://docs.sqlalchemy.org/en/20/core/connections.html#setting-isolation-level-or-dbapi-autocommit-for-a-connection
-
 {% endcallout %}
 
 We haven't discussed transaction isolation levels yet (and I won't in
@@ -273,7 +271,6 @@ with engine.connect().execution_options(isolation_level="AUTOCOMMIT") as connect
 # regular block, needs begin() and calls commit() at exit
 with engine.begin() as connection:
     connection.execute(text("<statement>"))
-
 ```
 
 If you prefer to autocommit by default, you can spin off an "autocommit" engine
@@ -314,13 +311,12 @@ with TransactionSession.begin() as session:
 # Commits the transaction, closes the session
 ```
 
-The rest of the article explains how to hook into the `begin()` call to turn an
+The rest of this article explains how to hook into the `begin()` call to turn an
 autocommit session into a transactional one in older versions of SQLAlchemy. As
 SQLAlchemy 2.0 explicitly [recommends] against this approach, we haven't updated
 it to work with newer versions.
 
 [recommends]: https://docs.sqlalchemy.org/en/20/core/connections.html#changing-between-isolation-levels
-
 {% endcallout %}
 
 SQLAlchemy gives us a way to hook into the `begin()` call: the

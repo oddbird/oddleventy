@@ -22,13 +22,11 @@ summary: |
 
 {% set update = ['Update', utility.datetime('2024-04-26')] | join(' ') %}
 {% callout 'note', update %}
-
 - Added a new section on [transactions].
 - Expanded information on [migrations].
 
 [transactions]: #transactions-are-on-by-default
 [migrations]: #migrations-are-not-built-in
-
 {% endcallout %}
 
 If you've heard about [FastAPI], a modern and fast web framework for building
@@ -205,7 +203,6 @@ achieves this by exposing custom methods as part of the class attributes:
 users = session.scalars(select(User).where(User.id.in_([1, 2, 3]))).all()
 ```
 
-<!-- prettier-ignore -->
 _The trailing underscore in `in_()` is needed because `in` is a reserved word in
 Python, not because of anything specific to SQLAlchemy._
 
@@ -386,9 +383,9 @@ We won't go into details here, but the basic substitutions are:
 
 - `./manage.py makemigrations` becomes `alembic revision --autogenerate`
 - `./manage.py migrate` becomes `alembic upgrade head`
-- `./manage.py migrate app <migration number>` becomes `alembic upgrade
-<revision hash>` if going forward, or `alembic downgrade <revision hash>` if
-  going back
+- `./manage.py migrate app <migration number>` becomes
+  `alembic upgrade <revision hash>` if going forward, or
+  `alembic downgrade <revision hash>` if going back
 
 SQLAlchemy and Alembic don't have the concept of "apps" as standalone elements
 with their own models and migrations. Instead, they use a single

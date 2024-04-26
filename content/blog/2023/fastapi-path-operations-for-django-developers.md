@@ -215,9 +215,9 @@ In contrast with the Django version, we get:
   has done away with a handful of unit / integration tests and consistently
   warns the frontend team when the API has changed.
 - Runtime validation of the request body and URL parameters by using type hints.
-  FastAPI will ensure that something like `def update_version(id: int, version:
-VersionUpdate):` will only accept a JSON body with a `title` field and an
-  integer URL parameter.
+  FastAPI will ensure that something like
+  `def update_version(id: int, version: VersionUpdate):` will only accept a JSON
+  body with a `title` field and an integer URL parameter.
 - Automatic serialization of the response body by using the `response_model`
   parameter. FastAPI will ensure that the response body is a JSON object with
   the expected fields and types. The path operation itself can return anything
