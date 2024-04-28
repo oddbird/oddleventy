@@ -26,11 +26,11 @@ date: 2014-06-14
 {% callout 'note', update %}
 This article was written before the release of SQLAlchemy 2.0. The library has
 changed significantly since then, and we have added relevant notes to the
-sections about [autocommit mode], [real autocommit], and [starting
+sections about [autocommit mode][am], [real autocommit], and [starting
 transactions]. TL;DR -- autocommit mode was deprecated and the isolation level
 approach is now recommended and thoroughly explained by the official docs.
 
-[autocommit mode]: #sqlalchemy-s-autocommit-mode-not-what-you-think
+[am]: #sqlalchemy-s-autocommit-mode-not-what-you-think
 [real autocommit]: #turning-on-real-autocommit
 [starting transactions]: #starting-a-transaction
 {% endcallout %}

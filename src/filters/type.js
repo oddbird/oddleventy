@@ -222,5 +222,5 @@ export const callout = (content, type = 'note', label = true) => {
 
   return `<div data-callout="${type}">${
     displayLabel ? `<strong>${displayLabel}:</strong>` : ''
-  }<div>${md(content.trim())}</div></div>`;
+  }<div>\n\n${content}\n\n</div></div>`;
 };
