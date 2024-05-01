@@ -6,7 +6,7 @@ author: miriam
 date: 2023-01-09
 action:
   text: Bring this workshop to your company »
-  url: '#contact-us-to-book-a-workshop'
+  url: '/workshops/cascading-styles-deep/#contact-us-to-book-a-workshop'
 image:
   src: talks/mia-smashing-de.jpg
   position: top

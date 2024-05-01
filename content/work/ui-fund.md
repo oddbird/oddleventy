@@ -69,7 +69,7 @@ tags:
   - Container Queries
   - CSS Scope
 summary: |
-  We were [sponsored](#open-source-sponsors)
+  We were [sponsored](/work/ui-fund/#open-source-sponsors)
   by the Google Chrome UI Fund
   in our work developing
   new web platform functionality
