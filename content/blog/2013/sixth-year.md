@@ -40,7 +40,7 @@ Thanks for a great year, everyone. See you around in 2014!
 
 — the Odds Bird
 
-[rachel nabors]: http://rachelnabors.com/
+[rachel nabors]: https://nearestnabors.com/
 [claudina sarahe]: https://twitter.com/itsmisscs
 [novel]: https://www.greengreenmud.com/
 [sassconf]: https://twitter.com/sassconf

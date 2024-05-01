@@ -51,7 +51,7 @@ Chris Lilley & Lea Verou released the handy [Color.js][] library,
 and all of this is based on
 [CSS Color Level 4][] and [Level 5][].
 
-[full proposal]: https://github.com/sass/sass/blob/main/proposal/color-4-new-spaces.md
+[full proposal]: https://github.com/sass/sass/blob/main/accepted/color-4-new-spaces.md
 [request]: https://sass-lang.com/blog/request-for-comments-color-spaces
 [collection of resources]: https://www.bram.us/2022/02/08/color-spaces-and-colors-in-css/
 [Color.js]: https://colorjs.io/

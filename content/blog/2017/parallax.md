@@ -22,8 +22,8 @@ article on [Performant Parallaxing]. This article is so useful, we
 couldn't pass up the opportunity to recommend it. Continue reading for a
 quick summary or **head over to Paul's article right away!**
 
-  [Rachel Nabors]: http://rachelnabors.com/
-  [Performant Parallaxing]: https://developer.chrome.com/blog/performant-parallaxing/
+[Rachel Nabors]: https://nearestnabors.com/
+[Performant Parallaxing]: https://developer.chrome.com/blog/performant-parallaxing/
 
 ### [Performant Parallaxing &gt;][Performant Parallaxing]
 
