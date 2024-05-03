@@ -1,5 +1,6 @@
 [data-callout] {
   --list-padding--default: 1em;
+  --inline-bleed: var(--gutter);
 
   background: var(--callout-block-bg, var(--callout));
   border-inline-start: thick solid var(--callout-block-border, var(--border));
