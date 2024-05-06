@@ -88,6 +88,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@11ty/eleventy-plugin-bundle@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@11ty/eleventy-plugin-bundle@npm:2.0.2"
+  dependencies:
+    debug: "npm:^4.3.4"
+  checksum: 10/80bd23f208c7c2286fd0321771d1ff0431cebd2ab3d96098248fdefa6a1fceffab55f4e234db6de5bdf0a771fa7166ddad062903e5abc376ed6b640f5ef77263
+  languageName: node
+  linkType: hard
+
 "@11ty/eleventy-plugin-rss@npm:^1.2.0":
   version: 1.2.0
   resolution: "@11ty/eleventy-plugin-rss@npm:1.2.0"
@@ -117,13 +126,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy@npm:3.0.0-alpha.9":
-  version: 3.0.0-alpha.9
-  resolution: "@11ty/eleventy@npm:3.0.0-alpha.9"
+"@11ty/eleventy@npm:3.0.0-alpha.10":
+  version: 3.0.0-alpha.10
+  resolution: "@11ty/eleventy@npm:3.0.0-alpha.10"
   dependencies:
     "@11ty/dependency-tree": "npm:^3.0.0"
     "@11ty/dependency-tree-esm": "npm:^1.0.0"
     "@11ty/eleventy-dev-server": "npm:^2.0.0"
+    "@11ty/eleventy-plugin-bundle": "npm:^2.0.2"
     "@11ty/eleventy-utils": "npm:^1.0.2"
     "@11ty/lodash-custom": "npm:^4.17.21"
     "@11ty/posthtml-urls": "npm:^1.0.0"
@@ -139,7 +149,7 @@ __metadata:
     is-glob: "npm:^4.0.3"
     iso-639-1: "npm:^3.1.2"
     kleur: "npm:^4.1.5"
-    liquidjs: "npm:^10.11.1"
+    liquidjs: "npm:^10.12.0"
     luxon: "npm:^3.4.4"
     markdown-it: "npm:^14.1.0"
     micromatch: "npm:^4.0.5"
@@ -156,7 +166,7 @@ __metadata:
     slugify: "npm:^1.6.6"
   bin:
     eleventy: cmd.cjs
-  checksum: 10/781730954d9c39e5e5cc69f46b22a52a0b86ae10e806510c753536bf8fa059010900963302a1e47b8488c58a3ab1de2374af0014cc399d00f7835265211a0bf7
+  checksum: 10/4aa67ca53d38c4faf8eec93e54ee6dd6ad8f5e81dc09ecc83c616c49425b5c596274a2ee3ac07d22f877991d298d83b5ebb299f0e35d5d01917da0fce37bd70e
   languageName: node
   linkType: hard
 
@@ -8119,7 +8129,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"liquidjs@npm:^10.11.1":
+"liquidjs@npm:^10.12.0":
   version: 10.12.0
   resolution: "liquidjs@npm:10.12.0"
   dependencies:
@@ -9280,7 +9290,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oddsite@workspace:."
   dependencies:
-    "@11ty/eleventy": "npm:3.0.0-alpha.9"
+    "@11ty/eleventy": "npm:3.0.0-alpha.10"
     "@11ty/eleventy-fetch": "npm:^4.0.1"
     "@11ty/eleventy-img": "npm:^4.0.2"
     "@11ty/eleventy-plugin-rss": "npm:^1.2.0"
