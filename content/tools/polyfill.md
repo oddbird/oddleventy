@@ -32,6 +32,11 @@ summary: |
 [Demo](https://popover-polyfill.netlify.app/) |
 [Source](https://github.com/oddbird/popover-polyfill)
 
+{{ embed.img(
+  src='projects/popover-attribute-polyfill.jpg',
+  alt='Popovers take a state of “auto” or “manual”. If no state is provided, the popover takes on the behavior of its default state, which is “auto”. Auto popovers can be “light dismissed” by selecting anywhere on the page, clicking the popover control button, or opening another popover on the page.'
+) }}
+
 OddBird's Popover Attribute Polyfill --
 built in collaboration with [Keith Cirkel](https://github.com/keithamus)
 and used in production by GitHub --
@@ -78,6 +83,11 @@ author-defined anchor elements.
 
 [Demo](https://layers-polyfill-example.netlify.app/) |
 [Source](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-cascade-layers#readme)
+
+{{ embed.img(
+  src='projects/cascade-layers-polyfill.jpg',
+  alt='Sample Content for Layers and the Polyfill - When layers are supported or if the polyfill is in use, you will see the default bootstrap button styles. In this demo, the Bootstrap CSS is imported into the lowest priority layer making any CSS written outside of the "framework" layer take priority. This means you can apply your own styles without having to worry about increased specificity.'
+) }}
 
 PostCSS Cascade Layers lets you use `@layer`
 following the Cascade Layers Specification.
