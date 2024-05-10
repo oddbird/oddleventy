@@ -34,7 +34,11 @@ summary: |
 
 {{ embed.img(
   src='projects/popover-attribute-polyfill.jpg',
-  alt='Popovers take a state of “auto” or “manual”. If no state is provided, the popover takes on the behavior of its default state, which is “auto”. Auto popovers can be “light dismissed” by selecting anywhere on the page, clicking the popover control button, or opening another popover on the page.'
+  alt='Popovers take a state of “auto” or “manual”. If no state is provided, the
+    popover takes on the behavior of its default state, which is “auto”. Auto
+    popovers can be “light dismissed” by selecting anywhere on the page,
+    clicking the popover control button, or opening another popover on the
+    page.'
 ) }}
 
 OddBird's Popover Attribute Polyfill --
@@ -86,7 +90,12 @@ author-defined anchor elements.
 
 {{ embed.img(
   src='projects/cascade-layers-polyfill.jpg',
-  alt='Sample Content for Layers and the Polyfill - When layers are supported or if the polyfill is in use, you will see the default bootstrap button styles. In this demo, the Bootstrap CSS is imported into the lowest priority layer making any CSS written outside of the "framework" layer take priority. This means you can apply your own styles without having to worry about increased specificity.'
+  alt='Sample Content for Layers and the Polyfill - When layers are supported or
+    if the polyfill is in use, you will see the default bootstrap button styles.
+    In this demo, the Bootstrap CSS is imported into the lowest priority layer
+    making any CSS written outside of the "framework" layer take priority. This
+    means you can apply your own styles without having to worry about increased
+    specificity.'
 ) }}
 
 PostCSS Cascade Layers lets you use `@layer`
