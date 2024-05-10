@@ -27,16 +27,25 @@ summary: |
 
 {% import 'embed.macros.njk' as embed %}
 
-## Cascade Layers Polyfill
+## Popover Polyfill
 
-[Demo](https://layers-polyfill-example.netlify.app/) |
-[Source](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-cascade-layers#readme)
+[Demo](https://popover-polyfill.netlify.app/) |
+[Source](https://github.com/oddbird/popover-polyfill)
 
-PostCSS Cascade Layers lets you use `@layer`
-following the Cascade Layers Specification.
-For more information on layers,
-checkout [A Complete Guide to CSS Cascade Layers](https://css-tricks.com/css-cascade-layers/)
-by Miriam Suzanne.
+OddBird's Popover Attribute Polyfill --
+built in collaboration with [Keith Cirkel](https://github.com/keithamus)
+and used in production by GitHub --
+lets developers preview the upcoming mechanism
+for [displaying popover content](https://open-ui.org/components/popover.research.explainer/)
+on top of other page content,
+drawing the user's attention
+to specific important information
+or actions that need to be taken.
+
+This polyfills the HTML `popover` attribute
+and `showPopover`/`hidePopover`/`togglePopover` methods
+onto `HTMLElement`, as well as the `popovertarget`
+and `popovertargetaction` attributes on `<button>` elements.
 
 ## CSS Anchor Positioning Polyfill
 
@@ -65,21 +74,13 @@ the proposed new functions allow absolutely positioned elements
 to be placed relative to one or more
 author-defined anchor elements.
 
-## Popover Polyfill
+## Cascade Layers Polyfill
 
-[Source](https://github.com/oddbird/popover-polyfill)
+[Demo](https://layers-polyfill-example.netlify.app/) |
+[Source](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-cascade-layers#readme)
 
-OddBird's Popover Attribute Polyfill --
-built in collaboration with [Keith Cirkel](https://github.com/keithamus)
-and used in production by GitHub --
-lets developers preview the upcoming mechanism
-for [displaying popover content](https://open-ui.org/components/popover.research.explainer/)
-on top of other page content,
-drawing the user's attention
-to specific important information
-or actions that need to be taken.
-
-This polyfills the HTML `popover` attribute
-and `showPopover`/`hidePopover`/`togglePopover` methods
-onto `HTMLElement`, as well as the `popovertarget`
-and `popovertargetaction` attributes on `<button>` elements.
+PostCSS Cascade Layers lets you use `@layer`
+following the Cascade Layers Specification.
+For more information on layers,
+checkout [A Complete Guide to CSS Cascade Layers](https://css-tricks.com/css-cascade-layers/)
+by Miriam Suzanne.
