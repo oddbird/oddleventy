@@ -1,6 +1,6 @@
 ---
 title: HTML & CSS Polyfills
-sub: Cascade Layers, CSS Anchor Positioning, Popover
+sub: Popover, CSS Anchor Positioning, Cascade Layers
 feature: true
 date: 2022-02-11
 image:
@@ -21,8 +21,8 @@ summary: |
   OddBird has started and maintains
   a number of powerful polyfills
   for new web platform features
-  including Cascade Layers, CSS Anchor Positioning,
-  and the Popover attribute.
+  including the Popover attribute,
+  CSS Anchor Positioning, and Cascade Layers.
 ---
 
 {% import 'embed.macros.njk' as embed %}
