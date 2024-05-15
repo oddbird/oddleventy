@@ -1,20 +1,21 @@
 ---
 title: Cascading Layouts
-sub: A workshop on resilient CSS layouts
+sub: A workshop on resilient CSS layouts, June 24-26
 feature: workshop
 author: miriam
-date: 2024-04-26
+date: 2024-05-15
 action:
-  text: Bring this workshop to your company »
-  url: '#contact-us-to-book-a-workshop'
+  text: Register Now »
+  url: 'https://ti.to/pland/css-layout'
 image:
-  src: talks/mia-smashing-de.jpg
-  position: top
+  src: talks/layout-workshop.png
+  position: center
   alt: |
-    Mia from behind,
-    standing at a laptop -
-    speaking to a conference audience
-    and gesturing to one side
+    A pink box labeled
+    extrinsic size (imposed from outside),
+    with overflowing blue text
+    that has a dashed box,
+    and says intrinsic size (from the content)
 tags:
   - CSS
   - Cascade
@@ -35,25 +36,6 @@ included:
   - title: Certificate of Completion
     text: Documenting your education
     icon: icons/ribbon
-press:
-  - text: |
-      We were super happy with how it went.
-      And you sold quite a lot of tickets too.
-    name: Charis Rooda
-    title: Event Organizer
-    face: charis-rooda.png
-    venue: Smashing Conference
-    url: https://smashingconf.com/
-  - text: |
-      Loving the content and the interactivity.
-      My favorite part is seeing how [Miriam] arranged the topics
-      so that concepts smoothly flow into each other.
-      Looking forward to two more days!
-    name: Seth A. Roby
-    title: Workshop attendee
-    face: seth-roby.jpg
-    url: https://mastodon.social/@TALlama/112039472807241153
-    slug: workshop-flow
 summary: |
   CSS Layout techniques have come a long way
   since the early days of Responsive Design,
@@ -79,15 +61,10 @@ summary: |
   grid='fit'
 ) }}
 
-## Contact Us to Book a Workshop
+## Register Now
 
-{{ contact.form(
-  submit='Book Now',
-  name='workshop',
-  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
-) }}
-
-{{ quotes.grid(press) }}
+<script src="https://js.tito.io/v2" async></script>
+<tito-widget event="pland/css-layout"></tito-widget>
 
 ## What Will Attendees Learn In This Workshop?
 
@@ -105,8 +82,8 @@ You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
 {{ utility.main_action(
-  content='Bring this workshop to your company »',
-  url='#contact-us-to-book-a-workshop'
+  content='Register Now »',
+  url='#register-now'
 ) }}
 
 ## About Miriam
