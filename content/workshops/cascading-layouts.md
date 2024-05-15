@@ -114,7 +114,15 @@ can guide us to more performant and resilient styles.
 
 #### Normal Flow & Formatting Contexts
 
-@@@
+Normal Flow is the default layout engine of CSS,
+before we apply flexbox or grids.
+Often passed over,
+this powerful layout model
+has a lot of complexity hidden just below the surface.
+We'll look at how the DOM is rendered
+as a tree of inline and block boxes,
+each generating a new 'formatting context'
+for the elements nested inside.
 
 ### 2. Distributing Space
 
