@@ -19,6 +19,8 @@
   to: /talks/
 - from: /tags/workshop/
   to: /talks/
+- from: /workshops/
+  to: /talks/
 
 - from: /talks/keynote/
   to: /talks/
