@@ -38,7 +38,7 @@ included:
     icon: icons/ribbon
 summary: |
   CSS layout techniques have come a long way
-  since the early days of Responsive Design,
+  since the early days of responsive design,
   but many websites are still using
   decade-old approaches
   that require more fragile code
