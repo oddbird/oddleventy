@@ -1,6 +1,6 @@
 ---
 title: Cascading Layouts
-sub: A workshop on resilient CSS layouts, June 24-26
+sub: A workshop on resilient CSS layouts, June 24-26, 2024
 feature: workshop
 author: miriam
 date: 2024-05-15
@@ -25,7 +25,7 @@ tags:
   - CSSWG
 included:
   - title: Interactive Sessions
-    text: Virtual or in-person
+    text: Online, wherever you are
     icon: icons/talk
   - title: Dedicated Q&A
     text: To gain a thorough understanding
@@ -37,14 +37,14 @@ included:
     text: Documenting your education
     icon: icons/ribbon
 summary: |
-  CSS Layout techniques have come a long way
+  CSS layout techniques have come a long way
   since the early days of Responsive Design,
   but many websites are still using
   decade-old approaches
   that require more fragile code
   and more ongoing maintenance.
   **Take your sites to the next level
-  with this 3-day workshop
+  with this 3-session workshop
   on building more resilient and maintainable web layouts
   using modern CSS**.
 ---
