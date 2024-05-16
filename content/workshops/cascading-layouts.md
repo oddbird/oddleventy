@@ -5,7 +5,7 @@ feature: workshop
 author: miriam
 date: 2024-05-15
 action:
-  text: Register Now »
+  text: Register now »
   url: 'https://ti.to/pland/css-layout'
 image:
   src: talks/layout-workshop.png
