@@ -1,7 +1,6 @@
 ---
 title: Cascading Style Systems
 sub: A workshop on resilient & maintainable CSS
-feature: workshop
 author: miriam
 date: 2023-01-09
 action:
