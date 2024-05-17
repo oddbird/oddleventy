@@ -184,10 +184,14 @@ params:
     '--width': '100%',
     '--span': span
   } -%}
+  {%- set start = (id.split('&t=')[1] or '0').split('s')[0] -%}
+  {%- set id = id.split('&t=')[0] -%}
   <is-land on:visible class="ratio" {{ utility.style_if(style) }} >
-    <lite-youtube videoid="{{ id }}" style="
-      background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ id }}/auto/jpeg/');
-    "/>
+    <lite-youtube
+      videoid="{{ id }}"
+      params="start={{ start }}"
+      style="background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ id }}/auto/jpeg/');"
+    />
   </is-land>
 {%- endmacro %}
 
