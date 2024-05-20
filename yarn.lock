@@ -8546,6 +8546,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-it-anchor@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "markdown-it-anchor@npm:9.0.1"
+  peerDependencies:
+    "@types/markdown-it": "*"
+    markdown-it: "*"
+  checksum: 10/eecf779066b37f75eea8e665564073aaf08fa91e7492f8d6477a55f23f6450b21b58b9b416170b20f803483c264c7d327ff5d32aca8453f7b1ab13a8874df4af
+  languageName: node
+  linkType: hard
+
 "markdown-it-footnote@npm:^4.0.0":
   version: 4.0.0
   resolution: "markdown-it-footnote@npm:4.0.0"
@@ -9328,7 +9338,7 @@ __metadata:
     lite-youtube-embed: "npm:^0.3.2"
     lodash-es: "npm:^4.17.21"
     markdown-it: "npm:^14.1.0"
-    markdown-it-anchor: "npm:^8.6.7"
+    markdown-it-anchor: "npm:^9.0.1"
     markdown-it-footnote: "npm:^4.0.0"
     markdown-it-mark: "npm:^4.0.0"
     mockdate: "npm:^3.0.5"
