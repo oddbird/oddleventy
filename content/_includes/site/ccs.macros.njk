@@ -22,7 +22,7 @@
 {% set fade = 'fade' if is_fade else none %}
 {% set steps = ccs.steps + 1 %}
 
-<ul data-ccs-show="palette" }}>
+<ul data-ccs-show="palette">
   {% for step in range(1, steps) | reverse %}
     {{ swatch(
       color=color,
