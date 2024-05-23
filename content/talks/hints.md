@@ -23,9 +23,9 @@ events:
     adr: Online
     date: 2024-05-09
     slides: https://slides.oddbird.net/hints/eleventy/
-    video: https://www.youtube.com/watch?v=iLxJ6PtuF9M&t=4190s
+    video: https://www.youtube.com/watch?v=uaN9kY8lKPU
     media: &11ty
-      youtube: iLxJ6PtuF9M&t=4190s
+      youtube: uaN9kY8lKPU
 media:
   - <<: *11ty
 summary: |
