@@ -22,11 +22,14 @@ pre {
   background: var(--bg-full);
   border: thin solid var(--border);
   color: var(--text);
-  contain: inline-size;
   padding: var(--gutter);
   margin: var(--newline) var(--inline-bleed, 0);
   overflow: auto;
   white-space: pre;
+}
+
+pre[class|='language'] {
+  contain: inline-size;
 }
 
 code:not([class^='language']) {

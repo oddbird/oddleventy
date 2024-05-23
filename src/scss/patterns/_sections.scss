@@ -156,7 +156,7 @@
 // Special
 [data-grid='birds'] {
   --fit-min: calc(var(--grid-item) * 1.25);
-  --media-content: var(--column-sm);
+  --media-content: var(--min-page-column);
   --media-gap: var(--shim);
   --newline: inherit;
 }

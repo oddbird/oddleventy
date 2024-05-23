@@ -1,6 +1,6 @@
 [data-grid='open-source'] {
   --col-gap: var(--spacer);
-  --fit-max: var(--column-sm);
+  --fit-max: var(--min-page-column);
   --item-title: var(--h2);
 
   header {
