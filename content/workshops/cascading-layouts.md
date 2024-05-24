@@ -6,9 +6,9 @@ author: miriam
 date: 2024-05-15
 action:
   text: Register now »
-  url: 'https://ti.to/pland/css-layout'
+  url: '/workshops/cascading-layouts/#register-now'
 image:
-  src: talks/layout-workshop.png
+  src: talks/cascading-layouts-workshop.jpg
   position: center
   alt: |
     A pink box labeled
@@ -53,6 +53,15 @@ summary: |
 {% import 'contact.macros.njk' as contact %}
 {% import 'embed.macros.njk' as embed %}
 {% import 'quotes.macros.njk' as quotes %}
+
+{{ embed.figure([{
+  img: 'talks/layout-workshop.png',
+  alt: 'A pink box labeled
+    extrinsic size (imposed from outside),
+    with overflowing blue text
+    that has a dashed box,
+    and says intrinsic size (from the content)'
+}]) }}
 
 ## What Will Attendees Get?
 
@@ -168,3 +177,11 @@ and container queries.
 
 Practical use-cases,
 and interactive exercises related to defining layouts.
+
+## Scholarships
+
+Need-based scholarships available.
+For more information,
+please [contact us].
+
+[contact us]: /contact/
