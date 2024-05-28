@@ -22,7 +22,8 @@ html {
   @include config.above('wide-page') {
     --page-columns: [full-start] var(--page-margin) [content-start]
       minmax(0, 1fr) [wide-start] minmax(0, var(--extra)) [page-start]
-      minmax(min-content, var(--page)) [page-end] minmax(0, var(--extra))
-      [wide-end] minmax(0, 1fr) [content-end] var(--page-margin) [full-end];
+      minmax(var(--min-page-column), var(--page)) [page-end]
+      minmax(0, var(--extra)) [wide-end] minmax(0, 1fr) [content-end]
+      var(--page-margin) [full-end];
   }
 }

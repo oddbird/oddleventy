@@ -28,6 +28,10 @@ pre {
   white-space: pre;
 }
 
+pre[class|='language'] {
+  contain: inline-size;
+}
+
 code:not([class^='language']) {
   background: var(--callout-special);
   border-radius: var(--quarter-shim);
