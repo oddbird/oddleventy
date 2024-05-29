@@ -71,7 +71,7 @@ orgs:
     url: https://www.blackvisionsmn.org/
     icon: icons/fist
     text: |
-      Black Visions Collective believes in a future
+      believes in a future
       where all Black people have autonomy,
       safety is community-led,
       and we are in right relationship within our ecosystems.
