@@ -3,19 +3,20 @@ title: Cascading Layouts
 sub: A workshop on resilient CSS layouts, June 24-26, 2024
 feature: workshop
 author: miriam
-date: 2024-05-15
+date: 2024-06-24
 action:
   text: Register now »
-  url: 'https://ti.to/pland/css-layout'
+  url: '/workshops/cascading-layouts/#register-now'
 image:
-  src: talks/layout-workshop.png
+  src: talks/cascading-workshop-cat.jpg
   position: center
   alt: |
-    A pink box labeled
-    extrinsic size (imposed from outside),
-    with overflowing blue text
-    that has a dashed box,
-    and says intrinsic size (from the content)
+    A cat sitting in a box
+    thinking OMG.
+    I have so many questions
+    for this damn box.
+og:
+  img: talks/cascading-layouts-workshop-og.jpg
 tags:
   - CSS
   - Cascade
@@ -53,6 +54,15 @@ summary: |
 {% import 'contact.macros.njk' as contact %}
 {% import 'embed.macros.njk' as embed %}
 {% import 'quotes.macros.njk' as quotes %}
+
+{{ embed.figure([{
+  img: 'talks/layout-workshop.png',
+  alt: 'A pink box labeled
+    extrinsic size (imposed from outside),
+    with overflowing blue text
+    that has a dashed box,
+    and says intrinsic size (from the content)'
+}]) }}
 
 ## What Will Attendees Get?
 
@@ -168,3 +178,11 @@ and container queries.
 
 Practical use-cases,
 and interactive exercises related to defining layouts.
+
+## Scholarships
+
+Need-based scholarships available.
+For more information,
+please [contact us].
+
+[contact us]: /contact/
