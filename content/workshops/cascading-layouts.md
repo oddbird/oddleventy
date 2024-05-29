@@ -55,14 +55,7 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 {% import 'quotes.macros.njk' as quotes %}
 
-{{ embed.figure([{
-  img: 'talks/layout-workshop.png',
-  alt: 'A pink box labeled
-    extrinsic size (imposed from outside),
-    with overflowing blue text
-    that has a dashed box,
-    and says intrinsic size (from the content)'
-}]) }}
+{{ embed.figure([{ youtube: '9EDOzJJdxWA' }]) }}
 
 ## What Will Attendees Get?
 
