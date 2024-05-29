@@ -8,14 +8,15 @@ action:
   text: Register now »
   url: '/workshops/cascading-layouts/#register-now'
 image:
-  src: talks/cascading-layouts-workshop.jpg
+  src: talks/cascading-workshop-cat.jpg
   position: center
   alt: |
-    A pink box labeled
-    extrinsic size (imposed from outside),
-    with overflowing blue text
-    that has a dashed box,
-    and says intrinsic size (from the content)
+    A cat sitting in a box
+    thinking OMG.
+    I have so many questions
+    for this damn box.
+og:
+  img: talks/cascading-layouts-workshop-og.jpg
 tags:
   - CSS
   - Cascade
