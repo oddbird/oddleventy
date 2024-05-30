@@ -4,7 +4,7 @@
 
 {% macro feature(page) %}
   {{ layout.title('Upcoming Workshop') }}
-  <article {{ post.aria_label(item) }} class="feature-workshop">
+  <article {{ post.aria_label(page) }} class="feature-workshop">
     {{ post.hero(page.data.image, 'post') }}
     <header class="training-header">
       {{ post.banner(page) }}
