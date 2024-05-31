@@ -32,6 +32,16 @@
     </div>
   {%- endif %}
 
+  {%- set show_workshop = feature_workshop or (tags and (('CSS' in tags) or ('_talk' in tags))) or oss -%}
+  {%- set fw = collections._talk | findPage('data.feature', 'workshop') -%}
+  {%- set is_workshop = page.url == fw.url -%}
+  {%- if fw and show_workshop and not is_workshop -%}
+    <section data-typeset>
+      {% import "page/workshop.macros.njk" as workshop %}
+      {{ workshop.feature(fw) }}
+    </section>
+  {%- endif -%}
+
   {% include 'page/mentions.njk' %}
 
   {% if oss or sponsors %}

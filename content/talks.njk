@@ -24,26 +24,8 @@ summary: |
 
 {% set fw = collections._talk | findPage('data.feature', 'workshop') %}
 {% if fw %}
-  {{ layout.title('Upcoming Workshop') }}
-  <article {{ post.aria_label(item) }} class="feature-workshop">
-    {{ post.hero(fw.data.image, 'post') }}
-    <header class="training-header">
-      {{ post.banner(fw) }}
-      {{ post.subtitle(fw.data.sub) }}
-      {{ post.byline(fw, collections) }}
-    </header>
-
-    <div class="training-detail">
-      {{ fw.data.summary | md | safe }}
-
-      {% if fw.data.action %}
-        {{ utility.main_action(
-          fw.data.action.text,
-          url=fw.data.action.url
-        ) }}
-      {% endif %}
-    </div>
-  </article>
+  {% import "page/workshop.macros.njk" as workshop %}
+  {{ workshop.feature(fw) }}
 {% endif %}
 
 {{ quotes.find(
