@@ -2,8 +2,6 @@
 card: large
 title: QuarqNet
 sub: Real-time telemetry & sharing for athletes
-links:
-  site: https://www.quarqnet.com/
 logo: sram
 image:
   src: work/quarqnet/quarqnet-hero.jpg
@@ -199,7 +197,7 @@ To establish color patterns for QuarqNet, OddBird designers started with
 the existing brand colors and selected related user interface colors.
 These colors were communicated via Pivotal Tracker and coded as Sass
 Maps to establish front-end development patterns as well as an automated
-"living" [style guide].
+"living" style guide.
 
 {{ embed.figure(
   data=[{
@@ -208,8 +206,6 @@ Maps to establish front-end development patterns as well as an automated
   }],
   class='extend-large'
 ) }}
-
-[style guide]: https://quarqnet.com/styleguide/config-colors.html
 
 ### User Story
 
@@ -348,8 +344,7 @@ and other visual clues to improve user comprehension of the new flow.
 
 ### Implementation
 
-After minor design tweaks in the browser, we had our solution! View the
-current, live application at [QuarqNet.com].
+After minor design tweaks in the browser, we had our solution!
 
 {{ embed.figure(
   data=[{
@@ -358,5 +353,3 @@ current, live application at [QuarqNet.com].
   }],
   class='extend-large'
 ) }}
-
-[QuarqNet.com]: https://www.quarqnet.com/
