@@ -51,8 +51,8 @@ work. When drafting logos, I often trace images. Paper lets me upload an
 image, draw on top of it, and easily delete the image from the
 background when I’m finished.
 
-[Paper]: https://wetransfer.com/paper
-[QuarqNet]: https://www.quarqnet.com/
+[Paper]: https://wetransfer.com/explore/paper
+[QuarqNet]: /work/quarqnet/
 
 ## Typography: A Practical Guide
 

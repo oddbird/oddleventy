@@ -1,8 +1,6 @@
 ---
 title: Quarq Race Intelligence
 sub: Real-time race analytics
-links:
-  site: https://www.quarqrace.com/
 logo: sram
 image:
   src: work/quarqrace/trig.jpg
