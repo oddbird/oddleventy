@@ -14,6 +14,11 @@ tags:
   - Container Queries
   - CSSWG
 events:
+  - venue: CMD Amsterdam
+    date: 2024-06-05
+    adr: Amsterdam, Netherlands
+    url: https://www.eventbrite.nl/e/pre-css-day-tickets-872463962197
+    slides: https://slides.oddbird.net/cq/pre-cssday/
   - venue: Front Conference
     date: 2023-08-31
     end: 2023-09-01
