@@ -297,7 +297,7 @@ every property of the mixin.
 But… revert _to what value_?
 Maybe we can use `revert-layer`
 and some clever layering?
-We could even build the off-switch into our mixin:
+We could even build the off switch into our mixin:
 
 ```css
 /* when '--off' is undefined we get the output */
@@ -327,7 +327,7 @@ We could even build the off-switch into our mixin:
 }
 ```
 
-That provides an off-switch,
+That provides an off switch,
 but it requires some careful planning ahead,
 and the layering requirement seems fragile.
 
