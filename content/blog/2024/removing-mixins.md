@@ -353,7 +353,7 @@ for the mixin-application syntax to cascade.
 But before we make any big changes
 we also need to ask:
 
-- Are there place we _don't want_ that behavior?
+- Are there places we _don't want_ that behavior?
   Places we want to call a mixin twice with different arguments,
   and have both apply?
   I haven't thought of good examples,
@@ -371,5 +371,5 @@ That has always seemed fragile to me,
 and I'd rather use the cascade if we can.
 
 What do you think?
-Should mixin-calls cascade?
-Are there use-cases for both behaviors?
+Should mixin calls cascade?
+Are there use cases for both behaviors?
