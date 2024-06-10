@@ -21,7 +21,7 @@ based on arbitrary conditions?
 
 I made [a proposal](https://css.oddbird.net/sasslike/mixins-functions/)
 last year, and it was
-[adopted by the CSS Working Group](https://github.com/w3c/csswg-drafts/issues/9350#issuecomment-1939628591),
+[adopted by the CSS Working Group](https://github.com/w3c/csswg-drafts/issues/9350#issuecomment-1939628591)
 for further exploration and specification.
 That proposal is similar to
 mixins in Sass and other pre-processors,
@@ -118,7 +118,7 @@ p {
 }
 ```
 
-(you can see this [style query demo](https://codepen.io/miriamsuzanne/pen/qBGXMPg?editors=1100) working in a Chromium browser)
+(You can see this [style query demo](https://codepen.io/miriamsuzanne/pen/qBGXMPg?editors=1100) working in a Chromium browser.)
 
 While that may be useful once supported everywhere,
 it has an even stronger 'nesting' requirement:
@@ -368,7 +368,7 @@ the JavaScript `removeEventListener()` function,
 which requires a careful matching of arguments.
 I'd like to avoid any `@un-apply`-style rules.
 That has always seemed fragile to me,
-and I'd rather use the cascade mechanic if we can.
+and I'd rather use the cascade if we can.
 
 What do you think?
 Should mixin-calls cascade?
