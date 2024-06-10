@@ -1,5 +1,5 @@
 ---
-title: Collaboration, the Future of CSS, Sass, and The Web with Miriam Suzanne
+title: Collaboration, the Future of CSS, Sass, and the Web with Miriam Suzanne
 venue: Mechanical Ink
 date: 2024-06-10
 canonical: https://schalkneethling.substack.com/p/collaboration-the-future-of-css-sass
