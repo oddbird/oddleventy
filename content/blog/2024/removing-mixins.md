@@ -2,6 +2,9 @@
 title: Can you un-mix a mixin?
 sub: Rethinking the CSS mixin proposal after CSS Day
 author: miriam
+image:
+  src: blog/2024/blender.jpg
+  alt: A clear kitchen blender filled with chopped fruit and greens
 date: 2024-06-11
 tags:
   - Article
