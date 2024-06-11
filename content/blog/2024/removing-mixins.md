@@ -20,6 +20,14 @@ How do we create re-usable blocks of styling
 that can be 'mixed in' to various selectors,
 based on arbitrary conditions?
 
+{% callout 'CSS Layout Workshop' %}
+If you have questions about this feature or others like it,
+we'll be getting deep into modern CSS
+with live Q&A
+at the **Cascade Layouts Workshop**, June 24-26.
+[Register now!](/workshops/cascading-layouts/#register-now)
+{% endcallout %}
+
 ## Mixin substitution with `@apply`
 
 I made [a proposal](https://css.oddbird.net/sasslike/mixins-functions/)
@@ -377,3 +385,8 @@ and I'd rather use the cascade if we can.
 What do you think?
 Should mixin calls cascade?
 Are there use cases for both behaviors?
+
+Join me to discuss modern CSS like this
+at the upcoming
+Cascading Layout Workshop online, June 24-26.
+You can register below.
