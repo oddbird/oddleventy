@@ -24,7 +24,7 @@ last year, and it was
 [adopted by the CSS Working Group](https://github.com/w3c/csswg-drafts/issues/9350#issuecomment-1939628591)
 for further exploration and specification.
 That proposal is similar to
-mixins in Sass and other pre-processors,
+[mixins in Sass](https://sass-lang.com/guide/#mixins) and other pre-processors,
 and builds on CSS Nesting:
 
 ```css
