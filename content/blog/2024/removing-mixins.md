@@ -90,7 +90,8 @@ but it has some limitations.
 ## Style queries and 'layered toggles'
 
 We don't have CSS-native mixins yet,
-but we do have style queries (in Chromium)
+but we do have style queries
+(in Chromium, and Webkit beta)
 which can be used for mixin-like behavior:
 
 ```css
@@ -128,7 +129,7 @@ The example above works
 because we query the parent paragraph
 to apply styles on nested `em` elements.
 
-[Roma Komarov](https://kizu.dev/)
+[Roman Komarov](https://kizu.dev/)
 has developed another mixin-like syntax
 that works today in all major browsers,
 using '[cyclic toggles](https://kizu.dev/cyclic-toggles/)'
@@ -187,7 +188,7 @@ the one with higher _cascade priority_
 (specificity, layers, source order, etc).
 
 What stood out to me
-during Roma's
+during Roman's
 [talk at CSS Day](https://cssday.nl/2024/speakers#roma)
 was the fact that both these pseudo-mixin solutions
 use custom properties to apply the mixin.
