@@ -12,13 +12,16 @@ tags:
   - CSS
   - CSSWG
   - Mixins & Functions
+summary: |
+  The CSS Working Group
+  has agreed to move forward
+  with CSS-native mixins.
+  But some recent mixin-like
+  CSS tricks have an advantage
+  that the official proposal doesn't account for:
+  they make it easy to remove a mixin
+  after it's already been mixed in.
 ---
-
-I've been thinking about
-[CSS-native mixins](https://css.oddbird.net/sasslike/mixins-functions/).
-How do we create re-usable blocks of styling
-that can be 'mixed in' to various selectors,
-based on arbitrary conditions?
 
 {% callout 'CSS Layout Workshop' %}
 If you have questions about this feature or others like it,
@@ -30,6 +33,11 @@ at the **Cascade Layouts Workshop**, June 24-26.
 
 ## Mixin substitution with `@apply`
 
+I've been thinking about
+[CSS-native mixins](https://css.oddbird.net/sasslike/mixins-functions/).
+How do we create re-usable blocks of styling
+that can be 'mixed in' to various selectors,
+based on arbitrary conditions?
 I made [a proposal](https://css.oddbird.net/sasslike/mixins-functions/)
 last year, and it was
 [adopted by the CSS Working Group](https://github.com/w3c/csswg-drafts/issues/9350#issuecomment-1939628591)
