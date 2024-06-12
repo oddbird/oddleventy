@@ -124,11 +124,11 @@ often waiting for 'full' support of a new feature
 before they even consider using it in production.
 
 In conversations,
-I'll especially hear concerns
+I especially hear concerns
 about browsers like iOS Safari
 that update more slowly,
 part of a much heavier OS update.
-Safari on mac may update in monthly-ish cycles,
+Safari on Mac may update in monthly-ish cycles,
 but users with an old phone
 are often out-of-date.
 
@@ -163,7 +163,7 @@ it doesn't make sense to re-write your code base
 or design system
 every time a new feature comes out.
 
-We started phasing-out Susy
+We started phasing out Susy
 (our light-weight grid system)
 on OddBird projects in 2015.
 By 2017,
@@ -176,17 +176,17 @@ on Jul 14, 2020.
 Four years later,
 [OddBird.net/susy](/susy/)
 still has the highest traffic of anything on our site,
-the `susy` package gets
+and the `susy` package gets
 [nearly 19k weekly downloads on npm](https://www.npmjs.com/package/susy).
 
-## Learn CSS Grid, Seriously
+## Learn CSS grid (yes, you need it)
 
 There's no rush to rip out
 all your media queries,
 and replace them with containers.
 You'll be fine waiting for
 _widely available_ support
-and your next schedule re-factor.
+and your next scheduled re-factor.
 
 But if you're still avoiding grid --
 whatever your reasons --
@@ -198,7 +198,7 @@ on every site we build.
 Yes, Flexbox is also pretty cool.
 But flexbox is designed for
 content-out distribution,
-not design-system page layout.
+not system-wide page layouts.
 Using flexbox alone
 is like only using `inline` text,
 without paragraphs, divs, and other `block` elements.
