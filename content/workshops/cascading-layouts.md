@@ -72,6 +72,9 @@ summary: |
 <script src="https://js.tito.io/v2" async></script>
 <tito-widget event="pland/css-layout"></tito-widget>
 
+Parity pricing and freelancer discounts available.
+[Contact us](/contact/) for details.
+
 ## What Will Attendees Learn In This Workshop?
 
 - Building **maintainable CSS layouts** with **progressive enhancement**
