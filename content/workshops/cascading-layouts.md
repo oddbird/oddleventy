@@ -34,6 +34,9 @@ included:
   - title: Cutting Edge Techniques
     text: From a W3C Invited Expert
     icon: icons/rocket
+  - title: Video Recordings
+    text: To revisit on your own time
+    icon: icons/video
   - title: Certificate of Completion
     text: Documenting your education
     icon: icons/ribbon
