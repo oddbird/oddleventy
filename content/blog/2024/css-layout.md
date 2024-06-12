@@ -1,13 +1,22 @@
 ---
 title: Learn Grid Now, Container Queries Can Wait
-sub: Take your time with new CSS, but don't sleep on essentials
+sub: Take your time with new CSS, but don't sleep on the essentials
 date: 2024-06-13
-# image:
-#   src:
-#   alt: Some alt
+image:
+  src: blog/2024/ever-given.jpg
+  alt: >
+    A back hoe on the bank of the Suez,
+    trying to free the Ever Given cargo ship
 author: miriam
+tags:
+  - Article
+  - Susy
+  - CSS
+  - CSSWG
+  - Layout
+  - Grids
 summary: |
-  Several people have asked me recently
+  Several people have asked recently
   why Container Queries
   aren't being used more broadly
   in production.
@@ -16,6 +25,28 @@ summary: |
   that most companies require
   to re-write a code-base.
 ---
+
+Chris Coyier
+[wrote about this recently](https://frontendmasters.com/blog/weve-got-container-queries-now-but-are-we-actually-using-them/)
+over at Frontend Masters.
+As he (and several comments) mention,
+grid and flexbox make
+layout more responsive without
+the need for queries.
+That's true!
+But looking at the numbers,
+I think we're asking the wrong question.
+
+{% callout 'Learn CSS layout in-depth' %}
+CSS has a number of useful layout models
+with different strengths.
+Join us for a
+[Cascade Layouts Workshop, June 24-26](/workshops/cascading-layouts/#register-now)!
+We'll cover everything from
+normal flow to flexbox, grid, and container queries --
+with clear advice on when to use the different tools.
+[Register now!](/workshops/cascading-layouts/#register-now)
+{% endcallout %}
 
 Container (Size) Queries
 shipped in Firefox on February 14, 2023 --
@@ -55,6 +86,29 @@ Even in single-digits,
 _6% of the web_
 is still a big difference
 in support.
+
+Firefox was the first to support
+flexbox behind a prefix,
+and the last to un-prefix the feature
+on March 18, 2014.
+[CanIUse shows flexbox support](https://caniuse.com/flexbox)
+in **99.9%** of all tracked browsers.
+Solidly in the _wide support_ category
+for Baseline,
+but only a fraction more
+than grid support.
+
+But then we look at the Chrome usage numbers:
+
+- **6.43%** of page loads use
+  [the `container` property](https://chromestatus.com/metrics/css/timeline/popularity/699)
+- **63.4%** of page loads use
+  [the `flex` property](https://chromestatus.com/metrics/css/timeline/popularity/233)
+- **only 18.485%** of page loads use
+  [the `grid-column` property](https://chromestatus.com/metrics/css/timeline/popularity/248)
+
+Container Queries are basically brand new.
+But _what's going on with grids_?
 
 {% callout 'The CanIUse defaults are broken' %}
   By default,
@@ -97,18 +151,17 @@ At OddBird,
 we often work on internal tools for clients --
 building from scratch,
 with little need for legacy support.
-With Container Queries,
-I wrote the specification,
-and started building
-[demos in January 2021](https://codepen.io/miriamsuzanne/details/NWRJpQo)
-(this demo is broken,
-since the syntax changed several times).
 
 I've been thinking about
 (and playing with)
 Container Queries
 for much longer than the
 baseline _wide support_ 30 months.
+I wrote the specification,
+and started building
+[demos in January 2021](https://codepen.io/miriamsuzanne/details/NWRJpQo)
+(this demo is broken,
+since the syntax changed several times).
 But actual browser support
 is barely over half-way there --
 reaching 16 months next week.
@@ -127,13 +180,13 @@ In conversations,
 I especially hear concerns
 about browsers like iOS Safari
 that update more slowly,
-part of a much heavier OS update.
+sometimes requiring a much heavier OS update.
 Safari on Mac may update in monthly-ish cycles,
 but users with an old phone
-are often out-of-date.
+are more often out-of-date.
 
-These are container ships
-that get stuck in the Suez Canal
+Big sites are container ships
+that will get stuck in the Suez Canal
 during high winds,
 or decimate the Francis Scott Key bridge
 when there's a power issue.
@@ -195,7 +248,13 @@ CSS grid is one of the best features in CSS,
 and one of the biggest time-savers
 on every site we build.
 
-Yes, Flexbox is also pretty cool.
+I can imagine
+it's hard to re-write
+a system built on flexbox.
+Flexbox is a great feature,
+and part of the web platform.
+What more do you need?
+
 But flexbox is designed for
 content-out distribution,
 not system-wide page layouts.
@@ -210,6 +269,18 @@ people looked at Grid and thought
 "that looks complicated" --
 then spent nearly a decade
 over-complicating flexbox to compensate.
+People still rely on third-party grid systems
+like Bootstrap,
+because flexbox needs to be _coerced_
+into doing this job.
 
+No!
 Stop.
-_It's time to learn grid. Now._
+_It's time to learn grid. Right now._
+You might not think you need it,
+but you do.
+Set down container queries,
+and go learn grid.
+
+(If you want to learn more,
+check out our workshop below)
