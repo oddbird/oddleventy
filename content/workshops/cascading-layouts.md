@@ -37,6 +37,10 @@ included:
   - title: Certificate of Completion
     text: Documenting your education
     icon: icons/ribbon
+  - title: Immediate Access
+    text: To recording and shared docs
+    icon: icons/video
+
 summary: |
   CSS layout techniques have come a long way
   since the early days of responsive design,
@@ -68,6 +72,15 @@ summary: |
 
 <script src="https://js.tito.io/v2" async></script>
 <tito-widget event="pland/css-layout"></tito-widget>
+
+## Discounts & Scholarships
+
+Freelancer and other
+need-based scholarships available.
+For discounts,
+please [contact us].
+
+[contact us]: /contact/
 
 ## What Will Attendees Learn In This Workshop?
 
@@ -171,11 +184,3 @@ and container queries.
 
 Practical use-cases,
 and interactive exercises related to defining layouts.
-
-## Scholarships
-
-Need-based scholarships available.
-For more information,
-please [contact us].
-
-[contact us]: /contact/
