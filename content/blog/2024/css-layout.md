@@ -282,5 +282,5 @@ but you do.
 Set down container queries,
 and go learn grid.
 
-(If you want to learn more,
-check out our workshop below)
+If you want to learn more,
+check out our workshop below.
