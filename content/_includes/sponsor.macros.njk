@@ -12,10 +12,22 @@
     sponsoring OddBird's open source work!
   </p>
 
-  <h3>Blue-Footed Boobies</h3>
-  <p>
-   {{ faces(tiers['Blue-Footed Booby'], 'md') }}
-  </p>
+  {%- if tiers['Great Horned Owl'] -%}
+    <h3>Great Horned Owls</h3>
+
+    <p>
+    {{ faces(tiers['Great Horned Owl'], 'lg') }}
+    </p>
+  {%- endif -%}
+
+  {%- if tiers['Blue-Footed Booby'] -%}
+    <h3>Blue-Footed Boobies</h3>
+
+    <p>
+    {{ faces(tiers['Blue-Footed Booby'], 'md') }}
+    </p>
+  {%- endif -%}
+
   <h3>Common Loons</h3>
 
   {{ faces(tiers['Common Loon']) }}
