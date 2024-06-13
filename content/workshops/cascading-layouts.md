@@ -67,6 +67,17 @@ summary: |
 ## Register Now
 
 <script src="https://js.tito.io/v2" async></script>
+<script>
+  window.tito = window.tito ||
+    function() {
+      (tito.q = tito.q || []).push(arguments);
+    };
+  tito('on:widget:loaded',function(){
+     document.getElementById('fallback-link').setAttribute('hidden', 'hidden');
+  });
+</script>
+
+<a href="https://ti.to/pland/css-layout" id="fallback-link">Register</a>
 <tito-widget event="pland/css-layout"></tito-widget>
 
 ## What Will Attendees Learn In This Workshop?
