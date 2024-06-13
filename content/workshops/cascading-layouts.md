@@ -34,9 +34,6 @@ included:
   - title: Cutting Edge Techniques
     text: From a W3C Invited Expert
     icon: icons/rocket
-  - title: Video Recordings
-    text: To revisit on your own time
-    icon: icons/video
   - title: Certificate of Completion
     text: Documenting your education
     icon: icons/ribbon
@@ -71,9 +68,6 @@ summary: |
 
 <script src="https://js.tito.io/v2" async></script>
 <tito-widget event="pland/css-layout"></tito-widget>
-
-Parity pricing and freelancer discounts available.
-[Contact us](/contact/) for details.
 
 ## What Will Attendees Learn In This Workshop?
 
