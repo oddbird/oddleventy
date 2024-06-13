@@ -17,7 +17,7 @@ tags:
   - Grids
 summary: |
   Several people have asked recently
-  why Container Queries
+  why container queries
   aren't being used more broadly
   in production.
   But I think we underestimate
@@ -48,7 +48,7 @@ with clear advice on when to use the different tools.
 [Register now!](/workshops/cascading-layouts/#register-now)
 {% endcallout %}
 
-Container (Size) Queries
+Container (size) queries
 shipped in Firefox on February 14, 2023 --
 the last major browser to ship the feature.
 Chrome/Edge and Safari shipped
@@ -60,7 +60,7 @@ with a Baseline status of
 _Newly Available_.
 
 In contrast,
-Safari shipped CSS Grid on March 27, 2017 --
+Safari shipped CSS grid on March 27, 2017 --
 and Edge un-prefixed the feature
 on October 17 that same year.
 [CanIUse lists grid support](https://caniuse.com/css-grid)
@@ -107,7 +107,7 @@ But then we look at the Chrome usage numbers:
 - **only 18.485%** of page loads use
   [the `grid-column` property](https://chromestatus.com/metrics/css/timeline/popularity/248)
 
-Container Queries are basically brand new.
+Container queries are basically brand new.
 But _what's going on with grids_?
 
 {% callout 'The CanIUse defaults are broken' %}
@@ -134,7 +134,7 @@ Especially with newer features
 shipping every few months.
 Our scale is off!
 
-> You're still talking about Container Queries?!
+> You're still talking about container queries?!
 > That was before
 > color mixing and selector nesting, _last year_!
 > Try to keep up!
@@ -154,7 +154,7 @@ with little need for legacy support.
 
 I've been thinking about
 (and playing with)
-Container Queries
+container queries
 for much longer than the
 baseline _wide support_ 30 months.
 I wrote the specification,
