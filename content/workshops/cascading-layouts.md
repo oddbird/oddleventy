@@ -73,11 +73,11 @@ summary: |
       (tito.q = tito.q || []).push(arguments);
     };
   tito('on:widget:loaded',function(){
-     document.getElementById('fallback-link').setAttribute('hidden', 'hidden');
+     document.getElementById('tito-registration-fallback').setAttribute('hidden', 'hidden');
   });
 </script>
 
-<a href="https://ti.to/pland/css-layout" id="fallback-link">Register</a>
+<a href="https://ti.to/pland/css-layout" id="tito-registration-fallback">Register</a>
 <tito-widget event="pland/css-layout"></tito-widget>
 
 ## What Will Attendees Learn In This Workshop?
