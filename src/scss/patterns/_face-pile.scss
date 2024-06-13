@@ -16,4 +16,12 @@
     inline-size: auto;
     max-width: unset;
   }
+
+  [data-supporters-face='md'] img {
+    block-size: 3lh;
+  }
+
+  [data-supporters-face='lg'] img {
+    block-size: 4lh;
+  }
 }

@@ -1,7 +1,7 @@
 {% import 'layout.macros.njk' as layout %}
 
 {% macro block(
-  supporters,
+  tiers,
   title='Open Source Sponsors'
 ) %}
   {{ layout.title(title) }}
@@ -14,11 +14,11 @@
 
   <h3>Blue-Footed Boobies</h3>
   <p>
-   NEED TO ADD LARGER AVATARS HERE
+   {{ faces(tiers['Blue-Footed Booby'], 'md') }}
   </p>
   <h3>Common Loons</h3>
 
-  {{ faces(supporters) }}
+  {{ faces(tiers['Common Loon']) }}
 
   <h3>Sponsor OddBird's OSS Work</h3>
   <p>
@@ -32,7 +32,7 @@
   {{ donate() }}
 {% endmacro %}
 
-{% macro faces(supporters) %}
+{% macro faces(supporters, size) %}
 <div face-pile="donors">
   {% for supporter in supporters -%}
     {%- if supporter.image != none -%}
@@ -40,9 +40,10 @@
         href="{{ supporter.website }}"
         data-supporters-tier="{{ supporter.tier | slugify }}"
         data-supporters-slug="{{ supporter.name | slugify }}"
+        data-supporters-face="{{ size }}"
         rel="sponsored noopener noreferrer"
         target="_blank"
-        >{% ocAvatar supporter.image, supporter.name %}</a>
+        >{% ocAvatar supporter.image, supporter.name, size %}</a>
     {%- endif -%}
   {%- endfor %}
 </div>

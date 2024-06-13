@@ -1,9 +1,11 @@
 // https://opencollective.com/oddbird-open-source/members/all.json
 import eleventyFetch from '@11ty/eleventy-fetch';
-
+import _ from 'lodash-es';
 const FilteredProfiles = [
   // if there are backers we need to exclude…
 ];
+
+const TIERS = ['Great Horned Owl', 'Blue-Footed Booby', 'Common Loon'];
 
 const getDefaultAvatarUrl = (url) => {
   const slug = url.split('/').at(-1);
@@ -26,6 +28,7 @@ export default async () => {
         (c) =>
           c.role === 'BACKER' &&
           c.totalAmountDonated &&
+          c.tier !== 'Donation' &&
           !FilteredProfiles.includes(c.name),
       )
       .map((c) => ({
@@ -41,14 +44,18 @@ export default async () => {
           b.total - a.total,
       );
 
+    const tiers = _.groupBy(supporters, ({ tier }) =>
+      TIERS.find((t) => tier.startsWith(t)),
+    );
+
     return {
-      supporters,
+      tiers,
     };
   } catch (e) {
     // eslint-disable-next-line no-console
     console.error('Failed fetching Open Collective backers.', e);
     return {
-      supporters: [],
+      tiers: {},
     };
   }
 };
