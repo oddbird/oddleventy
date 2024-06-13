@@ -265,7 +265,7 @@ You're using half the system,
 and _it's the more complicated half to manage_.
 
 At some point
-people looked at Grid and thought
+people looked at grid and thought
 "that looks complicated" --
 then spent nearly a decade
 over-complicating flexbox to compensate.
