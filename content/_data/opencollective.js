@@ -1,6 +1,7 @@
 // https://opencollective.com/oddbird-open-source/members/all.json
 import eleventyFetch from '@11ty/eleventy-fetch';
-import _ from 'lodash-es';
+import { groupBy } from 'lodash-es';
+
 const FilteredProfiles = [
   // if there are backers we need to exclude…
 ];
@@ -44,7 +45,7 @@ export default async () => {
           b.total - a.total,
       );
 
-    const tiers = _.groupBy(supporters, ({ tier }) =>
+    const tiers = groupBy(supporters, ({ tier }) =>
       TIERS.find((t) => tier.startsWith(t)),
     );
 
