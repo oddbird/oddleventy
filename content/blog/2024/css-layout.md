@@ -98,14 +98,43 @@ for Baseline,
 but only a fraction more
 than grid support.
 
-But then we look at the Chrome usage numbers:
+Chris links the Chrome usage counters
+for container queries.
+I'm warned these numbers are extremely unreliable --
+easily triggered by feature checks (e.g. Modernizr),
+unused code in third-party libraries,
+or popular outliers skewing the data --
+so take this with truckloads of salt.
+Here's what I see:
 
-- **6.43%** of page loads use
-  [the `container` property](https://chromestatus.com/metrics/css/timeline/popularity/699)
-- **63.4%** of page loads use
-  [the `flex` property](https://chromestatus.com/metrics/css/timeline/popularity/233)
+- **4.18%** of page loads use
+  [container queries](https://chromestatus.com/metrics/css/timeline/popularity/699)
+- **81.22%** of page loads use
+  [flexbox layout](https://chromestatus.com/metrics/feature/timeline/popularity/1692)
 - **only 18.485%** of page loads use
-  [the `grid-column` property](https://chromestatus.com/metrics/css/timeline/popularity/248)
+  [grid layout](https://chromestatus.com/metrics/feature/timeline/popularity/1693)
+
+The [State of CSS survey](https://2023.stateofcss.com/)
+attempts to measure
+how many web authors are using a feature.
+This is also suspect, but
+**26.7%** of 2023 respondents
+['have used' container queries](https://2023.stateofcss.com/en-US/features/layout/#at_container)).
+They didn't have questions
+about grid and flexbox.
+
+With popular tools like Bootstrap
+shipping flexbox-based grid systems,
+it's not surprising
+to see it highly represented
+in the Chrome use counter.
+Maybe this data is meaningless.
+But anecdotally,
+it does seem like most developers are using flexbox,
+a few are also using grid,
+and everyone still has container queries
+on their to-do list
+_once it has better support_.
 
 Container queries are basically brand new.
 But _what's going on with grids_?
