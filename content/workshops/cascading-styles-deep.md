@@ -25,11 +25,14 @@ tags:
   - CSS Nesting
 events:
   - venue: Smashing Workshops
+    date: 2024-10-14
+    end: 2024-10-28
+    adr: Online
+  - venue: Smashing Workshops
     date: 2024-02-26
+    end: 2024-03-12
     adr: Online
     url: https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/
-    note: >
-      Tickets [on sale now](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/)!
   - venue: Smashing Workshops
     date: 2023-09-06
     adr: Freiburg, Germany
@@ -47,6 +50,9 @@ included:
   - title: Certificate of Completion
     text: Documenting your education
     icon: icons/ribbon
+  - title: Immediate Access
+    text: To recording and shared docs
+    icon: icons/video
 press:
   - text: |
       We were super happy with how it went.
