@@ -5,20 +5,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title }}</title>
   <subtitle>{{ site.description }}</subtitle>
-  <link href="{{ page.url | absoluteUrl(site.url) }}" rel="self"/>
+  <link href="{{ page.url | htmlBaseUrl(site.url) }}" rel="self"/>
   <link href="{{ site.url }}"/>
   <updated>{{ posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ site.url }}</id>
   <rights>© {% getDate 'year' %} {{ site.title }}</rights>
-  <icon>{{ '/favicon.ico' | absoluteUrl(site.url) }}</icon>
-  <logo>{{ (site.images + open_graph.img) | imgSrc | absoluteUrl(site.url) }}</logo>
+  <icon>{{ '/favicon.ico' | htmlBaseUrl(site.url) }}</icon>
+  <logo>{{ (site.images + open_graph.img) | imgSrc | htmlBaseUrl(site.url) }}</logo>
   <author>
     <name>{{ site.title }}</name>
     <email>{{ site.email }}</email>
   </author>
   {%- for post in posts %}
   {%- if post.content or post.data.summary %}
-  {%- set absolutePostUrl = post.url | absoluteUrl(site.url) -%}
+  {%- set absolutePostUrl = post.url | htmlBaseUrl(site.url) -%}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
@@ -29,37 +29,37 @@
       {%- set author_page = collections.birds | authorPage(author) -%}
       <author>
         <name>{{ author_page.data.title }}</name>
-        <uri>{{ author_page.url | absoluteUrl(site.url) }}</uri>
+        <uri>{{ author_page.url | htmlBaseUrl(site.url) }}</uri>
       </author>
     {% endfor -%}
 
     <content type="html">
       {%- if post.data.image.src -%}
         {%- filter escape -%}
-          <img src="{{ (site.images + post.data.image.src) | imgSrc | absoluteUrl(site.url) }}" alt="{{ post.data.image.alt }}"/>
+          <img src="{{ (site.images + post.data.image.src) | imgSrc | htmlBaseUrl(site.url) }}" alt="{{ post.data.image.alt }}"/>
         {%- endfilter -%}
       {%- endif -%}
 
       {%- if post.data.summary -%}
-      {{ post.data.summary | md | htmlToAbsoluteUrls(absolutePostUrl) }}
+      {{ post.data.summary | md | transformWithHtmlBase(absolutePostUrl) }}
       {%- endif -%}
 
       {%- filter escape -%}
         {%- if post.data.action.text -%}
           <p>{{ utility.link_if(
             post.data.action.text,
-            post.data.action.url | absoluteUrl(site.url)
+            post.data.action.url | htmlBaseUrl(site.url)
           ) }}</p>
         {%- elif post.data.venue and post.data.canonical -%}
           <p>{{ utility.link_if(
             ['See more at', post.data.venue, '»'] | join(' '),
-            post.data.canonical | absoluteUrl(site.url)
+            post.data.canonical | htmlBaseUrl(site.url)
           ) }}</p>
         {%- endif -%}
       {%- endfilter -%}
 
       {%- if post.content -%}
-        {{ post.content | stripTagsForRSS | htmlToAbsoluteUrls(absolutePostUrl) }}
+        {{ post.content | stripTagsForRSS | transformWithHtmlBase(absolutePostUrl) }}
       {%- endif -%}
     </content>
 
