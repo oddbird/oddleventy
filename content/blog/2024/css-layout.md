@@ -37,17 +37,6 @@ That's true!
 But looking at the numbers,
 I think we're asking the wrong question.
 
-{% callout 'Learn CSS layout in-depth' %}
-CSS has a number of useful layout models
-with different strengths.
-Join us for a
-[Cascade Layouts Workshop, June 24-26](/workshops/cascading-layouts/#register-now)!
-We'll cover everything from
-normal flow to flexbox, grid, and container queries --
-with clear advice on when to use the different tools.
-[Register now!](/workshops/cascading-layouts/#register-now)
-{% endcallout %}
-
 Container (size) queries
 shipped in Firefox on February 14, 2023 --
 the last major browser to ship the feature.
@@ -310,6 +299,3 @@ You might not think you need it,
 but you do.
 Set down container queries,
 and go learn grid.
-
-If you want to learn more,
-check out our workshop below.

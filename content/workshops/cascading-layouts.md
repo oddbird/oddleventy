@@ -1,12 +1,11 @@
 ---
 title: Cascading Layouts
-sub: A workshop on resilient CSS layouts, June 24-26, 2024
-feature: workshop
+sub: A workshop on resilient CSS layouts
 author: miriam
-date: 2024-06-24
+date: 2024-12-31
 action:
-  text: Register now »
-  url: '/workshops/cascading-layouts/#register-now'
+  text: Bring this workshop to your company »
+  url: '/workshops/cascading-layouts/#contact-us-to-book-a-workshop'
 image:
   src: talks/cascading-workshop-cat.jpg
   position: center
@@ -24,6 +23,11 @@ tags:
   - Container Queries
   - Layout
   - CSSWG
+events:
+  - venue: OddBird Workshop
+    date: 2025-04-07
+    end: 2025-04-09
+    adr: Online
 included:
   - title: Interactive Sessions
     text: Online, wherever you are
@@ -40,7 +44,6 @@ included:
   - title: Immediate Access
     text: To recording and shared docs
     icon: icons/video
-
 summary: |
   CSS layout techniques have come a long way
   since the early days of responsive design,
@@ -68,30 +71,13 @@ summary: |
   grid='fit'
 ) }}
 
-## Register Now
+## Contact Us to Book a Workshop
 
-<script src="https://js.tito.io/v2" async></script>
-<script>
-  window.tito = window.tito ||
-    function() {
-      (tito.q = tito.q || []).push(arguments);
-    };
-  tito('on:widget:loaded',function(){
-     document.getElementById('tito-registration-fallback').setAttribute('hidden', 'hidden');
-  });
-</script>
-
-<a href="https://ti.to/pland/css-layout" id="tito-registration-fallback">Register</a>
-<tito-widget event="pland/css-layout"></tito-widget>
-
-## Discounts & Scholarships
-
-Freelancer and other
-need-based scholarships available.
-For discounts,
-please [contact us].
-
-[contact us]: /contact/
+{{ contact.form(
+  submit='Book Now',
+  name='workshop',
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
+) }}
 
 ## What Will Attendees Learn In This Workshop?
 
@@ -109,8 +95,8 @@ You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
 {{ utility.main_action(
-  content='Register Now »',
-  url='#register-now'
+  content='Bring this workshop to your company »',
+  url='#contact-us-to-book-a-workshop'
 ) }}
 
 ## About Miriam
