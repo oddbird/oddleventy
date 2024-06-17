@@ -26,13 +26,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-dev-server@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@11ty/eleventy-dev-server@npm:2.0.0"
+"@11ty/eleventy-dev-server@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@11ty/eleventy-dev-server@npm:2.0.1"
   dependencies:
     "@11ty/eleventy-utils": "npm:^1.0.2"
     chokidar: "npm:^3.6.0"
-    debug: "npm:^4.3.4"
+    debug: "npm:^4.3.5"
     dev-ip: "npm:^1.0.1"
     finalhandler: "npm:^1.2.0"
     mime: "npm:^3.0.0"
@@ -40,12 +40,12 @@ __metadata:
     morphdom: "npm:^2.7.2"
     please-upgrade-node: "npm:^3.2.0"
     send: "npm:^0.18.0"
-    ssri: "npm:^10.0.5"
+    ssri: "npm:^10.0.6"
     urlpattern-polyfill: "npm:^10.0.0"
-    ws: "npm:^8.16.0"
+    ws: "npm:^8.17.0"
   bin:
     eleventy-dev-server: cmd.js
-  checksum: 10/e11db3d8ab8b03f23166329ffc48821dd688d7279adaea463e0fc5108c1a2d46ad04005160a3e832c318d09843bfc0761adfb06f0b49d7cf29c4dc1936b9797b
+  checksum: 10/e023d9e9a10e6ec2221d7dc2fded3fcfd4e0d90a20036b2c305169a886c8b9a3674bf0f884ada9b27546bea99d23983fb153a2b5220dd62216190fb9a4d9c35e
   languageName: node
   linkType: hard
 
@@ -126,22 +126,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy@npm:3.0.0-alpha.10":
-  version: 3.0.0-alpha.10
-  resolution: "@11ty/eleventy@npm:3.0.0-alpha.10"
+"@11ty/eleventy-utils@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@11ty/eleventy-utils@npm:1.0.3"
+  dependencies:
+    normalize-path: "npm:^3.0.0"
+  checksum: 10/b81647a4817889c4842c7b97417de1cbdf17b1e68dd0ab34e6f040068b206f0b46688df52d7a5ed205be6a264f55500aae5178616388ca957c93e0a838585b0d
+  languageName: node
+  linkType: hard
+
+"@11ty/eleventy@npm:3.0.0-alpha.13":
+  version: 3.0.0-alpha.13
+  resolution: "@11ty/eleventy@npm:3.0.0-alpha.13"
   dependencies:
     "@11ty/dependency-tree": "npm:^3.0.0"
     "@11ty/dependency-tree-esm": "npm:^1.0.0"
-    "@11ty/eleventy-dev-server": "npm:^2.0.0"
+    "@11ty/eleventy-dev-server": "npm:^2.0.1"
     "@11ty/eleventy-plugin-bundle": "npm:^2.0.2"
-    "@11ty/eleventy-utils": "npm:^1.0.2"
+    "@11ty/eleventy-utils": "npm:^1.0.3"
     "@11ty/lodash-custom": "npm:^4.17.21"
     "@11ty/posthtml-urls": "npm:^1.0.0"
     "@sindresorhus/slugify": "npm:^2.2.1"
     bcp-47-normalize: "npm:^2.3.0"
     chokidar: "npm:^3.6.0"
     cross-spawn: "npm:^7.0.3"
-    debug: "npm:^4.3.4"
+    debug: "npm:^4.3.5"
     dependency-graph: "npm:^1.0.0"
     fast-glob: "npm:^3.3.2"
     graceful-fs: "npm:^4.2.11"
@@ -149,10 +158,10 @@ __metadata:
     is-glob: "npm:^4.0.3"
     iso-639-1: "npm:^3.1.2"
     kleur: "npm:^4.1.5"
-    liquidjs: "npm:^10.12.0"
+    liquidjs: "npm:^10.13.1"
     luxon: "npm:^3.4.4"
     markdown-it: "npm:^14.1.0"
-    micromatch: "npm:^4.0.5"
+    micromatch: "npm:^4.0.7"
     minimist: "npm:^1.2.8"
     moo: "npm:^0.5.2"
     multimatch: "npm:^7.0.0"
@@ -162,11 +171,11 @@ __metadata:
     please-upgrade-node: "npm:^3.2.0"
     posthtml: "npm:^0.16.6"
     recursive-copy: "npm:^2.0.14"
-    semver: "npm:^7.6.0"
+    semver: "npm:^7.6.2"
     slugify: "npm:^1.6.6"
   bin:
     eleventy: cmd.cjs
-  checksum: 10/4aa67ca53d38c4faf8eec93e54ee6dd6ad8f5e81dc09ecc83c616c49425b5c596274a2ee3ac07d22f877991d298d83b5ebb299f0e35d5d01917da0fce37bd70e
+  checksum: 10/8c6572741996bf1e1e749040e0023e335a9928c4441d00a557c93e6fa9d1e5e59ef624d395462b30920158d59e03a0bbfba4a2d3b6ee141cd99d209de018a1ec
   languageName: node
   linkType: hard
 
@@ -4785,6 +4794,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"debug@npm:^4.3.5":
+  version: 4.3.5
+  resolution: "debug@npm:4.3.5"
+  dependencies:
+    ms: "npm:2.1.2"
+  peerDependenciesMeta:
+    supports-color:
+      optional: true
+  checksum: 10/cb6eab424c410e07813ca1392888589972ce9a32b8829c6508f5e1f25f3c3e70a76731610ae55b4bbe58d1a2fffa1424b30e97fa8d394e49cd2656a9643aedd2
+  languageName: node
+  linkType: hard
+
 "decamelize@npm:^1.2.0":
   version: 1.2.0
   resolution: "decamelize@npm:1.2.0"
@@ -8264,15 +8285,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"liquidjs@npm:^10.12.0":
-  version: 10.12.0
-  resolution: "liquidjs@npm:10.12.0"
+"liquidjs@npm:^10.13.1":
+  version: 10.13.1
+  resolution: "liquidjs@npm:10.13.1"
   dependencies:
     commander: "npm:^10.0.0"
   bin:
     liquid: bin/liquid.js
     liquidjs: bin/liquid.js
-  checksum: 10/025f5b137f3651d995ac065ccfc695056dfe6e678e8cdae1416aed8b6e804f021b06135fd6537c0bc7eb1fb40a9c345fe9cda1486c5fca92b12ba3745cc54e73
+  checksum: 10/e78c8f9adce365f743f7161ce1f8d99f2fb0e08e7bcc14b424b13c454cbd30de70600d879b4a4753988b5a1ba5b7c3fd99cbf7e9b4f5cd546c76222c6c3b644a
   languageName: node
   linkType: hard
 
@@ -8814,7 +8835,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.4, micromatch@npm:^4.0.5":
+"micromatch@npm:^4.0.4":
   version: 4.0.5
   resolution: "micromatch@npm:4.0.5"
   dependencies:
@@ -9450,7 +9471,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oddsite@workspace:."
   dependencies:
-    "@11ty/eleventy": "npm:3.0.0-alpha.10"
+    "@11ty/eleventy": "npm:3.0.0-alpha.13"
     "@11ty/eleventy-fetch": "npm:^4.0.1"
     "@11ty/eleventy-img": "npm:^4.0.2"
     "@11ty/eleventy-plugin-rss": "npm:^1.2.0"
@@ -11313,6 +11334,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"semver@npm:^7.6.2":
+  version: 7.6.2
+  resolution: "semver@npm:7.6.2"
+  bin:
+    semver: bin/semver.js
+  checksum: 10/296b17d027f57a87ef645e9c725bff4865a38dfc9caf29b26aa084b85820972fbe7372caea1ba6857162fa990702c6d9c1d82297cecb72d56c78ab29070d2ca2
+  languageName: node
+  linkType: hard
+
 "semver@npm:~7.3.5":
   version: 7.3.8
   resolution: "semver@npm:7.3.8"
@@ -11699,12 +11729,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ssri@npm:^10.0.0, ssri@npm:^10.0.5":
+"ssri@npm:^10.0.0":
   version: 10.0.5
   resolution: "ssri@npm:10.0.5"
   dependencies:
     minipass: "npm:^7.0.3"
   checksum: 10/453f9a1c241c13f5dfceca2ab7b4687bcff354c3ccbc932f35452687b9ef0ccf8983fd13b8a3baa5844c1a4882d6e3ddff48b0e7fd21d743809ef33b80616d79
+  languageName: node
+  linkType: hard
+
+"ssri@npm:^10.0.6":
+  version: 10.0.6
+  resolution: "ssri@npm:10.0.6"
+  dependencies:
+    minipass: "npm:^7.0.3"
+  checksum: 10/f92c1b3cc9bfd0a925417412d07d999935917bc87049f43ebec41074661d64cf720315661844106a77da9f8204b6d55ae29f9514e673083cae39464343af2a8b
   languageName: node
   linkType: hard
 
@@ -13233,9 +13272,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.16.0":
-  version: 8.17.0
-  resolution: "ws@npm:8.17.0"
+"ws@npm:^8.17.0":
+  version: 8.17.1
+  resolution: "ws@npm:8.17.1"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ">=5.0.2"
@@ -13244,7 +13283,7 @@ __metadata:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: 10/5e1dcb0ae70c6e2f158f5b446e0a72a2cd335b07aba73ee1872e9bae1285382286a10e53ed479db21bdd690a5dfd05641a768611ebb236253c62fefa43ef58b4
+  checksum: 10/4264ae92c0b3e59c7e309001e93079b26937aab181835fb7af79f906b22cd33b6196d96556dafb4e985742dd401e99139572242e9847661fdbc96556b9e6902d
   languageName: node
   linkType: hard
 
