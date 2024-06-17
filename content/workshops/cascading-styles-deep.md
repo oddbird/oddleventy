@@ -2,7 +2,7 @@
 title: Cascading Style Systems
 sub: A workshop on resilient & maintainable CSS
 author: miriam
-date: 2023-01-09
+date: 2024-10-14
 action:
   text: Bring this workshop to your company »
   url: '/workshops/cascading-styles-deep/#contact-us-to-book-a-workshop'

@@ -2,7 +2,7 @@
 title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
-date: 2024-06-24
+date: 2024-12-31
 action:
   text: Bring this workshop to your company »
   url: '/workshops/cascading-layouts/#contact-us-to-book-a-workshop'
