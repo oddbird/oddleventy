@@ -26,7 +26,7 @@ tags:
 events:
   - venue: OddBird Workshop
     date: 2025-04-07
-    end: 2024-04-09
+    end: 2025-04-09
     adr: Online
 included:
   - title: Interactive Sessions
