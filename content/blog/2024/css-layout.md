@@ -26,6 +26,13 @@ summary: |
   to re-write a code-base.
 ---
 
+{% callout 'Learn CSS layout in-depth' %}
+To learn more about grid
+and other CSS layout models,
+join our
+[Online Smashing Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne).
+{% endcallout %}
+
 Chris Coyier
 [wrote about this recently](https://frontendmasters.com/blog/weve-got-container-queries-now-but-are-we-actually-using-them/)
 over at Frontend Masters.
@@ -299,10 +306,3 @@ You might not think you need it,
 but you do.
 Set down container queries,
 and go learn grid.
-
-{% callout 'Learn CSS layout in-depth' %}
-To learn more about grid
-and other CSS layout models,
-join our
-[Online Smashing Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne).
-{% endcallout %}
