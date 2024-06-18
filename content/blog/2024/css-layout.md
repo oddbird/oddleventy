@@ -305,7 +305,4 @@ To learn more about grid
 and other CSS layout models,
 join our
 [Online Smashing Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne).
-We'll cover everything from
-normal flow to flexbox, grid, and container queries --
-with clear advice on when to use the different tools.
 {% endcallout %}

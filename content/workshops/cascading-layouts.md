@@ -64,6 +64,12 @@ summary: |
 
 {{ embed.figure([{ youtube: '9EDOzJJdxWA' }]) }}
 
+{% callout %}
+This material will also be covered in the
+[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne),
+on sale now!
+{% endcallout %}
+
 ## What Will Attendees Get?
 
 {{ embed.icon_block(
@@ -78,6 +84,10 @@ summary: |
   name='workshop',
   extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
 ) }}
+
+Or join the more in-depth
+[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne),
+on sale now!
 
 ## What Will Attendees Learn In This Workshop?
 
