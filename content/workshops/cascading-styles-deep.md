@@ -273,7 +273,15 @@ but we’ll look at practical strategies
 for building an expressive and robust CSS system
 that works for you.
 
-{{ utility.main_action(
-  content='Bring this workshop to your company »',
-  url='#attend-or-schedule-a-workshop'
+## Contact Us to Book a Workshop
+
+Register now for the
+[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne),
+or consider bringing us in
+to talk with your team directly:
+
+{{ contact.form(
+  submit='Book Now',
+  name='workshop',
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
 ) }}
