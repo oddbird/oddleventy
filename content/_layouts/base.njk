@@ -12,7 +12,7 @@
 
     {% set banner = banner or title %}
     {% set description = (sub or summary or site.description) | removeMd %}
-    {% set perma = redirect.to if redirect else canonical or (page.url | absoluteUrl(site.url)) %}
+    {% set perma = redirect.to if redirect else canonical or (page.url | htmlBaseUrl(site.url)) %}
 
     {% set title_parts = [site.title, title] if (page.url == '/') else [title, site.title] %}
     <title>{{ title_parts | join(' | ') }}</title>

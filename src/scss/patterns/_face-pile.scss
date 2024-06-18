@@ -12,8 +12,16 @@
 
   img {
     aspect-ratio: 1;
-    block-size: 2lh;
+    block-size: var(--face-size, 2lh);
     inline-size: auto;
     max-width: unset;
+  }
+
+  [data-supporters-face='md'] {
+    --face-size: 3lh;
+  }
+
+  [data-supporters-face='lg'] {
+    --face-size: 4lh;
   }
 }
