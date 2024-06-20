@@ -202,7 +202,7 @@ and interactive exercises related to defining layouts.
 ## Contact Us to Book a Workshop
 
 Register now for the
-[online workshop, April 2025](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne),
+[online workshop, April 2025](/workshops/cascading-layouts/#register-now),
 or consider bringing us in
 to talk with your team directly:
 
