@@ -32,6 +32,14 @@
 
   {{ faces(tiers['Common Loon']) }}
 
+  {%- if tiers['GitHub'] -%}
+    <h3>GitHub Sponsors</h3>
+
+    <p>
+    {{ faces(tiers['GitHub']) }}
+    </p>
+  {%- endif -%}
+
   <h3>Sponsor OddBird's OSS Work</h3>
   <p>
     We love contributing back to the languages & tools
