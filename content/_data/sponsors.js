@@ -1,4 +1,3 @@
-// https://opencollective.com/oddbird-open-source/members/all.json
 import eleventyFetch from '@11ty/eleventy-fetch';
 import { config } from 'dotenv';
 import { groupBy } from 'lodash-es';
@@ -8,6 +7,7 @@ if (!process.env.GITHUB_KEY) {
   // Load .env variables with dotenv
   config();
 }
+
 // eslint-disable-next-line no-process-env
 const GITHUB_KEY = process.env.GITHUB_KEY;
 
@@ -17,15 +17,11 @@ const FilteredProfiles = [
 
 const TIERS = ['Great Horned Owl', 'Blue-Footed Booby', 'Common Loon'];
 
-const getDefaultAvatarUrl = (url) => {
-  const slug = url.split('/').at(-1);
-  return slug ? `https://images.opencollective.com/${slug}/avatar.png` : null;
-};
-
+// https://docs.github.com/en/graphql/reference/objects#sponsorshipconnection
 const loadGithubSponsors = async () => {
   if (!GITHUB_KEY) {
     // eslint-disable-next-line no-console
-    console.error('Github sponsors not loaded- set GITHUB_KEY in .env.');
+    console.error('Github sponsors not loaded; set `GITHUB_KEY` in `.env`.');
     return new Promise((resolve) => resolve([]));
   }
   const url = 'https://api.github.com/graphql?';
@@ -40,8 +36,7 @@ const loadGithubSponsors = async () => {
         Authorization: `Bearer ${GITHUB_KEY}`,
       },
       body: JSON.stringify({
-        query: `
-        {
+        query: `{
   organization(login: "oddbird") {
     name
     sponsorshipsAsMaintainer(first: 100, activeOnly: false) {
@@ -61,7 +56,7 @@ const loadGithubSponsors = async () => {
   if (data?.organization.sponsorshipsAsMaintainer.pageInfo.hasNextPage) {
     // eslint-disable-next-line no-console
     console.error(
-      'Good news- we have over 100 GitHub sponsors and need to implement pagination.',
+      'Good news! We have over 100 GitHub sponsors and need to implement pagination.',
     );
   }
   return data?.organization.sponsorshipsAsMaintainer.nodes.map(
@@ -75,6 +70,12 @@ const loadGithubSponsors = async () => {
   );
 };
 
+const getDefaultOpenCollectiveAvatarUrl = (url) => {
+  const slug = url.split('/').at(-1);
+  return slug ? `https://images.opencollective.com/${slug}/avatar.png` : null;
+};
+
+// https://opencollective.com/oddbird-open-source/members/all.json
 const loadOpenCollectiveSponsors = async () => {
   const url =
     'https://opencollective.com/oddbird-open-source/members/all.json?limit=1000';
@@ -97,7 +98,7 @@ const loadOpenCollectiveSponsors = async () => {
       name: c.name,
       tier: c.tier,
       website: c.website || c.profile,
-      image: c.image || getDefaultAvatarUrl(c.profile),
+      image: c.image || getDefaultOpenCollectiveAvatarUrl(c.profile),
       total: c.totalAmountDonated,
     }));
 };
