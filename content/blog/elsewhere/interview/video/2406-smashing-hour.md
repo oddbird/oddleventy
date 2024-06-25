@@ -9,7 +9,7 @@ image:
 tags:
   - CSS
   - CSSWG
-date: 2024-06-24
+date: 2024-06-20
 summary: |
   I joined Geoff Graham
   for a Smashing live stream

@@ -1,15 +1,14 @@
 ---
-title: Web Development Is Theatre
+title: Web Development Is Theater
 venue: Work Item Podcast
 url: https://theworkitem.com/blog/web-development-is-theatre-miriam-suzanne/
 author: miriam
 image:
   src: blog/elsewhere/work-item.jpg
-  position: top
 tags:
   - CSS
   - CSSWG
-date: 2024-06-25
+date: 2024-06-12
 summary: |
   I joined Den Delimarsky
   on the Work Item podcast
