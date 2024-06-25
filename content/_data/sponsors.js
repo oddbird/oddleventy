@@ -1,19 +1,21 @@
 // https://opencollective.com/oddbird-open-source/members/all.json
 import eleventyFetch from '@11ty/eleventy-fetch';
+import { config } from 'dotenv';
 import { groupBy } from 'lodash-es';
 
-const GITHUBKEY = '';
+// eslint-disable-next-line no-process-env
+if (!process.env.GITHUB_KEY) {
+  // Load .env variables with dotenv
+  config();
+}
+// eslint-disable-next-line no-process-env
+const GITHUB_KEY = process.env.GITHUB_KEY;
 
 const FilteredProfiles = [
   // if there are backers we need to exclude…
 ];
 
-const TIERS = [
-  'Great Horned Owl',
-  'Blue-Footed Booby',
-  'Common Loon',
-  'GitHub',
-];
+const TIERS = ['Great Horned Owl', 'Blue-Footed Booby', 'Common Loon'];
 
 const getDefaultAvatarUrl = (url) => {
   const slug = url.split('/').at(-1);
@@ -21,26 +23,34 @@ const getDefaultAvatarUrl = (url) => {
 };
 
 const loadGithubSponsors = async () => {
-  const url = 'https://api.github.com/graphql';
+  if (!GITHUB_KEY) {
+    // eslint-disable-next-line no-console
+    console.error('Github sponsors not loaded- set GITHUB_KEY in .env.');
+    return new Promise((resolve) => resolve([]));
+  }
+  const url = 'https://api.github.com/graphql?';
   const { data } = await eleventyFetch(url, {
     type: 'json',
     duration: '0s',
+    directory: '.cache/eleventy-fetch/',
+    dryRun: false,
     fetchOptions: {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${GITHUBKEY}`,
+        Authorization: `Bearer ${GITHUB_KEY}`,
       },
       body: JSON.stringify({
         query: `
         {
   organization(login: "oddbird") {
     name
-    sponsors(first: 100) {
+    sponsorshipsAsMaintainer(first: 100, activeOnly: false) {
       totalCount pageInfo { hasNextPage }
       nodes {
-        __typename
-        ... on User { name avatarUrl websiteUrl url }
-        ... on Organization { name avatarUrl websiteUrl url }
+        sponsorEntity{
+          ... on User { name avatarUrl websiteUrl url }
+          ... on Organization { name avatarUrl websiteUrl url }
+        }
       }
     }
   }
@@ -48,19 +58,21 @@ const loadGithubSponsors = async () => {
       }),
     },
   });
-  if (data?.organization.sponsors.pageInfo.hasNextPage) {
+  if (data?.organization.sponsorshipsAsMaintainer.pageInfo.hasNextPage) {
     // eslint-disable-next-line no-console
     console.error(
-      'Good news- we have over 100 GitHub sponsors and need to implement out pagination.',
+      'Good news- we have over 100 GitHub sponsors and need to implement pagination.',
     );
   }
-  return data?.organization.sponsors.nodes.map((node) => ({
-    name: node.name,
-    tier: 'GitHub',
-    website: node.websiteUrl || node.url,
-    image: node.avatarUrl,
-    total: 0,
-  }));
+  return data?.organization.sponsorshipsAsMaintainer.nodes.map(
+    ({ sponsorEntity }) => ({
+      name: sponsorEntity.name,
+      tier: 'Common Loon',
+      website: sponsorEntity.websiteUrl || sponsorEntity.url,
+      image: sponsorEntity.avatarUrl,
+      total: 0,
+    }),
+  );
 };
 
 const loadOpenCollectiveSponsors = async () => {
