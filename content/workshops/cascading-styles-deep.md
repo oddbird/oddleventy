@@ -1,11 +1,12 @@
 ---
+feature: workshop
 title: Cascading Style Systems
 sub: A workshop on resilient & maintainable CSS
 author: miriam
 date: 2024-10-14
 action:
-  text: Bring this workshop to your company »
-  url: '/workshops/cascading-styles-deep/#contact-us-to-book-a-workshop'
+  text: Register for the October workshop »
+  url: 'https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne'
 image:
   src: talks/mia-smashing-de.jpg
   position: top
@@ -28,6 +29,9 @@ events:
     date: 2024-10-14
     end: 2024-10-28
     adr: Online
+    url: https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/
+    note: >
+      Tickets [on sale now](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/)!
   - venue: Smashing Workshops
     date: 2024-02-26
     end: 2024-03-12
@@ -47,12 +51,20 @@ included:
   - title: Cutting Edge Techniques
     text: From a W3C Invited Expert
     icon: icons/rocket
-  - title: Certificate of Completion
-    text: Documenting your education
-    icon: icons/ribbon
   - title: Immediate Access
     text: To recording and shared docs
     icon: icons/video
+  - title: Certificate of Completion
+    text: Documenting your education
+    icon: icons/ribbon
+intro:
+  media:
+    - iframe: https://player.vimeo.com/video/880145407?h=d1fcc941a4
+      span: full
+  caption: |
+    Join Miriam for a deep dive
+    on developing **resilient and delightful experiences**
+    that hold up across browsers, languages, and device interfaces.
 press:
   - text: |
       We were super happy with how it went.
@@ -86,6 +98,12 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 {% import 'quotes.macros.njk' as quotes %}
 
+
+{{ embed.figure(
+  data=intro.media,
+  caption=intro.caption
+) }}
+
 ## What Will Attendees Get?
 
 {{ embed.icon_block(
@@ -93,15 +111,19 @@ summary: |
   grid='fit'
 ) }}
 
-## Contact Us to Book a Workshop
+{{ quotes.grid(press) }}
+
+## Attend or Schedule a Workshop
+
+Register for the
+[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne), or
+**contact us to schedule a workshop with your company**:
 
 {{ contact.form(
   submit='Book Now',
   name='workshop',
   extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
 ) }}
-
-{{ quotes.grid(press) }}
 
 ## What Will Attendees Learn In This Workshop?
 
@@ -122,7 +144,7 @@ but even the experts are likely to learn something new.
 
 {{ utility.main_action(
   content='Bring this workshop to your company »',
-  url='#contact-us-to-book-a-workshop'
+  url='#attend-or-schedule-a-workshop'
 ) }}
 
 ## About Miriam
@@ -251,7 +273,15 @@ but we’ll look at practical strategies
 for building an expressive and robust CSS system
 that works for you.
 
-{{ utility.main_action(
-  content='Bring this workshop to your company »',
-  url='#contact-us-to-book-a-workshop'
+## Contact Us to Book a Workshop
+
+Register now for the
+[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne),
+or consider bringing us in
+to talk with your team directly:
+
+{{ contact.form(
+  submit='Book Now',
+  name='workshop',
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
 ) }}

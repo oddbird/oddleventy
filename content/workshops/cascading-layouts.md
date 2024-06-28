@@ -4,8 +4,8 @@ sub: A workshop on resilient CSS layouts
 author: miriam
 date: 2024-12-31
 action:
-  text: Bring this workshop to your company »
-  url: '/workshops/cascading-layouts/#contact-us-to-book-a-workshop'
+  text: Register now for April 2025 »
+  url: '/workshops/cascading-layouts/#register-now'
 image:
   src: talks/cascading-workshop-cat.jpg
   position: center
@@ -71,13 +71,30 @@ summary: |
   grid='fit'
 ) }}
 
-## Contact Us to Book a Workshop
+## Register Now
 
-{{ contact.form(
-  submit='Book Now',
-  name='workshop',
-  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
-) }}
+<script src="https://js.tito.io/v2" async></script>
+<script>
+  window.tito = window.tito ||
+    function() {
+      (tito.q = tito.q || []).push(arguments);
+    };
+  tito('on:widget:loaded',function(){
+     document.getElementById('tito-registration-fallback').setAttribute('hidden', 'hidden');
+  });
+</script>
+
+<a href="https://ti.to/pland/css-layout" id="tito-registration-fallback">Register</a>
+<tito-widget event="pland/css-layout"></tito-widget>
+
+{% callout %}
+This material will also be covered in the
+[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne) --
+along with sessions on the cascade,
+inheritance,
+custom properties,
+and progressive enhancement.
+{% endcallout %}
 
 ## What Will Attendees Learn In This Workshop?
 
@@ -181,3 +198,16 @@ and container queries.
 
 Practical use-cases,
 and interactive exercises related to defining layouts.
+
+## Contact Us to Book a Workshop
+
+Register now for the
+[online workshop, April 2025](/workshops/cascading-layouts/#register-now),
+or consider bringing us in
+to talk with your team directly:
+
+{{ contact.form(
+  submit='Book Now',
+  name='workshop',
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
+) }}
