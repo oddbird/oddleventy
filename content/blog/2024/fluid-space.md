@@ -2,7 +2,7 @@
 title: Re-imagining fluid typography
 sub: Are we responding to the right inputs?
 author: miriam
-date: 2024-06-10
+date: 2024-07-04
 tags:
   - Article
   - CSS
@@ -40,9 +40,15 @@ generally with a `clamp()` function
 to integrate both `em`/`rem` and `vi`/`cqi` _inputs_
 in a responsive algorithm
 with lower and upper boundaries.
-
 See [utopia.fyi](https://utopia.fyi)
-for the most common approach.
+for the most common approach:
+
+```css
+:root {
+  font-size: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem)
+}
+```
+
 This comes with some accessibility risks
 if we're not careful,
 so keep an eye on the warnings
@@ -51,7 +57,7 @@ that Utopia provides.
 Since typography exists in context,
 it's also quite popular to define
 spacing in `em`/`rem` units.
-That helps maintain dimension-relationships
+That helps maintain relative sizing
 across an entire design.
 The result is a more consistent behavior
 between font preference settings
@@ -60,7 +66,17 @@ when something grows,
 everything else grows to match.
 But is that always what we want?
 
-## What's the purpose of a user preference?
+## Zoom isn't a single feature
+
+
+
+## What's the purpose of a zoom?
+
+
+
+## What's the purpose of a font-size preference?
+
+
 
 
 ## How do we determine available space?
