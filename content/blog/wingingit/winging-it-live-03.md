@@ -1,12 +1,12 @@
 ---
 title: Using New Color Formats
 episode: 3
+sponsors: true
 tags:
   - Accessibility
   - Color
   - Design
   - Figma
-  - Show Notes
   - User Experience
 author:
   - james
