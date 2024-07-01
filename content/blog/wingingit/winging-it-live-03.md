@@ -20,7 +20,8 @@ media:
   - youtube: Lq4saw4Rqe0
 summary: |
   Miriam Suzanne, Stacy Kvernmo, and James Stuckey Weber
-  demo how to use new color formats with OddContrast.com,
+  demo how to use new color formats with
+  [OddContrast.com](https://www.oddcontrast.com/),
   a color tool for previewing, accessibility testing,
   and selecting the format/space.
 ---
