@@ -12,7 +12,6 @@ tags:
 slides: https://slides.oddbird.net/variables/
 events:
   - venue: An Event Apart Spring Summit
-    url: https://aneventapart.com/event/spring-summit-2021
     date: 2021-04-19
     end: 2021-04-21
     adr: Online
