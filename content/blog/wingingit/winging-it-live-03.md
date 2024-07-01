@@ -46,7 +46,7 @@ summary: |
 - What does "in gamut" mean?
 - Specifying fallbacks
 - Why care about contrast?
-- How does Alpha impact contrast?
+- How does alpha impact contrast?
 
 ## Links:
 
