@@ -41,7 +41,7 @@ summary: |
 ## What we cover:
 
 - What is OddContrast?
-- Why we made OddContrast.
+- Why we made OddContrast
 - What are the new color formats, and why use them?
 - What does “in gamut” mean?
 - Specifying fallbacks
