@@ -1,7 +1,7 @@
 ---
 title: Updates to the Anchor Position Polyfill
 sub: Catching up to the spec
-date: 2024-06-26
+date: 2024-07-02
 image:
   src: blog/2024/anchor.jpg
   alt: >
@@ -22,9 +22,9 @@ as the spec started to take form. Now that the spec has stabilized, and Chromium
 has begun implementation, we are relying on our sponsors to support development
 of the polyfill. Thanks to their contributions, we're releasing [v0.0.6].
 
-[v0.0.6]: https://github.com/oddbird/css-anchor-positioning/releases/tag/v0.0.6
+[v0.1.0]: https://github.com/oddbird/css-anchor-positioning/releases/tag/v0.1.0
 
-## Updates in v0.0.6
+## Updates in v0.1.0
 
 1. `position-anchor`
 
@@ -74,8 +74,8 @@ isn't yet supported by the Polyfill.
 Thanks to a great contribution from [@ayoreis], the validity algorithm has been
 updated to match the [spec]. More can be found in the [issue], but this change
 makes more elements available for anchoring. The notable use case is you can now
-anchor to another element that is anchored as well (as long as it comes earlier
-in the DOM tree).
+anchor to another element that is anchored as well (as long as the anchor
+element is layed out before the target element).
 
 [@ayoreis]: https://github.com/ayoreis
 [spec]: https://drafts.csswg.org/css-anchor-position-1/#target
