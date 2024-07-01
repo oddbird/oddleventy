@@ -43,7 +43,7 @@ summary: |
 - What is OddContrast?
 - Why we made OddContrast
 - What are the new color formats, and why use them?
-- What does “in gamut” mean?
+- What does "in gamut" mean?
 - Specifying fallbacks
 - Why care about contrast?
 - How does Alpha impact contrast?
