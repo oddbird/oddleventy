@@ -3,9 +3,9 @@ title: Updates to the Anchor Position Polyfill
 sub: Catching up to the spec
 date: 2024-07-02
 image:
-  src: blog/2024/anchor.jpg
+  src: blog/2024/anchor1.jpg
   alt: >
-    A rusty anchor hanging from a board.
+    A rusty anchor hanging with the sea in the background.
 author: james
 oss: true
 tags:
@@ -14,8 +14,9 @@ tags:
   - Anchor Position
   - CSS
 summary: |
-  Support for updates to the Anchor Position Spec
-  is making the Anchor Position Polyfill more useful.
+  Sponsor support for continued development of the
+  Anchor Position Spec is making the Anchor Position Polyfill more useful.
+  Here's a summary of the latest updates.
 ---
 A couple years ago, OddBird started working on a polyfill for Anchor Position,
 as the spec started to take form. Now that the spec has stabilized, and Chromium
@@ -116,7 +117,7 @@ have a different anchor on a different screen size.
 While a lot of the basic functionality is already possible with the polyfill,
 there's a lot left to do to bring the Polyfill up to date with the spec. Our
 [v1.0.0 Milestone] is prioritized based on what we think will be the most
-impactful and useful features, and some of the upcoming ones are-
+impactful and useful features, and some of the upcoming ones are:
 
 [v1.0.0 Milestone]: https://github.com/oddbird/css-anchor-positioning/milestone/1
 
