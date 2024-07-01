@@ -50,7 +50,7 @@ summary: |
 
 ## Links:
 
-- [OddContrast.com](https://oddcontrast.com)
+- [OddContrast.com](https://www.oddcontrast.com/)
 - [OddContrast GitHub](https://github.com/oddbird/oddcontrast/issues)
 - [Color.js](https://colorjs.io/)
 - [W3C CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/)
