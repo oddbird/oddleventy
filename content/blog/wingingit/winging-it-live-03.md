@@ -6,8 +6,6 @@ tags:
   - Color
   - Design
   - Figma
-  - Show Notes
-  - User Experience
 author:
   - james
   - miriam
@@ -15,12 +13,13 @@ author:
 date: 2024-06-27
 length: 53 mins
 image:
-  src: winging-it/winging-it-6.jpg
+  src: winging-it/winging-it-live-3.jpg
 media:
   - youtube: Lq4saw4Rqe0
 summary: |
   Miriam Suzanne, Stacy Kvernmo, and James Stuckey Weber
-  demo how to use new color formats with OddContrast.com,
+  demo how to use new color formats
+  like P3, Oklch, and Oklab with OddContrast.com,
   a color tool for previewing, accessibility testing,
   and selecting the format/space.
 ---
@@ -40,7 +39,7 @@ summary: |
 ## What we cover:
 
 - What is OddContrast?
-- Why we made OddContrast.
+- Why we made OddContrast
 - What are the new color formats, and why use them?
 - What does “in gamut” mean?
 - Specifying fallbacks
@@ -55,7 +54,7 @@ summary: |
 - [W3C CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/)
 - [Okay, Color Spaces](https://ericportis.com/posts/2024/okay-color-spaces/)
 - [Palette Juicer](https://keyboarddanni.github.io/palettejuicer/)
-- [OKlch.com](https://oklch.com)
+- [Oklch.com](https://oklch.com)
 - [Gamut Mapping Gradients](https://apps.colorjs.io/gamut-mapping/gradients?from=oklch%2890%25+.4+250%29&to=oklch%2840%25+.1+20%29)
 
 ## Demos:
