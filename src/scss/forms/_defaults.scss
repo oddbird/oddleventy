@@ -2,6 +2,13 @@
 /// @group forms
 
 /// @group forms
+form {
+  [data-typeset] > & {
+    margin-block: var(--gutter);
+  }
+}
+
+/// @group forms
 textarea {
   min-height: calc(6em + 4vw);
   resize: vertical;

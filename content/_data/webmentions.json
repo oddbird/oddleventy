@@ -1,6 +1,29 @@
 {
-  "lastFetched": "2024-06-10T08:06:27.948Z",
+  "lastFetched": "2024-06-24T08:06:22.475Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Nelson Chu Pavlosky",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/45776646d2a1df9c46739119072eb536e85dbc314de7a2e940f5a7af584e035b.jpg",
+        "url": "https://jawns.club/@skyfaller"
+      },
+      "url": "https://jawns.club/@skyfaller/112616664108172980",
+      "published": "2024-06-14T19:38:42+00:00",
+      "wm-received": "2024-06-14T20:00:29Z",
+      "wm-id": 1834564,
+      "wm-source": "https://brid.gy/comment/mastodon/@mxbck@front-end.social/112614861718161804/112616664152485619",
+      "wm-target": "https://www.oddbird.net/2024/06/13/css-layout/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@mxbck\" class=\"u-url\">@<span>mxbck</span></a></span> <span class=\"h-card\"><a href=\"https://front-end.social/@mia\" class=\"u-url\">@<span>mia</span></a></span> Got any suggestions for how best to learn CSS Grid?</p><p>This post about best practices for CSS Grid got me interested in it (I hope it's not outdated): <a href=\"https://vgpena.github.io/using-css-grid-the-right-way/\"><span>https://</span><span>vgpena.github.io/using-css-gri</span><span>d-the-right-way/</span></a></p><p>I always see this educational game mentioned, and I did find it fun, if a bit basic: <a href=\"https://cssgridgarden.com/\"><span>https://</span><span>cssgridgarden.com/</span><span></span></a></p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2024/06/13/css-layout/\"></a>\n<a href=\"https://vgpena.github.io/using-css-grid-the-right-way/\">Using CSS Grid the right way</a>",
+        "text": "@mxbck @mia Got any suggestions for how best to learn CSS Grid?\n\nThis post about best practices for CSS Grid got me interested in it (I hope it's not outdated): https://vgpena.github.io/using-css-grid-the-right-way/\n\nI always see this educational game mentioned, and I did find it fun, if a bit basic: https://cssgridgarden.com/\n\nUsing CSS Grid the right way"
+      },
+      "in-reply-to": "https://www.oddbird.net/2024/06/13/css-layout/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {

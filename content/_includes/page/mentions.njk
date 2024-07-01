@@ -1,7 +1,7 @@
 {%- import 'utility.macros.njk' as utility -%}
 {%- import 'layout.macros.njk' as layout -%}
 
-{%- set abs_url = page.url | absoluteUrl(site.url) -%}
+{%- set abs_url = page.url | htmlBaseUrl(site.url) -%}
 {%- set mentions = webmentions | mentionsForUrl(abs_url) -%}
 
 {#

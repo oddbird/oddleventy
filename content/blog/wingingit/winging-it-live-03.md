@@ -1,11 +1,13 @@
 ---
 title: Using New Color Formats
 episode: 3
+sponsors: true
 tags:
   - Accessibility
   - Color
   - Design
   - Figma
+  - OddTools
 author:
   - james
   - miriam
@@ -18,8 +20,8 @@ media:
   - youtube: Lq4saw4Rqe0
 summary: |
   Miriam Suzanne, Stacy Kvernmo, and James Stuckey Weber
-  demo how to use new color formats
-  like P3, Oklch, and Oklab with OddContrast.com,
+  demo how to use new color formats with
+  [OddContrast.com](https://www.oddcontrast.com/),
   a color tool for previewing, accessibility testing,
   and selecting the format/space.
 ---
@@ -41,14 +43,14 @@ summary: |
 - What is OddContrast?
 - Why we made OddContrast
 - What are the new color formats, and why use them?
-- What does “in gamut” mean?
+- What does "in gamut" mean?
 - Specifying fallbacks
 - Why care about contrast?
-- How does Alpha impact contrast?
+- How does alpha impact contrast?
 
 ## Links:
 
-- [OddContrast.com](https://oddcontrast.com)
+- [OddContrast.com](https://www.oddcontrast.com/)
 - [OddContrast GitHub](https://github.com/oddbird/oddcontrast/issues)
 - [Color.js](https://colorjs.io/)
 - [W3C CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/)
