@@ -1,6 +1,6 @@
 ---
 title: Using New Color Formats
-episode: 3
+episode: 9
 sponsors: true
 tags:
   - Accessibility
@@ -15,7 +15,7 @@ author:
 date: 2024-06-27
 length: 53 mins
 image:
-  src: winging-it/winging-it-live-3.jpg
+  src: winging-it/winging-it-9.jpg
 media:
   - youtube: Lq4saw4Rqe0
 summary: |
