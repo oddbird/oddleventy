@@ -16,13 +16,11 @@ tags:
 slides: https://slides.oddbird.net/layers/
 events:
   - venue: An Event Apart
-    url: https://aneventapart.com/event/san-francisco-2022
     adr: San Francisco, CA
     date: 2022-12-12
     end: 2022-12-14
     slides: https://slides.oddbird.net/layers/aea-sf22/
   - venue: An Event Apart
-    url: https://aneventapart.com/event/denver-2022
     adr: Denver, CO
     date: 2022-10-10
     end: 2022-10-12
