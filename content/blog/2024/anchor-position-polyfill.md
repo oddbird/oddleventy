@@ -7,6 +7,7 @@ image:
   alt: >
     A rusty anchor hanging with the sea in the background.
 author: james
+sponsors: true
 tags:
   - Article
   - OSS
@@ -19,7 +20,7 @@ summary: |
   Here's a summary of the latest updates.
 ---
 
-A couple years ago, OddBird started working on a polyfill for [CSS Anchor
+A few years ago, OddBird started working on a polyfill for [CSS Anchor
 Positioning] as the spec started to take form. Now that the spec has stabilized
 and Chromium has begun implementation, we are relying on our sponsors to support
 development of the polyfill. Thanks to their contributions, we're releasing
@@ -141,7 +142,8 @@ commenting on the GitHub issues. We also welcome PRs.
 
 And of course, [sponsoring] OddBird's Open Source work is a great way to help
 make our continued work on this polyfill (and others) possible. We're grateful
-for our [existing sponsors] who have made this release possible!
+for our existing sponsors who have made this release possible, and you can see
+them [below].
 
 [sponsoring]: https://opencollective.com/oddbird-open-source
-[existing sponsors]: /polyfill/#open-source-sponsors
+[below]: #open-source-sponsors
