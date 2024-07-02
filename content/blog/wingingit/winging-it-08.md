@@ -38,7 +38,12 @@ summary: |
 
 ## What we cover:
 
-- What
+- What is Anchor Positioning?
+- Sizing based on the anchor element
+- Anchoring Popovers to their trigger
+- Scoping an anchor
+- Setting up fallback positions when your element overflows
+- Fun demos of what is now possible
 
 ## Links:
 
