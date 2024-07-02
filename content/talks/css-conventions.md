@@ -11,7 +11,6 @@ tags:
 slides: https://slides.oddbird.net/conventions/
 events:
   - venue: An Event Apart Fall Summit
-    url: https://aneventapart.com/event/online-1020
     date: 2020-10-26
     end: 2020-10-28
     adr: Online

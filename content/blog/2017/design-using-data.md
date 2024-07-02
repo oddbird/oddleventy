@@ -19,9 +19,7 @@ summary: |
   giving our community an easy way to learn on our own time
   from anywhere in the world.
   Our first video in this series is a talk by Sarah Parmenter titled
-  "Designing Using Data" given at [An Event Apart Orlando].
-
-  [An Event Apart Orlando]: https://aneventapart.com/event/orlando-2014
+  "Designing Using Data" given at An Event Apart Orlando.
 ---
 
 {% import "embed.macros.njk" as embed %}
@@ -47,10 +45,8 @@ use both research and experience to create the best results.
 ) }}][video]
 
 How do you use research to help you make design decisions? Let us know by
-sending us a message via [Twitter]. For other great talks from An Event Apart
-speakers, [visit their website].
+sending us a message via [Twitter].
 
 [Sarah Parmenter]: https://www.sazzy.co.uk/
 [video]: https://vimeo.com/120804557
 [Twitter]: https://twitter.com/oddbird
-[visit their website]: https://aneventapart.com/

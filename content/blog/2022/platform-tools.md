@@ -287,7 +287,7 @@ authors and the underlying language.
 
 Last month,
 I spoke about `@layer` for
-[An Event Apart Denver](https://aneventapart.com/event/denver-2022).
+An Event Apart Denver.
 During the Q&A session after my talk,
 someone asked,
 "How can I use this with CSS-in-JS tools?"

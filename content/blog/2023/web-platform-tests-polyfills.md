@@ -9,6 +9,7 @@ tags:
   - GitHub
   - JavaScript
   - Testing
+  - Polyfill
 image:
   src: blog/2023/graph.jpg
 summary: |
