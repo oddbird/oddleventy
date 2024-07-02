@@ -106,13 +106,13 @@ element, but with different names.
 }
 ```
 
-This will enable a number of use cases where a target can be anchored on
+This will enable a number of use cases where a target can be anchored to
 different anchors, depending on what is available. Perhaps some of your pages
-have a different layout, where you want `#target-b` to anchor on a
-`#side-anchor` if there is one, but otherwise on the default `.anchor`.
+have a different layout, where you want `#target-b` to anchor to a
+`#side-anchor` if there is one, but otherwise to the default `.anchor`.
 
 ```css
-.anchor#side-anchor{
+.anchor#side-anchor {
   anchor-name: --b;
 }
 ```
