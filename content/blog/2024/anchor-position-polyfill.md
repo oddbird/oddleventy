@@ -15,8 +15,8 @@ tags:
   - CSS
   - Polyfill
 summary: |
-  Sponsor support for continued development of the
-  CSS Anchor Positioning Spec is making the Anchor Position Polyfill more useful.
+  Our sponsors are supporting the continued development of the
+  CSS Anchor Positioning Polyfill.
   Here's a summary of the latest updates.
 ---
 
@@ -106,14 +106,14 @@ element, but with different names.
 }
 ```
 
-This enables a number of uses, for instance if you want `#target-b` to have a
-different anchor on a different screen size.
+This will enable a number of use cases where a target can be anchored on
+different anchors, depending on what is available. Perhaps some of your pages
+have a different layout, where you want `#target-b` to anchor on a
+`#side-anchor` if there is one, but otherwise on the default `.anchor`.
 
 ```css
-@media (min-width: 768px){
-  .anchor#side-anchor{
-    anchor-name: --b;
-  }
+.anchor#side-anchor{
+  anchor-name: --b;
 }
 ```
 
