@@ -61,12 +61,6 @@ and help along the way.
 - Intern compensation
   is determined on a case-by-case basis.
 
-### PTO
-
-All contractors are encouraged to take
-10 days of PTO annually,
-paid at \$400/day.
-
 ### Transparency
 
 Our books are open to the team,
@@ -87,7 +81,7 @@ at a level sufficient to keep the team working
 on internal projects for up to three months
 without client work.
 
-### Education & Technology
+### Education, Technology, & PTO
 
 OddBird provides \$1000 a year
 towards continuing education related to your work —
@@ -98,6 +92,10 @@ towards technology purchases
 that contribute to your daily work.
 If unused in a year, this money rolls over
 to subsequent years.
+
+All contractors are encouraged to take
+10 days of PTO annually,
+currently paid at \$400/day.
 
 These benefits are available
 after you’ve been working with OddBird
