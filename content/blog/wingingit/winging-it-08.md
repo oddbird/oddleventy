@@ -12,7 +12,7 @@ author:
 date: 2024-05-30
 length: 53 mins
 image:
-  src: winging-it/winging-it-9.jpg
+  src: winging-it/winging-it-8.jpg
 media:
   - youtube: 76hIB2L_vs4&t=1s
 summary: |
@@ -20,7 +20,8 @@ summary: |
   Why is it exciting?
   What can you use it for?
   How does the polyfill work?
-  Join us as we talk through these questions
+  Join James Stuckey Weber and Miriam Suzanne
+  as they talk through these questions
   and answer yours in our monthly live stream.
 ---
 

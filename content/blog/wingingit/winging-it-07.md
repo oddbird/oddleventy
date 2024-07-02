@@ -10,7 +10,7 @@ author:
 date: 2024-05-16
 length: 45 mins
 image:
-  src: winging-it/winging-it-9.jpg
+  src: winging-it/winging-it-7.jpg
 media:
   - youtube: Ci2DLDQYup0&t=1714s
 summary: |
