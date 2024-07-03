@@ -57,7 +57,7 @@ summary: |
 - [Anchor Size CodePen 2](https://codepen.io/jamessw/pen/OJYWorB)
 - [Popover](https://codepen.io/jamessw/pen/MWdjjQj)
 - [Anchor Scope](https://codepen.io/jamessw/pen/dyEXKeP)
-- [Fallback options with Position-try](https://codepen.io/jamessw/pen/abrZPQY)
+- [Fallback options with `position-try`](https://codepen.io/jamessw/pen/abrZPQY)
 - [More fallbacks](https://codepen.io/jamessw/pen/OJYbjyE)
 - [Textarea box with direction](https://codepen.io/jamessw/pen/qBGNgdL)
 - [Side note](https://codepen.io/jamessw/pen/gOJMyjN)
