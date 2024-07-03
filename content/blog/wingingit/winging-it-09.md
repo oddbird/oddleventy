@@ -21,7 +21,7 @@ media:
 summary: |
   Miriam Suzanne, Stacy Kvernmo, and James Stuckey Weber
   demo how to use new color formats with
-  [OddContrast.com](https://www.oddcontrast.com/),
+  [OddContrast](https://www.oddcontrast.com/),
   a color tool for previewing, accessibility testing,
   and selecting the format/space.
 ---
