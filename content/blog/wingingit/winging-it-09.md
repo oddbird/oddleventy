@@ -51,7 +51,7 @@ summary: |
 ## Links:
 
 - [OddContrast](https://www.oddcontrast.com/)
-- [OddContrast GitHub](https://github.com/oddbird/oddcontrast/issues)
+- [OddContrast GitHub Issues](https://github.com/oddbird/oddcontrast/issues)
 - [Color.js](https://colorjs.io/)
 - [W3C CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/)
 - [Okay, Color Spaces](https://ericportis.com/posts/2024/okay-color-spaces/)
