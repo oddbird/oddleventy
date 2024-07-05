@@ -39,7 +39,13 @@ summary: |
 
 ## What we cover:
 
-- W
+- What are container queries and why you should use them
+- How container queries differ from media queries
+- Why some layouts collapse when you add containment
+- Size containment with `contain-intrinsic-size`
+- Why should we avoid adding containment on root
+- Why a container can't query itself
+- An opt-out strategy to remove containment
 
 ## Links:
 
