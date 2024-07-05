@@ -45,7 +45,7 @@ summary: |
 
 - [Can We Query the Root Container?](https://www.oddbird.net/2023/07/05/contain-root/)
 - [Ahmad Shadeed's Interactive Guide to CSS Container Queries](https://ishadeed.com/article/css-container-query-guide/)
-- [A Cascading Layouts Workshop June 24-26, 2024](https://www.oddbird.net/workshops/cascading-layouts/)
+- [Cascading Layouts Workshop](https://www.oddbird.net/workshops/cascading-layouts/)
 
 ## Demos:
 
