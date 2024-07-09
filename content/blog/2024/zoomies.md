@@ -23,7 +23,7 @@ In brief:
 there is wide support for
 three different types of 'zoom' --
 available both to site visitors
-and (to some extend) CSS authors:
+and (to some extent) CSS authors:
 
 - **Page zoom**
   is the default with a handy keyboard shortcut,
@@ -32,7 +32,7 @@ and (to some extend) CSS authors:
 - **Scale factor** (or '_pinch zoom_')
   was introduced by early versions of mobile Safari,
   and may only be available through
-  track-pad or touch interfaces --
+  trackpad or touch interfaces --
   roughly matching the behavior of
   the CSS `scale` transform.
 - **Text-only zoom** is also provided
@@ -136,7 +136,7 @@ But once you hit 'print',
 the inch becomes reliable,
 and pixels will resize to fit.
 
-No matter what the result,
+No matter the medium,
 that `1:96` inch-to-px relationship
 (determined by
 [the arm-length of Håkon Wium Lie](https://drafts.csswg.org/css-values/#reference-pixel))
@@ -262,7 +262,7 @@ Thanks, Wikipedia!)
 This is the most common form
 of zoom available to us web surfers.
 I use the <kbd>Ctrl+/-</kbd>
-(<kbd>Cmd+/-</kbd> on mac)
+(<kbd>Cmd+/-</kbd> on Mac)
 keyboard shortcuts quite often,
 but these controls are also available
 in a browser menu.
@@ -333,10 +333,10 @@ includes a brief explanation:
 > on a focused input element to make it legible.
 
 I know I've experienced that.
-On mobile Safari you can also double-tap
+On Safari for iOS you can also double-tap
 elements in the page to 'zoom in'
 so that element fills the viewport.
-Testing here on a MacBook laptop with a track-pad,
+Testing here on a MacBook laptop with a trackpad,
 both the pinch and double-tap interactions
 work for me now in macOS Vivaldi (Chromium).
 
@@ -359,7 +359,7 @@ we're just looking at a smaller area
 of the overall page.
 
 **Scale factor** is adjusting
-_the size one viewport in relation to the other_.
+_the size of one viewport in relation to the other_.
 Specifically, the layout viewport
 can be scaled up larger (but not smaller)
 than the visual viewport.
