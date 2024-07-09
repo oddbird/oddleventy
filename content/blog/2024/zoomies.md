@@ -2,7 +2,7 @@
 title: Zoom, zoom, and zoom
 sub: The three types of browser (and CSS!) magnification
 author: miriam
-date: 2024-07-04
+date: 2024-07-09
 image:
   src: blog/2024/zoomies.jpg
   alt: >
