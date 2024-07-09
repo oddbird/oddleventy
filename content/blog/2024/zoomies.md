@@ -3,21 +3,32 @@ title: Zoom, zoom, and zoom
 sub: The three types of browser (and CSS!) magnification
 author: miriam
 date: 2024-07-04
+image:
+  src: blog/2024/zoomies.jpg
+  alt: >
+    A dog zooming by the camera, up-close,
+    body twisted and eyes wide
+    as it circles a grass yard
+  position: top
+summary: >
+  I'm working on an article
+  about fluid typography,
+  and relative units.
+  But instead, I fell down this rabbit hole --
+  _or a cleverly-disguised trap?_ --
+  trying to understand 'zoom' in the browser
+  (not Zoom™️ the software).
+  Since I couldn't find any up-to-date articles
+  on the subject,
+  I thought I should write one.
 tags:
   - Article
   - CSS
   - Layout
 ---
 
-I'm working on an article
-about fluid typography,
-and relative units --
-but fell down a rabbit hole
-(or a cleverly-disguised trap?)
-wanting to understand 'zoom' in the browser.
-Since I couldn't find any up-to-date articles
-on the subject,
-I thought I should write one.
+{% import 'embed.macros.njk' as embed %}
+{% import "quotes.macros.njk" as quotes %}
 
 In brief:
 there is wide support for
@@ -55,12 +66,20 @@ we access through the `px` unit.
 and are physically determined by the hardware.
 To quote the [CSS Values & Units Specification](https://drafts.csswg.org/css-values/#device-pixel):
 
-> A _device pixel_
-> is the smallest unit of area on the device output
-> capable of displaying its full range of colors.
-> For typical color screens,
-> it’s a square or somewhat rectangular region
-> containing a red, green, and blue subpixel.
+{% set devicePixelQuote %}
+A _device pixel_
+is the smallest unit of area on the device output
+capable of displaying its full range of colors.
+For typical color screens,
+it’s a square or somewhat rectangular region
+containing a red, green, and blue subpixel.
+{% endset %}
+
+{{ quotes.blockquote({
+  'text': devicePixelQuote,
+  'name': 'CSS Values & Units Specification',
+  'url': 'https://drafts.csswg.org/css-values/#device-pixel'
+}) }}
 
 These can range in size dramatically.
 Printers can generally fit more dots
@@ -94,6 +113,12 @@ For my screen, at the default settings,
 I have a device pixel ratio
 (what CSS calls a 'resolution')
 of `2x` or `2dppx` (_dots per `px` unit_).
+
+{{ embed.codepen(
+  id='oNRrLLy',
+  title='What is a pixel?',
+  user='miriamsuzanne'
+) }}
 
 To phrase it differently,
 the entire operating system is
@@ -179,26 +204,58 @@ because they usually are!
 Both are based on
 the size of your browser window,
 or the size of the page we print on.
-But there's a difference between
-_overflowing the box_
-and _only seeing part of the box_.
 
-Imagine an image zoom-and-pan interface,
-often in photo apps and editing tools.
+Even when we have enough content
+to overflow the layout viewport,
+it stays attached to the visual viewport.
+The box isn't growing,
+it's _overflowing_.
+Viewport units
+(based on the layout viewport)
+don't change their value
+when we create longer pages.
+
+So there's a difference between
+_overflowing the box_
+(when our content grows)
+and _only seeing part of the box_
+(when we scale one viewport
+in relation to the other).
+
+Imagine a photo-editing tool.
 The image itself has a 'canvas size'.
-Overflowing that canvas will crop the image.
-That's the 'layout viewport'.
-But you can also zoom in
-to view only part of the canvas,
-which is now large enough
-to overflow your screen.
-What you can see is the 'visual viewport'.
+We can enlarge elements of the image
+so that they overflow the canvas
+(and usually get cropped).
+That's like the relationship
+between content and the layout viewport.
+But we can also zoom the entire canvas
+in or out.
+That doesn't change the relationship
+between content and canvas,
+but it can change how much of the canvas
+we see in our editing interface.
+That interface window
+is like the visual viewport.
+
+Sometimes we can't see
+all the content inside the canvas,
+and sometimes we can't see
+the entire canvas in our browser window.
 
 Since I'm old,
-I'm more drawn to microfiche
+I'm drawn to microfiche
 as a visual analogy:
 
-<iframe src="https://giphy.com/embed/SxFW9rZbk3mdvlTFNN" width="480" height="271" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+{{ embed.figure(
+  data=[{
+    img: 'https://media1.giphy.com/media/SxFW9rZbk3mdvlTFNN/giphy.webp',
+    alt: 'A young man moving a plate of microfiche under a lens,
+      so the content pans across an old monitor'
+  }],
+  caption="Moving the layout viewport inside the visual viewport,
+    on a TV show I haven't seen (_Snowfall_)"
+) }}
 
 In most situations,
 the two viewports
@@ -216,13 +273,13 @@ It gets confusing
 (to me at least)
 because both viewports can overflow
 in different ways.
-But the size of our content
-only impacts one of them.
 When we add more content,
 we can overflow the layout viewport.
 In order to overflow
 the visual viewport,
-we'll need browser help!
+we need to make the layout viewport larger!
+And we can only do that
+with help from the browser.
 
 In researching this article,
 I also came across
@@ -301,7 +358,9 @@ _the size of a CSS pixel in relation to the layout viewport_.
 Since that happens before rendering,
 it impacts the layout of the page.
 It's then reflected by media queries,
-which query a 'smaller' viewport.
+which query a 'smaller' viewport
+when we zoom in --
+or a larger viewport zoomed out.
 
 As far as the browser is concerned,
 there's very little difference
@@ -327,10 +386,18 @@ _pinch zoom_ --
 and the Editor's Draft
 includes a brief explanation:
 
-> The "scale factor" is often referred to as "pinch-zoom";
-> however, it can be affected through means other than pinch-zooming.
-> e.g. The user agent may zooms [sic] in
-> on a focused input element to make it legible.
+{% set scaleFactorQuote %}
+The "scale factor" is often referred to as "pinch-zoom";
+however, it can be affected through means other than pinch-zooming.
+e.g. The user agent may zooms [sic] in
+on a focused input element to make it legible.
+{% endset %}
+
+{{ quotes.blockquote({
+  'text': scaleFactorQuote,
+  'name': "CSSOM View Module, Editor's Draft",
+  'url': 'https://drafts.csswg.org/cssom-view-1/#zooming'
+}) }}
 
 I know I've experienced that.
 On Safari for iOS you can also double-tap
@@ -374,20 +441,28 @@ we're zoomed in to view
 one smaller part of the box --
 and browsers handle that differently.
 
+{{ embed.codepen(
+  id='pomXRxP',
+  title='Zoom vs Scale',
+  user='miriamsuzanne'
+) }}
+
 ### CSS `zoom` and `scale` properties
 
 There's an old CSS browser hack
-using `zoom: 1` to trigger `hasLayout` --
-a proprietary bit of Internet Explorer lingo
+using `zoom: 1` to trigger `hasLayout`
+on Internet Explorer --
+an internal IE concept
 that's roughly equivalent
-to a modern Block Formatting Context.
-You can see it
+to a modern
+[Block Formatting Context](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
+You can see it used
 in Jay Hoffmann's excellent
 [evolution of the clearfix](https://css-tricks.com/clearfix-a-lesson-in-web-development-evolution/).
 Other than that,
 I don't think I've ever
 paid much attention to the `zoom` property
-in 20-some years of writing CSS!
+in 20-some years of writing CSS.
 
 It turns out there's a good reason for that.
 CSS `zoom` was initially IE-only.
@@ -396,7 +471,8 @@ released in 2001
 (MDN and CanIUse don't have data farther back),
 but it wasn't available in Firefox
 until **May 2024**.
-Zoom [just became available](https://caniuse.com/css-zoom)
+Zoom (the CSS property)
+[just became available](https://caniuse.com/css-zoom)
 in all browsers
 _this year!_
 
@@ -435,16 +511,19 @@ as CanIUse explains the difference:
 > whereas `zoom: 0.6` scales the elements on the page,
 > but not the page itself on which the elements are drawn.
 
-I've made a couple demos
-to help visualize
-zoom and scale and device pixel ratios --
-using the properties
-to better understand these
-two behaviors:
+Note that
+only the browser can zoom or scale
+in a way that impacts our
+two viewports.
+But when we zoom or scale in CSS,
+we're applying the same concepts
+to elements on the page:
 
-- [What's a pixel?](https://codepen.io/miriamsuzanne/pen/oNRrLLy)
-- [Zoom/scale, viewport vs elements](https://codepen.io/miriamsuzanne/pen/Exzzwgy?editors=1100)
-- [Scale vs zoom](https://codepen.io/miriamsuzanne/pen/pomXRxP?editors=1100)
+{{ embed.codepen(
+  id='Exzzwgy',
+  title='Zoom/scale, viewport vs elements',
+  user='miriamsuzanne'
+) }}
 
 ### Text-only zoom
 
@@ -458,7 +537,17 @@ I'm still working on that article --
 all about font-sizing --
 so I'll save the details for later.
 
-But if you've ever wanted to zoom the text
+In brief: it does exactly what it says.
+Text gets bigger,
+and nothing else changes.
+If you've ever wanted to zoom the text
 without _zooming_ or _scaling_
 anything else on the page,
 there it is!
+
+---
+
+Header image
+of a zooming dog
+by [Eric Sontroem](https://www.flickr.com/photos/96964826@N05/30947098457),
+[some rights reserved](https://creativecommons.org/licenses/by/2.0/)
