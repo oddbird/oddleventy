@@ -99,14 +99,14 @@ allowing us to set a screen 'resolution'
 that is different from the physical potential
 of the hardware.
 I have a 4k monitor here
-with `3840 x 2160` physical pixels,
+with `3840x2160` physical pixels,
 but to make the interface more legible
-it renders at a `1920 x 1080`
+it renders at a `1920x1080`
 resolution by default.
 
 That means we have twice the _pixel density_ --
 we can now fit multiple physical pixels
-inside a single resolution 'pixel'!
+inside a single visual 'pixel'!
 That ratio of rendered pixels to physical pixels
 is called the _device pixel ratio_.
 For my screen, at the default settings,
@@ -196,14 +196,14 @@ _two viewports_:
 - The **visual viewport**
   is the window we look through
   to see the page.
-  When we make the visual viewport larger,
-  we can see more of the layout at once.
+  When we make the visual viewport smaller,
+  we can see less of the layout on screen.
 
 Those might sound the same,
 because they usually are!
 Both are based on
-the size of your browser window,
-or the size of the page we print on.
+the size of your browser window by default,
+or the size of page we print on.
 
 Even when we have enough content
 to overflow the layout viewport,
@@ -254,16 +254,18 @@ as a visual analogy:
       so the content pans across an old monitor'
   }],
   caption="Moving the layout viewport inside the visual viewport,
-    on a TV show I haven't seen (_Snowfall_)"
+    on a TV show I haven't seen (_Snowfall_).
+    Content overflows onto multiple 'pages',
+    and those pages overflow the viewing screen."
 ) }}
 
 In most situations,
 the two viewports
 are the same size --
-the size of your browser window,
-or what's left of it after drawing
-the tabs and toolbars.
-But (as we'll see)
+the size of your browser window
+(or what's left of it after drawing
+the tabs and toolbars).
+But as we'll see,
 there are some zoomed-in situations
 where the visual viewport
 can end up smaller (but never larger)
@@ -377,14 +379,14 @@ but you're most likely to notice it
 on touch-screen devices.
 As far as I can tell,
 this was implemented originally
-for mobile Safari,
-and later added to the spec,
+for mobile Safari --
+then later added to the spec,
 and adopted by desktop browsers.
 In fact, the published spec
-mentions a previous name for it --
+uses an old name for it --
 _pinch zoom_ --
 and the Editor's Draft
-includes a brief explanation:
+provides an explanation for the change:
 
 {% set scaleFactorQuote %}
 The "scale factor" is often referred to as "pinch-zoom";
@@ -400,12 +402,13 @@ on a focused input element to make it legible.
 }) }}
 
 I know I've experienced that.
-On Safari for iOS you can also double-tap
+On Safari for iOS you can double-tap
 elements in the page to 'zoom in'
-so that element fills the viewport.
-Testing here on a MacBook laptop with a trackpad,
+so the tapped element fills the viewport.
+Testing here in macOS Vivaldi (Chromium)
+on a MacBook with a trackpad,
 both the pinch and double-tap interactions
-work for me now in macOS Vivaldi (Chromium).
+work for me.
 
 If you play with this,
 you'll notice that it's quite different
@@ -505,11 +508,19 @@ in relation to the things around.
 Or,
 as CanIUse explains the difference:
 
-> If e.g. `transform: scale(0.6)` is used on the `html` or `body` element
-> then it resizes the entire page,
-> showing a minified page with huge white margins around it,
-> whereas `zoom: 0.6` scales the elements on the page,
-> but not the page itself on which the elements are drawn.
+{% set caniQuote %}
+If e.g. `transform: scale(0.6)` is used on the `html` or `body` element
+then it resizes the entire page,
+showing a minified page with huge white margins around it,
+whereas `zoom: 0.6` scales the elements on the page,
+but not the page itself on which the elements are drawn.
+{% endset %}
+
+{{ quotes.blockquote({
+  'text': caniQuote,
+  'name': "Can I Use: CSS Zoom",
+  'url': 'https://caniuse.com/css-zoom'
+}) }}
 
 Note that
 only the browser can zoom or scale
