@@ -48,6 +48,8 @@ summary: |
   ) }}
 </aside>
 
-{{ layout.title('Latest News') }}
+{% if newsletterArchive | length %}
+  {{ layout.title('Latest News') }}
 
-{{ newsletterArchive | safe }}
+  {{ newsletterArchive | safe }}
+{% endif %}

@@ -11,5 +11,11 @@ export default async () => {
   });
   const archives = res.replace(/^document.write\("/, '').replace(/"\);$/, '');
 
-  return archives;
+  try {
+    return JSON.parse(`"${archives}"`);
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.error('Failed fetching OddNews archive.', e);
+    return '';
+  }
 };
