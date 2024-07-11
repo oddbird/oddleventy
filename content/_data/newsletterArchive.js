@@ -9,10 +9,10 @@ export default async () => {
     directory: '.cache/eleventy-fetch/',
     dryRun: false,
   });
-  const archives = res.replace(/^document.write\("/, '').replace(/"\);$/, '');
+  const archives = res.replace(/^document.write\(/, '').replace(/\);$/, '');
 
   try {
-    return JSON.parse(`"${archives}"`);
+    return JSON.parse(archives);
   } catch (e) {
     // eslint-disable-next-line no-console
     console.error('Failed fetching OddNews archive.', e);
