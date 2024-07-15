@@ -17,12 +17,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/dependency-tree@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@11ty/dependency-tree@npm:3.0.0"
+"@11ty/dependency-tree@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@11ty/dependency-tree@npm:3.0.1"
   dependencies:
     "@11ty/eleventy-utils": "npm:^1.0.2"
-  checksum: 10/41bc4273bcfb43f1deb2e56872a1dcd3d77489be456ea8546d5f905efa3baa67a2a2fb12ce7d530eab000ec108d1670ddad8fe426f51a9519de8eb42051fbc8f
+  checksum: 10/1a30b1a85676dc0bafe702e6f89152dbae1e99b49709e906bbfb02ce95c9730fcee1c6a1c8085739b5dc21806f4ee54e5fa419b7b9e9cb49032e659c8b250927
   languageName: node
   linkType: hard
 
@@ -115,11 +115,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy@npm:3.0.0-alpha.14":
-  version: 3.0.0-alpha.14
-  resolution: "@11ty/eleventy@npm:3.0.0-alpha.14"
+"@11ty/eleventy@npm:3.0.0-alpha.16":
+  version: 3.0.0-alpha.16
+  resolution: "@11ty/eleventy@npm:3.0.0-alpha.16"
   dependencies:
-    "@11ty/dependency-tree": "npm:^3.0.0"
+    "@11ty/dependency-tree": "npm:^3.0.1"
     "@11ty/dependency-tree-esm": "npm:^1.0.0"
     "@11ty/eleventy-dev-server": "npm:^2.0.1"
     "@11ty/eleventy-plugin-bundle": "npm:^2.0.2"
@@ -138,8 +138,9 @@ __metadata:
     gray-matter: "npm:^4.0.3"
     is-glob: "npm:^4.0.3"
     iso-639-1: "npm:^3.1.2"
+    js-yaml: "npm:^4.1.0"
     kleur: "npm:^4.1.5"
-    liquidjs: "npm:^10.14.0"
+    liquidjs: "npm:10.14.0"
     luxon: "npm:^3.4.4"
     markdown-it: "npm:^14.1.0"
     micromatch: "npm:^4.0.7"
@@ -156,7 +157,7 @@ __metadata:
     slugify: "npm:^1.6.6"
   bin:
     eleventy: cmd.cjs
-  checksum: 10/9481063a9f8e14e44a4ed80d6a2c09feec233800dbf4e6bc2c3fa1fb5581b05ca4a8c905a654b8fdd5117cdc2b6c688b8971609cd350f1798f642db4d8ddab08
+  checksum: 10/a3fb0d864392fd3dd36658971840e05200360fcd9b6890e3dc4607d1a06b8e85ad2d6fcc068075575d95606c0b0ce55bf24d91c489470d425626f4ba2b3163a3
   languageName: node
   linkType: hard
 
@@ -8051,7 +8052,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"liquidjs@npm:^10.14.0":
+"liquidjs@npm:10.14.0":
   version: 10.14.0
   resolution: "liquidjs@npm:10.14.0"
   dependencies:
@@ -9205,7 +9206,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oddsite@workspace:."
   dependencies:
-    "@11ty/eleventy": "npm:3.0.0-alpha.14"
+    "@11ty/eleventy": "npm:3.0.0-alpha.16"
     "@11ty/eleventy-fetch": "npm:^4.0.1"
     "@11ty/eleventy-img": "npm:^4.0.2"
     "@11ty/eleventy-plugin-rss": "npm:^2.0.2"
