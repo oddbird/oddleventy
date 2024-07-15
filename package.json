@@ -62,7 +62,7 @@
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/is-land": "^4.0.0",
-    "@babel/core": "^7.24.8",
+    "@babel/core": "^7.24.9",
     "@babel/preset-env": "^7.24.8",
     "@netlify/plugin-a11y": "^1.0.0-beta.1",
     "@rollup/plugin-babel": "^6.0.4",
@@ -100,7 +100,7 @@
     "postcss": "^8.4.39",
     "posthtml": "^0.16.6",
     "prettier": "^3.3.3",
-    "rimraf": "^5.0.8",
+    "rimraf": "^6.0.1",
     "rollup": "^4.18.1",
     "sanitize-html": "^2.13.0",
     "sass-embedded": "^1.77.8",
@@ -114,5 +114,5 @@
     "typescript": "^5.5.3",
     "typogr": "^0.6.8"
   },
-  "packageManager": "yarn@4.3.0"
+  "packageManager": "yarn@4.3.1"
 }
