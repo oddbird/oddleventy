@@ -19,16 +19,25 @@ summary: |
   in frontend development.
 ---
 
-> I think some of the new features
-> that we’ve been working on at the CSSWG
-> also help to clarify aspects of the system
-> that may have been unclear.
-> For example, Cascade Layers call attention
-> to other aspects of the cascade --
-> like style origins and importance.
->
-> The more we teach those hidden CSS features to developers,
-> the easier it is to understand how and why
-> CSS works the way that it does.
->
-> ---Miriam
+{% import "quotes.macros.njk" as quotes %}
+
+{% set pullQuote %}
+I think some of the new features
+that we’ve been working on at the CSSWG
+also help to clarify aspects of the system
+that may have been unclear.
+For example, Cascade Layers call attention
+to other aspects of the cascade --
+like style origins and importance.
+
+The more we teach those hidden CSS features to developers,
+the easier it is to understand how and why
+CSS works the way that it does.
+{% endset %}
+
+{{ quotes.blockquote({
+  'text': pullQuote,
+  'name': 'Miriam Suzanne',
+  'venue': 'Frontend Dogma',
+  'url': 'https://frontenddogma.com/posts/2024/5-questions-for-miriam-suzanne/'
+}) }}
