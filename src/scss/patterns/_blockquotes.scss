@@ -10,15 +10,15 @@ blockquote {
   padding: var(--spacer) 0;
 
   &:nth-of-type(odd) {
-    @include layout.clip('right');
-
     grid: 'edge icon quote' auto / var(--edge) auto var(--quote);
+
+    @include layout.clip('right');
   }
 
   &:nth-of-type(even) {
-    @include layout.clip('left');
-
     grid: 'icon quote edge' auto / auto var(--quote) var(--edge);
+
+    @include layout.clip('left');
   }
 
   .u-photo {
