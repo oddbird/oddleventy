@@ -21,12 +21,12 @@ $z-index: ('bump', 'dropdown', 'skip-link');
   margin-#{$side}: calc(var(--clip-overlap) * -0.5);
   padding-#{$side}: var(--offset-media-padding, var(--clip-space));
 
-  @include above($break) {
-    margin-#{$side}: var(--clip-overlap);
-  }
-
   @if ($side == 'left') {
     transform: translateY(calc(var(--offset) * -1));
+  }
+
+  @include above($break) {
+    margin-#{$side}: var(--clip-overlap);
   }
 }
 

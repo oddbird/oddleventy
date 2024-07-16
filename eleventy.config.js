@@ -144,7 +144,6 @@ export default (eleventyConfig) => {
   eleventyConfig.addFilter('activeAuthor', birds.activeAuthor);
   eleventyConfig.addFilter('withActiveAuthor', birds.withActiveAuthor);
 
-  eleventyConfig.addFilter('donorFacePile', support.donorFacePile);
   eleventyConfig.addShortcode('ocAvatar', support.openCollectiveAvatar);
 
   eleventyConfig.addFilter('typogr', type.typogr);
