@@ -11,7 +11,7 @@ tags:
   - Sass
   - CSS
   - CSSWG
-  - Mixins & Functions
+  - CSS Mixins & Functions
 summary: |
   The CSS Working Group
   has agreed to move forward
