@@ -1,6 +1,7 @@
 ---
-title: CSS Working Group updates for June & July
+title: CSS Working Group Updates for June & July
 sub: What I've been working on as an Invited Expert
+author: miriam
 date: 2024-07-23
 image:
   src: blog/2024/csswg-june.jpg
@@ -210,9 +211,8 @@ about new features showing up in production.
 I wrote up my thoughts,
 summarized by the title of the article:
 [Learn Grid Now, Container Queries Can Wait](/2024/06/13/css-layout/).
-Later this month,
-we'll be doing a live stream with
-[Stephanie Eckles](https://thinkdobecreate.com)
+We'll be doing a [live stream](https://www.youtube.com/watch?v=aDMWD_CYpEI)
+with [Stephanie Eckles](https://thinkdobecreate.com)
 ([ModernCSS.dev](https://moderncss.dev/) and [SmolCSS](https://smolcss.dev/))
 about the reasons to use grid,
 and some of the quick ways to get started.
@@ -446,3 +446,11 @@ over the current state of things.
 You can test how it impacts the linked pen
 by turning on the `css gamut mapping` feature flag
 in some Chromium browser versions (go to `chrome://flags`).
+
+We talked about this issue
+(and the potential solution)
+on our [Winging It Live stream](https://www.youtube.com/watch?v=Lq4saw4Rqe0)
+last month --
+along with details of our
+[OddContrast](https://contrast.oddbird.net)
+tool for wide-gamut contrast checking.
