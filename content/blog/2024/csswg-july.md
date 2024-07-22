@@ -2,7 +2,7 @@
 title: CSS Working Group Updates for June & July
 sub: What I've been working on as an Invited Expert
 author: miriam
-date: 2024-07-23
+date: 2024-07-22
 image:
   src: blog/2024/csswg-june.jpg
   alt: >
