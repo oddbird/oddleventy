@@ -13,8 +13,8 @@ summary: |
   Join OddBird
   for conversations
   at the cutting edge
-  of front-end web development
-  – from CSS, HTML, and JavaScript
+  of front-end web development --
+  from CSS, HTML, and JavaScript
   to UX design and team process.
   Streaming live the third Tuesday
   of each month.
