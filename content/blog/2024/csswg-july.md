@@ -1,5 +1,5 @@
 ---
-title: Working Group updates for June/July
+title: CSS Working Group updates for June & July
 sub: What I've been working on as an Invited Expert
 date: 2024-07-23
 tags:
