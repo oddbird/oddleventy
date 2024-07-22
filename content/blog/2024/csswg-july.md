@@ -2,6 +2,13 @@
 title: CSS Working Group updates for June & July
 sub: What I've been working on as an Invited Expert
 date: 2024-07-23
+image:
+  src: blog/2024/csswg-june.jpg
+  alt: >
+    A stepped gradient of a pink hue
+    in 2% lightness increments
+    from 100% to 58%,
+    labeled 'spec'
 tags:
   - CSS
   - CSSWG
@@ -40,7 +47,7 @@ or contributing to our
 
 spec:
 ~~[Containment, Level 3](https://www.w3.org/TR/css-contain-3/)~~
-[Conditional Rules, Level 5](https://drafts.csswg.org/css-conditional-5/)
+[Conditional Rules, Level 5](https://www.w3.org/TR/css-conditional-5/)
 
 ### Moving to a new specification
 
@@ -58,7 +65,7 @@ To help clarify that relationship,
 and simplify maintenance of these distinct features,
 Container Queries are moving
 from the [Containment module (level 3)](https://www.w3.org/TR/css-contain-3/)
-into the [Conditional Rules module (level 5)](https://drafts.csswg.org/css-conditional-5/).
+into the [Conditional Rules module (level 5)](https://www.w3.org/TR/css-conditional-5/).
 
 During this transition,
 Container Queries disappeared from any public spec --
