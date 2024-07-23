@@ -132,7 +132,7 @@ The workshop is taught in three sessions:
   alt: 'Yoda reaching out to control the force, surrounded by jungle swamp'
 }]) }}
 
-#### First, Do No Harm
+#### Cascading Styles
 
 CSS is fundamentally different
 from other languages or design tools,
@@ -142,13 +142,15 @@ We’ll dig into the practical implications of that vision,
 and how the ‘grain’ of the language
 can guide us to more performant and resilient styles.
 
-#### Normal Flow & Formatting Contexts
+#### Layout Modes & Formatting Contexts
 
-Normal Flow is the default layout engine of CSS,
-before we apply flexbox or grids.
-Often passed over,
-this powerful layout model
-has a lot of complexity hidden just below the surface.
+Many CSS properties are _modal_,
+behaving differently in different layout contexts.
+We'll start from the default layout mode
+called 'normal flow' --
+a powerful default
+that often feels _natural_,
+but hides a lot of complexity just below the surface.
 We'll look at how the DOM is rendered
 as a tree of inline and block boxes,
 each generating a new 'formatting context'
