@@ -17,8 +17,8 @@ media:
   - youtube: aDMWD_CYpEI
 summary: |
   We talk with Stephanie Eckles
-  – the brain behind ModernCSS.dev and SmolCSS.css
-  – about CSS grids.
+  -- the brain behind ModernCSS.dev and SmolCSS.css
+  -- about CSS grids.
   We'll look at a few of the most common grid patterns,
   to show you how (and why)
   you can get started
