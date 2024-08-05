@@ -26,9 +26,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-dev-server@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@11ty/eleventy-dev-server@npm:2.0.1"
+"@11ty/eleventy-dev-server@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@11ty/eleventy-dev-server@npm:2.0.2"
   dependencies:
     "@11ty/eleventy-utils": "npm:^1.0.2"
     chokidar: "npm:^3.6.0"
@@ -45,7 +45,7 @@ __metadata:
     ws: "npm:^8.17.0"
   bin:
     eleventy-dev-server: cmd.js
-  checksum: 10/e023d9e9a10e6ec2221d7dc2fded3fcfd4e0d90a20036b2c305169a886c8b9a3674bf0f884ada9b27546bea99d23983fb153a2b5220dd62216190fb9a4d9c35e
+  checksum: 10/40b9c3f8e328e09e6f82605f3c32cd82ea9d1a47d9611b5ace7291c59e44a4ef77d26ffe4c09df4f653d4c70f5bd928e9d3058e33728735b0d8123f186e4af7e
   languageName: node
   linkType: hard
 
@@ -115,13 +115,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy@npm:3.0.0-alpha.17":
-  version: 3.0.0-alpha.17
-  resolution: "@11ty/eleventy@npm:3.0.0-alpha.17"
+"@11ty/eleventy@npm:3.0.0-beta.1":
+  version: 3.0.0-beta.1
+  resolution: "@11ty/eleventy@npm:3.0.0-beta.1"
   dependencies:
     "@11ty/dependency-tree": "npm:^3.0.1"
     "@11ty/dependency-tree-esm": "npm:^1.0.0"
-    "@11ty/eleventy-dev-server": "npm:^2.0.1"
+    "@11ty/eleventy-dev-server": "npm:^2.0.2"
     "@11ty/eleventy-plugin-bundle": "npm:^2.0.2"
     "@11ty/eleventy-utils": "npm:^1.0.3"
     "@11ty/lodash-custom": "npm:^4.17.21"
@@ -132,7 +132,7 @@ __metadata:
     chardet: "npm:^2.0.0"
     chokidar: "npm:^3.6.0"
     cross-spawn: "npm:^7.0.3"
-    debug: "npm:^4.3.5"
+    debug: "npm:^4.3.6"
     dependency-graph: "npm:^1.0.0"
     fast-glob: "npm:^3.3.2"
     filesize: "npm:^10.1.4"
@@ -142,7 +142,7 @@ __metadata:
     iso-639-1: "npm:^3.1.2"
     js-yaml: "npm:^4.1.0"
     kleur: "npm:^4.1.5"
-    liquidjs: "npm:^10.15.0"
+    liquidjs: "npm:^10.16.1"
     luxon: "npm:^3.4.4"
     markdown-it: "npm:^14.1.0"
     micromatch: "npm:^4.0.7"
@@ -154,11 +154,11 @@ __metadata:
     please-upgrade-node: "npm:^3.2.0"
     posthtml: "npm:^0.16.6"
     posthtml-match-helper: "npm:^2.0.2"
-    semver: "npm:^7.6.2"
+    semver: "npm:^7.6.3"
     slugify: "npm:^1.6.6"
   bin:
     eleventy: cmd.cjs
-  checksum: 10/31771812baf3851ebde67c9a03c4a899a2432decd6e81a9a9b3bcd2352b36114ef0339678236e6f3a4fbb03166d0b6c321de146832baa769751bb9966ef8593c
+  checksum: 10/1bb2fee424507173fc11edf22c8cf45e0ee58795e33ac686f32fb5ffae73b68738112fcc1554185e58180e268502592b92007d2c1a2d3de2ca99cd5fca1a547c
   languageName: node
   linkType: hard
 
@@ -8202,15 +8202,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"liquidjs@npm:^10.15.0":
-  version: 10.16.0
-  resolution: "liquidjs@npm:10.16.0"
+"liquidjs@npm:^10.16.1":
+  version: 10.16.1
+  resolution: "liquidjs@npm:10.16.1"
   dependencies:
     commander: "npm:^10.0.0"
   bin:
     liquid: bin/liquid.js
     liquidjs: bin/liquid.js
-  checksum: 10/ec90b0a3cf24d6f49c8f1e66ed2ab6eaf9d9d382cebd709f2c939e9bb8c7d34165d724bfef6bd3de582658430eb91e5f445bdb746d2430526dade94015a0cbc4
+  checksum: 10/52a53b51b55c0bb9f223d250d6d8a672bd8bc9e67f18c6b9b86e667e7d40b880407cc965971130af0db6be61c97f1e27c750c494156b1d9edb6e65cc5a1200fc
   languageName: node
   linkType: hard
 
@@ -9366,7 +9366,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oddsite@workspace:."
   dependencies:
-    "@11ty/eleventy": "npm:3.0.0-alpha.17"
+    "@11ty/eleventy": "npm:3.0.0-beta.1"
     "@11ty/eleventy-fetch": "npm:^4.0.1"
     "@11ty/eleventy-img": "npm:^4.0.2"
     "@11ty/eleventy-plugin-rss": "npm:^2.0.2"
@@ -11198,12 +11198,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.3.5, semver@npm:^7.5.3, semver@npm:^7.5.4, semver@npm:^7.6.0, semver@npm:^7.6.2":
+"semver@npm:^7.3.5, semver@npm:^7.5.3, semver@npm:^7.5.4, semver@npm:^7.6.0":
   version: 7.6.2
   resolution: "semver@npm:7.6.2"
   bin:
     semver: bin/semver.js
   checksum: 10/296b17d027f57a87ef645e9c725bff4865a38dfc9caf29b26aa084b85820972fbe7372caea1ba6857162fa990702c6d9c1d82297cecb72d56c78ab29070d2ca2
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.6.3":
+  version: 7.6.3
+  resolution: "semver@npm:7.6.3"
+  bin:
+    semver: bin/semver.js
+  checksum: 10/36b1fbe1a2b6f873559cd57b238f1094a053dbfd997ceeb8757d79d1d2089c56d1321b9f1069ce263dc64cfa922fa1d2ad566b39426fe1ac6c723c1487589e10
   languageName: node
   linkType: hard
 
