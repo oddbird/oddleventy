@@ -11,6 +11,7 @@ image:
     from 100% to 58%,
     labeled 'spec'
 tags:
+  - Article
   - CSS
   - CSSWG
   - Cascade Layers
