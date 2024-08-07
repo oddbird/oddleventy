@@ -54,7 +54,7 @@ summary: |
 ## Links:
 - [CSS Grid Area](https://ishadeed.com/article/css-grid-area/)
 - [3 CSS Grid Techniques to Make You a Grid Convert](https://moderncss.dev/3-css-grid-techniques-to-make-you-a-grid-convert/)
-- [CSS Grid Experiments](https://codepen.io/collection/DQvYpQ)  by Olivia Ng
+- [CSS Grid Experiments](https://codepen.io/collection/DQvYpQ) by Olivia Ng
 
 ## Demos:
 - [Quick Layout with CSS Grid](https://codepen.io/miriamsuzanne/pen/OJGVzbK)
