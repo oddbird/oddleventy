@@ -1,6 +1,6 @@
 ---
 title: Partial Feature Queries, Relaxed Layout Containment, and more
-sub: CSS working group updates from July
+sub: CSS Working Group updates from July
 author: miriam
 date: 2024-08-13
 image:
@@ -143,13 +143,13 @@ That's what the proposed
 would do.
 This proposal gives us access
 to update a domain-specific setting
-a any `prefers-*` query, for any user,
+for any `prefers-*` query, for any user,
 and have the browser remember that setting
 when they return.
 
 That proposal has been underway for some time,
 but last month it was
-[adoped by the CSS Working Group](https://github.com/w3c/csswg-drafts/issues/6517#issuecomment-2220975121),
+[adopted by the CSS Working Group](https://github.com/w3c/csswg-drafts/issues/6517#issuecomment-2220975121),
 and will be added to
 [Media Queries Module Level 5](https://www.w3.org/TR/mediaqueries-5/).
 
@@ -163,7 +163,7 @@ between these features.
 Containment is essential for
 making size queries possible --
 but the existing breakdown of containment types
-defined for the `contain` property,
+defined for the `contain` property
 is not a perfect match for what we need.
 
 Our initial specification
@@ -203,7 +203,7 @@ pointing out that this situation is
 [not specific to anchor positioning](https://github.com/w3c/csswg-drafts/issues/10102),
 and we should consider allowing all positioned elements
 to escape `layout` containment --
-and therefor escape containers.
+and therefore escape containers.
 Ian Kilpatrick (a Blink engineer)
 followed up by proposing we
 [no longer apply full `layout` containment to query-containers](https://github.com/w3c/csswg-drafts/issues/10544),
@@ -378,7 +378,7 @@ or it will have to be separate.
 But in many ways,
 we're taking the same approach:
 Chrome is opening issues
-to show where there masonry might
+to show where their masonry might
 conflict with existing grid features,
 and WebKit is looking for ways
 to minimize those conflicts.
@@ -389,7 +389,7 @@ if the masonry-in-grid approach is viable or not.
 And then we will (hopefully)
 not be debating how the feature _works_,
 but only how it is 'spelled' in CSS syntax.
-Maybe kicking that can down the road,
+Maybe kicking that can down the road
 will give us more information to work with.
 
 ## Also keep an eye on…
