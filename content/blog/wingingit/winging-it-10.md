@@ -17,7 +17,7 @@ media:
   - youtube: aDMWD_CYpEI
 summary: |
   We talk with Stephanie Eckles
-  -- the brain behind ModernCSS.dev and SmolCSS.css
+  -- the brain behind [ModernCSS.dev](https://moderncss.dev/) and [SmolCSS.dev](https://smolcss.dev/)
   -- about CSS grids.
   We look at a few of the most common grid patterns,
   to show you how (and why)
@@ -61,5 +61,5 @@ summary: |
 - [Mix and match functions/intrinsic sizes for all the squish](https://codepen.io/miriamsuzanne/pen/wvKErbK)
 - [Subgrid Use Case](https://codepen.io/miriamsuzanne/pen/jRdgLB)
 
-## Learn More About CSS Grid:
+## Learn more about CSS grid:
 - [Cascading Style Systems: Resilient & Maintainable CSS](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne)
