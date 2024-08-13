@@ -10,6 +10,8 @@ tags:
   - CSS
   - CSSWG
   - Open Source
+  - Container Queries
+  - Layout
 summary: >
   Over the last month,
   the CSS Working Group has determined
@@ -395,12 +397,14 @@ will give us more information to work with.
 ## Also keep an eye on…
 
 - [Issue #10618](https://github.com/w3c/csswg-drafts/issues/10618):
-  I don't have much to say on this specific issue,
-  but I'm keeping a close eye
-  on the larger features.
   The `calc-size()` function
   and `interpolate-size` property
-  will finally solve _transitions to `auto`_!
+  will finally allow us to
+  transition or animate to and from `auto` sizes!
+  I don't have much more to say
+  about this specific issue,
+  but I'm keeping a close eye
+  on the overall feature.
 - [Issue #8320](https://github.com/w3c/csswg-drafts/issues/8320):
   One of the big frustrations
   with view transitions
