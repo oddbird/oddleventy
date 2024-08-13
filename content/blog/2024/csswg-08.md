@@ -1,5 +1,5 @@
 ---
-title: Partial Feature Queries, Relaxed Layout Containment, and more
+title: Partial Feature Queries, Relaxed Layout Containment, and More
 sub: CSS Working Group updates from July
 author: miriam
 date: 2024-08-13
@@ -12,7 +12,7 @@ tags:
   - Open Source
 summary: >
   Over the last month,
-  The CSS Working Group has determined
+  the CSS Working Group has determined
   we can loosen containment restrictions for query containers,
   and agreed on a syntax for special-case support queries
   (like support for the gap property in a flex context,
@@ -49,7 +49,7 @@ or contributing to our
 [Open Collective](https://opencollective.com/oddbird-open-source).
 {% endcallout %}
 
-## Container Queries & Conditional Rules
+## Container queries & conditional rules
 
 Container Queries have officially moved
 out of the CSS Containment Module, and into
@@ -329,7 +329,7 @@ you will be able to test:
 }
 ```
 
-## What's up with CSS Masonry?
+## What's up with CSS masonry?
 
 If you skim through the minutes
 from our July meetings you will also find
