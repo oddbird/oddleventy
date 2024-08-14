@@ -26,7 +26,7 @@ summary: |
   to re-write a code-base.
 ---
 
-{% callout 'Learn CSS layout in-depth' %}
+{% callout 'note', 'Learn CSS layout in-depth' %}
 To learn more about grid
 and other CSS layout models,
 join our
@@ -135,7 +135,7 @@ _once it has better support_.
 Container queries are basically brand new.
 But _what's going on with grids_?
 
-{% callout 'The CanIUse defaults are broken' %}
+{% callout 'note', 'The CanIUse defaults are broken' %}
   By default,
   [CanIUse](https://caniuse.com/) will show you
   _% of all users_,
