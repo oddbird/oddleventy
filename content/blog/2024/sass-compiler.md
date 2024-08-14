@@ -71,10 +71,11 @@ instead of `scss`.
 {% endcallout %}
 
 4. Adjust any options from the [`legacy`] API options to the [`modern`] API
-   options. In my case, I needed to update the `pkgImporter` to `importers: [new
+   options. In my case, I needed to update `pkgImporter` to `importers: [new
    NodePackageImporter()]` and change the import of `NodePackageImporter` from
-`sass` to `sass-embedded`. [`legacy`]:
-https://sass-lang.com/documentation/js-api/interfaces/legacystringoptions/
+  `sass` to `sass-embedded`.
+
+[`legacy`]: https://sass-lang.com/documentation/js-api/interfaces/legacystringoptions/
 [`modern`]: https://sass-lang.com/documentation/js-api/interfaces/stringoptions/
 
 And you're done. Now your Vite compilation time should be even faster!
@@ -102,8 +103,9 @@ Webpack's `sass-loader` also has support for the Compiler API.
 
 ## Benefits
 
-The benefit here is going to be very project-dependent. Initial tests of our
-codebases had an improvement of `vite build` going from 4.682s to 3.947s.
+The benefit here is going to be very project-dependent. In our codebases,
+we saw `vite build` times improving from ~4.7s to ~3.9s in a smaller project,
+and from ~5.9s to ~3.8s in a larger project.
 [Others](https://github.com/vitejs/vite/pull/17728#issuecomment-2247572134) have
 seen up to an 8x speed improvement. Incremental dev builds should also be
 faster.
