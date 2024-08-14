@@ -1,5 +1,5 @@
 ---
-title: Speeding up your Sass Compilation in Vite and Webpack
+title: Speeding Up Your Sass Compilation in Vite and Webpack
 sub: A quick guide to adopting the modern Sass API
 author: james
 date: 2024-08-14
@@ -30,7 +30,7 @@ up a new Sass instance for every single SFC.
 
 That can add up.
 
-Earlier this year, OddBird helped Sass add a new [`Compiler` API], that allows you
+Earlier this year, OddBird helped Sass add a new [`Compiler` API] that allows you
 to reuse a single instance of Sass for multiple compilations. While you can
 adopt the new API in your own bespoke Sass compilation setup, we were excited to
 see the Vite team add support in version 5.4.0.
@@ -43,12 +43,12 @@ see the Vite team add support in version 5.4.0.
 2. Switch from `sass` to `sass-embedded` by running `npm uninstall sass; npm
    install -D sass-embedded`.
 
-{% callout 'Wait- what\'s `sass-embedded`?' %}
+{% callout 'note', false %}
+**Wait -- what's `sass-embedded`?**
 
-  Sass is written in Dart. The `sass` package is transpiled to pure-Javascript,
-  and `sass-embedded` exposes the same API, but around a native Dart executable.
-  In many situations, `sass-embedded` is faster.
-
+Sass is written in Dart. The `sass` package is transpiled to pure-Javascript,
+and `sass-embedded` exposes the same API, but around a native Dart executable.
+In many situations, `sass-embedded` is faster.
 {% endcallout %}
 
 3. In your `vite.config.js` file, set `css.preprocessorOptions.scss.api` to `modern-compiler`.
@@ -65,12 +65,17 @@ css: {
 ...
 ```
 
-Note- if you're using the indented syntax, you'll need to use the `sass` key
+{% callout %}
+If you're using the indented syntax, you'll need to use the `sass` key
 instead of `scss`.
+{% endcallout %}
 
 4. Adjust any options from the [`legacy`] API options to the [`modern`] API
    options. In my case, I needed to update the `pkgImporter` to `importers: [new
-   NodePackageImporter()]` and update the import to `sass-embedded`.
+   NodePackageImporter()]` and change the import of `NodePackageImporter` from
+`sass` to `sass-embedded`. [`legacy`]:
+https://sass-lang.com/documentation/js-api/interfaces/legacystringoptions/
+[`modern`]: https://sass-lang.com/documentation/js-api/interfaces/stringoptions/
 
 And you're done. Now your Vite compilation time should be even faster!
 
@@ -78,7 +83,7 @@ And you're done. Now your Vite compilation time should be even faster!
 
 Webpack's `sass-loader` also has support for the Compiler API.
 
-1. Update to Vite version 5.4.0 or above.
+1. Update to sass-loader version 14.2.0 or above.
 2. Switch from `sass` to `sass-embedded` by running `npm uninstall sass; npm
    install -D sass-embedded`.
 3. In your `webpack.config.js`, set the `options.api` to `modern-compiler` for
