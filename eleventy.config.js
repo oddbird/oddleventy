@@ -31,7 +31,7 @@ export default (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({ 'src/media': 'assets/media' });
 
   eleventyConfig.addPassthroughCopy('content/robots.txt');
-  eleventyConfig.addPassthroughCopy('content/favicon.ico');
+  eleventyConfig.addPassthroughCopy({ 'src/images/favicon': '.' });
 
   // https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
   // Used because: https://github.com/11ty/eleventy/issues/2297
