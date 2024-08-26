@@ -17,8 +17,8 @@
       "wm-target": "https://www.oddbird.net/2024/07/23/winging-it-10/",
       "wm-protocol": "webmention",
       "content": {
-        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@OddBird\" class=\"u-url\">@<span>OddBird</span></a></span> <span class=\"h-card\"><a href=\"https://front-end.social/@5t3ph\" class=\"u-url\">@<span>5t3ph</span></a></span> “Best practice is a conversation.” ????</p>",
-        "text": "@OddBird @5t3ph “Best practice is a conversation.” ????"
+        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@OddBird\" class=\"u-url\">@<span>OddBird</span></a></span> <span class=\"h-card\"><a href=\"https://front-end.social/@5t3ph\" class=\"u-url\">@<span>5t3ph</span></a></span> “Best practice is a conversation.” 🫶</p>",
+        "text": "@OddBird @5t3ph “Best practice is a conversation.” 🫶"
       },
       "in-reply-to": "https://www.oddbird.net/2024/07/23/winging-it-10/",
       "wm-property": "in-reply-to",
@@ -40,31 +40,8 @@
       "wm-target": "https://www.oddbird.net/2024/06/13/css-layout/",
       "wm-protocol": "webmention",
       "content": {
-        "html": "<p><span class=\"h-card\"><a href=\"https://diaspodon.fr/@nicod\" class=\"u-url\">@<span>nicod</span></a></span> Grid is awesome!</p><p>Also, I’ll check why this toot was in French, it should indeed be in English.</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2024/06/13/css-layout/\"></a>",
-        "text": "@nicod Grid is awesome!\n\nAlso, I’ll check why this toot was in French, it should indeed be in English."
-      },
-      "in-reply-to": "https://www.oddbird.net/2024/06/13/css-layout/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "Nicolas Hoizey",
-        "photo": "https://webmention.io/avatar/static.mamot.fr/46db122dbb31fe47f9d54cd6b37edc875807209a0c1f9d0a8da12a397743b88d.jpg",
-        "url": "https://mamot.fr/@nhoizey"
-      },
-      "url": "https://mamot.fr/@nhoizey/112989923246283015",
-      "published": "2024-08-19T17:43:25+00:00",
-      "wm-received": "2024-08-19T17:54:50Z",
-      "wm-id": 1843793,
-      "wm-source": "https://brid.gy/comment/mastodon/@nhoizey@mamot.fr/112989683214340103/112989923246283015",
-      "wm-target": "https://www.oddbird.net/2024/06/13/css-layout/",
-      "wm-protocol": "webmention",
-      "content": {
-        "html": "<p><span class=\"h-card\"><a href=\"https://diaspodon.fr/@nicod\" class=\"u-url\">@<span>nicod</span></a></span> language is “en” in my feed, so there's something wrong in my GitHub Action posting the toot!</p><p><a href=\"https://nicolas-hoizey.com/feeds/mastodon/links.json\"><span>https://</span><span>nicolas-hoizey.com/feeds/masto</span><span>don/links.json</span></a></p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2024/06/13/css-layout/\"></a>",
-        "text": "@nicod language is “en” in my feed, so there's something wrong in my GitHub Action posting the toot!\n\nhttps://nicolas-hoizey.com/feeds/mastodon/links.json"
+        "html": "<p><span class=\"h-card\"><a href=\"https://diaspodon.fr/@nicod\" class=\"u-url\">@<span>nicod</span></a></span> Grid is awesome!</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2024/06/13/css-layout/\"></a>",
+        "text": "@nicod Grid is awesome!"
       },
       "in-reply-to": "https://www.oddbird.net/2024/06/13/css-layout/",
       "wm-property": "in-reply-to",
@@ -86,8 +63,8 @@
       "wm-target": "https://www.oddbird.net/2024/06/13/css-layout/",
       "wm-protocol": "webmention",
       "content": {
-        "html": "<p><span class=\"h-card\"><a href=\"https://mamot.fr/@nhoizey\" class=\"u-url\">@<span>nhoizey</span></a></span> Over the last few days, I've been learning new tricks with the grid that have opened up new ways for me.<br />I'm amazed at what you can do with it...</p><p>PS : your toot is in french ?<br /><br /><span class=\"h-card\"><a href=\"https://front-end.social/@mia\" class=\"u-url\">@<span>mia</span></a></span></p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2024/06/13/css-layout/\"></a>",
-        "text": "@nhoizey Over the last few days, I've been learning new tricks with the grid that have opened up new ways for me.\nI'm amazed at what you can do with it...\n\nPS : your toot is in french ?\n\n@mia"
+        "html": "<p><span class=\"h-card\"><a href=\"https://mamot.fr/@nhoizey\" class=\"u-url\">@<span>nhoizey</span></a></span> Over the last few days, I've been learning new tricks with the grid that have opened up new ways for me.<br />I'm amazed at what you can do with it...</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2024/06/13/css-layout/\"></a>",
+        "text": "@nhoizey Over the last few days, I've been learning new tricks with the grid that have opened up new ways for me.\nI'm amazed at what you can do with it..."
       },
       "in-reply-to": "https://www.oddbird.net/2024/06/13/css-layout/",
       "wm-property": "in-reply-to",
