@@ -40,11 +40,11 @@ summary: |
 
 ## What we cover:
 
-- When did Web Components “click”
+- When Web Components "clicked"
 - How to incorporate progressive enhancement
 - Future Web Components projects
 - What is still missing from Web Components?
-- Thoughts on [`Lit`](https://lit.dev/)
+- Thoughts on [Lit](https://lit.dev/)
 
 ## Demos:
 
