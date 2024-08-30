@@ -44,7 +44,7 @@ summary: |
 - How to incorporate progressive enhancement
 - Future Web Components projects
 - What is still missing from Web Components?
-- Thoughts on lit
+- Thoughts on [`Lit`](https://lit.dev/)
 
 ## Demos:
 
