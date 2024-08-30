@@ -1,7 +1,6 @@
 ---
 title: Learn CSS Grid First
 episode: 10
-sponsors: false
 tags:
   - CSS
   - Grids

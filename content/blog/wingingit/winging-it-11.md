@@ -1,7 +1,6 @@
 ---
 title: Web Components
 episode: 11
-sponsors: false
 tags:
   - Web Components
 author:
@@ -40,6 +39,7 @@ summary: |
 ) }}
 
 ## What we cover:
+
 - When did Web Components “click”
 - How to incorporate progressive enhancement
 - Future Web Components projects
@@ -47,23 +47,17 @@ summary: |
 - Thoughts on lit
 
 ## Demos:
-- [Slide-deck](https://github.com/oddbird/slide-deck/)
 
-- [Ground control](https://github.com/mirisuzanne/ground-control)
-
+- [slide-deck](https://github.com/oddbird/slide-deck/)
+- [ground-control](https://github.com/mirisuzanne/ground-control)
 - [is-land](https://github.com/11ty/is-land)
-
 - [fundraising-status](https://github.com/zachleat/fundraising-status)
-
 - [An Attempted Taxonomy of Web Components](https://www.zachleat.com/web/a-taxonomy-of-web-component-types/)
-
 - [Progressive Enhancement Recipes using Eleventy WebC Image Comparison Components](https://demo-webc-image-compare.netlify.app/)
 
 ## Links:
+
 - [Zach Leatherman](https://www.zachleat.com/)
-
 - [I Need Your Help to Make 11ty Fully Independent and Sustainable in 2024](https://www.zachleat.com/web/independent-sustainable-11ty/)
-
 - [Eleventy](https://www.11ty.dev/)
-
 - [Web Components Discord](https://discord.com/channels/767813449048260658/767813449048260661/1275219476429930619)
