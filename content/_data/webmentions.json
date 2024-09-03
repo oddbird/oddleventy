@@ -17,8 +17,8 @@
       "wm-target": "https://www.oddbird.net/2024/06/13/css-layout/",
       "wm-protocol": "webmention",
       "content": {
-        "html": "<p><span class=\"h-card\"><a href=\"https://mamot.fr/@nhoizey\" class=\"u-url\">@<span>nhoizey</span></a></span> <span class=\"h-card\"><a href=\"https://front-end.social/@mia\" class=\"u-url\">@<span>mia</span></a></span> Grid and Flexbox are not an either or, they are designed to work together. They are the Batman &amp; Robin of <a href=\"https://phpc.social/tags/webdev\">#<span>webdev</span></a></p>\n<a class=\"p-category\" href=\"https://mamot.fr/tags/webdev\">webdev</a>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2024/06/13/css-layout/\"></a>",
-        "text": "@nhoizey @mia Grid and Flexbox are not an either or, they are designed to work together. They are the Batman & Robin of #webdev\nwebdev"
+        "html": "<p><span class=\"h-card\"><a href=\"https://mamot.fr/@nhoizey\" class=\"u-url\">@<span>nhoizey</span></a></span> <span class=\"h-card\"><a href=\"https://front-end.social/@mia\" class=\"u-url\">@<span>mia</span></a></span> Grid and Flexbox are not an either or, they are designed to work together. They are the Batman &amp; Robin of <a href=\"https://phpc.social/tags/webdev\">#<span>webdev</span></a></p>",
+        "text": "@nhoizey @mia Grid and Flexbox are not an either or, they are designed to work together. They are the Batman & Robin of #webdev"
       },
       "in-reply-to": "https://www.oddbird.net/2024/06/13/css-layout/",
       "wm-property": "in-reply-to",
