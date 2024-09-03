@@ -234,7 +234,7 @@ Sandbox](https://css.oddbird.net/rwd/query/).
 
 To participate in discussions and implementation questions related to
 `container` queries, visit this project board: [Open Issues & Work on the
-Contain 3 Spec](https://github.com/w3c/csswg-drafts/projects/18).
+Contain 3 Spec](https://github.com/orgs/w3c/projects/108).
 
 ## Experiment and share
 

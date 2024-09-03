@@ -63,8 +63,6 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 {{ embed.figure(data=[{ youtube: 'WLAVc18Ugoc' }]) }}
 
-- [Slides](http://praliedutzel.com/talks/betweeners-responsive-web-design/)
-
 [Pralie Dutzel]: https://twitter.com/praliedutzel
 
 ## Style Guide-Driven Development: Documentation that Does Work by [Jan Jorgensen]

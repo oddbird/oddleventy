@@ -319,7 +319,7 @@ also used Lea Verou's [Contrast Ratio] tool to select colors for text
 that passed WCAG AA level at all sizes. We also built a WCAG contrast
 test into our [Sass Accoutrement toolkits].
 
-[contrast ratio]: https://contrast-ratio.com/
+[contrast ratio]: https://www.siegemedia.com/contrast-ratio
 [sass accoutrement toolkits]: /accoutrement/
 
 ### Landing Pages
