@@ -370,7 +370,7 @@ trade-offs. We have to invent our own syntax, which raises the learning
 curve for new developers, and eliminates some text-editor autocomplete
 gains. We've added dependencies to the project, making it also more
 difficult to test ideas in sandbox systems like [Codepen] and
-[Sassmeister].
+Sassmeister.
 
 Are those trade-offs worth it? That depends on your needs, and the needs
 of the project. No solution is one-size fits all. We hope some of these
@@ -387,6 +387,5 @@ would you improve on our map solution? We'd love to hear your thoughts on
 [OddSite config]: https://github.com/oddbird/oddsite/tree/master/static/sass/config
 [see the generated docs]: /styleguide/
 [Codepen]: https://codepen.io/
-[Sassmeister]: https://www.sassmeister.com/
 [Twitter]: https://twitter.com/oddbird
 [handy contact form]: /contact/

@@ -453,5 +453,5 @@ We talked about this issue
 on our [Winging It Live stream](https://www.youtube.com/watch?v=Lq4saw4Rqe0)
 last month --
 along with details of our
-[OddContrast](https://contrast.oddbird.net)
+[OddContrast](https://www.oddcontrast.com/)
 tool for wide-gamut contrast checking.

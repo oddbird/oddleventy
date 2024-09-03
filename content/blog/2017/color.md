@@ -216,7 +216,7 @@ two that work. Plus, Checker provides detailed descriptions of how to
 choose accessible colors, and accessibility articles if you’d like to
 dive deep.
 
-[Contrast Ratio]: https://contrast-ratio.com/
+[Contrast Ratio]: https://www.siegemedia.com/contrast-ratio
 
 ## [WebAIM: Color Contrast Checker]
 
