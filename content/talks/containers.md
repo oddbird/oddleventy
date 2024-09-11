@@ -14,6 +14,11 @@ tags:
   - Container Queries
   - CSSWG
 events:
+  - venue: Web Directions Developer Summit
+    date: 2024-11-27
+    end: 2024-11-28
+    adr: Sydney, Australia
+    url: https://webdirections.org/dev-summit/
   - venue: CMD Amsterdam
     date: 2024-06-05
     adr: Amsterdam, Netherlands

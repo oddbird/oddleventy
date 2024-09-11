@@ -24,7 +24,7 @@ tags:
   - Layout
   - CSSWG
 events:
-  - venue: OddBird Workshop
+  - venue: Cascading Layouts OddWorkshop
     date: 2025-04-07
     end: 2025-04-09
     adr: Online
