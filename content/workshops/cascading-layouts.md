@@ -3,9 +3,6 @@ title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
 date: 2024-12-31
-action:
-  text: Register now for April 2025 »
-  url: '/workshops/cascading-layouts/#register-now'
 image:
   src: talks/cascading-workshop-cat.jpg
   position: center
@@ -24,7 +21,7 @@ tags:
   - Layout
   - CSSWG
 events:
-  - venue: OddBird Workshop
+  - venue: Cascading Layouts OddWorkshop
     date: 2025-04-07
     end: 2025-04-09
     adr: Online
@@ -70,22 +67,6 @@ summary: |
   data=included,
   grid='fit'
 ) }}
-
-## Register Now
-
-<script src="https://js.tito.io/v2" async></script>
-<script>
-  window.tito = window.tito ||
-    function() {
-      (tito.q = tito.q || []).push(arguments);
-    };
-  tito('on:widget:loaded',function(){
-     document.getElementById('tito-registration-fallback').setAttribute('hidden', 'hidden');
-  });
-</script>
-
-<a href="https://ti.to/pland/css-layout" id="tito-registration-fallback">Register</a>
-<tito-widget event="pland/css-layout"></tito-widget>
 
 {% callout %}
 This material will also be covered in the
@@ -203,9 +184,7 @@ and interactive exercises related to defining layouts.
 
 ## Contact Us to Book a Workshop
 
-Register now for the
-[online workshop, April 2025](/workshops/cascading-layouts/#register-now),
-or consider bringing us in
+Consider bringing us in
 to talk with your team directly:
 
 {{ contact.form(

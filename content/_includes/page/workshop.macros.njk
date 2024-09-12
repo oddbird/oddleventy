@@ -3,7 +3,7 @@
 {% import 'post.macros.njk' as post %}
 
 {% macro feature(page) %}
-  {{ layout.title('Upcoming Workshop') }}
+  {{ layout.title('Featured Workshop') }}
   <article {{ post.aria_label(page) }} class="feature-workshop">
     {{ post.hero(page.data.image, 'post') }}
     <header class="training-header">

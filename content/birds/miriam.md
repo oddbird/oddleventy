@@ -23,11 +23,6 @@ events:
     url: https://cssday.nl/2024
     date: 2024-06-06
     end: 2024-06-07
-  - venue: Beyond Tellerand
-    adr: Berlin, DE
-    url: https://beyondtellerrand.com/events/berlin-2024
-    date: 2024-11-07
-    end: 2024-11-08
 summary: |
   Miriam (she/her) is a co-founder and front-end architect --
   overseeing the user-experience
