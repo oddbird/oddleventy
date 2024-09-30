@@ -8,15 +8,27 @@ image:
   alt: >
     A gallery of numbered images
     in four columns
+tags:
+  - Article
+  - CSS
+  - CSSWG
+  - Masonry
+summary: >
+  Back in 2020,
+  Firefox released a prototype
+  for doing 'masonry' layout in CSS.
+  Now all the browsers are eager to ship _something_,
+  but there's a hot debate
+  about the best syntax to use.
 ---
 
 {% import 'embed.macros.njk' as embed %}
 
-Back in 2020,
-Firefox released an experimental `masonry` keyword
+The Firefox prototype
+introduced a `masonry` keyword
 as part of CSS grid layout.
-We can define some grid tracks on one axis,
-set the other grid axis to `masonry`,
+We can define a standard grid template on one axis,
+set the cross-axis to `masonry`,
 and we get a 'waterfall' of content
 divided somewhat evenly across our tracks --
 aligned on one axis,
