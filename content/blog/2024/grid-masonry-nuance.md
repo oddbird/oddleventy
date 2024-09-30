@@ -1,8 +1,13 @@
 ---
-title: Choosing a masonry syntax in CSS
+title: Choosing a Masonry Syntax in CSS
 sub: What makes something a 'grid', and what's at stake?
 author: miriam
 date: 2024-09-26
+image:
+  src: blog/2024/masonry.jpg
+  alt: >
+    A gallery of numbered images
+    in four columns
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -161,34 +166,36 @@ In the proposed spec,
 `masonry-template-tracks` will have an initial value of
 `repeat(auto-areas, auto)`.
 
-There's a lot going on in that value:
+There's a lot going on in that value.
+The `repeat()` function is borrowed from grid,
+allowing us to take any number of columns
+and duplicate them any number of times.
+The first value is _how many times to repeat_,
+and the second value describes _the tracks to repeat_.
 
-- `repeat()` is borrowed from grid,
-  allowing us to take any number of columns
-  and duplicate them any number of times.
-  The first value is _how many times to repeat_,
-  and the second value describes _the tracks to repeat_.
-- Grid provides a few keywords for the repeat-count:
-  `auto-fit` and `auto-fill`.
-  Both create new tracks whenever space becomes available,
-  but `auto-fit` caps the total number of tracks
-  based on the number of items in our grid
-  (and some other criteria) --
-  to avoid generating empty tracks.
-  The proposed `auto-areas` would generate
-  zero or more tracks based first on
-  covering any explicit grid areas needed,
-  and then falling back to `auto-fit` behavior.
-  This might be useful in both masonry and non-masonry grids,
-  but is a good _default_ for masonry specifically.
-- Grid doesn't currently allow auto-repeating tracks
-  that use an intrinsic size.
-  Having `auto` in the second argument here
-  is a powerful new feature.
-  If this is possible to do in non-masonry tracks as well,
-  we should make it work everywhere.
-  But again: it only makes sense as the _default_
-  in a masonry-specific layout.
+Grid provides a few keywords for the repeat-count:
+`auto-fit` and `auto-fill`.
+Both create new tracks whenever space becomes available,
+but `auto-fit` caps the total number of tracks
+based on the number of items in our grid
+(and some other criteria) --
+to avoid generating empty tracks.
+The proposed `auto-areas` would generate
+zero or more tracks based first on
+covering any explicit grid areas needed,
+and then falling back to `auto-fill`
+(or [maybe `auto-fit`](https://github.com/w3c/csswg-drafts/issues/10854#issuecomment-2379810590)) behavior.
+This might be useful in both masonry and non-masonry grids,
+but is a good _default_ for masonry specifically.
+
+Grid doesn't currently allow auto-repeating tracks
+that use an intrinsic size.
+Having `auto` in the second argument here
+is a powerful new feature.
+If this is possible to do in non-masonry tracks as well,
+we should make it work everywhere.
+But again: it only makes sense as the _default_
+in a masonry-specific layout.
 
 Even assuming these values will work
 in both syntax options,
@@ -219,16 +226,14 @@ but we do on occasion,
 and this is likely to come up again.
 We could imagine a new layout system
 that is grid-like on one axis,
-but does _something else_
-on the other axis.
+but does _something else_ on the other axis.
 I don't think this is far-fetched at all.
 Columns are useful for alignment,
 even when the page isn't a strict 2-axis grid.
 See, for example, a decade of column-only web 'grid systems'.
 
-Or just imagine this feature as
-_literally_ grid columns with flexbox rows.
-We could imagine either:
+Or just consider masonry as a literal combination
+of grid columns with flexbox rows:
 
 ```css
 /* name TBD, maybe 'masonry'? */
@@ -431,7 +436,7 @@ I don't know.
 
 Join the conversation!
 There are several threads
-where developers can leave feedback…
+where developers can leave feedback:
 
 - on the [original proposal](https://github.com/w3c/csswg-drafts/issues/10233)
 - or the [alternate syntax](https://github.com/w3c/csswg-drafts/issues/9041)
@@ -439,22 +444,20 @@ where developers can leave feedback…
 It's most helpful to talk about your own use-cases,
 and how you expect to use this feature
 (if you do).
-I avoid arguments about…
+I avoid arguments about:
 
 - The meaning of the word 'grid'.
-  CSS grids aligned on a single axis
-  have been _the default_ since I started building websites
+  CSS column-only layouts
+  have been called 'grids'
+  since I started building websites
   in the early 2000s --
   and there are still use-cases for `display:grid`
   that focus entirely on one axis.
-  Whatever we decide, the term 'grid' is going to be fine.
 - Masonry being frivolous, as a layout.
   I get it.
   What we call _the Pinterest layout_ (derogatory)
-  has often been overused, and poorly used.
-  Beyond image galleries,
-  I don't find that sort of
-  random placement particularly useful.
+  has often been overused, or poorly used,
+  and not always accessible.
   But there are many other use cases
   for _flowing items into columns without aligning rows_,
   and we shouldn't lose sight of that.
@@ -472,7 +475,7 @@ For my part,
 I'm not particularly invested in one outcome or the other.
 I think both proposals are _pretty good_,
 and this conversation has already pushed both
-to be _better than they were initially_.
+to be better than they were initially.
 So I'm rooting for the process!
 
 Ask the questions!
