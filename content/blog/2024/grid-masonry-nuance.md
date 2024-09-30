@@ -2,7 +2,7 @@
 title: Choosing a Masonry Syntax in CSS
 sub: What makes something a 'grid', and what's at stake?
 author: miriam
-date: 2024-09-26
+date: 2024-09-30
 image:
   src: blog/2024/masonry.jpg
   alt: >
