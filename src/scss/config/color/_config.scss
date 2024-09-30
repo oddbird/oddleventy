@@ -5,7 +5,7 @@
 @use '../tools';
 @use 'brand';
 
-@function _hslHueNumber($color) {
+@function _hsl-hue-number($color) {
   @return math.div(color.channel($color, 'hue', $space: hsl), 1deg);
 }
 
@@ -27,9 +27,9 @@
 /// @access private
 /// @group config-color
 $_hues: (
-  'prime': _hslHueNumber(brand.$brand-blue),
-  'accent': _hslHueNumber(brand.$brand-pink),
-  'special': _hslHueNumber(brand.$brand-orange),
+  'prime': _hsl-hue-number(brand.$brand-blue),
+  'accent': _hsl-hue-number(brand.$brand-pink),
+  'special': _hsl-hue-number(brand.$brand-orange),
   'neutral': null,
 );
 
