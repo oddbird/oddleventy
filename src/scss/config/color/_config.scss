@@ -5,6 +5,10 @@
 @use '../tools';
 @use 'brand';
 
+@function _hsl-hue-number($color) {
+  @return math.div(color.channel($color, 'hue', $space: hsl), 1deg);
+}
+
 /// ## Color Config
 /// ---------------
 /// Accoutrement maps for storing global color tokens,
@@ -23,9 +27,9 @@
 /// @access private
 /// @group config-color
 $_hues: (
-  'prime': math.div(color.hue(brand.$brand-blue), 1deg),
-  'accent': math.div(color.hue(brand.$brand-pink), 1deg),
-  'special': math.div(color.hue(brand.$brand-orange), 1deg),
+  'prime': _hsl-hue-number(brand.$brand-blue),
+  'accent': _hsl-hue-number(brand.$brand-pink),
+  'special': _hsl-hue-number(brand.$brand-orange),
   'neutral': null,
 );
 
