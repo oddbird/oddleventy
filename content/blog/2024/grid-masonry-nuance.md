@@ -24,7 +24,7 @@ but packing more densely on the other.
     user='jensimmons'
   ) }}
   <figcaption>
-    Demo from Jen Simmons works on Safari Tech Preview,
+    This demo from Jen Simmons works on Safari Tech Preview,
     or Firefox with a feature flag.
     At it's core,
     a 'masonry' layout
@@ -43,20 +43,20 @@ with conflicting proposals from Apple and Google:
 
 - Safari implemented the grid-masonry proposal,
   and [wrote about the feature](https://webkit.org/blog/15269/help-us-invent-masonry-layouts-for-css-grid-level-3/),
-  [asking for feedback in a CSSWG issue](https://github.com/w3c/csswg-drafts/issues/10233)
+  [asking for feedback in a CSSWG issue](https://github.com/w3c/csswg-drafts/issues/10233).
 - Chrome responded with an
   [alternative masonry proposal](https://developer.chrome.com/blog/masonry),
   and opened an
-  [alternative issue on the CSSWG](https://github.com/w3c/csswg-drafts/issues/9041)
+  [alternative issue on the CSSWG](https://github.com/w3c/csswg-drafts/issues/9041).
 - For better comparison,
   two of the primary CSS spec authors --
   Elika Etemad (Apple) and Tab Atkins-Bittner (Google) --
   wrote a [combined specification](https://www.w3.org/TR/css-grid-3/)
   with both proposals side by side
-  (and joined wherever possible)
-- Chrome has since followed-up
+  (and joined wherever possible).
+- Chrome has since followed up
   with [further arguments](https://developer.chrome.com/blog/masonry-syntax)
-  for a non-grid syntax
+  for a non-grid syntax.
 - I expect we'll see a reply from Apple soon?
 
 Based on the comment threads,
@@ -116,9 +116,9 @@ The two proposals provide slightly different abstractions.
 
 - We can imagine a grid,
   where we define either columns or rows,
-  and then masonry-pack elements on the other axis
+  and then masonry-pack elements on the other axis.
 - We can imagine a set of masonry tracks,
-  and then specify the direction that they pack
+  and then specify the direction that they pack.
 
 There are advantages to understanding one
 unified track-layout system,
@@ -205,7 +205,7 @@ grid-template-rows: masonry;
 display: masonry;
 ```
 
-The non-grid option is clearly simpler,
+The non-grid option is clearly simpler --
 more can be _implied_.
 The grid option is not excessive,
 just _explicit_.
@@ -358,9 +358,9 @@ but it still requires explicit duplication.
 Because we can rely on various properties working
 in only one layout mode,
 and we get a simple mode toggle,
-it's fairly simple to setup any fallback we want.
+it's fairly simple to set up any fallback we want.
 But the trade off is that we don't have
-the the most obvious fallback _built-in_ from the start.
+the the most obvious fallback _built in_ from the start.
 
 While I was experimenting with different fallback paths,
 I was trying to maintain the spirit of masonry in some way --
@@ -401,8 +401,8 @@ image galleries fit this description perfectly.
 Maybe I'll start using it.
 
 It's also fair to say that fallbacks
-becomes less essential over time.
-Looking farther down the road,
+become less essential over time.
+Looking further down the road,
 we might also want to consider…
 
 ## What corners are we painting ourselves into?
@@ -444,20 +444,20 @@ I avoid arguments about…
 - The meaning of the word 'grid'.
   CSS grids aligned on a single axis
   have been _the default_ since I started building websites
-  in the early 2000's --
+  in the early 2000s --
   and there are still use-cases for `display:grid`
   that focus entirely on one axis.
   Whatever we decide, the term 'grid' is going to be fine.
 - Masonry being frivolous, as a layout.
   I get it.
-  What we call _the Pinterest layout_ (derogatory),
-  has often been over used, and poorly used.
+  What we call _the Pinterest layout_ (derogatory)
+  has often been overused, and poorly used.
   Beyond image galleries,
   I don't find that sort of
   random placement particularly useful.
   But there are many other use cases
   for _flowing items into columns without aligning rows_,
-  and we shouldn't lose site of that.
+  and we shouldn't lose sight of that.
   This is going to be a powerful tool when it ships,
   so it's worth spending some time to consider
   how we want it to work.
@@ -477,4 +477,4 @@ So I'm rooting for the process!
 
 Ask the questions!
 Push the language to be better!
-have fun out there, building the web.
+Have fun out there, building the web.
