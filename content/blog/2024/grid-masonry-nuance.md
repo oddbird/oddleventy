@@ -36,7 +36,7 @@ divided somewhat evenly across our tracks --
 aligned on one axis,
 but packing more densely on the other.
 
-At it's core,
+At its core,
 a 'masonry' layout
 works like 'grid' layout on one axis
 and 'flexbox' on the other.
@@ -160,7 +160,7 @@ works by first placing 'hypothetical' items
 _in every position that the item could potentially occupy_ --
 and then proceeding with normal grid track sizing,
 before finally placing the actual items
-in their actual position.
+in their actual positions.
 
 There may still be more to work out here,
 but the goal seems to be
@@ -446,7 +446,7 @@ that would mean duplicating the track definitions:
 }
 ```
 
-We could put those track definition inside a variable if we want,
+We could put those track definitions inside a variable if we want,
 but it still requires explicit duplication.
 
 Because we can rely on various properties working
