@@ -35,4 +35,4 @@ once we've had more time to live with it.
 [project-management features]: https://github.blog/2016-09-14-a-whole-new-github-universe-announcing-new-tools-forums-and-features/
 [kanban]: https://www.atlassian.com/agile/kanban
 [Pivotal Tracker]: https://www.pivotaltracker.com/
-[OddSite Open Design]: https://github.com/oddbird/oddsite/projects/1
+[OddSite Open Design]: /2016/07/12/open-design/
