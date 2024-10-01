@@ -2,7 +2,7 @@
 title: Choosing a Masonry Syntax in CSS
 sub: What makes something a 'grid', and what's at stake?
 author: miriam
-date: 2024-09-30
+date: 2024-09-26
 image:
   src: blog/2024/masonry.jpg
   alt: >
@@ -26,7 +26,8 @@ summary: >
 {% import 'embed.macros.njk' as embed %}
 
 The Firefox prototype
-introduced a `masonry` keyword
+and [CSS Grid Level 3 specification](https://drafts.csswg.org/css-grid-3/)
+initially introduced a `masonry` keyword
 as part of CSS grid layout.
 We can define a standard grid template on one axis,
 set the cross-axis to `masonry`,
@@ -35,6 +36,17 @@ divided somewhat evenly across our tracks --
 aligned on one axis,
 but packing more densely on the other.
 
+At it's core,
+a 'masonry' layout
+works like 'grid' layout on one axis
+and 'flexbox' on the other.
+Jen Simmons --
+then at Mozilla,
+but now working for Apple --
+developed a great demonstration
+of both the new functionality
+and several alternative techniques:
+
 <figure>
   {{ embed.codepen(
     id='QWjqbJj',
@@ -42,17 +54,15 @@ but packing more densely on the other.
     user='jensimmons'
   ) }}
   <figcaption>
-    This demo from Jen Simmons works on Safari Tech Preview,
-    or Firefox with a feature flag.
-    At it's core,
-    a 'masonry' layout
-    works like 'grid' layout on one axis
-    and 'flexbox' on the other.
+    This demo works on Safari Tech Preview,
+    or Firefox with an experimental feature flag.
   </figcaption>
 </figure>
 
-Rachel Andrew immediately
-[pushed back on the proposal](https://rachelandrew.co.uk/archives/2020/05/05/does-masonry-belong-in-the-css-grid-specification/) --
+Rachel Andrew --
+then independent, but now at Google --
+immediately
+[pushed back on the proposal](https://rachelandrew.co.uk/archives/2020/05/05/does-masonry-belong-in-the-css-grid-specification/),
 suggesting that masonry and grid
 are different enough
 they should not be part of the same layout mode.
@@ -81,10 +91,10 @@ Based on the comment threads,
 it seems like web authors also have opinions!
 
 At this point,
-the proposals have basically the same functionality
+the proposals have nearly the same functionality
 (with some caveats that Apple is hoping to address).
-They accept basically the same options,
-and use basically the same layout algorithm.
+They accept roughly the same options,
+and use almost the same layout algorithm.
 
 ```css
 /* grid masonry */
@@ -100,6 +110,14 @@ masonry-direction: column;
 
 I think either one will work _just fine_.
 But let's look at the details!
+
+{% callout 'Hot off the press' %}
+I was about to hit _publish_
+when Geoff Graham from CSS Tricks posted
+a similar rundown:
+[CSS Masonry & CSS Grid](https://css-tricks.com/css-masonry-css-grid/).
+I recommend checking it out!
+{% endcallout %}
 
 ## Is masonry a grid?
 
@@ -118,6 +136,44 @@ On that front it's clear that authors
 (like spec editors)
 see things very differently from each other.
 We're divided.
+
+## Do the features even overlap?
+
+Ian Kilpatrick (Google)
+[raised some issues early on](https://github.com/w3c/csswg-drafts/issues/8195#issuecomment-1347260607),
+suggesting that even the overlapping parts
+of grid and masonry
+(defining the columns)
+must have slightly different algorithms:
+
+- The grid layout mechanic starts by assigning items to tracks,
+  and then adjusts the track sizing
+  based on item placement.
+- The masonry mechanic works the other way,
+  first determining what tracks are available,
+  and then fitting items into those tracks.
+
+It's clear that there has been a lot of effort since then
+to bring the two approaches in line with each other.
+The [current proposal](https://drafts.csswg.org/css-grid-3/#track-sizing-performance)
+works by first placing 'hypothetical' items
+_in every position that the item could potentially occupy_ --
+and then proceeding with normal grid track sizing,
+before finally placing the actual items
+in their actual position.
+
+There may still be more to work out here,
+but the goal seems to be
+making both approaches _work the same_.
+That process should help reveal
+any fatal flaws in either proposal,
+and ensure our final choice
+is based only on the fundamental differences.
+
+It's worth letting that play out some
+before we make decisions based purely on syntax.
+Still, there are a lot more considerations
+to keep in mind.
 
 ## What can we learn or teach more clearly?
 
@@ -315,11 +371,29 @@ embedded above.
 It's not perfect,
 there's too much space,
 but it's pretty decent for a fallback.
-Jen also shows some (less convincing)
-flexbox-based alternatives.
 
-If we do want a flexbox fallback,
-though, it requires a bit more work.
+Jen provides some
+flexbox-based alternatives in her demo,
+and Chris Coyier has
+a 2020 article documenting other
+[Approaches for a CSS Masonry Layout](https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/).
+Many of them rely on either
+JavaScript, flexbox, or multi-column layouts.
+
+I find most of those alternatives unconvincing.
+Some people have suggested that masonry is
+'closer to flexbox than grid'
+because of the dense item-packing.
+It's an argument that sounds compelling to me
+on the surface,
+but after trying various options,
+I haven't actually seen a flexbox fallback
+that would work for me as a basis for enhancement.
+Maybe that just comes down to personal taste.
+
+If we do want a flexbox or multi-column fallback,
+the grid-based proposal requires a bit more work
+to get there.
 Since the `grid` display mode isn't going to fail entirely,
 we need to override it using `@supports`:
 
@@ -347,18 +421,19 @@ we need to override it using `@supports`:
 
 I'm not sure why we would want that fallback, exactly.
 Flexbox rows are all vertically aligned,
-just like our default grid rows.
+just like our default grid rows --
+so there's no clear advantage that I see.
 But I can imagine situations where we want
-a flexbox variants at some screen size,
-to create a different effect.
+a flexbox variant at some other screen size,
+to create a different effect?
 
-Using an alternate `masonry` display mode
-means we'll fall back to `block` display
-if we don't do anything else.
-To get the grid fallback
+An alternate `masonry` display mode
+would fall back to `block` display by default.
+To get any other fallback (grid, flex, or multi-column)
+we would have to specify both layouts completely.
+For a grid fallback
 with columns that match our masonry layout,
-we have to specify both --
-duplicating the track definitions:
+that would mean duplicating the track definitions:
 
 ```css
 /* grid fallback… duplicate properties */
@@ -371,8 +446,9 @@ duplicating the track definitions:
 }
 ```
 
-We could put the track definition inside a variable if we want,
+We could put those track definition inside a variable if we want,
 but it still requires explicit duplication.
+
 Because we can rely on various properties working
 in only one layout mode,
 and we get a simple mode toggle,
@@ -415,8 +491,8 @@ then this is pretty straight-forward.
 But those are big _ifs_.
 
 On my personal site,
-image galleries fit this description perfectly.
-Maybe I'll start using it.
+image galleries fit this description.
+Maybe I'll start using this approach.
 
 It's also fair to say that fallbacks
 become less essential over time.
