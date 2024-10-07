@@ -1,12 +1,12 @@
 ---
-title: Workshops, Talks, Events
-sub: Oh my!
+title: Workshops & Events
+sub: In-person & virtual for individuals, companies, and conferences
 action:
-  text: Register for upcoming events »
+  text: Register for events »
   url: /talks/#upcoming-events
 summary: |
   **We offer award-winning workshops & talks**
-  for individuals, companies, and conferences
+  for individuals, companies, and conference events
   to help developers create resilient web applications
   and design systems --
   improving team process, communication,
@@ -39,7 +39,7 @@ summary: |
   by_bird=collections
 ) }}
 
-{{ layout.title('All Talks & Workshops') }}
+{{ layout.title('All Workshops & Talks') }}
 {% call layout.grid('training') %}
   {% for item in collections._talk | getPublic | eventSort | reverse %}
     <article {{ post.aria_label(item) }} class="training-item">
