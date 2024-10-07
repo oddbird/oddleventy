@@ -21,14 +21,12 @@ summary: |
   into your CSS toolkit.
   As requested,
   this is part two of our dive into CSS grids.
-  We address your questions about strategy –
+  We address your questions about strategy --
   demoing CSS grid set up from start to finish.
 ---
 
 1. [Winging It Ep 10: Learn CSS Grid First](/2024/07/23/winging-it-10/)
 2. Winging It Ep 12: Learn CSS Grid - Part 2 (this episode)
-
-
 
 {% import "embed.macros.njk" as embed %}
 {% import "utility.macros.njk" as utility %}
@@ -42,13 +40,15 @@ summary: |
   subscribe_url
 ) }}
 
-
 ## What we cover:
 
 - When
 
 ## CSS grid workshop:
-If you're craving more, you can register for Miriam's Cascading Style Systems workshop with Smashing Conference. The first session is on October 14, 2024.
+
+If you're craving more, you can register for Miriam's Cascading Style Systems
+workshop with Smashing Conference. The first session is on October 14, 2024.
+
 - [Cascading Style Systems: Resilient & Maintainable CSS](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne)
 
 ## Demos:

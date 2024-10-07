@@ -27,8 +27,6 @@ summary: |
 1. Winging It Ep 10: Learn CSS Grid First (this episode)
 2. [Winging It Ep 12: Learn CSS Grid - Part 2](/2024/09/17/winging-it-12/)
 
-
-
 {% import "embed.macros.njk" as embed %}
 {% import "utility.macros.njk" as utility %}
 
@@ -40,7 +38,6 @@ summary: |
   'Subscribe to Channel »',
   subscribe_url
 ) }}
-
 
 ## What we cover:
 - Is flexbox alone good enough?
