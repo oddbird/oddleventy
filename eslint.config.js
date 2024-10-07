@@ -26,9 +26,9 @@ export default [
     ],
   },
   js.configs.recommended,
-  prettier,
   jest.configs['flat/recommended'],
   jest.configs['flat/style'],
+  prettier,
   {
     files: ['**/*.js'],
     languageOptions: {

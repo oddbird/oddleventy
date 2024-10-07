@@ -11,6 +11,7 @@
     "source.fixAll.eslint": "explicit"
   },
   "editor.formatOnSave": true,
+  "eslint.useFlatConfig": true,
   "css.validate": false,
   "scss.validate": false,
   "stylelint.packageManager": "yarn",
