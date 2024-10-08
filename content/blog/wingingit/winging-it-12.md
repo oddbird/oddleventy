@@ -22,7 +22,7 @@ summary: |
   As requested,
   this is part two of our dive into CSS grids.
   We address your questions about strategy --
-  demoing CSS grid set up from start to finish.
+  demoing how we plan and apply grid layouts starting with a design and implementing in the browser.
 ---
 
 1. [Winging It Ep 10: Learn CSS Grid First](/2024/07/23/winging-it-10/)
