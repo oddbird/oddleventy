@@ -42,7 +42,11 @@ summary: |
 
 ## What we cover:
 
-- When
+- How we plan our grids when reviewing a design
+- Working with the `grid-template` shorthand property
+- Making decisions about how content flows and stacks at different sizes 
+- Working with `gap` and empty grid cells
+- Rapid prototyping with rough markup
 
 ## CSS grid workshop:
 
