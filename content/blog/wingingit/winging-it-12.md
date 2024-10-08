@@ -56,6 +56,3 @@ workshop with Smashing Conference. The first session is on October 14, 2024.
 - [CSS Grid Design](https://www.figma.com/design/RHLs3YJE40ZAT7LiZaTQu3/Grid?node-id=2-21&node-type=frame&t=rLrO9i6kCAw1C1Ee-0)
 - [CSS Grid from Scratch](https://codepen.io/stacy/pen/ZEddQOz)
 
-## Links:
-
--
