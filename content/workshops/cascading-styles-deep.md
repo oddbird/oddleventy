@@ -29,13 +29,13 @@ events:
     date: 2024-11-29
     adr: Sydney, Australia
     url: https://webdirections.org/dev-summit/speakers/workshop-suzanne.php
+    note: >
+      Use the code `miriamworkshop` for $200 off!
   - venue: Smashing Workshops
     date: 2024-10-14
     end: 2024-10-28
     adr: Online
     url: https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/
-    note: >
-      Tickets [on sale now](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/)!
   - venue: Smashing Workshops
     date: 2024-02-26
     end: 2024-03-12
