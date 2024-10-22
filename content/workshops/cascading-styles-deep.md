@@ -25,10 +25,10 @@ tags:
   - CSS Scope
   - CSS Nesting
 events:
-  - venue: Web Directions Next
+  - venue: Web Directions Workshops
     date: 2024-11-29
     adr: Sydney, Australia
-    url: https://webdirections.org/next/
+    url: https://webdirections.org/dev-summit/speakers/workshop-suzanne.php
   - venue: Smashing Workshops
     date: 2024-10-14
     end: 2024-10-28
