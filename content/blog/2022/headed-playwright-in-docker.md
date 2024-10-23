@@ -2,6 +2,7 @@
 title: Running Playwright Inside Docker Containers
 author: ed
 date: 2022-11-30
+updated: 2024-04-25
 tags:
   - Article
   - Testing

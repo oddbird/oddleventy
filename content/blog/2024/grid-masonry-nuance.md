@@ -3,6 +3,7 @@ title: Choosing a Masonry Syntax in CSS
 sub: What makes something a 'grid', and what's at stake?
 author: miriam
 date: 2024-10-01
+updated: 2024-10-23
 image:
   src: blog/2024/masonry.jpg
   alt: >
@@ -24,6 +25,15 @@ summary: >
 ---
 
 {% import 'embed.macros.njk' as embed %}
+{% import 'utility.macros.njk' as utility %}
+
+{% set updateDetails = ['Update', utility.datetime(updated)] | join(' ') %}
+{% callout 'note', updateDetails %}
+Since posting this article,
+Safari has [responded to the debate](https://webkit.org/blog/16026/css-masonry-syntax/)
+with (I think) a fairly strong set of arguments.
+I've added [my thoughts below]().
+{% endcallout %}
 
 The Firefox prototype
 and [CSS Grid Level 3 specification](https://drafts.csswg.org/css-grid-3/)
@@ -85,7 +95,8 @@ with conflicting proposals from Apple and Google:
 - Chrome has since followed up
   with [further arguments](https://developer.chrome.com/blog/masonry-syntax)
   for a non-grid syntax.
-- I expect we'll see a reply from Apple soon?
+- ~~I expect we'll see a reply from Apple soon?~~
+  ([The Apple response has arrived](https://webkit.org/blog/16026/css-masonry-syntax/))
 
 Based on the comment threads,
 it seems like web authors also have opinions!
@@ -571,3 +582,64 @@ So I'm rooting for the process!
 Ask the questions!
 Push the language to be better!
 Have fun out there, building the web.
+
+## Looking at Apple's latest arguments for grid
+
+_Added on {{ utility.datetime(updated) }}_
+
+In their [response posted Oct 21, 2024](https://webkit.org/blog/16026/css-masonry-syntax/),
+Apple developers make several arguments
+in favor of the grid-integrated syntax.
+It's a long article,
+and covers a lot of points we've already discussed,
+but a few points stand out to me.
+
+They provide use-cases to show where the grid fallback is preferable,
+but also how a current masonry-like solution (similar to mine)
+could be progressively enhanced in much the same way as `subgrid`.
+That feeds into their argument that,
+while defaults are nice,
+most layouts will require more detail --
+and often that detail is where we get overlap with grids.
+So the simplest cases might be a line or two shorter
+with a non-grid approach,
+but realistic use-case are likely to duplicate the work.
+
+Taking that even farther,
+they call into question how useful it is
+to have `auto` as a repeating value in masonry layouts.
+This caught me off guard --
+up above I say it sounds useful --
+but I think Apple is right two question that.
+There's a fundamental lack of information
+if we ask the browser to figure out how many columns fit,
+_and also how big those columns should be_,
+without providing more detail about what to prioritize.
+Just because the browser can give us _something_ in this case,
+doesn't mean the result will ever be a useful default.
+
+They also provide more specific examples
+of [another `grid-plus-*`](/2024/10/01/grid-masonry-nuance/)
+layout that authors would find useful:
+grid columns, with 'normal flow' rows.
+That's a feature that I would be very excited to see.
+I don't know if their proposed syntax will work,
+but I agree that it should _also_
+re-use existing properties wherever possible,
+rather than being treated as a distinct layout method.
+
+At this point, I'm fairly well convinced
+that the grid solution is a better path forward --
+though I'm still not sure what
+'future conflicts' Google is concerned about.
+
+### Are we really calling this 'masonry'?
+
+At the end of the article,
+there is a suggestion that we re-think the name of this feature.
+The only real argument for 'masonry'
+is a popular tool with the same name --
+and a metaphor that's not particularly precise.
+
+I agree, but don't love their proposed `collapse` or `pack` values.
+Do you have better ideas?
