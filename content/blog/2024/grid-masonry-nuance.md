@@ -32,7 +32,7 @@ summary: >
 Since posting this article,
 Safari has [responded to the debate](https://webkit.org/blog/16026/css-masonry-syntax/)
 with (I think) a fairly strong set of arguments.
-I've added [my thoughts below]().
+I've added [my thoughts below](#looking-at-apple%E2%80%99s-latest-arguments-for-grid).
 {% endcallout %}
 
 The Firefox prototype
@@ -619,7 +619,7 @@ Just because the browser can give us _something_ in this case,
 doesn't mean the result will ever be a useful default.
 
 They also provide more specific examples
-of [another `grid-plus-*`](/2024/10/01/grid-masonry-nuance/)
+of [another `grid-plus-*`](#what-precedent-are-we-setting%3F)
 layout that authors would find useful:
 grid columns, with 'normal flow' rows.
 That's a feature that I would be very excited to see.
