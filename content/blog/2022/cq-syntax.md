@@ -4,6 +4,7 @@ title: Use the Right Container Query Syntax
 sub: Size queries are stable, and shipping in browsers
 author: miriam
 date: 2022-08-18
+updated: 2022-09-12
 image:
   src: talks/container-query.jpg
   alt: |

@@ -2,6 +2,8 @@
 card: large
 title: PostgreSQL Transactions and SQLAlchemy
 author: carl
+date: 2014-06-14
+updated: 2024-04-26
 tags:
   - Article
   - Python
@@ -17,12 +19,11 @@ summary: |
   first database query. If you prefer to start your transactions
   explicitly instead, I've documented here my explorations in getting that
   to work.
-date: 2014-06-14
 ---
 
 {% import 'utility.macros.njk' as utility %}
 
-{% set update = ['Update', utility.datetime('2024-04-26')] | join(' ') %}
+{% set update = ['Update', utility.datetime(updated)] | join(' ') %}
 {% callout 'note', update %}
 This article was written before the release of SQLAlchemy 2.0. The library has
 changed significantly since then, and we have added relevant notes to the

@@ -51,6 +51,9 @@
               end=end,
               format='range' if oss or client else 'long'
             ) }}
+            {%- if updated %};
+              <i>updated</i> {{ utility.datetime(updated) }}
+            {% endif %}
           {% endif -%}
           {{ post.where(adr) }}
         {%- endif %}

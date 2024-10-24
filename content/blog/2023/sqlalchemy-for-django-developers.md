@@ -3,6 +3,7 @@ card: feature
 title: SQLAlchemy for Django Developers
 author: ed
 date: 2023-10-23
+updated: 2024-04-26
 tags:
   - Article
   - Python

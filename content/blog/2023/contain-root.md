@@ -3,6 +3,7 @@ title: Can We Query the Root Container?
 sub: The complexities of containment, overflow, and 'propagation'
 author: miriam
 date: 2023-07-05
+updated: 2024-04-24
 tags:
   - Article
   - CSS

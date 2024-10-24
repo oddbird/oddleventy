@@ -539,7 +539,7 @@ params:
   start,
   end,
   format='long'
-) %}
+) -%}
   {{ utility.datetime(
     start=start,
     end=end,
@@ -547,7 +547,7 @@ params:
     is_pubdate=true,
     prefix=true
   ) }}
-{% endmacro %}
+{%- endmacro %}
 
 
 {# @docs
