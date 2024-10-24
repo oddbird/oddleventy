@@ -592,7 +592,7 @@ Apple developers make several arguments
 in favor of the grid-integrated syntax.
 It's a long article,
 and covers a lot of points we've already discussed,
-but a few points stand out to me.
+but a few ideas stand out to me.
 
 They provide use-cases to show where the grid fallback is preferable,
 but also how a current masonry-like solution (similar to mine)
@@ -643,3 +643,5 @@ and a metaphor that's not particularly precise.
 
 I agree, but don't love their proposed `collapse` or `pack` values.
 Do you have better ideas?
+Let us know [on Mastodon](https://front-end.social/@mia/113234445766222639)
+or [Bluesky](https://bsky.app/profile/mia.terrible.gay/post/3l5iajyldyk22)!
