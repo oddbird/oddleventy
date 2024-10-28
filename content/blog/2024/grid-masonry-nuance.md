@@ -603,14 +603,14 @@ most layouts will require more detail --
 and often that detail is where we get overlap with grids.
 So the simplest cases might be a line or two shorter
 with a non-grid approach,
-but realistic use-case are likely to duplicate the work.
+but realistic use-cases are likely to duplicate the work.
 
-Taking that even farther,
+Taking that even further,
 they call into question how useful it is
 to have `auto` as a repeating value in masonry layouts.
 This caught me off guard --
 up above I say it sounds useful --
-but I think Apple is right two question that.
+but I think Apple is right to question that.
 There's a fundamental lack of information
 if we ask the browser to figure out how many columns fit,
 _and also how big those columns should be_,
