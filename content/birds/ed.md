@@ -8,6 +8,9 @@ image:
 social:
   - twitter: je92rivas
   - github: jerivas
+  - mastodon:
+      user: jerivas
+      server: indieweb.social
 summary: |
   Ed (he/him) is a web developer building fast,
   accessible sites with Python & PHP.

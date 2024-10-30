@@ -10,7 +10,10 @@ social:
   - twitter: stacykvernmo
   - github: stacyk
   - codepen: stacy
-  - stackoverflow: 7033764
+  - mastodon:
+      user: stacy
+      server: front-end.social
+  - bluesky: namastacy.bsky.social
 summary: |
   Stacy (she/her)
   is a user experience designer,

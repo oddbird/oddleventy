@@ -15,6 +15,7 @@ social:
   - mastodon:
       user: oddbird
       server: front-end.social
+  - bluesky: oddbird.dev
   - github: oddbird
 nav:
   - url: /work/

@@ -1,4 +1,5 @@
 locale: en_US
 type: website
 img: blog/oddsite.jpg
-site: '@oddbird'
+twitter: '@oddbird'
+fedi: '@oddbird@front-end.social'

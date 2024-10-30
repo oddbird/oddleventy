@@ -15,6 +15,7 @@ social:
   - mastodon:
       user: mia
       server: front-end.social
+  - bluesky: mia.terrible.gay
   - github: MiriSuzanne
   - codepen: MiriamSuzanne
 events:
