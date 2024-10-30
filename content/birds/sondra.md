@@ -12,6 +12,7 @@ social:
   - mastodon:
       user: sondrae
       server: mastodon.social
+  - bluesky: sondrae.bsky.social
 summary: |
   Sondra (she/her)
   is a brand and user experience/interface designer --
