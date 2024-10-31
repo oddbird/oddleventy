@@ -69,7 +69,7 @@ if we knew the answers to those questions?
   or is that specific to people who write CSS on the side?
 - Is Tailwind broadly popular,
   or within certain demographics?
-- What other questions might rise up from this analysis?
+- What other questions might arise from this analysis?
 
 I don't have answers here.
 I'm just not sure what I'm looking at,
