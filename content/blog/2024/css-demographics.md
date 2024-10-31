@@ -15,7 +15,7 @@ summary: |
 Sacha Greif's annual
 [State of CSS survey](https://2024.stateofcss.com/en-US/)
 wrapped up recently,
-and the results are online.
+and the results are available.
 
 I've seen a number of people
 commenting on the
