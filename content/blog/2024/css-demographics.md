@@ -2,11 +2,19 @@
 title: What do survey demographics tell us?
 sub: Are we measuring what we meant to measure?
 date: 2024-10-31
+author: miriam
+tags:
+  - CSS
+summary: |
+  There's been a lot of interest
+  in the results of the annual
+  State of CSS survey,
+  but are we asking all the right questions?
 ---
 
 Sacha Greif's annual
 [State of CSS survey](https://2024.stateofcss.com/en-US/)
-recently wrapped up,
+wrapped up recently,
 and the results are online.
 
 I've seen a number of people
