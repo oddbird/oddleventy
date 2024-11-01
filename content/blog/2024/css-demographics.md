@@ -49,7 +49,7 @@ Do we know how representative this is?
 
 If you don't know [Kevin Powell's work teaching CSS](https://www.kevinpowell.co/),
 I highly recommend it.
-But we you might expect
+But as you might expect
 his audience is weighted towards students.
 If he's a [primary source for respondents](https://2024.stateofcss.com/en-US/demographics/#source),
 that's likely to impact the demographics, right?
@@ -72,9 +72,9 @@ which likely represents repeat participants.
 So where did they come from initially?
 The earliest data I can find is
 [from the 2019 survey](https://2019.stateofcss.com/demographics/#source),
-with the **State of JS**
+with the **State of JS** survey
 as the most popular source.
-maybe it's not surprising if a majority of those respondents
+Maybe it's not surprising if a majority of those respondents
 write JS as their primary job?
 
 In many cases,
@@ -102,15 +102,14 @@ But poking around a bit,
 a few things jumped out out:
 
 - Men seem more likely to write JS primarily,
-  while women are more likely to write CSS primarily
+  while women are more likely to write CSS primarily.
 - Respondents who write more JS are
   less likely to test across environments
-  (and also less likely to answer that question)
+  (and also less likely to answer that question).
 - Kevin Powell sent people in all age brackets,
   but his largest bracket (22%) was people over 60!
   We love to see it.
   His next bracket (18%) was under 20.
-  I don't know why I'm doing Kevin Analytics,
 
 Clearly, I don't have a lot of answers here.
 I'm just not sure what I'm looking at,
