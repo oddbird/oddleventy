@@ -48,7 +48,7 @@ summary: |
 
 ## Links:
 
-- [Inset Area](https://anchor-tool.com/)
+- [Inset Area](https://chrome.dev/anchor-tool/)
 - [Polyfill](https://github.com/oddbird/css-anchor-positioning)
 
 ## Demos:
