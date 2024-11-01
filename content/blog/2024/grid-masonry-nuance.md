@@ -643,5 +643,6 @@ and a metaphor that's not particularly precise.
 
 I agree, but don't love their proposed `collapse` or `pack` values.
 Do you have better ideas?
-Let us know [on Mastodon](https://front-end.social/@mia/113234445766222639)
-or [Bluesky](https://bsky.app/profile/mia.terrible.gay/post/3l5iajyldyk22)!
+Let us know on
+[Mastodon](https://front-end.social/@mia/113234445766222639)
+or [Bluesky](https://bsky.app/profile/miriam.codes/post/3l5iajyldyk22)!
