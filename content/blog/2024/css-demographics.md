@@ -1,8 +1,13 @@
 ---
 title: What do survey demographics tell us?
 sub: Are we measuring what we meant to measure?
-date: 2024-10-31
+date: 2024-11-04
 author: miriam
+image:
+  src: blog/2024/demographics.jpg
+  alt: >
+    A green on dark-gray horizontal bar chart,
+    with the labels cut off
 tags:
   - CSS
 summary: |
@@ -106,15 +111,19 @@ a few things jumped out out:
 - Respondents who write more JS are
   less likely to test across environments
   (and also less likely to answer that question).
+- Respondents who write more JS are
+  more likely to be working on applications.
 - Kevin Powell sent people in all age brackets,
   but his largest bracket (22%) was people over 60!
   We love to see it.
   His next bracket (18%) was under 20.
 
 Clearly, I don't have a lot of answers here.
+These correlations don't tell us much
+without knowing how representative the data is.
 I'm just not sure what I'm looking at,
 or how it should be read.
-And it concerns me that browsers use surveys like this
+But it concerns me that browsers use surveys like this
 as a primary gauge of developer interest --
 seemingly without asking who's represented,
 or who might be missing from the data.
