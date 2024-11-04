@@ -9,6 +9,7 @@ image:
     A green on dark-gray horizontal bar chart,
     with the labels cut off
 tags:
+  - Article
   - CSS
 summary: |
   There's been a lot of interest

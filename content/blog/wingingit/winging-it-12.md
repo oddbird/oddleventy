@@ -50,13 +50,6 @@ summary: |
 - Working with `gap` and empty grid cells
 - Rapid prototyping with rough markup
 
-## CSS grid workshop:
-
-If you're craving more, you can register for Miriam's Cascading Style Systems
-workshop with Smashing Conference. The first session is on October 14, 2024.
-
-- [Cascading Style Systems: Resilient & Maintainable CSS](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne)
-
 ## Demos:
 
 - [CSS Grid Design](https://www.figma.com/design/RHLs3YJE40ZAT7LiZaTQu3/Grid?node-id=2-21&node-type=frame&t=rLrO9i6kCAw1C1Ee-0)
