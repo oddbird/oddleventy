@@ -68,15 +68,6 @@ summary: |
   grid='fit'
 ) }}
 
-{% callout %}
-This material will also be covered in the
-[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne) --
-along with sessions on the cascade,
-inheritance,
-custom properties,
-and progressive enhancement.
-{% endcallout %}
-
 ## What Will Attendees Learn In This Workshop?
 
 - Building **maintainable CSS layouts** with **progressive enhancement**

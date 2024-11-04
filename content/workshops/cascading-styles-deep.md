@@ -114,11 +114,9 @@ summary: |
 
 {{ quotes.grid(press) }}
 
-## Attend or Schedule a Workshop
+## Schedule a Workshop
 
-Register for the
-[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne), or
-**contact us to schedule a workshop with your company**:
+**Contact us to schedule a workshop with your company**:
 
 {{ contact.form(
   submit='Book Now',
@@ -145,7 +143,7 @@ but even the experts are likely to learn something new.
 
 {{ utility.main_action(
   content='Bring this workshop to your company »',
-  url='#attend-or-schedule-a-workshop'
+  url='#schedule-a-workshop'
 ) }}
 
 ## About Miriam
@@ -276,9 +274,7 @@ that works for you.
 
 ## Contact Us to Book a Workshop
 
-Register now for the
-[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne),
-or consider bringing us in
+Consider bringing us in
 to talk with your team directly:
 
 {{ contact.form(

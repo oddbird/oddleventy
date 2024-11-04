@@ -62,6 +62,3 @@ summary: |
 - [Quick Layout with CSS Grid](https://codepen.io/miriamsuzanne/pen/OJGVzbK)
 - [Mix and match functions/intrinsic sizes for all the squish](https://codepen.io/miriamsuzanne/pen/wvKErbK)
 - [Subgrid Use Case](https://codepen.io/miriamsuzanne/pen/jRdgLB)
-
-## Learn more about CSS grid:
-- [Cascading Style Systems: Resilient & Maintainable CSS](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne)
