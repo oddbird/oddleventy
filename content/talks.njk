@@ -22,12 +22,6 @@ summary: |
 {% import 'talks.macros.njk' as talks %}
 {% import 'post.macros.njk' as post %}
 
-{% set fw = collections._talk | findPage('data.feature', 'workshop') %}
-{% if fw %}
-  {% import "page/workshop.macros.njk" as workshop %}
-  {{ workshop.feature(fw) }}
-{% endif %}
-
 {{ quotes.find(
   collections.all,
   slugs=['spot-on', 'popular-tutorial']

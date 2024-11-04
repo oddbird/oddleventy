@@ -4,9 +4,6 @@ title: Cascading Style Systems
 sub: A workshop on resilient & maintainable CSS
 author: miriam
 date: 2024-10-14
-action:
-  text: Register for the October workshop »
-  url: 'https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne'
 image:
   src: talks/mia-smashing-de.jpg
   position: top
