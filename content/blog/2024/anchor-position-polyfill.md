@@ -11,7 +11,7 @@ sponsors: true
 tags:
   - Article
   - Open Source
-  - Anchor Position
+  - Anchor Positioning
   - CSS
   - Polyfill
 summary: |
