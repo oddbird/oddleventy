@@ -1,5 +1,5 @@
 ---
-title: Updates to the Anchor Position Polyfill
+title: Updates to the Anchor Positioning Polyfill
 sub: Catching up to the spec
 date: 2024-07-02
 image:

@@ -1,6 +1,6 @@
 ---
-title: Continued updates to the Anchor Position Polyfill
-sub: Performance and
+title: Continued updates to the Anchor Positioning Polyfill
+sub: Performance, scope and fallbacks
 date: 2024-11-12
 image:
   src: blog/2024/anchor2.jpg
