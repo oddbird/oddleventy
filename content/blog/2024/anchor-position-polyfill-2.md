@@ -23,10 +23,10 @@ summary: |
 
 A lot has happened with Anchor Positioning since our [last update](/2024/07/02/anchor-position-polyfill/).
 
-With our [polyfill](https://github.com/oddbird/css-anchor-positioning), we've
-made a lot of progress in our goal of catching up to the spec, and based on the
-feedback we're hearing, people are finding it covers enough of their needs to be
-able to start using anchor positioning in production.
+We've made a lot of progress in our goal of catching up our
+[polyfill](https://github.com/oddbird/css-anchor-positioning) to the spec, and
+based on the feedback we're hearing, people are finding it covers enough of
+their needs to be able to start using anchor positioning in production.
 
 ## Pseudo-element support
 
@@ -46,7 +46,7 @@ shame as it's been [extremely](https://codepen.io/jamessw/pen/KKLMJKm)
 
 {% endcallout %}
 
-## anchor-scope support
+## Support for scoping anchor names
 
 [@mmalerba](https://github.com/mmalerba) added support for `anchor-scope`, which
 is extremely useful when working with lists of elements that each have their own
@@ -58,7 +58,7 @@ default, the last element with that rule will be the anchor.
 
 But that's not what we want. We want the anchoring element within the same list
 item to be our anchor. To do that, set `anchor-scope: --list-item` on
-the `li` element, to limit the search for an anchoring element.
+the `li` element to limit the search for an anchoring element.
 
 {{ embed.codepen(
   id='qBeJePX',
@@ -73,8 +73,8 @@ Chromium before 125, after 131, or in a non-Chromium browser.
 ## Position fallbacks
 
 What happens when an anchored element doesn't fit where it would go? We
-implemented the ["Overflow
-Management"](https://drafts.csswg.org/css-anchor-position/#fallback) portion of
+implemented the [Overflow
+Management](https://drafts.csswg.org/css-anchor-position/#fallback) portion of
 the spec to handle that.
 
 In simple cases, you could add `position-try: flip-block, flip-inline,
@@ -89,17 +89,16 @@ then over a diagonal axis. You can even combine the options.
 
 ## Performance improvements
 
-v0.3.0 was a performance-focused release. It turns out that applying anchor
-positioning is a fairly intensive process, which is one of the reasons why it's
-getting moved from the realm of JavaScript into the native browser.
+[v0.3.0](https://github.com/oddbird/css-anchor-positioning/releases/tag/v0.3.0)
+was a performance-focused release. It turns out that applying anchor positioning
+is a fairly intensive process, which is one of the reasons why it's getting
+moved from the realm of JavaScript into the native browser.
 
 [@marchbox](https://github.com/marchbox) contributed a huge win that allows you
-to apply the polyfill to just the css files that impact anchor positioning. By
+to apply the polyfill to just the styles that impact anchor positioning. By
 default, the polyfill parses all of your CSS, which is likely more than you
 need. You're now able to specify exactly which CSS stylesheets contain rules
 that impact how you use anchor positioning, so not all CSS has to be parsed.
-
-Native implementations are able to calculate anchor positioning much more efficiently.
 
 ## Coming soon
 
@@ -108,12 +107,14 @@ What are you excited for with anchor positioning? We'd love to implement
 and apply the polyfill to [dynamic
 elements](https://github.com/oddbird/css-anchor-positioning/issues/91).
 
-If you want to start using anchor positioning, there's a few ways you can help.
+If you want to start using anchor positioning, there are a few ways you can help.
 You can take a cue from the contributors listed in this article and take on a
-feature or fix a bug. You can also fund our work by becoming a sponsor.
+feature or fix a bug. You can also fund our work by [becoming a
+sponsor](https://opencollective.com/oddbird-open-source).
 
-Another way is to [hire us](/services/). If your company wants to use the Anchor
-Positioning Polyfill, hire us to complete a needed feature, or to finish the
-polyfill. Our client work also helps fund our open source work like this
-polyfill, so [get in touch](https://www.oddbird.net/contact/) with us if you
-have any web development needs.
+Another way to support this work is to [hire us](/services/). If your company
+wants to use the Anchor Positioning Polyfill, hire us to complete a needed
+feature, or to finish the polyfill. Our client work also helps fund our open
+source work like this polyfill, so [get in
+touch](https://www.oddbird.net/contact/) with us if you have any web development
+needs.
