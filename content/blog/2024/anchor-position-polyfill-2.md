@@ -23,10 +23,20 @@ summary: |
 
 A lot has happened with Anchor Positioning since our [last update](/2024/07/02/anchor-position-polyfill/).
 
-We've made a lot of progress in our goal of catching up our
-[polyfill](https://github.com/oddbird/css-anchor-positioning) to the spec, and
-based on the feedback we're hearing, people are finding it covers enough of
-their needs to be able to start using anchor positioning in production.
+Along with changes to the spec and Chromium's continued work towards
+implementing the spec, there's been a lot of interest in using anchor
+positioning. In fact, the State of CSS survey identified anchor positioning as
+the [most desired
+feature](https://2024.stateofcss.com/en-US/usage/#css_interoperability_features)
+that you can't yet use because of browser
+incompatibilities.
+
+And while it's true that anchor positioning is only implemented in Chromium
+browsers, our team at OddBird have made a lot of progress in our goal of
+catching up our [polyfill](https://github.com/oddbird/css-anchor-positioning) to
+the spec. Based on the feedback we're hearing, people are finding it covers
+enough of their needs to be able to start using anchor positioning in
+production.
 
 ## Pseudo-element support
 
