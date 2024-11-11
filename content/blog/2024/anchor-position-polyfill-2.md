@@ -32,7 +32,7 @@ that you can't yet use because of browser
 incompatibilities.
 
 And while it's true that anchor positioning is only implemented in Chromium
-browsers, our team at OddBird have made a lot of progress in our goal of
+browsers, our team at OddBird has made a lot of progress in our goal of
 catching up our [polyfill](https://github.com/oddbird/css-anchor-positioning) to
 the spec. Based on the feedback we're hearing, people are finding it covers
 enough of their needs to be able to start using anchor positioning in
