@@ -1,6 +1,6 @@
 ---
-title: Continued updates to the Anchor Positioning Polyfill
-sub: Performance, scope and fallbacks
+title: Updates to the Most Desired CSS Feature You Can't Use Yet
+sub: Performance, scope, and fallbacks for the anchor positioning polyfill
 date: 2024-11-12
 image:
   src: blog/2024/anchor2.jpg
@@ -117,14 +117,13 @@ What are you excited for with anchor positioning? We'd love to implement
 and apply the polyfill to [dynamic
 elements](https://github.com/oddbird/css-anchor-positioning/issues/91).
 
-If you want to start using anchor positioning, there are a few ways you can help.
-You can take a cue from the contributors listed in this article and take on a
-feature or fix a bug. You can also fund our work by [becoming a
-sponsor](https://opencollective.com/oddbird-open-source).
+There are 2 ways to help us keep this work sustainable and centered on your
+needs as a developer!
 
-Another way to support this work is to [hire us](/services/). If your company
-wants to use the Anchor Positioning Polyfill, hire us to complete a needed
-feature, or to finish the polyfill. Our client work also helps fund our open
-source work like this polyfill, so [get in
-touch](https://www.oddbird.net/contact/) with us if you have any web development
-needs.
+1. [Sponsor us](https://opencollective.com/oddbird-open-source). We display
+   sponsor logos and avatars here on our [website](#open-source-sponsors) and
+   offer [other fun perks](https://github.com/sponsors/oddbird).
+2. [Hire us](/contact/) to develop the Anchor Positioning polyfill or another
+   OSS language/tool you rely on. Our client work also helps fund our open
+   source work like this polyfill, so get in touch with us if you have any web
+   development needs.
