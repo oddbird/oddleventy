@@ -19,6 +19,7 @@ import * as type from '#filters/type.js';
 import * as utils from '#filters/utils.js';
 
 export default (eleventyConfig) => {
+  eleventyConfig.setServerOptions({ port: 7050 });
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setWatchThrottleWaitTime(100);
   eleventyConfig.addPlugin(rss);
