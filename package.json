@@ -43,7 +43,7 @@
     "webmentions": "node scripts/fetch-webmentions.js",
     "prod": "yarn build",
     "checklinks:internal": "npx --yes --package=hyperlink --package=tap-spot -- 'hyperlink --canonicalroot https://www.oddbird.net/ --root _site/ -r -p -i --skip \".css.map\" --skip \".js.map\" --skip \"feed.atom\" --skip \"/docs/\" _site/index.html | tap-spot'",
-    "checklinks:external": "npx --yes --package=broken-link-checker -- 'blc -ro --exclude=localhost:8080 --exclude=stackoverflow.com --exclude=codepen.io --exclude=linkedin.com --exclude=projects.invisionapp.com --exclude=docs.github.com --exclude=www.sass.hk --exclude=www.drupal.org --exclude=www.canva.com --exclude=www.fastcompany.com --exclude=duabuset-tandem.com --exclude=puta-elementa.com --exclude=campaignzero.org --exclude=twitter.com --exclude=vimeo.com --exclude=slideshare.net --exclude=coachhub.resilienceboost.com https://www.oddbird.net'",
+    "checklinks:external": "npx --yes --package=broken-link-checker -- 'blc -ro --exclude=stackoverflow.com --exclude=codepen.io --exclude=linkedin.com --exclude=projects.invisionapp.com --exclude=docs.github.com --exclude=www.sass.hk --exclude=www.drupal.org --exclude=www.canva.com --exclude=www.fastcompany.com --exclude=duabuset-tandem.com --exclude=puta-elementa.com --exclude=campaignzero.org --exclude=twitter.com --exclude=vimeo.com --exclude=slideshare.net --exclude=coachhub.resilienceboost.com https://www.oddbird.net'",
     "checklinks": "run-s checklinks:internal checklinks:external"
   },
   "imports": {
@@ -98,11 +98,11 @@
     "netlify-plugin-11ty": "^1.4.0",
     "node-fetch": "^3.3.2",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.48",
     "posthtml": "^0.16.6",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
-    "rollup": "^4.24.4",
+    "rollup": "^4.25.0",
     "sanitize-html": "^2.13.1",
     "sass-embedded": "^1.80.6",
     "sassdoc": "^2.7.4",

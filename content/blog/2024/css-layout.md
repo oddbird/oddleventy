@@ -239,7 +239,7 @@ We started phasing out Susy
 on OddBird projects in 2015.
 By 2017,
 we were
-[recommending others do the same](http://localhost:8080/talks/no-grid-system/),
+[recommending others do the same](/talks/no-grid-system/),
 and we
 [officially deprecated](https://github.com/oddbird/susy/commit/018b5c638ec0726d172af96828e6f1712682283b)
 the project

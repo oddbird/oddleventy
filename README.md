@@ -22,8 +22,8 @@ if necessary, then run `nvm install` (once per active shell) to use the correct
 version of Node for OddSite development.
 
 The correct [Yarn](https://yarnpkg.com/) version is included with Node, and will
-be used automatically for any `yarn` command. To activate it, run
-`corepack enable` (once per local Node installation).
+be used automatically for any `yarn` command. To activate it, run `corepack
+enable` (once per local Node installation).
 
 To upgrade the Node version used by OddSite, update the version number in these
 places and then run `nvm install` to upgrade:
@@ -42,14 +42,24 @@ yarn
 
 ### Development tasks
 
-Compile and run [Eleventy](https://www.11ty.dev/) server, with a watcher for file
-changes:
+Compile and run [Eleventy](https://www.11ty.dev/) server, with a watcher for
+file changes:
 
 ```
 yarn serve
 ```
 
-The site will be compiled into `_site/` and available at http://localhost:8080.
+The site will be compiled into `_site/` and available at http://localhost:7050.
+
+If
+[localias](https://github.com/peterldowns/localias?tab=readme-ov-file#-localias)
+is configured and running, add an alias for this project:
+
+```
+localias set oddsite.local 7050
+```
+
+This will allow you to visit the project at <https://oddsite.local>.
 
 You can also run individual commands:
 
@@ -85,13 +95,13 @@ yarn lint:js
 yarn sassdoc
 ```
 
-Sass Docs are compiled into the `_site/styleguide/` folder, which is then available
-at the URL: `/styleguide/`.
+Sass Docs are compiled into the `_site/styleguide/` folder, which is then
+available at the URL: `/styleguide/`.
 
 ## Deployment
 
-The site is auto-deployed on [Netlify](https://www.netlify.com/) from the
-`main` branch on GitHub. Deploys are automated on push to `main`.
+The site is auto-deployed on [Netlify](https://www.netlify.com/) from the `main`
+branch on GitHub. Deploys are automated on push to `main`.
 
 Use branches and PRs for changes, and Netlify will create staging previews for
 functional review before merge.
