@@ -4,7 +4,7 @@
   "containerEnv": {
     "SHELL": "/bin/bash"
   },
-  "forwardPorts": [7050],
+  "appPort": [7050],
   "customizations": {
     "vscode": {
       "extensions": [
