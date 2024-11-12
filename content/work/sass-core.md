@@ -2,7 +2,6 @@
 title: Sass Core Language
 sub: Implementing new language features
 date: 2023-05-22
-end: 2024-02-20
 client: &client Google
 logo: google
 image:
