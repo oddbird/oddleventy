@@ -40,6 +40,16 @@ displayed inline to the side. `top: max(anchor(--word top), anchor(--note
 bottom))` will set the `top` of the note to the higher value of the top of the
 anchoring word OR the bottom of the note above it.
 
+
+{{ embed.figure(
+  data=[{
+    img: 'blog/2024/anchor-comments.png',
+    alt: 'screenshot of text with comments on side, aligned with related words'
+  }],
+  caption="A demo from Tab Atkins-Bittner's [slides](https://tabatkins.com/talks/2024-06-07/) from CSS Day 2024."
+) }}
+
+
 This concept unlocks a lot of possibilities that I don't think were easy to
 achieve before.
 
@@ -48,6 +58,11 @@ Imagine a high school yearbook's photo spread. There are rows of headshots, and
 to the side of each row, there is a column with the names of each person in that
 row. It's not a terribly difficult layout for print, but there are a few
 challenges to implement it in HTML.
+
+{{ embed.img(
+  src='blog/2024/anchor-position-yearbook-layout.png',
+  alt='A rough wireframe of photos and aligned names.'
+)}}
 
 First, it would be a challenge to have the name and the photo of each person
 together in the HTML. Also, if it needed to be responsive, with different
