@@ -40,15 +40,13 @@ displayed inline to the side. `top: max(anchor(--word top), anchor(--note
 bottom))` will set the `top` of the note to the higher value of the top of the
 anchoring word OR the bottom of the note above it.
 
-
 {{ embed.figure(
   data=[{
     img: 'blog/2024/anchor-comments.png',
     alt: 'screenshot of text with comments on side, aligned with related words'
   }],
-  caption="A demo from Tab Atkins-Bittner's [slides](https://tabatkins.com/talks/2024-06-07/) from CSS Day 2024."
+  caption="A demo from Tab Atkins-Bittner's [slides](https://tabatkins.com/talks/2024-06-07/) from CSS Day 2024"
 ) }}
-
 
 This concept unlocks a lot of possibilities that I don't think were easy to
 achieve before.
@@ -61,7 +59,7 @@ challenges to implement it in HTML.
 
 {{ embed.img(
   src='blog/2024/anchor-position-yearbook-layout.png',
-  alt='A rough wireframe of photos and aligned names.'
+  alt='A rough wireframe of photos and aligned names'
 )}}
 
 First, it would be a challenge to have the name and the photo of each person
@@ -171,7 +169,7 @@ And if you're excited to use anchor positioning before it becomes baseline,
 check out our [polyfill](https://github.com/oddbird/css-anchor-positioning). It
 supports enough of the anchor positioning spec to do most things.
 
-There are 2 ways to help us keep this work sustainable and centered on your
+There are two ways to help us keep this work sustainable and centered on your
 needs as a developer!
 
 1. [Sponsor us](https://opencollective.com/oddbird-open-source). We display
