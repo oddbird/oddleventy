@@ -58,7 +58,7 @@ and `popovertargetaction` attributes on `<button>` elements.
 
 ## CSS Anchor Positioning Polyfill
 
-[Demo](https://anchor-polyfill.netlify.app/) |
+[Demo](https://anchor-positioning.oddbird.net/) |
 [Source](https://github.com/oddbird/css-anchor-positioning)
 
 {{ embed.img(
