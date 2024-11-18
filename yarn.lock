@@ -61,6 +61,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@11ty/eleventy-fetch@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "@11ty/eleventy-fetch@npm:5.0.1"
+  dependencies:
+    "@rgrove/parse-xml": "npm:^4.2.0"
+    debug: "npm:^4.3.7"
+    flat-cache: "npm:^6.1.1"
+    graceful-fs: "npm:^4.2.11"
+    p-queue: "npm:6.6.2"
+  checksum: 10/203a15677202f2e201535d68e8f4aad5b8336cdfcd0894ac0c1d49d628657d9f0ec5088c437c0e60cb7161f09ceadc272dfce60a9370f667e5250ce2c5b62fe2
+  languageName: node
+  linkType: hard
+
 "@11ty/eleventy-img@npm:^5.0.0":
   version: 5.0.0
   resolution: "@11ty/eleventy-img@npm:5.0.0"
@@ -2195,6 +2208,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@keyv/serialize@npm:*":
+  version: 1.0.1
+  resolution: "@keyv/serialize@npm:1.0.1"
+  dependencies:
+    buffer: "npm:^6.0.3"
+  checksum: 10/b47418bed4fb17e16e136d1071f71d12de6f566bbf4d484a611a2d7063e0e79aedb3164b51153054101b6b7eb2a2b349469d438f70a5fbac22a68f136a535ec4
+  languageName: node
+  linkType: hard
+
 "@netlify/plugin-a11y@npm:^1.0.0-beta.1":
   version: 1.0.0-beta.1
   resolution: "@netlify/plugin-a11y@npm:1.0.0-beta.1"
@@ -2262,6 +2284,13 @@ __metadata:
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
   checksum: 10/115e8ceeec6bc69dff2048b35c0ab4f8bbee12d8bb6c1f4af758604586d802b6e669dcb02dda61d078de42c2b4ddce41b3d9e726d7daa6b4b850f4adbf7333ff
+  languageName: node
+  linkType: hard
+
+"@rgrove/parse-xml@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "@rgrove/parse-xml@npm:4.2.0"
+  checksum: 10/f82e128090026e37ad4b72ed2b9496dfcecf2f1d7daf86d78d393485beea990a86d0f3fc9b19673d4bba392cbe84c925a0092d3ca7f894205d6e2dd4ad77eafc
   languageName: node
   linkType: hard
 
@@ -3600,6 +3629,16 @@ __metadata:
     normalize-url: "npm:^4.1.0"
     responselike: "npm:^1.0.2"
   checksum: 10/804f6c377ce6fef31c584babde31d55c69305569058ad95c24a41bb7b33d0ea188d388467a9da6cb340e95a3a1f8a94e1f3a709fef5eaf9c6b88e62448fa29be
+  languageName: node
+  linkType: hard
+
+"cacheable@npm:^1.8.1":
+  version: 1.8.4
+  resolution: "cacheable@npm:1.8.4"
+  dependencies:
+    hookified: "npm:^1.5.0"
+    keyv: "npm:^5.2.1"
+  checksum: 10/bc87197be74c114bd87065b78adf42374066227a65316bc46891b36316d3e3215f5bc38eeee96fc765941215a7e9d3de08123de8e3554d9b1be390415d31b9b9
   languageName: node
   linkType: hard
 
@@ -5650,6 +5689,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"flat-cache@npm:^6.1.1":
+  version: 6.1.2
+  resolution: "flat-cache@npm:6.1.2"
+  dependencies:
+    cacheable: "npm:^1.8.1"
+    flatted: "npm:^3.3.1"
+    hookified: "npm:^1.4.0"
+  checksum: 10/f4b11093e423c3f5b0bdb60577a4271b81958d7d5cc25ded95e396f5bc3fc1a165fd1e1118bbe29ce5239f0ca272c232b55c6bbe8294cf0f0e5a67cb96fa22cc
+  languageName: node
+  linkType: hard
+
 "flatted@npm:^3.2.9, flatted@npm:^3.3.1":
   version: 3.3.1
   resolution: "flatted@npm:3.3.1"
@@ -6273,6 +6323,13 @@ __metadata:
   bin:
     he: bin/he
   checksum: 10/d09b2243da4e23f53336e8de3093e5c43d2c39f8d0d18817abfa32ce3e9355391b2edb4bb5edc376aea5d4b0b59d6a0482aab4c52bc02ef95751e4b818e847f1
+  languageName: node
+  linkType: hard
+
+"hookified@npm:^1.4.0, hookified@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "hookified@npm:1.5.0"
+  checksum: 10/e59628f42399c6e18198c9474143e2fc8ce5e1b17632bb6267e6c0e96753ffa9e4d2572a073d0b0a53d8242d63173092022fde211ad847647ffcee80a6cc8c56
   languageName: node
   linkType: hard
 
@@ -7846,6 +7903,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"keyv@npm:^5.2.1":
+  version: 5.2.1
+  resolution: "keyv@npm:5.2.1"
+  dependencies:
+    "@keyv/serialize": "npm:*"
+  checksum: 10/2eade1f67820eb0ea849554faa82fedc7ff8beec13daccc0a8cc0fa6c496dcb33dafabc44b7a26997844af1b83cab86f7ed753dd1a014fdd8fc08eb3ed60e712
+  languageName: node
+  linkType: hard
+
 "kind-of@npm:^6.0.0, kind-of@npm:^6.0.2":
   version: 6.0.3
   resolution: "kind-of@npm:6.0.3"
@@ -9089,7 +9155,7 @@ __metadata:
   resolution: "oddsite@workspace:."
   dependencies:
     "@11ty/eleventy": "npm:^3.0.0"
-    "@11ty/eleventy-fetch": "npm:^4.0.1"
+    "@11ty/eleventy-fetch": "npm:^5.0.1"
     "@11ty/eleventy-img": "npm:^5.0.0"
     "@11ty/eleventy-plugin-rss": "npm:^2.0.2"
     "@11ty/eleventy-plugin-syntaxhighlight": "npm:^5.0.0"
@@ -9271,7 +9337,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p-queue@npm:^6.6.2":
+"p-queue@npm:6.6.2, p-queue@npm:^6.6.2":
   version: 6.6.2
   resolution: "p-queue@npm:6.6.2"
   dependencies:
