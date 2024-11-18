@@ -116,6 +116,7 @@ row as its photo.
 
 ```css
 li {
+  anchor-name: --photo;
   anchor-scope: --photo;
 }
 h2 {
@@ -145,15 +146,19 @@ the title above it, whichever is greater (or further down the page). That's
 because the anchoring element has to come **before** the anchored element, which
 means the reference to `anchor(--title)` will be the name above it.
 
-I'd recommend [viewing this on Codepen](https://codepen.io/jamessw/pen/BaXqgWd)
+I'd recommend [viewing this on Codepen](https://codepen.io/jamessw/pen/PoMvNwm)
 so you can resize the demo. I've added a short transition to the `top` property
 so you can see how the names adjust as the names above them move.
 
 {{ embed.codepen(
-  id='BaXqgWd',
+  id='PoMvNwm',
   title='CSS Anchor Positioning - Yearbook layout',
   user='jamessw'
 ) }}
+
+Note that Chromium released support for `anchor-scope` in version 131, but since
+the polyfill doesn't support partial polyfilling, this demo will only work in
+Chromium before 125, after 131, or in a non-Chromium browser.
 
 As an added bonus, because the photo and name are in the same `<li>`, we can add
 hover effects so that if one is hovered, both parts are hovered. If the item is
