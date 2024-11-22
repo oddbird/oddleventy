@@ -29,7 +29,7 @@ summary: |
 
 ## Popover Polyfill
 
-[Demo](https://popover-polyfill.netlify.app/) |
+[Demo](https://popover.oddbird.net/) |
 [Source](https://github.com/oddbird/popover-polyfill)
 
 {{ embed.img(
