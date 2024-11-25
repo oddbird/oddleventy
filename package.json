@@ -102,7 +102,7 @@
     "posthtml": "^0.16.6",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
-    "rollup": "^4.27.2",
+    "rollup": "^4.27.4",
     "sanitize-html": "^2.13.1",
     "sass-embedded": "^1.81.0",
     "sassdoc": "^2.7.4",
@@ -112,7 +112,7 @@
     "stylelint": "^16.10.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "truncate-html": "^1.1.2",
-    "typescript": "^5.6.3",
+    "typescript": "^5.7.2",
     "typogr": "^0.6.8"
   },
   "packageManager": "yarn@4.5.1"
