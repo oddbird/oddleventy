@@ -25,8 +25,8 @@ summary:
 OddBird is proposing the introduction of parts of SCSS syntax into the
 indented format. Some highlights:
 
-- Multi-line statements for long values, improving readability of properties
-  like `grid-template`.
-- Linebreaks are treated as whitespace anywhere you can't end a statement
-- A "SCSS-in-Sass" syntax to opt in to SCSS formatting inline.
+- Multiline statements for long values, improving readability of properties
+  like `grid-template`
+- Linebreaks now treated as whitespace anywhere you can't end a statement
+- A "SCSS-in-Sass" syntax to opt in to SCSS formatting inline
 - Optional semicolons
