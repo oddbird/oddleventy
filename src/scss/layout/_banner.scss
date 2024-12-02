@@ -9,10 +9,9 @@
   grid-area: banner;
   grid-template:
     '. logo menu .' minmax(var(--double-gutter), auto)
-    '. logo nav .' minmax(var(--double-gutter), auto) / var(--page-margin) minmax(
-      5em,
-      7em
-    )
+    '. logo nav .' minmax(var(--double-gutter), auto) / var(
+      --page-margin
+    ) minmax(5em, 7em)
     1fr var(--page-margin);
 
   &::before {
