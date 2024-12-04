@@ -1,7 +1,7 @@
 ---
 title: Sass Indented Syntax Improvements
 sub: Bringing SCSS flexibility to .sass files
-date: 2024-11-27
+date: 2024-12-03
 venue: Sass Blog
 url: https://sass-lang.com/blog/rfc-indented-syntax/
 author: james
