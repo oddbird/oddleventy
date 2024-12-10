@@ -1,8 +1,9 @@
 ---
-title: Cascading Style Systems
-sub: A workshop on resilient & maintainable CSS
+feature: workshop
+title: Modern CSS
+sub: A workshop on what's new, and how to start using it
 author: miriam
-date: 2024-10-14
+date: 2024-12-10
 image:
   src: talks/mia-smashing-de.jpg
   position: top
@@ -14,33 +15,16 @@ image:
 tags:
   - CSS
   - Cascade
-  - Custom Properties
   - Cascade Layers
   - Container Queries
-  - CSSWG
   - CSS Scope
   - CSS Nesting
+  - CSSWG
 events:
-  - venue: Web Directions Workshops
-    date: 2024-11-29
-    adr: Sydney, Australia
-    url: https://webdirections.org/dev-summit/speakers/workshop-suzanne.php
-    note: >
-      Use the code `miriamworkshop` for $200 off!
-  - venue: Smashing Workshops
-    date: 2024-10-14
-    end: 2024-10-28
-    adr: Online
-    url: https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/
-  - venue: Smashing Workshops
-    date: 2024-02-26
-    end: 2024-03-12
-    adr: Online
-    url: https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/
-  - venue: Smashing Workshops
-    date: 2023-09-06
-    adr: Freiburg, Germany
-    url: https://smashingconf.com/freiburg-2023/workshops/miriam-suzanne/
+  - venue: Smashing Conference
+    date: 2025-10-09
+    adr: New York
+    # url: https://smashingconf.com/ny-2025
 included:
   - title: Interactive Sessions
     text: Virtual or in-person
@@ -63,34 +47,14 @@ intro:
       span: full
   caption: |
     Join Miriam for a deep dive
-    on developing **resilient and delightful experiences**
-    that hold up across browsers, languages, and device interfaces.
-press:
-  - text: |
-      We were super happy with how it went.
-      And you sold quite a lot of tickets too.
-    name: Charis Rooda
-    title: Event Organizer
-    face: charis-rooda.png
-    venue: Smashing Conference
-    url: https://smashingconf.com/
-  - text: |
-      Loving the content and the interactivity.
-      My favorite part is seeing how [Miriam] arranged the topics
-      so that concepts smoothly flow into each other.
-      Looking forward to two more days!
-    name: Seth A. Roby
-    title: Workshop attendee
-    face: seth-roby.jpg
-    url: https://mastodon.social/@TALlama/112039472807241153
-    slug: workshop-flow
+    into all the new tools (and a few old ones)
+    that are essential for modern CSS.
 summary: |
   New CSS features are shipping at an unprecedented rate --
   cascade layers, container queries, the `:has()` selector,
   subgrid, nesting, and so much more.
-  **It’s a good time to step back and understand
-  how these tools fit together in a declarative system --
-  a resilient cascade of styles**.
+  **It’s a good time to rethink
+  how we write modern and resilient styles**.
 ---
 
 {% import 'utility.macros.njk' as utility %}
@@ -125,11 +89,10 @@ summary: |
 
 ## What Will Attendees Learn In This Workshop?
 
-- Building **maintainable CSS systems** with **progressive enhancement**
+- Writing **maintainable styles** with **progressive enhancement**
 - **The Cascade**, why it's there, and how to use it
 - **Managing conflicts** with cascade layers, scope, and nesting
 - **Modern selectors** like `:is()`, `:where()`, and `:has()`
-- Using **custom properties** to build adaptive systems
 - **CSS Layout** with grid and flexbox
 - Dynamic layouts using **subgrid** and **container queries**
 
@@ -152,55 +115,32 @@ but even the experts are likely to learn something new.
 
 ## Workshop Outline
 
-The workshop is taught in five sessions:
-
-### 1. Resilient Styles: a Declarative Cascade
+### 1. Understanding The Cascade
 
 {{ embed.figure([{
   img: 'pages/css-workshop/cascade.jpg',
   alt: 'Yoda reaching out to control the force, surrounded by jungle swamp'
 }]) }}
 
-#### First, Do No Harm
+#### Hints & Suggestions (an introduction)
 
 CSS is fundamentally different
 from other languages or design tools,
 built around a radical vision
 for contextual style and user-control.
-We’ll dig into the practical implications of that vision,
+We’ll review the practical implications of that vision,
 and how the ‘grain’ of the language
 can guide us to more performant and resilient styles.
 
-#### Cascading & Inheritance
+#### Cascade Layers, Scope, Nesting, and new Selectors
 
-A deep-dive into the algorithms
-that take us from simple property/value declarations
-to a fully-styled web application.
+A deep-dive into the cascade,
+and how we can manage (or avoid)
+conflicts between styles.
 Along the way, we’ll explore new features like nesting,
 cascade layers, scope, and the `:has()` selector.
 
-### 2. Dynamic Systems: Custom Properties & Value Resolution
-
-{{ embed.figure([{
-  img: 'pages/css-workshop/vars.jpg',
-  alt: 'Someone out-of-frame plugging a cable into an orange guitar amp'
-}]) }}
-
-#### Custom Properties Reveal the Matrix
-
-CSS custom properties (aka “variables”)
-expose the internals of CSS value resolution and error recovery.
-What does it even mean for properties
-to become ‘invalid at computed value time’?
-And how can we use these CSS internals to our advantage,
-developing more robust and dynamic style systems?
-
-#### CSS Variables in Practice
-
-Practical use-cases,
-and interactive exercises related to CSS variables and functions.
-
-### 3. Intrinsic Layouts: Distributing Space
+### 2. Understanding Layouts
 
 {{ embed.figure([{
   img: 'pages/css-workshop/flow.jpg',
@@ -211,61 +151,31 @@ and interactive exercises related to CSS variables and functions.
 
 Unlike the printed page,
 web content and context can be unpredictable.
-CSS provides tools to manage that uncertainty,
-aligning & distributing objects on the page.
-We’ll talk about normal flow,
-intrinsic and extrinsic sizing,
-logical properties,
-box sizing & alignment,
-and the flexible box model.
-
-#### Flex & Alignment in Practice
-
-Practical use-cases,
-and interactive exercises related to distributing space.
-
-### 4. Intrinsic Layouts: Defining Structure
-
-{{ embed.figure([{
-  img: 'pages/css-workshop/grids.jpg',
-  alt: 'Cat in a box, thinking OMG I have so many questions for this damn box'
-}]) }}
+We'll review normal flow and flexbox,
+and get a better understanding of
+alignment --
+which is now possible in block
+and positioned contexts!
 
 #### Defining Structure
 
-Sometimes we also need to impose external structure
-to create consistent and reliable layouts,
-even with unpredictable content.
+Flexbox is a content-out sizing method,
+But sometimes we also need to impose structure --
+creating more consistent and reliable layouts.
 This is a full session dedicated to grid & subgrid,
 the multiple ‘stages of squishiness’,
 and container queries.
 
-#### Grids & Containers in Practice
-
-Practical use-cases,
-and interactive exercises related to defining layouts.
-
-### 5. Resilient Styles: Organizing Conventions
+### 3. Understanding Resilience
 
 {{ embed.figure([{
   img: 'pages/css-workshop/conventions.jpg',
   alt: 'A woman in a suit kneels to pet cute ducklings while the mother duck removes money from her purse'
 }]) }}
 
-#### Cascade Aligned Programming
-
 There are many conventions for organizing CSS,
 but the best systems all share underlying principles
 based on CSS itself.
-What would it mean to use _the cascade_ itself
-as our guide for writing maintainable CSS?
-
-#### Modern and Resilient
-
-CSS is designed to adapt to context --
-failing silently, and enhancing progressively.
-We have tools to manage that context and support everyone,
-without giving up on the latest features.
 The details may vary from project to project,
 but we’ll look at practical strategies
 for building an expressive and robust CSS system
