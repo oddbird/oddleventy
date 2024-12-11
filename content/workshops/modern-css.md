@@ -1,17 +1,15 @@
 ---
 feature: workshop
-title: Modern CSS
-sub: A workshop on what's new, and how to start using it
+title: Modern CSS Architecture
+sub: A practical workshop on integrating modern CSS
 author: miriam
 date: 2024-12-10
 image:
-  src: talks/mia-smashing-de.jpg
-  position: top
+  src: talks/css-is-awesome.jpg
+  position: center
   alt: |
-    Mia from behind,
-    standing at a laptop -
-    speaking to a conference audience
-    and gesturing to one side
+    css:is(awesome)
+    over a colorful nebula
 tags:
   - CSS
   - Cascade
