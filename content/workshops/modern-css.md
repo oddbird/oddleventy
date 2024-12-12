@@ -22,7 +22,7 @@ events:
   - venue: Smashing Conference
     date: 2025-10-09
     adr: New York
-    # url: https://smashingconf.com/ny-2025
+    url: https://smashingconf.com/ny-2025
 included:
   - title: Interactive Sessions
     text: Virtual or in-person
