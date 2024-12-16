@@ -16,7 +16,7 @@ tags:
 slides: https://slides.oddbird.net/css-next/
 events:
   - venue: Camosun College
-    url: https://smashingconf.com/sf-2022/
+    url: https://camosun.ca/
     date: 2023-03-14
     adr: Victoria, BC
     slides: https://slides.oddbird.net/css-next/camosun/

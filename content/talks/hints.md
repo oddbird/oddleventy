@@ -18,11 +18,20 @@ tags:
   - CSSWG
 slides: https://slides.oddbird.net/layers/
 events:
+  - venue: Camosun College
+    url: https://camosun.ca/
+    date: 2024-11-18
+    adr: Victoria, BC
+    slides: https://slides.oddbird.net/hints/camosun/
   - venue: Beyond Tellerand
     adr: Berlin, DE
     url: https://beyondtellerrand.com/events/berlin-2024
     date: 2024-11-07
     end: 2024-11-08
+    slides: https://slides.oddbird.net/hints/btconf/
+    video: https://www.youtube.com/watch?v=s2rqYu6jqWY
+    media: &btconf
+      youtube: s2rqYu6jqWY
   - venue: 11ty International Symposium on Making Websites Real Good
     url: https://conf.11ty.dev
     adr: Online
@@ -32,6 +41,7 @@ events:
     media: &11ty
       youtube: uaN9kY8lKPU
 media:
+  - <<: *btconf
   - <<: *11ty
 summary: |
   The web is fundamentally different from other platforms,
