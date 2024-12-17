@@ -19,7 +19,7 @@ tags:
   - CSS Nesting
   - CSSWG
 events:
-  - venue: Smashing Conference
+  - venue: Smashing Workshop
     date: 2025-10-09
     adr: New York
     url: https://smashingconf.com/ny-2025
