@@ -9,6 +9,7 @@ social:
   - mastodon:
       user: jgerigmeyer
       server: front-end.social
+  - bluesky: jgerigmeyer.bsky.social
   - github: jgerigmeyer
 summary: |
   Jonny (he/him) is a co-founder and technical lead --
