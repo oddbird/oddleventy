@@ -13,7 +13,7 @@ social:
   - mastodon:
       user: stacy
       server: front-end.social
-  - bluesky: namastacy.bsky.social
+  - bluesky: stacykvernmo.com
 summary: |
   Stacy (she/her)
   is a user experience designer,
