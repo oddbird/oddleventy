@@ -379,7 +379,7 @@ to adjust timing and easing on animations.
 GreenSock made it easier to iterate on animations,
 helping us to meet the project deadline.
 
-[GreenSock animation library]: https://greensock.com/
+[GreenSock animation library]: https://gsap.com/
 
 {{ embed.codepen(
   id='rNedLbN',
