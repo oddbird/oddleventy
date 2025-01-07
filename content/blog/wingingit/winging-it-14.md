@@ -52,3 +52,8 @@ summary: |
   values
 - Name 7 `<filter-function>` values
 - #A47864 is the hex code for this color, which is Pantone's color of the year
+
+## Links:
+
+- [Sorted Colors](https://enes.in/sorted-colors/)
+- [Color Equivalents Table](https://meyerweb.com/eric/css/colors/)
