@@ -33,10 +33,9 @@
     &[data-reverse~='horizontal'] {
       --reverse-x: 'content image';
 
-      grid-template-columns: minmax(
-          min-content,
-          var(--media-content, 1fr)
-        ) fit-content(25%);
+      grid-template-columns:
+        minmax(min-content, var(--media-content, 1fr))
+        fit-content(25%);
     }
   }
 }
