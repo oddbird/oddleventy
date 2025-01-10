@@ -100,6 +100,16 @@ positioned element can be positioned can not be smaller than the space in which
 the anchor can be positioned. (Note: this is technically less accurate, but it
 helps me visualize the rule.)
 
+{% callout 'note', false %}
+
+Add this to your mental model.
+
+The space in which the positioned element can be
+positioned can not be smaller than the space in which the anchor can be
+positioned.
+
+{% endcallout %}
+
 <!-- TODO: Is there a visual way of showing this? -->
 
 Crucially, if the anchor element is a parent to the positioned element and
