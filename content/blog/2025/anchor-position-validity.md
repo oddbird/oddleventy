@@ -1,11 +1,12 @@
 ---
-title: How to find an acceptable anchor element
-sub: Why your anchor positioning isn't working
-date: 2025-01-12
+title: Here's why your anchor positioning isn't working
+sub: How to find an anchor element
+date: 2025-01-15
 image:
-  src: blog/2024/anchor1.jpg
+  src: blog/2025/anchor-valid.jpg
   alt: >
-    A rusty anchor hanging with the sea in the background.
+    A weathered small boat in the fog, with ropes going into the water,
+    hopefully leading to an anchor.
 author: james
 sponsors: true
 tags:
@@ -13,21 +14,25 @@ tags:
   - Anchor Positioning
   - CSS
 summary: |
-  It can be frustrating to track down why your anchor isn't being found.
-  There's a good reason, but it can be opaque and confusing.
+  It is frustrating to track down why an anchor isn't being found.
+  I've found a simple way that should work in most cases.
+  If that doesn't work, step through the checklist,
+  and then dive in to get a better understanding
+  of how Anchor Positioning works.
 ---
 
 {% import 'embed.macros.njk' as embed %}
 
 {% callout 'note', false %}
 
-**TL;DR:** There are many ways a positioned element can fail to find anchor. The
-most common issues can be avoided by:
+**TL;DR:** For the best chance of having anchor positioning work, here's my
+recommendation:
 
-- making the anchor and the positioned element siblings, and
-- putting the anchor first in the DOM.
+1. Make the anchor and the positioned element siblings.
+2. Put the anchor first in the DOM.
 
-Go give that a try, and then come back and find out why, and what to check next if that didn't work.
+Go give that a try, and then come back and find out why, and what to check next
+if that didn't work.
 
 I'll wait.
 
@@ -50,6 +55,8 @@ makes it really hard to troubleshoot and recover from.
 
 ## Troubleshooting Checklist
 
+Here's some of the common reasons why your anchor isn't being found.
+
 1. Is your anchor a parent of the positioned element? While this can work, there
    are multiple ways this can break.
    [More](#anchor-as-a-parent-to-the-positioned-element)
@@ -64,7 +71,7 @@ makes it really hard to troubleshoot and recover from.
 1. Is the `anchor-name` defined by styles in the same shadow tree where it is
    referred to? [More](#anchoring-across-shadow-trees)
 
-If your issue isn't on this list- let us know how you fixed it! This list isn't
+If your issue isn't on this list, let us know how you fixed it! This list isn't
 exhaustive, and omits some cases with hidden content, fixed position anchors,
 and other less likely edge cases.
 
@@ -93,17 +100,26 @@ positioned element can be positioned can not be smaller than the space in which
 the anchor can be positioned. (Note: this is technically less accurate, but it
 helps me visualize why this is important.)
 
-Crucially, if the anchor element is a parent to the positioned element and
-creates a containing box, anchor positioning will not work. The positioned
-element's containing box will be the anchor, and the anchor's containing box
-will be one of its ancestors.
-
 TODO: Is there a visual way of showing this?
+
+Crucially, if the anchor element is a parent to the positioned element and
+creates a containing box for the positioned element, anchor positioning will not
+work. The positioned element's containing box will be the anchor, and the
+anchor's containing box will be one of its ancestors.
+
+{{ embed.codepen(
+  id='raBdLWP',
+  title='Absolute anchor order',
+  user='jamessw',
+  height=200,
+  tab='html,result'
+) }}
 
 There are many reasons that will cause the anchor element will create a
 containing block, and positioned elements that are children will not work.
 
-  - If you set a `position` besides `static`
+  - If you set a `position` besides `static` on the anchor and the positioned
+    element is `position: absolute`.
   - If you transform the element somehow, with `transform`, `translate`,
     `scale`, etc.
   - If it's a query container for container size queries.
@@ -143,8 +159,13 @@ Generally, absolutely positioned elements are rendered after relatively
 positioned elements. If the anchor element is absolutely positioned, then the
 positioned element must come after the anchor in the DOM.
 
-{{ embed.codepen( id='xbKpedP', title='Absolute anchor order', user='jamessw',
-  height=300 ) }}
+{{ embed.codepen(
+  id='xbKpedP',
+  title='Absolute anchor order',
+  user='jamessw',
+  height=200,
+  tab='html,result'
+) }}
 
 {% callout 'note', false %}
 
@@ -185,21 +206,27 @@ You likely have run into containing blocks before. When you are positioning
 something with absolute positioning, it is positioned relative to its containing
 block.
 
-{{ embed.codepen( id='NPKyRPm', title='Containing box for absolutely positioned
-  element', user='jamessw', height=300 ) }}
+{{ embed.codepen(
+  id='NPKyRPm',
+  title='Containing box for absolutely positioned element',
+  user='jamessw',
+  height=300
+) }}
 
 If you use percentages to define widths and heights, these are calculated
 relative to the element's containing block.
 
 To figure out an element's containing block, find the ancestor element that the
-element's position and size are relative to. If the element is fixed position,
-the containing block can be the viewport.
+element's position and size are relative to. This is dependent on the element's
+`position` value, so for example, if the element is fixed position, the
+containing block can be the viewport, or if the element is relative position,
+the containing block could be generated by an ancestor `<li>` element.
 
 I've found MDN's guide on [Identifying the containing
 block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block)
 a helpful resource to unravel the containing block.
 
-## Potential solutions
+## Ways to make this easier
 
 Troubleshooting why an anchor is not found is not fun or easy. Anchor
 Positioning is in its early days, but as adoption grows, I hope we can find ways
