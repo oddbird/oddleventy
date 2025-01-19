@@ -123,9 +123,9 @@ block, and positioned elements that are children will not work:
 
 - If you set a `position` besides `static` on the anchor and the positioned
   element is `position: absolute`
-- If you transform the element somehow, with `transform`, `translate`,
+- If you transform the anchor element somehow, with `transform`, `translate`,
   `scale`, etc.
-- If it's a query container for container size queries
+- If the anchor elements is a query container for container size queries
 
 This is not an exhaustive list. Because there are so many ways to get into this
 situation unexpectedly, I recommend not nesting positioned elements inside the
@@ -177,22 +177,25 @@ positioned element must come after the anchor in the DOM.
   tab='html,result'
 ) }}
 
-{% callout 'note', false %}
-The "after the anchor in the DOM" check happens on the `flat tree`, which means
-that slotted content is placed and shadow hosts are filled with their children.
-{% endcallout %}
+{% callout 'note', false %} The "after the anchor in the DOM" check happens on
+the `flat tree`, which means that it happens after slotted content is placed and
+shadow hosts are filled with their children. {% endcallout %}
 
 <h3 id="top-layer">Top layer</h3>
 
 If you are using dialogs as modals or popovers, you are creating top layers. If
-the anchor element is in a higher top layer than the positioned element, the
-positioned element will not be able to locate the anchor.
+the anchor element is in a [higher top
+layer](https://drafts.csswg.org/css-position-4/#top-layer) than the positioned
+element, the positioned element will not be able to locate the anchor.
 
 <h3 id="anchoring-across-shadow-trees">Anchoring across shadow trees</h3>
 
-An element in one tree can anchor to an element in another tree,
-as long as the anchor name is defined in the same tree styles where it is
-referred to.
+An element in one tree can anchor to an element in another tree, as long as the
+relevant styles are all defined in the same style tree. In other words, if
+`anchor-name` is defined in a shadow tree, the `position-anchor` or `anchor()`
+styles must also be defined in that shadow tree. If the `anchor-name` is defined
+outside a shadow tree using `::part()`, then the `position-anchor` or `anchor()`
+styles can be defined outside as well.
 
 {{ embed.codepen(
   id='zxOWoOE',
