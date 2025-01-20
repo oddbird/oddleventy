@@ -74,6 +74,16 @@ position anchors, and other less likely edge cases.
 We're also [available for office hours](/contact/) to help work through your
 specific case.
 
+{% callout 'note', false %}
+
+The examples in this article are best viewed in a Chromium browser, version 131
+or later. In the examples that show that an anchor is not found, be aware of a
+[bug](https://issues.chromium.org/issues/388575663) in Chromium that causes
+elements with a `position-area` rule that do not have a valid anchor to be
+positioned incorrectly. 🤷🏼‍♂️
+
+{% endcallout %}
+
 <h3 id="anchor-as-a-parent-to-the-positioned-element">Anchor as a parent to the positioned element</h3>
 
 While a positioned element can be a child of the anchor, this is the primary
@@ -160,6 +170,14 @@ verify that both the anchor and positioned element are descendants of the
 element with the `anchor-scope` rule, or if the anchor itself has the
 `anchor-scope` rule, that the positioned element is a descendant of the anchor.
 
+{{ embed.codepen(
+  id='QwLVGjZ',
+  title='Anchor Scope',
+  user='jamessw',
+  height=200,
+  tab='html,result'
+) }}
+
 <h3 id="absolute-anchor-order">Absolute anchor order</h3>
 
 This is the motivation behind the recommended solution to have the anchor come
@@ -187,6 +205,24 @@ If you are using dialogs as modals or popovers, you are creating top layers. If
 the anchor element is in a [higher top
 layer](https://drafts.csswg.org/css-position-4/#top-layer) than the positioned
 element, the positioned element will not be able to locate the anchor.
+
+This area needs additional investigation. My reading of the spec says that an
+element _inside_ a higher top layer (for instance, a button inside a dialog) can
+be anchored to an element in a lower layer. However, I can't seem to get that to
+work, and I'm not sure it should. The containing block of the dialog or popover
+might not overlap with the anchor, so it's not clear to me how the top layer
+would handle overflow.
+
+What _does_ work is anchoring the dialog or popover itself on an element in the
+bottom layer.
+
+{{ embed.codepen(
+  id='OPLzjJq',
+  title='Top Layer',
+  user='jamessw',
+  height=200,
+  tab='html,result'
+) }}
 
 <h3 id="anchoring-across-shadow-trees">Anchoring across shadow trees</h3>
 
