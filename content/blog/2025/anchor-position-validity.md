@@ -135,7 +135,7 @@ block, and positioned elements that are children will not work:
   element is `position: absolute`
 - If you transform the anchor element somehow, with `transform`, `translate`,
   `scale`, etc.
-- If the anchor elements is a query container for container size queries
+- If the anchor element is a query container for container size queries
 
 This is not an exhaustive list. Because there are so many ways to get into this
 situation unexpectedly, I recommend not nesting positioned elements inside the
@@ -195,9 +195,11 @@ positioned element must come after the anchor in the DOM.
   tab='html,result'
 ) }}
 
-{% callout 'note', false %} The "after the anchor in the DOM" check happens on
-the `flat tree`, which means that it happens after slotted content is placed and
-shadow hosts are filled with their children. {% endcallout %}
+{% callout 'note', false %}
+The "after the anchor in the DOM" check happens on the `flat tree`, which means
+that it happens after slotted content is placed and shadow hosts are filled with
+their children.
+{% endcallout %}
 
 <h3 id="top-layer">Top layer</h3>
 
@@ -213,7 +215,7 @@ work, and I'm not sure it should. The containing block of the dialog or popover
 might not overlap with the anchor, so it's not clear to me how the top layer
 would handle overflow.
 
-What _does_ work is anchoring the dialog or popover itself on an element in the
+What _does_ work is anchoring the dialog or popover itself to an element in the
 bottom layer.
 
 {{ embed.codepen(
