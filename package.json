@@ -109,7 +109,7 @@
     "sassdoc-theme-herman": "^6.0.2",
     "slugify": "^1.6.6",
     "striptags": "^3.2.0",
-    "stylelint": "^16.14.0",
+    "stylelint": "^16.14.1",
     "stylelint-config-standard-scss": "^14.0.0",
     "truncate-html": "^1.2.0",
     "typescript": "^5.7.3",
