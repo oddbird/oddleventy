@@ -1,5 +1,4 @@
 ---
-feature: workshop
 title: Cascading Style Systems
 sub: A workshop on resilient & maintainable CSS
 author: miriam

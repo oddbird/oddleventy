@@ -19,6 +19,16 @@ social:
   - github: MiriSuzanne
   - codepen: MiriamSuzanne
 events:
+  - venue: Smashing Conference
+    adr: New York
+    url: https://smashingconf.com/ny-2025
+    date: 2025-10-06
+    end: 2025-10-09
+  - venue: JS Heroes
+    adr: Cluj, Romania
+    url: https://jsheroes.io/
+    date: 2025-05-29
+    end: 2025-05-30
   - venue: CSS Day
     adr: Amsterdam, NL
     url: https://cssday.nl/2024

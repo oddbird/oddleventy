@@ -20,11 +20,6 @@ tags:
   - Container Queries
   - Layout
   - CSSWG
-events:
-  - venue: Cascading Layouts OddWorkshop
-    date: 2025-04-07
-    end: 2025-04-09
-    adr: Online
 included:
   - title: Interactive Sessions
     text: Online, wherever you are

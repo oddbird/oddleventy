@@ -16,7 +16,7 @@
 - name: Django Girls
   url: https://djangogirls.org/
   type: donations
-  years: 2015--2023
+  years: 2015--2024
   description: |
     is a non-profit organization
     and a community that empowers and helps women
@@ -25,14 +25,14 @@
 - name: Natives in Tech
   url: https://nativesintech.org/
   type: donations
-  years: 2020--2023
+  years: 2020--2024
   description: |
     cultivates a tech ecosystem of Native technologists
     crafting free and open source technology for Native communities.
 - name: TransTech
   url: https://transtechsocial.org/
   type: donations
-  years: 2021--2023
+  years: 2021--2024
   description: |
     is an incubator for LGBTQ Talent
     with a focus on economically empowering

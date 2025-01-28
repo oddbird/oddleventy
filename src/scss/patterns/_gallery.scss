@@ -28,7 +28,9 @@ figure {
 .gallery {
   display: grid;
   grid-gap: var(--shim);
-  grid-template-columns: [full-start] repeat(auto-fit, minmax(40%, 1fr)) [full-end];
+  grid-template-columns:
+    [full-start] repeat(auto-fit, minmax(40%, 1fr))
+    [full-end];
 
   img,
   svg {
