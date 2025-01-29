@@ -1,7 +1,7 @@
 ---
 title: Here's why your anchor positioning isn't working
 sub: How to find an anchor element
-date: 2025-01-22
+date: 2025-01-29
 image:
   src: blog/2025/anchor-valid.jpg
   alt: >
