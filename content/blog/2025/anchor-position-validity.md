@@ -208,21 +208,26 @@ the anchor element is in a [higher top
 layer](https://drafts.csswg.org/css-position-4/#top-layer) than the positioned
 element, the positioned element will not be able to locate the anchor.
 
-This area needs additional investigation. My reading of the spec says that an
-element _inside_ a higher top layer (for instance, a button inside a dialog) can
-be anchored to an element in a lower layer. However, I can't seem to get that to
-work, and I'm not sure it should. The containing block of the dialog or popover
-might not overlap with the anchor, so it's not clear to me how the top layer
-would handle overflow.
-
-What _does_ work is anchoring the dialog or popover itself to an element in the
-bottom layer.
+You can position the root popover or dialog directly using `position: absolute`.
 
 {{ embed.codepen(
   id='OPLzjJq',
   title='Top Layer',
   user='jamessw',
   height=200,
+  tab='html,result'
+) }}
+
+However, if you want to position an element that is inside the popover or
+dialog, you will need to use `position: fixed`. Note that the positioned
+elements are not inside their parents in this example- `position: fixed` moves
+the element's containing block to the viewport and allows positioning to work.
+
+{{ embed.codepen(
+  id='vEBbVXq',
+  title='Top Layer - inside',
+  user='jamessw',
+  height=250,
   tab='html,result'
 ) }}
 
