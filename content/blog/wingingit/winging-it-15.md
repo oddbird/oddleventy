@@ -49,3 +49,13 @@ summary: |
 - What do users really want when they change the default browser font size?
 - Is it appropriate for padding and margins to grow along with text?
 - What all should we be responding to, and can CSS do what's required?
+
+## Links:
+
+- [The Ultimate Ideal Bestest Base Font Size That Everyone Is Keeping a Secret, Especially Chet](https://adrianroselli.com/2024/03/the-ultimate-ideal-bestest-base-font-size-that-everyone-is-keeping-a-secret-especially-chet.html)
+- [Why You Should Use px Units for margin, padding, & Other Spacing Techniques](https://ashleemboyer.com/blog/why-you-should-use-px-units-for-margin-padding-and-other-spacing-techniques)
+
+## Demos: 
+
+- [Viewport spacing, px guardrails, font-rounding](https://codepen.io/miriamsuzanne/pen/KKjVQMK?editors=1100 )
+
