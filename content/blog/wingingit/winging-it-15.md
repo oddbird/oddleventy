@@ -26,7 +26,7 @@ summary: |
   Responsive Typography has been around
   for at least a decade in various forms,
   but has become even more popular
-  with tools like Utopia.fyi, Fluid.style, Typetura,
+  with tools like [Utopia.fyi](https://utopia.fyi), [Fluid.style](https://fluid.style), [Typetura](https://github.com/Typetura/),
   and more -- all relying
   on the latest CSS units and math functions.
   But there are still a lot of questions worth asking.
