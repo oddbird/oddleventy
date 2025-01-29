@@ -220,7 +220,7 @@ You can position the root popover or dialog directly using `position: absolute`.
 
 However, if you want to position an element that is inside the popover or
 dialog, you will need to use `position: fixed`. Note that the positioned
-elements are not inside their parents in this example — `position: fixed` moves
+elements are not inside their parents in this example -- `position: fixed` moves
 the element's containing block to the viewport and allows positioning to work.
 
 {{ embed.codepen(
