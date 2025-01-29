@@ -1,5 +1,5 @@
 ---
-title: Here's why your anchor positioning isn't working
+title: Here's Why Your Anchor Positioning Isn't Working
 sub: How to find an anchor element
 date: 2025-01-29
 image:
