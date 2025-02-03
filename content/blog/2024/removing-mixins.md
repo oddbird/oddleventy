@@ -200,7 +200,7 @@ the one with higher _cascade priority_
 
 What stood out to me
 during Roman's
-[talk at CSS Day](https://cssday.nl/2024/speakers#roma)
+[talk at CSS Day](https://youtu.be/ZC_WS05t2lI)
 was the fact that both these pseudo-mixin solutions
 use custom properties to apply the mixin.
 As a result,

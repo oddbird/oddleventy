@@ -29,7 +29,6 @@ events:
     media: &dvlp
       youtube: JnvkjhwcMcM
   - venue: Generate New York
-    url: https://www.generateconf.com/
     adr: San Francisco, CA
     date: 2019-04-24
     end: 2019-04-25

@@ -15,7 +15,6 @@ tags:
   - Cascade
 events:
   - venue: Generate New York
-    url: https://www.generateconf.com/
     adr: San Francisco, CA
     date: 2019-04-24
   - venue: Smashing Conf
