@@ -2,7 +2,7 @@
 title: Victor Allen
 sub: Product designer and developer
 bird: victor
-date: 2025-01-31
+date: 2024-07-10
 image:
   src: birds/victor.jpg
   position: top
