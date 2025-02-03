@@ -17,10 +17,10 @@ summary: |
   huge nerd all the time.
 ---
 
-Victor is a multidisciplinary designer/developer with a human-centered
-philosophy and passion for providing utility and value for users. 
+**Victor is a multidisciplinary designer/developer** with a human-centered
+philosophy and passion for providing utility and value for users.
 He thrives on shepherding ideas from conception to release, with
-experience in web, mobile, games, product management, data visualization 
+experience in web, mobile, games, product management, data visualization
 and public interest technology.
 Away from work he enjoys tabletop games, bouldering, and hiking.
 He has three cats.
