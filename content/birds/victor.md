@@ -5,7 +5,7 @@ bird: victor
 date: 2024-07-10
 image:
   src: birds/victor.jpg
-  position: top
+  position: center
   alt: Victor overlooking a valley from a high ridge.
 social:
   - github: vwallen
