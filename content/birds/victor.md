@@ -13,7 +13,7 @@ social:
       user: restlesshead
       server: dice.camp
 summary: |
-  Victor is a human-centered developer & product/service designer by day,
+  Victor (he/him) is a human-centered developer & product/service designer by day,
   huge nerd all the time.
 ---
 
