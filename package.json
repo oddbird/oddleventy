@@ -102,7 +102,7 @@
     "posthtml": "^0.16.6",
     "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
-    "rollup": "^4.32.0",
+    "rollup": "^4.34.1",
     "sanitize-html": "^2.14.0",
     "sass-embedded": "^1.83.4",
     "sassdoc": "^2.7.4",
