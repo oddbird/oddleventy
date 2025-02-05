@@ -2,9 +2,9 @@
 {%- set og_image = og_image if ('://' in (og_image or '') | string) else (site.images + og_image) | imgSrc | htmlBaseUrl(site.url) -%}
 {%- set authorPage = collections.birds | authorPage(author) if author else none -%}
 {%- set twitterHandle = authorPage.data.social | selectattr('twitter') | first if authorPage else none -%}
-{%- set twitterAuthor = ['@', twitterHandle.twitter] | join() if twitterHandle else open_graph.twitter -%}
-{%- set fediHandle = authorPage.data.social | selectattr('mastodon') | first if authorPage else none -%}
-{%- set fediAuthor = ['@', fediHandle.mastodon.user, '@', fediHandle.mastodon.server] | join() if fediHandle else open_graph.twitter -%}
+{%- set twitterAuthor = ['@', twitterHandle.twitter] | join() if twitterHandle else none -%}
+{%- set fediHandle = authorPage.data.social | selectattr('mastodon') | first if authorPage else open_graph.fedi -%}
+{%- set fediAuthor = ['@', fediHandle.mastodon.user, '@', fediHandle.mastodon.server] | join() if fediHandle else none -%}
 
 <meta property="fb:app_id" content="{{ site.facebook_id }}" />
 <meta property="og:locale" content="{{ open_graph.locale }}" />
@@ -14,11 +14,10 @@
 <meta property="og:description" content="{{ description }}" />
 <meta property="og:url" content="{{ perma }}" />
 <meta property="og:site_name" content="{{ site.title }}" />
-<meta name="twitter:card" content="{{ og.twitter or 'summary' }}" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{{ title }}" />
 <meta name="twitter:description" content="{{ description }}" />
 <meta name="twitter:image" content="{{ og_image }}" />
 <meta name="twitter:domain" content="{{ site.url }}" />
-<meta name="twitter:site" content="{{ open_graph.twitter }}" />
-<meta name="twitter:creator" content="{{ twitterAuthor }}" />
-<meta name="fediverse:creator" content="{{ fediAuthor }}" />
+{% if twitterAuthor %}<meta name="twitter:creator" content="{{ twitterAuthor }}" />{% endif %}
+{% if fediAuthor %}<meta name="fediverse:creator" content="{{ fediAuthor }}" />{% endif %}

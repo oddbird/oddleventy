@@ -7,7 +7,6 @@ end: 2021-03-31
 image:
   src: birds/erica.jpg
 social:
-  - twitter: DuggieMitchell
   - github: duggiemitchell
 summary: |
   Erica
