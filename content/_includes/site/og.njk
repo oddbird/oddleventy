@@ -3,7 +3,7 @@
 {%- set authorPage = collections.birds | authorPage(author) if author else none -%}
 {%- set twitterHandle = authorPage.data.social | selectattr('twitter') | first if authorPage else none -%}
 {%- set twitterAuthor = ['@', twitterHandle.twitter] | join() if twitterHandle else none -%}
-{%- set fediHandle = authorPage.data.social | selectattr('mastodon') | first if authorPage else open_graph.fedi -%}
+{%- set fediHandle = authorPage.data.social | selectattr('mastodon') | first or open_graph.fedi if authorPage else open_graph.fedi -%}
 {%- set fediAuthor = ['@', fediHandle.mastodon.user, '@', fediHandle.mastodon.server] | join() if fediHandle else none -%}
 
 <meta property="fb:app_id" content="{{ site.facebook_id }}" />
