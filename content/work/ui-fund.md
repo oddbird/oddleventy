@@ -2,6 +2,7 @@
 title: CSS Language Development
 sub: Cascade Layers, Container Queries, Scope, and more
 date: 2020-07-01
+end: 2024-07-31
 logo: google
 client: &client Google
 image:

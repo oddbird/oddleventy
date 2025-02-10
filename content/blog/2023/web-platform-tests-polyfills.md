@@ -9,6 +9,7 @@ tags:
   - GitHub
   - JavaScript
   - Testing
+  - Polyfill
 image:
   src: blog/2023/graph.jpg
 summary: |
@@ -102,12 +103,12 @@ require more work. It also provides links to the test source and the test page
 on [wpt.live](https://wpt.live) and the local server (assuming you have it
 running). The HTML report can be viewed and shared as a standalone file, or
 hosted on any service that supports static sites. We use Netlify to host the
-[report page for the anchor position
+[report page for the anchor positioning
 polyfill](https://anchor-position-wpt.netlify.app/).
 
 {{ embed.img(
   src='blog/2023/wpt-report.png',
-  alt='Table showing multiple passing and failing tests for the main branch of the anchor position polyfill'
+  alt='Table showing multiple passing and failing tests for the main branch of the anchor positioning polyfill'
 ) }}
 
 *Note: the report includes many failing tests because the polyfill is a work in
@@ -189,7 +190,7 @@ You can complete all the previous steps manually, but to get the most use out of
 WPT we recommend including it as part of your CI. Based on the work of the
 [Container Query
 Polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) team,
-the anchor position polyfill uses these files to automate the workflow:
+the anchor positioning polyfill uses these files to automate the workflow:
 
 - [`.github/workflows/test-wpt.yml`](https://github.com/oddbird/css-anchor-positioning/blob/63486097aeb4d2cda5bff03a4f7bef26bef8d1ba/.github/workflows/test-wpt.yml):
   GitHub Actions workflow definition that holds environment variables and glues

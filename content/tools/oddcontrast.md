@@ -7,6 +7,8 @@ logo: oddcontrast
 image:
   position: top
   src: projects/contrast-hero.jpg
+media:
+  - youtube: Lq4saw4Rqe0
 oss: owner
 author: oddbird
 action:
@@ -26,6 +28,10 @@ summary: |
 ---
 
 {% import 'embed.macros.njk' as embed %}
+
+{{ embed.figure(
+  data=media
+) }}
 
 ## Support for Newer Color Formats and Spaces
 

@@ -14,7 +14,7 @@ tags:
 slides: https://slides.oddbird.net/dynamic-css/
 events:
   - venue: Shift Remote
-    url: https://remote.shiftconf.co/
+    url: https://shift.infobip.com/europe/remote-2020/
     date: 2020-08-06
     adr: Online
     video: https://youtu.be/aMBRl35GUrg?t=4317
@@ -29,7 +29,6 @@ events:
     media: &dvlp
       youtube: JnvkjhwcMcM
   - venue: Generate New York
-    url: https://www.generateconf.com/
     adr: San Francisco, CA
     date: 2019-04-24
     end: 2019-04-25

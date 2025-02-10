@@ -19,6 +19,7 @@ import * as type from '#filters/type.js';
 import * as utils from '#filters/utils.js';
 
 export default (eleventyConfig) => {
+  eleventyConfig.setServerOptions({ port: 7050 });
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setWatchThrottleWaitTime(100);
   eleventyConfig.addPlugin(rss);
@@ -31,7 +32,7 @@ export default (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({ 'src/media': 'assets/media' });
 
   eleventyConfig.addPassthroughCopy('content/robots.txt');
-  eleventyConfig.addPassthroughCopy('content/favicon.ico');
+  eleventyConfig.addPassthroughCopy({ 'src/images/favicon': '.' });
 
   // https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
   // Used because: https://github.com/11ty/eleventy/issues/2297
@@ -144,7 +145,6 @@ export default (eleventyConfig) => {
   eleventyConfig.addFilter('activeAuthor', birds.activeAuthor);
   eleventyConfig.addFilter('withActiveAuthor', birds.withActiveAuthor);
 
-  eleventyConfig.addFilter('donorFacePile', support.donorFacePile);
   eleventyConfig.addShortcode('ocAvatar', support.openCollectiveAvatar);
 
   eleventyConfig.addFilter('typogr', type.typogr);

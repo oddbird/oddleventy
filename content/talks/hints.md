@@ -1,6 +1,6 @@
 ---
 title: Hints and Suggestions
-sub: First, Do No Harm
+sub: The design of web design
 date: 2024-05-15
 author: miriam
 image:
@@ -18,6 +18,20 @@ tags:
   - CSSWG
 slides: https://slides.oddbird.net/layers/
 events:
+  - venue: Camosun College
+    url: https://camosun.ca/
+    date: 2024-11-18
+    adr: Victoria, BC
+    slides: https://slides.oddbird.net/hints/camosun/
+  - venue: Beyond Tellerand
+    adr: Berlin, DE
+    url: https://beyondtellerrand.com/events/berlin-2024
+    date: 2024-11-07
+    end: 2024-11-08
+    slides: https://slides.oddbird.net/hints/btconf/
+    video: https://www.youtube.com/watch?v=s2rqYu6jqWY
+    media: &btconf
+      youtube: s2rqYu6jqWY
   - venue: 11ty International Symposium on Making Websites Real Good
     url: https://conf.11ty.dev
     adr: Online
@@ -27,27 +41,32 @@ events:
     media: &11ty
       youtube: uaN9kY8lKPU
 media:
+  - <<: *btconf
   - <<: *11ty
 summary: |
-  The web is fundamentally different
-  from other platforms,
-  built around a radically political vision
-  for resilience and user-control.
-  CSS takes that to another level,
-  attempting the almost absurd task
-  of collaborative styling
-  across devices and interfaces and languages.
+  The web is fundamentally different from other platforms,
+  built around a radical political vision for resilience,
+  adaptability, and user control.
 ---
 
 {% import 'embed.macros.njk' as embed %}
+
+With that vision under threat,
+the Cascade takes on an almost absurd task --
+styling unknown content,
+with unknown collaborators,
+on an infinite and unknowable canvas,
+across browsers,
+languages, writing modes, and device interfaces.
 
 This is a dive into the origins of the web,
 and CSS in particular --
 the design constraints,
 the range of strange proposals,
 and how we got where we are.
-By the end, we see the _CSS is Awesome_ meme
-in a whole new light.
+By the end,
+we have a better understanding of the cascade,
+and see the _'CSS is Awesome'_ meme in a new light.
 
 ------
 

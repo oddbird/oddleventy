@@ -11,7 +11,8 @@ social:
   - github: jamesnw
   - mastodon:
       user: jamessw
-      server: mastodon.cloud
+      server: front-end.social
+  - bluesky: jamessw.com
 summary: |
   James (he/him) is a front-end developer focused on
   user-friendly solutions for complex problems.

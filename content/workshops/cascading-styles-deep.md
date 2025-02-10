@@ -1,12 +1,8 @@
 ---
-feature: workshop
 title: Cascading Style Systems
 sub: A workshop on resilient & maintainable CSS
 author: miriam
 date: 2024-10-14
-action:
-  text: Register for the October workshop »
-  url: 'https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne'
 image:
   src: talks/mia-smashing-de.jpg
   position: top
@@ -25,13 +21,17 @@ tags:
   - CSS Scope
   - CSS Nesting
 events:
+  - venue: Web Directions Workshops
+    date: 2024-11-29
+    adr: Sydney, Australia
+    url: https://webdirections.org/dev-summit/speakers/workshop-suzanne.php
+    note: >
+      Use the code `miriamworkshop` for $200 off!
   - venue: Smashing Workshops
     date: 2024-10-14
     end: 2024-10-28
     adr: Online
     url: https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/
-    note: >
-      Tickets [on sale now](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/)!
   - venue: Smashing Workshops
     date: 2024-02-26
     end: 2024-03-12
@@ -113,11 +113,9 @@ summary: |
 
 {{ quotes.grid(press) }}
 
-## Attend or Schedule a Workshop
+## Schedule a Workshop
 
-Register for the
-[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne), or
-**contact us to schedule a workshop with your company**:
+**Contact us to schedule a workshop with your company**:
 
 {{ contact.form(
   submit='Book Now',
@@ -144,7 +142,7 @@ but even the experts are likely to learn something new.
 
 {{ utility.main_action(
   content='Bring this workshop to your company »',
-  url='#attend-or-schedule-a-workshop'
+  url='#schedule-a-workshop'
 ) }}
 
 ## About Miriam
@@ -275,9 +273,7 @@ that works for you.
 
 ## Contact Us to Book a Workshop
 
-Register now for the
-[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne),
-or consider bringing us in
+Consider bringing us in
 to talk with your team directly:
 
 {{ contact.form(

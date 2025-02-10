@@ -9,7 +9,7 @@ tags:
   - Cascade Layers
   - CSS Scope
   - Container Queries
-  - CSS Functions and Mixins
+  - CSS Mixins & Functions
   - CSS Nesting
   - Custom Properties
 summary: |

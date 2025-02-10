@@ -28,6 +28,15 @@
     <link rel="webmention" href="https://webmention.io/www.oddbird.net/webmention" />
     <link rel="pingback" href="https://webmention.io/www.oddbird.net/xmlrpc" />
 
+    {# Favicon #}
+    <link rel="icon" type="image/x-icon" sizes="48x48" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff8b3d">
+    <meta name="msapplication-TileColor" content="#ff8b3d">
+
     {% if perma %}
       <link rel="canonical"
         href="{{ perma }}">
@@ -55,10 +64,6 @@
 
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#d9e4e7">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e393e">
-
-    <!-- TypeKit Fonts -->
-    <script src="https://use.typekit.net/slx1xnq.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
     <!-- Context: {{ env.CONTEXT }} -->
     {% if env.CONTEXT === 'production' -%}

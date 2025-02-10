@@ -26,13 +26,6 @@ summary: |
   to re-write a code-base.
 ---
 
-{% callout 'Learn CSS layout in-depth' %}
-To learn more about grid
-and other CSS layout models,
-join our
-[Online Smashing Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne).
-{% endcallout %}
-
 Chris Coyier
 [wrote about this recently](https://frontendmasters.com/blog/weve-got-container-queries-now-but-are-we-actually-using-them/)
 over at Frontend Masters.
@@ -135,7 +128,7 @@ _once it has better support_.
 Container queries are basically brand new.
 But _what's going on with grids_?
 
-{% callout 'The CanIUse defaults are broken' %}
+{% callout 'note', 'The CanIUse defaults are broken' %}
   By default,
   [CanIUse](https://caniuse.com/) will show you
   _% of all users_,
@@ -246,7 +239,7 @@ We started phasing out Susy
 on OddBird projects in 2015.
 By 2017,
 we were
-[recommending others do the same](http://localhost:8080/talks/no-grid-system/),
+[recommending others do the same](/talks/no-grid-system/),
 and we
 [officially deprecated](https://github.com/oddbird/susy/commit/018b5c638ec0726d172af96828e6f1712682283b)
 the project

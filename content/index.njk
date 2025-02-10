@@ -48,12 +48,6 @@ tools:
 {{ embed.logos(work, collections.all) }}
 {{ layout.section_link('View work samples', '/work/') }}
 
-{% set fw = collections._talk | findPage('data.feature', 'workshop') %}
-{% if fw %}
-  {% import "page/workshop.macros.njk" as workshop %}
-  {{ workshop.feature(fw) }}
-{% endif %}
-
 {{ post.homepage_posts(
    collections,
    class='preview'

@@ -3,9 +3,6 @@ title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
 date: 2024-12-31
-action:
-  text: Register now for April 2025 »
-  url: '/workshops/cascading-layouts/#register-now'
 image:
   src: talks/cascading-workshop-cat.jpg
   position: center
@@ -23,11 +20,6 @@ tags:
   - Container Queries
   - Layout
   - CSSWG
-events:
-  - venue: OddBird Workshop
-    date: 2025-04-07
-    end: 2025-04-09
-    adr: Online
 included:
   - title: Interactive Sessions
     text: Online, wherever you are
@@ -71,31 +63,6 @@ summary: |
   grid='fit'
 ) }}
 
-## Register Now
-
-<script src="https://js.tito.io/v2" async></script>
-<script>
-  window.tito = window.tito ||
-    function() {
-      (tito.q = tito.q || []).push(arguments);
-    };
-  tito('on:widget:loaded',function(){
-     document.getElementById('tito-registration-fallback').setAttribute('hidden', 'hidden');
-  });
-</script>
-
-<a href="https://ti.to/pland/css-layout" id="tito-registration-fallback">Register</a>
-<tito-widget event="pland/css-layout"></tito-widget>
-
-{% callout %}
-This material will also be covered in the
-[Smashing Online Workshop, October 2024](https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne) --
-along with sessions on the cascade,
-inheritance,
-custom properties,
-and progressive enhancement.
-{% endcallout %}
-
 ## What Will Attendees Learn In This Workshop?
 
 - Building **maintainable CSS layouts** with **progressive enhancement**
@@ -132,7 +99,7 @@ The workshop is taught in three sessions:
   alt: 'Yoda reaching out to control the force, surrounded by jungle swamp'
 }]) }}
 
-#### First, Do No Harm
+#### Cascading Styles
 
 CSS is fundamentally different
 from other languages or design tools,
@@ -142,13 +109,15 @@ We’ll dig into the practical implications of that vision,
 and how the ‘grain’ of the language
 can guide us to more performant and resilient styles.
 
-#### Normal Flow & Formatting Contexts
+#### Layout Modes & Formatting Contexts
 
-Normal Flow is the default layout engine of CSS,
-before we apply flexbox or grids.
-Often passed over,
-this powerful layout model
-has a lot of complexity hidden just below the surface.
+Many CSS properties are _modal_,
+behaving differently in different layout contexts.
+We'll start from the default layout mode
+called 'normal flow' --
+a powerful default
+that often feels _natural_,
+but hides a lot of complexity just below the surface.
 We'll look at how the DOM is rendered
 as a tree of inline and block boxes,
 each generating a new 'formatting context'
@@ -201,9 +170,7 @@ and interactive exercises related to defining layouts.
 
 ## Contact Us to Book a Workshop
 
-Register now for the
-[online workshop, April 2025](/workshops/cascading-layouts/#register-now),
-or consider bringing us in
+Consider bringing us in
 to talk with your team directly:
 
 {{ contact.form(

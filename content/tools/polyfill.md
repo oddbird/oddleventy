@@ -29,7 +29,7 @@ summary: |
 
 ## Popover Polyfill
 
-[Demo](https://popover-polyfill.netlify.app/) |
+[Demo](https://popover.oddbird.net/) |
 [Source](https://github.com/oddbird/popover-polyfill)
 
 {{ embed.img(
@@ -58,7 +58,7 @@ and `popovertargetaction` attributes on `<button>` elements.
 
 ## CSS Anchor Positioning Polyfill
 
-[Demo](https://anchor-polyfill.netlify.app/) |
+[Demo](https://anchor-positioning.oddbird.net/) |
 [Source](https://github.com/oddbird/css-anchor-positioning)
 
 {{ embed.img(
