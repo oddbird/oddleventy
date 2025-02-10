@@ -68,8 +68,8 @@ One of the key differences between using `anchor()` and `position-area` is that
 `position-area` creates a new containing block for the positioned element.
 
 If you are using `anchor()`, the positioned element's containing block works
-like normal. For a `position: fixed` positioned element, it will usually be the
-viewport. For a `position: absolute` positioned element, it will usually be the
+like normal. For a `fixed` position element, it will usually be the
+viewport. For an `absolute` positioned element, it will usually be the
 closest ancestor that has a `position` besides `static`. The `anchor()` function
 then resolves to a length that positions the element as specified, within that
 containing block.
@@ -142,7 +142,7 @@ the newly created containing block but would fit inside its original container
 block, it will get shifted to prevent overflow.
 
 In this example, the targets are all positioned with `position-area: center`.
-The top and bottom targets are shifted towards the center because they would
+The top and bottom targets are shifted toward the center because they would
 otherwise overflow their original containing block, which is the `div` with the
 dashed border. They are shifted just enough to be flush with their containing
 block.
@@ -154,7 +154,7 @@ block.
   height=350
 ) }}
 
-Note that in that example, the targets are `position: absolute`. If instead, the
+Note that in this example, the targets are `position: absolute`. If instead the
 targets are `position: fixed`, the targets do not overflow their original
 containing block (the viewport) and so no shifting happens.
 
@@ -167,14 +167,14 @@ containing block (the viewport) and so no shifting happens.
 
 You can opt in to this behavior with `anchor()` by setting a value for all of
 `top`, `right`, `bottom`, and `left`, and setting a value for `justify-self` and
-`align-self`. But `postion-area` is much more terse.
+`align-self`. But `position-area` is much more terse.
 
 ## Percentages
 
 One of the ways we observe a containing block is that percentages are resolved
-in relation to the containing block. That means a `padding: 5%` on an element
+in relation to the containing block. This means that `padding: 5%` on an element
 positioned using `position-area` will have a padding of 5% of the size of the
-containing block, the section of the grid that was selected.
+containing block -- the section of the grid that was selected.
 
 {{ embed.codepen(
   id='MYgMpMM',
@@ -185,7 +185,7 @@ containing block, the section of the grid that was selected.
 
 In this case, the padding on the element positioned with `anchor()` is much
 larger, since its containing block is the viewport, not the grid area created by
-`position-area.
+`position-area`.
 
 ## Try it out
 
@@ -194,8 +194,8 @@ larger, since its containing block is the viewport, not the grid area created by
 
 The [Anchor Positioning Polyfill](https://anchor-polyfill.netlify.app/) does not
 yet support `position-area`. This article was written as part of our exploration
-into the spec, and if you would like to sponsor further development, please get
-in [touch](/contact/)!
+into the spec, and if you would like to sponsor further development, please
+[get in touch](/contact/)!
 
 ## Sponsor us
 
