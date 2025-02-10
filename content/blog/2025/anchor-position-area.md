@@ -53,7 +53,7 @@ the different values for positioning an element within that grid.
 
 [{{ embed.img(
   src='blog/2025/anchor-tool-com.jpg',
-  alt='A screenshot of anchor-tool.com, demonstrating an element positioned with postion-area: top span-left.',
+  alt='A screenshot of anchor-tool.com, demonstrating an element positioned with position-area: top span-left.',
   attrs={
     'class': 'align-center'
   }
