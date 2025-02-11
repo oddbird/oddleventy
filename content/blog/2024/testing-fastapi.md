@@ -27,6 +27,12 @@ _This article is part of our ongoing series on [FastAPI]:_
 [FastAPI Path Operations for Django Developers]: /2023/10/19/fastapi-path-operations-for-django-developers/
 [SQLAlchemy for Django Developers]: /2023/10/23/sqlalchemy-for-django-developers/
 
+{% callout 'note', false %}
+Check out our [Winging It](/wingingit/) channel for a conversation on FastAPI.
+
+**Winging It** episode 5: [Streamline Your API Development with FastAPI](/2024/03/21/winging-it-05/)
+{% endcallout %}
+
 Testing is an integral part of the development process, as it ensures the
 functionality, stability, and overall quality of the codebase. In this article,
 we will explore several topics related to testing FastAPI applications. By the

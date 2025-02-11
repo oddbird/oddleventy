@@ -30,6 +30,12 @@ summary: |
 [migrations]: #migrations-are-not-built-in
 {% endcallout %}
 
+{% callout 'note', false %}
+Check out our [Winging It](/wingingit/) channel for a conversation on FastAPI.
+
+**Winging It** episode 5: [Streamline Your API Development with FastAPI](/2024/03/21/winging-it-05/)
+{% endcallout %}
+
 If you've heard about [FastAPI], a modern and fast web framework for building
 APIs with Python, you might be wondering how it compares to Django, the most
 popular and mature web framework for Python. In this series, I will answer this
@@ -413,3 +419,7 @@ streamlined and putting the pieces together requires time. There also seems to
 be a lot of old, pre-2.0 information out there that can be confusing. All in
 all, I think it's a library worth learning and keeping in your tool belt,
 especially if you are using FastAPI.
+
+## Links:
+
+- [Winging It Episode 05: Streamline Your API Development with FastAPI](/2024/03/21/winging-it-05/)
