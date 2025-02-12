@@ -318,7 +318,7 @@ and provide clamps:
 
 ```css
 html {
-  font-size: calc(1em, 0.9em + 1vw, 1.5em);
+  font-size: clamp(1em, 0.9em + 1vw, 1.5em);
 }
 ```
 
