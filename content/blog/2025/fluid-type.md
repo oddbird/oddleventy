@@ -1,5 +1,5 @@
 ---
-title: Re-imagining fluid typography
+title: Reimagining Fluid Typography
 sub: Are we responding to the right inputs?
 author: miriam
 date: 2025-02-13
@@ -61,7 +61,7 @@ for the most common approach:
 
 ```css
 :root {
-  font-size: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem)
+  font-size: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem);
 }
 ```
 
