@@ -2,7 +2,7 @@
 title: Reimagining Fluid Typography
 sub: Are we responding to the right inputs?
 author: miriam
-date: 2025-02-13
+date: 2025-02-12
 tags:
   - Article
   - CSS
