@@ -156,7 +156,7 @@ do some basic arithmetic,
 and set our base font size to `1.5em`.
 _Good enough_.
 
-TL;DR never do pixel math with `em` and `rem` units.
+TL;DR: never do pixel math with `em` and `rem` units.
 That's where we went wrong,
 by assuming that `16px === 1em` is a reliable fact.
 
@@ -196,7 +196,7 @@ html {
 But I still have an issue
 because _the browser_ doesn't give me many options
 for setting the preference.
-And (not surprising)
+And (not surprisingly)
 one size does not fit all sites or situations.
 
 I like reading large text,
@@ -215,11 +215,11 @@ when I have 20 inches to fill.
 Of course,
 I could set different defaults
 for different devices,
-But that doesn't help when I resize windows.
+but that doesn't help when I resize windows.
 Even with the browser constantly running fullscreen,
 may laptop is only sometimes plugged into
 an external monitor.
-when I unplug it, I have less space available.
+When I unplug it, I have less space available.
 
 Again I've heard a common refrain that
 "users don't resize their windows" --
@@ -324,7 +324,7 @@ as part of our UI.
 We still want to make sure the defaults are reasonable,
 based on the global preferences,
 and only provide the UI as a progressive enhancement.
-To quote accessibility expert Kate Kalcevich…
+To quote accessibility expert Kate Kalcevich:
 
 {{ quotes.blockquote({
   'text': "The real advance in accessibility is providing options and adapting to user preferences.",
