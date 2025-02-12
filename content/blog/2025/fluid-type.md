@@ -371,8 +371,10 @@ and only provide the UI as a progressive enhancement.
 To quote accessibility expert Kate Kalcevich:
 
 {{ quotes.blockquote({
-  'text': "The real advance in accessibility is providing options and adapting to user preferences.",
-  'name': "Kate Kalcevich"
+  text: "The real advance in accessibility is providing options and adapting to user preferences.",
+  name: "Kate Kalcevich",
+  title: "Scaling up Accessibility (video)",
+  url: "https://www.youtube.com/watch?v=BF6LnePk_Ws"
 }) }}
 
 I mocked up a (stand-alone) custom element
