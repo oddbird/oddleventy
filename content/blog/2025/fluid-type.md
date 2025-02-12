@@ -30,8 +30,8 @@ summary: |
 {% callout 'note' %}
 We talked about some of these ideas
 in our [Winging It](/2025/01/24/winging-it-15/) live stream
-last month,
-with Alan Stearns --
+last month
+with Alan Stearns,
 co-chair of the CSS Working Group.
 Check that out for more discussion
 of typography and CSS units!
@@ -77,8 +77,8 @@ because they are.
 Utopia asks us to start from a range of font sizes
 defined in `px` values,
 and then it does a conversion to `rem`
-by assuming that `1rem === 16px`.
-As long as that assumption hold true,
+by assuming that `1rem == 16px`.
+As long as that assumption holds true,
 the math above will scale our font
 from an `18px` minimum
 to a `20px` maximum.
@@ -175,7 +175,7 @@ would ideally increase their font size,
 but sites with the same size or larger text
 certainly shouldn't get _even bigger_.
 
-It's not just my site,
+It's not just my site --
 this has become a common practice across the industry.
 And it means some of my favorite sites
 already using large type
@@ -184,7 +184,7 @@ So I had to remove that preference.
 
 I see this situation play out over and over
 on the web.
-And then the lesson we often learn is
+The lesson we often learn is
 _users don't set preferences_,
 when the reality is that
 _we applied their preferences badly_.
@@ -198,9 +198,9 @@ do some basic arithmetic,
 and set our base font size to `1.5em`.
 _Good enough_.
 
-TL;DR: never do pixel math with `em` and `rem` units.
+TL;DR -- Never do pixel math with `em` and `rem` units.
 That's where we went wrong,
-by assuming that `16px === 1em` is a reliable fact.
+by assuming that `16px == 1em` is a reliable fact.
 
 In this case,
 there's a quick and easy solution
@@ -235,7 +235,7 @@ html {
 
 ## Why should type be responsive at all?
 
-But I still have an issue
+But I still have an issue,
 because _the browser_ doesn't give me many options
 for setting the preference.
 And (not surprisingly)
@@ -259,7 +259,7 @@ I could set different defaults
 for different devices,
 but that doesn't help when I resize windows.
 Even with the browser constantly running fullscreen,
-may laptop is only sometimes plugged into
+my laptop is only sometimes plugged into
 an external monitor.
 When I unplug it, I have less space available.
 
@@ -337,7 +337,7 @@ within range of the user's intent.
 Relative units like `em` and `rem`
 are excellent for _internal relationships_ --
 keeping the scale consistent between
-body text and headings for example.
+body text and headings, for example.
 But things always go wrong
 when we try to treat `em` as an alias for `px`,
 with mental conversions based on their assumed default relationship.
@@ -362,7 +362,7 @@ I'm happy for something a bit more compact.
 I think browsers like Arc are on the right track
 with per-site style adjustments.
 
-We could take my responsive-default approach even farther
+We could take my responsive-default approach even further
 by providing site-specific controls
 as part of our UI.
 We still want to make sure the defaults are reasonable,
@@ -377,7 +377,7 @@ To quote accessibility expert Kate Kalcevich:
 
 I mocked up a (stand-alone) custom element
 with a rough proof of concept.
-I'm sure there are ways to improve it
+I'm sure there are ways to improve it,
 such as adjusting the values,
 adding a form submit option,
 or tracking the preference in local storage --
