@@ -7,6 +7,12 @@ tags:
   - Article
   - CSS
   - Layout
+image:
+  src: blog/2025/font-scale-hero.jpg
+  alt: >
+    A case of letterpress type
+    with arrows pointing outward
+    and a cursor hand overlaid
 summary: |
   For many years,
   it has been 'best practice'
@@ -19,6 +25,7 @@ summary: |
 ---
 
 {% import "quotes.macros.njk" as quotes %}
+{% import 'embed.macros.njk' as embed %}
 
 {% callout 'note' %}
 We talked about some of these ideas
@@ -46,7 +53,7 @@ we maintain a consistent relationship between sizes,
 while allowing the entire system
 to scale up or down
 relative to user defaults
-or browser [(page) zoom](/2024/07/09/zoomies/)
+or browser [(page) zoom](/2024/07/09/zoomies/).
 
 Recently,
 'fluid typography' has pushed us
@@ -65,19 +72,43 @@ for the most common approach:
 }
 ```
 
-This comes with some accessibility risks
-if we're not careful,
-so keep an eye on the warnings
-that Utopia provides.
-Or jump over to [fluid.style](https://fluid.style)
-to test the page-zoom capabilities
-of any fluid calculation.
+Those numbers look a bit magical,
+because they are.
+Utopia asks us to start from a range of font sizes
+defined in `px` values,
+and then it does a conversion to `rem`
+by assuming that `1rem === 16px`.
+As long as that assumption hold true,
+the math above will scale our font
+from an `18px` minimum
+to a `20px` maximum.
 
-This utopian approach works pretty well,
+This is an assumption that developers often lean on,
+even when we're not doing fluid math.
+It's not an entirely reliable assumption,
+but it matches the default in most browsers,
+and things can feel pretty squishy
+if we don't do _some form_ of translation-to-pixels.
+How can we choose a font size
+using units that are entirely untethered from the display?
+What is `1rem` without a conversion?
+
+It's a reliable approach,
 but the more I play with it
 the more questions I have.
 So let's dig in,
 and see if there are improvements we can make.
+
+{% callout 'note' %}
+Fluid calculations with viewport units
+can cause accessibility issues
+if we're not careful.
+So keep an eye on the warnings
+that Utopia provides,
+or jump over to [fluid.style](https://fluid.style)
+to test the page-zoom capabilities
+of any fluid calculation.
+{% endcallout %}
 
 
 ## What's the purpose of a font-size preference?
@@ -86,9 +117,9 @@ I've been
 [playing with my browser settings](https://www.miriamsuzanne.com/2024/01/24/have-preferences/),
 starting with fonts
 and then the default font-size.
-This is a setting that most browsers provide.
+These are settings that most browsers provide.
 Since I generally prefer web text around `24px`,
-that seems like an obvious default, right?
+that seems like an obvious preference to set, right?
 
 But I've already designed my site
 to have large text _relative to_ the user default.
@@ -100,9 +131,16 @@ my site would already display text at `24px`.
 Now that I've said I _want_ `24px` font-size,
 my site has increased to `36px`!
 
+{{ embed.figure(
+  data=[{
+    img: 'blog/2025/font-scale.jpg',
+    alt: 'Two screenshots from my site, one with 16px preference and 24px rendered text - the other with much larger 24px preference and 36px rendered'
+  }],
+  caption='I can make the text larger, but it never matches my preference'
+) }}
+
 It seems like Chromium browsers
-no longer allow setting a specific font size.
-Instead you can choose from the default `medium`
+now have a way of selecting from the default `medium`
 or a list of larger and smaller options:
 
 - Very small
@@ -111,16 +149,20 @@ or a list of larger and smaller options:
 - Large
 - Very large
 
+You can still get to an exact-font-size setting,
+but it's hidden away.
 That change makes some sense to me,
 and better reflects what's happening.
-I can make the font size larger or smaller
-than their default value
-across the web (at least where sites respect my setting) --
+I can make font sizes
+generally larger or smaller across the web
+(at least where sites use relative sizing) --
 but I can't actually establish
-a single preferred font size.
+a single font size
+that sites will directly respect.
 
-But that's not actually what I _want_
-from a default font-size.
+The problem is
+that's not actually what I _want_
+from setting a font-size preference.
 My goal here
 is not to make the text on every website
 larger than it was before --
@@ -238,6 +280,8 @@ resizing windows up and down for fun,
 like we do,
 but they absolutely adjust the window size
 to fit different tasks.
+I set up a poll to see
+[how people on Mastodon manage browser windows](https://front-end.social/@mia/113992409837989769).
 
 As a web surfer,
 I would like my default font size
@@ -351,6 +395,10 @@ but I'm curious what you think.
 It may not be the _Ideal Bestest_ (TM) base font size,
 but we haven't strayed far --
 and we've avoided magic numbers
-from calculation witchcraft.
+or calculation witchcraft.
 Maybe the slight deviation is warranted
 for a more responsive and user-adaptive site?
+
+What do you think?
+Let us know on [Mastodon](https://front-end.social/@oddbird)
+or [Bluesky](https://bsky.app/profile/oddbird.dev/)!
