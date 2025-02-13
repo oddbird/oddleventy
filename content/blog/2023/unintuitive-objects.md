@@ -90,8 +90,8 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 
 {% callout 'note', false %}
-Check out our [Winging It](/wingingit/) channel for a conversation between
-designers and developers on intuitive web design.
+Check out our [Winging It](/wingingit/) conversations about design, frontend,
+and backend development.
 
 **Winging It** episode 3: [Intuitive Web Design with OOUX](/2023/10/24/winging-it-03/)
 {% endcallout %}
