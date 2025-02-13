@@ -31,7 +31,8 @@ summary: |
 {% endcallout %}
 
 {% callout 'note', false %}
-Check out our [Winging It](/wingingit/) channel for a conversation on FastAPI.
+Check out our [Winging It](/wingingit/) conversations about design, frontend,
+and backend development.
 
 **Winging It** episode 5: [Streamline Your API Development with FastAPI](/2024/03/21/winging-it-05/)
 {% endcallout %}
