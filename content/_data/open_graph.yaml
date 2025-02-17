@@ -1,5 +1,7 @@
 locale: en_US
 type: website
 img: blog/oddsite.jpg
-twitter: '@oddbird'
-fedi: '@oddbird@front-end.social'
+fedi:
+  mastodon:
+    user: oddbird
+    server: front-end.social
