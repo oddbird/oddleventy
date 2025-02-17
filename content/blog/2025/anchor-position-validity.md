@@ -19,6 +19,7 @@ summary: |
   If that doesn't work, step through the checklist,
   and then dive in to get a better understanding
   of how Anchor Positioning works.
+hire_cta: true
 ---
 
 {% import 'embed.macros.njk' as embed %}

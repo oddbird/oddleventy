@@ -1,3 +1,5 @@
+@use '../config';
+
 [data-layout='cta'] {
   --media-min: 6em;
   --media-size: calc(4em + 5vw);
@@ -7,4 +9,32 @@
   grid-area: var(--cta-grid-area, cta);
   grid-template-columns: minmax(min-content, var(--page));
   justify-content: center;
+}
+
+.hire-us-cta {
+  --section-link-justify: start;
+  --list-padding: var(--gutter-plus);
+  --marker-color: var(--text);
+
+  background-image: url('/assets/media/transition-bg.png');
+  background-repeat: round;
+  color: var(--text);
+  font-size: revert;
+  padding: var(--double-gutter) var(--page-margin) var(--double-gutter);
+}
+
+.hire-us-cta #cta-title {
+  background: revert;
+  color: var(--text);
+
+  span {
+    display: block;
+    font-weight: normal;
+  }
+
+  & :last-child {
+    @include config.font-family('body');
+
+    font-style: italic;
+  }
 }

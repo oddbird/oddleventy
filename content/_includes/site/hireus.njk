@@ -1,0 +1,17 @@
+{% import 'embed.macros.njk' as embed %}
+{% import 'layout.macros.njk' as layout %}
+
+{%- set title = '<span>Hire Us to Build</span> Custom Web Apps <span>That Stand the Test of Time</span>' -%}
+{%- set contents -%}
+  - **Well-tested code** = lower maintenance costs
+  - **WCAG accessibility** = more diverse visitors
+  - **Resilient design systems** = better team workflow
+  - **Enhanced performance** = happier customers
+{%- endset -%}
+
+<aside data-layout="cta" aria-labelledby="cta-title" class="hire-us-cta">
+    <h2 id="cta-title">{{ title | mdInline | safe }}</h2>
+    {{ contents | md | safe }}
+
+  {{ layout.section_link("Let's chat", '/contact/') }}
+</aside>

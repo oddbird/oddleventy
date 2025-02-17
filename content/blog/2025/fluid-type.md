@@ -22,6 +22,7 @@ summary: |
   That's great!
   But after playing around with my user preferences,
   I think we can improve on the common approaches.
+hire_cta: true
 ---
 
 {% import "quotes.macros.njk" as quotes %}
