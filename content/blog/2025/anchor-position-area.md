@@ -1,7 +1,7 @@
 ---
 title: Better Anchor Positioning with position-area
 sub: It's not just a shorthand for anchor()
-date: 2025-02-12
+date: 2025-02-18
 image:
   src: blog/2025/anchor-grid.jpg
   alt: >
