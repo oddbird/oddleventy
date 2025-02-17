@@ -1,17 +1,29 @@
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
 
-{%- set title = '<span>Hire Us to Build</span> Custom Web Apps <span>That Stand the Test of Time</span>' -%}
-{%- set contents -%}
-  - **Well-tested code** = lower maintenance costs
-  - **WCAG accessibility** = more diverse visitors
-  - **Resilient design systems** = better team workflow
-  - **Enhanced performance** = happier customers
-{%- endset -%}
+{%- set title = '<span class="title-action">Hire Us to Build</span> Custom Web Apps <span class="title-description">That stand the test of time</span>' -%}
 
 <aside data-layout="cta" aria-labelledby="cta-title" class="hire-us-cta" data-ccs-colors="dark">
-    <h2 id="cta-title">{{ title | mdInline | safe }}</h2>
-    {{ contents | md | safe }}
+  {% set cta_content %}
+    <h2 id="cta-title" class="hire-cta-title">{{ title | mdInline | safe }}</h2>
 
-  {{ layout.section_link("Let's chat", '/contact/') }}
+    {{ layout.section_link("Let's chat", '/contact/') }}
+    {{ contents | md | safe }}
+   {% endset %}
+
+     {{ embed.media_block(
+      name='hire-cta',
+      media=embed.screen(
+      fill='#650c00',
+      content=embed.img(
+        src='work/adobe/vintage-mobile.jpg',
+        alt='game play example showing vintage TVs
+          with the words Play Me in different font styles',
+        sizes='media'
+      )
+    ),
+    content=cta_content
+  ) }}
+
+
 </aside>

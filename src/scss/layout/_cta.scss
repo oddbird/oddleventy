@@ -12,29 +12,44 @@
 }
 
 .hire-us-cta {
-  --section-link-justify: start;
-  --list-padding: var(--gutter-plus);
-  --marker-color: var(--text);
-
   background-image: url('/assets/media/transition-bg.png');
-  background-repeat: round;
+  background-position: center;
+  background-size: cover;
   color: var(--text);
   font-size: revert;
   padding: var(--double-gutter) var(--page-margin) var(--double-gutter);
-}
+  margin-block: var(--spacer);
 
-.hire-us-cta #cta-title {
-  background: revert;
-  color: var(--text);
+  @include config.above('wide-page') {
+    --media-size: revert;
+    --align: center;
+  }
 
-  span {
+  .title-action,
+  .title-description {
     display: block;
+    font-size: var(--medium);
     font-weight: normal;
   }
 
-  & :last-child {
+  .title-description {
     @include config.font-family('body');
 
     font-style: italic;
   }
+}
+
+[data-media~='hire-cta'] {
+  @include config.above('wide-page') {
+    margin-block: calc(var(--spacer) * -1);
+  }
+
+  .media-image {
+    @include config.z-index('bump');
+  }
+}
+
+.hire-cta-title {
+  background: revert;
+  color: var(--text);
 }

@@ -73,7 +73,7 @@
 .section-link {
   --column: content;
 
-  justify-self: var(--section-link-justify, end);
+  justify-self: end;
   margin-block: var(--gutter) var(--double-gutter);
 }
 
