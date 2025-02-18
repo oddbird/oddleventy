@@ -13,12 +13,6 @@
 
 .hire-us-cta {
   --reverse-y: 'content' 'image';
-  --link: var(--bg);
-  --underline-thickness: 0px;
-  --underline-thickness--default: 0px;
-  --underline-color--default: transparent;
-  --underline-color: transparent;
-  --link-focus: var(--bg);
 
   background-image: url('/assets/media/transition-bg.png');
   background-position: center;
@@ -33,14 +27,6 @@
     --cta-padding-block-end: var(--double-gutter);
     --media-size: revert;
     --align: center;
-  }
-
-  .section-link {
-    &:hover,
-    &:focus {
-      --underline-thickness: 0px;
-      --underline-color: transparent;
-    }
   }
 }
 

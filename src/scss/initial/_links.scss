@@ -68,3 +68,21 @@ a {
     text-decoration: none;
   }
 }
+
+// For links styled as buttons, underlines
+// are removed and colors match styles applied
+// buttons
+[data-btn~='link-button'] {
+  --link: var(--bg);
+  --underline-thickness: 0px;
+  --underline-thickness--default: 0px;
+  --underline-color--default: transparent;
+  --underline-color: transparent;
+  --link-focus: var(--bg);
+
+  &:hover,
+  &:focus {
+    --underline-thickness: 0px;
+    --underline-color: transparent;
+  }
+}
