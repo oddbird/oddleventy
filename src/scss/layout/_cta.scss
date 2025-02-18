@@ -12,36 +12,29 @@
 }
 
 .hire-us-cta {
+  --reverse-y: 'content' 'image';
+
   background-image: url('/assets/media/transition-bg.png');
   background-position: center;
   background-size: cover;
   color: var(--text);
   font-size: revert;
-  padding: var(--double-gutter) var(--page-margin) var(--double-gutter);
+  padding: var(--double-gutter) var(--page-margin)
+    var(--cta-padding-block-end, 0);
   margin-block: var(--spacer);
 
   @include config.above('wide-page') {
+    --cta-padding-block-end: var(--double-gutter);
     --media-size: revert;
     --align: center;
-  }
-
-  .title-action,
-  .title-description {
-    display: block;
-    font-size: var(--medium);
-    font-weight: normal;
-  }
-
-  .title-description {
-    @include config.font-family('body');
-
-    font-style: italic;
   }
 }
 
 [data-media~='hire-cta'] {
+  --media-margin: var(--newline) 0 calc(var(--spacer) * -1);
+
   @include config.above('wide-page') {
-    margin-block: calc(var(--spacer) * -1);
+    --media-margin: calc(var(--spacer) * -1) 0;
   }
 
   .media-image {
@@ -49,7 +42,7 @@
   }
 }
 
-.hire-cta-title {
+[data-header~='hire-cta'] {
   background: revert;
   color: var(--text);
 }

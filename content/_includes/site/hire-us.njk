@@ -3,9 +3,9 @@
 
 {%- set title = '<span class="title-action">Hire Us to Build</span> Custom Web Apps <span class="title-description">That stand the test of time</span>' -%}
 
-<aside data-layout="cta" aria-labelledby="cta-title" class="hire-us-cta" data-ccs-colors="dark">
+<aside data-layout="cta" aria-labelledby="hire-cta-title" class="hire-us-cta" data-ccs-colors="dark">
   {% set cta_content %}
-    <h2 id="cta-title" class="hire-cta-title">{{ title | mdInline | safe }}</h2>
+    <h2 id="hire-cta-title" data-header='stacked hire-cta'>{{ title | mdInline | safe }}</h2>
 
     {{ layout.section_link("Let's chat", '/contact/') }}
     {{ contents | md | safe }}
