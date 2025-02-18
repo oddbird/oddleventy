@@ -74,11 +74,9 @@ a {
 // buttons
 [data-btn~='link-button'] {
   --link: var(--bg);
-  --underline-thickness: 0px;
-  --underline-thickness--default: 0px;
-  --underline-color--default: transparent;
-  --underline-color: transparent;
   --link-focus: var(--bg);
+  --underline-color: transparent;
+  --underline-thickness: 0;
 
   &:hover,
   &:focus {

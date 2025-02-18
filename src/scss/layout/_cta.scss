@@ -12,30 +12,31 @@
 }
 
 .hire-us-cta {
-  --reverse-y: 'content' 'image';
-  --media-gap: var(--double-gutter);
+  --media-gap: var(--gutter);
+  --media-justify: start;
+  --media-size: calc(7em + 5vw);
+  --stacked-margin-block: var(--shim);
+  --title-action-margin-block-end: var(--quarter-shim);
 
   background-image: url('/assets/media/transition-bg.png');
   background-position: center;
   background-size: cover;
   color: var(--text);
   font-size: revert;
-  padding: var(--double-gutter) var(--page-margin)
-    var(--cta-padding-block-end, 0);
   margin-block: var(--spacer);
+  padding: var(--quarter-shim) var(--double-gutter)
+    var(--cta-padding-block-end, var(--shim-plus));
 
   @include config.above('wide-page') {
-    --cta-padding-block-end: var(--double-gutter);
-    --media-size: revert;
     --align: center;
+    --cta-padding-block-end: var(--quarter-shim);
   }
 }
 
 [data-media~='hire-cta'] {
-  --media-margin: var(--newline) 0 calc(var(--spacer) * -1);
-
   @include config.above('wide-page') {
-    --media-margin: calc(var(--spacer) * -1) 0;
+    --media-gap: var(--double-gutter);
+    --media-margin: calc(var(--gutter) * -1) 0;
   }
 
   .media-image {
@@ -46,4 +47,5 @@
 [data-header~='hire-cta'] {
   background: revert;
   color: var(--text);
+  font-size: var(--h1);
 }
