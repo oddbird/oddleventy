@@ -23,6 +23,10 @@
     var(--cta-padding-block-end, 0);
   margin-block: var(--spacer);
 
+  @include config.below('wide-page') {
+    --media-gap: var(--double-gutter);
+  }
+
   @include config.above('wide-page') {
     --cta-padding-block-end: var(--double-gutter);
     --media-size: revert;
