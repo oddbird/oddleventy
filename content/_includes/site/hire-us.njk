@@ -8,20 +8,18 @@
 
     <a href='/contact/' data-btn="link-button" role="button" class="section-link" draggable="false"> Let's chat </a>
     {{ contents | md | safe }}
-   {% endset %}
+  {% endset %}
 
-     {{ embed.media_block(
+  {{ embed.media_block(
       name='hire-cta',
       media=embed.screen(
-      fill='#78080A',
-      content=embed.img(
-        src='work/adobe/vintage-mobile.jpg',
-        alt='Mobile view of the vintage font tag question',
-        sizes='media'
-      )
-    ),
-    content=cta_content
+        fill='#78080A',
+        content=embed.img(
+          src='work/adobe/vintage-mobile.jpg',
+          alt='Mobile view of the vintage font tag question',
+          sizes='media'
+        )
+      ),
+      content=cta_content
   ) }}
-
-
 </aside>
