@@ -1,27 +1,24 @@
 {% import 'embed.macros.njk' as embed %}
 
-{%- set title = '<span class="title-action">Hire Us to Build</span> Custom Web Apps <span class="title-description">That stand the test of time</span>' -%}
-
 <aside data-layout="cta" aria-labelledby="hire-cta-title" class="hire-us-cta" data-ccs-colors="dark">
-  {% set cta_content %}
-    <h2 id="hire-cta-title" data-header='stacked hire-cta'>{{ title | mdInline | safe }}</h2>
+    {% call embed.media_block(
+        name='hire-cta',
+        media=embed.screen(
+        fill='#78080A',
+        content=embed.img(
+          src='work/adobe/vintage-mobile.jpg',
+          alt='Mobile view of the vintage font tag question',
+          sizes='media'
+        )
+      )
+  ) %}
+
+    <h2 id="hire-cta-title" data-header='stacked hire-cta'>
+      <span class="title-action">Hire Us to Build</span>
+      Custom Web Apps
+      <span class="title-description">That stand the test of time</span>
+    </h2>
 
     <a href='/contact/' data-btn="link-button" role="button" class="section-link" draggable="false"> Let's chat </a>
-    {{ contents | md | safe }}
-   {% endset %}
-
-     {{ embed.media_block(
-      name='hire-cta',
-      media=embed.screen(
-      fill='#78080A',
-      content=embed.img(
-        src='work/adobe/vintage-mobile.jpg',
-        alt='Mobile view of the vintage font tag question',
-        sizes='media'
-      )
-    ),
-    content=cta_content
-  ) }}
-
-
+  {% endcall %}
 </aside>
