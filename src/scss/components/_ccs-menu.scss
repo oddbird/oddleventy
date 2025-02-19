@@ -32,7 +32,8 @@ $rainbow: ();
 }
 
 [data-ccs-input='contrast'] {
-  background-image: linear-gradient(to right, gray, white),
+  background-image:
+    linear-gradient(to right, gray, white),
     linear-gradient(to right, gray, black);
   background-size:
     100% 50%,

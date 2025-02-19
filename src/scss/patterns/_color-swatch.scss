@@ -1,8 +1,6 @@
 code[style*='--swatch']::before {
-  background: linear-gradient(
-      var(--swatch, transparent),
-      var(--swatch, transparent)
-    ),
+  background:
+    linear-gradient(var(--swatch, transparent), var(--swatch, transparent)),
     linear-gradient(45deg, black 50%, white 50%);
   border: thin solid var(--border, currentColor);
   content: '';
