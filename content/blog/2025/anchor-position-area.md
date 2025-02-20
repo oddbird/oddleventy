@@ -55,7 +55,7 @@ the different values for positioning an element within that grid.
   src='blog/2025/anchor-tool-com.jpg',
   alt='A screenshot of anchor-tool.com, demonstrating an element positioned with position-area: top span-left.',
   attrs={
-    'class': 'align-center'
+    'class': 'align-center img-shadow'
   }
 ) }}](https://anchor-tool.com/)
 
@@ -106,7 +106,7 @@ set on the positioned element resolve to `0`. This makes the containing block
 fill the entirety of its grid area.
 
 Then, `align-self` and `justify-self` are used to position the element close to
-the anchor, by specifying the alignment away from the specified grid area and
+the anchor, by setting the alignment away from the specified grid area and
 towards the non-specified grid area. If the grid area is `center` or `span-all`,
 then the value is `anchor-center`.
 
