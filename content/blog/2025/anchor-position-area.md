@@ -1,7 +1,7 @@
 ---
 title: Better Anchor Positioning with position-area
 sub: It's not just a shorthand for anchor()
-date: 2025-02-18
+date: 2025-02-20
 image:
   src: blog/2025/anchor-grid.jpg
   alt: >
@@ -29,7 +29,7 @@ or later.
 
 {% endcallout %}
 
-On the surface, `position-area` seems like just a shorthand.
+Initially, `position-area` seems like nothing more than a shorthand.
 Just replace `top: anchor(bottom); left: anchor(right)`
 with `position-area: bottom right` and it works.
 
