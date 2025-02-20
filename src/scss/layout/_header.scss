@@ -62,3 +62,25 @@
     grid-area: 1 / 1 / span 1 / -1;
   }
 }
+
+[data-header~='stacked'] {
+  line-height: 1;
+  margin-block: var(--stacked-margin-block, var(--newline));
+
+  .title-action,
+  .title-description {
+    display: block;
+    font-size: var(--h3);
+    font-weight: normal;
+  }
+
+  .title-action {
+    margin-block-end: var(--title-action-margin-block-end, 0);
+  }
+
+  .title-description {
+    @include config.font-family('body');
+
+    font-style: italic;
+  }
+}

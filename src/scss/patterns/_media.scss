@@ -17,7 +17,7 @@
   display: grid;
   grid-gap: var(--media-gap, var(--gutter));
   grid-template-areas: var(--reverse-y, 'image' 'content');
-  margin: var(--newline) 0;
+  margin: var(--media-margin, var(--newline) 0);
 
   &[data-reverse~='vertical'] {
     --reverse-y: 'content' 'image';

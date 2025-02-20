@@ -57,8 +57,8 @@
 }
 
 [data-ccs-show~='fade'] {
-  background-image: linear-gradient(to left, var(--show), var(--show)),
-    var(--neutral-gradient);
+  background-image:
+    linear-gradient(to left, var(--show), var(--show)), var(--neutral-gradient);
   background-size: 100% 50%;
   background-position: bottom;
 }

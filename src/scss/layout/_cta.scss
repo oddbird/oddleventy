@@ -1,3 +1,5 @@
+@use '../config';
+
 [data-layout='cta'] {
   --media-min: 6em;
   --media-size: calc(4em + 5vw);
@@ -7,4 +9,43 @@
   grid-area: var(--cta-grid-area, cta);
   grid-template-columns: minmax(min-content, var(--page));
   justify-content: center;
+}
+
+.hire-us-cta {
+  --media-gap: var(--gutter);
+  --media-justify: start;
+  --media-size: calc(7em + 5vw);
+  --stacked-margin-block: var(--shim);
+  --title-action-margin-block-end: var(--quarter-shim);
+
+  background-image: url('/assets/media/callout-bg-1.webp');
+  background-position: center;
+  background-size: cover;
+  color: var(--text);
+  font-size: revert;
+  margin-block: var(--spacer);
+  padding: var(--quarter-shim) var(--double-gutter)
+    var(--cta-padding-block-end, var(--shim-plus));
+
+  @include config.above('wide-page') {
+    --align: center;
+    --cta-padding-block-end: var(--quarter-shim);
+  }
+}
+
+[data-media~='hire-cta'] {
+  @include config.above('wide-page') {
+    --media-gap: var(--double-gutter);
+    --media-margin: calc(var(--gutter) * -1) 0;
+  }
+
+  .media-image {
+    @include config.z-index('bump');
+  }
+}
+
+[data-header~='hire-cta'] {
+  background: revert;
+  color: var(--text);
+  font-size: var(--h1);
 }
