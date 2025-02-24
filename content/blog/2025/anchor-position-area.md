@@ -1,7 +1,7 @@
 ---
 title: Better Anchor Positioning with position-area
 sub: It's not just a shorthand for anchor()
-date: 2025-02-20
+date: 2025-02-25
 image:
   src: blog/2025/anchor-grid.jpg
   alt: >
@@ -10,6 +10,7 @@ image:
     into a 9 by 9 grid.
 author: james
 sponsors: true
+hire_us: true
 tags:
   - Article
   - Anchor Positioning
