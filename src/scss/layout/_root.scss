@@ -5,7 +5,8 @@
   // and should be adjusted/tested as a group by hand
   @supports (background-blend-mode: multiply) {
     background-blend-mode: var(--bg-blend, multiply);
-    background-image: url('/assets/media/header-wash.webp'),
+    background-image:
+      url('/assets/media/header-wash.webp'),
       url('/assets/media/footer-wash.webp');
     background-position:
       var(--header-pos, left -8em) top 0,
