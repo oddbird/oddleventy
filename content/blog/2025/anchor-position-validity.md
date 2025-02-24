@@ -89,9 +89,10 @@ positioned incorrectly. 🤷🏼‍♂️
 While a positioned element can be a child of the anchor, this is the primary
 place where I've seen anchor positioning fail.
 
-{% callout 'note', false %} This may be changing- in our Winging It episode with
+{% callout 'note', false %} This may be changing -- in our Winging It episode with
 Tab Atkins-Bittner, Tab identified that this restriction may not be necessary.
-[This issue](https://github.com/w3c/csswg-drafts/issues/11769) proposes a change
+[I opened a CSS Working Group issue](https://github.com/w3c/csswg-drafts/issues/11769)
+proposing a change
 to the spec to allow this. {% endcallout %}
 
 The [spec](https://drafts.csswg.org/css-anchor-position/) has specific
