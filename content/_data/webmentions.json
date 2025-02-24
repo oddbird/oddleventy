@@ -5,29 +5,6 @@
       "type": "entry",
       "author": {
         "type": "card",
-        "name": "Elly Loel",
-        "photo": "https://webmention.io/avatar/shiitake.us-east.host.bsky.network/436cda731a0e7ac67d8bf5888f6c07ebecbb69ebd764b0f530c42cbd0a672cef.jpg",
-        "url": "https://bsky.app/profile/elly.lol"
-      },
-      "url": "https://bsky.app/profile/did:plc:vdylmzqphovh7hrt4a5ifiig/post/3liuoi6sefu2x",
-      "published": "2025-02-23T20:31:36+00:00",
-      "wm-received": "2025-02-23T20:36:54Z",
-      "wm-id": 1886871,
-      "wm-source": "https://bsky.brid.gy/convert/web/at://did:plc:vdylmzqphovh7hrt4a5ifiig/app.bsky.feed.post/3liuoi6sefu2x%23bridgy-fed-create",
-      "wm-target": "https://www.oddbird.net/2025/02/12/fluid-type/",
-      "wm-protocol": "webmention",
-      "content": {
-        "html": "Reimagining Fluid Typography\n\n???? <a href=\"https://www.oddbird.net/2025/02/12/fluid-type/\">https://www.oddbird.net/2025/02/12/fluid-type/</a>\n???? <a href=\"https://ellyloel.com/bookmarks/reimagining-fluid-typography/\">https://ellyloel.com/bookmarks/reimagining-fluid-typography/</a>\n\n<a href=\"https://bsky.app/search?q=%23Typography\">#Typography</a> <a href=\"https://bsky.app/search?q=%23CSS\">#CSS</a> <a href=\"https://bsky.app/search?q=%23Accessibility\">#Accessibility</a> <a href=\"https://bsky.app/search?q=%23Browsers\">#Browsers</a>",
-        "text": "Reimagining Fluid Typography\n\n???? https://www.oddbird.net/2025/02/12/fluid-type/\n???? https://ellyloel.com/bookmarks/reimagining-fluid-typography/\n\n#Typography #CSS #Accessibility #Browsers"
-      },
-      "mention-of": "https://www.oddbird.net/2025/02/12/fluid-type/",
-      "wm-property": "mention-of",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
         "name": "Nick Simson",
         "photo": "https://webmention.io/avatar/secure.gravatar.com/d19067467117b138356cdaafdd7b43c73e9dabca1f885cba530560869847c2aa.png",
         "url": "https://nicksimson.com"
