@@ -34,6 +34,10 @@
 
   {% include 'page/mentions.njk' %}
 
+  {% if hire_cta %}
+    {% include 'site/hire-us.njk' %}
+  {% endif %}
+
   {% if oss or sponsors %}
     <section data-list="sponsors" data-typeset>
       {{ sponsor.block(sponsorData.tiers) }}
