@@ -10,7 +10,6 @@ image:
     into a 9 by 9 grid.
 author: james
 sponsors: true
-hire_us: true
 tags:
   - Article
   - Anchor Positioning
