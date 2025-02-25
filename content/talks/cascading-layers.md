@@ -15,6 +15,11 @@ tags:
   - CSSWG
 slides: https://slides.oddbird.net/layers/
 events:
+  - venue: JS Heroes
+    adr: Cluj, Romania
+    url: https://jsheroes.io/
+    date: 2025-05-29
+    end: 2025-05-30
   - venue: An Event Apart
     adr: San Francisco, CA
     date: 2022-12-12
