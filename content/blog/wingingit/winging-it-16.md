@@ -43,7 +43,7 @@ summary: |
 - Intro to Anchor Positioning demo
 - Containing blocks
 - Element or valid pseudo element
-- Absolute positioned anchor - dom order matters
+- Absolute positioned anchor -- DOM order matters
 - Dialogs and popovers
 - Styles in the same tree
 - Styles actually present
