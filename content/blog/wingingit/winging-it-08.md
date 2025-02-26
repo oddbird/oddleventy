@@ -25,6 +25,14 @@ summary: |
   and answer yours in our monthly live stream.
 ---
 
+{% callout 'note', false %}
+Check out our [Winging It](/wingingit/)
+conversations about design, frontend,
+and backend development.
+
+**Winging It** episode 16: [Debugging CSS Anchor Positioning](/2025/02/20/winging-it-16/)
+{% endcallout %}
+
 {% import "embed.macros.njk" as embed %}
 {% import "utility.macros.njk" as utility %}
 
