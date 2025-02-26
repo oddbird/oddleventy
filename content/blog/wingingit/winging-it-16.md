@@ -26,6 +26,14 @@ summary: |
   of how Anchor Positioning works.
 ---
 
+{% callout 'note', false %}
+Check out our [Winging It](/wingingit/)
+conversations about design, frontend,
+and backend development.
+
+**Winging It** episode 8: [CSS Anchor Positioning in Practice](/2024/05/30/winging-it-08/)
+{% endcallout %}
+
 {% import "embed.macros.njk" as embed %}
 {% import "utility.macros.njk" as utility %}
 
