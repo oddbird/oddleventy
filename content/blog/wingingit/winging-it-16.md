@@ -40,14 +40,14 @@ summary: |
 
  ## What we cover:
 
-- Intro to Anchor Positioning demo
-- Containing blocks
-- Element or valid pseudo element
-- Absolute positioned anchor -- DOM order matters
-- Dialogs and popovers
-- Styles in the same tree
-- Styles actually present
-- Anchor Scope tree
+- What is Anchor Positioning?
+- What are containing blocks?
+- Pseudo elements that can be anchors
+- DOM order matters for absolute positioned anchors
+- Anchoring dialogs and popovers
+- Anchors in the Shadow DOM
+- Inline styles in browsers that don't support a declaration
+- `anchor-scope`
 - Recommendation for success
 - Ways to improve users' understanding of containing blocks rules
 - Coming soon for Anchor Positioning
@@ -55,7 +55,7 @@ summary: |
 ## Links:
 
 - [Here’s Why Your Anchor Positioning Isn’t Working](/2025/01/29/anchor-position-validity/)
-- [Xanthir.com](https://xanthir.com/talks/2024-06-07/)
+- [Anchor Positioning presentation - Tab Atkins-Bittner](https://xanthir.com/talks/2024-06-07/)
 
 ## Demos:
 
