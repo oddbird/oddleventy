@@ -40,7 +40,7 @@ summary: |
 
  ## What we cover:
 
-- Intro to Anchor positioning demo
+- Intro to Anchor Positioning demo
 - Containing blocks
 - Element or valid pseudo element
 - Absolute positioned anchor - dom order matters
