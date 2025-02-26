@@ -54,7 +54,7 @@ summary: |
 
 ## Links:
 
-- [Here’s Why Your Anchor Positioning Isn’t Working](https://www.oddbird.net/2025/01/29/anchor-position-validity/)
+- [Here’s Why Your Anchor Positioning Isn’t Working](/2025/01/29/anchor-position-validity/)
 - [Xanthir.com](https://xanthir.com/talks/2024-06-07/)
 
 ## Demos:
