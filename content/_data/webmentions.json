@@ -105,29 +105,6 @@
       "type": "entry",
       "author": {
         "type": "card",
-        "name": "nicod_",
-        "photo": "https://webmention.io/avatar/static.mamot.fr/447afb8c67fc2a1cbe9e628a0a16d93077275e5359d029e9bf47bcb1a0f9baae.png",
-        "url": "https://diaspodon.fr/@nicod"
-      },
-      "url": "https://diaspodon.fr/@nicod/112989863790991236",
-      "published": "2024-08-19T17:28:17+00:00",
-      "wm-received": "2024-08-19T17:54:50Z",
-      "wm-id": 1843794,
-      "wm-source": "https://brid.gy/comment/mastodon/@nhoizey@mamot.fr/112989683214340103/112989863819540022",
-      "wm-target": "https://www.oddbird.net/2024/06/13/css-layout/",
-      "wm-protocol": "webmention",
-      "content": {
-        "html": "<p><span class=\"h-card\"><a href=\"https://mamot.fr/@nhoizey\" class=\"u-url\">@<span>nhoizey</span></a></span> Over the last few days, I've been learning new tricks with the grid that have opened up new ways for me.<br />I'm amazed at what you can do with it...</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2024/06/13/css-layout/\"></a>",
-        "text": "@nhoizey Over the last few days, I've been learning new tricks with the grid that have opened up new ways for me.\nI'm amazed at what you can do with it..."
-      },
-      "in-reply-to": "https://www.oddbird.net/2024/06/13/css-layout/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
         "name": "Nelson Chu Pavlosky",
         "photo": "https://webmention.io/avatar/cdn.masto.host/45776646d2a1df9c46739119072eb536e85dbc314de7a2e940f5a7af584e035b.jpg",
         "url": "https://jawns.club/@skyfaller"
