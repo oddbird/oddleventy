@@ -3,8 +3,8 @@ title: Office Hours Coaching
 sub: Coaching designers and developers in web best practices
 index: Office Hours Coaching
 image:
-  src: pages/design-sketch.jpg
-  alt: Sketched design concept
+  src: pages/open-sign.jpg
+  alt: door with an open sign
   position: 20% 40%
 action:
   text: Request office hours coaching »
