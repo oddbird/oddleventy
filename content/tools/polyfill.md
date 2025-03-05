@@ -6,7 +6,7 @@ date: 2022-02-11
 image:
   position: center
   src: projects/polyfill.jpg
-oss: owner
+oss: creator
 author: oddbird
 action:
   text: Explore Polyfills »

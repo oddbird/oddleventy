@@ -9,7 +9,7 @@ author:
   - miriam
   - jonny
   - erica
-oss: owner
+oss: creator
 date: 2019-09-07
 index: Cascading Colors
 links:

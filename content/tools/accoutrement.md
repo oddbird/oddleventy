@@ -9,7 +9,7 @@ image:
 links:
   source: https://github.com/oddbird/accoutrement
   docs: /accoutrement/docs/
-oss: owner
+oss: creator
 index: Accoutrement
 author: oddbird
 accoutrement_modules:

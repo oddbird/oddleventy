@@ -2,17 +2,35 @@
 title: Tools
 banner: Open Source Tools
 sub: We build tools that millions of developers rely on
+list_tag: OddTools
+image:
+  position: top
+  src: projects/contrast-hero.jpg
+  alt: >
+    Our OddContrast tool showing
+    a foreground and background color picker
+    with display-p3 inputs,
+    and the resulting contrast ratio
+    passing various WCAG criteria.
 action:
-  text: Related posts »
-  url: /tags/oddtools/
+  text: Sponsor our open web contributions »
+  url: https://opencollective.com/oddbird-open-source
 summary: |
-  **We use open source software regularly**,
-  and try to contribute back to the projects we use.
-  We also develop a number of our own tools,
-  that might be useful to others.
+  We believe in an open web,
+  contributing to open tools & standards whenever we can.
+  Lately we've had a particular focus on CSS and related platform features
+  with Miriam joining the W3C as an Invited Expert.
 ---
 
 {% import 'oss.macros.njk' as oss %}
+
+{% md %}
+Here are some of the tools we've created and contributed to.
+If you appreciate what we're doing,
+you (or your company) can sponsor our work directly
+through [our Open Collective](https://opencollective.com/oddbird-open-source).
+Let's keep building an open web for everyone.
+{% endmd %}
 
 {{ oss.by_type(
   collections.oss | withActiveAuthor(collections.all),

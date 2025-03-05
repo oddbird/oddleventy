@@ -23,18 +23,19 @@ post:
     plural: Episodes
 
 oss:
-  - title: OddTools
-    all:
-      - owner
-  - title: Core Team
+  - title: Open Web
     current:
       - core team
       - maintainer
       - invited expert
+  - title: OddTools
+    current:
+      - creator
   - title: Other Contributions
     all:
       - contributor
     past:
+      - creator
       - core team
       - maintainer
       - invited expert

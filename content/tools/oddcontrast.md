@@ -9,7 +9,7 @@ image:
   src: projects/contrast-hero.jpg
 media:
   - youtube: Lq4saw4Rqe0
-oss: owner
+oss: creator
 author: oddbird
 action:
   text: Try OddContrast »

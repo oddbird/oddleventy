@@ -6,7 +6,7 @@ date: 2013-06-06
 logo: 'true'
 image:
   src: projects/true.jpg
-oss: owner
+oss: creator
 index: 'True'
 author:
   - miriam
