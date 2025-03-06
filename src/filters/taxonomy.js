@@ -73,6 +73,7 @@ export const ossGroups = (collection, only) => {
 
       return all.includes(oss) || current.includes(oss);
     });
+
     if (pages.length) {
       grouped[type.title] = pages;
     }

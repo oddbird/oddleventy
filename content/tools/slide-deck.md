@@ -1,11 +1,11 @@
 ---
 title: Slide-Deck
 sub: Customizable web presentations
-feature: true
 author: oddbird
 oss: creator
 date: 2023-12-22
 index: Slide-Deck
+logo: slide-deck
 image:
   src: talks/mia-smashing19-rad.jpg
   alt: >

@@ -1,7 +1,6 @@
 ---
 title: Cascading Colors
 sub: Dynamic & interactive color palettes using CSS
-feature: true
 logo: cascading-colors
 image:
   src: projects/cascading-colors.jpg
