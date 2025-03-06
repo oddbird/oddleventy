@@ -16,7 +16,7 @@ links:
 summary: |
   **Sass is the most mature, stable, and powerful
   professional grade CSS extension language in the world**.
-  After creating several of the most popular sass plugins,
+  After creating several of the most popular Sass plugins,
   Miriam became a core contributor to the language.
 ---
 
