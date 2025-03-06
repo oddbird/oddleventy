@@ -13,7 +13,7 @@ summary: |
     We love helping people solve
     complex technology and design problems!
     Schedule a chat
-    with your favorite Bird
+    with your favorite OddBird
     for 1 hour or multiple sessions
     about anything related to
     brand or UX Design, CSS,
@@ -37,7 +37,7 @@ summary: |
 
 ### Expert Code Review
 
-Chat with top developers,
+Chat with top developers
 working at the cutting edge
 of front-end, design systems,
 and W3C standards.
@@ -97,7 +97,6 @@ for the people who visit.
 - WordPress
 - Figma
 
-
 {% endcall %}
 
 {% call layout.block('column') %}
@@ -126,7 +125,7 @@ for the people who visit.
   you'd like to talk about.
 - **Step 2** \
   We'll reply with our recommendation
-  for the Bird that can help out,
+  for the OddBird who can help out,
   as well as links to schedule and pay.
 - **Step 3** \
   Schedule a date/time
@@ -173,22 +172,23 @@ Schedule recurring sessions
 or use as needed.
 Buy in bulk for a discount.
 
-- 7 - 10 hours is $230/hour
-- 11 - 14 hours is $220/hour
-- 15+ hours is $210/hour
+- 7–10 hours at $230/hour
+- 11–14 hours at $220/hour
+- 15+ hours at $210/hour
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
 ### One-Time Session
+
 If you need a single session
 for a quick tip or question,
 we’re here for you.
 Schedule single hour-long sessions
 at times that work well for you.
 
-- individual 1 hour sessions are $250/hour
+- individual 1 hour sessions at $250/hour
 
 {% endcall %}
 
@@ -202,10 +202,11 @@ at times that work well for you.
 ) }}
 
 ## Request Office Hours Coaching
-To learn more
-about individual Birds'
-experience and expertise,
-visit our [About](/about) page.
+
+[Meet the Birds](/about/#meet-the-birds)
+to learn more
+about our individual
+experience and expertise.
 
 To schedule your first session,
 send us a message that includes
