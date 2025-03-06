@@ -158,7 +158,7 @@ You learn about anchor positioning, positioned element siblings, Shadow Dom, usi
 {% call birds.card(
   bird=bird,
   extended=extended
-)%}
+) %}
 
 {% endcall %}
 
