@@ -2,6 +2,7 @@
 title: Office Hours Coaching
 sub: Coaching designers and developers in web best practices
 index: Office Hours Coaching
+hire_cta: false
 image:
   src: pages/open-sign.jpg
   alt: door with an open sign
