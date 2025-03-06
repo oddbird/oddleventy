@@ -2,7 +2,6 @@
 title: Office Hours Coaching
 sub: Coaching designers and developers in web best practices
 index: Office Hours Coaching
-hire_cta: false
 image:
   src: pages/open-sign.jpg
   alt: door with an open sign
@@ -186,8 +185,8 @@ Buy in bulk for a discount.
 If you need a single session
 for a quick tip or question,
 we’re here for you.
-Schedule singles hour-long sessions
-at times that works well for you.
+Schedule single hour-long sessions
+at times that work well for you.
 
 - individual 1 hour sessions are $250/hour
 
