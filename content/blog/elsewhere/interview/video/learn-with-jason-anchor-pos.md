@@ -1,7 +1,7 @@
 ---
 title: How to Use CSS Anchor Positioning TODAY
 venue: Learn With Jason
-url: https://www.learnwithjason.dev/demystifying-css-container-queries
+url: https://codetv.dev/series/learn-with-jason/s8/how-to-use-css-anchor-positioning-today
 date: 2025-03-06
 author: james
 card: feature
