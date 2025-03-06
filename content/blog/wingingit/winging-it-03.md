@@ -45,7 +45,7 @@ summary: |
 ## Links:
 
 - [Denver Zoo](https://denverzoo.org/)
-- [OOUX Certification (affiliate link)](http://partners.ooux.com/348125/17189)
+- [OOUX Certification](https://www.ooux.com/masterclass-ooux-certification)
 - [Slides](https://xd.adobe.com/view/59a38984-ff8c-4ae6-b09f-2cbf31f235fc-0cf0/)
 - [OddBird on Mastodon](https://front-end.social/@OddBird)
 

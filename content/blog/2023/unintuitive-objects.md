@@ -101,7 +101,7 @@ and backend development.
 I've been noticing unintuitive objects
 and working to avoid them
 since I first took Sophia Prater's
-[Object-Oriented UX Course](http://partners.ooux.com/348125/17189) in 2020,
+Object-Oriented UX Course in 2020,
 becoming a [Certified OOUX Strategist](https://www.ooux.com/people/sondraeby).
 To understand unintuitive objects,
 let's first define

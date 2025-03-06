@@ -36,7 +36,7 @@ summary:
 I've been _intrigued_
 by web components
 for some time,
-[from a safe distance](https://mastodon.social/@davatron5000/111389814542279855).
+from a safe distance.
 I like things that are part of the web platform,
 but mostly when that means
 _I don't have to write much JavaScript_.
