@@ -7,7 +7,8 @@
 {% if index %}
   {% set list = collections[index] | removePage(page.url) if collections[index] else [] %}
   {% if list | length %}
-    {%- set label = index | pageType('plural') or 'Posts' -%}
+    {%- set list_type = (index or list_tag) | pageType('plural') or 'Posts' -%}
+    {%- set label = [index or list_tag, list_type] | join(' ')  -%}
     <section data-list="tag" data-typeset>
       {{ post.by_year(
         list,
