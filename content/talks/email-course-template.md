@@ -2,6 +2,10 @@
 title: EMAIL COURSE NAME
 sub: Intriguing and beneficial course tagline goes here
 author: sondra
+extended: |
+  BIRD has helped [CLIENT NAME] with [RELEVANT PROJECT DESCRIPTION]. [BIRD] has written and spoken at [PUBLICATION] and/or [EVENT].
+
+  In addition to this email course, you can hire [BIRD] for one-on-one consulting or to refactor your existing application.
 action:
   text: Subscribe to CTA
   url: /
@@ -141,12 +145,22 @@ and advanced CSS – backed by Python & Django on the server.
 
 ## This Email Course Teaches
 
-You learn about anchor positioning, positioned element siblings, Shadow Dom, using Dev Tools, valid pseudo elements, anchor-scope, anchor-name, position-area.
+You learn about anchor positioning, positioned element siblings, Shadow Dom, using Dev Tools, valid pseudo elements, `anchor-scope`, `anchor-name`, `position-area`.
 
 {% endcall %}
 
 
+
 ## About (Bird Name)
+
+{% set bird = collections.birds | authorPage('sondra') %}
+
+{% call birds.card(
+  bird=bird,
+  extended=extended
+)%}
+
+{% endcall %}
 
 {{ utility.main_action(
   content='Subscribe to the free course',
@@ -156,6 +170,7 @@ You learn about anchor positioning, positioned element siblings, Shadow Dom, usi
 {{ quotes.grid(press) }}
 
 ## Restate the CTA + BENEFIT HERE
+
 
 {% call layout.grid(
   name='narrow-columns',
@@ -181,6 +196,8 @@ You learn about anchor positioning, positioned element siblings, Shadow Dom, usi
 {% endcall %}
 
 {% endcall %}
+
+
 
 
 ## Why [Topic] Is Important
