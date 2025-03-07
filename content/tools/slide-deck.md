@@ -69,7 +69,7 @@ and we're constantly making improvements.
 Our [Eleventy Plugin](https://github.com/oddbird/eleventy-plugin-slide-deck)
 provides a number of pre-built slide types --
 for titles, images, screenshots, code samples, live demos,
-and embeds from Codepen, Caniuse, or Caseline.
+and embeds from CodePen, caniuse, or Baseline.
 
 In the future, we also plan to support:
 
