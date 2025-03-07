@@ -18,7 +18,7 @@ links:
   source: https://github.com/oddbird/slide-deck/
   docs: https://github.com/oddbird/slide-deck?tab=readme-ov-file#slide-deck
 summary: |
-  A lightweight, stand-alone web component
+  A lightweight, standalone web component
   for converting semantic HTML
   into fully customizable
   and responsive web presentations.
