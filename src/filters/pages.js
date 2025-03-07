@@ -336,7 +336,8 @@ params:
 */
 export const addCallToAction = (pageURL) =>
   _.isString(pageURL) &&
-  (pageURL.startsWith('/work/') || pageURL.startsWith('/services/'));
+  (pageURL.startsWith('/work/') || pageURL.startsWith('/services/')) &&
+  pageURL !== '/services/consulting/';
 
 /* @docs
 label: isType

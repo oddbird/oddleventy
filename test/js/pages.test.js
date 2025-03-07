@@ -147,6 +147,11 @@ describe('page filters', () => {
       expect(addCallToAction(exampleURL)).toBe(true);
     });
 
+    test('returns false for services consulting URL', () => {
+      const exampleURL = '/services/consulting/';
+      expect(addCallToAction(exampleURL)).toBe(false);
+    });
+
     test('returns false for blog URL', () => {
       const exampleURL = '/blog/';
       expect(addCallToAction(exampleURL)).toBe(false);

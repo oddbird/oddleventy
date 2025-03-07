@@ -14,6 +14,7 @@ press:
       OddBird is very pleasant to work with and responsive.
       I’m not an expert in web development,
       so I really appreciated that.
+    slug: pleasant
     name: LJ Suzuki
     face: lj-suzuki.jpg
     url: https://cfoshare.org/
