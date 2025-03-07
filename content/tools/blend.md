@@ -5,7 +5,7 @@ date: 2020-04-28
 end: 2022-04-04
 image:
   src: projects/blend.jpg
-oss: owner
+oss: creator
 author:
   - miriam
   - jonny

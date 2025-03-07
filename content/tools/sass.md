@@ -20,6 +20,20 @@ summary: |
   Miriam became a core contributor to the language.
 ---
 
+Over the years,
+we've developed a number of Sass-based
+open source tools:
+
+- [Susy](/susy/) was a popular layout system
+  before CSS introduced grids
+- [True](/true/) is still the most widely used Sass unit-testing framework
+- [Accoutrement](/accoutrement/) & [Herman](/herman/)
+  help manage and document design systems
+- [Cascading Colors](/cascading-colors/)
+  provide user interactions for site color palettes
+- [Blend](/blend/)
+  helped polyfill modern color syntax in Sass
+
 More recently, the entire OddBird team
 contracted with Google
 to design and implement [high-priority Sass features][core],

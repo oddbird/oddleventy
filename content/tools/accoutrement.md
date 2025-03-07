@@ -1,7 +1,6 @@
 ---
 title: Accoutrement
-sub: Integrated design-system management in Sass
-feature: true
+sub: Design-token management in Sass
 date: 2014-10-30
 logo: accoutrement
 image:
@@ -9,7 +8,7 @@ image:
 links:
   source: https://github.com/oddbird/accoutrement
   docs: /accoutrement/docs/
-oss: owner
+oss: creator
 index: Accoutrement
 author: oddbird
 accoutrement_modules:

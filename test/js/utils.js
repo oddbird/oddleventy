@@ -181,7 +181,7 @@ export const collection3 = [
       tags: ['tag 1', 'tag2'],
       author: 'miriam',
       slug: 'news',
-      oss: 'owner',
+      oss: 'creator',
     },
     content: '<h1>This is my title</h1>\n\n<p>This is content…',
   },

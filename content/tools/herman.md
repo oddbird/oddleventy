@@ -7,7 +7,7 @@ image:
   src: herman/herman-hero.jpg
   alt: Sample organized color swatches with hex and hsl values
 date: 2015-11-08
-oss: owner
+oss: creator
 index: Herman
 author: oddbird
 action:
