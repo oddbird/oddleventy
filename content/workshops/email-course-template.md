@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 title: EMAIL COURSE NAME
 sub: Intriguing and beneficial course tagline goes here
 author: sondra
