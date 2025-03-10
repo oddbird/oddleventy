@@ -30,15 +30,15 @@ press:
     slug: popular-tutorial
 included:
   - text: Immediate access to lesson 1
-    icon: icons/mail
+    icon: icons/mail-open
   - text: Additional free surprises
     icon: icons/wand
   - text: Ongoing front-end tips & tricks
     icon: icons/tools
   - text: Easily unsubscribe whenever
-    icon: icons/video
+    icon: icons/interact
   - text: We won’t give anyone your email address
-    icon: icons/ribbon
+    icon: icons/eye-crossed
 summary: |
   Brief summary of what the email course teaches and specifically how it helps people with something they care about.
 ---
