@@ -11,7 +11,7 @@ author:
   - miriam
   - carl
   - jonny
-oss: owner
+oss: creator
 index: Susy
 action:
   text: Contact us for details »
