@@ -34,7 +34,7 @@ included:
     text: Documenting your education
     icon: icons/ribbon
   - title: Immediate Access
-    text: To recording and shared docs
+    text: To recordings and shared notes
     icon: icons/video
 summary: |
   CSS layout techniques have come a long way
