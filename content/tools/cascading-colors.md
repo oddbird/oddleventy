@@ -1,7 +1,6 @@
 ---
 title: Cascading Colors
 sub: Dynamic & interactive color palettes using CSS
-feature: true
 logo: cascading-colors
 image:
   src: projects/cascading-colors.jpg
@@ -9,7 +8,7 @@ author:
   - miriam
   - jonny
   - erica
-oss: owner
+oss: creator
 date: 2019-09-07
 index: Cascading Colors
 links:
