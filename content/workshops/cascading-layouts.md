@@ -2,6 +2,9 @@
 title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
+action:
+  text: Subscribe to OddNews for the latest workshop updates »
+  url: /oddnews/
 date: 2024-12-31
 image:
   src: talks/cascading-workshop-cat.jpg
@@ -55,6 +58,14 @@ summary: |
 {% import 'quotes.macros.njk' as quotes %}
 
 {{ embed.figure([{ youtube: '9EDOzJJdxWA' }]) }}
+
+{% callout 'note', false %}
+Earlybird tickets go on sale on **March, 31st, 2025!**
+
+For reminders, or to get the latest information about this
+workshop and other OddNews, subscribe to our [newsletter](/oddnews/).
+
+{% endcallout %}
 
 ## What Will Attendees Get?
 
