@@ -39,6 +39,10 @@ included:
   - title: Immediate Access
     text: To recordings and shared notes
     icon: icons/video
+events:
+  - venue: Online
+    date: 2025-04-14
+    end: 2025-04-16
 summary: |
   CSS layout techniques have come a long way
   since the early days of responsive design,
