@@ -24,3 +24,12 @@ media:
 {% import "embed.macros.njk" as embed %}
 
 {{ embed.figure(data=media) }}
+
+{% callout 'note', false %}
+Also check out our [Winging It](/wingingit/)
+conversations about design, frontend,
+and backend development.
+
+**Winging It** episode 8: [CSS Anchor Positioning in Practice](/2024/05/30/winging-it-08/) \
+**Winging It** episode 16: [Debugging CSS Anchor Positioning](/2025/02/20/winging-it-16/)
+{% endcallout %}

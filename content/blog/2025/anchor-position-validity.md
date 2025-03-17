@@ -24,16 +24,12 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 
 {% callout 'note', false %}
-**TL;DR** -- For the best chance of having anchor positioning work, here's my
-recommendation:
+Check out our [Winging It](/wingingit/)
+conversations about design, frontend,
+and backend development.
 
-1. Make the anchor and the positioned element siblings.
-2. Put the anchor first in the DOM.
-
-Go give that a try, and then come back and find out what to check next if that
-didn't work.
-
-I'll wait.
+**Winging It** episode 8: [CSS Anchor Positioning in Practice](/2024/05/30/winging-it-08/) \
+**Winging It** episode 16: [Debugging CSS Anchor Positioning](/2025/02/20/winging-it-16/)
 {% endcallout %}
 
 ## The problem
@@ -50,6 +46,19 @@ Shadow DOM?
 
 There are many reasons why it can fail, but they all fail in the same way. This
 makes it really hard to troubleshoot and recover from.
+
+{% callout 'note', false %}
+**TL;DR** -- For the best chance of having anchor positioning work, here's my
+recommendation:
+
+1. Make the anchor and the positioned element siblings.
+2. Put the anchor first in the DOM.
+
+Go give that a try, and then come back and find out what to check next if that
+didn't work.
+
+I'll wait.
+{% endcallout %}
 
 ## Troubleshooting checklist
 

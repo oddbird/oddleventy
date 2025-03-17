@@ -23,10 +23,12 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 
 {% callout 'note', false %}
+Check out our [Winging It](/wingingit/)
+conversations about design, frontend,
+and backend development.
 
-The examples in this article are best viewed in a Chromium browser, version 131
-or later.
-
+**Winging It** episode 8: [CSS Anchor Positioning in Practice](/2024/05/30/winging-it-08/) \
+**Winging It** episode 16: [Debugging CSS Anchor Positioning](/2025/02/20/winging-it-16/)
 {% endcallout %}
 
 Initially, `position-area` seems like nothing more than a shorthand.
@@ -34,6 +36,11 @@ Just replace `top: anchor(bottom); left: anchor(right)`
 with `position-area: bottom right` and it works.
 
 Or go even further, and replace that with `position-area: end`.
+
+{% callout 'note', false %}
+The examples in this article are best viewed in a Chromium browser, version 131
+or later.
+{% endcallout %}
 
 {{ embed.codepen(
   id='zxOVXOm',
