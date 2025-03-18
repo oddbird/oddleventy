@@ -3,7 +3,7 @@ title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
 action:
-  text: Subscribe to OddNews for the latest workshop updates »
+  text: Subscribe to OddNews for updates »
   url: /oddnews/
 date: 2024-12-31
 image:
@@ -94,8 +94,8 @@ You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
 {{ utility.main_action(
-  content='Bring this workshop to your company »',
-  url='#contact-us-to-book-a-workshop'
+  content='Subscribe to OddNews for updates »',
+  url='/oddnews/'
 ) }}
 
 ## About Miriam
@@ -185,11 +185,12 @@ and interactive exercises related to defining layouts.
 
 ## Contact Us to Book a Workshop
 
-Consider bringing us in
-to talk with your team directly:
+If your full team can't join us for
+the April workshop, consider bringing
+us in to talk with your team directly:
 
 {{ contact.form(
   submit='Book Now',
   name='workshop',
-  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
+  extraActions='or [subscribe to OddNews for updates »](/oddnews/)'
 ) }}
