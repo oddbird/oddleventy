@@ -63,14 +63,6 @@ summary: |
 
 {{ embed.figure([{ youtube: '9EDOzJJdxWA' }]) }}
 
-{% callout 'note', false %}
-Earlybird tickets go on sale on **March 31st, 2025!**
-
-For reminders, or to get the latest information about this
-workshop and other OddNews, subscribe to our [newsletter](/oddnews/).
-
-{% endcallout %}
-
 ## What Will Attendees Get?
 
 {{ embed.icon_block(

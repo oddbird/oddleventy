@@ -3,6 +3,14 @@
 
 {% if summary or action %}
   <div id="intro" class="summary{% if is_feed or is_entry %} p-summary{% endif %}">
+    {% if page.url == '/workshops/cascading-layouts/' %}
+      {% callout 'note', false %}
+        <p>Earlybird tickets go on sale on <strong>March 31st, 2025!</strong></p>
+        <p>For reminders, or to get the latest information about this
+        workshop and other OddNews, subscribe to
+        our <a href="/oddnews/">newsletter</a>.</p>
+      {% endcallout %}
+    {% endif %}
     {% if badges %}
       <ul class="oss-badges">
         {% for badge in badges %}
