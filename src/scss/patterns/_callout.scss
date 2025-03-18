@@ -4,10 +4,19 @@
 
   background: var(--callout-block-bg, var(--callout));
   border-inline-start: thick solid var(--callout-block-border, var(--border));
-  margin: var(--newline) calc(var(--gutter) * -1);
-  padding: var(--gutter);
+  margin: var(--callout-margin-block, var(--newline))
+    var(--callout-margin-inline, calc(var(--gutter) * -1));
+  padding: var(--callout-padding, var(--gutter));
 
   :is(p, ol, ul):last-child {
     margin-block-end: 0;
+  }
+
+  .post-header & {
+    --callout-margin-block: var(--gutter);
+    --callout-margin-inline: auto;
+    --callout-padding: var(--gutter) var(--double-gutter);
+
+    grid-area: note;
   }
 }
