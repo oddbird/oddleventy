@@ -4,8 +4,8 @@
 
   background: var(--callout-block-bg, var(--callout));
   border-inline-start: thick solid var(--callout-block-border, var(--border));
-  margin: var(--callout-margin-block, var(--newline))
-    var(--callout-margin-inline, calc(var(--gutter) * -1));
+  margin-block: var(--callout-margin-block, var(--newline));
+  margin-inline: var(--callout-margin-inline, calc(var(--gutter) * -1));
   padding: var(--callout-padding, var(--gutter));
 
   :is(p, ol, ul):last-child {
@@ -13,7 +13,7 @@
   }
 
   .post-header & {
-    --callout-margin-block: var(--gutter);
+    --callout-margin-block: var(--double-gutter) 0;
     --callout-margin-inline: auto;
     --callout-padding: var(--gutter) var(--double-gutter);
 
