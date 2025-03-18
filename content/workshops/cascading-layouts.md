@@ -41,8 +41,8 @@ included:
     icon: icons/video
 events:
   - venue: Online
-    date: 2025-04-14
-    end: 2025-04-16
+    date: 2025-04-28
+    end: 2025-04-30
 summary: |
   CSS layout techniques have come a long way
   since the early days of responsive design,
