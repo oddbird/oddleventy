@@ -298,6 +298,7 @@ params:
   fit=none,
   position=none,
   notch='15%',
+  inset='5px',
   content=none
 ) %}
   {%- set content = content if (content != none) else caller() -%}
@@ -305,7 +306,8 @@ params:
     '--device-img-notch': notch,
     '--device-img-fill': fill,
     '--device-img-fit': fit,
-    '--device-img-position': position
+    '--device-img-position': position,
+    '--device-clip-inset': inset
   } -%}
   <div data-screen="{{ device }}" {{ utility.style_if(style) }}>
     {{ content | safe }}
