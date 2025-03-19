@@ -2,14 +2,11 @@
 {% import 'utility.macros.njk' as utility %}
 
 {% if summary or action %}
-  {% if page.url == '/workshops/cascading-layouts/' %}
+  {% if page.url == '/workshops/cascading-layouts/' and callout_content %}
       {% callout 'note', false %}
-        <p>Earlybird tickets go on sale on <strong>March 31st, 2025!</strong></p>
-        <p>For reminders, or to get the latest information about this
-        workshop and other OddNews, subscribe to
-        our <a href="/oddnews/">newsletter</a>.</p>
+        {{ callout_content | md | safe }}
       {% endcallout %}
-    {% endif %}
+  {% endif %}
   <div id="intro" class="summary{% if is_feed or is_entry %} p-summary{% endif %}">
     {% if badges %}
       <ul class="oss-badges">
