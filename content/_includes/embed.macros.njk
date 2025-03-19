@@ -291,6 +291,12 @@ params:
     type: html
     default: none
     note: The image to embed (can also be passed into a `caller()` block)
+  inset:
+    type: number
+    default: 5px
+    note: |
+      Number used to specify size of the clip-path of the image inside
+      of the screen
 #}
 {% macro screen(
   device='iphone',
