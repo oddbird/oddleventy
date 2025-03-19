@@ -46,8 +46,8 @@ events:
 callout_content: |
   Early bird tickets go on sale **April 2025**!
 
-  For reminders, or to get the latest information about this
-  workshop and other OddNews, subscribe to
+  For reminders, or to get the latest information
+  about this workshop and other OddNews, subscribe to
   our&nbsp;[newsletter](/oddnews/).
 summary: |
   CSS layout techniques have come a long way
