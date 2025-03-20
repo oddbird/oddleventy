@@ -92,7 +92,7 @@ so that they can be used to set logical dimensions?
 - A [Github issue](https://github.com/w3c/csswg-drafts/issues/1282)
   has been open since 2017,
   to discuss the problem
-- In 2021, Elika Etimad and Jen Simmons and I
+- In 2021, Elika Etimad, Jen Simmons, and I
   proposed [a multi-step path forward](https://github.com/w3c/csswg-drafts/issues/1282#issuecomment-952428897),
   to progressively move towards logical properties
   as a simple default in CSS
