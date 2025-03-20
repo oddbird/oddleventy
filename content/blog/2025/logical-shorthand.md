@@ -40,7 +40,7 @@ from `padding-inline-start` to `inline-size` and `block-size`.
 There are a few situations
 where physical values make sense.
 If we're applying drop shadows on a multi-language page,
-we don't need each language to have it's own
+we don't need each language to have its own
 light source casting shadows in different directions.
 But the majority of web design starts
 from the flow of text --
@@ -89,13 +89,13 @@ and the `inset` shorthand doesn't include `inset-block-start`.
 Is there any way to update those shorthand properties
 so that they can be used to set logical dimensions?
 
-- A [Github issue](https://github.com/w3c/csswg-drafts/issues/1282)
+- A [GitHub issue](https://github.com/w3c/csswg-drafts/issues/1282)
   has been open since 2017,
-  to discuss the problem
+  to discuss the problem.
 - In 2021, Elika Etimad, Jen Simmons, and I
   proposed [a multi-step path forward](https://github.com/w3c/csswg-drafts/issues/1282#issuecomment-952428897),
   to progressively move towards logical properties
-  as a simple default in CSS
+  as a simple default in CSS.
 - Every year at TPAC,
   the Internationalization Working Group
   asks us to make progress and provide updates.
