@@ -1,6 +1,6 @@
 ---
-title: Support logical shorthands in CSS
-sub: Can we move this process forward?
+title: Support Logical Shorthands in CSS
+sub:  Can we get this process unstuck?
 date: 2025-03-20
 author: miriam
 image:
@@ -16,13 +16,13 @@ tags:
   - CSSWG
 action:
   text: Sponsor work on logical shorthands
-  url: https://opencollective.com/oddbird-open-source/
+  url: https://opencollective.com/oddbird-open-source/contribute/css-logical-shorthands-86141
 summary: >
   The CSS Working Group recently resolved
   to add a `size` shorthand for setting
   both the `width` and `height` of an element.
-  Many people asked about setting the 'logical'
-  `inline-size` and `block-size` instead.
+  Many people asked about using it to set the 'logical'
+  `inline-size` and `block-size` properties instead.
   But 'logical shorthands' have been stalled
   in the working group for years.
   _Can we get them unstuck?_
