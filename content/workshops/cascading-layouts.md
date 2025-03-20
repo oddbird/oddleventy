@@ -40,7 +40,8 @@ included:
     text: To recordings and shared notes
     icon: icons/video
 events:
-  - venue: Online
+  - venue: OddBird Workshops
+    adr: Online
     date: 2025-04-28
     end: 2025-04-30
 callout_content: |
