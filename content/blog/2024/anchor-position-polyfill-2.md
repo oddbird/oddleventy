@@ -21,6 +21,15 @@ summary: |
 ---
 {% import 'embed.macros.njk' as embed %}
 
+{% callout 'note', false %}
+Check out our [Winging It](/wingingit/)
+conversations about design, frontend,
+and backend development.
+
+**Winging It** episode 8: [CSS Anchor Positioning in Practice](/2024/05/30/winging-it-08/) \
+**Winging It** episode 16: [Debugging CSS Anchor Positioning](/2025/02/20/winging-it-16/)
+{% endcallout %}
+
 A lot has happened with Anchor Positioning since our [last update](/2024/07/02/anchor-position-polyfill/).
 
 Along with changes to the spec and Chromium's continued work towards

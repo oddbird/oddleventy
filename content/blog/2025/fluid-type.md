@@ -28,7 +28,13 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 
 {% callout 'note' %}
-We talked about some of these ideas
+
+Come join us live
+for a conversation
+about fluid type
+with the experts from Clearleft. [Winging It | March 20 @ 11am MT](https://www.youtube.com/live/py41Ys-iRvk)
+
+We also talked about some of these ideas
 in our [Winging It](/2025/01/24/winging-it-15/) live stream
 last month
 with Alan Stearns,
