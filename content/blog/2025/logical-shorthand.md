@@ -99,7 +99,7 @@ so that they can be used to set logical dimensions?
 - Every year at TPAC,
   the Internationalization Working Group
   asks us to make progress and provide updates.
-- Every year, we disappoint them.
+- Every year we disappoint them.
 
 The current situation
 is that we have several viable paths forward,
