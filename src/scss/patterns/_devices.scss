@@ -10,7 +10,9 @@
 
   img {
     background: var(--device-img-fill, white);
-    clip-path: inset(2px round var(--device-radius, 0));
+    clip-path: inset(
+      var(--device-clip-inset, 5px) round var(--device-radius, 0)
+    );
     height: 100%;
     inset: 1px;
     object-fit: var(--device-img-fit, cover);
@@ -23,6 +25,10 @@
     position: absolute;
     width: 100%;
     z-index: -1;
+  }
+
+  .oddnews-intro & {
+    --device-radius: calc(0.3rem * 2);
   }
 }
 
