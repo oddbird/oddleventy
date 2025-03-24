@@ -26,7 +26,7 @@ summary: |
 {% set update = ['Update', utility.datetime('2025-03-21')] | join(' ') %}
 
 {% callout 'note', update %}
-  🥳Container queries have been available to use in all major browsers since
+  🥳 Container queries have been available to use in all major browsers since
   February 2023. We've updated the guide with changes and developments that have happened since we first published.
 
 - New [containment types] have been added and other implied or planned containment behavior has been adjusted or removed.
