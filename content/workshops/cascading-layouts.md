@@ -2,6 +2,9 @@
 title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
+action:
+  text: Subscribe to OddNews for updates »
+  url: /oddnews/
 date: 2024-12-31
 image:
   src: talks/cascading-workshop-cat.jpg
@@ -34,8 +37,19 @@ included:
     text: Documenting your education
     icon: icons/ribbon
   - title: Immediate Access
-    text: To recording and shared docs
+    text: To recordings and shared notes
     icon: icons/video
+events:
+  - venue: OddBird Workshops
+    adr: Online
+    date: 2025-04-28
+    end: 2025-04-30
+callout_content: |
+  Early bird tickets go on sale **April 2025**!
+
+  For reminders, or to get the latest information
+  about this workshop and other OddNews, subscribe to
+  our&nbsp;[newsletter](/oddnews/).
 summary: |
   CSS layout techniques have come a long way
   since the early days of responsive design,
@@ -79,8 +93,8 @@ You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
 {{ utility.main_action(
-  content='Bring this workshop to your company »',
-  url='#contact-us-to-book-a-workshop'
+  content='Subscribe to OddNews for updates »',
+  url='/oddnews/'
 ) }}
 
 ## About Miriam
@@ -170,11 +184,12 @@ and interactive exercises related to defining layouts.
 
 ## Contact Us to Book a Workshop
 
-Consider bringing us in
-to talk with your team directly:
+If your full team can't join us for
+the April workshop, consider bringing
+us in to talk with your team directly:
 
 {{ contact.form(
   submit='Book Now',
   name='workshop',
-  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
+  extraActions='or [subscribe to OddNews for updates »](/oddnews/)'
 ) }}
