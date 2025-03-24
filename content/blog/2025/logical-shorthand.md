@@ -4,13 +4,8 @@ sub:  Can we get this process unstuck?
 date: 2025-03-20
 author: miriam
 image:
-  src: blog/2025/logical-demo.jpg
-  alt: >
-    An email signup form,
-    once in English (left to right)
-    and then in Arabic (right to left)
-    with the rounded input field and signup button
-    attached at a straight border
+  src: blog/2025/logical.jpg
+  alt: block-size, inline-size, size?
 tags:
   - CSS
   - CSSWG
