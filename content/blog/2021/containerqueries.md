@@ -26,11 +26,15 @@ summary: |
 {% set update = ['Update', utility.datetime('2025-03-21')] | join(' ') %}
 
 {% callout 'note', update %}
-  🥳 Container queries have been available to use in all major browsers since
-  February 2023. We've updated the guide with changes and developments that have happened since we first published.
 
-- New [containment types] have been added and other implied or planned containment behavior has been adjusted or removed.
-- Some [features that were being considered] have landed in browsers, while some are only partially implemented.
+🥳 Container queries have been available to use in all major browsers since
+February 2023. We've updated the guide with changes and developments that have
+happened since we first published.
+
+- New [containment types] have been added and other implied or planned
+  containment behavior has been adjusted or removed.
+- Some [features that were being considered] have landed in browsers, while some
+  are only partially implemented.
 
 [features that were being considered]: #what’s-next%3F
 [containment types]: #syntax-and-an-example
@@ -106,13 +110,18 @@ first.)
 
 {% callout 'note', update %}
 
-- `Inline-size` containment has been well-supported since container queries were supported in stable versions of browsers.
-- `Layout` containment was previously applied automatically when `container-type` and `container-name` properties were used. It has since been removed from the container queries specification, but is still applied in some browsers that have not updated their implementation of container queries.
-- Single-axis `block-size` containment proved to be impossible and has since been abandoned.
-- The `size` containment type, which queries in both the inline and
-block axes, has been available as a containment type in all browsers since
-February 2023. Setting `container-type: size` allows for querying the container's
-orientation and aspect-ratio in addition to its size.
+- `Inline-size` containment has been well-supported since container queries were
+  supported in stable versions of browsers.
+- `Layout` containment was previously applied automatically when
+  `container-type` and `container-name` properties were used. It has since been
+  removed from the container queries specification, but is still applied in some
+  browsers that have not updated their implementation of container queries.
+- Single-axis `block-size` containment proved to be impossible and has since
+  been abandoned.
+- The `size` containment type, which queries in both the inline and block axes,
+  has been available as a containment type in all browsers since February 2023.
+  Setting `container-type: size` allows for querying the container's orientation
+  and aspect-ratio in addition to its size.
 
 {% endcallout %}
 
@@ -260,15 +269,15 @@ queries work could change.
 {% callout 'note', update %}
 
 - [Container-relative units](https://developer.mozilla.org/en-US/docs/Web/CSS/length#container_query_length_units)
-have been available to use in all major browsers since February 2023.
+  have been available to use in all major browsers since February 2023.
 - Most Chromium based browsers added support for
-[`scroll-state`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
-containment in February of 2025. As of this update, it's avaible in a browser
-preview version of Opera.
-- Style queries, the ability to query a computed value of a containing
-  element, have been partially implented by most browsers (no support
-  in Firefox yet). The current implementation allows for the querying of
-  custom property values:
+  [`scroll-state`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+  containment in February of 2025. As of this update, it's available in a
+  browser preview version of Opera.
+- Style queries -- the ability to query a computed value of a containing element
+  -- have been partially implemented by most browsers (no support in Firefox
+  yet). The current implementation allows for the querying of custom property
+  values:
 
   ```css
   @container style(--theme: light) {
