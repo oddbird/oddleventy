@@ -5,29 +5,6 @@
       "type": "entry",
       "author": {
         "type": "card",
-        "name": "Mia (web luddite)",
-        "photo": "https://webmention.io/avatar/static.mamot.fr/39d6fb6fadc18d71bcf4603b694c04d82c14da6b96ece6d9f8961a8f2348af81.jpg",
-        "url": "https://front-end.social/@mia"
-      },
-      "url": "https://front-end.social/@mia/114202324270268822",
-      "published": "2025-03-21T20:32:56+00:00",
-      "wm-received": "2025-03-21T20:48:08Z",
-      "wm-id": 1896891,
-      "wm-source": "https://brid.gy/comment/mastodon/@nhoizey@mamot.fr/114201915454600379/114202324312583898",
-      "wm-target": "https://www.oddbird.net/2025/02/12/fluid-type/",
-      "wm-protocol": "webmention",
-      "content": {
-        "html": "<p><span class=\"h-card\"><a href=\"https://mamot.fr/@nhoizey\" class=\"u-url\">@<span>nhoizey</span></a></span> It approaches the problem by trusting that \"something close to 1em, but viewport responsive\" is a good size for the user – rather than assuming the user has a 16px default, we prefer 24px, and aiming for 1.5em… which will eternally be larger than requested.</p><p>But also, my post doesn't present a solution. I'm mostly asking questions, and then thinking about possible ways to approach the problem. Maybe I need to make that more clear.</p>\n<a class=\"u-mention\" href=\"https://www.oddbird.net/2025/02/12/fluid-type/\"></a>",
-        "text": "@nhoizey It approaches the problem by trusting that \"something close to 1em, but viewport responsive\" is a good size for the user – rather than assuming the user has a 16px default, we prefer 24px, and aiming for 1.5em… which will eternally be larger than requested.\n\nBut also, my post doesn't present a solution. I'm mostly asking questions, and then thinking about possible ways to approach the problem. Maybe I need to make that more clear."
-      },
-      "in-reply-to": "https://www.oddbird.net/2025/02/12/fluid-type/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
         "name": "Nick Simson",
         "photo": "https://webmention.io/avatar/secure.gravatar.com/d19067467117b138356cdaafdd7b43c73e9dabca1f885cba530560869847c2aa.png",
         "url": "https://nicksimson.com"
