@@ -1,5 +1,5 @@
 ---
-title: CSS Cascade Layers
+title: Fluid Type, OddContrast, and Custom CSS Functions
 issue: 21
 url: http://eepurl.com/i_NTYw
 date: 2025-03-13
@@ -12,10 +12,10 @@ image:
   src: winging-it/winging-it-1.jpg
 summary: |
   Here’s what we’re up to:
-  - Revisiting Fluid Type on Winging It with Richard Rutter | March 20, 2025
-  - New features for OddContrast
+  - [Revisiting Fluid Type on Winging It](/2025/03/13/oddnews-21/#upcoming-winging-it-live) with Richard Rutter | March 20, 2025
+  - [New features for OddContrast](/2025/03/13/oddnews-21/#new-features-for-oddcontrast)
   - CSS Layout Workshop coming in April 2025
-  - Custom CSS Functions in the Browser article by Miriam Suzanne
+  - [Custom CSS Functions in the Browser](/2025/03/13/oddnews-21/#custom-css-functions-in-the-browser) article by Miriam Suzanne
 ---
 
 {% import "utility.macros.njk" as utility %}
@@ -31,11 +31,8 @@ summary: |
 [Stacy Kvernmo](/authors/stacy), [Miriam Suzanne](/authors/miriam), and
 guest Richard Rutter on March 20, 2025.
 
-[Save the date](https://www.youtube.com/watch?v=py41Ys-iRvk)
 
-## OSS Updates
-
-### New Features for OddContrast
+## New Features for OddContrast
 
 If you haven’t checked it out, [OddContrast](/oddcontrast/) is OddBird’s color
 format converter, with newer color formats like Oklch, Oklab, and the Display P3
@@ -51,17 +48,9 @@ accessibility standards.
   displayed are an estimation of contrast when the foreground color is not
   opaque.
 
-### from [James Stuckey Weber](/author/james/)
+{% callout 'CSS Layout Workshop | April 28-30' %}
 
-I reviewed feature changes for the Web Features project and contributed to the
-Web DX Community Group. I also contributed a bug fix to the Firefox Dev Tools to
-show the offsetParent of fixed position elements if it’s not the viewport. It
-should be included in the Firefox 137 release.
-
-{% callout 'note' %}
-**CSS Layout Workshop in April**
-
-This April, Miriam will be teaching a workshop about building more resilient and
+Miriam will be teaching a workshop about building more resilient and
 maintainable web layouts using modern CSS.
 
 Watch for special editions of OddNews this month with free lessons and early
@@ -181,9 +170,7 @@ What functions would be most useful to you? Let us know what you come up with on
 [Mastodon](https://front-end.social/@OddBird) or
 [BlueSky](https://bsky.app/profile/oddbird.dev), we’d love to see your demos.
 
-{% callout 'note' %}
-**We need support.**
-
+{% callout 'We need support' %}
 For years, OddBird has been contributing to open web tools & standards, with a
 focus on CSS and related platform features at the W3C. But that work takes
 resources, making it hard for independent contributors like us to stay involved.
@@ -191,7 +178,7 @@ resources, making it hard for independent contributors like us to stay involved.
 If you appreciate what we’re doing, you (or your company) can sponsor our work
 directly or hire us to develop something you need.
 
-- [Sponsor us.](https://opencollective.com/oddbird-open-source) We display
+- [Sponsor us](https://opencollective.com/oddbird-open-source). We display
   sponsor logos and avatars on our website.
 - [Hire us](/contact/) to develop the Anchor Positioning polyfill or a
   language/tool you rely on.
