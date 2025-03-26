@@ -147,7 +147,7 @@ for the people who visit.
   slugs=['pleasant', 'best-in-the-world']
 ) }}
 
-{{ layout.title('Services') }}
+{{ layout.title('Packages') }}
 
 {% call embed.media_block(
   media=embed.screen(

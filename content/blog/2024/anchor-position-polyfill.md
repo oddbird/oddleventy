@@ -20,6 +20,15 @@ summary: |
   Here's a summary of the latest updates.
 ---
 
+{% callout 'note', false %}
+Check out our [Winging It](/wingingit/)
+conversations about design, frontend,
+and backend development.
+
+**Winging It** episode 8: [CSS Anchor Positioning in Practice](/2024/05/30/winging-it-08/) \
+**Winging It** episode 16: [Debugging CSS Anchor Positioning](/2025/02/20/winging-it-16/)
+{% endcallout %}
+
 A few years ago, OddBird started working on a polyfill for [CSS Anchor
 Positioning] as the spec started to take form. Now that the spec has stabilized
 and Chromium has begun implementation, we are relying on our sponsors to support
