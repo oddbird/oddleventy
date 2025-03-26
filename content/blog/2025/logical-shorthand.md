@@ -25,7 +25,7 @@ summary: >
 
 CSS began to add
 [logical properties and values](https://www.w3.org/TR/css-logical-1/)
-in 2017-2018,
+in 2017,
 allowing us to replace
 static physical terms like `top` and `bottom`
 with flow-relative terms like `inline-start` or `block-end`.
@@ -50,17 +50,16 @@ that will adapt when that flow changes:
   user='miriamsuzanne'
 ) }}
 
-This is an essential feature for multi-lingual sites.
 Before logical properties,
 it was common to have a preprocessor generate 'flipped' versions
 of all our stylesheets.
-But these days it's also useful for sites
-without any built-in translation at all.
-Many modern browsers and plugins
-will translate our sites automatically.
+This is an essential feature for some sites,
+but these days it's a good default for everyone.
+Modern browsers and extensions
+will often translate our sites automatically.
 Logical properties are a great way
 to optimize our sites in advance,
-without any real effort.
+without much effort.
 
 But what if we want to set
 multiple properties at once?
@@ -68,14 +67,15 @@ This is where shorthands
 like `margin` and `padding` become useful.
 But they are currently limited
 to setting physical dimension.
-Logical properties are great,
-but they still feel like a second-class
-feature of the language.
+_Logical properties are great,
+but without shorthand options
+they still feel like a second-class
+feature of the language._
 
-There are a few 2-value shorthands
-that have been implemented,
+There are a few 2-value shorthands,
 like `margin-block` for setting both
-the `-block-start` and `-block-end` margins.
+the `-block-start` and `-block-end` margins --
+which are currently logical-only.
 I find those extremely useful and concise.
 But the existing 4-value shorthands feel stuck in the past.
 It's surprising that a `size` shorthand

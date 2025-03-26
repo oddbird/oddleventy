@@ -328,8 +328,19 @@ html {
 }
 ```
 
-This looks a lot like the common approach in structure,
-but it has some distinct differences.
+I don't know if this is a major improvement yet.
+I certainly don't feel confident here
+in recommending a new best practice,
+but I'm interested in continuing to explore these questions.
+I think there might be other improvements we could make
+to more helpfully reflect a user font-size preference
+in a fluid setting.
+I'd be curious what other ideas people come up with.
+
+For now,
+I like that we've put the focus on
+_what an `em` represents to the user_,
+rather than _how an `em` will render under default conditions_.
 We're not trying to achieve a specific font size
 (or range of sizes)
 by assuming the user has a `16px` default.
