@@ -2,7 +2,7 @@
 title: How do we move logical shorthands forward?
 sub: There are several proposals, but one major road block
 author: miriam
-date: 2025-03-25
+date: 2025-03-27
 action:
   text: Sponsor work on logical shorthands
   url: https://opencollective.com/oddbird-open-source/contribute/css-logical-shorthands-86141
