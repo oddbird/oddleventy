@@ -52,13 +52,13 @@ and backend development.
 
  ## What we cover:
 
+- How do we balance author and user intents?
+- Adrian Roselli’s "ultimate ideal" base font-size
+- Possible solutions/ideas to achieve desired font-size (per site)
+- What does an `em` represent?
 - Common approach to fluid type with `vi` & `clamp()`
 - Utopia helps, and catches potential issues with `vi`
-- What happens when I change user preference? I never get what I asked for.
-- This problem is really caused by `em`
-- Adrian’s "ultimate ideal"
-- How do we balance author and user intents?
-
+- How can designers work with fluid typography in traditional design tools
 
 ## Links:
 
