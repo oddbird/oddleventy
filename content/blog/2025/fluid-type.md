@@ -3,10 +3,12 @@ title: Reimagining Fluid Typography
 sub: Are we responding to the right inputs?
 author: miriam
 date: 2025-02-12
+updated: 2025-03-27
 tags:
   - Article
   - CSS
-  - Layout
+  - Typography
+series: revisiting fluid typography
 image:
   src: blog/2025/font-scale-hero.jpg
   alt: >
@@ -26,22 +28,6 @@ summary: |
 
 {% import "quotes.macros.njk" as quotes %}
 {% import 'embed.macros.njk' as embed %}
-
-{% callout 'note' %}
-
-Come join us live
-for a conversation
-about fluid type
-with the experts from Clearleft. [Winging It | March 20 @ 11am MT](https://www.youtube.com/live/py41Ys-iRvk)
-
-We also talked about some of these ideas
-in our [Winging It](/2025/01/24/winging-it-15/) live stream
-last month
-with Alan Stearns,
-co-chair of the CSS Working Group.
-Check that out for more discussion
-of typography and CSS units!
-{% endcallout %}
 
 The browser provides a default text size
 based on user preferences,
@@ -328,8 +314,24 @@ html {
 }
 ```
 
-This looks a lot like the common approach in structure,
-but it has some distinct differences.
+{% import 'utility.macros.njk' as utility %}
+
+{% set update = ['Update', utility.datetime(updated)] | join(' ') %}
+{% callout 'note', update %}
+I don't know if this is a major improvement yet.
+I certainly don't feel confident here
+in recommending a new best practice,
+but I'm interested in continuing to explore these questions.
+I think there might be other improvements we could make
+to more helpfully reflect a user font-size preference
+in a fluid setting.
+I'd be curious what other ideas people come up with.
+{% endcallout %}
+
+For now,
+I like that we've put the focus on
+_what an `em` represents to the user_,
+rather than _how an `em` will render under default conditions_.
 We're not trying to achieve a specific font size
 (or range of sizes)
 by assuming the user has a `16px` default.

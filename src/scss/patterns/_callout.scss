@@ -21,3 +21,10 @@
     grid-area: note;
   }
 }
+
+[data-callout='series'] {
+  [aria-current]::marker {
+    content: '➡️ ';
+    content: '➡️ ' / '';
+  }
+}
