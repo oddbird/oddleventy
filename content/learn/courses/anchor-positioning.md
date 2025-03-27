@@ -15,19 +15,26 @@ image:
   alt: A rusty anchor hanging with the sea in the background.
 press:
   - text: |
-      Miriam has always been nothing but spot-on,
-      professional, funny, while also being extremely knowledgeable,
-      smart, polite and always on time.
-    slug: spot-on
-    name: Vitaly Friedman
-    title: Founder
-    venue: Smashing Magazine & Conference
-    face: vitaly-friedman.jpg
-  - text: Ed's tutorial has been the most popular this year!
-    name: Catherine Holmes
-    title: Sponsors Co-Chair
-    venue: DjangoCon
-    slug: popular-tutorial
+      Just tried out the anchor positioning API in CSS for the first time.
+      It's a little more complex than I initially thought it'd be,
+      but I love what can be done with it.
+      Shout out to @OddBird for the great polyfill too
+      so I could get it working in Firefox.
+    slug: shout-out
+    name: Luke Hansford
+    title: Engineering Manager, Fishbrain
+    venue: "@lukehansford@mastodon.social"
+    face: luke-hansford-bg.jpg
+  - text: |
+      OddBird is a company I recommend without reservation.
+      They are among the best in the world at front end,
+      design systems, and w3c standards.
+    name: Nicole Sullivan
+    title: Product Manager for Web UI
+    venue: Google Chrome
+    face: nicole-sullivan.jpg
+    slug: best-in-the-world
+    url: https://www.stubbornella.org/
 included:
   - text: Immediate access to lesson 1
     icon: icons/mail-open
@@ -122,7 +129,12 @@ of another element unlocks all sorts of creative possibilities.
 
 {% endcall %}
 
-<!-- Insert video intro, demo, image, or graphic here if relevant/available -->
+{{ embed.codepen(
+  id='wBvEavV',
+  title='Anchor Positioning Demo',
+  user='jamessw',
+  height=300
+) }}
 
 ## 11 Weekly Emails
 
@@ -170,11 +182,12 @@ of another element unlocks all sorts of creative possibilities.
 
 ## This Email Course Teaches
 
-You learn about anchor positioning, positioned element siblings, Shadow Dom, using Dev Tools, valid pseudo elements, `anchor-scope`, `anchor-name`, `position-area`.
+You learn about anchor positioning, scoping your anchors, handling overflow,
+anchoring with the Shadow DOM, positioning popovers, using Dev Tools to
+troubleshoot anchors, pseudo elements that can be anchors, and new possibilities
+for innovative layouts.
 
 {% endcall %}
-
-
 
 ## About James
 
@@ -212,33 +225,31 @@ You learn about anchor positioning, positioned element siblings, Shadow Dom, usi
 
 {% call layout.block('column') %}
 
-{{ contact.form(
-  submit='Subscribe to learn CSS anchor positioning',
-  name='workshop'
-) }}
+> TODO: Add Signup Form here
 
 {% endcall %}
 
 {% endcall %}
 
+## Why it's time to learn CSS anchor positioning
 
+Anchor positioning is currently not available in all browsers,
+and it will be 2 to 3 years before you can safely assume all your users have it.
 
+But now is the time to add this new tool to your toolkit.
+The ability to describe anchor positioning in a more
+declarative way has changed how I think about layout.
+It's unlocked new possibilities and made for better user experiences.
 
-## Why CSS Anchor Positioning Is Important
+And you can use it now with a polyfill
+to make sure that all your users have the same experience.
 
-Recently I was working on a web app with a designer, trying to solve a UX
-problem we were encountering near the end of a project. The designer suggested a
-tooltip, which was a perfect solution. But we hadn't built that pattern in to
-the app yet, and in my head I ran through the cost of setting that up in an
-accessible manner. Based on our target browsers, we'd need to research and add a
-dependency, style it, and then we'd be able to use a tooltip pattern.
+## Don't add another dependency
 
-We landed on a different (and probably better) solution, but it still bothered
-me that we had to discard a reasonable and common solution solely based on
-implementation cost.
-
-What bothered me even more is that I know that there is a solution on the
-horizon- we just don't fully have it yet.
+While it's tempting to reach for the JavaScript library you've used in the past,
+you can instead choose to use the new API. With the polyfill, users with
+browsers that support it natively will have a much more performant experience.
+And you'll get to enjoy the ergonomics of the new API.
 
 CSS anchor positioning takes a challenging task and simplifies it, speeding up
 your delivery time. And while it's not yet in all browsers, it's coming soon,
