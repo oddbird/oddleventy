@@ -43,13 +43,13 @@ and stack in either direction:
 In any given writing mode,
 text creates lines on one axis,
 and those lines wrap to stack up on the cross axis.
-We call those the `inline` and `block` axis respectively.
+We call those the `inline` and `block` axes respectively.
 This allows us to use
 'flow-relative' or 'logical' language
 in place of the 'physical' terms
 that CSS started with:
 
-- Axis: `horizontal`/`x` and `vertical`/`y`
+- Axes: `horizontal`/`x` and `vertical`/`y`
   are always fixed in place,
   but `inline` and `block`
   change relative to the writing mode.
@@ -66,7 +66,7 @@ that CSS started with:
 The original specifications
 use `length` (or later `extent`) & `measure` to describe
 the block and inline dimensions.
-That eventually become `block-size` & `inline-size` in 2014,
+That eventually became `block-size` & `inline-size` in 2014,
 which I think is a big improvement for clarity.
 I [trace this history in my notes](https://css.oddbird.net/logical/research/#why-inline-size-but-padding-inline),
 with links to all the discussion I can find.
@@ -247,7 +247,7 @@ _action-at-a-distance_.
 The toggle is not positioned in our code
 next to the values that it will impact.
 When we encounter a margin of `1em 2em 3em 4em`,
-we have no idea what that values _means_
+we have no idea what that value _means_
 until we find the toggle.
 If that toggle is another value in the cascade,
 there is _no way to know_ what mode we're in
