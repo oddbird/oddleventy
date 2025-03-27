@@ -1,0 +1,2 @@
+permalink: /{{ page.fileSlug }}/index.html
+hire_cta: true

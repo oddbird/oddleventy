@@ -18,7 +18,7 @@
   --stacked-margin-block: var(--shim);
   --title-action-margin-block-end: var(--quarter-shim);
 
-  background-image: url('/assets/media/callout-bg-1.webp');
+  background: linear-gradient(to bottom right, var(--brand-gradient-start), var(--brand-gradient-end));
   background-position: center;
   background-size: cover;
   color: var(--text);
@@ -46,6 +46,6 @@
 
 [data-header~='hire-cta'] {
   background: revert;
-  color: var(--text);
+  color: var(--bg);
   font-size: var(--h1);
 }

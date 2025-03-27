@@ -44,6 +44,10 @@
     {% include 'site/hire-us.njk' %}
   {% endif %}
 
+  {% if sponsor_cta %}
+    {% include 'site/sponsor-us.njk' %}
+  {% endif %}
+
   {% include 'page/list.njk' %}
 
   <!-- used for webmentions -->
