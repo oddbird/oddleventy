@@ -72,7 +72,7 @@ but without shorthand options
 they still feel like a second-class
 feature of the language._
 
-There are a few 2-value shorthands,
+There are a few 2-value shorthands --
 like `margin-block` for setting both
 the `-block-start` and `-block-end` margins --
 which are currently logical-only.

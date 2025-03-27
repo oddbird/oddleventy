@@ -146,13 +146,13 @@ opened a few weeks before publishing the spec:
 1. Add a _keyword_ like `logical` or `relative` to the value
 2. Use a _flag_ like `!logical` or `!relative` to toggle declarations
 3. Create _new shorthands_ like `margin-logical` and `padding-logical`
-4. A single _toggle property_ like `margin-mode: relative`
+4. Add a single _toggle property_ like `margin-mode: relative`
 
 For now we'll set aside
 finding the right _word_ (logical, relative, or something else),
 and focus on choosing a _mechanism_:
 keyword, flag, special shorthands, or toggle.
-These all have potential issues,
+These all have potential issues --
 which I'll cover with more detail
 in the another post --
 but option 4 raises an important issue
@@ -167,7 +167,7 @@ The result is a logical shorthand
 that's significantly _less short_
 than the physical alternatives.
 
-That might be ok as a partial fix,
+That might be okay as a partial fix,
 but if we stop there
 logical shorthands still feel
 like a second-class feature.
@@ -193,7 +193,7 @@ I don't know why Bert Bos and Håkon Lie
 used the clockwise
 top-right-bottom-left ordering
 for 4-value properties.
-The best things about it
+The best thing about it
 is the alternating-axis,
 which allows us to shorten things even more --
 down to 3 values, 2 values, or even a single value:
@@ -254,7 +254,7 @@ there is _no way to know_ what mode we're in
 before rendering the page,
 and allowing the cascade to resolve.
 
-This works ok for `box-sizing`,
+This works okay for `box-sizing`,
 which only impacts the `width` and `height` properties.
 We can set the toggle on an element
 as we size it,
@@ -285,7 +285,7 @@ that will be impacted by our choice_.
 
 - Before we can pursue a global toggle
   (cascading or otherwise)
-  we have to know what properties will be impacted,
+  we have to know which properties will be impacted,
   and what that impact looks like
   on each individual property.
 - Even when we provide a global toggle,
