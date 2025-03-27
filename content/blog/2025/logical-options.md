@@ -3,6 +3,21 @@ title: How do we move logical shorthands forward?
 sub: There are several proposals, but one major road block
 author: miriam
 date: 2025-03-27
+image:
+  src: blog/2025/closed-sign.jpg
+  alt: >
+    A chain-link gate in black and white
+    with a sign that says
+    closed indefinitely,
+    and a smaller warning
+    with gruesome icons for
+    entrapment (a person being smashed)
+    and pinching (a hand going through gears)
+tags:
+  - Article
+  - CSS
+  - CSSWG
+  - Logical Properties
 action:
   text: Sponsor work on logical shorthands
   url: https://opencollective.com/oddbird-open-source/contribute/css-logical-shorthands-86141
@@ -64,9 +79,9 @@ that CSS started with:
 
 {% callout 'note', 'Side quest' %}
 The original specifications
-use `length` (or later `extent`) & `measure` to describe
+use `length` (or later `extent`) and `measure` to describe
 the block and inline dimensions.
-That eventually became `block-size` & `inline-size` in 2014,
+That eventually became `block-size` and `inline-size` in 2014,
 which I think is a big improvement for clarity.
 I [trace this history in my notes](https://css.oddbird.net/logical/research/#why-inline-size-but-padding-inline),
 with links to all the discussion I can find.

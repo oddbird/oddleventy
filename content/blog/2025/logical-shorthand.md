@@ -7,8 +7,10 @@ image:
   src: blog/2025/logical.jpg
   alt: block-size, inline-size, size?
 tags:
+  - Article
   - CSS
   - CSSWG
+  - Logical Properties
 action:
   text: Sponsor work on logical shorthands
   url: https://opencollective.com/oddbird-open-source/contribute/css-logical-shorthands-86141

@@ -3,10 +3,11 @@ title: Reimagining Fluid Typography
 sub: Are we responding to the right inputs?
 author: miriam
 date: 2025-02-12
+updated: 2025-03-27
 tags:
   - Article
   - CSS
-  - Layout
+  - Typography
 image:
   src: blog/2025/font-scale-hero.jpg
   alt: >
@@ -328,6 +329,10 @@ html {
 }
 ```
 
+{% import 'utility.macros.njk' as utility %}
+
+{% set update = ['Update', utility.datetime(updated)] | join(' ') %}
+{% callout 'note', update %}
 I don't know if this is a major improvement yet.
 I certainly don't feel confident here
 in recommending a new best practice,
@@ -336,6 +341,7 @@ I think there might be other improvements we could make
 to more helpfully reflect a user font-size preference
 in a fluid setting.
 I'd be curious what other ideas people come up with.
+{% endcallout %}
 
 For now,
 I like that we've put the focus on
