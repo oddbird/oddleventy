@@ -19,7 +19,7 @@ tags:
   - CSSWG
   - Logical Properties
 action:
-  text: Sponsor work on logical shorthands
+  text: Sponsor our work on logical shorthands
   url: https://opencollective.com/oddbird-open-source/contribute/css-logical-shorthands-86141
 summary: >
   We're trying to make progress
