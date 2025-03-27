@@ -62,7 +62,7 @@ that CSS started with:
   of an element can be described
   as the `inline-size` and `block-size`.
 
-{% note 'Side quest' %}
+{% callout 'note', 'Side quest' %}
 The original specifications
 use `length` (or later `extent`) & `measure` to describe
 the block and inline dimensions.
@@ -70,7 +70,7 @@ That eventually become `block-size` & `inline-size` in 2014,
 which I think is a big improvement for clarity.
 I [trace this history in my notes](https://css.oddbird.net/logical/research/#why-inline-size-but-padding-inline),
 with links to all the discussion I can find.
-{% endnote %}
+{% endcallout %}
 
 _CSS Logical Properties & Values Module Level 1_
 defines a number of flow-relative values
@@ -100,7 +100,7 @@ for quickly setting the `margin-block`,
   user='miriamsuzanne'
 ) }}
 
-{% note 'Side quest' %}
+{% callout 'note', 'Side quest' %}
 These 2-value properties
 don't have any physical counterparts.
 There is no `margin-vertical` or `margin-y` property.
@@ -108,7 +108,7 @@ Should there be?
 Let us know what you think
 on [Mastodon](https://front-end.social/@oddbird)
 or [Bluesky](https://bsky.app/profile/oddbird.dev/)!
-{% endnote %}
+{% endcallout %}
 
 The Logical Properties spec also
 [includes a proposal](https://www.w3.org/TR/css-logical-1/#logical-shorthand-keyword)
