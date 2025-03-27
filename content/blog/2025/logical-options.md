@@ -4,7 +4,7 @@ sub: There are several proposals, but one major road block
 author: miriam
 date: 2025-03-27
 image:
-  src: blog/2025/closed-sign.jpg
+  src: blog/2025/closed.jpg
   alt: >
     A chain-link gate in black and white
     with a sign that says
@@ -18,6 +18,7 @@ tags:
   - CSS
   - CSSWG
   - Logical Properties
+series: CSS logical shorthands
 action:
   text: Sponsor our work on logical shorthands
   url: https://opencollective.com/oddbird-open-source/contribute/css-logical-shorthands-86141

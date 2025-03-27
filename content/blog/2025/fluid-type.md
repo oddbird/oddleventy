@@ -8,6 +8,7 @@ tags:
   - Article
   - CSS
   - Typography
+series: revisiting fluid typography
 image:
   src: blog/2025/font-scale-hero.jpg
   alt: >
@@ -27,22 +28,6 @@ summary: |
 
 {% import "quotes.macros.njk" as quotes %}
 {% import 'embed.macros.njk' as embed %}
-
-{% callout 'note' %}
-
-Come join us live
-for a conversation
-about fluid type
-with the experts from Clearleft. [Winging It | March 20 @ 11am MT](https://www.youtube.com/live/py41Ys-iRvk)
-
-We also talked about some of these ideas
-in our [Winging It](/2025/01/24/winging-it-15/) live stream
-last month
-with Alan Stearns,
-co-chair of the CSS Working Group.
-Check that out for more discussion
-of typography and CSS units!
-{% endcallout %}
 
 The browser provides a default text size
 based on user preferences,

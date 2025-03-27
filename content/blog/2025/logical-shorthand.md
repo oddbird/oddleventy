@@ -11,6 +11,7 @@ tags:
   - CSS
   - CSSWG
   - Logical Properties
+series: CSS logical shorthands
 action:
   text: Sponsor work on logical shorthands
   url: https://opencollective.com/oddbird-open-source/contribute/css-logical-shorthands-86141
