@@ -255,3 +255,15 @@ CSS anchor positioning takes a challenging task and simplifies it, speeding up
 your delivery time. And while it's not yet in all browsers, it's coming soon,
 and available with a polyfill. So now is the perfect time to learn CSS anchor
 positioning, step by step, so you can add it to your toolbox.
+
+## Why subscribe to an email course?
+
+The CSS anchor positioning API may seem complex, but it is actually a group of
+many simple parts. A talk or video will need to speed through all the parts to
+cover everything, but this email course will space deeper learning over
+multiple weeks.
+
+This email course is designed to complement other learning methods, to give you
+repetition so the concepts move from short to long term memory. You will benefit
+from having an understanding of the capabilities of the tool before you need to
+use it, so you can quickly identify where it will be useful.
