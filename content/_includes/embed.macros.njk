@@ -291,6 +291,12 @@ params:
     type: html
     default: none
     note: The image to embed (can also be passed into a `caller()` block)
+  inset:
+    type: number
+    default: 5px
+    note: |
+      Number used to specify size of the clip-path of the image inside
+      of the screen
 #}
 {% macro screen(
   device='iphone',
@@ -298,6 +304,7 @@ params:
   fit=none,
   position=none,
   notch='15%',
+  inset='5px',
   content=none
 ) %}
   {%- set content = content if (content != none) else caller() -%}
@@ -305,7 +312,8 @@ params:
     '--device-img-notch': notch,
     '--device-img-fill': fill,
     '--device-img-fit': fit,
-    '--device-img-position': position
+    '--device-img-position': position,
+    '--device-clip-inset': inset
   } -%}
   <div data-screen="{{ device }}" {{ utility.style_if(style) }}>
     {{ content | safe }}
