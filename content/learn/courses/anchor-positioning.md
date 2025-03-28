@@ -137,7 +137,7 @@ of another element unlocks all sorts of creative possibilities.
   height=300
 ) }}
 
-## 11 Weekly Emails
+## 9 Weekly Emails
 
 {% call layout.grid(
   'narrow-columns',
@@ -146,7 +146,6 @@ of another element unlocks all sorts of creative possibilities.
 
 {% call layout.block('column') %}
 
-- Why use CSS anchor positioning?
 - Placement with `position-area`
 - Using a position with `anchor()`
 - Using a size with `anchor-size()`
@@ -157,7 +156,6 @@ of another element unlocks all sorts of creative possibilities.
 
 {% call layout.block('column') %}
 
-- Multiple anchors and calculations
 - Troubleshooting anchor positioning
 - Scroll visibility
 - Handling element overflow
@@ -240,26 +238,24 @@ for innovative layouts.
 
 Anchor positioning is currently not available in all browsers,
 and it will be 2 to 3 years before you can safely assume all your users have it.
+But now is the time to add this new tool to your toolkit. Here's why.
 
-But now is the time to add this new tool to your toolkit.
-The ability to describe anchor positioning in a more
-declarative way has changed how I think about layout.
-It's unlocked new possibilities and made for better user experiences.
-
-And you can use it now with a polyfill
-to make sure that all your users have the same experience.
+The ability to describe anchor positioning in a more declarative way has changed
+how I think about layout. It’s unlocked new possibilities and made for better
+user experiences. And with the polyfill, all your users can have the same
+experience without waiting for browsers to catch up.
 
 ## Don't add another dependency
 
 While it's tempting to reach for the JavaScript library you've used in the past,
-you can instead choose to use the new API. With the polyfill, users with
-browsers that support it natively will have a much more performant experience.
-And you'll get to enjoy the ergonomics of the new API.
+they introduce performance bottlenecks and ongoing maintenance. As part of the
+browser, anchor positioning is more performant and will automatically continue
+to work for years to come. With the polyfill, even your users with browsers that
+don't support anchor positioning will have the same functionality, and you'll
+get to enjoy the ergonomics of the new API.
 
-CSS anchor positioning takes a challenging task and simplifies it, speeding up
-your delivery time. And while it's not yet in all browsers, it's coming soon,
-and available with a polyfill. So now is the perfect time to learn CSS anchor
-positioning, step by step, so you can add it to your toolbox.
+That's why I love anchor positioning. I can't wait to share what I've learned
+with you so you can add it to your toolkit too!
 
 ## Why subscribe to an email course?
 
