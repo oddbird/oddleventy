@@ -11,7 +11,7 @@
 /// @group links
 .main-action {
   font-size: var(--medium);
-  margin-top: var(--double-gutter);
+  margin-top: var(--main-action-margin, var(--double-gutter));
 }
 
 [data-section-title],

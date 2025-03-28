@@ -1,3 +1,5 @@
+@use '../config';
+
 [data-grid='open-source'] {
   --col-gap: var(--spacer);
   --fit-max: var(--min-page-column);
@@ -25,4 +27,46 @@
     inline-size: auto;
     max-block-size: calc(1lh + var(--gutter));
   }
+}
+
+[data-grid~='featured-goal'] {
+  grid-template:
+    'header' auto
+    'summary' auto
+    'list' auto
+    'action' min-content / 100%;
+
+  @include config.above('wide-page') {
+    grid-template:
+      'header ...' auto
+      'summary list' auto
+      'action ...' min-content / auto auto;
+  }
+
+  .main-action {
+    --main-action-margin: 0;
+
+    grid-area: action;
+  }
+}
+
+.feartured-goal-heading {
+  --column: wide;
+
+  font-size: var(--xxlarge);
+  margin-inline: auto;
+  margin-block-end: var(--double-gutter);
+  color: var(--action);
+}
+
+.goal-header {
+  grid-area: header;
+}
+
+.goal-summary {
+  grid-area: summary;
+}
+
+.goal-list {
+  grid-area: list;
 }
