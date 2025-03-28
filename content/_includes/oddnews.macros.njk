@@ -18,6 +18,8 @@ params:
     note: |
       tag for page where signup form is located:
       'footer' or 'oddblog' or 'oddnews'
+      Or, a custom tag for a specific list.
+      Must be mapped to a tag ID in filters/utils.js:oddNewsTags
   class:
     type: string
     default: none
@@ -26,7 +28,8 @@ params:
 {% macro oddnews_signup(
   heading=true,
   tag='footer',
-  class=none
+  class=none,
+  buttonText='Subscribe'
 ) %}
   <div class="oddnews-signup{% if class %} {{ class }}{% endif %}">
     {%- if heading -%}
@@ -53,7 +56,7 @@ params:
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80219aa68d7bad77b9fd2eb93_7c27f7fb9a" tabindex="-1" value=""></div>
         <div class="optionalParent">
           <div class="clear foot form-actions">
-            <button data-btn="submit" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button>
+            <button data-btn="submit" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">{{ buttonText }}</button>
           </div>
         </div>
       </div>

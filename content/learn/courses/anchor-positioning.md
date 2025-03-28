@@ -56,6 +56,7 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 {% import 'utility.macros.njk' as utility %}
 {% import 'contact.macros.njk' as contact %}
+{% import 'oddnews.macros.njk' as oddnews %}
 
 {% call layout.block(
   name='full',
@@ -225,7 +226,11 @@ for innovative layouts.
 
 {% call layout.block('column') %}
 
-> TODO: Add Signup Form here
+{{ oddnews.oddnews_signup(
+  heading=false,
+  tag="course-anchor-positioning",
+  buttonText="Subscribe to learn Anchor Positioning"
+) }}
 
 {% endcall %}
 
