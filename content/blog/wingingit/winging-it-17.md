@@ -21,11 +21,11 @@ summary: |
   and how a website design should plan for
   (and respond to) user preferences.
   And we're not the only ones thinking about it!
-  This month we're going to
-  continue the conversation,
-  with the experts
-  from [Clearleft](https://clearleft.com/)
-  behind excellent resources
+  This month we
+  continue the conversation
+  with Richard Rutter
+  from [Clearleft](https://clearleft.com/),
+  the experts behind excellent resources
   like [Utopia.fyi](https://utopia.fyi/)
   and [WebTypography.net](https://webtypography.net/]).
 ---
@@ -53,12 +53,12 @@ and backend development.
  ## What we cover:
 
 - How do we balance author and user intents?
-- Adrian Roselli’s "ultimate ideal" base font-size
+- Adrian Roselli's "ultimate ideal" base font-size
 - Possible solutions/ideas to achieve desired font-size (per site)
 - What does an `em` represent?
 - Common approach to fluid type with `vi` & `clamp()`
 - Utopia helps, and catches potential issues with `vi`
-- How can designers work with fluid typography in traditional design tools
+- How can designers work with fluid typography in traditional design tools?
 
 ## Links:
 
