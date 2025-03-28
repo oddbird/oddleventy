@@ -1,0 +1,11 @@
+{% import 'layout.macros.njk' as layout %}
+
+<h2>Featured Funding Goal</h2>
+
+{% call layout.grid('narrow-columns') %}
+{% call layout.block('column') %}
+
+ {{ goal.links | md | safe}}
+
+{% endcall %}
+{% endcall %}

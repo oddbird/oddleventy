@@ -14,6 +14,14 @@ goal:
     set the ‘logical’ inline-size and block-size properties instead. But ‘logical
     shorthands’ have been stalled in the working group for years. Can we get them
     unstuck?
+  links: |
+    - **Demo:** [2-Value Logical Shorthands](https://codepen.io/miriamsuzanne/pen/RNwYrEB)
+    - **Progress:** Follow along in [Mia’s public notebook](https://css.oddbird.net/logical/research/)
+    - **Article:** [How do we move logical shorthands forward?](/2025/03/27/logical-options/)
+    - **Article:** [Why inline-size but padding-inline?](https://css.oddbird.net/logical/research/#why-inline-size-but-padding-inline)
+    - **Side Quest:** Should there be physical counterparts for 2-value properties?
+      Let us know what you think on [Mastodon](https://front-end.social/@oddbird) 
+      or [Bluesky](https://bsky.app/profile/oddbird.dev)!
 summary: |
   Since we began, OddBird has contributed to open tools & standards — **focusing
   lately on CSS** and related platform features with Miriam joining the W3C as
@@ -23,6 +31,8 @@ summary: |
 ---
 
 {% import 'oss.macros.njk' as oss %}
+
+{% include 'featured-goal.njk' %}
 
 {{ oss.by_type(
   collections.oss | withActiveAuthor(collections.all),
