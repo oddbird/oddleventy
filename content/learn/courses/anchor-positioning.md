@@ -26,15 +26,13 @@ press:
     venue: "@lukehansford@mastodon.social"
     face: luke-hansford-bg.jpg
   - text: |
-      OddBird is a company I recommend without reservation.
-      They are among the best in the world at front end,
-      design systems, and w3c standards.
-    name: Nicole Sullivan
-    title: Product Manager for Web UI
-    venue: Google Chrome
-    face: nicole-sullivan.jpg
-    slug: best-in-the-world
-    url: https://www.stubbornella.org/
+      James helped me get my head around anchor positioning quickly. After he explained it to me I was able to put anchor positioning to work in a project immediately, in a way that I would have previously solved with lots of custom JavaScript and headaches. If you want to learn anchor positioning in a fast and practical way, there's no one better than James to teach you.
+    name: Jason Lengstorf
+    venue: Code.TV
+    title: Learn with Jason
+    face: jason-lengstorf.webp
+    slug: head-around
+    url: https://codetv.dev/series/learn-with-jason/
 included:
   - text: Immediate access to lesson 1
     icon: icons/mail-open
