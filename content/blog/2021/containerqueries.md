@@ -4,6 +4,7 @@ title: "Container Queries: a Quick Start Guide"
 sub: Now is the time to begin experimenting with a long requested layout tool.
 author: davidh
 date: 2021-04-05
+updated: 2025-03-21
 image:
   src: blog/2021/widequote.png
   alt: blockquote with magenta background and polygonal clip-path
@@ -20,6 +21,25 @@ summary: |
 ---
 
 {% import 'embed.macros.njk' as embed %}
+{% import 'utility.macros.njk' as utility %}
+
+{% set update = ['Update', utility.datetime('2025-03-21')] | join(' ') %}
+
+{% callout 'note', update %}
+
+🥳 Container queries have been available to use in all major browsers since
+February 2023. We've updated the guide with changes and developments that have
+happened since we first published.
+
+- New [containment types] have been added and other implied or planned
+  containment behavior has been adjusted or removed.
+- Some [features that were being considered] have landed in browsers, while some
+  are only partially implemented.
+
+[features that were being considered]: #what’s-next%3F
+[containment types]: #syntax-and-an-example
+
+{% endcallout %}
 
 In the latest version of [Chrome Canary](https://www.google.com/chrome/canary/),
 the most recent `@container` query proposal is available for use behind an
@@ -87,6 +107,23 @@ as well.
 (`Block-size` is also being considered as a containment type in the new
 proposal. `Inline-size` seemed to satisfy more use-cases, so is being developed
 first.)
+
+{% callout 'note', update %}
+
+- `Inline-size` containment has been well-supported since container queries were
+  supported in stable versions of browsers.
+- `Layout` containment was previously applied automatically when
+  `container-type` and `container-name` properties were used. It has since been
+  removed from the container queries specification, but is still applied in some
+  browsers that have not updated their implementation of container queries.
+- Single-axis `block-size` containment proved to be impossible and has since
+  been abandoned.
+- The `size` containment type, which queries in both the inline and block axes,
+  has been available as a containment type in all browsers since February 2023.
+  Setting `container-type: size` allows for querying the container's orientation
+  and aspect-ratio in addition to its size.
+
+{% endcallout %}
 
 Containers can also be named:
 
@@ -229,6 +266,33 @@ queries work could change.
   [Container-relative units](https://github.com/w3c/csswg-drafts/issues/5888)
   could be on the horizon as well.
 
+{% callout 'note', update %}
+
+- [Container-relative units](https://developer.mozilla.org/en-US/docs/Web/CSS/length#container_query_length_units)
+  have been available to use in all major browsers since February 2023.
+- Most Chromium based browsers added support for
+  [`scroll-state`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+  containment in February of 2025. As of this update, it's available in a
+  browser preview version of Opera.
+- Style queries -- the ability to query a computed value of a containing element
+  -- have been partially implemented by most browsers (no support in Firefox
+  yet). The current implementation allows for the querying of custom property
+  values:
+
+  ```css
+  @container style(--theme: light) {
+    /* styles to apply here */
+  }
+  ```
+
+  Browsers are still working on adding support for using style queries to
+  evaluate booleans (`@container style(gap) {...}`) and property-value pairs
+  (`@container style(display: flex) {...}`).
+- Size queries have made it possible to now query a containing element's
+  `aspect-ratio` and orientation.
+
+{% endcallout %}
+
 Bookmark Miriam's scratch site for updates: [Miriam's CSS
 Sandbox](https://css.oddbird.net/rwd/query/).
 
@@ -239,6 +303,7 @@ Contain 3 Spec](https://github.com/orgs/w3c/projects/108).
 ## Experiment and share
 
 Follow these steps to get started experimenting and making your own demos:
+
 - Download [Chrome Canary](https://www.google.com/chrome/canary/) or update to
   the latest version.
 - Navigate to `chrome://flags`.
