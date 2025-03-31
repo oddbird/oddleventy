@@ -18,7 +18,7 @@
 <div data-layout="footer" data-footer="{{ 'contact' if (page.url == '/contact/') }}">
   {% if page.url != '/contact/' %}
     <aside aria-label="contact">
-      {%- if not add_cta %}
+      {%- if not add_cta and page.url == '/services/' or '/work/' %}
         <div class="contact-form-intro">
           <h3>{{ footer_title | mdInline | safe }}</h3>
           {{ footer_content | md | safe }}
