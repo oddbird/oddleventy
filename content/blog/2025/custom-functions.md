@@ -7,17 +7,18 @@ tags:
   - Article
   - CSS
   - Layout
+  - W3C
 image:
   src: /projects/w3c.jpg
   alt: >
-    A
+    W3C logo
 summary: |
   There’s been a lot of progress
   in the CSS Working Group lately,
   but I want to draw your attention
   to a prototype that landed
   in Chromium ‘Canary’ (v136+) browsers
-  with the experimental platform features flag enabled. Author-defined Functions
+  with the [experimental platform features flag enabled](https://css-irl.info/how-to-enable-experimental-web-platform-features/). Author-defined Functions
   are coming to CSS,
   and you can start
   to experiment with them now!
@@ -36,13 +37,6 @@ for more W3C reports
 like this
 from Miriam Suzanne.
 {% endcallout %}
-
-There’s been a lot of progress
-in the CSS Working Group lately,
-but I want to draw your attention
-to a prototype that landed in Chromium ‘Canary’ (v136+) browsers with
-the [experimental platform features flag enabled](https://css-irl.info/how-to-enable-experimental-web-platform-features/). Author-defined Functions are coming to CSS,
-and you can start to experiment with them now!
 
 Back in 2009
 I was using Natalie Downe’s responsive layout technique.
