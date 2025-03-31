@@ -26,6 +26,16 @@ goal:
     - **Side Quest:** Should there be physical counterparts for 2-value properties?
       Let us know what you think on [Mastodon](https://front-end.social/@oddbird) 
       or [Bluesky](https://bsky.app/profile/oddbird.dev)!
+  image:
+      src: blog/2025/closed.jpg
+      alt: >
+        A chain-link gate in black and white
+        with a sign that says
+        closed indefinitely,
+        and a smaller warning
+        with gruesome icons for
+        entrapment (a person being smashed)
+        and pinching (a hand going through gears)
 summary: |
   Since we began, OddBird has contributed to open tools & standards — **focusing
   lately on CSS** and related platform features with Miriam joining the W3C as
@@ -35,8 +45,14 @@ summary: |
 ---
 
 {% import 'oss.macros.njk' as oss %}
+{% import 'quotes.macros.njk' as quotes %}
 
 {% include 'featured-goal.njk' %}
+
+{{ quotes.find(
+  collections.all,
+  slugs=['task-force', 'best-in-the-world']
+) }}
 
 {{ oss.by_type(
   collections.oss | withActiveAuthor(collections.all),

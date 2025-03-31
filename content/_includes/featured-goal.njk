@@ -1,11 +1,16 @@
 {% import 'layout.macros.njk' as layout %}
 {% import 'post.macros.njk' as post %}
 {% import "utility.macros.njk" as utility %}
+{% import "embed.macros.njk" as embed %}
 
 
 {{ layout.title('Featured Funding Goal')}}
 
 {% call layout.grid('featured-goal') %}
+
+{{ post.hero(
+  goal.image
+) }}
 
   <header class="goal-header">
     <a href="{{ goal.url }}">

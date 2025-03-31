@@ -30,7 +30,10 @@
 }
 
 [data-grid~='featured-goal'] {
+  --column: wide;
+
   grid-template:
+    'hero' auto
     'header' auto
     'summary' auto
     'list' auto
@@ -38,14 +41,18 @@
 
   @include config.above('wide-page') {
     grid-template:
-      'header ...' auto
-      'summary list' auto
-      'action ...' min-content / auto auto;
+      'hero hero hero hero' auto
+      '... header header ...' auto
+      '... summary list ... ' auto
+      '... action action ... ' min-content / var(--gutter) auto auto var(
+        --gutter
+      );
   }
 
   .main-action {
     --main-action-margin: 0;
 
+    font-size: var(--h4);
     grid-area: action;
   }
 }
