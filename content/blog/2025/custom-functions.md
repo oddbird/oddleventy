@@ -23,10 +23,7 @@ summary: |
   to experiment with them now!
 ---
 
-{% import "quotes.macros.njk" as quotes %}
-{% import 'embed.macros.njk' as embed %}
-
-{% callout '' %}
+{% callout 'note', false %}
 This article was originally published
 in OddNews,
 our newsletter for designers and developers
@@ -34,7 +31,7 @@ who want the latest
 in front-end web development
 and design.
 
-[Subscribe to OddNews](https://www.oddbird.net/oddnews/)
+[Subscribe to OddNews](/oddnews/)
 for more W3C reports
 like this
 from Miriam Suzanne.
@@ -54,8 +51,8 @@ or Responsive Web Design(TM),
 or `calc()`, or modern layout methods
 like flexbox and grid.
 The process involved a lot of math.
-It wasn’t complicated math
-– a single division problem –
+It wasn’t complicated math --
+a single division problem --
 but it was repeated
 for every element in the layout.
 At its simplest (not accounting for gutters),
@@ -121,12 +118,12 @@ from the function.
 In many languages,
 like JavaScript,
 we might expect
-to get the first valid result every time
-– but this is CSS,
+to get the first valid result every time --
+but this is CSS,
 where the *last* valid result takes precedence.
 If the user has a dark-mode preference set,
-this function will return `dark`
-– otherwise it will return
+this function will return `dark` --
+otherwise it will return
 the default light scheme value.
 
 We can also add call-time parameters
@@ -188,7 +185,7 @@ and [fluid-type](https://codepen.io/miriamsuzanne/pen/ogNobGx) functions.
 
 What functions would be
 most useful to you?
-[Let us know what you come up with](https://www.oddbird.net/contact/),
+[Let us know what you come up with](/contact/) --
 we’d love to see your demos
 on [Mastodon](https://front-end.social/@oddbird)
 or [Bluesky](https://bsky.app/profile/oddbird.dev/)!
