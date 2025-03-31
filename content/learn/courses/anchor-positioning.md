@@ -227,6 +227,7 @@ for innovative layouts.
 {{ oddnews.oddnews_signup(
   heading=false,
   tag="course-anchor-positioning",
+  class="headerless",
   buttonText="Subscribe to learn Anchor Positioning"
 ) }}
 
