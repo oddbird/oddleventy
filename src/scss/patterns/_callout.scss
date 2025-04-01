@@ -18,6 +18,7 @@
     --callout-padding: var(--gutter) var(--double-gutter);
     --newline: var(--gutter);
 
+    display: none;
     grid-area: note;
   }
 }
