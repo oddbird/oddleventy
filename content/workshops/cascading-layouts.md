@@ -3,7 +3,7 @@ title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
 action:
-  text: Register now »
+  text: Register now for April 2025 »
   url: 'https://ti.to/pland/css-layout'
 date: 2024-12-31
 image:
@@ -47,7 +47,9 @@ events:
 callout_content: |
   Early bird tickets **are on sale now**!
 
-  [Buy your ticket today](https://ti.to/pland/css-layout), and get the latest information
+  [Buy your ticket today](https://ti.to/pland/css-layout)
+  for the online workshop, April 2025,
+  and get the latest information
   about this workshop and other OddNews by subscribing to
   our&nbsp;[newsletter](/oddnews/).
 summary: |
@@ -77,7 +79,7 @@ summary: |
   grid='fit'
 ) }}
 
-## Register Now
+## Register Now for April 2025
 
 <script src="https://js.tito.io/v2" async></script>
 <script>
