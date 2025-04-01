@@ -57,15 +57,6 @@
   }
 }
 
-.feartured-goal-heading {
-  --column: wide;
-
-  font-size: var(--xxlarge);
-  margin-inline: auto;
-  margin-block-end: var(--double-gutter);
-  color: var(--action);
-}
-
 .goal-header {
   grid-area: header;
 }
