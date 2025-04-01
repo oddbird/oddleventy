@@ -3,8 +3,8 @@ title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
 action:
-  text: Subscribe to OddNews for updates »
-  url: /oddnews/
+  text: Register now »
+  url: 'https://ti.to/pland/css-layout'
 date: 2024-12-31
 image:
   src: talks/cascading-workshop-cat.jpg
@@ -45,10 +45,10 @@ events:
     date: 2025-04-28
     end: 2025-04-30
 callout_content: |
-  Early bird tickets go on sale **April 2025**!
+  Early bird tickets **are on sale now**!
 
-  For reminders, or to get the latest information
-  about this workshop and other OddNews, subscribe to
+  [Buy your ticket today](https://ti.to/pland/css-layout), and get the latest information
+  about this workshop and other OddNews by subscribing to
   our&nbsp;[newsletter](/oddnews/).
 summary: |
   CSS layout techniques have come a long way
@@ -77,6 +77,31 @@ summary: |
   grid='fit'
 ) }}
 
+## Register Now
+
+<script src="https://js.tito.io/v2" async></script>
+<script>
+  window.tito = window.tito ||
+    function() {
+      (tito.q = tito.q || []).push(arguments);
+    };
+  tito('on:widget:loaded',function(){
+     document.getElementById('tito-registration-fallback').setAttribute('hidden', 'hidden');
+  });
+</script>
+
+<a href="https://ti.to/pland/css-layout" id="tito-registration-fallback">Register</a>
+<tito-widget event="pland/css-layout"></tito-widget>
+
+## Discounts & Scholarships
+
+Freelancer and other
+need-based scholarships available.
+For discounts,
+please [contact us].
+
+[contact us]: /contact/
+
 ## What Will Attendees Learn In This Workshop?
 
 - Building **maintainable CSS layouts** with **progressive enhancement**
@@ -93,8 +118,8 @@ You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
 {{ utility.main_action(
-  content='Subscribe to OddNews for updates »',
-  url='/oddnews/'
+  content='Register now »',
+  url='https://ti.to/pland/css-layout'
 ) }}
 
 ## About Miriam
