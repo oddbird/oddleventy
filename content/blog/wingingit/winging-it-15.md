@@ -9,6 +9,7 @@ author:
   - miriam
   - stacy
 date: 2025-01-24
+series: revisiting fluid typography
 length: 57 mins
 image:
   src: winging-it/winging-it-15.jpg
@@ -55,7 +56,6 @@ summary: |
 - [The Ultimate Ideal Bestest Base Font Size That Everyone Is Keeping a Secret, Especially Chet](https://adrianroselli.com/2024/03/the-ultimate-ideal-bestest-base-font-size-that-everyone-is-keeping-a-secret-especially-chet.html)
 - [Why You Should Use px Units for margin, padding, & Other Spacing Techniques](https://ashleemboyer.com/blog/why-you-should-use-px-units-for-margin-padding-and-other-spacing-techniques)
 
-## Demos: 
+## Demos:
 
 - [Viewport spacing, px guardrails, font-rounding](https://codepen.io/miriamsuzanne/pen/KKjVQMK?editors=1100 )
-
