@@ -1,0 +1,38 @@
+{% import 'layout.macros.njk' as layout %}
+{% import 'post.macros.njk' as post %}
+{% import "utility.macros.njk" as utility %}
+{% import "embed.macros.njk" as embed %}
+
+{{ layout.title('Featured Funding Goal')}}
+
+{% call layout.grid('featured-goal') %}
+
+{{ post.hero(
+  goal.image
+) }}
+
+<header class="goal-header">
+  <a href="{{ goal.url }}">
+    <h3 class="post-header">
+      {{ goal.title }}
+    </h3>
+  </a>
+  {{ post.subtitle(goal.sub) }}
+  {{ post.by(
+    goal.author,
+    collections
+  ) }}
+</header>
+<div class="p-summary goal-summary">
+  {{ goal.summary | md | safe }}
+</div>
+<div class="goal-list">
+  {{ goal.links | md | safe }}
+</div>
+
+{{ utility.main_action(
+  goal.cta,
+  goal.sponsor_url
+) }}
+
+{% endcall %}
