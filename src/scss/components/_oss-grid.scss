@@ -31,6 +31,7 @@
 
 [data-grid~='featured-goal'] {
   --column: wide;
+  --goal-column: minmax(25ch, 1fr);
 
   grid-template:
     'hero' auto
@@ -44,9 +45,8 @@
       'hero hero hero hero' auto
       '... header header ...' auto
       '... summary list ... ' auto
-      '... action action ... ' min-content / var(--gutter) auto auto var(
-        --gutter
-      );
+      '... action action ... ' min-content / var(--gutter) var(--goal-column)
+      var(--goal-column) var(--gutter);
   }
 
   .main-action {
