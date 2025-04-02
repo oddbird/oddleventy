@@ -48,7 +48,7 @@ callout_content: |
   [Early bird tickets](https://ti.to/pland/css-layout)
   on sale through April 12. For workshop
   updates and demos of workshop content,
-  subscribe to [Odd News](/oddnews/).
+  subscribe to [OddNews](/oddnews/).
 summary: |
   CSS layout techniques have come a long way
   since the early days of responsive design,
