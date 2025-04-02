@@ -1,18 +1,17 @@
 {% import 'embed.macros.njk' as embed %}
 {% import 'utility.macros.njk' as utility %}
-{% import 'talks.macros.njk' as talks %}
 
 {% if summary or action %}
   {% if page.url == '/workshops/cascading-layouts/' and callout_content %}
-      {% callout 'note', false %}
+      {% callout 'event', false %}
+        <p class="event-dates"> {{ utility.datetime(
+          '2025-04-28',
+          '2025-04-30',
+          'long'
+        )}} - Online
+      </p>
         {{ callout_content | md | safe }}
       {% endcallout %}
-      {% if events %}
-        {{ talks.section(
-          'Events',
-          collections.all | getCollectionItem(page) | pageEvents
-        ) }}
-      {% endif %}
   {% endif %}
   <div id="intro" class="summary{% if is_feed or is_entry %} p-summary{% endif %}">
     {% if badges %}

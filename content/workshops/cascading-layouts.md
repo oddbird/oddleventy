@@ -45,13 +45,10 @@ events:
     date: 2025-04-28
     end: 2025-04-30
 callout_content: |
-  Early bird tickets **are on sale now**!
-
-  [Buy your ticket today](https://ti.to/pland/css-layout)
-  for the online workshop, April 2025,
-  and get the latest information
-  about this workshop and other OddNews by subscribing to
-  our&nbsp;[newsletter](/oddnews/).
+  [Early bird tickets](https://ti.to/pland/css-layout)
+  on sale through April 12. For workshop
+  updates and demos of workshop content,
+  subscribe to [Odd News](/oddnews/).
 summary: |
   CSS layout techniques have come a long way
   since the early days of responsive design,

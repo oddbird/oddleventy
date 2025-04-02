@@ -84,9 +84,3 @@ ol {
     --item-after: ', ';
   }
 }
-
-[data-list~='events'] {
-  .post-header & {
-    grid-area: events;
-  }
-}
