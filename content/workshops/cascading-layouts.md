@@ -67,7 +67,7 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 {% import 'quotes.macros.njk' as quotes %}
 
-{{ embed.figure([{ youtube: '9EDOzJJdxWA' }]) }}
+{{ embed.figure([{ youtube: '8k6m87woEpQ' }]) }}
 
 ## What Will Attendees Get?
 
