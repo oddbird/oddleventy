@@ -3,8 +3,8 @@ title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
 action:
-  text: Subscribe to OddNews for updates »
-  url: /oddnews/
+  text: Register now for April 2025 »
+  url: 'https://ti.to/pland/css-layout'
 date: 2024-12-31
 image:
   src: talks/cascading-workshop-cat.jpg
@@ -45,11 +45,10 @@ events:
     date: 2025-04-28
     end: 2025-04-30
 callout_content: |
-  Early bird tickets go on sale **April 2025**!
-
-  For reminders, or to get the latest information
-  about this workshop and other OddNews, subscribe to
-  our&nbsp;[newsletter](/oddnews/).
+  [Early bird tickets](https://ti.to/pland/css-layout)
+  on sale through April 12. For workshop
+  updates and demos of workshop content,
+  subscribe to [OddNews](/oddnews/).
 summary: |
   CSS layout techniques have come a long way
   since the early days of responsive design,
@@ -68,7 +67,7 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 {% import 'quotes.macros.njk' as quotes %}
 
-{{ embed.figure([{ youtube: '9EDOzJJdxWA' }]) }}
+{{ embed.figure([{ youtube: '8k6m87woEpQ' }]) }}
 
 ## What Will Attendees Get?
 
@@ -76,6 +75,31 @@ summary: |
   data=included,
   grid='fit'
 ) }}
+
+## Register Now for April 2025
+
+<script src="https://js.tito.io/v2" async></script>
+<script>
+  window.tito = window.tito ||
+    function() {
+      (tito.q = tito.q || []).push(arguments);
+    };
+  tito('on:widget:loaded',function(){
+     document.getElementById('tito-registration-fallback').setAttribute('hidden', 'hidden');
+  });
+</script>
+
+<a href="https://ti.to/pland/css-layout" id="tito-registration-fallback">Register</a>
+<tito-widget event="pland/css-layout"></tito-widget>
+
+## Discounts & Scholarships
+
+Freelancer and other
+need-based scholarships available.
+For discounts,
+please [contact us].
+
+[contact us]: /contact/
 
 ## What Will Attendees Learn In This Workshop?
 
@@ -93,8 +117,8 @@ You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
 {{ utility.main_action(
-  content='Subscribe to OddNews for updates »',
-  url='/oddnews/'
+  content='Register now »',
+  url='https://ti.to/pland/css-layout'
 ) }}
 
 ## About Miriam
