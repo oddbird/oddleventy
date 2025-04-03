@@ -45,6 +45,8 @@ events:
     date: 2025-04-28
     end: 2025-04-30
 callout_content: |
+  9am - 11:30am PT
+
   [Early bird tickets](https://ti.to/pland/css-layout)
   on sale through April 12. For workshop
   updates and demos of workshop content,
