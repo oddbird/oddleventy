@@ -65,9 +65,10 @@ summary: |
 {% import 'utility.macros.njk' as utility %}
 {% import 'contact.macros.njk' as contact %}
 {% import 'embed.macros.njk' as embed %}
-{% import 'quotes.macros.njk' as quotes %}
 
-{{ embed.figure([{ youtube: '8k6m87woEpQ' }]) }}
+<div id="workshop-video">
+  {{ embed.figure([{ youtube: '8k6m87woEpQ' }]) }}
+</div>
 
 ## What Will Attendees Get?
 
