@@ -37,7 +37,8 @@
   }
 }
 
-[data-media~='hire-cta'] {
+[data-media~='hire-cta'],
+[data-media~='sponsor-cta'] {
   @include config.above('wide-page') {
     --media-gap: var(--double-gutter);
     --media-margin: calc(var(--gutter) * -1) 0;
