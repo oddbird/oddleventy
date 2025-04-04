@@ -1,3 +1,5 @@
+import MockDate from 'mockdate';
+
 import {
   addCallToAction,
   byYear,
@@ -103,13 +105,34 @@ describe('page filters', () => {
     expect(testPage).toHaveProperty('year');
   });
 
-  test('eventSort', () => {
-    const slugs = ['test3', 'events', 'test1'];
-    const years = ['2018', '2019', '2040'];
-    const actual = eventSort(collection4);
+  describe('eventSort', () => {
+    beforeAll(() => {
+      MockDate.set('2020-02-01');
+    });
 
-    expect(actual.map((item) => item.page.fileSlug)).toEqual(slugs);
-    expect(actual.map((item) => item.year)).toEqual(years);
+    afterAll(() => {
+      MockDate.reset();
+    });
+
+    test('sorts collection', () => {
+      const slugs = ['test3', 'events', 'test1'];
+      const years = ['2018', '2019', '2040'];
+      const actual = eventSort(collection4);
+
+      expect(actual.map((item) => item.page.fileSlug)).toEqual(slugs);
+      expect(actual.map((item) => item.year)).toEqual(years);
+    });
+
+    test('sorts collection including future events', () => {
+      const slugs = ['test3', 'test1', 'events'];
+      const years = ['2018', '2040', '2030'];
+      const actual = eventSort(collection4, true);
+
+      expect(actual.map((item) => item.page.fileSlug)).toEqual(slugs);
+      expect(actual.map((item) => item.future_year ?? item.year)).toEqual(
+        years,
+      );
+    });
   });
 
   describe('byYear', () => {

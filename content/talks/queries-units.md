@@ -1,6 +1,6 @@
 ---
 title: Intrinsic CSS with Container Queries & Units
-date: 2022-08-16
+date: 2022-09-13
 author: miriam
 image:
   src: talks/container-query.jpg

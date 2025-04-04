@@ -2,7 +2,7 @@
 title: Dissecting the ‘Name-Brand’ CSS Conventions
 sub: To understand how they work with the language
 author: miriam
-date: 2020-08-24
+date: 2020-10-26
 image:
   src: talks/conventions.jpg
 tags:
