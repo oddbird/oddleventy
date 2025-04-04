@@ -5,7 +5,7 @@ author: miriam
 action:
   text: Register now for April 2025 »
   url: 'https://ti.to/pland/css-layout'
-date: 2024-12-31
+date: 2024-06-24
 image:
   src: talks/cascading-workshop-cat.jpg
   position: center
