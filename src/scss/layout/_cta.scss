@@ -34,12 +34,6 @@
   @include config.above('wide-page') {
     --align: center;
     --cta-padding-block-end: var(--quarter-shim);
-  }
-}
-
-[data-media~='hire-cta'],
-[data-media~='sponsor-cta'] {
-  @include config.above('wide-page') {
     --media-gap: var(--double-gutter);
     --media-margin: calc(var(--gutter) * -1) 0;
   }
@@ -53,4 +47,8 @@
   background: revert;
   color: var(--bg);
   font-size: var(--h1);
+}
+
+[data-media~='sponsor-cta'] {
+  --media-size: calc(9em + 5vw);
 }
