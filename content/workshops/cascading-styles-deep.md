@@ -2,7 +2,7 @@
 title: Cascading Style Systems
 sub: A workshop on resilient & maintainable CSS
 author: miriam
-date: 2023-01-09
+date: 2023-09-06
 image:
   src: talks/mia-smashing-de.jpg
   position: top
