@@ -22,7 +22,7 @@ events:
     date: 2022-11-07
     end: 2022-11-08
     slug: 2022-jamstack
-    slides: https://noti.st/mirisuzanne/Xj6q9g/intrinsic-css-with-container-queries-units
+    slides: https://slides.oddbird.net/queries-units/jamstack22/
     video: https://youtu.be/uumZV98zHt8
     media: &jam
       youtube: uumZV98zHt8
