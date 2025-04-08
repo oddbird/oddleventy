@@ -1,7 +1,7 @@
 ---
 title: Hints and Suggestions
 sub: The design of web design
-date: 2024-05-15
+date: 2024-05-09
 author: miriam
 image:
   src: talks/hints.jpg

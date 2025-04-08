@@ -2,7 +2,7 @@
 title: Beyond CSS Variables
 sub: Pushing past global design tokens
 author: miriam
-date: 2021-01-04
+date: 2021-04-19
 image:
   src: talks/vars-cascade.jpg
 tags:

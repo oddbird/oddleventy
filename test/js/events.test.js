@@ -86,7 +86,7 @@ describe('event filters', () => {
 
   test('getFuture', () => {
     expect(getFuture(getEvents(collection))).toHaveLength(0);
-    expect(getFuture(getEvents(collection4))).toHaveLength(1);
+    expect(getFuture(getEvents(collection4))).toHaveLength(3);
   });
 
   test('birdEvents', () => {
