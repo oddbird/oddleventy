@@ -19,7 +19,7 @@ tags:
   - CSS Scope
 summary: |
   I chat with Bruce Lawson
-  talk about all things CSS.
+  about all things CSS.
   We geek out over the latest and greatest features
   like Cascade Layers, `@Scope`,
   Mixins, and Container Queries --
