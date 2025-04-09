@@ -69,18 +69,12 @@ a {
   }
 }
 
-// For links styled as buttons, underlines
-// are removed and colors match styles applied
-// buttons
-[data-btn~='link-button'] {
+.highlight-link {
+  @include config.font-family('alt');
+
   --link: var(--bg);
   --link-focus: var(--bg);
-  --underline-color: transparent;
-  --underline-thickness: 0;
 
-  &:hover,
-  &:focus {
-    --underline-color: transparent;
-    --underline-thickness: 0;
-  }
+  font-weight: bold;
+  text-shadow: 1px 1px 0 var(--border);
 }
