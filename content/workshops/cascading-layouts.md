@@ -46,7 +46,9 @@ events:
     end: 2025-04-30
 press:
   - text: |
-      Miriam is one of the very few people I trust enough to point my own students toward. She gets the “why” as much as the “how,” and makes learning CSS feel genuinely empowering.
+      Miriam is one of the very few people I trust enough to point my own
+      students toward. She gets the “why” as much as the “how,” and makes
+      learning CSS feel genuinely empowering.
     name: Christine Vallaure
     title: Founder
     venue: moonlearning
