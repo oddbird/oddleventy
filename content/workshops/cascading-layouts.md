@@ -56,7 +56,7 @@ press:
       There are few, if any, who are more qualified to cover the ins and outs of CSS layout, and I can tell you that [Miriam's] work really helped inspire and inform the content in my course.
     name: Geoff Graham
     title: Author
-    venue: CSS Tricks
+    venue: CSS-Tricks
     face: geoff-graham.jpeg
     url: https://css-tricks.com/cascading-layouts-a-workshop-on-resilient-css-layouts/
 callout_content: |
