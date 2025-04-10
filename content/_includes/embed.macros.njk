@@ -200,7 +200,7 @@ params:
     <lite-youtube
       videoid="{{ videoID }}"
       params="start={{ start }}"
-      style="background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ id }}/auto/jpeg/');"
+      style="background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ videoID }}/auto/jpeg/');"
       {{ utility.attr_if('id', id or videoID) }}
     />
   </is-land>
