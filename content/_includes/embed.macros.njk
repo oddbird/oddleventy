@@ -138,18 +138,23 @@ params:
   height:
     type: number
     default: none
+  id:
+    type: string
+    default: none
 #}
 {% macro _video(
   src,
   width=none,
-  height=none
+  height=none,
+  id=none
 ) %}
   {%- set src = '/assets/media/' + src -%}
-  {%- set style = {
+  {%- set attrs = {
     'height': height,
-    'width': width
+    'width': width,
+    'id': id
   } -%}
-  <video src="{{ src }}" {{ utility.style_if(style) }} controls="controls">{{ src | mdInline }}</video>
+  <video src="{{ src }}" {{ utility.show_attrs(attrs) }} controls="controls">{{ src | mdInline }}</video>
 {% endmacro %}
 
 
@@ -158,7 +163,7 @@ label: _youtube
 category: Embed
 note: Embed a video from Youtube
 params:
-  id:
+  videoID:
     type: string
   width:
     type: number
@@ -169,13 +174,18 @@ params:
   span:
     type: number | 'full'
     default: none
-    note: Span multiple columns of a gallery
+    note: >
+      Span multiple columns of a gallery
+  id:
+    type: string
+    default: none
 #}
 {% macro _youtube(
-  id,
+  videoID,
   width=none,
   height=none,
-  span=none
+  span=none,
+  id=none
 ) -%}
   {%- set width = width or 560 -%}
   {%- set height = height or 315 -%}
@@ -184,13 +194,14 @@ params:
     '--width': '100%',
     '--span': span
   } -%}
-  {%- set start = (id.split('&t=')[1] or '0').split('s')[0] -%}
-  {%- set id = id.split('&t=')[0] -%}
-  <is-land on:visible class="ratio" {{ utility.style_if(style) }} >
+  {%- set start = (videoID.split('&t=')[1] or '0').split('s')[0] -%}
+  {%- set videoID = videoID.split('&t=')[0] -%}
+  <is-land on:visible class="ratio" {{ utility.style_if(style) }}>
     <lite-youtube
-      videoid="{{ id }}"
+      videoid="{{ videoID }}"
       params="start={{ start }}"
       style="background-image: url('https://v1.opengraph.11ty.dev/https%3A%2F%2Fyoutube.com%2Fwatch%3Fv%3D{{ id }}/auto/jpeg/');"
+      {{ utility.attr_if('id', id or videoID) }}
     />
   </is-land>
 {%- endmacro %}
@@ -220,9 +231,9 @@ params:
     {%- elif item.audio -%}
       {{- audio(item.audio, item.span) -}}
     {%- elif item.youtube -%}
-      {{- _youtube(item.youtube, item.width, item.height, item.span) -}}
+      {{- _youtube(item.youtube, item.width, item.height, item.span, item.id) -}}
     {%- elif item.video -%}
-      {{- _video(item.video, item.width, item.height) -}}
+      {{- _video(item.video, item.width, item.height, item.id) -}}
     {%- endif -%}
   {%- endfor -%}
 {%- endmacro %}

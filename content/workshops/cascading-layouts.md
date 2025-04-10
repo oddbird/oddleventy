@@ -81,6 +81,11 @@ summary: |
   with this 3-session workshop
   on building more resilient and maintainable web layouts
   using modern CSS**.
+media:
+  - youtube: 8k6m87woEpQ
+    id: workshop-video
+  - youtube: De6QMQA2aio
+    id: workshop-video-2
 ---
 
 {% import 'utility.macros.njk' as utility %}
@@ -88,13 +93,7 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 {% import "quotes.macros.njk" as quotes %}
 
-<div id="workshop-video">
-  {{ embed.figure([{ youtube: '8k6m87woEpQ' }]) }}
-</div>
-
-<div id="workshop-video-2">
-  {{ embed.figure([{ youtube: 'De6QMQA2aio' }]) }}
-</div>
+{{ embed.figure(media) }}
 
 ## What Will Attendees Get?
 
