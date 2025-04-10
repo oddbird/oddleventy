@@ -92,7 +92,7 @@ summary: |
   {{ embed.figure([{ youtube: '8k6m87woEpQ' }]) }}
 </div>
 
-<div id="workshop-video">
+<div id="workshop-video-2">
   {{ embed.figure([{ youtube: 'De6QMQA2aio' }]) }}
 </div>
 
