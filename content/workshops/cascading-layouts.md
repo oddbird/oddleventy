@@ -44,6 +44,25 @@ events:
     adr: Online
     date: 2025-04-28
     end: 2025-04-30
+press:
+  - text: |
+      Miriam is one of the very few people I trust enough to point my own
+      students toward. She gets the “why” as much as the “how,” and makes
+      learning CSS feel genuinely empowering.
+    name: Christine Vallaure
+    title: Founder
+    venue: moonlearning
+    face: christine-vallaure.jpeg
+    url: https://www.moonlearning.io/
+  - text: |
+      There are few, if any, who are more qualified to cover the ins and outs
+      of CSS layout, and I can tell you that Miriam's work really helped
+      inspire and inform the content in my course.
+    name: Geoff Graham
+    title: Author
+    venue: CSS-Tricks
+    face: geoff-graham.jpeg
+    url: https://css-tricks.com/cascading-layouts-a-workshop-on-resilient-css-layouts/
 callout_content: |
   9am - 11:30am PT
 
@@ -62,15 +81,19 @@ summary: |
   with this 3-session workshop
   on building more resilient and maintainable web layouts
   using modern CSS**.
+media:
+  - youtube: 8k6m87woEpQ
+    id: workshop-video
+  - youtube: De6QMQA2aio
+    id: workshop-video-2
 ---
 
 {% import 'utility.macros.njk' as utility %}
 {% import 'contact.macros.njk' as contact %}
 {% import 'embed.macros.njk' as embed %}
+{% import "quotes.macros.njk" as quotes %}
 
-<div id="workshop-video">
-  {{ embed.figure([{ youtube: '8k6m87woEpQ' }]) }}
-</div>
+{{ embed.figure(media) }}
 
 ## What Will Attendees Get?
 
@@ -103,6 +126,8 @@ For discounts,
 please [contact us].
 
 [contact us]: /contact/
+
+{{ quotes.grid(press) }}
 
 ## What Will Attendees Learn In This Workshop?
 
