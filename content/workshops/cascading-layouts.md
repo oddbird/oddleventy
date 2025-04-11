@@ -3,9 +3,9 @@ title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
 action:
-  text: Subscribe to OddNews for updates »
-  url: /oddnews/
-date: 2024-12-31
+  text: Register now for April 2025 »
+  url: 'https://ti.to/pland/css-layout'
+date: 2025-04-28
 image:
   src: talks/cascading-workshop-cat.jpg
   position: center
@@ -44,12 +44,32 @@ events:
     adr: Online
     date: 2025-04-28
     end: 2025-04-30
+press:
+  - text: |
+      Miriam is one of the very few people I trust enough to point my own
+      students toward. She gets the “why” as much as the “how,” and makes
+      learning CSS feel genuinely empowering.
+    name: Christine Vallaure
+    title: Founder
+    venue: moonlearning
+    face: christine-vallaure.jpeg
+    url: https://www.moonlearning.io/
+  - text: |
+      There are few, if any, who are more qualified to cover the ins and outs
+      of CSS layout, and I can tell you that Miriam's work really helped
+      inspire and inform the content in my course.
+    name: Geoff Graham
+    title: Author
+    venue: CSS-Tricks
+    face: geoff-graham.jpeg
+    url: https://css-tricks.com/cascading-layouts-a-workshop-on-resilient-css-layouts/
 callout_content: |
-  Early bird tickets go on sale **April 2025**!
+  9am - 11:30am PT
 
-  For reminders, or to get the latest information
-  about this workshop and other OddNews, subscribe to
-  our&nbsp;[newsletter](/oddnews/).
+  [Early bird tickets](https://ti.to/pland/css-layout)
+  on sale through April 12. For workshop
+  updates and demos of workshop content,
+  subscribe to [OddNews](/oddnews/).
 summary: |
   CSS layout techniques have come a long way
   since the early days of responsive design,
@@ -61,14 +81,19 @@ summary: |
   with this 3-session workshop
   on building more resilient and maintainable web layouts
   using modern CSS**.
+media:
+  - youtube: 8k6m87woEpQ
+    id: workshop-video
+  - youtube: De6QMQA2aio
+    id: workshop-video-2
 ---
 
 {% import 'utility.macros.njk' as utility %}
 {% import 'contact.macros.njk' as contact %}
 {% import 'embed.macros.njk' as embed %}
-{% import 'quotes.macros.njk' as quotes %}
+{% import "quotes.macros.njk" as quotes %}
 
-{{ embed.figure([{ youtube: '9EDOzJJdxWA' }]) }}
+{{ embed.figure(media) }}
 
 ## What Will Attendees Get?
 
@@ -76,6 +101,33 @@ summary: |
   data=included,
   grid='fit'
 ) }}
+
+## Register Now for April 2025
+
+<script src="https://js.tito.io/v2" async></script>
+<script>
+  window.tito = window.tito ||
+    function() {
+      (tito.q = tito.q || []).push(arguments);
+    };
+  tito('on:widget:loaded',function(){
+     document.getElementById('tito-registration-fallback').setAttribute('hidden', 'hidden');
+  });
+</script>
+
+<a href="https://ti.to/pland/css-layout" id="tito-registration-fallback">Register</a>
+<tito-widget event="pland/css-layout"></tito-widget>
+
+## Discounts & Scholarships
+
+Freelancer and other
+need-based scholarships available.
+For discounts,
+please [contact us].
+
+[contact us]: /contact/
+
+{{ quotes.grid(press) }}
 
 ## What Will Attendees Learn In This Workshop?
 
@@ -93,8 +145,8 @@ You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
 {{ utility.main_action(
-  content='Subscribe to OddNews for updates »',
-  url='/oddnews/'
+  content='Register now »',
+  url='https://ti.to/pland/css-layout'
 ) }}
 
 ## About Miriam

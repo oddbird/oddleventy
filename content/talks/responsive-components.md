@@ -2,7 +2,7 @@
 title: Container Queries & The Future of CSS
 sub: Modernizing the cascade for responsive design systems
 author: miriam
-date: 2021-02-16
+date: 2021-04-23
 image:
   src: talks/container-query.jpg
   position: top

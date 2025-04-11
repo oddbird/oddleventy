@@ -27,7 +27,7 @@ summary: |
   from [Clearleft](https://clearleft.com/),
   the experts behind excellent resources
   like [Utopia.fyi](https://utopia.fyi/)
-  and [WebTypography.net](https://webtypography.net/]).
+  and [WebTypography.net](https://webtypography.net/).
 ---
 
 {% callout 'note', false %}

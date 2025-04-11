@@ -3,7 +3,14 @@
 
 {% if summary or action %}
   {% if page.url == '/workshops/cascading-layouts/' and callout_content %}
-      {% callout 'note', false %}
+      {% callout 'event', false %}
+        <p class="event-dates">
+          {{ utility.datetime(
+            '2025-04-28',
+            '2025-04-30',
+            'long'
+          ) }} – Online
+        </p>
         {{ callout_content | md | safe }}
       {% endcallout %}
   {% endif %}
