@@ -21,9 +21,6 @@ post:
   - tag: Winging It
     icon: winging-it-lines
     plural: Episodes
-  - tag: OddNews
-    icon: winging-it-lines
-    plural: Issues
 
 oss:
   - title: Open Web
