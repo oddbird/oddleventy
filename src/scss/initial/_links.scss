@@ -77,4 +77,9 @@ a {
 
   font-weight: bold;
   text-shadow: 1px 1px 0 var(--border);
+
+  &:hover,
+  &:focus {
+    --underline-color: var(--brand-gradient-start);
+  }
 }
