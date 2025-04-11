@@ -1,8 +1,8 @@
 ---
 title: New Features for OddContrast
-sub:
+sub: Display color gamut ranges and more
 author: oddbird
-date: 2025-03-13
+date: 2025-04-11
 tags:
   - Article
   - Accessibility
@@ -16,7 +16,10 @@ image:
     in P3 color format and an estimate
     of foreground alpha value ratio.
 summary: |
-  OddContrast gets new features --
+  OddContrast,
+  OddBird’s color format converter
+  and contrast checker,
+  gets new features --
   including the ability
   to swap background and foreground colors,
   and display color gamut ranges

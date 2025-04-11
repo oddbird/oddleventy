@@ -2,7 +2,7 @@
 title: Custom CSS Functions in the Browser
 sub: Start using author-defined functions
 author: miriam
-date: 2025-03-13
+date: 2025-04-11
 tags:
   - Article
   - CSS
