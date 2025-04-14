@@ -18,9 +18,11 @@
   --stacked-margin-block: var(--shim);
   --title-action-margin-block-end: var(--quarter-shim);
 
-  background-image: url('/assets/media/callout-bg-1.webp');
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(
+    to bottom right,
+    var(--brand-gradient-start),
+    var(--brand-gradient-end)
+  );
   color: var(--text);
   font-size: revert;
   margin-block: var(--spacer);
@@ -30,11 +32,6 @@
   @include config.above('wide-page') {
     --align: center;
     --cta-padding-block-end: var(--quarter-shim);
-  }
-}
-
-[data-media~='hire-cta'] {
-  @include config.above('wide-page') {
     --media-gap: var(--double-gutter);
     --media-margin: calc(var(--gutter) * -1) 0;
   }
@@ -46,6 +43,10 @@
 
 [data-header~='hire-cta'] {
   background: revert;
-  color: var(--text);
+  color: var(--bg);
   font-size: var(--h1);
+}
+
+[data-media~='sponsor-cta'] {
+  --media-size: calc(9em + 5vw);
 }
