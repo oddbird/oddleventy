@@ -18,7 +18,8 @@ summary: |
   but I want to draw your attention
   to a prototype that landed
   in Chromium ‘Canary’ (v136+) browsers
-  with the [experimental platform features flag enabled](https://css-irl.info/how-to-enable-experimental-web-platform-features/). Author-defined Functions
+  with the [experimental platform features flag enabled](https://css-irl.info/how-to-enable-experimental-web-platform-features/).
+  Author-defined Functions
   are coming to CSS,
   and you can start
   to experiment with them now!
