@@ -24,7 +24,8 @@ events:
     date: 2025-04-01
     url: https://smashingconf.com/meets-modern-css
     video: https://www.youtube.com/watch?v=th1q0RyvBcc
-    youtube: th1q0RyvBcc
+    media: &meets
+      youtube: th1q0RyvBcc
   - venue: Camosun College
     url: https://camosun.ca/
     date: 2024-11-18
@@ -48,6 +49,8 @@ events:
     media: &11ty
       youtube: uaN9kY8lKPU
 media:
+  - <<: *meets
+    span: full
   - <<: *btconf
   - <<: *11ty
 summary: |

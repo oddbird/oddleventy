@@ -1,0 +1,21 @@
+{% import 'embed.macros.njk' as embed %}
+
+<aside data-layout="cta" aria-labelledby="sponsor-cta-title" class="hire-us-cta" data-ccs-colors="invert">
+  {% call embed.media_block(
+    name='sponsor-cta',
+    media=embed.img(
+    src='pages/anchor-positioning-demo.jpg',
+    alt='A Codepen demo showing how a tooltip is placed using anchor positioning.',
+    sizes='media',
+    attrs={'class': 'img-shadow'}
+  )
+) %}
+    <h2 id="sponsor-cta-title" data-header='stacked hire-cta'>
+      <span class="title-action">Sponsor Us to Develop</span>
+      Languages & Tools
+      <span class="title-description">That you depend on</span>
+    </h2>
+
+    <a href='https://opencollective.com/oddbird-open-source' class="section-link highlight-link">Sponsor Us</a>
+  {% endcall %}
+</aside>
