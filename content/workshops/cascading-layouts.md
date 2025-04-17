@@ -81,7 +81,7 @@ press:
       from someone involved in writing the specs.
     name: Charis Rooda
     title: Front-end Developer
-    venue: Charismagic
+    venue: CharisMagic
     face: charis-rooda.png
     url: http://charismagic.studio/
 callout_content: |
