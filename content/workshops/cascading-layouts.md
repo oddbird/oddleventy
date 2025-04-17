@@ -63,12 +63,31 @@ press:
     venue: CSS-Tricks
     face: geoff-graham.jpeg
     url: https://css-tricks.com/cascading-layouts-a-workshop-on-resilient-css-layouts/
+  - text: |
+      I'm not sure I know anyone
+      who understands CSS layouts better than Miriam,
+      but her real skill is being able to explain it all
+      in easy to understand ways.
+    name: Kevin Powell
+    title: Educator and CSS Evangelist
+    venue: Kevin Powell YouTube
+    face: kevin-powell.jpg
+    url: https://www.youtube.com/kevinpowell
+  - text: |
+      She doesn’t just teach how things work,
+      she explains why they work that way,
+      and how everything fits together.
+      It was a treat to learn
+      from someone involved in writing the specs.
+    name: Charis Rooda
+    title: Front-end Developer
+    venue: CharisMagic
+    face: charis-rooda.png
+    url: http://charismagic.studio/
 callout_content: |
   9am - 11:30am PT
 
-  [Early bird tickets](https://ti.to/pland/css-layout)
-  on sale through April 12. For workshop
-  updates and demos of workshop content,
+  For workshop updates and demos of workshop content,
   subscribe to [OddNews](/oddnews/).
 summary: |
   CSS layout techniques have come a long way
@@ -82,10 +101,13 @@ summary: |
   on building more resilient and maintainable web layouts
   using modern CSS**.
 media:
-  - youtube: 8k6m87woEpQ
+  - span: full
+    youtube: 8k6m87woEpQ
     id: workshop-video
   - youtube: De6QMQA2aio
     id: workshop-video-2
+  - youtube: ccL4JP4f_R4
+    id: workshop-video-3
 ---
 
 {% import 'utility.macros.njk' as utility %}
