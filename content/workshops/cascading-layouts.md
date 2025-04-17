@@ -87,9 +87,7 @@ press:
 callout_content: |
   9am - 11:30am PT
 
-  [Early bird tickets](https://ti.to/pland/css-layout)
-  on sale through April 12. For workshop
-  updates and demos of workshop content,
+  For workshop updates and demos of workshop content,
   subscribe to [OddNews](/oddnews/).
 summary: |
   CSS layout techniques have come a long way
@@ -103,7 +101,8 @@ summary: |
   on building more resilient and maintainable web layouts
   using modern CSS**.
 media:
-  - youtube: 8k6m87woEpQ
+  - span: full
+    youtube: 8k6m87woEpQ
     id: workshop-video
   - youtube: De6QMQA2aio
     id: workshop-video-2
