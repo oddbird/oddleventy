@@ -84,6 +84,34 @@ press:
     venue: CharisMagic
     face: charis-rooda.png
     url: http://charismagic.studio/
+  - text: |
+      Miriam has a unique talent
+      of being extremely technical
+      with CSS but communicates
+      that so seamlessly
+      and so inclusively that regardless
+      of what level you’re at now,
+      you’ll be so far beyond
+      that when you learn from her.
+      A true super talent.
+    name: Andy Bell
+    title: Founder
+    venue: Set Studio and Piccalilli
+    face: andy-bell.jpg
+    url: https://piccalil.li/
+  - text: |
+      Miriam is your favorite developer’s
+      favorite developer.
+      She’s been the driving force
+      behind a ton of modern CSS features,
+      and is better positioned
+      than anyone else
+      to help you understand them!
+    name: Josh W. Comeau
+    title: Indie Developer and Educator
+    venue: joshwcomeau.com
+    face: josh-comeau.jpg
+    url: https://www.joshwcomeau.com/
 callout_content: |
   9am - 11:30am PT
 
