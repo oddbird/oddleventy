@@ -80,7 +80,7 @@ press:
       It was a treat to learn
       from someone involved in writing the specs.
     name: Charis Rooda
-    title: Front-end Developer
+    title: Frontend Developer
     venue: CharisMagic
     face: charis-rooda.png
     url: http://charismagic.studio/
@@ -112,6 +112,86 @@ press:
     venue: joshwcomeau.com
     face: josh-comeau.jpg
     url: https://www.joshwcomeau.com/
+  - text: |
+      Even with my 20 years
+      of experience writing CSS,
+      I sometimes hit the wall.
+      Whenever that's the case,
+      I know I can ask Miriam,
+      and I'll get a clear and competent answer.
+    name: Manuel Matuzović
+    title: Frontend Developer
+    venue: matuzo.at
+    face: manuel-matuzovic.jpg
+    url: https://matuzo.at/
+  - text: |
+      Miriam's knack for explaining thorny subjects
+      like CSS layout
+      in ways that are easy to understand
+      will put you right at ease,
+      helping you level up
+      your CSS game in no time.
+      Whether you’re a beginner
+      or an expert,
+      you’re guaranteed to learn something new.
+    name: Michelle Barker
+    title: Lead Frontend Developer
+    venue: CSS In Real Life
+    face: michelle-barker.jpeg
+    url: https://css-irl.info/
+  - text: |
+      If I had to pick someone
+      to lead a workshop
+      on modern CSS layout strategies,
+      Miriam would be at the top of the list.
+      Not only has she been instrumental
+      in helping CSS evolve
+      in exciting new ways,
+      Miriam’s also one of those rare,
+      gifted educators:
+      her writing and speaking
+      consistently helps me see new ways
+      to approach design and layout for the web.
+    name: Ethan Marcotte
+    title: Designer & Writer
+    venue: ethanmarcotte.com
+    face: ethan-marcotte.jpg
+    url: https://ethanmarcotte.com/
+  - text: |
+      To learn from Miriam
+      is truly a privilege,
+      not only because
+      she is involved in writing specifications,
+      but because,
+      at the end of the day,
+      she is also a developer like us.
+      This puts her
+      in a unique position
+      to help you understand
+      not only how to use CSS,
+      but also to understand why
+      it works the way it does.
+    name: Sara Soueidan
+    title: Inclusive web UI engineer and educator
+    venue: sarasoueidan.com
+    slug: like-us
+    face: sara-soueidan.jpg
+    url: https://sarasoueidan.com/
+  - text: |
+      Miriam knows CSS better
+      than nearly anyone on the planet.
+      Not only does she help shape CSS specifications,
+      she applies the nuances of CSS
+      in honest-to-goodness real-world work.
+      I've learned so much from her,
+      so I'd strongly recommend
+      Miriam's workshop to anyone!
+    name: Brad Frost
+    title: Design System Consultant
+    venue: bradfrost.com
+    slug: css-nuance
+    face: brad-frost.jpg
+    url: https://bradfrost.com/
 callout_content: |
   9am - 11:30am PT
 
