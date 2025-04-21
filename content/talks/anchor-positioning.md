@@ -19,7 +19,7 @@ events:
 slides: |
   https://talks.jamessw.com/talks/2025-04-mits/
 action:
-  text: Sign up for CSS anchor positioning email course
+  text: Sign up for the CSS anchor positioning email course
   url: learn/courses/anchor-positioning/
 
 ---
