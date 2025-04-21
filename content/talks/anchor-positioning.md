@@ -15,7 +15,7 @@ events:
   - venue: Michigan Typescript
     date: 2025-05-06
     adr: Ann Arbor, Michigan
-    url: https://www.linkedin.com/company/michigantypescript/posts/?feedView=all
+    url: https://bsky.app/profile/michigantypescript.com
 slides: |
   https://talks.jamessw.com/talks/2025-04-mits/
 action:
