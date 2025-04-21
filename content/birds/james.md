@@ -16,6 +16,13 @@ social:
 summary: |
   James (he/him) is a front-end developer focused on
   user-friendly solutions for complex problems.
+bio: |
+  **James is a developer focusing on the web platform
+  and tools for web developers.**
+
+  James is a Peer Contributor to the Web Features project, as part of the W3C WebDX Community Group, and a contributor to Sass.
+
+  He enjoys birding and fermenting all sorts of things.
 ---
 
 **James is an experienced front-end developer and tech lead.**
