@@ -48,8 +48,6 @@ label: onlyShow
 category: Filter
 note: |
   Return only the first n items in a collection.
-example: |
-
 params:
   dict:
     type: object
@@ -69,7 +67,6 @@ category: Filter
 note: |
   Returns the matching mailchimp form tag
   for the page where the signup form lives |
-
 params:
   name:
     type: string
@@ -89,3 +86,29 @@ export const oddNewsTags = (name) => {
       return '';
   }
 };
+
+/* @docs
+label: getSort
+category: Filter
+note: |
+  Returns a sort compare function for the provided attribute.
+params:
+  attr:
+    type: string
+    note: Attribute by which to sort
+  reverse:
+    type: boolean
+    default: false
+    note: If `true`, sorts descending
+*/
+export const getSort =
+  (attr, reverse = false) =>
+  (a, b) => {
+    if (a[attr] < b[attr]) {
+      return reverse ? 1 : -1;
+    }
+    if (a[attr] > b[attr]) {
+      return reverse ? -1 : 1;
+    }
+    return 0;
+  };

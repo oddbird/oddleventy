@@ -3,9 +3,9 @@ title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
 action:
-  text: Subscribe to OddNews for updates »
-  url: /oddnews/
-date: 2024-12-31
+  text: Register now for April 2025 »
+  url: 'https://ti.to/pland/css-layout'
+date: 2025-04-28
 image:
   src: talks/cascading-workshop-cat.jpg
   position: center
@@ -44,12 +44,51 @@ events:
     adr: Online
     date: 2025-04-28
     end: 2025-04-30
+press:
+  - text: |
+      Miriam is one of the very few people I trust enough to point my own
+      students toward. She gets the “why” as much as the “how,” and makes
+      learning CSS feel genuinely empowering.
+    name: Christine Vallaure
+    title: Founder
+    venue: moonlearning
+    face: christine-vallaure.jpeg
+    url: https://www.moonlearning.io/
+  - text: |
+      There are few, if any, who are more qualified to cover the ins and outs
+      of CSS layout, and I can tell you that Miriam's work really helped
+      inspire and inform the content in my course.
+    name: Geoff Graham
+    title: Author
+    venue: CSS-Tricks
+    face: geoff-graham.jpeg
+    url: https://css-tricks.com/cascading-layouts-a-workshop-on-resilient-css-layouts/
+  - text: |
+      I'm not sure I know anyone
+      who understands CSS layouts better than Miriam,
+      but her real skill is being able to explain it all
+      in easy to understand ways.
+    name: Kevin Powell
+    title: Educator and CSS Evangelist
+    venue: Kevin Powell YouTube
+    face: kevin-powell.jpg
+    url: https://www.youtube.com/kevinpowell
+  - text: |
+      She doesn’t just teach how things work,
+      she explains why they work that way,
+      and how everything fits together.
+      It was a treat to learn
+      from someone involved in writing the specs.
+    name: Charis Rooda
+    title: Front-end Developer
+    venue: CharisMagic
+    face: charis-rooda.png
+    url: http://charismagic.studio/
 callout_content: |
-  Early bird tickets go on sale **April 2025**!
+  9am - 11:30am PT
 
-  For reminders, or to get the latest information
-  about this workshop and other OddNews, subscribe to
-  our&nbsp;[newsletter](/oddnews/).
+  For workshop updates and demos of workshop content,
+  subscribe to [OddNews](/oddnews/).
 summary: |
   CSS layout techniques have come a long way
   since the early days of responsive design,
@@ -61,14 +100,22 @@ summary: |
   with this 3-session workshop
   on building more resilient and maintainable web layouts
   using modern CSS**.
+media:
+  - span: full
+    youtube: 8k6m87woEpQ
+    id: workshop-video
+  - youtube: De6QMQA2aio
+    id: workshop-video-2
+  - youtube: ccL4JP4f_R4
+    id: workshop-video-3
 ---
 
 {% import 'utility.macros.njk' as utility %}
 {% import 'contact.macros.njk' as contact %}
 {% import 'embed.macros.njk' as embed %}
-{% import 'quotes.macros.njk' as quotes %}
+{% import "quotes.macros.njk" as quotes %}
 
-{{ embed.figure([{ youtube: '9EDOzJJdxWA' }]) }}
+{{ embed.figure(media) }}
 
 ## What Will Attendees Get?
 
@@ -76,6 +123,33 @@ summary: |
   data=included,
   grid='fit'
 ) }}
+
+## Register Now for April 2025
+
+<script src="https://js.tito.io/v2" async></script>
+<script>
+  window.tito = window.tito ||
+    function() {
+      (tito.q = tito.q || []).push(arguments);
+    };
+  tito('on:widget:loaded',function(){
+     document.getElementById('tito-registration-fallback').setAttribute('hidden', 'hidden');
+  });
+</script>
+
+<a href="https://ti.to/pland/css-layout" id="tito-registration-fallback">Register</a>
+<tito-widget event="pland/css-layout"></tito-widget>
+
+## Discounts & Scholarships
+
+Freelancer and other
+need-based scholarships available.
+For discounts,
+please [contact us].
+
+[contact us]: /contact/
+
+{{ quotes.grid(press) }}
 
 ## What Will Attendees Learn In This Workshop?
 
@@ -93,8 +167,8 @@ You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
 {{ utility.main_action(
-  content='Subscribe to OddNews for updates »',
-  url='/oddnews/'
+  content='Register now »',
+  url='https://ti.to/pland/css-layout'
 ) }}
 
 ## About Miriam

@@ -34,8 +34,8 @@ h3 {
   @supports (background-clip: text) or (-webkit-background-clip: text) {
     background: linear-gradient(
       to bottom right,
-      var(--heading-start),
-      var(--heading-end)
+      var(--brand-gradient-start),
+      var(--brand-gradient-end)
     );
     /* stylelint-disable-next-line property-no-vendor-prefix */
     -webkit-background-clip: text;

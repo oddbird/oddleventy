@@ -1,5 +1,6 @@
 {%- import 'utility.macros.njk' as utility -%}
 {%- import 'sponsor.macros.njk' as sponsor -%}
+{%- import 'post.macros.njk' as post -%}
 
 {# is this the page for one of us? #}
 {%- set is_bird = bird and (bird != 'oddbird') -%}
@@ -27,7 +28,25 @@
 
   {% if content -%}
     {%- set hcontent = 'e-content' if is_entry else ('p-note' if is_bird else none) -%}
+    {%- set series_posts = collections._post | withData('data.series', series) | getPublic if series else none -%}
+
     <div data-main data-typeset {{ utility.attr_if('class', hcontent)}}>
+      {% if series_posts and series_posts.length > 1 %}
+        {% set series_name = ['This post is part of a series on', series] | join(' ') | mdInline %}
+        {% callout 'series', series_name %}
+          <ol>
+            {% for post_item in series_posts %}
+              {% set is_current_page = post_item.page.url == page.url %}
+              <li {{ utility.attr_if('aria-current', 'page' if is_current_page else none) }}>
+                {{ utility.link_if(
+                  content=post.name(post_item),
+                  url=post_item.page.url if not is_current_page else none
+                ) }}
+              </li>
+            {% endfor %}
+          </ol>
+        {% endcallout %}
+      {% endif %}
       {{ content | safe }}
     </div>
   {%- endif %}
@@ -42,6 +61,10 @@
 
   {% if hire_cta %}
     {% include 'site/hire-us.njk' %}
+  {% endif %}
+
+  {% if sponsor_cta %}
+    {% include 'site/sponsor-us.njk' %}
   {% endif %}
 
   {% include 'page/list.njk' %}
