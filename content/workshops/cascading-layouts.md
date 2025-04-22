@@ -50,17 +50,18 @@ press:
       students toward. She gets the “why” as much as the “how,” and makes
       learning CSS feel genuinely empowering.
     name: Christine Vallaure
-    title: Founder
-    venue: moonlearning
+    venue: moonlearning.io
+    slug: trust-enough
     face: christine-vallaure.jpeg
     url: https://www.moonlearning.io/
   - text: |
-      There are few, if any, who are more qualified to cover the ins and outs
+      There are few, if any,
+      who are more qualified to cover the ins and outs
       of CSS layout, and I can tell you that Miriam's work really helped
       inspire and inform the content in my course.
     name: Geoff Graham
-    title: Author
-    venue: CSS-Tricks
+    venue: css-tricks.com
+    slug: ins-outs
     face: geoff-graham.jpeg
     url: https://css-tricks.com/cascading-layouts-a-workshop-on-resilient-css-layouts/
   - text: |
@@ -69,8 +70,8 @@ press:
       but her real skill is being able to explain it all
       in easy to understand ways.
     name: Kevin Powell
-    title: Educator and CSS Evangelist
     venue: Kevin Powell YouTube
+    slug: easy-understand
     face: kevin-powell.jpg
     url: https://www.youtube.com/kevinpowell
   - text: |
@@ -80,8 +81,8 @@ press:
       It was a treat to learn
       from someone involved in writing the specs.
     name: Charis Rooda
-    title: Frontend Developer
-    venue: CharisMagic
+    venue: charismagic.studio
+    slug: fits-together
     face: charis-rooda.png
     url: http://charismagic.studio/
   - text: |
@@ -95,8 +96,8 @@ press:
       that when you learn from her.
       A true super talent.
     name: Andy Bell
-    title: Founder
-    venue: Set Studio and Piccalilli
+    venue: piccalilli.li
+    slug: unique-talent
     face: andy-bell.jpg
     url: https://piccalil.li/
   - text: |
@@ -108,8 +109,8 @@ press:
       than anyone else
       to help you understand them!
     name: Josh W. Comeau
-    title: Indie Developer and Educator
     venue: joshwcomeau.com
+    slug: fav-dev
     face: josh-comeau.jpg
     url: https://www.joshwcomeau.com/
   - text: |
@@ -120,8 +121,8 @@ press:
       I know I can ask Miriam,
       and I'll get a clear and competent answer.
     name: Manuel Matuzović
-    title: Frontend Developer
     venue: matuzo.at
+    slug: clear-competent
     face: manuel-matuzovic.jpg
     url: https://matuzo.at/
   - text: |
@@ -135,8 +136,8 @@ press:
       or an expert,
       you’re guaranteed to learn something new.
     name: Michelle Barker
-    title: Lead Frontend Developer
-    venue: CSS In Real Life
+    venue: css-irl.info
+    slug: thorny-subjects
     face: michelle-barker.jpeg
     url: https://css-irl.info/
   - text: |
@@ -153,8 +154,8 @@ press:
       consistently helps me see new ways
       to approach design and layout for the web.
     name: Ethan Marcotte
-    title: Designer & Writer
     venue: ethanmarcotte.com
+    slug: evolving-css
     face: ethan-marcotte.jpg
     url: https://ethanmarcotte.com/
   - text: |
@@ -172,7 +173,6 @@ press:
       but also to understand why
       it works the way it does.
     name: Sara Soueidan
-    title: Inclusive web UI engineer and educator
     venue: sarasoueidan.com
     slug: like-us
     face: sara-soueidan.jpg
@@ -187,7 +187,6 @@ press:
       so I'd strongly recommend
       Miriam's workshop to anyone!
     name: Brad Frost
-    title: Design System Consultant
     venue: bradfrost.com
     slug: css-nuance
     face: brad-frost.jpg
@@ -225,6 +224,11 @@ media:
 
 {{ embed.figure(media) }}
 
+{{ quotes.find(
+  collections.all,
+  slugs=['trust-enough', 'ins-outs', 'easy-understand', 'fits-together']
+) }}
+
 ## What Will Attendees Get?
 
 {{ embed.icon_block(
@@ -257,7 +261,10 @@ please [contact us].
 
 [contact us]: /contact/
 
-{{ quotes.grid(press) }}
+{{ quotes.find(
+  collections.all,
+  slugs=['unique-talent', 'fav-dev', 'clear-competent', 'thorny-subjects']
+) }}
 
 ## What Will Attendees Learn In This Workshop?
 
@@ -283,6 +290,11 @@ but even the experts are likely to learn something new.
 
 {% set miriam = collections.birds | authorPage('miriam') %}
 {{ miriam.data.bio | md | safe }}
+
+{{ quotes.find(
+  collections.all,
+  slugs=['evolving-css', 'like-us', 'css-nuance']
+) }}
 
 ## Workshop Outline
 
@@ -373,5 +385,5 @@ us in to talk with your team directly:
 {{ contact.form(
   submit='Book Now',
   name='workshop',
-  extraActions='or [subscribe to OddNews for updates »](/oddnews/)'
+  extraActions='or [register now »](https://ti.to/pland/css-layout)'
 ) }}
