@@ -172,29 +172,12 @@ of another element unlocks all sorts of creative possibilities.
 
 {% endcall %}
 
-{% call layout.block(
-  name='full',
-  attrs={'class': 'has-angles'}
-) %}
-
-{% call layout.grid(
-  name='narrow-columns',
-  attrs={'style': '--column: wide'}
-) %}
-
-{% call layout.block('column') %}
-
 ## This Email Course Teaches
 
-You learn about anchor positioning, scoping your anchors, handling overflow,
-anchoring with the Shadow DOM, positioning popovers, using Dev Tools to
-troubleshoot anchors, pseudo elements that can be anchors, and new possibilities
-for innovative layouts.
-
-{% endcall %}
-{% endcall %}
-
-{% endcall %}
+You will learn about anchor positioning, scoping your anchors, handling
+overflow, anchoring with the Shadow DOM, positioning popovers, using Dev Tools
+to troubleshoot anchors, pseudo elements that can be anchors, and new
+possibilities for innovative layouts.
 
 ## About James
 
