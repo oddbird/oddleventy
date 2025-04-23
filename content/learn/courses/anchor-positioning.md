@@ -1,12 +1,16 @@
 ---
 eleventyExcludeFromCollections: true
 title: Create Performant Layouts and Resilient Dropdowns
-sub: This CSS anchor positioning coursegc teaches you how
+sub: This CSS anchor positioning course teaches you how
 author: james
 extended: |
-  James has added key features to the Anchor Positioning polyfill, and helped clients troubleshoot anchor positioning in a variety of frameworks.  James has written about anchor positioning on the OddBird site, and spoken on Learn With Jason and at Michigan TS.
+  James has added key features to the Anchor Positioning polyfill, and helped
+  clients troubleshoot anchor positioning in a variety of frameworks. He has
+  written about anchor positioning on the OddBird site, and spoken on Learn With
+  Jason and at Michigan TS.
 
-  In addition to this email course, you can hire James for one-on-one consulting or to refactor your existing application.
+  In addition to this email course, you can hire James for one-on-one consulting
+  or to refactor your existing application.
 action:
   text: Subscribe now
   url: "#sign-up"
@@ -22,14 +26,18 @@ press:
       so I could get it working in Firefox.
     slug: shout-out
     name: Luke Hansford
-    title: Engineering Manager, Fishbrain
     venue: "@lukehansford@mastodon.social"
+    url: https://mastodon.social/@lukehansford
     face: luke-hansford-bg.jpg
   - text: |
-      James helped me get my head around anchor positioning quickly. After he explained it to me I was able to put anchor positioning to work in a project immediately, in a way that I would have previously solved with lots of custom JavaScript and headaches. If you want to learn anchor positioning in a fast and practical way, there's no one better than James to teach you.
+      James helped me get my head around anchor positioning quickly. After he
+      explained it to me I was able to put anchor positioning to work in a
+      project immediately, in a way that I would have previously solved with
+      lots of custom JavaScript and headaches. If you want to learn anchor
+      positioning in a fast and practical way, there's no one better than James
+      to teach you.
     name: Jason Lengstorf
-    venue: Code.TV
-    title: Learn with Jason
+    venue: Learn With Jason
     face: jason-lengstorf.webp
     slug: head-around
     url: https://codetv.dev/series/learn-with-jason/
@@ -47,7 +55,10 @@ included:
     text: Your email address
     icon: icons/eye-crossed
 summary: |
-  Make your dropdowns more performant and discover new layout possibilities with quicker turnarounds using CSS anchor positioning. JavaScript positioning libraries require updates and maintenance, but CSS anchor positioning is part of the browser spec, and will stand the test of time.
+  Make your dropdowns more performant and discover new layout possibilities with
+  quicker turnarounds using CSS anchor positioning. JavaScript positioning
+  libraries require updates and maintenance, but CSS anchor positioning is part
+  of the browser spec, and will stand the test of time.
 ---
 
 {% import "layout.macros.njk" as layout %}
@@ -55,7 +66,6 @@ summary: |
 {% import "birds.macros.njk" as birds %}
 {% import 'embed.macros.njk' as embed %}
 {% import 'utility.macros.njk' as utility %}
-{% import 'contact.macros.njk' as contact %}
 {% import 'oddnews.macros.njk' as oddnews %}
 
 {% call layout.block(
@@ -113,7 +123,8 @@ and will still work in 10 years.
 ### Full support now
 
 Not all your users have a browser that supports CSS anchor positioning yet.
-I'll show you how to use OddBird's anchor position polyfill to support all your users.
+I'll show you how to use OddBird's anchor positioning polyfill to support all
+your users.
 
 {% endcall %}
 
@@ -170,7 +181,7 @@ of another element unlocks all sorts of creative possibilities.
 {% call layout.block() %}
 
 {{ utility.main_action(
-  content='Sign up, get first email',
+  content='Sign up to get your first email',
   url='#sign-up'
 ) }}
 
@@ -191,12 +202,7 @@ possibilities for innovative layouts.
 
 {% set bird = collections.birds | authorPage('james') %}
 
-{% call birds.card(
-  bird=bird,
-  extended=extended
-) %}
-
-{% endcall %}
+{{ birds.card(bird=bird, extended=extended) }}
 
 {{ utility.main_action(
   content='Subscribe to the free course',
@@ -205,8 +211,7 @@ possibilities for innovative layouts.
 
 {{ quotes.grid(press) }}
 
-<a id="sign-up"></a>
-## Create Performant Layouts and Resilient Dropdowns
+## <a id="sign-up">Create Performant Layouts and Resilient Dropdowns</a>
 
 {% call layout.grid(
   'narrow-columns',
@@ -225,6 +230,7 @@ possibilities for innovative layouts.
 {% call layout.block('column') %}
 
 ### Sign up for email course
+
 {{ oddnews.oddnews_signup(
   heading=false,
   tag="course-anchor-positioning",
@@ -243,7 +249,7 @@ and it will be 2 to 3 years before you can safely assume all your users have it.
 But now is the time to add this new tool to your toolkit. Here's why.
 
 The ability to describe anchor positioning in a more declarative way has changed
-how I think about layout. It’s unlocked new possibilities and made for better
+how I think about layout. It has unlocked new possibilities and made for better
 user experiences. And with the polyfill, all your users can have the same
 experience without waiting for browsers to catch up.
 

@@ -11,10 +11,11 @@ image:
 tags:
   - CSS
   - Anchor Positioning
+  - Layout
 events:
   - venue: Michigan Typescript
     date: 2025-05-06
-    adr: Ann Arbor, Michigan
+    adr: Ann Arbor, MI
     url: https://bsky.app/profile/michigantypescript.com
 slides: |
   https://talks.jamessw.com/talks/2025-04-mits/
@@ -23,6 +24,7 @@ summary: |
   and provides new and innovative layout options.
   But is it too new to be used?
 ---
+
 In this intro to anchor positioning,
 we'll cover the basics that
 make popovers and dropdowns
