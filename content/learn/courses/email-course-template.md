@@ -1,7 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
-# draft: true
-# permalink: false
+draft: true
+permalink: false
 title: EMAIL COURSE NAME
 sub: Intriguing and beneficial course tagline goes here
 author: sondra
