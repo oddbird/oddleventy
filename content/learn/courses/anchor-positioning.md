@@ -1,7 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 title: Create Performant Layouts and Resilient Dropdowns
-sub: This CSS anchor positioning teaches you how
+sub: This CSS anchor positioning course teaches you how
 author: james
 extended: |
   James has added key features to the Anchor Positioning polyfill, and helped clients troubleshoot anchor positioning in a variety of frameworks.  James has written about anchor positioning on the OddBird site, and spoken on Learn With Jason and at Michigan TS.
