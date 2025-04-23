@@ -1,7 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 title: Create Performant Layouts and Resilient Dropdowns
-sub: This CSS anchor positioning course teaches you how
+sub: This CSS anchor positioning coursegc teaches you how
 author: james
 extended: |
   James has added key features to the Anchor Positioning polyfill, and helped clients troubleshoot anchor positioning in a variety of frameworks.  James has written about anchor positioning on the OddBird site, and spoken on Learn With Jason and at Michigan TS.
@@ -34,15 +34,17 @@ press:
     slug: head-around
     url: https://codetv.dev/series/learn-with-jason/
 included:
-  - text: Immediate access to lesson 1
+  - title: Immediate access
+    text: To lesson 1
     icon: icons/mail-open
-  - text: Additional free surprises
-    icon: icons/wand
-  - text: Ongoing front-end tips & tricks
+  - title: Offer for additional
+    text: Free frontend tips & tricks
     icon: icons/tools
-  - text: Easily unsubscribe whenever
+  - title: Easily unsubscribe
+    text: Whenever you want
     icon: icons/interact
-  - text: We won’t give anyone your email address
+  - title: We won’t share
+    text: Your email address
     icon: icons/eye-crossed
 summary: |
   Make your dropdowns more performant and discover new layout possibilities with quicker turnarounds using CSS anchor positioning. JavaScript positioning libraries require updates and maintenance, but CSS anchor positioning is part of the browser spec, and will stand the test of time.
@@ -128,6 +130,8 @@ of another element unlocks all sorts of creative possibilities.
 
 {% endcall %}
 
+## Anchor Positioning Demo
+
 {{ embed.codepen(
   id='wBvEavV',
   title='Anchor Positioning Demo',
@@ -172,12 +176,16 @@ of another element unlocks all sorts of creative possibilities.
 
 {% endcall %}
 
+<div style="margin-bottom: 1rem">
+
 ## This Email Course Teaches
 
 You will learn about anchor positioning, scoping your anchors, handling
 overflow, anchoring with the Shadow DOM, positioning popovers, using Dev Tools
 to troubleshoot anchors, pseudo elements that can be anchors, and new
 possibilities for innovative layouts.
+
+</div>
 
 ## About James
 
@@ -192,16 +200,17 @@ possibilities for innovative layouts.
 
 {{ utility.main_action(
   content='Subscribe to the free course',
-  url='#'
+  url='#sign-up'
 ) }}
 
 {{ quotes.grid(press) }}
 
+<a id="sign-up"></a>
 ## Create Performant Layouts and Resilient Dropdowns
 
 {% call layout.grid(
-  name='narrow-columns',
-  attrs={'style': '--column: wide'}
+  'narrow-columns',
+  attrs={'style': '--column: page'}
 ) %}
 
 {% call layout.block('column') %}
@@ -215,6 +224,7 @@ possibilities for innovative layouts.
 
 {% call layout.block('column') %}
 
+### Sign up for email course
 {{ oddnews.oddnews_signup(
   heading=false,
   tag="course-anchor-positioning",
