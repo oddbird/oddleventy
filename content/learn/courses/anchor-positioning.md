@@ -1,13 +1,12 @@
 ---
-eleventyExcludeFromCollections: true
 title: Create Performant Layouts and Resilient Dropdowns
 sub: This CSS anchor positioning course teaches you how
 author: james
 extended: |
-  James has added key features to the Anchor Positioning polyfill, and helped
+  James added key features to the Anchor Positioning polyfill, and helped
   clients troubleshoot anchor positioning in a variety of frameworks. He has
   written about anchor positioning on the OddBird site, and spoken on Learn With
-  Jason and at Michigan TS.
+  Jason and at Michigan TypeScript.
 
   In addition to this email course, you can hire James for one-on-one consulting
   or to refactor your existing application.
@@ -43,17 +42,17 @@ press:
     url: https://codetv.dev/series/learn-with-jason/
 included:
   - title: Immediate access
-    text: To lesson 1
+    text: You will receive lesson 1 within minutes of subscribing
     icon: icons/mail-open
-  - title: Offer for additional
-    text: Free frontend tips & tricks
-    icon: icons/tools
   - title: Easily unsubscribe
-    text: Whenever you want
+    text: Take in as much of the course as you'd like
     icon: icons/interact
-  - title: We won’t share
-    text: Your email address
+  - title: Privacy matters to us
+    text: We won’t share your email address
     icon: icons/eye-crossed
+  - title: Easily upgrade for more free tips & tricks
+    text: After the course, choose to receive updates from OddBird
+    icon: icons/tools
 summary: |
   Make your dropdowns more performant and discover new layout possibilities with
   quicker turnarounds using CSS anchor positioning. JavaScript positioning
@@ -73,7 +72,7 @@ summary: |
   attrs={'class': 'has-angles'}
 ) %}
 
-## Take this Free Course to Get...
+## Take this free course to get...
 
 {% call layout.grid('narrow-columns') %}
 
@@ -141,7 +140,7 @@ of another element unlocks all sorts of creative possibilities.
 
 {% endcall %}
 
-## Anchor Positioning Demo
+## Anchor positioning demo
 
 {{ embed.codepen(
   id='wBvEavV',
@@ -150,7 +149,7 @@ of another element unlocks all sorts of creative possibilities.
   height=300
 ) }}
 
-## 9 Weekly Emails
+## 9 weekly emails
 
 {% call layout.grid(
   'narrow-columns',
@@ -246,14 +245,14 @@ possibilities for innovative layouts.
 
 Anchor positioning is currently not available in all browsers,
 and it will be 2 to 3 years before you can safely assume all your users have it.
-But now is the time to add this new tool to your toolkit. Here's why.
+But now is the time to add this new tool to your toolkit.
 
 The ability to describe anchor positioning in a more declarative way has changed
 how I think about layout. It has unlocked new possibilities and made for better
 user experiences. And with the polyfill, all your users can have the same
 experience without waiting for browsers to catch up.
 
-## Don't add another dependency
+## Don't add another forever dependency
 
 While it's tempting to reach for the JavaScript library you've used in the past,
 they introduce performance bottlenecks and ongoing maintenance. As part of the
