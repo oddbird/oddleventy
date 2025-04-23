@@ -1,7 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
-title: Learn CSS Anchor Positioning
-sub: Make your dropdowns more performant and discover new layout possibilities with CSS anchor positioning.
+title: Create Performant Layouts and Resilient Dropdowns
+sub: This CSS anchor positioning teaches you how
 author: james
 extended: |
   James has added key features to the Anchor Positioning polyfill, and helped clients troubleshoot anchor positioning in a variety of frameworks.  James has written about anchor positioning on the OddBird site, and spoken on Learn With Jason and at Michigan TS.
@@ -45,7 +45,7 @@ included:
   - text: We won’t give anyone your email address
     icon: icons/eye-crossed
 summary: |
-  Add CSS anchor positioning to your toolbox for quicker turnarounds and to unlock new creative possibilities.
+  Make your dropdowns more performant and discover new layout possibilities with quicker turnarounds using CSS anchor positioning. JavaScript positioning libraries require updates and maintenance, but CSS anchor positioning is part of the browser spec, and will stand the test of time.
 ---
 
 {% import "layout.macros.njk" as layout %}
@@ -77,7 +77,7 @@ I'll share the common issues I've seen and how to avoid them.
 
 {% call layout.block('column') %}
 
-### Reduced buggy behavior on dropdowns
+### Fewer dropdown bugs
 
 What happens to your dropdowns that are close to the edges,
 or as the user scrolls?
@@ -88,7 +88,7 @@ these literal edge cases.
 
 {% call layout.block('column') %}
 
-### Improved page performance
+### Fast page performance
 
 JavaScript positioning libraries require a lot render-blocking
 computations to do what they do.
@@ -108,7 +108,7 @@ and will still work in 10 years.
 
 {% call layout.block('column') %}
 
-### Using it now
+### Full support now
 
 Not all your users have a browser that supports CSS anchor positioning yet.
 I'll show you how to use OddBird's anchor position polyfill to support all your users.
@@ -177,12 +177,22 @@ of another element unlocks all sorts of creative possibilities.
   attrs={'class': 'has-angles'}
 ) %}
 
+{% call layout.grid(
+  name='narrow-columns',
+  attrs={'style': '--column: wide'}
+) %}
+
+{% call layout.block('column') %}
+
 ## This Email Course Teaches
 
 You learn about anchor positioning, scoping your anchors, handling overflow,
 anchoring with the Shadow DOM, positioning popovers, using Dev Tools to
 troubleshoot anchors, pseudo elements that can be anchors, and new possibilities
 for innovative layouts.
+
+{% endcall %}
+{% endcall %}
 
 {% endcall %}
 
@@ -204,7 +214,7 @@ for innovative layouts.
 
 {{ quotes.grid(press) }}
 
-## Sign up
+## Create Performant Layouts and Resilient Dropdowns
 
 {% call layout.grid(
   name='narrow-columns',
@@ -226,7 +236,7 @@ for innovative layouts.
   heading=false,
   tag="course-anchor-positioning",
   class="headerless",
-  buttonText="Subscribe to learn Anchor Positioning"
+  buttonText="Subscribe"
 ) }}
 
 {% endcall %}
