@@ -50,17 +50,18 @@ press:
       students toward. She gets the “why” as much as the “how,” and makes
       learning CSS feel genuinely empowering.
     name: Christine Vallaure
-    title: Founder
-    venue: moonlearning
+    venue: moonlearning.io
+    slug: trust-enough
     face: christine-vallaure.jpeg
     url: https://www.moonlearning.io/
   - text: |
-      There are few, if any, who are more qualified to cover the ins and outs
+      There are few, if any,
+      who are more qualified to cover the ins and outs
       of CSS layout, and I can tell you that Miriam's work really helped
       inspire and inform the content in my course.
     name: Geoff Graham
-    title: Author
-    venue: CSS-Tricks
+    venue: css-tricks.com
+    slug: ins-outs
     face: geoff-graham.jpeg
     url: https://css-tricks.com/cascading-layouts-a-workshop-on-resilient-css-layouts/
   - text: |
@@ -69,8 +70,8 @@ press:
       but her real skill is being able to explain it all
       in easy to understand ways.
     name: Kevin Powell
-    title: Educator and CSS Evangelist
     venue: Kevin Powell YouTube
+    slug: easy-understand
     face: kevin-powell.jpg
     url: https://www.youtube.com/kevinpowell
   - text: |
@@ -80,10 +81,116 @@ press:
       It was a treat to learn
       from someone involved in writing the specs.
     name: Charis Rooda
-    title: Front-end Developer
-    venue: CharisMagic
+    venue: charismagic.studio
+    slug: fits-together
     face: charis-rooda.png
     url: http://charismagic.studio/
+  - text: |
+      Miriam has a unique talent
+      of being extremely technical
+      with CSS but communicates
+      that so seamlessly
+      and so inclusively that regardless
+      of what level you’re at now,
+      you’ll be so far beyond
+      that when you learn from her.
+      A true super talent.
+    name: Andy Bell
+    venue: piccalilli.li
+    slug: unique-talent
+    face: andy-bell.jpg
+    url: https://piccalil.li/
+  - text: |
+      Miriam is your favorite developer’s
+      favorite developer.
+      She’s been the driving force
+      behind a ton of modern CSS features,
+      and is better positioned
+      than anyone else
+      to help you understand them!
+    name: Josh W. Comeau
+    venue: joshwcomeau.com
+    slug: fav-dev
+    face: josh-comeau.jpg
+    url: https://www.joshwcomeau.com/
+  - text: |
+      Even with my 20 years
+      of experience writing CSS,
+      I sometimes hit the wall.
+      Whenever that's the case,
+      I know I can ask Miriam,
+      and I'll get a clear and competent answer.
+    name: Manuel Matuzović
+    venue: matuzo.at
+    slug: clear-competent
+    face: manuel-matuzovic.jpg
+    url: https://matuzo.at/
+  - text: |
+      Miriam's knack for explaining thorny subjects
+      like CSS layout
+      in ways that are easy to understand
+      will put you right at ease,
+      helping you level up
+      your CSS game in no time.
+      Whether you’re a beginner
+      or an expert,
+      you’re guaranteed to learn something new.
+    name: Michelle Barker
+    venue: css-irl.info
+    slug: thorny-subjects
+    face: michelle-barker.jpeg
+    url: https://css-irl.info/
+  - text: |
+      If I had to pick someone
+      to lead a workshop
+      on modern CSS layout strategies,
+      Miriam would be at the top of the list.
+      Not only has she been instrumental
+      in helping CSS evolve
+      in exciting new ways,
+      Miriam’s also one of those rare,
+      gifted educators:
+      her writing and speaking
+      consistently helps me see new ways
+      to approach design and layout for the web.
+    name: Ethan Marcotte
+    venue: ethanmarcotte.com
+    slug: evolving-css
+    face: ethan-marcotte.jpg
+    url: https://ethanmarcotte.com/
+  - text: |
+      To learn from Miriam
+      is truly a privilege,
+      not only because
+      she is involved in writing specifications,
+      but because,
+      at the end of the day,
+      she is also a developer like us.
+      This puts her
+      in a unique position
+      to help you understand
+      not only how to use CSS,
+      but also to understand why
+      it works the way it does.
+    name: Sara Soueidan
+    venue: sarasoueidan.com
+    slug: like-us
+    face: sara-soueidan.jpg
+    url: https://sarasoueidan.com/
+  - text: |
+      Miriam knows CSS better
+      than nearly anyone on the planet.
+      Not only does she help shape CSS specifications,
+      she applies the nuances of CSS
+      in honest-to-goodness real-world work.
+      I've learned so much from her,
+      so I'd strongly recommend
+      Miriam's workshop to anyone!
+    name: Brad Frost
+    venue: bradfrost.com
+    slug: css-nuance
+    face: brad-frost.jpg
+    url: https://bradfrost.com/
 callout_content: |
   9am - 11:30am PT
 
@@ -117,6 +224,11 @@ media:
 
 {{ embed.figure(media) }}
 
+{{ quotes.find(
+  collections.all,
+  slugs=['trust-enough', 'ins-outs', 'easy-understand', 'fits-together']
+) }}
+
 ## What Will Attendees Get?
 
 {{ embed.icon_block(
@@ -149,7 +261,10 @@ please [contact us].
 
 [contact us]: /contact/
 
-{{ quotes.grid(press) }}
+{{ quotes.find(
+  collections.all,
+  slugs=['unique-talent', 'fav-dev', 'clear-competent', 'thorny-subjects']
+) }}
 
 ## What Will Attendees Learn In This Workshop?
 
@@ -175,6 +290,11 @@ but even the experts are likely to learn something new.
 
 {% set miriam = collections.birds | authorPage('miriam') %}
 {{ miriam.data.bio | md | safe }}
+
+{{ quotes.find(
+  collections.all,
+  slugs=['evolving-css', 'like-us', 'css-nuance']
+) }}
 
 ## Workshop Outline
 
@@ -265,5 +385,5 @@ us in to talk with your team directly:
 {{ contact.form(
   submit='Book Now',
   name='workshop',
-  extraActions='or [subscribe to OddNews for updates »](/oddnews/)'
+  extraActions='or [register now »](https://ti.to/pland/css-layout)'
 ) }}
