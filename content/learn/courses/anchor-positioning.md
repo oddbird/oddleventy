@@ -5,11 +5,12 @@ author: james
 extended: |
   James added key features to the Anchor Positioning polyfill, and helped
   clients troubleshoot anchor positioning in a variety of frameworks. He has
-  written about anchor positioning on the OddBird site, and spoken on Learn With
-  Jason and at Michigan TypeScript.
+  written about [anchor positioning](/tags/anchor-positioning/) on the OddBird
+  site, and spoken on Learn With Jason and at Michigan TypeScript.
 
-  In addition to this email course, you can hire James for one-on-one consulting
-  or to refactor your existing application.
+  In addition to this email course, you can hire James for
+  [one-on-one consulting](/services/consulting/)
+  or to [refactor your existing application](/contact/).
 action:
   text: Subscribe now
   url: "#sign-up"
@@ -50,7 +51,7 @@ included:
   - title: Privacy matters to us
     text: We won’t share your email address
     icon: icons/eye-crossed
-  - title: Easily upgrade for more free tips & tricks
+  - title: Easily opt-in for more free tips & tricks
     text: After the course, choose to receive updates from OddBird
     icon: icons/tools
 summary: |
@@ -90,7 +91,7 @@ I'll share the common issues I've seen and how to avoid them.
 
 ### Fewer dropdown bugs
 
-What happens to your dropdowns that are close to the edges,
+What happens to dropdowns that are close to viewport edges,
 or as the user scrolls?
 CSS anchor positioning offers a robust feature set to handle
 these literal edge cases.
@@ -101,7 +102,7 @@ these literal edge cases.
 
 ### Fast page performance
 
-JavaScript positioning libraries require a lot render-blocking
+JavaScript positioning libraries require a lot of render-blocking
 computations to do what they do.
 Moving that load to the browser reduces performance bottlenecks.
 
@@ -111,7 +112,7 @@ Moving that load to the browser reduces performance bottlenecks.
 
 ### Future-proof component libraries
 
-JavaScript positioning libraries require updates and maintenance.
+JavaScript-based solutions require updates and maintenance.
 CSS anchor positioning is part of the browser spec,
 and will still work in 10 years.
 
@@ -121,9 +122,9 @@ and will still work in 10 years.
 
 ### Full support now
 
-Not all your users have a browser that supports CSS anchor positioning yet.
-I'll show you how to use OddBird's anchor positioning polyfill to support all
-your users.
+Not all your users have a browser that supports CSS anchor positioning yet. I'll
+show you how to use OddBird's [anchor positioning
+polyfill](https://anchor-polyfill.netlify.app/) to support all your users.
 
 {% endcall %}
 
@@ -188,7 +189,7 @@ of another element unlocks all sorts of creative possibilities.
 
 <div style="margin-bottom: 1rem">
 
-## This Email Course Teaches
+## What this email course teaches
 
 You will learn about anchor positioning, scoping your anchors, handling
 overflow, anchoring with the Shadow DOM, positioning popovers, using Dev Tools
@@ -244,7 +245,7 @@ possibilities for innovative layouts.
 ## Why it's time to learn CSS anchor positioning
 
 Anchor positioning is currently not available in all browsers,
-and it will be 2 to 3 years before you can safely assume all your users have it.
+and it will be 2 or 3 years before you can safely assume all your users have it.
 But now is the time to add this new tool to your toolkit.
 
 The ability to describe anchor positioning in a more declarative way has changed
@@ -272,6 +273,6 @@ cover everything, but this email course will space deeper learning over
 multiple weeks.
 
 This email course is designed to complement other learning methods, to give you
-repetition so the concepts move from short to long term memory. You will benefit
-from having an understanding of the capabilities of the tool before you need to
-use it, so you can quickly identify where it will be useful.
+repetition so the concepts move from short-term to long-term memory. You will
+benefit from having an understanding of the capabilities of the tool before you
+need to use it, so you can quickly identify where it will be useful.
