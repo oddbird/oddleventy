@@ -67,7 +67,7 @@ summary: |
   attrs={'class': 'has-angles'}
 ) %}
 
-## Take this Free Course to Get...
+## Take this free course to get...
 
 {% call layout.grid('narrow-columns') %}
 
@@ -114,7 +114,7 @@ We do other cool things!
 
 <!-- Insert video intro, demo, image, or graphic here if relevant/available -->
 
-## Number of Weekly Emails (if known)
+## Number of weekly emails (if known)
 
 {% call layout.grid(
   'narrow-columns',
@@ -152,7 +152,7 @@ We do other cool things!
 
 <div style="margin-bottom: 1rem">
 
-## This Email Course Teaches
+## This email course teaches
 
 You learn about anchor positioning, positioned element siblings, Shadow Dom,
 using Dev Tools, valid pseudo elements, `anchor-scope`, `anchor-name`,
@@ -204,7 +204,7 @@ using Dev Tools, valid pseudo elements, `anchor-scope`, `anchor-name`,
 
 {% endcall %}
 
-## Why [Topic] Is Important
+## Why [topic] is important
 
 Mini article explaining why the reader may be experiencing particular issues
 related to the topic and some initial thoughts on what to consider in resolving

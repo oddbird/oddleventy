@@ -211,7 +211,7 @@ possibilities for innovative layouts.
 
 {{ quotes.grid(press) }}
 
-## <a id="sign-up">Create Performant Layouts and Resilient Dropdowns</a>
+## <a id="sign-up">Create performant layouts and resilient dropdowns</a>
 
 {% call layout.grid(
   'narrow-columns',
