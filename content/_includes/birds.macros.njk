@@ -109,7 +109,8 @@ params:
   birds=none,
   level=3,
   link=true,
-  class=''
+  class='',
+  extended=none
 ) %}
   {%- set bird = birds | authorPage(bird) if (birds and bird | typeCheck('string')) else bird -%}
   {%- set id = ['bird', bird.data.bird] | join('-') | slug -%}
@@ -144,6 +145,12 @@ params:
         data=bird.data.social,
         name=bird.data.bird | capitalize
       ) -}}
+
+      {%- if extended -%}
+        <p>
+          {{- extended | md | safe -}}
+        </p>
+      {%- endif -%}
     {%- endcall -%}
   </article>
 {% endmacro %}

@@ -18,6 +18,8 @@ params:
     note: |
       tag for page where signup form is located:
       'footer' or 'oddblog' or 'oddnews'
+      Or, a custom tag for a specific list.
+      Must be mapped to a tag ID in filters/utils.js:oddNewsTags
   class:
     type: string
     default: none
@@ -26,18 +28,26 @@ params:
 {% macro oddnews_signup(
   heading=true,
   tag='footer',
-  class=none
+  class=none,
+  buttonText='Subscribe',
+  altHeading=false,
+  altSubheading=none
 ) %}
   <div class="oddnews-signup{% if class %} {{ class }}{% endif %}">
-    {%- if heading -%}
-      <h3>OddNews Sign Up</h3>
-      <p>Get the latest news in front-end development — CSS, HTML, JavaScript, and UX. <a href="/oddnews">See Archive</a></p>
+    {%- if heading and altHeading -%}
+     <h3>{{ altHeading }}</h3>
+     <p>{{ altSubheading }}</p>
+      {% else %}
+        {%- if heading -%}
+          <h3>OddNews Sign Up</h3>
+          <p>Get the latest news in front-end development — CSS, HTML, JavaScript, and UX. <a href="/oddnews">See Archive</a></p>
+        {%- endif -%}
     {%- endif -%}
 
     <form action="https://oddbird.us19.list-manage.com/subscribe/post?u=80219aa68d7bad77b9fd2eb93&amp;id=7c27f7fb9a&amp;f_id=000a9de4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
       <div id="mc_embed_signup_scroll">
         <div class="mc-field-group">
-          <label for="mce-EMAIL">Email
+          <label data-label for="mce-EMAIL">Email
             <span aria-hidden="true">*</span>
             <span class="sr-only">required</span>
           </label>
@@ -53,7 +63,7 @@ params:
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80219aa68d7bad77b9fd2eb93_7c27f7fb9a" tabindex="-1" value=""></div>
         <div class="optionalParent">
           <div class="clear foot form-actions">
-            <button data-btn="submit" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button>
+            <button data-btn="submit" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">{{ buttonText }}</button>
           </div>
         </div>
       </div>

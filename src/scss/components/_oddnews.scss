@@ -3,8 +3,11 @@
 // OddNews forms
 // -------------
 .oddnews-signup {
+  @include config.font-family('alt');
+
   background-color: var(--oddnews-bg, var(--clip-bg, var(--callout)));
-  padding: 0 var(--gutter) var(--gutter);
+  padding: var(--oddnews-signup-padding-block-start, 0) var(--gutter)
+    var(--gutter);
 }
 
 // OddNews form in main content area on OddNews archive page
@@ -33,4 +36,8 @@
   @include config.above('wide-page') {
     grid-template-columns: 1fr 3fr;
   }
+}
+
+.headerless {
+  --oddnews-signup-padding-block-start: var(--newline);
 }

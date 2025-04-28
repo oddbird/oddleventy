@@ -34,6 +34,7 @@ describe('utility filters', () => {
     expect(oddNewsTags('footer')).toBe('6264369');
     expect(oddNewsTags('oddblog')).toBe('6265233');
     expect(oddNewsTags('oddnews')).toBe('6265089');
+    expect(oddNewsTags('course-anchor-positioning')).toBe('25860341');
   });
 
   test('getSort', () => {

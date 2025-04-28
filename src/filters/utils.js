@@ -80,6 +80,8 @@ export const oddNewsTags = (name) => {
       return '6265233';
     case 'oddnews':
       return '6265089';
+    case 'course-anchor-positioning':
+      return '25860341';
     default:
       return '';
   }
