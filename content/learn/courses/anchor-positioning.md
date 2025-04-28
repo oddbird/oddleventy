@@ -211,11 +211,11 @@ possibilities for innovative layouts.
 
 {{ quotes.grid(press) }}
 
+## <a id="sign-up">Create performant layouts and resilient dropdowns</a>
+
 {% call layout.block(
   attrs={'style': '--column: wide'}
 ) %}
-
-## <a id="sign-up">Create performant layouts and resilient dropdowns</a>
 
 {% call layout.grid(
   'narrow-columns'
