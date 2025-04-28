@@ -211,11 +211,14 @@ possibilities for innovative layouts.
 
 {{ quotes.grid(press) }}
 
+{% call layout.block(
+  attrs={'style': '--column: wide'}
+) %}
+
 ## <a id="sign-up">Create performant layouts and resilient dropdowns</a>
 
 {% call layout.grid(
-  'narrow-columns',
-  attrs={'style': '--column: page'}
+  'narrow-columns'
 ) %}
 
 {% call layout.block('column') %}
@@ -229,14 +232,16 @@ possibilities for innovative layouts.
 
 {% call layout.block('column') %}
 
-### Sign up for email course
-
 {{ oddnews.oddnews_signup(
-  heading=false,
+  heading=true,
   tag="course-anchor-positioning",
   class="headerless",
-  buttonText="Subscribe"
+  buttonText="Subscribe",
+  altHeading="Email Course Sign Up",
+  altSubheading="Be among the first to discover new layout possibilities with anchor positioning."
 ) }}
+
+{% endcall %}
 
 {% endcall %}
 
