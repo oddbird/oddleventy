@@ -45,16 +45,13 @@ and backend development.
 
  ## What we cover:
 
-- What are invokers?
-- Why are they needed?
-- Source
-- What are the implications for accessibility?
-- How are you verifying accessibility?
-- What’s the plan for existing popover commands?
-- What are potential future built-in events?
-- Is it possible to scope the targets, rather than having unique IDs?
-- Can you send a command to multiple targets with a single click?
-- What is OpenUI? What is Igalia?
+- Invokers, and why they are needed
+- Controlling popovers with invokers
+- Controlling dialog elements with invokers
+- Controlling anything with custom invoker events
+- Potential future built-in events
+- Polyfilling the Invokers API
+- What is OpenUI?
 
 
 ## Demos:
