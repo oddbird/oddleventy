@@ -49,8 +49,6 @@ leading to her recent [SVG Animations] book from O'Reilly.
 
 {{ embed.figure(data=[{ youtube: '7g0BHu0kWXo' }]) }}
 
-- [Slides](https://css-day.surge.sh/)
-
 [Ben Adam]: https://twitter.com/benadam11
 
 ## Code Patterns for Pattern Making by [Miriam Suzanne]

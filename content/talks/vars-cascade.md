@@ -2,7 +2,7 @@
 title: When Variables Cascade
 sub: An exploration of CSS custom properties
 author: miriam
-date: 2020-09-04
+date: 2020-10-13
 image:
   src: talks/vars-cascade.jpg
 tags:

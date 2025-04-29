@@ -1,7 +1,7 @@
 ---
 title: Hints and Suggestions
 sub: The design of web design
-date: 2024-05-15
+date: 2024-05-09
 author: miriam
 image:
   src: talks/hints.jpg
@@ -16,8 +16,16 @@ tags:
   - CSS
   - Cascade Layers
   - CSSWG
-slides: https://slides.oddbird.net/layers/
+slides: https://slides.oddbird.net/hints/
 events:
+  - venue: Smashing Meets
+    title: Hints and Suggestions
+    adr: online
+    date: 2025-04-01
+    url: https://smashingconf.com/meets-modern-css
+    video: https://www.youtube.com/watch?v=th1q0RyvBcc
+    media: &meets
+      youtube: th1q0RyvBcc
   - venue: Camosun College
     url: https://camosun.ca/
     date: 2024-11-18
@@ -41,6 +49,8 @@ events:
     media: &11ty
       youtube: uaN9kY8lKPU
 media:
+  - <<: *meets
+    span: full
   - <<: *btconf
   - <<: *11ty
 summary: |

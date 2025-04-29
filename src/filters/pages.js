@@ -2,6 +2,7 @@ import _ from 'lodash-es';
 
 import { pageType } from '#filters/taxonomy.js';
 import { getDate, now } from '#filters/time.js';
+import { getSort } from '#filters/utils.js';
 
 /* @docs
 label: Page Filters
@@ -254,6 +255,7 @@ export const pageYears = (collection) =>
     }
 
     const dates = [page.page.date];
+    const future = [];
 
     if (page.data.end) {
       dates.push(page.data.end);
@@ -263,12 +265,22 @@ export const pageYears = (collection) =>
       page.data.events.forEach((event) => {
         if (getDate(event.date) <= now()) {
           dates.push(event.date);
+        } else {
+          future.push(event.date);
         }
       });
     }
 
+    // soonest upcoming future date
+    page.future_sort = future.length
+      ? future.reduce((a, b) => (a < b ? a : b))
+      : null;
+    // most recent past date
     page.sort = dates.reduce((a, b) => (a > b ? a : b));
     page.year = getDate(page.sort, 'year');
+    page.future_year = page.future_sort
+      ? getDate(page.future_sort, 'year')
+      : null;
 
     return page;
   });
@@ -284,17 +296,22 @@ params:
     type: array
     note: containing 11ty page objects
 */
-export const eventSort = (collection) =>
+export const eventSort = (collection, includeFuture = false) =>
   pageYears(collection).sort((a, b) => {
-    if (a.sort < b.sort) {
-      return -1;
+    if (includeFuture) {
+      /* istanbul ignore if */
+      if (a.future_sort && b.future_sort) {
+        return getSort('future_sort', true)(a, b);
+      }
+      if (a.future_sort) {
+        return 1;
+      }
+      /* istanbul ignore if */
+      if (b.future_sort) {
+        return -1;
+      }
     }
-    /* istanbul ignore else */
-    if (a.sort > b.sort) {
-      return 1;
-    }
-    /* istanbul ignore next */
-    return 0;
+    return getSort('sort')(a, b);
   });
 
 /* @docs

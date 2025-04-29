@@ -24,7 +24,7 @@ summary: |
 
 {{ quotes.find(
   collections.all,
-  slugs=['spot-on', 'popular-tutorial']
+  slugs=['spot-on', 'popular-tutorial', 'like-us', 'css-nuance']
 ) }}
 
 {{ talks.section(
@@ -36,7 +36,7 @@ summary: |
 
 {{ layout.title('All Talks & Workshops') }}
 {% call layout.grid('training') %}
-  {% for item in collections._talk | getPublic | eventSort | reverse %}
+  {% for item in collections._talk | getPublic | eventSort(true) | reverse %}
     <article {{ post.aria_label(item) }} class="training-item">
       {{ post.hero(item.data.image, 'post') }}
       <header class="training-header">

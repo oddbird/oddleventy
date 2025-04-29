@@ -1,4 +1,10 @@
-import { oddNewsTags, onlyShow, styles, typeCheck } from '#filters/utils.js';
+import {
+  getSort,
+  oddNewsTags,
+  onlyShow,
+  styles,
+  typeCheck,
+} from '#filters/utils.js';
 
 describe('utility filters', () => {
   test('typeCheck', () => {
@@ -28,5 +34,17 @@ describe('utility filters', () => {
     expect(oddNewsTags('footer')).toBe('6264369');
     expect(oddNewsTags('oddblog')).toBe('6265233');
     expect(oddNewsTags('oddnews')).toBe('6265089');
+    expect(oddNewsTags('course-anchor-positioning')).toBe('25860341');
+  });
+
+  test('getSort', () => {
+    const arr = [{ a: 5 }, { a: 3 }, { a: 4 }, { a: 3 }, { a: 6 }];
+
+    expect([...arr].sort(getSort('a')).map((i) => i.a)).toEqual([
+      3, 3, 4, 5, 6,
+    ]);
+    expect([...arr].sort(getSort('a', true)).map((i) => i.a)).toEqual([
+      6, 5, 4, 3, 3,
+    ]);
   });
 });

@@ -2,7 +2,7 @@
 title: CSS Containers, What Do They Know?
 sub: A deep-dive introduction to CSS container queries
 author: miriam
-date: 2023-01-24
+date: 2023-05-24
 image:
   src: talks/mudturtles.jpg
   alt: |

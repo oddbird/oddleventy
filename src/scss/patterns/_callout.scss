@@ -1,13 +1,39 @@
+@use '../config';
+
 [data-callout] {
   --list-padding--default: 1em;
   --inline-bleed: 0;
 
   background: var(--callout-block-bg, var(--callout));
   border-inline-start: thick solid var(--callout-block-border, var(--border));
-  margin: var(--newline) calc(var(--gutter) * -1);
-  padding: var(--gutter);
+  margin-block: var(--callout-margin-block, var(--newline));
+  margin-inline: var(--callout-margin-inline, calc(var(--gutter) * -1));
+  padding: var(--callout-padding, var(--gutter));
 
   :is(p, ol, ul):last-child {
     margin-block-end: 0;
+  }
+}
+
+[data-callout='series'] {
+  [aria-current]::marker {
+    content: '➡️ ';
+    content: '➡️ ' / '';
+  }
+}
+
+[data-callout='event'] {
+  --callout-margin-block: var(--double-gutter) 0;
+  --callout-margin-inline: var(--page-margin);
+  --newline: var(--shim-plus);
+
+  grid-area: note;
+  justify-self: center;
+  max-inline-size: var(--wide-page);
+
+  .event-dates {
+    @include config.font-family('alt');
+
+    font-weight: bold;
   }
 }
