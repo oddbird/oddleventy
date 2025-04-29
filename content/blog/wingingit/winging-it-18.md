@@ -60,9 +60,7 @@ and backend development.
   - [Dialog](https://codepen.io/jamessw/pen/dPPbgLQ) 
   - [Returning a value from a dialog](https://codepen.io/jamessw/pen/qEEWQqL)
 
-- Custom events
-  - [Final](https://codepen.io/jamessw/pen/wBBwQmg)
-  - [Live](https://codepen.io/jamessw/pen/JooooPV)
+- Custom events- (https://codepen.io/jamessw/pen/wBBwQmg)
 
 
 ## Links:
