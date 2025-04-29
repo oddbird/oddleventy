@@ -56,7 +56,7 @@ and backend development.
 
 ## Demos:
 - Examples on popover and Dialog
-  - [Popover](https://codepen.io/jamessw/pen/raaBqrw) Using existing popover* commands, port over to command*
+  - [Popover](https://codepen.io/jamessw/pen/raaBqrw) Porting existing popover attributes to `command` and `commandfor`.
   - [Dialog](https://codepen.io/jamessw/pen/dPPbgLQ) 
   - [Return value](https://codepen.io/jamessw/pen/qEEWQqL)
 
