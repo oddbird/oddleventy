@@ -22,7 +22,6 @@ summary: |
   for a live conversation
   with special guest Luke Warlow,
   Web Platform Engineer at Igalia.
-
 ---
 
 {% callout 'note', false %}
@@ -55,17 +54,17 @@ and backend development.
 - Polyfilling the Invokers API
 - What is OpenUI?
 
-
 ## Demos:
-- Examples on popover and Dialog
-  - [Popover](https://codepen.io/jamessw/pen/raaBqrw) Porting existing popover attributes to `command` and `commandfor`.
+
+- Examples on popover and dialog
+  - [Popover](https://codepen.io/jamessw/pen/raaBqrw) -- Porting existing
+    popover attributes to `command` and `commandfor`
   - [Dialog](https://codepen.io/jamessw/pen/dPPbgLQ)
   - [Returning a value from a dialog](https://codepen.io/jamessw/pen/qEEWQqL)
-
 - [Custom events](https://codepen.io/jamessw/pen/wBBwQmg)
 
-
 ## Links:
+
 - [Future Invokers Explainer](https://open-ui.org/components/future-invokers.explainer/)
 - [Current support](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API#browser_compatibility)
-- [Invokers Polyfill](https://github.com/keithamus/invokers-polyfill)
+- [Invokers polyfill](https://github.com/keithamus/invokers-polyfill)
