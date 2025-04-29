@@ -1,5 +1,5 @@
 ---
-title: Take Command with Invoker
+title: Take Command with Invokers
 episode: 18
 tags:
   - CSS
