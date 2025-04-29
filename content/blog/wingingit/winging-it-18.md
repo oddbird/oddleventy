@@ -3,7 +3,9 @@ title: Take Command with Invokers
 episode: 18
 tags:
   - CSS
-  - Polyfill
+  - HTML
+  - Invokers
+  - Web Components
 author:
   - miriam
   - james
