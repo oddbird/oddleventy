@@ -58,7 +58,7 @@ and backend development.
 - Examples on popover and Dialog
   - [Popover](https://codepen.io/jamessw/pen/raaBqrw) Porting existing popover attributes to `command` and `commandfor`.
   - [Dialog](https://codepen.io/jamessw/pen/dPPbgLQ) 
-  - [Return value](https://codepen.io/jamessw/pen/qEEWQqL)
+  - [Returning a value from a dialog](https://codepen.io/jamessw/pen/qEEWQqL)
 
 - Custom events
   - [Final](https://codepen.io/jamessw/pen/wBBwQmg)
