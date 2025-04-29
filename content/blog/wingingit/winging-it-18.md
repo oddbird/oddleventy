@@ -29,6 +29,8 @@ summary: |
 Check out our [Winging It](/wingingit/)
 conversations about design, frontend,
 and backend development.
+
+**Winging It** episode 11: [Web Components](/2024/08/27/winging-it-11/)
 {% endcallout %}
 
 {% import "embed.macros.njk" as embed %}
@@ -57,10 +59,10 @@ and backend development.
 ## Demos:
 - Examples on popover and Dialog
   - [Popover](https://codepen.io/jamessw/pen/raaBqrw) Porting existing popover attributes to `command` and `commandfor`.
-  - [Dialog](https://codepen.io/jamessw/pen/dPPbgLQ) 
+  - [Dialog](https://codepen.io/jamessw/pen/dPPbgLQ)
   - [Returning a value from a dialog](https://codepen.io/jamessw/pen/qEEWQqL)
 
-- Custom events- (https://codepen.io/jamessw/pen/wBBwQmg)
+- [Custom events](https://codepen.io/jamessw/pen/wBBwQmg)
 
 
 ## Links:
