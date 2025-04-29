@@ -60,7 +60,7 @@ and backend development.
 ## Demos:
 - Examples on popover and Dialog
   - [Popover](https://codepen.io/jamessw/pen/raaBqrw) Using existing popover* commands, port over to command*
-  - [Dialog](https://codepen.io/jamessw/pen/dPPbgLQ) Add in the command* attributes
+  - [Dialog](https://codepen.io/jamessw/pen/dPPbgLQ) 
   - [Return value](https://codepen.io/jamessw/pen/qEEWQqL)
 
 - Custom events
