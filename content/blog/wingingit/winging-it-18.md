@@ -21,7 +21,7 @@ summary: |
   Join James Stuckey Weber and Miriam Suzanne
   for a live conversation
   with special guest Luke Warlow,
-  web platform engineer at Igalia.
+  Web Platform Engineer at Igalia.
 
 ---
 
