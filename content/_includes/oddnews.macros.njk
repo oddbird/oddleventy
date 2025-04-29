@@ -9,9 +9,13 @@ label: oddnews_signup
 note: Generate an OddNews signup form
 params:
   heading:
-    type: boolean
+    type: boolean | string
     default: true
-    note: Whether to include the "OddNews Sign Up" heading
+    note: Whether to include the "OddNews Sign Up" heading, or a custom heading
+  subheading:
+    type: boolean | string
+    default: true
+    note: Whether to include default subheading, or a custom subheading
   tag:
     type: string
     default: 'footer'
@@ -27,21 +31,21 @@ params:
 #}
 {% macro oddnews_signup(
   heading=true,
+  subheading=true,
   tag='footer',
   class=none,
-  buttonText='Subscribe',
-  altHeading=false,
-  altSubheading=none
+  buttonText='Subscribe'
 ) %}
   <div class="oddnews-signup{% if class %} {{ class }}{% endif %}">
-    {%- if heading and altHeading -%}
-     <h3>{{ altHeading }}</h3>
-     <p>{{ altSubheading }}</p>
-      {% else %}
-        {%- if heading -%}
-          <h3>OddNews Sign Up</h3>
+    {%- if heading -%}
+      <h3>{{ heading if heading | typeCheck('string') else 'OddNews Sign Up' }}</h3>
+      {%- if subheading -%}
+        {%- if subheading | typeCheck('string') -%}
+          <p>{{ subheading }}</p>
+        {%- else -%}
           <p>Get the latest news in front-end development — CSS, HTML, JavaScript, and UX. <a href="/oddnews">See Archive</a></p>
         {%- endif -%}
+      {%- endif -%}
     {%- endif -%}
 
     <form action="https://oddbird.us19.list-manage.com/subscribe/post?u=80219aa68d7bad77b9fd2eb93&amp;id=7c27f7fb9a&amp;f_id=000a9de4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
