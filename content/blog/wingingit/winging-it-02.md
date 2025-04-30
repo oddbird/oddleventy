@@ -9,6 +9,7 @@ author:
 date: 2023-09-19
 tags:
   - htmx
+  - HTML
 length: 28 mins
 image:
   src: winging-it/winging-it-2.jpg
