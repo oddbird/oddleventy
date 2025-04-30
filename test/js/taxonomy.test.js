@@ -22,6 +22,7 @@ describe('fromTaxonomy', () => {
       { tag: 'Case Study', icon: 'tools', plural: 'Case Studies' },
       { tag: 'Article', icon: 'news', plural: 'Articles' },
       { tag: 'Winging It', icon: 'winging-it-lines', plural: 'Episodes' },
+      { tag: 'Course', icon: 'mail-open', plural: 'Courses' },
     ];
 
     expect(fromTaxonomy('post', { icon: 'news' })).toEqual({
