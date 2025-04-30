@@ -21,6 +21,9 @@ post:
   - tag: Winging It
     icon: winging-it-lines
     plural: Episodes
+  - tag: Course
+    icon: mail-open
+    plural: Courses
 
 oss:
   - title: Open Web
