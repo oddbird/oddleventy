@@ -13,7 +13,7 @@ extended: |
   or to [refactor your existing application](/contact/).
 action:
   text: Subscribe now
-  url: "#sign-up"
+  url: '#sign-up'
 image:
   src: blog/2024/anchor1.jpg
   alt: A rusty anchor hanging with the sea in the background.
@@ -26,7 +26,7 @@ press:
       so I could get it working in Firefox.
     slug: shout-out
     name: Luke Hansford
-    venue: "@lukehansford@mastodon.social"
+    venue: '@lukehansford@mastodon.social'
     url: https://mastodon.social/@lukehansford
     face: luke-hansford-bg.jpg
   - text: |
@@ -61,9 +61,9 @@ summary: |
   of the browser spec, and will stand the test of time.
 ---
 
-{% import "layout.macros.njk" as layout %}
-{% import "quotes.macros.njk" as quotes %}
-{% import "birds.macros.njk" as birds %}
+{% import 'layout.macros.njk' as layout %}
+{% import 'quotes.macros.njk' as quotes %}
+{% import 'birds.macros.njk' as birds %}
 {% import 'embed.macros.njk' as embed %}
 {% import 'utility.macros.njk' as utility %}
 {% import 'oddnews.macros.njk' as oddnews %}
@@ -233,12 +233,11 @@ possibilities for innovative layouts.
 {% call layout.block('column') %}
 
 {{ oddnews.oddnews_signup(
-  heading=true,
-  tag="course-anchor-positioning",
-  class="headerless",
-  buttonText="Subscribe",
-  altHeading="Email Course Sign Up",
-  altSubheading="Be among the first to discover new layout possibilities with anchor positioning."
+  heading='Email Course Sign Up',
+  subheading='Be among the first to discover new layout possibilities with anchor positioning.',
+  tag='course-anchor-positioning',
+  class='headerless',
+  buttonText='Subscribe'
 ) }}
 
 {% endcall %}
