@@ -2,7 +2,7 @@
 title: CSS Anchor Positioning
 sub: How to use it, and is it ready to use?
 author: james
-date: 2025-05-06
+date: 2025-06-03
 image:
   src: blog/2024/anchor1.jpg
   position: center
@@ -14,11 +14,11 @@ tags:
   - Layout
 events:
   - venue: Michigan Typescript
-    date: 2025-05-06
+    date: 2025-06-03
     adr: Ann Arbor, MI
     url: https://bsky.app/profile/michigantypescript.com
 slides: |
-  https://talks.jamessw.com/talks/2025-04-mits/
+  https://talks.jamessw.com/talks/2025-mits/
 summary: |
   CSS anchor positioning is a powerful tool that simplifies popovers
   and provides new and innovative layout options.
