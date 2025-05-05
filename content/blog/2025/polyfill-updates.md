@@ -69,11 +69,16 @@ In addition, `togglePopover()` now returns whether the popover is shown.
 
 ### What's next for the Popover polyfill?
 
-The Popover API has been available in all browsers for over a year, but hint
-popovers have only been available in Chromium browsers for a few months. This
-means that many users are on a browser that supports the Popover API, but not
-hint popovers. This is a problem for the polyfill, as it only can polyfill from
-no support to full support -- partial polyfilling is not supported.
+The Popover API has 4 to 18 months of support in all browsers for, but hint
+popovers have only been available in Chromium browsers for a few months.
+
+<browser-support data-feature="popover"></browser-support>
+
+This means that many users are on a browser that supports the Popover API, but
+not hint popovers. This is a problem for the polyfill, as it only can polyfill
+from no support to full support -- partial polyfilling is not supported.
+
+<browser-support data-feature="popover-hint"></browser-support>
 
 We would love to selectively polyfill `popover=hint` in browsers that have
 support for the Popover API, but we anticipate that this will take a fair amount
