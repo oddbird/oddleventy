@@ -59,12 +59,10 @@
     </section>
   {% endif %}
 
-  {% if cta %}
-    {% if cta == 'hire' %}
-      {% include 'site/hire-us.njk' %}
-    {% elif cta == 'sponsor' -%}
-      {% include 'site/sponsor-us.njk' %}
-    {% endif %}
+  {% if cta == 'hire' %}
+    {% include 'site/hire-us.njk' %}
+  {% elif cta == 'sponsor' -%}
+    {% include 'site/sponsor-us.njk' %}
   {% endif %}
 
   {% include 'page/list.njk' %}
