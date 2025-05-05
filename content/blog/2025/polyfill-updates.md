@@ -1,6 +1,6 @@
 ---
 title: Updates to OddBird's Polyfills
-sub: <code>hint</code> popovers, <code>position-area</code> and more.
+sub: <code>hint</code> popovers, <code>position-area</code> and more
 date: 2025-05-09
 image:
   src: blog/2025/stack.jpg
@@ -50,8 +50,8 @@ proposal](https://open-ui.org/components/popover-hint.research.explainer/).
 
 ### Updates to JavaScript methods
 
-We also updated the `showPopover()` and `togglePopover()` to accept an object as
-an argument. Initially, `togglePopover()` only accepted a boolean `force`, to
+We also updated `showPopover()` and `togglePopover()` to accept an object as an
+argument. Initially, `togglePopover()` only accepted a boolean `force`, to
 either open or close the popover. However, the spec was updated to add a
 `source` parameter to `showPopover()` and `togglePopover()`, so we updated the
 polyfill to allow that format.
@@ -59,17 +59,20 @@ polyfill to allow that format.
 {% callout 'note', false %}
 **Why use `togglePopover({force: true})` instead of `showPopover()`?**
 
-If you call `showPopover()` on a popover that already is shown, the native
+If you call `showPopover()` on a popover that is already shown, the native
 browser implementation will throw an error. If you aren't sure if the popover is
 already shown, you may instead want to call `togglePopover({force: true})`,
 which will show it if it isn't already shown, but will not throw an error if it
-is. {% endcallout %}
+is.
 
-In addition, `togglePopover()` now returns whether the popover is shown.
+{% endcallout %}
+
+In addition, `togglePopover()` now returns a boolean value indicating whether
+the popover is shown after the method executes.
 
 ### What's next for the Popover polyfill?
 
-The Popover API has 4 to 18 months of support in all browsers for, but hint
+The Popover API has 4 to 18 months of support in all major browsers, but hint
 popovers have only been available in Chromium browsers for a few months.
 
 <browser-support data-feature="popover"></browser-support>
@@ -85,7 +88,7 @@ support for the Popover API, but we anticipate that this will take a fair amount
 of investigation and effort. You can track our progress on the Github
 [issue](https://github.com/oddbird/popover-polyfill/issues/242).
 
-Read more or try out the Popover polyfill at https://popover.oddbird.net/.
+Read more or try out the Popover polyfill at <https://popover.oddbird.net/>.
 
 {% import 'embed.macros.njk' as embed %}
 
@@ -111,7 +114,7 @@ You can see some demos [here](https://anchor-positioning.oddbird.net/position-ar
 
 ### Working towards spec parity
 
-We also added support for [`inside` and `outside` keywords](https://anchor-positioning.oddbird.net/#inside-outside) on physical insets,
+We also added support for [`inside` and `outside` keywords](https://anchor-positioning.oddbird.net/#inside-outside) on physical insets --
 for instance with `left: anchor(inside)`, which is equivalent to `left:
 anchor(left)`.
 
@@ -121,7 +124,7 @@ addition to the sizing properties that were already supported.
 
 ### Internal improvements
 
-* We reduced the built size of the polyfill by half, by curating the external
+* We reduced the built size of the polyfill by half by curating the external
   dependencies required at run time.
 * We added support for previewing the built polyfill from a pull request, which
   allows us to quickly get feedback from users or test a change on CodePen.
@@ -146,8 +149,8 @@ by 85% if we didn't have to parse the CSS ourselves.
 One of the frustrating caveats for our users has been that the polyfill can only
 affect elements and styles that are present when the polyfill is run. This
 creates issues for users with dynamic content, or who are using frameworks like
-React. While we have collaborated with users to find ways to ways around the issue,
-we would love to solve the issue of dynamic elements.
+React. While we have collaborated with users to find ways to work around the
+issue, we would love to solve the issue of dynamic elements.
 
 This is not a small task, but I think it would make it possible for a lot of
 users to adopt the polyfill in their project, and by extension, start using
