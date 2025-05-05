@@ -24,9 +24,11 @@ summary: |
   with your help.
 ---
 
-Over the last few months, our team at OddBird has had more time to work on
-our open source contributions, especially the Popover and CSS Anchor Positioning
-polyfills.
+We have been busy updating the Popover and CSS Anchor Positioning Polyfills,
+adding support for hint popovers, `position-area`, and more. A huge thank
+you to our sponsors and contributors! If you or you company would like to
+support these projects, there is much more we could do to improve polyfills for
+users.
 
 ## Popover updates
 
@@ -160,14 +162,14 @@ more.
 
 ## Can you help?
 
-As noted earlier, we were able to make this progress because we had more time to
-dedicate to this. Sadly, this has been because we are in a slower patch of
-client work. While that freed us up to do more polyfill work, it isn't
-sustainable.
+Over the last few months, we've enjoyed the chance to make a lot of updates to
+meet users' needs. Unfortunately, this rate of progress isn’t sustainable
+without additional support.
 
 If your company is using our polyfills, or if one of the issues above is
-blocking you from using our polyfills, [get in touch](/contact/). Would your
-company be able to fund the development of a feature?
+blocking you from using our polyfills, support us on [Open
+Collective](https://opencollective.com/oddbird-open-source) or [get in
+touch](/contact/) about supporting a specific feature.
 
-We would also welcome any code contributions if you'd like to contribute that
-way instead!
+We would also welcome any code contributions if you’d like to help out that way
+instead!
