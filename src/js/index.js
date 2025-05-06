@@ -1,5 +1,6 @@
 import '@11ty/is-land';
 import 'lite-youtube-embed';
+import '@oddbird/browser-support';
 
 import algoliasearchNetlify from '@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify';
 import ccs from 'cascading-color-systems';
