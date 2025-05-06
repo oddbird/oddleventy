@@ -1,5 +1,5 @@
 ---
-title: Updates to OddBird's Polyfills
+title: Updates to Popover and CSS Anchor Positioning Polyfills
 sub: <code>hint</code> popovers, <code>position-area</code> and more
 date: 2025-05-09
 image:
@@ -26,7 +26,7 @@ summary: |
 
 We have been busy updating the Popover and CSS Anchor Positioning Polyfills,
 adding support for hint popovers, `position-area`, and more. A huge thank
-you to our sponsors and contributors! If you or you company would like to
+you to our sponsors and contributors! If you or your company would like to
 support these projects, there is much more we could do to improve polyfills for
 users.
 
