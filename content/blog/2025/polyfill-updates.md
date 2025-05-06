@@ -1,7 +1,7 @@
 ---
 title: Updates to Popover and CSS Anchor Positioning Polyfills
 sub: <code>hint</code> popovers, <code>position-area</code> and more
-date: 2025-05-09
+date: 2025-05-06
 image:
   src: blog/2025/stack.jpg
   alt: >
