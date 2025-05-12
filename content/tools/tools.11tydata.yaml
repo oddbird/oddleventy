@@ -1,4 +1,4 @@
 permalink: /{{ page.fileSlug }}/index.html
 oss: creator
 sponsors: true
-sponsor_cta: true
+cta: sponsor
