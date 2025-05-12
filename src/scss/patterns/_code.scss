@@ -112,13 +112,13 @@ code:not([class^='language']) {
 
 @media screen and (-ms-high-contrast: active) {
   pre[class*='language-'] {
-    color: windowText;
+    color: CanvasText;
     background: window;
   }
 
   .token.important {
     background: highlight;
-    color: window;
+    color: canvas;
     font-weight: normal;
   }
 
