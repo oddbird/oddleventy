@@ -7,7 +7,7 @@ $brand-gradient-start: var(--ccs-prime--fg2);
 $brand-gradient-end: var(--ccs-accent--fg2);
 $border: var(--ccs-neutral);
 $border-fade: var(--ccs-neutral--fade);
-$shadow: hsla(var(--ccs-h--neutral), var(--ccs-s--fg6), var(--ccs-l--fg6), 40%);
+$shadow: hsl(var(--ccs-h--neutral), var(--ccs-s--fg6), var(--ccs-l--fg6), 40%);
 $action: var(--ccs-prime--fg3);
 $active: $highlight;
 $icon: var(--ccs-special--fg1);

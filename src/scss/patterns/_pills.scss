@@ -10,7 +10,7 @@
 .pill {
   &:link,
   &:visited {
-    background-color: hsla(
+    background-color: hsl(
       var(--ccs-h--special),
       var(--ccs-s--bg1),
       var(--ccs-l--bg5),
