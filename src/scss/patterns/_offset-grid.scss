@@ -46,7 +46,7 @@ $break: 'wide-break';
   }
 }
 
-// services page
+// services and work pages
 
 .offset-media {
   --offset-media-padding: 0;
@@ -54,7 +54,7 @@ $break: 'wide-break';
   display: flex;
 
   img {
-    flex: 1 0 auto;
+    flex: 1;
     height: 100%; // Safari fix
     object-fit: cover;
   }
