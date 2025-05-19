@@ -1,8 +1,8 @@
 {%- import 'utility.macros.njk' as utility -%}
 {%- import 'layout.macros.njk' as layout -%}
 
-{%- set abs_url = page.url | htmlBaseUrl(site.url) -%}
-{%- set mentions = webmentions | mentionsForUrl(abs_url) -%}
+{%- set abs_url = page.url | htmlBaseUrl(site.url) if page.url else '' -%}
+{%- set mentions = webmentions | mentionsForUrl(abs_url) if abs_url else [] -%}
 
 {#
   For now, we only show mentions on posts and oss pages.
