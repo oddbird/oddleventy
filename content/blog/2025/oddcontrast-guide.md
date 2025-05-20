@@ -1,6 +1,6 @@
 ---
-title: OddContrast Title
-sub:: A guide to using OddContrast
+title: A guide to using OddContrast
+sub: A modern color tool
 author: oddbird
 date: 2025-05-20
 tags:
