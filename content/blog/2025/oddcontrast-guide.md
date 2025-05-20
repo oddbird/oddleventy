@@ -20,6 +20,8 @@ summary: |
   but also utilizes the color formats and spaces newly available in CSS.
 ---
 
+{% import 'embed.macros.njk' as embed %}
+
 ## Background we might not need?
 
 For years designers and developers were limited to colors in the sRGB colors
@@ -43,6 +45,13 @@ The default color format is `p3` but you can select from the following options:
 - P3
 - sRGB
 
+{{ embed.figure(
+  data=[{
+    img: 'blog/2025/oddcontrast-formats.jpg',
+    alt: 'p3 is selected in the color format select field'
+  }]
+) }}
+
 You may enter any supported color notation regardless of chosen color format.
 There's also some flexibility when it comes to how you enter your color.
 For instance, you can paste a 6 digit Hex color without the `#`.
@@ -54,7 +63,12 @@ The same goes for when you are working in decimals, you can paste
 value as a `%`. You can even used named colors! Here’s `honeydew` as the
 foreground color.
 
-@@@TODO add HoneyDew image here
+{{ embed.figure(
+  data=[{
+    img: 'blog/2025/oddcontrast-named-colors-cropped.jpg',
+    alt: 'honeydew named colors is used as the foreground color'
+  }]
+) }}
 
 ## Workflow enhancements
 
@@ -70,13 +84,22 @@ incrementally when focused.
 Need to swap the foreground and background colors? No problem, select the left
 right arrow icon button or you can drag and drop the color swatches themselves.
 
-@@@TODO add BG/FG swap image
+{{ embed.figure(
+  data=[{
+    img: 'blog/2025/oddcontrast-swap.gif',
+    alt: 'use the arrow icon to swap foreground and background colors'
+  }]
+) }}
 
 Once you are happy with your colors, you can easily copy your preferred color
 notation to the clipboard with a single click.
 
-@@@TODO add copy to clipboard image
-
+{{ embed.figure(
+  data=[{
+    img: 'blog/2025/oddcontrast-clipboard.png',
+    alt: 'the copy to clipboard flow'
+  }]
+) }}
 
 ## Visualize the in-gamut range
 
@@ -87,8 +110,24 @@ will update with the color values. To preview this, select the sRGB option in
 the "Show Gamut" field, edit the color sliders and see how every shift in color
 will affect the other channels.
 
-A warning will be displayed if your color is out of gamut for each of the color
-spaces, regardless of your gamut display preference.
+{{ embed.figure(
+  data=[{
+    img: 'blog/2025/oddcontrast-srgb-gamut.jpg',
+    alt: 'use the arrow icon to swap foreground and background colors'
+  }]
+) }}
+
+<div class="contain">
+{{ embed.figure(
+  data=[{
+    img: 'blog/2025/oddcontrast-gamut-warning.jpg',
+    alt: 'use the arrow icon to swap foreground and background colors'
+  }],
+    class='align-left'
+) }}
+
+A warning will be displayed if your color is out of gamut over the swatch if you have a gamut selected. A separate warning will appear near the color notations for each affected color space regardless of your gamut display setting.
+</div>
 
 ## Saving and sharing your color combinations
 
@@ -113,6 +152,7 @@ combination within its very own logo.
 
 - [ ] Evaluates the contrast ratio between two colors
 - [ ] WCAG 2 Level AA and AAA pass/fail results for both normal and large text
+- [ ] Mention Alpha
 - [x] Resources section that has links to learn more about color
 - [x] Shows the selected colors in all the supported color notation
 - [x] Indicates when a chosen color falls outside the current color gamut
