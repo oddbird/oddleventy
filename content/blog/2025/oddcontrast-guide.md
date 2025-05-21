@@ -2,7 +2,7 @@
 title: A guide to using OddContrast
 sub: A modern color tool
 author: oddbird
-date: 2025-05-20
+date: 2025-05-21
 tags:
   - Article
   - Accessibility
@@ -21,8 +21,6 @@ summary: |
 ---
 
 {% import 'embed.macros.njk' as embed %}
-
-## Background we might not need?
 
 For years designers and developers were limited to colors in the sRGB colors
 space, using formats like hexadecimal, RGB, and HSL. As display technology
