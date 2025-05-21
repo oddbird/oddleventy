@@ -145,6 +145,7 @@ combination within its very own logo.
 - [Falling For Oklch: A Love Story Of Color Spaces, Gamuts, And CSS](https://www.smashingmagazine.com/2023/08/oklch-color-spaces-gamuts-css/) by Geoff Graham
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/) by Björn Ottosson
 - [OKLCH in CSS: why we moved from RGB and HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) by Evil Martians
+- [CSS Color Module 4](https://www.w3.org/TR/css-color-4/)
 
 ## ToDo / Things to include
 
