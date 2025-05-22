@@ -1,5 +1,5 @@
 ---
-title: The design of web design
+title: The Design of Web Design
 date: 2025-05-22
 canonical: https://podrocket.logrocket.com/design-of-web-design-miriam-suzanne
 author: miriam
