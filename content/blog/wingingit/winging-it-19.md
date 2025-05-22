@@ -17,11 +17,11 @@ media:
 summary: |
   Miriam Suzanne and Stacy Kvernmo
   answer questions from listeners
-  about CSS including,
+  about CSS --
   what the next big evolution for CSS may be,
   how to make a site more accessible,
   whether float is still useful,
-  and what's on their CSS wishlist.
+  and what's on their CSS wish list.
 ---
 
 {% callout 'note', false %}
@@ -43,15 +43,18 @@ and backend development.
 ) }}
 
  ## What we cover:
+
 - What is likely to be the next big evolution of CSS?
-- In light of Global Accessibility Awareness Day, What are some of the ways you test a site for accessibility?
+- In light of Global Accessibility Awareness Day, what are some of the ways you
+  test a site for accessibility?
 - How paved is the road to logical properties for all the things?
 - What (smaller) new-ish CSS feature are you excited about?
 - What CSS syntax do you always need to look up when writing?
-- In 2025, is there still a use case for float?
+- In 2025, is there still a use case for `float`?
 - How would you suggest we apply layers to an existing project?
 - Do you have anything on your CSS wish list?
-- What browser inspector tools do you use often? What additional tools do you wish there were?
+- What browser inspector tools do you use often? What additional tools do you
+  wish there were?
 - How can I be more closely involved with the core CSS language and standard?
 
 ## Links:
@@ -61,5 +64,7 @@ and backend development.
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/accessibility/scoring)
 - [relative colors](https://codepen.io/stacy/pen/pvvGKxN)
 - [GitHub CSSWG drafts](https://github.com/w3c/csswg-drafts/issues)
-- [Carousels with CSS](https://developer.chrome.com/blog/carousels-with-css) by Adam Argyle
-- [Are 'CSS Carousels' accessible?](https://www.sarasoueidan.com/blog/css-carousels-accessibility/) by Sara Soueidan
+- [Carousels with CSS](https://developer.chrome.com/blog/carousels-with-css) by
+  Adam Argyle
+- [Are 'CSS Carousels' accessible?](https://www.sarasoueidan.com/blog/css-carousels-accessibility/)
+  by Sara Soueidan
