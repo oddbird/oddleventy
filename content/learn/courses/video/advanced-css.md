@@ -1,7 +1,7 @@
 ---
 title: Advanced CSS Video Course
 fancy_heading: true
-sub: |
+summary: |
   CSS layout techniques have come a long way since
   the early days of responsive design, but many
   websites are still using decade-old approaches.
