@@ -30,8 +30,7 @@ h2 {
 }
 
 h2,
-h3,
-.fancy-heading {
+h3 {
   @supports (background-clip: text) or (-webkit-background-clip: text) {
     background: linear-gradient(
       to bottom right,
