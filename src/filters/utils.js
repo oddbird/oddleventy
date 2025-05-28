@@ -105,12 +105,12 @@ params:
 */
 export const getSort =
   (attr, reverse = false) =>
-    (a, b) => {
-      if (a[attr] < b[attr]) {
-        return reverse ? 1 : -1;
-      }
-      if (a[attr] > b[attr]) {
-        return reverse ? -1 : 1;
-      }
-      return 0;
-    };
+  (a, b) => {
+    if (a[attr] < b[attr]) {
+      return reverse ? 1 : -1;
+    }
+    if (a[attr] > b[attr]) {
+      return reverse ? -1 : 1;
+    }
+    return 0;
+  };
