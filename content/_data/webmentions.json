@@ -1,6 +1,32 @@
 {
-  "lastFetched": "2025-05-19T08:08:41.501Z",
+  "lastFetched": "2025-05-26T08:10:35.540Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jeremy Keith",
+        "photo": "https://avatars.webmention.io/adactio.com/24f33c5820046ebbcb429f78bb988fc1fa9f97d35247e0b72b3fb5ff888da633.jpg",
+        "url": "https://adactio.com/"
+      },
+      "url": "https://adactio.com/links/21848",
+      "published": "2025-04-14T10:07:10",
+      "wm-received": "2025-05-25T18:40:42Z",
+      "wm-id": 1913525,
+      "wm-source": "https://adactio.com/links/21848",
+      "wm-target": "https://www.oddbird.net/workshops/cascading-layouts/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<h1 class=\"p-name\">\n<a class=\"u-bookmark-of\" href=\"https://www.oddbird.net/workshops/cascading-layouts/\">\nCascading Layouts | OddBird\n</a>\n</h1>\n<h2>\n<time class=\"dt-published\" datetime=\"2025-04-14T10:07:10\">\nApril 14th, 2025\n</time></h2>\n\n<blockquote>\n  <p>A workshop on resilient CSS layouts </p>\n</blockquote>\n\n<p>Oh, hell yes!</p>\n\n<p>Do not hesitate—sign yourself up to this series of three online workshops by Miriam. This is the quickest to level up your working knowledge of the most powerful parts of CSS.</p>\n\n<p>By the end of this you’re going to feel like Neo in that bit of The Matrix when he says “I know kung-fu!” …except kung-fu isn’t very useful for building resilient and maintainable websites, whereas modern CSS absolutely is.</p>",
+        "text": "Cascading Layouts | OddBird\n\n\n\n\nApril 14th, 2025\n\n\n\n  A workshop on resilient CSS layouts \n\n\nOh, hell yes!\n\nDo not hesitate—sign yourself up to this series of three online workshops by Miriam. This is the quickest to level up your working knowledge of the most powerful parts of CSS.\n\nBy the end of this you’re going to feel like Neo in that bit of The Matrix when he says “I know kung-fu!” …except kung-fu isn’t very useful for building resilient and maintainable websites, whereas modern CSS absolutely is."
+      },
+      "bookmark-of": "https://www.oddbird.net/workshops/cascading-layouts/",
+      "wm-property": "bookmark-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://adactio.com/links/21848"
+      }
+    },
     {
       "type": "entry",
       "author": {
