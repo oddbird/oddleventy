@@ -82,6 +82,8 @@ export const oddNewsTags = (name) => {
       return '6265089';
     case 'course-anchor-positioning':
       return '25860341';
+    case 'advanced-css-video':
+      return '25860548';
     default:
       return '';
   }
@@ -103,12 +105,12 @@ params:
 */
 export const getSort =
   (attr, reverse = false) =>
-  (a, b) => {
-    if (a[attr] < b[attr]) {
-      return reverse ? 1 : -1;
-    }
-    if (a[attr] > b[attr]) {
-      return reverse ? -1 : 1;
-    }
-    return 0;
-  };
+    (a, b) => {
+      if (a[attr] < b[attr]) {
+        return reverse ? 1 : -1;
+      }
+      if (a[attr] > b[attr]) {
+        return reverse ? -1 : 1;
+      }
+      return 0;
+    };
