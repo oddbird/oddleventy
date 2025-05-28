@@ -6,6 +6,7 @@
   @include config.font-family('alt');
 
   background-color: var(--oddnews-bg, var(--clip-bg, var(--callout)));
+  font-size: var(--small);
   padding: var(--oddnews-signup-padding-block-start, 0) var(--gutter)
     var(--gutter);
 }

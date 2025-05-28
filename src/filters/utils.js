@@ -82,6 +82,8 @@ export const oddNewsTags = (name) => {
       return '6265089';
     case 'course-anchor-positioning':
       return '25860341';
+    case 'advanced-css-video':
+      return '25860548';
     default:
       return '';
   }

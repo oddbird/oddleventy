@@ -35,6 +35,7 @@ describe('utility filters', () => {
     expect(oddNewsTags('oddblog')).toBe('6265233');
     expect(oddNewsTags('oddnews')).toBe('6265089');
     expect(oddNewsTags('course-anchor-positioning')).toBe('25860341');
+    expect(oddNewsTags('advanced-css-video')).toBe('25860548');
   });
 
   test('getSort', () => {
