@@ -1,6 +1,6 @@
 ---
-title: CSS Q&A Party!
-sub: What's coming to CSS and what's useful now
+title: What's New to CSS
+sub: CSS Q&A Party!
 episode: 19
 tags:
   - CSS
