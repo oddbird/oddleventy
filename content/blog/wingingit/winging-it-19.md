@@ -62,7 +62,7 @@ and backend development.
 - [Wave](https://wave.webaim.org/extension/)
 - [Voiceover](https://support.apple.com/guide/voiceover/welcome/mac)
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/accessibility/scoring)
-- [relative colors](https://codepen.io/stacy/pen/pvvGKxN)
+- [Relative colors demo](https://codepen.io/stacy/pen/pvvGKxN)
 - [GitHub CSSWG drafts](https://github.com/w3c/csswg-drafts/issues)
 - [Carousels with CSS](https://developer.chrome.com/blog/carousels-with-css) by
   Adam Argyle
