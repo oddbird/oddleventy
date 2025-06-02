@@ -113,12 +113,10 @@ past clients so new clients know what to expect.
 User tasks, or stories, that drive interactions on the site flowed
 naturally out of my thinking about types of users. User stories, written
 from the perspective of a user, describe user goals for a given task. I
-wrote a set of stories in [Pivotal Tracker], prioritized them and
+wrote a set of stories in Pivotal Tracker, prioritized them and
 assigned each story to a team member. These blog posts about our open
 design process are top priority user stories for the OddSite project.
 *Pop!* (The sound of my brain exploding.)
-
-[Pivotal Tracker]: https://www.pivotaltracker.com/n/projects/22378
 
 ## Visual Design
 
