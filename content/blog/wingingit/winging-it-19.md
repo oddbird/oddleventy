@@ -1,5 +1,5 @@
 ---
-title: What's New to CSS?
+title: What's New in CSS
 sub: CSS Q&A Party
 episode: 19
 tags:
