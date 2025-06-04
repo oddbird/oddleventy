@@ -85,9 +85,10 @@ right arrow icon button or you can drag and drop the color swatches themselves.
 
 {{ embed.figure(
   data=[{
-    img: 'blog/2025/oddcontrast-swap.gif',
+    img: 'blog/2025/oddcontrast-swaps.png',
     alt: 'use the arrow icon to swap foreground and background colors'
-  }]
+  }],
+  class='extend-large'
 ) }}
 
 Once you are happy with your colors, you can easily copy your preferred color
@@ -138,14 +139,41 @@ OddContrast automatically updates the URL as you make changes to the colors.
 This dynamic URL allows you to easily share color combinations with others or
 bookmark them for your own future use.
 
-## Contrast ratios and Alpha
+## Contrast ratios and transparency
 
-Coming soon.
+Using the [WCAG 2 contrast ratio requirements](https://webaim.org/articles/contrast/#ratio),
+OddContrast displays a pass or fail message for meeting the minimum (Level AA)
+and enhanced (Level AAA) values for normal and large text.
+A warning is shown if the the colors include an alpha value lower than one
+as WCAG 2 does not account for transparency.
+
+OddContrast approximates a ratio by premultiplying a semi-transparent
+foreground color in the sRGB space. In practice,
+the displayed foreground color may vary depending on the display and browser.
+
+Without knowing what is behind a background color with transparency,
+OddContrast cannot estimate the contrast ratio.
+If the background color is not opaque,
+the contrast ratio is computed without background or foreground opacity.
+
+{{ embed.figure(
+  data=[{
+    img: 'blog/2025/oddcontrast-alpha.jpg',
+    alt: 'a warning is shown when using the alpha channel'
+  }]
+) }}
 
 ## For fun
 
 To add some whimsy, OddContrast proudly showcases your chosen color
 combination within its very own logo.
+
+{{ embed.figure(
+  data=[{
+    img: 'blog/2025/oddcontrast-inline-logos.png',
+    alt: 'OddContrast logo with different colors'
+  }]
+) }}
 
 ## Learn more about the available colors spaces and formats
 
