@@ -132,14 +132,15 @@ for each affected color space
 regardless of your gamut display setting.
 </div>
 
-
 ## Saving and sharing your color combinations
 
 OddContrast automatically updates the URL as you make changes to the colors.
 This dynamic URL allows you to easily share color combinations with others or
 bookmark them for your own future use.
 
-## Contrast ratios
+## Contrast ratios and Alpha
+
+Coming soon.
 
 ## For fun
 
