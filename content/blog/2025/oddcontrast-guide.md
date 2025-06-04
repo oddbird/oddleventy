@@ -16,8 +16,8 @@ image:
     in P3 color format and an estimate
     of foreground alpha value ratio.
 summary: |
-  Learn how to use OddBird's color tool that not only checks contrast ratios
-  but also utilizes the color formats and spaces newly available in CSS.
+  OddBird's color tool not only checks contrast ratios,
+	but supports the new CSS color formats and spaces.
 ---
 
 {% import 'embed.macros.njk' as embed %}
