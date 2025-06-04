@@ -33,7 +33,8 @@ testing tool that handles our new world of modern color formats.
 Although it looks simple on the surface, OddContrast has many built-in
 conveniences when working with color.
 
-The default color format is `p3` but you can select from the following options:
+The default color format is display-p3 but you can select from the following
+options:
 - Hex
 - HSL
 - Lab
@@ -50,16 +51,11 @@ The default color format is `p3` but you can select from the following options:
   }]
 ) }}
 
-You may enter any supported color notation regardless of chosen color format.
-There's also some flexibility when it comes to how you enter your color.
-For instance, you can paste a 6 digit Hex color without the `#`.
-This level of recognition is helpful when coming from design tools as they
-often will not include the full color notation.
-
-The same goes for when you are working in decimals, you can paste
-`oklch(.44 0.1 295)` even though the default is set to display the lightness
-value as a `%`. You can even used named colors! Here’s `honeydew` as the
-foreground color.
+Regardless of chosen color display format,
+you can use any valid CSS notation to enter foreground and background colors.
+For instance, you can use decimals in `oklch(.44 0.1 295)`
+even though the default is set to display the lightness value as a `%`.
+You can even used named colors! Here’s `honeydew` as the foreground color.
 
 {{ embed.figure(
   data=[{
@@ -67,6 +63,11 @@ foreground color.
     alt: 'honeydew named colors is used as the foreground color'
   }]
 ) }}
+
+While not valid CSS notation, OddContrast also accepts 6 and 8-digit Hex
+colors without the `#`.
+This flexibility is helpful when coming from design tools as they
+often will not include the full color notation.
 
 ## Workflow enhancements
 
@@ -124,14 +125,21 @@ will affect the other channels.
     class='align-left'
 ) }}
 
-A warning will be displayed if your color is out of gamut over the swatch if you have a gamut selected. A separate warning will appear near the color notations for each affected color space regardless of your gamut display setting.
+If your color is outside the selected gamut,
+a warning will be displayed over the swatch.
+A separate warning will appear near the color notations
+for each affected color space
+regardless of your gamut display setting.
 </div>
+
 
 ## Saving and sharing your color combinations
 
 OddContrast automatically updates the URL as you make changes to the colors.
 This dynamic URL allows you to easily share color combinations with others or
 bookmark them for your own future use.
+
+## Contrast ratios
 
 ## For fun
 
@@ -146,24 +154,3 @@ combination within its very own logo.
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/) by Björn Ottosson
 - [OKLCH in CSS: why we moved from RGB and HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) by Evil Martians
 - [CSS Color Module 4](https://www.w3.org/TR/css-color-4/)
-
-## ToDo / Things to include
-
-- [ ] Evaluates the contrast ratio between two colors
-- [ ] WCAG 2 Level AA and AAA pass/fail results for both normal and large text
-- [ ] Mention Alpha
-- [x] Resources section that has links to learn more about color
-- [x] Shows the selected colors in all the supported color notation
-- [x] Indicates when a chosen color falls outside the current color gamut
-
-
-## Background that I probably don't need, was going to start with this
-
-When HSL was introduced in the
-[CSS Color Module 3](https://www.w3.org/TR/css-color-3/#hsl-color)
-it offered an intuitive approach to color manipulation.
-Designers and developers could more easily predict the resulting
-color when adjusting the Hue (H), Saturation (S), and Lightness (L) values.
-Now with the [Color 4 specification](https://www.w3.org/TR/css-color-4/),
-color formats like Oklch offer similar predictability but with an even broader
-palette of possibilities as it isn't confined to the sRGB color space.
