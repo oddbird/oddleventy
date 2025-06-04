@@ -17,7 +17,7 @@ image:
     of foreground alpha value ratio.
 summary: |
   OddBird's color tool not only checks contrast ratios,
-	but supports the new CSS color formats and spaces.
+  but supports the new CSS color formats and spaces.
 ---
 
 {% import 'embed.macros.njk' as embed %}
