@@ -23,7 +23,7 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 
 For years designers and developers were limited to colors in the sRGB colors
-space, using formats like Hexadecimal, RGB, and HSL. As display technology
+space, using formats like hexadecimal, RGB, and HSL. As display technology
 progressed, so too has CSS, and we have access to additional color spaces and
 wider gamuts. These advances led us to build OddContrast, a color editing and
 testing tool that handles our new world of modern color formats.
@@ -33,7 +33,7 @@ testing tool that handles our new world of modern color formats.
 Although it looks simple on the surface, OddContrast has many built-in
 conveniences when working with color.
 
-The default color format is display-p3 but you can select from the following
+The default color format is `display-p3` but you can select from the following
 options:
 - Hex
 - HSL
@@ -80,8 +80,9 @@ The last slider sets the Alpha value and is consistent across all color formats.
 Additionally, you can use your keyboard arrow keys to nudge the color values
 incrementally when focused.
 
-Need to swap the foreground and background colors? No problem, select the left
-right arrow icon button or you can drag and drop the color swatches themselves.
+Need to swap the foreground and background colors? No problem -- select the
+left-right arrow icon button or you can drag and drop the color swatches
+themselves.
 
 {{ embed.figure(
   data=[{
@@ -123,7 +124,7 @@ will affect the other channels.
     img: 'blog/2025/oddcontrast-gamut-warning.jpg',
     alt: 'use the arrow icon to swap foreground and background colors'
   }],
-    class='align-left'
+  class='align-left'
 ) }}
 
 If your color is outside the selected gamut,
