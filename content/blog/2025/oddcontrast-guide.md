@@ -167,12 +167,7 @@ the contrast ratio is computed without background or foreground opacity.
 To add some whimsy, OddContrast proudly showcases your chosen color
 combination within its very own logo.
 
-{{ embed.figure(
-  data=[{
-    img: 'blog/2025/oddcontrast-inline-logos.png',
-    alt: 'OddContrast logo with different colors'
-  }]
-) }}
+{{ embed.svg('svg/oddcontrast-inline-logos') }}
 
 ## Learn more about the available colors spaces and formats
 
