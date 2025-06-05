@@ -2,7 +2,7 @@
 title: A guide to using OddContrast
 sub: A modern color tool
 author: oddbird
-date: 2025-05-21
+date: 2025-06-05
 tags:
   - Article
   - Accessibility
@@ -10,11 +10,10 @@ tags:
   - Design
   - OddTools
 image:
-  src: blog/2025/oddcontrast-gamut-sliders.png
+  src: blog/2025/oddcontrast-guide.jpg
   alt: >
-    OddContrast displays sRGB gamut range
-    in P3 color format and an estimate
-    of foreground alpha value ratio.
+    OddContrast displays P3 gamut range
+    in Oklch color format
 summary: |
   OddBird's color tool not only checks contrast ratios,
   but supports the new CSS color formats and spaces.
