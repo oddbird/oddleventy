@@ -1,5 +1,5 @@
 ---
-title: A guide to using OddContrast
+title: A Guide to Using OddContrast
 sub: A modern color tool
 author: oddbird
 date: 2025-06-05
