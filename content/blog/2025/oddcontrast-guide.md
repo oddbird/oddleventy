@@ -8,6 +8,7 @@ tags:
   - Accessibility
   - Color
   - Design
+  - OddContrast
   - OddTools
 image:
   src: blog/2025/oddcontrast-guide.jpg
@@ -22,7 +23,7 @@ summary: |
 {% import 'embed.macros.njk' as embed %}
 
 For years designers and developers were limited to colors in the sRGB colors
-space, using formats like hexadecimal, RGB, and HSL. As display technology
+space, using formats like Hexadecimal, RGB, and HSL. As display technology
 progressed, so too has CSS, and we have access to additional color spaces and
 wider gamuts. These advances led us to build OddContrast, a color editing and
 testing tool that handles our new world of modern color formats.
