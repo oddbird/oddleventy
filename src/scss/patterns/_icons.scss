@@ -26,38 +26,3 @@
 [data-shopify='cutout'] {
   fill: var(--bg);
 }
-
-// OddContrast logos
-.oddcontrast-logo-text {
-  fill: var(--text);
-}
-
-.oddcontrast-logo-stroke {
-  stroke: var(--text);
-  stroke-miterlimit: 10;
-  stroke-width: 1px;
-}
-
-.oddcontrast-logo-lime {
-  fill: #88e5b2;
-}
-
-.oddcontrast-logo-raspberry {
-  fill: #ad3b6a;
-}
-
-.oddcontrast-logo-blue {
-  fill: #375dbc;
-}
-
-.oddcontrast-logo-green {
-  fill: #55b67f;
-}
-
-.oddcontrast-logo-plum {
-  fill: #92278f;
-}
-
-.oddcontrast-logo-orange {
-  fill: #f1592a;
-}
