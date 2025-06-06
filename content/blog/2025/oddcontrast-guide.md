@@ -2,7 +2,7 @@
 title: Make the Web a More a Colorful Place!
 sub: A guide to using new color spaces & formats with OddContrast
 author: oddbird
-date: 2025-06-05
+date: 2025-06-06
 tags:
   - Article
   - Accessibility
