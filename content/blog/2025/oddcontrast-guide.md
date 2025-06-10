@@ -1,5 +1,5 @@
 ---
-title: Make the Web a More a Colorful Place!
+title: Make the Web a More Colorful Place!
 sub: A guide to using new color spaces & formats with OddContrast
 author: oddbird
 date: 2025-06-06
