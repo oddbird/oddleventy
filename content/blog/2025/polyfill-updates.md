@@ -160,6 +160,12 @@ Anchor Positioning. You can follow [that
 issue](https://github.com/oddbird/css-anchor-positioning/issues/91) to find out
 more.
 
+{% callout 'note', false %}
+Interested in learning more about anchor positioning?
+Sign up for our free weekly
+[CSS anchor positioning email course](/learn/courses/anchor-positioning).
+{% endcallout %}
+
 ## Can you help?
 
 Over the last few months, we've enjoyed the chance to make a lot of updates to
