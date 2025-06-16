@@ -24,7 +24,7 @@ describe('active', () => {
   test('filters inactive bird-detail pages', () => {
     const expected = collection2[3];
 
-    expect(active(collection2)).toEqual(expect.not.objectContaining(expected));
+    expect(active(collection2)).toEqual(expect.not.arrayContaining([expected]));
   });
 
   test('returns inactive bird-detail pages', () => {
