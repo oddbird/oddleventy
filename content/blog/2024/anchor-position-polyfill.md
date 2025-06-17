@@ -126,6 +126,12 @@ have a different layout, where you want `#target-b` to anchor to a
 }
 ```
 
+{% callout 'note', false %}
+Interested in learning more about anchor positioning?
+Sign up for our free weekly
+[CSS anchor positioning email course](/learn/courses/anchor-positioning).
+{% endcallout %}
+
 ## What's next?
 
 While a lot of the basic functionality is already possible with the polyfill,

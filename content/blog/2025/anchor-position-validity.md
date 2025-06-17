@@ -322,6 +322,12 @@ containing blocks. Is there a way we could move this from a set of guidelines
 and a checklist of gotchas to avoid, to a place where these rules click and make
 sense to developers?
 
+{% callout 'note', false %}
+Interested in learning more about anchor positioning?
+Sign up for our free weekly
+[CSS anchor positioning email course](/learn/courses/anchor-positioning).
+{% endcallout %}
+
 ## Sponsor us
 
 If you found this article helpful, please [sponsor our

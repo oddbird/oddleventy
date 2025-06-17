@@ -204,6 +204,12 @@ yet support `position-area`. This article was written as part of our exploration
 into the spec, and if you would like to sponsor further development, please
 [get in touch](/contact/)!
 
+{% callout 'note', false %}
+Interested in learning more about anchor positioning?
+Sign up for our free weekly
+[CSS anchor positioning email course](/learn/courses/anchor-positioning).
+{% endcallout %}
+
 ## Sponsor us
 
 If you found this article helpful, please [sponsor our

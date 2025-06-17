@@ -173,6 +173,12 @@ As an added bonus, because the photo and name are in the same `<li>`, we can add
 hover effects so that if one is hovered, both parts are hovered. If the item is
 a link they can be inside the same `<a>`.
 
+{% callout 'note', false %}
+Interested in learning more about anchor positioning?
+Sign up for our free weekly
+[CSS anchor positioning email course](/learn/courses/anchor-positioning).
+{% endcallout %}
+
 ## Wrap-up
 
 What new possibilities for anchor positioning are you excited about? Let us know
