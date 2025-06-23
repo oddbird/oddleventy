@@ -4,6 +4,8 @@ import { pageType } from '#filters/taxonomy.js';
 import { getDate, now } from '#filters/time.js';
 import { getSort } from '#filters/utils.js';
 
+import { isPublic as tagIsPublic } from './tags.js';
+
 /* @docs
 label: Page Filters
 category: File
@@ -373,6 +375,21 @@ params:
 */
 export const isType = (collection, type) =>
   collection.filter((page) => pageType(page.data.tags, 'tag') === type);
+
+/* @docs
+label: isPublicType
+category: Filter
+note: |
+  Filters collection and removes any pages
+  that are of a non-public type.
+  (types are defined in the `taxonomy.yaml` data file)
+params:
+  collection:
+    type: array
+    note: containing 11ty page objects
+*/
+export const isPublicType = (collection) =>
+  collection.filter((page) => tagIsPublic(pageType(page.data.tags, 'tag')));
 
 /* @docs
 label: isHome

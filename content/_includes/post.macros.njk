@@ -74,7 +74,8 @@ params:
     default: 3
   banner_title:
     type: string
-    default: 'Related Posts'
+    default: ''
+    note: If set, will override the default title of "Related {tag} Posts"
   page_url:
     type: url
     default: "''"
@@ -83,17 +84,18 @@ params:
   tag,
   collections=[],
   limit=3,
-  banner_title='Related Posts',
+  banner_title=none,
   page_url=''
 ) %}
   {%- set posts = collections[tag] -%}
   {%- if posts | length -%}
-    {%- set recents = posts | pageYears | reverse | removePage(page_url) | onlyShow(limit) -%}
-    {%- if recents | length -%}
+    {%- set related = posts | pageYears | isPublicType | reverse | removePage(page_url) | onlyShow(limit) -%}
+    {%- set title = banner_title or ['Related', tag, 'Posts'] | join(' ') -%}
+    {%- if related | length -%}
       {{ list(
-        recents,
+        related,
         collections=collections,
-        title=banner_title,
+        title=title,
         override_feature=true,
         override_large=true
       ) }}
