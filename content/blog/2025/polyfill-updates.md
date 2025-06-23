@@ -17,6 +17,7 @@ tags:
   - Anchor Positioning
   - Polyfill
   - CSS
+related_tag: Anchor Positioning
 summary: |
   We have been busy updating the Popover and
   CSS Anchor Positioning Polyfills,

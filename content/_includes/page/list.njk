@@ -44,5 +44,10 @@
     collections.all | getCollectionItem(page) | pageEvents
   ) }}
 {% elif is_entry %}
-  {% include 'page/recents.njk' %}
+  {% if related_tag %}
+    {% include 'page/related.njk' %}
+  {% else %}
+    {% include 'page/recents.njk' %}
+  {% endif %}
+
 {% endif %}

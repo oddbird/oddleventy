@@ -1,0 +1,11 @@
+{%- set tag = related_tag -%}
+
+{% if tag %}
+  <section data-list="tag" data-typeset data-type="{{ tag }}">
+    {{ post.related_posts(
+      tag,
+      collections,
+      page_url=page.url
+    ) }}
+  </section>
+{% endif %}
