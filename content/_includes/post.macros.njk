@@ -75,7 +75,7 @@ params:
   banner_title:
     type: string
     default: ''
-    note: If set, will override the default title of "{tag} Posts"
+    note: If set, will override the default title of "Posts about {tag}"
   page_url:
     type: url
     default: "''"
@@ -90,7 +90,7 @@ params:
   {%- set posts = collections[tag] -%}
   {%- if posts | length -%}
     {%- set related = posts | pageYears | isPublicType | reverse | removePage(page_url) | onlyShow(limit) -%}
-    {%- set title = banner_title or [tag, 'Posts'] | join(' ') -%}
+    {%- set title = banner_title or ['Posts about', tag] | join(' ') -%}
     {%- if related | length -%}
       {{ list(
         related,
