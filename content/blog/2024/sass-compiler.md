@@ -12,6 +12,7 @@ tags:
   - Article
   - Sass
   - Build Tools
+related_tag: Sass
 summary:
   Sass compilation can be a speed bottleneck in your build,
   but it doesn't have to be anymore.

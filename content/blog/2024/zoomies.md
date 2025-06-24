@@ -25,6 +25,7 @@ tags:
   - Article
   - CSS
   - Layout
+related_tag: CSS
 ---
 
 {% import 'embed.macros.njk' as embed %}

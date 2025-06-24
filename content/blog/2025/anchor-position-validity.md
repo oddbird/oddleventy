@@ -13,6 +13,7 @@ tags:
   - Article
   - Anchor Positioning
   - CSS
+related_tag: Anchor Positioning
 summary: |
   It is frustrating to track down why an anchor isn't being found.
   I've found a simple way that should work in most cases.
