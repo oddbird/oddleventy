@@ -1,6 +1,6 @@
 {%- set tag = related_tag -%}
 
-{% if tag %}
+{% if tag and collections[tag] | removePage(page.url) | length %}
   <section data-list="tag" data-typeset>
     {{ post.related_posts(
       tag,
