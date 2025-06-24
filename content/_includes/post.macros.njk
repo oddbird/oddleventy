@@ -90,7 +90,7 @@ params:
   {%- set posts = collections[tag] -%}
   {%- if posts | length -%}
     {%- set related = posts | pageYears | isPublicType | reverse | removePage(page_url) | onlyShow(limit) -%}
-    {%- set title = banner_title or ['Related', tag, 'Posts'] | join(' ') -%}
+    {%- set title = banner_title or [tag, 'Posts'] | join(' ') -%}
     {%- if related | length -%}
       {{ list(
         related,
