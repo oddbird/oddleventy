@@ -389,7 +389,10 @@ params:
     note: containing 11ty page objects
 */
 export const isPublicType = (collection) =>
-  collection.filter((page) => tagIsPublic(pageType(page.data.tags, 'tag')));
+  collection.filter((page) => {
+    const type = pageType(page.data.tags, 'tag');
+    return type && tagIsPublic(type);
+  });
 
 /* @docs
 label: isHome
