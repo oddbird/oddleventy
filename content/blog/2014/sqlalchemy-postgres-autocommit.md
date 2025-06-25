@@ -11,6 +11,7 @@ tags:
   - PostgreSQL
   - Transactions
   - Django
+related_tag: Django
 image:
   src: blog/2014/sqlalchemy.jpg
   alt: SQLAlchemy

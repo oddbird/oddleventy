@@ -13,6 +13,7 @@ tags:
   - CSSWG
   - Article
   - Container Queries
+related_tag: Container Queries
 summary: |
   The `@container` query, that elusive feature developers have been requesting
   and proposing for years, has finally made its debut in a browser. Well, sort

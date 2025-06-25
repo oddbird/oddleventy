@@ -8,6 +8,7 @@ tags:
   - Article
   - CSS
   - Typography
+related_tag: Typography
 series: revisiting fluid typography
 image:
   src: blog/2025/font-scale-hero.jpg

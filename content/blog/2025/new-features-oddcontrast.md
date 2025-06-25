@@ -9,6 +9,8 @@ tags:
   - Color
   - Design
   - OddTools
+  - OddContrast
+related_tag: OddContrast
 image:
   src: blog/2025/oddcontrast-gamut-sliders.png
   alt: >

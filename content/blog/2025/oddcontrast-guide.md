@@ -10,6 +10,7 @@ tags:
   - Design
   - OddContrast
   - OddTools
+related_tag: OddContrast
 image:
   src: blog/2025/oddcontrast-guide.jpg
   alt: >

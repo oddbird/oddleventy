@@ -14,6 +14,7 @@ tags:
   - Article
   - Anchor Positioning
   - CSS
+related_tag: Anchor Positioning
 summary: |
   `position-area` might be my favorite part of the CSS Anchor Positioning spec,
   with a ton of features packed in to make things just... work.

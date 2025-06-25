@@ -1,6 +1,6 @@
 {%- set post_type = tags | pageType('tag') -%}
 
-{% if post_type and collections[post_type] | length %}
+{% if post_type and collections[post_type] | removePage(page.url) | length %}
   <section data-list="tag" data-typeset>
     {{ post.recent_posts(
       post_type,

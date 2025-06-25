@@ -57,6 +57,53 @@ params:
 
 
 {# @docs
+label: related_posts
+category: lists
+note: |
+  Returns a given number of most recent
+  posts with a tag
+params:
+  tag:
+    type: string
+    note: The tag to show related posts for
+  collections:
+    type: 11ty collections object
+    default: '[]'
+  limit:
+    type: number
+    default: 3
+  banner_title:
+    type: string
+    default: ''
+    note: If set, will override the default title of "Posts about {tag}"
+  page_url:
+    type: url
+    default: "''"
+#}
+{% macro related_posts(
+  tag,
+  collections=[],
+  limit=3,
+  banner_title=none,
+  page_url=''
+) %}
+  {%- set posts = collections[tag] -%}
+  {%- if posts | length -%}
+    {%- set related = posts | pageYears | isPublicType | reverse | removePage(page_url) | onlyShow(limit) -%}
+    {%- set title = banner_title or ['Posts about', tag] | join(' ') -%}
+    {%- if related | length -%}
+      {{ list(
+        related,
+        collections=collections,
+        title=title,
+        override_feature=true,
+        override_large=true
+      ) }}
+    {%- endif -%}
+  {%- endif -%}
+{% endmacro %}
+
+{# @docs
 label: recent_posts
 category: lists
 note: |

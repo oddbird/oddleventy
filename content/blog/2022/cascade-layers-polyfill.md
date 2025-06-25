@@ -8,6 +8,7 @@ tags:
   - Cascade Layers
   - CSSWG
   - Polyfill
+related_tag: Cascade Layers
 image:
   src: blog/2022/postcss-cascade-layers-polyfill.png
   alt: |

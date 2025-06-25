@@ -18,6 +18,7 @@ tags:
   - CSS
   - CSSWG
   - Logical Properties
+related_tag: CSSWG
 series: CSS logical shorthands
 action:
   text: Sponsor our work on logical shorthands

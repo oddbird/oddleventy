@@ -126,6 +126,7 @@ export default (eleventyConfig) => {
   eleventyConfig.addFilter('removePage', pages.removePage);
   eleventyConfig.addFilter('addCallToAction', pages.addCallToAction);
   eleventyConfig.addFilter('isType', pages.isType);
+  eleventyConfig.addFilter('isPublicType', pages.isPublicType);
   eleventyConfig.addFilter('isHome', pages.isHome);
 
   eleventyConfig.addFilter('fromTaxonomy', taxonomy.fromTaxonomy);

@@ -14,6 +14,7 @@ import {
   isCurrent,
   isHome,
   isPublic,
+  isPublicType,
   isType,
   pageYears,
   removePage,
@@ -26,6 +27,11 @@ describe('page filters', () => {
   test('isPublic', () => {
     expect(isPublic(collection3[0])).toBeTruthy();
     expect(isPublic(collection3[1])).toBeFalsy();
+  });
+
+  test('isPublicType', () => {
+    expect(isPublicType(collection4)).toHaveLength(3);
+    expect(collection4).toHaveLength(4);
   });
 
   test('isCurrent', () => {
@@ -115,8 +121,8 @@ describe('page filters', () => {
     });
 
     test('sorts collection', () => {
-      const slugs = ['test3', 'events', 'test1'];
-      const years = ['2018', '2019', '2040'];
+      const slugs = ['test3', 'events', 'test1', 'talk1'];
+      const years = ['2018', '2019', '2040', '2040'];
       const actual = eventSort(collection4);
 
       expect(actual.map((item) => item.page.fileSlug)).toEqual(slugs);
@@ -124,8 +130,8 @@ describe('page filters', () => {
     });
 
     test('sorts collection including future events', () => {
-      const slugs = ['test3', 'test1', 'events'];
-      const years = ['2018', '2040', '2030'];
+      const slugs = ['test3', 'test1', 'talk1', 'events'];
+      const years = ['2018', '2040', '2040', '2030'];
       const actual = eventSort(collection4, true);
 
       expect(actual.map((item) => item.page.fileSlug)).toEqual(slugs);
@@ -189,7 +195,7 @@ describe('page filters', () => {
   test('isType', () => {
     const filtered = isType(collection4, 'Article');
 
-    expect(collection4).toHaveLength(3);
+    expect(collection4).toHaveLength(4);
     expect(filtered).toHaveLength(1);
   });
 
