@@ -82,9 +82,9 @@ css: {
 ...
 ```
 
-4. Vite 7.0 also removed support for the legacy API, which doesn't support the
-   Compiler API anyways. Adjust any options from the [`legacy`] API options to
-   the [`modern`] API options. In my case, I needed to update `pkgImporter` to
+4. Vite 7.0 also removed support for the legacy API. If you were using the
+   legacy API, adjust any options from the [`legacy`] API options to the
+  [`modern`] API options. In my case, I needed to update `pkgImporter` to
   `importers: [new NodePackageImporter()]` and change the import of
   `NodePackageImporter` from `sass` to `sass-embedded`.
 
