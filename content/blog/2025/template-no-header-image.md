@@ -1,7 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 draft: true
-permalink: false
+# permalink: false
 title: Make the Web a More Colorful Place with no pictures.
 sub: A guide to using new color spaces & formats with OddContrast
 author: oddbird
