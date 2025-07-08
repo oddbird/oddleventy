@@ -39,3 +39,30 @@
   --link-focus: var(--link);
   --underline-color: var(--link);
 }
+
+// The anchor positioning polyfill doesn't support implicit anchors with popover
+li[dropdown-menu] {
+  anchor-scope: --dropdown-menu;
+
+  button{
+    anchor-name: --dropdown-menu;
+  }
+
+  [popover]{
+    // Default of fixed position doesn't work with anchor positioning polyfill
+    position: absolute;
+    position-anchor: --dropdown-menu;
+
+    // TODO: Can we move to logical? That was causing issues with the polyfill
+    left: anchor(left);
+    top: anchor(bottom);
+    margin: unset;
+  }
+}
+
+// Hide popover until polyfilled
+@supports not selector(:popover-open) {
+  [popover]:not(.\:popover-open) {
+    display: none;
+  }
+}
