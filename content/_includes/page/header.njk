@@ -1,7 +1,7 @@
 {% import 'embed.macros.njk' as embed %}
 
 {% set device = (image and image.device) %}
-{% set hero = image.src or image.svg %}
+{% set hero = image.src or image.svg or header_type == 'hero' %}
 {% set media = device or (image.type == 'angle' and hero) %}
 {% set hero_type = 'hero' if hero and not device else 'angle' %}
 {% set details %}
@@ -63,6 +63,8 @@
     {% if image %}
       {% include 'page/hero.njk' %}
       {{ details | safe }}
+    {% elif hero %}
+        {{ details | safe }}
     {% else %}
       <div data-block="rotate">
         {{ details | safe }}
