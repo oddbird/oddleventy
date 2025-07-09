@@ -44,18 +44,17 @@
 li[dropdown-menu] {
   anchor-scope: --dropdown-menu;
 
-  button{
+  button {
     anchor-name: --dropdown-menu;
   }
 
-  [popover]{
-    // Default of fixed position doesn't work with anchor positioning polyfill
-    position: absolute;
+  [popover] {
     position-anchor: --dropdown-menu;
 
-    // TODO: Can we move to logical? That was causing issues with the polyfill
-    left: anchor(left);
-    top: anchor(bottom);
+    // Required for anchor positioning polyfill
+    inset: auto;
+    position-area: block-end span-inline-end;
+    position-try-fallbacks: block-end span-inline-start;
     margin: unset;
   }
 }
