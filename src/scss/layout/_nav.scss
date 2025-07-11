@@ -39,3 +39,29 @@
   --link-focus: var(--link);
   --underline-color: var(--link);
 }
+
+// The anchor positioning polyfill doesn't support implicit anchors with popover
+li[dropdown-menu] {
+  anchor-scope: --dropdown-menu;
+
+  button {
+    anchor-name: --dropdown-menu;
+  }
+
+  [popover] {
+    position-anchor: --dropdown-menu;
+
+    // Required for anchor positioning polyfill
+    inset: auto;
+    position-area: block-end span-inline-end;
+    position-try-fallbacks: block-end span-inline-start;
+    margin: unset;
+  }
+}
+
+// Hide popover until polyfilled
+@supports not selector(:popover-open) {
+  [popover]:not(.\:popover-open) {
+    display: none;
+  }
+}
