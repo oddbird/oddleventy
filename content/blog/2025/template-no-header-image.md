@@ -1,5 +1,5 @@
 ---
-eleventyExcludeFromCollections: true
+eleventyExcludeFromCollections: false
 draft: true
 # permalink: false
 title: Make the Web a More Colorful Place with no pictures.
@@ -14,7 +14,6 @@ tags:
   - OddContrast
   - OddTools
 related_tag: OddContrast
-header_type: hero
 summary: |
   OddBird's color tool not only checks contrast ratios,
   but supports the new CSS color formats and spaces.

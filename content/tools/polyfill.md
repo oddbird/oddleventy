@@ -3,7 +3,6 @@ title: HTML & CSS Polyfills
 sub: Popover, CSS Anchor Positioning, Cascade Layers
 feature: true
 date: 2022-02-11
-header_type: hero
 oss: creator
 author: oddbird
 action:

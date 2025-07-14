@@ -1,7 +1,7 @@
 {% import 'embed.macros.njk' as embed %}
 
 {% set device = (image and image.device) %}
-{% set hero = image.src or image.svg or header_type == 'hero' %}
+{% set hero = image.src or image.svg %}
 {% set media = device or (image.type == 'angle' and hero) %}
 {% set hero_type = 'hero' if not device else 'angle' %}
 
