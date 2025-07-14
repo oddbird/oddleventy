@@ -162,7 +162,7 @@ With a quick search, I found several examples and articles:
 There's a lot of room left to explore here, so play with it, and share
 what you find!
 
-[Live Theming with CSS Variables]: https://www.jonathan-harrell.com/blog/live-theming-with-css-variables/
+[Live Theming with CSS Variables]: https://www.jonathanharrell.com/blog/live-theming-with-css-variables/
 [How to use variables in CSS]: https://www.sitepoint.com/how-to-use-variables-in-css/
 [CSS-Tricks also provides a rundown]: https://css-tricks.com/css-custom-properties-theming/
 
