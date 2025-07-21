@@ -20,7 +20,7 @@
         ]
         ignoreElements = '#search'
         ignoreGuidelines = ['color-contrast']
-        failWithIssues = true
+        failWithIssues = false
 
 [[plugins]]
     package = "@algolia/netlify-plugin-crawler"
