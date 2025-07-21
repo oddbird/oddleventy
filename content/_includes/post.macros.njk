@@ -835,7 +835,7 @@ params:
   banner_title='Featured Posts',
   class=none
 ) %}
-  {%- set featured = collections.posts | isHome(limit) -%}
+  {%- set featured = collections.posts | getPublic | isHome(limit) -%}
   {%- if featured | length -%}
     {{ list(
       featured,
