@@ -90,7 +90,7 @@ and I wouldn't want to!
   the color scheme, line-lengths, white-space,
   and so on.
 - **Fluid type is (by definition) a dynamic value**.
-  If we do want to integrate viewport units later,
+  If we want to integrate viewport units later,
   we can't do that while also matching
   a user preference _exactly_.
 
@@ -145,7 +145,7 @@ we achieve two important goals:
    (in this case `24px` with units removed),
    and it will apply for the majority of users
    who never change their default setting.
-2. When users do change their font-size preference,
+2. When users change their font-size preference,
    our site text scales up or down
    in relation to the preference.
 3. Users can also zoom in or out after they land on the page,
@@ -325,7 +325,7 @@ unless the user has requested something even larger:
 
 ```css
 html {
-  /* larger of user preference & sit design */
+  /* larger of user preference & site design */
   font-size: max(1em, 20px);
 }
 ```
