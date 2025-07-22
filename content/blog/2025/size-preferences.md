@@ -8,18 +8,19 @@ tags:
   - CSS
   - Typography
 series: revisiting fluid typography
+related_tag: Typography
 image:
-  src: blog/2025/font-scale.jpg
+  src: blog/2025/capital-letters.jpg
   alt: >
-    Two screenshots from my site,
-    one with 16px preference and 24px rendered text -
-    the other with much larger 24px preference
-    and 36px rendered
+    Close-up of keys on an old Spanish typewriter,
+    part of the space bar,
+    a, s, d, z, x,
+    and MAYÚSCULAS (capslock)
+    with release above it
 summary: |
   When I tried setting my
-  browser font-size preferences
-  earlier in the year,
-  I found it broke more than it improved,
+  browser font-size preferences,
+  I found it broke more sites than it improved,
   and I quickly moved back to the default.
   So what went wrong,
   and how can we fix it?
