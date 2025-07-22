@@ -93,12 +93,12 @@ and I wouldn't want to!
   we can't do that while also matching
   a user preference _exactly_.
 
-So global preference are limited,
+So global preferences are limited,
 and will never provide a perfect solution.
 We need some way for authors to adapt those preferences
 to be more appropriate for a given context,
 and a page-zoom option for users
-to make final adjustment on a site-by-site basis.
+to make final adjustments on a site-by-site basis.
 
 But the global setting should mean _something_,
 and ideally it's a value users are comfortable changing
@@ -143,12 +143,12 @@ we achieve two important goals:
    an ideal base size for our site content
    (in this case `24px` with units removed),
    and it will apply for the majority of users
-   who never change their default setting
+   who never change their default setting.
 2. When users do change their font-size preference,
    our site text scales up or down
-   in relation to the preference
+   in relation to the preference.
 3. Users can also zoom in or out after they land on the page,
-   using built-in browser zoom tools
+   using built-in browser zoom tools.
 
 We have some ability to establish a design,
 and the user has some ability to adjust it --
@@ -188,9 +188,9 @@ Still,
 this is a much better solution
 than simply overriding or discarding
 the user preference.
-It does still allow me
+It does allow me
 to have some input if I need,
-and I can still make adjustments on the fly.
+and I can make adjustments on the fly.
 It's not a _terrible_ solution --
 and for a time,
 it was maybe the best we could do.
@@ -309,7 +309,7 @@ So much for _user-centered design_, I guess?
 Oh well,
 let's try another approach.
 
-### Alternative 2 -- larger value wins
+### Alternative 3 -- larger value wins
 
 Rather than thinking about the default setting
 as a _preferred_ text size,
@@ -414,7 +414,7 @@ to the user preference at any size.
 Rather than thinking of `2em`
 as a likely output of `32px`,
 I'm thinking of it as a math equation
-with a variable and a fallback --
+with a variable and a fallback:
 `2 * var(--user-preference, 16px)`.
 I use `em` when I care about _relationships_,
 and `px` when I care about _actual sizes_.
@@ -481,9 +481,9 @@ I only need to zoom for text readability,
 and it's not necessary for
 the entire layout --
 along with white-space and images --
-too zoom at the same rate.
+to zoom at the same rate.
 
-But, I don't think
+But I don't think
 browsers can solve this issue on their own.
 In fact,
 I expect browsers are _following our lead_ on this one.
@@ -509,7 +509,7 @@ to see the difference:
 Note that both page-zoom
 and text-only zoom
 behave the same (zooming everything)
-if you toggle them switch for `em`-based layouts.
+if you toggle the switch for `em`-based layouts.
 The same is true on most responsive websites,
 including here on the OddBird website,
 [my personal website](https://miriamsuzanne.com),
