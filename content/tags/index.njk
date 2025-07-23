@@ -45,7 +45,7 @@ summary: |
     </h3>
 
     <ul>
-      {% for latest in collections[item.tag] | reverse %}
+      {% for latest in collections[item.tag] | getPublic | reverse %}
         {% if loop.index < 5 %}
           <li>
             {{ utility.link_if(
