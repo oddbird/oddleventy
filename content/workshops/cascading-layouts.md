@@ -3,8 +3,8 @@ title: Cascading Layouts
 sub: A workshop on resilient CSS layouts
 author: miriam
 action:
-  text: Register now for April 2025 »
-  url: 'https://ti.to/pland/css-layout'
+  text: Book for your company »
+  url: '#schedule-a-workshop'
 date: 2025-04-28
 image:
   src: talks/cascading-workshop-cat.jpg
@@ -191,11 +191,6 @@ press:
     slug: css-nuance
     face: brad-frost.jpg
     url: https://bradfrost.com/
-callout_content: |
-  9am - 11:30am PT
-
-  For workshop updates and demos of workshop content,
-  subscribe to [OddNews](/oddnews/).
 summary: |
   CSS layout techniques have come a long way
   since the early days of responsive design,
@@ -229,6 +224,16 @@ media:
   slugs=['trust-enough', 'ins-outs', 'easy-understand', 'fits-together']
 ) }}
 
+## Schedule a Workshop
+
+**Contact us to schedule a workshop with your company**:
+
+{{ contact.form(
+  submit='Book Now',
+  name='workshop',
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
+) }}
+
 ## What Will Attendees Get?
 
 {{ embed.icon_block(
@@ -236,6 +241,7 @@ media:
   grid='fit'
 ) }}
 
+<!---
 ## Register Now for April 2025
 
 <script src="https://js.tito.io/v2" async></script>
@@ -260,6 +266,7 @@ For discounts,
 please [contact us].
 
 [contact us]: /contact/
+-->
 
 {{ quotes.find(
   collections.all,
@@ -282,8 +289,8 @@ You don’t need to be an expert to keep up,
 but even the experts are likely to learn something new.
 
 {{ utility.main_action(
-  content='Register now »',
-  url='https://ti.to/pland/css-layout'
+  content='Bring this workshop to your company »',
+  url='#schedule-a-workshop'
 ) }}
 
 ## About Miriam
@@ -378,12 +385,12 @@ and interactive exercises related to defining layouts.
 
 ## Contact Us to Book a Workshop
 
-If your full team can't join us for
-the April workshop, consider bringing
-us in to talk with your team directly:
+Consider bringing Miriam,
+virtually or in person,
+to talk with your team directly:
 
 {{ contact.form(
   submit='Book Now',
   name='workshop',
-  extraActions='or [register now »](https://ti.to/pland/css-layout)'
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
 ) }}

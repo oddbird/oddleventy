@@ -125,3 +125,16 @@ in my original post,
 as I was just starting to put words to an idea.
 This time I want to break things apart,
 and look for real alternative approaches in CSS.
+
+{% callout 'note', false %}
+If you enjoy Miriam's writing
+on modern CSS,
+consider booking her
+[Cascading Layouts Workshop](/workshops/cascading-layouts/)
+at your company
+to take your sites
+and your team's skills
+to the next level.
+
+ [Book workshop at your company »](/workshops/cascading-layouts/#schedule-a-workshop)
+{% endcallout %}

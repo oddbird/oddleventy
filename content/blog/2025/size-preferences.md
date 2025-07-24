@@ -538,3 +538,16 @@ But unless we make a change
 to how we build responsive website,
 I don't see much reason for browsers
 to prioritize text-only zoom.
+
+{% callout 'note', false %}
+If you enjoy Miriam's writing
+on modern CSS,
+consider booking her
+[Cascading Layouts Workshop](/workshops/cascading-layouts/)
+at your company
+to take your sites
+and your team's skills
+to the next level.
+
+ [Book workshop at your company »](/workshops/cascading-layouts/#schedule-a-workshop)
+{% endcallout %}
