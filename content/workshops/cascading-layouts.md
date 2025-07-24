@@ -241,33 +241,6 @@ media:
   grid='fit'
 ) }}
 
-<!---
-## Register Now for April 2025
-
-<script src="https://js.tito.io/v2" async></script>
-<script>
-  window.tito = window.tito ||
-    function() {
-      (tito.q = tito.q || []).push(arguments);
-    };
-  tito('on:widget:loaded',function(){
-     document.getElementById('tito-registration-fallback').setAttribute('hidden', 'hidden');
-  });
-</script>
-
-<a href="https://ti.to/pland/css-layout" id="tito-registration-fallback">Register</a>
-<tito-widget event="pland/css-layout"></tito-widget>
-
-## Discounts & Scholarships
-
-Freelancer and other
-need-based scholarships available.
-For discounts,
-please [contact us].
-
-[contact us]: /contact/
--->
-
 {{ quotes.find(
   collections.all,
   slugs=['unique-talent', 'fav-dev', 'clear-competent', 'thorny-subjects']
