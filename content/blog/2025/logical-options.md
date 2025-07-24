@@ -3,6 +3,7 @@ title: How do we move logical shorthands forward?
 sub: There are several proposals, but one major road block
 author: miriam
 date: 2025-03-27
+updated: 2025-06-27
 image:
   src: blog/2025/closed.jpg
   alt: >
@@ -18,6 +19,7 @@ tags:
   - CSS
   - CSSWG
   - Logical Properties
+related_tag: CSSWG
 series: CSS logical shorthands
 action:
   text: Sponsor our work on logical shorthands
@@ -30,6 +32,19 @@ summary: >
   depends on where we hope to be
   a decade from now.
 ---
+
+{% import 'utility.macros.njk' as utility %}
+
+{% set update = ['Update', utility.datetime(updated)] | join(' ') %}
+{% callout 'note', update %}
+Thanks to your contributions,
+I've completed the first phase of this project --
+[documenting impacted properties](https://css.oddbird.net/logical/properties/).
+But there's more to do,
+and we could still
+[use your help](https://opencollective.com/oddbird-open-source/contribute/css-logical-shorthands-86141)
+moving forward.
+{% endcallout %}
 
 ## What are flow-relative 'logical' properties?
 

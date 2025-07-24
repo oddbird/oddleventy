@@ -17,6 +17,7 @@ tags:
   - Anchor Positioning
   - Polyfill
   - CSS
+related_tag: Anchor Positioning
 summary: |
   We have been busy updating the Popover and
   CSS Anchor Positioning Polyfills,
@@ -159,6 +160,12 @@ users to adopt the polyfill in their project, and by extension, start using
 Anchor Positioning. You can follow [that
 issue](https://github.com/oddbird/css-anchor-positioning/issues/91) to find out
 more.
+
+{% callout 'note', false %}
+Interested in learning more about anchor positioning?
+Sign up for our free weekly
+[CSS anchor positioning email course](/learn/courses/anchor-positioning).
+{% endcallout %}
 
 ## Can you help?
 

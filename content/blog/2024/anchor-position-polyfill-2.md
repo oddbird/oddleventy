@@ -119,6 +119,12 @@ default, the polyfill parses all of your CSS, which is likely more than you
 need. You're now able to specify exactly which CSS stylesheets contain rules
 that impact how you use anchor positioning, so not all CSS has to be parsed.
 
+{% callout 'note', false %}
+Interested in learning more about anchor positioning?
+Sign up for our free weekly
+[CSS anchor positioning email course](/learn/courses/anchor-positioning).
+{% endcallout %}
+
 ## Coming soon
 
 What are you excited for with anchor positioning? We'd love to implement

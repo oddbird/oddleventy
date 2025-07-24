@@ -59,13 +59,13 @@
     </section>
   {% endif %}
 
+  {% include 'page/list.njk' %}
+
   {% if cta == 'hire' %}
     {% include 'site/hire-us.njk' %}
   {% elif cta == 'sponsor' -%}
     {% include 'site/sponsor-us.njk' %}
   {% endif %}
-
-  {% include 'page/list.njk' %}
 
   <!-- used for webmentions -->
   <a href="{{ page.url | url }}" class="u-url" hidden>{{ (banner or title) | removeMd }}</a>

@@ -8,6 +8,7 @@ tags:
   - CSS
   - Layout
   - W3C
+related_tag: CSS
 image:
   src: /projects/w3c.jpg
   alt: >

@@ -14,6 +14,7 @@ tags:
   - Article
   - Anchor Positioning
   - CSS
+related_tag: Anchor Positioning
 summary: |
   `position-area` might be my favorite part of the CSS Anchor Positioning spec,
   with a ton of features packed in to make things just... work.
@@ -203,6 +204,12 @@ The [Anchor Positioning Polyfill](https://anchor-polyfill.netlify.app/) does not
 yet support `position-area`. This article was written as part of our exploration
 into the spec, and if you would like to sponsor further development, please
 [get in touch](/contact/)!
+
+{% callout 'note', false %}
+Interested in learning more about anchor positioning?
+Sign up for our free weekly
+[CSS anchor positioning email course](/learn/courses/anchor-positioning).
+{% endcallout %}
 
 ## Sponsor us
 

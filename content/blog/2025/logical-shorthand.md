@@ -2,6 +2,7 @@
 title: Support Logical Shorthands in CSS
 sub:  Can we get this process unstuck?
 date: 2025-03-20
+updated: 2025-06-27
 author: miriam
 image:
   src: blog/2025/logical.jpg
@@ -11,6 +12,7 @@ tags:
   - CSS
   - CSSWG
   - Logical Properties
+related_tag: CSSWG
 series: CSS logical shorthands
 action:
   text: Sponsor work on logical shorthands
@@ -25,6 +27,19 @@ summary: >
   in the working group for years.
   _Can we get them unstuck?_
 ---
+
+{% import 'utility.macros.njk' as utility %}
+
+{% set update = ['Update', utility.datetime(updated)] | join(' ') %}
+{% callout 'note', update %}
+Thanks to your contributions,
+I've completed the first phase of this project --
+[documenting impacted properties](https://css.oddbird.net/logical/properties/).
+But there's more to do,
+and we could still
+[use your help](https://opencollective.com/oddbird-open-source/contribute/css-logical-shorthands-86141)
+moving forward.
+{% endcallout %}
 
 CSS began to add
 [logical properties and values](https://www.w3.org/TR/css-logical-1/)

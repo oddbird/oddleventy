@@ -3,6 +3,7 @@ title: Speeding Up Your Sass Compilation in Vite and Webpack
 sub: A quick guide to adopting the modern Sass API
 author: james
 date: 2024-08-14
+updated: 2025-06-30
 image:
   src: blog/2024/sass-compiler.jpeg
   alt: >
@@ -12,10 +13,13 @@ tags:
   - Article
   - Sass
   - Build Tools
+related_tag: Sass
 summary:
   Sass compilation can be a speed bottleneck in your build,
   but it doesn't have to be anymore.
 ---
+
+{% import 'utility.macros.njk' as utility %}
 
 Vite comes with built in support for Sass, as well as other CSS preprocessors.
 Just `npm install sass`, import a `.scss` file, and it works.
@@ -39,7 +43,15 @@ see the Vite team add support in version 5.4.0.
 
 ## How to enable the Sass Compiler API in Vite
 
-1. Update to Vite version 5.4.0 or above.
+{% set update = ['Update', utility.datetime(updated)] | join(' ') %}
+{% callout 'note', update %}
+
+[Vite 7.0](https://vite.dev/blog/announcing-vite7) changed the available options
+for compiling Sass, simplifying the process even more.
+
+{% endcallout %}
+
+1. Update to Vite version 5.4.0 or above, and ideally 7.0 or above.
 2. Switch from `sass` to `sass-embedded` by running `npm uninstall sass; npm
    install -D sass-embedded`.
 
@@ -51,13 +63,18 @@ and `sass-embedded` exposes the same API, but around a native Dart executable.
 In many situations, `sass-embedded` is faster.
 {% endcallout %}
 
-3. In your `vite.config.js` file, set `css.preprocessorOptions.scss.api` to `modern-compiler`.
+3. Vite 7.0 made the Sass Compiler API the default (and removed support for the
+   non-compiler API), so you don't need to opt in to the API. For Vite 5.4.0
+   through < 7.0, you will need to opt in. In your `vite.config.js` file, set
+   `css.preprocessorOptions.scss.api` to `modern-compiler`.
 
 ```js
 ...
 css: {
   preprocessorOptions: {
+    // Set `sass` if using the indented syntax
     scss: {
+      // Only needed on versions < 7.0.0
       api: 'modern-compiler',
     }
   }
@@ -65,15 +82,11 @@ css: {
 ...
 ```
 
-{% callout %}
-If you're using the indented syntax, you'll need to use the `sass` key
-instead of `scss`.
-{% endcallout %}
-
-4. Adjust any options from the [`legacy`] API options to the [`modern`] API
-   options. In my case, I needed to update `pkgImporter` to `importers: [new
-   NodePackageImporter()]` and change the import of `NodePackageImporter` from
-  `sass` to `sass-embedded`.
+4. Vite 7.0 also removed support for the legacy API. If you were using the
+   legacy API, adjust any options from the [`legacy`] API options to the
+  [`modern`] API options. In my case, I needed to update `pkgImporter` to
+  `importers: [new NodePackageImporter()]` and change the import of
+  `NodePackageImporter` from `sass` to `sass-embedded`.
 
 [`legacy`]: https://sass-lang.com/documentation/js-api/interfaces/legacystringoptions/
 [`modern`]: https://sass-lang.com/documentation/js-api/interfaces/stringoptions/

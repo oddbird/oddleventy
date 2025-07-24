@@ -7,6 +7,7 @@ tags:
   - Article
   - Testing
   - Docker
+related_tag: Testing
 image:
   src: blog/2022/containers.jpg
   alt: |

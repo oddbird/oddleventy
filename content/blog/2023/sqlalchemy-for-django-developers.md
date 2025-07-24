@@ -10,6 +10,7 @@ tags:
   - Django
   - FastAPI
   - SQLAlchemy
+related_tag: Django
 image:
   src: blog/2023/library.jpg
 summary: |

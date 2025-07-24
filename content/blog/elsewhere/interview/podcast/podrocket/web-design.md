@@ -17,6 +17,5 @@ audio: https://chrt.fm/track/7F1212/aphid.fireside.fm/d/1437767933/3911462c-bca2
 {{ embed.audio(audio) }}
 
 Or listen on…
-- [YouTube](https://buff.ly/unnKZIs)
 - [Apple](https://buff.ly/ZFB9NRi)
 - [Spotify](https://buff.ly/unnKZIs)

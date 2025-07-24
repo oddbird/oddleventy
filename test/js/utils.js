@@ -266,6 +266,20 @@ export const collection4 = [
   },
   {
     page: {
+      inputPath: './talk1.md',
+      fileSlug: 'talk1',
+      outputPath: './_site/talk1/index.html',
+      url: '/talk1/',
+      date: '2040-01-09T04:10:17.000Z',
+    },
+    data: {
+      title: 'Talk 1',
+      tags: ['_talk'],
+    },
+    content: '<h1>This is my title</h1>\n\n<p>This is content…',
+  },
+  {
+    page: {
       inputPath: './test3.md',
       fileSlug: 'test3',
       outputPath: './_site/test3/index.html',
