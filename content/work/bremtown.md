@@ -42,7 +42,7 @@ summary: |
   to showcase their cabinetry products
   to dealers, designers, and firms.
   We also helped redesign their
-  brand, logo, structure,
+  brand and logo, and the structure
   and narrative of their marketing site
   for a more intuitive and modern user experience
   and increased lead generation.
