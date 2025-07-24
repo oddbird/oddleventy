@@ -1,7 +1,7 @@
 ---
 title: Bremtown Cabinetry
-sub: Spec Book web app, Marketing website & CMS
-logo: tegy
+sub: Spec book web app, marketing website & CMS
+logo: bremtown
 client: &client Bremtown
 date: 2022-11-08
 end:
