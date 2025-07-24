@@ -48,7 +48,6 @@ summary: |
   and increased lead generation.
 ---
 
-{% import 'quotes.macros.njk' as quotes %}
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
 
