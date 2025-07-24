@@ -549,5 +549,5 @@ to take your sites
 and your team's skills
 to the next level.
 
- [Book workshop at your company »](/workshops/cascading-layouts/#schedule-a-workshop)
+[Book workshop at your company »](/workshops/cascading-layouts/#schedule-a-workshop)
 {% endcallout %}
