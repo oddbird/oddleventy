@@ -25,5 +25,24 @@ to structured documents and Web applications.
 By separating the presentation style from the content,
 CSS simplifies Web authoring and site maintenance.
 
+Miriam is an editor on several specifications,
+and has lead the standardization of
+many popular CSS features
+since joining the group in 2020:
+
+- [CSS Cascading & Inheritance](https://drafts.csswg.org/css-cascade-6/)
+  now defines both _cascade layers_ and _scope_.
+- [CSS Conditional Rules](https://drafts.csswg.org/css-conditional-5/)
+  now defines size, style, and state
+  _container queries_.
+  (previously in CSS Containment).
+- [CSS Values and Units](https://drafts.csswg.org/css-values-5/)
+  now defines `progress()`
+  and related _interpolation functions_
+  for creating more dynamic and responsive CSS.
+- [CSS Mixins & Functions](https://drafts.csswg.org/css-mixins-1/)
+  is a new module for
+  author-defined functions and mixins.
+
 All my research, explainers, and proposals
 are available at [css.oddbird.net](https://css.oddbird.net/).
