@@ -1,19 +1,18 @@
 ---
-title: Talks & Workshops
-sub: Bring us to your event or browse past talks
+title: Workshops & Events
+sub: In-person & virtual for individuals, companies, and conferences
 action:
-  text: Hire us to give a talk or workshop »
-  url: /contact/
+  text: Register for events »
+  url: /talks/#upcoming-events
 summary: |
-  **We provide award-winning talks & workshops**
-  for companies or conferences,
-  to help you create resilient web applications
+  **We offer award-winning workshops & talks**
+  for individuals, companies, and conference events
+  to help developers create resilient web applications
   and design systems --
   improving team process, communication,
   site performance, and accessibility.
-  Dive into the posts below
-  for the latest videos & slides,
-  and upcoming conference or workshop dates.
+  Explore workshops and register for
+  upcoming events below.
 ---
 
 {% import 'utility.macros.njk' as utility %}
@@ -34,7 +33,7 @@ summary: |
   by_bird=collections
 ) }}
 
-{{ layout.title('All Talks & Workshops') }}
+{{ layout.title('All Workshops & Talks') }}
 {% call layout.grid('training') %}
   {% for item in collections._talk | getPublic | eventSort(true) | reverse %}
     <article {{ post.aria_label(item) }} class="training-item">
