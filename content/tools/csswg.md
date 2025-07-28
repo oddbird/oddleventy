@@ -16,11 +16,6 @@ summary: |
   helping to develop the next level of
   Cascading & Inheritance,
   in addition to other CSS standards.
-  She's also active in the [CSS4] and [Design
-  Token] Community Groups.
-
-  [CSS4]: https://www.w3.org/community/css4/
-  [Design Token]: https://www.w3.org/community/design-tokens/
 ---
 
 Cascading Style Sheets (CSS) are the design language of the web --
