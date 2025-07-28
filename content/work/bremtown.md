@@ -4,7 +4,6 @@ sub: Spec book web app, marketing website & CMS
 logo: bremtown
 client: &client Bremtown
 date: 2022-11-08
-end:
 image:
   src: work/bremtown/bremtown-hero.jpg
   alt: marketing website and spec book on large and small screens
