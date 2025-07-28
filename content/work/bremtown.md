@@ -15,8 +15,10 @@ people:
     face: furman-brown.jpg
     title: Founder
     venue: *client
+links:
+  website: https://www.bremtown.com/
+  spec book: https://spec.bremtown.com/
 tags:
-  - _post
   - Manufacturing
 sample:
   desktop:
@@ -30,11 +32,11 @@ sample:
      and more intuitive for designers,
      giving them more time
      to focus on creating great spaces.
-press:
-  - text: |
-      GET QUOTE FROM TIM
-    <<: *tim
-    slug: innovative
+# press:
+#   - text: |
+#       NEED QUOTE AND PIC FROM TIM
+#     <<: *tim
+#     slug: configurations
 summary: |
   OddBird helped Bremtown Cabinetry
   plan, design, and develop
@@ -50,6 +52,15 @@ summary: |
 
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
+
+Bremtown's spec book website
+is a CMS powered by Wagtail.
+The information managed by the CMS
+is presented to end users
+as an interactive, filterable,
+and visual catalog
+that clearly lays out
+all available product options.
 
 {{ layout.title('What We Did') }}
 
