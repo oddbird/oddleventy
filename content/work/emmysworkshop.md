@@ -20,6 +20,7 @@ people:
     venue: *client
 tags:
   - Education Sector
+  - Nonprofit Sector
 press:
   - text: |
       The first meeting I had with Miriam helped me decide.

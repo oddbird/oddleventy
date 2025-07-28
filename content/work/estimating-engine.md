@@ -37,6 +37,12 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
+General Stamping and Metalworks'
+tool for internal staff
+requires the Django application
+to keep track of complex relationships
+between thousands of materials, parts, and operations.
+
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
