@@ -1,6 +1,6 @@
 ---
-title: Material Pricing
-sub: DESCRIPTION
+title: Material Repricing
+sub: Track manufacturing costs as material prices change
 image:
   src: work/material-pricing/material-pricing.jpg
   alt: manufacturing reprice details
@@ -12,9 +12,8 @@ tags:
 people:
   - &ryan
     name: Ryan Hochstetler
-    face: james-weber.jpg
     url: https://www.linkedin.com/in/ryanhochstetler/
-    title: Analytics Manager
+    title: Digital Director
     venue: *client
 # press:
 #   - text: |
@@ -23,22 +22,23 @@ people:
 #     slug: configurations
 summary: |
   OddBird helped General Stamping & Metalworks
-  plan, design, and develop Material Pricing,
+  plan, design, and develop Material Repricing,
   a responsive web application.
-  Material Pricing
-
-  MORE SUMMARY HIGHLIGHTING OUR WORK.
+  Material Repricing allows GSM
+  to quickly track changing material prices,
+  ensuring their customers have accurate
+  and up-to-date prices for thousands of complex parts.
 ---
 
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-General Stamping and Metalworks'
+General Stamping & Metalworks'
 tool for internal staff
 requires the Django application
 to keep track of complex relationships
-between thousands of materials, parts, and operations.
+between thousands of materials and parts.
 
 {{ layout.title('What We Did') }}
 
@@ -70,11 +70,11 @@ between thousands of materials, parts, and operations.
 
 ### Languages & Tools
 
-- Adobe XD
+- Figma
 - Django & Python
-- Herman
 - JavaScript with Vue
 - Sass & CSS
+- Herman
 
 {% endcall %}
 

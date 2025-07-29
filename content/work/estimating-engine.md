@@ -13,9 +13,8 @@ tags:
 people:
   - &ryan
     name: Ryan Hochstetler
-    face: james-weber.jpg
     url: https://www.linkedin.com/in/ryanhochstetler/
-    title: Analytics Manager
+    title: Digital Director
     venue: *client
 # press:
 #   - text: |
@@ -37,7 +36,7 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-General Stamping and Metalworks'
+General Stamping & Metalworks'
 tool for internal staff
 requires the Django application
 to keep track of complex relationships
@@ -75,9 +74,9 @@ between thousands of materials, parts, and operations.
 
 - Adobe XD
 - Django & Python
-- Herman
 - JavaScript with Vue
 - Sass & CSS
+- Herman
 
 {% endcall %}
 
