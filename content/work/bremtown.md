@@ -18,7 +18,7 @@ links:
   website: https://www.bremtown.com/
   spec book: https://spec.bremtown.com/
 tags:
-  - Manufacturing
+  - Manufacturing Sector
 sample:
   desktop:
     src: bremtown/bremtown-spec-site.png
