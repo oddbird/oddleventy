@@ -54,5 +54,5 @@ to your company,
 or attend [Modern CSS Architecture](https://smashingconf.com/ny-2025/workshops/miriam-suzanne-modern-css-architecture)
 at Smashing Conference in New York.
 
-[Book workshop at your company »](/workshops/cascading-layouts/#schedule-a-workshop)
+[Book a workshop for your company »](/workshops/cascading-layouts/#schedule-a-workshop)
 {% endcallout %}
