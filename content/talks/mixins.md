@@ -35,14 +35,24 @@ how will they be different
 from the Sass tools that inspired them,
 how can you help in the spec process,
 and what other features might this open up in the future?
-Is this finally a death blow for CSS pre-processors?
-(No, but let’s talk about it anyway!)
 
 Along the way,
-we veer into variables --
-and some of the long-standing _gotchas_
+we dive into variables --
+and some of the surprises
 that still cause confusion for developers.
 Those same issues
 will become even more visible
 as new features roll out,
 so it's a good time to learn our way around!
+
+{% callout 'note', false %}
+Take your CSS knowledge deeper
+with a workshop!
+Bring
+[Cascading Layouts Workshop](/workshops/cascading-layouts/)
+to your company,
+or attend [Modern CSS Architecture](https://smashingconf.com/ny-2025/workshops/miriam-suzanne-modern-css-architecture)
+at Smashing Conference in New York.
+
+[Book workshop at your company »](/workshops/cascading-layouts/#schedule-a-workshop)
+{% endcallout %}
