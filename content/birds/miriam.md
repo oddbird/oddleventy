@@ -26,11 +26,6 @@ events:
     end: 2025-10-09
   - venue: CSS Day
     adr: Amsterdam, NL
-    url: https://cssday.nl/
-    date: 2025-06-05
-    end: 2025-06-06
-  - venue: CSS Day
-    adr: Amsterdam, NL
     url: https://cssday.nl/2024
     date: 2024-06-06
     end: 2024-06-07
