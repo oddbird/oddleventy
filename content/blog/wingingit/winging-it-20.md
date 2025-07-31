@@ -18,9 +18,8 @@ summary: |
   [Kilian Valkhof](https://kilianvalkhof.com/), Miriam Suzanne,
   and James Stuckey Weber
   talk about developer tools
-  including Polypane browser
-  and other tools
-  for accessibility and a11y.
+  including the Polypane browser
+  and other accessibility tools.
 ---
 
 {% callout 'note', false %}
