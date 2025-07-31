@@ -55,17 +55,17 @@ and backend development.
   - Upcoming features
 - Additional accessibility tools from Kilian
 
-
 ## Links:
+
 - [kilianvalkhof.com](https://kilianvalkhof.com/)
 - [Polypane: desktop browser](https://polypane.app/)
 - [Form Inspector](https://polypane.app/form-inspector/)
-- [Super Position](https://superposition.design)
+- [Superposition](https://superposition.design)
 - [FixA11y — improving accessibility](https://fixa11y.com)
 - [Color Contrast](https://colorcontrast.app)
-- [OddContrast](https://oddconstrast.com)
-- [From Scratch](https://fromscratch.rocks)
-- [Squiggle Conf](https://squiggleconf.com/)
+- [OddContrast](https://oddcontrast.com)
+- [FromScratch](https://fromscratch.rocks)
+- [SquiggleConf](https://squiggleconf.com/)
 - [REVENGE.CSS](https://github.com/Heydon/REVENGE.CSS)
 - [CSS Specificity Calculator](https://polypane.app/css-specificity-calculator/)
 - [Practical Accessibility: A comprehensive course for learning web accessibility](https://practical-accessibility.today/)

@@ -1,6 +1,6 @@
 ---
 title: CSS IS AWESOME Game
-sub: With special guests Michelle Barker, Stephanie Eckles, Kevin Powell, and Henri Helvetical
+sub: With special guests Michelle Barker, Stephanie Eckles, Kevin Powell, and Henri Helvetica
 episode: 14
 tags:
   - CSS
