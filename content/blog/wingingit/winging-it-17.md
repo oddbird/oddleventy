@@ -1,5 +1,6 @@
 ---
 title: Revisiting Fluid Type
+sub: With special guest Richard Rutter
 episode: 17
 tags:
   - CSS

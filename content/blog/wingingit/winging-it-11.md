@@ -1,5 +1,6 @@
 ---
 title: Web Components
+sub: With special guest Zach Leatherman
 episode: 11
 tags:
   - Web Components
