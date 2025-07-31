@@ -1,5 +1,6 @@
 ---
 title: Take Command with Invokers
+sub: With special guest Luke Warlow
 episode: 18
 tags:
   - CSS
@@ -20,7 +21,7 @@ summary: |
   to buttons with the Invoker Commands API.
   Join James Stuckey Weber and Miriam Suzanne
   for a live conversation
-  with special guest Luke Warlow,
+  with special guest [Luke Warlow](https://lukewarlow.dev/),
   Web Platform Engineer at Igalia.
 ---
 

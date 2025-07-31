@@ -1,5 +1,6 @@
 ---
 title: Debugging CSS Anchor Positioning
+sub: With special guest Tab Atkins-Bittner
 episode: 16
 tags:
   - CSS

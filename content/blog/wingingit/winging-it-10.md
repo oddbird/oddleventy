@@ -1,5 +1,6 @@
 ---
 title: Learn CSS Grid First
+sub: With special guest Stephanie Eckles
 episode: 10
 tags:
   - CSS
