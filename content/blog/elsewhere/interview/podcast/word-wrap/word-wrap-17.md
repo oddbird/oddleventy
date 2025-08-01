@@ -17,7 +17,7 @@ summary: |
   named CSS colors,
   how much we like eating cookies,
   and other wild tangents.
-audio: https://cdn.transistor.fm/file/transistor/m/shows/29448/1b2b4c4afbedbdb1f2c3aff904bc7a17.mp3
+audio: https://media.transistor.fm/083970c3/0806ab68.mp3
 ---
 
 {% import "embed.macros.njk" as embed %}
