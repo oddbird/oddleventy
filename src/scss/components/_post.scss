@@ -8,29 +8,27 @@
   --left: calc(var(--drop-focus) * -1);
   --bottom: calc(100% + var(--drop-focus));
 
-  clip-path: polygon(
-    var(--left) 0,
-    calc(100% - var(--fold)) 0,
-    100% var(--fold),
-    100% var(--bottom),
-    var(--left) var(--bottom)
-  );
+  clip-path: polygon(var(--left) 0,
+      calc(100% - var(--fold)) 0,
+      100% var(--fold),
+      100% var(--bottom),
+      var(--left) var(--bottom));
   display: grid;
   grid-area: post;
   grid-row-gap: var(--shim);
   grid-template:
-    [hero-start] 'left type type' var(
-      --post-thumb-height,
-      var(--post-thumb-small)
-    )
-    [hero-end] 'left main right' 1fr
-    / [hero-start] var(--post-margin) minmax(min-content, var(--page)) var(
-      --post-margin
-    )
-    [hero-end];
+    [hero-start] 'left type type' var(--post-thumb-height,
+      var(--post-thumb-small)) [hero-end] 'left main right' 1fr
+    / [hero-start] var(--post-margin) minmax(min-content, var(--page)) var(--post-margin
+    ) [hero-end];
 
   .post-header {
     margin-bottom: var(--gutter);
+  }
+
+  // posts without header images won't have a data-hero
+  &:not(:has([data-hero])) {
+    --post-thumb-height: auto;
   }
 }
 
