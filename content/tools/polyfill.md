@@ -3,9 +3,6 @@ title: HTML & CSS Polyfills
 sub: Popover, CSS Anchor Positioning, Cascade Layers
 feature: true
 date: 2022-02-11
-image:
-  position: center
-  src: projects/polyfill.jpg
 oss: creator
 author: oddbird
 action:
@@ -101,5 +98,5 @@ author-defined anchor elements.
 PostCSS Cascade Layers lets you use `@layer`
 following the Cascade Layers Specification.
 For more information on layers,
-checkout [A Complete Guide to CSS Cascade Layers](https://css-tricks.com/css-cascade-layers/)
+check out [A Complete Guide to CSS Cascade Layers](https://css-tricks.com/css-cascade-layers/)
 by Miriam Suzanne.

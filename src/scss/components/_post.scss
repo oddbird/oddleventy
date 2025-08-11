@@ -32,6 +32,11 @@
   .post-header {
     margin-bottom: var(--gutter);
   }
+
+  // posts without header images won't have a data-hero
+  &:not(:has([data-hero])) {
+    --post-thumb-height: auto;
+  }
 }
 
 [data-post='link'] {
