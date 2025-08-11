@@ -48,9 +48,9 @@
     --edge: 25%;
   }
 
-  &:not(:has([data-hero])) {
+  &:not(:has([data-flag])) {
     @include config.above('page') {
-      margin-block-start: var(--spacer);
+      margin-block-start: var(--gutter);
     }
   }
 }
