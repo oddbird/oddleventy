@@ -5,6 +5,9 @@ logo: phamaly
 client: Phamaly
 date: 2019-08-01
 end: 2021-03-02
+tags:
+  - Arts Sector
+  - Nonprofit Sector
 image:
   src: work/phamaly/chicago.jpg
   alt: Phamaly cast performing Chicago

@@ -12,6 +12,7 @@ date: 2018-05-31
 end: 2022-07-30
 tags:
   - Technology Sector
+  - Nonprofit Sector
 people:
   - &jason
     name: Jason Lantz

@@ -25,7 +25,7 @@ summary: |
   New Orleans.
 
   [Vue.js]: https://vuejs.org/
-  [Sarah Drasner]: https://sarahdrasnerdesign.com/
+  [Sarah Drasner]: https://sarah.dev/
   [VueConf US]: https://us.vuejs.org/
 ---
 

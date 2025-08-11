@@ -53,14 +53,13 @@ Watch Miriam's talk & view slides: [Dynamic CSS: Layouts & Beyond]
 ### Design System Magic with Houdini
 
 Sam Richard handed me a cute little rabbit sticker and introduced
-Houdini. Both blew my mind. Check out Sam's [Houdini microsite].
+Houdini. Both blew my mind.
 
 > "CSS Houdini will let authors tap in to the actual CSS engine, finally
 > allowing us to extend CSS, and do so at CSS speeds."
 
 Watch Sam's talk: [Magic Tricks with Houdini]
 
-  [Houdini microsite]: https://houdini.glitch.me/
   [Magic Tricks with Houdini]: https://youtu.be/FYWZrLpN5Po
 
 ## Sophia Prater
