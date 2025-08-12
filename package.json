@@ -67,7 +67,6 @@
     "@babel/preset-env": "^7.28.0",
     "@date-fns/utc": "^2.1.0",
     "@eslint/js": "^9.32.0",
-    "@netlify/plugin-a11y": "^1.0.0-beta.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.1",
