@@ -24,8 +24,15 @@
   }
 }
 
+[data-subnavlist] {
+  --list-padding--default: 0;
+  --nav-link-display: block;
+
+  list-style: none;
+}
+
 [data-nav] {
-  display: inline-block;
+  display: var(--nav-link-display, inline-block);
   padding: var(--shim) var(--banner-space);
 
   &:not(:hover, :active, :focus, [aria-current]) {
@@ -41,7 +48,7 @@
 }
 
 // The anchor positioning polyfill doesn't support implicit anchors with popover
-li[dropdown-menu] {
+[dropdown-menu] {
   anchor-scope: --dropdown-menu;
 
   button {
@@ -50,19 +57,32 @@ li[dropdown-menu] {
     &::before {
       content: '›';
       display: inline-block;
+      rotate: var(--rotate-btn-icon, 0);
       transition: rotate var(--fast) ease-in-out;
     }
   }
 
   [popover] {
-    position-anchor: --dropdown-menu;
-    position: absolute;
+    background-color: var(--callout);
+    border-width: var(--border-width) 0 0 0;
+    border-color: var(--active);
 
     // Required for anchor positioning polyfill
     inset: auto;
+    margin: unset;
+    padding: 0;
+    position: absolute;
+    position-anchor: --dropdown-menu;
     position-area: block-end span-inline-end;
     position-try-fallbacks: block-end span-inline-start;
-    margin: unset;
+  }
+
+  // Needs to have separate selectors as :popover-open invalidates the whole rule on unsupported browsers
+  &:has(:popover-open),
+  &:has(.\:popover-open) {
+    button::before {
+      rotate: 0.25turn;
+    }
   }
 }
 
@@ -71,13 +91,4 @@ li[dropdown-menu] {
   [popover]:not(.\:popover-open) {
     display: none;
   }
-}
-
-// Needs to have separate selectors as :popover-open invalidates the whole rule on unsupported browsers
-[dropdown-menu]:has(:popover-open) button::before {
-  rotate: 0.25turn;
-}
-
-[dropdown-menu]:has(.\:popover-open) button::before {
-  rotate: 0.25turn;
 }
