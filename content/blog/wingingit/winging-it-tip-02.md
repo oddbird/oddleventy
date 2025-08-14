@@ -45,9 +45,9 @@ In my codepen example (linked below),
 I use `margin: unset`,
 but you can also use `margin: initial`
 or give it an actual value.
-You just don't want it to be `margin: auto`
-(which is great for centering the popover,
-but that's not what you want to do here).
+Otherwise, it would use `margin: auto`
+which is great for centering the popover,
+but that's not what you want to do here.
 
 ## Links:
 - Codepen demo
