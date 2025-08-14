@@ -50,5 +50,5 @@ which is great for centering the popover,
 but that's not what you want to do here.
 
 ## Links:
-- Codepen demo
+- [CodePen demo](https://codepen.io/jamessw/pen/azvLgqx)
 - Sign up for my [free email course](https://oddbird.dev/learn/courses/anchor-positioning/) for 9 weeks of anchor positioning knowledge.
