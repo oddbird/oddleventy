@@ -72,7 +72,7 @@ PDF reports with one click.
 ### Languages & Tools
 
 - Figma
-- Django & Python
+- Python/Django & Django Ninja
 - JavaScript with Vue
 - Sass & CSS
 - Herman
