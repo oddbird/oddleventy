@@ -42,6 +42,6 @@ or useful pattern.
 
 ## Links:
 
-- [Codepen demo](https://codepen.io/editor/miriamsuzanne/pen/0198809c-16da-7e15-a688-741651df92f7)
+- [CodePen demo](https://codepen.io/editor/miriamsuzanne/pen/0198809c-16da-7e15-a688-741651df92f7)
 - [Layout Workshop](https://www.oddbird.net/workshops/cascading-layouts/)
 - [Smashing Workshop](https://smashingconf.com/ny-2025)
