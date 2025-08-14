@@ -1,13 +1,12 @@
 ---
-title: Estimating Engine
-sub: Create & manage custom manufacturing quotes
+title: Material Repricing
+sub: Track manufacturing costs as material prices change
 image:
-  src: work/estimating-engine/estimating-engine.jpg
-  alt: manufacturing quote details
+  src: work/material-pricing/material-pricing.jpg
+  alt: manufacturing reprice details
   position: top
 client: &client General Stamping & Metalworks
-date: 2020-01-31
-end: 2023-04-30
+date: 2024-01-31
 tags:
   - Manufacturing Sector
 people:
@@ -23,31 +22,31 @@ people:
 #     slug: configurations
 summary: |
   OddBird helped General Stamping & Metalworks
-  plan, design, and develop Estimating Engine,
+  plan, design, and develop Material Repricing,
   a responsive web application.
-  Estimating Engine enables estimators at GSM
-  to efficiently
-  create and manage custom quotes
-  to manufacture parts
-  for their customers.
+  Material Repricing allows GSM
+  to quickly track changing material prices,
+  ensuring their customers have accurate
+  and up-to-date prices for thousands of complex parts.
 ---
 
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-General Stamping & Metalworks'
-tool for internal staff
-requires the Django application
-to keep track of complex relationships
-between thousands of materials, parts, and operations.
+General Stamping & Metalworks' tool
+allows internal staff to efficiently keep track
+of material prices as they change.
+The application supports importing and exporting
+Excel spreadsheets as well as generating
+PDF reports with one click.
 
 {{ layout.title('What We Did') }}
 
 {% call embed.media_block(
   media=embed.img(
-    src='work/estimating-engine/ee-example.jpg',
-    alt='details of part for manufacturing quote'
+    src='work/material-pricing/mp-responsive-example.png',
+    alt='details of a part for manufacturing reprice shown in large and small screen sizes'
   ),
   name='desktop-work'
 ) %}
@@ -72,8 +71,8 @@ between thousands of materials, parts, and operations.
 
 ### Languages & Tools
 
-- Adobe XD
-- Django & Python
+- Figma
+- Python/Django & Django Ninja
 - JavaScript with Vue
 - Sass & CSS
 - Herman
