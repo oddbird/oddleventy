@@ -34,11 +34,12 @@ summary: |
 {% import 'layout.macros.njk' as layout %}
 {% import 'quotes.macros.njk' as quotes %}
 
-General Stamping & Metalworks'
-tool for internal staff
-requires the Django application
-to keep track of complex relationships
-between thousands of materials and parts.
+General Stamping & Metalworks' tool
+allows internal staff to efficiently keep track
+of material prices as they change.
+The application supports importing and exporting
+Excel spreadsheets as well as generating
+PDF reports with one click.
 
 {{ layout.title('What We Did') }}
 
