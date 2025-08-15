@@ -1,5 +1,6 @@
 ---
 title: Relative Units & Typography
+sub: With special guest Alan Stearns
 episode: 15
 tags:
   - CSS

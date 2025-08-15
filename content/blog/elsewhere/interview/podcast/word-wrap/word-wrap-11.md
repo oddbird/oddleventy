@@ -17,7 +17,7 @@ summary: |
   about my journey into webdev and onto the CSSWG,
   what I find frustrating about how others use CSS,
   and the three specs I'm working on.
-audio: https://cdn.transistor.fm/file/transistor/m/shows/29448/eb15a1f60f7d9d2f6c7a9f9ab47d83fc.mp3
+audio: https://media.transistor.fm/decd0eb6/fdb28829.mp3
 ---
 
 {% import "embed.macros.njk" as embed %}

@@ -1,5 +1,6 @@
 ---
 title: Revisiting Fluid Type
+sub: With special guest Richard Rutter
 episode: 17
 tags:
   - CSS
@@ -15,6 +16,7 @@ image:
   src: winging-it/winging-it-17.jpg
 media:
   - youtube: py41Ys-iRvk
+series: revisiting fluid typography
 summary: |
   Miriam's been asking questions
   about fluid typography,
