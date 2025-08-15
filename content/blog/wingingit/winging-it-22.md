@@ -1,5 +1,5 @@
 ---
-title: Avoid this mistake when using anchor positioning on a popover!
+title: Avoid this mistake when anchor positioning a popover!
 episode: 22
 tags:
   - CSS
@@ -9,7 +9,7 @@ author:
 date: 2025-08-12
 length: 1 min
 image:
-  src: winging-it/tips-tricks-02.jpg
+  src: winging-it/winging-it-22.jpg
 media:
   - youtube: n0djH78gQ-Q
 summary: |

@@ -9,7 +9,7 @@ author:
 date: 2025-08-13
 length: 3.5 min
 image:
-  src: winging-it/tips-tricks-03.jpg
+  src: winging-it/winging-it-23.jpg
   position: top
 media:
   - youtube: bhHV0rQ3-CQ
