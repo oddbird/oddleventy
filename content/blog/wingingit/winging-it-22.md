@@ -51,4 +51,5 @@ but that's not what you want to do here.
 
 ## Links:
 - [CodePen demo](https://codepen.io/jamessw/pen/azvLgqx)
-- Sign up for my [free email course](https://oddbird.dev/learn/courses/anchor-positioning/) for 9 weeks of anchor positioning knowledge.
+- Sign up for my [free email course](/learn/courses/anchor-positioning/) for 9
+  weeks of anchor positioning knowledge.
