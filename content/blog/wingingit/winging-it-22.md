@@ -15,7 +15,7 @@ media:
 summary: |
   Are you positioning a popover
   with CSS anchor positioning
-  and position-area?
+  and `position-area`?
   Make sure to override
   the default margins on the popover.
 ---
