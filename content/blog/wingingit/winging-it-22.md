@@ -41,7 +41,7 @@ or useful pattern.
 
 ## What We Cover:
 
-In my CodePen example (linked below),
+In my [CodePen example](https://codepen.io/jamessw/pen/azvLgqx),
 I use `margin: unset`,
 but you can also use `margin: initial`
 or give it an actual value.
