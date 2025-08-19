@@ -1,7 +1,4 @@
 ---
-eleventyExcludeFromCollections: false
-draft: true
-# permalink: false
 title: Test post will be deleted, but I need to test on deploy preview
 sub: A guide to using new color spaces & formats with OddContrast
 author: oddbird

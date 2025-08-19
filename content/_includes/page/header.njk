@@ -1,9 +1,9 @@
 {% import 'embed.macros.njk' as embed %}
 
-{% set device = (image and image.device) %}
-{% set hero = image.src or image.svg %}
-{% set media = device or (image.type == 'angle' and hero) %}
-{% set hero_type = 'hero' if not device else 'angle' %}
+{% set has_device = (image and image.device) %}
+{% set has_hero = image.src or image.svg %}
+{% set has_media = has_device or (image.type == 'angle' and has_hero) %}
+{% set hero_type = 'hero' if not has_device else 'angle' %}
 
 {% set details %}
   {% include 'page/title.njk' %}
@@ -25,7 +25,7 @@
     </a>
   {% endif %}
 
-  {% if device %}
+  {% if has_device %}
     {% set hero = embed.screen(
       fill=image.fill,
       fit=image.fit,
@@ -44,7 +44,7 @@
       attrs={'data-block': 'rotate'},
       content=details
     ) }}
-  {% elif media %}
+  {% elif has_media %}
     {{ embed.media_block(
       media=embed.svg(
         image.svg,
