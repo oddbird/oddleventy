@@ -22,17 +22,17 @@ nav:
     title: Services
     items:
       - title: Design & Development
-        url: /services/development
+        url: /services/development/
       - title: Strategy & Research
-        url: /services/planning
+        url: /services/planning/
       - title: Design Systems
-        url: /services/design-systems
+        url: /services/design-systems/
       - title: Consulting
-        url: /services/consulting
+        url: /services/consulting/
       - title: Web Standards
-        url: /tools#featured-funding-goal
+        url: /tools/#featured-funding-goal
       - title: Developer Tools
-        url: /tools#oddtools
+        url: /tools/#oddtools
   - url: /work/
   - url: /talks/
     title: Events
