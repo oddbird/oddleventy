@@ -1,7 +1,8 @@
 ---
 eleventyExcludeFromCollections: false
-# draft: true
-title: Test post will be delted, but I need to test on deploy preview
+draft: true
+# permalink: false
+title: Test post will be deleted, but I need to test on deploy preview
 sub: A guide to using new color spaces & formats with OddContrast
 author: oddbird
 date: 2025-07-08
@@ -16,6 +17,8 @@ related_tag: OddContrast
 summary: |
   OddBird's color tool not only checks contrast ratios,
   but supports the new CSS color formats and spaces.
+og:
+  img: /blog/2025/oddcontrast-named-colors-cropped.jpg
 ---
 
 {% import 'embed.macros.njk' as embed %}
