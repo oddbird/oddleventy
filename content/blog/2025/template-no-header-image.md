@@ -1,8 +1,7 @@
 ---
 eleventyExcludeFromCollections: false
-draft: true
-# permalink: false
-title: Make the Web a More Colorful Place with no pictures.
+# draft: true
+title: Test post will be delted, but I need to test on deploy preview
 sub: A guide to using new color spaces & formats with OddContrast
 author: oddbird
 date: 2025-07-08
