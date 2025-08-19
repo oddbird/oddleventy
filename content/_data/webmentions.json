@@ -1,6 +1,29 @@
 {
-  "lastFetched": "2025-07-28T08:09:36.790Z",
+  "lastFetched": "2025-08-18T08:09:07.969Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "????Wiiお姉さん ???? ????️‍⚧️",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/e5c3b34aea2922aba7ca2e7239962e83d8a8a4e5fd3faa69d2e4ac31cf3c5c21.jpg",
+        "url": "https://tech.lgbt/@darkwiiplayer"
+      },
+      "url": "https://tech.lgbt/@darkwiiplayer/114977035619935818",
+      "published": "2025-08-05T16:12:13+00:00",
+      "wm-received": "2025-08-05T16:22:51Z",
+      "wm-id": 1928633,
+      "wm-source": "https://brid.gy/comment/mastodon/@oddbird@front-end.social/114972031500253345/114977035837864274",
+      "wm-target": "https://www.oddbird.net/2022/02/21/layers-guide/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@OddBird\" class=\"u-url\">@<span>OddBird</span></a></span> savage take on tailwind but I'm glad someone finally said it <img alt=\"blobcatgiggle\" src=\"https://cdn.masto.host/frontendsocial/cache/custom_emojis/images/000/005/807/original/ffd02e28122ce693.png\" /></p>",
+        "text": "@OddBird savage take on tailwind but I'm glad someone finally said it"
+      },
+      "in-reply-to": "https://www.oddbird.net/2022/02/21/layers-guide/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
