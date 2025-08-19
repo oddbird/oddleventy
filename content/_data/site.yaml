@@ -34,8 +34,6 @@ nav:
       - title: Developer Tools
         url: /tools#oddtools
   - url: /work/
-  - url: /learn/courses
-    title: Courses
   - url: /talks/
     title: Events
   - url: /blog/
