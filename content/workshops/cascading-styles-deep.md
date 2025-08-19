@@ -28,6 +28,7 @@ events:
     note: >
       Use the code `miriamworkshop` for $200 off!
   - venue: Smashing Workshops
+    workshop: The Title of the Workshop
     date: 2024-10-14
     end: 2024-10-28
     adr: Online
