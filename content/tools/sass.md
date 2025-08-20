@@ -4,8 +4,6 @@ sub: CSS with superpowers
 feature: true
 author: miriam
 oss: core team
-image:
-  svg: logos/sass
 date: 2016-05-20
 index: Sass
 logo: sass

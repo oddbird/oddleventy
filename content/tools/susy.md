@@ -5,8 +5,6 @@ date: 2009-07-13
 end: 2020-07-13
 card: large
 logo: susy
-image:
-  svg: logos/susy-mark
 author:
   - miriam
   - carl
