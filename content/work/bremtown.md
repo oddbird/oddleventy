@@ -121,12 +121,12 @@ in new partnerships!
 ## Brand, Wireframes, and Mockups
 
 We have been working with Bremtown
-since 2023
+since 2023,
 doing a full refresh
 of their brand, logo, marketing message,
 and website layout design
 for lead generation.
-We started with brand and logo redesign
+We started with a redesigned brand and logo
 to establish the new look and feel.
 
 Working within the structure
@@ -142,14 +142,16 @@ we iterated quickly
 based on user feedback.
 Next, we created
 mockups of the layout design,
-user flows, and CTAs
-for three user types
+user flows, and calls to action
+for three user types,
 designing for responsiveness
 from the beginning.
 We helped craft the marketing messages
-and recommend images
+and recommended images
 to support the
-cabintry-reimagined narrative.
+cabinetry-reimagined narrative.
+
+{% endcall %}
 
 {% call embed.media_block(
   media=embed.img(
@@ -162,7 +164,7 @@ cabintry-reimagined narrative.
 ## Web Platform
 
 We created a brand new web platform
-based on the printed spec book
+based on their printed spec book
 for marketing their products
 to dealers, interior designers,
 and design firms
@@ -171,5 +173,4 @@ new partnerships more quickly
 and streamlining existing processes
 for current partners.
 
-{% endcall %}
 {% endcall %}
