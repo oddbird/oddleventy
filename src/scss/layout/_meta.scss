@@ -16,7 +16,7 @@
 }
 
 .post-links {
-  --meta-column: 2;
+  --meta-column: var(--post-links-column, 2);
 
   padding: 0;
   list-style: none;

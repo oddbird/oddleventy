@@ -6,13 +6,6 @@ oss: creator
 date: 2023-12-22
 index: Slide-Deck
 logo: slide-deck
-image:
-  src: talks/mia-smashing19-rad.jpg
-  alt: >
-    Miriam speaking at Smashing Conf NY
-    in a mustard yellow leather jacket
-    and lightning-bolt pink-blue-white earrings
-  position: top
 links:
   site: https://slide-deck.netlify.app/
   source: https://github.com/oddbird/slide-deck/

@@ -3,8 +3,6 @@ title: Accoutrement
 sub: Design-token management in Sass
 date: 2014-10-30
 logo: accoutrement
-image:
-  src: projects/accoutrement.jpg
 links:
   source: https://github.com/oddbird/accoutrement
   docs: /accoutrement/docs/

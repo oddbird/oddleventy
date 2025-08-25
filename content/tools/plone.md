@@ -3,8 +3,6 @@ title: Plone
 sub: Enterprise Web Content Management System
 date: 2011-01-08
 end: 2018-11-07
-image:
-  src: projects/plone.jpg
 links:
   site: https://plone.org/
   source: https://github.com/plone/Products.CMFPlone

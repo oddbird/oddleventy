@@ -128,7 +128,7 @@ and meets WCAG accessibility standards.
 <p>
 
 We helped craft the marketing messages
-and recommend images
+and recommended images
 to support the
 cabintry-reimagined narrative
 and to reach
