@@ -4,8 +4,6 @@ sub: Addressing the technical debt of CSS
 author: miriam
 oss: core team
 logo: remedy
-image:
-  svg: logos/remedy
 date: 2019-07-11
 index: CSS Remedy
 links:

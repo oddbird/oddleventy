@@ -47,6 +47,16 @@
   @include config.above(50em) {
     --edge: 25%;
   }
+
+  &:not(:has([data-flag])) {
+    --hero-header-justify: start;
+    --hero-header-margin-block: var(--double-gutter);
+    --post-links-column: 1;
+
+    @include config.above('page') {
+      margin-block-start: var(--gutter);
+    }
+  }
 }
 
 [data-header='angle'] {
