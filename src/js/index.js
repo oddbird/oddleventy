@@ -1,16 +1,20 @@
 import '@11ty/is-land';
 import 'lite-youtube-embed';
 import '@oddbird/browser-support';
+import '@oddbird/popover-polyfill';
 
 import algoliasearchNetlify from '@algolia/algoliasearch-netlify-frontend/dist/algoliasearchNetlify';
 import ccs from 'cascading-color-systems';
 
+import applyAnchorPositioning from './anchor-positioning.js';
 import { clickToCopy } from './clickToCopy.js';
 
 // Initialize Cascading Colors
 // https://www.oddbird.net/cascading-colors/
 ccs();
 clickToCopy();
+
+applyAnchorPositioning();
 
 // Initialize Algolia search widget
 // https://www.algolia.com/doc/tools/crawler/netlify-plugin/front-end/

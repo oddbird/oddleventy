@@ -25,14 +25,14 @@
 
   &:hover,
   &:focus {
-    --btn-bg: var(--accent);
-    --btn-text: var(--bg);
+    --btn-bg: var(--btn-bg-hover, var(--accent));
+    --btn-text: var(--btn-text-hover, var(--bg));
   }
 
   &:active,
   &[aria-pressed='true'] {
-    --btn-bg: var(--active);
-    --btn-text: var(--bg);
+    --btn-bg: var(--btn-bg-active, var(--active));
+    --btn-text: var(--btn-text-active, var(--bg));
   }
 }
 
@@ -58,10 +58,23 @@
   font-size: var(--xsmall);
 }
 
-// Menu
-// -----
+// Main Menu
+// ---------
 /// @group buttons
-[data-btn~='menu'] {
+[data-btn~='main-menu'] {
+  --btn-border: transparent;
+  --btn-bg: transparent;
+  --btn-bg-active: transparent;
+  --btn-bg-hover: transparent;
+  --btn-text: var(--action);
+  --btn-text-active: var(--active);
+  --btn-text-hover: var(--active);
+}
+
+// Secondary Menu
+// --------------
+/// @group buttons
+[data-btn~='secondary-menu'] {
   @include config.font-family('body');
 
   --btn-bg: transparent;
