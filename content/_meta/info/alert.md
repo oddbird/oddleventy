@@ -5,7 +5,7 @@ title: alert
 aria: 'Subscribe to OddNews'
 ---
 
-**Level up your CSS for free!**
-Grids, mixins,
-anchor positioning, and more.
-[Subscribe »](/oddnews/)
+**[Level up your CSS](/oddnews/)**
+with free
+cutting-edge demos
+in your inbox!

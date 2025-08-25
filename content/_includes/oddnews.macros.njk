@@ -38,12 +38,12 @@ params:
 ) %}
   <div class="oddnews-signup{% if class %} {{ class }}{% endif %}">
     {%- if heading -%}
-      <h3>{{ heading if heading | typeCheck('string') else 'OddNews Sign Up' }}</h3>
+      <h3>{{ heading if heading | typeCheck('string') else 'Level Up Your CSS' }}</h3>
       {%- if subheading -%}
         {%- if subheading | typeCheck('string') -%}
           <p>{{ subheading }}</p>
         {%- else -%}
-          <p>Get the latest news in front-end development — CSS, HTML, JavaScript, and UX. <a href="/oddnews">See Archive</a></p>
+          <p><strong>Get free cutting-edge demos in your inbox!</strong> Grid & layouts with Miriam Suzanne, anchor positioning with James Stuckey Weber, and more! <a href="/oddnews">Peruse archive</a></p>
         {%- endif -%}
       {%- endif -%}
     {%- endif -%}
