@@ -1,9 +1,11 @@
 ---
-live: false
+live: true
 info_slug: alert
 title: alert
-aria: 'Black Lives Matter'
+aria: 'Subscribe to OddNews'
 ---
 
-**OddBird stands with the Black community in
-[demanding change](/community/blm/).**
+**Level up your CSS for free!**
+Grids, mixins,
+anchor positioning, and more.
+[Subscribe »](/oddnews/)
