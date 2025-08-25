@@ -18,11 +18,24 @@ social:
   - bluesky: oddbird.dev
   - github: oddbird
 nav:
+  - menu: services
+    title: Services
+    items:
+      - title: Design & Development
+        url: /services/development/
+      - title: Strategy & Research
+        url: /services/planning/
+      - title: Design Systems
+        url: /services/design-systems/
+      - title: Consulting
+        url: /services/consulting/
+      - title: Web Standards
+        url: /tools/#featured-funding-goal
+      - title: Developer Tools
+        url: /tools/#oddtools
   - url: /work/
-  - url: /services/
-  - url: /tools/
   - url: /talks/
-    title: Talks
+    title: Events
   - url: /blog/
   - url: /about/
   - url: /contact/

@@ -6,8 +6,8 @@ import terser from '@rollup/plugin-terser';
 export default {
   input: 'src/js/index.js',
   output: {
-    file: '_built/js/scripts.js',
-    format: 'iife',
+    dir: '_built/js',
+    format: 'es',
     sourcemap: true,
   },
   plugins: [

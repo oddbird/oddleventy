@@ -2,8 +2,6 @@
 title: Compass
 sub: CSS-authoring framework & Sass library
 oss: core team
-image:
-  svg: logos/compass
 author: miriam
 date: 2010-04-09
 end: 2016-08-04
