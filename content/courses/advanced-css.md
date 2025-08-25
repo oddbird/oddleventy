@@ -18,7 +18,7 @@ permalink: courses/design-with-code/
 
 {% import 'layout.macros.njk' as layout %}
 {% import 'oddnews.macros.njk' as oddnews %}
-{% import "quotes.macros.njk" as quotes %}
+{% import 'quotes.macros.njk' as quotes %}
 
 {% call layout.block(
   name='full',

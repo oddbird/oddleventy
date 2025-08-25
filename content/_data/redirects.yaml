@@ -21,8 +21,10 @@
   to: /talks/
 - from: /workshops/
   to: /talks/
-- from: /learn/courses/
-  to: /courses/
+- from: /learn/courses/design-with-code/
+  to: /courses/design-with-code/
+- from: /learn/courses/anchor-positioning/
+  to: /courses/anchor-positioning/
 
 - from: /talks/keynote/
   to: /talks/
