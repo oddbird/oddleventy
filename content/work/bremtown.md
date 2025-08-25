@@ -102,3 +102,74 @@ all available product options.
 {% endcall %}
 
 {% endcall %}
+
+{% callout 'note', false %}
+Within weeks of launch
+Bremtown reported an increase
+in new partnerships!
+{% endcallout %}
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/bremtown/marketing-spec-site-responsive.png',
+    alt='Bremtown marketing site for designers to browse cabinetry products on large and small screens',
+    caption='Rebranded, accessible, and responsive marketing website with imagined marketing narrative'
+  ),
+  name='desktop-work'
+) %}
+
+## Brand, Wireframes, and Mockups
+
+We have been working with Bremtown
+since 2023
+doing a full refresh
+of their brand, logo, marketing message,
+and website layout design
+for lead generation.
+We started with brand and logo redesign
+to establish the new look and feel.
+
+Working within the structure
+of the new brand
+as well as some established layouts and components,
+we designed a responsive website
+that meets WCAG 2.1 accessibility standards
+with CMS components
+that are user-friendly and scalable.
+
+Starting with wireframes,
+we iterated quickly
+based on user feedback.
+Next, we created
+mockups of the layout design,
+user flows, and CTAs
+for three user types
+designing for responsiveness
+from the beginning.
+We helped craft the marketing messages
+and recommend images
+to support the
+cabintry-reimagined narrative.
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/bremtown/search-filter-user-guide.png',
+    alt='Bremtown marketing site for designers to browse cabinetry products on large and small screens'
+  ),
+  name='desktop-work'
+) %}
+
+## Web Platform
+
+We created a brand new web platform
+based on the printed spec book
+for marketing their products
+to dealers, interior designers,
+and design firms
+with the goal of establishing
+new partnerships more quickly
+and streamlining existing processes
+for current partners.
+
+{% endcall %}
+{% endcall %}
