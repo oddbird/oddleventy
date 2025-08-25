@@ -18,6 +18,7 @@ links:
   website: https://www.bremtown.com/
   spec book: https://spec.bremtown.com/
 tags:
+  - Case Study
   - Manufacturing Sector
 sample:
   desktop:
@@ -103,31 +104,15 @@ all available product options.
 
 {% endcall %}
 
-{% callout 'note', false %}
-Within weeks of launch
-Bremtown reported an increase
-in new partnerships!
-{% endcallout %}
+## Brand & Logo
 
-{% call embed.media_block(
-  media=embed.img(
-    src='work/bremtown/marketing-spec-site-responsive.png',
-    alt='Bremtown marketing site for designers to browse cabinetry products on large and small screens',
-    caption='Rebranded, accessible, and responsive marketing website with imagined marketing narrative'
-  ),
-  name='desktop-work'
-) %}
-
-## Brand, Wireframes, and Mockups
-
-We have been working with Bremtown
-since 2023
-doing a full refresh
-of their brand, logo, marketing message,
-and website layout design
-for lead generation.
 We started with brand and logo redesign
-to establish the new look and feel.
+to establish the new look and feel
+that would reflect
+Bremtown's reimagination
+of the custom cabinetry industry.
+
+## Responsive & Accessible Website
 
 Working within the structure
 of the new brand
@@ -137,32 +122,34 @@ that meets WCAG 2.1 accessibility standards
 with CMS components
 that are user-friendly and scalable.
 
-Starting with wireframes,
-we iterated quickly
-based on user feedback.
-Next, we created
-mockups of the layout design,
-user flows, and CTAs
-for three user types
-designing for responsiveness
-from the beginning.
+<p style="font-size: 1.5rem;">
+Bremtown's website is responsive
+and meets WCAG accessibility standards.
+<p>
+
 We helped craft the marketing messages
 and recommend images
 to support the
-cabintry-reimagined narrative.
+cabintry-reimagined narrative
+and to reach
+three different types
+of website visitors
+with different priorities.
 
 {% call embed.media_block(
   media=embed.img(
-    src='work/bremtown/search-filter-user-guide.png',
-    alt='Bremtown marketing site for designers to browse cabinetry products on large and small screens'
+    src='work/bremtown/marketing-spec-site-responsive.png',
+    alt='Bremtown marketing site for designers to browse cabinetry products on large and small screens',
+    caption='Rebranded, accessible, and responsive marketing website with imagined marketing narrative'
   ),
   name='desktop-work'
 ) %}
+{% endcall %}
 
 ## Web Platform
 
 We created a brand new web platform
-based on the printed spec book
+based on Bremtown's printed spec book
 for marketing their products
 to dealers, interior designers,
 and design firms
@@ -170,6 +157,46 @@ with the goal of establishing
 new partnerships more quickly
 and streamlining existing processes
 for current partners.
+The interactive User's Guide
+teaches new customers
+how to use the spec site
+with an intuitive, self-guided process.
+
+<p style="font-size: 1.5rem;">
+Within weeks of launch,
+Bremtown reported an increase
+in the rate of new partnerships!
+<p>
+
+Starting with wireframes,
+we iterated quickly
+based on end-user feedback.
+Next we created
+interactive mockups
+showing user flow
+and component interaction,
+creating a visual style guide
+of components along the way
+to streamline the iteration process.
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/bremtown/search-filter-user-guide.png',
+    alt='Bremtown spec site for designers to browse cabinetry products on large and small screens',
+    caption='Powered by Wagtail CMS, information is presented to end users as an interactive, filterable, and visual catalog that lays out all available product options'
+  ),
+  name='desktop-work'
+) %}
 
 {% endcall %}
-{% endcall %}
+
+## Ongoing Partnership
+
+We continue to work with Bremtown,
+responding to their needs daily.
+Because the code is resilient
+and built with best practices,
+maintenance is minimal.
+This allows us
+to spend the majority of our time
+on new feature development.

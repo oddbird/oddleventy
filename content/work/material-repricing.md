@@ -83,4 +83,45 @@ PDF reports with one click.
 
 {% endcall %}
 
+## Responsive Web App
+
+The staff at GSM
+use this application
+on a variety of devices
+from desktops to tablets.
+Because users don't need
+to see notes all the time,
+we created an expandable sidebar,
+allowing users to focus
+on the most imporant information
+for them
+at any given time.
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/material-pricing/material-reprice-responsive-devices.png',
+    alt=''
+  ),
+  name='desktop-work'
+) %}
+{% endcall %}
+
+## Visual Component Library
+
+As we created mockups,
+we documented the styles and components
+in a component library
+using Figma
+to streamline design iteration
+and keep the design consistent.
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/material-pricing/component-library.png',
+    alt=''
+  ),
+  name='desktop-work'
+) %}
+{% endcall %}
+
 {{ quotes.grid(press) }}
