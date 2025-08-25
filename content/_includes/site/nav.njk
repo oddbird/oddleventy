@@ -3,14 +3,29 @@
 <nav data-layout="nav" aria-label="primary">
   <ul data-navlist="main">
     {% for item in site.nav %}
-      {% set target = collections.all | getPage(item.url, 'data') %}
-      {% set current = 'page' if (item.url == page.url) else none %}
-      <li>
-        <a href="{{ item.url }}"
-          data-nav="{{ item.url | slug }}"
-          {{ utility.attr_if('aria-current', current) }}>
-          {{ item.title or target.title or 'ERROR' }}
-        </a>
+      <li {{ utility.attr_if('dropdown-menu', item.menu) }}>
+        {% if item.menu %}
+          <button popovertarget="popover-{{item.menu}}" data-nav data-btn="main-menu parent">
+            {{ item.title or target.title or 'ERROR' }}
+          </button>
+          <ul popover id="popover-{{item.menu}}" data-subnavlist>
+            {% for subitem in item.items %}
+              {% set target = collections.all | getPage(subitem.url, 'data') %}
+              {% set current = 'page' if (subitem.url == page.url) else none %}
+              <li>
+                <a href="{{ subitem.url }}" data-nav="{{ subitem.url | slug }}" {{ utility.attr_if('aria-current', current) }}>
+                  {{ subitem.title or target.title or 'ERROR' }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          {% set target = collections.all | getPage(item.url, 'data') %}
+          {% set current = 'page' if (item.url == page.url) else none %}
+          <a href="{{ item.url }}" data-nav="{{ item.url | slug }}" {{ utility.attr_if('aria-current', current) }}>
+            {{ item.title or target.title or 'ERROR' }}
+          </a>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
