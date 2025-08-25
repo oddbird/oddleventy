@@ -1,36 +1,71 @@
 ---
-title: OddNews
-sub: Because best practice is a conversation...
-banner: OddNews
+title: Level Up Your CSS
+sub: Cutting-edge demos & tutorials in your inbox for free
+action:
+  text: Subscribe below »
+  url: '#level-up-your-css-with-oddnews'
+banner: Level Up Your CSS
 summary: |
-  **Hi, OddFriends!**
-  This is the newsletter for designers & developers
-  who want the **latest news in front-end web development** --
-  articles, videos, updates, and workshops
-  on topics from CSS, HTML, and JavaScript
-  to UX design and team process.
+  Grid demos
+  with Miriam Suzanne,
+  anchor positioning tutorials
+  with James Stuckey Weber,
+  and more!
+  OddNews is the email for designers
+  and front-end developers
+  who want to dig deep
+  into CSS fundamentals
+  and explore all the latest features.
+
+press:
+  - text: |
+      To learn from Miriam
+      is truly a privilege,
+      not only because
+      she is involved in writing specifications,
+      but because,
+      at the end of the day,
+      she is also a developer like us.
+      This puts her
+      in a unique position
+      to help you understand
+      not only how to use CSS,
+      but also to understand why
+      it works the way it does.
+    name: Sara Soueidan
+    venue: sarasoueidan.com
+    slug: like-us
+    face: sara-soueidan.jpg
+    url: https://sarasoueidan.com/
+  - text: |
+      James helped me get my head around anchor positioning quickly. After he
+      explained it to me I was able to put anchor positioning to work in a
+      project immediately, in a way that I would have previously solved with
+      lots of custom JavaScript and headaches. If you want to learn anchor
+      positioning in a fast and practical way, there's no one better than James
+      to teach you.
+    name: Jason Lengstorf
+    venue: Learn With Jason
+    face: jason-lengstorf.webp
+    slug: head-around
+    url: https://codetv.dev/series/learn-with-jason/
 ---
 
 {% import 'oddnews.macros.njk' as oddnews %}
 {% import 'embed.macros.njk' as embed %}
 {% import 'layout.macros.njk' as layout %}
+{% import 'quotes.macros.njk' as quotes %}
 
-{{ oddnews.oddnews_signup(
-  heading=false,
-  tag='oddnews',
-  class='oddnews-form-main'
-) }}
-
-{%- set title = 'What to Expect' -%}
+{%- set title = 'What You Get' -%}
 {%- set contents -%}
-  Here are a few examples of topics featured in past editions of OddNews.
-  - **CSS** - [Miriam Suzanne's](/authors/miriam/) latest work on Container Queries
-  - **Sass** - How to use the `split()` function in Sass
-  - **JavaScript** - Guide to Sass's new Node.js package importer
-  - **App Development** - Web apps vs. PWAs vs. Native apps
-  - **UX Design** - Strategies for designing more intuitive websites
-  - **Workshop** - Details about upcoming workshops
-  - **Bird of the Month** - Introduction to the oddest of birds
+  Video tutorials, demos, articles, and sales like these.
+  - **Stretch** keyword for CSS `height` and `width` properties
+  - **Anchor Positioning** in practice with [James Stuckey Weber](/authors/james/)
+  - [Miriam Suzanne's](/authors/miriam/) **container queries** in practice
+  - How to use the `split()` function in **Sass**
+  - **CSS Grid** video tutorials with Miriam and [Stacy Kvernmo](/authors/stacy/)
+  - Mistakes to avoid when anchor positioning a **popover**
+  - Early bird pricing for Miriam's **CSS workshops**
 {%- endset -%}
 
 <aside data-layout="cta" class="oddnews-intro has-angles" aria-labelledby="cta-title">
@@ -54,7 +89,34 @@ summary: |
 </aside>
 
 {% if newsletterArchive | length %}
-  {{ layout.title('Latest News') }}
+  {{ layout.title('Latest Issues') }}
 
   {{ newsletterArchive | safe }}
 {% endif %}
+
+{{ quotes.grid(press) }}
+
+<h2>
+Level up your CSS with OddNews
+</h2>
+<p>
+Start writing more resilient and scalable CSS like a pro
+totally for free.
+</p>
+<ul>
+  <li>
+  Get CSS training 1-2 times monthly
+  </li>
+  <li>
+  Privacy matters! We won't share your email address
+  </li>
+  <li>
+  Please unsubscribe whenever you like
+  </li>
+</ul>
+
+{{ oddnews.oddnews_signup(
+  heading=false,
+  tag='oddnews',
+  class='oddnews-form-main'
+) }}

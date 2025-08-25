@@ -4,8 +4,6 @@ sub: Unit-testing for Sass developers
 feature: true
 date: 2013-06-06
 logo: 'true'
-image:
-  src: projects/true.jpg
 oss: creator
 index: 'True'
 author:

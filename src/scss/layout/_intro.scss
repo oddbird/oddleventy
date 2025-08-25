@@ -5,9 +5,9 @@
 
   [data-header='hero'] & {
     font-size: var(--medium);
-    justify-self: center;
+    justify-self: var(--hero-header-justify, center);
     max-width: var(--wide-page);
-    margin: var(--spacer) var(--page-margin);
+    margin: var(--hero-header-margin-block, var(--spacer)) var(--page-margin);
     width: calc(100% - var(--page-margin) * 2);
   }
 }
