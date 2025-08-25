@@ -21,6 +21,8 @@
   to: /talks/
 - from: /workshops/
   to: /talks/
+- from: /learn/courses/
+  to: /courses/
 
 - from: /talks/keynote/
   to: /talks/

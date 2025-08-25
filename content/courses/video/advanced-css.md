@@ -13,7 +13,7 @@ summary: |
   the fundamentals behind
   each technology.
 author: miriam
-permalink: learn/courses/design-with-code/
+permalink: courses/design-with-code/
 ---
 
 {% import 'layout.macros.njk' as layout %}

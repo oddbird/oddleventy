@@ -208,7 +208,7 @@ into the spec, and if you would like to sponsor further development, please
 {% callout 'note', false %}
 Interested in learning more about anchor positioning?
 Sign up for our free weekly
-[CSS anchor positioning email course](/learn/courses/anchor-positioning).
+[CSS anchor positioning email course](/courses/anchor-positioning).
 {% endcallout %}
 
 ## Sponsor us
