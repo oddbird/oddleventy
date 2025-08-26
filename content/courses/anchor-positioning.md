@@ -2,6 +2,7 @@
 title: Create Performant Layouts and Resilient Dropdowns
 sub: This CSS anchor positioning course teaches you how
 author: james
+date: 2025-04-28
 extended: |
   James added key features to the Anchor Positioning polyfill, and helped
   clients troubleshoot anchor positioning in a variety of frameworks. He has

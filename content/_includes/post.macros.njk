@@ -399,6 +399,7 @@ params:
   <p class="byline">
     {%- set is_episode = post.data.tags and post.data.tags | pageType('tag') in ['Podcast', 'Video', 'Winging It'] -%}
     {%- set is_talk = post.data.tags and ('_talk' in post.data.tags) -%}
+    {%- set is_course = post.data.tags and post.data.tags | pageType('tag') == 'Course' -%}
     {% if is_episode -%}
       {{ linked(
         venue=post.data.venue,
@@ -429,7 +430,7 @@ params:
 
       {{ client(post.data.client) }}
     {%- endif %}
-    {% if dateformat and not is_talk %}
+    {% if dateformat and not is_talk and not is_course %}
       {{ pubdate(post.page.date, post.data.end, dateformat) }}
     {% endif %}
     {%- if is_episode and post.data.length %}
