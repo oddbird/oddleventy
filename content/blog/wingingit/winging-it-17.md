@@ -17,6 +17,7 @@ image:
 media:
   - youtube: py41Ys-iRvk
 series: revisiting fluid typography
+related_tag: Typography
 summary: |
   Miriam's been asking questions
   about fluid typography,
