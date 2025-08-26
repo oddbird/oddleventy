@@ -3,6 +3,10 @@ title: Visualizing Responsive Typography
 sub: What do all the numbers in our `clamp()` do?
 author: miriam
 date: 2025-08-26
+image:
+  src: blog/2025/tips-tricks-04.jpg
+  alt: >
+    Miriam gesturing as she talks in a video thumbnail
 tags:
   - Article
   - CSS
