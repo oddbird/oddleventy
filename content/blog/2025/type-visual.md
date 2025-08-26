@@ -59,7 +59,7 @@ Tools like [Utopia.fyi](https://utopia.fyi/type/calculator/)
 will give you a more complex output
 with several parts:
 
-```
+```css
 :root {
   --step-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
 }
@@ -87,7 +87,7 @@ at half the rate of the viewport,
 but even that seems too dramatic.
 The [default scale from Utopia.fyi](https://utopia.fyi/type/calculator/)
 uses `0.2273vw` for the primary font size.
-That's a of `1px` font-size change for every
+That's a `1px` font-size change for every
 `440px` of viewport resizing!
 Even the largest font in that scale
 uses less than a `2vw` response rate.
@@ -187,7 +187,7 @@ at least on all modern browsers.
 
 Utopia helpfully provides a warning
 when we create scales that are inaccessible.
-Maybe I can add that to my demo is well.
+Maybe I can add that to my demo as well.
 In the meantime,
 play with that 'page zoom' slider
 to test different values
