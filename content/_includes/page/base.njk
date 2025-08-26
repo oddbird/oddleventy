@@ -42,7 +42,9 @@
                   content=post.name(post_item),
                   url=post_item.page.url if not is_current_page else none
                 ) }}
-                {{ post_item.page.sub if post_item.page.sub else '' }}
+                {% if post_item.data.sub and not is_current_page %}
+                  &ndash; <em>{{ post_item.data.sub }}</em>
+                {% endif %}
               </li>
             {% endfor %}
           </ol>
