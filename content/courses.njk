@@ -1,0 +1,16 @@
+---
+title: Courses
+index: Course
+list_label: All Courses
+sub: Frontend web development courses for curious developers
+summary: |
+  Video and email courses for frontend web developers on modern CSS including
+  anchor positioning, grid & subgrid, container queries and more!
+---
+
+{% import 'quotes.macros.njk' as quotes %}
+
+{{ quotes.find(
+  collections.all,
+  slugs=['fits-together', 'head-around']
+) }}

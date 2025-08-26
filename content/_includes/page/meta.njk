@@ -45,7 +45,7 @@
           {{ post.by(author, collections) }}
           {{ linked | safe }}
           {{ post.client(client) }}
-          {%- if not is_talk %}
+          {%- if not is_talk and not is_course %}
             {{ post.pubdate(
               start=page.date,
               end=end,

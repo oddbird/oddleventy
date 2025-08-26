@@ -17,6 +17,9 @@
 {# is this page a Podcast, Video, or Winging It episode page? #}
 {%- set is_episode = tags | pageType('tag') in ['Podcast', 'Video', 'Winging It'] -%}
 
+{# is this page a Course page? #}
+{%- set is_course = tags | pageType('tag') == 'Course' -%}
+
 {# based on the above, what microformats should be applied? #}
 {# see: https://microformats.org/wiki/microformats2 #}
 {%- set hclass = 'h-feed' if is_feed else ('h-entry' if is_entry else none) -%}

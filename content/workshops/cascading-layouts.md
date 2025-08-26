@@ -75,7 +75,7 @@ press:
     face: kevin-powell.jpg
     url: https://www.youtube.com/kevinpowell
   - text: |
-      She doesn’t just teach how things work,
+      Miriam doesn’t just teach how things work,
       she explains why they work that way,
       and how everything fits together.
       It was a treat to learn

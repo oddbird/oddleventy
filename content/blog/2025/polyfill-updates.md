@@ -164,7 +164,7 @@ more.
 {% callout 'note', false %}
 Interested in learning more about anchor positioning?
 Sign up for our free weekly
-[CSS anchor positioning email course](/learn/courses/anchor-positioning).
+[CSS anchor positioning email course](/courses/anchor-positioning).
 {% endcallout %}
 
 ## Can you help?

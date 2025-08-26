@@ -35,4 +35,4 @@ unlocked by anchor positioning.
 If you're not able to join live, come back
 to watch the recording and review the slides anytime.
 To go deeper, sign up for the
-[CSS anchor positioning email course](/learn/courses/anchor-positioning/).
+[CSS anchor positioning email course](/courses/anchor-positioning/).

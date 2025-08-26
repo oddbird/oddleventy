@@ -122,7 +122,7 @@ that impact how you use anchor positioning, so not all CSS has to be parsed.
 {% callout 'note', false %}
 Interested in learning more about anchor positioning?
 Sign up for our free weekly
-[CSS anchor positioning email course](/learn/courses/anchor-positioning).
+[CSS anchor positioning email course](/courses/anchor-positioning).
 {% endcallout %}
 
 ## Coming soon
