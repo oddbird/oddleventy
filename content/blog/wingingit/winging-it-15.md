@@ -11,6 +11,7 @@ author:
   - stacy
 date: 2025-01-24
 series: revisiting fluid typography
+related_tag: Typography
 length: 57 mins
 image:
   src: winging-it/winging-it-15.jpg
