@@ -10,6 +10,7 @@ date: 2020-01-31
 end: 2023-04-30
 tags:
   - Manufacturing Sector
+  - Business Operations
 people:
   - &ryan
     name: Ryan Hochstetler

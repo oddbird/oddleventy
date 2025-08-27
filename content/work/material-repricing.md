@@ -9,6 +9,7 @@ client: &client General Stamping & Metalworks
 date: 2024-01-31
 tags:
   - Manufacturing Sector
+  - Business Operations
 people:
   - &ryan
     name: Ryan Hochstetler
