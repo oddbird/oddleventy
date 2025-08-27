@@ -94,7 +94,7 @@ to see notes all the time,
 we created an expandable sidebar,
 allowing users to focus
 on the most imporant information
-for them
+that is most imporant to them
 at any given time.
 
 {% call embed.media_block(
@@ -112,7 +112,7 @@ As we created mockups,
 we documented the styles and components
 in a component library
 using Figma
-to streamline design iteration
+to streamline iteration
 and keep the design consistent.
 
 {% call embed.media_block(
@@ -123,5 +123,27 @@ and keep the design consistent.
   name='desktop-work'
 ) %}
 {% endcall %}
+
+## Ongoing Partnership
+
+### Multi-Project Relationship
+
+This is the second
+business operations platform
+we have created with GSM
+to streamline their
+internal processes
+and respond to customers
+with accurate repricing information
+more quickly.
+
+### Minimal Maintenance
+
+Because the code is resilient
+and built with best practices,
+maintenance is minimal,
+allowing GSM to spend time
+testing and honing their operations
+instead of reporting technical issues.
 
 {{ quotes.grid(press) }}
