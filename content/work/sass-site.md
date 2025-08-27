@@ -95,4 +95,22 @@ used to quickly learn and prototype Sass, or to report bugs in Sass.
 
 {% endcall %}
 
+{{ embed.figure(
+  data=[{
+    img: 'work/google/sass-language-website.png',
+    alt: 'Sass language homepage'
+  }],
+  class='extend-large',
+  caption='We rewrote sass-lang.com from the ground up to make it easier to work on, update, and deploy.'
+) }}
+
+{{ embed.figure(
+  data=[{
+    img: 'work/google/sass-site-playground-responsive.png',
+    alt: 'Sass playground for large and small screens'
+  }],
+  class='extend-large',
+  caption='A responsive playground to learn, prototype, and report bugs in Sass.'
+) }}
+
 {{ quotes.grid(press) }}
