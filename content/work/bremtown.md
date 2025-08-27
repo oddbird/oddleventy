@@ -18,7 +18,6 @@ links:
   website: https://www.bremtown.com/
   spec book: https://spec.bremtown.com/
 tags:
-  - Case Study
   - Manufacturing Sector
 sample:
   desktop:
@@ -104,37 +103,29 @@ all available product options.
 
 {% endcall %}
 
-## Brand & Logo
+## Intuitive & Scalable Website with Wagtail CMS
 
-We started with brand and logo redesign
-to establish the new look and feel
-that would reflect
+### Refreshed Logo & Brand
+
+A redesign to reflect
 Bremtown's reimagination
-of the custom cabinetry industry.
+of the custom cabinetry industry,
+focused on relationships
+and a streamlined process.
 
-## Responsive & Accessible Website
+### User-Focused Message
 
-Working within the structure
-of the new brand
-as well as some established layouts and components,
-we designed a responsive website
-that meets WCAG 2.1 accessibility standards
-with CMS components
-that are user-friendly and scalable.
-
-<p style="font-size: 1.5rem;">
-Bremtown's website is responsive
-and meets WCAG accessibility standards.
-<p>
-
-We helped craft the marketing messages
-and recommended images
-to support the
-cabintry-reimagined narrative
-and to reach
-three different types
-of website visitors
+Marketing narrative
+that speaks to
+three types of website visitors
 with different priorities.
+
+### Responsive & Accessible Experience
+
+A responsive website
+that meets WCAG 2.1 accessibility standards
+with Wagtail CMS components
+that are user-friendly and scalable.
 
 {% call embed.media_block(
   media=embed.img(
@@ -146,38 +137,28 @@ with different priorities.
 ) %}
 {% endcall %}
 
-## Web Platform
+## Lead Generating Product Platform
 
-We created a brand new web platform
-based on Bremtown's printed spec book
-for marketing their products
-to dealers, interior designers,
-and design firms
-with the goal of establishing
-new partnerships more quickly
-and streamlining existing processes
-for current partners.
-The interactive User's Guide
-teaches new customers
+### Groundbreaking Spec Site
+
+An online, searchable product catalog
+allows partners
+to search and select products
+more quickly than the print version.
+
+ ### Increased Lead Generation
+
+Highly-visual spec book
+makes ordering more intuitive for designers,
+leading to an immediate increase
+in lead generation.
+
+### Self-guided Onboarding
+
+Interactive User’s Guide
+teaches new partners
 how to use the spec site
-with an intuitive, self-guided process.
-
-<p style="font-size: 1.5rem;">
-Within weeks of launch,
-Bremtown reported an increase
-in the rate of new partnerships!
-<p>
-
-Starting with wireframes,
-we iterated quickly
-based on end-user feedback.
-Next we created
-interactive mockups
-showing user flow
-and component interaction,
-creating a visual style guide
-of components along the way
-to streamline the iteration process.
+in a self-guided process.
 
 {% call embed.media_block(
   media=embed.img(
@@ -192,11 +173,22 @@ to streamline the iteration process.
 
 ## Ongoing Partnership
 
+### Daily Collaboration
+
 We continue to work with Bremtown,
-responding to their needs daily.
+responding to their feedback
+on new feature development daily.
+
+### Minimal Maintenance
+
 Because the code is resilient
 and built with best practices,
-maintenance is minimal.
-This allows us
+maintenance is minimal, allowing us
 to spend the majority of our time
 on new feature development.
+
+One stylesheet for both sites means
+they share the same design tokens
+making them consistent,
+and much easier to maintain
+over time.
