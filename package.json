@@ -64,7 +64,7 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-    "@11ty/is-land": "^4.0.1",
+    "@11ty/is-land": "^5.0.0",
     "@babel/core": "^7.28.3",
     "@babel/preset-env": "^7.28.3",
     "@date-fns/utc": "^2.1.1",
