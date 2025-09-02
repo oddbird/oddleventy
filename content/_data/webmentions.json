@@ -1,6 +1,29 @@
 {
-  "lastFetched": "2025-08-25T08:08:48.693Z",
+  "lastFetched": "2025-09-02T15:20:58.592Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Piccalilli",
+        "photo": "https://avatars.webmention.io/conocybe.us-west.host.bsky.network/29b8dd7bcc3f775209cac5cba73211e324c77855390d4f9174d076de8ed52b50.jpg",
+        "url": "https://bsky.app/profile/piccalil.li"
+      },
+      "url": "https://bsky.app/profile/did:plc:lyk2pixxcmyeu4jrapaq26fy/post/3lxh6mbysbs22",
+      "published": "2025-08-28T09:00:52+00:00",
+      "wm-received": "2025-08-28T09:01:16Z",
+      "wm-id": 1934114,
+      "wm-source": "https://bsky.brid.gy/convert/web/at://did:plc:lyk2pixxcmyeu4jrapaq26fy/app.bsky.feed.post/3lxh6mbysbs22%23bridgy-fed-create",
+      "wm-target": "https://www.oddbird.net/2025/08/26/type-visual/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "The last post of a fantastic series by Mia here. There’s some great visualisations that’ll help you really understand fluid/responsive typography. \n\n<a href=\"https://www.oddbird.net/2025/08/26/type-visual/\">www.oddbird.net/2025/08/26/t...</a>",
+        "text": "The last post of a fantastic series by Mia here. There’s some great visualisations that’ll help you really understand fluid/responsive typography. \n\nwww.oddbird.net/2025/08/26/t..."
+      },
+      "mention-of": "https://www.oddbird.net/2025/08/26/type-visual/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
