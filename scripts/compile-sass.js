@@ -70,6 +70,7 @@ Promise.all([
   compileSass({ name: 'screen', usePostCSS: true }),
   compileSass({ name: 'styleguide', usePostCSS: true }),
   compileSass({ name: 'json' }),
+  compileSass({ name: 'nav-dropdown' }),
 
   // page-specific CSS; this should maybe not be hardcoded?
   compileSass({ name: 'page/support-unknown', usePostCSS: true }),

@@ -9,6 +9,7 @@ images: ./src/images/
 feed: /feed.atom
 styles:
   - screen.css
+  - nav-dropdown.css
 facebook_id: 1820980378150914
 social:
   - email: birds
