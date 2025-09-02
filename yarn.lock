@@ -159,10 +159,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/is-land@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "@11ty/is-land@npm:4.0.1"
-  checksum: 10/789fb38d329fbd1b00b1989038b5c6ffa254bc7e9a32d0e35f4ac1d9113e06dab53ae859d11ce0155d2f9765c72d9abf9971ab7b433918e569973da5feb766f9
+"@11ty/is-land@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@11ty/is-land@npm:5.0.0"
+  checksum: 10/b26e753a52b49df0e2949e5e89c50b628c0db9af66cbeb029d3db3eee7e1f64fa5b26bfea6fc28a4702b976f2646c7e833d9a8d5d1eaf7893e8372531adb53a4
   languageName: node
   linkType: hard
 
@@ -9367,7 +9367,7 @@ __metadata:
     "@11ty/eleventy-img": "npm:^6.0.4"
     "@11ty/eleventy-plugin-rss": "npm:^2.0.4"
     "@11ty/eleventy-plugin-syntaxhighlight": "npm:^5.0.2"
-    "@11ty/is-land": "npm:^4.0.1"
+    "@11ty/is-land": "npm:^5.0.0"
     "@algolia/algoliasearch-netlify-frontend": "npm:^1.0.15"
     "@babel/core": "npm:^7.28.3"
     "@babel/preset-env": "npm:^7.28.3"
