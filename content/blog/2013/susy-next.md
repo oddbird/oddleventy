@@ -58,7 +58,7 @@ Please welcome the Susy Next team:
 - [Scott Kellum][] \[[@scottkellum]\] is a designer at [VOX Media]. He
   created [Singularity] for managing asymmetric grids, as well as
   [Sassy Math], [Modular Scale], and more.
-- [Rachel Nabors][] \[[@rachelnabors]\] is a front-ender & UI lead at
+- Rachel Nabors \[[@rachelnabors]\] is a front-ender & UI lead at
   [Ruzuku] an award-winning comicker, developer, Susy contributor, and
   a regular speaker at web conferences.
 - [Danny Palmer][] \[[@dannyprose]\] is an interactive creative and
@@ -95,7 +95,6 @@ help make it a community project. Stay tuned!
 [vox media]: https://corp.voxmedia.com/
 [sassy math]: https://github.com/at-import/Sassy-math
 [modular scale]: https://github.com/modularscale/modularscale-sass
-[rachel nabors]: https://github.com/rachelnabors
 [@rachelnabors]: https://twitter.com/rachelnabors
 [ruzuku]: https://www.ruzuku.com/
 [danny palmer]: https://github.com/dannyprose/
