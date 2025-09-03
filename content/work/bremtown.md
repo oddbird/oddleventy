@@ -103,7 +103,7 @@ all available product options.
 
 {% endcall %}
 
-## Intuitive & Scalable Website with Wagtail CMS
+## Intuitive & Scalable Website with WordPress
 
 ### Refreshed Logo & Brand
 
@@ -124,7 +124,7 @@ with different priorities.
 
 A responsive website
 that meets WCAG 2.1 accessibility standards
-with Wagtail CMS components
+with WordPress CMS components
 that are user-friendly and scalable.
 
 {% call embed.media_block(
