@@ -52,7 +52,6 @@
   "dependencies": {
     "@algolia/algoliasearch-netlify-frontend": "^1.0.15",
     "@oddbird/browser-support": "^0.1.0",
-    "@oddbird/css-anchor-positioning": "^0.6.1",
     "@oddbird/popover-polyfill": "^0.6.1",
     "accoutrement": "^4.0.5",
     "cascading-color-systems": "^0.1.0-beta.17",
