@@ -137,7 +137,7 @@ that are user-friendly and scalable.
 ) %}
 {% endcall %}
 
-## Lead Generating Product Platform
+## Lead Generating Product Platform with Wagtail & htmx
 
 ### Groundbreaking Spec Site
 
