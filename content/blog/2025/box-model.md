@@ -15,7 +15,7 @@ tags:
   - Layout
 related_tag: CSS
 summary: |
-  Setting the box-model to `border-box`
+  Setting the `box-sizing` model to `border-box`
   is one of the few remaining
   CSS 'resets' used across most projects.
   But there are two common approaches,
@@ -95,20 +95,20 @@ that would be even more noticeable!
 
 Of course,
 we could still argue
-that `box-model` is an outlier,
+that `box-sizing` is an outlier,
 and should be one of the exceptions.
 The argument I've seen
-comes from way back when `box-model`
+comes from way back when `box-sizing`
 was first introduced --
 and it was very specific to the transitional period
-before `box-model` was widely used.
+before `box-sizing` was widely used.
 
 The claim is that
 we might still have some legacy components
 or third-party widgets on our site
 that still rely on a _content-box_ model.
-By setting `box-model` to `inherit`,
-we can change our box-model on the widget container,
+By setting `box-sizing` to `inherit`,
+we can change our box model on the widget container,
 and it will apply to everything inside.
 The assumption is that any component
 will be designed using one box model or the other --
@@ -122,11 +122,11 @@ without relying on inheritance:
 
 ```css
 /* set it everywhere */
-* { box-model: border-box; }
+* { box-sizing: border-box; }
 
 /* override it in context */
 .content-box-sizing, .content-box-sizing * {
-  box-model: content-box;
+  box-sizing: content-box;
 }
 ```
 
@@ -135,7 +135,7 @@ and it's less code by default.
 But more important to me,
 _that's not the best use of `box-sizing`_.
 
-## Box-model is more useful when it doesn't inherit!
+## Box-sizing is more useful when it doesn't inherit!
 
 Contrary to popular belief,
 there's not a _modern_ `border-box` model,
@@ -184,7 +184,7 @@ that adds or removes the borders and padding:
 }
 ```
 
-When we're using `box-model` in this way --
+When we're using `box-sizing` in this way --
 _the way it was intended!_ --
 inheritance would only get in the way.
 I specifically want the ability to size containers
