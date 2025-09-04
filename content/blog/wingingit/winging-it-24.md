@@ -1,5 +1,6 @@
 ---
 title: Mixins & Functions to Streamline CSS
+sub: With special guest Roma Komarov
 episode: 24
 tags:
   - CSS
