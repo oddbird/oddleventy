@@ -69,7 +69,7 @@ and backend development.
 
 - [Functional Capturing](https://blog.kizu.dev/functional-capturing/)
 - [Indirect Cyclic Conditions](https://kizu.dev/indirect-cyclic-conditions/)
-- [Mixins & Functions](https://css.oddbird.net/sasslike/mixins-functions/)
+- [CSS Mixins & Functions Explainer](https://css.oddbird.net/sasslike/mixins-functions/)
 - [W3C CSS Functions and Mixins Module](https://www.w3.org/TR/css-mixins-1/)
 - [Mixins Browser Support: Chrome](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) (CSSMixins flag)
 - [Functions Browser Support Chrome with Experimental Web Platform Features Flag](https://slides.oddbird.net/mixins/cssday/#slide-30)
