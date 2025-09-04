@@ -188,7 +188,7 @@ to spend the majority of our time
 on new feature development.
 
 One stylesheet for both sites means
-they share the same design tokens
-making them consistent,
+they share the same design tokens,
+making them consistent
 and much easier to maintain
 over time.
