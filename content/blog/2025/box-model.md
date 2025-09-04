@@ -132,7 +132,7 @@ without relying on inheritance:
 
 This isn't more difficult than inheritance,
 and it's less code by default.
-But more important to me,
+But more importantly,
 _that's not the best use of `box-sizing`_.
 
 ## Box-sizing is more useful when it doesn't inherit!
@@ -149,7 +149,7 @@ there are great reasons to use
 `content-box` sizing
 in modern layouts!
 
-This may seem to obvious,
+This may seem to be obvious,
 but the `content-box` model is useful
 _when we care about the size of the content_.
 I find that most useful for wrapping containers.
@@ -159,7 +159,7 @@ I care about the line-length available in the `content-box`.
 Borders and padding should be additional,
 rather than eating into the content.
 
-I find this is often true with generated
+This is often true with generated
 `::before` and `::after` content as well --
 which is why I don't generally change the default
 on pseudo-elements.
@@ -200,3 +200,16 @@ and even simpler to handle on a case-by-case basis.
 Please don't inherit the box model.
 It starts you off in the wrong mindset,
 just to solve a problem that doesn't really exist.
+
+{% callout 'note', false %}
+If you enjoy Miriam's writing
+on modern CSS,
+consider booking her
+[Cascading Layouts Workshop](/workshops/cascading-layouts/)
+at your company
+to take your sites
+and your team's skills
+to the next level.
+
+[Book a workshop for your company »](/workshops/cascading-layouts/#schedule-a-workshop)
+{% endcallout %}
