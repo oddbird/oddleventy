@@ -9,6 +9,7 @@ client: &client General Stamping & Metalworks
 date: 2024-01-31
 tags:
   - Manufacturing Sector
+  - Business Operations
 people:
   - &ryan
     name: Ryan Hochstetler
@@ -82,5 +83,68 @@ PDF reports with one click.
 {% endcall %}
 
 {% endcall %}
+
+## Responsive Web App
+
+The staff at GSM
+use this application
+on a variety of devices
+from desktops to tablets.
+Because users don't need
+to see notes all the time,
+we created an expandable sidebar,
+allowing users to focus
+on the information
+that is most important to them
+at any given time.
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/material-pricing/material-reprice-responsive-devices.png',
+    alt=''
+  ),
+  name='desktop-work'
+) %}
+{% endcall %}
+
+## Visual Component Library
+
+As we created mockups,
+we documented the styles and components
+in a component library
+using Figma
+to streamline iteration
+and keep the design consistent.
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/material-pricing/component-library.png',
+    alt=''
+  ),
+  name='desktop-work'
+) %}
+{% endcall %}
+
+## Ongoing Partnership
+
+### Multi-Project Relationship
+
+This is the second
+business operations platform
+we have created with GSM
+to streamline their
+internal processes
+and respond to customers
+with accurate repricing information
+more quickly.
+
+### Minimal Maintenance
+
+Because the code is resilient
+and built with best practices,
+maintenance is minimal,
+allowing GSM to spend time
+testing and honing their operations
+instead of reporting technical issues.
 
 {{ quotes.grid(press) }}

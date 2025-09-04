@@ -102,3 +102,93 @@ all available product options.
 {% endcall %}
 
 {% endcall %}
+
+## Intuitive & Scalable Website with WordPress
+
+### Refreshed Logo & Brand
+
+A redesign to reflect
+Bremtown's reimagination
+of the custom cabinetry industry,
+focused on relationships
+and a streamlined process.
+
+### User-Focused Message
+
+Marketing narrative
+that speaks to
+three types of website visitors
+with different priorities.
+
+### Responsive & Accessible Experience
+
+A responsive website
+that meets WCAG 2.1 accessibility standards
+with WordPress CMS components
+that are user-friendly and scalable.
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/bremtown/marketing-spec-site-responsive.png',
+    alt='Bremtown marketing site for designers to browse cabinetry products on large and small screens',
+    caption='Rebranded, accessible, and responsive marketing website with imagined marketing narrative'
+  ),
+  name='desktop-work'
+) %}
+{% endcall %}
+
+## Lead Generating Product Platform with Wagtail & htmx
+
+### Groundbreaking Spec Site
+
+An online, searchable product catalog
+allows partners
+to search and select products
+more quickly than the print version.
+
+ ### Increased Lead Generation
+
+Highly-visual spec book
+makes ordering more intuitive for designers,
+leading to an immediate increase
+in lead generation.
+
+### Self-guided Onboarding
+
+Interactive User’s Guide
+teaches new partners
+how to use the spec site
+in a self-guided process.
+
+{% call embed.media_block(
+  media=embed.img(
+    src='work/bremtown/search-filter-user-guide.png',
+    alt='Bremtown spec site for designers to browse cabinetry products on large and small screens',
+    caption='Powered by Wagtail CMS, information is presented to end users as an interactive, filterable, and visual catalog that lays out all available product options'
+  ),
+  name='desktop-work'
+) %}
+
+{% endcall %}
+
+## Ongoing Partnership
+
+### Daily Collaboration
+
+We continue to work with Bremtown,
+responding to their feedback
+on new feature development daily.
+
+### Minimal Maintenance
+
+Because the code is resilient
+and built with best practices,
+maintenance is minimal, allowing us
+to spend the majority of our time
+on new feature development.
+
+One stylesheet for both sites means
+they share the same design tokens,
+making them consistent
+and much easier to maintain
+over time.
