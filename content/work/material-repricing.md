@@ -94,8 +94,8 @@ Because users don't need
 to see notes all the time,
 we created an expandable sidebar,
 allowing users to focus
-on the most imporant information
-that is most imporant to them
+on the information
+that is most important to them
 at any given time.
 
 {% call embed.media_block(
