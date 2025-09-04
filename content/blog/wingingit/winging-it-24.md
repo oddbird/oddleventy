@@ -73,3 +73,4 @@ and backend development.
 - [W3C CSS Functions and Mixins Module](https://www.w3.org/TR/css-mixins-1/)
 - [Mixins Browser Support: Chrome](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) (CSSMixins flag)
 - [Functions Browser Support Chrome with Experimental Web Platform Features Flag](https://slides.oddbird.net/mixins/cssday/#slide-30)
+- [Can you style an element based on the presence or absence of a custom property?](https://front-end.social/@heydon/112234057015687360)
