@@ -1,0 +1,45 @@
+// The anchor positioning polyfill doesn't support implicit anchors with popover
+[dropdown-menu] {
+  anchor-scope: --dropdown-menu;
+
+  button {
+    anchor-name: --dropdown-menu;
+
+    &::before {
+      content: '›';
+      display: inline-block;
+      rotate: var(--rotate-btn-icon, 0);
+      transition: rotate var(--fast) ease-in-out;
+    }
+  }
+
+  [popover] {
+    background-color: var(--callout);
+    border-width: var(--border-width) 0 0 0;
+    border-color: var(--active);
+
+    // Required for anchor positioning polyfill
+    inset: auto;
+    margin: unset;
+    padding: 0;
+    position: absolute;
+    position-anchor: --dropdown-menu;
+    position-area: block-end span-inline-end;
+    position-try-fallbacks: block-end span-inline-start;
+  }
+
+  // Needs to have separate selectors as :popover-open invalidates the whole rule on unsupported browsers
+  &:has(:popover-open),
+  &:has(.\:popover-open) {
+    button::before {
+      rotate: 0.25turn;
+    }
+  }
+}
+
+// Hide popover until polyfilled
+@supports not selector(:popover-open) {
+  [popover]:not(.\:popover-open) {
+    display: none;
+  }
+}
