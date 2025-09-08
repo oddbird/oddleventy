@@ -20,8 +20,8 @@
         "https://oyster.us-east.host.bsky.network/xrpc/com.atproto.sync.getBlob?did=did:plc:xbj7qbl7qmoo7dpf5dheplex&cid=bafkreieung2o4djfr7m5c6gvo5hu34kcs7jgdddebq4a2v2mokc5ahb5wa"
       ],
       "content": {
-        "html": "Good timing on this post by <a href=\"https://bsky.app/profile/miriam.codes\">@miriam.codes</a>, I have a draft in my pre-prod database about something similar, and this gives me the 3rd example I was looking for ????\n\n<a href=\"https://www.oddbird.net/2025/09/04/box-model/\">www.oddbird.net/2025/09/04/b...</a>",
-        "text": "Good timing on this post by @miriam.codes, I have a draft in my pre-prod database about something similar, and this gives me the 3rd example I was looking for ????\n\nwww.oddbird.net/2025/09/04/b..."
+        "html": "Good timing on this post by <a href=\"https://bsky.app/profile/miriam.codes\">@miriam.codes</a>, I have a draft in my pre-prod database about something similar, and this gives me the 3rd example I was looking for 😅",
+        "text": "Good timing on this post by @miriam.codes, I have a draft in my pre-prod database about something similar, and this gives me the 3rd example I was looking for 😅"
       },
       "mention-of": "https://www.oddbird.net/2025/09/04/box-model/",
       "wm-property": "mention-of",
@@ -54,7 +54,7 @@
       "type": "entry",
       "author": {
         "type": "card",
-        "name": "????Wiiお姉さん ???? ????️‍⚧️",
+        "name": "𒀭Wiiお姉さん 💜 🏳️‍⚧️",
         "photo": "https://avatars.webmention.io/cdn.masto.host/e5c3b34aea2922aba7ca2e7239962e83d8a8a4e5fd3faa69d2e4ac31cf3c5c21.jpg",
         "url": "https://tech.lgbt/@darkwiiplayer"
       },
