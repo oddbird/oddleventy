@@ -1,6 +1,32 @@
 {
-  "lastFetched": "2025-09-02T15:20:58.592Z",
+  "lastFetched": "2025-09-08T08:08:41.273Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Kevin Powell",
+        "photo": "https://avatars.webmention.io/oyster.us-east.host.bsky.network/79c903b9a5c01c8a35e30e6d99e1e4851f535e9b8241f82e992f9daa005cefc3.jpg",
+        "url": "https://bsky.app/profile/kevinpowell.co"
+      },
+      "url": "https://bsky.app/profile/did:plc:xbj7qbl7qmoo7dpf5dheplex/post/3ly3uw2ghks2k",
+      "published": "2025-09-05T14:33:18+00:00",
+      "wm-received": "2025-09-05T14:33:25Z",
+      "wm-id": 1936493,
+      "wm-source": "https://bsky.brid.gy/convert/web/at://did:plc:xbj7qbl7qmoo7dpf5dheplex/app.bsky.feed.post/3ly3uw2ghks2k%23bridgy-fed-create",
+      "wm-target": "https://www.oddbird.net/2025/09/04/box-model/",
+      "wm-protocol": "webmention",
+      "photo": [
+        "https://oyster.us-east.host.bsky.network/xrpc/com.atproto.sync.getBlob?did=did:plc:xbj7qbl7qmoo7dpf5dheplex&cid=bafkreieung2o4djfr7m5c6gvo5hu34kcs7jgdddebq4a2v2mokc5ahb5wa"
+      ],
+      "content": {
+        "html": "Good timing on this post by <a href=\"https://bsky.app/profile/miriam.codes\">@miriam.codes</a>, I have a draft in my pre-prod database about something similar, and this gives me the 3rd example I was looking for ????\n\n<a href=\"https://www.oddbird.net/2025/09/04/box-model/\">www.oddbird.net/2025/09/04/b...</a>",
+        "text": "Good timing on this post by @miriam.codes, I have a draft in my pre-prod database about something similar, and this gives me the 3rd example I was looking for ????\n\nwww.oddbird.net/2025/09/04/b..."
+      },
+      "mention-of": "https://www.oddbird.net/2025/09/04/box-model/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
