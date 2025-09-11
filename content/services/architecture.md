@@ -4,6 +4,7 @@ sub: Want to reduce technical debt and long-term maintenance?
 action:
   text: Let's chat
   url: '#chat'
+cta: false
 included:
   - title: No Obligation
     text: We're always happy to talk, and we're focused on helping, not selling.
