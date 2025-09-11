@@ -332,12 +332,16 @@ including [David Herron](/author/david),
 
 {{ quotes.find(
   collections.all,
-  slugs=['trust-enough', 'ins-outs', 'easy-understand', 'fits-together']
-) }}
-
-{{ quotes.find(
-  collections.all,
-  slugs=['unique-talent', 'fav-dev', 'clear-competent', 'thorny-subjects']
+  slugs=[
+    'trust-enough', 
+    'ins-outs', 
+    'easy-understand', 
+    'fits-together', 
+    'unique-talent', 
+    'fav-dev', 
+    'clear-competent', 
+    'thorny-subjects'
+   ]
 ) }}
 
 
