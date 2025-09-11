@@ -182,7 +182,7 @@ are a great place to start.
 
 Sometimes all you need
 is a chat with an expert.
-Miriam Suzanne will spend 1 hour
+Miriam Suzanne will spend an hour with you,
 answering your architecture questions,
 recording the conversation along the way.
 
