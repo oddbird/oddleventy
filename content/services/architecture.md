@@ -214,7 +214,7 @@ to talk through your pain points
 and bottlenecks.
 We'll review your code, tools,
 and workflow, and deliver a report
-with recommending strategic updates.
+with recommended strategic updates.
 
 - Dive deep into your architecture
 - Get a report with prioritized action items
