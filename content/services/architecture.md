@@ -195,7 +195,7 @@ and recording the conversation for you.
 - Identify obvious sticking points
 - Outline next steps to bring to your team or boss
 
-**$250**
+**Starts at $250** for one hour.
 
 {{ utility.main_action(
   content='Schedule now »',
@@ -225,7 +225,7 @@ to fit your needs.
 - Time to ask questions and discuss
   next-steps for your code-base
 
-**Starts at $2,000** for a single lesson
+**Starts at $2,000** for a single lesson.
 
 {% endcall %}
 
@@ -248,7 +248,7 @@ to get your team up-to-speed.
 - Experts to take you to the next level
 - Start scaling and reducing costs now
 
-**Starts at $5,000** for an assessment
+**Starts at $5,000** for an assessment.
 
 {% endcall %}
 
