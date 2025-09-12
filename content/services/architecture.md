@@ -150,8 +150,7 @@ to reduce your tech debt.
 
 It's a modernization of your
 application or website,
-starting with the core web technologies
-and working out.
+starting with the core web technologies.
 CSS has come a long way
 since the early days,
 but many sites and apps
@@ -393,7 +392,7 @@ It's more essential than ever
 for us to understand the decisions being made,
 and how they will impact the users
 and the business moving forward.
-There's no replacing Actual Intelligence.
+There's no replacing ✨ Actual Intelligence.
 
 ## What is 'Poetic CSS'?
 
@@ -408,7 +407,7 @@ In practice that means:
 - Start global, end local
 - Everything that can be global should be global
 - Stop naming things that already have names
-- Use selectors for selecting, use layers for layering
+- Use selectors for selecting, use cascade layers for layering
 - Use a wide range of units and intrinsic values to say what you mean
 - Use both logical and physical properties
 - Every layout method has different strengths
@@ -429,18 +428,18 @@ and using brute force or abstinence-only approaches to CSS.
 Everything is re-named.
 Everything is a single class.
 Everything is scoped.
-Nothing is important.
+Nothing is `!important`.
 Everything is flexbox.
 Everything's a utility.
 Everything is `rem` or `em` or `px`.
 But on the whole,
 they still seem unhappy with the results --
 and constantly insist that CSS can't be maintained.
+
 Meanwhile we've been
 happily building large-scale projects
 by using the language as intended,
 and embracing new features as they come along.
-
 Third-party tools come and go,
 but a deep understanding of the language
 allows you to keep working with the grain of the web
