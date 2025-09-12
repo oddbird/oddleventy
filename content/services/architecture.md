@@ -19,7 +19,7 @@ included:
     text: We don't have all the answers, but we know what questions to ask.
     icon: icons/messaging
   - title: Would you like to level up your CSS?
-    text: OddNews [LINK] is packed with CSS demos and tips.
+    text: "[OddNews](/oddnews/) is packed with CSS demos and tips."
     icon: icons/rocket
 press:
   - text: |
