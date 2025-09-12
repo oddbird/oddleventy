@@ -161,7 +161,7 @@ around accessible and performant HTML,
 and make sure everyone on the team
 understands the tools and strategy
 to keep things running smoothly –
-so you can do focus on
+so you can focus on
 your users and business goals.
 
 ## What's the cost?
