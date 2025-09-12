@@ -34,21 +34,22 @@ press:
     face: brad-frost.jpg
     url: https://bradfrost.com/
 summary: |
-  The web allows us to reach a world-wide audience across all internet-connected devices,
+  The web allows us to reach a world-wide audience
+  on any device,
   with the promise of long-term compatibility.
   But many teams get lost
-  trying to re-invent existing features from scratch,
-  or using third-party tools
-  to mask the complexity without addressing it.
+  trying to re-invent browser features,
+  or requiring third-party tools
+  to mask the complexity.
   **It doesn't have to
   be like this!**
 
-  Together
-  we can create a prioritized strategy
+  We can create a prioritized strategy
   to level-up your team
-  and streamline your HTML & CSS
-  so you can scale efficiently,
+  and streamline your HTML/CSS,
+  so you can
   improve performance and reliability,
+  scale efficiently,
   and spend less on maintenance.
 media:
   - span: full
@@ -121,7 +122,7 @@ less maintenance over the long run.
 Third-party tools
 often stand between us
 and the platform features
-that are designed to work everywhere --
+that work everywhere --
 forcing dependency upgrades
 when we could be
 making progressive enhancements.
@@ -155,11 +156,12 @@ CSS has come a long way
 since the early days,
 but many sites and apps
 are still using decade-old approaches.
+
 We'll help you organize your CSS
 around accessible and performant HTML,
 and make sure everyone on the team
 understands the tools and strategy
-to keep things running smoothly –
+to keep things running smoothly --
 so you can focus on
 your users and business goals.
 
@@ -167,7 +169,7 @@ your users and business goals.
 
 **You decide!**
 Start small with a conversation,
-or jump into a full assessment and training.
+jump in to a full assessment and training.
 We can customize the project
 to fit your budget and needs,
 but the options below
@@ -182,13 +184,13 @@ are a great place to start.
 
 {% call layout.block('column') %}
 
-### Quick Fix
+### Expert Advice
 
 Sometimes all you need
 is a chat with an expert.
 Miriam Suzanne will spend an hour with you,
-answering your architecture questions,
-recording the conversation along the way.
+answering your CSS architecture questions,
+and recording the conversation for you.
 
 - Identify obvious sticking points
 - Outline next steps to bring to your team or boss
@@ -204,24 +206,24 @@ recording the conversation along the way.
 
 {% call layout.block('column') %}
 
-### Architecture Audit
+### Tailored Training
 
-Based on 20+ years of working with clients
-and the W3C,
-Miriam will meet with you
-to talk through your pain points
-and bottlenecks.
-We'll review your code, tools,
-and workflow, and deliver a report
-with recommended strategic updates.
+It can be hard staying up to date
+with the latest web features --
+and not every developer has the same
+comfort level with CSS/HTML to begin with.
+That's ok!
+Let us know about your team
+and the issues you're facing,
+and Miriam will put together
+a custom web development curriculum
+to fit your needs.
 
-- Dive deep into your architecture
-- Get a report with prioritized action items
-and recommended tools
+- Customized lessons for your team
+- Time to ask questions and discuss
+  next-steps for your code-base
 
 **Starts at $2,000**
-
-(LET'S CHAT CTA)
 
 {% endcall %}
 
@@ -229,13 +231,15 @@ and recommended tools
 
 ### Frontend Fixup
 
-Your inefficient code
+Technical debt
 is holding your company back,
-but your team is focused elsewhere.
+but your team is focused elsewhere
+or not sure where to start.
 Miriam and the OddBirds
-will define strategic updates,
-make your application performant,
-scalable, and resilient,
+will asses the situation
+and work with you to define a strategy
+to make your application performant,
+scalable, and resilient --
 and provide workshops
 to get your team up-to-speed.
 
@@ -243,8 +247,6 @@ to get your team up-to-speed.
 - Start scaling and reducing costs now
 
 **Starts at $5,000**
-
-(LET'S CHAT CTA)
 
 {% endcall %}
 
