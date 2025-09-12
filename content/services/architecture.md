@@ -215,15 +215,17 @@ comfort level with CSS/HTML to begin with.
 That's ok!
 Let us know about your team
 and the issues you're facing,
-and Miriam will put together
+and Miriam can put together
 a custom web development curriculum
 to fit your needs.
 
-- Customized lessons for your team
+- Choose a common topic,
+  or have Miriam curate a lesson plan
+  specific to your team
 - Time to ask questions and discuss
   next-steps for your code-base
 
-**Starts at $2,000**
+**Starts at $2,000** for a single lesson
 
 {% endcall %}
 
@@ -246,7 +248,7 @@ to get your team up-to-speed.
 - Experts to take you to the next level
 - Start scaling and reducing costs now
 
-**Starts at $5,000**
+**Starts at $5,000** for an assessment
 
 {% endcall %}
 
