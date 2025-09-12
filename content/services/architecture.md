@@ -11,16 +11,16 @@ cta: false
 included:
   - title: No Obligation
     text: We're always happy to talk, and we're focused on helping, not selling.
-    icon: icons/mail-open
+    icon: icons/hand
   - title: Tailored to Your Needs
     text: What's the most difficult problem you're facing?
-    icon: icons/interact
+    icon: icons/tools
   - title: Best Practice is a Conversation
     text: We don't have all the answers, but we know what questions to ask.
-    icon: icons/eye-crossed
+    icon: icons/messaging
   - title: Would you like to level up your CSS?
     text: OddNews [LINK] is packed with CSS demos and tips.
-    icon: icons/tools
+    icon: icons/rocket
 press:
   - text: |
       Miriam knows CSS better
@@ -96,7 +96,7 @@ and how to use them efficiently.
 
 {% call layout.block('column') %}
 
-### Improve Performance
+### Delight Your Users
 
 Keep your users coming back
 with a more performant, reliable,
@@ -143,11 +143,20 @@ to reduce your tech debt.
 
 {% endcall %} {# layout.block('full') #}
 
-## Example (IS THERE A BETTER VIDEO?)
+## What is Poetic CSS Architecture?
+
+Miriam Suzanne
+describes Poetic CSS Architecture,
+why it makes a difference,
+and demos an example
+of what to expect
+if you get
+tailored training
+or a fixup.
 
 {{ embed.figure(media) }}
 
-## What is a Poetic CSS architecture fixup?
+## What is a Poetic CSS Architecture fixup?
 
 It's a modernization of your
 application or website,
@@ -195,7 +204,7 @@ and recording the conversation for you.
 - Identify obvious sticking points
 - Outline next steps to bring to your team or boss
 
-**Starts at $250** for one hour.
+**$250**
 
 {{ utility.main_action(
   content='Schedule now »',
@@ -208,8 +217,13 @@ and recording the conversation for you.
 
 ### Tailored Training
 
-It can be hard staying up to date
-with the latest web features --
+It can be hard to stay up
+on the latest web features.
+That's ok!
+Miriam can create
+a custom web development curriculum
+to address your team's needs.
+<!--
 and not every developer has the same
 comfort level with CSS/HTML to begin with.
 That's ok!
@@ -217,22 +231,34 @@ Let us know about your team
 and the issues you're facing,
 and Miriam can put together
 a custom web development curriculum
-to fit your needs.
+to fit your needs.-->
 
 - Choose a common topic,
-  or have Miriam curate a lesson plan
-  specific to your team
-- Time to ask questions and discuss
+  or a custom lesson plan
+- Ask questions and talk
   next-steps for your code-base
 
-**Starts at $2,000** for a single lesson.
+**Starts at $2,000**
+
+{{ utility.main_action(
+  content='Book now »',
+  url='#chat'
+) }}
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
 ### Frontend Fixup
-
+Tech debt
+is holding your company back,
+but you're not sure
+where to start.
+Miriam and the OddBirds
+will help you make your application
+more performant, scalable,
+and resilient.
+<!--
 Technical debt
 is holding your company back,
 but your team is focused elsewhere
@@ -243,12 +269,17 @@ and work with you to define a strategy
 to make your application performant,
 scalable, and resilient --
 and provide workshops
-to get your team up-to-speed.
+to get your team up-to-speed.-->
 
 - Experts to take you to the next level
 - Start scaling and reducing costs now
 
-**Starts at $5,000** for an assessment.
+**Starts at $5,000**
+
+{{ utility.main_action(
+  content='Lets chat »',
+  url='#chat'
+) }}
 
 {% endcall %}
 
@@ -332,7 +363,7 @@ writing, music, and visual art.
 {% call layout.block('column') %}
 
 {{ contact.form(
-  submit='Book Now',
+  submit='Send Message',
   name='fixup',
   extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
 ) }}
