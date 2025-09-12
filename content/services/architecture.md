@@ -53,7 +53,7 @@ summary: |
   and spend less on maintenance.
 media:
   - span: full
-    youtube: iZZXOuLxagE
+    youtube: Um3tnONShPc
     id: workshop-video
 ---
 
