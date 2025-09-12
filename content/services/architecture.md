@@ -96,7 +96,7 @@ and how to use them efficiently.
 
 {% call layout.block('column') %}
 
-### Delight Your Users
+### Improve Performance
 
 Keep your users coming back
 with a more performant, reliable,
