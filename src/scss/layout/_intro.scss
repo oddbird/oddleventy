@@ -4,11 +4,15 @@
   grid-area: intro;
 
   [data-header='hero'] & {
-    font-size: var(--medium);
     justify-self: var(--hero-header-justify, center);
     max-width: var(--wide-page);
     margin: var(--hero-header-margin-block, var(--spacer)) var(--page-margin);
     width: calc(100% - var(--page-margin) * 2);
+  }
+  
+  // Larger intro type only on pages with hero images
+  [data-header='hero']:has([data-hero]) & {
+    font-size: var(--medium);
   }
 }
 
