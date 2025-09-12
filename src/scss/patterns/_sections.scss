@@ -183,3 +183,31 @@
   );
   padding: var(--spacer) var(--page-margin) calc(var(--spacer) + var(--gutter));
 }
+
+// Gradient Background with inverted links, icons, buttons
+// -------------------------------------------------------
+.fancy-background {
+  --icon-grid-fill: var(--ccs-prime--bg1);
+  --btn-bg: var(--ccs-accent--bg1);
+  --btn-text: var(--text);
+
+  background: linear-gradient(to bottom right,
+      var(--brand-gradient-start),
+      var(--brand-gradient-end));
+  color: var(--bg);
+  padding: var(--spacer) var(--page-margin) calc(var(--spacer) + var(--gutter));
+
+  :any-link {
+    --anchor-fill-hover: var(--ccs-accent--bg3);
+    --link: var(--bg);
+    --link-focus: var(--bg);
+    --underline-color: var(--bg);
+  }
+
+  :is(h2, h3, h4, h5, h6) {
+    --link-focus: var(--bg);
+
+    background: revert;
+    color: var(--bg);
+  }
+}

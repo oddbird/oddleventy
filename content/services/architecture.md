@@ -302,6 +302,14 @@ writing, music, and visual art.
   slugs=['planet', 'like-us']
 ) }}
 
+{% call layout.block(
+  name='full',
+  attrs={
+    'class': 'fancy-background',
+    'data-ccs-colors': 'invert'
+  }
+) %}
+
 ## <a id="chat">Want a CSS architecture fixup? Let's chat.</a>
 
 {% call layout.block(
@@ -334,6 +342,8 @@ writing, music, and visual art.
 {% endcall %} {# layout.grid #}
 
 {% endcall %} {# layout.block #}
+
+{% endcall %} {# layout.block fancy-background #}
 
 {{ quotes.find(
   collections.all,
