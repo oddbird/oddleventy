@@ -62,7 +62,7 @@ media:
 {% import 'birds.macros.njk' as birds %}
 {% import 'embed.macros.njk' as embed %}
 {% import 'utility.macros.njk' as utility %}
-{% import 'oddnews.macros.njk' as oddnews %}
+{% import 'contact.macros.njk' as contact %}
 
 {% call layout.block(
   name='full',
@@ -323,14 +323,10 @@ writing, music, and visual art.
 
 {% call layout.block('column') %}
 
-{{ oddnews.oddnews_signup(
-  heading='Start the Conversation',
-  subheading='Schedule a call to talk through
-  your goals and what type of CSS architecture
-  fixup make sense for you.',
-  tag='course-anchor-positioning',
-  class='headerless',
-  buttonText='Send Message'
+{{ contact.form(
+  submit='Book Now',
+  name='fixup',
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
 ) }}
 
 {% endcall %}
@@ -338,7 +334,6 @@ writing, music, and visual art.
 {% endcall %} {# layout.grid #}
 
 {% endcall %} {# layout.block #}
-
 
 {{ quotes.find(
   collections.all,
