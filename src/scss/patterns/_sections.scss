@@ -191,9 +191,11 @@
   --btn-bg: var(--ccs-accent--bg1);
   --btn-text: var(--text);
 
-  background: linear-gradient(to bottom right,
-      var(--brand-gradient-start),
-      var(--brand-gradient-end));
+  background: linear-gradient(
+    to bottom right,
+    var(--brand-gradient-start),
+    var(--brand-gradient-end)
+  );
   color: var(--bg);
   padding: var(--spacer) var(--page-margin) calc(var(--spacer) + var(--gutter));
 
