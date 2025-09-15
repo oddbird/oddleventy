@@ -257,7 +257,7 @@ and resilient.
 **Starts at $5,000**
 
 {{ utility.main_action(
-  content='Lets chat »',
+  content="Let's chat »",
   url='#chat'
 ) }}
 
