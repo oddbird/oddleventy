@@ -10,7 +10,7 @@ $two-column: 45em;
   display: grid;
   font-size: var(--small);
   grid-area: footer;
-  grid-gap: var(--page-margin);
+  gap: var(--page-margin);
   grid-template: var(
     --footer-template-sm,
     'contact' min-content 'oddnews' min-content 'contentinfo' auto / 100%
@@ -37,7 +37,7 @@ $two-column: 45em;
 
   display: grid;
   grid-area: contentinfo;
-  grid-gap: var(--gutter);
+  gap: var(--gutter);
   grid-template-rows: 1fr auto;
 
   @include config.above($two-column) {

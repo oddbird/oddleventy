@@ -43,7 +43,7 @@
       var(--gutter),
       1fr
     );
-  grid-gap: var(--gutter);
+  gap: var(--gutter);
   margin: var(--gutter) var(--page-margin);
   max-width: var(--wide-page);
 
