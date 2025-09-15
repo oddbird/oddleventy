@@ -274,9 +274,9 @@ and resilient.
 
 Miriam leads a tight-knit team
 of senior front-end developers
-including [David Herron](/author/david),
-[James Stuckey Weber](/author/james), and
-[Stacy Kvernmo](/author/stacy/).
+including [David Herron](/authors/davidh),
+[James Stuckey Weber](/authors/james), and
+[Stacy Kvernmo](/authors/stacy/).
 
 **A developer, teacher,
 and pioneer of modern CSS** --
