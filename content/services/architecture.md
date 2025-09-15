@@ -244,24 +244,12 @@ to address your team's needs.
 ### Frontend Fixup
 Tech debt
 is holding your company back,
-but you're not sure
-where to start.
+and you're not confident
+about moving forward.
 Miriam and the OddBirds
 will help you make your application
 more performant, scalable,
 and resilient.
-<!--
-Technical debt
-is holding your company back,
-but your team is focused elsewhere
-or not sure where to start.
-Miriam and the OddBirds
-will asses the situation
-and work with you to define a strategy
-to make your application performant,
-scalable, and resilient --
-and provide workshops
-to get your team up-to-speed.-->
 
 - Experts to take you to the next level
 - Start scaling and reducing costs now
