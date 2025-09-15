@@ -224,15 +224,6 @@ That's ok!
 Miriam can create
 a custom web development curriculum
 to address your team's needs.
-<!--
-and not every developer has the same
-comfort level with CSS/HTML to begin with.
-That's ok!
-Let us know about your team
-and the issues you're facing,
-and Miriam can put together
-a custom web development curriculum
-to fit your needs.-->
 
 - Choose a common topic,
   or a custom lesson plan
