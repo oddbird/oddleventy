@@ -1,5 +1,5 @@
 [icon-grid] {
-  --fill: var(--icon);
+  --fill: var(--icon-grid-fill, var(--icon));
   --media-justify: start;
 }
 

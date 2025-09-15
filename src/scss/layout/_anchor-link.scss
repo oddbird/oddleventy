@@ -42,7 +42,7 @@
   &:hover,
   &:focus,
   &:active {
-    --fill: var(--ccs-accent--fg2);
+    --fill: var(--anchor-fill-hover, var(--ccs-accent--fg2));
   }
 }
 
