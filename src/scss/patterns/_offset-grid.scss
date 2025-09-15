@@ -6,7 +6,7 @@ $break: 'wide-break';
   --column: full;
 
   display: grid;
-  grid-gap: var(--double-gutter);
+  gap: var(--double-gutter);
   margin: var(--spacer) 0;
   position: relative;
 

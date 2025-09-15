@@ -3,7 +3,7 @@
 [data-ccs-show='modes'] {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: var(--shim);
+  gap: var(--shim);
   list-style: none;
   padding: 0;
 
@@ -18,7 +18,7 @@
 
 [data-ccs-show='color'] {
   display: grid;
-  grid-gap: var(--shim);
+  gap: var(--shim);
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   margin-top: var(--gutter);
 }

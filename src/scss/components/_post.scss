@@ -17,7 +17,7 @@
   );
   display: grid;
   grid-area: post;
-  grid-row-gap: var(--shim);
+  row-gap: var(--shim);
   grid-template:
     [hero-start] 'left type type' var(
       --post-thumb-height,
