@@ -5,7 +5,7 @@ sub: >
   improve your user experience,
   and scale with confidence
 action:
-  text: Let's chat
+  text: Let's chat »
   url: '#chat'
 cta: false
 included:
