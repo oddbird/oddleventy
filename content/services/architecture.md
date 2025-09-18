@@ -209,7 +209,7 @@ and recording the conversation for you.
 
 {{ utility.main_action(
   content='Schedule now »',
-  url='https://calendly.com/oddbirdllc/schedule-a-workshop'
+  url='https://calendly.com/oddbirdllc/css-architecture'
 ) }}
 
 {% endcall %}
@@ -345,7 +345,7 @@ writing, music, and visual art.
 {{ contact.form(
   submit='Send Message',
   name='fixup',
-  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/css-architecture)'
 ) }}
 
 {% endcall %}
