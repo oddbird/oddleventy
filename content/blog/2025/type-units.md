@@ -2,7 +2,7 @@
 title: The best CSS unit might be a combination
 sub: We don't have to choose between `px` and `rem` for spacing
 author: miriam
-date: 2025-09-17
+date: 2025-09-23
 tags:
   - Article
   - CSS
@@ -40,7 +40,7 @@ by calling it `1.25em`,
 and then the user also asks for a `20px` font-size,
 the result will not be agreement
 but a combined `25px` font.
-If we switched to a `px`-only approach,
+If we switch to a `px`-only approach,
 we're ignoring the user preference entirely --
 which is even worse.
 But if we stop doing the math in our heads,
@@ -96,11 +96,10 @@ with a variable in it:
 `calc(1 * var(--negotiated-base-font-size))`.
 Similarly `1em` can be thought of as
 `calc(1 * var(--current-font-size))`.
+
 The difference between `1rem` and `1em`
 is like the difference between `--brand-pink`
 and `currentColor`.
-on the root element,
-
 Both are variables, both are useful,
 but they describe entirely different relationships.
 To ask which one is _better_ in general
@@ -110,7 +109,7 @@ If I want to develop
 [fluid type calculations](/2025/08/26/type-visual/)
 that adapt to local context,
 I'll use `em` and `cqi` (container inline size) values.
-If I want a my calculations to remain consistent
+If I want my calculations to remain consistent
 across the entire page,
 I'll use `rem` and `vi` (viewport inline size) calculations.
 In either case,
@@ -132,7 +131,7 @@ and it can make things less readable
 if we always zoom the spacing
 at the same rate as the text (using `em` or `rem`).
 We end up with excessive white-space
-that ends up pushing our content off-screen.
+that pushes our content off-screen.
 
 I think she's pointing to a worthwhile concern,
 but I came to a slightly different conclusion.
@@ -190,7 +189,7 @@ within a range of font sizes.
 
 The right units
 for any situation
-are _the ones that expresses most clearly
+are _the ones that express most clearly
 what we mean_ --
 and sometimes what we mean
 requires a combination of units.
@@ -198,7 +197,7 @@ requires a combination of units.
 This is the central premise of
 the OddBird approach to
 what we call
-[Poetic CSS architecture](/services/architecture/).
+[Poetic CSS Architecture](/services/architecture/).
 There's no best unit,
 no best layout mode,
 and no best selector.
