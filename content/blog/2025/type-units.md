@@ -10,13 +10,11 @@ tags:
 series: revisiting fluid typography
 related_tag: Typography
 image:
-  src: blog/2025/capital-letters.jpg
+  src: blog/2025/units.jpg
   alt: >
-    Close-up of keys on an old Spanish typewriter,
-    part of the space bar,
-    a, s, d, z, x,
-    and MAYÚSCULAS (capslock)
-    with release above it
+    A measuring tape with both imperial and metric,
+    then a ruler with only metric,
+    and another ruler with combined units
 summary: |
   There are many articles
   and established CSS best-practices
