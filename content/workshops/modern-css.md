@@ -82,7 +82,7 @@ summary: |
 {{ contact.form(
   submit='Book Now',
   name='workshop',
-  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/css-architecture)'
 ) }}
 
 ## What Will Attendees Learn In This Workshop?
@@ -187,5 +187,5 @@ to talk with your team directly:
 {{ contact.form(
   submit='Book Now',
   name='workshop',
-  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/schedule-a-workshop)'
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/css-architecture)'
 ) }}
