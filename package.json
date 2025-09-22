@@ -68,7 +68,7 @@
     "@babel/core": "^7.28.4",
     "@babel/preset-env": "^7.28.3",
     "@date-fns/utc": "^2.1.1",
-    "@eslint/js": "^9.35.0",
+    "@eslint/js": "^9.36.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.1",
