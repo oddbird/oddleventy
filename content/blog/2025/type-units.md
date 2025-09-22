@@ -1,5 +1,5 @@
 ---
-title: The best CSS unit might be a combination
+title: The Best CSS Unit Might Be a Combination
 sub: We don't have to choose between `px` and `rem` for spacing
 author: miriam
 date: 2025-09-23
