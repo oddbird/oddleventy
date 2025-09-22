@@ -207,12 +207,10 @@ we have more tools for clearly expressing our goals.
 {% callout 'note', false %}
 If you enjoy Miriam's writing
 on modern CSS,
-consider booking her
-[Cascading Layouts Workshop](/workshops/cascading-layouts/)
-at your company
-to take your sites
-and your team's skills
-to the next level.
-
-[Book a workshop for your company »](/workshops/cascading-layouts/#schedule-a-workshop)
+we offer
+consulting and training
+around [Poetic CSS Architecture](/services/architecture/) --
+to help you eliminate technical debt
+and build more performant
+sites & applications.
 {% endcallout %}
