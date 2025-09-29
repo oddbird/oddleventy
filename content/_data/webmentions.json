@@ -32,29 +32,6 @@
         "photo": "https://avatars.webmention.io/oyster.us-east.host.bsky.network/79c903b9a5c01c8a35e30e6d99e1e4851f535e9b8241f82e992f9daa005cefc3.jpg",
         "url": "https://bsky.app/profile/kevinpowell.co"
       },
-      "url": "https://bsky.app/profile/did:plc:xbj7qbl7qmoo7dpf5dheplex/post/3lzlubjcv3c23",
-      "published": "2025-09-24T16:29:36+00:00",
-      "wm-received": "2025-09-24T16:29:49Z",
-      "wm-id": 1941903,
-      "wm-source": "https://bsky.brid.gy/convert/web/at://did:plc:xbj7qbl7qmoo7dpf5dheplex/app.bsky.feed.post/3lzlubjcv3c23%23bridgy-fed-create",
-      "wm-target": "https://www.oddbird.net/2025/09/04/box-model/",
-      "wm-protocol": "webmention",
-      "content": {
-        "html": "Forgot to link to Miriam's article, here it is: <a href=\"https://www.oddbird.net/2025/09/04/box-model/\">www.oddbird.net/2025/09/04/b...</a>",
-        "text": "Forgot to link to Miriam's article, here it is: www.oddbird.net/2025/09/04/b..."
-      },
-      "in-reply-to": "https://www.oddbird.net/2025/09/04/box-model/",
-      "wm-property": "in-reply-to",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "Kevin Powell",
-        "photo": "https://avatars.webmention.io/oyster.us-east.host.bsky.network/79c903b9a5c01c8a35e30e6d99e1e4851f535e9b8241f82e992f9daa005cefc3.jpg",
-        "url": "https://bsky.app/profile/kevinpowell.co"
-      },
       "url": "https://bsky.app/profile/did:plc:xbj7qbl7qmoo7dpf5dheplex/post/3ly3uw2ghks2k",
       "published": "2025-09-05T14:33:18+00:00",
       "wm-received": "2025-09-05T14:33:25Z",
