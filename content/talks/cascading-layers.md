@@ -20,6 +20,8 @@ events:
     url: https://jsheroes.io/
     date: 2025-05-29
     end: 2025-05-30
+    media: &jsheroes
+      - youtube: 4PkhzoFLJ0Q
   - venue: An Event Apart
     adr: San Francisco, CA
     date: 2022-12-12
@@ -30,6 +32,9 @@ events:
     date: 2022-10-10
     end: 2022-10-12
     slides: https://slides.oddbird.net/layers/aea-denver22/
+media:
+  - span: full
+    <<: *jsheroes
 summary: |
   Earlier this year,
   all the major browsers released Cascade Layers,
@@ -42,6 +47,8 @@ summary: |
   require us to re-think
   how all the pieces fit together.
 ---
+
+{% import "embed.macros.njk" as embed %}
 
 The Cascade is the underlying algorithm
 that drives our entire language,
@@ -59,3 +66,10 @@ the purpose of `!important`,
 and how we build or use third-party libraries.
 And we’ll take a look at what else is coming
 over the next few years with `@scope` and proximity.
+
+------
+
+{{ embed.figure(
+  data=media,
+  caption='Conference videos...'
+) }}
