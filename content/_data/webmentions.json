@@ -5,32 +5,6 @@
       "type": "entry",
       "author": {
         "type": "card",
-        "name": "Max Glenister",
-        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
-        "url": "https://social.omgmog.net/profile/max"
-      },
-      "url": "https://social.omgmog.net/2025/20250923type-units",
-      "published": "2025-10-03T08:41:44+00:00",
-      "wm-received": "2025-10-03T08:41:47Z",
-      "wm-id": 1944202,
-      "wm-source": "https://social.omgmog.net/2025/20250923type-units",
-      "wm-target": "https://www.oddbird.net/2025/09/23/type-units/",
-      "wm-protocol": "webmention",
-      "syndication": [
-        "https://indieweb.social/@omgmog/115309340564501686"
-      ],
-      "content": {
-        "html": "<p><a href=\"https://www.oddbird.net/2025/09/23/type-units/\">https://www.oddbird.net/2025/09/23/type-units/</a></p>",
-        "text": "https://www.oddbird.net/2025/09/23/type-units/"
-      },
-      "mention-of": "https://www.oddbird.net/2025/09/23/type-units/",
-      "wm-property": "mention-of",
-      "wm-private": false
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
         "name": "Piccalilli",
         "photo": "https://avatars.webmention.io/conocybe.us-west.host.bsky.network/29b8dd7bcc3f775209cac5cba73211e324c77855390d4f9174d076de8ed52b50.jpg",
         "url": "https://bsky.app/profile/piccalil.li"
