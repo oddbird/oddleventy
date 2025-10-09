@@ -1,11 +1,11 @@
 ---
-title: Anchor positioning updates for Fall 2025
-sub: Overflowing content, browser support and polyfill updates
+title: Anchor Positioning Updates for Fall 2025
+sub: Overflowing content, browser support, and polyfill updates
 date: 2025-10-06
 image:
-  src: blog/2025/anchor-fall-cb-overflow.jpg
+  src: blog/2025/anchor-fall-cb-overflow1.jpg
   alt: >
-    A hand holding a brown mug.
+    A hand holding a coffee mug.
     Coffee is pouring into the mug and overflowing.
 author: james
 sponsors: true
@@ -15,22 +15,14 @@ tags:
   - CSS
 related_tag: Anchor Positioning
 summary: |
-  Anchor positioning is close to Baseline, and as more people try it out,
+  Anchor positioning is close to Baseline.
+  As more people try it out,
   they are finding areas where it could be improved,
   and differences between browsers.
   Let's take a look at the current state of anchor positioning.
 ---
 
 {% import 'embed.macros.njk' as embed %}
-
-{% callout 'note', false %}
-Check out our [Winging It](/wingingit/)
-conversations about design, frontend,
-and backend development.
-
-**Winging It** episode 8: [CSS Anchor Positioning in Practice](/2024/05/30/winging-it-08/) \
-**Winging It** episode 16: [Debugging CSS Anchor Positioning](/2025/02/20/winging-it-16/)
-{% endcallout %}
 
 In September, Safari 26 was released with anchor positioning! This means 2 out
 of 3 major browsers support anchor positioning, with Firefox support on the way.
