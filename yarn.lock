@@ -1738,7 +1738,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/dom@npm:^1.7.1":
+"@floating-ui/dom@npm:^1.7.4":
   version: 1.7.4
   resolution: "@floating-ui/dom@npm:1.7.4"
   dependencies:
@@ -2453,15 +2453,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oddbird/css-anchor-positioning@npm:^0.6.1":
-  version: 0.6.1
-  resolution: "@oddbird/css-anchor-positioning@npm:0.6.1"
+"@oddbird/css-anchor-positioning@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "@oddbird/css-anchor-positioning@npm:0.7.0"
   dependencies:
-    "@floating-ui/dom": "npm:^1.7.1"
-    "@types/css-tree": "npm:^2.3.10"
+    "@floating-ui/dom": "npm:^1.7.4"
+    "@types/css-tree": "npm:^2.3.11"
     css-tree: "npm:^3.1.0"
-    nanoid: "npm:^5.1.5"
-  checksum: 10/1e6f12f18f8953f0234dff3bb506b10826eaf1ae04a747f965eac48fba27cd7ed8784f6d1b1a7a1278d0d83aa69e07ef231d5a1ee691d5995dea1d13dcb5da8f
+    nanoid: "npm:^5.1.6"
+  checksum: 10/a093af889eba27d874de371256a8cf28bcc6c47f231662d3f38b47446747d383d488272a94d2576873fc98b93ccc8a7b5ef251188731441c216cf35ffadd7137
   languageName: node
   linkType: hard
 
@@ -2637,9 +2637,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-babel@npm:^6.0.4":
-  version: 6.0.4
-  resolution: "@rollup/plugin-babel@npm:6.0.4"
+"@rollup/plugin-babel@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "@rollup/plugin-babel@npm:6.1.0"
   dependencies:
     "@babel/helper-module-imports": "npm:^7.18.6"
     "@rollup/pluginutils": "npm:^5.0.1"
@@ -2652,7 +2652,7 @@ __metadata:
       optional: true
     rollup:
       optional: true
-  checksum: 10/89210c8c597b41fd4c561749505c85827697d8d0918c492270f522bd85fac8db3af701cf05480a9e594fcc0df9be42fb7ab025b02a272bde74bb2f63c8c39de2
+  checksum: 10/9971648c2c9f2d4b7cec1c35541384414d150d50937af3729eb8ea09fa71ad0e3d11ca10a03e4ae97c0d3d5c3d619e1b693cfe81257b8ad50a4844c88dbaf384
   languageName: node
   linkType: hard
 
@@ -2676,9 +2676,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-node-resolve@npm:^16.0.2":
-  version: 16.0.2
-  resolution: "@rollup/plugin-node-resolve@npm:16.0.2"
+"@rollup/plugin-node-resolve@npm:^16.0.3":
+  version: 16.0.3
+  resolution: "@rollup/plugin-node-resolve@npm:16.0.3"
   dependencies:
     "@rollup/pluginutils": "npm:^5.0.1"
     "@types/resolve": "npm:1.20.2"
@@ -2690,7 +2690,7 @@ __metadata:
   peerDependenciesMeta:
     rollup:
       optional: true
-  checksum: 10/79ea6cd8fe474161914bc9bf1618787a75378f9e52fb70ffe698322140e8100a0b706198ba5cc615eabf774e78979542df2ad6bc1fe0ad5e820e20f2537de48c
+  checksum: 10/6848212994adc5c3fcd851eb268ad58b3905c5535272ae51d33a7ac1590ff428d102afe81702e031b0360481798e61efc0194b4ee39b812a3ae274c998f4d424
   languageName: node
   linkType: hard
 
@@ -2997,7 +2997,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/css-tree@npm:^2.3.10":
+"@types/css-tree@npm:^2.3.11":
   version: 2.3.11
   resolution: "@types/css-tree@npm:2.3.11"
   checksum: 10/c4e1e990257cc8f9c90ebe3ec1b3d53733f9883cf772bbf1c2da462bb9fa6770b6ed98f24e176d1e0ad2c6b276b8ced5cd3d676b793518bec09adf2dd077a307
@@ -4695,10 +4695,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.45.1":
-  version: 3.45.1
-  resolution: "core-js@npm:3.45.1"
-  checksum: 10/b9dca79b1af8bb4f0d4af0752ea98d694fe157abaf55513fd4084df32dfd4398f0fc57898b32cdb643c1cecb87b9231c2a2ce535797c80ae328eac6d6078ee61
+"core-js@npm:^3.46.0":
+  version: 3.46.0
+  resolution: "core-js@npm:3.46.0"
+  checksum: 10/82993ca487c6cbbf8bbf00e45eeb9705eb63dc2f9c90d7f35696733efbc3f4b52426e1f8dbef0f0b68ea16caa21e4f44cc5490e08120e1cad4a72b031ed8adaa
   languageName: node
   linkType: hard
 
@@ -9102,7 +9102,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^5.1.5":
+"nanoid@npm:^5.1.6":
   version: 5.1.6
   resolution: "nanoid@npm:5.1.6"
   bin:
@@ -9429,11 +9429,11 @@ __metadata:
     "@date-fns/utc": "npm:^2.1.1"
     "@eslint/js": "npm:^9.37.0"
     "@oddbird/browser-support": "npm:^0.1.0"
-    "@oddbird/css-anchor-positioning": "npm:^0.6.1"
+    "@oddbird/css-anchor-positioning": "npm:^0.7.0"
     "@oddbird/popover-polyfill": "npm:^0.6.1"
-    "@rollup/plugin-babel": "npm:^6.0.4"
+    "@rollup/plugin-babel": "npm:^6.1.0"
     "@rollup/plugin-commonjs": "npm:^28.0.6"
-    "@rollup/plugin-node-resolve": "npm:^16.0.2"
+    "@rollup/plugin-node-resolve": "npm:^16.0.3"
     "@rollup/plugin-terser": "npm:^0.4.4"
     "@tommoor/remove-markdown": "npm:^0.3.2"
     accoutrement: "npm:^4.0.5"
@@ -9441,7 +9441,7 @@ __metadata:
     cascading-color-systems: "npm:^0.1.0-beta.17"
     chalk: "npm:^5.6.2"
     chokidar-cli: "npm:^3.0.0"
-    core-js: "npm:^3.45.1"
+    core-js: "npm:^3.46.0"
     cssremedy: "npm:^0.1.0-beta.2"
     date-fns: "npm:^4.1.0"
     dotenv: "npm:^17.2.3"
