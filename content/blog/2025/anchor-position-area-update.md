@@ -2,6 +2,7 @@
 title: Anchor Positioning Updates for Fall 2025
 sub: Overflowing content, browser support, and polyfill updates
 date: 2025-10-13
+updated: 2025-10-15
 image:
   src: blog/2025/anchor-fall-cb-overflow1.jpg
   alt: >
@@ -23,6 +24,7 @@ summary: |
 ---
 
 {% import 'embed.macros.njk' as embed %}
+{% import 'utility.macros.njk' as utility %}
 
 In September, Safari 26 was released with anchor positioning! This means 2 out
 of 3 major browsers support anchor positioning, with Firefox support on the way.
@@ -71,6 +73,20 @@ behavior over the other, and my hope is that CSS makes this configurable. For
 now, if you're wanting to align it to the start side, you can use the
 [safe](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self#safe)
 keyword, but there isn't a way to align it to the end side.
+
+{% set update = ['Update', utility.datetime(updated)] | join(' ') %}
+{% callout 'note', update %}
+
+There actually *is* a right answer here. Safari's behavior is correct, and there
+is an [open Chromium bug](https://issues.chromium.org/issues/438334710).
+
+One suggested workaround for the bug is adding `place-self: anchor-center` on
+the positioned element. I've found this isn't always the behavior I want, but
+it can be useful.
+
+I still think it would be useful to be able to declare which behavior I wanted.
+
+{% endcallout %}
 
 ## Position fallback stability
 
