@@ -84,7 +84,7 @@ One suggested workaround for the bug is adding `place-self: anchor-center` on
 the positioned element. I've found this isn't always the behavior I want, but
 it can be useful.
 
-I still think it would be useful to be able to declare which behavior I wanted.
+I still think it would be nice to be able to declare which behavior I want.
 
 {% endcallout %}
 
