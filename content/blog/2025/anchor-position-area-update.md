@@ -2,7 +2,7 @@
 title: Anchor Positioning Updates for Fall 2025
 sub: Overflowing content, browser support, and polyfill updates
 date: 2025-10-13
-updated: 2025-10-15
+updated: 2025-10-16
 image:
   src: blog/2025/anchor-fall-cb-overflow1.jpg
   alt: >
@@ -120,6 +120,18 @@ about how to make sure this doesn't break existing popover styles, but what this
 means for you is that at some point in the future, you will likely not need to
 add `margin: unset`, and popovers will be positioned correctly without extra
 rules.
+
+{% callout 'note', update %}
+
+After some initial work on the `dialog` value, the CSSWG [revisited the
+topic](https://github.com/w3c/csswg-drafts/issues/10258#issuecomment-3407215102).
+Instead of a `dialog` value, `margins: auto` will be disabled when a `position-area` is set. This is effectively adding `margin: unset` for you.
+
+While I'm fine with any solution that fixes positioned popovers, I do think that
+this behavior is a bit simpler to understand than a new `dialog` keyword, so I'm
+happy this change was made.
+
+{% endcallout %}
 
 ## Other changes
 
