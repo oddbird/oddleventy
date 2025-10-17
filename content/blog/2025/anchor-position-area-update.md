@@ -2,6 +2,7 @@
 title: Anchor Positioning Updates for Fall 2025
 sub: Overflowing content, browser support, and polyfill updates
 date: 2025-10-13
+updated: 2025-10-16
 image:
   src: blog/2025/anchor-fall-cb-overflow1.jpg
   alt: >
@@ -23,6 +24,7 @@ summary: |
 ---
 
 {% import 'embed.macros.njk' as embed %}
+{% import 'utility.macros.njk' as utility %}
 
 In September, Safari 26 was released with anchor positioning! This means 2 out
 of 3 major browsers support anchor positioning, with Firefox support on the way.
@@ -72,6 +74,20 @@ now, if you're wanting to align it to the start side, you can use the
 [safe](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self#safe)
 keyword, but there isn't a way to align it to the end side.
 
+{% set update = ['Update', utility.datetime(updated)] | join(' ') %}
+{% callout 'note', update %}
+
+There actually *is* a right answer here. Safari's behavior is correct, and there
+is an [open Chromium bug](https://issues.chromium.org/issues/438334710).
+
+One suggested workaround for the bug is adding `place-self: anchor-center` on
+the positioned element. I've found this isn't always the behavior I want, but
+it can be useful.
+
+I still think it would be nice to be able to declare which behavior I want.
+
+{% endcallout %}
+
 ## Position fallback stability
 
 In pre-release versions of Safari, users picked up on a difference in how Chrome
@@ -104,6 +120,18 @@ about how to make sure this doesn't break existing popover styles, but what this
 means for you is that at some point in the future, you will likely not need to
 add `margin: unset`, and popovers will be positioned correctly without extra
 rules.
+
+{% callout 'note', update %}
+
+After some initial work on the `dialog` value, the CSSWG [revisited the
+topic](https://github.com/w3c/csswg-drafts/issues/10258#issuecomment-3407215102).
+Instead of a `dialog` value, `margins: auto` will be disabled when a `position-area` is set. This is effectively adding `margin: unset` for you.
+
+While I'm fine with any solution that fixes positioned popovers, I do think that
+this behavior is a bit simpler to understand than a new `dialog` keyword, so I'm
+happy this change was made.
+
+{% endcallout %}
 
 ## Other changes
 
