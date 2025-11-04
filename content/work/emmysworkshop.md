@@ -6,8 +6,6 @@ image:
 client: &client Carleton College
 date: 2016-08-01
 end: 2018-06-30
-links:
-  site: https://emmysworkshop.com/
 tasks:
   - Branding
   - Responsive front-end architecture
@@ -16,7 +14,6 @@ people:
     name: Anna Rafferty
     title: Assistant Professor of Computer Science
     # face: anna-rafferty.jpg
-    url: https://emmysworkshop.com/
     venue: *client
 tags:
   - Education Sector
