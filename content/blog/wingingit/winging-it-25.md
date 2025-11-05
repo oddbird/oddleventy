@@ -52,7 +52,7 @@ and backend development.
 ## What We Cover:
 
 ### Complex Navigation
-- OddBird's complex navigation and disperate audiences
+- OddBird's complex navigation and disparate audiences
 - Defining web "objects" with OOUX philosophy
 - How to prioritize the navigation people need most
 - Are mega menus ever a good idea?
