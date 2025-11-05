@@ -86,7 +86,5 @@ and backend development.
 - [OOUX.com](http://ooux.com/)
 - [DevCollaborative Services](https://devcollaborative.com/our-services)
 - [Top Tasks: To Focus On What Matters You Must De Focus On What Doesn’t](https://www.smashingmagazine.com/2022/05/top-tasks-focus-what-matters-must-defocus-what-doesnt/) by Gerry McGovern
-- [Netflix.com](https://www.netflix.com/)
-- [Amazon.com](https://www.amazon.com/)
 - [vistaprint.com](https://www.vistaprint.com/)
 - [Design for Complex UIs](https://www.youtube.com/watch?v=2hlQqMigGZg) with Vitaly Friedman
