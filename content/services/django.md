@@ -1,9 +1,10 @@
 ---
-title: GET BENEFIT with a Django Fixup
+title: Ship Faster & Safer with a Django Fixup
 sub: >
-  BENEFIT ONE,
-  BENEFIT TWO,
-  and BENEFIT THREE
+  Security hardening,
+  performance tuning,
+  and developer velocity—
+  diagnosed, fixed, and handed back stronger.
 action:
   text: Let's chat »
   url: '#chat'
@@ -18,16 +19,19 @@ included:
   - title: Best Practice is a Conversation
     text: We don't have all the answers, but we know what questions to ask.
     icon: icons/messaging
-  - title: Would you like to level up your CSS?
-    text: |
-      [OddNews](/oddnews/) is packed with CSS demos and tips.
-    icon: icons/rocket
 summary: |
-  [Describe the problem people feel.
-  Security may be top of mind for many
-  people in the US right now.
-  How does Django/Python solve the problem?
-  In 2-4 sentences.]
+  Django is battle-tested and secure by default—
+  but production realities add up.
+  Slow queries, flaky tests, brittle deployments,
+  upgrade debt, and sluggish CI pipelines
+  can hold your team back.
+  **It doesn't have to be like this!**
+
+  We'll diagnose what's slowing you down,
+  implement high-impact fixes,
+  and train your team to keep shipping with confidence—
+  so you can scale efficiently
+  and spend less time firefighting.
 media:
   - span: full
     youtube: Um3tnONShPc
@@ -52,49 +56,65 @@ media:
 
 {% call layout.block('column') %}
 
-### Benefit 1
+### Secure your App
 
-[One sentence description here.]
-
-{% endcall %}
-
-{% call layout.block('column') %}
-
-### Benefit 2
-
-[One sentence description here.]
+Close the common gaps—
+proven security settings, CSP headers, session config, auth flows—
+and ship confidently.
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Benefit 3
+### Boost Performance
 
-[One sentence description here.]
-
-{% endcall %}
-
-{% call layout.block('column') %}
-
-### Benefit 4
-
-[One sentence description here.]
+Cut response times with ORM tuning,
+N+1 fixes, caching strategies,
+server optimizations,
+and proper database indexing.
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Benefit 5
+### Untie Developers
 
-[One sentence description here.]
+Deliver more features, faster, with
+stable fixtures/factories,
+sensible settings splits,
+and snappy local/CI environments.
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Benefit 6
+### Stay up to Date
 
-[One sentence description here.]
+Run on the latest Django version,
+remove deprecated patterns,
+and automate upgrades
+so you're never stuck with unmaintained dependencies.
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Test with Confidence
+
+Raise coverage where it matters,
+stabilize flaky tests,
+leverage end-to-end testing,
+and add smoke checks that catch regressions early.
+
+{% endcall %}
+
+{% call layout.block('column') %}
+
+### Stabilize your API
+
+Produce self-documenting, type-safe APIs
+that eliminate entire classes of bugs
+and are loved by front-end developers.
 
 {% endcall %}
 
@@ -110,9 +130,22 @@ media:
 
 ## What is a Django fixup?
 
-[Two to four sentence description
-of what the steps are in a Django fixup
-and what it fixes.]
+It's a health check and modernization sprint
+for your Django application.
+We audit your configuration, dependencies,
+database queries, test suite, and CI pipeline—
+then deliver a prioritized plan
+with effort estimates
+and implement high-impact fixes.
+
+You'll get measurable improvements
+in response times, deployment cadence, and reliability—
+along with documentation and pairing sessions
+so your team can sustain the gains.
+We've helped teams cut API latency,
+speed up CI and local development,
+and land dependency upgrades
+that had been stalled for months.
 
 ## What's the cost?
 
@@ -149,24 +182,32 @@ and recording the conversation for you.
 
 {{ utility.main_action(
   content='Schedule now »',
-  url='https://calendly.com/oddbirdllc/css-architecture'
+  url='https://calendly.com/oddbirdllc/django-fixup'
 ) }}
 
 {% endcall %}
 
 {% call layout.block('column') %}
 
-### Tailored Training OR Django Audit??
+### Audit & Training
 
-[Description here]
+Upgrade debt piling up?
+Unclear how to scale?
+We'll audit your Django application—
+config, dependencies, queries, tests, CI—
+and deliver a prioritized findings report
+with quick wins you can implement right away
+or use as a roadmap to train your team.
 
-- [What you get 1]
-- [What you get 2]
+- Findings doc with effort/impact priorities
+- 1–2 pairing sessions to apply top wins
+- Custom training curriculum for your team
+
 
 **Starts at $2,000**
 
 {{ utility.main_action(
-  content='Book now »',
+  content='Request an audit »',
   url='#chat'
 ) }}
 
@@ -174,15 +215,21 @@ and recording the conversation for you.
 
 {% call layout.block('column') %}
 
-### Back-end Fixup
-[Describe the problem.
-Maybe security related?]
-Ed, Victor, and the OddBirds
-will help you make your application
-more [describe the fix].
+### Django Fixup
 
-- Experts to take you to the next level
-- Start scaling and reducing costs now
+Your Django app is holding the business back—
+slow responses, flaky deploys,
+and buggy feature roll-outs.
+OddBird will implement the fixes that matter most:
+upgrade to a maintained Django version,
+harden settings,
+optimize queries,
+stabilize tests,
+and speed up CI.
+
+- Measurable before/after metrics (response time, error rate, deploy time)
+- Implemented changes via pull requests
+- Playbook for ongoing maintenance
 
 **Starts at $5,000**
 
@@ -204,26 +251,35 @@ more [describe the fix].
 
 [Ed Rivas](/authors/ed) leads a tight-knit team
 of senior back-end developers
-including [Victor Allen](/authors/victor).
+including [Victor Allen](/authors/victor)—
+with deep collaboration across
+OddBird's front-end, design, and standards experts.
 
-OddBird's back-end lead since 2020,
-Ed has been an avid Python & Django developer
-for over 13 years. He has
-been delving into PHP & WordPress
-development as well. He is a speaker
-and open source software contributer,
-and a mentor and organizer in his
-local community.
-
-- Multiple-time speaker at [DjangoCon US],
-the largest international conference
-for Django developers
-- Ed has volunteered as a coach for [DjangoGirls],
-a nonprofit organization focused on
-teaching web development to girls and women.
-- He is an expert in CMS-based sites, building dozens.
-- He is a Native Spanish speaker
+**A developer, teacher, and open source contributor** —
+Ed has been a Python & Django developer for over a decade.
+He's spoken multiple times at [DjangoCon US],
+the largest international conference for Django developers,
+and volunteered as a coach for [DjangoGirls],
+teaching web development to underrepresented groups.
+Ed is a native Spanish speaker
 with experience translating content and software UIs.
+
+**Need more than back-end development?**
+We're a cross-discipline team of experts
+working at the cutting edge of the web platform.
+Our team includes:
+- [Miriam Suzanne](/authors/miriam), Invited Expert on the W3C CSS Working Group
+  and core contributor to Sass—
+  leading specs for container queries, cascade layers, and CSS scope
+- Developers who've built polyfills adopted by millions
+- Presenters who've trained teams at Google, Mozilla, and leading startups
+- We've designed and developed for clients in healthcare, education, finance,
+  manufacturing, and more
+
+That breadth means we've *seen it all*—
+and we know how to connect Django back-end work
+to accessible front-ends, design systems,
+and the long-term maintainability your business needs.
 
 [DjangoCon US]: https://djangocon.us/
 [DjangoGirls]: https://djangogirls.org/en/
@@ -232,6 +288,40 @@ with experience translating content and software UIs.
   collections.all,
   slugs=['popular-tutorial', 'handoff']
 ) }}
+
+## Common Questions
+
+**Are you just going to rewrite everything?**
+No—we start with surgical improvements
+and avoid rewrites unless the value is overwhelming.
+Most gains come from targeted fixes,
+not ground-up rebuilds.
+
+**Can we keep shipping features?**
+Yes—we work in separate branches
+to isolate changes and avoid blocking your roadmap.
+You stay in control of priorities.
+
+**What if we already have strong Django developers?**
+Great—pair with us for accelerated upgrades,
+fresh patterns from other industries,
+and a second set of expert eyes.
+We become your force multiplier.
+
+**What access do you need?**
+To start, just access to a technical point of contact.
+As our involvement deepens,
+we'll need access to the codebase,
+project management software,
+and other parts of your development workflow.
+
+**How soon can we start?**
+Typically within 2-4 weeks for audits/fixups;
+Expert Advice sessions can start sooner.
+
+**Can you also develop new features for us?**
+Absolutely! Our team has expertise in [strategy](/services/planning),
+[design](/services/design-systems), and [full-stack development](/services/development).
 
 {% call layout.block(
   name='full',
@@ -265,7 +355,7 @@ with experience translating content and software UIs.
 {{ contact.form(
   submit='Send Message',
   name='fixup',
-  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/css-architecture)'
+  extraActions='or [schedule a call to learn more »](https://calendly.com/oddbirdllc/django-fixup)'
 ) }}
 
 {% endcall %}
@@ -286,11 +376,30 @@ with experience translating content and software UIs.
   ]
 ) }}
 
-## Why is Django important?
+## Isn't Django a legacy framework? Why use it today?
 
-[Three paragraph description
-speaking to any arguements people might have
-against Django.]
+Django remains one of the most
+secure, scalable, and productive web frameworks—
+battle-tested by Instagram, Spotify, Pinterest,
+and thousands of enterprise teams.
+Its "batteries included" philosophy
+means you spend less time wiring libraries together
+and more time solving business problems.
+
+But the ecosystem keeps evolving.
+Modern Django includes async support,
+type hints, improved admin customization,
+and a vast array of third-party packages—
+features that can dramatically improve performance
+and developer experience
+if you know how to use them.
+Many teams are still running decades-old patterns from Django 1.x,
+leaving performance and security wins on the table.
+
+With the right architecture and up-to-date patterns,
+Django scales to millions of requests
+while keeping your codebase maintainable.
+We'll help you get there.
 
 ## Can't I just vibe code with AI?
 
@@ -300,11 +409,10 @@ about the user interface,
 accessibility,
 and long-term maintainability.
 New tools can automate
-parts of the code-writing process --
-with varying levels of success --
-but no machine can make the hard decisions for us.
-It's more essential than ever
-for us to understand the decisions being made,
-and how they will impact the users
-and the business moving forward.
+parts of the code-writing process,
+but without the guidance and supervision
+of an experienced developer
+you risk ending up with an unmaintainable and buggy codebase
+that will need to be rewritten from scratch
+sooner than you'd like.
 There's no replacing ✨ Actual Intelligence.
