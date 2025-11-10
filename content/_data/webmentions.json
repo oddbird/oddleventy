@@ -1,6 +1,32 @@
 {
-  "lastFetched": "2025-11-03T08:09:06.032Z",
+  "lastFetched": "2025-11-10T08:09:10.588Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "OddBird",
+        "photo": "https://avatars.webmention.io/button.us-west.host.bsky.network/ac0543a3cd2dad55a9ce7cad9425ca1772d5c44eacbb22ef391e8ac9ca389efa.jpg",
+        "url": "https://bsky.app/profile/oddbird.dev"
+      },
+      "url": "https://bsky.app/profile/did:plc:eyxqmw6q42bfrgz7t3osfepi/post/3m52k2efyy22p",
+      "published": "2025-11-07T16:52:10+00:00",
+      "wm-received": "2025-11-07T16:52:19Z",
+      "wm-id": 1952734,
+      "wm-source": "https://bsky.brid.gy/convert/web/at://did:plc:eyxqmw6q42bfrgz7t3osfepi/app.bsky.feed.post/3m52k2efyy22p%23bridgy-fed-create",
+      "wm-target": "https://www.oddbird.net/2025/10/23/winging-it-25/",
+      "wm-protocol": "webmention",
+      "photo": [
+        "https://button.us-west.host.bsky.network/xrpc/com.atproto.sync.getBlob?did=did:plc:eyxqmw6q42bfrgz7t3osfepi&cid=bafkreibaybnhcozsfwm7dcmeu3pvebua7r4bakymzrpavtijxch2y6z5ju"
+      ],
+      "content": {
+        "html": "Winging It E25\n<a href=\"https://bsky.app/profile/stacykvernmo.com\">@stacykvernmo.com</a>, <a href=\"https://bsky.brid.gy/web/did:plc:rtyivqqcr4myescpewk6ptqr\">@sondrae.bsky.social</a> and <a href=\"https://bsky.brid.gy/web/did:plc:i6gsi2jxfuabsa2im3orsjny\">@clayton.social.coop.ap.brid.gy</a> debate thorny <a href=\"https://bsky.app/search?q=%23UX\">#UX</a> design questions in costume. <a href=\"https://www.oddbird.net/2025/10/23/winging-it-25/\">www.oddbird.net/2025/10/23/w...</a>\n\n- Complex navigation\n- Ever a case for infinite scroll?\n- Pagination or load more button?\n- Click to open or hover?\n- Truncatio…",
+        "text": "Winging It E25\n@stacykvernmo.com, @sondrae.bsky.social and @clayton.social.coop.ap.brid.gy debate thorny #UX design questions in costume. www.oddbird.net/2025/10/23/w...\n\n- Complex navigation\n- Ever a case for infinite scroll?\n- Pagination or load more button?\n- Click to open or hover?\n- Truncatio…"
+      },
+      "mention-of": "https://www.oddbird.net/2025/10/23/winging-it-25/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
