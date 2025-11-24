@@ -20,7 +20,7 @@ jobs:
     if: github.event.ref_type == 'branch'
     steps:
       - name: Clone shadow repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ secrets.SHADOW_OWNER }}/${{ secrets.SHADOW_REPO }}
           ssh-key: ${{ secrets.SHADOW_REPO_PRIVATE_KEY }}
@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - run: corepack enable
       - uses: actions/setup-node@v6
         with:
@@ -46,7 +46,7 @@ jobs:
       - run: yarn install
       - run: yarn build:prod
       - name: Clone shadow repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ secrets.SHADOW_OWNER }}/${{ secrets.SHADOW_REPO }}
           ssh-key: ${{ secrets.SHADOW_REPO_PRIVATE_KEY }}
