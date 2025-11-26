@@ -27,9 +27,9 @@ summary: |
   Miriam Suzanne,
   and Eric Meyer of Igalia
   as they talk about
-  the emerging patterns.
-  The rough edges and changes to the spec.
-  And what the future holds
+  the emerging patterns,
+  the rough edges and changes to the spec,
+  and what the future holds
   for anchor positioning.
 ---
 
@@ -62,7 +62,7 @@ to learn how to use and troubleshoot Anchor Positioning today.
 - Containing block shift overflow difference
 - Popover default margin styles
 
-### What are the emerging patterns
+### What are the emerging patterns?
 - Follower pattern by anchoring on a pseudo class
 - Floating focus (but is it accessible, or good UX?)
 - `--is`, `--for` pattern
