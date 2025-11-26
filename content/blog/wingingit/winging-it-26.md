@@ -1,6 +1,6 @@
 ---
 title: Cross-Browser Anchor Positioning
-sub: Anchor Positioning is availble in all browsers. What's next, with Eric Meyer.
+sub: Anchor Positioning is available in all browsers. What's next, with Eric Meyer.
 episode: 26
 tags:
   - CSS
@@ -27,7 +27,7 @@ summary: |
   Miriam Suzanne,
   and Eric Meyer of Igalia
   as they talk about
-  the emerging  patterns.
+  the emerging patterns.
   The rough edges and changes to the spec.
   And what the future holds
   for anchor positioning.
@@ -54,7 +54,8 @@ to learn how to use and troubleshoot Anchor Positioning today.
 
 ### The state of Anchor Positioning now
 - Everywhere but Firefox, and Firefox is behind a flag
-- Perhaps December 9, with  Firefox 146
+  - Go to `about:config` and enable `layout.css.anchor-positioning.enabled`
+- Perhaps will be released December 9, with Firefox 146
 
 ### What rough edges are being ironed out?
 - Position fallback: when should it fallback?
@@ -62,21 +63,19 @@ to learn how to use and troubleshoot Anchor Positioning today.
 - Popover default margin styles
 
 ### What are the emerging patterns
-- Follower pattern (anchor on a pseudo class)
-- Floating focus
+- Follower pattern by anchoring on a pseudo class
+- Floating focus (but is it accessible, or good UX?)
 - `--is`, `--for` pattern
 
 ### Known issues
 - Anchor containers (like position containers) are not always where you assume they’ll be
 - Scrolling can only respond to default anchor element scrolling
-- Position area not working as expected
-- Position area syntax is complex. Might be helpful to work backwards: given a keyword, place where you think it might go
-anchor attribute
+- Position area not working as expected, and the syntax is complex.
 - Bugs (but they’re being fixed pretty quickly)
 
 ### Will Anchor Positioning be baseline?
 - What would it mean to be baseline?
-- Could some  parts of anchor positioning be baseline?
+- Could some parts of anchor positioning be baseline?
 
 ### What is coming next for Anchor Positioning?
 - Container queries for detecting fallback
@@ -95,4 +94,3 @@ anchor attribute
 - [WhatWG - Add anchor attribute](https://github.com/whatwg/html/pull/9144)
 - [Web Platform DX - Web Features Anchor Positioning](https://github.com/web-platform-dx/web-features/blob/main/features/anchor-positioning.yml.dist)
 - [Detect fallback positions with anchored container queries from Chrome 143](https://developer.chrome.com/blog/anchored-container-queries)
-- [Are transforms ignored? Bluesky conversation](https://bsky.app/profile/berndderidder.nl/post/3m5ws4kcy3k2p)
