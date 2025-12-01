@@ -79,13 +79,13 @@ const checkRequiredFields = (entry) => {
   const { author, published, content, url } = entry;
   return Boolean(
     url &&
-      entry['wm-id'] &&
-      entry['wm-source'] &&
-      entry['wm-property'] &&
-      entry['wm-target'] &&
-      author?.name &&
-      published &&
-      (content?.text || content?.html),
+    entry['wm-id'] &&
+    entry['wm-source'] &&
+    entry['wm-property'] &&
+    entry['wm-target'] &&
+    author?.name &&
+    published &&
+    (content?.text || content?.html),
   );
 };
 
