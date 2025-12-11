@@ -9,7 +9,7 @@ image:
     Gray box with dashed lines across the corners
     and handwritten label hero image
 summary: >
-  Beautiful design mockups can be distracting ,
+  Beautiful design mockups can be distracting,
   giving a false sense of what is complete
   and what still needs to be done.
   At OddBird,
@@ -158,7 +158,7 @@ to obscure the detail.
       on the right labeled marketing site internal
       is the same design
       but with cursive headlines and sans-serif body fonts
-      including bold and itali
+      including bold and italics.
     '
   }],
   caption='
