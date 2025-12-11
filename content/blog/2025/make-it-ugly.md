@@ -3,6 +3,11 @@ title: Make it ugly, for clients
 sub: It's important to focus the conversation
 author: miriam
 date: 2025-12-11
+tags:
+  - Article
+  - Design
+  - Process
+related_tag: Design
 image:
   src: blog/2025/process-hero.jpg
   alt: >
