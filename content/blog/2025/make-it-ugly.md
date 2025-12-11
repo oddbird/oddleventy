@@ -2,10 +2,25 @@
 title: Make it ugly, for clients
 sub: It's important to focus the conversation
 author: miriam
-date: 2025-12-03
+date: 2025-12-11
+image:
+  src: blog/2025/process-hero.jpg
+  alt: >
+    Gray box with dashed lines across the corners
+    and handwritten label hero image
+summary: >
+  Beautiful design mockups can be distracting ,
+  giving a false sense of what is complete
+  and what still needs to be done.
+  At OddBird,
+  we find it helpful to remove any
+  'premature sheen'
+  before sharing mockups with clients.
 ---
 
-Jeremy Keith
+{% import 'embed.macros.njk' as embed %}
+
+[Jeremy Keith](https://adactio.com)
 (co-founder of [Clearleft](https://clearleft.com/),
 and long-time open-web advocate)
 recently
@@ -14,13 +29,15 @@ with (musician) Brian Eno.
 We're reaching Inception-levels of quotation here,
 I know --
 but in that interview,
-Brian quotes from an unnamed architect friend,
+Brian quotes from an architect friend (Rem Koolhaas),
 talking about the introduction of computers:
 
-> It didn’t help us make good buildings.
-> It helped us make things that looked like they might be good buildings.
+> You could construct a building in half an hour on the computer,
+> and you’d have this amazing-looking thing, but, he said,
+> “It didn’t help us make good buildings.
+> It helped us make things that looked like they might be good buildings.”
 
-The architect refers to this
+Koolhaas refers to this
 as a 'premature sheen' that software can add,
 distracting from the real questions at hand
 early in a project.
@@ -41,6 +58,28 @@ from idea to execution.
 It's not a straight line,
 but requires cycles of experimentation and editing,
 prototyping, sketching, drafting, and polishing.
+
+{{ embed.figure(
+  data=[{
+    img: 'blog/2025/process-gsm.png',
+    alt: '
+      Three screenshots,
+      the first has a real rough wireframe -
+      handwritten text with notes and questions in red,
+      and a few lines,
+      the second has more text still hand-written
+      without additional notes,
+      and the final is a fully designed mockup
+      with more notes added over top
+      to explain the navigation active and hover states being shown.
+    '
+  }],
+  caption='
+    Sketches from different stages in the process,
+    developing a [Material Repricing](/work/material-repricing/) tool for
+    General Stamping & Metalworks.
+  '
+) }}
 
 When I review a design concept,
 I know where we are in that process --
@@ -106,6 +145,32 @@ or changing all the fonts
 to something off-brand,
 or scribbling notes on top of the design
 to obscure the detail.
+
+{{ embed.figure(
+  data=[{
+    img: 'blog/2025/process-bremtown.png',
+    alt: '
+      Two screenshots,
+      on the left a design labeled
+      marketing site client demo
+      uses entirely handwritten fonts
+      and has notes overlaid describing the parts,
+      on the right labeled marketing site internal
+      is the same design
+      but with cursive headlines and sans-serif body fonts
+      including bold and itali
+    '
+  }],
+  caption='
+    The design we sent to our client
+    ([Bremtown Cabinetry](/work/bremtown/))
+    has the brand fonts replaced
+    by a handwritten font,
+    and additional notes laid over the design --
+    even though we have a more hi-fidelity version
+    for internal use.
+  '
+) }}
 
 We want to help clients focus
 on the right questions at the right times.
