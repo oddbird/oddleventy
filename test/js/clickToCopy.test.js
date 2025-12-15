@@ -2,8 +2,6 @@
  * @jest-environment jsdom
  */
 
-/* eslint-env browser */
-
 import { jest } from '@jest/globals';
 
 import { anchorLinkIconString } from '#filters/type.js';
