@@ -19,7 +19,7 @@ summary: |
   each technology.
 author: miriam
 date: 2025-05-30
-permalink: courses/design-with-code/
+permalink: courses/poetic-css/
 ---
 
 {% import 'layout.macros.njk' as layout %}
