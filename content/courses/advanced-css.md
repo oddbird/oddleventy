@@ -1,6 +1,11 @@
 ---
-title: Designing With Code
+title: Poetic CSS
 sub: CSS video course waitlist signup
+# empty alt, since it's just the title again
+image:
+  src: pages/poetic-css.jpg
+  alt: ''
+  position: center
 summary: |
   If you've ever struggled
   to understand why CSS works the way it does,
@@ -14,7 +19,7 @@ summary: |
   each technology.
 author: miriam
 date: 2025-05-30
-permalink: courses/design-with-code/
+permalink: courses/poetic-css/
 ---
 
 {% import 'layout.macros.njk' as layout %}

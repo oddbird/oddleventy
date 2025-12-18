@@ -22,7 +22,9 @@
 - from: /workshops/
   to: /talks/
 - from: /learn/courses/design-with-code/
-  to: /courses/design-with-code/
+  to: /courses/poetic-css/
+- from: /courses/design-with-code/
+  to: /courses/poetic-css/
 - from: /learn/courses/anchor-positioning/
   to: /courses/anchor-positioning/
 
