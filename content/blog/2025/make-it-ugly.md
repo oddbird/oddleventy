@@ -1,5 +1,5 @@
 ---
-title: Make it ugly, for clients
+title: Make It Ugly, for Clients
 sub: It's important to focus the conversation
 author: miriam
 date: 2025-12-11
