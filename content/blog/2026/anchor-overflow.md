@@ -1,13 +1,13 @@
 ---
-title: Better Anchor Positioning with position-area
-sub: It's not just a shorthand for anchor()
-date: 2026-01-09
+title: Handling overflow with anchor positioning
+sub: What is safer than safe?
+date: 2026-01-20
 image:
-  src: blog/2025/anchor-grid.jpg
+  src: blog/2026/anchor-overflow.jpg
   alt: >
-    A hand with painted nails
-    placing a white square of paper
-    into a 9 by 9 grid.
+    A small blue house
+    perched precariously,
+    overhanging the edge of a concrete base.
 author: james
 sponsors: true
 tags:
@@ -78,7 +78,9 @@ variety of situations. Unfortunately, Firefox doesn't support yet using the
 thumb as an anchor, and there is an [open
 bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1993699).
 
-Also, the CSS shown with each demo is editable, so play around to see what's going on!
+Also, the CSS shown with each demo is editable, so play around to see what's
+going on!
+
 {% endcallout %}
 
 Anchor positioning handles this by applying self alignment values to position
@@ -93,7 +95,7 @@ using them in grid layouts.
     display: grid;
   }
   </style>
-  <style part="editable-style" contenteditable>[part="label"]{
+  <style part="editable-style" contenteditable>[part="label"] {
   align-self: start;
   justify-self: end;
 }</style></code>
@@ -111,17 +113,23 @@ except for start and end without the center, as it has to be contiguous.
 For an in-depth look at `position-area`, my [article on
 `position-area`](/2025/02/25/anchor-position-area/).
 
-There are just 3 rules that determine what alignment is used. For each axis, if
-`position-area` only specifies the `center` track, then the alignment is
-`center`.
+## Alignment rules
+
+There are just 3 rules that determine what alignment is used, based on the value
+of the `position-area` that you specified.
+
+### Rule #1 - center
+
+For each axis, if `position-area` only specifies the `center` track, then the
+alignment is `center`.
 
 <inline-demo>
   <template shadowrootmode="open">
     <style>
     ::-webkit-slider-thumb {anchor-name: --thumb;}
-    [part="label"]{ position-anchor: --thumb; }
+    [part="label"]{ position-anchor: --thumb; pointer-events: none; opacity: .8 }
   </style>
-    <style part="editable-style" contenteditable>[part="label"]{
+    <style part="editable-style" contenteditable>div {
   position-area: center center;
 }</style>
     <input type="range" part="slider"></input>
@@ -129,6 +137,8 @@ There are just 3 rules that determine what alignment is used. For each axis, if
   </template>
 </inline-demo>
 
+
+### Rule #3 - anchor-center
 If `position-area` specifies all three sections in the axis, then the alignment
 is `anchor-center`.
 
@@ -138,19 +148,20 @@ is `anchor-center`.
     ::-webkit-slider-thumb { anchor-name: --thumb; }
     [part="label"]{ position-anchor: --thumb; }
   </style>
-  <style part="editable-style" contenteditable>[part="label"]{
+  <style part="editable-style" contenteditable>div {
   position-area: block-start;
 }</style>
     <input type="range" part="slider"></input>
-    <div part="label">justify-self: anchor-center;</div>
+    <div part="label">justify-self: anchor-center</div>
   </template>
 </inline-demo>
 
-Wait- what is `anchor-center`? It's a new value for the self alignment
+Wait — what is `anchor-center`? It's a new value for the self alignment
 properties that aligns to the center of the anchor element. This differs from
 `center`, which aligns to the center of the new containing block created by
 `position-area`.
 
+### Rule #3 - everything else
 The final case for `position-area` is that it specifies just 2 of the sections
 on the axis. In other words, it selects one edge, and perhaps the center, but
 not the other edge. In this situation, the alignment is whatever puts it closest
@@ -162,7 +173,7 @@ to the anchor.
       ::-webkit-slider-thumb { anchor-name: --thumb; }
       [part="label"]{ position-anchor: --thumb; }
     </style>
-    <style part="editable-style" contenteditable>[part="label"]{
+    <style part="editable-style" contenteditable>div {
   position-area: start;
 }</style>
     <input type="range" part="slider"></input>
@@ -173,9 +184,9 @@ to the anchor.
 {% callout 'note', false %}
 
 Of course, the spec isn't just "whatever puts it closest". The spec says that
-the alignment is "toward the non-specified side track". So if you specify "start
- or "start and center", then the alignment will be `end`, and if you specify
- "end" or "end and center", then the alignment will be `start`.
+the alignment is "toward the non-specified side track". So if you specify
+ "start" or "start and center", then the alignment will be `end`, and if you
+ specify "end" or "end and center", then the alignment will be `start`.
 
 While I find this to be technically useful, it doesn't really help my mental
 model of how this works, so I just think of it as "whatever is closest".
@@ -184,15 +195,17 @@ model of how this works, so I just think of it as "whatever is closest".
 
 ## Overriding the defaults
 
-But these are just the default values, and you can choose to override them. I haven't seen compelling use cases for this, but I'm guessing someone will come up with a use case. I'm guessing `stretch` will be the most useful override.
+But these are just the default values, and you can choose to override them. I
+haven't seen compelling use cases for this, but I'm guessing someone will come
+up with a use case. I'm guessing `stretch` will be the most useful override.
 
 <inline-demo>
   <template shadowrootmode="open">
    <style>
     ::-webkit-slider-thumb { anchor-name: --thumb; }
-    [part="label"]{ position-anchor: --thumb; }
+    [part="label"]{ position-anchor: --thumb; position-area: block-start; }
   </style>
-  <style part="editable-style" contenteditable>[part="label"]{
+  <style part="editable-style" contenteditable>div {
   align-self: stretch;
 }</style>
     <input type="range" part="slider"></input>
@@ -202,39 +215,58 @@ But these are just the default values, and you can choose to override them. I ha
 
 ## Overflowing the containing block
 
-You may have noticed that by default, the label stays within its containing
-block, even if that means that it no longer positioned right at the anchor's
-center.
+A common use case for anchor positioning is adding a popover to a word in text.
+In these situations, you don't have a way to know where on the screen the word
+will appear, or by extension where teh anchored element will appear. While you
+could use `position-try-options` to specify what happens when the anchored
+element overflows, there's a good chance you won't have to.
+
+<inline-demo>
+  <template shadowrootmode="open">
+   <style>
+    span { anchor-name: --span; outline: var(--accent) medium solid; }
+    div{ position: absolute; position-anchor: --span; position-area: bottom; }
+  </style>
+    <p contenteditable>
+      Feel free to edit this text, which has a single <span>span</span> element
+      that is the anchor element. I think it's pretty neat that the anchor
+      positioning still works while you type!
+    </p>
+    <div part="label">Positioned element</div>
+  </template>
+</inline-demo>
+
+You may have noticed that the label stays within its containing block, even if
+that means that it is no longer positioned right at the anchor's center. This is
+the default behavior for absolutely positioned elements.
 
 <inline-demo>
   <template shadowrootmode="open">
    <style>
     ::-webkit-slider-thumb { anchor-name: --thumb; }
-    [part="label"]{ position-anchor: --thumb; }
+    [part="label"]{ position-anchor: --thumb; position-area: block-start }
   </style>
-  <style part="editable-style" contenteditable>[part="label"]{
-}</style>
     <input type="range" part="slider"></input>
-    <div part="label">Fascinating info but longer</div>
+    <div part="label">CSS is awesome</div>
   </template>
 </inline-demo>
 
 In some cases, there isn't a compelling reason that the label can't overflow its
 containing block. On this page, the label is small, and the containing block has
-healthy margins (except on small screens). In this case, we can specify that we
-want `unsafe` alignment.
+healthy margins (except on small screens). In this case, we could specify that
+we want `unsafe` alignment.
 
 <inline-demo>
   <template shadowrootmode="open">
    <style>
     ::-webkit-slider-thumb { anchor-name: --thumb; }
-    [part="label"]{ position-anchor: --thumb; }
+    [part="label"]{ position-anchor: --thumb; position-area: block-start }
   </style>
-  <style part="editable-style" contenteditable>[part="label"]{
+  <style part="editable-style" contenteditable>div {
   justify-self: unsafe anchor-center;
 }</style>
     <input type="range" part="slider"></input>
-    <div part="label">Fascinating info but longer</div>
+    <div part="label">CSS is awesome</div>
   </template>
 </inline-demo>
 
@@ -246,27 +278,27 @@ overflows on the right side, but doesn't on the left side.
   <template shadowrootmode="open">
    <style>
     ::-webkit-slider-thumb { anchor-name: --thumb; }
-    [part="label"]{ position-anchor: --thumb; }
+    [part="label"]{ position-anchor: --thumb; position-area: block-start }
   </style>
   <style>
     ::-webkit-slider-thumb {anchor-name: --thumb;}
   [part="label"]{position-anchor: --thumb;}
   </style>
-    <style part="editable-style" contenteditable>[part="label"]{
+    <style part="editable-style" contenteditable>div {
   justify-self: safe anchor-center;
 }</style>
     <input type="range" part="slider"></input>
-    <div part="label">Fascinating info but longer</div>
+    <div part="label">CSS is awesome</div>
   </template>
 </inline-demo>
 
 So:
-- unspecified/normal stops overflow on both sides
+- unspecified stops overflow on both sides
 - `safe` stops overflow only on the start side
 - `unsafe` allows overflow on both sides
 
-I find this confusing, because specifying `safe` may make it less safe,
-depending on the situation. In this case, the area specified by `position-area`
+I initially found this confusing, as specifying `safe` may make it less safe
+depending on the situation. In this example, the area specified by `position-area`
 includes the `block-end`, so the implicit `justify-self` value is `start`. By
 specifying `safe start` instead, the label overflows on the end side. Remove
 `safe` to see the difference.
@@ -277,21 +309,43 @@ specifying `safe start` instead, the label overflows on the end side. Remove
     ::-webkit-slider-thumb { anchor-name: --thumb; }
     [part="label"]{ position-anchor: --thumb; }
   </style>
-  <style part="editable-style" contenteditable>[part="label"]{
+  <style part="editable-style" contenteditable>div {
   position-area: block-start inline-end;
   justify-self: safe start;
   inline-size: max-content;
 }</style>
     <input type="range" part="slider"></input>
-    <div part="label">Fascinating info but long enough to overflow</div>
+    <div part="label">CSS is awesome and is totally a language</div>
   </template>
 </inline-demo>
 
-TODO: Improve wrap-up
-The [CSS spec](https://drafts.csswg.org/css-align/#auto-safety) says that `the
-default behavior lies somewhere between safe and unsafe, and also varies by
-layout mode.`
+In the context of anchor positioned elements, where overflow can easily happen
+on either side, the `safe` keyword doesn't quite make sense. However, when we
+think of it for normal text, this is the behavior that we often expect. For
+instance, in the "CSS is awesome" meme, we want text to overflow on the end, but
+not at the start.
+
+<inline-demo>
+  <template shadowrootmode="open">
+  <style>
+    :host{container-type: inline-size; inline-size: 50cqi; place-self: center;}
+    p{ font-size: 40cqi; margin: 2cqi; line-height: .8em}
+  </style>
+  <p>CSS is awesome</p>
+  </template>
+</inline-demo>
+
+## Future improvements
 
 While `safe` and `unsafe` behavior has been part of grid and flex layouts for
 quite some time, I'm guessing many authors (including me) will encounter it for
-the first time while using anchor positioning.
+the first time (or in new situations) while using anchor positioning. I expect
+with more use cases, CSS will make improvements to the capabilities of overflow
+alignment.
+
+Currently, you can't specify an overflow alignment keyword without also
+specifying the alignment, but there's a [CSSWG
+issue](https://github.com/w3c/csswg-drafts/issues/12920) to allow that. I also
+think it would be useful to add a keyword for the default behavior, so it could
+be set like `safe` and `unsafe`, and potentially add a keyword like `safe-end`
+that would overflow on the start, but not the end.
