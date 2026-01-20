@@ -57,7 +57,7 @@ summary: |
       width: 100%;
       margin-block-start: 3em;
     }
-    &::part(slider)::-webkit-slider-thumb {anchor-name: --thumb;}
+
     &::part(label){
       position: absolute;
 
