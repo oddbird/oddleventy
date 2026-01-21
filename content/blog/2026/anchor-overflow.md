@@ -1,7 +1,7 @@
 ---
 title: Handling overflow with anchor positioning
 sub: What is safer than safe?
-date: 2026-01-20
+date: 2026-01-21
 image:
   src: blog/2026/anchor-overflow.jpg
   alt: >
