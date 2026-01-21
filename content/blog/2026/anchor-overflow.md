@@ -24,15 +24,11 @@ summary: |
 <style>
   /* inline-demo styles */
   inline-demo {
-    border: medium solid black;
+    border: medium solid var(--text);
     position: relative;
     margin-block: var(--gutter);
-    --code-stripe-1: light-dark(
-      oklch(from var(--highlight) .99 .1 h),
-      oklch(from var(--highlight) .01 .1 h));
-    --code-stripe-2: light-dark(
-      oklch(from var(--highlight) .97 .1 h),
-      oklch(from var(--highlight) .1 .1 h));
+    --code-stripe-1: oklch(from var(--highlight) .99 .1 h);
+    --code-stripe-2: oklch(from var(--highlight) .97 .1 h);
 
     &::part(editable-style) {
       display: block;
@@ -40,6 +36,7 @@ summary: |
       font-family: monospace;
       font-size: var(--code);
       padding: var(--shim);
+      color: black;
       background: repeating-linear-gradient(
         45deg,
         var(--code-stripe-1),
