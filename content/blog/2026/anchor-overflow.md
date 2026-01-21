@@ -23,7 +23,7 @@ summary: |
 
 <style>
   /* inline-demo styles */
-  inline-demo{
+  inline-demo {
     border: medium solid black;
     position: relative;
     margin-block: var(--gutter);
@@ -34,7 +34,7 @@ summary: |
       oklch(from var(--highlight) .97 .1 h),
       oklch(from var(--highlight) .1 .1 h));
 
-    &::part(editable-style){
+    &::part(editable-style) {
       display: block;
       white-space: pre;
       font-family: monospace;
@@ -52,8 +52,8 @@ summary: |
 </style>
 <style>
   /* Styles for demos in this article */
-  inline-demo{
-    &::part(slider){
+  inline-demo {
+    &::part(slider) {
       width: 100%;
       margin-block-start: 3em;
     }
@@ -74,7 +74,7 @@ summary: |
 
 These demos use a range input as an easy movable element. While movement isn't
 required for anchor positioning, it's useful for demos to show how it works in a
-variety of situations. Unfortunately, Firefox doesn't support yet using the
+variety of situations. Unfortunately, Firefox doesn't yet support using the
 thumb as an anchor, and there is an [open
 bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1993699).
 
@@ -88,21 +88,21 @@ the element close to the anchor. You likely are familiar with these values from
 using them in grid layouts.
 
 <inline-demo>
- <template shadowrootmode="open">
- <style>
-  #root{
-    block-size: 5em;
-    display: grid;
-  }
-  </style>
-  <style part="editable-style" contenteditable>[part="label"] {
+  <template shadowrootmode="open">
+    <style>
+      #root {
+        block-size: 5em;
+        display: grid;
+      }
+    </style>
+    <style part="editable-style" contenteditable>[part="label"] {
   align-self: start;
   justify-self: end;
-}</style></code>
-  <div id="root">
- <div part="label">Move me by changing the *-self values</div>
- </div>
- </template>
+}</style>
+    <div id="root">
+      <div part="label">Move me by changing the *-self values</div>
+    </div>
+  </template>
 </inline-demo>
 
 There are many possible values for `position-area`, but they are essentially
@@ -110,7 +110,7 @@ different ways of specifying which areas you want to pick within a 3x3 grid. On
 each axis, you have a start, center, and end area. You can pick any combination
 except for start and end without the center, as it has to be contiguous.
 
-For an in-depth look at `position-area`, my [article on
+For an in-depth look at `position-area`, check out my [article on
 `position-area`](/2025/02/25/anchor-position-area/).
 
 ## Alignment rules
@@ -118,7 +118,7 @@ For an in-depth look at `position-area`, my [article on
 There are just 3 rules that determine what alignment is used, based on the value
 of the `position-area` that you specified.
 
-### Rule #1 - center
+### Rule #1: center
 
 For each axis, if `position-area` only specifies the `center` track, then the
 alignment is `center`.
@@ -126,43 +126,54 @@ alignment is `center`.
 <inline-demo>
   <template shadowrootmode="open">
     <style>
-    ::-webkit-slider-thumb {anchor-name: --thumb;}
-    [part="label"]{ position-anchor: --thumb; pointer-events: none; opacity: .8 }
-  </style>
+      ::-webkit-slider-thumb {
+        anchor-name: --thumb;
+      }
+      [part="label"] {
+        position-anchor: --thumb;
+        pointer-events: none;
+        opacity: 0.8;
+      }
+    </style>
     <style part="editable-style" contenteditable>div {
   position-area: center center;
 }</style>
-    <input type="range" part="slider"></input>
+    <input type="range" part="slider" />
     <div part="label">place-self: center</div>
   </template>
 </inline-demo>
 
+### Rule #2: anchor-center
 
-### Rule #3 - anchor-center
 If `position-area` specifies all three sections in the axis, then the alignment
 is `anchor-center`.
 
 <inline-demo>
   <template shadowrootmode="open">
-  <style>
-    ::-webkit-slider-thumb { anchor-name: --thumb; }
-    [part="label"]{ position-anchor: --thumb; }
-  </style>
-  <style part="editable-style" contenteditable>div {
+    <style>
+      ::-webkit-slider-thumb {
+        anchor-name: --thumb;
+      }
+      [part="label"] {
+        position-anchor: --thumb;
+      }
+    </style>
+    <style part="editable-style" contenteditable>div {
   position-area: block-start;
 }</style>
-    <input type="range" part="slider"></input>
+    <input type="range" part="slider" />
     <div part="label">justify-self: anchor-center</div>
   </template>
 </inline-demo>
 
-Wait — what is `anchor-center`? It's a new value for the self alignment
+Wait -- what is `anchor-center`? It's a new value for the self alignment
 properties that aligns to the center of the anchor element. This differs from
 `center`, which aligns to the center of the new containing block created by
 `position-area`.
 
-### Rule #3 - everything else
-The final case for `position-area` is that it specifies just 2 of the sections
+### Rule #3: everything else
+
+The final case for `position-area` is that it specifies just two of the sections
 on the axis. In other words, it selects one edge, and perhaps the center, but
 not the other edge. In this situation, the alignment is whatever puts it closest
 to the anchor.
@@ -170,13 +181,17 @@ to the anchor.
 <inline-demo>
   <template shadowrootmode="open">
     <style>
-      ::-webkit-slider-thumb { anchor-name: --thumb; }
-      [part="label"]{ position-anchor: --thumb; }
+      ::-webkit-slider-thumb {
+        anchor-name: --thumb;
+      }
+      [part="label"] {
+        position-anchor: --thumb;
+      }
     </style>
     <style part="editable-style" contenteditable>div {
   position-area: start;
 }</style>
-    <input type="range" part="slider"></input>
+    <input type="range" part="slider" />
     <div part="label">place-self: end</div>
   </template>
 </inline-demo>
@@ -185,8 +200,8 @@ to the anchor.
 
 Of course, the spec isn't just "whatever puts it closest". The spec says that
 the alignment is "toward the non-specified side track". So if you specify
- "start" or "start and center", then the alignment will be `end`, and if you
- specify "end" or "end and center", then the alignment will be `start`.
+"start" or "start and center", then the alignment will be `end`, and if you
+specify "end" or "end and center", then the alignment will be `start`.
 
 While I find this to be technically useful, it doesn't really help my mental
 model of how this works, so I just think of it as "whatever is closest".
@@ -197,18 +212,23 @@ model of how this works, so I just think of it as "whatever is closest".
 
 But these are just the default values, and you can choose to override them. I
 haven't seen compelling use cases for this, but I'm guessing someone will come
-up with a use case. I'm guessing `stretch` will be the most useful override.
+up with one. Probably `stretch` will be the most useful override.
 
 <inline-demo>
   <template shadowrootmode="open">
-   <style>
-    ::-webkit-slider-thumb { anchor-name: --thumb; }
-    [part="label"]{ position-anchor: --thumb; position-area: block-start; }
-  </style>
-  <style part="editable-style" contenteditable>div {
+    <style>
+      ::-webkit-slider-thumb {
+        anchor-name: --thumb;
+      }
+      [part="label"] {
+        position-anchor: --thumb;
+        position-area: block-start;
+      }
+    </style>
+    <style part="editable-style" contenteditable>div {
   align-self: stretch;
 }</style>
-    <input type="range" part="slider"></input>
+    <input type="range" part="slider" />
     <div part="label">Fascinating info but longer</div>
   </template>
 </inline-demo>
@@ -217,16 +237,23 @@ up with a use case. I'm guessing `stretch` will be the most useful override.
 
 A common use case for anchor positioning is adding a popover to a word in text.
 In these situations, you don't have a way to know where on the screen the word
-will appear, or by extension where teh anchored element will appear. While you
+will appear, or by extension where the anchored element will appear. While you
 could use `position-try-options` to specify what happens when the anchored
 element overflows, there's a good chance you won't have to.
 
 <inline-demo>
   <template shadowrootmode="open">
-   <style>
-    span { anchor-name: --span; outline: var(--accent) medium solid; }
-    div{ position: absolute; position-anchor: --span; position-area: bottom; }
-  </style>
+    <style>
+      span {
+        anchor-name: --span;
+        outline: var(--accent) medium solid;
+      }
+      div {
+        position: absolute;
+        position-anchor: --span;
+        position-area: bottom;
+      }
+    </style>
     <p contenteditable>
       Feel free to edit this text, which has a single <span>span</span> element
       that is the anchor element. I think it's pretty neat that the anchor
@@ -242,11 +269,16 @@ the default behavior for absolutely positioned elements.
 
 <inline-demo>
   <template shadowrootmode="open">
-   <style>
-    ::-webkit-slider-thumb { anchor-name: --thumb; }
-    [part="label"]{ position-anchor: --thumb; position-area: block-start }
-  </style>
-    <input type="range" part="slider"></input>
+    <style>
+      ::-webkit-slider-thumb {
+        anchor-name: --thumb;
+      }
+      [part="label"] {
+        position-anchor: --thumb;
+        position-area: block-start;
+      }
+    </style>
+    <input type="range" part="slider" />
     <div part="label">CSS is awesome</div>
   </template>
 </inline-demo>
@@ -258,14 +290,19 @@ we want `unsafe` alignment.
 
 <inline-demo>
   <template shadowrootmode="open">
-   <style>
-    ::-webkit-slider-thumb { anchor-name: --thumb; }
-    [part="label"]{ position-anchor: --thumb; position-area: block-start }
-  </style>
-  <style part="editable-style" contenteditable>div {
+    <style>
+      ::-webkit-slider-thumb {
+        anchor-name: --thumb;
+      }
+      [part="label"] {
+        position-anchor: --thumb;
+        position-area: block-start;
+      }
+    </style>
+    <style part="editable-style" contenteditable>div {
   justify-self: unsafe anchor-center;
 }</style>
-    <input type="range" part="slider"></input>
+    <input type="range" part="slider" />
     <div part="label">CSS is awesome</div>
   </template>
 </inline-demo>
@@ -276,18 +313,19 @@ overflows on the right side, but doesn't on the left side.
 
 <inline-demo>
   <template shadowrootmode="open">
-   <style>
-    ::-webkit-slider-thumb { anchor-name: --thumb; }
-    [part="label"]{ position-anchor: --thumb; position-area: block-start }
-  </style>
-  <style>
-    ::-webkit-slider-thumb {anchor-name: --thumb;}
-  [part="label"]{position-anchor: --thumb;}
-  </style>
+    <style>
+      ::-webkit-slider-thumb {
+        anchor-name: --thumb;
+      }
+      [part="label"] {
+        position-anchor: --thumb;
+        position-area: block-start;
+      }
+    </style>
     <style part="editable-style" contenteditable>div {
   justify-self: safe anchor-center;
 }</style>
-    <input type="range" part="slider"></input>
+    <input type="range" part="slider" />
     <div part="label">CSS is awesome</div>
   </template>
 </inline-demo>
@@ -305,16 +343,20 @@ specifying `safe start` instead, the label overflows on the end side. Remove
 
 <inline-demo>
   <template shadowrootmode="open">
-   <style>
-    ::-webkit-slider-thumb { anchor-name: --thumb; }
-    [part="label"]{ position-anchor: --thumb; }
-  </style>
-  <style part="editable-style" contenteditable>div {
+    <style>
+      ::-webkit-slider-thumb {
+        anchor-name: --thumb;
+      }
+      [part="label"] {
+        position-anchor: --thumb;
+      }
+    </style>
+    <style part="editable-style" contenteditable>div {
   position-area: block-start inline-end;
   justify-self: safe start;
   inline-size: max-content;
 }</style>
-    <input type="range" part="slider"></input>
+    <input type="range" part="slider" />
     <div part="label">CSS is awesome and is totally a language</div>
   </template>
 </inline-demo>
@@ -327,11 +369,19 @@ not at the start.
 
 <inline-demo>
   <template shadowrootmode="open">
-  <style>
-    :host{container-type: inline-size; inline-size: 50cqi; place-self: center;}
-    p{ font-size: 40cqi; margin: 2cqi; line-height: .8em}
-  </style>
-  <p>CSS is awesome</p>
+    <style>
+      :host {
+        container-type: inline-size;
+        inline-size: 50cqi;
+        place-self: center;
+      }
+      p {
+        font-size: 40cqi;
+        margin: 2cqi;
+        line-height: 0.8em;
+      }
+    </style>
+    <p>CSS is awesome</p>
   </template>
 </inline-demo>
 
