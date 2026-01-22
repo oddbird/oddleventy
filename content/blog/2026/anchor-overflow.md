@@ -22,33 +22,6 @@ summary: |
 ---
 
 <style>
-  /* inline-demo styles */
-  inline-demo {
-    border: medium solid var(--text);
-    position: relative;
-    margin-block: var(--gutter);
-    --code-stripe-1: oklch(from var(--highlight) .99 .1 h);
-    --code-stripe-2: oklch(from var(--highlight) .97 .1 h);
-
-    &::part(editable-style) {
-      display: block;
-      white-space: pre;
-      font-family: monospace;
-      font-size: var(--code);
-      padding: var(--shim);
-      color: black;
-      background: repeating-linear-gradient(
-        45deg,
-        var(--code-stripe-1),
-        var(--code-stripe-1) 10px,
-        var(--code-stripe-2) 10px,
-        var(--code-stripe-2) 20px
-      );
-    }
-  }
-</style>
-<style>
-  /* Styles for demos in this article */
   inline-demo {
     &::part(slider) {
       width: 100%;
