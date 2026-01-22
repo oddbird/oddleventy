@@ -1,7 +1,7 @@
 ---
 title: Handling overflow with anchor positioning
 sub: What is safer than safe?
-date: 2026-01-21
+date: 2026-01-22
 image:
   src: blog/2026/anchor-overflow.jpg
   alt: >
@@ -52,7 +52,7 @@ summary: |
   inline-demo {
     &::part(slider) {
       width: 100%;
-      margin-block-start: 3em;
+      margin-block-start: 4em;
     }
 
     &::part(label){
@@ -350,13 +350,18 @@ specifying `safe start` instead, the label overflows on the end side. Remove
     </style>
     <style part="editable-style" contenteditable>div {
   position-area: block-start inline-end;
-  justify-self: safe start;
-  inline-size: max-content;
+  justify-self: unsafe start;
+  min-inline-size: 5em;
 }</style>
     <input type="range" part="slider" />
-    <div part="label">CSS is awesome and is totally a language</div>
+    <div part="label">CSS is awesome and is totally a language.</div>
   </template>
 </inline-demo>
+
+You'll also note that the label text wraps to try to stay inside the containing
+block. This is because there is still vertical space in the containing block in
+this instance. You can disable this behavior by setting `min-inline-size:
+max-content`.
 
 In the context of anchor positioned elements, where overflow can easily happen
 on either side, the `safe` keyword doesn't quite make sense. However, when we
@@ -391,8 +396,7 @@ with more use cases, CSS will make improvements to the capabilities of overflow
 alignment.
 
 Currently, you can't specify an overflow alignment keyword without also
-specifying the alignment, but there's a [CSSWG
-issue](https://github.com/w3c/csswg-drafts/issues/12920) to allow that. I also
-think it would be useful to add a keyword for the default behavior, so it could
-be set like `safe` and `unsafe`, and potentially add a keyword like `safe-end`
-that would overflow on the start, but not the end.
+specifying the alignment. I also think it would be useful to add a keyword for
+the default behavior, so it could be set like `safe` and `unsafe`, and
+potentially add a keyword like `safe-end` that would overflow on the start, but
+not the end.
