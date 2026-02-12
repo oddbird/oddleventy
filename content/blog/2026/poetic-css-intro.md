@@ -154,3 +154,38 @@ how all the pieces fit together.
 
 Without that understanding,
 all you have is a bag of memorized tricks.
+
+## Making progress
+
+We've been planning this course for a while,
+but fitting it in around other projects
+made it slow to pick up momentum --
+and we didn't want to start selling something
+that only exists in our minds!
+
+It's not done,
+but we're getting to the point
+where we have actual lessons
+to share with early subscribers.
+Maybe that's you?
+
+The course structure is roughed in,
+many of the demos have been built,
+slide decks and transcripts/articles are taking shape,
+I've done some camera tests
+(using old lights from my Mozilla videos),
+and I'm starting to film
+the first set of lessons.
+
+But there's a lot more to do
+Turning a series of videos into a _course_
+that you can access.
+Hopefully we'll get that infrastructure in place soon --
+a landing page with the course outline,
+a checkout flow,
+and a platform you can log into
+for access.
+We're working on it!
+
+You're in the right place
+to get updates along the way.
