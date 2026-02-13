@@ -1,49 +1,81 @@
 ---
 title: CSS is one big progressive enhancement
-sub: An intro to my upcoming Poetic CSS course
+sub: Learn the internal logic of CSS in my new course
 author: miriam
 date: 2026-02-12
+action:
+  text: Subscribe for updates »
+  url: /courses/poetic-css/
 summary:
-  I hear over and over
+  I hear regularly from web developers
   that CSS feels like a series of workarounds,
   rather than a unified system.
   And sometimes that's because
   there are essential features missing from the language,
   but often it's a problem
-  with the way CSS is taught.
+  with the way CSS is taught
+  through third-party frameworks.
+  In my upcoming course,
+  Poetic CSS,
+  I hope to show you the systems
+  behind the language.
 ---
 
-Since coding my first website
-in the early 2000's,
-taking my first client in 2006,
-and starting OddBird a few years later,
-I've dedicated my career
-to helping address this issue from all sides.
-I started sharing CSS tools in Sass
-then joined the Sass core team,
-started teaching at conferences
-and on the Mozilla developer channel,
-and eventually became part of the
-CSS Working Group --
-designing features like cascade layers,
-scope, and container queries.
-All of that while working with OddBird
-to build top-shelf
-web sites and applications
-for clients around the world.
+{%- import 'utility.macros.njk' as utility -%}
 
-A lot has changed over those 20 years,
-with new CSS features rolling out
+There are many excellent CSS courses in the world,
+and I recommend learning from more than one source.
+Many of them are by top-notch designers,
+if that's an angle that interests you.
+But this course is all about systems:
+
+- Understanding the internal system logic of CSS itself
+- Building our own systems to efficiently work with CSS
+
+We'll cover individual features
+like flexbox and grid and container queries,
+but we'll also re-visit
+underlying principles like inheritance,
+the cascade, and value resolution.
+I want to completely change how you think about
+something like 'CSS variables' --
+fundamentally different
+from variables in any other language --
+so that you have more tools to reach for
+in everyday situations.
+
+The goal is extremely practical and grounded:
+helping you write better CSS,
+without the struggle and confusion.
+Not a set of tricks,
+but a system to work with.
+If you're writing it from scratch,
+using third-party frameworks,
+or having an LLM generate code for you --
+your job is to _make it work for users_.
+And to get there,
+you have to understand
+how all the pieces fit together.
+
+# A vision disguised as a language
+
+A lot has changed over the 20 years
+I've been making websites and applications
+for clients,
+and tools for developers.
+These days,
+new CSS features are rolling out
 faster than ever.
 But underneath the heap of different properties and values
-that we usually learn,
-there's a logic that holds it all together --
-and that hasn't really changed at all.
-Instead,
-new CSS features like variables and cascade layers
+that we learn,
+there's a logic that holds it all together.
+That logic hasn't changed,
+but it's rarely discussed.
+Meanwhile,
+CSS features like variables and cascade layers
 have given us more and more _direct access_
 to understand and manipulate
-the internal features that make CSS
+the internal systems that make CSS
 both _powerful_ and also _complicated_.
 
 This is not some secret
@@ -65,7 +97,7 @@ in different languages and writing modes,
 while leaving the end user
 with full control of the outcome.
 
-A world wide web:
+A _world wide web_:
 [on everything,
 for everyone](https://w3.org/Consortium/mission.html#principles).
 
@@ -78,10 +110,8 @@ That's often framed as a moral argument,
 something that you _should_ consider
 for the sake of inclusion.
 But I want to show you
-how CSS is a progressive enhancement
-_from the inside out_,
-and not a complication
-that you can opt out of.
+how CSS is built on progressive enhancement
+_from the inside out_.
 
 If you want to design websites,
 CSS is the only way to do it.
@@ -94,11 +124,12 @@ If you find that impractical,
 you're probably right!
 Universal design certainly makes things complicated!
 But you'll be surprised how much of the work
-CSS can do for us if we let it.
-And if you try to reject those principles,
-you will be fighting the language at every step.
+CSS can do for us once we embrace that mindset.
+When we reject it,
+we end up fighting the language at every step --
+confused by its behavior.
 
-With that goal in mind,
+With that in mind,
 we can revisit the various features of CSS
 and see how they all fit together
 from that underlying principle.
@@ -106,12 +137,6 @@ Not to gloss over the rough edges
 (CSS has
 [its share of mistakes](https://wiki.csswg.org/ideas/mistakes))
 but to _understand where they come from_.
-
-Once we understand CSS
-as a series of progressive enhancements,
-we can revisit the essential features
-and put them in context,
-to really understand how they work.
 The result is a language
 that prioritizes resilience over precision,
 and _showing your work_ over _getting the right answer_.
@@ -122,38 +147,34 @@ we choose our words carefully
 to _express our intent_
 without being overly restrictive.
 
-There are many excellent CSS courses in the world,
-and I recommend learning from more than one source.
-But this course is all about systems:
+## CSS without inheritance (a side quest)
 
-- Understanding the internal system logic of CSS itself
-- And building our own systems to efficiently work with CSS
+Sometimes when I'm working on a lesson,
+I end up down a rabbit hole
+that feels interesting but tangential
+to the main thread.
+The other day,
+I filmed one of these 'side quests'
+to include as extra material --
+and to get a feel for my setup.
+Let me know if you find this sort of tangent
+interesting!
+Maybe you'll catch my 'todo' slide
+that makes a brief appearance! :)
 
-We'll talk about individual features
-like flexbox and grid and container queries,
-but we'll also re-visit
-underlying principles like inheritance,
-the cascade, and value resolution.
-I want to completely change how you think about
-something like 'CSS variables' --
-fundamentally different
-from any other variables
-in any other language --
-so that you have more tools to reach for
-in everyday situations.
+I was looking at early proposals
+for style on the web,
+and noticed they all include _inheritance_.
+It's mentioned in the first proposal
+without any explanation,
+and never goes away.
+But maybe that shouldn't be surprising?
+Have you ever considered
+what it would be like
+to style the web _without_ inheritance?
+Let's try it!
 
-The goal is extremely practical and grounded:
-helping you write better CSS,
-more quickly and efficiently.
-If you're doing it by hand,
-or having an LLM to write it for you --
-either way,
-your job is to make it work.
-But to get there you have to understand
-how all the pieces fit together.
-
-Without that understanding,
-all you have is a bag of memorized tricks.
+… video here? …
 
 ## Making progress
 
@@ -161,31 +182,42 @@ We've been planning this course for a while,
 but fitting it in around other projects
 made it slow to pick up momentum --
 and we didn't want to start selling something
-that only exists in our minds!
+that only exists in my mind!
 
-It's not done,
+It's still not done,
 but we're getting to the point
 where we have actual lessons
 to share with early subscribers.
 Maybe that's you?
-
 The course structure is roughed in,
 many of the demos have been built,
 slide decks and transcripts/articles are taking shape,
-I've done some camera tests
-(using old lights from my Mozilla videos),
-and I'm starting to film
-the first set of lessons.
+I've done some camera and lighting tests,
+and I'm starting to film the first lessons.
 
-But there's a lot more to do
-Turning a series of videos into a _course_
+But there's a lot more to do,
+turning a series of videos into a _course_
 that you can access.
 Hopefully we'll get that infrastructure in place soon --
 a landing page with the course outline,
 a checkout flow,
-and a platform you can log into
-for access.
+and a platform you can log into.
 We're working on it!
+
+Our plan
+is to launch the course later this spring (2026),
+with pre-sales and early access
+starting in the next few months.
 
 You're in the right place
 to get updates along the way.
+
+{{ utility.main_action(action.text, url=action.url) }}
+
+## Let us know what you're looking for!
+
+Are there specific questions you have,
+or topics you'd like me to cover?
+Confusion around a specific feature,
+or interest in a particular aspect of the language?
+I'd love to hear what's on your mind!
