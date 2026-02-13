@@ -140,7 +140,7 @@ fundamentally different
 from any other variables
 in any other language --
 so that you have more tools to reach for
-in every-day situations.
+in everyday situations.
 
 The goal is extremely practical and grounded:
 helping you write better CSS,
