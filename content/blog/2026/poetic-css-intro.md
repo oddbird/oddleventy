@@ -33,7 +33,7 @@ But this course is all about systems:
 - Building our own systems to efficiently work with CSS
 
 We'll cover individual features
-like flexbox and grid and container queries,
+like flexbox, grid, and container queries,
 but we'll also re-visit
 underlying principles like inheritance,
 the cascade, and value resolution.
