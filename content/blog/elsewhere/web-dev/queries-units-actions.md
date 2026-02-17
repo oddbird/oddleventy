@@ -31,17 +31,28 @@ summary:
   including the sidebar?
 ---
 
-## Responsive typography with `cqi` units
+## Defining containers to measure in context
 
-The first step is to define some basic sizing variables that could be reused across the project—starting with whitespace sizes. But before creating any custom properties, the browser provides some useful named values as CSS units:
+By default, `1cqi` (1/100 container query inline size) is the same as `1svi` (1/100 small viewport inline size) because the
+["small" viewport](https://web.dev/learn/css/sizing#alternative_viewport-relative_units) acts as the initial container for any web page. In order to take full advantage of the cqi unit, you need to define additional "containers" within the page. The primary layout containers on this page are the product-list and shopping-cart—so they are set to expose their inline-size.
 
-- `1em`: the current font size.
-- `1rem`: the font size on the :root (html) element.
-- `1lh` / `1rlh`: the current and root line heights.
-- `1vw`: the viewport width.
-- `1vi`: the viewport "inline" size (for English, this is the same as vw).
-- `1cqi`: the inline size of the nearest "container" (defaulting to the viewport).
+```css
+product-list,
+shopping-cart {
+  container-type: inline-size;
+}
+```
 
+Container units are powerful, but sometimes it's useful to make more dramatic changes in a component layout when the available size crosses a threshold. These are often called breakpoints—since the fix is applied at the point when a given layout begins to break. You may already be familiar with using @media to add breakpoints based on the viewport size. The new @container rule works the same way, but measuring container elements instead of the page!
+
+## Article contents
+
+- Defining containers to measure in context
+- Explicit container queries
+- Transition grid templates and visibility
+- Querying media versus containers
+
+## The demo where we put it all together
 
 {% import 'embed.macros.njk' as embed %}
 
@@ -50,10 +61,3 @@ The first step is to define some basic sizing variables that could be reused acr
   title="Baseline Bakery",
   user="web-dot-dev"
 )}}
-
-## Article Contents
-
-- Defining containers to measure in context
-- Explicit container queries
-- Transition grid templates and visibility
-- Querying media versus containers
