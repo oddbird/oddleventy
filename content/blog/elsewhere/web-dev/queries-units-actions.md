@@ -1,6 +1,6 @@
 ---
 title: Container Queries and Units in Action
-date: 2025-10-23
+date: 2026-02-17
 venue: web.dev
 canonical: https://web.dev/articles/baseline-in-action-container-queries
 author: miriam
