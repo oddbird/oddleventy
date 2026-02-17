@@ -43,7 +43,7 @@ shopping-cart {
 }
 ```
 
-Container units are powerful, but sometimes it's useful to make more dramatic changes in a component layout when the available size crosses a threshold. These are often called breakpoints—since the fix is applied at the point when a given layout begins to break. You may already be familiar with using @media to add breakpoints based on the viewport size. The new @container rule works the same way, but measuring container elements instead of the page!
+Container units are powerful, but sometimes it's useful to make more dramatic changes in a component layout when the available size crosses a threshold. These are often called breakpoints—since the fix is applied at the point when a given layout begins to break. You may already be familiar with using `@media` to add breakpoints based on the viewport size. The new `@container` rule works the same way, but measuring container elements instead of the page!
 
 ## Article contents
 
