@@ -48,8 +48,7 @@ The first step is to define some basic sizing variables that could be reused acr
 {{ embed.codepen(
   id="XJXEOEg",
   title="Baseline Bakery",
-  user="jamessw",
-  height=300
+  user="web-dot-dev"
 )}}
 
 ## Article Contents
