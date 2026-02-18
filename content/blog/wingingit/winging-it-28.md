@@ -53,7 +53,8 @@ Check out our [CSS Mixins Playlist](https://www.youtube.com/playlist?list=PL4jAK
 ## What We Cover:
 
 - What `@scope` is and when it is useful
-- Can we use mixins now?
+- How CSS functions differ from mixins
+- Current browser support for mixins
 - When to use a mixin
   - Will something like `@content` work for CSS mixins, similar to Sass?
 
