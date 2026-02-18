@@ -26,7 +26,7 @@ summary: |
   we wanted to talk with him
   about what that means.
   Chris has also been writing
-  about the future of CSS Mixins,
+  about the future of CSS mixins,
   a new specification
   Miriam is working on.
   We answer questions,
