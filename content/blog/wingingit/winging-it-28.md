@@ -52,16 +52,13 @@ Check out our [CSS Mixins Playlist](https://www.youtube.com/playlist?list=PL4jAK
 
 ## What We Cover:
 
-### What is `@scope`?
-
-### Why is it useful?
-
-### Can we use mixins now?
-
-### When to use a mixin
-- Will something like @content work for CSS mixins, similar to Sass?
-
+- What is `@scope`?
+- Why is it useful?
+- Can we use mixins now?
+- When to use a mixin
+  - Will something like `@content` work for CSS mixins, similar to Sass?
 
 ## Links:
-- [Scope In CSS](https://frontendmasters.com/blog/scope-in-css/)
+
+- [Scope in CSS](https://frontendmasters.com/blog/scope-in-css/)
 - [Thoughts on Native CSS Mixins](https://frontendmasters.com/blog/thoughts-on-native-css-mixins/)
