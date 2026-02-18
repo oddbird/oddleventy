@@ -20,7 +20,7 @@ summary: |
   Firefox added the CSS `@scope` rule –
   making the new feature available
   across all major browsers!
-  Since Chris Coyier has done
+  Since [Chris Coyier](https://chriscoyier.net) has done
   a fair amount of writing
   and speaking on the topic,
   we wanted to talk with him
