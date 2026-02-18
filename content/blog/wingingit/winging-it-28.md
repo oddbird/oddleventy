@@ -64,3 +64,6 @@ Check out our [CSS Mixins Playlist](https://www.youtube.com/playlist?list=PL4jAK
 
 - [Scope in CSS](https://frontendmasters.com/blog/scope-in-css/)
 - [Thoughts on Native CSS Mixins](https://frontendmasters.com/blog/thoughts-on-native-css-mixins/)
+- [Embedded scopes pen](https://codepen.io/miriamsuzanne/pen/ExrdXrZ)
+- [Gradient text mixin pen](https://codepen.io/miriamsuzanne/pen/azONKwv)
+- [Flag functions pen](https://codepen.io/miriamsuzanne/pen/GgJZmBd)
