@@ -56,7 +56,9 @@ Check out our [CSS Mixins Playlist](https://www.youtube.com/playlist?list=PL4jAK
 - How CSS functions differ from mixins
 - Current browser support for mixins
 - When to use a mixin
-  - Will something like `@content` work for CSS mixins, similar to Sass?
+- Will `@content` work for CSS mixins, similar to Sass?
+- `@content` vs `@contents`
+- Fun with functions
 
 ## Links:
 
