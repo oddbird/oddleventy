@@ -64,7 +64,7 @@ describe('clickToCopy tests', () => {
       href: anchorLink.href,
     };
     expect(() => copyAnchorLink(mockedAnchorLinkElementDOM)).toThrow(
-      new Error('An error occurred with copying the anchor link.'),
+      'An error occurred with copying the anchor link.',
     );
   });
 });
