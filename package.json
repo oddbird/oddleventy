@@ -52,7 +52,7 @@
   "dependencies": {
     "@algolia/algoliasearch-netlify-frontend": "^1.0.15",
     "@oddbird/browser-support": "^0.1.2",
-    "@oddbird/css-anchor-positioning": "^0.8.0",
+    "@oddbird/css-anchor-positioning": "^0.9.0",
     "@oddbird/popover-polyfill": "^0.6.1",
     "accoutrement": "^4.0.7",
     "cascading-color-systems": "^0.1.0-beta.18",
@@ -92,7 +92,7 @@
     "js-yaml": "^4.1.1",
     "lite-youtube-embed": "^0.3.4",
     "lodash-es": "^4.17.23",
-    "markdown-it": "^14.1.0",
+    "markdown-it": "^14.1.1",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mark": "^4.0.0",
