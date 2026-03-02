@@ -10,8 +10,8 @@ image:
     Image gallery grid
     with pictures of dogs and birds.
     Each images has a caption:
-    Say hi to mochi,
-    Say hi to sisters,
+    Say hi to Mochi,
+    Say hi to Sisters,
     Say hi to Mr. Macaw
 tags:
   - Link
@@ -46,7 +46,9 @@ that you can use to do just that.
 
 ## How to deal with large image sizes
 
-Images can be some of the largest assets you ask your users to download, and image galleries by their nature often have many images. This demo uses a couple of Baseline features to help reduce the performance impact on users.
+Images can be some of the largest assets you ask your users to download, and
+image galleries by their nature often have many images. This demo uses a couple
+of Baseline features to help reduce the performance impact on users.
 
 ## Article contents
 
