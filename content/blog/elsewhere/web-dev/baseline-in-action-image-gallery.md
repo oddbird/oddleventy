@@ -9,10 +9,6 @@ image:
   alt: >
     Image gallery grid
     with pictures of dogs and birds.
-    Each images has a caption:
-    Say hi to Mochi,
-    Say hi to Sisters,
-    Say hi to Mr. Macaw
 tags:
   - Link
   - CSS
