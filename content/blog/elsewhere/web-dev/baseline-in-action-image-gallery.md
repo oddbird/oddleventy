@@ -49,7 +49,7 @@ of Baseline features to help reduce the performance impact on users.
 ## Article contents
 
 - Lazy loading and AVIF
-- Lightbox effect
+- Lightbox effect transitions with `@starting-style`
 - Style the button
 - Aspect ratio
 - Take it further
