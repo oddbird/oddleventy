@@ -50,7 +50,7 @@ of Baseline features to help reduce the performance impact on users.
 
 - Lazy loading and AVIF
 - Lightbox effect transitions with `@starting-style`
-- Style the button
+- Using `backdrop-filter` for better readability
 - Aspect ratio
 - Take it further
 
@@ -61,3 +61,5 @@ of Baseline features to help reduce the performance impact on users.
   title="Baseline Zoo",
   user="web-dot-dev"
 )}}
+
+[Read full article »](https://web.dev/articles/baseline-in-action-image-gallery)
