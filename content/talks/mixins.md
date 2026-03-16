@@ -21,7 +21,12 @@ events:
     date: 2025-06-05
     end: 2025-06-06
     slides: https://slides.oddbird.net/mixins/cssday/
-    video: https://conffab.com/presentation/is-sass-dead-yet-css-mixins-functions-c/?gl=yFA1b51n8wXn
+    video: https://www.youtube.com/watch?v=IIvqkkfmPYE
+    media: &cssDay
+      youtube: IIvqkkfmPYE
+media:
+  - span: full
+    <<: *cssDay
 summary: |
   Sass has inspired new developments in CSS for over a decade --
   from variables to nesting,
@@ -35,6 +40,23 @@ how will they be different
 from the Sass tools that inspired them,
 how can you help in the spec process,
 and what other features might this open up in the future?
+
+------
+
+{% import "embed.macros.njk" as embed %}
+
+{{ embed.figure(
+  data=media,
+  caption="
+    Both features have come a long way in the last year,
+    since I gave this talk.
+    If you're interested in an update,
+    check out our
+    [live stream with Chris Coyier](https://www.oddbird.net/2026/01/22/winging-it-28/).
+  "
+) }}
+
+------
 
 Along the way,
 we dive into variables --
