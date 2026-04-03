@@ -88,15 +88,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-plugin-rss@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "@11ty/eleventy-plugin-rss@npm:2.0.4"
+"@11ty/eleventy-plugin-rss@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@11ty/eleventy-plugin-rss@npm:3.0.0"
   dependencies:
-    "@11ty/eleventy-utils": "npm:^2.0.0"
-    "@11ty/posthtml-urls": "npm:^1.0.1"
-    debug: "npm:^4.4.0"
-    posthtml: "npm:^0.16.6"
-  checksum: 10/c919f9c2bbee9c42219980848fd83058bbc99fb5fde30e3a397739a250cce496e69ccac677a5fec5287e672d1539f34eb75eb227f9d429c00cd3922458ad28eb
+    "@11ty/eleventy-utils": "npm:^2.0.7"
+    "@11ty/posthtml-urls": "npm:^1.0.2"
+    debug: "npm:^4.4.3"
+    posthtml: "npm:^0.16.7"
+  checksum: 10/99ad020b908ce9847c0a2c4c887bff88a4e1357ee608b193a5375710b7f18d6a5149194581ab648e6f478647d42fcbd7623e2d1fb5fbe4b1d1a995b18990cb1d
   languageName: node
   linkType: hard
 
@@ -109,7 +109,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-utils@npm:^2.0.0, @11ty/eleventy-utils@npm:^2.0.1, @11ty/eleventy-utils@npm:^2.0.2, @11ty/eleventy-utils@npm:^2.0.7":
+"@11ty/eleventy-utils@npm:^2.0.1, @11ty/eleventy-utils@npm:^2.0.2, @11ty/eleventy-utils@npm:^2.0.7":
   version: 2.0.7
   resolution: "@11ty/eleventy-utils@npm:2.0.7"
   checksum: 10/f31d91c27c6957c0373ba12e15805c1d9572d58a487de0d38cf6b364cb80d13bafd1d83c7a1d2a75b541f48ab2a8430353b518bc237f71a737eda145479aeef1
@@ -173,7 +173,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/posthtml-urls@npm:^1.0.1, @11ty/posthtml-urls@npm:^1.0.2":
+"@11ty/posthtml-urls@npm:^1.0.2":
   version: 1.0.2
   resolution: "@11ty/posthtml-urls@npm:1.0.2"
   dependencies:
@@ -9378,7 +9378,7 @@ __metadata:
     "@11ty/eleventy": "npm:^3.1.5"
     "@11ty/eleventy-fetch": "npm:^5.1.2"
     "@11ty/eleventy-img": "npm:^6.0.4"
-    "@11ty/eleventy-plugin-rss": "npm:^2.0.4"
+    "@11ty/eleventy-plugin-rss": "npm:^3.0.0"
     "@11ty/eleventy-plugin-syntaxhighlight": "npm:^5.0.2"
     "@11ty/is-land": "npm:^5.0.1"
     "@algolia/algoliasearch-netlify-frontend": "npm:^1.0.15"
@@ -9437,7 +9437,7 @@ __metadata:
     stylelint: "npm:^17.5.0"
     stylelint-config-standard-scss: "npm:^17.0.0"
     truncate-html: "npm:^1.2.2"
-    typescript: "npm:^5.9.3"
+    typescript: "npm:^6.0.2"
     typogr: "npm:^0.6.8"
   languageName: unknown
   linkType: soft
@@ -9949,7 +9949,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"posthtml@npm:^0.16.6, posthtml@npm:^0.16.7":
+"posthtml@npm:^0.16.7":
   version: 0.16.7
   resolution: "posthtml@npm:0.16.7"
   dependencies:
@@ -12389,23 +12389,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.9.3":
-  version: 5.9.3
-  resolution: "typescript@npm:5.9.3"
+"typescript@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "typescript@npm:6.0.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/c089d9d3da2729fd4ac517f9b0e0485914c4b3c26f80dc0cffcb5de1719a17951e92425d55db59515c1a7ddab65808466debb864d0d56dcf43f27007d0709594
+  checksum: 10/b9fc2fcee7ee8e5ca6f5138181964550531e18e2d20ecb71b802d4d495881e3444e0ef94cbb6e84eb2ba41e913f6feae3ca33cc722b32e6e6dfadb32d23b80e6
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.9.3#optional!builtin<compat/typescript>":
-  version: 5.9.3
-  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
+"typescript@patch:typescript@npm%3A^6.0.2#optional!builtin<compat/typescript>":
+  version: 6.0.2
+  resolution: "typescript@patch:typescript@npm%3A6.0.2#optional!builtin<compat/typescript>::version=6.0.2&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/696e1b017bc2635f4e0c94eb4435357701008e2f272f553d06e35b494b8ddc60aa221145e286c28ace0c89ee32827a28c2040e3a69bdc108b1a5dc8fb40b72e3
+  checksum: 10/e5501dfcf8c5b6b9a61f6fa53decc40187cebe3a2b7b2bd51c615007ad4cf6d58298461fef63294f6be9d5f2f33019b2a2e2bf02d9cb7d7f6ec94372bf24ffa2
   languageName: node
   linkType: hard
 
