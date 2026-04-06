@@ -9149,7 +9149,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-gyp@npm:^12.2.0, node-gyp@npm:latest":
+"node-gyp@npm:latest":
   version: 12.2.0
   resolution: "node-gyp@npm:12.2.0"
   dependencies:
@@ -9422,7 +9422,6 @@ __metadata:
     mockdate: "npm:^3.0.5"
     netlify-plugin-11ty: "npm:^1.5.0"
     node-fetch: "npm:^3.3.2"
-    node-gyp: "npm:^12.2.0"
     npm-run-all: "npm:^4.1.5"
     postcss: "npm:^8.5.8"
     posthtml: "npm:^0.16.7"
