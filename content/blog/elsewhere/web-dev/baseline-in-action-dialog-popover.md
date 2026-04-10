@@ -1,5 +1,6 @@
 ---
-title: < dialog > and popover Baseline Layered UI Patterns
+title: >
+  `<dialog>` and `popover`: Baseline Layered UI Patterns
 date: 2026-04-09
 venue: web.dev
 canonical: https://web.dev/articles/baseline-in-action-dialog-popover
