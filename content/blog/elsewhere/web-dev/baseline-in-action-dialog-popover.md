@@ -1,6 +1,6 @@
 ---
 title: >
-  `<dialog>` and `popover`: Baseline Layered UI Patterns
+  Baseline Layered UI Patterns: `<dialog>` and `popover`
 date: 2026-04-09
 venue: web.dev
 canonical: https://web.dev/articles/baseline-in-action-dialog-popover
@@ -43,10 +43,10 @@ that developers can reach
 for instead of custom implementations.
 To show the advantages
 of using layered UI patterns built
-into today's web browsers—
+into today's web browsers —
 and to give an example
 of when you might reach for `<dialog>`
-or use the `popover` attribute—
+or use the `popover` attribute —
 this article walks through
 an example of a modal
 that appears when the user attempts
