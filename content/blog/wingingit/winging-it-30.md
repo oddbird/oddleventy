@@ -53,7 +53,7 @@ Based on Stacy's [web.dev article](web.dev/articles/baseline-in-action-image-gal
   - Where you can use them
   - Example image sizes after converting
 - **Lazy Loading**
-- **`@starting-style`** Baseline 2024 Newly available 19/30
+- **`@starting-style`**
 - **Backdrop-filter** - Baseline 2024 Newly available 18/30
 - **Relative colors** - Baseline 2024 Newly available 18/30
 - **Text-box** - Limited (waiting on Firefox, been in Chrome/Edge/Safari for over a year)
