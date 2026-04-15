@@ -56,7 +56,7 @@ Based on Stacy's [web.dev article](web.dev/articles/baseline-in-action-image-gal
 - **`@starting-style`**
 - **Backdrop-filter**
 - **Relative colors**
-- **Text-box** - Limited (waiting on Firefox, been in Chrome/Edge/Safari for over a year)
+- **Text-box**
 - **`nth-child` of .class** [codepen](https://codepen.io/editor/stacy/pen/019d06f5-09b0-739b-b4ec-3104bbe8af6f)
 
 ## Links:
