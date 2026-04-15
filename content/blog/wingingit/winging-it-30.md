@@ -68,7 +68,7 @@ Based on Stacy's [web.dev article](web.dev/articles/baseline-in-action-image-gal
 - [caniuse `@starting-style`](https://caniuse.com/wf-starting-style)
 - [caniuse CSS `backdrop-filter`](https://caniuse.com/css-backdrop-filter)
 - [caniuse CSS relative colors](https://caniuse.com/css-relative-colors)
-- [caniuse CSS text box trim](https://caniuse.com/css-text-box-trim)
+- [caniuse CSS `text-box-trim`](https://caniuse.com/css-text-box-trim)
 - [CSS text-box-trim by Adam Argyle](https://developer.chrome.com/blog/css-text-box-trim)
 - [CodePen Quick Wins](http://codepen.io/editor/stacy/pen/019d038f-2feb-761c-9fbd-aa3e319166ac)
 - [caniuse transition behavior](https://caniuse.com/mdn-css_properties_transition-behavior_allow-discrete)
