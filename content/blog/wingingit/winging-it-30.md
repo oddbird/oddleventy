@@ -47,7 +47,7 @@ Based on Stacy's [web.dev article](web.dev/articles/baseline-in-action-image-gal
 
 ## What We Cover:
 
-- **AVIF** - Baseline 2024 Newly available 25/30
+- **AVIF**
   - What makes AVIF a good choice
   - How to convert images
   - Where you can use them, [everywhere but Affinity?](https://docs.google.com/spreadsheets/d/1uBhSmwDFyE0pYhnP1WAr0gs_CwCPdjAg0254YQO1Rhk/edit)
