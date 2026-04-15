@@ -17,11 +17,11 @@ media:
 summary: |
   Join Stacy, James, and Miriam
   as we explore some hidden gems
-  of UI development—
+  of UI development --
   from `@starting-style`
   for smoother entry transitions
   to performance boosts with AVIF images
-  and using the browser’s built-in lazy-loading.
+  and using the browser's built-in lazy-loading.
   We cover a variety of quick wins
   that you can use
   to make your life easier
@@ -30,7 +30,7 @@ summary: |
 ---
 
 {% callout 'note', false %}
-Based on Stacy's [web.dev article](web.dev/articles/baseline-in-action-image-gallery)
+Based on Stacy's [web.dev article](https://web.dev/articles/baseline-in-action-image-gallery)
 {% endcallout %}
 
 {% import "embed.macros.njk" as embed %}
