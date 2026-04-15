@@ -51,7 +51,7 @@ Based on Stacy's [web.dev article](web.dev/articles/baseline-in-action-image-gal
   - What makes AVIF a good choice
   - How to convert images
   - Where you can use them
-  - Example Images sizes after converting
+  - Example image sizes after converting
 - **Lazy Loading** - Baseline 2023 Newly available 27/30
 - **`@starting-style`** Baseline 2024 Newly available 19/30
 - **Backdrop-filter** - Baseline 2024 Newly available 18/30
