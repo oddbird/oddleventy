@@ -65,7 +65,7 @@ Based on Stacy's [web.dev article](web.dev/articles/baseline-in-action-image-gal
 - [AVIF has landed](https://jakearchibald.com/2020/avif-has-landed/)
 - [Squoosh](https://squoosh.app/)
 - [Lazy Loading Attr](https://caniuse.com/loading-lazy-attr)
-- [caniuse starting style](https://caniuse.com/wf-starting-style)
+- [caniuse `@starting-style`](https://caniuse.com/wf-starting-style)
 - [caniuse CSS `backdrop-filter`](https://caniuse.com/css-backdrop-filter)
 - [caniuse CSS relative colors](https://caniuse.com/css-relative-colors)
 - [caniuse CSS text box trim](https://caniuse.com/css-text-box-trim)
