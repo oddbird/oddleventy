@@ -57,7 +57,7 @@ Based on Stacy's [web.dev article](web.dev/articles/baseline-in-action-image-gal
 - **Backdrop-filter**
 - **Relative colors**
 - **Text-box**
-- **`nth-child` of .class** [codepen](https://codepen.io/editor/stacy/pen/019d06f5-09b0-739b-b4ec-3104bbe8af6f)
+- **`nth-child` of .class** [CodePen](https://codepen.io/editor/stacy/pen/019d06f5-09b0-739b-b4ec-3104bbe8af6f)
 
 ## Links:
 
