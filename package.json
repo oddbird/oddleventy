@@ -105,7 +105,7 @@
     "prettier": "^3.8.1",
     "rimraf": "^6.1.3",
     "rollup": "^4.60.1",
-    "sanitize-html": "^2.17.2",
+    "sanitize-html": "^2.17.3",
     "sass-embedded": "^1.99.0",
     "sassdoc": "^2.7.4",
     "sassdoc-theme-herman": "^7.0.1",
