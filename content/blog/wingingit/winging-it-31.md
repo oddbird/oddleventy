@@ -55,11 +55,10 @@ to learn how to use and troubleshoot Anchor Positioning today.
 
 ## Links:
 
-- [Abs value](https://codepen.io/jamessw/pen/MYeqVyL)
-- [Clamping](https://codepen.io/jamessw/pen/raLeboW)
-- [Select flip](https://codepen.io/jamessw/pen/QwEePzy)
-- [css-contain](https://github.com/w3c/csswg-drafts/issues/6205)
-- [css-anchor-position-1](https://github.com/w3c/csswg-drafts/issues/13716)
+- [Absolute value CodePen](https://codepen.io/jamessw/pen/MYeqVyL)
+- [Clamping CodePen](https://codepen.io/jamessw/pen/raLeboW)
+- [Select flip CodePen](https://codepen.io/jamessw/pen/QwEePzy)
+- [Element.matchContainer()](https://github.com/w3c/csswg-drafts/issues/6205)
+- [Allow anchor() within shape()](https://github.com/w3c/csswg-drafts/issues/13716)
 - [Anchor Positioning in Space](https://anchor-positioning-in-space.schalkneethling.com/)
-- [For instance Safari 26.4 bug fixes](https://webkit.org/blog/17862/webkit-features-for-safari-26-4/)
 - [Shadow DOM CSS - Anchor Positioning](https://shadow-dom-css.adobe.com/#anchor-positioning)
