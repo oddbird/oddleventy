@@ -1,5 +1,5 @@
 ---
-title: Dos & Don’ts of Anchor Positioning
+title: Dos & Don'ts of Anchor Positioning
 episode: 31
 tags:
   - CSS
@@ -15,13 +15,13 @@ image:
 media:
   - youtube: OEvVW4wQUII
 summary: |
-  CSS Anchor Positioning isn't baseline yet,
+  CSS anchor positioning isn't baseline yet,
   and there's good reason for that.
   You can use it,
   but it comes with some caveats.
   James, Stacy, and Miriam
   cover new resources
-  to make Anchor Positioning easier,
+  to make anchor positioning easier,
   and work through some demos
   to help you understand
   how anchor positioning works.
@@ -31,7 +31,7 @@ summary: |
 
 {% callout 'note', false %}
 Check out our [Anchor Positioning Playlist](https://www.youtube.com/playlist?list=PL4jAKUtAhpHk7CKHosxrEILMwrncZioZY)
-to learn how to use and troubleshoot Anchor Positioning today.
+to learn how to use and troubleshoot anchor positioning today.
 {% endcallout %}
 
 {% import "embed.macros.njk" as embed %}
