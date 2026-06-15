@@ -62,4 +62,4 @@ to learn more CSS.
 - CodePen: [Combining short & longhand](https://codepen.io/editor/miriamsuzanne/pen/019d3068-20c1-78d2-9b91-d037767f3a8e)
 - CodePen: [Long or shorthand?](https://codepen.io/editor/miriamsuzanne/pen/019d8cec-6c44-79be-9486-373a96f704b7)
 - [Maybe don't use custom properties in shorthand properties](https://www.matuzo.at/blog/2025/invalid-custom-properties-in-shorthands) by Manuel Matuzovic
-- Sign up for [Poetic CSS course updates](https://www.oddbird.net/courses/poetic-css/)
+- Sign up for [Poetic CSS course updates](https://courses.oddbird.net/poetic-css/)
