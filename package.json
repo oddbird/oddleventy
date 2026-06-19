@@ -117,5 +117,5 @@
     "typescript": "^6.0.3",
     "typogr": "^0.6.8"
   },
-  "packageManager": "yarn@4.16.0"
+  "packageManager": "yarn@4.17.0"
 }
