@@ -8059,7 +8059,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^4.1.0, js-yaml@npm:^4.1.1, js-yaml@npm:^4.2.0":
+"js-yaml@npm:^4.1.0, js-yaml@npm:^4.1.1":
   version: 4.2.0
   resolution: "js-yaml@npm:4.2.0"
   dependencies:
@@ -9347,7 +9347,6 @@ __metadata:
     globals: "npm:^17.6.0"
     jest: "npm:^30.4.2"
     jest-environment-jsdom: "npm:^30.4.1"
-    js-yaml: "npm:^4.2.0"
     lite-youtube-embed: "npm:^0.3.4"
     lodash-es: "npm:^4.18.1"
     markdown-it: "npm:^14.2.0"
