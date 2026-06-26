@@ -1,9 +1,9 @@
 import { readFileSync } from 'node:fs';
 
-import yaml from 'js-yaml';
+import { load } from 'js-yaml';
 import { find as _find } from 'lodash-es';
 
-export const taxonomy = yaml.load(
+export const taxonomy = load(
   readFileSync('./content/_data/taxonomy.yaml', 'utf8'),
 );
 
