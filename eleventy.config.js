@@ -3,7 +3,7 @@
 import rss from '@11ty/eleventy-plugin-rss';
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import fs from 'fs-extra';
-import yaml from 'js-yaml';
+import { load } from 'js-yaml';
 import { concat, groupBy, merge } from 'lodash-es';
 
 import * as birds from '#filters/birds.js';
@@ -178,7 +178,7 @@ export default (eleventyConfig) => {
 
   // config
   eleventyConfig.setLibrary('md', type.mdown);
-  eleventyConfig.addDataExtension('yml, yaml', yaml.load);
+  eleventyConfig.addDataExtension('yml, yaml', load);
   eleventyConfig.setQuietMode(true);
 
   if (!process.env.NETLIFY) {
