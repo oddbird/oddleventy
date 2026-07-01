@@ -496,7 +496,7 @@ params:
   } | merge(attrs) -%}
       {{ utility.link_if(
         name,
-        post.page.url,
+        post.data.redirect.to if post.data.redirect else post.page.url,
         'title-link u-url' if hentry else 'title-link'
       ) }}
   {%- endh -%}
