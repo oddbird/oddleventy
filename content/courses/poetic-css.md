@@ -20,6 +20,9 @@ summary: |
 author: miriam
 date: 2025-05-30
 permalink: courses/poetic-css/
+canonical: https://courses.oddbird.net/poetic-css
+redirect:
+  to: https://courses.oddbird.net/poetic-css/
 ---
 
 {% import 'layout.macros.njk' as layout %}
