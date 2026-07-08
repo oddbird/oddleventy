@@ -1,5 +1,5 @@
 ---
-title: Grid Lanes - The Future of Masonry Layout
+title: Grid Lanes -- The Future of Masonry Layout
 episode: 33
 tags:
   - CSS
@@ -14,7 +14,7 @@ image:
 media:
   - youtube: siSCSaqH8hU
 summary: |
-  This long debated solution
+  This long-debated solution
   for masonry layout
   is now available
   and it's time
@@ -43,10 +43,14 @@ to learn more CSS.
 
 ## What We Cover:
 
-- `grid-lanes` is a new CSS display property that allows you to create a masonry-like layout
-- `flow-tolerance` is a new property for `grid-lanes` that accepts a length value
-- Defining the `grid-lanes` with `grid-template-columns` creates a vertical “waterfall” layout. `grid-template-rows` creates a “brick” layout
-- Other grid features like gap, subgrid, and spanning a cell multiple tracks works with `grid-lanes`
+- `grid-lanes` is a new CSS display property that allows you to create a
+  masonry-like layout
+- `flow-tolerance` is a new property for `grid-lanes` that accepts a length
+  value
+- Defining the `grid-lanes` with `grid-template-columns` creates a vertical
+  "waterfall" layout. `grid-template-rows` creates a "brick" layout
+- Other grid features like gap, subgrid, and spanning a cell multiple tracks
+  works with `grid-lanes`
 - What alignment options do we have?
 - Can we fill in gaps that are created after spanning cells?
 
