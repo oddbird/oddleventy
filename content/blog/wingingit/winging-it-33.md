@@ -49,8 +49,8 @@ to learn more CSS.
   value
 - Defining the `grid-lanes` with `grid-template-columns` creates a vertical
   "waterfall" layout. `grid-template-rows` creates a "brick" layout
-- Other grid features like gap, subgrid, and spanning a cell multiple tracks
-  works with `grid-lanes`
+- Other grid features like gap, subgrid, and spanning a cell across multiple
+  tracks work with `grid-lanes`
 - What alignment options do we have?
 - Can we fill in gaps that are created after spanning cells?
 
