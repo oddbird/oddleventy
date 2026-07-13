@@ -13,6 +13,40 @@
         mainBranch = "main"
         template = "hierarchical"
 
+# Subdomain redirects, migrated from Namecheap URL Forwarding (which cannot
+# serve HTTPS). For each of these to take effect, the subdomain must be added
+# as a domain alias on this Netlify site so Netlify provisions a cert and
+# receives the request. Listed before the path-based rules so host matches win.
+[[redirects]]
+    from = "https://susy.oddbird.net/*"
+    to = "https://www.oddbird.net/susy/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "https://susydocs.oddbird.net/*"
+    to = "https://www.oddbird.net/susy/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "https://susyone.oddbird.net/*"
+    to = "https://susy.readthedocs.io/susyone/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "https://friends.oddbird.net/*"
+    to = "https://www.oddbird.net/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "https://contrast.oddbird.net/*"
+    to = "https://www.oddcontrast.com/"
+    status = 301
+    force = true
+
 [[redirects]]
     from = "/accoutrement/docs/*"
     to = "https://accoutrement-docs.netlify.app/accoutrement/docs/:splat"
