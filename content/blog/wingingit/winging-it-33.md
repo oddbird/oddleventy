@@ -25,7 +25,7 @@ summary: |
 ---
 
 {% callout 'note', false %}
-Check out our [CSS Tips & Tricks Playlist](https://www.youtube.com/playlist?list=PL4jAKUtAhpHlOm3Lfv83ZHpfdJ4zHCDyv)
+Check out our [Learn CSS Grid Playlist](https://www.youtube.com/playlist?list=PL4jAKUtAhpHkXeLvZNoGHokWd0bo__NYy)
 to learn more CSS.
 {% endcallout %}
 
@@ -44,13 +44,13 @@ to learn more CSS.
 ## What We Cover:
 
 - `grid-lanes` is a new CSS display property that allows you to create a
-  masonry-like layout
+  masonry-like layout.
 - `flow-tolerance` is a new property for `grid-lanes` that accepts a length
-  value
+  value.
 - Defining the `grid-lanes` with `grid-template-columns` creates a vertical
-  "waterfall" layout. `grid-template-rows` creates a "brick" layout
+  "waterfall" layout. `grid-template-rows` creates a "brick" layout.
 - Other grid features like gap, subgrid, and spanning a cell across multiple
-  tracks work with `grid-lanes`
+  tracks work with `grid-lanes`.
 - What alignment options do we have?
 - Can we fill in gaps that are created after spanning cells?
 
