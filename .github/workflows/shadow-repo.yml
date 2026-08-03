@@ -1,6 +1,7 @@
 name: Sync with shadow repo
 
 on:
+  workflow_dispatch: # Allow running on-demand
   push:
     branches-ignore:
       - 'dependabot/**'
