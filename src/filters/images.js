@@ -75,13 +75,37 @@ const imgOptionsFor = (src) => {
 // metadata for every source image before the build starts. This only
 // reads image headers (no image processing), and takes under a second.
 export const imageMetadata = new Map();
+// Images that exist, but could not be read (e.g. corrupt files).
+// Tracked so that `image()` can report the underlying cause.
+export const imageErrors = new Map();
+
+// Content refers to the same file in several ways
+// (e.g. `./src/images//projects/w3c.jpg`), so paths are normalized
+// to a single canonical form before being used as keys or options.
 export const metadataKey = (src) => normalize(src);
+const canonicalSrc = (src) => `./${metadataKey(src)}`;
+
+// Matched case-insensitively: macOS would match an uppercase `.JPG`
+// in a case-sensitive glob, but Netlify (Linux) would not.
+const IMG_EXTENSIONS = new Set([
+  '.avif',
+  '.gif',
+  '.jpeg',
+  '.jpg',
+  '.png',
+  '.svg',
+  '.webp',
+]);
 
 export const cacheImageMetadata = async () => {
-  const files = globSync(`${IMG_SRC}**/*.{jpg,jpeg,png,gif,webp,avif,svg}`);
+  imageMetadata.clear();
+  imageErrors.clear();
+  const files = globSync(`${IMG_SRC}**/*`).filter((file) =>
+    IMG_EXTENSIONS.has(extname(file).toLowerCase()),
+  );
   await Promise.all(
     files.map(async (file) => {
-      const src = `./${metadataKey(file)}`;
+      const src = canonicalSrc(file);
       try {
         const metadata = await eleventyImg(src, {
           ...imgOptionsFor(src),
@@ -89,6 +113,7 @@ export const cacheImageMetadata = async () => {
         });
         imageMetadata.set(metadataKey(src), metadata);
       } catch (error) {
+        imageErrors.set(metadataKey(src), error);
         // eslint-disable-next-line no-console
         console.warn(`Unable to read image metadata for "${src}": ${error}`);
       }
@@ -124,7 +149,10 @@ params:
     note: |
       Returns url to largest jpeg image instead of full HTML
 */
-export const image = (src, alt, attrs, sizes, getUrl) => {
+export const image = (rawSrc, alt, attrs, sizes, getUrl) => {
+  // Normalize once, so that the options used to generate an image always
+  // match the options its cached metadata was computed with.
+  const src = canonicalSrc(rawSrc);
   const opts = imgOptionsFor(src);
   const imgSizes =
     sizes && imgConfig.sizes[sizes]
@@ -168,10 +196,13 @@ export const image = (src, alt, attrs, sizes, getUrl) => {
 
   const metadata = imageMetadata.get(metadataKey(src));
   if (!metadata) {
+    const error = imageErrors.get(metadataKey(src));
     throw new Error(
-      `Missing image metadata for "${src}". ` +
-        `Images must live in "${IMG_SRC}", ` +
-        `and \`cacheImageMetadata()\` must run before the build.`,
+      error
+        ? `Unable to process image "${src}": ${error}`
+        : `Missing image metadata for "${src}". ` +
+            `Images must live in "${IMG_SRC}", ` +
+            `and \`cacheImageMetadata()\` must run before the build.`,
     );
   }
 

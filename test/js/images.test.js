@@ -1,3 +1,6 @@
+import { globSync } from 'node:fs';
+import { extname, normalize } from 'node:path';
+
 import { jest } from '@jest/globals';
 
 jest.unstable_mockModule('@11ty/eleventy-img', () => ({
@@ -5,7 +8,7 @@ jest.unstable_mockModule('@11ty/eleventy-img', () => ({
 }));
 
 const eleventyImg = await import('@11ty/eleventy-img');
-const { cacheImageMetadata, image, imageMetadata } =
+const { cacheImageMetadata, image, imageErrors, imageMetadata } =
   await import('#filters/images');
 
 eleventyImg.default.generateHTML = jest.fn();
@@ -23,8 +26,10 @@ describe('image filters', () => {
     });
 
     beforeEach(() => {
+      imageMetadata.clear();
+      imageErrors.clear();
+      // the only key shape `cacheImageMetadata` can produce
       imageMetadata.set('src/images/foo/img.jpg', metadata);
-      imageMetadata.set('foo/img.jpg', metadata);
     });
 
     afterAll(() => {
@@ -42,6 +47,9 @@ describe('image filters', () => {
 
       expect(options.widths).toEqual([480, 960, 1600]);
       expect(options.formats).toEqual(['webp', 'jpeg']);
+      // filenames are not hashed, so output paths must mirror the source dirs
+      expect(options.outputDir).toBe('./_site/assets/images/foo');
+      expect(options.urlPath).toBe('/assets/images/foo');
       expect(options.filenameFormat('hash', src, 480, 'webp')).toBe(
         'img-480w.webp',
       );
@@ -76,22 +84,45 @@ describe('image filters', () => {
       expect(url).toBe('/assets/images/img-960w.webp');
     });
 
-    test('normalizes the metadata lookup', () => {
-      image('./src/images//foo/img.jpg', null, null, null, true);
+    // `content/blog/2025/custom-functions.md` sets `image.src: /projects/w3c.jpg`,
+    // and `embed.macros.njk` prepends `./src/images/`
+    test('normalizes a doubled slash in the source path', () => {
+      image('./src/images//foo/img.jpg', 'alt text');
 
-      expect(eleventyImg.default.generateHTML).not.toHaveBeenCalled();
+      expect(eleventyImg.default.generateHTML).toHaveBeenCalledTimes(1);
+      expect(eleventyImg.default.generateHTML.mock.calls[0][0]).toBe(metadata);
+      // generation must target the same paths the metadata was computed with
+      expect(eleventyImg.default.mock.calls[0][1].outputDir).toBe(
+        './_site/assets/images/foo',
+      );
     });
 
-    test('warns if unexpected src prefix', () => {
-      image('foo/img.jpg');
+    test('normalizes a doubled slash when returning a url', () => {
+      expect(image('./src/images//foo/img.jpg', null, null, null, true)).toBe(
+        '/assets/images/img-960w.webp',
+      );
+    });
 
-      expect(global.console.warn).toHaveBeenCalledTimes(1);
+    test('warns and throws if src is outside the image directory', () => {
+      // `cacheImageMetadata` can only ever key paths under `./src/images/`
+      expect(() => image('foo/img.jpg')).toThrow('Missing image metadata');
+      expect(global.console.warn).toHaveBeenCalledWith(
+        'Unexpected image source path: "./foo/img.jpg"',
+      );
     });
 
     test('throws if metadata was not pre-computed', () => {
       imageMetadata.clear();
 
       expect(() => image(src)).toThrow('Missing image metadata');
+    });
+
+    test('reports the underlying cause for an unreadable image', () => {
+      imageMetadata.clear();
+      imageErrors.set('src/images/foo/img.jpg', new Error('bad header'));
+
+      expect(() => image(src)).toThrow('Unable to process image');
+      expect(() => image(src)).toThrow('bad header');
     });
   });
 
@@ -103,8 +134,15 @@ describe('image filters', () => {
       global.console.warn = jest.fn();
     });
 
-    afterEach(() => {
+    beforeEach(() => {
       imageMetadata.clear();
+      imageErrors.clear();
+    });
+
+    // `clearMocks` resets calls but not implementations, which would
+    // otherwise leak into `image()`'s un-awaited `eleventyImg()` call
+    afterEach(() => {
+      eleventyImg.default.mockReset();
     });
 
     afterAll(() => {
@@ -116,13 +154,23 @@ describe('image filters', () => {
 
       await cacheImageMetadata();
 
-      expect(imageMetadata.size).toBeGreaterThan(0);
-      // keys are normalized, relative to the project root
-      for (const key of imageMetadata.keys()) {
-        expect(key.startsWith('src/images/')).toBe(true);
-      }
+      // every source image is indexed, at every depth, and nothing else
+      const expected = globSync('./src/images/**/*')
+        .filter((file) =>
+          ['.avif', '.gif', '.jpeg', '.jpg', '.png', '.svg', '.webp'].includes(
+            extname(file).toLowerCase(),
+          ),
+        )
+        .map((file) => normalize(file));
+
+      expect(expected.length).toBeGreaterThan(0);
+      expect([...imageMetadata.keys()].sort()).toEqual(expected.sort());
       expect(imageMetadata.values().next().value).toEqual(metadata);
-      expect(eleventyImg.default.mock.calls[0][1].statsOnly).toBe(true);
+
+      for (const [src, opts] of eleventyImg.default.mock.calls) {
+        expect(src.startsWith('./src/images/')).toBe(true);
+        expect(opts.statsOnly).toBe(true);
+      }
     });
 
     test('warns (and skips) images it cannot read', async () => {
@@ -131,10 +179,20 @@ describe('image filters', () => {
       await cacheImageMetadata();
 
       expect(imageMetadata.size).toBe(0);
-      expect(global.console.warn).toHaveBeenCalled();
-      expect(global.console.warn.mock.calls[0][0]).toContain(
-        'Unable to read image metadata',
-      );
+      expect(imageErrors.size).toBeGreaterThan(0);
+      const [message] = global.console.warn.mock.calls[0];
+
+      expect(message).toMatch(/^Unable to read image metadata for/u);
+      expect(message).toMatch(/"\.\/src\/images\/.+": Error: nope$/u);
+    });
+
+    test('clears stale entries, so removed images do not linger', async () => {
+      imageMetadata.set('src/images/gone.jpg', metadata);
+      eleventyImg.default.mockResolvedValue(metadata);
+
+      await cacheImageMetadata();
+
+      expect(imageMetadata.has('src/images/gone.jpg')).toBe(false);
     });
   });
 });
