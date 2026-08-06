@@ -8118,17 +8118,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^5.2.1":
-  version: 5.2.2
-  resolution: "js-yaml@npm:5.2.2"
-  dependencies:
-    argparse: "npm:^2.0.1"
-  bin:
-    js-yaml: bin/js-yaml.mjs
-  checksum: 10/2b4c2933af12c97e1c4894a4f27fe9b06dab70a64a96bb50624b4429bef6bf11008bde20d868bce52a36784473314efc30078ba6025b58cf7537961e23b1ae9c
-  languageName: node
-  linkType: hard
-
 "jsdom@npm:^26.1.0":
   version: 26.1.0
   resolution: "jsdom@npm:26.1.0"
@@ -9406,7 +9395,6 @@ __metadata:
     globals: "npm:^17.7.0"
     jest: "npm:^30.4.2"
     jest-environment-jsdom: "npm:^30.4.1"
-    js-yaml: "npm:^5.2.1"
     lite-youtube-embed: "npm:^0.3.4"
     lodash-es: "npm:^4.18.1"
     markdown-it: "npm:^14.3.0"
