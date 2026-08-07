@@ -108,6 +108,21 @@ const IMG_EXTENSIONS = new Set([
   '.webp',
 ]);
 
+// Image generation is started during render but never awaited, since
+// templates are synchronous. Track the work so that failures can be
+// reported (with the source that caused them) once the build is done,
+// instead of surfacing as a bare unhandled rejection.
+const pendingImages = [];
+const failedImages = [];
+
+export const finishImages = async () => {
+  await Promise.all(pendingImages.splice(0));
+  if (failedImages.length) {
+    const failures = failedImages.splice(0).join('\n  ');
+    throw new Error(`Unable to generate images:\n  ${failures}`);
+  }
+};
+
 export const cacheImageMetadata = async () => {
   imageMetadata.clear();
   imageErrors.clear();
@@ -218,7 +233,11 @@ export const image = (rawSrc, alt, attrs, sizes, getUrl) => {
   }
 
   // generate images; this is async but we don’t wait
-  eleventyImg(src, opts);
+  pendingImages.push(
+    eleventyImg(src, opts).catch((error) => {
+      failedImages.push(`${src}: ${error.message}`);
+    }),
+  );
 
   if (getUrl) {
     const data = metadata.jpeg[metadata.jpeg.length - 1];

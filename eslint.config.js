@@ -35,7 +35,6 @@ export default [
       sourceType: 'module',
       ecmaVersion: 2022,
       globals: {
-        ...globals.es6,
         ...globals.node,
       },
     },
@@ -157,7 +156,6 @@ export default [
     files: ['src/js/**/*.js', 'test/js/**/*.js'],
     languageOptions: {
       globals: {
-        ...globals.es6,
         ...globals.browser,
       },
     },

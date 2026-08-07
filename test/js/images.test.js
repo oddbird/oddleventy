@@ -8,7 +8,7 @@ jest.unstable_mockModule('@11ty/eleventy-img', () => ({
 }));
 
 const eleventyImg = await import('@11ty/eleventy-img');
-const { cacheImageMetadata, image, imageErrors, imageMetadata } =
+const { cacheImageMetadata, finishImages, image, imageErrors, imageMetadata } =
   await import('#filters/images');
 
 eleventyImg.default.generateHTML = jest.fn();
@@ -30,7 +30,12 @@ describe('image filters', () => {
       imageErrors.clear();
       // the only key shape `cacheImageMetadata` can produce
       imageMetadata.set('src/images/foo/img.jpg', metadata);
+      // eleventy-img always returns a promise
+      eleventyImg.default.mockResolvedValue(metadata);
     });
+
+    // drain the generation queue, so nothing leaks into a later block
+    afterEach(() => finishImages());
 
     afterAll(() => {
       global.console.warn = warn;
@@ -123,6 +128,44 @@ describe('image filters', () => {
 
       expect(() => image(src)).toThrow('Unable to process image');
       expect(() => image(src)).toThrow('bad header');
+    });
+  });
+
+  describe('finishImages', () => {
+    const src = './src/images/foo/img.jpg';
+
+    beforeEach(() => {
+      imageMetadata.clear();
+      imageErrors.clear();
+      imageMetadata.set('src/images/foo/img.jpg', metadata);
+    });
+
+    afterEach(() => {
+      eleventyImg.default.mockReset();
+    });
+
+    test('resolves when every image generated', async () => {
+      eleventyImg.default.mockResolvedValue(metadata);
+      image(src, 'alt text');
+
+      await expect(finishImages()).resolves.toBeUndefined();
+    });
+
+    test('reports the source of any image that failed', async () => {
+      eleventyImg.default.mockRejectedValue(new Error('sharp exploded'));
+      image(src, 'alt text');
+
+      await expect(finishImages()).rejects.toThrow(
+        `Unable to generate images:\n  ${src}: sharp exploded`,
+      );
+    });
+
+    test('does not re-report failures on a later build', async () => {
+      eleventyImg.default.mockRejectedValue(new Error('sharp exploded'));
+      image(src, 'alt text');
+
+      await expect(finishImages()).rejects.toThrow('sharp exploded');
+      await expect(finishImages()).resolves.toBeUndefined();
     });
   });
 
