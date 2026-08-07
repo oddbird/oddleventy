@@ -1,6 +1,7 @@
 /* eslint-disable no-sync, no-process-env */
 
 import { globSync } from 'node:fs';
+import { createRequire } from 'node:module';
 import { basename, dirname, extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -12,6 +13,9 @@ import { merge } from 'lodash-es';
 import { fromTaxonomy } from '#filters/taxonomy.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const IMG_VERSION = createRequire(import.meta.url)(
+  '@11ty/eleventy-img/package.json',
+).version;
 
 /* @docs
 label: Responsive Images
@@ -47,10 +51,17 @@ const rebuildCache = Boolean(
 let cacheChanged = false;
 
 export const CACHE_FILE = join(__dirname, 'image_cache.json');
-export let imageCache = { html: {}, src: {} };
+export let imageCache = { version: IMG_VERSION, html: {}, src: {} };
 /* istanbul ignore next */
 if (useCache && !rebuildCache && fs.existsSync(CACHE_FILE)) {
-  imageCache = fs.readJsonSync(CACHE_FILE);
+  const cached = fs.readJsonSync(CACHE_FILE);
+  // eleventy-img can change its generated markup between versions, so a
+  // cache written by a different version must not be reused -- otherwise
+  // stale markup survives an upgrade locally, and only differs once the
+  // production build (which never uses this cache) regenerates it.
+  if (cached.version === IMG_VERSION) {
+    imageCache = cached;
+  }
 }
 
 // Options are derived entirely from the source path,
@@ -82,7 +93,7 @@ export const imageErrors = new Map();
 // Content refers to the same file in several ways
 // (e.g. `./src/images//projects/w3c.jpg`), so paths are normalized
 // to a single canonical form before being used as keys or options.
-export const metadataKey = (src) => normalize(src);
+const metadataKey = (src) => normalize(src);
 const canonicalSrc = (src) => `./${metadataKey(src)}`;
 
 // Matched case-insensitively: macOS would match an uppercase `.JPG`

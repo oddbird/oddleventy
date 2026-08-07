@@ -154,7 +154,9 @@ describe('image filters', () => {
 
       await cacheImageMetadata();
 
-      // every source image is indexed, at every depth, and nothing else
+      // The extension list is intentionally duplicated rather than imported
+      // from the filter: sharing the set would make this assertion
+      // tautological, and it would no longer catch a dropped extension.
       const expected = globSync('./src/images/**/*')
         .filter((file) =>
           ['.avif', '.gif', '.jpeg', '.jpg', '.png', '.svg', '.webp'].includes(
