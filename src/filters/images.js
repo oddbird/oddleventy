@@ -1,6 +1,8 @@
 /* eslint-disable no-sync, no-process-env */
 
-import { basename, dirname, extname, join } from 'node:path';
+import { globSync } from 'node:fs';
+import { createRequire } from 'node:module';
+import { basename, dirname, extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import eleventyImg from '@11ty/eleventy-img';
@@ -11,6 +13,9 @@ import { merge } from 'lodash-es';
 import { fromTaxonomy } from '#filters/taxonomy.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const IMG_VERSION = createRequire(import.meta.url)(
+  '@11ty/eleventy-img/package.json',
+).version;
 
 /* @docs
 label: Responsive Images
@@ -46,11 +51,101 @@ const rebuildCache = Boolean(
 let cacheChanged = false;
 
 export const CACHE_FILE = join(__dirname, 'image_cache.json');
-export let imageCache = { html: {}, src: {} };
+export let imageCache = { version: IMG_VERSION, html: {}, src: {} };
 /* istanbul ignore next */
 if (useCache && !rebuildCache && fs.existsSync(CACHE_FILE)) {
-  imageCache = fs.readJsonSync(CACHE_FILE);
+  const cached = fs.readJsonSync(CACHE_FILE);
+  // eleventy-img can change its generated markup between versions, so a
+  // cache written by a different version must not be reused -- otherwise
+  // stale markup survives an upgrade locally, and only differs once the
+  // production build (which never uses this cache) regenerates it.
+  if (cached.version === IMG_VERSION) {
+    imageCache = cached;
+  }
 }
+
+// Options are derived entirely from the source path,
+// so image metadata can be cached by source path alone.
+const imgOptionsFor = (src) => {
+  let outputDir = './_site/assets/images/';
+  let urlPath = '/assets/images/';
+  if (src.startsWith(IMG_SRC)) {
+    const dir = dirname(src.slice(IMG_SRC.length));
+    outputDir = `${outputDir}${dir}`;
+    urlPath = `${urlPath}${dir}`;
+  } else {
+    // eslint-disable-next-line no-console
+    console.warn(`Unexpected image source path: "${src}"`);
+  }
+  return { ...imgOptions, outputDir, urlPath };
+};
+
+// As of v7, eleventy-img is async-only (`statsSync` was removed).
+// The `image` shortcode is called from inside Nunjucks macros,
+// which can only be rendered synchronously, so we pre-compute the
+// metadata for every source image before the build starts. This only
+// reads image headers (no image processing), and takes under a second.
+export const imageMetadata = new Map();
+// Images that exist, but could not be read (e.g. corrupt files).
+// Tracked so that `image()` can report the underlying cause.
+export const imageErrors = new Map();
+
+// Content refers to the same file in several ways
+// (e.g. `./src/images//projects/w3c.jpg`), so paths are normalized
+// to a single canonical form before being used as keys or options.
+const metadataKey = (src) => normalize(src);
+const canonicalSrc = (src) => `./${metadataKey(src)}`;
+
+// Matched case-insensitively: macOS would match an uppercase `.JPG`
+// in a case-sensitive glob, but Netlify (Linux) would not.
+const IMG_EXTENSIONS = new Set([
+  '.avif',
+  '.gif',
+  '.jpeg',
+  '.jpg',
+  '.png',
+  '.svg',
+  '.webp',
+]);
+
+// Image generation is started during render but never awaited, since
+// templates are synchronous. Track the work so that failures can be
+// reported (with the source that caused them) once the build is done,
+// instead of surfacing as a bare unhandled rejection.
+const pendingImages = [];
+const failedImages = [];
+
+export const finishImages = async () => {
+  await Promise.all(pendingImages.splice(0));
+  if (failedImages.length) {
+    const failures = failedImages.splice(0).join('\n  ');
+    throw new Error(`Unable to generate images:\n  ${failures}`);
+  }
+};
+
+export const cacheImageMetadata = async () => {
+  imageMetadata.clear();
+  imageErrors.clear();
+  const files = globSync(`${IMG_SRC}**/*`).filter((file) =>
+    IMG_EXTENSIONS.has(extname(file).toLowerCase()),
+  );
+  await Promise.all(
+    files.map(async (file) => {
+      const src = canonicalSrc(file);
+      try {
+        const metadata = await eleventyImg(src, {
+          ...imgOptionsFor(src),
+          statsOnly: true,
+        });
+        imageMetadata.set(metadataKey(src), metadata);
+      } catch (error) {
+        imageErrors.set(metadataKey(src), error);
+        // eslint-disable-next-line no-console
+        console.warn(`Unable to read image metadata for "${src}": ${error}`);
+      }
+    }),
+  );
+};
 
 /* @docs
 label: image
@@ -80,22 +175,11 @@ params:
     note: |
       Returns url to largest jpeg image instead of full HTML
 */
-export const image = (src, alt, attrs, sizes, getUrl) => {
-  let outputDir = './_site/assets/images/';
-  let urlPath = '/assets/images/';
-  if (src.startsWith(IMG_SRC)) {
-    const dir = dirname(src.slice(IMG_SRC.length));
-    outputDir = `${outputDir}${dir}`;
-    urlPath = `${urlPath}${dir}`;
-  } else {
-    // eslint-disable-next-line no-console
-    console.warn(`Unexpected image source path: "${src}"`);
-  }
-  const opts = {
-    ...imgOptions,
-    outputDir,
-    urlPath,
-  };
+export const image = (rawSrc, alt, attrs, sizes, getUrl) => {
+  // Normalize once, so that the options used to generate an image always
+  // match the options its cached metadata was computed with.
+  const src = canonicalSrc(rawSrc);
+  const opts = imgOptionsFor(src);
   const imgSizes =
     sizes && imgConfig.sizes[sizes]
       ? imgConfig.sizes[sizes]
@@ -136,10 +220,24 @@ export const image = (src, alt, attrs, sizes, getUrl) => {
     }
   }
 
-  // generate images; this is async but we don’t wait
-  eleventyImg(src, opts);
+  const metadata = imageMetadata.get(metadataKey(src));
+  if (!metadata) {
+    const error = imageErrors.get(metadataKey(src));
+    throw new Error(
+      error
+        ? `Unable to process image "${src}": ${error}`
+        : `Missing image metadata for "${src}". ` +
+            `Images must live in "${IMG_SRC}", ` +
+            `and \`cacheImageMetadata()\` must run before the build.`,
+    );
+  }
 
-  const metadata = eleventyImg.statsSync(src, opts);
+  // generate images; this is async but we don’t wait
+  pendingImages.push(
+    eleventyImg(src, opts).catch((error) => {
+      failedImages.push(`${src}: ${error.message}`);
+    }),
+  );
 
   if (getUrl) {
     const data = metadata.jpeg[metadata.jpeg.length - 1];

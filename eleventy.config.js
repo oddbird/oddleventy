@@ -181,6 +181,15 @@ export default (eleventyConfig) => {
   eleventyConfig.addDataExtension('yml, yaml', load);
   eleventyConfig.setQuietMode(true);
 
+  // eleventy-img is async-only as of v7, but the `image` shortcode is called
+  // from inside (synchronous) Nunjucks macros -- so gather image metadata
+  // up front, and generate the markup synchronously from that.
+  eleventyConfig.on('eleventy.before', images.cacheImageMetadata);
+
+  // image generation is started during render but not awaited,
+  // so wait for it here and fail the build if any image errored
+  eleventyConfig.on('eleventy.after', images.finishImages);
+
   if (!process.env.NETLIFY) {
     eleventyConfig.on('eleventy.before', () => {
       delete process.env.IMAGE_CACHE_CHANGED;
