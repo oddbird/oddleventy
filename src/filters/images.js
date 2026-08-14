@@ -50,8 +50,8 @@ const rebuildCache = Boolean(
 );
 let cacheChanged = false;
 
-export const CACHE_FILE = join(__dirname, 'image_cache.json');
-export let imageCache = { version: IMG_VERSION, html: {}, src: {} };
+const CACHE_FILE = join(__dirname, 'image_cache.json');
+let imageCache = { version: IMG_VERSION, html: {}, src: {} };
 /* istanbul ignore next */
 if (useCache && !rebuildCache && fs.existsSync(CACHE_FILE)) {
   const cached = fs.readJsonSync(CACHE_FILE);
@@ -117,9 +117,21 @@ const failedImages = [];
 
 export const finishImages = async () => {
   await Promise.all(pendingImages.splice(0));
-  if (failedImages.length) {
-    const failures = failedImages.splice(0).join('\n  ');
-    throw new Error(`Unable to generate images:\n  ${failures}`);
+  const failures = failedImages.splice(0);
+
+  // Persist the cache only for a build where every image generated. The
+  // cached markup is returned before an image is ever re-requested, so a
+  // cache written after a failure would serve markup for a file that was
+  // never written -- and the next build would report nothing at all.
+  // This has to happen here, rather than in a separate `eleventy.after`
+  // handler: those run in parallel, and would race this function.
+  /* istanbul ignore next */
+  if (useCache && process.env.IMAGE_CACHE_CHANGED && !failures.length) {
+    fs.outputJsonSync(CACHE_FILE, imageCache, { spaces: 2 });
+  }
+
+  if (failures.length) {
+    throw new Error(`Unable to generate images:\n  ${failures.join('\n  ')}`);
   }
 };
 

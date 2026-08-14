@@ -160,6 +160,34 @@ describe('image filters', () => {
       );
     });
 
+    // The cache may only be written once generation has settled, so
+    // `finishImages` must await in-flight work rather than sampling it.
+    test('waits for in-flight generation before reporting', async () => {
+      let fail;
+      eleventyImg.default.mockReturnValue(
+        new Promise((resolve, reject) => {
+          fail = reject;
+        }),
+      );
+      image(src, 'alt text');
+
+      let settled = false;
+      const finished = finishImages().catch((error) => {
+        settled = true;
+        throw error;
+      });
+
+      await new Promise((resolve) => {
+        setTimeout(resolve, 10);
+      });
+
+      expect(settled).toBe(false);
+
+      fail(new Error('late failure'));
+
+      await expect(finished).rejects.toThrow('late failure');
+    });
+
     test('does not re-report failures on a later build', async () => {
       eleventyImg.default.mockRejectedValue(new Error('sharp exploded'));
       image(src, 'alt text');
