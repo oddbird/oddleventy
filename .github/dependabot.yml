@@ -23,3 +23,13 @@ updates:
         update-types:
           - 'minor'
           - 'patch'
+    ignore:
+      - dependency-name: '@babel/core'
+        update-types:
+          - 'version-update:semver-major'
+      - dependency-name: '@babel/preset-env'
+        update-types:
+          - 'version-update:semver-major'
+      - dependency-name: 'typescript'
+        update-types:
+          - 'version-update:semver-major'
