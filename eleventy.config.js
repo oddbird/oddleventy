@@ -2,7 +2,6 @@
 
 import rss from '@11ty/eleventy-plugin-rss';
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
-import fs from 'fs-extra';
 import { load } from 'js-yaml';
 import { concat, groupBy, merge } from 'lodash-es';
 
@@ -181,17 +180,19 @@ export default (eleventyConfig) => {
   eleventyConfig.addDataExtension('yml, yaml', load);
   eleventyConfig.setQuietMode(true);
 
+  // eleventy-img is async-only as of v7, but the `image` shortcode is called
+  // from inside (synchronous) Nunjucks macros -- so gather image metadata
+  // up front, and generate the markup synchronously from that.
+  eleventyConfig.on('eleventy.before', images.cacheImageMetadata);
+
+  // image generation is started during render but not awaited, so wait for
+  // it here. This also writes the local image cache, since that may only
+  // happen once every image is known to have generated successfully.
+  eleventyConfig.on('eleventy.after', images.finishImages);
+
   if (!process.env.NETLIFY) {
     eleventyConfig.on('eleventy.before', () => {
       delete process.env.IMAGE_CACHE_CHANGED;
-    });
-
-    eleventyConfig.on('eleventy.after', () => {
-      if (process.env.IMAGE_CACHE_CHANGED) {
-        // If the image cache has been updated, emit the new JSON file
-        // eslint-disable-next-line no-sync
-        fs.outputJsonSync(images.CACHE_FILE, images.imageCache, { spaces: 2 });
-      }
     });
   }
 
