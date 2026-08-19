@@ -4,6 +4,7 @@ subtitle: What each browser’s dev tools do best
 episode: 34
 tags:
   - CSS
+  - Grids
 author:
   - stacy
   - miriam
@@ -50,7 +51,7 @@ to learn more CSS.
 
 ## Links:
 
-- [Custom properties and grid](https://www.oddbird.net/)
-- Variable fonts and animations
-- [OddCourses](https://courses.oddbird.net/poetic-css/)
+- [Custom properties and grid demo on oddbird.net](/)
+- [Variable fonts and animations demo on courses.oddbird.net](https://courses.oddbird.net/poetic-css/)
 - [Flexbox demo](https://codepen.io/miriamsuzanne/pen/YMJKbg)
+- [CSS Shapes demo](https://codepen.io/miriamsuzanne/pen/qBwZvPe?editors=1010)
