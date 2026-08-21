@@ -1598,14 +1598,14 @@ __metadata:
   linkType: hard
 
 "@csstools/css-syntax-patches-for-csstree@npm:^1.1.4, @csstools/css-syntax-patches-for-csstree@npm:^1.1.6":
-  version: 1.1.7
-  resolution: "@csstools/css-syntax-patches-for-csstree@npm:1.1.7"
+  version: 1.1.8
+  resolution: "@csstools/css-syntax-patches-for-csstree@npm:1.1.8"
   peerDependencies:
     css-tree: ^3.2.1
   peerDependenciesMeta:
     css-tree:
       optional: true
-  checksum: 10/ba372ab41c351509d47e77f58eb56112fe6fd42e104b70c9c9c797faf4fbb3e837a5df5c9d7e3464b04607ee42e91701e34f935aeec8abb94f24be67cfa1b707
+  checksum: 10/6c837c7a7c514f483dddf2fe5f55082bb88cf19a273f50172cde0a59b9f7a1f974766fe357276a66d984cac0d9aaedfcb66c3c56cd888c7e66b663f3c04d1732
   languageName: node
   linkType: hard
 
@@ -1780,7 +1780,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/dom@npm:^1.7.6":
+"@floating-ui/dom@npm:^1.8.0":
   version: 1.8.0
   resolution: "@floating-ui/dom@npm:1.8.0"
   dependencies:
@@ -2547,22 +2547,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oddbird/css-anchor-positioning@npm:^0.10.1":
-  version: 0.10.1
-  resolution: "@oddbird/css-anchor-positioning@npm:0.10.1"
+"@oddbird/css-anchor-positioning@npm:^0.10.2":
+  version: 0.10.2
+  resolution: "@oddbird/css-anchor-positioning@npm:0.10.2"
   dependencies:
-    "@floating-ui/dom": "npm:^1.7.6"
-    "@types/css-tree": "npm:^2.3.11"
+    "@floating-ui/dom": "npm:^1.8.0"
+    "@types/css-tree": "npm:^3.2.0"
     css-tree: "npm:^3.2.1"
-    nanoid: "npm:^5.1.16"
-  checksum: 10/4049561ae4b0b98204a6c1655eae7a3649a0b403bd3c2814f58c32f57bd37ad8da06da800782fd36d3b0160bfa5c5d1249135731f60ea5887c796dc2e738c472
+    nanoid: "npm:^6.0.1"
+  checksum: 10/2f4de9625e30823ed5bdae9ecf600ce848a256fe5cf274c9efadf98b72aa3bf728dcc2bfcceb95c8dd494c35d19663fed9e6b7ee8d119637247926f3d4f3c016
   languageName: node
   linkType: hard
 
-"@oddbird/popover-polyfill@npm:^0.7.1":
-  version: 0.7.1
-  resolution: "@oddbird/popover-polyfill@npm:0.7.1"
-  checksum: 10/aa0017797c70f8a748920855cf5d6db7026a0f140e4738f8776b187649e21c8f3df8ce2bf346907ad715a91aa0e762004cccdaf60135115b5e0c5843cba4345e
+"@oddbird/popover-polyfill@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "@oddbird/popover-polyfill@npm:0.7.2"
+  checksum: 10/87d807d3d2525b2f2bb069d505dcc9408d9d571abf8cd639760fe091786535e9f2ea9d5026c6446f0de22d01beae3ea4e57b80721801ad0014e89ef3fa97bc94
   languageName: node
   linkType: hard
 
@@ -3110,10 +3110,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/css-tree@npm:^2.3.11":
-  version: 2.3.11
-  resolution: "@types/css-tree@npm:2.3.11"
-  checksum: 10/c4e1e990257cc8f9c90ebe3ec1b3d53733f9883cf772bbf1c2da462bb9fa6770b6ed98f24e176d1e0ad2c6b276b8ced5cd3d676b793518bec09adf2dd077a307
+"@types/css-tree@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@types/css-tree@npm:3.2.0"
+  checksum: 10/bf179b0eef4bebedacaae3a73d488040c52ac10886ab6e6cdc503d6abbf1e13b2e6f8548f42a82cccbcac76e9a07b78bf889e4a16ebc159f3c4cb60f184f4031
   languageName: node
   linkType: hard
 
@@ -4005,11 +4005,11 @@ __metadata:
   linkType: hard
 
 "baseline-browser-mapping@npm:^2.11.12":
-  version: 2.11.13
-  resolution: "baseline-browser-mapping@npm:2.11.13"
+  version: 2.11.15
+  resolution: "baseline-browser-mapping@npm:2.11.15"
   bin:
     baseline-browser-mapping: dist/cli.cjs
-  checksum: 10/42b8b85ab6662d8cba5678dcd01acfcd884b4e87b882f517b137ce0b193db1478cfb0d0c5a50cd43c031e81f8514d1a1533ce1d55f0cb5735246665fd5ebe8f6
+  checksum: 10/0da0f6f57b4be920bf06c571adf0e1f5666994b35eb04122d6a27eaa4f4a42efb6c79a27de543db12fc58226bf94c9d51e398bff9e7426275e0bd493bec12b81
   languageName: node
   linkType: hard
 
@@ -4463,9 +4463,9 @@ __metadata:
   linkType: hard
 
 "cjs-module-lexer@npm:^2.1.0":
-  version: 2.2.0
-  resolution: "cjs-module-lexer@npm:2.2.0"
-  checksum: 10/fc8eb5c1919504366d8260a150d93c4e857740e770467dc59ca0cc34de4b66c93075559a5af65618f359187866b1be40e036f4e1a1bab2f1e06001c216415f74
+  version: 2.2.1
+  resolution: "cjs-module-lexer@npm:2.2.1"
+  checksum: 10/16601d6fc3a9bb6a5aba4fcc1fd4c194317f94c2bc869a0dfb0f64d01b6ff0c9011b3ba6c89805b3d4de246be371a102d95d0dad5e944a4a23ca87f5381fbd03
   languageName: node
   linkType: hard
 
@@ -4625,9 +4625,9 @@ __metadata:
   linkType: hard
 
 "colord@npm:^2.9.3":
-  version: 2.9.3
-  resolution: "colord@npm:2.9.3"
-  checksum: 10/907a4506d7307e2f580b471b581e992181ed75ab0c6925ece9ca46d88161d2fc50ed15891cd0556d0d9321237ca75afc9d462e4c050b939ef88428517f047f30
+  version: 2.9.5
+  resolution: "colord@npm:2.9.5"
+  checksum: 10/83e5a44ace0c3a6d53495f22be26af481579e6f1252db52f301fdeb78d9c0a64f74a5e4cc8e5f2bed386387dac453b3236b9ffb43536d75279029b6b0c23cf9d
   languageName: node
   linkType: hard
 
@@ -4972,9 +4972,9 @@ __metadata:
   linkType: hard
 
 "dayjs@npm:^1.11.7":
-  version: 1.11.21
-  resolution: "dayjs@npm:1.11.21"
-  checksum: 10/dd16f9f2706b61b90e3c346a3211ac3afd9e26193136ce0e87f70bf74d1c17a447bceb230a88b175467fc9f5e3243d8c1544b9897092a12d9c80ee44d338dcb6
+  version: 1.11.23
+  resolution: "dayjs@npm:1.11.23"
+  checksum: 10/61d29544ca1553369f75541b5abf9c1bb6a978991498923a2d5721c9df3eca513b2c15ff5534de6930dc553de5d6f2b8f8047149f3528df906b21f51df637463
   languageName: node
   linkType: hard
 
@@ -5313,9 +5313,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.402":
-  version: 1.5.405
-  resolution: "electron-to-chromium@npm:1.5.405"
-  checksum: 10/41a95c0f5a2408a2b2e4aa51d826801f84769f006f20ae5a9430dd9f8a7a141f58b2de99044e7f5591f9f9215f0dc4a4e9e40a2d229071f40a64a301cb39c36a
+  version: 1.5.411
+  resolution: "electron-to-chromium@npm:1.5.411"
+  checksum: 10/19e1d919323f3082a000405004d95e48f5ef8dd98be4250ffddbf151d18bff76b778a969a0473ac2f94d3efba8f13849eb051f71abc9ac3ee9ab88e28fb958e5
   languageName: node
   linkType: hard
 
@@ -6583,16 +6583,17 @@ __metadata:
   linkType: hard
 
 "globby@npm:^16.2.1":
-  version: 16.2.3
-  resolution: "globby@npm:16.2.3"
+  version: 16.2.4
+  resolution: "globby@npm:16.2.4"
   dependencies:
     "@sindresorhus/merge-streams": "npm:^4.0.0"
     fast-glob: "npm:^3.3.3"
     ignore: "npm:^7.0.5"
     is-path-inside: "npm:^4.0.0"
+    micromatch: "npm:^4.0.8"
     slash: "npm:^5.1.0"
     unicorn-magic: "npm:^0.4.0"
-  checksum: 10/05b38e17378a021378dc123cbdd0f392661bd55bb260214d8a2744c5d0d64040e37084ab657a8ff537e4273be2378874a27e8c9649ec1ed373cb329d9ff095b0
+  checksum: 10/c638692255f250285584c6809a6345fb13ae7335d9e6e7621427167c51278a7a40503059bd3ebf8376f836ebd4d22035441694b04ad2d63775079cb9b8437823
   languageName: node
   linkType: hard
 
@@ -9145,12 +9146,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^5.1.16":
-  version: 5.1.16
-  resolution: "nanoid@npm:5.1.16"
+"nanoid@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "nanoid@npm:6.0.1"
   bin:
     nanoid: bin/nanoid.js
-  checksum: 10/b1e702e2b7072e74ac2ae880907d0a291853a36617ec5c3d27d81ab04965ebc0d4d0f707cf9220928cf93d5370b1f561c930efee853dc9c1a3facaefdf1a42ee
+  checksum: 10/e49582351f6fff22c275a58504950e923b74c611fc1eac9589a98e89506270d2d1e3b61ed6429df6e7529e54ff71d9f0c5fbb1c540aaee81ae33a523e88ca668
   languageName: node
   linkType: hard
 
@@ -9465,8 +9466,8 @@ __metadata:
     "@date-fns/utc": "npm:^2.1.1"
     "@eslint/js": "npm:^10.0.1"
     "@oddbird/browser-support": "npm:^0.1.2"
-    "@oddbird/css-anchor-positioning": "npm:^0.10.1"
-    "@oddbird/popover-polyfill": "npm:^0.7.1"
+    "@oddbird/css-anchor-positioning": "npm:^0.10.2"
+    "@oddbird/popover-polyfill": "npm:^0.7.2"
     "@rollup/plugin-babel": "npm:^7.1.0"
     "@rollup/plugin-commonjs": "npm:^29.0.3"
     "@rollup/plugin-node-resolve": "npm:^16.0.3"
