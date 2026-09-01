@@ -1,6 +1,6 @@
 {
   "name": "Oddleventy",
-  "image": "node:20",
+  "image": "node:24",
   "containerEnv": {
     "SHELL": "/bin/bash"
   },
