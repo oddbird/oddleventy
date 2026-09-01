@@ -21,7 +21,7 @@ jobs:
     if: github.event.ref_type == 'branch'
     steps:
       - name: Clone shadow repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: ${{ secrets.SHADOW_OWNER }}/${{ secrets.SHADOW_REPO }}
           ssh-key: ${{ secrets.SHADOW_REPO_PRIVATE_KEY }}
@@ -38,16 +38,16 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - run: corepack enable
-      - uses: actions/setup-node@v7
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version-file: .nvmrc
           cache: yarn
       - run: yarn install
       - run: yarn build:prod
       - name: Clone shadow repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: ${{ secrets.SHADOW_OWNER }}/${{ secrets.SHADOW_REPO }}
           ssh-key: ${{ secrets.SHADOW_REPO_PRIVATE_KEY }}
@@ -69,7 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request' && github.event.action == 'opened'
     steps:
-      - uses: peter-evans/create-or-update-comment@v5
+      - uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5
         with:
           issue-number: ${{ github.event.number }}
           body: |
