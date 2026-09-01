@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices", "group:all", "schedule:weekly"],
+  "timezone": "America/New_York",
+  "commitMessageSuffix": "[skip netlify]",
+  "packageRules": [
+    {
+      "description": "Pin all direct dependencies",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies", "devDependencies"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "description": "Stay on TypeScript 6 until the 7.x rewrite is compatible",
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7"
+    },
+    {
+      "description": "Stay on Babel v7",
+      "matchPackageNames": ["@babel/core", "@babel/preset-env"],
+      "allowedVersions": "<8"
+    }
+  ]
+}
