@@ -3808,9 +3808,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.5.5":
-  version: 10.5.5
-  resolution: "autoprefixer@npm:10.5.5"
+"autoprefixer@npm:10.5.6":
+  version: 10.5.6
+  resolution: "autoprefixer@npm:10.5.6"
   dependencies:
     browserslist: "npm:^4.28.9"
     caniuse-lite: "npm:^1.0.30001810"
@@ -3821,7 +3821,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: 10/1ee9f194bae95014edc482d6148dcc28ecc2845f9e27f9577b1615b225dfe49946dc7fa225703d85921c40b814c3766d6bb864d4b6040c2fc986f918aed6b971
+  checksum: 10/94488a13c7586aafd32542b20cb3480c114d48bf09f9fe56d9ebb8221ef02f77303aae11b7db4e487fa7bc00664969aef3971f3e31c22f14b2ba3c0f500e9d58
   languageName: node
   linkType: hard
 
@@ -8333,9 +8333,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it@npm:15.0.1":
-  version: 15.0.1
-  resolution: "markdown-it@npm:15.0.1"
+"markdown-it@npm:15.0.2":
+  version: 15.0.2
+  resolution: "markdown-it@npm:15.0.2"
   dependencies:
     argparse: "npm:^3.0.0"
     entities: "npm:^8.0.0"
@@ -8345,7 +8345,7 @@ __metadata:
     uc.micro: "npm:^3.0.0"
   bin:
     markdown-it: bin/markdown-it.mjs
-  checksum: 10/d37c26b1d4c96f8894fc5524133acd3b408b936fb862beebd348f350bedaa4c58efd522164398690986be6de565a123d3e7049279c2219ef28347565247d6279
+  checksum: 10/55dd86dbcdab89b910e21773c363e492a41f45e5edb095d05029e43125c5250a891c73becf6504a412cf6fdcdd93ac9629949d3932968347ef36dc1d444d776a
   languageName: node
   linkType: hard
 
@@ -8931,7 +8931,7 @@ __metadata:
     "@rollup/plugin-terser": "npm:1.0.0"
     "@tommoor/remove-markdown": "npm:0.3.2"
     accoutrement: "npm:4.0.7"
-    autoprefixer: "npm:10.5.5"
+    autoprefixer: "npm:10.5.6"
     cascading-color-systems: "npm:0.1.0-beta.18"
     chalk: "npm:6.0.0"
     chokidar-cli: "npm:3.0.0"
@@ -8951,7 +8951,7 @@ __metadata:
     js-yaml: "npm:5.4.1"
     lite-youtube-embed: "npm:0.3.4"
     lodash-es: "npm:4.18.1"
-    markdown-it: "npm:15.0.1"
+    markdown-it: "npm:15.0.2"
     markdown-it-anchor: "npm:10.0.0"
     markdown-it-footnote: "npm:4.0.0"
     markdown-it-mark: "npm:4.0.0"
