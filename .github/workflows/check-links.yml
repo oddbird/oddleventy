@@ -6,10 +6,18 @@ on:
     # 1st of every month at 8:00 UTC (4:00 Eastern)
     - cron: '0 8 1 * *'
 
+permissions:
+  contents: read
+  issues: write
+
+env:
+  ISSUE_TITLE: Broken external links
+
 jobs:
   check:
-    name: Check Links
+    name: Check External Links
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - run: corepack enable
@@ -18,10 +26,57 @@ jobs:
           node-version-file: .nvmrc
           cache: yarn
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Build site
         run: yarn build:prod
-      - name: Check for broken internal links
-        run: yarn checklinks:internal
       - name: Check for broken external links
-        run: yarn checklinks:external
+        id: lychee
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          # Keep in sync with `checklinks:external` in `package.json`
+          args: --scheme https --scheme http '_site/**/*.html'
+          format: json
+          output: lychee/out.json
+          fail: false
+      # Exit code 2 means broken links were found; anything else non-zero means
+      # lychee itself failed (e.g. bad config), which should fail the job.
+      - name: Fail on lychee errors
+        if: steps.lychee.outputs.exit_code != 0 && steps.lychee.outputs.exit_code != 2
+        run: |
+          echo "::error::lychee exited with code ${{ steps.lychee.outputs.exit_code }}"
+          exit 1
+      - name: Open or update issue
+        if: steps.lychee.outputs.exit_code == 2
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # List each broken URL once, however many pages link to it
+          {
+            echo "Found by the [Check Links workflow]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
+            echo "Fix or remove each link, or add it to \`exclude\` in \`lychee.toml\` if it is a false positive."
+            echo
+            jq -r '
+              [(.error_map, .timeout_map) | to_entries[] | .key as $page | .value[]
+                | {url, page: $page, status: (.status.code // .status.text | tostring)}]
+              | group_by(.url)[]
+              | (map(.page) | unique) as $pages
+              | (map(.status | select(test("cached") | not))[0] // .[0].status) as $status
+              | "- [ ] <\(.[0].url)> (\($status | sub("\\. .*"; ""))) on \($pages | length) page(s), e.g. `\($pages[0] | ltrimstr("_site"))`"
+            ' lychee/out.json
+          } > issue.md
+          cat issue.md >> "$GITHUB_STEP_SUMMARY"
+          issue=$(gh issue list --state open --search "in:title \"$ISSUE_TITLE\"" --json number --jq '.[0].number // empty')
+          if [ -n "$issue" ]; then
+            gh issue edit "$issue" --body-file issue.md
+          else
+            gh issue create --title "$ISSUE_TITLE" --body-file issue.md
+          fi
+      - name: Close issue
+        if: steps.lychee.outputs.exit_code == 0
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          issue=$(gh issue list --state open --search "in:title \"$ISSUE_TITLE\"" --json number --jq '.[0].number // empty')
+          if [ -n "$issue" ]; then
+            gh issue close "$issue" --comment "No broken links found in $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          fi
