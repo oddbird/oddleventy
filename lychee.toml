@@ -1,7 +1,12 @@
 # Link checker config: https://lychee.cli.rs/guides/config/
 # Run with `yarn checklinks:internal` or `yarn checklinks:external`.
+#
+# Checked: links (`<a>`, `<link>`), images, and media sources in the built HTML.
+# Not checked: `<script src>`, URLs in `<meta>` tags (e.g. `og:image`), and
+# `url()` in CSS, because lychee does not extract them.
 
-# Resolve root-relative links (`/about/`) against the built site.
+# Resolve root-relative links (`/about/`) against the built site. This path is
+# relative to the working directory, so run lychee from the root of the repo.
 root_dir = "_site"
 index_files = ["index.html"]
 
@@ -9,7 +14,7 @@ index_files = ["index.html"]
 # `netlify.toml`), so they are not part of the build. Check them on the live
 # site instead (these are skipped by the offline/internal check).
 remap = [
-  '^file://.*/_site/(accoutrement|blend|cascading-colors|herman|susy|true)/docs(.*)$ https://www.oddbird.net/$1/docs$2',
+  '^file://.*/_site/(accoutrement|blend|cascading-colors|herman|susy|true)/docs([/?#].*)?$ https://www.oddbird.net/$1/docs$2',
 ]
 
 no_progress = true
@@ -24,8 +29,12 @@ max_concurrency = 32
 accept = ["100..=103", "200..=299", "403", "429"]
 
 # Only exclude URLs that can't be checked (not links that are actually broken).
-# Each value is a regular expression.
+# Each value is a regular expression. Note that lychee also has a few built-in
+# exclusions (e.g. `twitter.com`), which are not listed here.
 exclude = [
+  # Absolute links to the proxied docs, which `checklinks:internal` maps onto
+  # the local build (only the first matching `remap` rule is applied to a link)
+  '^file://.*/_site/(accoutrement|blend|cascading-colors|herman|susy|true)/docs([/?#].*)?$',
   # Local development URLs (in the styleguide)
   '^https?://localhost',
   '^https?://oddsite\.local',

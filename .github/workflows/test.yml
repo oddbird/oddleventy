@@ -66,6 +66,12 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: yarn
+      # Generating images is most of the build, so reuse them between runs
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: _site/assets/images
+          key: site-images-${{ hashFiles('src/images/**', 'src/filters/images.js') }}
+          restore-keys: site-images-
       - name: Build site
         run: |
           yarn install --immutable
@@ -74,4 +80,4 @@ jobs:
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
           # Keep in sync with `checklinks:internal` in `package.json`
-          args: --offline --include-fragments '_site/**/*.html'
+          args: --offline --include-fragments --remap "^https://www[.]oddbird[.]net/ file://$PWD/_site/" '_site/**/*.html'

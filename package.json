@@ -42,7 +42,7 @@
     "build:prod": "NETLIFY=true CONTEXT=production yarn build",
     "webmentions": "node scripts/fetch-webmentions.js",
     "prod": "yarn build",
-    "checklinks:internal": "lychee --offline --include-fragments '_site/**/*.html'",
+    "checklinks:internal": "lychee --offline --include-fragments --remap \"^https://www[.]oddbird[.]net/ file://$PWD/_site/\" '_site/**/*.html'",
     "checklinks:external": "lychee --scheme https --scheme http '_site/**/*.html'",
     "checklinks": "run-s checklinks:internal checklinks:external"
   },

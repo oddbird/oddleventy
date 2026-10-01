@@ -111,7 +111,7 @@ To check links locally, [install lychee](https://lychee.cli.rs/guides/getting-st
 # check internal links, images, and anchors in the built site
 yarn checklinks:internal
 
-# check external links (this takes a few minutes)
+# check external links (this takes about a minute)
 yarn checklinks:external
 ```
 

@@ -27,6 +27,13 @@ jobs:
           cache: yarn
       - name: Install dependencies
         run: yarn install --immutable
+      # Generating images is most of the build, so reuse them between runs (the
+      # same cache is used by the "Lint & Test" workflow).
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: _site/assets/images
+          key: site-images-${{ hashFiles('src/images/**', 'src/filters/images.js') }}
+          restore-keys: site-images-
       - name: Build site
         run: yarn build:prod
       - name: Check for broken external links
@@ -39,44 +46,63 @@ jobs:
           output: lychee/out.json
           fail: false
       # Exit code 2 means broken links were found; anything else non-zero means
-      # lychee itself failed (e.g. bad config), which should fail the job.
-      - name: Fail on lychee errors
-        if: steps.lychee.outputs.exit_code != 0 && steps.lychee.outputs.exit_code != 2
+      # lychee itself failed (e.g. bad config). Finding no links at all means
+      # the build or the config is broken, not that every link is fine.
+      - name: Verify results
+        env:
+          EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
         run: |
-          echo "::error::lychee exited with code ${{ steps.lychee.outputs.exit_code }}"
-          exit 1
-      - name: Open or update issue
-        if: steps.lychee.outputs.exit_code == 2
+          if [ "$EXIT_CODE" != 0 ] && [ "$EXIT_CODE" != 2 ]; then
+            echo "::error::lychee exited with code $EXIT_CODE"
+            exit 1
+          fi
+          if ! jq -e '.total > 0' lychee/out.json > /dev/null; then
+            echo "::error::lychee did not find any links to check"
+            exit 1
+          fi
+      - name: Open, update, or close issue
         env:
           GH_TOKEN: ${{ github.token }}
+          EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
+          # Match the exact title, without `--search` (which lags behind)
+          issue=$(gh issue list --state open --limit 1000 --json number,title --jq 'map(select(.title == env.ISSUE_TITLE))[0].number // empty')
+
+          if [ "$EXIT_CODE" = 0 ]; then
+            echo "No broken external links found." >> "$GITHUB_STEP_SUMMARY"
+            if [ -n "$issue" ]; then
+              gh issue close "$issue" --comment "No broken links found in $RUN_URL"
+            fi
+            exit 0
+          fi
+
           # List each broken URL once, however many pages link to it
+          jq -r '
+            [(.error_map, .timeout_map) | to_entries[] | .key as $page | .value[]
+              | {url, page: $page, status: (.status.code // .status.details // .status.text | tostring)}]
+            | group_by(.url)[]
+            | (map(.page) | unique) as $pages
+            | (map(.status | select(test("cached") | not))[0] // .[0].status) as $status
+            | "- <\(.[0].url)> (\($status | sub("( -|[.]) .*"; ""))) on \($pages | length) page(s), e.g. `\($pages[0] | ltrimstr("_site"))`"
+          ' lychee/out.json > links.md
+          count=$(wc -l < links.md | tr -d ' ')
           {
-            echo "Found by the [Check Links workflow]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
+            echo "$count broken external links, found by the [Check Links workflow]($RUN_URL)."
             echo "Fix or remove each link, or add it to \`exclude\` in \`lychee.toml\` if it is a false positive."
             echo
-            jq -r '
-              [(.error_map, .timeout_map) | to_entries[] | .key as $page | .value[]
-                | {url, page: $page, status: (.status.code // .status.text | tostring)}]
-              | group_by(.url)[]
-              | (map(.page) | unique) as $pages
-              | (map(.status | select(test("cached") | not))[0] // .[0].status) as $status
-              | "- [ ] <\(.[0].url)> (\($status | sub("\\. .*"; ""))) on \($pages | length) page(s), e.g. `\($pages[0] | ltrimstr("_site"))`"
-            ' lychee/out.json
+            # Issue bodies are limited to 65536 characters
+            awk '{ size += length($0) + 1 } size < 60000' links.md
           } > issue.md
-          cat issue.md >> "$GITHUB_STEP_SUMMARY"
-          issue=$(gh issue list --state open --search "in:title \"$ISSUE_TITLE\"" --json number --jq '.[0].number // empty')
+          if [ "$(wc -l < issue.md)" -lt "$((count + 3))" ]; then
+            printf '\nThis list is incomplete. See the workflow run for the rest.\n' >> issue.md
+          fi
+          cat links.md >> "$GITHUB_STEP_SUMMARY"
+
           if [ -n "$issue" ]; then
             gh issue edit "$issue" --body-file issue.md
+            # Editing an issue does not notify anyone, but a comment does
+            gh issue comment "$issue" --body "Updated: $count broken links found in $RUN_URL"
           else
             gh issue create --title "$ISSUE_TITLE" --body-file issue.md
-          fi
-      - name: Close issue
-        if: steps.lychee.outputs.exit_code == 0
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          issue=$(gh issue list --state open --search "in:title \"$ISSUE_TITLE\"" --json number --jq '.[0].number // empty')
-          if [ -n "$issue" ]; then
-            gh issue close "$issue" --comment "No broken links found in $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           fi
