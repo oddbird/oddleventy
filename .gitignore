@@ -69,6 +69,9 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+# Link checker (lychee) cache
+.lycheecache
+
 # Optional REPL history
 .node_repl_history
 
