@@ -18,9 +18,9 @@ events:
     slides: https://talks.jamessw.com/talks/2026-djangocon/
     video: https://www.youtube.com/watch?v=qxogejENz84&list=PLFQg7E3if2as&index=34
 summary: |
-  New features in HTML and CSS mean
-  a better dev experience for providing better user experiences.
-  But are they too new to use?
+  There are new features in HTML and CSS
+  that improve dev experience and user experience.
+  But are the features too new to use?
 ---
 
 {% import 'embed.macros.njk' as embed %}
@@ -152,7 +152,7 @@ on an infinite and unknowable canvas,
 across operating systems, interfaces, languages,
 and writing modes...
 
-### Making an Informed Decision
+### Making an Informed Decision with Baseline
 
 So how can you make an informed decision?
 Maybe you check out Caniuse, but what is this telling you?
@@ -178,7 +178,7 @@ So the Web Features project groups parts of
 the web platform into manageable chunks.
 But how do you know if things are ready to use?
 
-#### Introducing Baseline
+#### How Baseline Can Help
 
 Enter Baseline. I'm curious, by show of hands,
 how many of you have heard of Baseline?
@@ -245,7 +245,7 @@ and get ready to use it.
 And support for setting light and dark versions of images is coming as well.
 Are you seeing how Baseline can inform your decisions?
 
-### Colors
+### New Ways of Interacting with Colors
 
 CSS has also progressed well beyond the hexadecimal RGB colors you know and love.
 
@@ -295,7 +295,7 @@ Or offset a color's hue by its relative position amongst its siblings.
 As we change the number of elements, the styles dynamically update.
 And that is available as of last week.
 
-### Dropdown Menu
+### Making a Modern Dropdown Menu
 
 Next, let's look at a deceptively simple pattern,
 the dropdown menu. It always ends up being more complicated to implement correctly than I expect,
@@ -398,7 +398,7 @@ first gets run through a sanitizer you define.
 
 And a Sanitizer API is coming, which can replace third party libraries like DOMPurify.
 
-### Text Layout
+### New Text Layout Options
 
 Text layout has long been a struggle,
 especially when trying to go from the
@@ -465,7 +465,7 @@ This is still in the early days,
 but there's active development and effort
 to make this and other form elements much more themeable.
 
-### View Transitions
+### Smoothing Navigations with View Transitions
 
 Lots of times, when you navigate between two pages,
 there are pieces of the views that are common between them.
@@ -521,7 +521,7 @@ It's just some extra for the users that have it.
 Support for cross document view transitions should be coming across browsers yet this year.
 And the ability to transition just parts of the page is coming as well.
 
-### Container Queries
+### Styling Context with Container Queries
 
 A long standing request has been to
 style an element
