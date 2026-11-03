@@ -1,0 +1,51 @@
+# Link checker config: https://lychee.cli.rs/guides/config/
+# Run with `yarn checklinks:internal` or `yarn checklinks:external`.
+#
+# Checked: links (`<a>`, `<link>`), images, and media sources in the built HTML.
+# Not checked: `<script src>`, URLs in `<meta>` tags (e.g. `og:image`), and
+# `url()` in CSS, because lychee does not extract them.
+
+# Resolve root-relative links (`/about/`) against the built site. This path is
+# relative to the working directory, so run lychee from the root of the repo.
+root_dir = "_site"
+index_files = ["index.html"]
+
+# Docs for our open-source tools are proxied from other Netlify sites (see
+# `netlify.toml`), so they are not part of the build. Check them on the live
+# site instead (these are skipped by the offline/internal check).
+remap = [
+  '^file://.*/_site/(accoutrement|blend|cascading-colors|herman|susy|true)/docs([/?#].*)?$ https://www.oddbird.net/$1/docs$2',
+]
+
+no_progress = true
+cache = true
+max_cache_age = "2d"
+max_retries = 2
+timeout = 30
+max_concurrency = 32
+
+# Sites that block bots usually respond with 403 (Forbidden) or 429 (Too Many
+# Requests), so treat those as passing rather than excluding each site.
+accept = ["100..=103", "200..=299", "403", "429"]
+
+# Only exclude URLs that can't be checked (not links that are actually broken).
+# Each value is a regular expression. Note that lychee also has a few built-in
+# exclusions (e.g. `twitter.com`), which are not listed here.
+exclude = [
+  # Absolute links to the proxied docs, which `checklinks:internal` maps onto
+  # the local build (only the first matching `remap` rule is applied to a link)
+  '^file://.*/_site/(accoutrement|blend|cascading-colors|herman|susy|true)/docs([/?#].*)?$',
+  # Local development URLs (in the styleguide)
+  '^https?://localhost',
+  '^https?://oddsite\.local',
+  # Pingback endpoint, which only accepts POST requests
+  '^https://webmention\.io/www\.oddbird\.net/xmlrpc',
+  # Private video embeds
+  '^https://player\.vimeo\.com/',
+  # Sites that block or stall automated requests
+  '^https?://([a-z]+\.)?linkedin\.com/',
+  '^https?://([a-z]+\.)?codepen\.io/',
+  '^https://www\.adobe\.com/',
+  '^https://blog\.bitsrc\.io/',
+  '^https://deardesignstudent\.com/',
+]

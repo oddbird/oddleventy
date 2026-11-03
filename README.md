@@ -98,6 +98,23 @@ yarn sassdoc
 Sass Docs are compiled into the `_site/styleguide/` folder, which is then
 available at the URL: `/styleguide/`.
 
+### Check for broken links
+
+Links are checked with [lychee](https://lychee.cli.rs/), configured in
+`lychee.toml`. Internal links are checked on every push, and external links are
+checked monthly (broken links are reported in a GitHub issue).
+
+To check links locally, [install lychee](https://lychee.cli.rs/guides/getting-started/)
+(e.g. `brew install lychee`) and build the site, then run:
+
+```
+# check internal links, images, and anchors in the built site
+yarn checklinks:internal
+
+# check external links (this takes about a minute)
+yarn checklinks:external
+```
+
 ## Deployment
 
 The site is auto-deployed on [Netlify](https://www.netlify.com/) from the `main`
