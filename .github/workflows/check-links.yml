@@ -84,7 +84,7 @@ jobs:
             | group_by(.url)[]
             | (map(.page) | unique) as $pages
             | (map(.status | select(test("cached") | not))[0] // .[0].status) as $status
-            | "- <\(.[0].url)> (\($status | sub("( -|[.]) .*"; ""))) on \($pages | length) page(s), e.g. `\($pages[0] | ltrimstr("_site"))`"
+            | "- <\(.[0].url)> (\($status | sub("( -|[.]) .*"; ""))) on \($pages | length) page(s), e.g. <https://www.oddbird.net\($pages[0] | ltrimstr("_site") | rtrimstr("index.html"))>"
           ' lychee/out.json > links.md
           count=$(wc -l < links.md | tr -d ' ')
           {
