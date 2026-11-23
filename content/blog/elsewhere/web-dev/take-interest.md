@@ -11,7 +11,7 @@ image:
 tags:
   - Link
   - CSS
-related_tag: CSS
+related_tag: HTML
 summary:
   Navigating to a new page
   is a relatively significant change,
