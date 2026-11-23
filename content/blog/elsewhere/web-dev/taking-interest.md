@@ -57,7 +57,7 @@ It's a much lower investment
 for the user.
 
 The cost of a user accidentally triggering an action
-can be high—for example,
+can be high -- for example,
 if they lose (or send) a half-written email,
 or make an unintended purchase.
 If a user accidentally opens a popover,
