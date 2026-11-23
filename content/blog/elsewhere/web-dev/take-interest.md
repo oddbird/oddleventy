@@ -1,6 +1,5 @@
 ---
-title: >
-  Taking Interest
+title: Taking Interest
 date: 2026-11-20
 venue: web.dev
 canonical: https://web.dev/articles/taking-interest
