@@ -45,7 +45,7 @@ to the web platform as a concept.
 Most events are
 in response to a user's action
 that significantly changes
-the user's context—they clicked a link
+the user's context -- they clicked a link
 to a new page, pressed play,
 or submitted a form.
 
