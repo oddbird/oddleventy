@@ -1,13 +1,15 @@
 ---
 title: Taking Interest
-date: 2026-11-20
+date: 2026-11-23
 venue: web.dev
 canonical: https://web.dev/articles/taking-interest
 author: james
 image:
   src: blog/elsewhere/interest-timing.jpg
   alt: >
-    Baseline Radio the color theme color-mix playlist
+    A woman cradles her head in her hands
+    and covers her eyes rather than looking
+    at a laptop's screen.
 tags:
   - Link
   - CSS
@@ -77,7 +79,7 @@ you can make it easier for the user to trigger.
 {{ embed.codepen(
   id="01a086da-ec05-738e-8dff-2ea66f9ccaf4",
   title="Interest Invokers Delays",
-  user="web-dot-dev"
+  user="jamessw"
 )}}
 
 [Read full article »](https://web.dev/articles/taking-interest)
