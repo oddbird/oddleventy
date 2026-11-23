@@ -69,7 +69,7 @@ you can make it easier for the user to trigger.
 - Interest versus action
 - Triggering interest
 - UI patterns
-- Checklist
+- Implementation Checklist
 
 ## The demo where we put it all together
 
