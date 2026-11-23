@@ -11,6 +11,7 @@ image:
 tags:
   - Link
   - CSS
+  - HTML
 related_tag: HTML
 summary:
   Navigating to a new page
