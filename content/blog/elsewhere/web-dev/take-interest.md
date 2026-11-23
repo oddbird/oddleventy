@@ -36,6 +36,7 @@ of the popover
 you want to open.
 
 ## Interest versus action
+
 Interest invokers are somewhat unique
 to the web platform as a concept.
 Most events are
