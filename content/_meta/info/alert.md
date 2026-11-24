@@ -2,7 +2,8 @@
 live: true
 info_slug: alert
 title: alert
+aria: Announcement
 ---
 
 **[Poetic CSS Course](https://courses.oddbird.net/poetic-css/)** --
-Use code BLACKFRIDAY to get 25% off today - Nov. 30, 2026
+Use code BLACKFRIDAY for 25% off through Nov. 30, 2026
