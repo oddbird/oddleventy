@@ -135,7 +135,7 @@ Remember that this is front end,
 that the code you're writing isn't run on your computer.
 
 It's not like Django, where it's running
-on a server you provision and control
+on a server you provision and control.
 
 By making content available on the internet,
 you are giving up a ton of control.

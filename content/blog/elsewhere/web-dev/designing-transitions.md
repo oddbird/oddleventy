@@ -25,7 +25,7 @@ summary: |
 
 {% import 'embed.macros.njk' as embed %}
 
-The View Transition API increase the polish and usability of your Single Page
+The View Transition API increases the polish and usability of your Single Page
 Application (SPA) by adding cues about how content is repositioned as a user
 goes through your application.
 
